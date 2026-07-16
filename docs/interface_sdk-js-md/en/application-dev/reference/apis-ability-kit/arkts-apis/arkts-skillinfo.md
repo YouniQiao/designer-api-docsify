@@ -12,5 +12,5 @@
 
 | Name | Description |
 | --- | --- |
-| [SkillType](arkts-ability-skilltype-e.md) | Enumerates the skill types. |
+| [SkillType](arkts-ability-skillinfo-skilltype-e.md) | Enumerates the skill types. |
 

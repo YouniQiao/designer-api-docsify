@@ -21,13 +21,13 @@ createBundleContext(bundleName: string): Context
 > **说明：**  
 >  
 > - stage模型多module的情况下可能发生资源id冲突的情况，建议使用  
-> [application.createModuleContext](arkts-ability-createmodulecontext-f.md#createmodulecontext-1)替代。
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext-1)替代。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [createBundleContext](arkts-ability-createbundlecontext-f-sys.md#createbundlecontext-1)
+**替代接口：** [createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md#createbundlecontext-1)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -71,7 +71,7 @@ createModuleContext(bundleName: string, moduleName: string): Context
 
 **废弃版本：** 12
 
-**替代接口：** [createModuleContext](arkts-ability-createmodulecontext-f.md#createmodulecontext-1)
+**替代接口：** [createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext-1)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

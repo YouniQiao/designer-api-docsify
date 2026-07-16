@@ -29,5 +29,5 @@ Opens a stream based on the file descriptor. This API returns the result synchro
 
 | Type | Description |
 | --- | --- |
-| [Stream](arkts-corefile-stream-i.md) | File stream. |
+| [Stream](arkts-corefile-file-fs-stream-i.md) | File stream. |
 

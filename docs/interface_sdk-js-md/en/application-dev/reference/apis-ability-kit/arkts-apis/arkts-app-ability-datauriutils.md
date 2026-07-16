@@ -20,8 +20,8 @@ import { dataUriUtils } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [attachId](arkts-ability-attachid-f.md#attachid-1) | Attaches an ID to the end of a given URI. |
-| [deleteId](arkts-ability-deleteid-f.md#deleteid-1) | Deletes the ID from the end of a given URI. |
-| [getId](arkts-ability-getid-f.md#getid-1) | Obtains the ID attached to the end of a given URI. |
-| [updateId](arkts-ability-updateid-f.md#updateid-1) | Updates the ID in a given URI. |
+| [attachId](arkts-ability-datauriutils-attachid-f.md#attachid-1) | Attaches an ID to the end of a given URI. |
+| [deleteId](arkts-ability-datauriutils-deleteid-f.md#deleteid-1) | Deletes the ID from the end of a given URI. |
+| [getId](arkts-ability-datauriutils-getid-f.md#getid-1) | Obtains the ID attached to the end of a given URI. |
+| [updateId](arkts-ability-datauriutils-updateid-f.md#updateid-1) | Updates the ID in a given URI. |
 

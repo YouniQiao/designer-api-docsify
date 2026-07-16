@@ -12,11 +12,11 @@ import { AVVolumePanelParameter, AVVolumePanel } from '@kit.AudioKit';
 
 | Name | Description |
 | --- | --- |
-| [AVVolumePanelParameter](arkts-audio-avvolumepanelparameter-c.md) | Declare custom parameters used for volume panel. |
+| [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md) | Declare custom parameters used for volume panel. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [AVVolumePanel](arkts-audio-avvolumepanel-s.md) | A panel to set the system audio output volume. |
+| [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) | A panel to set the system audio output volume. |
 

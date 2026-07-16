@@ -32,7 +32,7 @@ declare function statSync(file: string | number): Stat
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stat](arkts-corefile-stat-i.md) | 表示文件或目录的具体信息。 |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | 表示文件或目录的具体信息。 |
 
 **错误码：**
 

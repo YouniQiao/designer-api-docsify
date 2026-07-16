@@ -20,5 +20,5 @@ import { Retention, RetentionPolicy } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [RetentionPolicy](arkts-arkts-retentionpolicy-e.md) | Enum for Retention annotation field type. |
+| [RetentionPolicy](arkts-arkts-lang-retentionpolicy-e.md) | Enum for Retention annotation field type. |
 

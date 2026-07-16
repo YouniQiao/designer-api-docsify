@@ -20,11 +20,11 @@ import { fileUri } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [getUriFromPath](arkts-corefile-geturifrompath-f.md#geturifrompath-1) | Get the uri from the path of file in app sandbox |
+| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) | Get the uri from the path of file in app sandbox |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [FileUri](arkts-corefile-fileuri-c.md) | FileUri represents the uri of the file. |
+| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri represents the uri of the file. |
 

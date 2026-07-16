@@ -12,5 +12,5 @@ import { VpnExtensionContext } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [VpnExtensionAbility](arkts-network-vpnextensionability-c.md) | class of vpn extension ability. |
+| [VpnExtensionAbility](arkts-network-app-ability-vpnextensionability-vpnextensionability-c.md) | class of vpn extension ability. |
 

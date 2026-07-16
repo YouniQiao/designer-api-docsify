@@ -12,19 +12,19 @@ import { ProgressButtonV2, ProgressButtonV2ColorOptions, ProgressButtonV2Color }
 
 | Name | Description |
 | --- | --- |
-| [ProgressButtonV2Color](arkts-arkui-progressbuttonv2color-c.md) | Declare ProgressButtonV2 Color. |
+| [ProgressButtonV2Color](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2color-c.md) | Declare ProgressButtonV2 Color. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [ProgressButtonV2](arkts-arkui-progressbuttonv2-s.md) | Declare Component ProgressButtonV2 |
+| [ProgressButtonV2](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2-s.md) | Declare Component ProgressButtonV2 |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ProgressButtonV2ColorOptions](arkts-arkui-progressbuttonv2coloroptions-i.md) | Declare Color options interface of the ProgressButtonV2. |
+| [ProgressButtonV2ColorOptions](arkts-arkui-arkui-advanced-progressbuttonv2-progressbuttonv2coloroptions-i.md) | Declare Color options interface of the ProgressButtonV2. |
 
 ### Types
 

@@ -36,7 +36,7 @@ Sets the check box shape of the check box group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | Yes | Check box shape of the check box group.<br>Default value:**CheckBoxShape.CIRCLE**.<br>**NOTE**<br>The **CheckboxGroup** component is displayed according to the set shape.<br>All check boxes in the **CheckboxGroup** component that do not have their shape individually set will inherit the shape of the **CheckboxGroup**.<br>Check boxes in the **CheckboxGroup** component that have their shape individually set will prioritize their own shape setting over the shape of the **CheckboxGroup**. |
+| value | [CheckBoxShape](../arkts-apis/arkts-arkui-enums-checkboxshape-e.md) | Yes | Check box shape of the check box group.<br>Default value:**CheckBoxShape.CIRCLE**.<br>**NOTE**<br>The **CheckboxGroup** component is displayed according to the set shape.<br>All check boxes in the **CheckboxGroup** component that do not have their shape individually set will inherit the shape of the **CheckboxGroup**.<br>Check boxes in the **CheckboxGroup** component that have their shape individually set will prioritize their own shape setting over the shape of the **CheckboxGroup**. |
 
 ## checkboxShape
 
@@ -74,7 +74,7 @@ Customize the CheckboxGroup content area. When this attribute is set, the settin
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 21
 
@@ -114,7 +114,7 @@ Sets the check mark style of the check box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | Yes | Check mark style of the check box. |
+| value | [MarkStyle](../arkts-apis/arkts-arkui-units-markstyle-i.md) | Yes | Check mark style of the check box. |
 
 ## mark
 

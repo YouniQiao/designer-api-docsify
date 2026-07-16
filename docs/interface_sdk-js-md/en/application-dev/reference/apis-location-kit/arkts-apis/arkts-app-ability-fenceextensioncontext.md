@@ -13,6 +13,6 @@ import { FenceExtensionContext } from '@kit.LocationKit';
 
 | Name | Description |
 | --- | --- |
-| [FenceExtensionContext](arkts-location-fenceextensioncontext-c-sys.md) | class of static subscriber extension context. |
+| [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md) | class of static subscriber extension context. |
 <!--DelEnd-->
 

@@ -12,11 +12,11 @@ import { ContentFormCard, FormType } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [ContentFormCard](arkts-arkdata-contentformcard-s.md) | Defines a content form card. |
+| [ContentFormCard](arkts-arkdata-data-udmfcomponents-contentformcard-s.md) | Defines a content form card. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [FormType](arkts-arkdata-formtype-e.md) | Enumerates the form card types. |
+| [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md) | Enumerates the form card types. |
 

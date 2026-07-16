@@ -28,5 +28,5 @@ Opens a directory. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [Dir](arkts-corefile-dir-depr-i.md) | **Dir** object opened. |
+| [Dir](arkts-corefile-fileio-dir-depr-i.md) | **Dir** object opened. |
 

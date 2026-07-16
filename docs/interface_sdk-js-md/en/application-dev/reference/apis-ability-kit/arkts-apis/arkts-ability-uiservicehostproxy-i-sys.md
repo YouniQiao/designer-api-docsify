@@ -1,6 +1,6 @@
 # UIServiceHostProxy (System API)
 
-UIServiceHostProxy functions as a proxy to send data from the [UIServiceExtensionAbility](arkts-ability-uiserviceextensionability-c-sys.md) server to the client.
+UIServiceHostProxy functions as a proxy to send data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) server to the client.
 
 > **NOTE**  
 >  
@@ -20,7 +20,7 @@ UIServiceHostProxy functions as a proxy to send data from the [UIServiceExtensio
 sendData(data: Record<string, Object>): void
 ```
 
-Sends data from the [UIServiceExtensionAbility](arkts-ability-uiserviceextensionability-c-sys.md)server to the client.
+Sends data from the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)server to the client.
 
 **Since:** 14
 
@@ -36,7 +36,7 @@ Sends data from the [UIServiceExtensionAbility](arkts-ability-uiserviceextension
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Data to be sent to the [UIServiceExtensionAbility](arkts-ability-uiserviceextensionability-c-sys.md)client. |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | Data to be sent to the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)client. |
 
 **Error codes:**
 

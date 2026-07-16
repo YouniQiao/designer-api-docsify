@@ -32,7 +32,7 @@ contentFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | 菜单项中内容信息的字体样式。 |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 菜单项中内容信息的字体样式。 |
 
 ## contentFontColor
 
@@ -80,7 +80,7 @@ labelFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | 菜单项中标签信息的字体样式。 |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 菜单项中标签信息的字体样式。 |
 
 ## labelFontColor
 

@@ -47,7 +47,7 @@ build(builder: WrappedBuilder<Args>, arg?: Object): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)<Args> | 是 | 创建对应节点树的时候所需的无状态UI方法[@Builder](../../../../ui/state-management/arkts-builder.md)。 |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-common-wrappedbuilder-c.md)<Args> | 是 | 创建对应节点树的时候所需的无状态UI方法[@Builder](../../../../ui/state-management/arkts-builder.md)。 |
 | arg | Object | 否 | builder的入参。当前仅支持一个入参，且入参对象类型与@Builder定义的入参类型保持一致。<br/>默认值：undefined |
 
 ## build
@@ -80,9 +80,9 @@ build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)<Args> | 是 | 创建对应节点树的时候所需的无状态UI方法[@Builder](../../../../ui/state-management/arkts-builder.md)。 |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-common-wrappedbuilder-c.md)<Args> | 是 | 创建对应节点树的时候所需的无状态UI方法[@Builder](../../../../ui/state-management/arkts-builder.md)。 |
 | arg | Object | 是 | builder的入参。当前仅支持一个入参，且入参对象类型与@Builder定义的入参类型保持一致。 |
-| options | [BuildOptions](arkts-arkui-buildoptions-i.md) | 是 | builder的配置参数，判断是否支持@Builder中嵌套@Builder的行为。 |
+| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 | builder的配置参数，判断是否支持@Builder中嵌套@Builder的行为。 |
 
 ## constructor
 
@@ -107,7 +107,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 | UI上下文，获取方式可参考[UIContext获取方法](../../../../ui/arkts-global-interface.md#uicontext获取方法)。 |
-| options | [RenderOptions](arkts-arkui-renderoptions-i.md) | 否 | BuilderNode的构造可选参数。<br/>默认值：undefined |
+| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数。<br/>默认值：undefined |
 
 ## dispose
 
@@ -310,7 +310,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | [InputEventType](arkts-arkui-inputeventtype-t.md) | 是 | 用于事件分发的输入事件。 |
-| competitionStrategy | [CompetitionStrategy](arkts-arkui-competitionstrategy-e.md) | 否 | Whether the gesture for posting the event is in a competition scenario. By default, the gesture is not in a competition scenario. |
+| competitionStrategy | [CompetitionStrategy](arkts-arkui-enums-competitionstrategy-e.md) | 否 | Whether the gesture for posting the event is in a competition scenario. By default, the gesture is not in a competition scenario. |
 
 **返回值：**
 
@@ -356,7 +356,7 @@ OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md) | 是 | 触摸事件。 |
+| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | 是 | 触摸事件。 |
 
 **返回值：**
 
@@ -442,7 +442,7 @@ update(arg: Object): void
 updateConfiguration(): void
 ```
 
-传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md)。
+传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)。
 
 > **说明：**  
 >  

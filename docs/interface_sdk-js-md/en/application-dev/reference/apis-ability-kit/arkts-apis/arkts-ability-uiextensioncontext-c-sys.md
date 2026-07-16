@@ -1,6 +1,6 @@
 # UIExtensionContext
 
-UIExtensionContext provides the context environment for [UIExtensionAbility](arkts-ability-uiextensionability-c.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md) and provides UIExtensionAbility-related configuration and APIs for operating the UIExtensionAbility. For example, you can use the APIs to start a UIExtensionAbility.
+UIExtensionContext provides the context environment for [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md) and provides UIExtensionAbility-related configuration and APIs for operating the UIExtensionAbility. For example, you can use the APIs to start a UIExtensionAbility.
 
 **Inheritance/Implementation:** UIExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
@@ -33,7 +33,7 @@ Connects the current UI extension to an service extension ability with a root ho
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | The element name of the service ability |
-| connect | [ConnectOptions](arkts-ability-connectoptions-t.md) | Yes | The remote object instance |
+| connect | [ConnectOptions](arkts-ability-ability-connectoptions-t.md) | Yes | The remote object instance |
 
 **Return value:**
 
@@ -65,7 +65,7 @@ Connects the current UI extension to an service extension ability with a root ho
 setHostPageOverlayForbidden(isForbidden: boolean) : void
 ```
 
-Sets whether the page started by the [UIExtensionAbility](arkts-ability-uiextensionability-c.md) can be overlaid by the page of the user.
+Sets whether the page started by the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) can be overlaid by the page of the user.
 
 > **NOTE**  
 >  
@@ -73,8 +73,8 @@ Sets whether the page started by the [UIExtensionAbility](arkts-ability-uiextens
 > [Component Startup Rules (Stage Model)](../../../../application-models/component-startup-rules.md).  
 >  
 > This API must be called before a window is created. You are advised to call it within the  
-> [onCreate](arkts-ability-uiextensionability-c.md#oncreate-1) lifecycle of the  
-> [UIExtensionAbility](arkts-ability-uiextensionability-c.md).
+> [onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate-1) lifecycle of the  
+> [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md).
 
 **Since:** 15
 
@@ -90,7 +90,7 @@ Sets whether the page started by the [UIExtensionAbility](arkts-ability-uiextens
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isForbidden | boolean | Yes | Whether the page started by the [UIExtensionAbility](arkts-ability-uiextensionability-c.md) can be overlaid by the page of the user. **true** if the page can be overlaid, **false** otherwise. |
+| isForbidden | boolean | Yes | Whether the page started by the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) can be overlaid by the page of the user. **true** if the page can be overlaid, **false** otherwise. |
 
 **Error codes:**
 
@@ -131,13 +131,13 @@ Starts an ability with the caller information specified. The caller information 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
-| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | No | Parameters used for starting the ability. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AbilityResult> | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<AbilityResult> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -188,7 +188,7 @@ Starts a ServiceExtensionAbility. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -242,13 +242,13 @@ Starts a ServiceExtensionAbility under a specified system account. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information for starting the ServiceExtensionAbility. |
-| accountId | number | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountcount-1). |
+| accountId | number | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount-1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -297,13 +297,13 @@ Starts multiple UIAbility components simultaneously. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantList | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Want> | Yes | List of launch parameters for multiple UIAbility components to be started simultaneously. A maximum of four Want objects can be passed. The **Want** parameter does not support implicit launch, cross-user launch, distributed launch, instant installation, or on-demand loading. By default, the main application is launched unless specified otherwise. |
+| wantList | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<Want> | Yes | List of launch parameters for multiple UIAbility components to be started simultaneously. A maximum of four Want objects can be passed. The **Want** parameter does not support implicit launch, cross-user launch, distributed launch, instant installation, or on-demand loading. By default, the main application is launched unless specified otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -377,7 +377,7 @@ Starts a second UIAbility after the first UIAbility instance is created, and dis
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

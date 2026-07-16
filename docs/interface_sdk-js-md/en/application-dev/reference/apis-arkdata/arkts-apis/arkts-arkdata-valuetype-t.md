@@ -1,32 +1,25 @@
 # ValueType
 
 ```TypeScript
-type ValueType = number | number | number | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined
+export type ValueType = number | number | string | boolean
 ```
 
-Enumerates the data field types allowed in a unified data record.
+Defines the value types allowed in a **ValuesBucket** instance.
 
-**Since:** 12
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined--><!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined-End-->
+<!--Device-unnamed-export type ValueType = long | double | string | boolean--><!--Device-unnamed-export type ValueType = long | double | string | boolean-End-->
 
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
 
 | Type | Description |
 | --- | --- |
-| int | Int. |
-| long | Long. |
-| double | Double. |
-| string | String. |
-| boolean | Boolean. |
-| image.PixelMap | The value is of the [image.PixelMap]{ |
-| Want | [Want]{ |
-| ArrayBuffer | ArrayBuffer. |
-| object | Object. |
-| null | Null. |
-| undefined | Undefined. |
+| long | [since 20] |
+| double | [since 20] |
+| string | The value is a string. [since 12] |
+| boolean | The value is **true** or **false**. [since 12] |
 

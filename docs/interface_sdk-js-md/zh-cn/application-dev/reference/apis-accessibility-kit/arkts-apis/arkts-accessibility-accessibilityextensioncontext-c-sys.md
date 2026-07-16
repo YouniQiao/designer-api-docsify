@@ -71,7 +71,7 @@ getAccessibilityWindowsSync(displayId?: number): Array<AccessibilityElement>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<AccessibilityElement> | 窗口列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<AccessibilityElement> | 窗口列表。 |
 
 **错误码：**
 
@@ -268,7 +268,7 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | 是 | 监听事件名，固定为‘preDisconnect’，即无障碍扩展服务即将关闭事件。 |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 否 | 回调函数，取消指定无障碍扩展服务即将关闭时的回调。需与[on('preDisconnect')](arkts-accessibility-accessibilityextensioncontext-c-sys.md#on-1)的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-common-callback-i.md)<void> | 否 | 回调函数，取消指定无障碍扩展服务即将关闭时的回调。需与[on('preDisconnect')](arkts-accessibility-accessibilityextensioncontext-c-sys.md#on-1)的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -302,7 +302,7 @@ on(type: 'preDisconnect', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | 是 | 监听事件名，固定为‘preDisconnect’，即无障碍扩展服务即将关闭事件。 |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | 是 | 回调函数，在无障碍扩展服务即将关闭时回调。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-common-callback-i.md)<void> | 是 | 回调函数，在无障碍扩展服务即将关闭时回调。 |
 
 **错误码：**
 

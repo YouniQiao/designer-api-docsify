@@ -12,13 +12,13 @@ import { Decimal } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [Decimal](arkts-arkts-decimal-c.md) | An arbitrary-precision Decimal type |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | An arbitrary-precision Decimal type |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DecimalConfig](arkts-arkts-decimalconfig-i.md) | Provides configuration for decimal. |
+| [DecimalConfig](arkts-arkts-math-decimal-decimalconfig-i.md) | Provides configuration for decimal. |
 
 ### Types
 

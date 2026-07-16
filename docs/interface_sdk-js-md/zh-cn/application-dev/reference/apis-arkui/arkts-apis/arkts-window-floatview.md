@@ -13,7 +13,7 @@
 
 **与闪控球联动：**
 
-本模块可与[@ohos.window.floatingBall](arkts-window-floatingball.md)（闪控球）联合使用。通过[floatView.bind](arkts-arkui-bind-f.md#bind-1)接口将标准悬浮窗控制器与闪控球控制器绑定后，用户点击闪控球可展开为标准悬浮窗，点击标准悬浮窗左上角的缩小按钮可收起为闪控球，实现两种窗口形态的相互切换。
+本模块可与[@ohos.window.floatingBall](arkts-window-floatingball.md)（闪控球）联合使用。通过[floatView.bind](arkts-arkui-floatview-bind-f.md#bind-1)接口将标准悬浮窗控制器与闪控球控制器绑定后，用户点击闪控球可展开为标准悬浮窗，点击标准悬浮窗左上角的缩小按钮可收起为闪控球，实现两种窗口形态的相互切换。
 
 **全局悬浮窗和标准悬浮窗对比**
 
@@ -50,29 +50,29 @@ import { floatView } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [bind](arkts-arkui-bind-f.md#bind-1) | 绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatviewcontroller-i.md)和[闪控球控制器](arkts-arkui-floatingballcontroller-i.md)，且均未启动。使用Promise异步回调。 |
-| [create](arkts-arkui-create-f.md#create-1) | 创建标准悬浮窗控制器。使用Promise异步回调。 |
-| [getFloatViewLimits](arkts-arkui-getfloatviewlimits-f.md#getfloatviewlimits-1) | 根据传入的模板类型获取对应标准悬浮窗窗口的限制，单位为px。 |
-| [isFloatViewEnabled](arkts-arkui-isfloatviewenabled-f.md#isfloatviewenabled-1) | 判断当前设备是否支持标准悬浮窗功能。 |
-| [unbind](arkts-arkui-unbind-f.md#unbind-1) | 解绑标准悬浮窗和闪控球。需要在[标准悬浮窗控制器](arkts-arkui-floatviewcontroller-i.md)和[闪控球控制器](arkts-arkui-floatingballcontroller-i.md)均停止后才可解绑。使用Promise异步回调。 |
+| [bind](arkts-arkui-floatview-bind-f.md#bind-1) | 绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和[闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)，且均未启动。使用Promise异步回调。 |
+| [create](arkts-arkui-floatview-create-f.md#create-1) | 创建标准悬浮窗控制器。使用Promise异步回调。 |
+| [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits-1) | 根据传入的模板类型获取对应标准悬浮窗窗口的限制，单位为px。 |
+| [isFloatViewEnabled](arkts-arkui-floatview-isfloatviewenabled-f.md#isfloatviewenabled-1) | 判断当前设备是否支持标准悬浮窗功能。 |
+| [unbind](arkts-arkui-floatview-unbind-f.md#unbind-1) | 解绑标准悬浮窗和闪控球。需要在[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和[闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)均停止后才可解绑。使用Promise异步回调。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [FloatViewConfiguration](arkts-arkui-floatviewconfiguration-i.md) | 创建标准悬浮窗控制器时需要提供的参数配置。 |
-| [FloatViewController](arkts-arkui-floatviewcontroller-i.md) | 标准悬浮窗控制器实例。用于启动、停止标准悬浮窗以及注册回调等操作。下列API示例中都需先使用[floatView.create()](arkts-arkui-create-f.md#create-1)方法获取到标准悬浮窗控制器实例（即floatViewController），再通过此实例调用对应方法。 |
-| [FloatViewLimits](arkts-arkui-floatviewlimits-i.md) | 标准悬浮窗窗口的限制。 |
-| [FloatViewProperties](arkts-arkui-floatviewproperties-i.md) | 标准悬浮窗窗口的属性。 |
-| [FloatViewRectChangeInfo](arkts-arkui-floatviewrectchangeinfo-i.md) | 标准悬浮窗矩形区域变化信息。 |
-| [FloatViewStateChangeInfo](arkts-arkui-floatviewstatechangeinfo-i.md) | 标准悬浮窗状态变化信息。 |
-| [RatioLimit](arkts-arkui-ratiolimit-i.md) | 标准悬浮窗的宽高比限制范围。宽高比比值由窗口矩形区域的宽除以高获得。 |
-| [TemplateProperty](arkts-arkui-templateproperty-i.md) | 切换悬浮窗模板并修改窗口尺寸时需要提供的参数配置。 |
+| [FloatViewConfiguration](arkts-arkui-floatview-floatviewconfiguration-i.md) | 创建标准悬浮窗控制器时需要提供的参数配置。 |
+| [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | 标准悬浮窗控制器实例。用于启动、停止标准悬浮窗以及注册回调等操作。下列API示例中都需先使用[floatView.create()](arkts-arkui-floatview-create-f.md#create-1)方法获取到标准悬浮窗控制器实例（即floatViewController），再通过此实例调用对应方法。 |
+| [FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md) | 标准悬浮窗窗口的限制。 |
+| [FloatViewProperties](arkts-arkui-floatview-floatviewproperties-i.md) | 标准悬浮窗窗口的属性。 |
+| [FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md) | 标准悬浮窗矩形区域变化信息。 |
+| [FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md) | 标准悬浮窗状态变化信息。 |
+| [RatioLimit](arkts-arkui-floatview-ratiolimit-i.md) | 标准悬浮窗的宽高比限制范围。宽高比比值由窗口矩形区域的宽除以高获得。 |
+| [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | 切换悬浮窗模板并修改窗口尺寸时需要提供的参数配置。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [FloatViewState](arkts-arkui-floatviewstate-e.md) | 标准悬浮窗状态的枚举。 |
-| [FloatViewTemplateType](arkts-arkui-floatviewtemplatetype-e.md) | 标准悬浮窗模板类型的枚举。 |
+| [FloatViewState](arkts-arkui-floatview-floatviewstate-e.md) | 标准悬浮窗状态的枚举。 |
+| [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md) | 标准悬浮窗模板类型的枚举。 |
 

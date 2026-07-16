@@ -110,7 +110,7 @@ itemHeight(height: Optional<LengthMetrics>)
 
 设置UIPickerComponent容器每个选项的高度。未通过该接口设置时，每个选项的高度为40vp。
 
-单位：与[LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-c.md)一致。
+单位：与[LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)一致。
 
 取值范围：[40vp, 64vp]
 

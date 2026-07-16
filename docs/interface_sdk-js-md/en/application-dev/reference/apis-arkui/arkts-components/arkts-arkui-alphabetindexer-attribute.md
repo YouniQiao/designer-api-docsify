@@ -1,8 +1,8 @@
 # AlphabetIndexer properties/events
 
-When the [width](arkts-arkui-commonmethod-c.md#width-1) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
+When the [width](arkts-arkui-common-commonmethod-c.md#width-1) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
 
-The default value of the [padding](arkts-arkui-commonmethod-c.md#padding-1) attribute is 4 vp.
+The default value of the [padding](arkts-arkui-common-commonmethod-c.md#padding-1) attribute is 4 vp.
 
 The [maxFontScale](TextAttribute#maxFontScale) and [minFontScale](TextAttribute#minFontScale) attributes are both set to a constant value of 1, which means that they do not change with the system font size.
 
@@ -38,7 +38,7 @@ Sets the alignment style of the indexer pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.<br>Default value: **IndexerAlign.END** |
+| value | [IndexerAlign](arkts-arkui-alphabet-indexer-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.<br>Default value: **IndexerAlign.END** |
 | offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | No | Spacing between the pop-up window and the alphabetic index bar. A value greater than or equal to **0** is valid. If this parameter is set to a value less than **0** or is not set, the spacing is the same as **popupPosition**. When this parameter and [popupPosition](AlphabetIndexerAttribute#popupPosition) are set at the same time, **offset** takes effect in the horizontal direction, and **popupPosition.y** takes effect in the vertical direction.<br>**Since:** 10 |
 
 ## autoCollapse
@@ -55,7 +55,7 @@ When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 
 
 > **NOTE**
 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 12.
 
 **Since:** 11
 
@@ -139,7 +139,7 @@ Sets the text style for unselected items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Text style of unselected items.<br>Default value:<br>API version 11 and earlier:<br>{<br>size:'12.0fp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Regular,<br> family:'HarmonyOS Sans'<br>}<br>API version 12 and later:<br>{<br>size:'10.0vp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Medium,<br>family:'HarmonyOS Sans'<br>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of unselected items.<br>Default value:<br>API version 11 and earlier:<br>{<br>size:'12.0fp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Regular,<br> family:'HarmonyOS Sans'<br>}<br>API version 12 and later:<br>{<br>size:'10.0vp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Medium,<br>family:'HarmonyOS Sans'<br>} |
 
 ## itemBorderRadius
 
@@ -185,7 +185,7 @@ Sets the size of the index item area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.<br>The actual value is restricted by the component size.The maximum width of an index item is the component width minus the left and right [padding](arkts-arkui-commonmethod-c.md#padding-1), and the maximum height of an index item is (component height minus the top and bottom [padding](arkts-arkui-commonmethod-c.md#padding-1))/number of index items. If the input value is less than or equal to 0, the default value is used.<br>Default value: **16.0**<br>Unit: vp |
+| value | string \| number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.<br>The actual value is restricted by the component size.The maximum width of an index item is the component width minus the left and right [padding](arkts-arkui-common-commonmethod-c.md#padding-1), and the maximum height of an index item is (component height minus the top and bottom [padding](arkts-arkui-common-commonmethod-c.md#padding-1))/number of index items. If the input value is less than or equal to 0, the default value is used.<br>Default value: **16.0**<br>Unit: vp |
 
 ## onPopupSelect
 
@@ -331,7 +331,7 @@ Sets the background blur style of the pop-up window. In versions earlier than AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the pop-up window.<br>The background blur effect can affect [popupBackground](AlphabetIndexerAttribute#popupBackground). You can disable the effect by setting it to **NONE**. |
+| value | [BlurStyle](arkts-arkui-common-blurstyle-e.md) | Yes | Background blur style of the pop-up window.<br>The background blur effect can affect [popupBackground](AlphabetIndexerAttribute#popupBackground). You can disable the effect by setting it to **NONE**. |
 
 ## popupColor
 
@@ -375,7 +375,7 @@ Sets the text style for the primary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Text style of the primary index item in the pop-up window.<br>Default value:<br>{<br>size:'24.0vp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Medium,<br> family:'HarmonyOS Sans'<br>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the primary index item in the pop-up window.<br>Default value:<br>{<br>size:'24.0vp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Medium,<br> family:'HarmonyOS Sans'<br>} |
 
 ## popupItemBackgroundColor
 
@@ -447,7 +447,7 @@ Sets the text style for the secondary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Text style of the secondary index item in the pop-up window.<br>Default value:<br>{<br>size:24,<br>weight:FontWeight.Medium<br>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the secondary index item in the pop-up window.<br>Default value:<br>{<br>size:24,<br>weight:FontWeight.Medium<br>} |
 
 ## popupPosition
 
@@ -469,7 +469,7 @@ Sets the position of the pop-up window relative to the center of the indexer's t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Position](../arkts-apis/arkts-arkui-position-i.md) | Yes | Position of the pop-up window relative to the center of the indexer's top border.<br>Default value: **{x: 60.0, y: 48.0}** |
+| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | Yes | Position of the pop-up window relative to the center of the indexer's top border.<br>Default value: **{x: 60.0, y: 48.0}** |
 
 ## popupSelectedColor
 
@@ -565,7 +565,7 @@ Since API version 10, this parameter supports two-way binding through [$$](../..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the selected item.<br>Value range:[0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length – 1]<br>Default value: **0** |
+| index | number | Yes | Index of the selected item.<br>Value range:[0, [arrayValue](arkts-arkui-alphabet-indexer-alphabetindexeroptions-i.md).length – 1]<br>Default value: **0** |
 
 ## selectedBackgroundColor
 
@@ -631,7 +631,7 @@ Sets the text style for the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Text style of the selected item.<br>Default value:<br>API version 11 and earlier:<br>{<br>size:'12.0fp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Regular,<br> family:'HarmonyOS Sans'<br>}<br>API version 12 and later:<br>{<br>size:'10.0vp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Medium,<br>family:'HarmonyOS Sans'<br>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the selected item.<br>Default value:<br>API version 11 and earlier:<br>{<br>size:'12.0fp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Regular,<br> family:'HarmonyOS Sans'<br>}<br>API version 12 and later:<br>{<br>size:'10.0vp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Medium,<br>family:'HarmonyOS Sans'<br>} |
 
 ## usingPopup
 

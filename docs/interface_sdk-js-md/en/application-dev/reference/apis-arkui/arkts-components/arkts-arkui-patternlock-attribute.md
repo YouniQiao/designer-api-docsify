@@ -90,7 +90,7 @@ Sets the background color.
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 9
 
@@ -140,7 +140,7 @@ The callback parameter is an array of digits, where each digit represents the in
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 11
 
@@ -278,7 +278,7 @@ Sets the width and height (same value) of the component. If this attribute is se
 
 > **NOTE**  
 >  
-> When the **PatternLock** component has the universal attribute [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio-1) set  
+> When the **PatternLock** component has the universal attribute [aspectRatio](arkts-arkui-common-commonmethod-c.md#aspectratio-1) set  
 > and the ratio is not equal to 1 (the component is constrained to a rectangle), the nine‑grid pattern is still  
 > drawn as a square, which exceeds the component's bounds.
 

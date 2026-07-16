@@ -34,7 +34,7 @@ Sets the text auto-capitalization mode. This API provides the capability, but ac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [AutoCapitalizationMode](../arkts-apis/arkts-arkui-autocapitalizationmode-e.md) | Yes | Auto-capitalization mode. The default state is inactive. |
+| mode | [AutoCapitalizationMode](../arkts-apis/arkts-arkui-text-common-autocapitalizationmode-e.md) | Yes | Auto-capitalization mode. The default state is inactive. |
 
 ## cancelButton
 
@@ -84,7 +84,7 @@ Sets the caret style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CaretStyle](../arkts-apis/arkts-arkui-caretstyle-i.md) | Yes | Caret style.<br>Default value:<br>{<br>width: '2.0vp',<br>color: '#007DFF'<br>} |
+| value | [CaretStyle](../arkts-apis/arkts-arkui-text-common-caretstyle-i.md) | Yes | Caret style.<br>Default value:<br>{<br>width: '2.0vp',<br>color: '#007DFF'<br>} |
 
 ## compressLeadingPunctuation
 
@@ -99,7 +99,7 @@ Sets whether to enable leading punctuation compression.
 > - Leading punctuation is not compressed by default.  
 >  
 > - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a  
-> line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md).
+> line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -139,7 +139,7 @@ Dragging is not allowed when **CopyOptions.None** is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether the input text can be copied.<br>Default value: **CopyOptions.LocalDevice** |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-enums-copyoptions-e.md) | Yes | Whether the input text can be copied.<br>Default value: **CopyOptions.LocalDevice** |
 
 ## customKeyboard
 
@@ -157,15 +157,15 @@ The custom keyboard is presented by overlaying the original screen. It is not co
 
 The custom keyboard cannot obtain focus, but it blocks gesture events.
 
-By default, the custom keyboard is closed when the input component loses focus. You can also use the [stopEditing](arkts-arkui-searchcontroller-c.md#stopediting-1) API to close the keyboard.
+By default, the custom keyboard is closed when the input component loses focus. You can also use the [stopEditing](arkts-arkui-search-searchcontroller-c.md#stopediting-1) API to close the keyboard.
 
-When setting a custom keyboard, you can bind the [onKeyPreIme](arkts-arkui-commonmethod-c.md#onkeypreime-1) event to prevent input from the physical keyboard.
+When setting a custom keyboard, you can bind the [onKeyPreIme](arkts-arkui-common-commonmethod-c.md#onkeypreime-1) event to prevent input from the physical keyboard.
 
 From API version 23, the [setCustomKeyboardContinueFeature](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature23)API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards,the system changes the keyboard directly without triggering the close and open animations.
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 10
 
@@ -182,7 +182,7 @@ From API version 23, the [setCustomKeyboardContinueFeature](../../../../referenc
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | CustomBuilder \| ComponentContent \| undefined | Yes | Custom keyboard. If the value is **undefined**, the custom keyboard is closed.<br>**Since:** 22 |
-| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) | No | Whether to support keyboard avoidance.<br>**Since:** 12 |
+| options | [KeyboardOptions](arkts-arkui-rich-editor-keyboardoptions-i.md) | No | Whether to support keyboard avoidance.<br>**Since:** 12 |
 
 ## decoration
 
@@ -206,7 +206,7 @@ Sets the color, type, and style of the text decorative line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | Yes | Text decorative line options.<br>Default value: {<br> type:TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>} |
+| value | [TextDecorationOptions](arkts-arkui-common-textdecorationoptions-i.md) | Yes | Text decorative line options.<br>Default value: {<br> type:TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>} |
 
 ## dividerColor
 
@@ -242,7 +242,7 @@ Sets the extended options of the custom menu, including the text content, icon, 
 
 When [disableMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20) or
 
-[disableSystemServiceMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20)is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu-1) callback of **editMenuOptions**.
+[disableSystemServiceMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20)is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-text-common-editmenuoptions-i.md#oncreatemenu-1) callback of **editMenuOptions**.
 
 **Since:** 12
 
@@ -258,7 +258,7 @@ When [disableMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-te
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes | Extended options of the custom menu. |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-text-common-editmenuoptions-i.md) | Yes | Extended options of the custom menu. |
 
 ## enableAutoSpacing
 
@@ -372,7 +372,7 @@ Sets whether to enable entity recognition for selected text. This API only works
 
 When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default.
 
-This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
+This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-copyoptions-i.md) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
 **Since:** 22
 
@@ -412,7 +412,7 @@ Sets the type of the Enter key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key.<br>Default value: **EnterKeyType.Search** |
+| value | [EnterKeyType](arkts-arkui-text-input-enterkeytype-e.md) | Yes | Type of the Enter key.<br>Default value: **EnterKeyType.Search** |
 
 ## fallbackLineSpacing
 
@@ -569,7 +569,7 @@ If **inputFilter** is set and the entered characters are not null, the filtering
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Regular expression. |
-| error | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<string> | No | Filtered-out content to return when regular expression matching fails. |
+| error | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<string> | No | Filtered-out content to return when regular expression matching fails. |
 
 ## keyboardAppearance
 
@@ -847,7 +847,7 @@ Called when a copy operation is performed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<string> | Yes | Callback used to return the copied text content.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<string> | Yes | Callback used to return the copied text content.<br>**Since:** 18 |
 
 ## onCut
 
@@ -869,7 +869,7 @@ Called when a cut operation is performed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<string> | Yes | Callback used to return the cut text content.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<string> | Yes | Callback used to return the cut text content.<br>**Since:** 18 |
 
 ## onDidDelete
 
@@ -893,7 +893,7 @@ Called when text is deleted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<DeleteValue> | Yes | Callback invoked when text is deleted.<br>It is available only for system input methods. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<DeleteValue> | Yes | Callback invoked when text is deleted.<br>It is available only for system input methods. |
 
 ## onDidInsert
 
@@ -917,7 +917,7 @@ Called when text is inserted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<InsertValue> | Yes | Callback invoked when text is inserted.<br>It is available only for system input methods. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<InsertValue> | Yes | Callback invoked when text is inserted.<br>It is available only for system input methods. |
 
 ## onEditChange
 
@@ -941,7 +941,7 @@ Called when the input state changes. The text box is in the editing state when i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> | Yes | Callback for editing state changes. The value **true** indicates that the text is being inserted, and **false** indicates that the text box is out of focus and text cannot be inserted. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<boolean> | Yes | Callback for editing state changes. The value **true** indicates that the text is being inserted, and **false** indicates that the text box is out of focus and text cannot be inserted. |
 
 ## onPaste
 
@@ -985,7 +985,7 @@ Called when the search icon, search button, or soft keyboard search button is cl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<string> | Yes | Search submission callback, which returns the text content currently in the search box.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<string> | Yes | Search submission callback, which returns the text content currently in the search box.<br>**Since:** 18 |
 
 ## onSubmit
 
@@ -1045,15 +1045,15 @@ Called when the search box is about to be bound to an input method.
 
 <!--Del-->
 
-Before the search box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-uicontext-c-sys.md#setkeyboardappearanceconfig-1) API of **UIContext** to set the keyboard style.<!--DelEnd-->
+Before the search box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig-1) API of **UIContext** to set the keyboard style.<!--DelEnd-->
 
-From API version 22, the [setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.md#setextraconfig-1) method of [IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)can be called to set input method extension information. After the input method is bound, it receives this extension information, which can be used to implement custom functionality.
+From API version 22, the [setExtraConfig](../arkts-apis/arkts-arkui-text-common-imeclient-i.md#setextraconfig-1) method of [IMEClient](../arkts-apis/arkts-arkui-text-common-imeclient-i.md)can be called to set input method extension information. After the input method is bound, it receives this extension information, which can be used to implement custom functionality.
 
 **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously.
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 20
 
@@ -1069,7 +1069,7 @@ From API version 22, the [setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<IMEClient> | Yes | Called when the search box is about to be bound to an input method. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<IMEClient> | Yes | Called when the search box is about to be bound to an input method. |
 
 ## onWillChange
 
@@ -1095,7 +1095,7 @@ This callback is triggered after **onWillInsert** and **onWillDelete**, but befo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<EditableTextChangeValue, boolean> | Yes | Callback invoked when the text content is about to change.<br>Returning **true** allows the change to proceed, while returning **false** cancels the change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<EditableTextChangeValue, boolean> | Yes | Callback invoked when the text content is about to change.<br>Returning **true** allows the change to proceed, while returning **false** cancels the change. |
 
 ## onWillCopy
 
@@ -1119,7 +1119,7 @@ Called before using the Clipboard copy menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<string, boolean> | Yes | Callback used to check whether copy is allowed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<string, boolean> | Yes | Callback used to check whether copy is allowed. |
 
 ## onWillCut
 
@@ -1143,7 +1143,7 @@ Called before using the Clipboard cut menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<string, boolean> | Yes | Callback used to check whether cut is allowed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<string, boolean> | Yes | Callback used to check whether cut is allowed. |
 
 ## onWillDelete
 
@@ -1167,7 +1167,7 @@ Called when text is about to be deleted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<DeleteValue, boolean> | Yes | Callback invoked when text is about to be deleted.<br>It returns **true** if the text is deleted; returns **false** otherwise.<br>This callback is not invoked for text preview.<br>It is available only for system input methods. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<DeleteValue, boolean> | Yes | Callback invoked when text is about to be deleted.<br>It returns **true** if the text is deleted; returns **false** otherwise.<br>This callback is not invoked for text preview.<br>It is available only for system input methods. |
 
 ## onWillInsert
 
@@ -1191,7 +1191,7 @@ Called when text is about to be inserted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<InsertValue, boolean> | Yes | Callback invoked when text is about to be inserted.<br>It returns **true** if the text is inserted; returns **false** otherwise.<br>This callback is not invoked for pre-edit or candidate word operations.<br>It is available only for system input methods. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<InsertValue, boolean> | Yes | Callback invoked when text is about to be inserted.<br>It returns **true** if the text is inserted; returns **false** otherwise.<br>This callback is not invoked for pre-edit or candidate word operations.<br>It is available only for system input methods. |
 
 ## placeholderColor
 
@@ -1235,7 +1235,7 @@ Placeholder text style, including the font size, font weight, font family, and f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | No | Placeholder text style. |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | No | Placeholder text style. |
 
 ## searchButton
 
@@ -1262,7 +1262,7 @@ The default font size on wearable devices is 18 fp.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text on the search button located next to the search text box.<br>The Resource type is supported since API version 20.<br>**Since:** 20 |
-| option | [SearchButtonOptions](arkts-arkui-searchbuttonoptions-i.md) | No | Text style of the search button located next to the search text box.<br>Default value:<br>{<br>fontSize: '16fp',<br>fontColor: '#ff3f97e9'<br>}<br>**Since:** 10 |
+| option | [SearchButtonOptions](arkts-arkui-search-searchbuttonoptions-i.md) | No | Text style of the search button located next to the search text box.<br>Default value:<br>{<br>fontSize: '16fp',<br>fontColor: '#ff3f97e9'<br>}<br>**Since:** 10 |
 
 ## searchIcon
 
@@ -1502,7 +1502,7 @@ Sets the text alignment mode in the search text box. Currently, the following al
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textalign-e.md) | Yes | Text alignment mode in the search text box.<br>Default value: **TextAlign.Start** |
+| value | [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md) | Yes | Text alignment mode in the search text box.<br>Default value: **TextAlign.Start** |
 
 ## textDirection
 
@@ -1550,7 +1550,7 @@ The default font size on wearable devices is 18 fp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | No | Text font of the search text box. |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | No | Text font of the search text box. |
 
 ## textIndent
 
@@ -1600,5 +1600,5 @@ Different **SearchType** values trigger corresponding keyboard types and enforce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SearchType](arkts-arkui-searchtype-e.md) | Yes | Text box type.<br>Default value: **SearchType.NORMAL** |
+| value | [SearchType](arkts-arkui-search-searchtype-e.md) | Yes | Text box type.<br>Default value: **SearchType.NORMAL** |
 

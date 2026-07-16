@@ -31,5 +31,5 @@ Defines a **SelectionMenu** component. When the input parameter is empty, both t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | Yes | Configuration options of the **SelectionMenu** component. |
+| options | [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Yes | Configuration options of the **SelectionMenu** component. |
 

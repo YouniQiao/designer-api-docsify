@@ -30,9 +30,9 @@ Index of an application clone. It takes effect only for [application clones](../
 readonly applicationInfo: ApplicationInfo
 ```
 
-Application configuration information <!--Del-->. The information can be obtained by passing in **GET_ABILITY_INFO_WITH_APPLICATION** to the **abilityFlags** parameter of [queryAbilityInfo](arkts-ability-queryabilityinfo-f-sys.md#queryabilityinfo-2)<!--DelEnd-->.
+Application configuration information <!--Del-->. The information can be obtained by passing in **GET_ABILITY_INFO_WITH_APPLICATION** to the **abilityFlags** parameter of [queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md#queryabilityinfo-2)<!--DelEnd-->.
 
-This field is not returned when the [getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)or [getBundleInfo](arkts-ability-getbundleinfo-f.md#getbundleinfo-2)is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md).appInfo object.
+This field is not returned when the [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself-1)or [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo-2)is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md).appInfo object.
 
 **Type:** ApplicationInfo
 
@@ -122,7 +122,7 @@ Device types supported by the ability. The value is derived from that of [device
 readonly enabled: boolean
 ```
 
-Whether the ability is available, that is, whether it can be started or queried. **true** if available, **false** otherwise. If the ability is unavailable, you must call [getAbilityInfo](arkts-ability-getabilityinfo-f.md#getabilityinfo-1) with **AbilityFlag** set to **GET_ABILITY_INFO_WITH_DISABLE** to query the ability.
+Whether the ability is available, that is, whether it can be started or queried. **true** if available, **false** otherwise. If the ability is unavailable, you must call [getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getabilityinfo-1) with **AbilityFlag** set to **GET_ABILITY_INFO_WITH_DISABLE** to query the ability.
 
 **Type:** boolean
 
@@ -216,7 +216,7 @@ readonly label: string
 
 Resource descriptor of the ability name visible to users. It corresponds to the **label** field under **abilities** in the [module.json5](../../../../quick-start/module-configuration-file.md) file.
 
-Note: Starting from API version 20, if [bundleManager.getAbilityInfo](arkts-ability-getabilityinfo-f.md#getabilityinfo-1) is used to obtain ability information, this field is the ability name visible to users.
+Note: Starting from API version 20, if [bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getabilityinfo-1) is used to obtain ability information, this field is the ability name visible to users.
 
 **Type:** string
 
@@ -252,7 +252,7 @@ Resource ID of the ability label. It is automatically generated during compilati
 readonly launchType: bundleManager.LaunchType
 ```
 
-Ability launch mode, that is, whether it can be started in multiton mode. For details, see [LaunchType](arkts-ability-launchtype-e.md).
+Ability launch mode, that is, whether it can be started in multiton mode. For details, see [LaunchType](arkts-ability-bundlemanager-launchtype-e.md).
 
 **Type:** bundleManager.LaunchType
 
@@ -270,7 +270,7 @@ Ability launch mode, that is, whether it can be started in multiton mode. For de
 readonly metadata: Array<Metadata>
 ```
 
-Metadata of the ability. You can configure the system-defined parameters to use the capabilities provided by the system, for example, [shortcuts](../../../../quick-start/module-configuration-file.md#shortcuts) and [window metadata configuration](../../../../windowmanager/window-config-m.md). You can also customize the parameters and call [getBundleInfoForSelf](arkts-ability-getbundleinfoforself-f.md#getbundleinfoforself-1)to obtain the parameters by passing **GET_BUNDLE_INFO_WITH_HAP_MODULE**, **GET_BUNDLE_INFO_WITH_ABILITY**, and **GET_BUNDLE_INFO_WITH_METADATA** to **bundleFlags**.
+Metadata of the ability. You can configure the system-defined parameters to use the capabilities provided by the system, for example, [shortcuts](../../../../quick-start/module-configuration-file.md#shortcuts) and [window metadata configuration](../../../../windowmanager/window-config-m.md). You can also customize the parameters and call [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself-1)to obtain the parameters by passing **GET_BUNDLE_INFO_WITH_HAP_MODULE**, **GET_BUNDLE_INFO_WITH_ABILITY**, and **GET_BUNDLE_INFO_WITH_METADATA** to **bundleFlags**.
 
 **Type:** Array<Metadata>
 
@@ -324,7 +324,7 @@ Ability name.
 readonly orientation: bundleManager.DisplayOrientation
 ```
 
-Ability display orientation. It is derived from the **orientation** field under **abilities** in the [module.json5](../../../../quick-start/module-configuration-file.md) file. If **orientation** in the file is set to an enumerated value, this property is a non-zero value. For details about the available values, see [displayOrientation](arkts-ability-displayorientation-e.md). If **orientation** in the file is set to a resource index, the value of this property is **0**.
+Ability display orientation. It is derived from the **orientation** field under **abilities** in the [module.json5](../../../../quick-start/module-configuration-file.md) file. If **orientation** in the file is set to an enumerated value, this property is a non-zero value. For details about the available values, see [displayOrientation](arkts-ability-bundlemanager-displayorientation-e.md). If **orientation** in the file is set to a resource index, the value of this property is **0**.
 
 **Type:** bundleManager.DisplayOrientation
 

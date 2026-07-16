@@ -1,16 +1,18 @@
 # ValuesBucket
 
 ```TypeScript
-type ValuesBucket = collections.Map<string, ValueType>
+export type ValuesBucket = Record<string, ValueType | Uint8Array | null>
 ```
 
-Represents the KV pair of the [ValueType](arkts-arkdata-valuetype-t.md) data that can be passed across threads.
+Defines the types of the key and value in a KV pair. This type is not multi-thread safe. If a **ValuesBucket** instance is operated by multiple threads at the same time in an application, use a lock for it.
 
-**Since:** 12
+**Since:** 10
 
-<!--Device-sendableRelationalStore-type ValuesBucket = collections.Map<string, ValueType>--><!--Device-sendableRelationalStore-type ValuesBucket = collections.Map<string, ValueType>-End-->
+**Model restriction:** This API can be used only in the stage model.
 
-**System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+<!--Device-unnamed-export type ValuesBucket = Record<string, ValueType | Uint8Array | null>--><!--Device-unnamed-export type ValuesBucket = Record<string, ValueType | Uint8Array | null>-End-->
 
-**Property type:** collections.Map<string, ValueType>
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Property type:** Record<string, ValueType | Uint8Array | null>
 

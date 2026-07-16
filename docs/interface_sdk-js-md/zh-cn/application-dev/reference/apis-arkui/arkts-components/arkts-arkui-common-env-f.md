@@ -22,7 +22,7 @@ declare function Env<T>(key: SystemEnvKey<T> | SystemProperties): PropertyDecora
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | [SystemEnvKey](arkts-arkui-systemenvkey-c.md)<T> \| SystemProperties | 是 | 用户输入的键值。【自22至26】 |
+| key | [SystemEnvKey](arkts-arkui-common-systemenvkey-c.md)<T> \| SystemProperties | 是 | 用户输入的键值。【自22至26】 |
 
 **返回值：**
 

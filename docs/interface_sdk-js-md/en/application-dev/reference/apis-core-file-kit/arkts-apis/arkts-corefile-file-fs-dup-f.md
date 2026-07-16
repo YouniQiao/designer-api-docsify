@@ -30,7 +30,7 @@ Duplicates the file descriptor and returns the corresponding **File** object.
 
 | Type | Description |
 | --- | --- |
-| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-file-i.md) | File object opened. |
+| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | File object opened. |
 
 **Error codes:**
 

@@ -105,7 +105,7 @@ Set hdrBrightness for XComponent.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | brightness | number | Yes | control the brightness of HDR video |
-| type | [HdrType](arkts-arkui-hdrtype-e.md) | No | the HDR type of the XComponent |
+| type | [HdrType](arkts-arkui-xcomponent-hdrtype-e.md) | No | the HDR type of the XComponent |
 
 ## onDestroy
 

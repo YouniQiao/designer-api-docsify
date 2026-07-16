@@ -26,15 +26,15 @@ clone a node or a subtree whose root node is the input node
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | input node to be cloned |
-| parent | [Node](arkts-arkgraphics3d-node-i.md) | Yes | the parent node which the cloned node will be set as its child node |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | input node to be cloned |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | the parent node which the cloned node will be set as its child node |
 | name | string | Yes | the name of the cloned node |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-node-i.md) | the clone result, return null if clone is failed. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | the clone result, return null if clone is failed. |
 
 ## createComponent
 
@@ -54,14 +54,14 @@ Create a new component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | The node the component is attached to |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | The node the component is attached to |
 | name | string | Yes | The name of the component to load. Valid names are defined by each plugin. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SceneComponent> | - The newly added component. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<SceneComponent> | - The newly added component. |
 
 ## destroy
 
@@ -95,14 +95,14 @@ Get component by name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | The node component is attached to. |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | The node component is attached to. |
 | name | string | Yes | name of the component |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SceneComponent](arkts-arkgraphics3d-scenecomponent-i.md) | @syscap SystemCapability.ArkUi.Graphics3D |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) | @syscap SystemCapability.ArkUi.Graphics3D |
 
 ## getDefaultRenderContext
 
@@ -122,7 +122,7 @@ Get default render context
 
 | Type | Description |
 | --- | --- |
-| [RenderContext](arkts-arkgraphics3d-rendercontext-i.md) | -- The default RenderContext instance@static |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | -- The default RenderContext instance@static |
 
 ## getNodeByPath
 
@@ -143,13 +143,13 @@ Get a node by path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | the path of the node |
-| type | [NodeType](arkts-arkgraphics3d-nodetype-e.md) | No | verify the type of node, if it does not match, return null |
+| type | [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md) | No | verify the type of node, if it does not match, return null |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-node-i.md) | if the node is found by it's path |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | if the node is found by it's path |
 
 ## getResourceFactory
 
@@ -169,7 +169,7 @@ Get resource factory.
 
 | Type | Description |
 | --- | --- |
-| [SceneResourceFactory](arkts-arkgraphics3d-sceneresourcefactory-i.md) | if the node is found by it's path |
+| [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | if the node is found by it's path |
 
 ## importNode
 
@@ -190,14 +190,14 @@ Import node into the scene. The original node may come from separate Scene.The n
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | The name of the newly created node. |
-| node | [Node](arkts-arkgraphics3d-node-i.md) | Yes | The node to be imported. |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | The node to be imported. |
 | parent | Node \| null | Yes | The parent node or null for root |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-node-i.md) | The newly created node. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | The newly created node. |
 
 ## importScene
 
@@ -225,7 +225,7 @@ Import scene into the scene as a node. The node hierarchy will appear under the 
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-node-i.md) | The newly created node. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | The newly created node. |
 
 ## load
 
@@ -251,7 +251,7 @@ Create a new scene from a ResourceStr.If uri is not provided, will return an emp
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Scene> | promise a scene@static |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Scene> | promise a scene@static |
 
 ## renderFrame
 
@@ -271,7 +271,7 @@ A new frame is rendered for all active camera.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [RenderParameters](arkts-arkgraphics3d-renderparameters-i.md) | No | Rendering parameters |
+| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | No | Rendering parameters |
 
 **Return value:**
 

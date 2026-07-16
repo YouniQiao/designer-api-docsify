@@ -18,8 +18,8 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 
 | Name | Description |
 | --- | --- |
-| [EditorEventInfo](arkts-arkui-editoreventinfo-i.md) | Provides the information about the selected content. |
-| [EditorMenuOptions](arkts-arkui-editormenuoptions-i.md) | Describes the edit menu options. |
-| [ExpandedMenuOptions](arkts-arkui-expandedmenuoptions-i.md) | Describes the expanded drop-down menu options.Inherits from [MenuItemOptions](../arkts-components/arkts-arkui-menuitemoptions-i.md). |
-| [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | Defines the configuration options of the **SelectionMenu** component. |
+| [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | Provides the information about the selected content. |
+| [EditorMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-editormenuoptions-i.md) | Describes the edit menu options. |
+| [ExpandedMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md) | Describes the expanded drop-down menu options.Inherits from [MenuItemOptions](../arkts-components/arkts-arkui-menu-item-menuitemoptions-i.md). |
+| [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Defines the configuration options of the **SelectionMenu** component. |
 

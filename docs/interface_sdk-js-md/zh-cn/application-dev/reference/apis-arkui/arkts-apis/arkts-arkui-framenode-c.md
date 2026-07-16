@@ -147,7 +147,7 @@ cancelAnimations(properties: AnimationPropertyType[]): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| properties | [AnimationPropertyType](arkts-arkui-animationpropertytype-e.md)[] | 是 | 待取消的动画属性枚举数组。可以一次取消一个节点上的多个属性的动画。 |
+| properties | [AnimationPropertyType](arkts-arkui-enums-animationpropertytype-e.md)[] | 是 | 待取消的动画属性枚举数组。可以一次取消一个节点上的多个属性的动画。 |
 
 **返回值：**
 
@@ -225,14 +225,14 @@ convertPosition(position: Position, targetNode: FrameNode): Position
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-position-i.md) | 是 | 当前节点坐标系中的相对坐标。 |
+| position | [Position](arkts-arkui-units-position-i.md) | 是 | 当前节点坐标系中的相对坐标。 |
 | targetNode | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 本次坐标转换的目标节点，转换得到的点坐标就是该节点坐标系中的相对坐标。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 目标节点局部坐标系中的转换坐标。 |
+| [Position](arkts-arkui-units-position-i.md) | 目标节点局部坐标系中的转换坐标。 |
 
 **错误码：**
 
@@ -263,13 +263,13 @@ convertPositionFromWindow(positionByWindow: Position): Position
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| positionByWindow | [Position](arkts-arkui-position-i.md) | 是 | 当前节点所在窗口的坐标系中的相对坐标。 |
+| positionByWindow | [Position](arkts-arkui-units-position-i.md) | 是 | 当前节点所在窗口的坐标系中的相对坐标。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 当前节点坐标系中的转换坐标。 |
+| [Position](arkts-arkui-units-position-i.md) | 当前节点坐标系中的转换坐标。 |
 
 **错误码：**
 
@@ -300,13 +300,13 @@ convertPositionToWindow(positionByLocal: Position): Position
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| positionByLocal | [Position](arkts-arkui-position-i.md) | 是 | 当前节点坐标系中的相对坐标。 |
+| positionByLocal | [Position](arkts-arkui-units-position-i.md) | 是 | 当前节点坐标系中的相对坐标。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 当前节点所在窗口的坐标系中的转换坐标。 |
+| [Position](arkts-arkui-units-position-i.md) | 当前节点所在窗口的坐标系中的转换坐标。 |
 
 **错误码：**
 
@@ -337,10 +337,10 @@ createAnimation(property: AnimationPropertyType, startValue: Optional<number[]>,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | [AnimationPropertyType](arkts-arkui-animationpropertytype-e.md) | 是 | 动画属性枚举。 |
+| property | [AnimationPropertyType](arkts-arkui-enums-animationpropertytype-e.md) | 是 | 动画属性枚举。 |
 | startValue | [Optional](../arkts-components/arkts-arkui-optional-t.md)<number[]> | 是 | 动画属性的起始值。取值为undefined或数组，取值为数组时数组长度需要和属性枚举匹配。如果为undefined则表示不显式指定动画初值，节点上一次设置的属性终值为此次动画的起点值。如果取值为数组，<br/>- 对于AnimationPropertyType.ROTATION，取值格式为[rotationX, rotationY, rotationZ]，单位为度（°），表示绕x、y、z轴的旋转角。<br/>- 对于AnimationPropertyType.TRANSLATION，取值格式为[translateX, translateY]，单位为px，表示沿x、y轴的平移量。<br/>- 对于AnimationPropertyType.SCALE，取值格式为[scaleX, scaleY]，表示x、y方向的缩放比例。<br/>- 对于AnimationPropertyType.OPACITY，取值格式为[opacity]，表示不透明度。opacity的取值范围为[0, 1]。<br/>当节点上从未设置过该属性时，需要显式指定startValue才能正常创建动画。当节点上已经设置过属性（如第二次及之后创建动画），则推荐不显式指定startValue或者显式指定startValue为上一次的终值，表示使用上一次的终值作为新的动画起点，避免起始值跳变。 |
 | endValue | number[] | 是 | 动画属性的终止值。取值为数组，数组长度需要和属性枚举匹配。<br/>- 对于AnimationPropertyType.ROTATION，取值格式为[rotationX, rotationY, rotationZ]，单位为度（°），表示绕x、y、z轴的旋转角。<br/>- 对于AnimationPropertyType.TRANSLATION，取值格式为[translateX, translateY]，单位为px，表示沿x、y轴的平移量。<br/>- 对于AnimationPropertyType.SCALE，取值格式为[scaleX, scaleY]，表示x、y方向的缩放比例。<br/>- 对于AnimationPropertyType.OPACITY，取值格式为[opacity]，表示不透明度。opacity的取值范围为[0, 1]。 |
-| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 | 动画参数。包含时长、动画曲线、结束回调等参数。 |
+| param | [AnimateParam](../arkts-components/arkts-arkui-common-animateparam-i.md) | 是 | 动画参数。包含时长、动画曲线、结束回调等参数。 |
 
 **返回值：**
 
@@ -476,7 +476,7 @@ getChild(index: number, expandMode?: ExpandMode): FrameNode | null
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | number | 是 | 需要查询的子节点的序列号。<br/>index取值范围为[0, +∞)，若当前节点有n个子节点，index取值有效范围为[0, n-1]。 |
-| expandMode | [ExpandMode](arkts-arkui-expandmode-e.md) | 否 | 指定子节点展开模式。<br/>默认值：ExpandMode.EXPAND |
+| expandMode | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | 否 | 指定子节点展开模式。<br/>默认值：ExpandMode.EXPAND |
 
 **返回值：**
 
@@ -530,7 +530,7 @@ getChildrenCount(countMode?: ChildrenCountMode): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| countMode | [ChildrenCountMode](arkts-arkui-childrencountmode-e.md) | 否 | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
+| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | 否 | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
 
 **返回值：**
 
@@ -560,7 +560,7 @@ getCrossLanguageOptions(): CrossLanguageOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [CrossLanguageOptions](arkts-arkui-crosslanguageoptions-i.md) | 跨ArkTS语言访问选项。 |
+| [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) | 跨ArkTS语言访问选项。 |
 
 ## getCustomProperty
 
@@ -722,7 +722,7 @@ getGlobalPositionOnDisplay(): Position
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 节点相对于全局屏幕的位置偏移，单位为VP。 |
+| [Position](arkts-arkui-units-position-i.md) | 节点相对于全局屏幕的位置偏移，单位为VP。 |
 
 ## getId
 
@@ -798,13 +798,13 @@ getInteractionEventBindingInfo(eventType: EventQueryType): InteractionEventBindi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventType | [EventQueryType](arkts-arkui-eventquerytype-e.md) | 是 | 要查询的交互事件类型。 |
+| eventType | [EventQueryType](arkts-arkui-enums-eventquerytype-e.md) | 是 | 要查询的交互事件类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [InteractionEventBindingInfo](arkts-arkui-interactioneventbindinginfo-i.md) | Returns an **InteractionEventBindingInfo** object containing event binding details if the interaction event is bound to the current node; returns **undefined** otherwise. |
+| [InteractionEventBindingInfo](arkts-arkui-framenode-interactioneventbindinginfo-i.md) | Returns an **InteractionEventBindingInfo** object containing event binding details if the interaction event is bound to the current node; returns **undefined** otherwise. |
 
 ## getLastChildIndexWithoutExpand
 
@@ -852,7 +852,7 @@ getLayoutPosition(): Position
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 节点布局后相对于父组件的位置偏移，单位为PX。 |
+| [Position](arkts-arkui-units-position-i.md) | 节点布局后相对于父组件的位置偏移，单位为PX。 |
 
 ## getMeasuredSize
 
@@ -876,7 +876,7 @@ getMeasuredSize(): Size
 
 | 类型 | 说明 |
 | --- | --- |
-| [Size](../arkts-components/arkts-arkui-size-i.md) | 节点测量后的大小，单位为PX。 |
+| [Size](../arkts-components/arkts-arkui-canvas-size-i.md) | 节点测量后的大小，单位为PX。 |
 
 ## getNextSibling
 
@@ -924,7 +924,7 @@ getNodePropertyValue(property: AnimationPropertyType): number[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | [AnimationPropertyType](arkts-arkui-animationpropertytype-e.md) | 是 | 动画属性枚举。 |
+| property | [AnimationPropertyType](arkts-arkui-enums-animationpropertytype-e.md) | 是 | 动画属性枚举。 |
 
 **返回值：**
 
@@ -1026,7 +1026,7 @@ getPositionToParent(): Position
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 节点相对于父组件的位置偏移，单位为VP。 |
+| [Position](arkts-arkui-units-position-i.md) | 节点相对于父组件的位置偏移，单位为VP。 |
 
 ## getPositionToParentWithTransform
 
@@ -1034,7 +1034,7 @@ getPositionToParent(): Position
 getPositionToParentWithTransform(): Position
 ```
 
-获取FrameNode相对于父组件带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](../arkts-components/arkts-arkui-commonmethod-c.md#transform-1),[translate](../arkts-components/arkts-arkui-commonmethod-c.md#translate-1)等，返回的坐标是组件布局时左上角变换后的坐标。
+获取FrameNode相对于父组件带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](../arkts-components/arkts-arkui-common-commonmethod-c.md#transform-1),[translate](../arkts-components/arkts-arkui-common-commonmethod-c.md#translate-1)等，返回的坐标是组件布局时左上角变换后的坐标。
 
 **起始版本：** 12
 
@@ -1050,7 +1050,7 @@ getPositionToParentWithTransform(): Position
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 节点相对于父组件的位置偏移，单位为VP。 当设置了其他（比如：transform, translate等）绘制属性，由于浮点数精度的影响，返回值会有微小偏差。 |
+| [Position](arkts-arkui-units-position-i.md) | 节点相对于父组件的位置偏移，单位为VP。 当设置了其他（比如：transform, translate等）绘制属性，由于浮点数精度的影响，返回值会有微小偏差。 |
 
 ## getPositionToScreen
 
@@ -1074,7 +1074,7 @@ getPositionToScreen(): Position
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 节点相对于屏幕的位置偏移，单位为VP。 |
+| [Position](arkts-arkui-units-position-i.md) | 节点相对于屏幕的位置偏移，单位为VP。 |
 
 ## getPositionToScreenWithTransform
 
@@ -1082,7 +1082,7 @@ getPositionToScreen(): Position
 getPositionToScreenWithTransform(): Position
 ```
 
-获取FrameNode相对于屏幕带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](../arkts-components/arkts-arkui-commonmethod-c.md#transform-1),[translate](../arkts-components/arkts-arkui-commonmethod-c.md#translate-1)等，返回的坐标是组件布局时左上角变换后的坐标。
+获取FrameNode相对于屏幕带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](../arkts-components/arkts-arkui-common-commonmethod-c.md#transform-1),[translate](../arkts-components/arkts-arkui-common-commonmethod-c.md#translate-1)等，返回的坐标是组件布局时左上角变换后的坐标。
 
 **起始版本：** 12
 
@@ -1098,7 +1098,7 @@ getPositionToScreenWithTransform(): Position
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 节点相对于屏幕的位置偏移，单位为VP。 当设置了其他（比如：transform, translate等）绘制属性，由于浮点数精度的影响，返回值会有微小偏差。 |
+| [Position](arkts-arkui-units-position-i.md) | 节点相对于屏幕的位置偏移，单位为VP。 当设置了其他（比如：transform, translate等）绘制属性，由于浮点数精度的影响，返回值会有微小偏差。 |
 
 ## getPositionToWindow
 
@@ -1122,7 +1122,7 @@ getPositionToWindow(): Position
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 节点相对于窗口的位置偏移，单位为VP。 |
+| [Position](arkts-arkui-units-position-i.md) | 节点相对于窗口的位置偏移，单位为VP。 |
 
 ## getPositionToWindowWithTransform
 
@@ -1130,7 +1130,7 @@ getPositionToWindow(): Position
 getPositionToWindowWithTransform(): Position
 ```
 
-获取FrameNode相对于窗口带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](../arkts-components/arkts-arkui-commonmethod-c.md#transform-1),[translate](../arkts-components/arkts-arkui-commonmethod-c.md#translate-1)等，返回的坐标是组件布局时左上角变换后的坐标。
+获取FrameNode相对于窗口带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](../arkts-components/arkts-arkui-common-commonmethod-c.md#transform-1),[translate](../arkts-components/arkts-arkui-common-commonmethod-c.md#translate-1)等，返回的坐标是组件布局时左上角变换后的坐标。
 
 **起始版本：** 12
 
@@ -1146,7 +1146,7 @@ getPositionToWindowWithTransform(): Position
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | 节点相对于窗口的位置偏移，单位为VP。 当设置了其他（比如：transform, translate等）绘制属性，由于浮点数精度的影响，返回值会有微小偏差。 |
+| [Position](arkts-arkui-units-position-i.md) | 节点相对于窗口的位置偏移，单位为VP。 当设置了其他（比如：transform, translate等）绘制属性，由于浮点数精度的影响，返回值会有微小偏差。 |
 
 ## getPreviousSibling
 
@@ -1242,7 +1242,7 @@ getUserConfigBorderWidth(): Edges<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Edges](arkts-arkui-edges-i.md)<LengthMetrics> | 用户设置的边框宽度。 |
+| [Edges](arkts-arkui-units-edges-i.md)<LengthMetrics> | 用户设置的边框宽度。 |
 
 ## getUserConfigMargin
 
@@ -1266,7 +1266,7 @@ getUserConfigMargin(): Edges<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Edges](arkts-arkui-edges-i.md)<LengthMetrics> | 用户设置的外边距。 |
+| [Edges](arkts-arkui-units-edges-i.md)<LengthMetrics> | 用户设置的外边距。 |
 
 ## getUserConfigPadding
 
@@ -1290,7 +1290,7 @@ getUserConfigPadding(): Edges<LengthMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Edges](arkts-arkui-edges-i.md)<LengthMetrics> | 用户设置的内边距。 |
+| [Edges](arkts-arkui-units-edges-i.md)<LengthMetrics> | 用户设置的内边距。 |
 
 ## getUserConfigSize
 
@@ -1612,7 +1612,7 @@ layout(position: Position): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-position-i.md) | 是 | 组件进行布局时使用的位置信息。 |
+| position | [Position](arkts-arkui-units-position-i.md) | 是 | 组件进行布局时使用的位置信息。 |
 
 ## measure
 
@@ -1636,7 +1636,7 @@ measure(constraint: LayoutConstraint): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| constraint | [LayoutConstraint](arkts-arkui-layoutconstraint-i.md) | 是 | 组件进行测量时使用的父容器布局约束。 |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | 是 | 组件进行测量时使用的父容器布局约束。 |
 
 ## moveTo
 
@@ -1648,8 +1648,8 @@ moveTo(targetParent: FrameNode, index?: number): void
 
 > **说明：**  
 >  
-> 当前仅支持以下类型的[TypedFrameNode](arkts-arkui-typedframenode-i.md)进行移动操作：[Stack](arkts-arkui-stack-t.md)、  
-> [XComponent](arkts-arkui-xcomponent-t.md)。对于其他类型的节点，移动操作不会生效。  
+> 当前仅支持以下类型的[TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)进行移动操作：[Stack](arkts-arkui-typenode-stack-t.md)、  
+> [XComponent](arkts-arkui-typenode-xcomponent-t.md)。对于其他类型的节点，移动操作不会生效。  
 >  
 > 当前仅支持根节点为以下类型组件的[BuilderNode](arkts-arkui-buildernode-c.md)进行移动操作：[Stack](../arkts-components/arkts-arkui-stack.md)、  
 > [XComponent](../arkts-components/arkts-arkui-xcomponent.md)、[EmbeddedComponent](../arkts-components/arkts-arkui-embeddedcomponent.md)。对于其他类型的组件，移动操作不会生效。
@@ -1686,7 +1686,7 @@ onDraw?(context: DrawContext): void
 
 FrameNode的自绘制方法，该方法会重写默认绘制方法，在FrameNode进行内容绘制时被调用。
 
-该接口的[DrawContext](arkts-arkui-drawcontext-c.md)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见[调整自定义绘制Canvas的变换矩阵](../../../../ui/arkts-user-defined-arktsNode-frameNode.md#调整自定义绘制canvas的变换矩阵)。
+该接口的[DrawContext](arkts-arkui-graphics-drawcontext-c.md)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见[调整自定义绘制Canvas的变换矩阵](../../../../ui/arkts-user-defined-arktsNode-frameNode.md#调整自定义绘制canvas的变换矩阵)。
 
 **起始版本：** 12
 
@@ -1726,7 +1726,7 @@ FrameNode的自定义布局方法，该方法会重写默认布局方法，在Fr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-position-i.md) | 是 | 组件进行布局时使用的位置信息。 |
+| position | [Position](arkts-arkui-units-position-i.md) | 是 | 组件进行布局时使用的位置信息。 |
 
 ## onMeasure
 
@@ -1750,7 +1750,7 @@ FrameNode的自定义测量方法，该方法会重写默认测量方法，在Fr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| constraint | [LayoutConstraint](arkts-arkui-layoutconstraint-i.md) | 是 | 组件进行测量时使用的布局约束。 |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | 是 | 组件进行测量时使用的布局约束。 |
 
 ## recycle
 
@@ -1882,16 +1882,16 @@ setCrossLanguageOptions(options: CrossLanguageOptions): void
 
 > **说明：**  
 >  
-> 当前仅支持[Scroll](arkts-arkui-scroll-t.md), [Swiper](arkts-arkui-swiper-t.md)，[List](arkts-arkui-list-t.md)，  
-> [ListItem](arkts-arkui-listitem-t.md)，[ListItemGroup](arkts-arkui-listitemgroup-t.md)，  
-> [WaterFlow](arkts-arkui-waterflow-t.md)，[FlowItem](arkts-arkui-flowitem-t.md)，[Grid](arkts-arkui-grid-t.md)，  
-> [GridItem](arkts-arkui-griditem-t.md)，[TextInput](arkts-arkui-textinput-t.md)，[TextArea](arkts-arkui-textarea-t.md)，  
-> [Column](arkts-arkui-column-t.md)，[Row](arkts-arkui-row-t.md)，[Stack](arkts-arkui-stack-t.md)，  
-> [Flex](arkts-arkui-flex-t.md)，[RelativeContainer](arkts-arkui-relativecontainer-t.md)，  
-> [Progress](arkts-arkui-progress-t.md)，[LoadingProgress](arkts-arkui-loadingprogress-t.md)，  
-> [Image](arkts-arkui-image-t.md)，[Button](arkts-arkui-button-t.md)，[CheckBox](arkts-arkui-checkbox-t.md)，  
-> [Radio](arkts-arkui-radio-t.md)，[Slider](arkts-arkui-slider-t.md)，[Toggle](arkts-arkui-toggle-t.md)，  
-> [XComponent](arkts-arkui-xcomponent-t.md)类型的[TypedFrameNode](arkts-arkui-typedframenode-i.md)设置跨ArkTS语言访问选项。
+> 当前仅支持[Scroll](arkts-arkui-typenode-scroll-t.md), [Swiper](arkts-arkui-typenode-swiper-t.md)，[List](arkts-arkui-typenode-list-t.md)，  
+> [ListItem](arkts-arkui-typenode-listitem-t.md)，[ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md)，  
+> [WaterFlow](arkts-arkui-typenode-waterflow-t.md)，[FlowItem](arkts-arkui-typenode-flowitem-t.md)，[Grid](arkts-arkui-typenode-grid-t.md)，  
+> [GridItem](arkts-arkui-typenode-griditem-t.md)，[TextInput](arkts-arkui-typenode-textinput-t.md)，[TextArea](arkts-arkui-typenode-textarea-t.md)，  
+> [Column](arkts-arkui-typenode-column-t.md)，[Row](arkts-arkui-typenode-row-t.md)，[Stack](arkts-arkui-typenode-stack-t.md)，  
+> [Flex](arkts-arkui-typenode-flex-t.md)，[RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md)，  
+> [Progress](arkts-arkui-typenode-progress-t.md)，[LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md)，  
+> [Image](arkts-arkui-typenode-image-t.md)，[Button](arkts-arkui-typenode-button-t.md)，[CheckBox](arkts-arkui-typenode-checkbox-t.md)，  
+> [Radio](arkts-arkui-typenode-radio-t.md)，[Slider](arkts-arkui-typenode-slider-t.md)，[Toggle](arkts-arkui-typenode-toggle-t.md)，  
+> [XComponent](arkts-arkui-typenode-xcomponent-t.md)类型的[TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)设置跨ArkTS语言访问选项。
 
 **起始版本：** 15
 
@@ -1907,7 +1907,7 @@ setCrossLanguageOptions(options: CrossLanguageOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CrossLanguageOptions](arkts-arkui-crosslanguageoptions-i.md) | 是 | 跨ArkTS语言访问选项。 |
+| options | [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) | 是 | 跨ArkTS语言访问选项。 |
 
 **错误码：**
 
@@ -1937,7 +1937,7 @@ setLayoutPosition(position: Position): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-position-i.md) | 是 | FrameNode的布局后的位置。 |
+| position | [Position](arkts-arkui-units-position-i.md) | 是 | FrameNode的布局后的位置。 |
 
 ## setMeasuredSize
 
@@ -1961,7 +1961,7 @@ setMeasuredSize(size: Size): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [Size](../arkts-components/arkts-arkui-size-i.md) | 是 | FrameNode的测量后的尺寸。 |
+| size | [Size](../arkts-components/arkts-arkui-canvas-size-i.md) | 是 | FrameNode的测量后的尺寸。 |
 
 ## setNeedsLayout
 

@@ -82,7 +82,7 @@ disappearTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号、字体粗细。默认值： { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号、字体粗细。默认值： { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } |
 
 ## disappearTextStyle
 
@@ -232,7 +232,7 @@ onDateChange(callback: Callback<Date>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Date> | 是 | 返回选中的时间，年、月、日为选中的日期，时、分取决于当前系统时间的时、分，秒恒为00。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<Date> | 是 | 返回选中的时间，年、月、日为选中的日期，时、分取决于当前系统时间的时、分，秒恒为00。<br>**起始版本：** 18 |
 
 ## onDateChange
 
@@ -244,7 +244,7 @@ onDateChange(callback: Optional<Callback<Date>>)
 
 > **说明：**  
 >  
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 18
 
@@ -284,7 +284,7 @@ selectedTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。默认值： { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } } |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。默认值： { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } } |
 
 ## selectedTextStyle
 
@@ -332,7 +332,7 @@ textStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。默认值： { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } } |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。默认值： { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } } |
 
 ## textStyle
 

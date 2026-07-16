@@ -22,17 +22,17 @@ import { wifiext } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [disableHotspot](arkts-connectivity-disablehotspot-f.md#disablehotspot-1) | Disables a Wi-Fi hotspot. |
-| [enableHotspot](arkts-connectivity-enablehotspot-f.md#enablehotspot-1) | Enables a Wi-Fi hotspot. |
-| [getPowerModel](arkts-connectivity-getpowermodel-f.md#getpowermodel-1) | Obtains the current Wi-Fi power mode. |
-| [getPowerModel](arkts-connectivity-getpowermodel-f.md#getpowermodel-2) | Obtains the current Wi-Fi power mode. |
-| [getSupportedPowerModel](arkts-connectivity-getsupportedpowermodel-f.md#getsupportedpowermodel-1) | Obtains the supported power model. |
-| [getSupportedPowerModel](arkts-connectivity-getsupportedpowermodel-f.md#getsupportedpowermodel-2) | Obtains the supported power model. |
-| [setPowerModel](arkts-connectivity-setpowermodel-f.md#setpowermodel-1) | Set the current Wi-Fi power mode. |
+| [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md#disablehotspot-1) | Disables a Wi-Fi hotspot. |
+| [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md#enablehotspot-1) | Enables a Wi-Fi hotspot. |
+| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md#getpowermodel-1) | Obtains the current Wi-Fi power mode. |
+| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md#getpowermodel-2) | Obtains the current Wi-Fi power mode. |
+| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md#getsupportedpowermodel-1) | Obtains the supported power model. |
+| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md#getsupportedpowermodel-2) | Obtains the supported power model. |
+| [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md#setpowermodel-1) | Set the current Wi-Fi power mode. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PowerModel](arkts-connectivity-powermodel-e.md) | The power model enumeration. |
+| [PowerModel](arkts-connectivity-wifiext-powermodel-e.md) | The power model enumeration. |
 

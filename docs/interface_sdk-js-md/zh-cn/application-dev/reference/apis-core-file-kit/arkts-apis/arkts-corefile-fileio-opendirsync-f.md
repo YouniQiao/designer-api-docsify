@@ -28,5 +28,5 @@ declare function opendirSync(path: string): Dir
 
 | 类型 | 说明 |
 | --- | --- |
-| [Dir](arkts-corefile-dir-depr-i.md) | 返回Dir对象。 |
+| [Dir](arkts-corefile-fileio-dir-depr-i.md) | 返回Dir对象。 |
 

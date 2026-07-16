@@ -32,7 +32,7 @@ Sets the size of all text within the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Size of all text within the menu.<br>Default value:<br>{<br> size: 16,<br>family: 'HarmonyOS Sans',<br> weight: FontWeight.Medium,<br> style: FontStyle.Normal<br>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Size of all text within the menu.<br>Default value:<br>{<br> size: 16,<br>family: 'HarmonyOS Sans',<br> weight: FontWeight.Medium,<br> style: FontStyle.Normal<br>} |
 
 ## fontColor
 
@@ -204,5 +204,5 @@ Sets the submenu expanding mode of the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | Yes | Submenu expanding mode of the menu.<br>Default value:**SubMenuExpandingMode.SIDE_EXPAND** |
+| mode | [SubMenuExpandingMode](arkts-arkui-menu-submenuexpandingmode-e.md) | Yes | Submenu expanding mode of the menu.<br>Default value:**SubMenuExpandingMode.SIDE_EXPAND** |
 

@@ -34,7 +34,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<TextClockConfiguration> | Yes | Content modifier to apply to the text clock.<br>**modifier**: content modifier. You need to customize a class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<TextClockConfiguration> | Yes | Content modifier to apply to the text clock.<br>**modifier**: content modifier. You need to customize a class to implement the **ContentModifier** API. |
 
 ## dateTimeOptions
 
@@ -190,7 +190,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal**, indicating the standard font style(non-italic) |
+| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal**, indicating the standard font style(non-italic) |
 
 ## fontWeight
 

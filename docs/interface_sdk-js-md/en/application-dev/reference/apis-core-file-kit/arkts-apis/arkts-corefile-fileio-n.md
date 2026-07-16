@@ -20,5 +20,5 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 
 | Name | Description |
 | --- | --- |
-| [OpenMode](arkts-corefile-openmode-n.md) | Mode Indicates the open flags. |
+| [OpenMode](arkts-corefile-fileio-openmode-n.md) | Mode Indicates the open flags. |
 

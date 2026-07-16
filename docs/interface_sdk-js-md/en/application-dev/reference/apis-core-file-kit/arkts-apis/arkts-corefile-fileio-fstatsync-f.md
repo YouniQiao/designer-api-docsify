@@ -28,5 +28,5 @@ Obtains file status based on the file descriptor. This API returns the result sy
 
 | Type | Description |
 | --- | --- |
-| [Stat](arkts-corefile-stat-i.md) | Detailed file status obtained. |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | Detailed file status obtained. |
 

@@ -28,5 +28,5 @@ Build function of PopupV2. This component is implemented based on state manageme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PopupV2InitInfo](arkts-arkui-popupv2initinfo-i.md) | Yes | popup option. |
+| options | [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | Yes | popup option. |
 

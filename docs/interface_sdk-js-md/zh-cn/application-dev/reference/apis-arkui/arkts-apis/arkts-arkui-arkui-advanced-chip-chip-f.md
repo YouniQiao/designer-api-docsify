@@ -30,5 +30,5 @@ Chip的构建函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ChipOptions](arkts-arkui-chipoptions-i.md) | 是 | 定义Chip组件的参数。 |
+| options | [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) | 是 | 定义Chip组件的参数。 |
 

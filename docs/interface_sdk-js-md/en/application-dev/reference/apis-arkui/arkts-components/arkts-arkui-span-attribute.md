@@ -1,8 +1,8 @@
 # Span properties/events
 
-Inherited from [BaseSpan](arkts-arkui-basespan-c.md).
+Inherited from [BaseSpan](arkts-arkui-span-basespan-c.md).
 
-Among universal events, only [onClick](arkts-arkui-commonmethod-c.md#onclick-2) click events and [onHover](arkts-arkui-commonmethod-c.md#onhover-1) hover events are supported.
+Among universal events, only [onClick](arkts-arkui-common-commonmethod-c.md#onclick-2) click events and [onHover](arkts-arkui-common-commonmethod-c.md#onhover-1) hover events are supported.
 
 **Inheritance/Implementation:** SpanAttribute extends [BaseSpan<SpanAttribute>](BaseSpan<SpanAttribute>)
 
@@ -34,7 +34,7 @@ Style and color of the text decorative line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md) | Yes | Style of the text decorative line.<br>Default value:<br>{<br> type:TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>}<br>**NOTE**<br>The **style** parameter cannot be used in widgets.<br>**Since:** 12 |
+| value | [DecorationStyleInterface](../arkts-apis/arkts-arkui-styled-string-decorationstyleinterface-i.md) | Yes | Style of the text decorative line.<br>Default value:<br>{<br> type:TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>}<br>**NOTE**<br>The **style** parameter cannot be used in widgets.<br>**Since:** 12 |
 
 ## font
 
@@ -58,7 +58,7 @@ Sets the text style, covering the font size, font width, Font family, and font s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Text style. |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style. |
 
 ## font
 
@@ -82,8 +82,8 @@ Used to set the font of span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | the span font size, font weight, font family and font style. |
-| fontConfigs | [FontConfigs](../arkts-apis/arkts-arkui-fontconfigs-i.md) | No | the configuration of font. |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | the span font size, font weight, font family and font style. |
+| fontConfigs | [FontConfigs](../arkts-apis/arkts-arkui-text-common-fontconfigs-i.md) | No | the configuration of font. |
 
 ## fontColor
 
@@ -179,7 +179,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal** |
+| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal** |
 
 ## fontVariations
 
@@ -203,7 +203,7 @@ Set the font variation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontVariations | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<FontVariation> | Yes | Indicates the span font variation. |
+| fontVariations | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<FontVariation> | Yes | Indicates the span font variation. |
 
 ## fontWeight
 
@@ -227,7 +227,7 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| ResourceStr | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings of the number type are supported, for example, **400**, **"bold"**,**"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.<br>Default value: **FontWeight.Normal**<br>The [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md) type is supported since API version 20.<br>**Since:** 20 |
+| value | number \| FontWeight \| ResourceStr | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings of the number type are supported, for example, **400**, **"bold"**,**"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.<br>Default value: **FontWeight.Normal**<br>The [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) type is supported since API version 20.<br>**Since:** 20 |
 
 ## fontWeight
 
@@ -254,7 +254,7 @@ Called when the font weight is set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | weight | number \| FontWeight \| ResourceStr | Yes | the span font weight. |
-| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No | the configuration of font weight. |
+| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-text-common-fontweightconfigs-i.md) | No | the configuration of font weight. |
 
 ## letterSpacing
 
@@ -278,7 +278,7 @@ Sets the letter spacing. A negative value tightens the spacing; a positive value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| ResourceStr | Yes | Letter spacing.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)<br>The [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md) type is supported since API version 20.<br>**Since:** 20 |
+| value | number \| ResourceStr | Yes | Letter spacing.<br>Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)<br>The [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) type is supported since API version 20.<br>**Since:** 20 |
 
 ## lineHeight
 
@@ -326,7 +326,7 @@ Sets the text case.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextCase](../arkts-apis/arkts-arkui-textcase-e.md) | Yes | Text case.<br>Default value: **TextCase.Normal** |
+| value | [TextCase](../arkts-apis/arkts-arkui-enums-textcase-e.md) | Yes | Text case.<br>Default value: **TextCase.Normal** |
 
 ## textShadow
 

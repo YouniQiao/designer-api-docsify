@@ -6,14 +6,14 @@
 
 | Name | Description |
 | --- | --- |
-| [Map](arkts-na-map-i.md) |  |
-| [MapConstructor](arkts-na-mapconstructor-i.md) |  |
-| [ReadonlyMap](arkts-na-readonlymap-i.md) |  |
-| [ReadonlySet](arkts-na-readonlyset-i.md) |  |
-| [Set](arkts-na-set-i.md) |  |
-| [SetConstructor](arkts-na-setconstructor-i.md) |  |
-| [WeakMap](arkts-na-weakmap-i.md) |  |
-| [WeakMapConstructor](arkts-na-weakmapconstructor-i.md) |  |
-| [WeakSet](arkts-na-weakset-i.md) |  |
-| [WeakSetConstructor](arkts-na-weaksetconstructor-i.md) |  |
+| [Map](arkts-na-lib-es2015-collection-map-i.md) |  |
+| [MapConstructor](arkts-na-lib-es2015-collection-mapconstructor-i.md) |  |
+| [ReadonlyMap](arkts-na-lib-es2015-collection-readonlymap-i.md) |  |
+| [ReadonlySet](arkts-na-lib-es2015-collection-readonlyset-i.md) |  |
+| [Set](arkts-na-lib-es2015-collection-set-i.md) |  |
+| [SetConstructor](arkts-na-lib-es2015-collection-setconstructor-i.md) |  |
+| [WeakMap](arkts-na-lib-es2015-collection-weakmap-i.md) |  |
+| [WeakMapConstructor](arkts-na-lib-es2015-collection-weakmapconstructor-i.md) |  |
+| [WeakSet](arkts-na-lib-es2015-collection-weakset-i.md) |  |
+| [WeakSetConstructor](arkts-na-lib-es2015-collection-weaksetconstructor-i.md) |  |
 

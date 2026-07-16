@@ -178,7 +178,7 @@ Called when the initial state of the slidable panel is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PanelMode](arkts-arkui-panelmode-e.md) | Yes |  |
+| value | [PanelMode](arkts-arkui-panel-panelmode-e.md) | Yes |  |
 
 ## onChange
 
@@ -394,5 +394,5 @@ Called when the slidable panel type is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-paneltype-e-sys.md) | Yes |  |
+| value | [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md) | Yes |  |
 

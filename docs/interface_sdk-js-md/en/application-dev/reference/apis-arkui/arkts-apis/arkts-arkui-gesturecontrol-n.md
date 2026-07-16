@@ -14,5 +14,5 @@ Enumerates gesture competition results.
 
 | Name | Description |
 | --- | --- |
-| [GestureType](arkts-arkui-gesturetype-e.md) | Enumerates gesture recognizer types. |
+| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | Enumerates gesture recognizer types. |
 

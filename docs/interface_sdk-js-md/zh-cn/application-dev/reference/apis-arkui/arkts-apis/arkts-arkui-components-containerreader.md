@@ -12,15 +12,15 @@ import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@k
 
 | 名称 | 说明 |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-containerreaderattribute-c.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性： |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [BreakpointOptions](arkts-arkui-breakpointoptions-i.md) | 定义断点配置选项，用于指定容器尺寸分析的阈值参数。 |
-| [ContainerReaderInfo](arkts-arkui-containerreaderinfo-i.md) | 定义ContainerReader组件的配置选项，用于指定容器尺寸读取和断点值获取的参数，不能通过此参数改变组件尺寸和断点值。 |
-| [ContainerReaderInterface](arkts-arkui-containerreaderinterface-i.md) | 定义ContainerReader组件。用于在动态场景下基于尺寸断点读取和分析容器布局信息。提供容器尺寸分析和断点检测能力。 |
+| [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | 定义断点配置选项，用于指定容器尺寸分析的阈值参数。 |
+| [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | 定义ContainerReader组件的配置选项，用于指定容器尺寸读取和断点值获取的参数，不能通过此参数改变组件尺寸和断点值。 |
+| [ContainerReaderInterface](arkts-arkui-arkui-components-containerreader-containerreaderinterface-i.md) | 定义ContainerReader组件。用于在动态场景下基于尺寸断点读取和分析容器布局信息。提供容器尺寸分析和断点检测能力。 |
 
 ### 常量
 

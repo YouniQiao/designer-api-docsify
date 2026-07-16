@@ -34,7 +34,7 @@ Sets the auto-capitalization text mode. This API provides the capability, but ac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [AutoCapitalizationMode](../arkts-apis/arkts-arkui-autocapitalizationmode-e.md) | Yes | Auto-capitalization mode. The default state is inactive. |
+| mode | [AutoCapitalizationMode](../arkts-apis/arkts-arkui-text-common-autocapitalizationmode-e.md) | Yes | Auto-capitalization mode. The default state is inactive. |
 
 ## barState
 
@@ -58,7 +58,7 @@ Sets the scrollbar display mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar display mode.<br>Default value: **BarState.Auto** |
+| value | [BarState](../arkts-apis/arkts-arkui-enums-barstate-e.md) | Yes | Scrollbar display mode.<br>Default value: **BarState.Auto** |
 
 ## caretColor
 
@@ -104,7 +104,7 @@ Sets the caret style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CaretStyle](../arkts-apis/arkts-arkui-caretstyle-i.md) | Yes | Caret style. |
+| value | [CaretStyle](../arkts-apis/arkts-arkui-text-common-caretstyle-i.md) | Yes | Caret style. |
 
 ## compressLeadingPunctuation
 
@@ -119,7 +119,7 @@ Sets whether to enable leading punctuation compression.
 > - Leading punctuation is not compressed by default.  
 >  
 > - For the list of punctuation marks that support compression, see the punctuation range at the beginning of a  
-> line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md).
+> line in [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 23
 
@@ -159,7 +159,7 @@ Sets the content type for autofill.<!--RP3--><!--RP3End-->
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contentType | [ContentType](../../apis-audio-kit/arkts-apis/arkts-audio-contenttype-e.md) | Yes | Content type for autofill. |
+| contentType | [ContentType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-contenttype-e.md) | Yes | Content type for autofill. |
 
 ## copyOption
 
@@ -183,7 +183,7 @@ If this attribute is set to **CopyOptions.None**, drag and drop operations are n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether the input text can be copied.<br>Default value: **CopyOptions.LocalDevice** |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-enums-copyoptions-e.md) | Yes | Whether the input text can be copied.<br>Default value: **CopyOptions.LocalDevice** |
 
 ## customKeyboard
 
@@ -201,15 +201,15 @@ The custom keyboard is presented by overlaying the original screen, which is not
 
 The custom keyboard cannot obtain the focus, but it blocks gesture events.
 
-By default, the custom keyboard is closed when the input component loses the focus. You can also use the [TextAreaController](arkts-arkui-textareacontroller-c.md).[stopEditing](arkts-arkui-textareacontroller-c.md#stopediting-1) API to close the keyboard.
+By default, the custom keyboard is closed when the input component loses the focus. You can also use the [TextAreaController](arkts-arkui-text-area-textareacontroller-c.md).[stopEditing](arkts-arkui-text-area-textareacontroller-c.md#stopediting-1) API to close the keyboard.
 
-When setting a custom keyboard, you can bind the [onKeyPrelme](arkts-arkui-commonmethod-c.md#onkeypreime-1) event to prevent input from the physical keyboard.
+When setting a custom keyboard, you can bind the [onKeyPrelme](arkts-arkui-common-commonmethod-c.md#onkeypreime-1) event to prevent input from the physical keyboard.
 
 From API version 23, the [setCustomKeyboardContinueFeature](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature23)API can be used to enable the continuation feature for custom keyboards. When switching between custom keyboards,the system changes the keyboard directly without triggering the close and open animations.
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 10
 
@@ -226,7 +226,7 @@ From API version 23, the [setCustomKeyboardContinueFeature](../../../../referenc
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | CustomBuilder \| ComponentContent \| undefined | Yes | Custom keyboard. If the value is **undefined**, the custom keyboard is closed.<br>**Since:** 22 |
-| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) | No | Whether to support keyboard avoidance.<br>**Since:** 12 |
+| options | [KeyboardOptions](arkts-arkui-rich-editor-keyboardoptions-i.md) | No | Whether to support keyboard avoidance.<br>**Since:** 12 |
 
 ## decoration
 
@@ -250,7 +250,7 @@ Sets the color, type, and style of the text decorative line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | Yes | Text decorative line options.<br>Default value: {<br> type:TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>} |
+| value | [TextDecorationOptions](arkts-arkui-common-textdecorationoptions-i.md) | Yes | Text decorative line options.<br>Default value: {<br> type:TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>} |
 
 ## editMenuOptions
 
@@ -262,7 +262,7 @@ Sets the extended options of the custom context menu on selection, including the
 
 When [disableMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20) or
 
-[disableSystemServiceMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20)is used to disable system service menu items in the context menu on selection, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu-1) callback of **editMenuOptions**.
+[disableSystemServiceMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20)is used to disable system service menu items in the context menu on selection, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-text-common-editmenuoptions-i.md#oncreatemenu-1) callback of **editMenuOptions**.
 
 **Since:** 12
 
@@ -278,7 +278,7 @@ When [disableMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-te
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes | Extended options of the custom context menu on selection. |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-text-common-editmenuoptions-i.md) | Yes | Extended options of the custom context menu on selection. |
 
 ## ellipsisMode
 
@@ -444,7 +444,7 @@ Sets whether to enable entity recognition for selected text. This API only works
 
 When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default.
 
-This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
+This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-copyoptions-i.md) is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
 **Since:** 22
 
@@ -472,7 +472,7 @@ Sets the type of the Enter key.
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 12.
 
 **Since:** 11
 
@@ -488,7 +488,7 @@ Sets the type of the Enter key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key.<br>Default value: **EnterKeyType.NEW_LINE** |
+| value | [EnterKeyType](arkts-arkui-text-input-enterkeytype-e.md) | Yes | Type of the Enter key.<br>Default value: **EnterKeyType.NEW_LINE** |
 
 ## fallbackLineSpacing
 
@@ -632,7 +632,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal** |
+| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal** |
 
 ## fontWeight
 
@@ -710,7 +710,7 @@ If this attribute is set to **TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | Yes | How the adaptive height is determined for the text.<br>Default value:**TextHeightAdaptivePolicy.MAX_LINES_FIRST** |
+| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-enums-textheightadaptivepolicy-e.md) | Yes | How the adaptive height is determined for the text.<br>Default value:**TextHeightAdaptivePolicy.MAX_LINES_FIRST** |
 
 ## horizontalScrolling
 
@@ -868,7 +868,7 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](Text
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | Yes | Line break rule.<br>Default value: **LineBreakStrategy.GREEDY** |
+| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-enums-linebreakstrategy-e.md) | Yes | Line break rule.<br>Default value: **LineBreakStrategy.GREEDY** |
 
 ## lineHeight
 
@@ -941,7 +941,7 @@ Sets the line spacing for text. When **LineSpacingOptions** is not specified, li
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Line spacing. Values less than or equal to 0 are treated as the default value **0**. |
-| options | [LineSpacingOptions](../arkts-apis/arkts-arkui-linespacingoptions-i.md) | No | Line spacing configuration options.<br>Default value:**{ onlyBetweenLines: false }**. |
+| options | [LineSpacingOptions](../arkts-apis/arkts-arkui-text-common-linespacingoptions-i.md) | No | Line spacing configuration options.<br>Default value:**{ onlyBetweenLines: false }**. |
 
 ## maxFontScale
 
@@ -1071,7 +1071,7 @@ Sets the maximum number of visible lines when used with [textOverflow](TextAreaA
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | lines | number | Yes | Maximum number of lines that can be displayed with the inline style in the editing state.<br>Default value: **3** with the inline style; **+∞** with the non-inline style, indicating that there is no maximum number of lines<br>Value range: (0, +∞) |
-| options | [MaxLinesOptions](../arkts-apis/arkts-arkui-maxlinesoptions-i.md) | Yes | Display effect for overflow text.<br>Default value: **MaxLinesMode.CLIP**. |
+| options | [MaxLinesOptions](../arkts-apis/arkts-arkui-text-common-maxlinesoptions-i.md) | Yes | Display effect for overflow text.<br>Default value: **MaxLinesMode.CLIP**. |
 
 ## minFontScale
 
@@ -1133,7 +1133,7 @@ If the value of **minFontSize** is less than or equal to 0, the adaptive font si
 minLines(lines: Optional<number>)
 ```
 
-Sets the minimum number of lines displayed for the component. When [constraintSize](arkts-arkui-commonmethod-c.md#constraintsize-1) is set, the component's final height respects the defined constraints.
+Sets the minimum number of lines displayed for the component. When [constraintSize](arkts-arkui-common-commonmethod-c.md#constraintsize-1) is set, the component's final height respects the defined constraints.
 
 **Since:** 20
 
@@ -1265,7 +1265,7 @@ Called when text is deleted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<DeleteValue> | Yes | Callback triggered when text is deleted.<br>It is available only for system input methods. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<DeleteValue> | Yes | Callback triggered when text is deleted.<br>It is available only for system input methods. |
 
 ## onDidInsert
 
@@ -1289,7 +1289,7 @@ Called when text is inserted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<InsertValue> | Yes | Callback triggered when text is inserted.<br>It is available only for system input methods. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<InsertValue> | Yes | Callback triggered when text is inserted.<br>It is available only for system input methods. |
 
 ## onEditChange
 
@@ -1419,9 +1419,9 @@ Called when the input box is about to be bound to an input method.
 
 <!--Del-->
 
-Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-uicontext-c-sys.md#setkeyboardappearanceconfig-1) API of **UIContext** to set the keyboard style.<!--DelEnd-->
+Before the input box is bound to an input method, you can use the [setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig-1) API of **UIContext** to set the keyboard style.<!--DelEnd-->
 
-From API version 22, the [setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.md#setextraconfig-1) method of [IMEClient](../arkts-apis/arkts-arkui-imeclient-i.md)can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality.
+From API version 22, the [setExtraConfig](../arkts-apis/arkts-arkui-text-common-imeclient-i.md#setextraconfig-1) method of [IMEClient](../arkts-apis/arkts-arkui-text-common-imeclient-i.md)can be called to set input method extension information. After the input method is bound, it receives this extension information which can be used to implement custom functionality.
 
 **IMEClient** is valid only during the execution of **onWillAttachIME** and cannot be called asynchronously.
 
@@ -1439,7 +1439,7 @@ From API version 22, the [setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<IMEClient> \| undefined | Yes | Callback invoked when the input box is about to be bound to an input method. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<IMEClient> \| undefined | Yes | Callback invoked when the input box is about to be bound to an input method. |
 
 ## onWillChange
 
@@ -1465,7 +1465,7 @@ This callback is triggered after **onWillInsert** and **onWillDelete**, but befo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<EditableTextChangeValue, boolean> | Yes | Callback triggered when the text content is about to change.<br>**true**: The change is allowed. **false**: The change is canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<EditableTextChangeValue, boolean> | Yes | Callback triggered when the text content is about to change.<br>**true**: The change is allowed. **false**: The change is canceled. |
 
 ## onWillCopy
 
@@ -1491,7 +1491,7 @@ Called before a copy operation is performed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<string, boolean> | Yes | Callback invoked before a copy operation. The callback parameter of the string type indicates the text content to be copied. The callback parameter of the boolean type indicates whether the selected text is allowed to be copied. **true**: The text is allowed to be copied. **false**: The text is not allowed to be copied. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<string, boolean> | Yes | Callback invoked before a copy operation. The callback parameter of the string type indicates the text content to be copied. The callback parameter of the boolean type indicates whether the selected text is allowed to be copied. **true**: The text is allowed to be copied. **false**: The text is not allowed to be copied. |
 
 ## onWillCut
 
@@ -1517,7 +1517,7 @@ Called before a cut operation is performed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<string, boolean> | Yes | Callback invoked before a cut operation. The callback parameter of the string type indicates the text content to be cut. The callback parameter of the boolean type indicates whether the selected text is allowed to be cut. **true**: The text is allowed to be cut. **false**: The text is not allowed to be cut. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<string, boolean> | Yes | Callback invoked before a cut operation. The callback parameter of the string type indicates the text content to be cut. The callback parameter of the boolean type indicates whether the selected text is allowed to be cut. **true**: The text is allowed to be cut. **false**: The text is not allowed to be cut. |
 
 ## onWillDelete
 
@@ -1541,7 +1541,7 @@ Called when text is about to be deleted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<DeleteValue, boolean> | Yes | Callback invoked when text is about to be deleted.<br>It returns **true** if the text is deleted; returns **false** otherwise.<br>This callback is not invoked for text preview.<br>It is available only for system input methods. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<DeleteValue, boolean> | Yes | Callback invoked when text is about to be deleted.<br>It returns **true** if the text is deleted; returns **false** otherwise.<br>This callback is not invoked for text preview.<br>It is available only for system input methods. |
 
 ## onWillInsert
 
@@ -1565,7 +1565,7 @@ Called when text is about to be inserted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<InsertValue, boolean> | Yes | Callback invoked when text is about to be inserted.<br>It returns **true** if the text is inserted; returns **false** otherwise.<br>This callback is not invoked for pre-edit or candidate word operations.<br>It is available only for system input methods. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<InsertValue, boolean> | Yes | Callback invoked when text is about to be inserted.<br>It returns **true** if the text is inserted; returns **false** otherwise.<br>This callback is not invoked for pre-edit or candidate word operations.<br>It is available only for system input methods. |
 
 ## orphanCharOptimization
 
@@ -1575,7 +1575,7 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 Sets whether to enable orphan character optimization during text layout. If this attribute is not set, orphan character optimization is disabled by default.
 
-Orphan character optimization improves text layout by more efficiently handling isolated characters (the first character on the last line of a paragraph). When enabled, it adjusts line break points to avoid isolated characters whenever possible. This feature takes effect only when [wordBreak](TextAreaAttribute#wordBreak) is not **BREAK_ALL** and the [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md) in the text to be laid out is **"zh-Hans"** or **"zh-Hant"**.
+Orphan character optimization improves text layout by more efficiently handling isolated characters (the first character on the last line of a paragraph). When enabled, it adjusts line break points to avoid isolated characters whenever possible. This feature takes effect only when [wordBreak](TextAreaAttribute#wordBreak) is not **BREAK_ALL** and the [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md) in the text to be laid out is **"zh-Hans"** or **"zh-Hant"**.
 
 **Since**: 26.0.0
 
@@ -1625,7 +1625,7 @@ Placeholder text style, including the font size, font weight, font family, and f
 
 > **NOTE**  
 >  
-> You can use [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontcollection-c.md#loadfontsync-1) to register custom fonts.
+> You can use [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync-1) to register custom fonts.
 
 **Since:** 7
 
@@ -1639,7 +1639,7 @@ Placeholder text style, including the font size, font weight, font family, and f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Placeholder text style. |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Placeholder text style. |
 
 ## punctuationOverflow
 
@@ -1823,7 +1823,7 @@ It is visible when the number of characters entered is greater than the characte
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to display the character counter.<br>**true**: Character counter is displayed.**false**: Character counter is not displayed. |
-| options | [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) | No | Configuration options for the character counter.<br>**Since:** 11 |
+| options | [InputCounterOptions](arkts-arkui-common-inputcounteroptions-i.md) | No | Configuration options for the character counter.<br>**Since:** 11 |
 
 ## stopBackPress
 
@@ -1945,7 +1945,7 @@ Sets the polymorphic style of the text box. The inline input style is only avail
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextContentStyle](../arkts-apis/arkts-arkui-textcontentstyle-e.md) | Yes | Polymorphic style of the text box.<br>Default value:**TextContentStyle.DEFAULT** |
+| value | [TextContentStyle](../arkts-apis/arkts-arkui-enums-textcontentstyle-e.md) | Yes | Polymorphic style of the text box.<br>Default value:**TextContentStyle.DEFAULT** |
 
 ## textAlign
 
@@ -1957,7 +1957,7 @@ Sets the horizontal alignment of the text.
 
 Available options are **TextAlign.Start**, **TextAlign.Center**, and **TextAlign.End**. **TextAlign.JUSTIFY** is available since API version 11.
 
-The vertical position of the text paragraph can be controlled by the [align](arkts-arkui-commonmethod-c.md#align-1) attribute, but the horizontal position cannot be controlled by **align** in this component.
+The vertical position of the text paragraph can be controlled by the [align](arkts-arkui-common-commonmethod-c.md#align-1) attribute, but the horizontal position cannot be controlled by **align** in this component.
 
 - **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top.  
 - **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically.  
@@ -1977,7 +1977,7 @@ When **textAlign** is set to **TextAlign.JUSTIFY**, the text in the last line is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textalign-e.md) | Yes | Horizontal alignment of the text.<br>Default value: **TextAlign.Start** |
+| value | [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md) | Yes | Horizontal alignment of the text.<br>Default value: **TextAlign.Start** |
 
 ## textDirection
 
@@ -2037,7 +2037,7 @@ Sets the display mode when the text is too long.
 
 In inline style, the effect of truncating text according to [maxLines](TextAreaAttribute#maxLines(value: number)) only applies when **textOverflow** is set.
 
-Text is clipped at the transition between words. To clip text in the middle of a word, set [wordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md) to **WordBreak.BREAK_ALL**.
+Text is clipped at the transition between words. To clip text in the middle of a word, set [wordBreak](../arkts-apis/arkts-arkui-enums-wordbreak-e.md) to **WordBreak.BREAK_ALL**.
 
 If **textOverflow** is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**, this attribute must be used with [maxLines](TextAreaAttribute#maxLines(value: number)) for the settings to take effect. **TextOverflow.None** produces the same effect as **TextOverflow.Clip**.
 
@@ -2060,7 +2060,7 @@ If **textOverflow** is set to **TextOverflow.None**, **TextOverflow.Clip**, or *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) | Yes | Display mode when the text is too long.<br>Default value: **TextOverflow.Clip** |
+| value | [TextOverflow](../arkts-apis/arkts-arkui-enums-textoverflow-e.md) | Yes | Display mode when the text is too long.<br>Default value: **TextOverflow.Clip** |
 
 ## type
 
@@ -2086,7 +2086,7 @@ Different **TextAreaType** values trigger corresponding keyboard types and enfor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextAreaType](arkts-arkui-textareatype-e.md) | Yes | Text box type.<br>Default value: **TextAreaType.NORMAL**. |
+| value | [TextAreaType](arkts-arkui-text-area-textareatype-e.md) | Yes | Text box type.<br>Default value: **TextAreaType.NORMAL**. |
 
 ## wordBreak
 
@@ -2110,5 +2110,5 @@ Sets the word break rule. This attribute does not take effect for the placeholde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-wordbreak-e.md) | Yes | Word break rule.<br>Default value: **WordBreak.BREAK_WORD** |
+| value | [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-wordbreak-e.md) | Yes | Word break rule.<br>Default value: **WordBreak.BREAK_WORD** |
 

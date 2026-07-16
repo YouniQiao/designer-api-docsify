@@ -20,5 +20,5 @@ import { hdrCapability } from '@kit.ArkGraphics2D';
 
 | 名称 | 说明 |
 | --- | --- |
-| [HDRFormat](arkts-arkgraphics2d-hdrformat-e.md) | HDR格式枚举。 |
+| [HDRFormat](arkts-arkgraphics2d-hdrcapability-hdrformat-e.md) | HDR格式枚举。 |
 

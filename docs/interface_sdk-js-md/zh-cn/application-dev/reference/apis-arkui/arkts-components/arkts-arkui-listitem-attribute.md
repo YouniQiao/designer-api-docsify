@@ -128,7 +128,7 @@ sticky(value: Sticky)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Sticky](arkts-arkui-sticky-e.md) | 是 |  |
+| value | [Sticky](arkts-arkui-list-item-sticky-e.md) | 是 |  |
 
 ## swipeAction
 
@@ -150,5 +150,5 @@ swipeAction(value: SwipeActionOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md) | 是 | ListItem的划出组件。 |
+| value | [SwipeActionOptions](arkts-arkui-list-item-swipeactionoptions-i.md) | 是 | ListItem的划出组件。 |
 

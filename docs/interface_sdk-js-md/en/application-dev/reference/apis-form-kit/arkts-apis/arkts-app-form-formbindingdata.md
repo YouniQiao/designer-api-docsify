@@ -20,12 +20,12 @@ import { formBindingData } from '@kit.FormKit';
 
 | Name | Description |
 | --- | --- |
-| [createFormBindingData](arkts-form-createformbindingdata-f.md#createformbindingdata-1) | Creates a **FormBindingData** object. |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md#createformbindingdata-1) | Creates a **FormBindingData** object. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [FormBindingData](arkts-form-formbindingdata-i.md) | Defines the createFormBindingData result interface. |
-| [ProxyData](arkts-form-proxydata-i.md) | Defines the form proxy data. |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | Defines the createFormBindingData result interface. |
+| [ProxyData](arkts-form-formbindingdata-proxydata-i.md) | Defines the form proxy data. |
 

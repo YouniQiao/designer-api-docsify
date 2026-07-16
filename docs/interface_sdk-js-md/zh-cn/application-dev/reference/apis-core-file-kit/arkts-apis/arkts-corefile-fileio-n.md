@@ -20,5 +20,5 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 
 | 名称 | 说明 |
 | --- | --- |
-| [OpenMode](arkts-corefile-openmode-n.md) | open接口flags参数常量。文件打开标签。 |
+| [OpenMode](arkts-corefile-fileio-openmode-n.md) | open接口flags参数常量。文件打开标签。 |
 

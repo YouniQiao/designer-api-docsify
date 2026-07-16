@@ -20,5 +20,5 @@ import { uri } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-c.md) | URI Represents a Uniform Resource Identifier (URI) reference. |
+| [URI](arkts-arkts-uri-uri-c.md) | URI Represents a Uniform Resource Identifier (URI) reference. |
 

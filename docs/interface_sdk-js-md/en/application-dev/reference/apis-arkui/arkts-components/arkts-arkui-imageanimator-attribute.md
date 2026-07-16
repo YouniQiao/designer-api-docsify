@@ -58,7 +58,7 @@ Sets the status before and after execution of the animation in the current playb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | Yes | Status before and after execution of the animation in the current playback direction.<br>Default value: **FillMode.Forwards** |
+| value | [FillMode](../arkts-apis/arkts-arkui-enums-fillmode-e.md) | Yes | Status before and after execution of the animation in the current playback direction.<br>Default value: **FillMode.Forwards** |
 
 ## fixedSize
 
@@ -106,7 +106,7 @@ Sets image frame information. Dynamic update is not supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ImageFrameInfo> | Yes | Image frame information. The information of each frame includes the path,size, position, and playback duration of an image. For details, see [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md).<br>Default value: **[]**<br> Note: If the input array is too large, memory usage may increase. Therefore, as the controller of memory usage, be sure to assess potential memory consumption before passing in the data to avoid issues such as insufficient memory. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<ImageFrameInfo> | Yes | Image frame information. The information of each frame includes the path,size, position, and playback duration of an image. For details, see [ImageFrameInfo](arkts-arkui-image-animator-imageframeinfo-i.md).<br>Default value: **[]**<br> Note: If the input array is too large, memory usage may increase. Therefore, as the controller of memory usage, be sure to assess potential memory consumption before passing in the data to avoid issues such as insufficient memory. |
 
 ## iterations
 
@@ -136,7 +136,7 @@ Sets the number of times that the animation is played.
 monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 ```
 
-Sets whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1) event.
+Sets whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange](arkts-arkui-common-commonmethod-c.md#onvisibleareachange-1) event.
 
 **Since:** 17
 
@@ -152,7 +152,7 @@ Sets whether the component should automatically pause or resume based on its vis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorInvisibleArea | boolean | Yes | Whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)event.<br> With the value **true**, when the component's [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) is **Running**, the component automatically pauses once it becomes invisible and resumes playback if it becomes visible again, based on the **onVisibleAreaChange** event.<br>With the value **false**, the pause and playback of the component are not affected by **onVisibleAreaChange**.<br>Default value: **false**<br> **NOTE**<br>When this parameter is dynamically changed from **true** to **false**, the component will resume from its last paused state based on the current [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md).<br>Changes to this property do not affect the custom [state](ImageAnimatorAttribute#state) value. |
+| monitorInvisibleArea | boolean | Yes | Whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange](arkts-arkui-common-commonmethod-c.md#onvisibleareachange-1)event.<br> With the value **true**, when the component's [AnimationStatus](../arkts-apis/arkts-arkui-enums-animationstatus-e.md) is **Running**, the component automatically pauses once it becomes invisible and resumes playback if it becomes visible again, based on the **onVisibleAreaChange** event.<br>With the value **false**, the pause and playback of the component are not affected by **onVisibleAreaChange**.<br>Default value: **false**<br> **NOTE**<br>When this parameter is dynamically changed from **true** to **false**, the component will resume from its last paused state based on the current [AnimationStatus](../arkts-apis/arkts-arkui-enums-animationstatus-e.md).<br>Changes to this property do not affect the custom [state](ImageAnimatorAttribute#state) value. |
 
 ## onCancel
 
@@ -345,5 +345,5 @@ Sets the playback state of the animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | Yes | Playback state of the animation.<br>Default value: **AnimationStatus.Initial** |
+| value | [AnimationStatus](../arkts-apis/arkts-arkui-enums-animationstatus-e.md) | Yes | Playback state of the animation.<br>Default value: **AnimationStatus.Initial** |
 

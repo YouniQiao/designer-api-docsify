@@ -29,10 +29,10 @@ import { fileAccess } from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createFileAccessHelper](arkts-corefile-createfileaccesshelper-f-sys.md#createfileaccesshelper-1) | 以同步方法创建连接当前系统内所有文件管理服务的helper对象。 |
-| [createFileAccessHelper](arkts-corefile-createfileaccesshelper-f-sys.md#createfileaccesshelper-2) | 以同步方法创建连接指定wants的helper对象。 |
-| [getFileAccessAbilityInfo](arkts-corefile-getfileaccessabilityinfo-f-sys.md#getfileaccessabilityinfo-1) | 以异步方法获取系统内extension配置为fileAccess类型的所有Want信息。使用callback异步回调。 |
-| [getFileAccessAbilityInfo](arkts-corefile-getfileaccessabilityinfo-f-sys.md#getfileaccessabilityinfo-2) | 以异步方法获取系统内extension配置为fileAccess类型的所有Want信息。使用Promise异步回调。 |
+| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createfileaccesshelper-1) | 以同步方法创建连接当前系统内所有文件管理服务的helper对象。 |
+| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createfileaccesshelper-2) | 以同步方法创建连接指定wants的helper对象。 |
+| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getfileaccessabilityinfo-1) | 以异步方法获取系统内extension配置为fileAccess类型的所有Want信息。使用callback异步回调。 |
+| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getfileaccessabilityinfo-2) | 以异步方法获取系统内extension配置为fileAccess类型的所有Want信息。使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -40,14 +40,14 @@ import { fileAccess } from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [CopyResult](arkts-corefile-copyresult-i-sys.md) | 表示复制操作失败时的返回信息，复制成功时则没有返回信息。 |
-| [FileAccessHelper](arkts-corefile-fileaccesshelper-i-sys.md) | FileAccessHelper对象。 |
-| [FileInfo](arkts-corefile-fileinfo-i-sys.md) | 表示文件(夹)属性信息和接口能力。 |
-| [FileIterator](arkts-corefile-fileiterator-i-sys.md) | 表示文件夹的迭代器对象。 |
-| [MoveResult](arkts-corefile-moveresult-i-sys.md) | 表示移动操作失败时的返回信息，移动成功时则没有返回信息。 |
-| [NotifyMessage](arkts-corefile-notifymessage-i-sys.md) | 通知回调函数的值。 |
-| [RootInfo](arkts-corefile-rootinfo-i-sys.md) | 表示设备的根属性信息和接口能力。 |
-| [RootIterator](arkts-corefile-rootiterator-i-sys.md) | 表示设备根目录的迭代器对象。 |
+| [CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md) | 表示复制操作失败时的返回信息，复制成功时则没有返回信息。 |
+| [FileAccessHelper](arkts-corefile-fileaccess-fileaccesshelper-i-sys.md) | FileAccessHelper对象。 |
+| [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md) | 表示文件(夹)属性信息和接口能力。 |
+| [FileIterator](arkts-corefile-fileaccess-fileiterator-i-sys.md) | 表示文件夹的迭代器对象。 |
+| [MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md) | 表示移动操作失败时的返回信息，移动成功时则没有返回信息。 |
+| [NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md) | 通知回调函数的值。 |
+| [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md) | 表示设备的根属性信息和接口能力。 |
+| [RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md) | 表示设备根目录的迭代器对象。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -55,9 +55,9 @@ import { fileAccess } from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FileKey](arkts-corefile-filekey-e-sys.md) | Property elements that support the file queries. |
-| [NotifyType](arkts-corefile-notifytype-e-sys.md) | 枚举，通知类型。 |
-| [OPENFLAGS](arkts-corefile-openflags-e-sys.md) | 枚举，目前支持的文件打开的标志位。 |
+| [FileKey](arkts-corefile-fileaccess-filekey-e-sys.md) | Property elements that support the file queries. |
+| [NotifyType](arkts-corefile-fileaccess-notifytype-e-sys.md) | 枚举，通知类型。 |
+| [OPENFLAGS](arkts-corefile-fileaccess-openflags-e-sys.md) | 枚举，目前支持的文件打开的标志位。 |
 <!--DelEnd-->
 
 <!--Del-->

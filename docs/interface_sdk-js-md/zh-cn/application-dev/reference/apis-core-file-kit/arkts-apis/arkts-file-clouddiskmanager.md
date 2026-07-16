@@ -23,7 +23,7 @@ import { cloudDiskManager } from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [SyncFolderAccessor](arkts-corefile-syncfolderaccessor-c-sys.md) | 同步根管理类，负责为系统文件管理应用提供获取三方网盘注册的同步根信息的能力。 |
+| [SyncFolderAccessor](arkts-corefile-clouddiskmanager-syncfolderaccessor-c-sys.md) | 同步根管理类，负责为系统文件管理应用提供获取三方网盘注册的同步根信息的能力。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -31,7 +31,7 @@ import { cloudDiskManager } from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [SyncFolder](arkts-corefile-syncfolder-i-sys.md) | 表示同步根信息。 |
+| [SyncFolder](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md) | 表示同步根信息。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -39,6 +39,6 @@ import { cloudDiskManager } from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [SyncFolderState](arkts-corefile-syncfolderstate-e-sys.md) | 枚举，云盘的同步根的状态。 |
+| [SyncFolderState](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md) | 枚举，云盘的同步根的状态。 |
 <!--DelEnd-->
 

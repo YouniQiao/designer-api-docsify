@@ -36,7 +36,7 @@ Lists all file names in a directory. This API returns the result synchronously.T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileExtOptions](arkts-corefile-listfileextoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
+| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
 
 **Return value:**
 

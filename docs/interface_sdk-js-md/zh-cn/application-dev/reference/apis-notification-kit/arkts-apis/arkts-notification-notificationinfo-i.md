@@ -1,6 +1,6 @@
 # NotificationInfo
 
-通知订阅扩展能力中[onReceiveMessage](arkts-notification-notificationsubscriberextensionability-c.md#onreceivemessage-1)回调的通知信息。
+通知订阅扩展能力中[onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onreceivemessage-1)回调的通知信息。
 
 > **说明：**  
 >  

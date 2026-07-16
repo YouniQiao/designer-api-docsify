@@ -12,25 +12,25 @@ import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem
 
 | Name | Description |
 | --- | --- |
-| [EditableTitleBarMenuItem](arkts-arkui-editabletitlebarmenuitem-c.md) | Declaration of the menu item on the right side. |
+| [EditableTitleBarMenuItem](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md) | Declaration of the menu item on the right side. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [EditableTitleBar](arkts-arkui-editabletitlebar-s.md) | Declaration of the editable title bar. |
+| [EditableTitleBar](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebar-s.md) | Declaration of the editable title bar. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [EditableTitleBarOptions](arkts-arkui-editabletitlebaroptions-i.md) | Indicates the options of the editable title bar. |
+| [EditableTitleBarOptions](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebaroptions-i.md) | Indicates the options of the editable title bar. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [EditableLeftIconType](arkts-arkui-editablelefticontype-e.md) | Declaration of the left icon type. |
+| [EditableLeftIconType](arkts-arkui-arkui-advanced-editabletitlebar-editablelefticontype-e.md) | Declaration of the left icon type. |
 
 ### Types
 

@@ -16,7 +16,7 @@
 radius(value: Length | Array<any>)
 ```
 
-设置圆角半径大小，取值范围≥0，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)动态设置属性方法。异常值按照默认值处理。
+设置圆角半径大小，取值范围≥0，支持[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)动态设置属性方法。异常值按照默认值处理。
 
 **起始版本：** 7
 
@@ -40,7 +40,7 @@ radius(value: Length | Array<any>)
 radiusHeight(value: Length)
 ```
 
-设置圆角的高度，仅设置高时宽高一致，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)动态设置属性方法。 异常值按照默认值处理。
+设置圆角的高度，仅设置高时宽高一致，支持[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)动态设置属性方法。 异常值按照默认值处理。
 
 **起始版本：** 7
 
@@ -64,7 +64,7 @@ radiusHeight(value: Length)
 radiusWidth(value: Length)
 ```
 
-设置圆角的宽度，仅设置宽时宽高一致，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)动态设置属性方法。 异常值按照默认值处理。
+设置圆角的宽度，仅设置宽时宽高一致，支持[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)动态设置属性方法。 异常值按照默认值处理。
 
 **起始版本：** 7
 

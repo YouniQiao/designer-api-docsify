@@ -1,6 +1,6 @@
 # EnterpriseAdminExtensionContext
 
-**EnterpriseAdminExtensionContext** is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md)and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
+**EnterpriseAdminExtensionContext** is the context of [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
 
 When an **EnterpriseAdminExtensionAbility** component is instantiated, the system automatically creates the corresponding **EnterpriseAdminExtensionContext**. You can use this **EnterpriseAdminExtensionContext** to obtain the sandbox path of the app and start other components. This context can only be used within the current **EnterpriseAdminExtensionAbility** and cannot be transferred to other components.
 
@@ -25,7 +25,7 @@ When an **EnterpriseAdminExtensionAbility** component is instantiated, the syste
 startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 ```
 
-Directly starts another component within the [EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md)component (without pop-up prompts on the page). Currently, [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) and [AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appserviceextensionability-c.md)are supported. This API uses a promise to return the result.
+Directly starts another component within the [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)component (without pop-up prompts on the page). Currently, [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) and [AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)are supported. This API uses a promise to return the result.
 
 > **NOTE**  
 >  
@@ -59,7 +59,7 @@ Directly starts another component within the [EnterpriseAdminExtensionAbility](a
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. If the component fails to be started, an error object is thrown. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. If the component fails to be started, an error object is thrown. |
 
 **Error codes:**
 

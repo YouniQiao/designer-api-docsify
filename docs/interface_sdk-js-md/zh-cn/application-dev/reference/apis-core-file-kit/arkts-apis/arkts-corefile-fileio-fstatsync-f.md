@@ -28,5 +28,5 @@ declare function fstatSync(fd: number): Stat
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stat](arkts-corefile-stat-i.md) | 表示文件状态的具体信息。 |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | 表示文件状态的具体信息。 |
 

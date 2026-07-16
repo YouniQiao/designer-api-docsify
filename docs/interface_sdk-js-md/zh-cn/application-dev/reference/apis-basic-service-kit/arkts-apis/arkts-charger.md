@@ -27,6 +27,6 @@ import { charger } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ChargeType](arkts-basicservices-chargetype-e-sys.md) | 表示充电类型的枚举。 |
+| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) | 表示充电类型的枚举。 |
 <!--DelEnd-->
 

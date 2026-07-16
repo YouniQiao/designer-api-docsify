@@ -27,12 +27,12 @@ import { mediaquery } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [matchMediaSync](arkts-arkui-matchmediasync-f.md#matchmediasync-1) | 设置媒体查询的查询条件，并返回对应的监听句柄。 |
+| [matchMediaSync](arkts-arkui-mediaquery-matchmediasync-f.md#matchmediasync-1) | 设置媒体查询的查询条件，并返回对应的监听句柄。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [MediaQueryListener](arkts-arkui-mediaquerylistener-i.md) | 媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。继承自[MediaQueryResult](arkts-arkui-mediaqueryresult-i.md)。 |
-| [MediaQueryResult](arkts-arkui-mediaqueryresult-i.md) | 用于执行媒体查询操作。 |
+| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | 媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)。 |
+| [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md) | 用于执行媒体查询操作。 |
 

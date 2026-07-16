@@ -30,8 +30,8 @@ edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | Scroll组件的边缘滑动效果，支持弹簧效果和阴影效果。<br>默认值：<em>EdgeEffect.None</em> |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。<br>默认值：<em>{ alwaysEnabled: true }</em><br>**起始版本：** 11 |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-enums-edgeeffect-e.md) | 是 | Scroll组件的边缘滑动效果，支持弹簧效果和阴影效果。<br>默认值：<em>EdgeEffect.None</em> |
+| options | [EdgeEffectOptions](arkts-arkui-common-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。<br>默认值：<em>{ alwaysEnabled: true }</em><br>**起始版本：** 11 |
 
 ## enableBouncesZoom
 
@@ -151,7 +151,7 @@ initialOffset(value: OffsetOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [OffsetOptions](arkts-arkui-offsetoptions-i.md) | 是 | 初始滚动偏移量。当输入的大小为百分比时，初始滚动偏移量为Scroll组件主轴方向大小与百分比数值之积。 |
+| value | [OffsetOptions](arkts-arkui-scroll-offsetoptions-i.md) | 是 | 初始滚动偏移量。当输入的大小为百分比时，初始滚动偏移量为Scroll组件主轴方向大小与百分比数值之积。 |
 
 ## maxZoomScale
 
@@ -223,7 +223,7 @@ nestedScroll(value: NestedScrollOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。<br>默认值：<em>{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY}</em> |
+| value | [NestedScrollOptions](arkts-arkui-common-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。<br>默认值：<em>{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY}</em> |
 
 ## onDidScroll
 
@@ -519,7 +519,7 @@ scrollBar(barState: BarState)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | 滚动条状态。<br>默认值：<em>BarState.Auto</em> |
+| barState | [BarState](../arkts-apis/arkts-arkui-enums-barstate-e.md) | 是 | 滚动条状态。<br>默认值：<em>BarState.Auto</em> |
 
 ## scrollBarColor
 
@@ -635,7 +635,7 @@ scrollSnap(value: ScrollSnapOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScrollSnapOptions](arkts-arkui-scrollsnapoptions-i.md) | 是 | Scroll组件的限位滚动模式。 |
+| value | [ScrollSnapOptions](arkts-arkui-scroll-scrollsnapoptions-i.md) | 是 | Scroll组件的限位滚动模式。 |
 
 ## scrollable
 
@@ -657,7 +657,7 @@ scrollable(value: ScrollDirection)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | 是 | 滚动方向。<br>默认值：<em>ScrollDirection.Vertical</em> |
+| value | [ScrollDirection](arkts-arkui-scroll-scrolldirection-e.md) | 是 | 滚动方向。<br>默认值：<em>ScrollDirection.Vertical</em> |
 
 ## zoomScale
 

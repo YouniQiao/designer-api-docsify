@@ -42,11 +42,11 @@ Sets the alignment mode of grid items in the grid. For details about the usage, 
 cachedCount(value: number)
 ```
 
-Sets the number of grid items to be cached (preloaded). It works only in [LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with the [virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll-1) option enabled. <!--Del-->For details, see [Minimizing White Blocks During Swiping](../../../../performance/arkts-performance-improvement-recommendation.md#minimizing-white-blocks-during-swiping).<!--DelEnd-->
+Sets the number of grid items to be cached (preloaded). It works only in [LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with the [virtualScroll](../arkts-apis/arkts-arkui-repeat-repeatattribute-c.md#virtualscroll-1) option enabled. <!--Del-->For details, see [Minimizing White Blocks During Swiping](../../../../performance/arkts-performance-improvement-recommendation.md#minimizing-white-blocks-during-swiping).<!--DelEnd-->
 
 The number of the grid items to be cached before and after the currently displayed one equals the value of **cachedCount** multiplied by the number of columns.
 
-[LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with [virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll-1) enabled will release **GridItem** components that are outside the display and cache range.
+[LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with [virtualScroll](../arkts-apis/arkts-arkui-repeat-repeatattribute-c.md#virtualscroll-1) enabled will release **GridItem** components that are outside the display and cache range.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ cachedCount(count: number, show: boolean)
 
 Sets the number of grid items to be cached (preloaded) and specifies whether to display the preloaded nodes.
 
-The number of the grid items to be cached before and after the currently displayed one equals the value of **cachedCount** multiplied by the number of columns. This attribute can be combined with the [clip](arkts-arkui-commonmethod-c.md#clip-1) or [clipContent](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
+The number of the grid items to be cached before and after the currently displayed one equals the value of **cachedCount** multiplied by the number of columns. This attribute can be combined with the [clip](arkts-arkui-common-commonmethod-c.md#clip-1) or [clipContent](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
 
 **Since:** 14
 
@@ -221,8 +221,8 @@ Sets the effect used when the scroll boundary is reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: **EdgeEffect.None** |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value **{ alwaysEnabled: true }** means to enable the scroll effect, and **{ alwaysEnabled: false }** means the opposite.<br>Default value: **{ alwaysEnabled: false }**<br>**Since:** 11 |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-enums-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: **EdgeEffect.None** |
+| options | [EdgeEffectOptions](arkts-arkui-common-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value **{ alwaysEnabled: true }** means to enable the scroll effect, and **{ alwaysEnabled: false }** means the opposite.<br>Default value: **{ alwaysEnabled: false }**<br>**Since:** 11 |
 
 ## editMode
 
@@ -268,7 +268,7 @@ Sets the options of the edit mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | No | Edit mode options. |
+| options | [EditModeOptions](arkts-arkui-common-editmodeoptions-i.md) | No | Edit mode options. |
 
 ## enableEditMode
 
@@ -320,7 +320,7 @@ Sets whether to support the scrolling gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true** |
+| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroll-scroller-c.md).<br>Default value: **true** |
 
 ## focusWrapMode
 
@@ -390,7 +390,7 @@ Sets the main axis layout direction of the grid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GridDirection](arkts-arkui-griddirection-e.md) | Yes | Main axis layout direction of the grid.<br>Default value: **GridDirection.Row** |
+| value | [GridDirection](arkts-arkui-grid-griddirection-e.md) | Yes | Main axis layout direction of the grid.<br>Default value: **GridDirection.Row** |
 
 ## maxCount
 
@@ -492,7 +492,7 @@ Sets the nested scrolling options. Sets the nested scrolling modes for both forw
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options. |
+| value | [NestedScrollOptions](arkts-arkui-common-nestedscrolloptions-i.md) | Yes | Nested scrolling options. |
 
 ## onEditModeChange
 
@@ -516,7 +516,7 @@ Triggered when the editing mode status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> \| undefined | Yes | Callback triggered when editing mode status changes.<br>Passing undefined will unregister the callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<boolean> \| undefined | Yes | Callback triggered when editing mode status changes.<br>Passing undefined will unregister the callback. |
 
 ## onItemDragEnter
 
@@ -594,7 +594,7 @@ Triggered when a grid item starts to be dragged.
 
 This event is triggered when the user long presses a grid item.
 
-Drag gesture recognition is also initiated by a long press, and the event processing mechanism prioritizes child component events. Therefore, when the grid item is bound to the [LongPressGesture](../arkts-apis/arkts-arkui-longpressgestureinterface-i.md), it cannot be dragged. In light of this, if both long press and drag operations are required on the grid item, you can use the universal drag event.
+Drag gesture recognition is also initiated by a long press, and the event processing mechanism prioritizes child component events. Therefore, when the grid item is bound to the [LongPressGesture](../arkts-apis/arkts-arkui-gesture-longpressgestureinterface-i.md), it cannot be dragged. In light of this, if both long press and drag operations are required on the grid item, you can use the universal drag event.
 
 The floating grid element being dragged can move within the application window. If it is necessary to restrict its movement range, this can be achieved through custom gestures. For details, see [Example 16: Customizing the Drag Effect for GridItem](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-16-customizing-the-drag-effect-for-griditem).
 
@@ -756,11 +756,11 @@ When this API is called back, the event parameter passes the scroll offset that 
 
 This event is triggered when either of the following conditions is met:
 
-1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation).2. The **Grid** component scrolls by inertia.3. Call the [fling](arkts-arkui-scroller-c.md#fling-1) API to trigger scrolling.
+1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation).2. The **Grid** component scrolls by inertia.3. Call the [fling](arkts-arkui-scroll-scroller-c.md#fling-1) API to trigger scrolling.
 
 This event is not triggered in the following scenarios:
 
-1. A scroll control API other than [fling](arkts-arkui-scroller-c.md#fling-1) is called.2. The out-of-bounds bounce effect is active.3. The scrollbar is dragged.
+1. A scroll control API other than [fling](arkts-arkui-scroll-scroller-c.md#fling-1) is called.2. The out-of-bounds bounce effect is active.3. The scrollbar is dragged.
 
 **Since:** 10
 
@@ -806,7 +806,7 @@ Called when the first or last item displayed in the grid changes.
 onScrollStart(event: () => void)
 ```
 
-Triggered when the grid starts scrolling initiated by the user's finger dragging the grid or its scrollbar. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroller-c.md)starts.
+Triggered when the grid starts scrolling initiated by the user's finger dragging the grid or its scrollbar. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroll-scroller-c.md)starts.
 
 **Since:** 10
 
@@ -830,7 +830,7 @@ Triggered when the grid starts scrolling initiated by the user's finger dragging
 onScrollStop(event: () => void)
 ```
 
-Triggered when the grid stops scrolling after the user's finger leaves the screen. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroller-c.md) stops.
+Triggered when the grid stops scrolling after the user's finger leaves the screen. This event is also triggered when the animation contained in the scrolling triggered by [Scroller](arkts-arkui-scroll-scroller-c.md) stops.
 
 **Since:** 10
 
@@ -922,7 +922,7 @@ Sets the scrollbar state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: **BarState.Auto**<br>**NOTE**<br>In API version 9and earlier versions, the default value is **BarState.Off**. Since API version 10, the default value is **BarState.Auto**. |
+| value | [BarState](../arkts-apis/arkts-arkui-enums-barstate-e.md) | Yes | Scrollbar state.<br>Default value: **BarState.Auto**<br>**NOTE**<br>In API version 9and earlier versions, the default value is **BarState.Off**. Since API version 10, the default value is **BarState.Auto**. |
 
 ## scrollBarColor
 

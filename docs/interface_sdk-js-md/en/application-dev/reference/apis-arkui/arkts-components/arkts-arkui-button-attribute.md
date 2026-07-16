@@ -18,11 +18,11 @@ The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-commo
 buttonStyle(value: ButtonStyleMode)
 ```
 
-Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1),[fontColor](ButtonAttribute#fontColor), and [role](ButtonAttribute#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
+Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the [backgroundColor](arkts-arkui-common-commonmethod-c.md#backgroundcolor-1),[fontColor](ButtonAttribute#fontColor), and [role](ButtonAttribute#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 12.
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ Sets the style and primacy for the button. The system automatically adjusts the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes | Style and primacy of the button<br>Default value: **ButtonStyleMode.EMPHASIZED** |
+| value | [ButtonStyleMode](arkts-arkui-button-buttonstylemode-e.md) | Yes | Style and primacy of the button<br>Default value: **ButtonStyleMode.EMPHASIZED** |
 
 ## contentModifier
 
@@ -64,7 +64,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<ButtonConfiguration> | Yes | Content modifier to apply to the button.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<ButtonConfiguration> | Yes | Content modifier to apply to the button.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## controlSize
 
@@ -76,7 +76,7 @@ Sets the size for the button.
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 12.
 
 **Since:** 11
 
@@ -94,7 +94,7 @@ Sets the size for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ControlSize](arkts-arkui-controlsize-e.md) | Yes | Size of the button.<br>Default value: **ControlSize.NORMAL** |
+| value | [ControlSize](arkts-arkui-button-controlsize-e.md) | Yes | Size of the button.<br>Default value: **ControlSize.NORMAL** |
 
 ## fontColor
 
@@ -190,7 +190,7 @@ Sets the font style for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontstyle-e.md) | Yes | Font style of the button.<br>Default value: **FontStyle.Normal** |
+| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes | Font style of the button.<br>Default value: **FontStyle.Normal** |
 
 ## fontWeight
 
@@ -238,7 +238,7 @@ Sets the label style for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes | Label style of the button. |
+| value | [LabelStyle](arkts-arkui-button-labelstyle-i.md) | Yes | Label style of the button. |
 
 ## maxFontScale
 
@@ -294,7 +294,7 @@ Sets the minimum font scale factor for text.
 role(value: ButtonRole)
 ```
 
-Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1),[fontColor](ButtonAttribute#fontColor), and [buttonStyle](ButtonAttribute#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
+Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the [backgroundColor](arkts-arkui-common-commonmethod-c.md#backgroundcolor-1),[fontColor](ButtonAttribute#fontColor), and [buttonStyle](ButtonAttribute#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 **Since:** 12
 
@@ -312,7 +312,7 @@ Sets the role of the button. The system automatically adjusts the button backgro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | Yes | Role of the button.<br>Default value: **ButtonRole.NORMAL** |
+| value | [ButtonRole](arkts-arkui-button-buttonrole-e.md) | Yes | Role of the button.<br>Default value: **ButtonRole.NORMAL** |
 
 ## stateEffect
 
@@ -360,5 +360,5 @@ Sets the button type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonType](arkts-arkui-buttontype-e.md) | Yes | Button type.<br>API version 18 and later: The default value is **ButtonType.ROUNDED_RECTANGLE**. |
+| value | [ButtonType](arkts-arkui-button-buttontype-e.md) | Yes | Button type.<br>API version 18 and later: The default value is **ButtonType.ROUNDED_RECTANGLE**. |
 

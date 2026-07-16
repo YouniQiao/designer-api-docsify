@@ -20,11 +20,11 @@ import { convertxml } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [ConvertXML](arkts-arkts-convertxml-c.md) | ConvertXML representation refers to extensible markup language. |
+| [ConvertXML](arkts-arkts-xml-convertxml-c.md) | ConvertXML representation refers to extensible markup language. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ConvertOptions](arkts-arkts-convertoptions-i.md) | Options for conversion. |
+| [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | Options for conversion. |
 

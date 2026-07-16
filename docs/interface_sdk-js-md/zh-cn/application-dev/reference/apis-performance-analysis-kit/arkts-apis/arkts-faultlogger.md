@@ -37,20 +37,20 @@ import { FaultLogger } from '@kit.PerformanceAnalysisKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [query](arkts-performanceanalysis-query-f.md#query-1) | 获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。 |
-| [query](arkts-performanceanalysis-query-f.md#query-2) | 获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。 |
-| [querySelfFaultLog](arkts-performanceanalysis-queryselffaultlog-f.md#queryselffaultlog-1) | 获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。 |
-| [querySelfFaultLog](arkts-performanceanalysis-queryselffaultlog-f.md#queryselffaultlog-2) | 获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。 |
+| [query](arkts-performanceanalysis-faultlogger-query-f.md#query-1) | 获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。 |
+| [query](arkts-performanceanalysis-faultlogger-query-f.md#query-2) | 获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。 |
+| [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md#queryselffaultlog-1) | 获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。 |
+| [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md#queryselffaultlog-2) | 获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [FaultLogInfo](arkts-performanceanalysis-faultloginfo-i.md) | 故障信息数据结构，获取到的故障信息的数据结构。 |
+| [FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md) | 故障信息数据结构，获取到的故障信息的数据结构。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [FaultType](arkts-performanceanalysis-faulttype-e.md) | 故障类型枚举。 |
+| [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 故障类型枚举。 |
 

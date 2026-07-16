@@ -6,7 +6,7 @@ The APIs provided by **DataSharePredicates** correspond to the filter criteria o
 
 **DataSharePredicates** applies to the following scenario:
 
-- It is used as a search criterion in the media file management service. For details, see [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-fetchoptions-i.md) in the fetch options of the album management. In this scenario, you do not need to pay attention to the database type.
+- It is used as a search criterion in the media file management service. For details, see [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) in the fetch options of the album management. In this scenario, you do not need to pay attention to the database type.
 
 <!--Del-->
 
@@ -34,13 +34,13 @@ import { dataSharePredicates } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-c.md) | Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a **DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for it. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a **DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for it. |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-c-sys.md) | Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a **DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for it. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c-sys.md) | Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a **DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for it. |
 <!--DelEnd-->
 

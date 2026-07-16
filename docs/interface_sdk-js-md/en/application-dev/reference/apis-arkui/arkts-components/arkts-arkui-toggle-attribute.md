@@ -34,7 +34,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<ToggleConfiguration> | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<ToggleConfiguration> | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## onChange
 
@@ -130,5 +130,5 @@ Sets the style for the component of the **Switch** type. This attribute is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SwitchStyle](arkts-arkui-switchstyle-i.md) | Yes | Style of the component of the **Switch** type. |
+| value | [SwitchStyle](arkts-arkui-toggle-switchstyle-i.md) | Yes | Style of the component of the **Switch** type. |
 

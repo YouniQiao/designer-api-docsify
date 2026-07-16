@@ -20,13 +20,13 @@ import { agentConstant } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AgentCardType](arkts-ability-agentcardtype-e.md) | The type of an AgentCard. |
+| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md) | The type of an AgentCard. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [AgentCardType](arkts-ability-agentcardtype-e-sys.md) | The type of an AgentCard. |
+| [AgentCardType](arkts-ability-agentconstant-agentcardtype-e-sys.md) | The type of an AgentCard. |
 <!--DelEnd-->
 

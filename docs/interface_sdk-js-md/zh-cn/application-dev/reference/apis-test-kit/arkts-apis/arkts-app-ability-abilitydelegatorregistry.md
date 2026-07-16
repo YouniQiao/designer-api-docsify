@@ -24,23 +24,23 @@ import { abilityDelegatorRegistry } from '@kit.TestKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAbilityDelegator](arkts-test-getabilitydelegator-f.md#getabilitydelegator-1) | 获取应用程序的[AbilityDelegator](application/AbilityDelegator:AbilityDelegator)对象，该对象能够使用调度测试框架的相关功能。 |
-| [getArguments](arkts-test-getarguments-f.md#getarguments-1) | 获取单元测试参数[AbilityDelegatorArgs](application/abilityDelegatorArgs:AbilityDelegatorArgs)对象。 |
+| [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator-1) | 获取应用程序的[AbilityDelegator](application/AbilityDelegator:AbilityDelegator)对象，该对象能够使用调度测试框架的相关功能。 |
+| [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md#getarguments-1) | 获取单元测试参数[AbilityDelegatorArgs](application/abilityDelegatorArgs:AbilityDelegatorArgs)对象。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [AbilityLifecycleState](arkts-test-abilitylifecyclestate-e.md) | Ability生命周期状态，该类型为枚举，可配合[AbilityDelegator](application/AbilityDelegator:AbilityDelegator)的[getAbilityState(ability)](application/AbilityDelegator:AbilityDelegator.getAbilityState)方法返回不同ability生命周期。 |
+| [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md) | Ability生命周期状态，该类型为枚举，可配合[AbilityDelegator](application/AbilityDelegator:AbilityDelegator)的[getAbilityState(ability)](application/AbilityDelegator:AbilityDelegator.getAbilityState)方法返回不同ability生命周期。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [AbilityDelegator](arkts-test-abilitydelegator-t.md) | AbilityDelegator模块。 |
-| [AbilityDelegatorArgs](arkts-test-abilitydelegatorargs-t.md) | AbilityDelegatorArgs模块。 |
-| [AbilityMonitor](arkts-test-abilitymonitor-t.md) | AbilityMonitor模块。 |
-| [AbilityStageMonitor](arkts-test-abilitystagemonitor-t.md) | AbilityStageMonitor模块。 |
-| [InteropAbilityMonitor](arkts-test-interopabilitymonitor-t.md) | 提供匹配满足指定条件的监控对象的方法。最近匹配的Ability对象将保存在InteropAbilityMonitor对象中。 |
-| [ShellCmdResult](arkts-test-shellcmdresult-t.md) | ShellCmdResult模块。 |
+| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) | AbilityDelegator模块。 |
+| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) | AbilityDelegatorArgs模块。 |
+| [AbilityMonitor](arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | AbilityMonitor模块。 |
+| [AbilityStageMonitor](arkts-test-abilitydelegatorregistry-abilitystagemonitor-t.md) | AbilityStageMonitor模块。 |
+| [InteropAbilityMonitor](arkts-test-abilitydelegatorregistry-interopabilitymonitor-t.md) | 提供匹配满足指定条件的监控对象的方法。最近匹配的Ability对象将保存在InteropAbilityMonitor对象中。 |
+| [ShellCmdResult](arkts-test-abilitydelegatorregistry-shellcmdresult-t.md) | ShellCmdResult模块。 |
 

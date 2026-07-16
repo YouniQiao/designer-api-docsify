@@ -23,28 +23,28 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [deleteStorage](arkts-arkdata-deletestorage-f.md#deletestorage-1) | 从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题，使用callback方式返回结果，此方法为异步方法。 |
-| [deleteStorage](arkts-arkdata-deletestorage-f.md#deletestorage-2) | 从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题，使用Promise方式返回结果，此方法为异步方法。 |
-| [deleteStorageSync](arkts-arkdata-deletestoragesync-f.md#deletestoragesync-1) | 从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。 |
-| [getStorage](arkts-arkdata-getstorage-f.md#getstorage-1) | 读取指定文件，将数据加载到Storage实例，用于数据操作，使用callback方式返回结果，此方法为异步方法。 |
-| [getStorage](arkts-arkdata-getstorage-f.md#getstorage-2) | 读取指定文件，将数据加载到Storage实例，用于数据操作，使用Promise方式返回结果，此方法为异步方法。 |
-| [getStorageSync](arkts-arkdata-getstoragesync-f.md#getstoragesync-1) | 读取指定文件，将数据加载到Storage实例，用于数据操作。 |
-| [removeStorageFromCache](arkts-arkdata-removestoragefromcache-f.md#removestoragefromcache-1) | 从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。使用callback方式返回结果，此方法为异步方法。 |
-| [removeStorageFromCache](arkts-arkdata-removestoragefromcache-f.md#removestoragefromcache-2) | 从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。使用Promise方式返回结果，此方法为异步方法。 |
-| [removeStorageFromCacheSync](arkts-arkdata-removestoragefromcachesync-f.md#removestoragefromcachesync-1) | 从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。 |
+| [deleteStorage](arkts-arkdata-storage-deletestorage-f.md#deletestorage-1) | 从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题，使用callback方式返回结果，此方法为异步方法。 |
+| [deleteStorage](arkts-arkdata-storage-deletestorage-f.md#deletestorage-2) | 从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题，使用Promise方式返回结果，此方法为异步方法。 |
+| [deleteStorageSync](arkts-arkdata-storage-deletestoragesync-f.md#deletestoragesync-1) | 从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。 |
+| [getStorage](arkts-arkdata-storage-getstorage-f.md#getstorage-1) | 读取指定文件，将数据加载到Storage实例，用于数据操作，使用callback方式返回结果，此方法为异步方法。 |
+| [getStorage](arkts-arkdata-storage-getstorage-f.md#getstorage-2) | 读取指定文件，将数据加载到Storage实例，用于数据操作，使用Promise方式返回结果，此方法为异步方法。 |
+| [getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getstoragesync-1) | 读取指定文件，将数据加载到Storage实例，用于数据操作。 |
+| [removeStorageFromCache](arkts-arkdata-storage-removestoragefromcache-f.md#removestoragefromcache-1) | 从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。使用callback方式返回结果，此方法为异步方法。 |
+| [removeStorageFromCache](arkts-arkdata-storage-removestoragefromcache-f.md#removestoragefromcache-2) | 从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。使用Promise方式返回结果，此方法为异步方法。 |
+| [removeStorageFromCacheSync](arkts-arkdata-storage-removestoragefromcachesync-f.md#removestoragefromcachesync-1) | 从内存中移除指定文件对应的Storage单实例。移除Storage单实例时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [Storage](arkts-arkdata-storage-i.md) | 提供获取和修改存储数据的接口。下列接口都需先使用[data_storage.getStorage](arkts-arkdata-getstorage-f.md#getstorage-1)或[data_storage.getStorageSync](arkts-arkdata-getstoragesync-f.md#getstoragesync-1)获取到Storage实例，再通过此实例调用对应接口。 |
-| [StorageObserver](arkts-arkdata-storageobserver-i.md) |  |
+| [Storage](arkts-arkdata-storage-storage-i.md) | 提供获取和修改存储数据的接口。下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md#getstorage-1)或[data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getstoragesync-1)获取到Storage实例，再通过此实例调用对应接口。 |
+| [StorageObserver](arkts-arkdata-storage-storageobserver-i.md) |  |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [ValueType](arkts-arkdata-valuetype-t.md) | 用于表示允许的数据字段类型。 |
+| [ValueType](arkts-arkdata-storage-valuetype-t.md) | 用于表示允许的数据字段类型。 |
 
 ### 常量
 

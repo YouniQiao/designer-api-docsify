@@ -12,12 +12,12 @@ import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } fro
 
 | Name | Description |
 | --- | --- |
-| [Package](arkts-ability-package-c.md) |  |
+| [Package](arkts-ability-package-package-c.md) |  |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CheckPackageHasInstalledOptions](arkts-ability-checkpackagehasinstalledoptions-i.md) |  |
-| [CheckPackageHasInstalledResponse](arkts-ability-checkpackagehasinstalledresponse-i.md) |  |
+| [CheckPackageHasInstalledOptions](arkts-ability-package-checkpackagehasinstalledoptions-i.md) |  |
+| [CheckPackageHasInstalledResponse](arkts-ability-package-checkpackagehasinstalledresponse-i.md) |  |
 

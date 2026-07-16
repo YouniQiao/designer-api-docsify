@@ -1,6 +1,6 @@
 # UIExtensionContext
 
-UIExtensionContext是[UIExtensionAbility](arkts-ability-uiextensionability-c.md)的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md)，提供UIExtensionAbility的相关配置信息以及操作UIAbility的方法，如启动UIAbility等。
+UIExtensionContext是[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md)，提供UIExtensionAbility的相关配置信息以及操作UIAbility的方法，如启动UIAbility等。
 
 **继承/实现关系：** UIExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
@@ -16,7 +16,7 @@ UIExtensionContext是[UIExtensionAbility](arkts-ability-uiextensionability-c.md)
 connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOptions): number
 ```
 
-将当前UIExtensionAbility连接到一个[ServiceExtensionAbility](arkts-ability-serviceextensionability-c-sys.md#onconnect-1)，通过返回的远程代理对象与ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。与此同时，该方法会将UIExtensionAbility的原始宿主Ability的Token传递给被连接的ServiceExtensionAbility，ServiceExtensionAbility可以在[onCreate()](arkts-ability-serviceextensionability-c-sys.md#oncreate-1)或[onConnect()](arkts-ability-serviceextensionability-c-sys.md#onconnect-1)方法中，通过Want参数的[UI_EXTENSION_ROOT_TOKEN](arkts-ability-params-e.md)获取该Token。
+将当前UIExtensionAbility连接到一个[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#onconnect-1)，通过返回的远程代理对象与ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。与此同时，该方法会将UIExtensionAbility的原始宿主Ability的Token传递给被连接的ServiceExtensionAbility，ServiceExtensionAbility可以在[onCreate()](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#oncreate-1)或[onConnect()](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#onconnect-1)方法中，通过Want参数的[UI_EXTENSION_ROOT_TOKEN](arkts-ability-wantconstant-params-e.md)获取该Token。
 
 > **说明：**  
 >  
@@ -37,7 +37,7 @@ connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOpti
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 连接ServiceExtensionAbility的Want信息，包括Ability名称、Bundle名称等。 |
-| connect | [ConnectOptions](arkts-ability-connectoptions-t.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、连接失败、断开的信息。 |
+| connect | [ConnectOptions](arkts-ability-ability-connectoptions-t.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、连接失败、断开的信息。 |
 
 **返回值：**
 
@@ -69,14 +69,14 @@ connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOpti
 setHostPageOverlayForbidden(isForbidden: boolean) : void
 ```
 
-是否允许[UIExtensionAbility](arkts-ability-uiextensionability-c.md)拉起的页面被使用方的页面覆盖。
+是否允许[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)拉起的页面被使用方的页面覆盖。
 
 > **说明：**  
 >  
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../../application-models/component-startup-rules.md)。  
 >  
-> 该接口需要在窗口创建之前调用。建议在[UIExtensionAbility](arkts-ability-uiextensionability-c.md)的  
-> [onCreate](arkts-ability-uiextensionability-c.md#oncreate-1)生命周期内调用。
+> 该接口需要在窗口创建之前调用。建议在[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)的  
+> [onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate-1)生命周期内调用。
 
 **起始版本：** 15
 
@@ -92,7 +92,7 @@ setHostPageOverlayForbidden(isForbidden: boolean) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isForbidden | boolean | 是 | 是否允许[UIExtensionAbility](arkts-ability-uiextensionability-c.md)拉起的页面被使用方的页面覆盖。true表示不允许，false表示允许。 |
+| isForbidden | boolean | 是 | 是否允许[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)拉起的页面被使用方的页面覆盖。true表示不允许，false表示允许。 |
 
 **错误码：**
 
@@ -132,7 +132,7 @@ startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<Abili
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 启动Ability的want信息。 |
-| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | 否 | 启动Ability所携带的参数。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**
 
@@ -242,7 +242,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 启动ServiceExtensionAbility的Want信息。 |
-| accountId | number | 是 | 系统账号的ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-accountmanager-i.md#getosaccountlocalid-1)接口获取。 |
+| accountId | number | 是 | 系统账号的ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1)接口获取。 |
 
 **返回值：**
 
@@ -296,7 +296,7 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Want> | 是 | 需要被同时拉起的多个UIAbility的启动参数列表，最多支持传入4个Want。启动参数Want不支持隐式启动、跨用户启动、分布式、免安装和按需加载，不指明分身的情况下默认启动主应用。 |
+| wantList | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<Want> | 是 | 需要被同时拉起的多个UIAbility的启动参数列表，最多支持传入4个Want。启动参数Want不支持隐式启动、跨用户启动、分布式、免安装和按需加载，不指明分身的情况下默认启动主应用。 |
 
 **返回值：**
 

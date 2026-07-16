@@ -171,7 +171,7 @@ enableScrollInteraction(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md)的滚动接口。<br/>默认值：true |
+| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroll-scroller-c.md)的滚动接口。<br/>默认值：true |
 
 ## friction
 
@@ -217,7 +217,7 @@ itemConstraintSize(value: ConstraintSizeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | 是 | 约束尺寸。设置小于0的值，参数不生效。 <br/>**说明：**<br/>1.同时设置itemConstraintSize和FlowItem的[constraintSize](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#constraintsize)属性时，minWidth/minHeight会取其中的最大值，maxWidth/maxHeight会取其中的最小值，调整后的值作为FlowItem的constraintSize处理。<br/>2.只设置itemConstraintSize时，相当于对WaterFlow所有子组件设置了相同的constraintSize。<br/>3.itemConstraintSize通过以上两种方式转换成FlowItem的constraintSize后的生效规则与通用属性[constraintSize](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#constraintsize)相同。 |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-units-constraintsizeoptions-i.md) | 是 | 约束尺寸。设置小于0的值，参数不生效。 <br/>**说明：**<br/>1.同时设置itemConstraintSize和FlowItem的[constraintSize](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#constraintsize)属性时，minWidth/minHeight会取其中的最大值，maxWidth/maxHeight会取其中的最小值，调整后的值作为FlowItem的constraintSize处理。<br/>2.只设置itemConstraintSize时，相当于对WaterFlow所有子组件设置了相同的constraintSize。<br/>3.itemConstraintSize通过以上两种方式转换成FlowItem的constraintSize后的生效规则与通用属性[constraintSize](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#constraintsize)相同。 |
 
 ## layoutDirection
 
@@ -239,7 +239,7 @@ layoutDirection(value: FlexDirection)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md) | 是 | 布局的主轴方向。<br/>默认值：FlexDirection.Column |
+| value | [FlexDirection](../arkts-apis/arkts-arkui-enums-flexdirection-e.md) | 是 | 布局的主轴方向。<br/>默认值：FlexDirection.Column |
 
 ## nestedScroll
 
@@ -263,7 +263,7 @@ nestedScroll(value: NestedScrollOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。 |
+| value | [NestedScrollOptions](arkts-arkui-common-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。 |
 
 ## onReachEnd
 
@@ -319,11 +319,11 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 满足以下任一条件时触发该事件：
 
-1. 用户交互（如手指滑动、键鼠操作等）触发滚动。2. WaterFlow惯性滚动。3. 调用[fling](arkts-arkui-scroller-c.md#fling-1)接口触发滚动。
+1. 用户交互（如手指滑动、键鼠操作等）触发滚动。2. WaterFlow惯性滚动。3. 调用[fling](arkts-arkui-scroll-scroller-c.md#fling-1)接口触发滚动。
 
 不触发该事件的条件：
 
-1. 调用除[fling](arkts-arkui-scroller-c.md#fling-1)接口外的其他滚动控制接口。2. 越界回弹。3. 拖动滚动条。
+1. 调用除[fling](arkts-arkui-scroll-scroller-c.md#fling-1)接口外的其他滚动控制接口。2. 越界回弹。3. 拖动滚动条。
 
 **起始版本：** 10
 
@@ -424,9 +424,9 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 > **说明：**  
 >  
 > 当通过[sections](../../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#waterflowoptions对象说明)参数设置了  
-> [WaterFlowSections](arkts-arkui-waterflowsections-c.md)分组，或通过  
+> [WaterFlowSections](arkts-arkui-water-flow-waterflowsections-c.md)分组，或通过  
 > [layoutMode](../../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#waterflowoptions对象说明)设置  
-> [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md)布局模式时，supportEmptyBranchInLazyLoading设为true、false、undefined或不设置  
+> [SLIDING_WINDOW](arkts-arkui-water-flow-waterflowlayoutmode-e.md)布局模式时，supportEmptyBranchInLazyLoading设为true、false、undefined或不设置  
 > supportEmptyBranchInLazyLoading，空分支后的FlowItem都会显示。
 
 **起始版本：** 26.0.0
@@ -467,5 +467,5 @@ syncLoad(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否同步加载WaterFlow区域内所有子组件。<br/>true表示同步加载，false表示异步加载。<br/>默认值：true。<br/>**说明：** <br/>设置为false时，在首次显示、不带动画[scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex-1)跳转场景，若当帧布局耗时超过50ms，会将WaterFlow区域内尚未布局的子组件延后到下一帧进行布局。 |
+| enable | boolean | 是 | 是否同步加载WaterFlow区域内所有子组件。<br/>true表示同步加载，false表示异步加载。<br/>默认值：true。<br/>**说明：** <br/>设置为false时，在首次显示、不带动画[scrollToIndex](arkts-arkui-scroll-scroller-c.md#scrolltoindex-1)跳转场景，若当帧布局耗时超过50ms，会将WaterFlow区域内尚未布局的子组件延后到下一帧进行布局。 |
 

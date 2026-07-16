@@ -55,6 +55,6 @@ Defines an explicit animation. When an animation is required, call this API expl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [AnimateParam](arkts-arkui-animateparam-i.md) | Yes |  |
+| value | [AnimateParam](arkts-arkui-common-animateparam-i.md) | Yes |  |
 | event | () => void | Yes |  |
 

@@ -26,15 +26,15 @@ cloneNode(node: Node, parent: Node, name: string): Node | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-node-i.md) | 是 | 要克隆的输入节点 |
-| parent | [Node](arkts-arkgraphics3d-node-i.md) | 是 | 克隆节点将被设置为其子节点的父节点 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 要克隆的输入节点 |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 克隆节点将被设置为其子节点的父节点 |
 | name | string | 是 | 克隆节点的名称 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-node-i.md) | 克隆结果，如果克隆失败则返回null. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 克隆结果，如果克隆失败则返回null. |
 
 ## createComponent
 
@@ -54,7 +54,7 @@ createComponent(node: Node, name: string): Promise<SceneComponent>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-node-i.md) | 是 | 组件附加到的节点 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 组件附加到的节点 |
 | name | string | 是 | 要加载的组件名称. 有效名称由各插件定义. |
 
 **返回值：**
@@ -95,14 +95,14 @@ getComponent(node: Node, name: string): SceneComponent | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-node-i.md) | 是 | 组件附加到的节点. |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 组件附加到的节点. |
 | name | string | 是 | 组件名称 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SceneComponent](arkts-arkgraphics3d-scenecomponent-i.md) | @syscap SystemCapability.ArkUi.Graphics3D |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) | @syscap SystemCapability.ArkUi.Graphics3D |
 
 ## getDefaultRenderContext
 
@@ -122,7 +122,7 @@ static getDefaultRenderContext(): RenderContext | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderContext](arkts-arkgraphics3d-rendercontext-i.md) | -- 默认RenderContext实例@static |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | -- 默认RenderContext实例@static |
 
 ## getNodeByPath
 
@@ -143,13 +143,13 @@ getNodeByPath(path: string, type?: NodeType): Node | null
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 节点路径 |
-| type | [NodeType](arkts-arkgraphics3d-nodetype-e.md) | 否 | 验证节点类型，如果不匹配则返回null |
+| type | [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md) | 否 | 验证节点类型，如果不匹配则返回null |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-node-i.md) | 如果通过路径找到节点 |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 如果通过路径找到节点 |
 
 ## getResourceFactory
 
@@ -169,7 +169,7 @@ getResourceFactory(): SceneResourceFactory
 
 | 类型 | 说明 |
 | --- | --- |
-| [SceneResourceFactory](arkts-arkgraphics3d-sceneresourcefactory-i.md) | 如果通过路径找到节点 |
+| [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | 如果通过路径找到节点 |
 
 ## importNode
 
@@ -190,14 +190,14 @@ importNode(name: string, node: Node, parent: Node | null): Node
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 新创建节点的名称. |
-| node | [Node](arkts-arkgraphics3d-node-i.md) | 是 | 要导入的节点. |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 是 | 要导入的节点. |
 | parent | Node \| null | 是 | 父节点，根节点为null |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-node-i.md) | 新创建的节点. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 新创建的节点. |
 
 ## importScene
 
@@ -225,7 +225,7 @@ importScene(name: string, scene: Scene, parent: Node | null): Node
 
 | 类型 | 说明 |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-node-i.md) | 新创建的节点. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 新创建的节点. |
 
 ## load
 
@@ -271,7 +271,7 @@ renderFrame(params?: RenderParameters): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [RenderParameters](arkts-arkgraphics3d-renderparameters-i.md) | 否 | 渲染参数 |
+| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | 否 | 渲染参数 |
 
 **返回值：**
 

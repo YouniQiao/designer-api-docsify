@@ -1,6 +1,6 @@
 # ImageSpan properties/events
 
-The attributes inherit from [BaseSpan](arkts-arkui-basespan-c.md). Among the universal attributes, [size](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md),[background](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), and [border](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are supported.
+The attributes inherit from [BaseSpan](arkts-arkui-span-basespan-c.md). Among the universal attributes, [size](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md),[background](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), and [border](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are supported.
 
 Among all the universal events, only the [click event](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) is supported. The following events are also supported.
 
@@ -34,7 +34,7 @@ Sets the placeholder image displayed during image loading.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) | Yes | Placeholder image displayed during image loading. The [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) type is supported.<br>Default value: **null** |
+| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Placeholder image displayed during image loading. The [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) type is supported.<br>Default value: **null** |
 
 ## colorFilter
 
@@ -82,7 +82,7 @@ Sets the image scale type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | Yes | Image scale type.<br>Default value: **ImageFit.Cover** |
+| value | [ImageFit](../arkts-apis/arkts-arkui-enums-imagefit-e.md) | Yes | Image scale type.<br>Default value: **ImageFit.Cover** |
 
 ## onComplete
 
@@ -180,5 +180,5 @@ Sets the alignment mode of the image relative to the line height.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageSpanAlignment](../arkts-apis/arkts-arkui-imagespanalignment-e.md) | Yes | Alignment mode of the image relative to the line height.<br>Default value:**ImageSpanAlignment.BOTTOM** |
+| value | [ImageSpanAlignment](../arkts-apis/arkts-arkui-enums-imagespanalignment-e.md) | Yes | Alignment mode of the image relative to the line height.<br>Default value:**ImageSpanAlignment.BOTTOM** |
 

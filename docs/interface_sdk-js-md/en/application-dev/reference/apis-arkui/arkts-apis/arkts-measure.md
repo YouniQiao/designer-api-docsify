@@ -12,11 +12,11 @@ import { MeasureOptions } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [MeasureText](arkts-arkui-measuretext-c.md) | Defines the Measure interface. |
+| [MeasureText](arkts-arkui-measure-measuretext-c.md) | Defines the Measure interface. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [MeasureOptions](arkts-arkui-measureoptions-i.md) | Provides attributes of the measured text. |
+| [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Provides attributes of the measured text. |
 

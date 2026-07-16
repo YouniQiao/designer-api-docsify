@@ -24,7 +24,7 @@ Since API version 11, this API follows the following rules:
 
 If the data type is [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md), the ring is of the monochrome type.
 
-If the data type is [LinearGradient](arkts-arkui-lineargradient-i.md), the ring is of the gradient type.
+If the data type is [LinearGradient](arkts-arkui-common-lineargradient-i.md), the ring is of the gradient type.
 
 If the data type is Array, the ring is of the gradient type. The first parameter indicates the color value. If it is set to a non-color value, the color of 0xFFE84026 is used. The second parameter indicates the color weight. If it is set to a negative number or a non-numeric value, the color weight is 0.
 
@@ -68,7 +68,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<GaugeConfiguration> | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<GaugeConfiguration> | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## description
 
@@ -144,7 +144,7 @@ Sets the indicator style of the gauge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | Yes | Indicator style.<br>**NOTE**<br>If this attribute is set to **null**, no indicator is displayed. |
+| value | [GaugeIndicatorOptions](arkts-arkui-gauge-gaugeindicatoroptions-i.md) | Yes | Indicator style.<br>**NOTE**<br>If this attribute is set to **null**, no indicator is displayed. |
 
 ## privacySensitive
 
@@ -156,7 +156,7 @@ Sets whether to enable privacy mode.
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 12
 
@@ -174,7 +174,7 @@ Sets whether to enable privacy mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)<boolean> | Yes | Whether to enable privacy mode. In privacy mode, the gauge indicator points to **0**, the maximum and minimum values are masked, and the scale range is displayed in gray or the background color. The value **true** means to enable privacy mode, and **false** means the opposite.<br>Default value: **false**.&lt;!--Del--&gt;<br>For widgets, this property must be used with [FormComponent](arkts-arkui-formcomponent.md) and the [obscured](arkts-arkui-commonmethod-c.md#obscured-1) attribute to display privacy masking effects.&lt;!--DelEnd--&gt;. |
+| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)<boolean> | Yes | Whether to enable privacy mode. In privacy mode, the gauge indicator points to **0**, the maximum and minimum values are masked, and the scale range is displayed in gray or the background color. The value **true** means to enable privacy mode, and **false** means the opposite.<br>Default value: **false**.&lt;!--Del--&gt;<br>For widgets, this property must be used with [FormComponent](arkts-arkui-formcomponent.md) and the [obscured](arkts-arkui-common-commonmethod-c.md#obscured-1) attribute to display privacy masking effects.&lt;!--DelEnd--&gt;. |
 
 ## startAngle
 
@@ -248,7 +248,7 @@ Sets the shadow style of the gauge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | Yes | Shadow effect. You can specify the blur radius, and the offset along the X and Y axes.<br>**NOTE**<br>The shadow color is the same as the ring color.<br>If this attribute is set to **null**, the shadow effect is disabled. |
+| value | [GaugeShadowOptions](arkts-arkui-gauge-gaugeshadowoptions-i.md) | Yes | Shadow effect. You can specify the blur radius, and the offset along the X and Y axes.<br>**NOTE**<br>The shadow color is the same as the ring color.<br>If this attribute is set to **null**, the shadow effect is disabled. |
 
 ## value
 

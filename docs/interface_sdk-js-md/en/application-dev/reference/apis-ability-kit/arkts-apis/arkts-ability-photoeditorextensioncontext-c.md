@@ -35,7 +35,7 @@ Save image data by image pixmap.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AbilityResult> | Returns the result of save. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<AbilityResult> | Returns the result of save. |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ Save image data by uri.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AbilityResult> | Returns the result of save. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<AbilityResult> | Returns the result of save. |
 
 **Error codes:**
 

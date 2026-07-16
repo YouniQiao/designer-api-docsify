@@ -24,14 +24,14 @@ import { fileExtensionInfo } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [DeviceFlag](arkts-corefile-deviceflag-n.md) | Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is used to determine whether a capability is available through the AND operation. |
-| [DocumentFlag](arkts-corefile-documentflag-n.md) | Defines the values of **mode** used in **FileInfo**. |
+| [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md) | Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is used to determine whether a capability is available through the AND operation. |
+| [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-n.md) | Defines the values of **mode** used in **FileInfo**. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [DeviceType](arkts-corefile-devicetype-e-sys.md) | Defines the values of **deviceType** used in **RootInfo**. |
+| [DeviceType](arkts-corefile-fileextensioninfo-devicetype-e-sys.md) | Defines the values of **deviceType** used in **RootInfo**. |
 <!--DelEnd-->
 

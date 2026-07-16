@@ -80,7 +80,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family. Default font: **'HarmonyOS Sans'**<br>Supported fonts include **'HarmonyOS Sans'** and custom fonts registered using [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontcollection-c.md#loadfontsync-1).<br>Only the 'HarmonyOS Sans' font is supported for widgets. |
+| value | string \| Resource | Yes | Font family. Default font: **'HarmonyOS Sans'**<br>Supported fonts include **'HarmonyOS Sans'** and custom fonts registered using [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync-1).<br>Only the 'HarmonyOS Sans' font is supported for widgets. |
 
 ## fontSize
 
@@ -152,7 +152,7 @@ Sets the scrolling strategy for the marquee after its attributes are updated. (T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MarqueeUpdateStrategy](../arkts-apis/arkts-arkui-marqueeupdatestrategy-e.md) | Yes | Scrolling strategy for the marquee after its attributes are updated.<br>Default value: **MarqueeUpdateStrategy.DEFAULT** |
+| value | [MarqueeUpdateStrategy](../arkts-apis/arkts-arkui-enums-marqueeupdatestrategy-e.md) | Yes | Scrolling strategy for the marquee after its attributes are updated.<br>Default value: **MarqueeUpdateStrategy.DEFAULT** |
 
 ## onBounce
 
@@ -252,5 +252,5 @@ Called when scrolling is stoped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> \| undefined | Yes |  |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<void> \| undefined | Yes |  |
 

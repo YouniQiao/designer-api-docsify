@@ -12,5 +12,5 @@ import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [PhotoEditorExtensionAbility](arkts-ability-photoeditorextensionability-c.md) | Class of the photo editor ExtensionAbility, which provides APIs for you to edit photos. |
+| [PhotoEditorExtensionAbility](arkts-ability-app-ability-photoeditorextensionability-photoeditorextensionability-c.md) | Class of the photo editor ExtensionAbility, which provides APIs for you to edit photos. |
 

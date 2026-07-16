@@ -34,7 +34,7 @@ alignItems(value: VerticalAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md) | 是 | 子组件在垂直方向上的对齐格式。<br/>默认值：VerticalAlign.Center |
+| value | [VerticalAlign](../arkts-apis/arkts-arkui-enums-verticalalign-e.md) | 是 | 子组件在垂直方向上的对齐格式。<br/>默认值：VerticalAlign.Center |
 
 ## justifyContent
 
@@ -58,7 +58,7 @@ justifyContent(value: FlexAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md) | 是 | 子组件在水平方向上的对齐格式。<br/>默认值：FlexAlign.Start |
+| value | [FlexAlign](../arkts-apis/arkts-arkui-enums-flexalign-e.md) | 是 | 子组件在水平方向上的对齐格式。<br/>默认值：FlexAlign.Start |
 
 ## reverse
 

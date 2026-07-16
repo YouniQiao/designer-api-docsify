@@ -24,5 +24,5 @@ import { uri } from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-c.md) | 构造一个URI对象，并提供判断两个URI是否相等、对URI路径部分进行编码规范化等方法。 |
+| [URI](arkts-arkts-uri-uri-c.md) | 构造一个URI对象，并提供判断两个URI是否相等、对URI路径部分进行编码规范化等方法。 |
 

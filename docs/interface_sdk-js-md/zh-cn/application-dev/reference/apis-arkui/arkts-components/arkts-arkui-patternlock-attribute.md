@@ -90,7 +90,7 @@ backgroundColor(value: ResourceColor)
 
 > **说明：**  
 >  
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 9
 
@@ -140,7 +140,7 @@ onDotConnect(callback: import('../api/@ohos.base').Callback<number>)
 
 > **说明：**  
 >  
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -278,7 +278,7 @@ sideLength(value: Length)
 
 > **说明：**  
 >  
-> PatternLock组件设置了通用属性宽高比[aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio-1)，且不等于1时（组件尺寸被设定为长方形），九宫格依然绘制为正方形（超出组件范围）。
+> PatternLock组件设置了通用属性宽高比[aspectRatio](arkts-arkui-common-commonmethod-c.md#aspectratio-1)，且不等于1时（组件尺寸被设定为长方形），九宫格依然绘制为正方形（超出组件范围）。
 
 **起始版本：** 9
 

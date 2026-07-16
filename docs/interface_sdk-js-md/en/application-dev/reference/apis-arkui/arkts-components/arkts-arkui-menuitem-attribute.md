@@ -32,7 +32,7 @@ Sets the font style of the menu item content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Font style of the menu item content. |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font style of the menu item content. |
 
 ## contentFontColor
 
@@ -80,7 +80,7 @@ Sets the font style of the menu item label.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Font style of the menu item label. |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font style of the menu item label. |
 
 ## labelFontColor
 

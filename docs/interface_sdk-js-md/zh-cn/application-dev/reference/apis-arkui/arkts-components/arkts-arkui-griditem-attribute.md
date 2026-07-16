@@ -28,7 +28,7 @@ columnEnd(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 当前元素终点列号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例1固定行列grid)和[示例3（可滚动Grid设置跨行跨列节点）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)。<br/>取值范围：[0, 总列数-1] |
+| value | number | 是 | 当前元素终点列号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例1固定行列grid)和[示例3（可滚动Grid设置跨行跨列节点）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)。<br/>取值范围：[0, 总列数-1] |
 
 ## columnStart
 
@@ -50,7 +50,7 @@ columnStart(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 当前元素起始列号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例1固定行列grid)和[示例3（可滚动Grid设置跨行跨列节点）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)。<br/>取值范围：[0, 总列数-1] |
+| value | number | 是 | 当前元素起始列号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例1固定行列grid)和[示例3（可滚动Grid设置跨行跨列节点）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)。<br/>取值范围：[0, 总列数-1] |
 
 ## forceRebuild
 
@@ -120,7 +120,7 @@ rowEnd(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 当前元素终点行号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例1固定行列grid)和[示例3（可滚动Grid设置跨行跨列节点）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)。<br/>取值范围：[0, 总行数-1] |
+| value | number | 是 | 当前元素终点行号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例1固定行列grid)和[示例3（可滚动Grid设置跨行跨列节点）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)。<br/>取值范围：[0, 总行数-1] |
 
 ## rowStart
 
@@ -142,7 +142,7 @@ rowStart(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 当前元素起始行号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例1固定行列grid)和[示例3（可滚动Grid设置跨行跨列节点）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)。<br/>取值范围：[0, 总行数-1] |
+| value | number | 是 | 当前元素起始行号。<br/>需要指定GridItem起始行列号和所占行列数的场景推荐使用Grid的[GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md)参数，详细可参考Grid的[示例1（固定行列Grid）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例1固定行列grid)和[示例3（可滚动Grid设置跨行跨列节点）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)。<br/>取值范围：[0, 总行数-1] |
 
 ## selectable
 

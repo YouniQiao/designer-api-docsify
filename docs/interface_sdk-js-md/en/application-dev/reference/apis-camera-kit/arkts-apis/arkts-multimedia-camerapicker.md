@@ -20,18 +20,18 @@ import { cameraPicker } from '@kit.CameraKit';
 
 | Name | Description |
 | --- | --- |
-| [pick](arkts-camera-pick-f.md#pick-1) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
+| [pick](arkts-camera-camerapicker-pick-f.md#pick-1) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [PickerProfile](arkts-camera-pickerprofile-c.md) | Defines the configuration information about the camera picker. |
-| [PickerResult](arkts-camera-pickerresult-c.md) | Defines the processing result of the camera picker. |
+| [PickerProfile](arkts-camera-camerapicker-pickerprofile-c.md) | Defines the configuration information about the camera picker. |
+| [PickerResult](arkts-camera-camerapicker-pickerresult-c.md) | Defines the processing result of the camera picker. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PickerMediaType](arkts-camera-pickermediatype-e.md) | Enumerates the media types displayed in the camera picker. |
+| [PickerMediaType](arkts-camera-camerapicker-pickermediatype-e.md) | Enumerates the media types displayed in the camera picker. |
 

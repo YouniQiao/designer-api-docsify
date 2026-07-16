@@ -33,7 +33,7 @@ Opens a file or directory. This API returns the result synchronously. This API s
 
 | Type | Description |
 | --- | --- |
-| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-file-i.md) | File object opened. |
+| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | File object opened. |
 
 **Error codes:**
 

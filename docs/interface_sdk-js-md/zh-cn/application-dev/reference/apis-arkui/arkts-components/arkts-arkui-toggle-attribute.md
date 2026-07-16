@@ -34,7 +34,7 @@ contentModifier(modifier: ContentModifier<ToggleConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<ToggleConfiguration> | 是 | 在Toggle组件上，定制内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<ToggleConfiguration> | 是 | 在Toggle组件上，定制内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## onChange
 
@@ -106,7 +106,7 @@ switchPointColor(color: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | Switch类型的圆形滑块颜色。<br/>默认值：$r('sys.color.ohos_id_color_foreground_contrary')<br/>**说明：**<br/>同时设置了[systemMaterial](arkts-arkui-commonmethod-c.md#systemmaterial-1)新材质时，设置此属性后会出现点光源效果，点光源颜色跟随此属性的设置。 |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | Switch类型的圆形滑块颜色。<br/>默认值：$r('sys.color.ohos_id_color_foreground_contrary')<br/>**说明：**<br/>同时设置了[systemMaterial](arkts-arkui-common-commonmethod-c.md#systemmaterial-1)新材质时，设置此属性后会出现点光源效果，点光源颜色跟随此属性的设置。 |
 
 ## switchStyle
 
@@ -130,5 +130,5 @@ switchStyle(value: SwitchStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SwitchStyle](arkts-arkui-switchstyle-i.md) | 是 | Switch样式风格。 |
+| value | [SwitchStyle](arkts-arkui-toggle-switchstyle-i.md) | 是 | Switch样式风格。 |
 

@@ -38,7 +38,7 @@ changeRenderType(type: NodeRenderType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [NodeRenderType](arkts-arkui-noderendertype-e.md) | 是 | 渲染类型 |
+| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | 是 | 渲染类型 |
 
 **返回值：**
 
@@ -74,9 +74,9 @@ constructor(uiContext: UIContext, options: RenderOptions,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 | 用于创建FrameNode的UIContext |
-| options | [RenderOptions](arkts-arkui-renderoptions-i.md) | 是 | Builder Node的渲染选项 |
+| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 是 | Builder Node的渲染选项 |
 | id | string | 是 | 应用定义的XComponent id |
-| type | [XComponentType](arkts-arkui-xcomponenttype-e.md) | 是 | XComponent类型 |
+| type | [XComponentType](arkts-arkui-enums-xcomponenttype-e.md) | 是 | XComponent类型 |
 | libraryName | string | 否 | XComponent要加载的库名称 |
 
 ## onCreate

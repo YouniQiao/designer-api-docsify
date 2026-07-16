@@ -18,7 +18,7 @@ aboutToAppear?(): void
 
 > **说明：**  
 >  
-> 回调时机参考[onAppear](../arkts-components/arkts-arkui-commonmethod-c.md#onappear-1)。
+> 回调时机参考[onAppear](../arkts-components/arkts-arkui-common-commonmethod-c.md#onappear-1)。
 
 **起始版本：** 11
 
@@ -40,7 +40,7 @@ aboutToDisappear?(): void
 
 > **说明：**  
 >  
-> 回调时机参考[onDisAppear](../arkts-components/arkts-arkui-commonmethod-c.md#ondisappear-1)。
+> 回调时机参考[onDisAppear](../arkts-components/arkts-arkui-common-commonmethod-c.md#ondisappear-1)。
 
 **起始版本：** 11
 
@@ -74,7 +74,7 @@ aboutToResize?(size: Size): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [Size](../arkts-components/arkts-arkui-size-i.md) | 是 | 用于返回组件布局大小的宽和高，单位为vp。 |
+| size | [Size](../arkts-components/arkts-arkui-canvas-size-i.md) | 是 | 用于返回组件布局大小的宽和高，单位为vp。 |
 
 ## makeNode
 
@@ -126,7 +126,7 @@ onAttach?(): void
 
 > **说明：**  
 >  
-> 回调时机参考[onAttach](../arkts-components/arkts-arkui-commonmethod-c.md#onattach-1)。
+> 回调时机参考[onAttach](../arkts-components/arkts-arkui-common-commonmethod-c.md#onattach-1)。
 
 **起始版本：** 18
 
@@ -172,7 +172,7 @@ onDetach?(): void
 
 > **说明：**  
 >  
-> 回调时机参考[onDetach](../arkts-components/arkts-arkui-commonmethod-c.md#ondetach-1)。
+> 回调时机参考[onDetach](../arkts-components/arkts-arkui-common-commonmethod-c.md#ondetach-1)。
 
 **起始版本：** 18
 
@@ -206,7 +206,7 @@ onTouchEvent?(event: TouchEvent): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md) | 是 | 触摸事件。 |
+| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | 是 | 触摸事件。 |
 
 ## onUnbind
 

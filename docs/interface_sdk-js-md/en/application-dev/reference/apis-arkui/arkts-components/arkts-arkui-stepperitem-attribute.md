@@ -96,5 +96,5 @@ Sets the display status of **nextLabel** in the stepper.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ItemState](../arkts-apis/arkts-arkui-itemstate-e.md) | No | Display status of **nextLabel** in the stepper.<br>Default value: **ItemState.Normal** |
+| value | [ItemState](../arkts-apis/arkts-arkui-arkui-advanced-toolbar-itemstate-e.md) | No | Display status of **nextLabel** in the stepper.<br>Default value: **ItemState.Normal** |
 

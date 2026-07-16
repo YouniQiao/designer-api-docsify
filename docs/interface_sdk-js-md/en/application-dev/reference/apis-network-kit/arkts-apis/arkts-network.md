@@ -6,11 +6,11 @@
 
 | Name | Description |
 | --- | --- |
-| [Network](arkts-network-network-depr-c.md) |  |
+| [Network](arkts-network-network-network-depr-c.md) |  |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [NetworkResponse](arkts-network-networkresponse-depr-i.md) | This module provides the Network Response. |
+| [NetworkResponse](arkts-network-network-networkresponse-depr-i.md) | This module provides the Network Response. |
 

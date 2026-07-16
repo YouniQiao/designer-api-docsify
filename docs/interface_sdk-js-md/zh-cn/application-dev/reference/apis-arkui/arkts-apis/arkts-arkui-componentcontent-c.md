@@ -33,7 +33,7 @@ ComponentContent的构造函数。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 | 创建对应节点时所需要的UI上下文。 |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)<[]> | 是 | 封装不带参builder函数的WrappedBuilder对象。 |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-common-wrappedbuilder-c.md)<[]> | 是 | 封装不带参builder函数的WrappedBuilder对象。 |
 
 ## constructor
 
@@ -58,7 +58,7 @@ ComponentContent的构造函数。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 | 创建对应节点时所需要的UI上下文。 |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)<[T]> | 是 | 封装带参builder函数的WrappedBuilder对象。 |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-common-wrappedbuilder-c.md)<[T]> | 是 | 封装带参builder函数的WrappedBuilder对象。 |
 | args | T | 是 | WrappedBuilder对象封装的builder函数的参数。 |
 
 ## constructor
@@ -84,9 +84,9 @@ ComponentContent的构造函数。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 | 创建对应节点时所需要的UI上下文。 |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)<[T]> | 是 | 封装带参builder函数的WrappedBuilder对象。 |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-common-wrappedbuilder-c.md)<[T]> | 是 | 封装带参builder函数的WrappedBuilder对象。 |
 | args | T | 是 | WrappedBuilder对象封装的builder函数的参数。 |
-| options | [BuildOptions](arkts-arkui-buildoptions-i.md) | 是 | build的配置参数，判断是否支持@Builder中嵌套@Builder的行为。*@Builder** within **@Builder**. |
+| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 | build的配置参数，判断是否支持@Builder中嵌套@Builder的行为。*@Builder** within **@Builder**. |
 
 ## dispose
 
@@ -261,7 +261,7 @@ update(args: T): void
 updateConfiguration(): void
 ```
 
-传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md)。
+传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md)。
 
 > **说明：**
 

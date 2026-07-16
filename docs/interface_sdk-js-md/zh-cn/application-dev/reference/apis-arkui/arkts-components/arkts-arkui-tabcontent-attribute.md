@@ -22,7 +22,7 @@ onWillHide(event: VoidCallback)
 
 > **˵����**
 
-> ��API version 20��ʼ���ýӿ�֧����[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)�е��á�
+> ��API version 20��ʼ���ýӿ�֧����[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)�е��á�
 
 **起始版本：** 12
 
@@ -50,7 +50,7 @@ onWillShow(event: VoidCallback)
 
 > **˵����**
 
-> ��API version 20��ʼ���ýӿ�֧����[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)�е��á�
+> ��API version 20��ʼ���ýӿ�֧����[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)�е��á�
 
 **起始版本：** 12
 
@@ -104,10 +104,10 @@ tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 
 > **˵����**
 
-> - ��ҳǩ��[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)����ʽ��ͨ��Ϊ����+�»��ߣ�����+�����ҳǩ������������ı���ʽ����������ڶ������ߵײ�ʹ�á��л�ҳǩʱĬ��֧�ֶ�����תЧ������������Ѷ  
+> - ��ҳǩ��[SubTabBarStyle](arkts-arkui-tab-content-subtabbarstyle-c.md)����ʽ��ͨ��Ϊ����+�»��ߣ�����+�����ҳǩ������������ı���ʽ����������ڶ������ߵײ�ʹ�á��л�ҳǩʱĬ��֧�ֶ�����תЧ������������Ѷ  
 > ��Ӧ�õĶ������ࣨ��"��ע����Ƶ������"��������ģ��Ķ�������������  
 >  
-> - �ײ�ҳǩ/���ҳǩ��[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)����ʽ�����»��ߺͱ���Ч����ҳǩ��ʽͨ��Ϊͼ��+���ֵ���Ϸ�ʽ���л�ҳǩʱĬ���޶�����תЧ�����ײ�ҳǩͨ������Ӧ��  
+> - �ײ�ҳǩ/���ҳǩ��[BottomTabBarStyle](arkts-arkui-tab-content-bottomtabbarstyle-c.md)����ʽ�����»��ߺͱ���Ч����ҳǩ��ʽͨ��Ϊͼ��+���ֵ���Ϸ�ʽ���л�ҳǩʱĬ���޶�����תЧ�����ײ�ҳǩͨ������Ӧ��  
 > ������������ҳ�����֡��Ƽ��������ҳǩ�����ڿ���������������vertical(true)�������򲼾֣���ҳǩ�ڲ����ʾ��Ĭ�������ʾ��
 
 **起始版本：** 9

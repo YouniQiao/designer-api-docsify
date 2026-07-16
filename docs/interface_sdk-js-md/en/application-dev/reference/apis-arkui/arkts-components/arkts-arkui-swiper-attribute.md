@@ -65,7 +65,7 @@ If [loop](SwiperAttribute#loop) is set to **false**, automatic playback stops at
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | autoPlay | boolean | Yes | Whether to enable automatic playback for child components.<br>**true**: yes;**false**: no<br>If an invalid value is passed, the value **false** is used. |
-| options | [AutoPlayOptions](arkts-arkui-autoplayoptions-i.md) | Yes | Whether child components stop automatic playback when the screen is pressed by fingers, a mouse device, or other input devices. If **stopWhenTouched** is set to **true**, automatic playback resumes after any finger lifts in multi-touch scenarios.<br>Default value: **{ stopWhenTouched: true }**. |
+| options | [AutoPlayOptions](arkts-arkui-swiper-autoplayoptions-i.md) | Yes | Whether child components stop automatic playback when the screen is pressed by fingers, a mouse device, or other input devices. If **stopWhenTouched** is set to **true**, automatic playback resumes after any finger lifts in multi-touch scenarios.<br>Default value: **{ stopWhenTouched: true }**. |
 
 ## cachedCount
 
@@ -181,7 +181,7 @@ Sets the number of child components to be prloaded and configuration options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | count | number | Yes | - Number of child components to be preloaded (cached).<br>The value range is [0, +∞). If the value is less than 0, the value **1** is used. |
-| options | [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md) | Yes | Configuration options for child components to be preloaded. |
+| options | [CachedCountOptions](arkts-arkui-swiper-cachedcountoptions-i.md) | Yes | Configuration options for child components to be preloaded. |
 
 ## curve
 
@@ -189,7 +189,7 @@ Sets the number of child components to be prloaded and configuration options.
 curve(value: Curve | string | ICurve)
 ```
 
-Sets the animation curve. The interpolating spring curve is used by default. For details about common curves, see [Curve](../arkts-apis/arkts-arkui-curve-e.md). You can also create custom curves (interpolation curve objects) by using the API provided by the [interpolation calculation](../arkts-apis/arkts-curves.md) module.
+Sets the animation curve. The interpolating spring curve is used by default. For details about common curves, see [Curve](../arkts-apis/arkts-arkui-enums-curve-e.md). You can also create custom curves (interpolation curve objects) by using the API provided by the [interpolation calculation](../arkts-apis/arkts-curves.md) module.
 
 **Since:** 8
 
@@ -205,7 +205,7 @@ Sets the animation curve. The interpolating spring curve is used by default. For
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Curve \| string \| ICurve | Yes | Animation curve.<br>The **string** type is deprecated since API version9 (see [curves.init](../arkts-apis/arkts-arkui-init-f.md#init-1), [curves.steps](../arkts-apis/arkts-arkui-steps-f.md#steps-1),[curves.cubicBezier](../arkts-apis/arkts-arkui-cubicbezier-f.md#cubicbezier-1), and [curves.spring](../arkts-apis/arkts-arkui-spring-f.md#spring-1)). Use **Curve** or **ICurve** instead.<br>Default value:**[interpolatingSpring](../arkts-apis/arkts-arkui-interpolatingspring-f.md#interpolatingspring-1)(-1, 1, 328, 34)**.<br>**Since:** 10 |
+| value | Curve \| string \| ICurve | Yes | Animation curve.<br>The **string** type is deprecated since API version9 (see [curves.init](../arkts-apis/arkts-arkui-curves-init-f.md#init-1), [curves.steps](../arkts-apis/arkts-arkui-curves-steps-f.md#steps-1),[curves.cubicBezier](../arkts-apis/arkts-arkui-curves-cubicbezier-f.md#cubicbezier-1), and [curves.spring](../arkts-apis/arkts-arkui-curves-spring-f.md#spring-1)). Use **Curve** or **ICurve** instead.<br>Default value:**[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring-1)(-1, 1, 328, 34)**.<br>**Since:** 10 |
 
 ## customContentTransition
 
@@ -217,7 +217,7 @@ Defines a custom page transition animation. During finger-following swipes and p
 
 Instructions:
 
-1. This API does not work when **prevMargin** and **nextMargin** are set in such a way that the **Swiper** frontend and backend display the same page during loop playback.2. During finger-following swipes and post-release transition animations,the [SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md) callback is invoked for all pages in the viewport on a frame-by-frame basis. For example, when there are two pages whose subscripts are 0 and 1in the viewport, two callbacks whose indexes are 0 and 1 are invoked in each frame.3. When the **swipeByGroup** parameter of the **displayCount** attribute is set to **true**,the callback is invoked for all pages in a group if any page in the group is within the viewport;and all pages in a group are removed from the render tree if none of them are within the viewport.4. During finger-following swipes and post-release transition animations, the default animation (page scrolling)is still effective. If you do not want the page to scroll, you can set the **translate** property on the main axis to offset the page scrolling. For example, if the value of **displayCount** is **2** and there are two pages whose subscripts are 0 and 1 within the viewport, you can set the **translate** property on the main axis to the following on a frame-by-frame basis:**translate** for page 0 = **-position** x **mainAxisLength**; **translate** for page 1= **-(position - 1)** x **mainAxisLength**
+1. This API does not work when **prevMargin** and **nextMargin** are set in such a way that the **Swiper** frontend and backend display the same page during loop playback.2. During finger-following swipes and post-release transition animations,the [SwiperContentTransitionProxy](arkts-arkui-swiper-swipercontenttransitionproxy-i.md) callback is invoked for all pages in the viewport on a frame-by-frame basis. For example, when there are two pages whose subscripts are 0 and 1in the viewport, two callbacks whose indexes are 0 and 1 are invoked in each frame.3. When the **swipeByGroup** parameter of the **displayCount** attribute is set to **true**,the callback is invoked for all pages in a group if any page in the group is within the viewport;and all pages in a group are removed from the render tree if none of them are within the viewport.4. During finger-following swipes and post-release transition animations, the default animation (page scrolling)is still effective. If you do not want the page to scroll, you can set the **translate** property on the main axis to offset the page scrolling. For example, if the value of **displayCount** is **2** and there are two pages whose subscripts are 0 and 1 within the viewport, you can set the **translate** property on the main axis to the following on a frame-by-frame basis:**translate** for page 0 = **-position** x **mainAxisLength**; **translate** for page 1= **-(position - 1)** x **mainAxisLength**
 
 **Since:** 12
 
@@ -235,7 +235,7 @@ Instructions:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transition | [SwiperContentAnimatedTransition](arkts-arkui-swipercontentanimatedtransition-i.md) | Yes | Information about the custom page transition animation. |
+| transition | [SwiperContentAnimatedTransition](arkts-arkui-swiper-swipercontentanimatedtransition-i.md) | Yes | Information about the custom page transition animation. |
 
 ## disableSwipe
 
@@ -325,7 +325,7 @@ Sets the number of elements to display per page.
 > treated as a group for page switching, allowing only one page to be switched at a time. In this case, you are  
 > advised not to set **swipeByGroup** or set **swipeByGroup** to **false**.  
 >  
-> - This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 18.
+> - This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 18.
 
 When the navigation indicator is set to dot style and the number of child elements displayed in the viewport is greater than 1 (multi-page scenario)<!--RP1--><!--RP1End-->, the number of displayed navigation dots follows the rules below.
 
@@ -415,7 +415,7 @@ Sets the mode in which elements are displayed along the main axis. This API take
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SwiperDisplayMode](arkts-arkui-swiperdisplaymode-e.md) | Yes | Mode in which elements are displayed along the main axis.<br>Default value:**SwiperDisplayMode.STRETCH** |
+| value | [SwiperDisplayMode](arkts-arkui-swiper-swiperdisplaymode-e.md) | Yes | Mode in which elements are displayed along the main axis.<br>Default value:**SwiperDisplayMode.STRETCH** |
 
 ## duration
 
@@ -427,7 +427,7 @@ Sets the duration of the animation for child component switching.
 
 **duration** must be used in conjunction with [curve](SwiperAttribute#curve).
 
-The default curve for the animation is [interpolatingSpring](../arkts-apis/arkts-arkui-interpolatingspring-f.md#interpolatingspring-1). When this curve is applied, the duration of the animation is determined solely by the parameters of the curve itself and is no longer governed by the **duration** setting. For curves that are not governed by the **duration** setting,see [Interpolation Calculation](../arkts-apis/arkts-curves.md). Among others,[springMotion](../arkts-apis/arkts-arkui-springmotion-f.md#springmotion-1),[responsiveSpringMotion](../arkts-apis/arkts-arkui-responsivespringmotion-f.md#responsivespringmotion-1), and interpolatingSpring do not respect the **duration** setting. To have the animation duration managed by **duration**, you should select a different curve for the **curve** attribute.
+The default curve for the animation is [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring-1). When this curve is applied, the duration of the animation is determined solely by the parameters of the curve itself and is no longer governed by the **duration** setting. For curves that are not governed by the **duration** setting,see [Interpolation Calculation](../arkts-apis/arkts-curves.md). Among others,[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springmotion-1),[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion-1), and interpolatingSpring do not respect the **duration** setting. To have the animation duration managed by **duration**, you should select a different curve for the **curve** attribute.
 
 **Since:** 7
 
@@ -449,7 +449,7 @@ The default curve for the animation is [interpolatingSpring](../arkts-apis/arkts
 effectMode(value: EdgeEffect)
 ```
 
-Edge sliding effect. This parameter takes effect only when [loop](SwiperAttribute#loop) is set to **false** or all child nodes are displayed on one screen in the **Swiper** viewport. When the [SwiperController.changeIndex()](arkts-arkui-swipercontroller-c.md#changeindex-1),[SwiperController.showNext()](arkts-arkui-swipercontroller-c.md#shownext-1), or [SwiperController.showPrevious()](arkts-arkui-swipercontroller-c.md#showprevious-1) API is called to go to the first or last page, the rebound effect does not take effect.
+Edge sliding effect. This parameter takes effect only when [loop](SwiperAttribute#loop) is set to **false** or all child nodes are displayed on one screen in the **Swiper** viewport. When the [SwiperController.changeIndex()](arkts-arkui-swiper-swipercontroller-c.md#changeindex-1),[SwiperController.showNext()](arkts-arkui-swiper-swipercontroller-c.md#shownext-1), or [SwiperController.showPrevious()](arkts-arkui-swiper-swipercontroller-c.md#showprevious-1) API is called to go to the first or last page, the rebound effect does not take effect.
 
 **Since:** 8
 
@@ -465,7 +465,7 @@ Edge sliding effect. This parameter takes effect only when [loop](SwiperAttribut
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the component is at one of the edges.<br>Default value:**EdgeEffect.Spring** |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-enums-edgeeffect-e.md) | Yes | Effect used when the component is at one of the edges.<br>Default value:**EdgeEffect.Spring** |
 
 ## index
 
@@ -595,7 +595,7 @@ Sets the style of the navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | No | Style of the navigation indicator. |
+| value | [IndicatorStyle](arkts-arkui-tab-content-indicatorstyle-i.md) | No | Style of the navigation indicator. |
 
 ## interval
 
@@ -677,7 +677,7 @@ Sets whether to enable loop playback. In **LazyForEach** mode, it is recommended
 maintainVisibleContentPosition(enabled: boolean)
 ```
 
-Sets whether to maintain the visible content position when data is inserted or deleted above or ahead of the viewport. This applies to **Swiper** components using a single [LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) as the child node, where the data source is modified using **LazyForEach** API such as [onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd-1) or [onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete-1). In other scenarios, the position of the visible content changes when data is inserted or deleted above or before the display area.
+Sets whether to maintain the visible content position when data is inserted or deleted above or ahead of the viewport. This applies to **Swiper** components using a single [LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) as the child node, where the data source is modified using **LazyForEach** API such as [onDataAdd](arkts-arkui-lazy-for-each-datachangelistener-i.md#ondataadd-1) or [onDataDelete](arkts-arkui-lazy-for-each-datachangelistener-i.md#ondatadelete-1). In other scenarios, the position of the visible content changes when data is inserted or deleted above or before the display area.
 
 When **swipeByGroup** in [displayCount](SwiperAttribute#displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean))is set to **true**, the visible content position remains unchanged only if the amount of data inserted or deleted above or before the display area is a multiple of the group size. Otherwise, the visible content position may change during group recalculation.
 
@@ -729,7 +729,7 @@ Sets the nested scrolling mode of the **Swiper** component and its parent contai
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SwiperNestedScrollMode](arkts-arkui-swipernestedscrollmode-e.md) | Yes | Nested scrolling mode of the **Swiper** component and its parent container.<br>If an invalid value is passed, the value **SwiperNestedScrollMode.SELF_ONLY** is used. |
+| value | [SwiperNestedScrollMode](arkts-arkui-swiper-swipernestedscrollmode-e.md) | Yes | Nested scrolling mode of the **Swiper** component and its parent container.<br>If an invalid value is passed, the value **SwiperNestedScrollMode.SELF_ONLY** is used. |
 
 ## nextMargin
 
@@ -743,11 +743,11 @@ When the main axis runs horizontally and either **nextMargin** or **prevMargin**
 
 When the main axis runs vertically and either **nextMargin** or **prevMargin** is greater than the measured height of the child component, both margins are hidden.
 
-When using the **nextMargin** or **prevMargin** API, avoid applying [size constraints](arkts-arkui-commonmethod-c.md#constraintsize-1) to child components. Otherwise, the main axis of the child nodes will not be stretched to the expected length, causing the margins to lose their effect.
+When using the **nextMargin** or **prevMargin** API, avoid applying [size constraints](arkts-arkui-common-commonmethod-c.md#constraintsize-1) to child components. Otherwise, the main axis of the child nodes will not be stretched to the expected length, causing the margins to lose their effect.
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 10
 
@@ -856,7 +856,7 @@ When the **Swiper** component is used together with **LazyForEach**, the subpage
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<number> | Yes | Index of the currently displayed element.<br>**Since:** 18 |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<number> | Yes | Index of the currently displayed element.<br>**Since:** 18 |
 
 ## onContentDidScroll
 
@@ -966,7 +966,7 @@ Defines the callback of the swipe state change event for the **Swiper** componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ScrollState> | Yes | Callback triggered when the sliding status changes. |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<ScrollState> | Yes | Callback triggered when the sliding status changes. |
 
 ## onSelected
 
@@ -992,7 +992,7 @@ Triggered when the selected element changes. The index of the currently selected
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<number> | Yes | Index of the currently selected element. |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<number> | Yes | Index of the currently selected element. |
 
 ## onUnselected
 
@@ -1018,7 +1018,7 @@ Triggered when the selected element changes. The index of the element that is ab
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<number> | Yes | Index of the element that is about to be hidden. |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<number> | Yes | Index of the element that is about to be hidden. |
 
 ## pageFlipMode
 
@@ -1058,11 +1058,11 @@ When the main axis runs horizontally and either **nextMargin** or **prevMargin**
 
 When the main axis runs vertically and either **nextMargin** or **prevMargin** is greater than the measured height of the child component, both margins are hidden.
 
-When using the **nextMargin** or **prevMargin** API, avoid applying [size constraints](arkts-arkui-commonmethod-c.md#constraintsize-1) to child components. Otherwise, the main axis of the child nodes will not be stretched to the expected length, causing the margins to lose their effect.
+When using the **nextMargin** or **prevMargin** API, avoid applying [size constraints](arkts-arkui-common-commonmethod-c.md#constraintsize-1) to child components. Otherwise, the main axis of the child nodes will not be stretched to the expected length, causing the margins to lose their effect.
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 10
 

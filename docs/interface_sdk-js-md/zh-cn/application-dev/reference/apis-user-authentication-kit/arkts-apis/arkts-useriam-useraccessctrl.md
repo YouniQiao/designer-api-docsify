@@ -27,7 +27,7 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [verifyAuthToken](arkts-userauthentication-verifyauthtoken-f-sys.md#verifyauthtoken-1) | 验证认证令牌。该接口用于校验AuthToken的有效性，包括完整性校验和时效性校验，校验通过后返回解析后的AuthToken详细信息。使用Promise异步回调。 |
+| [verifyAuthToken](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md#verifyauthtoken-1) | 验证认证令牌。该接口用于校验AuthToken的有效性，包括完整性校验和时效性校验，校验通过后返回解析后的AuthToken详细信息。使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -35,7 +35,7 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AuthToken](arkts-userauthentication-authtoken-i-sys.md) | 认证令牌数据。表示校验通过后返回解析的AuthToken数据结果，包含认证的详细信息，如挑战值、认证信任等级、认证类型、用户ID等。 |
+| [AuthToken](arkts-userauthentication-useraccessctrl-authtoken-i-sys.md) | 认证令牌数据。表示校验通过后返回解析的AuthToken数据结果，包含认证的详细信息，如挑战值、认证信任等级、认证类型、用户ID等。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -43,6 +43,6 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AuthTokenType](arkts-userauthentication-authtokentype-e-sys.md) | 认证令牌类型枚举。该枚举定义了认证令牌的类型，用于标识令牌的签发来源。 |
+| [AuthTokenType](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md) | 认证令牌类型枚举。该枚举定义了认证令牌的类型，用于标识令牌的签发来源。 |
 <!--DelEnd-->
 

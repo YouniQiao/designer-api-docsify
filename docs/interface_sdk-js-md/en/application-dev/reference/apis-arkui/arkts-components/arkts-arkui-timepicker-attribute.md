@@ -34,7 +34,7 @@ Sets whether to display a leading zero for the hours, minutes, and seconds.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DateTimeOptions](../../apis-localization-kit/arkts-apis/arkts-localization-datetimeoptions-i.md) | Yes | Whether to display a leading zero for the hours, minutes, and seconds.<br>Default value:<br>**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format, the default value is **"numeric"**, meaning no leading zero.<br>**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br>**second**: The default value is **"2-digit"**,meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br> If **hour**, **minute**, or **second** is set to **undefined**, the display follows the default rules. |
+| value | [DateTimeOptions](../../apis-localization-kit/arkts-apis/arkts-localization-intl-datetimeoptions-i.md) | Yes | Whether to display a leading zero for the hours, minutes, and seconds.<br>Default value:<br>**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format, the default value is **"numeric"**, meaning no leading zero.<br>**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br>**second**: The default value is **"2-digit"**,meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".<br> If **hour**, **minute**, or **second** is set to **undefined**, the display follows the default rules. |
 
 ## dateTimeOptions
 
@@ -106,7 +106,7 @@ Sets the text color, font size, and font weight of edge items (the second item a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{<br  >color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for edge items.<br>Default value:<br>{<br  >color: '#ff182431',<br>font: {<br>size: '14fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
 ## disappearTextStyle
 
@@ -168,7 +168,7 @@ To enable haptic feedback, you must declare the following permission under **req
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 18.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 18.
 
 **Since:** 12
 
@@ -322,7 +322,7 @@ Compared with the [onChange](TimePickerAttribute#onChange(callback: TimePickerRe
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 18
 
@@ -338,7 +338,7 @@ Compared with the [onChange](TimePickerAttribute#onChange(callback: TimePickerRe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<TimePickerResult> | Yes | Callback triggered during the scrolling of the time picker when an item enters the divider area. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<TimePickerResult> | Yes | Callback triggered during the scrolling of the time picker when an item enters the divider area. |
 
 ## selectedTextStyle
 
@@ -364,7 +364,7 @@ Default value: { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Font color, font size, and font weight of the selected item.<br>Default value:{ color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } } |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | Yes | Font color, font size, and font weight of the selected item.<br>Default value:{ color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } } |
 
 ## selectedTextStyle
 
@@ -412,7 +412,7 @@ Sets the text color, font size, and font weight of candidate items (the item imm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for candidate items.<br>Default value:{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | Yes | Text color, font size, and font weight for candidate items.<br>Default value:{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
 ## textStyle
 

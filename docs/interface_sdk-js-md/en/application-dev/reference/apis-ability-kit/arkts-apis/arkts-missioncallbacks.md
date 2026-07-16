@@ -7,7 +7,7 @@
 
 | Name | Description |
 | --- | --- |
-| [MissionCallback](arkts-ability-missioncallback-i-sys.md) | MissionCallback registered by app. |
+| [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | MissionCallback registered by app. |
 <!--DelEnd-->
 
 <!--Del-->

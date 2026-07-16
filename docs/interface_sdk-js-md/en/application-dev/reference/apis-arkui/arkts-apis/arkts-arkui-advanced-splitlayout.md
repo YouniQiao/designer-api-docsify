@@ -12,5 +12,5 @@ import { SplitLayout } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [SplitLayout](arkts-arkui-splitlayout-s.md) | Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts. |
+| [SplitLayout](arkts-arkui-arkui-advanced-splitlayout-splitlayout-s.md) | Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts. |
 

@@ -42,7 +42,7 @@ Sets the route mode used for redirecting the user from the **NavRouter** compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | Yes | Route mode used for redirection.<br>Default value:**NavRouteMode.PUSH_WITH_RECREATE** |
+| mode | [NavRouteMode](arkts-arkui-nav-router-navroutemode-e.md) | Yes | Route mode used for redirection.<br>Default value:**NavRouteMode.PUSH_WITH_RECREATE** |
 
 ## onStateChange
 

@@ -1,6 +1,6 @@
 # AbilityDelegator
 
-The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-app-ability-uiability.md) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism.You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-getabilitydelegator-f.md#getabilitydelegator-1).
+The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-app-ability-uiability.md) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism.You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator-1).
 
 > **NOTE**  
 >  
@@ -32,8 +32,8 @@ Adds an **AbilityMonitor** instance. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the **AbilityMonitor** instance is added, **err** is **undefined**. Otherwise, **err** is an error object. |
+| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the **AbilityMonitor** instance is added, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -62,13 +62,13 @@ Adds an **AbilityMonitor** instance. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -97,7 +97,7 @@ Adds an **AbilityMonitor** instance. This API returns the result synchronously. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Error codes:**
 
@@ -127,7 +127,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is added, **err** is undefined. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is added, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -162,7 +162,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -222,7 +222,7 @@ Add an InteropAbilityMonitor object for monitoring the lifecycle state changes o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [InteropAbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-interopabilitymonitor-t.md) | Yes | InteropAbilityMonitor object. |
+| monitor | [InteropAbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-interopabilitymonitor-t.md) | Yes | InteropAbilityMonitor object. |
 
 **Error codes:**
 
@@ -250,8 +250,8 @@ Schedules the lifecycle state of an ability to **Background**. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-uiability-c.md) | Yes | Target ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Background**, **err** is **undefined**. Otherwise, **err** is an error object. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Background**, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -280,13 +280,13 @@ Schedules the lifecycle state of an ability to **Background**. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -315,8 +315,8 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-uiability-c.md) | Yes | Target ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Foreground**, **err** is **undefined**. Otherwise, **err** is an error object. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Foreground**, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -345,13 +345,13 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -381,7 +381,7 @@ Executes a shell command. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | cmd | string | Yes | Shell command string. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ShellCmdResult> | Yes | Callback used to return the result. If the shell command is executed, **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<ShellCmdResult> | Yes | Callback used to return the result. If the shell command is executed, **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
 
 ## executeShellCommand
 
@@ -405,7 +405,7 @@ Executes a shell command with the timeout period specified. This API uses an asy
 | --- | --- | --- | --- |
 | cmd | string | Yes | Shell command string. |
 | timeoutSecs | number | Yes | Command timeout period, in seconds. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ShellCmdResult> | Yes | Callback used to return the result. If the shell command is executed, **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<ShellCmdResult> | Yes | Callback used to return the result. If the shell command is executed, **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
 
 ## executeShellCommand
 
@@ -434,7 +434,7 @@ Executes a shell command with the timeout period specified. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ShellCmdResult> | Promise used to return a [ShellCmdResult](arkts-ability-shellcmdresult-i.md) object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<ShellCmdResult> | Promise used to return a [ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md) object. |
 
 ## finishTest
 
@@ -458,7 +458,7 @@ Finishes the test and prints log information to the unit test console. This API 
 | --- | --- | --- | --- |
 | msg | string | Yes | Log string. |
 | code | number | Yes | Log code. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the test finishes and the log information is printed to the unit test console, **err** is undefined. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the test finishes and the log information is printed to the unit test console, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -494,7 +494,7 @@ Finishes the test and prints log information to the unit test console. This API 
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -523,13 +523,13 @@ Obtains the lifecycle state of an ability.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-uiability-c.md) | Yes | Target ability. |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Lifecycle state of the ability, For details about the state values, see [AbilityLifecycleState](../../apis-test-kit/arkts-apis/arkts-test-abilitylifecyclestate-e.md). |
+| number | Lifecycle state of the ability, For details about the state values, see [AbilityLifecycleState](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md). |
 
 **Error codes:**
 
@@ -557,7 +557,7 @@ Obtains the application context.
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | [Context](arkts-ability-context-depr-i.md). |
+| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | [Context](arkts-ability-context-context-depr-i.md). |
 
 ## getCurrentTopAbility
 
@@ -579,7 +579,7 @@ Obtains the top ability of this application. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<UIAbility> | Yes | Callback used to return the result. If the top ability is obtained,**err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<UIAbility> | Yes | Callback used to return the result. If the top ability is obtained,**err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -608,7 +608,7 @@ Obtains the top ability of this application. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<UIAbility> | Promise used to return the top ability. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<UIAbility> | Promise used to return the top ability. |
 
 **Error codes:**
 
@@ -637,7 +637,7 @@ Prints log information to the unit test console. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | msg | string | Yes | Log string. The value contains a maximum of 10,000 characters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the log information is printed to the unit test console, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the log information is printed to the unit test console, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## print
 
@@ -665,7 +665,7 @@ Prints log information to the unit test console. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 ## printSync
 
@@ -715,8 +715,8 @@ Removes an **AbilityMonitor** instance. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the **AbilityMonitor** instance is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
+| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the **AbilityMonitor** instance is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -745,13 +745,13 @@ Removes an **AbilityMonitor** instance. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -780,7 +780,7 @@ Removes an **AbilityMonitor** instance. This API returns the result synchronousl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Error codes:**
 
@@ -810,7 +810,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is removed, **err** is undefined. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is removed, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -845,7 +845,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -905,7 +905,7 @@ Remove a specified InteropAbilityMonitor object from the application memory.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [InteropAbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-interopabilitymonitor-t.md) | Yes | InteropAbilityMonitor object. |
+| monitor | [InteropAbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-interopabilitymonitor-t.md) | Yes | InteropAbilityMonitor object. |
 
 **Error codes:**
 
@@ -963,7 +963,7 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | **Want** parameter for starting the ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1012,7 +1012,7 @@ Starts an ability. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1055,8 +1055,8 @@ Waits for the **Ability** instance that matches the **AbilityMonitor** instance 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<UIAbility> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
+| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<UIAbility> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1085,9 +1085,9 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 | timeout | number | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<UIAbility> | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<UIAbility> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -1116,14 +1116,14 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| monitor | [AbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 | timeout | number | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<UIAbility> | Promise used to return the **Ability** instance obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<UIAbility> | Promise used to return the **Ability** instance obtained. |
 
 **Error codes:**
 
@@ -1153,7 +1153,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AbilityStage> | Yes | Callback used to return the result. If the operation is successful,**err** is undefined and data is the [AbilityStage](arkts-ability-abilitystage-c.md)instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<AbilityStage> | Yes | Callback used to return the result. If the operation is successful,**err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1184,7 +1184,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 | --- | --- | --- | --- |
 | monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 | timeout | number | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AbilityStage> | Yes | Callback used to return the result. If the operation is successful,**err** is undefined and data is the [AbilityStage](arkts-ability-abilitystage-c.md)instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<AbilityStage> | Yes | Callback used to return the result. If the operation is successful,**err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1220,7 +1220,7 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AbilityStage> | Promise used to return the [AbilityStage](arkts-ability-abilitystage-c.md) instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<AbilityStage> | Promise used to return the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md) instance. |
 
 **Error codes:**
 

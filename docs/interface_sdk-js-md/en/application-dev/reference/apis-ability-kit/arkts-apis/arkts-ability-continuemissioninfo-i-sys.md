@@ -1,6 +1,6 @@
 # ContinueMissionInfo (System API)
 
-The module defines the parameters required for initiating mission continuation with the bundle name specified. For details about mission continuation, see [continueMission](arkts-ability-continuemission-f-sys.md#continuemission-3)
+The module defines the parameters required for initiating mission continuation with the bundle name specified. For details about mission continuation, see [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission-3)
 
 **Since:** 10
 

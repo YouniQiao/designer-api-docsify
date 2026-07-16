@@ -28,7 +28,7 @@ Changes the file owner based on the file descriptor. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 
 ## fchown
@@ -54,5 +54,5 @@ Changes the file owner based on the file descriptor. This API uses an asynchrono
 | fd | number | Yes | File descriptor of the target file. |
 | uid | number | Yes | New UID. |
 | gid | number | Yes | New GID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked when the file owner is changed asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback invoked when the file owner is changed asynchronously. |
 

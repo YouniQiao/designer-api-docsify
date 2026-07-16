@@ -58,7 +58,7 @@ fillMode(value: FillMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | 是 | 当前播放方向下，动画开始前和结束后的状态。<br/>默认值：FillMode.Forwards |
+| value | [FillMode](../arkts-apis/arkts-arkui-enums-fillmode-e.md) | 是 | 当前播放方向下，动画开始前和结束后的状态。<br/>默认值：FillMode.Forwards |
 
 ## fixedSize
 
@@ -106,7 +106,7 @@ images(value: Array<ImageFrameInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ImageFrameInfo> | 是 | 设置图片帧信息集合。每一帧的帧信息(ImageFrameInfo)包含图片路径、图片大小、图片位置和图片播放时长信息，详见[ImageFrameInfo](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-imageanimator.md#imageframeinfo对象说明)对象说明。<br/>默认值：[] <br/> **说明：** 传入数组的内容过大时，内存占用会随之升高。此内存由开发者自行控制。因此，开发者在传入数据前，请充分评估内存消耗情况，以避免内存不足等问题。 |
+| value | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<ImageFrameInfo> | 是 | 设置图片帧信息集合。每一帧的帧信息(ImageFrameInfo)包含图片路径、图片大小、图片位置和图片播放时长信息，详见[ImageFrameInfo](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-imageanimator.md#imageframeinfo对象说明)对象说明。<br/>默认值：[] <br/> **说明：** 传入数组的内容过大时，内存占用会随之升高。此内存由开发者自行控制。因此，开发者在传入数据前，请充分评估内存消耗情况，以避免内存不足等问题。 |
 
 ## iterations
 
@@ -136,7 +136,7 @@ iterations(value: number)
 monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 ```
 
-设置组件是否通过系统[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)的可见性判定，控制组件的暂停和播放。
+设置组件是否通过系统[onVisibleAreaChange](arkts-arkui-common-commonmethod-c.md#onvisibleareachange-1)的可见性判定，控制组件的暂停和播放。
 
 **起始版本：** 17
 
@@ -152,7 +152,7 @@ monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitorInvisibleArea | boolean | 是 | 当设置为true时，组件将基于系统的[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)可见性判定，控制组件的暂停和播放。<br/> 当组件的运行状态为[AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)的Running时，若判定组件不可见，则自动执行暂停操作；若判定为可见，则自动恢复播放。<br/>当设置为false时，组件的暂停和播放不受到onVisibleAreaChange影响。<br/>默认值：false<br/> **说明：** <br/>当该属性由true动态修改为false时，组件将依据当前的[AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)状态进行处理。<br/> 例如，若当前状态为Running且因[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)的不可见回调暂停，则在属性由true改为false后，组件会从上次暂停的位置重新开始播放。<br/>由该属性导致的不可见暂停和可见暂停操作不会改变用户设置的[state](ImageAnimatorAttribute#state)值。 |
+| monitorInvisibleArea | boolean | 是 | 当设置为true时，组件将基于系统的[onVisibleAreaChange](arkts-arkui-common-commonmethod-c.md#onvisibleareachange-1)可见性判定，控制组件的暂停和播放。<br/> 当组件的运行状态为[AnimationStatus](../arkts-apis/arkts-arkui-enums-animationstatus-e.md)的Running时，若判定组件不可见，则自动执行暂停操作；若判定为可见，则自动恢复播放。<br/>当设置为false时，组件的暂停和播放不受到onVisibleAreaChange影响。<br/>默认值：false<br/> **说明：** <br/>当该属性由true动态修改为false时，组件将依据当前的[AnimationStatus](../arkts-apis/arkts-arkui-enums-animationstatus-e.md)状态进行处理。<br/> 例如，若当前状态为Running且因[onVisibleAreaChange](arkts-arkui-common-commonmethod-c.md#onvisibleareachange-1)的不可见回调暂停，则在属性由true改为false后，组件会从上次暂停的位置重新开始播放。<br/>由该属性导致的不可见暂停和可见暂停操作不会改变用户设置的[state](ImageAnimatorAttribute#state)值。 |
 
 ## onCancel
 
@@ -344,5 +344,5 @@ state(value: AnimationStatus)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | 是 | 默认为初始状态，用于控制播放状态。<br/>默认值：AnimationStatus.Initial |
+| value | [AnimationStatus](../arkts-apis/arkts-arkui-enums-animationstatus-e.md) | 是 | 默认为初始状态，用于控制播放状态。<br/>默认值：AnimationStatus.Initial |
 

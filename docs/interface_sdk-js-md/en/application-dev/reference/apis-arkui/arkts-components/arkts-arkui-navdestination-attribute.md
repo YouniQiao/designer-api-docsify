@@ -22,7 +22,7 @@ Sets the icon of the back button on the title bar.
 
 > **NOTE**
 
-> - This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.  
+> - This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 12.  
 >  
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the  
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or  
@@ -54,7 +54,7 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 > **NOTE**
 
-> - This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).  
+> - This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).  
 >  
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the  
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or  
@@ -96,7 +96,7 @@ Binds the **NavDestination** component with a nested scrollable container, which
 > triggered without delay. As such, to ensure the optimal user experience, avoid triggering scroll events of  
 > multiple scrollable containers simultaneously.  
 >  
-> - This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 22.
+> - This API can be called in [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 22.
 
 **Since:** 14
 
@@ -112,7 +112,7 @@ Binds the **NavDestination** component with a nested scrollable container, which
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scrollInfos | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NestedScrollInfo> | Yes | Controller of the target nested scrollable containers. |
+| scrollInfos | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<NestedScrollInfo> | Yes | Controller of the target nested scrollable containers. |
 
 ## bindToScrollable
 
@@ -133,7 +133,7 @@ Binds the **NavDestination** component with a scrollable container, which can be
 > triggered without delay. As such, to ensure the optimal user experience, avoid triggering scroll events of  
 > multiple scrollable containers simultaneously.  
 >  
-> - This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 22.
+> - This API can be called in [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 22.
 
 **Since:** 14
 
@@ -149,7 +149,7 @@ Binds the **NavDestination** component with a scrollable container, which can be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scrollers | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<Scroller> | Yes | Controller of the target scrollable container. |
+| scrollers | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<Scroller> | Yes | Controller of the target scrollable container. |
 
 ## customTransition
 
@@ -161,7 +161,7 @@ Sets a custom transition animation for the **NavDestination** component.
 
 > **NOTE**
 
-> - This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).  
+> - This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).  
 >  
 > - If both this attribute and [systemTransition](NavDestinationAttribute#systemTransition) are set,  
 > whichever is set later takes effect.
@@ -228,7 +228,7 @@ Sets whether to show or hide the system status bar when entering this **NavDesti
 > full-screen window.  
 > > 2. The **Navigation** container containing the **NavDestination** component occupies the entire page area.  
 > > 3. The **NavDestination** component occupies the entire **Navigation** container.  
-> > 4. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD.  
+> > 4. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-nav-destination-navdestinationmode-e.md).STANDARD.  
 >  
 > - The actual effect of setting the system status bar depends on the specific device support. For details, see  
 > [setSpecificSystemBarEnabled](../../../../reference/apis-arkui/arkts-apis-window-Window.md#setspecificsystembarenabled11).
@@ -391,7 +391,7 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 > status bar.  
 >  
 > - To allow a component to extend into non-safe areas, the title bar and toolbar must be hidden or set to  
-> [STACK](arkts-arkui-barstyle-e.md) mode.
+> [STACK](arkts-arkui-navigation-barstyle-e.md) mode.
 
 **Since:** 12
 
@@ -407,8 +407,8 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<LayoutSafeAreaType> | No | Types of non-safe areas to extend into.<br>Default value:<br>[LayoutSafeAreaType.SYSTEM] |
-| edges | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<LayoutSafeAreaEdge> | No | Edges for expanding the safe area.<br> Default value:<br>[LayoutSafeAreaEdge.TOP, LayoutSafeAreaEdge.BOTTOM] |
+| types | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<LayoutSafeAreaType> | No | Types of non-safe areas to extend into.<br>Default value:<br>[LayoutSafeAreaType.SYSTEM] |
+| edges | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<LayoutSafeAreaEdge> | No | Edges for expanding the safe area.<br> Default value:<br>[LayoutSafeAreaEdge.TOP, LayoutSafeAreaEdge.BOTTOM] |
 
 ## menus
 
@@ -416,11 +416,11 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 menus(value: Array<NavigationMenuItem> | CustomBuilder)
 ```
 
-Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed.When the value type is Array<[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
+Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed.When the value type is Array<[NavigationMenuItem](arkts-arkui-navigation-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
 > **NOTE**
 
-> - This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 14.  
+> - This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 14.  
 >  
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the  
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or  
@@ -440,7 +440,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NavigationMenuItem> \| CustomBuilder | Yes | Menu items in the upper right corner of the page. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<NavigationMenuItem> \| CustomBuilder | Yes | Menu items in the upper right corner of the page. |
 
 ## menus
 
@@ -448,11 +448,11 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenuOptions)
 ```
 
-Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed.Compared with [menus](NavDestinationAttribute#menus(value: Array<NavigationMenuItem> | CustomBuilder)), this API adds menu options. When the value type is Array<[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
+Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed.Compared with [menus](NavDestinationAttribute#menus(value: Array<NavigationMenuItem> | CustomBuilder)), this API adds menu options. When the value type is Array<[NavigationMenuItem](arkts-arkui-navigation-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
 > **NOTE**
 
-> - This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).  
+> - This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).  
 >  
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the  
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or  
@@ -472,8 +472,8 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NavigationMenuItem> \| CustomBuilder | Yes | Menu items in the upper right corner of the page. |
-| options | [NavigationMenuOptions](arkts-arkui-navigationmenuoptions-i.md) | No | Optional settings for menu items in the upper right corner of the page. |
+| items | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<NavigationMenuItem> \| CustomBuilder | Yes | Menu items in the upper right corner of the page. |
+| options | [NavigationMenuOptions](arkts-arkui-navigation-navigationmenuoptions-i.md) | No | Optional settings for menu items in the upper right corner of the page. |
 
 ## mode
 
@@ -485,7 +485,7 @@ Sets the mode of the **NavDestination** component. Dynamic modification is not s
 
 > **NOTE**
 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 12.
 
 **Since:** 11
 
@@ -501,7 +501,7 @@ Sets the mode of the **NavDestination** component. Dynamic modification is not s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NavDestinationMode](arkts-arkui-navdestinationmode-e.md) | Yes | Mode of the **NavDestination** component.<br>Default value:**NavDestinationMode.STANDARD**. |
+| value | [NavDestinationMode](arkts-arkui-nav-destination-navdestinationmode-e.md) | Yes | Mode of the **NavDestination** component.<br>Default value:**NavDestinationMode.STANDARD**. |
 
 ## onActive
 
@@ -513,7 +513,7 @@ Triggered when the **NavDestination** component becomes active (on top of the st
 
 > **NOTE**
 
-> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 22.
+> This API can be called in [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 22.
 
 **Since:** 17
 
@@ -579,7 +579,7 @@ Triggered when the navigation destination page is hidden. Starting from API vers
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<VisibilityChangeReason> | Yes | Triggered when the navigation destination page is hidden.<br  >In versions earlier than API version 21, the callback is a basic callback without parameters.<br>Since API version 21, the callback includes a **VisibilityChangeReason** parameter describing the trigger cause.<br>**Since:** 21 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<VisibilityChangeReason> | Yes | Triggered when the navigation destination page is hidden.<br  >In versions earlier than API version 21, the callback is a basic callback without parameters.<br>Since API version 21, the callback includes a **VisibilityChangeReason** parameter describing the trigger cause.<br>**Since:** 21 |
 
 ## onInactive
 
@@ -591,7 +591,7 @@ Triggered when the **NavDestination** component becomes inactive (not on top of 
 
 > **NOTE**
 
-> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 22.
+> This API can be called in [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 22.
 
 **Since:** 17
 
@@ -615,15 +615,15 @@ Triggered when the **NavDestination** component becomes inactive (not on top of 
 onNewParam(callback: Optional<Callback<ESObject>>)
 ```
 
-Triggered when a **NavDestination** page that already exists in the stack is moved to the top using [launchMode.MOVE_TO_TOP_SINGLETON](arkts-arkui-launchmode-e.md) or [launchMode.POP_TO_SINGLETON](arkts-arkui-launchmode-e.md).
+Triggered when a **NavDestination** page that already exists in the stack is moved to the top using [launchMode.MOVE_TO_TOP_SINGLETON](arkts-arkui-navigation-launchmode-e.md) or [launchMode.POP_TO_SINGLETON](arkts-arkui-navigation-launchmode-e.md).
 
 > **NOTE**
 
 > - This callback is not triggered by  
-> [replacePath](arkts-arkui-navpathstack-c.md#replacepath-1) or  
-> [replaceDestination](arkts-arkui-navpathstack-c.md#replacedestination-1).  
+> [replacePath](arkts-arkui-navigation-navpathstack-c.md#replacepath-1) or  
+> [replaceDestination](arkts-arkui-navigation-navpathstack-c.md#replacedestination-1).  
 >  
-> - This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 22.
+> - This API can be called in [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 22.
 
 **Since:** 19
 
@@ -651,7 +651,7 @@ Triggered when the **NavDestination** component is about to build a child compon
 
 > **NOTE**
 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 11
 
@@ -705,7 +705,7 @@ Triggered when the **NavDestination** component returns.
 
 > **NOTE**
 
-> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 22.
+> This API can be called in [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 22.
 
 **Since:** 15
 
@@ -771,7 +771,7 @@ Triggered when the navigation destination page is displayed. Starting from API v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<VisibilityChangeReason> | Yes | Triggered when the navigation destination page is displayed.<br>In versions earlier than API version 21, the callback is a basic callback without parameters.<br>Since API version 21, the callback includes a **VisibilityChangeReason** parameter describing the trigger cause.<br>**Since:** 21 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<VisibilityChangeReason> | Yes | Triggered when the navigation destination page is displayed.<br>In versions earlier than API version 21, the callback is a basic callback without parameters.<br>Since API version 21, the callback includes a **VisibilityChangeReason** parameter describing the trigger cause.<br>**Since:** 21 |
 
 ## onWillAppear
 
@@ -783,7 +783,7 @@ Called when the **NavDestination** component is about to be mounted. The routing
 
 > **NOTE**
 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 12
 
@@ -799,7 +799,7 @@ Called when the **NavDestination** component is about to be mounted. The routing
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> | Yes | Called when the **NavDestination** component is about to be mounted. The routing stack can be modified in the callback, and the modification takes effect in the current frame. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<void> | Yes | Called when the **NavDestination** component is about to be mounted. The routing stack can be modified in the callback, and the modification takes effect in the current frame. |
 
 ## onWillDisappear
 
@@ -811,7 +811,7 @@ Called when the the **NavDestination** component is about to be unmounted (or wh
 
 > **NOTE**
 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 12
 
@@ -827,7 +827,7 @@ Called when the the **NavDestination** component is about to be unmounted (or wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> | Yes | Called when the the **NavDestination** component is about to be unmounted (or when the transition animation, if any, is about to start). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<void> | Yes | Called when the the **NavDestination** component is about to be unmounted (or when the transition animation, if any, is about to start). |
 
 ## onWillHide
 
@@ -839,7 +839,7 @@ Called when the **NavDestination** component is about to be hidden.
 
 > **NOTE**
 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 12
 
@@ -855,7 +855,7 @@ Called when the **NavDestination** component is about to be hidden.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> | Yes | Called when the **NavDestination** component is about to be hidden. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<void> | Yes | Called when the **NavDestination** component is about to be hidden. |
 
 ## onWillShow
 
@@ -867,7 +867,7 @@ Called when the **NavDestination** component is about to display.
 
 > **NOTE**
 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 12
 
@@ -883,7 +883,7 @@ Called when the **NavDestination** component is about to display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> | Yes | Called when the **NavDestination** component is about to display. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<void> | Yes | Called when the **NavDestination** component is about to display. |
 
 ## preferredOrientation
 
@@ -900,7 +900,7 @@ Sets the display orientation for the **NavDestination** component. After the tra
 > full-screen window.  
 > > 2. The **Navigation** container containing the **NavDestination** component occupies the entire application  
 > page area.  
-> > 3. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-navdestinationmode-e.md).STANDARD.  
+> > 3. The type of **NavDestination** is [NavDestinationMode](arkts-arkui-nav-destination-navdestinationmode-e.md).STANDARD.  
 >  
 > - The actual effect of setting the display orientation depends on the specific device support. For details, see  
 > [setPreferredOrientation](../../../../reference/apis-arkui/arkts-apis-window-Window.md#setpreferredorientation9-1).
@@ -964,7 +964,7 @@ Sets the style of the system status bar when this **NavDestination** page is dis
 > - For other usage restrictions, see the description of [systemBarStyle](NavigationAttribute#systemBarStyle)  
 > for the **Navigation** component.  
 >  
-> - This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> - This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 12
 
@@ -1004,7 +1004,7 @@ Sets the system transition animation of the **NavDestination** component. System
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [NavigationSystemTransitionType](arkts-arkui-navigationsystemtransitiontype-e.md) | Yes | Type of the system transition animation.<br>Default value:**NavigationSystemTransitionType.DEFAULT**. |
+| type | [NavigationSystemTransitionType](arkts-arkui-nav-destination-navigationsystemtransitiontype-e.md) | Yes | Type of the system transition animation.<br>Default value:**NavigationSystemTransitionType.DEFAULT**. |
 
 ## title
 
@@ -1017,7 +1017,7 @@ Sets the page title. When the title string is too long: (1) If no subtitle is se
 
 > **NOTE**
 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 12.
 
 **Since:** 9
 
@@ -1034,7 +1034,7 @@ Sets the page title. When the title string is too long: (1) If no subtitle is se
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | string \| CustomBuilder \| NavDestinationCommonTitle \| NavDestinationCustomTitle \| Resource | Yes | Page title.<br>**Since:** 14 |
-| options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | No | Title bar options.<br>**Since:** 12 |
+| options | [NavigationTitleOptions](arkts-arkui-navigation-navigationtitleoptions-i.md) | No | Title bar options.<br>**Since:** 12 |
 
 ## toolbarConfiguration
 
@@ -1046,7 +1046,7 @@ Sets the content of the toolbar. If this API is not called, the toolbar remains 
 
 > **NOTE**
 
-> - This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.  
+> - This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.  
 >  
 > - The following operations are not allowed: modifying the icon size through the **fontSize** attribute of the  
 > **SymbolGlyphModifier** object, changing the animation effects through the **effectStrategy** attribute, or  
@@ -1066,6 +1066,6 @@ Sets the content of the toolbar. If this API is not called, the toolbar remains 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| toolbarParam | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ToolbarItem> \| CustomBuilder | Yes | Content of the toolbar.<br>When configured with Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md)&gt;, the toolbar follows the rules below:<br>- Toolbar items are evenly distributed on the bottom toolbar, with text and icons evenly spaced in each content area.<br>- In portrait mode, the toolbar shows a maximum of five icons, with any additional icons placed under an automatically generated **More** icon. In landscape mode, the behavior of the toolbar is determined by the display mode: (1)If the display mode is [Split](arkts-arkui-navigationmode-e.md), the display will remain the same as in portrait mode. (2)If the display mode is [Stack](arkts-arkui-navigationmode-e.md), the toolbar must be used together with Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; of the [menus](NavDestinationAttribute#menus(value: Array&lt;NavigationMenuItem&gt; \| CustomBuilder)) attribute; in this configuration, the bottom toolbar is automatically hidden, and all items on the toolbar are relocated to the menu in the upper right corner of the screen.<br>When configured with [CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8), the toolbar does not follow the above rules. |
-| options | [NavigationToolbarOptions](arkts-arkui-navigationtoolbaroptions-i.md) | No | Toolbar options. Toolbar options include the background color,background blur style and blur option, background properties, layout mode of the toolbar, as well as whether to hide the toolbar text, and options for the toolbar's more button menu. |
+| toolbarParam | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<ToolbarItem> \| CustomBuilder | Yes | Content of the toolbar.<br>When configured with Array&lt;[ToolbarItem](arkts-arkui-navigation-toolbaritem-i.md)&gt;, the toolbar follows the rules below:<br>- Toolbar items are evenly distributed on the bottom toolbar, with text and icons evenly spaced in each content area.<br>- In portrait mode, the toolbar shows a maximum of five icons, with any additional icons placed under an automatically generated **More** icon. In landscape mode, the behavior of the toolbar is determined by the display mode: (1)If the display mode is [Split](arkts-arkui-navigation-navigationmode-e.md), the display will remain the same as in portrait mode. (2)If the display mode is [Stack](arkts-arkui-navigation-navigationmode-e.md), the toolbar must be used together with Array&lt;[NavigationMenuItem](arkts-arkui-navigation-navigationmenuitem-i.md)&gt; of the [menus](NavDestinationAttribute#menus(value: Array&lt;NavigationMenuItem&gt; \| CustomBuilder)) attribute; in this configuration, the bottom toolbar is automatically hidden, and all items on the toolbar are relocated to the menu in the upper right corner of the screen.<br>When configured with [CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8), the toolbar does not follow the above rules. |
+| options | [NavigationToolbarOptions](arkts-arkui-navigation-navigationtoolbaroptions-i.md) | No | Toolbar options. Toolbar options include the background color,background blur style and blur option, background properties, layout mode of the toolbar, as well as whether to hide the toolbar text, and options for the toolbar's more button menu. |
 

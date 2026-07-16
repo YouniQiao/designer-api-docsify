@@ -30,7 +30,7 @@ Web组件的自定义AI会话配置。用于注册多个自定义AI会话。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| aiSessions | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<AISessionEvent> | 是 | AISessionOptions对象的数组。 |
+| aiSessions | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<AISessionEvent> | 是 | AISessionOptions对象的数组。 |
 
 ## allowWindowOpenMethod
 
@@ -95,10 +95,10 @@ bindSelectionMenu(elementType: WebElementType, content: CustomBuilder, responseT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elementType | [WebElementType](arkts-arkweb-webelementtype-e.md) | 是 | 表示选择菜单的类型。 |
+| elementType | [WebElementType](arkts-arkweb-web-webelementtype-e.md) | 是 | 表示选择菜单的类型。 |
 | content | [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md) | 是 | 表示选择菜单的内容。 |
-| responseType | [WebResponseType](arkts-arkweb-webresponsetype-e.md) | 是 | 表示选择菜单的响应类型。 |
-| options | [SelectionMenuOptionsExt](arkts-arkweb-selectionmenuoptionsext-i.md) | 否 | 表示选择菜单的配置项。 |
+| responseType | [WebResponseType](arkts-arkweb-web-webresponsetype-e.md) | 是 | 表示选择菜单的响应类型。 |
+| options | [SelectionMenuOptionsExt](arkts-arkweb-web-selectionmenuoptionsext-i.md) | 否 | 表示选择菜单的配置项。 |
 
 ## blankScreenDetectionConfig
 
@@ -129,7 +129,7 @@ blankScreenDetectionConfig(detectConfig: BlankScreenDetectionConfig)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| detectConfig | [BlankScreenDetectionConfig](arkts-arkweb-blankscreendetectionconfig-i.md) | 是 | 白屏检测的策略配置。 |
+| detectConfig | [BlankScreenDetectionConfig](arkts-arkweb-web-blankscreendetectionconfig-i.md) | 是 | 白屏检测的策略配置。 |
 
 ## blockNetwork
 
@@ -173,7 +173,7 @@ Sets the blur on for elements on webview when soft keyboard is hidden manually.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [BlurOnKeyboardHideMode](arkts-arkweb-bluronkeyboardhidemode-e.md) | 是 | Default value is SILENT. Set BLUR to enable the blur on keyboard hide mode, which can be {@link BlurOnKeyboardHideMode}. |
+| mode | [BlurOnKeyboardHideMode](arkts-arkweb-web-bluronkeyboardhidemode-e.md) | 是 | Default value is SILENT. Set BLUR to enable the blur on keyboard hide mode, which can be {@link BlurOnKeyboardHideMode}. |
 
 ## bypassVsyncCondition
 
@@ -193,7 +193,7 @@ bypassVsyncCondition(condition: WebBypassVsyncCondition)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| condition | [WebBypassVsyncCondition](arkts-arkweb-webbypassvsynccondition-e.md) | 是 | 触发渲染流程跳过vsync调度的条件。 <br> 传入undefined或null时为NONE。 |
+| condition | [WebBypassVsyncCondition](arkts-arkweb-web-webbypassvsynccondition-e.md) | 是 | 触发渲染流程跳过vsync调度的条件。 <br> 传入undefined或null时为NONE。 |
 
 ## cacheMode
 
@@ -215,7 +215,7 @@ cacheMode(cacheMode: CacheMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cacheMode | [CacheMode](arkts-arkweb-cachemode-e.md) | 是 | 要设置的缓存模式。 |
+| cacheMode | [CacheMode](arkts-arkweb-web-cachemode-e.md) | 是 | 要设置的缓存模式。 |
 
 ## copyOptions
 
@@ -237,7 +237,7 @@ copyOptions(value: CopyOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-copyoptions-e.md) | 是 | 复制选项。 |
+| value | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-enums-copyoptions-e.md) | 是 | 复制选项。 |
 
 ## darkMode
 
@@ -261,7 +261,7 @@ darkMode(mode: WebDarkMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebDarkMode](arkts-arkweb-webdarkmode-e.md) | 是 | 设置Web的深色模式为关闭、开启或跟随系统。<br>传入null或undefined时为`WebDarkMode.Off`。 |
+| mode | [WebDarkMode](arkts-arkweb-web-webdarkmode-e.md) | 是 | 设置Web的深色模式为关闭、开启或跟随系统。<br>传入null或undefined时为`WebDarkMode.Off`。 |
 
 ## dataDetectorConfig
 
@@ -281,7 +281,7 @@ dataDetectorConfig(config: TextDataDetectorConfig)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [TextDataDetectorConfig](../../apis-arkui/arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | 是 | 实体识词配置 |
+| config | [TextDataDetectorConfig](../../apis-arkui/arkts-apis/arkts-arkui-text-common-textdatadetectorconfig-i.md) | 是 | 实体识词配置 |
 
 ## databaseAccess
 
@@ -411,7 +411,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 | 自定义文本菜单选项。菜单项数量、菜单内容尺寸和图标尺寸需与 ArkUI Menu 组件保持一致。菜单中仅支持使用系统提供的 id 枚举值（TextMenuItemId），包括剪切、复制、粘贴、全选、翻译、搜索以及网页中的部分 AI 菜单。onMenuItemClick 函数中的 textRange 参数在网页场景下无意义，传入值为 -1。 |
+| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-text-common-editmenuoptions-i.md) | 是 | 自定义文本菜单选项。菜单项数量、菜单内容尺寸和图标尺寸需与 ArkUI Menu 组件保持一致。菜单中仅支持使用系统提供的 id 枚举值（TextMenuItemId），包括剪切、复制、粘贴、全选、翻译、搜索以及网页中的部分 AI 菜单。onMenuItemClick 函数中的 textRange 参数在网页场景下无意义，传入值为 -1。 |
 
 ## enableAutoFill
 
@@ -605,7 +605,7 @@ enableNativeMediaPlayer(config: NativeMediaPlayerConfig)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [NativeMediaPlayerConfig](arkts-arkweb-nativemediaplayerconfig-i.md) | 是 | enable: 是否开启该功能。<br/> shouldOverlay: 该功能开启后， 应用接管网页视频的播放器画面是否覆盖网页内容。<br  >传入undefined或null时为`{enable: false, shouldOverlay: false}`。 |
+| config | [NativeMediaPlayerConfig](arkts-arkweb-web-nativemediaplayerconfig-i.md) | 是 | enable: 是否开启该功能。<br/> shouldOverlay: 该功能开启后， 应用接管网页视频的播放器画面是否覆盖网页内容。<br  >传入undefined或null时为`{enable: false, shouldOverlay: false}`。 |
 
 ## enableScrollDirectionalLock
 
@@ -630,7 +630,7 @@ enableScrollDirectionalLock(value: boolean, type: ScrollDirectionalLockType)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean | 是 | 是否使能定向锁定。  - `true`：为对应的类型类别启用方向锁定。  - `false`：禁用对应类型类别的方向锁定。 |
-| type | [ScrollDirectionalLockType](arkts-arkweb-scrolldirectionallocktype-e.md) | 是 | 指定方向锁的应用场景。 |
+| type | [ScrollDirectionalLockType](arkts-arkweb-web-scrolldirectionallocktype-e.md) | 是 | 指定方向锁的应用场景。 |
 
 ## enableSelectedDataDetector
 
@@ -640,9 +640,9 @@ enableSelectedDataDetector(enable: boolean)
 
 设置是否启用文本选择的AI菜单功能，启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。
 
-AI菜单功能启用时，在网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、phoneNumber（呼叫）、address（导航前往）、dateTime（新建日程）。
+AI菜单功能启用时，在网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-text-common-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、phoneNumber（呼叫）、address（导航前往）、dateTime（新建日程）。
 
-AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。
+AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-text-common-textmenuitemid-c.md)中的askAI菜单项不同时出现。
 
 示例使用场景详见[使用Web组件的智能分词能力](../../../../web/web-data-detector.md)。
 
@@ -814,7 +814,7 @@ gestureFocusMode(mode: GestureFocusMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [GestureFocusMode](arkts-arkweb-gesturefocusmode-e.md) | 是 | The gesture focus mode, which can be {@link GestureFocusMode}.The default value is FocusMode.DEFAULT. |
+| mode | [GestureFocusMode](arkts-arkweb-web-gesturefocusmode-e.md) | 是 | The gesture focus mode, which can be {@link GestureFocusMode}.The default value is FocusMode.DEFAULT. |
 
 ## horizontalScrollBarAccess
 
@@ -924,7 +924,7 @@ Injects the JavaScripts script into the Web component. When the specified page o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scripts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ScriptItem> | 是 | The array of the JavaScripts to be injected. |
+| scripts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<ScriptItem> | 是 | The array of the JavaScripts to be injected. |
 
 ## javaScriptOnDocumentStart
 
@@ -946,7 +946,7 @@ Injects the JavaScripts script into the Web component.When the specified page or
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scripts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ScriptItem> | 是 | The array of the JavaScripts to be injected. |
+| scripts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<ScriptItem> | 是 | The array of the JavaScripts to be injected. |
 
 ## javaScriptProxy
 
@@ -968,7 +968,7 @@ Injects the JavaScript object into window and invoke the function in window.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| javaScriptProxy | [JavaScriptProxy](arkts-arkweb-javascriptproxy-i.md) | 是 | The ArkTs object in javaScriptProxy will be registered into this Web component,and the methods within the methodList of the injected ArkTs object declared in javaScriptProxy can be accessed by JavaScript.<br>**起始版本：** 12 |
+| javaScriptProxy | [JavaScriptProxy](arkts-arkweb-web-javascriptproxy-i.md) | 是 | The ArkTs object in javaScriptProxy will be registered into this Web component,and the methods within the methodList of the injected ArkTs object declared in javaScriptProxy can be accessed by JavaScript.<br>**起始版本：** 12 |
 
 ## keyboardAppearance
 
@@ -990,7 +990,7 @@ keyboardAppearance(mode: WebKeyboardAppearanceMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebKeyboardAppearanceMode](arkts-arkweb-webkeyboardappearancemode-e.md) | 是 | 此网站的WebKeyboardAppearanceMode。 |
+| mode | [WebKeyboardAppearanceMode](arkts-arkweb-web-webkeyboardappearancemode-e.md) | 是 | 此网站的WebKeyboardAppearanceMode。 |
 
 ## keyboardAvoidMode
 
@@ -1012,7 +1012,7 @@ Set web avoidance keyboard mode. The default value is WebKeyboardAvoidMode.RESIZ
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebKeyboardAvoidMode](arkts-arkweb-webkeyboardavoidmode-e.md) | 是 | The web keyboard avoid mode, which can be {@link WebKeyboardAvoidMode}. |
+| mode | [WebKeyboardAvoidMode](arkts-arkweb-web-webkeyboardavoidmode-e.md) | 是 | The web keyboard avoid mode, which can be {@link WebKeyboardAvoidMode}. |
 
 ## layoutMode
 
@@ -1054,7 +1054,7 @@ layoutMode(mode: WebLayoutMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebLayoutMode](arkts-arkweb-weblayoutmode-e.md) | 是 | 设置web布局模式，跟随系统或自适应布局。<br>传入null或undefined时为`WebLayoutMode.NONE` |
+| mode | [WebLayoutMode](arkts-arkweb-web-weblayoutmode-e.md) | 是 | 设置web布局模式，跟随系统或自适应布局。<br>传入null或undefined时为`WebLayoutMode.NONE` |
 
 ## mediaOptions
 
@@ -1070,7 +1070,7 @@ mediaOptions(options: WebMediaOptions)
 >  
 > - 该媒体播放策略将同时管控有声视频。  
 >  
-> - 建议为所有Web组件设置相同的[audioExclusive](arkts-arkweb-webmediaoptions-i.md)值。  
+> - 建议为所有Web组件设置相同的[audioExclusive](arkts-arkweb-web-webmediaoptions-i.md)值。  
 >  
 > - 音视频互相打断在应用内和应用间生效，续播只在应用间生效。
 
@@ -1086,7 +1086,7 @@ mediaOptions(options: WebMediaOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [WebMediaOptions](arkts-arkweb-webmediaoptions-i.md) | 是 | 设置Web的媒体策略。<br>属性参数更新后需重新播放音频方可生效。<br>传入undefined或null时为`{resumeInterval: 0,audioExclusive: true}` |
+| options | [WebMediaOptions](arkts-arkweb-web-webmediaoptions-i.md) | 是 | 设置Web的媒体策略。<br>属性参数更新后需重新播放音频方可生效。<br>传入undefined或null时为`{resumeInterval: 0,audioExclusive: true}` |
 
 ## mediaPlayGestureAccess
 
@@ -1201,7 +1201,7 @@ mixedMode(mixedMode: MixedMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mixedMode | [MixedMode](arkts-arkweb-mixedmode-e.md) | 是 | 要设置的混合内容模式。 |
+| mixedMode | [MixedMode](arkts-arkweb-web-mixedmode-e.md) | 是 | 要设置的混合内容模式。 |
 
 ## multiWindowAccess
 
@@ -1243,7 +1243,7 @@ nativeEmbedOptions(options?: EmbedOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EmbedOptions](arkts-arkweb-embedoptions-i.md) | 否 | 同层渲染相关配置。<br>传入undefined或null时为`{supportDefaultIntrinsicSize: false}`。 |
+| options | [EmbedOptions](arkts-arkweb-web-embedoptions-i.md) | 否 | 同层渲染相关配置。<br>传入undefined或null时为`{supportDefaultIntrinsicSize: false}`。 |
 
 ## nestedScroll
 
@@ -1285,7 +1285,7 @@ onActivateContent(callback: Callback<void>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> | 是 | The triggered function when the web page is active for window.open called by other web component. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<void> | 是 | The triggered function when the web page is active for window.open called by other web component. |
 
 ## onAdsBlocked
 
@@ -1329,7 +1329,7 @@ Web 想要显示 JavaScript alert() 弹窗时触发。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnAlertEvent, boolean> | 是 | 网页中调用 alert() 显示警告弹窗时使用的回调函数。[since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnAlertEvent, boolean> | 是 | 网页中调用 alert() 显示警告弹窗时使用的回调函数。[since 8 - 11] |
 
 ## onAudioStateChanged
 
@@ -1351,7 +1351,7 @@ onAudioStateChanged(callback: Callback<OnAudioStateChangedEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnAudioStateChangedEvent> | 是 | 网页上的音频播放状态发生改变时触发。在API 12之前，使用 { function } 作为参数类型。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnAudioStateChangedEvent> | 是 | 网页上的音频播放状态发生改变时触发。在API 12之前，使用 { function } 作为参数类型。 |
 
 ## onBeforeUnload
 
@@ -1373,7 +1373,7 @@ Triggered when the Web wants to confirm navigation from JavaScript onbeforeunloa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnBeforeUnloadEvent, boolean> | 是 | The triggered function when the web page wants to confirm navigation from JavaScript |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnBeforeUnloadEvent, boolean> | 是 | The triggered function when the web page wants to confirm navigation from JavaScript |
 
 ## onCameraCaptureStateChange
 
@@ -1383,7 +1383,7 @@ onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback)
 
 通知用户当前网页的摄像头状态，摄像头有三个状态，无状态（None），捕获中（Active），暂停中（Paused）。使用callback异步回调。
 
-可以通过startCamera，stopCamera，closeCamera这三个接口来切换摄像头的状态。这三个接口分别对应开启，暂停，停止摄像头功能。示例使用场景详见[startCamera](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#startcamera-1)。
+可以通过startCamera，stopCamera，closeCamera这三个接口来切换摄像头的状态。这三个接口分别对应开启，暂停，停止摄像头功能。示例使用场景详见[startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera-1)。
 
 > **说明：**  
 >  
@@ -1425,7 +1425,7 @@ onClientAuthenticationRequest(callback: Callback<OnClientAuthenticationEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnClientAuthenticationEvent> | 是 | The triggered callback when needs ssl client certificate from the user. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnClientAuthenticationEvent> | 是 | The triggered callback when needs ssl client certificate from the user. [since 9 - 11] |
 
 ## onConfirm
 
@@ -1447,7 +1447,7 @@ onConfirm(callback: Callback<OnConfirmEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnConfirmEvent, boolean> | 是 | 网页调用 confirm() 时触发的回调函数。[since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnConfirmEvent, boolean> | 是 | 网页调用 confirm() 时触发的回调函数。[since 8 - 11] |
 
 ## onConsole
 
@@ -1469,7 +1469,7 @@ onConsole(callback: Callback<OnConsoleEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnConsoleEvent, boolean> | 是 | The triggered function when the web page receives a JavaScript console |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnConsoleEvent, boolean> | 是 | The triggered function when the web page receives a JavaScript console |
 
 ## onContextMenuHide
 
@@ -1513,7 +1513,7 @@ onContextMenuShow(callback: Callback<OnContextMenuShowEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnContextMenuShowEvent, boolean> | 是 | 调用以允许自定义显示上下文菜单时触发的回调。[9 - 11 版本起支持] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnContextMenuShowEvent, boolean> | 是 | 调用以允许自定义显示上下文菜单时触发的回调。[9 - 11 版本起支持] |
 
 ## onControllerAttached
 
@@ -1557,7 +1557,7 @@ Triggered when the form could be resubmitted.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnDataResubmittedEvent> | 是 | The triggered callback to decision whether resend form data or not. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnDataResubmittedEvent> | 是 | The triggered callback to decision whether resend form data or not. |
 
 ## onDetectedBlankScreen
 
@@ -1604,7 +1604,7 @@ onDownloadStart(callback: Callback<OnDownloadStartEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnDownloadStartEvent> | 是 | The triggered function when starting to download. [since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnDownloadStartEvent> | 是 | The triggered function when starting to download. [since 8 - 11] |
 
 ## onErrorReceive
 
@@ -1612,7 +1612,7 @@ onDownloadStart(callback: Callback<OnDownloadStartEvent>)
 onErrorReceive(callback: Callback<OnErrorReceiveEvent>)
 ```
 
-网页加载遇到错误时触发该回调。主资源与子资源出错都会回调该接口，可以通过[isMainFrame](arkts-arkweb-webresourcerequest-c.md#ismainframe-1)来判断是否是主资源报错。出于性能考虑，建议此回调中尽量执行简单逻辑。在无网络的情况下，触发此回调。
+网页加载遇到错误时触发该回调。主资源与子资源出错都会回调该接口，可以通过[isMainFrame](arkts-arkweb-web-webresourcerequest-c.md#ismainframe-1)来判断是否是主资源报错。出于性能考虑，建议此回调中尽量执行简单逻辑。在无网络的情况下，触发此回调。
 
 **起始版本：** 8
 
@@ -1626,7 +1626,7 @@ onErrorReceive(callback: Callback<OnErrorReceiveEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnErrorReceiveEvent> | 是 | The triggered function when the web page receives a web resource loading |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnErrorReceiveEvent> | 是 | The triggered function when the web page receives a web resource loading |
 
 ## onFaviconReceived
 
@@ -1648,7 +1648,7 @@ onFaviconReceived(callback: Callback<OnFaviconReceivedEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnFaviconReceivedEvent> | 是 | The triggered callback when the application receive a new favicon for the |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnFaviconReceivedEvent> | 是 | The triggered callback when the application receive a new favicon for the |
 
 ## onFileSelectorShow
 
@@ -1694,7 +1694,7 @@ onFirstContentfulPaint(callback: Callback<OnFirstContentfulPaintEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnFirstContentfulPaintEvent> | 是 | 网页首次内容绘制回调函数。<br>**起始版本：** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnFirstContentfulPaintEvent> | 是 | 网页首次内容绘制回调函数。<br>**起始版本：** 12 |
 
 ## onFirstMeaningfulPaint
 
@@ -1835,7 +1835,7 @@ Triggered when requesting to show the geolocation permission.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnGeolocationShowEvent> | 是 | Callback invoked when a request to obtain the geolocation information is received.<br>**起始版本：** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnGeolocationShowEvent> | 是 | Callback invoked when a request to obtain the geolocation information is received.<br>**起始版本：** 12 |
 
 ## onHttpAuthRequest
 
@@ -1857,7 +1857,7 @@ onHttpAuthRequest(callback: Callback<OnHttpAuthRequestEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnHttpAuthRequestEvent, boolean> | 是 | The triggered when the browser needs credentials from the user. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnHttpAuthRequestEvent, boolean> | 是 | The triggered when the browser needs credentials from the user. [since 9 - 11] |
 
 ## onHttpErrorReceive
 
@@ -1879,7 +1879,7 @@ onHttpErrorReceive(callback: Callback<OnHttpErrorReceiveEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnHttpErrorReceiveEvent> | 是 | The triggered function when the web page receives a web resource loading HTTP |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnHttpErrorReceiveEvent> | 是 | The triggered function when the web page receives a web resource loading HTTP |
 
 ## onInputmethodAttached
 
@@ -1989,7 +1989,7 @@ onInterceptRequest(callback: Callback<OnInterceptRequestEvent, WebResourceRespon
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnInterceptRequestEvent, WebResourceResponse> | 是 | The triggered callback when the resources loading is intercepted. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnInterceptRequestEvent, WebResourceResponse> | 是 | The triggered callback when the resources loading is intercepted. [since 9 - 11] |
 
 ## onLargestContentfulPaint
 
@@ -2031,7 +2031,7 @@ onLoadFinished(callback: Callback<OnLoadFinishedEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnLoadFinishedEvent> | 是 | 网页加载结束时触发的函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnLoadFinishedEvent> | 是 | 网页加载结束时触发的函数。 |
 
 ## onLoadIntercept
 
@@ -2053,7 +2053,7 @@ onLoadIntercept(callback: Callback<OnLoadInterceptEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnLoadInterceptEvent, boolean> | 是 | The triggered callback when the navigation is intercepted. [since 10 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnLoadInterceptEvent, boolean> | 是 | The triggered callback when the navigation is intercepted. [since 10 - 11] |
 
 ## onLoadStarted
 
@@ -2073,7 +2073,7 @@ onLoadStarted(callback: Callback<OnLoadStartedEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnLoadStartedEvent> | 是 | 网页加载开始时触发的函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnLoadStartedEvent> | 是 | 网页加载开始时触发的函数。 |
 
 ## onMicrophoneCaptureStateChange
 
@@ -2204,7 +2204,7 @@ onNativeEmbedObjectParamChange(callback: OnNativeEmbedObjectParamChangeCallback)
 onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback)
 ```
 
-当网页中同层标签（例如<embed\>标签或<object\>标签）在视口内的可见性发生变化时，将触发该回调。同层标签默认不可见，若在页面首次加载时已可见，则会上报；若不可见，则不会上报。同层标签全部不可见才视为不可见，部分可见或全部可见则视为可见。若要获取因同层标签CSS属性（包括visibility、display以及尺寸变化）导致的可见状态变化，需配置[nativeEmbedOptions](web:WebAttribute.nativeEmbedOptions)，并将[EmbedOptions](arkts-arkweb-embedoptions-i.md)中的supportCssDisplayChange参数设为true。
+当网页中同层标签（例如<embed\>标签或<object\>标签）在视口内的可见性发生变化时，将触发该回调。同层标签默认不可见，若在页面首次加载时已可见，则会上报；若不可见，则不会上报。同层标签全部不可见才视为不可见，部分可见或全部可见则视为可见。若要获取因同层标签CSS属性（包括visibility、display以及尺寸变化）导致的可见状态变化，需配置[nativeEmbedOptions](web:WebAttribute.nativeEmbedOptions)，并将[EmbedOptions](arkts-arkweb-web-embedoptions-i.md)中的supportCssDisplayChange参数设为true。
 
 **起始版本：** 12
 
@@ -2260,7 +2260,7 @@ onOverScroll(callback: Callback<OnOverScrollEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnOverScrollEvent> | 是 | 发生过度滚动时触发的函数。[since 10 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnOverScrollEvent> | 是 | 发生过度滚动时触发的函数。[since 10 - 11] |
 
 ## onOverrideErrorPage
 
@@ -2324,7 +2324,7 @@ Called when the web page starts to be loaded.This API is called only for the mai
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPageBeginEvent> | 是 | The triggered function at the begin of web page loading. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPageBeginEvent> | 是 | The triggered function at the begin of web page loading. |
 
 ## onPageEnd
 
@@ -2346,7 +2346,7 @@ onPageEnd(callback: Callback<OnPageEndEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPageEndEvent> | 是 | The triggered function at the end of web page loading. [since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPageEndEvent> | 是 | The triggered function at the end of web page loading. [since 8 - 11] |
 
 ## onPageVisible
 
@@ -2368,7 +2368,7 @@ Triggered when previous page will no longer be drawn and next page begin to draw
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPageVisibleEvent> | 是 | The triggered callback when previous page will no longer be drawn and next |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPageVisibleEvent> | 是 | The triggered callback when previous page will no longer be drawn and next |
 
 ## onPdfLoadEvent
 
@@ -2388,7 +2388,7 @@ onPdfLoadEvent(callback: Callback<OnPdfLoadEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPdfLoadEvent> | 是 | 当PDF加载成功或失败时，会触发回调，通知用户PDF页面加载状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPdfLoadEvent> | 是 | 当PDF加载成功或失败时，会触发回调，通知用户PDF页面加载状态。 |
 
 ## onPdfScrollAtBottom
 
@@ -2408,7 +2408,7 @@ onPdfScrollAtBottom(callback: Callback<OnPdfScrollEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPdfScrollEvent> | 是 | 当PDF滚动到垂直方向底部时，会触发回调，通知用户PDF页面已滚动到底。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPdfScrollEvent> | 是 | 当PDF滚动到垂直方向底部时，会触发回调，通知用户PDF页面已滚动到底。 |
 
 ## onPermissionRequest
 
@@ -2430,7 +2430,7 @@ Triggered when the host application that web content from the specified origin i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPermissionRequestEvent> | 是 | The triggered callback when the host application that web content from the specified origin is |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPermissionRequestEvent> | 是 | The triggered callback when the host application that web content from the specified origin is |
 
 ## onProgressChange
 
@@ -2452,7 +2452,7 @@ onProgressChange(callback: Callback<OnProgressChangeEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnProgressChangeEvent> | 是 | The triggered function when the page loading progress changes. [since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnProgressChangeEvent> | 是 | The triggered function when the page loading progress changes. [since 8 - 11] |
 
 ## onPrompt
 
@@ -2474,7 +2474,7 @@ onPrompt(callback: Callback<OnPromptEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPromptEvent, boolean> | 是 | 网页调用 prompt() 时使用的回调函数。[since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPromptEvent, boolean> | 是 | 网页调用 prompt() 时使用的回调函数。[since 9 - 11] |
 
 ## onRefreshAccessedHistory
 
@@ -2496,7 +2496,7 @@ Triggered when the Web page refreshes accessed history.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnRefreshAccessedHistoryEvent> | 是 | The triggered callback when the Web page refreshes accessed history. [since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnRefreshAccessedHistoryEvent> | 是 | The triggered callback when the Web page refreshes accessed history. [since 8 - 11] |
 
 ## onRenderExited
 
@@ -2518,7 +2518,7 @@ Triggered when the render process exits.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnRenderExitedEvent> | 是 | The triggered when the render process exits. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnRenderExitedEvent> | 是 | The triggered when the render process exits. |
 
 ## onRenderExited
 
@@ -2626,7 +2626,7 @@ onResourceLoad(callback: Callback<OnResourceLoadEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnResourceLoadEvent> | 是 | The triggered when the url loading. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnResourceLoadEvent> | 是 | The triggered when the url loading. [since 9 - 11] |
 
 ## onSafeBrowsingCheckFinish
 
@@ -2690,7 +2690,7 @@ WebView 缩放比例变化时触发。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnScaleChangeEvent> | 是 | 缩放比例变化时触发的回调。[9 - 11 版本起支持] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnScaleChangeEvent> | 是 | 缩放比例变化时触发的回调。[9 - 11 版本起支持] |
 
 ## onScreenCaptureRequest
 
@@ -2712,7 +2712,7 @@ Triggered when the host application that web content from the specified origin i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnScreenCaptureRequestEvent> | 是 | The triggered callback when the host application that web content from the specified origin is |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnScreenCaptureRequestEvent> | 是 | The triggered callback when the host application that web content from the specified origin is |
 
 ## onScroll
 
@@ -2734,7 +2734,7 @@ onScroll(callback: Callback<OnScrollEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnScrollEvent> | 是 | 网页滚动到指定位置时触发的函数。[since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnScrollEvent> | 是 | 网页滚动到指定位置时触发的函数。[since 9 - 11] |
 
 ## onSearchResultReceive
 
@@ -2756,7 +2756,7 @@ Notify search result to host application through onSearchResultReceive.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnSearchResultReceiveEvent> | 是 | Function Triggered when the host application call searchAllAsync. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnSearchResultReceiveEvent> | 是 | Function Triggered when the host application call searchAllAsync. |
 
 ## onShowFileSelector
 
@@ -2778,7 +2778,7 @@ onShowFileSelector(callback: Callback<OnShowFileSelectorEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnShowFileSelectorEvent, boolean> | 是 | 文件选择器显示时触发的回调函数。[since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnShowFileSelectorEvent, boolean> | 是 | 文件选择器显示时触发的回调函数。[since 9 - 11] |
 
 ## onSslErrorEvent
 
@@ -2822,7 +2822,7 @@ onSslErrorEventReceive(callback: Callback<OnSslErrorEventReceiveEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnSslErrorEventReceiveEvent> | 是 | The triggered callback when the Web page receives an ssl Error. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnSslErrorEventReceiveEvent> | 是 | The triggered callback when the Web page receives an ssl Error. [since 9 - 11] |
 
 ## onSslErrorReceive
 
@@ -2888,7 +2888,7 @@ onTitleReceive(callback: Callback<OnTitleReceiveEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnTitleReceiveEvent> | 是 | The triggered function when the title of the main application document |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnTitleReceiveEvent> | 是 | The triggered function when the title of the main application document |
 
 ## onTouchIconUrlReceived
 
@@ -2910,7 +2910,7 @@ onTouchIconUrlReceived(callback: Callback<OnTouchIconUrlReceivedEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnTouchIconUrlReceivedEvent> | 是 | The triggered callback when the application receive an new url of an |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnTouchIconUrlReceivedEvent> | 是 | The triggered callback when the application receive an new url of an |
 
 ## onUrlLoadIntercept
 
@@ -3020,7 +3020,7 @@ Triggered when web page requires the user to create a window.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnWindowNewEvent> | 是 | The triggered callback when web page requires the user to create a window. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnWindowNewEvent> | 是 | The triggered callback when web page requires the user to create a window. |
 
 ## onWindowNewExt
 
@@ -3042,7 +3042,7 @@ Triggered when web page requires to create a new window.If the {@link setWebCont
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnWindowNewExtEvent> | 是 | The triggered callback when web page requires the user |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnWindowNewExtEvent> | 是 | The triggered callback when web page requires the user |
 
 ## onlineImageAccess
 
@@ -3106,7 +3106,7 @@ overScrollMode(mode: OverScrollMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [OverScrollMode](arkts-arkweb-overscrollmode-e.md) | 是 | 过度滚动模式，可参考 {@link OverScrollMode}。默认值为 OverScrollMode.NEVER。 |
+| mode | [OverScrollMode](arkts-arkweb-web-overscrollmode-e.md) | 是 | 过度滚动模式，可参考 {@link OverScrollMode}。默认值为 OverScrollMode.NEVER。 |
 
 ## overviewModeAccess
 
@@ -3223,7 +3223,7 @@ rotateRenderEffect(effect: WebRotateEffect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | [WebRotateEffect](arkts-arkweb-webrotateeffect-e.md) | 是 | 设置Web组件旋转时，宽高动画过程中组件内容的填充方式。 |
+| effect | [WebRotateEffect](arkts-arkweb-web-webrotateeffect-e.md) | 是 | 设置Web组件旋转时，宽高动画过程中组件内容的填充方式。 |
 
 ## runJavaScriptOnDocumentEnd
 
@@ -3253,7 +3253,7 @@ Injects the JavaScripts that will be run after document has been parsed finished
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scripts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ScriptItem> | 是 | The JavaScripts executed in array order. |
+| scripts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<ScriptItem> | 是 | The JavaScripts executed in array order. |
 
 ## runJavaScriptOnDocumentStart
 
@@ -3283,7 +3283,7 @@ Injects the JavaScripts that will be run just after document object has been cre
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scripts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ScriptItem> | 是 | The JavaScripts executed in array order. |
+| scripts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<ScriptItem> | 是 | The JavaScripts executed in array order. |
 
 ## runJavaScriptOnHeadEnd
 
@@ -3309,7 +3309,7 @@ Injects the JavaScripts that will be run after head element has been parsed fini
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scripts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ScriptItem> | 是 | The JavaScripts executed in array order. |
+| scripts | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<ScriptItem> | 是 | The JavaScripts executed in array order. |
 
 ## scrollbarLayoutPolicy
 
@@ -3331,7 +3331,7 @@ scrollbarLayoutPolicy(policy: ScrollbarLayoutPolicy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | [ScrollbarLayoutPolicy](arkts-arkweb-scrollbarlayoutpolicy-e.md) | 是 | 要应用的布局策略。 |
+| policy | [ScrollbarLayoutPolicy](arkts-arkweb-web-scrollbarlayoutpolicy-e.md) | 是 | 要应用的布局策略。 |
 
 ## selectionMenuOptions
 
@@ -3355,7 +3355,7 @@ selectionMenuOptions(expandedMenuOptions: Array<ExpandedMenuItemOptions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| expandedMenuOptions | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ExpandedMenuItemOptions> | 是 | 自定义文本菜单配置项。菜单项数量、菜单内容尺寸、startIcon 图标尺寸均与 ArkUI Menu 组件保持一致。 |
+| expandedMenuOptions | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<ExpandedMenuItemOptions> | 是 | 自定义文本菜单配置项。菜单项数量、菜单内容尺寸、startIcon 图标尺寸均与 ArkUI Menu 组件保持一致。 |
 
 ## tableData
 

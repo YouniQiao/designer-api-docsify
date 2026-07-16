@@ -128,7 +128,7 @@ Sets the sticky effect of the list item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Sticky](arkts-arkui-sticky-e.md) | Yes |  |
+| value | [Sticky](arkts-arkui-list-item-sticky-e.md) | Yes |  |
 
 ## swipeAction
 
@@ -150,5 +150,5 @@ Sets the swipe action item displayed when the list item is swiped out from the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md) | Yes | Swipe action item displayed when the list item is swiped out from the screen edge. |
+| value | [SwipeActionOptions](arkts-arkui-list-item-swipeactionoptions-i.md) | Yes | Swipe action item displayed when the list item is swiped out from the screen edge. |
 

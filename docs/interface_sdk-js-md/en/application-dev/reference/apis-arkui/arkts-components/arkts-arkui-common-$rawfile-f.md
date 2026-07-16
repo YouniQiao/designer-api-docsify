@@ -28,5 +28,5 @@ global $rawfile function
 
 | Type | Description |
 | --- | --- |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform@form@atomicservice |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform@form@atomicservice |
 

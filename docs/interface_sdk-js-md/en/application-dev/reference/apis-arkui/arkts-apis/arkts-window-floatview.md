@@ -13,7 +13,7 @@ A float view is applicable to scenarios where application content needs to be co
 
 **Linkage with the floating ball**:
 
-This module can be used together with [@ohos.window.floatingBall](arkts-window-floatingball.md).After the float view controller is bound to the floating ball controller using the [floatView.bind](arkts-arkui-bind-f.md#bind-1) API, users can tap the floating ball to expand it as a float view, and click the minimize button in the upper left corner of the float view to collapse it back as a floating ball. This allows for seamless switching between the two window forms.
+This module can be used together with [@ohos.window.floatingBall](arkts-window-floatingball.md).After the float view controller is bound to the floating ball controller using the [floatView.bind](arkts-arkui-floatview-bind-f.md#bind-1) API, users can tap the floating ball to expand it as a float view, and click the minimize button in the upper left corner of the float view to collapse it back as a floating ball. This allows for seamless switching between the two window forms.
 
 **Comparison between the global floating window and float view**:
 
@@ -50,29 +50,29 @@ import { floatView } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [bind](arkts-arkui-bind-f.md#bind-1) | Binds the float view and floating ball. You need to create the [float view controller](arkts-arkui-floatviewcontroller-i.md) and [floating ball controller](arkts-arkui-floatingballcontroller-i.md) first, and neither of them has been started. This API uses a promise to return the result. |
-| [create](arkts-arkui-create-f.md#create-1) | Creates a float view controller. This API uses a promise to return the result. |
-| [getFloatViewLimits](arkts-arkui-getfloatviewlimits-f.md#getfloatviewlimits-1) | Obtains the limits of the float view based on the passed template type. The unit is px. |
-| [isFloatViewEnabled](arkts-arkui-isfloatviewenabled-f.md#isfloatviewenabled-1) | Checks whether the device supports the float view.\| Type\| Description\| \|------------\|------------\| \| boolean \| Whether the device supports the float view. **true** to support; **false** otherwise.\| |
-| [unbind](arkts-arkui-unbind-f.md#unbind-1) | Unbinds the float view and floating ball. The unbinding can be performed only after both the [float view controller](arkts-arkui-floatviewcontroller-i.md) and [floating ball controller](arkts-arkui-floatingballcontroller-i.md) are stopped. This API uses a promise to return the result. |
+| [bind](arkts-arkui-floatview-bind-f.md#bind-1) | Binds the float view and floating ball. You need to create the [float view controller](arkts-arkui-floatview-floatviewcontroller-i.md) and [floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md) first, and neither of them has been started. This API uses a promise to return the result. |
+| [create](arkts-arkui-floatview-create-f.md#create-1) | Creates a float view controller. This API uses a promise to return the result. |
+| [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits-1) | Obtains the limits of the float view based on the passed template type. The unit is px. |
+| [isFloatViewEnabled](arkts-arkui-floatview-isfloatviewenabled-f.md#isfloatviewenabled-1) | Checks whether the device supports the float view.\| Type\| Description\| \|------------\|------------\| \| boolean \| Whether the device supports the float view. **true** to support; **false** otherwise.\| |
+| [unbind](arkts-arkui-floatview-unbind-f.md#unbind-1) | Unbinds the float view and floating ball. The unbinding can be performed only after both the [float view controller](arkts-arkui-floatview-floatviewcontroller-i.md) and [floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md) are stopped. This API uses a promise to return the result. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [FloatViewConfiguration](arkts-arkui-floatviewconfiguration-i.md) | Provides parameter configuration required for creating a float view controller. |
-| [FloatViewController](arkts-arkui-floatviewcontroller-i.md) | Defines a float view controller instance, which is used to start and stop the float view and register callbacks.Before calling the following APIs, you must use [floatView.create()](arkts-arkui-create-f.md#create-1) to create a float view controller instance (that is, **floatViewController**). |
-| [FloatViewLimits](arkts-arkui-floatviewlimits-i.md) | Provides the limits of the float view. |
-| [FloatViewProperties](arkts-arkui-floatviewproperties-i.md) | Provides the properties of the float view. |
-| [FloatViewRectChangeInfo](arkts-arkui-floatviewrectchangeinfo-i.md) | Provides the rectangle area change information of the float view. |
-| [FloatViewStateChangeInfo](arkts-arkui-floatviewstatechangeinfo-i.md) | Provides the state change information of the float view. |
-| [RatioLimit](arkts-arkui-ratiolimit-i.md) | Provides the aspect ratio range of the float view. The aspect ratio is obtained by dividing the width of the rectangular area of the window by its height. |
-| [TemplateProperty](arkts-arkui-templateproperty-i.md) | Provides parameter configuration required for switching the float view template and modifying the size of the window. |
+| [FloatViewConfiguration](arkts-arkui-floatview-floatviewconfiguration-i.md) | Provides parameter configuration required for creating a float view controller. |
+| [FloatViewController](arkts-arkui-floatview-floatviewcontroller-i.md) | Defines a float view controller instance, which is used to start and stop the float view and register callbacks.Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md#create-1) to create a float view controller instance (that is, **floatViewController**). |
+| [FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md) | Provides the limits of the float view. |
+| [FloatViewProperties](arkts-arkui-floatview-floatviewproperties-i.md) | Provides the properties of the float view. |
+| [FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md) | Provides the rectangle area change information of the float view. |
+| [FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md) | Provides the state change information of the float view. |
+| [RatioLimit](arkts-arkui-floatview-ratiolimit-i.md) | Provides the aspect ratio range of the float view. The aspect ratio is obtained by dividing the width of the rectangular area of the window by its height. |
+| [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Provides parameter configuration required for switching the float view template and modifying the size of the window. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [FloatViewState](arkts-arkui-floatviewstate-e.md) | Enumerates the states of the float view. |
-| [FloatViewTemplateType](arkts-arkui-floatviewtemplatetype-e.md) | Provides the template type of the float view. |
+| [FloatViewState](arkts-arkui-floatview-floatviewstate-e.md) | Enumerates the states of the float view. |
+| [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md) | Provides the template type of the float view. |
 

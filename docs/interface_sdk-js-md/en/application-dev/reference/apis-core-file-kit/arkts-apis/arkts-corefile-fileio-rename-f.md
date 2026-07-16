@@ -29,7 +29,7 @@ Renames a file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 
 ## rename
@@ -56,5 +56,5 @@ Renames a file. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | oldPath | string | Yes | Application sandbox path of the file to rename. |
 | newPath | string | Yes | Application sandbox path of the file renamed. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback invoked when the file is asynchronously renamed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback invoked when the file is asynchronously renamed. |
 

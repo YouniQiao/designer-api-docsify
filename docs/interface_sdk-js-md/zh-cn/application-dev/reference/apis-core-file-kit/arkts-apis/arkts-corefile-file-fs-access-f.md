@@ -29,7 +29,7 @@ declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件或目录应用沙箱路径。 |
-| mode | [AccessModeType](arkts-corefile-accessmodetype-e.md) | 否 | 文件或目录校验的权限。不填该参数则默认校验文件是否存在。<br>**起始版本：** 12 |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | 否 | 文件或目录校验的权限。不填该参数则默认校验文件是否存在。<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -76,7 +76,7 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件或目录应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 异步检查文件或目录是否存在的回调。如果存在，回调返回true；否则返回false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<boolean> | 是 | 异步检查文件或目录是否存在的回调。如果存在，回调返回true；否则返回false。 |
 
 **错误码：**
 
@@ -117,8 +117,8 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件或目录应用沙箱路径。 |
-| mode | [AccessModeType](arkts-corefile-accessmodetype-e.md) | 是 | 文件或目录校验的权限。 |
-| flag | [AccessFlagType](arkts-corefile-accessflagtype-e.md) | 是 | 文件或目录校验的位置。 |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | 是 | 文件或目录校验的权限。 |
+| flag | [AccessFlagType](arkts-corefile-file-fs-accessflagtype-e.md) | 是 | 文件或目录校验的位置。 |
 
 **返回值：**
 

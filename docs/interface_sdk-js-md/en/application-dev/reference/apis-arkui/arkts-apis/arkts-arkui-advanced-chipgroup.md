@@ -12,20 +12,20 @@ import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixI
 
 | Name | Description |
 | --- | --- |
-| [ChipGroup](arkts-arkui-chipgroup-s.md) |  |
-| [IconGroupSuffix](arkts-arkui-icongroupsuffix-s.md) | The **ChipGroup** component provides a set of chips for organizing and categorizing files or resource content. |
+| [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md) |  |
+| [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) | The **ChipGroup** component provides a set of chips for organizing and categorizing files or resource content. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ChipGroupItemOptions](arkts-arkui-chipgroupitemoptions-i.md) | Defines the specific attributes of individual chips. |
-| [ChipGroupPaddingOptions](arkts-arkui-chipgrouppaddingoptions-i.md) | Defines the top and bottom padding of a **ChipGroup** component, which is used to control the overall height of the ChipGroup. |
-| [ChipGroupSpaceOptions](arkts-arkui-chipgroupspaceoptions-i.md) | Defines the left and right padding of the chip group, and the spacing between chips. |
-| [ChipItemStyle](arkts-arkui-chipitemstyle-i.md) | Defines the common attributes shared by all chips. |
-| [IconItemOptions](arkts-arkui-iconitemoptions-i.md) | Defines the configuration for the trailing builder, with constraints applied to background size and color settings. |
-| [IconOptions](arkts-arkui-iconoptions-i.md) | Defines the common attributes of icons. |
-| [LabelOptions](arkts-arkui-labeloptions-i.md) | Defines the label configuration options. |
-| [SuffixImageIconOptions](arkts-arkui-suffiximageiconoptions-i.md) | Defines the configuration options for suffix icons.Inherits from [IconOptions](arkts-arkui-iconoptions-i.md). |
-| [SymbolItemOptions](arkts-arkui-symbolitemoptions-i.md) | Suffix icon option type of ChipGroup. |
+| [ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md) | Defines the specific attributes of individual chips. |
+| [ChipGroupPaddingOptions](arkts-arkui-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md) | Defines the top and bottom padding of a **ChipGroup** component, which is used to control the overall height of the ChipGroup. |
+| [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md) | Defines the left and right padding of the chip group, and the spacing between chips. |
+| [ChipItemStyle](arkts-arkui-arkui-advanced-chipgroup-chipitemstyle-i.md) | Defines the common attributes shared by all chips. |
+| [IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) | Defines the configuration for the trailing builder, with constraints applied to background size and color settings. |
+| [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md) | Defines the common attributes of icons. |
+| [LabelOptions](arkts-arkui-arkui-advanced-chipgroup-labeloptions-i.md) | Defines the label configuration options. |
+| [SuffixImageIconOptions](arkts-arkui-arkui-advanced-chipgroup-suffiximageiconoptions-i.md) | Defines the configuration options for suffix icons.Inherits from [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md). |
+| [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md) | Suffix icon option type of ChipGroup. |
 

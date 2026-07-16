@@ -12,29 +12,29 @@ import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2Operati
 
 | Name | Description |
 | --- | --- |
-| [SubHeaderV2OperationItem](arkts-arkui-subheaderv2operationitem-c.md) | Declare the SubHeaderV2OperationItem |
-| [SubHeaderV2Select](arkts-arkui-subheaderv2select-c.md) | Declare the SubHeaderV2Select |
-| [SubHeaderV2Title](arkts-arkui-subheaderv2title-c.md) | Declare the SubHeaderV2Title |
+| [SubHeaderV2OperationItem](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md) | Declare the SubHeaderV2OperationItem |
+| [SubHeaderV2Select](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2select-c.md) | Declare the SubHeaderV2Select |
+| [SubHeaderV2Title](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2title-c.md) | Declare the SubHeaderV2Title |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [SubHeaderV2](arkts-arkui-subheaderv2-s.md) | Defines struct SubHeaderV2. |
+| [SubHeaderV2](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2-s.md) | Defines struct SubHeaderV2. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [SubHeaderV2OperationItemOptions](arkts-arkui-subheaderv2operationitemoptions-i.md) | Defines the SubHeaderV2OperationItemOptions. |
-| [SubHeaderV2SelectOptions](arkts-arkui-subheaderv2selectoptions-i.md) | Defines the SubHeaderV2SelectOptions. |
-| [SubHeaderV2TitleOptions](arkts-arkui-subheaderv2titleoptions-i.md) | Defines the SubHeaderV2TitleOptions. |
+| [SubHeaderV2OperationItemOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | Defines the SubHeaderV2OperationItemOptions. |
+| [SubHeaderV2SelectOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | Defines the SubHeaderV2SelectOptions. |
+| [SubHeaderV2TitleOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | Defines the SubHeaderV2TitleOptions. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SubHeaderV2OperationType](arkts-arkui-subheaderv2operationtype-e.md) | Control style of operation element |
+| [SubHeaderV2OperationType](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationtype-e.md) | Control style of operation element |
 
 ### Types
 

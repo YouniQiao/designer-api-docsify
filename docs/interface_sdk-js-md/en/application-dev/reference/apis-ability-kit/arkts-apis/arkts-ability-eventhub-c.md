@@ -31,7 +31,7 @@ Trigger the event callbacks.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Indicates the event. |
-| args | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md)[] | Yes | Indicates the callback arguments. |
+| args | [Object](../../apis-na/arkts-apis/arkts-na-lib-es5-object-i.md)[] | Yes | Indicates the callback arguments. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ Unsubscribes from an event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Event name. |
-| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | No | Callback for the event. If **callback** is unspecified, the given event with all callbacks is unsubscribed. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-lib-es2015-core-function-i.md) | No | Callback for the event. If **callback** is unspecified, the given event with all callbacks is unsubscribed. |
 
 **Error codes:**
 
@@ -101,7 +101,7 @@ Subscribes to an event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Event name. |
-| callback | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [Function](../../apis-na/arkts-apis/arkts-na-lib-es2015-core-function-i.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 

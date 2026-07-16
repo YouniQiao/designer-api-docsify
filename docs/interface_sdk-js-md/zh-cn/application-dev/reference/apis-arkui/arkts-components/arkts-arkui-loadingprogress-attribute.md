@@ -58,7 +58,7 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<LoadingProgressConfiguration> | 是 | 在LoadingProgress组件上，定制内容区的方法。<br/>modifier： 内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<LoadingProgressConfiguration> | 是 | 在LoadingProgress组件上，定制内容区的方法。<br/>modifier： 内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## enableLoading
 
@@ -66,7 +66,7 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>)
 enableLoading(value: boolean)
 ```
 
-设置LoadingProgress动画是否显示。LoadingProgress动画不显示时，该组件依旧占位。通用属性[Visibility](../arkts-apis/arkts-arkui-visibility-e.md).Hidden隐藏的是包括[border](arkts-arkui-commonmethod-c.md#border-1)、[padding](arkts-arkui-commonmethod-c.md#padding-1)等整个组件范围，而enableLoading=false只隐藏LoadingProgress本身动画内容，不包括border等。
+设置LoadingProgress动画是否显示。LoadingProgress动画不显示时，该组件依旧占位。通用属性[Visibility](../arkts-apis/arkts-arkui-enums-visibility-e.md).Hidden隐藏的是包括[border](arkts-arkui-common-commonmethod-c.md#border-1)、[padding](arkts-arkui-common-commonmethod-c.md#padding-1)等整个组件范围，而enableLoading=false只隐藏LoadingProgress本身动画内容，不包括border等。
 
 **起始版本：** 10
 

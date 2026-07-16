@@ -22,11 +22,11 @@ export function borderStyles(all: BorderStyle): Edges<BorderStyle>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| all | [BorderStyle](arkts-arkui-borderstyle-e.md) | 是 | 边框样式。 |
+| all | [BorderStyle](arkts-arkui-enums-borderstyle-e.md) | 是 | 边框样式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Edges](arkts-arkui-edges-i.md)<BorderStyle> | 边框样式均设置为传入值的边框样式对象。 |
+| [Edges](arkts-arkui-graphics-edges-i.md)<BorderStyle> | 边框样式均设置为传入值的边框样式对象。 |
 

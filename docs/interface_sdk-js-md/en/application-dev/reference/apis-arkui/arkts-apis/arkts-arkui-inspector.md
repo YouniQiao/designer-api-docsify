@@ -20,11 +20,11 @@ import { inspector } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [createComponentObserver](arkts-arkui-createcomponentobserver-f.md#createcomponentobserver-1) | Sets the component after layout or draw criteria and returns the corresponding listening handle |
+| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver-1) | Sets the component after layout or draw criteria and returns the corresponding listening handle |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ComponentObserver](arkts-arkui-componentobserver-i.md) | The ComponentObserver is used to listen for layout, draw and drawChildren events. |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | The ComponentObserver is used to listen for layout, draw and drawChildren events. |
 

@@ -13,7 +13,7 @@ import { WindowExtensionContext } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [WindowExtensionAbility](arkts-arkui-windowextensionability-c-sys.md) | class of window extension ability. |
+| [WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md) | class of window extension ability. |
 <!--DelEnd-->
 
 <!--Del-->

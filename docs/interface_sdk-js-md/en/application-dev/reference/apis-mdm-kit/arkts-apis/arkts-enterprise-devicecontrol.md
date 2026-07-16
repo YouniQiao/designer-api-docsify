@@ -27,24 +27,24 @@ import { deviceControl } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [operateDevice](arkts-mdm-operatedevice-f.md#operatedevice-1) | Allows the specified device administrator application to operate devices. |
-| [operateDevice](arkts-mdm-operatedevice-f.md#operatedevice-2) | Allows the administrator to operate devices. |
+| [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice-1) | Allows the specified device administrator application to operate devices. |
+| [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice-2) | Allows the administrator to operate devices. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [lockScreen](arkts-mdm-lockscreen-f-sys.md#lockscreen-1) | Locks the device screen immediately. |
-| [reboot](arkts-mdm-reboot-f-sys.md#reboot-1) | Reboots the device. |
-| [resetFactory](arkts-mdm-resetfactory-f-sys.md#resetfactory-1) | Restores factory settings. This API uses an asynchronous callback to return the result. |
-| [resetFactory](arkts-mdm-resetfactory-f-sys.md#resetfactory-2) | Restores factory settings. This API uses a promise to return the result. |
-| [shutdown](arkts-mdm-shutdown-f-sys.md#shutdown-1) | Shuts down the device. |
+| [lockScreen](arkts-mdm-devicecontrol-lockscreen-f-sys.md#lockscreen-1) | Locks the device screen immediately. |
+| [reboot](arkts-mdm-devicecontrol-reboot-f-sys.md#reboot-1) | Reboots the device. |
+| [resetFactory](arkts-mdm-devicecontrol-resetfactory-f-sys.md#resetfactory-1) | Restores factory settings. This API uses an asynchronous callback to return the result. |
+| [resetFactory](arkts-mdm-devicecontrol-resetfactory-f-sys.md#resetfactory-2) | Restores factory settings. This API uses a promise to return the result. |
+| [shutdown](arkts-mdm-devicecontrol-shutdown-f-sys.md#shutdown-1) | Shuts down the device. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Operation](arkts-mdm-operation-e.md) | The operation to be performed. |
+| [Operation](arkts-mdm-devicecontrol-operation-e.md) | The operation to be performed. |
 

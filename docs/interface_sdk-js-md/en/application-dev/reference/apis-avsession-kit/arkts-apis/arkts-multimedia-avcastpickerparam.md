@@ -12,7 +12,7 @@ import { AVCastPickerColorMode, AVCastPickerState, AVCastPickerStyle } from '@ki
 
 | Name | Description |
 | --- | --- |
-| [AVCastPickerColorMode](arkts-avsession-avcastpickercolormode-e.md) | Definition of color mode of picker |
-| [AVCastPickerState](arkts-avsession-avcastpickerstate-e.md) | Definition of av cast picker state |
-| [AVCastPickerStyle](arkts-avsession-avcastpickerstyle-e.md) | Definition of av cast picker style |
+| [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md) | Definition of color mode of picker |
+| [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) | Definition of av cast picker state |
+| [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md) | Definition of av cast picker style |
 

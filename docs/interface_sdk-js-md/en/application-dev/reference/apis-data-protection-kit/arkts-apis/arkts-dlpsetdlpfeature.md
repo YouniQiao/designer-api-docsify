@@ -33,7 +33,7 @@ import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 
 | Name | Description |
 | --- | --- |
-| [setDlpFeature](arkts-dataprotection-setdlpfeature-f-sys.md#setdlpfeature-1) | Sets the DLP status. This API uses a promise to return the result. The system enables or disables the DLP protection function based on the DLP status specified using this API.When this feature is enabled, right-click the file to be encrypted, and the encryption option is displayed in the shortcut menu. Files in .txt, .pdf, .xls, .xlsx, .ppt, .pptx, .doc, and .docx formats can be encrypted.This API is used to enable or disable the DLP function in enterprise policies. |
+| [setDlpFeature](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md#setdlpfeature-1) | Sets the DLP status. This API uses a promise to return the result. The system enables or disables the DLP protection function based on the DLP status specified using this API.When this feature is enabled, right-click the file to be encrypted, and the encryption option is displayed in the shortcut menu. Files in .txt, .pdf, .xls, .xlsx, .ppt, .pptx, .doc, and .docx formats can be encrypted.This API is used to enable or disable the DLP function in enterprise policies. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -41,8 +41,8 @@ import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 
 | Name | Description |
 | --- | --- |
-| [DLPFeatureInfo](arkts-dataprotection-dlpfeatureinfo-i-sys.md) | Sets the DLP status. |
-| [StatusInfoResult](arkts-dataprotection-statusinforesult-i-sys.md) | Describes the DLP settings. |
+| [DLPFeatureInfo](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) | Sets the DLP status. |
+| [StatusInfoResult](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) | Describes the DLP settings. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -50,6 +50,6 @@ import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 
 | Name | Description |
 | --- | --- |
-| [DlpFeatureStatus](arkts-dataprotection-dlpfeaturestatus-e-sys.md) | Enumerates DLP statuses. |
+| [DlpFeatureStatus](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) | Enumerates DLP statuses. |
 <!--DelEnd-->
 

@@ -28,5 +28,5 @@ Defining wrapBuilder function.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)<Args> | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [WrappedBuilder](arkts-arkui-common-wrappedbuilder-c.md)<Args> | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 

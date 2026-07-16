@@ -10,14 +10,14 @@ For typical use cases (for example, long screenshots) and best practices of comp
 >  
 > - In scenarios where [XComponent](../arkts-components/arkts-arkui-xcomponent.md) is used to, for example, display video or camera streams,  
 > obtain images through  
-> [createPixelMapFromSurface](../../apis-image-kit/arkts-apis/arkts-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface-1),  
+> [createPixelMapFromSurface](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface-1),  
 > instead of through an API in this module.  
 >  
 > - If the content of a component does not fill the entire area allocated for it, any remaining space in the snapshot  
 > will be rendered as transparent pixels. In addition, if the component uses [image effects](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) or other  
 > effect-related attributes, the resulting snapshot may not be as expected. To address these potential issues, check  
 > whether the component's transparent content area needs to be filled, or use the window screenshot API  
-> [snapshot](arkts-arkui-window-i.md#snapshot-1) instead.  
+> [snapshot](arkts-arkui-window-window-i.md#snapshot-1) instead.  
 >  
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 
@@ -39,26 +39,26 @@ import { componentSnapshot } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [createFromBuilder](arkts-arkui-createfrombuilder-f.md#createfrombuilder-1) | Renders a custom component in the application background and outputs its snapshot. This API uses an asynchronous callback to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
-| [createFromBuilder](arkts-arkui-createfrombuilder-f.md#createfrombuilder-2) | Renders a custom component in the application background and outputs its snapshot. This API uses a promise to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
-| [get](arkts-arkui-get-f.md#get-1) | Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API uses an asynchronous callback to return the result. |
-| [get](arkts-arkui-get-f.md#get-2) | Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API uses a promise to return the result. |
-| [getSync](arkts-arkui-getsync-f.md#getsync-1) | Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) object. |
+| [createFromBuilder](arkts-arkui-componentsnapshot-createfrombuilder-f.md#createfrombuilder-1) | Renders a custom component in the application background and outputs its snapshot. This API uses an asynchronous callback to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
+| [createFromBuilder](arkts-arkui-componentsnapshot-createfrombuilder-f.md#createfrombuilder-2) | Renders a custom component in the application background and outputs its snapshot. This API uses a promise to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
+| [get](arkts-arkui-componentsnapshot-get-f.md#get-1) | Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API uses an asynchronous callback to return the result. |
+| [get](arkts-arkui-componentsnapshot-get-f.md#get-2) | Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API uses a promise to return the result. |
+| [getSync](arkts-arkui-componentsnapshot-getsync-f.md#getsync-1) | Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) object. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ColorModeOptions](arkts-arkui-colormodeoptions-i.md) | Defines the color space used for the snapshot. |
-| [DynamicRangeModeOptions](arkts-arkui-dynamicrangemodeoptions-i.md) | Defines the dynamic range mode used for the snapshot. |
-| [LocalizedSnapshotRegion](arkts-arkui-localizedsnapshotregion-i.md) | Defines the rectangular region for capturing the component snapshot, with coordinates adjusted based on the layout direction (LTR or RTL). |
-| [SnapshotOptions](arkts-arkui-snapshotoptions-i.md) | Defines the extra options for snapshot taking. |
-| [SnapshotRegion](arkts-arkui-snapshotregion-i.md) | Defines the rectangular region for capturing the component snapshot. |
-| [SnapshotSizeLimitation](arkts-arkui-snapshotsizelimitation-i.md) | Defines the size limit of a component screenshot. |
+| [ColorModeOptions](arkts-arkui-componentsnapshot-colormodeoptions-i.md) | Defines the color space used for the snapshot. |
+| [DynamicRangeModeOptions](arkts-arkui-componentsnapshot-dynamicrangemodeoptions-i.md) | Defines the dynamic range mode used for the snapshot. |
+| [LocalizedSnapshotRegion](arkts-arkui-componentsnapshot-localizedsnapshotregion-i.md) | Defines the rectangular region for capturing the component snapshot, with coordinates adjusted based on the layout direction (LTR or RTL). |
+| [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | Defines the extra options for snapshot taking. |
+| [SnapshotRegion](arkts-arkui-componentsnapshot-snapshotregion-i.md) | Defines the rectangular region for capturing the component snapshot. |
+| [SnapshotSizeLimitation](arkts-arkui-componentsnapshot-snapshotsizelimitation-i.md) | Defines the size limit of a component screenshot. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [SnapshotRegionType](arkts-arkui-snapshotregiontype-t.md) | Defines the snapshot region rect type. |
+| [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md) | Defines the snapshot region rect type. |
 

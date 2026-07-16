@@ -23,8 +23,8 @@ import { businessAbilityRouter } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [queryBusinessAbilityInfo](arkts-ability-querybusinessabilityinfo-f-sys.md#querybusinessabilityinfo-1) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
-| [queryBusinessAbilityInfo](arkts-ability-querybusinessabilityinfo-f-sys.md#querybusinessabilityinfo-2) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
+| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md#querybusinessabilityinfo-1) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
+| [queryBusinessAbilityInfo](arkts-ability-businessabilityrouter-querybusinessabilityinfo-f-sys.md#querybusinessabilityinfo-2) | Query the business ability info of by the given filter. ohos.permission.GET_BUNDLE_INFO_PRIVILEGED is required for cross user access. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -32,7 +32,7 @@ import { businessAbilityRouter } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [BusinessAbilityFilter](arkts-ability-businessabilityfilter-i-sys.md) | This filter value is used to filter business ability info |
+| [BusinessAbilityFilter](arkts-ability-businessabilityrouter-businessabilityfilter-i-sys.md) | This filter value is used to filter business ability info |
 <!--DelEnd-->
 
 <!--Del-->
@@ -40,7 +40,7 @@ import { businessAbilityRouter } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [BusinessType](arkts-ability-businesstype-e-sys.md) | This enumeration value is used to identify various types of business ability info |
+| [BusinessType](arkts-ability-businessabilityrouter-businesstype-e-sys.md) | This enumeration value is used to identify various types of business ability info |
 <!--DelEnd-->
 
 <!--Del-->
@@ -48,6 +48,6 @@ import { businessAbilityRouter } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [BusinessAbilityInfo](arkts-ability-businessabilityinfo-t-sys.md) | Obtains business ability info. |
+| [BusinessAbilityInfo](arkts-ability-businessabilityrouter-businessabilityinfo-t-sys.md) | Obtains business ability info. |
 <!--DelEnd-->
 

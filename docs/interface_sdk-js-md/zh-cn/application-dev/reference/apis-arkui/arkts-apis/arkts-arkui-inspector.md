@@ -20,11 +20,11 @@ import { inspector } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createComponentObserver](arkts-arkui-createcomponentobserver-f.md#createcomponentobserver-1) |  |
+| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver-1) |  |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ComponentObserver](arkts-arkui-componentobserver-i.md) | ComponentObserver用于监听布局和绘制事件。 |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | ComponentObserver用于监听布局和绘制事件。 |
 

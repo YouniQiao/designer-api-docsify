@@ -12,5 +12,5 @@ import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 
 | Name | Description |
 | --- | --- |
-| [UserAuthExtensionAbility](arkts-userauthentication-userauthextensionability-c.md) | The class of user authentication extension ability. |
+| [UserAuthExtensionAbility](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md) | The class of user authentication extension ability. |
 

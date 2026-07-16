@@ -56,7 +56,7 @@ Sets the attributes of the sidebar control button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonStyle](arkts-arkui-buttonstyle-i.md) | Yes | Attributes of the sidebar control button. |
+| value | [ButtonStyle](arkts-arkui-sidebar-buttonstyle-i.md) | Yes | Attributes of the sidebar control button. |
 
 ## divider
 
@@ -331,7 +331,7 @@ Sets the position of the sidebar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | Yes | Position of the sidebar.<br>Default value: **SideBarPosition.Start** |
+| value | [SideBarPosition](arkts-arkui-sidebar-sidebarposition-e.md) | Yes | Position of the sidebar.<br>Default value: **SideBarPosition.Start** |
 
 ## sideBarWidth
 

@@ -31,7 +31,7 @@ Obtains an extended attribute of a file or directory. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the value of the extended attribute obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<string> | Promise used to return the value of the extended attribute obtained. |
 
 **Error codes:**
 

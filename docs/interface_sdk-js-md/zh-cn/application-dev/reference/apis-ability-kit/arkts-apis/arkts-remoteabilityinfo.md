@@ -7,6 +7,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-i-sys.md) | remoteAbility信息。 |
+| [RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md) | remoteAbility信息。 |
 <!--DelEnd-->
 

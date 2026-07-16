@@ -36,13 +36,13 @@ Add accessibility virtual nodes.
 | --- | --- | --- | --- |
 | elementId | number | Yes | Indicates the id of the node to which the accessibility virtual node tree belongs |
 | windowId | number | Yes | Indicates the window id<br>The value range is all integers. |
-| nodes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AccessibilityVirtualNode> | Yes | Indicates accessibility virtual node tree. |
+| nodes | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<AccessibilityVirtualNode> | Yes | Indicates accessibility virtual node tree. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OperateVirtualNodeResult> | Promise used to return the result code. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<OperateVirtualNodeResult> | Promise used to return the result code. |
 
 **Error codes:**
 
@@ -74,7 +74,7 @@ Obtains the element that is currently focused. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AccessibilityElement> | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<AccessibilityElement> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -113,7 +113,7 @@ Obtains the accessibility windows.
 
 | Type | Description |
 | --- | --- |
-| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AccessibilityElement> | List of windows. |
+| [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<AccessibilityElement> | List of windows. |
 
 **Error codes:**
 
@@ -149,7 +149,7 @@ Obtains the custom default focuses of an application. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<number>> | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Array<number>> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -186,7 +186,7 @@ Obtains node elements in batches. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AccessibilityElement>> | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Array<AccessibilityElement>> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -224,7 +224,7 @@ Obtains the root element of an active window. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AccessibilityElement> | Promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<AccessibilityElement> | Promise used to return the result. |
 
 **Error codes:**
 
@@ -310,7 +310,7 @@ Unsubscribes from the pre-disconnection event of the accessibility extension ser
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | Yes | Name of the event to listen for. The value is fixed at **'preDisconnect'**,indicating that the accessibility extension service is about to be disconnected. |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | No | Callback to unregister, which must be the same as that of [on('preDisconnect')](arkts-accessibility-accessibilityextensioncontext-c-sys.md#on-1).If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-common-callback-i.md)<void> | No | Callback to unregister, which must be the same as that of [on('preDisconnect')](arkts-accessibility-accessibilityextensioncontext-c-sys.md#on-1).If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
@@ -344,7 +344,7 @@ Used together with [notifyDisconnect](arkts-accessibility-accessibilityextension
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | Yes | Name of the event to listen for. The value is fixed at **'preDisconnect'**,indicating that the accessibility extension service is about to be disconnected. |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback to be invoked when the accessibility extension service is about to be disconnected. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-common-callback-i.md)<void> | Yes | Callback to be invoked when the accessibility extension service is about to be disconnected. |
 
 **Error codes:**
 
@@ -384,7 +384,7 @@ Remove accessibility virtual nodes.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OperateVirtualNodeResult> | Promise used to return the result code. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<OperateVirtualNodeResult> | Promise used to return the result code. |
 
 **Error codes:**
 
@@ -420,7 +420,7 @@ Starts the foreground page. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -486,7 +486,7 @@ Update accessibility element property.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<OperateVirtualNodeResult> | Promise used to return the result code. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<OperateVirtualNodeResult> | Promise used to return the result code. |
 
 **Error codes:**
 

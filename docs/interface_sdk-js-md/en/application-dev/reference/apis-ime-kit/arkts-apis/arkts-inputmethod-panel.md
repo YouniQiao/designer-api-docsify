@@ -12,12 +12,12 @@ import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [PanelInfo](arkts-ime-panelinfo-i.md) | Defines the attributes of the input method panel. |
+| [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | Defines the attributes of the input method panel. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PanelFlag](arkts-ime-panelflag-e.md) | Enumerates the state types of the input method panel. |
-| [PanelType](arkts-ime-paneltype-e.md) | Enumerates the types of the input method panel. |
+| [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md) | Enumerates the state types of the input method panel. |
+| [PanelType](arkts-ime-inputmethod-panel-paneltype-e.md) | Enumerates the types of the input method panel. |
 

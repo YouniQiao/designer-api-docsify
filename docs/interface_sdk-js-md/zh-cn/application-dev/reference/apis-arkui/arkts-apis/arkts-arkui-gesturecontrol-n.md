@@ -14,5 +14,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [GestureType](arkts-arkui-gesturetype-e.md) | 定义手势类型。 |
+| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | 定义手势类型。 |
 

@@ -4,8 +4,8 @@ The relational database (RDB) manages data based on relational models. With the 
 
 This module provides the following RDB-related functions:
 
-- [RdbPredicates](arkts-arkdata-rdbpredicates-c.md): provides APIs for creating predicates. The predicates represent the properties, characteristics, or relationships between data entities in an RDB store and are used to define data operation conditions.  
-- [RdbStore](arkts-arkdata-rdbstore-i.md): provides APIs for managing data in an RDB store.
+- [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md): provides APIs for creating predicates. The predicates represent the properties, characteristics, or relationships between data entities in an RDB store and are used to define data operation conditions.  
+- [RdbStore](arkts-arkdata-rdb-rdbstore-i.md): provides APIs for managing data in an RDB store.
 
 **Since:** 7
 
@@ -23,36 +23,36 @@ This module provides the following RDB-related functions:
 
 | Name | Description |
 | --- | --- |
-| [deleteRdbStore](arkts-arkdata-deleterdbstore-f.md#deleterdbstore-1) | Deletes an RDB store. This API uses an asynchronous callback to return the result. |
-| [deleteRdbStore](arkts-arkdata-deleterdbstore-f.md#deleterdbstore-2) | Deletes an RDB store. This API uses a promise to return the result. |
-| [getRdbStore](arkts-arkdata-getrdbstore-f.md#getrdbstore-1) | Obtains an RDB store. This API uses an asynchronous callback to return the result. You can set parameters for the RDB store based on service requirements and call APIs to perform data operations. |
-| [getRdbStore](arkts-arkdata-getrdbstore-f.md#getrdbstore-2) | Obtains an RDB store. This API uses a promise to return the result. You can set parameters for the RDB store based on service requirements and call APIs to perform data operations. |
+| [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md#deleterdbstore-1) | Deletes an RDB store. This API uses an asynchronous callback to return the result. |
+| [deleteRdbStore](arkts-arkdata-rdb-deleterdbstore-f.md#deleterdbstore-2) | Deletes an RDB store. This API uses a promise to return the result. |
+| [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md#getrdbstore-1) | Obtains an RDB store. This API uses an asynchronous callback to return the result. You can set parameters for the RDB store based on service requirements and call APIs to perform data operations. |
+| [getRdbStore](arkts-arkdata-rdb-getrdbstore-f.md#getrdbstore-2) | Obtains an RDB store. This API uses a promise to return the result. You can set parameters for the RDB store based on service requirements and call APIs to perform data operations. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdbpredicates-c.md) | Defines predicates for an RDB store. This class determines whether the conditional expression for the RDB store is true or false. |
+| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Defines predicates for an RDB store. This class determines whether the conditional expression for the RDB store is true or false. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [RdbStore](arkts-arkdata-rdbstore-i.md) | Provides APIs for managing data in an RDB store.Before using the APIs of this class, use [executeSql](arkts-arkdata-rdbstore-i.md#executesql-1)to initialize the database table structure and related data. |
-| [StoreConfig](arkts-arkdata-storeconfig-i.md) | Defines the RDB store configuration. |
+| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | Provides APIs for managing data in an RDB store.Before using the APIs of this class, use [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql-1)to initialize the database table structure and related data. |
+| [StoreConfig](arkts-arkdata-rdb-storeconfig-i.md) | Defines the RDB store configuration. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SubscribeType](arkts-arkdata-subscribetype-e.md) | Defines the subscription type. |
-| [SyncMode](arkts-arkdata-syncmode-e.md) | Defines the database sync mode. |
+| [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Defines the subscription type. |
+| [SyncMode](arkts-arkdata-rdb-syncmode-e.md) | Defines the database sync mode. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ResultSet](arkts-arkdata-resultset-t.md) | Configure RdbPredicates to match the specified field whose data type is ValueType array and values are out of a given range. |
-| [ValueType](arkts-arkdata-valuetype-t.md) | Defines the data types allowed. |
-| [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Defines the types of the key and value in a KV pair. |
+| [ResultSet](arkts-arkdata-rdb-resultset-t.md) | Configure RdbPredicates to match the specified field whose data type is ValueType array and values are out of a given range. |
+| [ValueType](arkts-arkdata-rdb-valuetype-t.md) | Defines the data types allowed. |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Defines the types of the key and value in a KV pair. |
 

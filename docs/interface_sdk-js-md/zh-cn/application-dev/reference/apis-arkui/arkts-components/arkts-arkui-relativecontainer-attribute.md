@@ -34,7 +34,7 @@ barrier(value: Array<BarrierStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<BarrierStyle> | 是 | RelativeContainer容器内的屏障。 |
+| value | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<BarrierStyle> | 是 | RelativeContainer容器内的屏障。 |
 
 ## barrier
 
@@ -58,7 +58,7 @@ barrier(barrierStyle: Array<LocalizedBarrierStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| barrierStyle | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<LocalizedBarrierStyle> | 是 | RelativeContainer容器内的屏障。 |
+| barrierStyle | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<LocalizedBarrierStyle> | 是 | RelativeContainer容器内的屏障。 |
 
 ## guideLine
 
@@ -82,5 +82,5 @@ guideLine(value: Array<GuideLineStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<GuideLineStyle> | 是 | RelativeContainer容器内的辅助线。 |
+| value | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<GuideLineStyle> | 是 | RelativeContainer容器内的辅助线。 |
 

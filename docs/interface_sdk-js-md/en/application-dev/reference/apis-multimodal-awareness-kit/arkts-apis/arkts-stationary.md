@@ -24,26 +24,26 @@ import { stationary } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-multimodalawareness-off-f.md#off-1) | Unsubscribes from the device status. |
-| [on](arkts-multimodalawareness-on-f.md#on-1) | Subscribes to the device status. |
-| [once](arkts-multimodalawareness-once-f.md#once-1) | Obtains the device status. |
+| [off](arkts-multimodalawareness-stationary-off-f.md#off-1) | Unsubscribes from the device status. |
+| [on](arkts-multimodalawareness-stationary-on-f.md#on-1) | Subscribes to the device status. |
+| [once](arkts-multimodalawareness-stationary-once-f.md#once-1) | Obtains the device status. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ActivityResponse](arkts-multimodalawareness-activityresponse-i.md) | Defines the response interface to receive the device status. |
+| [ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md) | Defines the response interface to receive the device status. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ActivityEvent](arkts-multimodalawareness-activityevent-e.md) | Enumerates the device status events. |
-| [ActivityState](arkts-multimodalawareness-activitystate-e.md) | Enumerates the device statuses. |
+| [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | Enumerates the device status events. |
+| [ActivityState](arkts-multimodalawareness-stationary-activitystate-e.md) | Enumerates the device statuses. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ActivityType](arkts-multimodalawareness-activitytype-t.md) | Enumerates the device status types. |
+| [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | Enumerates the device status types. |
 

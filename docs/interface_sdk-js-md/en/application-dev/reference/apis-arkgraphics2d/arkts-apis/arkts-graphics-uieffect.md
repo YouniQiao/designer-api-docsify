@@ -24,6 +24,6 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 
 | Name | Description |
 | --- | --- |
-| [BrightnessBlenderParam](arkts-arkgraphics2d-brightnessblenderparam-i-sys.md) | The parameters of brightness blender. |
+| [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | The parameters of brightness blender. |
 <!--DelEnd-->
 

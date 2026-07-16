@@ -34,7 +34,7 @@ alignListItem(value: ListItemAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ListItemAlign](arkts-arkui-listitemalign-e.md) | 是 | 交叉轴方向的布局方式。<br/>默认值：ListItemAlign.Start |
+| value | [ListItemAlign](arkts-arkui-list-listitemalign-e.md) | 是 | 交叉轴方向的布局方式。<br/>默认值：ListItemAlign.Start |
 
 ## backPressBehavior
 
@@ -58,7 +58,7 @@ backPressBehavior(behavior: ListBackPressBehavior | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| behavior | ListBackPressBehavior \| undefined | 是 | List组件的系统返回键行为选项。当前支持通过[ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md)参数，配置系统返回键生效时，是否收起已展开的ListItem的划出组件。<br/>设置为undefined时，恢复默认行为，即系统返回键生效时，收起已展开的ListItem的划出组件。 |
+| behavior | ListBackPressBehavior \| undefined | 是 | List组件的系统返回键行为选项。当前支持通过[ListBackPressBehavior](arkts-arkui-list-listbackpressbehavior-i.md)参数，配置系统返回键生效时，是否收起已展开的ListItem的划出组件。<br/>设置为undefined时，恢复默认行为，即系统返回键生效时，收起已展开的ListItem的划出组件。 |
 
 ## cachedCount
 
@@ -96,7 +96,7 @@ cachedCount(count: number, show: boolean)
 
 设置列表中ListItem/ListItemGroup的预加载数量，并配置是否显示预加载节点。
 
-List设置cachedCount后，显示区域外上下各会预加载并布局cachedCount行ListItem。计算ListItem行数时，会计算ListItemGroup内部的ListItem行数。如果ListItemGroup内没有ListItem，则整个ListItemGroup算一行。配合裁剪[clip](arkts-arkui-commonmethod-c.md#clip-1)或内容裁剪[clipContent](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14)属性可以显示出预加载节点。
+List设置cachedCount后，显示区域外上下各会预加载并布局cachedCount行ListItem。计算ListItem行数时，会计算ListItemGroup内部的ListItem行数。如果ListItemGroup内没有ListItem，则整个ListItemGroup算一行。配合裁剪[clip](arkts-arkui-common-commonmethod-c.md#clip-1)或内容裁剪[clipContent](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14)属性可以显示出预加载节点。
 
 > **说明：**  
 >  
@@ -134,7 +134,7 @@ cachedCount(count: number | CacheCountInfo, show: boolean)
 
 若cachedCount属性的第一个参数为CacheCountInfo类型，当已缓存行数小于CacheCountInfo.minCount时，会在帧间空闲时隙预加载和布局。当已缓存行数大于CacheCountInfo.maxCount时，会将超出范围的节点销毁或回收复用。UI空闲时（无动画或用户操作），会在显示区域外上下各预加载CacheCountInfo.maxCount行ListItem。
 
-在计算ListItem行数时，会计算ListItemGroup内部的ListItem行数。如果ListItemGroup内没有ListItem，则整个ListItemGroup算一行。配合[clip](arkts-arkui-commonmethod-c.md#clip-1)或[clipContent](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14)属性可以显示出预加载节点。
+在计算ListItem行数时，会计算ListItemGroup内部的ListItem行数。如果ListItemGroup内没有ListItem，则整个ListItemGroup算一行。配合[clip](arkts-arkui-common-commonmethod-c.md#clip-1)或[clipContent](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14)属性可以显示出预加载节点。
 
 默认行为：count参数默认为number类型，数值根据屏幕内显示的节点个数设置，最大值为16。预加载的ListItem默认不参与绘制。
 
@@ -207,8 +207,8 @@ childrenMainSize(value: ChildrenMainSize)
 
 > **说明：**  
 >  
-> - 该属性通过向List组件提供所有子组件在主轴方向的大小信息，确保在面对子组件主轴大小不一致、增删子组件、使用[scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex-1)等场景时，List组件能  
-> 够维护其滑动位置准确性。这样，[scrollTo](arkts-arkui-scroller-c.md#scrollto-1)可以准确的跳转到指定位置，[currentOffset](arkts-arkui-scroller-c.md#currentoffset-1)可以获取到  
+> - 该属性通过向List组件提供所有子组件在主轴方向的大小信息，确保在面对子组件主轴大小不一致、增删子组件、使用[scrollToIndex](arkts-arkui-scroll-scroller-c.md#scrolltoindex-1)等场景时，List组件能  
+> 够维护其滑动位置准确性。这样，[scrollTo](arkts-arkui-scroll-scroller-c.md#scrollto-1)可以准确的跳转到指定位置，[currentOffset](arkts-arkui-scroll-scroller-c.md#currentoffset-1)可以获取到  
 > 当前准确的滑动位置，内置滚动条可以实现平滑移动无跳变。  
 >  
 > - 当子组件是ListItemGroup时，需要根据ListItemGroup的列数、ListItemGroup中ListItem在主轴方向的间距以及ListItemGroup中header、footer和ListItem的大  
@@ -233,7 +233,7 @@ childrenMainSize(value: ChildrenMainSize)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | 是 | 该对象用来维护子组件在主轴方向的大小信息。 |
+| value | [ChildrenMainSize](arkts-arkui-common-childrenmainsize-c.md) | 是 | 该对象用来维护子组件在主轴方向的大小信息。 |
 
 ## contentEndOffset
 
@@ -401,8 +401,8 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | List组件的边缘滑动效果，支持弹簧效果和阴影效果。<br/>默认值：EdgeEffect.Spring |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled:false }不开启。<br/>默认值：{ alwaysEnabled: false }<br>**起始版本：** 11 |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-enums-edgeeffect-e.md) | 是 | List组件的边缘滑动效果，支持弹簧效果和阴影效果。<br/>默认值：EdgeEffect.Spring |
+| options | [EdgeEffectOptions](arkts-arkui-common-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled:false }不开启。<br/>默认值：{ alwaysEnabled: false }<br>**起始版本：** 11 |
 
 ## editMode
 
@@ -452,7 +452,7 @@ editModeOptions(options?: EditModeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | 否 | 编辑模式选项。 |
+| options | [EditModeOptions](arkts-arkui-common-editmodeoptions-i.md) | 否 | 编辑模式选项。 |
 
 ## enableEditMode
 
@@ -500,7 +500,7 @@ enableScrollInteraction(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md)的滚动接口。<br/>默认值：true |
+| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroll-scroller-c.md)的滚动接口。<br/>默认值：true |
 
 ## focusWrapMode
 
@@ -631,7 +631,7 @@ listDirection(value: Axis)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | 是 | 组件的排列方向。<br/>默认值：Axis.Vertical |
+| value | [Axis](../arkts-apis/arkts-arkui-enums-axis-e.md) | 是 | 组件的排列方向。<br/>默认值：Axis.Vertical |
 
 ## maintainVisibleContentPosition
 
@@ -703,7 +703,7 @@ nestedScroll(value: NestedScrollOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。<br/>默认值：{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward:NestedScrollMode.SELF_ONLY } |
+| value | [NestedScrollOptions](arkts-arkui-common-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。<br/>默认值：{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward:NestedScrollMode.SELF_ONLY } |
 
 ## onEditModeChange
 
@@ -727,7 +727,7 @@ onEditModeChange(callback: Callback<boolean> | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> \| undefined | 是 | 编辑模式状态变化时触发的回调。true表示进入编辑模式，false表示退出编辑模式。<br>传入undefined会注销回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<boolean> \| undefined | 是 | 编辑模式状态变化时触发的回调。true表示进入编辑模式，false表示退出编辑模式。<br>传入undefined会注销回调。 |
 
 ## onItemDelete
 
@@ -829,7 +829,7 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 > **说明：**  
 >  
-> 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 8
 
@@ -988,11 +988,11 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 满足以下任一条件时触发该事件：
 
-1. 用户交互（如手指滑动、键鼠操作等）触发滚动。2. List惯性滚动。3. 调用[fling](arkts-arkui-scroller-c.md#fling-1)接口触发滚动。
+1. 用户交互（如手指滑动、键鼠操作等）触发滚动。2. List惯性滚动。3. 调用[fling](arkts-arkui-scroll-scroller-c.md#fling-1)接口触发滚动。
 
 不触发该事件的条件：
 
-1. 调用除[fling](arkts-arkui-scroller-c.md#fling-1)接口外的其他滚动控制接口。2. 越界回弹。3. 拖动滚动条。
+1. 调用除[fling](arkts-arkui-scroll-scroller-c.md#fling-1)接口外的其他滚动控制接口。2. 越界回弹。3. 拖动滚动条。
 
 **起始版本：** 9
 
@@ -1044,7 +1044,7 @@ List的边缘效果为弹簧效果时，在List划动到边缘继续划动和松
 onScrollStart(event: () => void)
 ```
 
-列表滑动开始时触发。手指拖动列表或列表的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
+列表滑动开始时触发。手指拖动列表或列表的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroll-scroller-c.md)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
 
 **起始版本：** 9
 
@@ -1068,7 +1068,7 @@ onScrollStart(event: () => void)
 onScrollStop(event: () => void)
 ```
 
-列表滑动停止时触发。手拖动列表或列表的滚动条触发的滑动，手离开屏幕后滑动停止时会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
+列表滑动停止时触发。手拖动列表或列表的滚动条触发的滑动，手离开屏幕后滑动停止时会触发该事件。使用[Scroller](arkts-arkui-scroll-scroller-c.md)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
 
 **起始版本：** 7
 
@@ -1136,7 +1136,7 @@ scrollBar(value: BarState)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | 滚动条状态。<br/>默认值：API version 9及以下版本默认值为BarState.Off，API version 10及以上版本的默认值为BarState.Auto。 |
+| value | [BarState](../arkts-apis/arkts-arkui-enums-barstate-e.md) | 是 | 滚动条状态。<br/>默认值：API version 9及以下版本默认值为BarState.Off，API version 10及以上版本的默认值为BarState.Auto。 |
 
 ## scrollSnapAlign
 
@@ -1162,7 +1162,7 @@ scrollSnapAlign(value: ScrollSnapAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | 是 | 列表项滚动结束对齐效果。<br/>默认值：ScrollSnapAlign.NONE |
+| value | [ScrollSnapAlign](arkts-arkui-list-scrollsnapalign-e.md) | 是 | 列表项滚动结束对齐效果。<br/>默认值：ScrollSnapAlign.NONE |
 
 ## scrollSnapAnimationSpeed
 
@@ -1186,7 +1186,7 @@ scrollSnapAnimationSpeed(speed: ScrollSnapAnimationSpeed)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speed | [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | 是 | 列表滚动限位动画速度。<br/>默认值：ScrollSnapAnimationSpeed.NORMAL |
+| speed | [ScrollSnapAnimationSpeed](arkts-arkui-list-scrollsnapanimationspeed-e.md) | 是 | 列表滚动限位动画速度。<br/>默认值：ScrollSnapAnimationSpeed.NORMAL |
 
 ## stackFromEnd
 
@@ -1222,7 +1222,7 @@ sticky(value: StickyStyle)
 
 > **说明：**  
 >  
-> 由于浮点数计算精度，设置sticky后，在List滑动过程中小概率产生缝隙，可以通过[pixelRound](arkts-arkui-commonmethod-c.md#pixelround-1)指定当前组件向下像素取整解决该问题。
+> 由于浮点数计算精度，设置sticky后，在List滑动过程中小概率产生缝隙，可以通过[pixelRound](arkts-arkui-common-commonmethod-c.md#pixelround-1)指定当前组件向下像素取整解决该问题。
 
 **起始版本：** 9
 
@@ -1238,7 +1238,7 @@ sticky(value: StickyStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [StickyStyle](arkts-arkui-stickystyle-e.md) | 是 | ListItemGroup吸顶或吸底效果。<br/>默认值：StickyStyle.None |
+| value | [StickyStyle](arkts-arkui-list-stickystyle-e.md) | 是 | ListItemGroup吸顶或吸底效果。<br/>默认值：StickyStyle.None |
 
 ## supportEmptyBranchInLazyLoading
 

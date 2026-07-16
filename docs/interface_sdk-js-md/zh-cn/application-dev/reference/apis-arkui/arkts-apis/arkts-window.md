@@ -20,7 +20,7 @@ import { window } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Callback](arkts-arkui-callback-i.md) | Defines the window callback. |
+| [Callback](arkts-arkui-window-callback-i.md) | Defines the window callback. |
 
 ### 类型
 

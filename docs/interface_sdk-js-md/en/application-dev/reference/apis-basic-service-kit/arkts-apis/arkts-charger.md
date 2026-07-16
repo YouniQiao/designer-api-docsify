@@ -27,6 +27,6 @@ import { charger } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [ChargeType](arkts-basicservices-chargetype-e-sys.md) | Enumerates charging types. |
+| [ChargeType](arkts-basicservices-charger-chargetype-e-sys.md) | Enumerates charging types. |
 <!--DelEnd-->
 

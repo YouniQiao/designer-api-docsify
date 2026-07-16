@@ -12,12 +12,12 @@ import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } fro
 
 | 名称 | 说明 |
 | --- | --- |
-| [Package](arkts-ability-package-c.md) |  |
+| [Package](arkts-ability-package-package-c.md) |  |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [CheckPackageHasInstalledOptions](arkts-ability-checkpackagehasinstalledoptions-i.md) |  |
-| [CheckPackageHasInstalledResponse](arkts-ability-checkpackagehasinstalledresponse-i.md) |  |
+| [CheckPackageHasInstalledOptions](arkts-ability-package-checkpackagehasinstalledoptions-i.md) |  |
+| [CheckPackageHasInstalledResponse](arkts-ability-package-checkpackagehasinstalledresponse-i.md) |  |
 

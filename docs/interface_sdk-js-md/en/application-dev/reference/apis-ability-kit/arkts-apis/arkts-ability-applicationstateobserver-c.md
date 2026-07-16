@@ -1,6 +1,6 @@
 # ApplicationStateObserver
 
-The module defines an observer to listen for application state changes. It can be used as an input parameter in [on('applicationState')](arkts-ability-on-f.md#on-1)to listen for lifecycle changes of the application.
+The module defines an observer to listen for application state changes. It can be used as an input parameter in [on('applicationState')](arkts-ability-appmanager-on-f.md#on-1)to listen for lifecycle changes of the application.
 
 **Since:** 14
 
@@ -46,7 +46,7 @@ Called when the first process of the application is created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-t.md) | Yes | Application state data. |
+| appStateData | [AppStateData](arkts-ability-appmanager-appstatedata-t.md) | Yes | Application state data. |
 
 ## onAppStopped
 
@@ -66,7 +66,7 @@ Called when the last process of the application is destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-t.md) | Yes | Application state data. |
+| appStateData | [AppStateData](arkts-ability-appmanager-appstatedata-t.md) | Yes | Application state data. |
 
 ## onForegroundApplicationChanged
 
@@ -86,7 +86,7 @@ Called when the foreground or background state of an application changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-t.md) | Yes | Application state data. |
+| appStateData | [AppStateData](arkts-ability-appmanager-appstatedata-t.md) | Yes | Application state data. |
 
 ## onProcessCreated
 

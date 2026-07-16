@@ -13,6 +13,6 @@ import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [SelectionExtensionAbility](arkts-basicservices-selectionextensionability-c-sys.md) | This module provides ExtensionAbility for word selection, allowing users to search or translate text selected using a mouse or touchpad. |
+| [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md) | This module provides ExtensionAbility for word selection, allowing users to search or translate text selected using a mouse or touchpad. |
 <!--DelEnd-->
 

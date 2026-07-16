@@ -1,6 +1,6 @@
 # Image properties/events
 
-The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md), [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md), and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF,HEIF, and TIFF. Note that the APNG and SVGA formats are not supported.
+The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md), [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md), and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF,HEIF, and TIFF. Note that the APNG and SVGA formats are not supported.
 
 > **NOTE**
 
@@ -10,7 +10,7 @@ The **Image** component is usually used to display images in applications. It su
 > state. For instructions on how to set focus, see  
 > [Setting Whether a Component Is Focusable](../../../../ui/arkts-common-events-focus-event.md#setting-whether-a-component-is-focusable).  
 > By default, the **Image** component is not focusable. To enable it to gain focus, set both the  
-> [focusable](arkts-arkui-commonmethod-c.md#focusable-1) and [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch-1) attributes to  
+> [focusable](arkts-arkui-common-commonmethod-c.md#focusable-1) and [focusOnTouch](arkts-arkui-common-commonmethod-c.md#focusontouch-1) attributes to  
 > **true**.  
 >  
 > - The **Image** component supports SVG image sources. For details about SVG tags, see [SVG Tags](./common).  
@@ -48,7 +48,7 @@ Sets the placeholder image displayed during image loading.
 
 The placeholder image supports configuration of [objectFit](ImageAttribute#objectFit) for setting the fill effect, which is consistent with the fill effect of the image.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource \| PixelMap | Yes | Placeholder image displayed during loading. Local images (in PNG,JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) objects are supported, but online images are not.<br>- Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-c.md#constructor-1). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-geturifrompath-f.md#geturifrompath-1) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path.<br>Default value: **null**<br>When the value is switched from a valid one (an image resource that can be parsed and loaded correctly) to an invalid one (an image path that cannot be parsed or loaded), the component retains the previously successfully loaded image content without clearing or resetting it.<br>**Since:** 12 |
+| value | string \| Resource \| PixelMap | Yes | Placeholder image displayed during loading. Local images (in PNG,JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.<br>- Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor-1). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path.<br>Default value: **null**<br>When the value is switched from a valid one (an image resource that can be parsed and loaded correctly) to an invalid one (an image path that cannot be parsed or loaded), the component retains the previously successfully loaded image content without clearing or resetting it.<br>**Since:** 12 |
 
 ## alt
 
@@ -76,13 +76,13 @@ Sets the placeholder image displayed during image loading and when image loading
 
 > **NOTE**  
 >  
-> When a placeholder image is configured via [ImageAlt](arkts-arkui-imagealt-i.md), **Image** takes effect based on the  
+> When a placeholder image is configured via [ImageAlt](arkts-arkui-image-imagealt-i.md), **Image** takes effect based on the  
 > placeholder image sources configured for the loading and load-failure states. If no placeholder image is  
 > configured, it is not displayed by default.
 
 The placeholder image supports configuration of [objectFit](ImageAttribute#objectFit) for setting the fill effect, which is consistent with the fill effect of the image.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 22
 
@@ -100,7 +100,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | ResourceStr \| PixelMap \| ImageAlt | Yes | Placeholder image displayed during loading or in case of loading failure. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) objects are supported, but online images are not.<br>-Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-c.md#constructor-1). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-geturifrompath-f.md#geturifrompath-1) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path. |
+| src | ResourceStr \| PixelMap \| ImageAlt | Yes | Placeholder image displayed during loading or in case of loading failure. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.<br>-Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor-1). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path. |
 
 ## antialiased
 
@@ -112,7 +112,7 @@ Sets whether to enable anti-aliasing for the edges of a pixel map image. If the 
 
 > **NOTE**  
 >  
-> If the [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1) attribute is set for an image,  
+> If the [backgroundColor](arkts-arkui-common-commonmethod-c.md#backgroundcolor-1) attribute is set for an image,  
 > setting the **antialiased** attribute of the image to **true** does not affect the aliasing effect of the  
 > background color.  
 >  
@@ -148,7 +148,7 @@ When the image is scaled down: .autoResize(false) + .interpolation(.Medium)
 
 When the image is scaled up: .interpolation(.High)
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md) or the image format is SVG.
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) or the image format is SVG.
 
 **Since:** 7
 
@@ -242,7 +242,7 @@ Triggers transition animations when the image content changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transition | [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md) | Yes | Type of transition animation.<br>The value **ContentTransitionEffect.OPACITY** indicates the fade-in/fade-out effect, and the value **ContentTransitionEffect.IDENTITY** indicates no animation effect.<br>Default value:**ContentTransitionEffect.IDENTITY**<br>When this parameter is set to **undefined** or **null**, the value defaults to **ContentTransitionEffect.IDENTITY**.<br>Note: This parameter does not take effect for dynamic image resources. |
+| transition | [ContentTransitionEffect](arkts-arkui-common-contenttransitioneffect-c.md) | Yes | Type of transition animation.<br>The value **ContentTransitionEffect.OPACITY** indicates the fade-in/fade-out effect, and the value **ContentTransitionEffect.IDENTITY** indicates no animation effect.<br>Default value:**ContentTransitionEffect.IDENTITY**<br>When this parameter is set to **undefined** or **null**, the value defaults to **ContentTransitionEffect.IDENTITY**.<br>Note: This parameter does not take effect for dynamic image resources. |
 
 ## copyOption
 
@@ -252,7 +252,7 @@ copyOption(value: CopyOptions)
 
 Specifies whether the image can be copied. When **copyOption** is set to a value other than **CopyOptions.None**,the image can be copied through multiple interactions, such as long press, right-click, or Ctrl+C. SVG images cannot be copied.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 9
 
@@ -268,7 +268,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Specifies whether the image can be copied.<br>Default value: **CopyOptions.None** |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-enums-copyoptions-e.md) | Yes | Specifies whether the image can be copied.<br>Default value: **CopyOptions.None** |
 
 ## draggable
 
@@ -316,7 +316,7 @@ Sets the dynamic range of the image to be displayed. This attribute is not appli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | Yes | Dynamic range of the image.<br>Default value: **DynamicRangeMode.STANDARD** |
+| value | [DynamicRangeMode](arkts-arkui-image-dynamicrangemode-e.md) | Yes | Dynamic range of the image.<br>Default value: **DynamicRangeMode.STANDARD** |
 
 ## enableAnalyzer
 
@@ -328,19 +328,19 @@ Sets whether to enable the AI image analyzer, which supports subject recognition
 
 This attribute cannot be used together with the [overlay](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) attribute. If they are set at the same time, the [CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)attribute in **overlay** has no effect. This feature also depends on device capabilities.
 
-Images to be analyzed must be static, non-vector images. That is, SVG and GIF images cannot be analyzed.[Pixel maps](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) in [RGBA_8888](../../apis-image-kit/arkts-apis/arkts-image-pixelmapformat-e.md) format can be passed in for analysis. For details,see [Example 5: Enabling the AI Image Analyzer](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#example-5-enabling-the-ai-image-analyzer).
+Images to be analyzed must be static, non-vector images. That is, SVG and GIF images cannot be analyzed.[Pixel maps](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) in [RGBA_8888](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmapformat-e.md) format can be passed in for analysis. For details,see [Example 5: Enabling the AI Image Analyzer](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#example-5-enabling-the-ai-image-analyzer).
 
-The [alt](ImageAttribute#alt(value: string | Resource | PixelMap)) placeholder image does not support analysis. The [objectRepeat](ImageAttribute#objectRepeat) attribute supports analysis only when it is set to **ImageRepeat.NoRepeat**. Analysis is not supported when the [obscured](arkts-arkui-commonmethod-c.md#obscured-1) attribute is enabled.
+The [alt](ImageAttribute#alt(value: string | Resource | PixelMap)) placeholder image does not support analysis. The [objectRepeat](ImageAttribute#objectRepeat) attribute supports analysis only when it is set to **ImageRepeat.NoRepeat**. Analysis is not supported when the [obscured](arkts-arkui-common-commonmethod-c.md#obscured-1) attribute is enabled.
 
-Analysis is performed based on the complete original image. Even if the settings of the [clip](arkts-arkui-commonmethod-c.md#clip-1), [margin](arkts-arkui-commonmethod-c.md#margin-1),[borderRadius](arkts-arkui-commonmethod-c.md#borderradius-1),[position](arkts-arkui-commonmethod-c.md#position-1), and [objectFit](ImageAttribute#objectFit) attributes cause incomplete image display, or if a mask layer is set via [renderMode](ImageAttribute#renderMode), analysis will still be conducted on the complete original image. The [copyOption](ImageAttribute#copyOption) attribute does not affect the AI image analyzer functionality.
+Analysis is performed based on the complete original image. Even if the settings of the [clip](arkts-arkui-common-commonmethod-c.md#clip-1), [margin](arkts-arkui-common-commonmethod-c.md#margin-1),[borderRadius](arkts-arkui-common-commonmethod-c.md#borderradius-1),[position](arkts-arkui-common-commonmethod-c.md#position-1), and [objectFit](ImageAttribute#objectFit) attributes cause incomplete image display, or if a mask layer is set via [renderMode](ImageAttribute#renderMode), analysis will still be conducted on the complete original image. The [copyOption](ImageAttribute#copyOption) attribute does not affect the AI image analyzer functionality.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 > **NOTE**  
 >  
 > - The **ohos.permission.INTERNET** permission is required.  
 >  
-> - This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> - This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 12.
 
 **Since:** 11
 
@@ -366,7 +366,7 @@ fillColor(value: ResourceColor)
 
 Fill color to be superimposed on the image. This attribute applies only to SVG images. Once set, the fill color will replace the fill colors of all drawable elements within the SVG image. To set the fill color for a PNG image,use [colorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter)).
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -390,9 +390,9 @@ This attribute does not take effect when the parameter type of the component is 
 fillColor(color: ResourceColor | ColorContent)
 ```
 
-Fill color to be superimposed on the image. This attribute applies only to SVG images. Once set, the fill color will replace the fill colors of all drawable elements within the SVG image. To set the fill color for a PNG image,use [colorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter)). To reset the fill color, pass a value of the [ColorContent](arkts-arkui-colorcontent-c.md) type.
+Fill color to be superimposed on the image. This attribute applies only to SVG images. Once set, the fill color will replace the fill colors of all drawable elements within the SVG image. To set the fill color for a PNG image,use [colorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter)). To reset the fill color, pass a value of the [ColorContent](arkts-arkui-image-colorcontent-c.md) type.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 15
 
@@ -416,9 +416,9 @@ This attribute does not take effect when the parameter type of the component is 
 fillColor(color: ResourceColor | ColorContent | ColorMetrics)
 ```
 
-Fill color to be superimposed on the image. This attribute applies only to SVG images. Once set, the fill color will replace the fill colors of all drawable elements within the SVG image. To set the fill color for a PNG image,use [colorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter)). To reset the fill color, pass a value of the [ColorContent](arkts-arkui-colorcontent-c.md) type. You can set P3 color gamut values by passing in the [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-c.md) type, which can achieve richer color performance on devices that support high color gamut.
+Fill color to be superimposed on the image. This attribute applies only to SVG images. Once set, the fill color will replace the fill colors of all drawable elements within the SVG image. To set the fill color for a PNG image,use [colorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter)). To reset the fill color, pass a value of the [ColorContent](arkts-arkui-image-colorcontent-c.md) type. You can set P3 color gamut values by passing in the [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) type, which can achieve richer color performance on devices that support high color gamut.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 20
 
@@ -446,7 +446,7 @@ Specifies whether the image display size follows the size of the image source.
 
 This attribute does not take effect when the component has the **width** and **height** attributes set.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -528,7 +528,7 @@ interpolation(value: ImageInterpolation)
 
 Defines the image interpolation effect. This attribute mitigates aliasing during image scaling. This attribute is not applicable to SVG images.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -544,7 +544,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageInterpolation](arkts-arkui-imageinterpolation-e.md) | Yes | Interpolation effect of the image.<br>Default value:**ImageInterpolation.Low**<br>When set to **undefined**, the value is treated as **ImageInterpolation.None**. |
+| value | [ImageInterpolation](arkts-arkui-image-imageinterpolation-e.md) | Yes | Interpolation effect of the image.<br>Default value:**ImageInterpolation.Low**<br>When set to **undefined**, the value is treated as **ImageInterpolation.None**. |
 
 ## matchTextDirection
 
@@ -554,7 +554,7 @@ matchTextDirection(value: boolean)
 
 Specifies whether the image follows the system language direction, displaying a mirrored effect in a right-to-left(RTL) language environments.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -594,7 +594,7 @@ Sets how the image is resized to fit its container. If the attribute is not set,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | Yes | How the image is resized to fit its container. |
+| value | [ImageFit](../arkts-apis/arkts-arkui-enums-imagefit-e.md) | Yes | How the image is resized to fit its container. |
 
 ## objectRepeat
 
@@ -604,7 +604,7 @@ objectRepeat(value: ImageRepeat)
 
 Sets how the image is repeated. When set to repeat, the image is repeated from the center to edges. The last image will be clipped if it does not fit in the component. This attribute is not applicable to SVG images.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -620,7 +620,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | Yes | How the image is repeated.<br>Default value: **ImageRepeat.NoRepeat** |
+| value | [ImageRepeat](../arkts-apis/arkts-arkui-enums-imagerepeat-e.md) | Yes | How the image is repeated.<br>Default value: **ImageRepeat.NoRepeat** |
 
 ## onComplete
 
@@ -1052,7 +1052,7 @@ onError(callback: ImageErrorCallback)
 
 Triggered when an error occurs during image loading.
 
-This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 9
 
@@ -1068,7 +1068,7 @@ This event is not triggered if the parameter type of the component is [AnimatedD
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | Yes | Callback triggered when an error occurs during image loading.**NOTE**&lt;You are advised to use this callback to quickly identify the cause of image loading failures. For details,see the [ImageError](arkts-arkui-imageerror-i.md) error codes.<br>**Since:** 11 |
+| callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | Yes | Callback triggered when an error occurs during image loading.**NOTE**&lt;You are advised to use this callback to quickly identify the cause of image loading failures. For details,see the [ImageError](arkts-arkui-image-imageerror-i.md) error codes.<br>**Since:** 11 |
 
 ## onFinish
 
@@ -1078,7 +1078,7 @@ onFinish(event: () => void)
 
 Triggered when the animation playback in the loaded SVG image is complete. If the animation is an infinite loop,this callback is not triggered.
 
-Only images in SVG format are supported. This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+Only images in SVG format are supported. This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -1122,7 +1122,7 @@ This attribute does not apply to placeholder images specified by [alt](ImageAttr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | [ImageRotateOrientation](arkts-arkui-imagerotateorientation-e.md) | Yes | Display orientation of the image content.<br>Only static pixel map display is supported.<br>For images containing rotation or flip information, use **ImageRotateOrientation.AUTO**.<br>Default value: **ImageRotateOrientation.UP**<br>When this parameter is set to **undefined** or **null**, the value is **ImageRotateOrientation.AUTO**. |
+| orientation | [ImageRotateOrientation](arkts-arkui-image-imagerotateorientation-e.md) | Yes | Display orientation of the image content.<br>Only static pixel map display is supported.<br>For images containing rotation or flip information, use **ImageRotateOrientation.AUTO**.<br>Default value: **ImageRotateOrientation.UP**<br>When this parameter is set to **undefined** or **null**, the value is **ImageRotateOrientation.AUTO**. |
 
 ## privacySensitive
 
@@ -1160,7 +1160,7 @@ Sets the rendering mode of the image. This attribute is not applicable to SVG im
 
 This attribute does not take effect when [ColorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter)) is set.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -1176,7 +1176,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | Yes | Rendering mode of the image, which can be **Original** or **Template** (monochrome).<br>Default value: **ImageRenderMode.Original** |
+| value | [ImageRenderMode](arkts-arkui-image-imagerendermode-e.md) | Yes | Rendering mode of the image, which can be **Original** or **Template** (monochrome).<br>Default value: **ImageRenderMode.Original** |
 
 ## resizable
 
@@ -1186,15 +1186,15 @@ resizable(value: ResizableOptions)
 
 Sets the resizable image options. Resizing is effective for drag previews and placeholder images.
 
-When a valid [ResizableOptions](arkts-arkui-resizableoptions-i.md) is set, the **objectRepeat**, **antialiased**, and **orientation** attributes do not take effect.
+When a valid [ResizableOptions](arkts-arkui-image-resizableoptions-i.md) is set, the **objectRepeat**, **antialiased**, and **orientation** attributes do not take effect.
 
-When the sum of the values of **top** and **bottom** is greater than the source image height, or the sum of the values of **left** and **right** is greater than the source image width, the [ResizableOptions](arkts-arkui-resizableoptions-i.md) attribute does not take effect.
+When the sum of the values of **top** and **bottom** is greater than the source image height, or the sum of the values of **left** and **right** is greater than the source image width, the [ResizableOptions](arkts-arkui-image-resizableoptions-i.md) attribute does not take effect.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md) or the image format is SVG.
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) or the image format is SVG.
 
 > **NOTE**  
 >  
-> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 11
 
@@ -1210,7 +1210,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResizableOptions](arkts-arkui-resizableoptions-i.md) | Yes | Resizable image options. |
+| value | [ResizableOptions](arkts-arkui-image-resizableoptions-i.md) | Yes | Resizable image options. |
 
 ## sourceSize
 
@@ -1220,7 +1220,7 @@ sourceSize(value: ImageSourceSize)
 
 Sets the decoding size of the image. This attribute works only when the target size is smaller than the source size. This attribute is not applicable to SVG images or **PixelMap** objects.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 7
 
@@ -1236,7 +1236,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageSourceSize](arkts-arkui-imagesourcesize-i.md) | Yes | Decoding size of the image. This parameter can be used to reduce the image resolution when the image display size needs to be smaller than the component size. When this parameter is used with **ImageFit.None** of the [objectFit](ImageAttribute#objectFit) API, a small image can be displayed in the component.<br>**Since:** 18 |
+| value | [ImageSourceSize](arkts-arkui-image-imagesourcesize-i.md) | Yes | Decoding size of the image. This parameter can be used to reduce the image resolution when the image display size needs to be smaller than the component size. When this parameter is used with **ImageFit.None** of the [objectFit](ImageAttribute#objectFit) API, a small image can be displayed in the component.<br>**Since:** 18 |
 
 ## supportSvg2
 
@@ -1274,7 +1274,7 @@ syncLoad(value: boolean)
 
 Specifies whether to load the image synchronously. When loading a small local image, you are advised to set **syncLoad** to **true** so that the image loading can be quickly completed on the main thread.
 
-This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md).
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 If image flickering occurs during loading, set **syncLoad** to **true**. For details, see [Optimizing Concurrent Tasks](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-click-to-click-response-optimization#section715115119192).
 

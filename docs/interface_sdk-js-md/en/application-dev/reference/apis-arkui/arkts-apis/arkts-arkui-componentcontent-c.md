@@ -33,7 +33,7 @@ A constructor used to create a **ComponentContent** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context required for creating a node. |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)<[]> | Yes | **WrappedBuilder** object that encapsulates a builder function that has no parameters. |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-common-wrappedbuilder-c.md)<[]> | Yes | **WrappedBuilder** object that encapsulates a builder function that has no parameters. |
 
 ## constructor
 
@@ -58,7 +58,7 @@ A constructor used to create a **ComponentContent** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context required for creating a node. |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)<[T]> | Yes | **WrappedBuilder** object that encapsulates a builder function that has parameters. |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-common-wrappedbuilder-c.md)<[T]> | Yes | **WrappedBuilder** object that encapsulates a builder function that has parameters. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
 
 ## constructor
@@ -84,9 +84,9 @@ A constructor used to create a **ComponentContent** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | UI context required for creating a node. |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)<[T]> | Yes | **WrappedBuilder** object that encapsulates a builder function that has parameters. |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-common-wrappedbuilder-c.md)<[T]> | Yes | **WrappedBuilder** object that encapsulates a builder function that has parameters. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
-| options | [BuildOptions](arkts-arkui-buildoptions-i.md) | Yes | Build options, which determine whether to support the behavior of nesting **@Builder** within **@Builder**. |
+| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | Yes | Build options, which determine whether to support the behavior of nesting **@Builder** within **@Builder**. |
 
 ## dispose
 
@@ -233,7 +233,7 @@ Triggers component reuse for custom components under this **ComponentContent**. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | No | Parameters for **ComponentContent** reuse. This parameter is passed to all top-level custom components within the **ComponentContent** during reuse and must include all required constructor parameters for each component; otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ComponentContent directly uses the data source during construction. |
+| param | [Object](../../apis-na/arkts-apis/arkts-na-lib-es5-object-i.md) | No | Parameters for **ComponentContent** reuse. This parameter is passed to all top-level custom components within the **ComponentContent** during reuse and must include all required constructor parameters for each component; otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)lifecycle callback of internal custom components, with this parameter as the callback input. The default value is undefined. In this case, the custom component in ComponentContent directly uses the data source during construction. |
 
 ## update
 
@@ -265,7 +265,7 @@ Updates the builder function parameters encapsulated by the [WrappedBuilder](../
 updateConfiguration(): void
 ```
 
-Updates the configuration of the entire node by passing in a [system environment change](../../apis-ability-kit/arkts-apis/arkts-ability-configuration-i.md) event.
+Updates the configuration of the entire node by passing in a [system environment change](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) event.
 
 > **NOTE**  
 >  

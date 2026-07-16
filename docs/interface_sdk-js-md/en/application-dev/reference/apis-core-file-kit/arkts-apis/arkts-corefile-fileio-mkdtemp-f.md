@@ -28,7 +28,7 @@ Creates a temporary directory. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise that returns the directory created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<string> | Promise that returns the directory created. |
 
 
 ## mkdtemp
@@ -54,5 +54,5 @@ Creates a temporary directory. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback invoked when a temporary directory is created asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<string> | Yes | Callback invoked when a temporary directory is created asynchronously. |
 

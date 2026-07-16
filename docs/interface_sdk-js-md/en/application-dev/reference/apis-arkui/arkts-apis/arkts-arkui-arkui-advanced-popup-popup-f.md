@@ -28,5 +28,5 @@ export declare function Popup(options: PopupOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PopupOptions](../arkts-components/arkts-arkui-popupoptions-i.md) | Yes | Parameters of the popup. |
+| options | [PopupOptions](../arkts-components/arkts-arkui-common-popupoptions-i.md) | Yes | Parameters of the popup. |
 

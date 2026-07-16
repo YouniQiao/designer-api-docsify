@@ -28,14 +28,14 @@ import { deviceInfo } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [apiAvailable](arkts-basicservices-apiavailable-f.md#apiavailable-1) | Checks whether a specified API version is available on the current device.This API provides compatibility check across different OpenHarmony/distributed OS versions.A suitable version check method is automatically selected based on the input format and supported API versions. |
+| [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md#apiavailable-1) | Checks whether a specified API version is available on the current device.This API provides compatibility check across different OpenHarmony/distributed OS versions.A suitable version check method is automatically selected based on the input format and supported API versions. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DeviceTypes](arkts-basicservices-devicetypes-e.md) | Enumerates device types, which can be used to verify the return value of **deviceType**. |
-| [PerformanceClassLevel](arkts-basicservices-performanceclasslevel-e.md) | Enumerates the device capability levels. |
+| [DeviceTypes](arkts-basicservices-deviceinfo-devicetypes-e.md) | Enumerates device types, which can be used to verify the return value of **deviceType**. |
+| [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md) | Enumerates the device capability levels. |
 
 ### Constants
 

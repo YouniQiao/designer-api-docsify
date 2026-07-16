@@ -1,8 +1,8 @@
 # Column properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-commonmethod-c.md), the following attributes are supported.
 
-The [universal events](arkts-arkui-commonmethod-c.md) are supported.
+The [universal events](arkts-arkui-common-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** ColumnAttribute extends [CommonMethod<ColumnAttribute>](CommonMethod<ColumnAttribute>)
 
@@ -34,7 +34,7 @@ Alignment mode of the child components in the horizontal direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md) | Yes | Alignment mode of child components in the horizontal direction.<br>Default value: **HorizontalAlign.Center** |
+| value | [HorizontalAlign](../arkts-apis/arkts-arkui-enums-horizontalalign-e.md) | Yes | Alignment mode of child components in the horizontal direction.<br>Default value: **HorizontalAlign.Center** |
 
 ## justifyContent
 
@@ -58,7 +58,7 @@ Alignment mode of the child components in the vertical direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md) | Yes | Alignment mode of child components in the vertical direction.<br>Default value:**FlexAlign.Start** |
+| value | [FlexAlign](../arkts-apis/arkts-arkui-enums-flexalign-e.md) | Yes | Alignment mode of child components in the vertical direction.<br>Default value:**FlexAlign.Start** |
 
 ## reverse
 

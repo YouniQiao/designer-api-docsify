@@ -22,12 +22,12 @@ Sets whether to enable the AI image analyzer, which supports subject recognition
 
 For the settings to take effect, this attribute must be used together with [startImageAnalyzer](startImageAnalyzer) and [stopImageAnalyzer](stopImageAnalyzer) of CanvasRenderingContext2D.
 
-This attribute cannot be used together with the [overlay](arkts-arkui-commonmethod-c.md#overlay-1) attribute.If they are set at the same time, the **CustomBuilder** attribute in **overlay** has no effect.This feature depends on device capabilities.
+This attribute cannot be used together with the [overlay](arkts-arkui-common-commonmethod-c.md#overlay-1) attribute.If they are set at the same time, the **CustomBuilder** attribute in **overlay** has no effect.This feature depends on device capabilities.
 
 > **NOTE**  
 >  
 > This API can be called within  
-> [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)  
+> [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)  
 > since API version 20.
 
 **Since:** 12
@@ -54,7 +54,7 @@ onReady(event: VoidCallback)
 
 Triggered when the **Canvas** component is initialized or when its size changes.
 
-When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange-1)event is triggered, not the **onReady** event. The [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange-1)event is triggered after the **onReady** event.
+When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the [onAreaChange](arkts-arkui-common-commonmethod-c.md#onareachange-1)event is triggered, not the **onReady** event. The [onAreaChange](arkts-arkui-common-commonmethod-c.md#onareachange-1)event is triggered after the **onReady** event.
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ onReady(event: Callback<DrawingRenderingContext | undefined> | undefined)
 
 Triggered when the **Canvas** component is initialized or when its size changes.
 
-When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange-1)event is triggered, not the **onReady** event. The [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange-1)event is triggered after the **onReady** event.
+When this event is triggered, the canvas is cleared. The width and height of the **Canvas** component are then determined and can be obtained, allowing you to use APIs related to the **Canvas** component for drawing. If only the position of the canvas changes, only the [onAreaChange](arkts-arkui-common-commonmethod-c.md#onareachange-1)event is triggered, not the **onReady** event. The [onAreaChange](arkts-arkui-common-commonmethod-c.md#onareachange-1)event is triggered after the **onReady** event.
 
 **Since:** 23
 
@@ -98,5 +98,5 @@ When this event is triggered, the canvas is cleared. The width and height of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<DrawingRenderingContext \| undefined> \| undefined | Yes | Triggered when the **Canvas** component is initialized or when its size changes.<br>Constraints on input parameters of the Callback&lt;DrawingRenderingContext \| undefined&gt; type:<br>1. Only **Canvas** components created using [CanvasParams](arkts-arkui-canvasparams-i.md) will return a **DrawingRenderingContext** object in this callback; otherwise, **undefined** is returned.<br>2. The **DrawingRenderingContext** object returned by this callback must not be used as a parameter to create **Canvas** components, as doing so will cause the application to crash. |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<DrawingRenderingContext \| undefined> \| undefined | Yes | Triggered when the **Canvas** component is initialized or when its size changes.<br>Constraints on input parameters of the Callback&lt;DrawingRenderingContext \| undefined&gt; type:<br>1. Only **Canvas** components created using [CanvasParams](arkts-arkui-canvas-canvasparams-i.md) will return a **DrawingRenderingContext** object in this callback; otherwise, **undefined** is returned.<br>2. The **DrawingRenderingContext** object returned by this callback must not be used as a parameter to create **Canvas** components, as doing so will cause the application to crash. |
 

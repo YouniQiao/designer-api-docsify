@@ -20,7 +20,7 @@ Represents the callback used to set the parallel relationship between built-in g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| current | GestureRecognizer | Yes | Built-in gesture recognizer of the current component. Currently only a built-in gesture recognizer of the [GestureType](../arkts-apis/arkts-arkui-gesturetype-e.md).PAN_GESTURE type is supported. |
+| current | GestureRecognizer | Yes | Built-in gesture recognizer of the current component. Currently only a built-in gesture recognizer of the [GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md).PAN_GESTURE type is supported. |
 | others | Array&lt;GestureRecognizer&gt; | Yes | Gesture recognizers of the same type from other components with higherpriority in the response chain. |
 
 **Return value:**

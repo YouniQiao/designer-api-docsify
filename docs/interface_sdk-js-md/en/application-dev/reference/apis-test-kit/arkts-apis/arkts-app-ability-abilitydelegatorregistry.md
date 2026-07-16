@@ -24,23 +24,23 @@ import { abilityDelegatorRegistry } from '@kit.TestKit';
 
 | Name | Description |
 | --- | --- |
-| [getAbilityDelegator](arkts-test-getabilitydelegator-f.md#getabilitydelegator-1) | Obtains an [AbilityDelegator](application/AbilityDelegator:AbilityDelegator) object. |
-| [getArguments](arkts-test-getarguments-f.md#getarguments-1) | Obtains an [AbilityDelegatorArgs](application/abilityDelegatorArgs:AbilityDelegatorArgs) object. |
+| [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator-1) | Obtains an [AbilityDelegator](application/AbilityDelegator:AbilityDelegator) object. |
+| [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md#getarguments-1) | Obtains an [AbilityDelegatorArgs](application/abilityDelegatorArgs:AbilityDelegatorArgs) object. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AbilityLifecycleState](arkts-test-abilitylifecyclestate-e.md) | Enumerates the ability lifecycle states. It can be used in [getAbilityState(ability)](application/AbilityDelegator:AbilityDelegator.getAbilityState) of [AbilityDelegator](application/AbilityDelegator:AbilityDelegator) to return different ability lifecycle states. |
+| [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md) | Enumerates the ability lifecycle states. It can be used in [getAbilityState(ability)](application/AbilityDelegator:AbilityDelegator.getAbilityState) of [AbilityDelegator](application/AbilityDelegator:AbilityDelegator) to return different ability lifecycle states. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AbilityDelegator](arkts-test-abilitydelegator-t.md) | Represents the **AbilityDelegator** module. |
-| [AbilityDelegatorArgs](arkts-test-abilitydelegatorargs-t.md) | Represents the **AbilityDelegatorArgs** module. |
-| [AbilityMonitor](arkts-test-abilitymonitor-t.md) | Represents the **AbilityMonitor** module. |
-| [AbilityStageMonitor](arkts-test-abilitystagemonitor-t.md) | Represents the **AbilityStageMonitor** module. |
-| [InteropAbilityMonitor](arkts-test-interopabilitymonitor-t.md) | Provide methods for matching monitored Ability objects that meet specified conditions.The most recently matched Ability objects will be saved in the InteropAbilityMonitor object. |
-| [ShellCmdResult](arkts-test-shellcmdresult-t.md) | Represents the **ShellCmdResult** module. |
+| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) | Represents the **AbilityDelegator** module. |
+| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) | Represents the **AbilityDelegatorArgs** module. |
+| [AbilityMonitor](arkts-test-abilitydelegatorregistry-abilitymonitor-t.md) | Represents the **AbilityMonitor** module. |
+| [AbilityStageMonitor](arkts-test-abilitydelegatorregistry-abilitystagemonitor-t.md) | Represents the **AbilityStageMonitor** module. |
+| [InteropAbilityMonitor](arkts-test-abilitydelegatorregistry-interopabilitymonitor-t.md) | Provide methods for matching monitored Ability objects that meet specified conditions.The most recently matched Ability objects will be saved in the InteropAbilityMonitor object. |
+| [ShellCmdResult](arkts-test-abilitydelegatorregistry-shellcmdresult-t.md) | Represents the **ShellCmdResult** module. |
 

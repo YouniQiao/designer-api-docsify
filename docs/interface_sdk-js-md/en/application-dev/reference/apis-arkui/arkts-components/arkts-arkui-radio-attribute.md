@@ -90,7 +90,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<RadioConfiguration> | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<RadioConfiguration> | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## contentModifier
 
@@ -191,5 +191,5 @@ Since API version 10, this API is supported in ArkTS widgets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RadioStyle](arkts-arkui-radiostyle-i.md) | No | Style of the radio button in selected or deselected state. |
+| value | [RadioStyle](arkts-arkui-radio-radiostyle-i.md) | No | Style of the radio button in selected or deselected state. |
 

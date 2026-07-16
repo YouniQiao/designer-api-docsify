@@ -21,10 +21,10 @@ import { cloudExtension } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createAssetLoaderStub](arkts-arkdata-createassetloaderstub-f-sys.md#createassetloaderstub-1) | 根据AssetLoader类的实例创建对应的RemoteObject对象，系统内部通过该对象调用AssetLoader的实现接口，使用Promise异步回调。 |
-| [createCloudDBStub](arkts-arkdata-createclouddbstub-f-sys.md#createclouddbstub-1) | 根据CloudDB类的实例创建对应的RemoteObject对象，系统内部通过该对象调用CloudDB的实现接口，使用Promise异步回调。 |
-| [createCloudServiceStub](arkts-arkdata-createcloudservicestub-f-sys.md#createcloudservicestub-1) | 根据CloudService类的实例创建对应的RemoteObject对象，系统内部通过该对象调用CloudService的实现接口。使用Promise异步回调。 |
-| [createShareServiceStub](arkts-arkdata-createshareservicestub-f-sys.md#createshareservicestub-1) | 根据ShareCenter类的实例创建对应的RemoteObject对象，系统内部通过该对象调用ShareCenter的实现接口，使用Promise异步回调。 |
+| [createAssetLoaderStub](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md#createassetloaderstub-1) | 根据AssetLoader类的实例创建对应的RemoteObject对象，系统内部通过该对象调用AssetLoader的实现接口，使用Promise异步回调。 |
+| [createCloudDBStub](arkts-arkdata-cloudextension-createclouddbstub-f-sys.md#createclouddbstub-1) | 根据CloudDB类的实例创建对应的RemoteObject对象，系统内部通过该对象调用CloudDB的实现接口，使用Promise异步回调。 |
+| [createCloudServiceStub](arkts-arkdata-cloudextension-createcloudservicestub-f-sys.md#createcloudservicestub-1) | 根据CloudService类的实例创建对应的RemoteObject对象，系统内部通过该对象调用CloudService的实现接口。使用Promise异步回调。 |
+| [createShareServiceStub](arkts-arkdata-cloudextension-createshareservicestub-f-sys.md#createshareservicestub-1) | 根据ShareCenter类的实例创建对应的RemoteObject对象，系统内部通过该对象调用ShareCenter的实现接口，使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -32,24 +32,24 @@ import { cloudExtension } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AppBriefInfo](arkts-arkdata-appbriefinfo-i-sys.md) | 简要应用信息。 |
-| [AppSchema](arkts-arkdata-appschema-i-sys.md) | 应用数据库模式。 |
-| [AssetLoader](arkts-arkdata-assetloader-i-sys.md) | 提供资产上传下载接口的类。 |
-| [CloudAsset](arkts-arkdata-cloudasset-i-sys.md) | 云资产的信息。 |
-| [CloudDB](arkts-arkdata-clouddb-i-sys.md) | 提供云数据库操作接口的类。 |
-| [CloudData](arkts-arkdata-clouddata-i-sys.md) | 云数据。 |
-| [CloudInfo](arkts-arkdata-cloudinfo-i-sys.md) | 云信息。 |
-| [CloudService](arkts-arkdata-cloudservice-i-sys.md) | 提供对接同步云服务的类。开发者需要继承此类并实现类的接口，系统内部通过该类的接口连接并使用同步云服务。 |
-| [Database](arkts-arkdata-database-i-sys.md) | 数据库结构信息。 |
-| [ExtensionValue](arkts-arkdata-extensionvalue-i-sys.md) | 当前数据记录的扩展信息。 |
-| [Field](arkts-arkdata-field-i-sys.md) | 数据库中的字段结构。 |
-| [LockInfo](arkts-arkdata-lockinfo-i-sys.md) | 云数据库锁信息。 |
-| [Result](arkts-arkdata-result-i-sys.md) | 端云共享结果的返回值。 |
-| [ServiceInfo](arkts-arkdata-serviceinfo-i-sys.md) | 云服务信息 |
-| [ShareCenter](arkts-arkdata-sharecenter-i-sys.md) | 提供对接共享云服务的类。开发者需要继承此类并实现类的接口，系统内部通过该类的接口连接并使用共享云服务，实现端云共享的发起、取消或退出等能力。 |
-| [SubscribeId](arkts-arkdata-subscribeid-i-sys.md) | 订阅ID。 |
-| [SubscribeInfo](arkts-arkdata-subscribeinfo-i-sys.md) | 订阅信息 |
-| [Table](arkts-arkdata-table-i-sys.md) | 表结构信息。 |
+| [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md) | 简要应用信息。 |
+| [AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md) | 应用数据库模式。 |
+| [AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md) | 提供资产上传下载接口的类。 |
+| [CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md) | 云资产的信息。 |
+| [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | 提供云数据库操作接口的类。 |
+| [CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md) | 云数据。 |
+| [CloudInfo](arkts-arkdata-cloudextension-cloudinfo-i-sys.md) | 云信息。 |
+| [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | 提供对接同步云服务的类。开发者需要继承此类并实现类的接口，系统内部通过该类的接口连接并使用同步云服务。 |
+| [Database](arkts-arkdata-cloudextension-database-i-sys.md) | 数据库结构信息。 |
+| [ExtensionValue](arkts-arkdata-cloudextension-extensionvalue-i-sys.md) | 当前数据记录的扩展信息。 |
+| [Field](arkts-arkdata-cloudextension-field-i-sys.md) | 数据库中的字段结构。 |
+| [LockInfo](arkts-arkdata-cloudextension-lockinfo-i-sys.md) | 云数据库锁信息。 |
+| [Result](arkts-arkdata-cloudextension-result-i-sys.md) | 端云共享结果的返回值。 |
+| [ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md) | 云服务信息 |
+| [ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md) | 提供对接共享云服务的类。开发者需要继承此类并实现类的接口，系统内部通过该类的接口连接并使用共享云服务，实现端云共享的发起、取消或退出等能力。 |
+| [SubscribeId](arkts-arkdata-cloudextension-subscribeid-i-sys.md) | 订阅ID。 |
+| [SubscribeInfo](arkts-arkdata-cloudextension-subscribeinfo-i-sys.md) | 订阅信息 |
+| [Table](arkts-arkdata-cloudextension-table-i-sys.md) | 表结构信息。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -57,9 +57,9 @@ import { cloudExtension } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ErrorCode](arkts-arkdata-errorcode-e-sys.md) | 表示端云同步过程的状态。请使用枚举名而非枚举值。 |
-| [FieldType](arkts-arkdata-fieldtype-e-sys.md) | 描述数据库表中字段类型的枚举。请使用枚举名而非枚举值。 |
-| [Flag](arkts-arkdata-flag-e-sys.md) | 描述数据库上执行操作的枚举。请使用枚举名而非枚举值。 |
+| [ErrorCode](arkts-arkdata-cloudextension-errorcode-e-sys.md) | 表示端云同步过程的状态。请使用枚举名而非枚举值。 |
+| [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md) | 描述数据库表中字段类型的枚举。请使用枚举名而非枚举值。 |
+| [Flag](arkts-arkdata-cloudextension-flag-e-sys.md) | 描述数据库上执行操作的枚举。请使用枚举名而非枚举值。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -67,7 +67,7 @@ import { cloudExtension } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [CloudAssets](arkts-arkdata-cloudassets-t-sys.md) | 表示CloudAsset类型的数组。 |
-| [CloudType](arkts-arkdata-cloudtype-t-sys.md) | 表示云数据字段可使用的类型。各接口参数的实际类型视其功能而定。 |
+| [CloudAssets](arkts-arkdata-cloudextension-cloudassets-t-sys.md) | 表示CloudAsset类型的数组。 |
+| [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md) | 表示云数据字段可使用的类型。各接口参数的实际类型视其功能而定。 |
 <!--DelEnd-->
 

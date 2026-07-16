@@ -25,7 +25,7 @@ import { shortKey } from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FingerprintEvent](arkts-input-fingerprintevent-i-sys.md) | 指纹手势事件的类型和相对侧边指纹器件的偏移位置。 |
+| [FingerprintEvent](arkts-input-multimodalinput-shortkey-fingerprintevent-i-sys.md) | 指纹手势事件的类型和相对侧边指纹器件的偏移位置。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -33,6 +33,6 @@ import { shortKey } from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FingerprintAction](arkts-input-fingerprintaction-e-sys.md) | 指纹手势事件类型的枚举。 |
+| [FingerprintAction](arkts-input-multimodalinput-shortkey-fingerprintaction-e-sys.md) | 指纹手势事件类型的枚举。 |
 <!--DelEnd-->
 

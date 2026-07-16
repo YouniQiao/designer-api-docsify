@@ -1,8 +1,8 @@
 # AlphabetIndexer属性/事件
 
-[width](arkts-arkui-commonmethod-c.md#width-1)属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
+[width](arkts-arkui-common-commonmethod-c.md#width-1)属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
 
-[padding](arkts-arkui-commonmethod-c.md#padding-1)属性默认为4vp。
+[padding](arkts-arkui-common-commonmethod-c.md#padding-1)属性默认为4vp。
 
 文本最大的字体缩放倍数[maxFontScale](TextAttribute#maxFontScale)和最小的字体缩放倍数[minFontScale](TextAttribute#minFontScale)皆为1，不跟随系统字体大小调节变化。
 
@@ -38,7 +38,7 @@ alignStyle(value: IndexerAlign, offset?: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | 是 | 索引条提示弹窗的对齐样式，支持弹窗显示在索引条右侧和左侧。<br/>默认值：IndexerAlign.END |
+| value | [IndexerAlign](arkts-arkui-alphabet-indexer-indexeralign-e.md) | 是 | 索引条提示弹窗的对齐样式，支持弹窗显示在索引条右侧和左侧。<br/>默认值：IndexerAlign.END |
 | offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | 否 | 提示弹窗与索引条之间间距，大于等于0为有效值，在不设置或设置为小于0的情况下间距与popupPosition.x相同。与[popupPosition](AlphabetIndexerAttribute#popupPosition)同时设置时，水平方向上offset生效，竖直方向上popupPosition.y生效。<br>**起始版本：** 10 |
 
 ## autoCollapse
@@ -55,7 +55,7 @@ autoCollapse(value: boolean)
 
 > **说明：**
 
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -139,7 +139,7 @@ font(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | 未选中索引项文本样式。<br/>默认值：<br/>API version 11及以前：<br/>{<br/>size:'12.0fp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Regular,<br/> family:'HarmonyOS Sans'<br/>}<br/>API version 12及以后：<br/  >{<br/>size:'10.0vp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Medium,<br/> family:'HarmonyOS Sans'<br/>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 未选中索引项文本样式。<br/>默认值：<br/>API version 11及以前：<br/>{<br/>size:'12.0fp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Regular,<br/> family:'HarmonyOS Sans'<br/>}<br/>API version 12及以后：<br/  >{<br/>size:'10.0vp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Medium,<br/> family:'HarmonyOS Sans'<br/>} |
 
 ## itemBorderRadius
 
@@ -185,7 +185,7 @@ itemSize(value: string | number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| number | 是 | 索引项区域大小，索引项区域为正方形，即正方形边长。不支持设置为百分比。<br/>实际取值会受到组件尺寸的约束，索引项宽度最大为组件宽度-左右[padding](arkts-arkui-commonmethod-c.md#padding-1)，索引项高度最大为（组件高度-上下[padding](arkts-arkui-commonmethod-c.md#padding-1)）/索引项个数。传入值小于等于0时，按照默认值处理。<br/>默认值：16.0<br/>单位：vp |
+| value | string \| number | 是 | 索引项区域大小，索引项区域为正方形，即正方形边长。不支持设置为百分比。<br/>实际取值会受到组件尺寸的约束，索引项宽度最大为组件宽度-左右[padding](arkts-arkui-common-commonmethod-c.md#padding-1)，索引项高度最大为（组件高度-上下[padding](arkts-arkui-common-commonmethod-c.md#padding-1)）/索引项个数。传入值小于等于0时，按照默认值处理。<br/>默认值：16.0<br/>单位：vp |
 
 ## onPopupSelect
 
@@ -333,7 +333,7 @@ popupBackgroundBlurStyle(value: BlurStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | 是 | 设置提示弹窗的背景模糊材质。<br/>弹窗的背景模糊材质效果会对背景色[popupBackground](AlphabetIndexerAttribute#popupBackground)产生影响，可通过设置属性值为NONE关闭背景模糊材质效果。 |
+| value | [BlurStyle](arkts-arkui-common-blurstyle-e.md) | 是 | 设置提示弹窗的背景模糊材质。<br/>弹窗的背景模糊材质效果会对背景色[popupBackground](AlphabetIndexerAttribute#popupBackground)产生影响，可通过设置属性值为NONE关闭背景模糊材质效果。 |
 
 ## popupColor
 
@@ -377,7 +377,7 @@ popupFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | 提示弹窗一级索引文本样式。<br/>默认值：<br/>{<br/>size:'24.0vp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Medium,<br/> family:'HarmonyOS Sans'<br/>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 提示弹窗一级索引文本样式。<br/>默认值：<br/>{<br/>size:'24.0vp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Medium,<br/> family:'HarmonyOS Sans'<br/>} |
 
 ## popupItemBackgroundColor
 
@@ -449,7 +449,7 @@ popupItemFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | 提示弹窗二级索引项文本样式。 <br/>默认值：<br/>{<br/>size:24,<br/>weight:FontWeight.Medium<br/>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 提示弹窗二级索引项文本样式。 <br/>默认值：<br/>{<br/>size:24,<br/>weight:FontWeight.Medium<br/>} |
 
 ## popupPosition
 
@@ -471,7 +471,7 @@ popupPosition(value: Position)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Position](../arkts-apis/arkts-arkui-position-i.md) | 是 | 弹出窗口相对于索引条上边框中点的位置。<br/>默认值：{x: 60.0, y: 48.0} |
+| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | 是 | 弹出窗口相对于索引条上边框中点的位置。<br/>默认值：{x: 60.0, y: 48.0} |
 
 ## popupSelectedColor
 
@@ -567,7 +567,7 @@ selected(index: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 选中项索引值。<br/>取值范围：[0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length-1]<br/>默认值：0 |
+| index | number | 是 | 选中项索引值。<br/>取值范围：[0, [arrayValue](arkts-arkui-alphabet-indexer-alphabetindexeroptions-i.md).length-1]<br/>默认值：0 |
 
 ## selectedBackgroundColor
 
@@ -633,7 +633,7 @@ selectedFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | 选中项文本样式。<br/>默认值：<br/>API version 11及以前：<br/>{<br/>size:'12.0fp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Regular,<br/> family:'HarmonyOS Sans'<br/>}<br/>API version 12及以后：<br/  >{<br/>size:'10.0vp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Medium,<br/> family:'HarmonyOS Sans'<br/>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 选中项文本样式。<br/>默认值：<br/>API version 11及以前：<br/>{<br/>size:'12.0fp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Regular,<br/> family:'HarmonyOS Sans'<br/>}<br/>API version 12及以后：<br/  >{<br/>size:'10.0vp',<br/> style:FontStyle.Normal,<br/> weight:FontWeight.Medium,<br/> family:'HarmonyOS Sans'<br/>} |
 
 ## usingPopup
 

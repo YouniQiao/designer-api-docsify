@@ -12,13 +12,13 @@ import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-lazycolumnlayoutattribute-c.md) | Defines the lazy column layout attribute. |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | Defines the lazy column layout attribute. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [LazyColumnLayoutInterface](arkts-arkui-lazycolumnlayoutinterface-i.md) | Defines the lazy column layout component. |
+| [LazyColumnLayoutInterface](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutinterface-i.md) | Defines the lazy column layout component. |
 
 ### Constants
 

@@ -1,6 +1,6 @@
 # ApplicationContext
 
-ApplicationContext inherits from [Context](arkts-ability-context-depr-i.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
+ApplicationContext inherits from [Context](arkts-ability-context-context-depr-i.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 
 > **NOTE**  
 >  
@@ -40,7 +40,7 @@ Obtains information about the running processes.This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ProcessInformation>> | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Array<ProcessInformation>> | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Obtains information about the running processes.This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ProcessInformation>> | Yes | Callback used to return the information about the running processes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<Array<ProcessInformation>> | Yes | Callback used to return the information about the running processes. |
 
 **Error codes:**
 
@@ -98,7 +98,7 @@ A UIExtensionAbility instance can be preloaded for multiple times. Each time a p
 
 | Name| Type| Mandatory| Description|  
 | -------- | -------- | -------- | -------- |  
-| want | [Want](arkts-ability-want-c.md) | Yes| Want information of the UIExtensionAbility.|
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
 
 **Since:** 12
 
@@ -122,7 +122,7 @@ A UIExtensionAbility instance can be preloaded for multiple times. Each time a p
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -165,7 +165,7 @@ Registers a listener to monitor the ability lifecycle of the application.This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityLifecycleCallback | [AbilityLifecycleCallback](arkts-ability-abilitylifecyclecallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
+| abilityLifecycleCallback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
 
 **Return value:**
 
@@ -199,7 +199,7 @@ Register environment callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| environmentCallback | [EnvironmentCallback](arkts-ability-environmentcallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
+| environmentCallback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback used to return the ID of the registered listener. |
 
 **Return value:**
 
@@ -236,7 +236,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | number | Yes | Event type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the ID of the registered listener. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterAbilityLifecycleCallback
 
@@ -272,7 +272,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -307,7 +307,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | number | Yes | Event type. |
-| envcallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the ID of the registered listener. |
+| envcallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterEnvironmentCallback
 
@@ -341,7 +341,7 @@ Unregisters the listener for system environment changes. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

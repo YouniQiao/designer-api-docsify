@@ -14,7 +14,7 @@ The **ArcScrollBar** component is designed to be used together with scrollable c
 > earliest API version.  
 >  
 > - When the width and height of the **ArcScrollBar** component are not set, the **maxSize** value specified in its  
-> parent component [LayoutConstraint](arkts-arkui-layoutconstraint-i.md) is used as the width and height. If  
+> parent component [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) is used as the width and height. If  
 > the parent component of the **ArcScrollBar** component contains scrollable components, such as  
 > [ArcList](arkts-arkui-arclist.md), [List](../arkts-components/arkts-arkui-list.md),  
 > [Grid](../arkts-components/arkts-arkui-grid.md), [Scroll](../arkts-components/arkts-arkui-scroll.md), or  

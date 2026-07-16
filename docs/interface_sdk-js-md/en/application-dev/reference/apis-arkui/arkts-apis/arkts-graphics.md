@@ -15,46 +15,46 @@
 
 | Name | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-colormetrics-c.md) | Used to mix colors. |
-| [DrawContext](arkts-arkui-drawcontext-c.md) | Graphics drawing context, which provides the canvas width and height required for drawing. |
-| [LengthMetrics](arkts-arkui-lengthmetrics-c.md) | Defines the length attribute. When the length unit is PERCENT, the value **1** indicates 100%. |
-| [ShapeClip](arkts-arkui-shapeclip-c.md) | Sets the clipping shape. |
-| [ShapeMask](arkts-arkui-shapemask-c.md) | Describes the shape mask. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Used to mix colors. |
+| [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Graphics drawing context, which provides the canvas width and height required for drawing. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Defines the length attribute. When the length unit is PERCENT, the value **1** indicates 100%. |
+| [ShapeClip](arkts-arkui-graphics-shapeclip-c.md) | Sets the clipping shape. |
+| [ShapeMask](arkts-arkui-graphics-shapemask-c.md) | Describes the shape mask. |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-colormetrics-c-sys.md) | Used to mix colors. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | Used to mix colors. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [BackgroundBlur](arkts-arkui-backgroundblur-i.md) | Defines the background blur effect. |
-| [Circle](arkts-arkui-circle-i.md) | Describes a circle. |
-| [CommandPath](arkts-arkui-commandpath-i.md) | Describes the command for drawing a path. |
-| [ContentBlur](arkts-arkui-contentblur-i.md) | Defines the content blur effect. |
-| [Corners](arkts-arkui-corners-i.md) | Describes the four corners. |
-| [Edges](arkts-arkui-edges-i.md) | Describes the edges. |
-| [ForegroundBlur](arkts-arkui-foregroundblur-i.md) | Defines the foreground blur effect. |
-| [Frame](arkts-arkui-frame-i.md) | Sets or returns the layout size and position of the component. |
-| [RoundRect](arkts-arkui-roundrect-i.md) | Describes a rectangle with rounded corners. |
-| [Size](arkts-arkui-size-i.md) | Returns the width and height of the component. The default unit is vp, but APIs that use the Size type may specify a different unit, in which case the unit specified by the API takes precedence. |
-| [SizeT](arkts-arkui-sizet-i.md) | Sets the width and height attributes. |
-| [Vector2](arkts-arkui-vector2-i.md) | Defines a vector that contains the x and y coordinate values. |
-| [Vector2T](arkts-arkui-vector2t-i.md) | Represents a vector of the T type that contains two values: x and y. |
-| [Vector3](arkts-arkui-vector3-i.md) | Represents a vector including three values: x, y, and z. |
-| [Vector4](arkts-arkui-vector4-i.md) | Defines a vector that contains the x, y, z, and w coordinate values. |
+| [BackgroundBlur](arkts-arkui-graphics-backgroundblur-i.md) | Defines the background blur effect. |
+| [Circle](arkts-arkui-graphics-circle-i.md) | Describes a circle. |
+| [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Describes the command for drawing a path. |
+| [ContentBlur](arkts-arkui-graphics-contentblur-i.md) | Defines the content blur effect. |
+| [Corners](arkts-arkui-graphics-corners-i.md) | Describes the four corners. |
+| [Edges](arkts-arkui-graphics-edges-i.md) | Describes the edges. |
+| [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md) | Defines the foreground blur effect. |
+| [Frame](arkts-arkui-graphics-frame-i.md) | Sets or returns the layout size and position of the component. |
+| [RoundRect](arkts-arkui-graphics-roundrect-i.md) | Describes a rectangle with rounded corners. |
+| [Size](arkts-arkui-graphics-size-i.md) | Returns the width and height of the component. The default unit is vp, but APIs that use the Size type may specify a different unit, in which case the unit specified by the API takes precedence. |
+| [SizeT](arkts-arkui-graphics-sizet-i.md) | Sets the width and height attributes. |
+| [Vector2](arkts-arkui-graphics-vector2-i.md) | Defines a vector that contains the x and y coordinate values. |
+| [Vector2T](arkts-arkui-graphics-vector2t-i.md) | Represents a vector of the T type that contains two values: x and y. |
+| [Vector3](arkts-arkui-graphics-vector3-i.md) | Represents a vector including three values: x, y, and z. |
+| [Vector4](arkts-arkui-graphics-vector4-i.md) | Defines a vector that contains the x, y, z, and w coordinate values. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-e.md) | Enumerates length units. |
-| [LengthUnit](arkts-arkui-lengthunit-e.md) | Enumerates length units. |
+| [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Enumerates length units. |
+| [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | Enumerates length units. |
 
 ### Types
 

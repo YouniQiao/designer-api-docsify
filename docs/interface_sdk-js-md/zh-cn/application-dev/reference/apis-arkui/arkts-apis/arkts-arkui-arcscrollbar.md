@@ -12,14 +12,14 @@ import { ArcScrollBarAttribute, ArcScrollBar } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arcscrollbarattribute-c.md) |  |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcScrollBarInterface](arkts-arkui-arcscrollbarinterface-i.md) | 弧形滚动条组件ArcScrollBar，用于配合可滚动组件使用，如[ArcList](arkts-arkui-arclist.md)、[List](../arkts-components/arkts-arkui-list.md)、[Grid](../arkts-components/arkts-arkui-grid.md)、[Scroll](../arkts-components/arkts-arkui-scroll.md)、[WaterFlow](../arkts-components/arkts-arkui-waterflow.md)。 |
-| [ArcScrollBarOptions](arkts-arkui-arcscrollbaroptions-i.md) | ArcScrollBar的构造函数参数。 |
+| [ArcScrollBarInterface](arkts-arkui-arkui-arcscrollbar-arcscrollbarinterface-i.md) | 弧形滚动条组件ArcScrollBar，用于配合可滚动组件使用，如[ArcList](arkts-arkui-arclist.md)、[List](../arkts-components/arkts-arkui-list.md)、[Grid](../arkts-components/arkts-arkui-grid.md)、[Scroll](../arkts-components/arkts-arkui-scroll.md)、[WaterFlow](../arkts-components/arkts-arkui-waterflow.md)。 |
+| [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | ArcScrollBar的构造函数参数。 |
 
 ### 常量
 

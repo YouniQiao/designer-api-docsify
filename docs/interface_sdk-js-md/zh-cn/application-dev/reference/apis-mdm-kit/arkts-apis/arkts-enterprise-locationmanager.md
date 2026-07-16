@@ -26,12 +26,12 @@ import { locationManager } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getLocationPolicy](arkts-mdm-getlocationpolicy-f.md#getlocationpolicy-1) | 查询位置服务管理策略。 |
-| [setLocationPolicy](arkts-mdm-setlocationpolicy-f.md#setlocationpolicy-1) | 设置位置服务管理策略。 |
+| [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md#getlocationpolicy-1) | 查询位置服务管理策略。 |
+| [setLocationPolicy](arkts-mdm-locationmanager-setlocationpolicy-f.md#setlocationpolicy-1) | 设置位置服务管理策略。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [LocationPolicy](arkts-mdm-locationpolicy-e.md) | 位置服务策略值。 |
+| [LocationPolicy](arkts-mdm-locationmanager-locationpolicy-e.md) | 位置服务策略值。 |
 

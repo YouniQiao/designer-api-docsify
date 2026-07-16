@@ -1,6 +1,6 @@
 # FolderStack properties/events
 
-In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-commonmethod-c.md), the following events are supported.
 
 **Inheritance/Implementation:** FolderStackAttribute extends [CommonMethod<FolderStackAttribute>](CommonMethod<FolderStackAttribute>)
 
@@ -16,7 +16,7 @@ In addition to the [universal events](arkts-arkui-commonmethod-c.md), the follow
 alignContent(value: Alignment)
 ```
 
-Sets the alignment of child components in the container. When both this attribute and the [align](arkts-arkui-commonmethod-c.md#align-1) attribute are set, whichever is set last takes effect.
+Sets the alignment of child components in the container. When both this attribute and the [align](arkts-arkui-common-commonmethod-c.md#align-1) attribute are set, whichever is set last takes effect.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ Sets the alignment of child components in the container. When both this attribut
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | Yes | Alignment of child components in the container.<br>Default value: **Alignment.Center**.<br>Invalid values are treated as the default value. |
+| value | [Alignment](../arkts-apis/arkts-arkui-enums-alignment-e.md) | Yes | Alignment of child components in the container.<br>Default value: **Alignment.Center**.<br>Invalid values are treated as the default value. |
 
 ## autoHalfFold
 

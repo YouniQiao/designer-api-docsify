@@ -12,7 +12,7 @@ import { InteropAbilityLifecycleCallback } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [InteropAbilityLifecycleCallback](arkts-ability-interopabilitylifecyclecallback-i.md) | The interop ability lifecycle callback. |
+| [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | The interop ability lifecycle callback. |
 
 ### Types
 

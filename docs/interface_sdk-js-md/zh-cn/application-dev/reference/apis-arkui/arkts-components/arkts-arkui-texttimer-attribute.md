@@ -34,7 +34,7 @@ contentModifier(modifier: ContentModifier<TextTimerConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<TextTimerConfiguration> | 是 | 在TextTimer组件上，定制内容区的方法。<br/>modifier： 内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<TextTimerConfiguration> | 是 | 在TextTimer组件上，定制内容区的方法。<br/>modifier： 内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## fontColor
 
@@ -130,7 +130,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontstyle-e.md) | 是 | 字体样式，例如斜体的字体样式。<br/>默认值：FontStyle.Normal |
+| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | 是 | 字体样式，例如斜体的字体样式。<br/>默认值：FontStyle.Normal |
 
 ## fontWeight
 
@@ -216,7 +216,7 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 > **说明：**  
 >  
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 

@@ -34,8 +34,8 @@ edgeAlign(alignType: CalendarAlign, offset?: Offset)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignType | [CalendarAlign](arkts-arkui-calendaralign-e.md) | 是 | 对齐方式的类型。<br/>默认值：CalendarAlign.END |
-| offset | [Offset](../arkts-apis/arkts-arkui-offset-i.md) | 否 | 按照对齐方式对齐后，选择器相对入口组件的偏移量。<br/>默认值：{dx: 0, dy: 0} |
+| alignType | [CalendarAlign](arkts-arkui-calendar-picker-calendaralign-e.md) | 是 | 对齐方式的类型。<br/>默认值：CalendarAlign.END |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 | 按照对齐方式对齐后，选择器相对入口组件的偏移量。<br/>默认值：{dx: 0, dy: 0} |
 
 ## edgeAlign
 
@@ -60,7 +60,7 @@ edgeAlign(alignType: Optional<CalendarAlign>, offset?: Offset)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | alignType | [Optional](arkts-arkui-optional-t.md)<CalendarAlign> | 是 | 对齐方式的类型。默认值：CalendarAlign.END<br/>当alignType的值为undefined时，使用默认值。 |
-| offset | [Offset](../arkts-apis/arkts-arkui-offset-i.md) | 否 | 按照对齐方式对齐后，选择器相对入口组件的偏移量。<br/>默认值：{dx: 0, dy: 0} |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 | 按照对齐方式对齐后，选择器相对入口组件的偏移量。<br/>默认值：{dx: 0, dy: 0} |
 
 ## markToday
 
@@ -108,7 +108,7 @@ onChange(callback: Callback<Date>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Date> | 是 | 选中的日期值。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<Date> | 是 | 选中的日期值。<br>**起始版本：** 18 |
 
 ## onChange
 
@@ -120,7 +120,7 @@ onChange(callback: Optional<Callback<Date>>)
 
 > **说明：**  
 >  
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 18
 
@@ -160,7 +160,7 @@ textStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 设置入口区的文本颜色、字号、字体粗细。默认值：<br/>{<br/>color: '#ff182431',<br/>font: {<br/>size:'16fp', <br/>weight: FontWeight.Regular<br/>}<br/>} |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | 是 | 设置入口区的文本颜色、字号、字体粗细。默认值：<br/>{<br/>color: '#ff182431',<br/>font: {<br/>size:'16fp', <br/>weight: FontWeight.Regular<br/>}<br/>} |
 
 ## textStyle
 

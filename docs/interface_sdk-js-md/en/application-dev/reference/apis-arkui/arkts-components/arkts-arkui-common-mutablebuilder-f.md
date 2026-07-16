@@ -28,5 +28,5 @@ Defining mutableBuilder function.
 
 | Type | Description |
 | --- | --- |
-| [MutableBuilder](arkts-arkui-mutablebuilder-c.md)<Args> | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [MutableBuilder](arkts-arkui-common-mutablebuilder-c.md)<Args> | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 

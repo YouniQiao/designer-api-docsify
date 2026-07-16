@@ -18,5 +18,5 @@ The ConfigurationConstant module provides the enumerated values of the environme
 
 | Name | Description |
 | --- | --- |
-| [ColorMode](arkts-ability-colormode-depr-e.md) | Enumerates the color modes. |
+| [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md) | Enumerates the color modes. |
 

@@ -34,8 +34,8 @@ Sets how the picker is aligned with the entry component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignType | [CalendarAlign](arkts-arkui-calendaralign-e.md) | Yes | Alignment type.<br>Default value: **CalendarAlign.END**. |
-| offset | [Offset](../arkts-apis/arkts-arkui-offset-i.md) | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** |
+| alignType | [CalendarAlign](arkts-arkui-calendar-picker-calendaralign-e.md) | Yes | Alignment type.<br>Default value: **CalendarAlign.END**. |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** |
 
 ## edgeAlign
 
@@ -60,7 +60,7 @@ Sets how the picker is aligned with the entry component. Compared with [edgeAlig
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alignType | [Optional](arkts-arkui-optional-t.md)<CalendarAlign> | Yes | Alignment type.<br>Default value: **CalendarAlign.END**.<br>If the value of **alignType** is **undefined**, the default value is used. |
-| offset | [Offset](../arkts-apis/arkts-arkui-offset-i.md) | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** |
 
 ## markToday
 
@@ -108,7 +108,7 @@ Triggered when a date is selected. This event cannot be triggered by two-way bou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<Date> | Yes | Selected date value.<br>**Since:** 18 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<Date> | Yes | Selected date value.<br>**Since:** 18 |
 
 ## onChange
 
@@ -120,7 +120,7 @@ Triggered when a date is selected. This event cannot be triggered by two-way bou
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 18
 
@@ -160,7 +160,7 @@ Sets the font color, font size, and font weight in the entry area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | Yes | Font color, font size, and font weight in the entry area.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | Yes | Font color, font size, and font weight in the entry area.<br>Default value:<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp', <br>weight: FontWeight.Regular<br>}<br>} |
 
 ## textStyle
 

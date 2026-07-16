@@ -4,8 +4,8 @@
 
 > **说明：**  
 >  
-> 该类型变量可以赋值具体的布局算法类对象，如[CustomLayoutAlgorithm](arkts-arkui-customlayoutalgorithm-c.md)类对象、  
-> [RowLayoutAlgorithm](arkts-arkui-rowlayoutalgorithm-c.md)类对象等。
+> 该类型变量可以赋值具体的布局算法类对象，如[CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md)类对象、  
+> [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md)类对象等。
 
 **起始版本：** 24
 

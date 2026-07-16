@@ -1,6 +1,6 @@
 # EnterpriseAdminExtensionContext
 
-EnterpriseAdminExtensionContext是[EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md)的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
+EnterpriseAdminExtensionContext是[EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
 
 每个EnterpriseAdminExtensionAbility组件实例化时，系统都会自动创建对应的EnterpriseAdminExtensionContext。开发者可以通过EnterpriseAdminExtensionContext获取应用的沙箱路径、启动其他的组件。该上下文环境只能在当前EnterpriseAdminExtensionAbility中使用，不能传递到其他组件中使用。
 
@@ -24,7 +24,7 @@ EnterpriseAdminExtensionContext是[EnterpriseAdminExtensionAbility](arkts-mdm-en
 startAbilityByAdmin(admin: Want, want: Want): Promise<void>
 ```
 
-在[EnterpriseAdminExtensionAbility](arkts-mdm-enterpriseadminextensionability-c.md)组件中直接启动另外一个组件（页面没有弹窗提醒），目前支持[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md)，[AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-appserviceextensionability-c.md)。使用Promise异步回调。
+在[EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)组件中直接启动另外一个组件（页面没有弹窗提醒），目前支持[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md)，[AppServiceExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)。使用Promise异步回调。
 
 > **说明：**  
 >  

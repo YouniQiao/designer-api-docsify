@@ -12,15 +12,15 @@ import { BluetoothDevice, BLEFoundResponse, StopBLEScanOptions, SubscribeBLEFoun
 
 | Name | Description |
 | --- | --- |
-| [Bluetooth](arkts-connectivity-bluetooth-c.md) | Provides methods to manage BLE scan. |
+| [Bluetooth](arkts-connectivity-bluetooth-bluetooth-c.md) | Provides methods to manage BLE scan. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [BLEFoundResponse](arkts-connectivity-blefoundresponse-i.md) |  |
-| [BluetoothDevice](arkts-connectivity-bluetoothdevice-i.md) |  |
-| [StartBLEScanOptions](arkts-connectivity-startblescanoptions-i.md) |  |
-| [StopBLEScanOptions](arkts-connectivity-stopblescanoptions-i.md) |  |
-| [SubscribeBLEFoundOptions](arkts-connectivity-subscribeblefoundoptions-i.md) |  |
+| [BLEFoundResponse](arkts-connectivity-bluetooth-blefoundresponse-i.md) |  |
+| [BluetoothDevice](arkts-connectivity-bluetooth-bluetoothdevice-i.md) |  |
+| [StartBLEScanOptions](arkts-connectivity-bluetooth-startblescanoptions-i.md) |  |
+| [StopBLEScanOptions](arkts-connectivity-bluetooth-stopblescanoptions-i.md) |  |
+| [SubscribeBLEFoundOptions](arkts-connectivity-bluetooth-subscribeblefoundoptions-i.md) |  |
 

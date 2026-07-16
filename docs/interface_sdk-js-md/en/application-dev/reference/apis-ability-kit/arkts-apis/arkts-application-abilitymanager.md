@@ -21,10 +21,10 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 
 | Name | Description |
 | --- | --- |
-| [getAbilityRunningInfos](arkts-ability-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos-1) | Obtains the ability running information. This API uses a promise to return the result. |
-| [getAbilityRunningInfos](arkts-ability-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos-2) | Obtains the ability running information. This API uses an asynchronous callback to return the result. |
-| [updateConfiguration](arkts-ability-updateconfiguration-depr-f-sys.md#updateconfiguration-1) | Updates the configuration. This API uses an asynchronous callback to return the result. |
-| [updateConfiguration](arkts-ability-updateconfiguration-depr-f-sys.md#updateconfiguration-2) | Updates the configuration. This API uses a promise to return the result. |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos-1) | Obtains the ability running information. This API uses a promise to return the result. |
+| [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md#getabilityrunninginfos-2) | Obtains the ability running information. This API uses an asynchronous callback to return the result. |
+| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration-1) | Updates the configuration. This API uses an asynchronous callback to return the result. |
+| [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md#updateconfiguration-2) | Updates the configuration. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -32,6 +32,6 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 
 | Name | Description |
 | --- | --- |
-| [AbilityState](arkts-ability-abilitystate-depr-e-sys.md) | Enumerates the ability states. |
+| [AbilityState](arkts-ability-abilitymanager-abilitystate-depr-e-sys.md) | Enumerates the ability states. |
 <!--DelEnd-->
 

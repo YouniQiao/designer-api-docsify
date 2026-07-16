@@ -27,6 +27,6 @@ import { faceAuth } from '@kit.UserAuthenticationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FaceAuthManager](arkts-userauthentication-faceauthmanager-c-sys.md) | 人脸认证管理器对象。用于提供人脸录入过程中的管理功能，包括设置人脸预览界面的Surface ID等。 |
+| [FaceAuthManager](arkts-userauthentication-faceauth-faceauthmanager-c-sys.md) | 人脸认证管理器对象。用于提供人脸录入过程中的管理功能，包括设置人脸预览界面的Surface ID等。 |
 <!--DelEnd-->
 

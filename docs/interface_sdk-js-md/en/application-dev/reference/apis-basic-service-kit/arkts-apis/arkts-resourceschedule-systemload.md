@@ -16,19 +16,21 @@ import { systemLoad } from '@kit.BasicServicesKit';
 
 ## Summary
 
-### Functions
+<!--Del-->
+### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getLevel](arkts-basicservices-getlevel-f.md#getlevel-1) | Obtains the system load level. This API uses a promise to return the result. |
-| [off](arkts-basicservices-off-f.md#off-1) | Disables listening for system load level changes. This API uses an asynchronous callback to return the result. |
-| [on](arkts-basicservices-on-f.md#on-1) | Enables listening for system load level changes. This API uses an asynchronous callback to return the result. |
+| [getLevel](arkts-basicservices-systemload-getlevel-f.md#getlevel-1) | Obtains the system load level. This API uses a promise to return the result. |
+| [off](arkts-basicservices-systemload-off-f.md#off-1) | Disables listening for system load level changes. This API uses an asynchronous callback to return the result. |
+| [on](arkts-basicservices-systemload-on-f.md#on-1) | Enables listening for system load level changes. This API uses an asynchronous callback to return the result. |
+<!--DelEnd-->
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [SystemLoadLevel](arkts-basicservices-systemloadlevel-e.md) | Enumerates system load levels. |
+| [SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md) | Enumerates system load levels. |
 <!--DelEnd-->
 

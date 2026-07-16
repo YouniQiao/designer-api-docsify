@@ -25,26 +25,26 @@ import { proxyChannelManager } from '@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [closeProxyChannel](arkts-distributedservice-closeproxychannel-f.md#closeproxychannel-1) | Closes a proxy channel that has been opened. |
-| [off](arkts-distributedservice-off-f.md#off-1) | Unsubscribes from data receiving events. |
-| [off](arkts-distributedservice-off-f.md#off-2) | Unsubscribes from channel state change events. |
-| [on](arkts-distributedservice-on-f.md#on-1) | Subscribes to data receiving events. This API returns the result asynchronously through a callback. |
-| [on](arkts-distributedservice-on-f.md#on-2) | Subscribes to channel state change events. This API returns the result asynchronously through a callback. |
-| [openProxyChannel](arkts-distributedservice-openproxychannel-f.md#openproxychannel-1) | Opens a proxy channel. This API uses a promise to return the result. |
-| [sendData](arkts-distributedservice-senddata-f.md#senddata-1) | Sends data to the peer end. This API uses a promise to return the result. |
+| [closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md#closeproxychannel-1) | Closes a proxy channel that has been opened. |
+| [off](arkts-distributedservice-proxychannelmanager-off-f.md#off-1) | Unsubscribes from data receiving events. |
+| [off](arkts-distributedservice-proxychannelmanager-off-f.md#off-2) | Unsubscribes from channel state change events. |
+| [on](arkts-distributedservice-proxychannelmanager-on-f.md#on-1) | Subscribes to data receiving events. This API returns the result asynchronously through a callback. |
+| [on](arkts-distributedservice-proxychannelmanager-on-f.md#on-2) | Subscribes to channel state change events. This API returns the result asynchronously through a callback. |
+| [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md#openproxychannel-1) | Opens a proxy channel. This API uses a promise to return the result. |
+| [sendData](arkts-distributedservice-proxychannelmanager-senddata-f.md#senddata-1) | Sends data to the peer end. This API uses a promise to return the result. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ChannelInfo](arkts-distributedservice-channelinfo-i.md) | Represents the proxy channel information, including the MAC address and service UUID of the peer device. |
-| [ChannelStateInfo](arkts-distributedservice-channelstateinfo-i.md) | Represents the connection state information of the proxy channel. |
-| [DataInfo](arkts-distributedservice-datainfo-i.md) | Represents the received data, including the channel ID and data. |
+| [ChannelInfo](arkts-distributedservice-proxychannelmanager-channelinfo-i.md) | Represents the proxy channel information, including the MAC address and service UUID of the peer device. |
+| [ChannelStateInfo](arkts-distributedservice-proxychannelmanager-channelstateinfo-i.md) | Represents the connection state information of the proxy channel. |
+| [DataInfo](arkts-distributedservice-proxychannelmanager-datainfo-i.md) | Represents the received data, including the channel ID and data. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ChannelState](arkts-distributedservice-channelstate-e.md) | Enumerates the connection states of the proxy channel. |
-| [LinkType](arkts-distributedservice-linktype-e.md) | Enumerates the link types. |
+| [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md) | Enumerates the connection states of the proxy channel. |
+| [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md) | Enumerates the link types. |
 

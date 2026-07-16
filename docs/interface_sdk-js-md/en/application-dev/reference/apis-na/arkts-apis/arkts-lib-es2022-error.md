@@ -6,14 +6,14 @@
 
 | Name | Description |
 | --- | --- |
-| [AggregateErrorConstructor](arkts-na-aggregateerrorconstructor-i.md) |  |
-| [Error](arkts-na-error-i.md) |  |
-| [ErrorConstructor](arkts-na-errorconstructor-i.md) |  |
-| [ErrorOptions](arkts-na-erroroptions-i.md) |  |
-| [EvalErrorConstructor](arkts-na-evalerrorconstructor-i.md) |  |
-| [RangeErrorConstructor](arkts-na-rangeerrorconstructor-i.md) |  |
-| [ReferenceErrorConstructor](arkts-na-referenceerrorconstructor-i.md) |  |
-| [SyntaxErrorConstructor](arkts-na-syntaxerrorconstructor-i.md) |  |
-| [TypeErrorConstructor](arkts-na-typeerrorconstructor-i.md) |  |
-| [URIErrorConstructor](arkts-na-urierrorconstructor-i.md) |  |
+| [AggregateErrorConstructor](arkts-na-lib-es2022-error-aggregateerrorconstructor-i.md) |  |
+| [Error](arkts-na-lib-es2022-error-error-i.md) |  |
+| [ErrorConstructor](arkts-na-lib-es2022-error-errorconstructor-i.md) |  |
+| [ErrorOptions](arkts-na-lib-es2022-error-erroroptions-i.md) |  |
+| [EvalErrorConstructor](arkts-na-lib-es2022-error-evalerrorconstructor-i.md) |  |
+| [RangeErrorConstructor](arkts-na-lib-es2022-error-rangeerrorconstructor-i.md) |  |
+| [ReferenceErrorConstructor](arkts-na-lib-es2022-error-referenceerrorconstructor-i.md) |  |
+| [SyntaxErrorConstructor](arkts-na-lib-es2022-error-syntaxerrorconstructor-i.md) |  |
+| [TypeErrorConstructor](arkts-na-lib-es2022-error-typeerrorconstructor-i.md) |  |
+| [URIErrorConstructor](arkts-na-lib-es2022-error-urierrorconstructor-i.md) |  |
 

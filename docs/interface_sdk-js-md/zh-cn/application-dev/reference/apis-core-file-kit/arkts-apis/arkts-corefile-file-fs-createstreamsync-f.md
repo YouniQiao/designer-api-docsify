@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function createStreamSync(path: string, mode: string): Stream
 ```
 
-以同步方法基于文件路径创建文件流。需要配合[Stream](arkts-corefile-stream-i.md)中的close()函数关闭文件流。
+以同步方法基于文件路径创建文件流。需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。
 
 **起始版本：** 9
 
@@ -33,7 +33,7 @@ declare function createStreamSync(path: string, mode: string): Stream
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stream](arkts-corefile-stream-i.md) | 返回文件流的结果。 |
+| [Stream](arkts-corefile-file-fs-stream-i.md) | 返回文件流的结果。 |
 
 **错误码：**
 

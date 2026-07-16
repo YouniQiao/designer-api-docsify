@@ -6,14 +6,14 @@
 
 | Name | Description |
 | --- | --- |
-| [WebGL2RenderingContext](arkts-arkgraphics2d-webgl2renderingcontext-i.md) | WebGL 2.0 |
-| [WebGL2RenderingContextBase](arkts-arkgraphics2d-webgl2renderingcontextbase-i.md) | WebGL 2.0 |
-| [WebGL2RenderingContextOverloads](arkts-arkgraphics2d-webgl2renderingcontextoverloads-i.md) | WebGL 2.0 |
-| [WebGLQuery](arkts-arkgraphics2d-webglquery-i.md) | WebGL 2.0 |
-| [WebGLSampler](arkts-arkgraphics2d-webglsampler-i.md) | WebGL 2.0 |
-| [WebGLSync](arkts-arkgraphics2d-webglsync-i.md) | WebGL 2.0 |
-| [WebGLTransformFeedback](arkts-arkgraphics2d-webgltransformfeedback-i.md) | WebGL 2.0 |
-| [WebGLVertexArrayObject](arkts-arkgraphics2d-webglvertexarrayobject-i.md) | WebGL 2.0 |
+| [WebGL2RenderingContext](arkts-arkgraphics2d-webgl2-webgl2renderingcontext-i.md) | WebGL 2.0 |
+| [WebGL2RenderingContextBase](arkts-arkgraphics2d-webgl2-webgl2renderingcontextbase-i.md) | WebGL 2.0 |
+| [WebGL2RenderingContextOverloads](arkts-arkgraphics2d-webgl2-webgl2renderingcontextoverloads-i.md) | WebGL 2.0 |
+| [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | WebGL 2.0 |
+| [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | WebGL 2.0 |
+| [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | WebGL 2.0 |
+| [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) | WebGL 2.0 |
+| [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) | WebGL 2.0 |
 
 ### Types
 

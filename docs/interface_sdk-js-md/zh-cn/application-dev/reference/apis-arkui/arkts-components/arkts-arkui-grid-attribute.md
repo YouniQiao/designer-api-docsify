@@ -49,11 +49,11 @@ alignItems(alignment: Optional<GridItemAlignment>)
 cachedCount(value: number)
 ```
 
-设置预加载的GridItem的数量，只在[LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了[virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll-1)开关的[Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。<!--Del-->具体使用可参考[减少应用白块说明](../../../../performance/arkts-performance-improvement-recommendation.md#减少应用滑动白块)。<!--DelEnd-->
+设置预加载的GridItem的数量，只在[LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了[virtualScroll](../arkts-apis/arkts-arkui-repeat-repeatattribute-c.md#virtualscroll-1)开关的[Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。<!--Del-->具体使用可参考[减少应用白块说明](../../../../performance/arkts-performance-improvement-recommendation.md#减少应用滑动白块)。<!--DelEnd-->
 
 设置缓存后会在Grid显示区域上下各缓存cachedCount*列数个GridItem。
 
-[LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了[virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll-1)开关的[Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)超出显示和缓存范围的GridItem会被释放。
+[LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了[virtualScroll](../arkts-apis/arkts-arkui-repeat-repeatattribute-c.md#virtualscroll-1)开关的[Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)超出显示和缓存范围的GridItem会被释放。
 
 **起始版本：** 7
 
@@ -77,7 +77,7 @@ cachedCount(count: number, show: boolean)
 
 设置预加载的GridItem数量，并配置是否显示预加载节点。
 
-设置缓存后会在Grid显示区域上下各缓存cachedCount*列数个GridItem。配合裁剪[clip](arkts-arkui-commonmethod-c.md#clip-1)或内容裁剪[clipContent](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14)属性可以显示出预加载节点。
+设置缓存后会在Grid显示区域上下各缓存cachedCount*列数个GridItem。配合裁剪[clip](arkts-arkui-common-commonmethod-c.md#clip-1)或内容裁剪[clipContent](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14)属性可以显示出预加载节点。
 
 **起始版本：** 14
 
@@ -234,8 +234,8 @@ edgeEffect(value: EdgeEffect, options?: EdgeEffectOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 | Grid组件的边缘滑动效果，支持弹簧效果和阴影效果。<br/>默认值：EdgeEffect.None |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled:false }不开启。<br/>默认值：{ alwaysEnabled: false }<br>**起始版本：** 11 |
+| value | [EdgeEffect](../arkts-apis/arkts-arkui-enums-edgeeffect-e.md) | 是 | Grid组件的边缘滑动效果，支持弹簧效果和阴影效果。<br/>默认值：EdgeEffect.None |
+| options | [EdgeEffectOptions](arkts-arkui-common-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时，是否开启滑动效果。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled:false }不开启。<br/>默认值：{ alwaysEnabled: false }<br>**起始版本：** 11 |
 
 ## editMode
 
@@ -281,7 +281,7 @@ editModeOptions(options?: EditModeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | 否 | 编辑模式选项。 |
+| options | [EditModeOptions](arkts-arkui-common-editmodeoptions-i.md) | 否 | 编辑模式选项。 |
 
 ## enableEditMode
 
@@ -333,7 +333,7 @@ enableScrollInteraction(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroller-c.md)的滚动接口。<br/>默认值：true |
+| value | boolean | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器[Scroller](arkts-arkui-scroll-scroller-c.md)的滚动接口。<br/>默认值：true |
 
 ## focusWrapMode
 
@@ -403,7 +403,7 @@ layoutDirection(value: GridDirection)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [GridDirection](arkts-arkui-griddirection-e.md) | 是 | 布局的主轴方向。<br/>默认值：GridDirection.Row |
+| value | [GridDirection](arkts-arkui-grid-griddirection-e.md) | 是 | 布局的主轴方向。<br/>默认值：GridDirection.Row |
 
 ## maxCount
 
@@ -505,7 +505,7 @@ nestedScroll(value: NestedScrollOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。 |
+| value | [NestedScrollOptions](arkts-arkui-common-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。 |
 
 ## onEditModeChange
 
@@ -529,7 +529,7 @@ onEditModeChange(callback: Callback<boolean> | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> \| undefined | 是 | 编辑模式状态变化时触发的回调。<br>传入undefined会取消注册回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<boolean> \| undefined | 是 | 编辑模式状态变化时触发的回调。<br>传入undefined会取消注册回调。 |
 
 ## onItemDragEnter
 
@@ -607,7 +607,7 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 手指长按GridItem时触发该事件。
 
-由于拖拽检测也需要长按，且事件处理机制优先触发子组件事件，GridItem上绑定[LongPressGesture](../arkts-apis/arkts-arkui-longpressgestureinterface-i.md)时无法触发拖拽。如有长按和拖拽同时使用的需求可以使用通用拖拽事件。
+由于拖拽检测也需要长按，且事件处理机制优先触发子组件事件，GridItem上绑定[LongPressGesture](../arkts-apis/arkts-arkui-gesture-longpressgestureinterface-i.md)时无法触发拖拽。如有长按和拖拽同时使用的需求可以使用通用拖拽事件。
 
 拖拽浮起的网格元素可在应用窗口内移动，若需限制移动范围，可通过自定义手势实现，具体参考[示例16（实现GridItem自定义拖拽）](../../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例16实现griditem自定义拖拽)。
 
@@ -773,11 +773,11 @@ onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 
 满足以下任一条件时触发该事件：
 
-1. 用户交互（如手指滑动、键鼠操作等）触发滚动。2. Grid惯性滚动。3. 调用[fling](arkts-arkui-scroller-c.md#fling-1)接口触发滚动。
+1. 用户交互（如手指滑动、键鼠操作等）触发滚动。2. Grid惯性滚动。3. 调用[fling](arkts-arkui-scroll-scroller-c.md#fling-1)接口触发滚动。
 
 不触发该事件的条件：
 
-1. 调用除[fling](arkts-arkui-scroller-c.md#fling-1)接口外的其他滚动控制接口。2. 越界回弹。3. 拖动滚动条。
+1. 调用除[fling](arkts-arkui-scroll-scroller-c.md#fling-1)接口外的其他滚动控制接口。2. 越界回弹。3. 拖动滚动条。
 
 **起始版本：** 10
 
@@ -823,7 +823,7 @@ onScrollIndex(event: (first: number, last: number) => void)
 onScrollStart(event: () => void)
 ```
 
-网格滑动开始时触发。手指拖动网格或网格的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
+网格滑动开始时触发。手指拖动网格或网格的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroll-scroller-c.md)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
 
 **起始版本：** 10
 
@@ -847,7 +847,7 @@ onScrollStart(event: () => void)
 onScrollStop(event: () => void)
 ```
 
-网格滑动停止时触发。手指拖动网格或网格的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
+网格滑动停止时触发。手指拖动网格或网格的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用[Scroller](arkts-arkui-scroll-scroller-c.md)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
 
 **起始版本：** 10
 
@@ -943,7 +943,7 @@ scrollBar(value: BarState)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | 滚动条状态。<br/>默认值：BarState.Auto<br/>**说明：** <br/>API version 9及以下版本默认值为BarState.Off，API version 10及以上版本的默认值为BarState.Auto。 |
+| value | [BarState](../arkts-apis/arkts-arkui-enums-barstate-e.md) | 是 | 滚动条状态。<br/>默认值：BarState.Auto<br/>**说明：** <br/>API version 9及以下版本默认值为BarState.Off，API version 10及以上版本的默认值为BarState.Auto。 |
 
 ## scrollBarColor
 

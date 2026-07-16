@@ -12,5 +12,5 @@ import { InputEvent } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [InputEvent](arkts-input-inputevent-i.md) | The **inputEvent** module provides the basic events reported by the device. |
+| [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md) | The **inputEvent** module provides the basic events reported by the device. |
 

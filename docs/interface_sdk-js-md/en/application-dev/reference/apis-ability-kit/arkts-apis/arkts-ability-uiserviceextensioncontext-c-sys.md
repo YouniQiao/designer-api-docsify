@@ -1,8 +1,8 @@
 # UIServiceExtensionContext (System API)
 
-The UIServiceExtensionContext module provides the context environment for a [UIServiceExtensionAbility](arkts-ability-uiserviceextensionability-c-sys.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
+The UIServiceExtensionContext module provides the context environment for a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
 
-UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts-ability-uiserviceextensionability-c-sys.md) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability.
+UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability.
 
 > **NOTE**  
 >  
@@ -24,7 +24,7 @@ UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 ```
 
-Connects to a [UIExtensionAbility](arkts-ability-uiextensionability-c.md) and returns the connection ID.
+Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) and returns the connection ID.
 
 > **NOTE**  
 >  
@@ -46,7 +46,7 @@ Connects to a [UIExtensionAbility](arkts-ability-uiextensionability-c.md) and re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want parameter. |
-| options | [ConnectOptions](arkts-ability-connectoptions-t.md) | Yes | Connection options. |
+| options | [ConnectOptions](arkts-ability-ability-connectoptions-t.md) | Yes | Connection options. |
 
 **Return value:**
 
@@ -79,7 +79,7 @@ Connects to a [UIExtensionAbility](arkts-ability-uiextensionability-c.md) and re
 disconnectServiceExtensionAbility(connectionId: number): Promise<void>
 ```
 
-Disconnects from a [UIExtensionAbility](arkts-ability-uiextensionability-c.md). This API is opposite to [connectServiceExtensionAbility](arkts-ability-uiserviceextensioncontext-c-sys.md#connectserviceextensionability-1). This API uses a promise to return the result.
+Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). This API is opposite to [connectServiceExtensionAbility](arkts-ability-uiserviceextensioncontext-c-sys.md#connectserviceextensionability-1). This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -101,7 +101,7 @@ Disconnects from a [UIExtensionAbility](arkts-ability-uiextensionability-c.md). 
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -139,13 +139,13 @@ Starts an ability. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
-| options | [StartOptions](arkts-ability-startoptions-c-sys.md) | No | Parameters used for starting the ability. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -177,7 +177,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-app-ability-uiability.md) or [UIExtensionAbility](arkts-ability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
+Starts a [UIAbility](arkts-app-ability-uiability.md) or [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
 
 > **NOTE**  
 >  
@@ -208,7 +208,7 @@ Starts a [UIAbility](arkts-app-ability-uiability.md) or [UIExtensionAbility](ark
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -223,7 +223,7 @@ Starts a [UIAbility](arkts-app-ability-uiability.md) or [UIExtensionAbility](ark
 terminateSelf(): Promise<void>
 ```
 
-Terminates this [UIServiceExtensionAbility](arkts-ability-uiserviceextensionability-c-sys.md). This API uses a promise to return the result.
+Terminates this [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -239,5 +239,5 @@ Terminates this [UIServiceExtensionAbility](arkts-ability-uiserviceextensionabil
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 

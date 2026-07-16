@@ -32,7 +32,7 @@ font(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | Menu中所有文本的尺寸。<br/>默认值：<br/>{<br/> size: 16,<br/> family: 'HarmonyOS Sans',<br/>weight: FontWeight.Medium,<br/> style: FontStyle.Normal<br/>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | Menu中所有文本的尺寸。<br/>默认值：<br/>{<br/> size: 16,<br/> family: 'HarmonyOS Sans',<br/>weight: FontWeight.Medium,<br/> style: FontStyle.Normal<br/>} |
 
 ## fontColor
 
@@ -206,5 +206,5 @@ subMenuExpandingMode(mode: SubMenuExpandingMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | 是 | Menu子菜单展开样式。<br/>默认值：SubMenuExpandingMode.SIDE_EXPAND |
+| mode | [SubMenuExpandingMode](arkts-arkui-menu-submenuexpandingmode-e.md) | 是 | Menu子菜单展开样式。<br/>默认值：SubMenuExpandingMode.SIDE_EXPAND |
 

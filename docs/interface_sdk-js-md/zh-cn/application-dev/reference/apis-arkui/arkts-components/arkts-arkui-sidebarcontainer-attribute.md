@@ -56,7 +56,7 @@ controlButton(value: ButtonStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ButtonStyle](arkts-arkui-buttonstyle-i.md) | 是 | 侧边栏控制按钮的属性。 |
+| value | [ButtonStyle](arkts-arkui-sidebar-buttonstyle-i.md) | 是 | 侧边栏控制按钮的属性。 |
 
 ## divider
 
@@ -343,7 +343,7 @@ sideBarPosition(value: SideBarPosition)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SideBarPosition](arkts-arkui-sidebarposition-e.md) | 是 | 侧边栏显示位置。<br/>默认值：SideBarPosition.Start |
+| value | [SideBarPosition](arkts-arkui-sidebar-sidebarposition-e.md) | 是 | 侧边栏显示位置。<br/>默认值：SideBarPosition.Start |
 
 ## sideBarWidth
 

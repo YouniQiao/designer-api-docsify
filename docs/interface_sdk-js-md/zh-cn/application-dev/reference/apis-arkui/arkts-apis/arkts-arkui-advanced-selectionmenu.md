@@ -18,8 +18,8 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 
 | 名称 | 说明 |
 | --- | --- |
-| [EditorEventInfo](arkts-arkui-editoreventinfo-i.md) | 选中内容信息。 |
-| [EditorMenuOptions](arkts-arkui-editormenuoptions-i.md) | 编辑菜单选项。 |
-| [ExpandedMenuOptions](arkts-arkui-expandedmenuoptions-i.md) | 扩展下拉菜单。继承于[MenuItemOptions](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-menuitem.md#menuitemoptions对象说明)。 |
-| [SelectionMenuOptions](arkts-arkui-selectionmenuoptions-i.md) | SelectionMenuOptions定义SelectionMenu的可选菜单类型项及其具体配置参数。 |
+| [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | 选中内容信息。 |
+| [EditorMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-editormenuoptions-i.md) | 编辑菜单选项。 |
+| [ExpandedMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md) | 扩展下拉菜单。继承于[MenuItemOptions](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-menuitem.md#menuitemoptions对象说明)。 |
+| [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | SelectionMenuOptions定义SelectionMenu的可选菜单类型项及其具体配置参数。 |
 

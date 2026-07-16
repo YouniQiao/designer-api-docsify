@@ -28,5 +28,5 @@ Obtains file information. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [Stat](arkts-corefile-stat-i.md) | File information obtained. |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | File information obtained. |
 

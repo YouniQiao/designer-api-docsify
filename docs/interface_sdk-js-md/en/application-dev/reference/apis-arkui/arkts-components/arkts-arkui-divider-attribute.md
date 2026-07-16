@@ -1,8 +1,8 @@
 # Divider properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-commonmethod-c.md), the following attributes are supported.
 
-The [universal events](arkts-arkui-commonmethod-c.md) are supported.
+The [universal events](arkts-arkui-common-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** DividerAttribute extends [CommonMethod<DividerAttribute>](CommonMethod<DividerAttribute>)
 
@@ -18,7 +18,7 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 color(value: ResourceColor)
 ```
 
-Sets the color of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets the color of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ Sets the color of the divider. This attribute can be dynamically set using [attr
 lineCap(value: LineCapStyle)
 ```
 
-Sets the line cap style of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets the line cap style of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ Sets the line cap style of the divider. This attribute can be dynamically set us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | Yes | Line cap style of the divider.<br>Default value: **LineCapStyle.Butt**<br>Invalid values are treated as the default value. |
+| value | [LineCapStyle](../arkts-apis/arkts-arkui-enums-linecapstyle-e.md) | Yes | Line cap style of the divider.<br>Default value: **LineCapStyle.Butt**<br>Invalid values are treated as the default value. |
 
 ## strokeWidth
 
@@ -66,7 +66,7 @@ Sets the line cap style of the divider. This attribute can be dynamically set us
 strokeWidth(value: number | string)
 ```
 
-Sets the stroke width of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets the stroke width of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 7
 
@@ -82,7 +82,7 @@ Sets the stroke width of the divider. This attribute can be dynamically set usin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes | Stroke width of the divider.<br>Default value: **1px**<br>Invalid values are treated as the default value.<br>Unit: vp<br>**NOTE**<br>Percentage values are not supported. This attribute has lower priority than the [height](arkts-arkui-commonmethod-c.md#height-1) attribute. If its value exceeds the **height** setting, cropping is performed based on the **height** constraint. Due to hardware limitations on some devices where 1 px dividers may not display properly after rounding, you are advised to use the **2px** value. |
+| value | number \| string | Yes | Stroke width of the divider.<br>Default value: **1px**<br>Invalid values are treated as the default value.<br>Unit: vp<br>**NOTE**<br>Percentage values are not supported. This attribute has lower priority than the [height](arkts-arkui-common-commonmethod-c.md#height-1) attribute. If its value exceeds the **height** setting, cropping is performed based on the **height** constraint. Due to hardware limitations on some devices where 1 px dividers may not display properly after rounding, you are advised to use the **2px** value. |
 
 ## vertical
 
@@ -90,7 +90,7 @@ Sets the stroke width of the divider. This attribute can be dynamically set usin
 vertical(value: boolean)
 ```
 
-Sets the direction of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets the direction of the divider. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 7
 

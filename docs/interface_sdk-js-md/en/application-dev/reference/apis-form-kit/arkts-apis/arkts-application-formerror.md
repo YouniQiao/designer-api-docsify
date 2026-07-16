@@ -20,13 +20,13 @@ import { formError } from '@kit.FormKit';
 
 | Name | Description |
 | --- | --- |
-| [FormError](arkts-form-formerror-e.md) | Error of form. |
+| [FormError](arkts-form-formerror-formerror-e.md) | Error of form. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [FormError](arkts-form-formerror-e-sys.md) | Error of form. |
+| [FormError](arkts-form-formerror-formerror-e-sys.md) | Error of form. |
 <!--DelEnd-->
 

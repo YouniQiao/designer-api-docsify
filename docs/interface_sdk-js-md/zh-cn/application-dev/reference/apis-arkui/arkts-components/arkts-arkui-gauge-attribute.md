@@ -22,7 +22,7 @@ colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGra
 
 参数类型为[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)，则圆环类型为单色环。
 
-参数类型为[LinearGradient](arkts-arkui-lineargradient-i.md)，则圆环类型为渐变环。
+参数类型为[LinearGradient](arkts-arkui-common-lineargradient-i.md)，则圆环类型为渐变环。
 
 参数类型为数组，则圆环类型为分段渐变环，第一个参数为颜色值，若设置为非颜色类型，则置为"0xFFE84026"。第二个参数为颜色所占比重，若设置为负数或是非数值类型，则将比重置为0。
 
@@ -66,7 +66,7 @@ contentModifier(modifier: ContentModifier<GaugeConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<GaugeConfiguration> | 是 | 在Gauge组件上定制内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<GaugeConfiguration> | 是 | 在Gauge组件上定制内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## description
 
@@ -142,7 +142,7 @@ indicator(value: GaugeIndicatorOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | 是 | 指针样式。<br/>**说明：** <br/>设置null则不显示指针。 |
+| value | [GaugeIndicatorOptions](arkts-arkui-gauge-gaugeindicatoroptions-i.md) | 是 | 指针样式。<br/>**说明：** <br/>设置null则不显示指针。 |
 
 ## privacySensitive
 
@@ -154,7 +154,7 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 > **说明：**  
 >  
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 12
 
@@ -246,7 +246,7 @@ trackShadow(value: GaugeShadowOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | 是 | 添加阴影效果，可以指定模糊半径、X轴和Y轴的偏移量。<br/>**说明：** <br/>阴影颜色与圆环颜色一致。<br/>设置null为不开启投影。 |
+| value | [GaugeShadowOptions](arkts-arkui-gauge-gaugeshadowoptions-i.md) | 是 | 添加阴影效果，可以指定模糊半径、X轴和Y轴的偏移量。<br/>**说明：** <br/>阴影颜色与圆环颜色一致。<br/>设置null为不开启投影。 |
 
 ## value
 

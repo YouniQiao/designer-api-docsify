@@ -20,7 +20,7 @@ arrowModifier(modifier: Optional<SymbolGlyphModifier>)
 
 > **说明：**  
 >  
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 20
 
@@ -60,7 +60,7 @@ arrowPosition(value: ArrowPosition)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ArrowPosition](arkts-arkui-arrowposition-e.md) | 是 | 下拉菜单项的文本与箭头之间的对齐方式。<br/>默认值：ArrowPosition.END |
+| value | [ArrowPosition](arkts-arkui-select-arrowposition-e.md) | 是 | 下拉菜单项的文本与箭头之间的对齐方式。<br/>默认值：ArrowPosition.END |
 
 ## arrowPosition
 
@@ -108,7 +108,7 @@ avoidance(mode: AvoidanceMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | 是 | 设置下拉菜单的避让模式。<br/>默认值：AvoidanceMode.COVER_TARGET |
+| mode | [AvoidanceMode](arkts-arkui-select-avoidancemode-e.md) | 是 | 设置下拉菜单的避让模式。<br/>默认值：AvoidanceMode.COVER_TARGET |
 
 ## controlSize
 
@@ -132,7 +132,7 @@ controlSize(value: ControlSize)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ControlSize](arkts-arkui-controlsize-e.md) | 是 | Select组件的尺寸。<br/>默认值：ControlSize.NORMAL |
+| value | [ControlSize](arkts-arkui-button-controlsize-e.md) | 是 | Select组件的尺寸。<br/>默认值：ControlSize.NORMAL |
 
 ## controlSize
 
@@ -226,7 +226,7 @@ font(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | 下拉按钮本身的文本样式。<br/>API version 11及以前默认值：<br/>{<br/>size: `$r('sys.float.ohos_id_text_size_button1')`,<br/>weight: FontWeight.Medium<br/>} <br/>API version 12以后，如果设置controlSize的值为：controlSize.SMALL，size默认值是`$r('sys.float.ohos_id_text_size_button2')`，否则为`$r('sys.float.ohos_id_text_size_button1')`。 |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 下拉按钮本身的文本样式。<br/>API version 11及以前默认值：<br/>{<br/>size: `$r('sys.float.ohos_id_text_size_button1')`,<br/>weight: FontWeight.Medium<br/>} <br/>API version 12以后，如果设置controlSize的值为：controlSize.SMALL，size默认值是`$r('sys.float.ohos_id_text_size_button2')`，否则为`$r('sys.float.ohos_id_text_size_button1')`。 |
 
 ## font
 
@@ -344,8 +344,8 @@ menuAlign(alignType: MenuAlignType, offset?: Offset)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignType | [MenuAlignType](arkts-arkui-menualigntype-e.md) | 是 | 对齐方式类型。<br/>默认值：MenuAlignType.START |
-| offset | [Offset](../arkts-apis/arkts-arkui-offset-i.md) | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。<br/> 默认值：{dx: 0, dy: 0} |
+| alignType | [MenuAlignType](arkts-arkui-select-menualigntype-e.md) | 是 | 对齐方式类型。<br/>默认值：MenuAlignType.START |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。<br/> 默认值：{dx: 0, dy: 0} |
 
 ## menuAlign
 
@@ -370,7 +370,7 @@ menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | alignType | [Optional](arkts-arkui-optional-t.md)<MenuAlignType> | 是 | 对齐方式类型。<br/>当alignType的值为undefined时，默认值：MenuAlignType.START |
-| offset | [Offset](../arkts-apis/arkts-arkui-offset-i.md) | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。<br/> 默认值：{dx: 0, dy: 0} |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。<br/> 默认值：{dx: 0, dy: 0} |
 
 ## menuBackgroundBlurStyle
 
@@ -382,7 +382,7 @@ menuBackgroundBlurStyle(value: BlurStyle)
 
 > **说明：**  
 >  
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -398,7 +398,7 @@ menuBackgroundBlurStyle(value: BlurStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | 是 | 下拉菜单的背景模糊材质。<br/>默认值：BlurStyle.COMPONENT_ULTRA_THICK |
+| value | [BlurStyle](arkts-arkui-common-blurstyle-e.md) | 是 | 下拉菜单的背景模糊材质。<br/>默认值：BlurStyle.COMPONENT_ULTRA_THICK |
 
 ## menuBackgroundBlurStyle
 
@@ -458,7 +458,7 @@ menuBackgroundColor(value: ResourceColor)
 
 > **说明：**  
 >  
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -534,7 +534,7 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>)
 
 > **说明：**  
 >  
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 12
 
@@ -550,7 +550,7 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<MenuItemConfiguration> | 是 | 在Select组件上，定制下拉菜单项内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<MenuItemConfiguration> | 是 | 在Select组件上，定制下拉菜单项内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## menuItemContentModifier
 
@@ -562,7 +562,7 @@ menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration
 
 > **说明：**  
 >  
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 18
 
@@ -602,7 +602,7 @@ menuOutline(outline: MenuOutlineOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outline | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | 是 | 下拉菜单框的外描边样式。 |
+| outline | [MenuOutlineOptions](arkts-arkui-select-menuoutlineoptions-i.md) | 是 | 下拉菜单框的外描边样式。 |
 
 ## minKeyboardAvoidDistance
 
@@ -740,7 +740,7 @@ optionFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | 下拉菜单项的文本样式。<br/>默认值：<br/>{<br/>size: $r('sys.float.ohos_id_text_size_body1'),<br/>weight: FontWeight.Regular<br/>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 下拉菜单项的文本样式。<br/>默认值：<br/>{<br/>size: $r('sys.float.ohos_id_text_size_body1'),<br/>weight: FontWeight.Regular<br/>} |
 
 ## optionFont
 
@@ -882,7 +882,7 @@ optionTextModifier(modifier: Optional<TextModifier>)
 
 > **说明：**  
 >  
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 20
 
@@ -1074,7 +1074,7 @@ selectedOptionFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | 下拉菜单选中项的文本样式。<br/>默认值：<br/>{<br/>size: $r('sys.float.ohos_id_text_size_body1'),<br/>weight: FontWeight.Regular<br/>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 下拉菜单选中项的文本样式。<br/>默认值：<br/>{<br/>size: $r('sys.float.ohos_id_text_size_body1'),<br/>weight: FontWeight.Regular<br/>} |
 
 ## selectedOptionFont
 
@@ -1158,7 +1158,7 @@ selectedOptionTextModifier(modifier: Optional<TextModifier>)
 
 > **说明：**  
 >  
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 20
 
@@ -1282,7 +1282,7 @@ textModifier(modifier: Optional<TextModifier>)
 
 > **说明：**  
 >  
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 20
 

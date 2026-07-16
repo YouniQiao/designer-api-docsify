@@ -90,7 +90,7 @@ contentModifier(modifier: ContentModifier<RadioConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<RadioConfiguration> | 是 | 在Radio组件上，定制内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<RadioConfiguration> | 是 | 在Radio组件上，定制内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## contentModifier
 
@@ -191,5 +191,5 @@ radioStyle(value?: RadioStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RadioStyle](arkts-arkui-radiostyle-i.md) | 否 | 单选框选中状态和非选中状态的样式。 <br/> 未设置时，则按照RadioStyle中各参数的默认值配置。 |
+| value | [RadioStyle](arkts-arkui-radio-radiostyle-i.md) | 否 | 单选框选中状态和非选中状态的样式。 <br/> 未设置时，则按照RadioStyle中各参数的默认值配置。 |
 

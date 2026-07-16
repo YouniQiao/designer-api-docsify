@@ -27,12 +27,12 @@ import { locationManager } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [getLocationPolicy](arkts-mdm-getlocationpolicy-f.md#getlocationpolicy-1) | Queries the location service policy. |
-| [setLocationPolicy](arkts-mdm-setlocationpolicy-f.md#setlocationpolicy-1) | Sets a location service policy. |
+| [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md#getlocationpolicy-1) | Queries the location service policy. |
+| [setLocationPolicy](arkts-mdm-locationmanager-setlocationpolicy-f.md#setlocationpolicy-1) | Sets a location service policy. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [LocationPolicy](arkts-mdm-locationpolicy-e.md) | Enumerates the location service policies. |
+| [LocationPolicy](arkts-mdm-locationmanager-locationpolicy-e.md) | Enumerates the location service policies. |
 

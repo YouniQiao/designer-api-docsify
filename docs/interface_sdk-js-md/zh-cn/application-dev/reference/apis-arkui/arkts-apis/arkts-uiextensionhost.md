@@ -31,7 +31,7 @@ import { uiExtensionHost } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [UIExtensionHostWindowProxy](arkts-arkui-uiextensionhostwindowproxy-i-sys.md) | Transition Controller |
-| [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhostwindowproxyproperties-i-sys.md) | 用于表示宿主应用窗口和UIExtensionComponent组件的信息。 |
+| [UIExtensionHostWindowProxy](arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) | Transition Controller |
+| [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md) | 用于表示宿主应用窗口和UIExtensionComponent组件的信息。 |
 <!--DelEnd-->
 

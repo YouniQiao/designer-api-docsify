@@ -12,26 +12,26 @@ import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeC
 
 | Name | Description |
 | --- | --- |
-| [TreeController](arkts-arkui-treecontroller-c.md) | Declare TreeController |
-| [TreeListener](arkts-arkui-treelistener-c.md) | Declare class TreeListener |
-| [TreeListenerManager](arkts-arkui-treelistenermanager-c.md) | Declare class TreeListenerManager |
+| [TreeController](arkts-arkui-arkui-advanced-treeview-treecontroller-c.md) | Declare TreeController |
+| [TreeListener](arkts-arkui-arkui-advanced-treeview-treelistener-c.md) | Declare class TreeListener |
+| [TreeListenerManager](arkts-arkui-arkui-advanced-treeview-treelistenermanager-c.md) | Declare class TreeListenerManager |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [TreeView](arkts-arkui-treeview-s.md) | Declare TreeView Component |
+| [TreeView](arkts-arkui-arkui-advanced-treeview-treeview-s.md) | Declare TreeView Component |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CallbackParam](arkts-arkui-callbackparam-i.md) | Declare CallbackParam |
-| [NodeParam](arkts-arkui-nodeparam-i.md) | Declare NodeParam |
+| [CallbackParam](arkts-arkui-arkui-advanced-treeview-callbackparam-i.md) | Declare CallbackParam |
+| [NodeParam](arkts-arkui-arkui-advanced-treeview-nodeparam-i.md) | Declare NodeParam |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [TreeListenType](arkts-arkui-treelistentype-e.md) | Control style of operation element |
+| [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Control style of operation element |
 

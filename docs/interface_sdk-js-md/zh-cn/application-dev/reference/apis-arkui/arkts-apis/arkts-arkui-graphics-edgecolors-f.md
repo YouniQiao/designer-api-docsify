@@ -28,5 +28,5 @@ export function edgeColors(all: number): Edges<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Edges](arkts-arkui-edges-i.md)<number> | 边框颜色均设置为传入值的边框颜色对象。 |
+| [Edges](arkts-arkui-graphics-edges-i.md)<number> | 边框颜色均设置为传入值的边框颜色对象。 |
 

@@ -8,13 +8,13 @@
 
 | Name | Description |
 | --- | --- |
-| [CollatorOptions](arkts-na-collatoroptions-i.md) |  |
-| [ResolvedCollatorOptions](arkts-na-resolvedcollatoroptions-i.md) |  |
-| [Collator](arkts-na-collator-i.md) |  |
-| [NumberFormatOptions](arkts-na-numberformatoptions-i.md) |  |
-| [ResolvedNumberFormatOptions](arkts-na-resolvednumberformatoptions-i.md) |  |
-| [NumberFormat](arkts-na-numberformat-i.md) |  |
-| [DateTimeFormatOptions](arkts-na-datetimeformatoptions-i.md) |  |
-| [ResolvedDateTimeFormatOptions](arkts-na-resolveddatetimeformatoptions-i.md) |  |
-| [DateTimeFormat](arkts-na-datetimeformat-i.md) |  |
+| [CollatorOptions](arkts-na-intl-collatoroptions-i.md) |  |
+| [ResolvedCollatorOptions](arkts-na-intl-resolvedcollatoroptions-i.md) |  |
+| [Collator](arkts-na-intl-collator-i.md) |  |
+| [NumberFormatOptions](arkts-na-intl-numberformatoptions-i.md) |  |
+| [ResolvedNumberFormatOptions](arkts-na-intl-resolvednumberformatoptions-i.md) |  |
+| [NumberFormat](arkts-na-intl-numberformat-i.md) |  |
+| [DateTimeFormatOptions](arkts-na-intl-datetimeformatoptions-i.md) |  |
+| [ResolvedDateTimeFormatOptions](arkts-na-intl-resolveddatetimeformatoptions-i.md) |  |
+| [DateTimeFormat](arkts-na-intl-datetimeformat-i.md) |  |
 

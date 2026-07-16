@@ -31,11 +31,11 @@ Create a new scene from a SceneLoadParams.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the resource of creating a scene |
-| param | [SceneLoadParams](arkts-arkgraphics3d-sceneloadparams-i-sys.md) | Yes | the params for scene load |
+| param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | Yes | the params for scene load |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Scene> | Promise used to return a scene |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Scene> | Promise used to return a scene |
 

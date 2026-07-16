@@ -30,8 +30,8 @@ Sets the effect used when the scroll boundary is reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: <em>EdgeEffect.None</em> |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself.The value <em>{ alwaysEnabled: true }</em> means to enable the scroll effect, and <em>{ alwaysEnabled: false }</em> means the opposite.<br>Default value: <em>{ alwaysEnabled: true }</em><br>**Since:** 11 |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-enums-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported.<br>Default value: <em>EdgeEffect.None</em> |
+| options | [EdgeEffectOptions](arkts-arkui-common-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself.The value <em>{ alwaysEnabled: true }</em> means to enable the scroll effect, and <em>{ alwaysEnabled: false }</em> means the opposite.<br>Default value: <em>{ alwaysEnabled: true }</em><br>**Since:** 11 |
 
 ## enableBouncesZoom
 
@@ -151,7 +151,7 @@ Sets the initial scrolling offset. This attribute takes effect only during the i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [OffsetOptions](arkts-arkui-offsetoptions-i.md) | Yes | Initial scrolling offset. When the value specified is a percentage,the initial scrolling offset is calculated as the product of the <em>Scroll</em> component's size in the main axis direction and the percentage value. |
+| value | [OffsetOptions](arkts-arkui-scroll-offsetoptions-i.md) | Yes | Initial scrolling offset. When the value specified is a percentage,the initial scrolling offset is calculated as the product of the <em>Scroll</em> component's size in the main axis direction and the percentage value. |
 
 ## maxZoomScale
 
@@ -223,7 +223,7 @@ Sets the nested scrolling options. You can set the nested scrolling mode in the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options.<br>Default value: <em>{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY}</em> |
+| value | [NestedScrollOptions](arkts-arkui-common-nestedscrolloptions-i.md) | Yes | Nested scrolling options.<br>Default value: <em>{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY}</em> |
 
 ## onDidScroll
 
@@ -519,7 +519,7 @@ Sets the scrollbar state. If the container component cannot be scrolled, the scr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: <em>BarState.Auto</em> |
+| barState | [BarState](../arkts-apis/arkts-arkui-enums-barstate-e.md) | Yes | Scrollbar state.<br>Default value: <em>BarState.Auto</em> |
 
 ## scrollBarColor
 
@@ -635,7 +635,7 @@ Sets the scroll snapping mode.During the snap animation, the scroll operation so
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScrollSnapOptions](arkts-arkui-scrollsnapoptions-i.md) | Yes | Scroll snapping mode. |
+| value | [ScrollSnapOptions](arkts-arkui-scroll-scrollsnapoptions-i.md) | Yes | Scroll snapping mode. |
 
 ## scrollable
 
@@ -657,7 +657,7 @@ Sets the scrolling direction. The scroll offset is reset when this value is chan
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScrollDirection](arkts-arkui-scrolldirection-e.md) | Yes | Scrolling direction.<br>Default value: <em>ScrollDirection.Vertical</em> |
+| value | [ScrollDirection](arkts-arkui-scroll-scrolldirection-e.md) | Yes | Scrolling direction.<br>Default value: <em>ScrollDirection.Vertical</em> |
 
 ## zoomScale
 

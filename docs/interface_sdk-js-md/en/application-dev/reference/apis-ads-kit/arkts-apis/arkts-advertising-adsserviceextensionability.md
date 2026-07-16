@@ -13,12 +13,12 @@ import { RespCallback } from '@kit.AdsKit';
 
 | Name | Description |
 | --- | --- |
-| [AdsServiceExtensionAbility](arkts-ads-adsserviceextensionability-c-sys.md) | Provides the capability of integrating advertising services with vendors. |
+| [AdsServiceExtensionAbility](arkts-ads-advertising-adsserviceextensionability-adsserviceextensionability-c-sys.md) | Provides the capability of integrating advertising services with vendors. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [RespCallback](arkts-ads-respcallback-i.md) | Ad request callback. |
+| [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Ad request callback. |
 

@@ -147,7 +147,7 @@ Cancels all animations for specified properties on the FrameNode. This API execu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| properties | [AnimationPropertyType](arkts-arkui-animationpropertytype-e.md)[] | Yes | Array of animation properties to cancel. You can simultaneously cancel the animations of multiple properties on the node. |
+| properties | [AnimationPropertyType](arkts-arkui-enums-animationpropertytype-e.md)[] | Yes | Array of animation properties to cancel. You can simultaneously cancel the animations of multiple properties on the node. |
 
 **Return value:**
 
@@ -225,14 +225,14 @@ Converts a coordinate point from this node's coordinate system to the target nod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-position-i.md) | Yes | Coordinates relative to the current node's coordinate system. |
+| position | [Position](arkts-arkui-units-position-i.md) | Yes | Coordinates relative to the current node's coordinate system. |
 | targetNode | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node for coordinate transformation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Converted coordinates relative to the target node's local coordinate system. |
+| [Position](arkts-arkui-units-position-i.md) | Converted coordinates relative to the target node's local coordinate system. |
 
 **Error codes:**
 
@@ -263,13 +263,13 @@ Converts the coordinates of a point from the coordinate system of the window whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| positionByWindow | [Position](arkts-arkui-position-i.md) | Yes | Relative coordinates in the coordinate system of the window where the current node is located. |
+| positionByWindow | [Position](arkts-arkui-units-position-i.md) | Yes | Relative coordinates in the coordinate system of the window where the current node is located. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Converted coordinates in the coordinate system of the current node. |
+| [Position](arkts-arkui-units-position-i.md) | Converted coordinates in the coordinate system of the current node. |
 
 **Error codes:**
 
@@ -300,13 +300,13 @@ Converts the coordinates of a point from the coordinate system of the current no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| positionByLocal | [Position](arkts-arkui-position-i.md) | Yes | Coordinates relative to the current node's coordinate system. |
+| positionByLocal | [Position](arkts-arkui-units-position-i.md) | Yes | Coordinates relative to the current node's coordinate system. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Converted coordinates in the coordinate system of the window where the current node is located. |
+| [Position](arkts-arkui-units-position-i.md) | Converted coordinates in the coordinate system of the window where the current node is located. |
 
 **Error codes:**
 
@@ -337,10 +337,10 @@ Creates a property animation for the FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | [AnimationPropertyType](arkts-arkui-animationpropertytype-e.md) | Yes | Animation property type. |
+| property | [AnimationPropertyType](arkts-arkui-enums-animationpropertytype-e.md) | Yes | Animation property type. |
 | startValue | [Optional](../arkts-components/arkts-arkui-optional-t.md)<number[]> | Yes | Animation start value. The value can be **undefined** or an array. If the value is **undefined**, the animation uses the last set value of the property on the node as the starting value. If the value is an array, the length must match the property type requirements:<br>-**AnimationPropertyType.ROTATION**: [rotationX, rotationY, rotationZ] in degrees (°).<br>-**AnimationPropertyType.TRANSLATION**: [translateX, translateY] in px.<br>- **AnimationPropertyType.SCALE**:[scaleX, scaleY](scale factors).<br>- **AnimationPropertyType.OPACITY**: [opacity](value range: [0, 1]).<br>For the first animation of a property, **startValue** must be explicitly specified. For subsequent animations,it is recommended that you either omit **startValue** or set it to the previous animation's end value to avoid abrupt changes. |
 | endValue | number[] | Yes | Animation end value. The value is an array. The array length must match the property type requirements:<br>- **AnimationPropertyType.ROTATION**: [rotationX, rotationY, rotationZ] in degrees (°).<br>- **AnimationPropertyType.TRANSLATION**: [translateX, translateY] in px.<br>-**AnimationPropertyType.SCALE**: [scaleX, scaleY](scale factors).<br>- **AnimationPropertyType.OPACITY**:[opacity](value range: [0, 1]). |
-| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | Animation parameters, including the duration, animation curve, and end callback. |
+| param | [AnimateParam](../arkts-components/arkts-arkui-common-animateparam-i.md) | Yes | Animation parameters, including the duration, animation curve, and end callback. |
 
 **Return value:**
 
@@ -478,7 +478,7 @@ Obtains a child node at a specified index from this FrameNode, with optional sup
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the child node to obtain.<br>The value range of index is [0, +∞). If the current node has n child nodes, the valid value range of index is [0, n-1]. |
-| expandMode | [ExpandMode](arkts-arkui-expandmode-e.md) | No | Expansion mode of the child node.<br>Default value: **ExpandMode.EXPAND**. |
+| expandMode | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | No | Expansion mode of the child node.<br>Default value: **ExpandMode.EXPAND**. |
 
 **Return value:**
 
@@ -532,7 +532,7 @@ Get the children count of the current FrameNode with specified count mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| countMode | [ChildrenCountMode](arkts-arkui-childrencountmode-e.md) | No | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
+| countMode | [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | No | The children count mode. Default value is ChildrenCountMode.ALL_EXPAND. |
 
 **Return value:**
 
@@ -562,7 +562,7 @@ Obtains the cross-language access options for this FrameNode. For example, for n
 
 | Type | Description |
 | --- | --- |
-| [CrossLanguageOptions](arkts-arkui-crosslanguageoptions-i.md) | Cross-ArkTS language access options. |
+| [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) | Cross-ArkTS language access options. |
 
 ## getCustomProperty
 
@@ -592,7 +592,7 @@ Obtains the component's custom property by its name.
 
 | Type | Description |
 | --- | --- |
-| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Value of the custom property. |
+| [Object](../../apis-na/arkts-apis/arkts-na-lib-es5-object-i.md) | Value of the custom property. |
 
 ## getFirstChild
 
@@ -724,7 +724,7 @@ Obtains the position offset of this FrameNode relative to the global display, in
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Position offset of the node relative to the global display, in vp. |
+| [Position](arkts-arkui-units-position-i.md) | Position offset of the node relative to the global display, in vp. |
 
 ## getId
 
@@ -777,7 +777,7 @@ Obtains the structure information of the node, which is consistent with what is 
 
 | Type | Description |
 | --- | --- |
-| [Object](../../apis-na/arkts-apis/arkts-na-object-i.md) | Structure information of the node. |
+| [Object](../../apis-na/arkts-apis/arkts-na-lib-es5-object-i.md) | Structure information of the node. |
 
 ## getInteractionEventBindingInfo
 
@@ -801,13 +801,13 @@ Obtains the event binding information for the target node. Returns **undefined**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | [EventQueryType](arkts-arkui-eventquerytype-e.md) | Yes | Type of the interaction event to query. |
+| eventType | [EventQueryType](arkts-arkui-enums-eventquerytype-e.md) | Yes | Type of the interaction event to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [InteractionEventBindingInfo](arkts-arkui-interactioneventbindinginfo-i.md) | Returns an **InteractionEventBindingInfo** object containing event binding details if the interaction event is bound to the current node; returns **undefined** otherwise. |
+| [InteractionEventBindingInfo](arkts-arkui-framenode-interactioneventbindinginfo-i.md) | Returns an **InteractionEventBindingInfo** object containing event binding details if the interaction event is bound to the current node; returns **undefined** otherwise. |
 
 ## getLastChildIndexWithoutExpand
 
@@ -855,7 +855,7 @@ Obtains the position offset of this FrameNode relative to the parent component a
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Position offset of the current FrameNode relative to the parent component after layout, in px. |
+| [Position](arkts-arkui-units-position-i.md) | Position offset of the current FrameNode relative to the parent component after layout, in px. |
 
 ## getMeasuredSize
 
@@ -879,7 +879,7 @@ Obtains the measured size of this FrameNode, in px.
 
 | Type | Description |
 | --- | --- |
-| [Size](../arkts-components/arkts-arkui-size-i.md) | Measured size of the node, in px. |
+| [Size](../arkts-components/arkts-arkui-canvas-size-i.md) | Measured size of the node, in px. |
 
 ## getNextSibling
 
@@ -927,7 +927,7 @@ Obtains the property value of the FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | [AnimationPropertyType](arkts-arkui-animationpropertytype-e.md) | Yes | Animation property type. |
+| property | [AnimationPropertyType](arkts-arkui-enums-animationpropertytype-e.md) | Yes | Animation property type. |
 
 **Return value:**
 
@@ -1029,7 +1029,7 @@ Obtains the position offset of this FrameNode relative to the parent component, 
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Position offset of the node relative to the parent component, in vp. |
+| [Position](arkts-arkui-units-position-i.md) | Position offset of the node relative to the parent component, in vp. |
 
 ## getPositionToParentWithTransform
 
@@ -1037,7 +1037,7 @@ Obtains the position offset of this FrameNode relative to the parent component, 
 getPositionToParentWithTransform(): Position
 ```
 
-Obtains the position offset of a FrameNode relative to its drawing-enabled parent component, in vp. Drawing attributes include [transform](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform) and [translate](../arkts-components/arkts-arkui-commonmethod-c.md#translate-1). This API returns the upper left corner coordinates after component layout.
+Obtains the position offset of a FrameNode relative to its drawing-enabled parent component, in vp. Drawing attributes include [transform](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform) and [translate](../arkts-components/arkts-arkui-common-commonmethod-c.md#translate-1). This API returns the upper left corner coordinates after component layout.
 
 **Since:** 12
 
@@ -1053,7 +1053,7 @@ Obtains the position offset of a FrameNode relative to its drawing-enabled paren
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Position offset of the node relative to the parent component, in vp. If other drawing attributes (such as **transform** and **translate**) are set, the return value may slightly deviate due to the precision of floating point numbers. |
+| [Position](arkts-arkui-units-position-i.md) | Position offset of the node relative to the parent component, in vp. If other drawing attributes (such as **transform** and **translate**) are set, the return value may slightly deviate due to the precision of floating point numbers. |
 
 ## getPositionToScreen
 
@@ -1077,7 +1077,7 @@ Obtains the position offset of this FrameNode relative to the screen, in vp.
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Position offset of the node relative to the screen, in vp. |
+| [Position](arkts-arkui-units-position-i.md) | Position offset of the node relative to the screen, in vp. |
 
 ## getPositionToScreenWithTransform
 
@@ -1085,7 +1085,7 @@ Obtains the position offset of this FrameNode relative to the screen, in vp.
 getPositionToScreenWithTransform(): Position
 ```
 
-Obtains the position offset of a FrameNode relative to the drawing-enabled screen, in vp. Drawing attributes include [transform](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform)and [translate](../arkts-components/arkts-arkui-commonmethod-c.md#translate-1). This API returns the upper left corner coordinates after component layout.
+Obtains the position offset of a FrameNode relative to the drawing-enabled screen, in vp. Drawing attributes include [transform](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform)and [translate](../arkts-components/arkts-arkui-common-commonmethod-c.md#translate-1). This API returns the upper left corner coordinates after component layout.
 
 **Since:** 12
 
@@ -1101,7 +1101,7 @@ Obtains the position offset of a FrameNode relative to the drawing-enabled scree
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Position offset of the node relative to the screen, in vp. If other drawing attributes (such as **transform** and **translate**) are set, the return value may slightly deviate due to the precision of floating point numbers. |
+| [Position](arkts-arkui-units-position-i.md) | Position offset of the node relative to the screen, in vp. If other drawing attributes (such as **transform** and **translate**) are set, the return value may slightly deviate due to the precision of floating point numbers. |
 
 ## getPositionToWindow
 
@@ -1125,7 +1125,7 @@ Obtains the position offset of this FrameNode relative to the window, in vp.
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Position offset of the node relative to the window, in vp. |
+| [Position](arkts-arkui-units-position-i.md) | Position offset of the node relative to the window, in vp. |
 
 ## getPositionToWindowWithTransform
 
@@ -1133,7 +1133,7 @@ Obtains the position offset of this FrameNode relative to the window, in vp.
 getPositionToWindowWithTransform(): Position
 ```
 
-Obtains the position offset of a FrameNode relative to the drawing-enabled window, in vp. Drawing attributes include [transform](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform)and [translate](../arkts-components/arkts-arkui-commonmethod-c.md#translate-1). This API returns the upper left corner coordinates after component layout.
+Obtains the position offset of a FrameNode relative to the drawing-enabled window, in vp. Drawing attributes include [transform](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform)and [translate](../arkts-components/arkts-arkui-common-commonmethod-c.md#translate-1). This API returns the upper left corner coordinates after component layout.
 
 **Since:** 12
 
@@ -1149,7 +1149,7 @@ Obtains the position offset of a FrameNode relative to the drawing-enabled windo
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-position-i.md) | Position offset of the node relative to the window, in vp. If other drawing attributes (such as **transform** and **translate**) are set, the return value may slightly deviate due to the precision of floating point numbers. |
+| [Position](arkts-arkui-units-position-i.md) | Position offset of the node relative to the window, in vp. If other drawing attributes (such as **transform** and **translate**) are set, the return value may slightly deviate due to the precision of floating point numbers. |
 
 ## getPreviousSibling
 
@@ -1245,7 +1245,7 @@ Obtains the border width set by the user.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-edges-i.md)<LengthMetrics> | Border width set by the user. |
+| [Edges](arkts-arkui-units-edges-i.md)<LengthMetrics> | Border width set by the user. |
 
 ## getUserConfigMargin
 
@@ -1269,7 +1269,7 @@ Obtains the margin set by the user.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-edges-i.md)<LengthMetrics> | Margin set by the user. |
+| [Edges](arkts-arkui-units-edges-i.md)<LengthMetrics> | Margin set by the user. |
 
 ## getUserConfigPadding
 
@@ -1293,7 +1293,7 @@ Obtains the padding set by the user.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-edges-i.md)<LengthMetrics> | Padding set by the user. |
+| [Edges](arkts-arkui-units-edges-i.md)<LengthMetrics> | Padding set by the user. |
 
 ## getUserConfigSize
 
@@ -1615,7 +1615,7 @@ Lays out this FrameNode, specifying the layout positions for the FrameNode and i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-position-i.md) | Yes | Position information used in layout. |
+| position | [Position](arkts-arkui-units-position-i.md) | Yes | Position information used in layout. |
 
 ## measure
 
@@ -1639,7 +1639,7 @@ Measures this FrameNode and calculates its size based on the layout constraints 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraint | [LayoutConstraint](arkts-arkui-layoutconstraint-i.md) | Yes | Parent container layout constraints used for measurement. |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | Parent container layout constraints used for measurement. |
 
 ## moveTo
 
@@ -1651,8 +1651,8 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 
 > **NOTE**  
 >  
-> Currently, only the following types of [TypedFrameNode](arkts-arkui-typedframenode-i.md) are supported for the movement  
-> operations: [Stack](arkts-arkui-stack-t.md), [XComponent](arkts-arkui-xcomponent-t.md). This API does not work for  
+> Currently, only the following types of [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) are supported for the movement  
+> operations: [Stack](arkts-arkui-typenode-stack-t.md), [XComponent](arkts-arkui-typenode-xcomponent-t.md). This API does not work for  
 > other node types.  
 >  
 > This API only supports [BuilderNode](arkts-arkui-buildernode-c.md) with root components of these types:  
@@ -1691,7 +1691,7 @@ onDraw?(context: DrawContext): void
 
 Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering.
 
-Note: The Canvas provided in the [DrawContext](arkts-arkui-drawcontext-c.md) parameter is a temporary command-recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
+Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-c.md) parameter is a temporary command-recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
 
 **Since:** 12
 
@@ -1731,7 +1731,7 @@ Called when this FrameNode needs to determine its layout. This API provides cust
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-position-i.md) | Yes | Position information used in layout. |
+| position | [Position](arkts-arkui-units-position-i.md) | Yes | Position information used in layout. |
 
 ## onMeasure
 
@@ -1755,7 +1755,7 @@ Called when this FrameNode needs to determine its size. This API provides custom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraint | [LayoutConstraint](arkts-arkui-layoutconstraint-i.md) | Yes | Layout constraints used by the component for measurement. |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | Layout constraints used by the component for measurement. |
 
 ## recycle
 
@@ -1888,16 +1888,16 @@ Sets the cross-language access options for this FrameNode. For example, for node
 > **NOTE**  
 >  
 > Currently, the cross-ArkTS language access option can only be configured for the following components:  
-> [Scroll](arkts-arkui-scroll-t.md), [Swiper](arkts-arkui-swiper-t.md), [List](arkts-arkui-list-t.md),  
-> [ListItem](arkts-arkui-listitem-t.md), [ListItemGroup](arkts-arkui-listitemgroup-t.md),  
-> [WaterFlow](arkts-arkui-waterflow-t.md), [FlowItem](arkts-arkui-flowitem-t.md), [Grid](arkts-arkui-grid-t.md),  
-> [GridItem](arkts-arkui-griditem-t.md), [TextInput](arkts-arkui-textinput-t.md), [TextArea](arkts-arkui-textarea-t.md),  
-> [Column](arkts-arkui-column-t.md), [Row](arkts-arkui-row-t.md), [Stack](arkts-arkui-stack-t.md),  
-> [Flex](arkts-arkui-flex-t.md), [RelativeContainer](arkts-arkui-relativecontainer-t.md),  
-> [Progress](arkts-arkui-progress-t.md), [LoadingProgress](arkts-arkui-loadingprogress-t.md),  
-> [Image](arkts-arkui-image-t.md), [Button](arkts-arkui-button-t.md), [CheckBox](arkts-arkui-checkbox-t.md),  
-> [Radio](arkts-arkui-radio-t.md), [Slider](arkts-arkui-slider-t.md), [Toggle](arkts-arkui-toggle-t.md), and  
-> [TypedFrameNode](arkts-arkui-typedframenode-i.md) of the [XComponent](arkts-arkui-xcomponent-t.md) type.
+> [Scroll](arkts-arkui-typenode-scroll-t.md), [Swiper](arkts-arkui-typenode-swiper-t.md), [List](arkts-arkui-typenode-list-t.md),  
+> [ListItem](arkts-arkui-typenode-listitem-t.md), [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md),  
+> [WaterFlow](arkts-arkui-typenode-waterflow-t.md), [FlowItem](arkts-arkui-typenode-flowitem-t.md), [Grid](arkts-arkui-typenode-grid-t.md),  
+> [GridItem](arkts-arkui-typenode-griditem-t.md), [TextInput](arkts-arkui-typenode-textinput-t.md), [TextArea](arkts-arkui-typenode-textarea-t.md),  
+> [Column](arkts-arkui-typenode-column-t.md), [Row](arkts-arkui-typenode-row-t.md), [Stack](arkts-arkui-typenode-stack-t.md),  
+> [Flex](arkts-arkui-typenode-flex-t.md), [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md),  
+> [Progress](arkts-arkui-typenode-progress-t.md), [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md),  
+> [Image](arkts-arkui-typenode-image-t.md), [Button](arkts-arkui-typenode-button-t.md), [CheckBox](arkts-arkui-typenode-checkbox-t.md),  
+> [Radio](arkts-arkui-typenode-radio-t.md), [Slider](arkts-arkui-typenode-slider-t.md), [Toggle](arkts-arkui-typenode-toggle-t.md), and  
+> [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) of the [XComponent](arkts-arkui-typenode-xcomponent-t.md) type.
 
 **Since:** 15
 
@@ -1913,7 +1913,7 @@ Sets the cross-language access options for this FrameNode. For example, for node
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CrossLanguageOptions](arkts-arkui-crosslanguageoptions-i.md) | Yes | Cross-ArkTS language access options. |
+| options | [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) | Yes | Cross-ArkTS language access options. |
 
 **Error codes:**
 
@@ -1943,7 +1943,7 @@ Sets the position of this FrameNode after layout. The default unit is PX.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-position-i.md) | Yes | Position of the FrameNode after layout. |
+| position | [Position](arkts-arkui-units-position-i.md) | Yes | Position of the FrameNode after layout. |
 
 ## setMeasuredSize
 
@@ -1967,7 +1967,7 @@ Sets the measured size of this FrameNode. The default unit is PX. If the configu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](../arkts-components/arkts-arkui-size-i.md) | Yes | Measured size of the FrameNode. |
+| size | [Size](../arkts-components/arkts-arkui-canvas-size-i.md) | Yes | Measured size of the FrameNode. |
 
 ## setNeedsLayout
 

@@ -30,7 +30,7 @@ import { uiExtensionHost } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [UIExtensionHostWindowProxy](arkts-arkui-uiextensionhostwindowproxy-i-sys.md) | Transition Controller |
-| [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhostwindowproxyproperties-i-sys.md) | Defines information about the host application window and **UIExtensionComponent**. |
+| [UIExtensionHostWindowProxy](arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md) | Transition Controller |
+| [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md) | Defines information about the host application window and **UIExtensionComponent**. |
 <!--DelEnd-->
 

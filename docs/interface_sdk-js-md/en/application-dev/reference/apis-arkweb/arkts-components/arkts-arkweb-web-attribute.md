@@ -30,7 +30,7 @@ Custom AI session configuration for Web components.Used to register multiple cus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aiSessions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AISessionEvent> | Yes | Array of AISessionEvent objects. |
+| aiSessions | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<AISessionEvent> | Yes | Array of AISessionEvent objects. |
 
 ## allowWindowOpenMethod
 
@@ -95,10 +95,10 @@ Bind to the selection menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementType | [WebElementType](arkts-arkweb-webelementtype-e.md) | Yes | Indicates the type of selection menu. |
+| elementType | [WebElementType](arkts-arkweb-web-webelementtype-e.md) | Yes | Indicates the type of selection menu. |
 | content | [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Indicates the content of selection menu. |
-| responseType | [WebResponseType](arkts-arkweb-webresponsetype-e.md) | Yes | Indicates response type of selection menu. |
-| options | [SelectionMenuOptionsExt](arkts-arkweb-selectionmenuoptionsext-i.md) | No | Indicates the options of selection menu. |
+| responseType | [WebResponseType](arkts-arkweb-web-webresponsetype-e.md) | Yes | Indicates response type of selection menu. |
+| options | [SelectionMenuOptionsExt](arkts-arkweb-web-selectionmenuoptionsext-i.md) | No | Indicates the options of selection menu. |
 
 ## blankScreenDetectionConfig
 
@@ -129,7 +129,7 @@ Sets the blank screen detection configuration, such as whether to enable the det
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| detectConfig | [BlankScreenDetectionConfig](arkts-arkweb-blankscreendetectionconfig-i.md) | Yes | Blank screen detection policy. |
+| detectConfig | [BlankScreenDetectionConfig](arkts-arkweb-web-blankscreendetectionconfig-i.md) | Yes | Blank screen detection policy. |
 
 ## blockNetwork
 
@@ -173,7 +173,7 @@ Sets whether to enable blur mode for the web element when soft keyboard is hidde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [BlurOnKeyboardHideMode](arkts-arkweb-bluronkeyboardhidemode-e.md) | Yes | Whether to enable blur mode of the web element when soft keyboard is hidden. The default value is **BlurOnKeyboardHideMode.SILENT**. |
+| mode | [BlurOnKeyboardHideMode](arkts-arkweb-web-bluronkeyboardhidemode-e.md) | Yes | Whether to enable blur mode of the web element when soft keyboard is hidden. The default value is **BlurOnKeyboardHideMode.SILENT**. |
 
 ## bypassVsyncCondition
 
@@ -193,7 +193,7 @@ Sets the rendering process to bypass vsync (vertical synchronization) scheduling
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | [WebBypassVsyncCondition](arkts-arkweb-webbypassvsynccondition-e.md) | Yes | Condition for triggering the rendering process to bypass vsync scheduling.<br> When **undefined** or **null** is passed in, the value is **NONE**. |
+| condition | [WebBypassVsyncCondition](arkts-arkweb-web-webbypassvsynccondition-e.md) | Yes | Condition for triggering the rendering process to bypass vsync scheduling.<br> When **undefined** or **null** is passed in, the value is **NONE**. |
 
 ## cacheMode
 
@@ -215,7 +215,7 @@ Sets the mode of cache in Web.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cacheMode | [CacheMode](arkts-arkweb-cachemode-e.md) | Yes | The cache mode, which can be {@link CacheMode}. |
+| cacheMode | [CacheMode](arkts-arkweb-web-cachemode-e.md) | Yes | The cache mode, which can be {@link CacheMode}. |
 
 ## copyOptions
 
@@ -237,7 +237,7 @@ Called to set copy option
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | copy option.The default value is CopyOptions.LocalDevice. |
+| value | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-enums-copyoptions-e.md) | Yes | copy option.The default value is CopyOptions.LocalDevice. |
 
 ## darkMode
 
@@ -261,7 +261,7 @@ When dark mode is enabled, the **Web** component enables the dark style defined 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WebDarkMode](arkts-arkweb-webdarkmode-e.md) | Yes | Dark mode for the web page, which can be set to **Off**, **On**, or **Auto**.<br>When **null** or **undefined** is passed, the value is **WebDarkMode.Off**. |
+| mode | [WebDarkMode](arkts-arkweb-web-webdarkmode-e.md) | Yes | Dark mode for the web page, which can be set to **Off**, **On**, or **Auto**.<br>When **null** or **undefined** is passed, the value is **WebDarkMode.Off**. |
 
 ## dataDetectorConfig
 
@@ -281,7 +281,7 @@ Data detector with config.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [TextDataDetectorConfig](../../apis-arkui/arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | Yes | The config of text data detector. |
+| config | [TextDataDetectorConfig](../../apis-arkui/arkts-apis/arkts-arkui-text-common-textdatadetectorconfig-i.md) | Yes | The config of text data detector. |
 
 ## databaseAccess
 
@@ -423,7 +423,7 @@ Set the custom text menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes | Customize text menu options.The number of menu items, as well as the content size and icon size of the menu,should be consistent with the ArkUI Menu component.The system-provided id enumeration values (TextMenuItemId) in the menu are only supported for CUT, COPY, PASTE, SELECT_ALL, TRANSLATE, SEARCH and some AI menu in the web.The textRange parameter in the onMenuItemClick function is meaningless in the web,and the input value is -1. |
+| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-text-common-editmenuoptions-i.md) | Yes | Customize text menu options.The number of menu items, as well as the content size and icon size of the menu,should be consistent with the ArkUI Menu component.The system-provided id enumeration values (TextMenuItemId) in the menu are only supported for CUT, COPY, PASTE, SELECT_ALL, TRANSLATE, SEARCH and some AI menu in the web.The textRange parameter in the onMenuItemClick function is meaningless in the web,and the input value is -1. |
 
 ## enableAutoFill
 
@@ -657,7 +657,7 @@ Sets whether to enable the [application to take over web page media playback](..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [NativeMediaPlayerConfig](arkts-arkweb-nativemediaplayerconfig-i.md) | Yes | **enable**: whether to enable the feature.<br> **shouldOverlay**:whether the image of the video player taken over by the application will overlay the web page content, if this feature is enabled.<br>When **undefined** or **null** is passed in, the value is **{enable: false, shouldOverlay: false}**. |
+| config | [NativeMediaPlayerConfig](arkts-arkweb-web-nativemediaplayerconfig-i.md) | Yes | **enable**: whether to enable the feature.<br> **shouldOverlay**:whether the image of the video player taken over by the application will overlay the web page content, if this feature is enabled.<br>When **undefined** or **null** is passed in, the value is **{enable: false, shouldOverlay: false}**. |
 
 ## enableScrollDirectionalLock
 
@@ -682,7 +682,7 @@ When directional lock is enabled, the scroll axis is locked based on the initial
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to enable directional lock.  - `true`: Enables direction locking for the corresponding type category.  - `false`: Disables direction locking for the corresponding type category. |
-| type | [ScrollDirectionalLockType](arkts-arkweb-scrolldirectionallocktype-e.md) | Yes | Specifies the scenario in which directional lock is applied. |
+| type | [ScrollDirectionalLockType](arkts-arkweb-web-scrolldirectionallocktype-e.md) | Yes | Specifies the scenario in which directional lock is applied. |
 
 ## enableSelectedDataDetector
 
@@ -692,9 +692,9 @@ enableSelectedDataDetector(enable: boolean)
 
 Sets whether to enable the AI menu feature for text selection menu. After the AI menu feature is enabled, the email, phone number, website, date, and address in the selection can be identified, and the corresponding AI menu items are displayed in the text selection menu. By default, the AI menu feature is enabled.
 
-When the AI menu feature is enabled, the corresponding AI menu items can be displayed in the text selection menu after text is selected on the web page, including **url** (opening a link), **email** (creating an email),**phoneNumber** (calling), **address** (navigating to the address), and **dateTime** (creating an event) in [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md).
+When the AI menu feature is enabled, the corresponding AI menu items can be displayed in the text selection menu after text is selected on the web page, including **url** (opening a link), **email** (creating an email),**phoneNumber** (calling), **address** (navigating to the address), and **dateTime** (creating an event) in [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-text-common-textmenuitemid-c.md).
 
-When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md) do not appear at the same time.
+When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-text-common-textmenuitemid-c.md) do not appear at the same time.
 
 For details about the application scenario, see [Using Smart Text Data Detector](../../../../web/web-data-detector.md).
 
@@ -866,7 +866,7 @@ Set the gesture focus acquisition mode.When users interact with the web using di
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [GestureFocusMode](arkts-arkweb-gesturefocusmode-e.md) | Yes | The gesture focus mode, which can be {@link GestureFocusMode}.The default value is FocusMode.DEFAULT. |
+| mode | [GestureFocusMode](arkts-arkweb-web-gesturefocusmode-e.md) | Yes | The gesture focus mode, which can be {@link GestureFocusMode}.The default value is FocusMode.DEFAULT. |
 
 ## horizontalScrollBarAccess
 
@@ -980,7 +980,7 @@ Injects the JavaScripts script into the Web component. When the specified page o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scripts | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ScriptItem> | Yes | The array of the JavaScripts to be injected. |
+| scripts | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<ScriptItem> | Yes | The array of the JavaScripts to be injected. |
 
 ## javaScriptOnDocumentStart
 
@@ -1004,7 +1004,7 @@ Injects the JavaScripts script into the Web component.When the specified page or
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scripts | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ScriptItem> | Yes | The array of the JavaScripts to be injected. |
+| scripts | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<ScriptItem> | Yes | The array of the JavaScripts to be injected. |
 
 ## javaScriptProxy
 
@@ -1028,7 +1028,7 @@ Registers the supplied ArkTs object in javaScriptProxy into this Web component.T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| javaScriptProxy | [JavaScriptProxy](arkts-arkweb-javascriptproxy-i.md) | Yes | The ArkTs object in javaScriptProxy will be registered into this Web component,and the methods within the methodList of the injected ArkTs object declared in javaScriptProxy can be accessed by JavaScript.<br>**Since:** 12 |
+| javaScriptProxy | [JavaScriptProxy](arkts-arkweb-web-javascriptproxy-i.md) | Yes | The ArkTs object in javaScriptProxy will be registered into this Web component,and the methods within the methodList of the injected ArkTs object declared in javaScriptProxy can be accessed by JavaScript.<br>**Since:** 12 |
 
 ## keyboardAppearance
 
@@ -1050,7 +1050,7 @@ Set the WebKeyboardAppearanceMode to determine the immersive mode for the soft k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WebKeyboardAppearanceMode](arkts-arkweb-webkeyboardappearancemode-e.md) | Yes | The WebKeyboardAppearanceMode of this web |
+| mode | [WebKeyboardAppearanceMode](arkts-arkweb-web-webkeyboardappearancemode-e.md) | Yes | The WebKeyboardAppearanceMode of this web |
 
 ## keyboardAvoidMode
 
@@ -1058,7 +1058,7 @@ Set the WebKeyboardAppearanceMode to determine the immersive mode for the soft k
 keyboardAvoidMode(mode: WebKeyboardAvoidMode)
 ```
 
-Sets the custom soft keyboard avoidance mode.If the keyboard avoidance mode set in **UIContext** is [KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-keyboardavoidmode-e.md), this API does not take effect.
+Sets the custom soft keyboard avoidance mode.If the keyboard avoidance mode set in **UIContext** is [KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md), this API does not take effect.
 
 **Since:** 12
 
@@ -1072,7 +1072,7 @@ Sets the custom soft keyboard avoidance mode.If the keyboard avoidance mode set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WebKeyboardAvoidMode](arkts-arkweb-webkeyboardavoidmode-e.md) | Yes | Web soft keyboard avoidance mode. In the nested scrolling scenario, the soft keyboard avoidance mode of the **Web** component is not recommended,including **RESIZE_VISUAL** and **RESIZE_CONTENT**. Default value: **WebKeyboardAvoidMode.RESIZE_CONTENT**. |
+| mode | [WebKeyboardAvoidMode](arkts-arkweb-web-webkeyboardavoidmode-e.md) | Yes | Web soft keyboard avoidance mode. In the nested scrolling scenario, the soft keyboard avoidance mode of the **Web** component is not recommended,including **RESIZE_VISUAL** and **RESIZE_CONTENT**. Default value: **WebKeyboardAvoidMode.RESIZE_CONTENT**. |
 
 ## layoutMode
 
@@ -1118,7 +1118,7 @@ Sets the web layout mode. When this attribute is not explicitly called, the web 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WebLayoutMode](arkts-arkweb-weblayoutmode-e.md) | Yes | Web layout mode.<br>When **null** or **undefined** is passed in, the value is **WebLayoutMode.NONE**. |
+| mode | [WebLayoutMode](arkts-arkweb-web-weblayoutmode-e.md) | Yes | Web layout mode.<br>When **null** or **undefined** is passed in, the value is **WebLayoutMode.NONE**. |
 
 ## mediaOptions
 
@@ -1134,7 +1134,7 @@ Sets the web-based media playback policy, including the validity period for auto
 >  
 > - The media playback policy controls videos with an audio track.  
 >  
-> - You are advised to set [audioExclusive](arkts-arkweb-webmediaoptions-i.md) to the same value for all **Web**  
+> - You are advised to set [audioExclusive](arkts-arkweb-web-webmediaoptions-i.md) to the same value for all **Web**  
 > components.  
 >  
 > - Audio and video interruption takes effect within an application and between applications, and playback  
@@ -1152,7 +1152,7 @@ Sets the web-based media playback policy, including the validity period for auto
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WebMediaOptions](arkts-arkweb-webmediaoptions-i.md) | Yes | Web-based media playback policy.<br>After the parameter settings are updated,the playback must be started again for the settings to take effect.<br>When **undefined** or **null** is passed in, **{resumeInterval: 0, audioExclusive: true}** is used. |
+| options | [WebMediaOptions](arkts-arkweb-web-webmediaoptions-i.md) | Yes | Web-based media playback policy.<br>After the parameter settings are updated,the playback must be started again for the settings to take effect.<br>When **undefined** or **null** is passed in, **{resumeInterval: 0, audioExclusive: true}** is used. |
 
 ## mediaPlayGestureAccess
 
@@ -1272,7 +1272,7 @@ Sets the behavior when a secure origin attempts to load a resource from an insec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mixedMode | [MixedMode](arkts-arkweb-mixedmode-e.md) | Yes | The mixed mode, which can be {@link MixedMode}. |
+| mixedMode | [MixedMode](arkts-arkweb-web-mixedmode-e.md) | Yes | The mixed mode, which can be {@link MixedMode}. |
 
 ## multiWindowAccess
 
@@ -1314,7 +1314,7 @@ Sets the same-layer rendering configuration. This attribute takes effect only wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EmbedOptions](arkts-arkweb-embedoptions-i.md) | No | Configuration options of the same-layer rendering.<br>If **undefined** or **null** is passed in, the value **{supportDefaultIntrinsicSize: false}** is used. |
+| options | [EmbedOptions](arkts-arkweb-web-embedoptions-i.md) | No | Configuration options of the same-layer rendering.<br>If **undefined** or **null** is passed in, the value **{supportDefaultIntrinsicSize: false}** is used. |
 
 ## nestedScroll
 
@@ -1358,7 +1358,7 @@ Triggered to check whether a bound **Web** instance exists based on the name whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> | Yes | Callback triggered on a new page after **window.open** is triggered on the |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<void> | Yes | Callback triggered on a new page after **window.open** is triggered on the |
 
 ## onAdsBlocked
 
@@ -1402,7 +1402,7 @@ Triggered when alert() is invoked to display an alert dialog box on the web page
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnAlertEvent, boolean> | Yes | Callback used when alert() is invoked to display an alert dialog box on the web |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnAlertEvent, boolean> | Yes | Callback used when alert() is invoked to display an alert dialog box on the web |
 
 ## onAudioStateChanged
 
@@ -1424,7 +1424,7 @@ Triggered when the audio playback status on the web page changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnAudioStateChangedEvent> | Yes | Callback invoked when the audio playback status on the web page changes. Before API 12�� use { function } as param. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnAudioStateChangedEvent> | Yes | Callback invoked when the audio playback status on the web page changes. Before API 12�� use { function } as param. |
 
 ## onBeforeUnload
 
@@ -1446,7 +1446,7 @@ Triggered when the Web wants to confirm navigation from JavaScript onbeforeunloa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnBeforeUnloadEvent, boolean> | Yes | The triggered function when the web page wants to confirm navigation from JavaScript |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnBeforeUnloadEvent, boolean> | Yes | The triggered function when the web page wants to confirm navigation from JavaScript |
 
 ## onCameraCaptureStateChange
 
@@ -1456,7 +1456,7 @@ onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback)
 
 Triggered to notify the user of the camera state on the current web page, which can be **None**, **Active**, or **Paused**. This API uses an asynchronous callback to return the result.
 
-You can use the **startCamera**, **stopCamera**, and **closeCamera** APIs to enable, pause, and stop the camera respectively. For details about how to use them, see [startCamera](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#startcamera-1).
+You can use the **startCamera**, **stopCamera**, and **closeCamera** APIs to enable, pause, and stop the camera respectively. For details about how to use them, see [startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera-1).
 
 > **NOTE**  
 >  
@@ -1498,7 +1498,7 @@ Triggered when the Web page needs ssl client certificate from the user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnClientAuthenticationEvent> | Yes | The triggered callback when needs ssl client certificate from the user. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnClientAuthenticationEvent> | Yes | The triggered callback when needs ssl client certificate from the user. [since 9 - 11] |
 
 ## onConfirm
 
@@ -1520,7 +1520,7 @@ Triggered when confirm() is invoked by the web page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnConfirmEvent, boolean> | Yes | Callback triggered when confirm() is invoked by the web page. [since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnConfirmEvent, boolean> | Yes | Callback triggered when confirm() is invoked by the web page. [since 8 - 11] |
 
 ## onConsole
 
@@ -1542,7 +1542,7 @@ Triggered when the web page receives a JavaScript console message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnConsoleEvent, boolean> | Yes | The triggered function when the web page receives a JavaScript console |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnConsoleEvent, boolean> | Yes | The triggered function when the web page receives a JavaScript console |
 
 ## onContextMenuHide
 
@@ -1586,7 +1586,7 @@ Triggered when called to allow custom display of the context menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnContextMenuShowEvent, boolean> | Yes | The triggered callback when called to allow custom display of the context |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnContextMenuShowEvent, boolean> | Yes | The triggered callback when called to allow custom display of the context |
 
 ## onControllerAttached
 
@@ -1630,7 +1630,7 @@ Triggered when the form could be resubmitted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnDataResubmittedEvent> | Yes | The triggered callback to decision whether resend form data or not. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnDataResubmittedEvent> | Yes | The triggered callback to decision whether resend form data or not. [since 9 - 11] |
 
 ## onDetectedBlankScreen
 
@@ -1677,7 +1677,7 @@ Triggered when starting to download.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnDownloadStartEvent> | Yes | The triggered function when starting to download. [since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnDownloadStartEvent> | Yes | The triggered function when starting to download. [since 8 - 11] |
 
 ## onErrorReceive
 
@@ -1685,7 +1685,7 @@ Triggered when starting to download.
 onErrorReceive(callback: Callback<OnErrorReceiveEvent>)
 ```
 
-Triggered when an error occurs during web page loading. The error may occur on the main resource or sub-resource.You can use [isMainFrame](arkts-arkweb-webresourcerequest-c.md#ismainframe-1) to determine whether the error occurs on the main resource. This API is called when there is no network connection.
+Triggered when an error occurs during web page loading. The error may occur on the main resource or sub-resource.You can use [isMainFrame](arkts-arkweb-web-webresourcerequest-c.md#ismainframe-1) to determine whether the error occurs on the main resource. This API is called when there is no network connection.
 
 **Since:** 8
 
@@ -1699,7 +1699,7 @@ Triggered when an error occurs during web page loading. The error may occur on t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnErrorReceiveEvent> | Yes | The triggered function when the web page receives a web resource loading |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnErrorReceiveEvent> | Yes | The triggered function when the web page receives a web resource loading |
 
 ## onFaviconReceived
 
@@ -1721,7 +1721,7 @@ Triggered when the application receive a new favicon for the current web page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnFaviconReceivedEvent> | Yes | The triggered callback when the application receive a new favicon for the |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnFaviconReceivedEvent> | Yes | The triggered callback when the application receive a new favicon for the |
 
 ## onFileSelectorShow
 
@@ -1767,7 +1767,7 @@ Triggered when the first content paint occurs on the web page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnFirstContentfulPaintEvent> | Yes | Callback invoked when the first content paint occurs on the web page.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnFirstContentfulPaintEvent> | Yes | Callback invoked when the first content paint occurs on the web page.<br>**Since:** 12 |
 
 ## onFirstMeaningfulPaint
 
@@ -1897,7 +1897,7 @@ Called when a request to obtain the geolocation information is received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnGeolocationShowEvent> | Yes | Callback invoked when a request to obtain the geolocation information is received.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnGeolocationShowEvent> | Yes | Callback invoked when a request to obtain the geolocation information is received.<br>**Since:** 12 |
 
 ## onHttpAuthRequest
 
@@ -1919,7 +1919,7 @@ Triggered when the browser needs credentials from the user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnHttpAuthRequestEvent, boolean> | Yes | The triggered when the browser needs credentials from the user. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnHttpAuthRequestEvent, boolean> | Yes | The triggered when the browser needs credentials from the user. [since 9 - 11] |
 
 ## onHttpErrorReceive
 
@@ -1941,7 +1941,7 @@ Triggered when the web page receives a web resource loading HTTP error.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnHttpErrorReceiveEvent> | Yes | The triggered function when the web page receives a web resource loading HTTP |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnHttpErrorReceiveEvent> | Yes | The triggered function when the web page receives a web resource loading HTTP |
 
 ## onInputmethodAttached
 
@@ -2053,7 +2053,7 @@ This API is used to intercept the resource loading and return the response data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnInterceptRequestEvent, WebResourceResponse> | Yes | The triggered callback when the resources loading is intercepted. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnInterceptRequestEvent, WebResourceResponse> | Yes | The triggered callback when the resources loading is intercepted. [since 9 - 11] |
 
 ## onLargestContentfulPaint
 
@@ -2097,7 +2097,7 @@ Notify the host application that a page has finished loading. This method is cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnLoadFinishedEvent> | Yes | The triggered function at the end of web page loading. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnLoadFinishedEvent> | Yes | The triggered function at the end of web page loading. |
 
 ## onLoadIntercept
 
@@ -2119,7 +2119,7 @@ Triggered when the navigation is intercepted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnLoadInterceptEvent, boolean> | Yes | The triggered callback when the navigation is intercepted. [since 10 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnLoadInterceptEvent, boolean> | Yes | The triggered callback when the navigation is intercepted. [since 10 - 11] |
 
 ## onLoadStarted
 
@@ -2141,7 +2141,7 @@ Triggered at the begin of web page loading. This method is called once for each 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnLoadStartedEvent> | Yes | The triggered function at the begin of web page loading. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnLoadStartedEvent> | Yes | The triggered function at the begin of web page loading. |
 
 ## onMicrophoneCaptureStateChange
 
@@ -2335,7 +2335,7 @@ Triggered when the overscroll occurs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnOverScrollEvent> | Yes | Function triggered when the overscroll occurs. [since 10 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnOverScrollEvent> | Yes | Function triggered when the overscroll occurs. [since 10 - 11] |
 
 ## onOverrideErrorPage
 
@@ -2401,7 +2401,7 @@ Called when the web page starts to be loaded.This API is called only for the mai
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPageBeginEvent> | Yes | The triggered function at the begin of web page loading. [since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPageBeginEvent> | Yes | The triggered function at the begin of web page loading. [since 8 - 11] |
 
 ## onPageEnd
 
@@ -2423,7 +2423,7 @@ Triggered at the end of web page loading.This callback is called only for the ma
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPageEndEvent> | Yes | The triggered function at the end of web page loading. [since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPageEndEvent> | Yes | The triggered function at the end of web page loading. [since 8 - 11] |
 
 ## onPageVisible
 
@@ -2445,7 +2445,7 @@ Triggered when the old page is not displayed and the new page is about to be vis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPageVisibleEvent> | Yes | Callback invoked when the old |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPageVisibleEvent> | Yes | Callback invoked when the old |
 
 ## onPdfLoadEvent
 
@@ -2465,7 +2465,7 @@ Called to notify the user of whether the PDF page is successfully loaded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPdfLoadEvent> | Yes | Callback triggered to notify users of whether the PDF page is successfully loaded. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPdfLoadEvent> | Yes | Callback triggered to notify users of whether the PDF page is successfully loaded. |
 
 ## onPdfScrollAtBottom
 
@@ -2485,7 +2485,7 @@ Called to notify the user that the PDF page has been scrolled to the bottom.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPdfScrollEvent> | Yes | Callback triggered to notify the user that the PDF page has been scrolled to the bottom. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPdfScrollEvent> | Yes | Callback triggered to notify the user that the PDF page has been scrolled to the bottom. |
 
 ## onPermissionRequest
 
@@ -2507,7 +2507,7 @@ Triggered when a permission request is received. To call this API, you need to d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPermissionRequestEvent> | Yes | Callback invoked when a permission request is received. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPermissionRequestEvent> | Yes | Callback invoked when a permission request is received. |
 
 ## onProgressChange
 
@@ -2529,7 +2529,7 @@ Triggered when the page loading progress changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnProgressChangeEvent> | Yes | The triggered function when the page loading progress changes. [since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnProgressChangeEvent> | Yes | The triggered function when the page loading progress changes. [since 8 - 11] |
 
 ## onPrompt
 
@@ -2551,7 +2551,7 @@ Triggered when prompt() is invoked by the web page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnPromptEvent, boolean> | Yes | Callback used when prompt() is invoked by the web page. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnPromptEvent, boolean> | Yes | Callback used when prompt() is invoked by the web page. [since 9 - 11] |
 
 ## onRefreshAccessedHistory
 
@@ -2573,7 +2573,7 @@ Triggered when the Web page refreshes accessed history.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnRefreshAccessedHistoryEvent> | Yes | The triggered callback when the Web page refreshes accessed history. [since 8 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnRefreshAccessedHistoryEvent> | Yes | The triggered callback when the Web page refreshes accessed history. [since 8 - 11] |
 
 ## onRenderExited
 
@@ -2581,7 +2581,7 @@ Triggered when the Web page refreshes accessed history.
 onRenderExited(callback: Callback<OnRenderExitedEvent>)
 ```
 
-Triggered when the rendering process exits abnormally. A rendering process may be shared by multiple **Web** components.Each affected **Web** component triggers this callback. You can call the bound **webviewController** APIs to restore the web page when this callback is triggered. For example, [refresh](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#refresh-1) and [loadUrl](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#loadurl-1).For details about the component lifecycle, see [Lifecycle of the Web Components](../../../../web/web-event-sequence.md)
+Triggered when the rendering process exits abnormally. A rendering process may be shared by multiple **Web** components.Each affected **Web** component triggers this callback. You can call the bound **webviewController** APIs to restore the web page when this callback is triggered. For example, [refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh-1) and [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl-1).For details about the component lifecycle, see [Lifecycle of the Web Components](../../../../web/web-event-sequence.md)
 
 **Since:** 9
 
@@ -2595,7 +2595,7 @@ Triggered when the rendering process exits abnormally. A rendering process may b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnRenderExitedEvent> | Yes | Triggered when the rendering process exits abnormally.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnRenderExitedEvent> | Yes | Triggered when the rendering process exits abnormally.<br>**Since:** 12 |
 
 ## onRenderExited
 
@@ -2627,7 +2627,7 @@ Triggered when the render process exits.
 onRenderProcessNotResponding(callback: OnRenderProcessNotRespondingCallback)
 ```
 
-Triggered when the rendering process does not respond. If the **Web** component cannot process the input event or navigate to a new URL within a proper time range, the web page process is considered unresponsive and the callback is triggered. If the web page process does not respond, this callback may be triggered until the web page process responds again.In this case, [onRenderProcessResponding] is triggered.You can terminate the associated rendering process through [terminateRenderProcess](../arkts-apis/arkts-arkweb-webviewcontroller-c.md#terminaterenderprocess-1), which may affect other **Web** components in the same rendering process.
+Triggered when the rendering process does not respond. If the **Web** component cannot process the input event or navigate to a new URL within a proper time range, the web page process is considered unresponsive and the callback is triggered. If the web page process does not respond, this callback may be triggered until the web page process responds again.In this case, [onRenderProcessResponding] is triggered.You can terminate the associated rendering process through [terminateRenderProcess](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#terminaterenderprocess-1), which may affect other **Web** components in the same rendering process.
 
 **Since:** 12
 
@@ -2703,7 +2703,7 @@ Triggered when the url loading.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnResourceLoadEvent> | Yes | The triggered when the url loading. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnResourceLoadEvent> | Yes | The triggered when the url loading. [since 9 - 11] |
 
 ## onSafeBrowsingCheckFinish
 
@@ -2769,7 +2769,7 @@ Triggered when the scale of WebView changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnScaleChangeEvent> | Yes | The triggered when the scale of WebView changed. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnScaleChangeEvent> | Yes | The triggered when the scale of WebView changed. [since 9 - 11] |
 
 ## onScreenCaptureRequest
 
@@ -2791,7 +2791,7 @@ Triggered when a screen capture request is received.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnScreenCaptureRequestEvent> | Yes | Callback invoked when a screen capture request is received. Before API 12�� use { function } as param. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnScreenCaptureRequestEvent> | Yes | Callback invoked when a screen capture request is received. Before API 12�� use { function } as param. |
 
 ## onScroll
 
@@ -2821,7 +2821,7 @@ If it is global scrolling, the value of window.pagYOffset or window.pagXOffset w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnScrollEvent> | Yes | Function triggered when the web page scroll to the specified position. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnScrollEvent> | Yes | Function triggered when the web page scroll to the specified position. [since 9 - 11] |
 
 ## onSearchResultReceive
 
@@ -2843,7 +2843,7 @@ Notify search result to host application through onSearchResultReceive.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnSearchResultReceiveEvent> | Yes | Function Triggered when the host application call searchAllAsync. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnSearchResultReceiveEvent> | Yes | Function Triggered when the host application call searchAllAsync. |
 
 ## onShowFileSelector
 
@@ -2865,7 +2865,7 @@ Triggered when the file selector shows.Call this function to handle HTML forms w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnShowFileSelectorEvent, boolean> | Yes | The triggered when the file selector shows. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnShowFileSelectorEvent, boolean> | Yes | The triggered when the file selector shows. [since 9 - 11] |
 
 ## onSslErrorEvent
 
@@ -2909,7 +2909,7 @@ Called to notify users when an SSL error occurs with a request for the main fram
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnSslErrorEventReceiveEvent> | Yes | The triggered callback when the Web page receives an ssl Error. [since 9 - 11] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnSslErrorEventReceiveEvent> | Yes | The triggered callback when the Web page receives an ssl Error. [since 9 - 11] |
 
 ## onSslErrorReceive
 
@@ -2975,7 +2975,7 @@ Notifies the application that the title has changed.If the page being loaded doe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnTitleReceiveEvent> | Yes | The triggered function when the title of the main application document |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnTitleReceiveEvent> | Yes | The triggered function when the title of the main application document |
 
 ## onTouchIconUrlReceived
 
@@ -2997,7 +2997,7 @@ Triggered when the application receive the url of an apple-touch-icon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnTouchIconUrlReceivedEvent> | Yes | The triggered callback when the application receive an new url of an |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnTouchIconUrlReceivedEvent> | Yes | The triggered callback when the application receive an new url of an |
 
 ## onUrlLoadIntercept
 
@@ -3107,7 +3107,7 @@ Triggered when web page requires to create a new window.If the {@link setWebCont
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnWindowNewEvent> | Yes | The web page requests the user to create a window. [since 12] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnWindowNewEvent> | Yes | The web page requests the user to create a window. [since 12] |
 
 ## onWindowNewExt
 
@@ -3129,7 +3129,7 @@ Triggered when web page requires to create a new window.If the {@link setWebCont
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<OnWindowNewExtEvent> | Yes | The triggered callback when web page requires the user |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<OnWindowNewExtEvent> | Yes | The triggered callback when web page requires the user |
 
 ## onlineImageAccess
 
@@ -3199,7 +3199,7 @@ Sets the over-scroll mode for web
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [OverScrollMode](arkts-arkweb-overscrollmode-e.md) | Yes | The over-scroll mode, which can be {@link OverScrollMode}.The default value is OverScrollMode.NEVER. |
+| mode | [OverScrollMode](arkts-arkweb-web-overscrollmode-e.md) | Yes | The over-scroll mode, which can be {@link OverScrollMode}.The default value is OverScrollMode.NEVER. |
 
 ## overviewModeAccess
 
@@ -3316,7 +3316,7 @@ Sets how the final state of the **Web** component's content is rendered during i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [WebRotateEffect](arkts-arkweb-webrotateeffect-e.md) | Yes | How the final state of the **Web** component's content is rendered during its width and height animation process when the component rotates. |
+| effect | [WebRotateEffect](arkts-arkweb-web-webrotateeffect-e.md) | Yes | How the final state of the **Web** component's content is rendered during its width and height animation process when the component rotates. |
 
 ## runJavaScriptOnDocumentEnd
 
@@ -3348,7 +3348,7 @@ Injects the JavaScripts that will be run after document has been parsed finished
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scripts | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ScriptItem> | Yes | The JavaScripts executed in array order. |
+| scripts | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<ScriptItem> | Yes | The JavaScripts executed in array order. |
 
 ## runJavaScriptOnDocumentStart
 
@@ -3381,7 +3381,7 @@ Injects the JavaScripts that will be run just after document object has been cre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scripts | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ScriptItem> | Yes | The JavaScripts executed in array order. |
+| scripts | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<ScriptItem> | Yes | The JavaScripts executed in array order. |
 
 ## runJavaScriptOnHeadEnd
 
@@ -3408,7 +3408,7 @@ Injects the JavaScripts that will be run after head element has been parsed fini
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scripts | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ScriptItem> | Yes | The JavaScripts executed in array order. |
+| scripts | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<ScriptItem> | Yes | The JavaScripts executed in array order. |
 
 ## scrollbarLayoutPolicy
 
@@ -3430,7 +3430,7 @@ Sets the scrollbar layout policy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | [ScrollbarLayoutPolicy](arkts-arkweb-scrollbarlayoutpolicy-e.md) | Yes | The layout policy to apply. |
+| policy | [ScrollbarLayoutPolicy](arkts-arkweb-web-scrollbarlayoutpolicy-e.md) | Yes | The layout policy to apply. |
 
 ## selectionMenuOptions
 
@@ -3456,7 +3456,7 @@ Set the custom text menu.The Web component custom menu extension item interface 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| expandedMenuOptions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ExpandedMenuItemOptions> | Yes | Customize text menu options.The number of menu items, the content size of the menu, and the startIcon icon size are consistent with the ArkUI Menu component. |
+| expandedMenuOptions | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<ExpandedMenuItemOptions> | Yes | Customize text menu options.The number of menu items, the content size of the menu, and the startIcon icon size are consistent with the ArkUI Menu component. |
 
 ## tableData
 

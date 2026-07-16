@@ -26,14 +26,14 @@ import { identifier } from '@kit.AdsKit';
 
 | Name | Description |
 | --- | --- |
-| [getOAID](arkts-ads-getoaid-f.md#getoaid-1) | Obtains the OAID. This API uses an asynchronous callback to return the result. |
-| [getOAID](arkts-ads-getoaid-f.md#getoaid-2) | Obtains the OAID. This API uses a promise to return the result. |
+| [getOAID](arkts-ads-identifier-getoaid-f.md#getoaid-1) | Obtains the OAID. This API uses an asynchronous callback to return the result. |
+| [getOAID](arkts-ads-identifier-getoaid-f.md#getoaid-2) | Obtains the OAID. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [resetOAID](arkts-ads-resetoaid-f-sys.md#resetoaid-1) | Resets the OAID. |
+| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md#resetoaid-1) | Resets the OAID. |
 <!--DelEnd-->
 

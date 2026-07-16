@@ -20,7 +20,7 @@ Creates an arrow modifier to customize the drop-down arrow icon style of the **S
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 20
 
@@ -60,7 +60,7 @@ Sets the alignment between the text and arrow of an option.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ArrowPosition](arkts-arkui-arrowposition-e.md) | Yes | Alignment between the text and arrow of an option.<br>Default value:**ArrowPosition.END** |
+| value | [ArrowPosition](arkts-arkui-select-arrowposition-e.md) | Yes | Alignment between the text and arrow of an option.<br>Default value:**ArrowPosition.END** |
 
 ## arrowPosition
 
@@ -108,7 +108,7 @@ Sets the avoidance mode for the drop-down menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | Yes | Avoidance mode for the drop-down menu.<br>Default value:**AvoidanceMode.COVER_TARGET** |
+| mode | [AvoidanceMode](arkts-arkui-select-avoidancemode-e.md) | Yes | Avoidance mode for the drop-down menu.<br>Default value:**AvoidanceMode.COVER_TARGET** |
 
 ## controlSize
 
@@ -132,7 +132,7 @@ Sets the size of the **Select** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ControlSize](arkts-arkui-controlsize-e.md) | Yes | Size of the **Select** component.<br>Default value: **ControlSize.NORMAL** |
+| value | [ControlSize](arkts-arkui-button-controlsize-e.md) | Yes | Size of the **Select** component.<br>Default value: **ControlSize.NORMAL** |
 
 ## controlSize
 
@@ -226,7 +226,7 @@ Sets the text style of the drop-down button. When **size** is set to **0**, the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Text style of the drop-down list button.<br>For API versions 11 and earlier, the default value is as follows:<br>{<br>size: `$r('sys.float.ohos_id_text_size_button1')`,<br>weight: FontWeight.Medium<br  >} <br>Since API version 12: The default value of **size** is **$r('sys.float.ohos_id_text_size_button2')** in the case of **controlSize.SMALL** and **$r('sys.float.ohos_id_text_size_button1')** in other cases. |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the drop-down list button.<br>For API versions 11 and earlier, the default value is as follows:<br>{<br>size: `$r('sys.float.ohos_id_text_size_button1')`,<br>weight: FontWeight.Medium<br  >} <br>Since API version 12: The default value of **size** is **$r('sys.float.ohos_id_text_size_button2')** in the case of **controlSize.SMALL** and **$r('sys.float.ohos_id_text_size_button1')** in other cases. |
 
 ## font
 
@@ -344,8 +344,8 @@ Sets the alignment between the drop-down button and the drop-down menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignType | [MenuAlignType](arkts-arkui-menualigntype-e.md) | Yes | Alignment type.<br>Default value: **MenuAlignType.START** |
-| offset | [Offset](../arkts-apis/arkts-arkui-offset-i.md) | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.<br> Default value: **{dx: 0, dy: 0}** |
+| alignType | [MenuAlignType](arkts-arkui-select-menualigntype-e.md) | Yes | Alignment type.<br>Default value: **MenuAlignType.START** |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.<br> Default value: **{dx: 0, dy: 0}** |
 
 ## menuAlign
 
@@ -370,7 +370,7 @@ Sets the alignment between the drop-down button and the drop-down menu. Compared
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alignType | [Optional](arkts-arkui-optional-t.md)<MenuAlignType> | Yes | Alignment type.<br>If **alignType** is set to **undefined**, the default value **MenuAlignType.START** is used. |
-| offset | [Offset](../arkts-apis/arkts-arkui-offset-i.md) | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.<br> Default value: **{dx: 0, dy: 0}** |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.<br> Default value: **{dx: 0, dy: 0}** |
 
 ## menuBackgroundBlurStyle
 
@@ -382,7 +382,7 @@ Sets the background blur style of the drop-down menu.
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 12.
 
 **Since:** 11
 
@@ -398,7 +398,7 @@ Sets the background blur style of the drop-down menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the drop-down menu.<br>Default value:**BlurStyle.COMPONENT_ULTRA_THICK** |
+| value | [BlurStyle](arkts-arkui-common-blurstyle-e.md) | Yes | Background blur style of the drop-down menu.<br>Default value:**BlurStyle.COMPONENT_ULTRA_THICK** |
 
 ## menuBackgroundBlurStyle
 
@@ -458,7 +458,7 @@ Sets the background color of the drop-down menu.
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 12.
 
 **Since:** 11
 
@@ -534,7 +534,7 @@ Creates a content modifier for the drop-down menu. After **menuItemContentModifi
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 12
 
@@ -550,7 +550,7 @@ Creates a content modifier for the drop-down menu. After **menuItemContentModifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<MenuItemConfiguration> | Yes | Content modifier to apply to the drop-down menu.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<MenuItemConfiguration> | Yes | Content modifier to apply to the drop-down menu.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## menuItemContentModifier
 
@@ -562,7 +562,7 @@ Creates a content modifier for the drop-down menu. Compared with [menuItemConten
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 18
 
@@ -602,7 +602,7 @@ Sets the outline style for the drop-down menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outline | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Yes | Outline style of the drop-down menu. |
+| outline | [MenuOutlineOptions](arkts-arkui-select-menuoutlineoptions-i.md) | Yes | Outline style of the drop-down menu. |
 
 ## minKeyboardAvoidDistance
 
@@ -740,7 +740,7 @@ Sets the text font of options in the drop-down menu. When **size** is set to **0
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Text font of options in the drop-down menu.<br>Default value:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text font of options in the drop-down menu.<br>Default value:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
 
 ## optionFont
 
@@ -882,7 +882,7 @@ If both [optionFont](SelectAttribute#optionFont(value: Font)) and **Font** of **
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 20
 
@@ -1074,7 +1074,7 @@ Sets the text font of the selected option in the drop-down menu. When **size** i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | Yes | Text font of the selected option in the drop-down menu.<br>Default value:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text font of the selected option in the drop-down menu.<br>Default value:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
 
 ## selectedOptionFont
 
@@ -1158,7 +1158,7 @@ If both [selectedOptionFont](SelectAttribute#selectedOptionFont(value: Font)) an
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 20
 
@@ -1282,7 +1282,7 @@ Creates a text modifier to customize the text style of the **Select** button. Af
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 20
 

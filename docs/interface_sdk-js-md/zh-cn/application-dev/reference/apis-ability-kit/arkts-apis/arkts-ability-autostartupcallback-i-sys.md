@@ -32,7 +32,7 @@ onAutoStartupOff(info: AutoStartupInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [AutoStartupInfo](arkts-ability-autostartupinfo-t-sys.md) | 是 | 取消开机自启动的应用组件信息。 |
+| info | [AutoStartupInfo](arkts-ability-common-autostartupinfo-t-sys.md) | 是 | 取消开机自启动的应用组件信息。 |
 
 ## onAutoStartupOn
 
@@ -56,5 +56,5 @@ onAutoStartupOn(info: AutoStartupInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [AutoStartupInfo](arkts-ability-autostartupinfo-t-sys.md) | 是 | 设置为开机自启动的应用组件信息。 |
+| info | [AutoStartupInfo](arkts-ability-common-autostartupinfo-t-sys.md) | 是 | 设置为开机自启动的应用组件信息。 |
 

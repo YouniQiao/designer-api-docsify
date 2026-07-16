@@ -9,8 +9,8 @@ Universal attributes are supported. The width and height can be set.
 > related attributes support the union deformation effect:  
 > [border](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border),  
 > [outline](../../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-outline.md#outline),  
-> [shadow](arkts-arkui-commonmethod-c.md#shadow-1),  
-> [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1), and  
+> [shadow](arkts-arkui-common-commonmethod-c.md#shadow-1),  
+> [backgroundColor](arkts-arkui-common-commonmethod-c.md#backgroundcolor-1), and  
 > [pointLight](UnionEffectContainerAttribute#pointLight). The above effects are drawn on the shape after union,  
 > which is the drawing part of **UnionEffectContainer**.  
 >  

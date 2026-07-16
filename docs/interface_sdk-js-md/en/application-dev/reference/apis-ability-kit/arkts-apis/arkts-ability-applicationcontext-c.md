@@ -1,6 +1,6 @@
 # ApplicationContext
 
-ApplicationContext inherits from [Context](arkts-ability-context-depr-i.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
+ApplicationContext inherits from [Context](arkts-ability-context-context-depr-i.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 
 > **NOTE**  
 >  
@@ -44,7 +44,7 @@ Clears up all data in the application file path and revokes the permissions that
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ Clears up all data in the application file path and revokes the permissions that
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the application data is cleared up, <code>error</code> is <code>undefined</code>; otherwise, <code>error</code> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the application data is cleared up, <code>error</code> is <code>undefined</code>; otherwise, <code>error</code> is an error object. |
 
 **Error codes:**
 
@@ -115,7 +115,7 @@ Disables delayed process exit for the current process.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -145,7 +145,7 @@ Enable delayed exit for the current process.<p>**NOTE**:<br>It can be called onl
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
@@ -175,7 +175,7 @@ Obtains the unique instance IDs of all multi-instances of this application. This
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the unique instance IDs of all multi-instances of the application. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Array<string>> | Promise used to return the unique instance IDs of all multi-instances of the application. |
 
 **Error codes:**
 
@@ -209,7 +209,7 @@ This API is used to manage multiple windows in an application that contains seve
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<window.WindowStage>> | Promise used to return all WindowStage objects in the current application process. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Array<window.WindowStage>> | Promise used to return all WindowStage objects in the current application process. |
 
 ## getCurrentAppCloneIndex
 
@@ -295,7 +295,7 @@ Obtains the information about running processes. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ProcessInformation>> | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Array<ProcessInformation>> | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -327,7 +327,7 @@ Obtains the information about running processes. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ProcessInformation>> | Yes | Callback used to return the information about the running processes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<Array<ProcessInformation>> | Yes | Callback used to return the information about the running processes. |
 
 **Error codes:**
 
@@ -365,7 +365,7 @@ Get the UIAbility instance by the instance Id.
 
 | Type | Description |
 | --- | --- |
-| [UIAbility](arkts-ability-uiability-c.md) | The UIAbility instance. |
+| [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | The UIAbility instance. |
 
 **Error codes:**
 
@@ -402,7 +402,7 @@ Kills all processes of this application. The application will not execute the no
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -444,7 +444,7 @@ Kills all processes of this application. The application will not execute the no
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -480,7 +480,7 @@ Kills all processes of this application. The application will not execute the no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If all the processes are killed,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If all the processes are killed,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -513,7 +513,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
 | callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](arkts-ability-applicationcontext-c.md#on-1)API is called to register a listener for the lifecycle of a UIAbility within the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the deregistration is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the deregistration is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -550,7 +550,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -582,7 +582,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
 | callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](arkts-ability-applicationcontext-c.md#on-2)API is called to register a listener for system environment changes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the deregistration is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the deregistration is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -619,7 +619,7 @@ Unregisters the listener for system environment changes. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -650,7 +650,7 @@ Unregisters the listener for application process state changes. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](arkts-ability-applicationcontext-c.md#on-3)or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](arkts-ability-applicationcontext-c.md#on-3)or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 **Error codes:**
 
@@ -707,7 +707,7 @@ Registers a listener for the lifecycle of a UIAbility within the application. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
-| callback | [AbilityLifecycleCallback](arkts-ability-abilitylifecyclecallback-c.md) | Yes | Callback triggered when the UIAbility lifecycle changes. |
+| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | Callback triggered when the UIAbility lifecycle changes. |
 
 **Return value:**
 
@@ -731,15 +731,15 @@ Registers a listener for system environment changes. This API uses an asynchrono
 
 > **NOTE**  
 >  
-> - You can also use [onConfigurationUpdate](arkts-ability-ability-c.md#onconfigurationupdate-1) to  
+> - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate-1) to  
 > listen for system environment changes. Unlike  
-> [onConfigurationUpdate](arkts-ability-ability-c.md#onconfigurationupdate-1) of **Ability**, this  
+> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate-1) of **Ability**, this  
 > API offers greater flexibility. It can be used both within application components and pages. However, the  
 > environment variables that can be subscribed to are different from those of  
-> [onConfigurationUpdate](arkts-ability-ability-c.md#onconfigurationupdate-1). For example, this  
+> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate-1). For example, this  
 > API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the  
 > description of each environment variable in  
-> [Configuration](arkts-ability-configuration-i.md).  
+> [Configuration](arkts-ability-app-ability-configuration-configuration-i.md).  
 >  
 > - There are certain restrictions when this API is triggered. For example, if you set the application language by  
 > calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage-1), the system does not trigger the  
@@ -761,7 +761,7 @@ Registers a listener for system environment changes. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
-| callback | [EnvironmentCallback](arkts-ability-environmentcallback-c.md) | Yes | Callback triggered when the system environment changes. |
+| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback triggered when the system environment changes. |
 
 **Return value:**
 
@@ -798,7 +798,7 @@ Registers a listener for application process state changes. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-applicationstatechangecallback-c.md) | Yes | Callback triggered when the application process state is changed. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | Callback triggered when the application process state is changed. |
 
 **Error codes:**
 
@@ -846,7 +846,7 @@ Restarts the application and starts the specified UIAbility. This API can be cal
 > application is not triggered.  
 >  
 > If an atomic service calls this API,  
-> [restartSelfAtomicService()](arkts-ability-restartselfatomicservice-f.md#restartselfatomicservice-1)  
+> [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartselfatomicservice-1)  
 > , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp-1) within 3 seconds after a  
 > successful call to this API, the system returns error code 16000064.  
 >  
@@ -893,7 +893,7 @@ Sets the dark/light color mode for the application. This API can be called only 
 > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has  
 > been loaded (using the  
 > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the  
-> [onWindowStageCreate()](arkts-ability-uiability-c.md#onwindowstagecreate-1) lifecycle).
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate-1) lifecycle).
 
 **Since:** 11
 
@@ -931,7 +931,7 @@ Sets the font for this application. This API can be called only on the main thre
 > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has  
 > been loaded (using the  
 > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the  
-> [onWindowStageCreate()](arkts-ability-uiability-c.md#onwindowstagecreate-1) lifecycle).
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate-1) lifecycle).
 
 **Since:** 12
 
@@ -991,7 +991,7 @@ Sets the language for the application. This API can be called only on the main t
 > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has  
 > been loaded (using the  
 > [loadContent](../../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the  
-> [onWindowStageCreate()](arkts-ability-uiability-c.md#onwindowstagecreate-1) lifecycle).
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate-1) lifecycle).
 
 **Since:** 11
 
@@ -1007,7 +1007,7 @@ Sets the language for the application. This API can be called only on the main t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | Target language. The list of supported languages can be obtained by calling [getSystemLanguages()](../../apis-localization-kit/arkts-apis/arkts-localization-system-c.md#getsystemlanguages-1). |
+| language | string | Yes | Target language. The list of supported languages can be obtained by calling [getSystemLanguages()](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-system-c.md#getsystemlanguages-1). |
 
 **Error codes:**
 
@@ -1034,7 +1034,7 @@ This API can be properly called only on phones and 2-in-1 devices. If it is call
 >  
 > - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are  
 > advised to call this API within the **onCreate()** callback of the  
-> [AbilityStage](arkts-ability-abilitystage-c.md).  
+> [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).  
 >  
 > - If this API is called multiple times within the same process, the outcome of the final call is used. In cases  
 > where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and  
@@ -1089,7 +1089,7 @@ Starts a UIAbility of the current application during the delayed-exit window.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

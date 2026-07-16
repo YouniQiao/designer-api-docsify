@@ -162,7 +162,7 @@ When the slider type is set to **SliderBlockType.SHAPE**, this API sets the size
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes | Size of the slider in the block direction.<br>Default value:<br>- For [SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet: **{width: 18, height: 18}**<br>- For [SliderStyle](arkts-arkui-sliderstyle-e.md).InSet: **{width: 12, height: 12}**<br>- For [SliderStyle](arkts-arkui-sliderstyle-e.md).NONE: This parameter is not effective.<br>If the set **blockSize** has different width and height values, the smaller value is taken. If one or both of the width and height values are less than or equal to 0, the default value is used instead. |
+| value | [SizeOptions](../arkts-apis/arkts-arkui-units-sizeoptions-i.md) | Yes | Size of the slider in the block direction.<br>Default value:<br>- For [SliderStyle](arkts-arkui-slider-sliderstyle-e.md).OutSet: **{width: 18, height: 18}**<br>- For [SliderStyle](arkts-arkui-slider-sliderstyle-e.md).InSet: **{width: 12, height: 12}**<br>- For [SliderStyle](arkts-arkui-slider-sliderstyle-e.md).NONE: This parameter is not effective.<br>If the set **blockSize** has different width and height values, the smaller value is taken. If one or both of the width and height values are less than or equal to 0, the default value is used instead. |
 
 ## blockStyle
 
@@ -186,7 +186,7 @@ Sets the style of the slider in the block direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SliderBlockStyle](arkts-arkui-sliderblockstyle-i.md) | Yes | Style of the slider in the block direction.<br>Default value:**SliderBlockType.DEFAULT**, indicating the round slider. |
+| value | [SliderBlockStyle](arkts-arkui-slider-sliderblockstyle-i.md) | Yes | Style of the slider in the block direction.<br>Default value:**SliderBlockType.DEFAULT**, indicating the round slider. |
 
 ## contentModifier
 
@@ -210,7 +210,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<SliderConfiguration> | Yes | Content modifier to apply to the slider.<br>**ContentModifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<SliderConfiguration> | Yes | Content modifier to apply to the slider.<br>**ContentModifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## digitalCrownSensitivity
 
@@ -222,7 +222,7 @@ Sets the sensitivity to the digital crown rotation.
 
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 18
 
@@ -277,7 +277,7 @@ Sets the maximum value.
 > **NOTE**  
 >  
 > This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use  
-> **max** instead. **max** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
+> **max** instead. **max** is an attribute of [SliderOptions](arkts-arkui-slider-slideroptions-i.md).
 
 **Since:** 7
 
@@ -306,7 +306,7 @@ Sets the minimum value.
 > **NOTE**  
 >  
 > This attribute is supported since API version 7 and deprecated since API version 9. You are advised to use  
-> **min** instead. **min** is an attribute of [SliderOptions](arkts-arkui-slideroptions-i.md).
+> **min** instead. **min** is an attribute of [SliderOptions](arkts-arkui-slider-slideroptions-i.md).
 
 **Since:** 7
 
@@ -346,7 +346,7 @@ Sets the minimum distance required for the slider to respond.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum distance required for the slider to respond. The slider will only move when the sliding distance exceeds this threshold.<br>Default value: **0**<br>**NOTE**<br>The unit is consistent with that of the **min** and **max** properties in [SliderOptions](arkts-arkui-slideroptions-i.md).<br>If the value is less than 0, greater than the result of (**max** – **min**), or invalid, the default value is used. |
+| value | number | Yes | Minimum distance required for the slider to respond. The slider will only move when the sliding distance exceeds this threshold.<br>Default value: **0**<br>**NOTE**<br>The unit is consistent with that of the **min** and **max** properties in [SliderOptions](arkts-arkui-slider-slideroptions-i.md).<br>If the value is less than 0, greater than the result of (**max** – **min**), or invalid, the default value is used. |
 
 ## onChange
 
@@ -399,7 +399,7 @@ Sets the prefix of the slider.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Visual content of the slider prefix, which will be displayed at the start of the slider. |
-| options | [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md) | No | Accessibility configuration of the slider prefix. |
+| options | [SliderPrefixOptions](arkts-arkui-slider-sliderprefixoptions-i.md) | No | Accessibility configuration of the slider prefix. |
 
 ## selectedBorderRadius
 
@@ -528,7 +528,7 @@ The accessibility text settings take effect only when the step markers are displ
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to display the step markers along the slider track.<br>**true**: Display the step markers. **false**: Do not display the step markers.<br>Default value: **false** |
-| options | [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | No | Accessibility configuration of step markers.<br>Default value:**null** |
+| options | [SliderShowStepOptions](arkts-arkui-slider-slidershowstepoptions-i.md) | No | Accessibility configuration of step markers.<br>Default value:**null** |
 
 ## showTips
 
@@ -581,7 +581,7 @@ Sets the slide range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SlideRange](arkts-arkui-sliderange-i.md) | Yes | Slide range. |
+| value | [SlideRange](arkts-arkui-slider-sliderange-i.md) | Yes | Slide range. |
 
 ## sliderInteractionMode
 
@@ -605,7 +605,7 @@ Sets the interaction mode between the user and the slider.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SliderInteraction](arkts-arkui-sliderinteraction-e.md) | Yes | Interaction mode between the user and the slider.<br> Default value:**SliderInteraction.SLIDE_AND_CLICK** |
+| value | [SliderInteraction](arkts-arkui-slider-sliderinteraction-e.md) | Yes | Interaction mode between the user and the slider.<br> Default value:**SliderInteraction.SLIDE_AND_CLICK** |
 
 ## stepColor
 
@@ -678,7 +678,7 @@ Sets the suffix of the slider.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Visual content of the slider suffix, which will be displayed at the end of the slider. |
-| options | [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md) | No | Accessibility configuration of the slider suffix. |
+| options | [SliderSuffixOptions](arkts-arkui-slider-slidersuffixoptions-i.md) | No | Accessibility configuration of the slider suffix. |
 
 ## trackBorderRadius
 
@@ -752,7 +752,7 @@ Sets the linear gradient background color of the track.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ColorMetricsLinearGradient](arkts-arkui-colormetricslineargradient-c.md) | Yes | Linear gradient background color of the track.<br>If **color** is **undefined**, the gradient color setting is invalid. The default background color of the track is **$r('sys.color.ohos_id_color_component_normal')**. |
+| color | [ColorMetricsLinearGradient](arkts-arkui-slider-colormetricslineargradient-c.md) | Yes | Linear gradient background color of the track.<br>If **color** is **undefined**, the gradient color setting is invalid. The default background color of the track is **$r('sys.color.ohos_id_color_component_normal')**. |
 
 ## trackThickness
 
@@ -762,13 +762,13 @@ trackThickness(value: Length)
 
 Sets the thickness of the track. If the value is less than or equal to 0, the default value is used.
 
-To ensure [SliderStyle](arkts-arkui-sliderstyle-e.md) works as expected for the thumb and track,[blockSize](SliderAttribute#blockSize) should increase or decrease proportionally with **trackThickness**.
+To ensure [SliderStyle](arkts-arkui-slider-sliderstyle-e.md) works as expected for the thumb and track,[blockSize](SliderAttribute#blockSize) should increase or decrease proportionally with **trackThickness**.
 
-Specially, when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet**, trackThickness:[blockSize](SliderAttribute#blockSize) = 1:4; when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet**,trackThickness: [blockSize](SliderAttribute#blockSize) = 5:3.
+Specially, when **style** is **[SliderStyle](arkts-arkui-slider-sliderstyle-e.md).OutSet**, trackThickness:[blockSize](SliderAttribute#blockSize) = 1:4; when **style** is **[SliderStyle](arkts-arkui-slider-sliderstyle-e.md).InSet**,trackThickness: [blockSize](SliderAttribute#blockSize) = 5:3.
 
 If the value of **trackThickness** or [blockSize](SliderAttribute#blockSize) exceeds the width or height of the **Slider** component, the default value is used.
 
-When [SliderStyle](arkts-arkui-sliderstyle-e.md) is set to **OutSet**, if the specified value of [blockSize](SliderAttribute#blockSize) exceeds the width or height of the **Slider** component, the default value is used, regardless of whether the value of **trackThickness** is valid or not.
+When [SliderStyle](arkts-arkui-slider-sliderstyle-e.md) is set to **OutSet**, if the specified value of [blockSize](SliderAttribute#blockSize) exceeds the width or height of the **Slider** component, the default value is used, regardless of whether the value of **trackThickness** is valid or not.
 
 **Since:** 8
 
@@ -784,5 +784,5 @@ When [SliderStyle](arkts-arkui-sliderstyle-e.md) is set to **OutSet**, if the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Thickness of the track.<br>Default value: 4.0vp when **style** is set to **[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet**; 20.0vp when **style** is set to **[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet** |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Thickness of the track.<br>Default value: 4.0vp when **style** is set to **[SliderStyle](arkts-arkui-slider-sliderstyle-e.md).OutSet**; 20.0vp when **style** is set to **[SliderStyle](arkts-arkui-slider-sliderstyle-e.md).InSet** |
 

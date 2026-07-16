@@ -57,7 +57,7 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
 onWorkStop(work: workScheduler.WorkInfo): void
 ```
 
-结束延迟任务调度回调。当延迟任务2分钟超时或应用调用[stopWork](arkts-backgroundtasks-stopwork-f.md#stopwork-1)接口取消任务时，触发该回调。
+结束延迟任务调度回调。当延迟任务2分钟超时或应用调用[stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md#stopwork-1)接口取消任务时，触发该回调。
 
 **起始版本：** 9
 

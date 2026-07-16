@@ -18,7 +18,7 @@ Called after the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.m
 
 > **NOTE**  
 >  
-> For details about the callback timing, see [onAppear](../arkts-components/arkts-arkui-commonmethod-c.md#onappear-1).
+> For details about the callback timing, see [onAppear](../arkts-components/arkts-arkui-common-commonmethod-c.md#onappear-1).
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md
 
 > **NOTE**  
 >  
-> For details about the callback timing, see [onDisAppear](../arkts-components/arkts-arkui-commonmethod-c.md#ondisappear-1).
+> For details about the callback timing, see [onDisAppear](../arkts-components/arkts-arkui-common-commonmethod-c.md#ondisappear-1).
 
 **Since:** 11
 
@@ -74,7 +74,7 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](../arkts-components/arkts-arkui-size-i.md) | Yes | Width and height of the component, in vp. |
+| size | [Size](../arkts-components/arkts-arkui-canvas-size-i.md) | Yes | Width and height of the component, in vp. |
 
 ## makeNode
 
@@ -128,7 +128,7 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md
 
 > **NOTE**  
 >  
-> For details about the callback timing, see [onAttach](../arkts-components/arkts-arkui-commonmethod-c.md#onattach-1).
+> For details about the callback timing, see [onAttach](../arkts-components/arkts-arkui-common-commonmethod-c.md#onattach-1).
 
 **Since:** 18
 
@@ -174,7 +174,7 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md
 
 > **NOTE**  
 >  
-> For details about the callback timing, see [onDetach](../arkts-components/arkts-arkui-commonmethod-c.md#ondetach-1).
+> For details about the callback timing, see [onDetach](../arkts-components/arkts-arkui-common-commonmethod-c.md#ondetach-1).
 
 **Since:** 18
 
@@ -208,7 +208,7 @@ Called when the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-touchevent-i.md) | Yes | Touch event. |
+| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | Yes | Touch event. |
 
 ## onUnbind
 

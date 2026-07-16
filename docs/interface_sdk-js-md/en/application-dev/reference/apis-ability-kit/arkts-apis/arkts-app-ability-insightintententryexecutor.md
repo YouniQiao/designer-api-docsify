@@ -12,5 +12,5 @@ import { InsightIntentEntryExecutor } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [InsightIntentEntryExecutor](arkts-ability-insightintententryexecutor-c.md) | The class of insight intent entry executor. |
+| [InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md) | The class of insight intent entry executor. |
 

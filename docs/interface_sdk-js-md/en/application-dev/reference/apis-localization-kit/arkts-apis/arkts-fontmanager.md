@@ -23,9 +23,9 @@ import { fontManager } from '@kit.LocalizationKit';
 
 | Name | Description |
 | --- | --- |
-| [dataMigration](arkts-localization-datamigration-f-sys.md#datamigration-1) | Starts a migration task during device upgrade. |
-| [installFont](arkts-localization-installfont-f-sys.md#installfont-1) | Installs a font in the specified path. This API uses a promise to return the result. |
-| [uninstallFont](arkts-localization-uninstallfont-f-sys.md#uninstallfont-1) | Uninstalls a font by name. This API uses a promise to return the result. |
+| [dataMigration](arkts-localization-fontmanager-datamigration-f-sys.md#datamigration-1) | Starts a migration task during device upgrade. |
+| [installFont](arkts-localization-fontmanager-installfont-f-sys.md#installfont-1) | Installs a font in the specified path. This API uses a promise to return the result. |
+| [uninstallFont](arkts-localization-fontmanager-uninstallfont-f-sys.md#uninstallfont-1) | Uninstalls a font by name. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -33,7 +33,7 @@ import { fontManager } from '@kit.LocalizationKit';
 
 | Name | Description |
 | --- | --- |
-| [DataMigrationCallback](arkts-localization-datamigrationcallback-i-sys.md) | Callback type used during data migration. |
-| [DataMigrationProgress](arkts-localization-datamigrationprogress-i-sys.md) | Describes the data migration progress. |
+| [DataMigrationCallback](arkts-localization-fontmanager-datamigrationcallback-i-sys.md) | Callback type used during data migration. |
+| [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | Describes the data migration progress. |
 <!--DelEnd-->
 

@@ -12,7 +12,7 @@ import { InputMethodExtraConfig } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [InputMethodExtraConfig](arkts-ime-inputmethodextraconfig-i.md) | Represents the extension information of an input method. |
+| [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | Represents the extension information of an input method. |
 
 ### Types
 

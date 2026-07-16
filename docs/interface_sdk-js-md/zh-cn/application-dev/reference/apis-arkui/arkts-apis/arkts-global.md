@@ -31,5 +31,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [console](arkts-arkui-console-c.md) | Defines the console info. |
+| [console](arkts-arkui-global-console-c.md) | Defines the console info. |
 

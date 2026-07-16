@@ -72,7 +72,7 @@ Called when the pull-down distance changes.
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ Called when the pull-down distance changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<number> | Yes | Callback used to listen for the pull-down distance changes. It is triggered when the pull-down distance changes and returns the current pull-down distance.<br>Unit: vp |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<number> | Yes | Callback used to listen for the pull-down distance changes. It is triggered when the pull-down distance changes and returns the current pull-down distance.<br>Unit: vp |
 
 ## onRefreshing
 
@@ -228,7 +228,7 @@ Sets the minimum pull-down offset required to trigger a refresh. If the distance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Pull-down offset, in vp.<br>Default value: 96 vp when [promptText](arkts-arkui-refreshoptions-i.md)is set and 64 vp when [promptText](arkts-arkui-refreshoptions-i.md) is not set.<br>If the value specified is 0 or less than 0, the default value is used. |
+| value | number | Yes | Pull-down offset, in vp.<br>Default value: 96 vp when [promptText](arkts-arkui-refresh-refreshoptions-i.md)is set and 64 vp when [promptText](arkts-arkui-refresh-refreshoptions-i.md) is not set.<br>If the value specified is 0 or less than 0, the default value is used. |
 
 ## refreshOffset
 
@@ -238,7 +238,7 @@ refreshOffset(value: number | Resource)
 
 Sets the pull-down offset that triggers the refresh. When the pull-down distance is less than the value of this attribute, releasing the pull-down gesture does not trigger the refresh. The resource type is supported.
 
-If this API and [promptText](arkts-arkui-refreshoptions-i.md) are not set, the default offset is 64 vp. If [promptText](arkts-arkui-refreshoptions-i.md) is set, the default offset is 96 vp.
+If this API and [promptText](arkts-arkui-refresh-refreshoptions-i.md) are not set, the default offset is 64 vp. If [promptText](arkts-arkui-refresh-refreshoptions-i.md) is set, the default offset is 96 vp.
 
 **Since:** 26.0.0
 

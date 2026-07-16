@@ -13,7 +13,7 @@ import { DataShareExtensionAbility } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [DataShareExtensionAbility](arkts-arkdata-datashareextensionability-c-sys.md) | This module provides data sharing and expansion capabilities. |
+| [DataShareExtensionAbility](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md) | This module provides data sharing and expansion capabilities. |
 <!--DelEnd-->
 
 <!--Del-->

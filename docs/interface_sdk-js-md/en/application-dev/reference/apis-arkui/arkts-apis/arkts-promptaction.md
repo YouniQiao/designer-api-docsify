@@ -32,18 +32,18 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [LevelOrder](arkts-arkui-levelorder-c.md) | Defines the display order of a dialog box. |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | Defines the display order of a dialog box. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
+| [DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ImmersiveMode](arkts-arkui-immersivemode-e.md) | Enumerates the display area modes of the dialog box overlay within a page. |
-| [LevelMode](arkts-arkui-levelmode-e.md) | Enumerates the display level modes of the dialog box. |
+| [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md) | Enumerates the display area modes of the dialog box overlay within a page. |
+| [LevelMode](arkts-arkui-promptaction-levelmode-e.md) | Enumerates the display level modes of the dialog box. |
 

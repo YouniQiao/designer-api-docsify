@@ -115,10 +115,10 @@ fileio
 
 | Name | Description |
 | --- | --- |
-| [Dir](arkts-corefile-dir-depr-i.md) | Manages directories. Before calling a method of the **Dir** class, use the **opendir()** method synchronously or asynchronously to create a **Dir** instance. |
-| [Dirent](arkts-corefile-dirent-depr-i.md) | Provides information about files and directories. Before calling an API of the **Dirent** class, use [dir.read()](arkts-corefile-fileio-read-f.md#read-1) synchronously or asynchronously to create a **Dirent** instance. |
-| [ReadOut](arkts-corefile-readout-depr-i.md) | Obtains the file read result. This class applies only to the **read()** method. |
-| [Stat](arkts-corefile-stat-depr-i.md) | Provides detailed file information. Before calling a method of the **Stat** class, use the [stat()](arkts-corefile-fileio-stat-f.md#stat-1)method synchronously or asynchronously to create a **Stat** instance. |
-| [Stream](arkts-corefile-stream-depr-i.md) | Provides a stream for file operations. Before calling any API of the **Stream** class, use **createStream()** to create a **Stream** instance synchronously or asynchronously. |
-| [Watcher](arkts-corefile-watcher-depr-i.md) | Listens for file change. You can call the **Watcher.stop()** method synchronously or asynchronously to stop the listening. |
+| [Dir](arkts-corefile-fileio-dir-depr-i.md) | Manages directories. Before calling a method of the **Dir** class, use the **opendir()** method synchronously or asynchronously to create a **Dir** instance. |
+| [Dirent](arkts-corefile-fileio-dirent-depr-i.md) | Provides information about files and directories. Before calling an API of the **Dirent** class, use [dir.read()](arkts-corefile-fileio-read-f.md#read-1) synchronously or asynchronously to create a **Dirent** instance. |
+| [ReadOut](arkts-corefile-fileio-readout-depr-i.md) | Obtains the file read result. This class applies only to the **read()** method. |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) | Provides detailed file information. Before calling a method of the **Stat** class, use the [stat()](arkts-corefile-fileio-stat-f.md#stat-1)method synchronously or asynchronously to create a **Stat** instance. |
+| [Stream](arkts-corefile-fileio-stream-depr-i.md) | Provides a stream for file operations. Before calling any API of the **Stream** class, use **createStream()** to create a **Stream** instance synchronously or asynchronously. |
+| [Watcher](arkts-corefile-fileio-watcher-depr-i.md) | Listens for file change. You can call the **Watcher.stop()** method synchronously or asynchronously to stop the listening. |
 

@@ -34,7 +34,7 @@ autoCapitalizationMode(mode: AutoCapitalizationMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [AutoCapitalizationMode](../arkts-apis/arkts-arkui-autocapitalizationmode-e.md) | 是 | 自动大小写模式，默认状态无效。 |
+| mode | [AutoCapitalizationMode](../arkts-apis/arkts-arkui-text-common-autocapitalizationmode-e.md) | 是 | 自动大小写模式，默认状态无效。 |
 
 ## barState
 
@@ -58,7 +58,7 @@ barState(value: BarState)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | 是 | 输入框滚动条的显示模式。<br/>默认值：BarState.Auto |
+| value | [BarState](../arkts-apis/arkts-arkui-enums-barstate-e.md) | 是 | 输入框滚动条的显示模式。<br/>默认值：BarState.Auto |
 
 ## caretColor
 
@@ -104,7 +104,7 @@ caretStyle(value: CaretStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CaretStyle](../arkts-apis/arkts-arkui-caretstyle-i.md) | 是 | 光标的风格。 |
+| value | [CaretStyle](../arkts-apis/arkts-arkui-text-common-caretstyle-i.md) | 是 | 光标的风格。 |
 
 ## compressLeadingPunctuation
 
@@ -118,7 +118,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 >  
 > - 行首标点符号默认不压缩。  
 >  
-> - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-paragraphstyle-i.md)的行首压缩的标点范围。
+> - 支持压缩的标点符号，请参考[ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md)的行首压缩的标点范围。
 
 **起始版本：** 23
 
@@ -158,7 +158,7 @@ contentType(contentType: ContentType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contentType | [ContentType](../../apis-audio-kit/arkts-apis/arkts-audio-contenttype-e.md) | 是 | 自动填充类型。 |
+| contentType | [ContentType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-contenttype-e.md) | 是 | 自动填充类型。 |
 
 ## copyOption
 
@@ -182,7 +182,7 @@ copyOption(value: CopyOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | 是 | 输入的文本是否可复制。<br/>默认值：CopyOptions.LocalDevice，支持设备内复制。 |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-enums-copyoptions-e.md) | 是 | 输入的文本是否可复制。<br/>默认值：CopyOptions.LocalDevice，支持设备内复制。 |
 
 ## customKeyboard
 
@@ -200,15 +200,15 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 
 自定义键盘无法获取焦点，但是会拦截手势事件。
 
-默认在输入控件失去焦点时，关闭自定义键盘，开发者也可以通过[TextAreaController](arkts-arkui-textareacontroller-c.md).[stopEditing](arkts-arkui-textareacontroller-c.md#stopediting-1)方法控制键盘关闭。
+默认在输入控件失去焦点时，关闭自定义键盘，开发者也可以通过[TextAreaController](arkts-arkui-text-area-textareacontroller-c.md).[stopEditing](arkts-arkui-text-area-textareacontroller-c.md#stopediting-1)方法控制键盘关闭。
 
-当设置自定义键盘时，可以通过绑定[onKeyPreIme](arkts-arkui-commonmethod-c.md#onkeypreime-1)事件规避物理键盘的输入。
+当设置自定义键盘时，可以通过绑定[onKeyPreIme](arkts-arkui-common-commonmethod-c.md#onkeypreime-1)事件规避物理键盘的输入。
 
 从API version 23开始，自定义键盘可以通过[setCustomKeyboardContinueFeature](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#setcustomkeyboardcontinuefeature23)开启接续，在切换至其他自定义键盘时，会直接切换，不会触发键盘关闭和拉起动画。
 
 > **说明：**  
 >  
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 10
 
@@ -225,7 +225,7 @@ customKeyboard(value: CustomBuilder | ComponentContent | undefined, options?: Ke
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | CustomBuilder \| ComponentContent \| undefined | 是 | 自定义键盘。设定值为undefined时，关闭自定义键盘。<br>**起始版本：** 22 |
-| options | [KeyboardOptions](arkts-arkui-keyboardoptions-i.md) | 否 | 设置自定义键盘是否支持避让功能。<br>**起始版本：** 12 |
+| options | [KeyboardOptions](arkts-arkui-rich-editor-keyboardoptions-i.md) | 否 | 设置自定义键盘是否支持避让功能。<br>**起始版本：** 12 |
 
 ## decoration
 
@@ -249,7 +249,7 @@ decoration(value: TextDecorationOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextDecorationOptions](arkts-arkui-textdecorationoptions-i.md) | 是 | 文本装饰线对象。<br />默认值：{<br/> type: TextDecorationType.None,<br/> color: Color.Black,<br/> style: TextDecorationStyle.SOLID,<br/> thicknessScale: 1.0<br/>} |
+| value | [TextDecorationOptions](arkts-arkui-common-textdecorationoptions-i.md) | 是 | 文本装饰线对象。<br />默认值：{<br/> type: TextDecorationType.None,<br/> color: Color.Black,<br/> style: TextDecorationStyle.SOLID,<br/> thicknessScale: 1.0<br/>} |
 
 ## editMenuOptions
 
@@ -259,7 +259,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。
 
-调用[disableMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20)或[disableSystemServiceMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法[onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md#oncreatemenu-1)的入参列表中不包含被屏蔽的菜单选项。
+调用[disableMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20)或[disableSystemServiceMenuItems](../../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法[onCreateMenu](../arkts-apis/arkts-arkui-text-common-editmenuoptions-i.md#oncreatemenu-1)的入参列表中不包含被屏蔽的菜单选项。
 
 **起始版本：** 12
 
@@ -275,7 +275,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 | 扩展菜单选项。 |
+| editMenu | [EditMenuOptions](../arkts-apis/arkts-arkui-text-common-editmenuoptions-i.md) | 是 | 扩展菜单选项。 |
 
 ## ellipsisMode
 
@@ -441,7 +441,7 @@ enableSelectedDataDetector(enable: boolean | undefined)
 
 当enableSelectedDataDetector设置为true时，默认识别所有类型的实体。
 
-需要[CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-copyoptions-i.md)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
+需要[CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-copyoptions-i.md)为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
 
 **起始版本：** 22
 
@@ -469,7 +469,7 @@ enterKeyType(value: EnterKeyType)
 
 > **说明：**  
 >  
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -485,7 +485,7 @@ enterKeyType(value: EnterKeyType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | 是 | 输入法回车键类型。<br/>默认值：EnterKeyType.NEW_LINE |
+| value | [EnterKeyType](arkts-arkui-text-input-enterkeytype-e.md) | 是 | 输入法回车键类型。<br/>默认值：EnterKeyType.NEW_LINE |
 
 ## fallbackLineSpacing
 
@@ -629,7 +629,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontstyle-e.md) | 是 | 字体样式。<br/>默认值：FontStyle.Normal |
+| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | 是 | 字体样式。<br/>默认值：FontStyle.Normal |
 
 ## fontWeight
 
@@ -707,7 +707,7 @@ heightAdaptivePolicy(value: TextHeightAdaptivePolicy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md) | 是 | 文本自适应高度的方式。<br/>默认值：TextHeightAdaptivePolicy.MAX_LINES_FIRST |
+| value | [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-enums-textheightadaptivepolicy-e.md) | 是 | 文本自适应高度的方式。<br/>默认值：TextHeightAdaptivePolicy.MAX_LINES_FIRST |
 
 ## horizontalScrolling
 
@@ -864,7 +864,7 @@ lineBreakStrategy(strategy: LineBreakStrategy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md) | 是 | 文本的折行规则。 <br />默认值：LineBreakStrategy.GREEDY |
+| strategy | [LineBreakStrategy](../arkts-apis/arkts-arkui-enums-linebreakstrategy-e.md) | 是 | 文本的折行规则。 <br />默认值：LineBreakStrategy.GREEDY |
 
 ## lineHeight
 
@@ -937,7 +937,7 @@ lineSpacing(value: LengthMetrics, options?: LineSpacingOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 文本的行间距。设置值不大于0时，取默认值0。 |
-| options | [LineSpacingOptions](../arkts-apis/arkts-arkui-linespacingoptions-i.md) | 否 | 设置行间距配置项。<br/>默认值：{ onlyBetweenLines: false } |
+| options | [LineSpacingOptions](../arkts-apis/arkts-arkui-text-common-linespacingoptions-i.md) | 否 | 设置行间距配置项。<br/>默认值：{ onlyBetweenLines: false } |
 
 ## maxFontScale
 
@@ -1064,7 +1064,7 @@ maxLines(lines: number, options: MaxLinesOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | lines | number | 是 | 内联输入风格编辑态时文本可显示的最大行数。<br/>默认值：3，非内联模式下，默认值为+∞，不限制最大行数。 <br/>取值范围：(0, +∞) |
-| options | [MaxLinesOptions](../arkts-apis/arkts-arkui-maxlinesoptions-i.md) | 是 | 文本超长时显示效果。<br/>默认值：MaxLinesMode.CLIP |
+| options | [MaxLinesOptions](../arkts-apis/arkts-arkui-text-common-maxlinesoptions-i.md) | 是 | 文本超长时显示效果。<br/>默认值：MaxLinesMode.CLIP |
 
 ## minFontScale
 
@@ -1126,7 +1126,7 @@ minFontSize小于或等于0时，自适应字号不生效，此时按照[fontSiz
 minLines(lines: Optional<number>)
 ```
 
-设置最小行数。组件的高度将根据lines自动调整，确保显示高度不低于lines对应的高度。如果设置了[constraintSize](arkts-arkui-commonmethod-c.md#constraintsize-1)，那么组件最后显示高度会在[constraintSize](arkts-arkui-commonmethod-c.md#constraintsize-1)约束内。
+设置最小行数。组件的高度将根据lines自动调整，确保显示高度不低于lines对应的高度。如果设置了[constraintSize](arkts-arkui-common-commonmethod-c.md#constraintsize-1)，那么组件最后显示高度会在[constraintSize](arkts-arkui-common-commonmethod-c.md#constraintsize-1)约束内。
 
 **起始版本：** 20
 
@@ -1258,7 +1258,7 @@ onDidDelete(callback: Callback<DeleteValue>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<DeleteValue> | 是 | 在删除完成时调用的回调。<br/>仅支持系统输入法输入的场景。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<DeleteValue> | 是 | 在删除完成时调用的回调。<br/>仅支持系统输入法输入的场景。 |
 
 ## onDidInsert
 
@@ -1282,7 +1282,7 @@ onDidInsert(callback: Callback<InsertValue>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<InsertValue> | 是 | 在输入完成时调用的回调。<br/>仅支持系统输入法输入的场景。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<InsertValue> | 是 | 在输入完成时调用的回调。<br/>仅支持系统输入法输入的场景。 |
 
 ## onEditChange
 
@@ -1412,10 +1412,10 @@ onWillAttachIME(callback: Callback<IMEClient> | undefined)
 
 <!--Del-->
 
-在输入框将要绑定输入法前，可以通过`UIContext`的系统接口[setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-uicontext-c-sys.md#setkeyboardappearanceconfig-1)设置键盘的样式。<!--DelEnd-  
+在输入框将要绑定输入法前，可以通过`UIContext`的系统接口[setKeyboardAppearanceConfig](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#setkeyboardappearanceconfig-1)设置键盘的样式。<!--DelEnd-  
 ->
 
-从API version 22开始，调用[IMEClient](../../../../reference/apis-arkui/arkui-ts/ts-text-common.md#imeclient20对象说明)的[setExtraConfig](../arkts-apis/arkts-arkui-imeclient-i.md#setextraconfig-1)方法可以设置输入法扩展信息。在绑定输入法成功后，输入法会收到扩展信息，输入法可以依据此信息实现自定义功能。
+从API version 22开始，调用[IMEClient](../../../../reference/apis-arkui/arkui-ts/ts-text-common.md#imeclient20对象说明)的[setExtraConfig](../arkts-apis/arkts-arkui-text-common-imeclient-i.md#setextraconfig-1)方法可以设置输入法扩展信息。在绑定输入法成功后，输入法会收到扩展信息，输入法可以依据此信息实现自定义功能。
 
 IMEClient仅在onWillAttachIME执行期间有效，不可进行异步调用。
 
@@ -1433,7 +1433,7 @@ IMEClient仅在onWillAttachIME执行期间有效，不可进行异步调用。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<IMEClient> \| undefined | 是 | 在输入框将要绑定输入法前触发该回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<IMEClient> \| undefined | 是 | 在输入框将要绑定输入法前触发该回调。 |
 
 ## onWillChange
 
@@ -1459,7 +1459,7 @@ onWillChange的回调时序晚于onWillInsert、onWillDelete，早于onDidInsert
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<EditableTextChangeValue, boolean> | 是 | 在文本内容将要发生变化时的回调。<br/>返回true时，表示正常修改。返回false时，表示拦截此次触发。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<EditableTextChangeValue, boolean> | 是 | 在文本内容将要发生变化时的回调。<br/>返回true时，表示正常修改。返回false时，表示拦截此次触发。 |
 
 ## onWillCopy
 
@@ -1483,7 +1483,7 @@ onWillCopy(callback: Callback<string, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<string, boolean> | 是 | 复制操作前的回调。回调参数类型为string时，表示将要被复制的文本内容。回调参数类型为boolean时，表示当前选中文本是否允许被复制，true：允许文本被复制；false：不允许文本被复制。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<string, boolean> | 是 | 复制操作前的回调。回调参数类型为string时，表示将要被复制的文本内容。回调参数类型为boolean时，表示当前选中文本是否允许被复制，true：允许文本被复制；false：不允许文本被复制。 |
 
 ## onWillCut
 
@@ -1507,7 +1507,7 @@ onWillCut(callback: Callback<string, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<string, boolean> | 是 | 剪切操作前的回调。回调参数类型为string时，表示将要被剪切的文本内容。回调参数类型为boolean时，表示当前选中文本是否允许被剪切，true：允许文本被剪切；false：不允许文本被剪切。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<string, boolean> | 是 | 剪切操作前的回调。回调参数类型为string时，表示将要被剪切的文本内容。回调参数类型为boolean时，表示当前选中文本是否允许被剪切，true：允许文本被剪切；false：不允许文本被剪切。 |
 
 ## onWillDelete
 
@@ -1531,7 +1531,7 @@ onWillDelete(callback: Callback<DeleteValue, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<DeleteValue, boolean> | 是 | 在将要删除时调用的回调。<br/>在返回true时，表示正常删除，返回false时，表示不删除。<br/>在预上屏删除操作时，该回调不触发。<br/>仅支持系统输入法输入的场景。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<DeleteValue, boolean> | 是 | 在将要删除时调用的回调。<br/>在返回true时，表示正常删除，返回false时，表示不删除。<br/>在预上屏删除操作时，该回调不触发。<br/>仅支持系统输入法输入的场景。 |
 
 ## onWillInsert
 
@@ -1555,7 +1555,7 @@ onWillInsert(callback: Callback<InsertValue, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<InsertValue, boolean> | 是 | 在将要输入时调用的回调。<br/>在返回true时，表示正常插入，返回false时，表示不插入。<br/>在预上屏和候选词操作时，该回调不触发。<br/>仅支持系统输入法输入的场景。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<InsertValue, boolean> | 是 | 在将要输入时调用的回调。<br/>在返回true时，表示正常插入，返回false时，表示不插入。<br/>在预上屏和候选词操作时，该回调不触发。<br/>仅支持系统输入法输入的场景。 |
 
 ## orphanCharOptimization
 
@@ -1565,7 +1565,7 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。
 
-孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](TextAreaAttribute#wordBreak)为非BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md)的[locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textstyle-i.md)为“zh-Hans”或“zh-Hant”时生效。
+孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](TextAreaAttribute#wordBreak)为非BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)的[locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)为“zh-Hans”或“zh-Hant”时生效。
 
 **起始版本：** 26.0.0
 
@@ -1613,7 +1613,7 @@ placeholderFont(value: Font)
 
 > **说明：**  
 >  
-> 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-fontcollection-c.md#loadfontsync-1)注册自定义字体。
+> 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync-1)注册自定义字体。
 
 **起始版本：** 7
 
@@ -1627,7 +1627,7 @@ placeholderFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-c.md) | 是 | placeholder文本样式。 |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | placeholder文本样式。 |
 
 ## punctuationOverflow
 
@@ -1808,7 +1808,7 @@ showCounter(value: boolean, options?: InputCounterOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean | 是 | 是否显示计数器。<br/>true表示显示计数器，false表示不显示。 |
-| options | [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) | 否 | 计数器的配置项。<br>**起始版本：** 11 |
+| options | [InputCounterOptions](arkts-arkui-common-inputcounteroptions-i.md) | 否 | 计数器的配置项。<br>**起始版本：** 11 |
 
 ## stopBackPress
 
@@ -1880,7 +1880,7 @@ strokeJoinStyle(strokeJoinStyle: StrokeJoinStyle | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strokeJoinStyle | StrokeJoinStyle \| undefined | 是 | 文本描边拐角样式。<br/>值为undefined时，按照StrokeJoinStyle.MITER_JOIN处理，请参考[StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)，文本拐角处表现为锐角。 |
+| strokeJoinStyle | StrokeJoinStyle \| undefined | 是 | 文本描边拐角样式。<br/>值为undefined时，按照StrokeJoinStyle.MITER_JOIN处理，请参考[StrokeJoinStyle](../arkts-apis/arkts-arkui-text-common-strokejoinstyle-e.md)，文本拐角处表现为锐角。 |
 
 ## strokeWidth
 
@@ -1928,7 +1928,7 @@ style(value: TextContentStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextContentStyle](../arkts-apis/arkts-arkui-textcontentstyle-e.md) | 是 | 文本框多态样式。<br/>默认值：TextContentStyle.DEFAULT |
+| value | [TextContentStyle](../arkts-apis/arkts-arkui-enums-textcontentstyle-e.md) | 是 | 文本框多态样式。<br/>默认值：TextContentStyle.DEFAULT |
 
 ## textAlign
 
@@ -1940,7 +1940,7 @@ textAlign(value: TextAlign)
 
 支持TextAlign.Start、TextAlign.Center和TextAlign.End。从API version 11开始，新增TextAlign.JUSTIFY选项。
 
-可通过[align](arkts-arkui-commonmethod-c.md#align-1)属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置。
+可通过[align](arkts-arkui-common-commonmethod-c.md#align-1)属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置。
 
 - Alignment.TopStart、Alignment.Top、Alignment.TopEnd：内容顶部对齐。  
 - Alignment.Start、Alignment.Center、Alignment.End：内容垂直居中。  
@@ -1960,7 +1960,7 @@ textAlign(value: TextAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-textalign-e.md) | 是 | 文本在输入框中的水平对齐方式。<br/>默认值：TextAlign.Start |
+| value | [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md) | 是 | 文本在输入框中的水平对齐方式。<br/>默认值：TextAlign.Start |
 
 ## textDirection
 
@@ -2020,7 +2020,7 @@ textOverflow(value: TextOverflow)
 
 内联模式，主动配置textOverflow才会生效按[maxLines](TextAreaAttribute#maxLines(value: number))截断效果，不配置时，默认不截断。
 
-文本截断是按字截断。例如，英文以单词为最小单位进行截断，若需要以字母为单位进行截断，[wordBreak](../arkts-apis/arkts-arkui-wordbreak-e.md)属性可设置为WordBreak.BREAK_ALL。
+文本截断是按字截断。例如，英文以单词为最小单位进行截断，若需要以字母为单位进行截断，[wordBreak](../arkts-apis/arkts-arkui-enums-wordbreak-e.md)属性可设置为WordBreak.BREAK_ALL。
 
 当textOverflow设置为TextOverflow.None、TextOverflow.Clip、TextOverflow.Ellipsis时，需配合[maxLines](TextAreaAttribute#maxLines(value: number))使用，单独设置不生效。设置TextOverflow.None与TextOverflow.Clip效果一样。
 
@@ -2042,7 +2042,7 @@ textOverflow(value: TextOverflow)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md) | 是 | 文本超长时的显示方式。<br/>默认值：TextOverflow.Clip |
+| value | [TextOverflow](../arkts-apis/arkts-arkui-enums-textoverflow-e.md) | 是 | 文本超长时的显示方式。<br/>默认值：TextOverflow.Clip |
 
 ## type
 
@@ -2068,7 +2068,7 @@ type(value: TextAreaType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextAreaType](arkts-arkui-textareatype-e.md) | 是 | 输入框类型。<br/>默认值：TextAreaType.NORMAL |
+| value | [TextAreaType](arkts-arkui-text-area-textareatype-e.md) | 是 | 输入框类型。<br/>默认值：TextAreaType.NORMAL |
 
 ## wordBreak
 
@@ -2092,5 +2092,5 @@ wordBreak(value: WordBreak)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-wordbreak-e.md) | 是 | 文本断行规则。 <br />默认值：WordBreak.BREAK_WORD |
+| value | [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-wordbreak-e.md) | 是 | 文本断行规则。 <br />默认值：WordBreak.BREAK_WORD |
 

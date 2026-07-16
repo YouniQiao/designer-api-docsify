@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [NotificationTemplate](arkts-notification-notificationtemplate-i.md) | This module defines the notification template, which is used to specify the template type for a notification. |
+| [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) | This module defines the notification template, which is used to specify the template type for a notification. |
 

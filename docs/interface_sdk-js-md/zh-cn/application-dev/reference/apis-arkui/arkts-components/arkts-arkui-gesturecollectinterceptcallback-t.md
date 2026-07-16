@@ -5,7 +5,7 @@ declare type GestureCollectInterceptCallback = (recognizers: Array<GestureRecogn
    touchRecognizers?: Array<TouchRecognizer>) => GestureCollectIntervention
 ```
 
-定义在[onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept-1)中使用的回调类型。
+定义在[onGestureCollectIntercept](arkts-arkui-common-commonmethod-c.md#ongesturecollectintercept-1)中使用的回调类型。
 
 **起始版本：** 26.0.0
 

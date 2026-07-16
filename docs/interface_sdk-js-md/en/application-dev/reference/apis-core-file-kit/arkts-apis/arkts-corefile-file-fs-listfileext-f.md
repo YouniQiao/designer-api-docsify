@@ -36,13 +36,13 @@ Lists all file names in a directory. This API uses a promise to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileExtOptions](arkts-corefile-listfileextoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
+| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string[]> | Promise used to return the file names listed. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<string[]> | Promise used to return the file names listed. |
 
 **Error codes:**
 

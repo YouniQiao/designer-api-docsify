@@ -34,7 +34,7 @@ dateTimeOptions(value: DateTimeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DateTimeOptions](../../apis-localization-kit/arkts-apis/arkts-localization-datetimeoptions-i.md) | 是 | 设置时分秒是否显示前导0。默认值：<br/>hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"；12小时制默认为"numeric"，即没有前导0。minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。second: 默认为"2-digit"，设置second是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。当hour、minute、second的值设置为undefined时，显示效果与其默认值规则一致。 |
+| value | [DateTimeOptions](../../apis-localization-kit/arkts-apis/arkts-localization-intl-datetimeoptions-i.md) | 是 | 设置时分秒是否显示前导0。默认值：<br/>hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"；12小时制默认为"numeric"，即没有前导0。minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。second: 默认为"2-digit"，设置second是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。当hour、minute、second的值设置为undefined时，显示效果与其默认值规则一致。 |
 
 ## dateTimeOptions
 
@@ -106,7 +106,7 @@ disappearTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号和字体粗细。默认值：{ color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号和字体粗细。默认值：{ color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } |
 
 ## disappearTextStyle
 
@@ -168,7 +168,7 @@ enableHapticFeedback(enable: boolean)
 
 > **说明：**  
 >  
-> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 12
 
@@ -322,7 +322,7 @@ onEnterSelectedArea(callback: Callback<TimePickerResult>)
 
 > **说明：**  
 >  
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 该接口不支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 18
 
@@ -338,7 +338,7 @@ onEnterSelectedArea(callback: Callback<TimePickerResult>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<TimePickerResult> | 是 | 滑动TimePicker过程中，选项进入分割线区域时触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<TimePickerResult> | 是 | 滑动TimePicker过程中，选项进入分割线区域时触发的回调。 |
 
 ## selectedTextStyle
 
@@ -362,7 +362,7 @@ selectedTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。默认值：{ color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } } |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。默认值：{ color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } } |
 
 ## selectedTextStyle
 
@@ -410,7 +410,7 @@ textStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。默认值：{ color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } } |
+| value | [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。默认值：{ color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } } |
 
 ## textStyle
 

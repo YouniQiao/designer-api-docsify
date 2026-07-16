@@ -20,11 +20,11 @@ import { ability } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AbilityResult](arkts-ability-abilityresult-t.md) | Defines the level-2 module AbilityResult. |
-| [ConnectOptions](arkts-ability-connectoptions-t.md) | Defines the level-2 module ConnectOptions. |
-| [DataAbilityHelper](arkts-ability-dataabilityhelper-t.md) | Defines the level-2 module DataAbilityHelper. |
-| [DataAbilityOperation](arkts-ability-dataabilityoperation-t.md) | Defines the level-2 module DataAbilityOperation. |
-| [DataAbilityResult](arkts-ability-dataabilityresult-t.md) | Defines the level-2 module DataAbilityResult. |
-| [PacMap](arkts-ability-pacmap-t.md) | Defines the level-2 module PacMap. |
-| [StartAbilityParameter](arkts-ability-startabilityparameter-t.md) | Defines the level-2 module StartAbilityParameter. |
+| [AbilityResult](arkts-ability-ability-abilityresult-t.md) | Defines the level-2 module AbilityResult. |
+| [ConnectOptions](arkts-ability-ability-connectoptions-t.md) | Defines the level-2 module ConnectOptions. |
+| [DataAbilityHelper](arkts-ability-ability-dataabilityhelper-t.md) | Defines the level-2 module DataAbilityHelper. |
+| [DataAbilityOperation](arkts-ability-ability-dataabilityoperation-t.md) | Defines the level-2 module DataAbilityOperation. |
+| [DataAbilityResult](arkts-ability-ability-dataabilityresult-t.md) | Defines the level-2 module DataAbilityResult. |
+| [PacMap](arkts-ability-ability-pacmap-t.md) | Defines the level-2 module PacMap. |
+| [StartAbilityParameter](arkts-ability-ability-startabilityparameter-t.md) | Defines the level-2 module StartAbilityParameter. |
 

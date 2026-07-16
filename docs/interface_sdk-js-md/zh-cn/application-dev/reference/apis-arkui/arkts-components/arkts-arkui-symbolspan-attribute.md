@@ -34,7 +34,7 @@ attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)<SymbolSpanAttribute> | 是 | 动态设置组件的属性。 |
+| modifier | [AttributeModifier](arkts-arkui-common-attributemodifier-i.md)<SymbolSpanAttribute> | 是 | 动态设置组件的属性。 |
 
 ## effectStrategy
 
@@ -46,7 +46,7 @@ effectStrategy(value: SymbolEffectStrategy)
 
 > **说明：**  
 >  
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -64,7 +64,7 @@ effectStrategy(value: SymbolEffectStrategy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | 是 | SymbolSpan动效策略。<br/>默认值：SymbolEffectStrategy.NONE |
+| value | [SymbolEffectStrategy](arkts-arkui-symbolglyph-symboleffectstrategy-e.md) | 是 | SymbolSpan动效策略。<br/>默认值：SymbolEffectStrategy.NONE |
 
 ## fontColor
 
@@ -76,7 +76,7 @@ fontColor(value: Array<ResourceColor>)
 
 > **说明：**  
 >  
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -94,7 +94,7 @@ fontColor(value: Array<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ResourceColor> | 是 | SymbolSpan组件颜色。<br/> 默认值：不同渲染策略下默认值不同。 |
+| value | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<ResourceColor> | 是 | SymbolSpan组件颜色。<br/> 默认值：不同渲染策略下默认值不同。 |
 
 ## fontSize
 
@@ -106,7 +106,7 @@ fontSize(value: number | string | Resource)
 
 > **说明：**  
 >  
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -138,7 +138,7 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 
 > **说明：**  
 >  
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -183,7 +183,7 @@ fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWei
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number \| FontWeight \| ResourceStr | 是 | SymbolSpan组件图标小符号的粗细。<br/>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。<br/>ResourceStr类型仅支持number类型取值的字符串形式，例如“400"，以及“bold”、“bolder”、“lighter”、“regular”、“medium”分别对应FontWeight中相应的枚举值。<br/>默认值：FontWeight.Normal |
-| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 | 字体粗细配置。<br/>默认值继承[FontWeightConfigs](../../../../reference/apis-arkui/arkui-ts/ts-text-common.md#fontweightconfigs24对象说明)。 |
+| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-text-common-fontweightconfigs-i.md) | 否 | 字体粗细配置。<br/>默认值继承[FontWeightConfigs](../../../../reference/apis-arkui/arkui-ts/ts-text-common.md#fontweightconfigs24对象说明)。 |
 
 ## renderingStrategy
 
@@ -195,7 +195,7 @@ renderingStrategy(value: SymbolRenderingStrategy)
 
 > **说明：**  
 >  
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -213,5 +213,5 @@ renderingStrategy(value: SymbolRenderingStrategy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | 是 | SymbolSpan渲染策略。<br/>默认值：SymbolRenderingStrategy.SINGLE |
+| value | [SymbolRenderingStrategy](arkts-arkui-symbolglyph-symbolrenderingstrategy-e.md) | 是 | SymbolSpan渲染策略。<br/>默认值：SymbolRenderingStrategy.SINGLE |
 

@@ -6,13 +6,13 @@
 
 | Name | Description |
 | --- | --- |
-| [ShortcutInfo](arkts-ability-shortcutinfo-depr-i.md) |  |
+| [ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) |  |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ShortcutWant](arkts-ability-shortcutwant-depr-i-sys.md) |  |
+| [ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) |  |
 <!--DelEnd-->
 

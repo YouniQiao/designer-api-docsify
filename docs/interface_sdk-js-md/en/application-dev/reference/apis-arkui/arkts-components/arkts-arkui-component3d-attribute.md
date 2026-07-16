@@ -161,5 +161,5 @@ Buffer input for shader animation
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | The uniform buffer of shader input |
+| buffer | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<number> | Yes | The uniform buffer of shader input |
 

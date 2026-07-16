@@ -5,7 +5,7 @@ declare type GestureCollectInterceptCallback = (recognizers: Array<GestureRecogn
    touchRecognizers?: Array<TouchRecognizer>) => GestureCollectIntervention
 ```
 
-Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept-1).
+Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-common-commonmethod-c.md#ongesturecollectintercept-1).
 
 **Since:** 26.0.0
 

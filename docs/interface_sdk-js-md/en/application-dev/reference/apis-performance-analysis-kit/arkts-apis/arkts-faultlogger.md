@@ -40,20 +40,20 @@ import { FaultLogger } from '@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [query](arkts-performanceanalysis-query-f.md#query-1) | Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
-| [query](arkts-performanceanalysis-query-f.md#query-2) | Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
-| [querySelfFaultLog](arkts-performanceanalysis-queryselffaultlog-f.md#queryselffaultlog-1) | Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
-| [querySelfFaultLog](arkts-performanceanalysis-queryselffaultlog-f.md#queryselffaultlog-2) | Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
+| [query](arkts-performanceanalysis-faultlogger-query-f.md#query-1) | Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
+| [query](arkts-performanceanalysis-faultlogger-query-f.md#query-2) | Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
+| [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md#queryselffaultlog-1) | Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
+| [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md#queryselffaultlog-2) | Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [FaultLogInfo](arkts-performanceanalysis-faultloginfo-i.md) | Defines the data structure of the fault log information. |
+| [FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md) | Defines the data structure of the fault log information. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [FaultType](arkts-performanceanalysis-faulttype-e.md) | Enumerates the fault types. |
+| [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Enumerates the fault types. |
 

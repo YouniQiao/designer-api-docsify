@@ -23,7 +23,7 @@ import { shortKey } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [setKeyDownDuration](arkts-input-setkeydownduration-f-sys.md#setkeydownduration-1) | Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result. |
-| [setKeyDownDuration](arkts-input-setkeydownduration-f-sys.md#setkeydownduration-2) | Sets the delay for starting an ability using shortcut keys. This API uses a promise to return the result. |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration-1) | Sets the delay for starting an ability using shortcut keys. This API uses an asynchronous callback to return the result. |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md#setkeydownduration-2) | Sets the delay for starting an ability using shortcut keys. This API uses a promise to return the result. |
 <!--DelEnd-->
 

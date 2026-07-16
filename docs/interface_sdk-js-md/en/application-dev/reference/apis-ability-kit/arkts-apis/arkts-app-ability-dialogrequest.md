@@ -28,21 +28,21 @@ import { dialogRequest } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getRequestCallback](arkts-ability-getrequestcallback-f.md#getrequestcallback-1) | Obtains the request callback from Want. |
-| [getRequestInfo](arkts-ability-getrequestinfo-f.md#getrequestinfo-1) |  |
+| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getrequestcallback-1) | Obtains the request callback from Want. |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getrequestinfo-1) |  |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [RequestCallback](arkts-ability-requestcallback-i.md) | Provides a callback for setting the modal dialog box request result. |
-| [RequestInfo](arkts-ability-requestinfo-i.md) | Defines the request information, which is used as an input parameter for binding the modal dialog box. |
-| [RequestResult](arkts-ability-requestresult-i.md) | Defines the result of the request for the modal dialog box. It contains **ResultCode** and **ResultWant**. |
-| [WindowRect](arkts-ability-windowrect-i.md) | Defines the location attributes of a modal dialog box. |
+| [RequestCallback](arkts-ability-dialogrequest-requestcallback-i.md) | Provides a callback for setting the modal dialog box request result. |
+| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) | Defines the request information, which is used as an input parameter for binding the modal dialog box. |
+| [RequestResult](arkts-ability-dialogrequest-requestresult-i.md) | Defines the result of the request for the modal dialog box. It contains **ResultCode** and **ResultWant**. |
+| [WindowRect](arkts-ability-dialogrequest-windowrect-i.md) | Defines the location attributes of a modal dialog box. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ResultCode](arkts-ability-resultcode-e.md) | Enumerates the result codes of the request for the modal dialog box. |
+| [ResultCode](arkts-ability-dialogrequest-resultcode-e.md) | Enumerates the result codes of the request for the modal dialog box. |
 

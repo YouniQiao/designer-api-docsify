@@ -12,11 +12,11 @@ import { SelectTitleBarMenuItem, SelectTitleBar } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [SelectTitleBarMenuItem](arkts-arkui-selecttitlebarmenuitem-c.md) | Declaration of the menu item on the right side. |
+| [SelectTitleBarMenuItem](arkts-arkui-arkui-advanced-selecttitlebar-selecttitlebarmenuitem-c.md) | Declaration of the menu item on the right side. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [SelectTitleBar](arkts-arkui-selecttitlebar-s.md) | Declaration of the selectable title bar. |
+| [SelectTitleBar](arkts-arkui-arkui-advanced-selecttitlebar-selecttitlebar-s.md) | Declaration of the selectable title bar. |
 

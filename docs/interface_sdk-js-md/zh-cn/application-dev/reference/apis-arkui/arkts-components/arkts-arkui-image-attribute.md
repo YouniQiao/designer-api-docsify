@@ -1,6 +1,6 @@
 # Image属性/事件
 
-Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)、[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)和[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)类型的数据源，支持png、jpg、jpeg、bmp、svg、webp、gif、heif和tiff类型的图片格式，不支持apng和svga格式。
+Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)、[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)和[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)类型的数据源，支持png、jpg、jpeg、bmp、svg、webp、gif、heif和tiff类型的图片格式，不支持apng和svga格式。
 
 > **说明：**
 
@@ -10,8 +10,8 @@ Image为图片组件，常用于在应用中显示图片。Image支持加载[Pix
 >  
 > - 使用快捷组合键对Image组件复制时，Image组件必须处于获焦状态，如何获焦请参考[设置组件是否可获焦]  
 > (../../../../ui/arkts-common-events-focus-event.md#设置组件是否可获焦)。Image组件默认不获焦，  
-> 需将[focusable](arkts-arkui-commonmethod-c.md#focusable-1)属性设置为true，即可使用Tab键将焦点切换到组件上，再将  
-> [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch-1)属性设置为true，即可实现点击获焦。  
+> 需将[focusable](arkts-arkui-common-commonmethod-c.md#focusable-1)属性设置为true，即可使用Tab键将焦点切换到组件上，再将  
+> [focusOnTouch](arkts-arkui-common-commonmethod-c.md#focusontouch-1)属性设置为true，即可实现点击获焦。  
 >  
 > - 图片格式支持SVG图源，SVG标签文档请参考[SVG标签说明](./common)。  
 >  
@@ -51,7 +51,7 @@ alt(value: string | Resource | PixelMap)
 
 占位图支持使用[objectFit](ImageAttribute#objectFit)设置填充效果，与图片的填充效果一致。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
 
@@ -67,7 +67,7 @@ alt(value: string | Resource | PixelMap)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource \| PixelMap | 是 | 设置图片加载过程中显示的占位图，支持本地图片（png、jpg、bmp、svg、gif和heif类型），支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)类型图片，不支持网络图片。  - 支持`Base64`字符串。  - 支持file://路径前缀的字符串，应用沙箱URI：file://&lt;bundleName&gt;/&lt;sandboxPath&gt;。应用沙箱路径URI构造可参考[constructor](@ohos.file.fileuri:fileUri.FileUri#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](@ohos.file.fileuri:fileUri.getUriFromPath)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。默认值：null由有效值（可正常解析并加载的图片资源）切换为无效值（无法解析或加载的图片路径）时，组件保持显示此前成功加载的图片内容，不进行清除或重置操作。<br>**起始版本：** 12 |
+| value | string \| Resource \| PixelMap | 是 | 设置图片加载过程中显示的占位图，支持本地图片（png、jpg、bmp、svg、gif和heif类型），支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型图片，不支持网络图片。  - 支持`Base64`字符串。  - 支持file://路径前缀的字符串，应用沙箱URI：file://&lt;bundleName&gt;/&lt;sandboxPath&gt;。应用沙箱路径URI构造可参考[constructor](@ohos.file.fileuri:fileUri.FileUri#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](@ohos.file.fileuri:fileUri.getUriFromPath)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。默认值：null由有效值（可正常解析并加载的图片资源）切换为无效值（无法解析或加载的图片路径）时，组件保持显示此前成功加载的图片内容，不进行清除或重置操作。<br>**起始版本：** 12 |
 
 ## alt
 
@@ -79,12 +79,12 @@ alt(src: ResourceStr | PixelMap | ImageAlt)
 
 > **说明：**  
 >  
-> 通过[ImageAlt](arkts-arkui-imagealt-i.md)配置占位图时，Image会根据用户配置的加载过程中和加载失败的占位图源生效，  
+> 通过[ImageAlt](arkts-arkui-image-imagealt-i.md)配置占位图时，Image会根据用户配置的加载过程中和加载失败的占位图源生效，  
 > 未配置时默认不显示。
 
 占位图支持使用[objectFit](ImageAttribute#objectFit)设置填充效果，与图片的填充效果一致。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 22
 
@@ -102,7 +102,7 @@ alt(src: ResourceStr | PixelMap | ImageAlt)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ResourceStr \| PixelMap \| ImageAlt | 是 | 设置图片加载过程中和加载失败时的占位图，支持本地图片（png、jpg、bmp、svg、gif和heif类型），支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)类型图片，不支持网络图片。  - 支持`Base64`字符串。  - 支持file://路径前缀的字符串，应用沙箱URI：file://&lt;bundleName&gt;/&lt;sandboxPath&gt;。应用沙箱路径URI构造可参考[constructor](@ohos.file.fileuri:fileUri.FileUri#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](@ohos.file.fileuri:fileUri.getUriFromPath)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。 |
+| src | ResourceStr \| PixelMap \| ImageAlt | 是 | 设置图片加载过程中和加载失败时的占位图，支持本地图片（png、jpg、bmp、svg、gif和heif类型），支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型图片，不支持网络图片。  - 支持`Base64`字符串。  - 支持file://路径前缀的字符串，应用沙箱URI：file://&lt;bundleName&gt;/&lt;sandboxPath&gt;。应用沙箱路径URI构造可参考[constructor](@ohos.file.fileuri:fileUri.FileUri#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](@ohos.file.fileuri:fileUri.getUriFromPath)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。 |
 
 ## antialiased
 
@@ -114,7 +114,7 @@ antialiased(isAntialiased: Optional<boolean>)
 
 > **说明：**  
 >  
-> 如果图片设置了背景色属性([backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1))，  
+> 如果图片设置了背景色属性([backgroundColor](arkts-arkui-common-commonmethod-c.md#backgroundcolor-1))，  
 > 图片的抗锯齿属性  
 > 设置为true不会影响背景色的锯齿效果。  
 >  
@@ -150,7 +150,7 @@ autoResize(value: boolean)
 
 图片放大显示时：.interpolation(.High)
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)和SVG时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)和SVG时设置该属性不生效。
 
 **起始版本：** 7
 
@@ -222,7 +222,7 @@ colorFilter(value: ColorFilter | DrawingColorFilter | ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ColorFilter \| DrawingColorFilter \| ResourceColor | 是 | 图像颜色的滤镜值。[ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md)、[DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md)类型及SVG图源的相关说明，请参考[colorFilter](ImageAttribute#colorFilter(value: ColorFilter \| DrawingColorFilter))的接口说明。[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)类型的输入颜色值，默认按照[DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md).[createBlendModeColorFilter](@ohos.graphics.drawing:drawing.ColorFilter.createBlendModeColorFilter(color: common2D.Color, mode: BlendMode))的SRC_ATOP模式进行绘制。 |
+| value | ColorFilter \| DrawingColorFilter \| ResourceColor | 是 | 图像颜色的滤镜值。[ColorFilter](../arkts-apis/arkts-arkui-units-colorfilter-c.md)、[DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md)类型及SVG图源的相关说明，请参考[colorFilter](ImageAttribute#colorFilter(value: ColorFilter \| DrawingColorFilter))的接口说明。[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)类型的输入颜色值，默认按照[DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md).[createBlendModeColorFilter](@ohos.graphics.drawing:drawing.ColorFilter.createBlendModeColorFilter(color: common2D.Color, mode: BlendMode))的SRC_ATOP模式进行绘制。 |
 
 ## contentTransition
 
@@ -246,7 +246,7 @@ contentTransition(transition: ContentTransitionEffect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transition | [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md) | 是 | 过渡动效的类型。其中取值为ContentTransitionEffect.OPACITY表示淡入淡出效果，取值为ContentTransitionEffect.IDENTITY表示无动画效果。默认值：ContentTransitionEffect.IDENTITY设置为undefined或null时，取默认值ContentTransitionEffect.IDENTITY。**说明**：对动态图片资源不生效。 |
+| transition | [ContentTransitionEffect](arkts-arkui-common-contenttransitioneffect-c.md) | 是 | 过渡动效的类型。其中取值为ContentTransitionEffect.OPACITY表示淡入淡出效果，取值为ContentTransitionEffect.IDENTITY表示无动画效果。默认值：ContentTransitionEffect.IDENTITY设置为undefined或null时，取默认值ContentTransitionEffect.IDENTITY。**说明**：对动态图片资源不生效。 |
 
 ## copyOption
 
@@ -256,7 +256,7 @@ copyOption(value: CopyOptions)
 
 设置图片是否可复制。当copyOption设置为非CopyOptions.None时，支持使用长按、鼠标右击、快捷组合键'CTRL+C'等方式进行复制。SVG图片不支持复制。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 9
 
@@ -272,7 +272,7 @@ copyOption(value: CopyOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | 是 | 图片是否可复制。<br/>默认值：CopyOptions.None |
+| value | [CopyOptions](../arkts-apis/arkts-arkui-enums-copyoptions-e.md) | 是 | 图片是否可复制。<br/>默认值：CopyOptions.None |
 
 ## draggable
 
@@ -318,7 +318,7 @@ dynamicRangeMode(value: DynamicRangeMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | 是 | 图像显示的动态范围。<br/>默认值：DynamicRangeMode.STANDARD |
+| value | [DynamicRangeMode](arkts-arkui-image-dynamicrangemode-e.md) | 是 | 图像显示的动态范围。<br/>默认值：DynamicRangeMode.STANDARD |
 
 ## enableAnalyzer
 
@@ -328,21 +328,21 @@ enableAnalyzer(enable: boolean)
 
 设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能。<!--RP3--><!--RP3End-->
 
-不能和[overlay](arkts-arkui-commonmethod-c.md#overlay-1)属性同时使用，两者同时设置时overlay中[CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)属性将失效。该特性依赖设备能力。
+不能和[overlay](arkts-arkui-common-commonmethod-c.md#overlay-1)属性同时使用，两者同时设置时overlay中[CustomBuilder](../../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)属性将失效。该特性依赖设备能力。
 
-分析图像要求是静态非矢量图，即svg、gif等图像类型不支持分析，支持传入[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)进行分析，目前仅支持[RGBA_8888](../../apis-image-kit/arkts-apis/arkts-image-pixelmapformat-e.md)类型，使用方式见[示例5（开启图像AI分析）](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#示例5开启图像ai分析)。
+分析图像要求是静态非矢量图，即svg、gif等图像类型不支持分析，支持传入[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)进行分析，目前仅支持[RGBA_8888](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmapformat-e.md)类型，使用方式见[示例5（开启图像AI分析）](../../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#示例5开启图像ai分析)。
 
-[alt](ImageAttribute#alt(value: string | Resource | PixelMap))占位图不支持分析，[objectRepeat](ImageAttribute#objectRepeat)属性仅在取值为ImageRepeat.NoRepeat时支持分析，隐私遮罩属性[obscured](arkts-arkui-commonmethod-c.md#obscured-1)打开时不支持分析。
+[alt](ImageAttribute#alt(value: string | Resource | PixelMap))占位图不支持分析，[objectRepeat](ImageAttribute#objectRepeat)属性仅在取值为ImageRepeat.NoRepeat时支持分析，隐私遮罩属性[obscured](arkts-arkui-common-commonmethod-c.md#obscured-1)打开时不支持分析。
 
-基于完整原始图像进行分析，设置[clip](arkts-arkui-commonmethod-c.md#clip-1)、[margin](arkts-arkui-commonmethod-c.md#margin-1)、[borderRadius](arkts-arkui-commonmethod-c.md#borderradius-1)、[position](arkts-arkui-commonmethod-c.md#position-1)和[objectFit](ImageAttribute#objectFit)属性导致图像显示不完整，或使用[renderMode](ImageAttribute#renderMode)设置蒙层，仍基于完整原始图像进行分析。 [copyOption](ImageAttribute#copyOption)属性不影响AI分析功能。
+基于完整原始图像进行分析，设置[clip](arkts-arkui-common-commonmethod-c.md#clip-1)、[margin](arkts-arkui-common-commonmethod-c.md#margin-1)、[borderRadius](arkts-arkui-common-commonmethod-c.md#borderradius-1)、[position](arkts-arkui-common-commonmethod-c.md#position-1)和[objectFit](ImageAttribute#objectFit)属性导致图像显示不完整，或使用[renderMode](ImageAttribute#renderMode)设置蒙层，仍基于完整原始图像进行分析。 [copyOption](ImageAttribute#copyOption)属性不影响AI分析功能。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 > **说明：**  
 >  
 > - 需要配置权限：ohos.permission.INTERNET。  
 >  
-> - 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> - 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -368,7 +368,7 @@ fillColor(value: ResourceColor)
 
 设置填充颜色。仅对SVG图源生效，设置后会替换SVG图片中所有可绘制元素的填充颜色。如需对png图片进行修改颜色，可以使用[colorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter))。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
 
@@ -392,9 +392,9 @@ fillColor(value: ResourceColor)
 fillColor(color: ResourceColor | ColorContent)
 ```
 
-设置填充颜色。仅对SVG图源生效，设置后会替换SVG图片中所有可绘制元素的填充颜色。如需对png图片进行修改颜色，可以使用[colorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter))。如果想重置填充颜色可以传入[ColorContent](arkts-arkui-colorcontent-c.md)类型。
+设置填充颜色。仅对SVG图源生效，设置后会替换SVG图片中所有可绘制元素的填充颜色。如需对png图片进行修改颜色，可以使用[colorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter))。如果想重置填充颜色可以传入[ColorContent](arkts-arkui-image-colorcontent-c.md)类型。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 15
 
@@ -418,9 +418,9 @@ fillColor(color: ResourceColor | ColorContent)
 fillColor(color: ResourceColor | ColorContent | ColorMetrics)
 ```
 
-设置填充颜色。仅对SVG图源生效，设置后会替换SVG图片中所有可绘制元素的填充颜色。如需对png图片进行修改颜色，可以使用[colorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter))。如果想重置填充颜色可以传入[ColorContent](arkts-arkui-colorcontent-c.md)类型。支持通过传入[ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-c.md)类型设置P3色域颜色值<!--Del-->，从API version 24开始，支持BT2020色域颜色值<!--DelEnd-->，可在支持高色域的设备上获得更丰富的色彩表现。
+设置填充颜色。仅对SVG图源生效，设置后会替换SVG图片中所有可绘制元素的填充颜色。如需对png图片进行修改颜色，可以使用[colorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter))。如果想重置填充颜色可以传入[ColorContent](arkts-arkui-image-colorcontent-c.md)类型。支持通过传入[ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)类型设置P3色域颜色值<!--Del-->，从API version 24开始，支持BT2020色域颜色值<!--DelEnd-->，可在支持高色域的设备上获得更丰富的色彩表现。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 20
 
@@ -448,7 +448,7 @@ fitOriginalSize(value: boolean)
 
 图片组件已设置width、height属性时，fitOriginalSize属性不生效。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
 
@@ -530,7 +530,7 @@ interpolation(value: ImageInterpolation)
 
 定义图片插值效果。用于优化图片缩放时的锯齿问题。SVG类型图源不支持该属性。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
 
@@ -546,7 +546,7 @@ interpolation(value: ImageInterpolation)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageInterpolation](arkts-arkui-imageinterpolation-e.md) | 是 | 图片的插值效果。默认值：ImageInterpolation.Low设置undefined时，取值为ImageInterpolation.None。 |
+| value | [ImageInterpolation](arkts-arkui-image-imageinterpolation-e.md) | 是 | 图片的插值效果。默认值：ImageInterpolation.Low设置undefined时，取值为ImageInterpolation.None。 |
 
 ## matchTextDirection
 
@@ -556,7 +556,7 @@ matchTextDirection(value: boolean)
 
 设置图片是否跟随系统语言方向，在RTL语言环境下显示镜像翻转显示效果。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
 
@@ -596,7 +596,7 @@ objectFit(value: ImageFit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | 是 | 图片的填充效果。 |
+| value | [ImageFit](../arkts-apis/arkts-arkui-enums-imagefit-e.md) | 是 | 图片的填充效果。 |
 
 ## objectRepeat
 
@@ -606,7 +606,7 @@ objectRepeat(value: ImageRepeat)
 
 设置图片的重复样式，从中心点向两边重复，剩余空间不足放下一张图片时会截断。SVG类型图源不支持该属性。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
 
@@ -622,7 +622,7 @@ objectRepeat(value: ImageRepeat)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | 是 | 图片的重复样式。<br/>默认值：ImageRepeat.NoRepeat |
+| value | [ImageRepeat](../arkts-apis/arkts-arkui-enums-imagerepeat-e.md) | 是 | 图片的重复样式。<br/>默认值：ImageRepeat.NoRepeat |
 
 ## onComplete
 
@@ -1054,7 +1054,7 @@ onError(callback: ImageErrorCallback)
 
 图片加载异常时触发该回调。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时该事件不触发。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
 
 **起始版本：** 9
 
@@ -1070,7 +1070,7 @@ onError(callback: ImageErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | 是 | 图片加载异常时触发的回调。**说明：**建议开发者使用此回调，可快速确认图片加载失败时的具体原因，参见[ImageError](arkts-arkui-imageerror-i.md)的错误信息详细介绍。<br>**起始版本：** 11 |
+| callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | 是 | 图片加载异常时触发的回调。**说明：**建议开发者使用此回调，可快速确认图片加载失败时的具体原因，参见[ImageError](arkts-arkui-image-imageerror-i.md)的错误信息详细介绍。<br>**起始版本：** 11 |
 
 ## onFinish
 
@@ -1080,7 +1080,7 @@ onFinish(event: () => void)
 
 当加载的源文件为带动效的SVG格式图片时，SVG动效播放完成时会触发这个回调。如果动效为无限循环动效，则不会触发这个回调。
 
-仅支持SVG格式的图片。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时该事件不触发。
+仅支持SVG格式的图片。当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
 
 **起始版本：** 7
 
@@ -1124,7 +1124,7 @@ orientation(orientation: ImageRotateOrientation) : ImageAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| orientation | [ImageRotateOrientation](arkts-arkui-imagerotateorientation-e.md) | 是 | 图像内容的显示方向。仅支持静态位图的显示。如果需要显示携带旋转角度信息或翻转信息的图片，建议使用ImageRotateOrientation.AUTO进行设置。默认值：ImageRotateOrientation.UP<br/>设置为undefined或null时，取值为ImageRotateOrientation.AUTO。 |
+| orientation | [ImageRotateOrientation](arkts-arkui-image-imagerotateorientation-e.md) | 是 | 图像内容的显示方向。仅支持静态位图的显示。如果需要显示携带旋转角度信息或翻转信息的图片，建议使用ImageRotateOrientation.AUTO进行设置。默认值：ImageRotateOrientation.UP<br/>设置为undefined或null时，取值为ImageRotateOrientation.AUTO。 |
 
 ## privacySensitive
 
@@ -1162,7 +1162,7 @@ renderMode(value: ImageRenderMode)
 
 设置[ColorFilter](ImageAttribute#colorFilter(value: ColorFilter | DrawingColorFilter))时，该属性设置不生效。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
 
@@ -1178,7 +1178,7 @@ renderMode(value: ImageRenderMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | 是 | 图片的渲染模式为原色或黑白。<br/>默认值：ImageRenderMode.Original |
+| value | [ImageRenderMode](arkts-arkui-image-imagerendermode-e.md) | 是 | 图片的渲染模式为原色或黑白。<br/>默认值：ImageRenderMode.Original |
 
 ## resizable
 
@@ -1188,15 +1188,15 @@ resizable(value: ResizableOptions)
 
 设置图像拉伸时可调整大小的图像选项。拉伸对拖拽缩略图以及占位图有效。
 
-设置合法的 [ResizableOptions](arkts-arkui-resizableoptions-i.md) 时，objectRepeat属性、antialiased属性和orientation属性设置不生效。
+设置合法的 [ResizableOptions](arkts-arkui-image-resizableoptions-i.md) 时，objectRepeat属性、antialiased属性和orientation属性设置不生效。
 
-当设置 top +bottom 大于原图的高或者 left + right 大于原图的宽时[ResizableOptions](arkts-arkui-resizableoptions-i.md) 属性设置不生效。
+当设置 top +bottom 大于原图的高或者 left + right 大于原图的宽时[ResizableOptions](arkts-arkui-image-resizableoptions-i.md) 属性设置不生效。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)和SVG时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)和SVG时设置该属性不生效。
 
 > **说明：**  
 >  
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 11
 
@@ -1212,7 +1212,7 @@ resizable(value: ResizableOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResizableOptions](arkts-arkui-resizableoptions-i.md) | 是 | 图像拉伸时可调整大小的图像选项。 |
+| value | [ResizableOptions](arkts-arkui-image-resizableoptions-i.md) | 是 | 图像拉伸时可调整大小的图像选项。 |
 
 ## sourceSize
 
@@ -1222,7 +1222,7 @@ sourceSize(value: ImageSourceSize)
 
 设置图片解码尺寸。仅在目标尺寸小于图源尺寸时生效。SVG类型图源和PixelMap资源不支持该属性。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 **起始版本：** 7
 
@@ -1238,7 +1238,7 @@ sourceSize(value: ImageSourceSize)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageSourceSize](arkts-arkui-imagesourcesize-i.md) | 是 | 图片解码尺寸参数，降低图片的分辨率，常用于需要让图片显示尺寸比组件尺寸更小的场景。和[objectFit](ImageAttribute#objectFit)接口的ImageFit.None配合使用时可在组件内显示小图。<br>**起始版本：** 18 |
+| value | [ImageSourceSize](arkts-arkui-image-imagesourcesize-i.md) | 是 | 图片解码尺寸参数，降低图片的分辨率，常用于需要让图片显示尺寸比组件尺寸更小的场景。和[objectFit](ImageAttribute#objectFit)接口的ImageFit.None配合使用时可在组件内显示小图。<br>**起始版本：** 18 |
 
 ## supportSvg2
 
@@ -1276,7 +1276,7 @@ syncLoad(value: boolean)
 
 设置是否同步加载图片。建议加载尺寸较小的本地图片时将syncLoad设为true，因为耗时较短，在主线程上执行即可。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时设置该属性不生效。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时设置该属性不生效。
 
 如果加载图片时出现闪烁，设置syncLoad为true。详情请参见[并发优化](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-click-to-click-response-optimization#section715115119192)。
 

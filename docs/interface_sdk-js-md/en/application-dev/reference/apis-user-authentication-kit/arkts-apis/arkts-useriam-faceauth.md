@@ -27,6 +27,6 @@ import { faceAuth } from '@kit.UserAuthenticationKit';
 
 | Name | Description |
 | --- | --- |
-| [FaceAuthManager](arkts-userauthentication-faceauthmanager-c-sys.md) | Provides APIs for facial authentication management. It provides management features during face enrollment,including setting the surface ID of the face preview page. |
+| [FaceAuthManager](arkts-userauthentication-faceauth-faceauthmanager-c-sys.md) | Provides APIs for facial authentication management. It provides management features during face enrollment,including setting the surface ID of the face preview page. |
 <!--DelEnd-->
 

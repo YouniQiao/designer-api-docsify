@@ -20,9 +20,9 @@ color(value: ResourceColor | LinearGradient)
 
 设置进度条前景色。
 
-从API version 10开始支持利用[LinearGradient](arkts-arkui-lineargradient-i.md)设置Ring样式的渐变色。Ring类型不建议设置透明度，如需设置透明度，建议使用[DataPanel](arkts-arkui-datapanel.md)。
+从API version 10开始支持利用[LinearGradient](arkts-arkui-common-lineargradient-i.md)设置Ring样式的渐变色。Ring类型不建议设置透明度，如需设置透明度，建议使用[DataPanel](arkts-arkui-datapanel.md)。
 
-从API version 23开始支持利用[LinearGradient](arkts-arkui-lineargradient-i.md)设置Linear样式和Capsule样式的渐变色。API version 22及之前版本利用LinearGradient设置Linear样式和Capsule样式的渐变色时，会以默认主题色显示。
+从API version 23开始支持利用[LinearGradient](arkts-arkui-common-lineargradient-i.md)设置Linear样式和Capsule样式的渐变色。API version 22及之前版本利用LinearGradient设置Linear样式和Capsule样式的渐变色时，会以默认主题色显示。
 
 **起始版本：** 7
 
@@ -62,7 +62,7 @@ contentModifier(modifier: ContentModifier<ProgressConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<ProgressConfiguration> | 是 | The contentModifier of progress. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<ProgressConfiguration> | 是 | The contentModifier of progress. |
 
 ## privacySensitive
 
@@ -74,7 +74,7 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 > **说明：**  
 >  
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1)中调用。
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1)中调用。
 
 **起始版本：** 12
 

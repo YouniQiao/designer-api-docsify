@@ -28,5 +28,5 @@ wrapBuilder is a template function that returns a WrappedBuilder object.wrapBuil
 
 | Type | Description |
 | --- | --- |
-| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)<Args> | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
+| [WrappedBuilder](arkts-arkui-common-wrappedbuilder-c.md)<Args> | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 

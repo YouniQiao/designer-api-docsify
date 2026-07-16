@@ -28,7 +28,7 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Stat> | Promise that returns the detailed file status obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Stat> | Promise that returns the detailed file status obtained. |
 
 
 ## fstat
@@ -54,5 +54,5 @@ Obtains file status based on the file descriptor. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file whose status is to be obtained. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Stat> | Yes | Callback used to return the file status obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<Stat> | Yes | Callback used to return the file status obtained. |
 

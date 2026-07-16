@@ -161,5 +161,5 @@ shaderInputBuffer(buffer: Array<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 着色器输入的统一缓冲区 |
+| buffer | [Array](../../apis-arkts/arkts-apis/arkts-arkts-collections-array-c.md)<number> | 是 | 着色器输入的统一缓冲区 |
 

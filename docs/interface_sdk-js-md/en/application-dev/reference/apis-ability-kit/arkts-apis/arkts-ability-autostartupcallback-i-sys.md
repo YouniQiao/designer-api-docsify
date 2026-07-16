@@ -32,7 +32,7 @@ Called when the auto-startup setting of an application component is canceled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AutoStartupInfo](arkts-ability-autostartupinfo-t-sys.md) | Yes | Information about the target application component. |
+| info | [AutoStartupInfo](arkts-ability-common-autostartupinfo-t-sys.md) | Yes | Information about the target application component. |
 
 ## onAutoStartupOn
 
@@ -56,5 +56,5 @@ Called when auto-startup is set for an application component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AutoStartupInfo](arkts-ability-autostartupinfo-t-sys.md) | Yes | Information about the target application component. |
+| info | [AutoStartupInfo](arkts-ability-common-autostartupinfo-t-sys.md) | Yes | Information about the target application component. |
 

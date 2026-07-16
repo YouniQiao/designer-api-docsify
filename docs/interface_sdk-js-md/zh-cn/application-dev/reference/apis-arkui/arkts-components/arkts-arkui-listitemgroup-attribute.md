@@ -36,7 +36,7 @@ childrenMainSize(value: ChildrenMainSize)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | 是 | 该对象用来维护子组件在主轴方向的大小信息。 |
+| value | [ChildrenMainSize](arkts-arkui-common-childrenmainsize-c.md) | 是 | 该对象用来维护子组件在主轴方向的大小信息。 |
 
 ## divider
 

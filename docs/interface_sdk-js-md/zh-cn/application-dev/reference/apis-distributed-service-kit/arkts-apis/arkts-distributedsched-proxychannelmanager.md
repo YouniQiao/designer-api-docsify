@@ -25,26 +25,26 @@ import { proxyChannelManager } from '@kit.DistributedServiceKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [closeProxyChannel](arkts-distributedservice-closeproxychannel-f.md#closeproxychannel-1) | 关闭已打开的代理通道。 |
-| [off](arkts-distributedservice-off-f.md#off-1) | 取消订阅数据接收事件，停止接收数据。 |
-| [off](arkts-distributedservice-off-f.md#off-2) | 取消订阅通道状态事件。 |
-| [on](arkts-distributedservice-on-f.md#on-1) | 订阅数据接收事件，使用异步回调。 |
-| [on](arkts-distributedservice-on-f.md#on-2) | 订阅通道状态事件，使用callback进行异步回调。 |
-| [openProxyChannel](arkts-distributedservice-openproxychannel-f.md#openproxychannel-1) | 打开代理通道，使用Promise异步回调返回结果。 |
-| [sendData](arkts-distributedservice-senddata-f.md#senddata-1) | 向对端发送数据，使用Promise异步回调。 |
+| [closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md#closeproxychannel-1) | 关闭已打开的代理通道。 |
+| [off](arkts-distributedservice-proxychannelmanager-off-f.md#off-1) | 取消订阅数据接收事件，停止接收数据。 |
+| [off](arkts-distributedservice-proxychannelmanager-off-f.md#off-2) | 取消订阅通道状态事件。 |
+| [on](arkts-distributedservice-proxychannelmanager-on-f.md#on-1) | 订阅数据接收事件，使用异步回调。 |
+| [on](arkts-distributedservice-proxychannelmanager-on-f.md#on-2) | 订阅通道状态事件，使用callback进行异步回调。 |
+| [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md#openproxychannel-1) | 打开代理通道，使用Promise异步回调返回结果。 |
+| [sendData](arkts-distributedservice-proxychannelmanager-senddata-f.md#senddata-1) | 向对端发送数据，使用Promise异步回调。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ChannelInfo](arkts-distributedservice-channelinfo-i.md) | 打开代理通道函数的入参，包括对端设备的MAC地址和监听服务的UUID。 |
-| [ChannelStateInfo](arkts-distributedservice-channelstateinfo-i.md) | 当代理通道状态变化时，用于表示代理通道的连接状态。 |
-| [DataInfo](arkts-distributedservice-datainfo-i.md) | 存放接收的数据信息，包括通道Id和数据。 |
+| [ChannelInfo](arkts-distributedservice-proxychannelmanager-channelinfo-i.md) | 打开代理通道函数的入参，包括对端设备的MAC地址和监听服务的UUID。 |
+| [ChannelStateInfo](arkts-distributedservice-proxychannelmanager-channelstateinfo-i.md) | 当代理通道状态变化时，用于表示代理通道的连接状态。 |
+| [DataInfo](arkts-distributedservice-proxychannelmanager-datainfo-i.md) | 存放接收的数据信息，包括通道Id和数据。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ChannelState](arkts-distributedservice-channelstate-e.md) | 通道状态发生变化时，代理通道上报的通道连接状态。 |
-| [LinkType](arkts-distributedservice-linktype-e.md) | 链路类型。 |
+| [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md) | 通道状态发生变化时，代理通道上报的通道连接状态。 |
+| [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md) | 链路类型。 |
 

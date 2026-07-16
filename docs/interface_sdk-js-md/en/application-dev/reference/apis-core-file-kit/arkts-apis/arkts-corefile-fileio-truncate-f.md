@@ -29,7 +29,7 @@ Truncates a file based on the file path. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 
 ## truncate
@@ -55,7 +55,7 @@ Truncates a file based on the file path. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file to truncate. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 
 ## truncate
@@ -82,5 +82,5 @@ Truncates a file based on the file path. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file to truncate. |
 | len | number | Yes | File length after truncation, in bytes. The default value is **0**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 

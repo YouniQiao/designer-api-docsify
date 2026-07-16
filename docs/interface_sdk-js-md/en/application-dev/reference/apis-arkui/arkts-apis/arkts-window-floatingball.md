@@ -26,23 +26,23 @@ import { floatingBall } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [create](arkts-arkui-create-f.md#create-1) | Creates a floating ball controller. This API uses a promise to return the result. |
-| [isFloatingBallEnabled](arkts-arkui-isfloatingballenabled-f.md#isfloatingballenabled-1) | Checks whether the device supports floating balls. |
+| [create](arkts-arkui-floatingball-create-f.md#create-1) | Creates a floating ball controller. This API uses a promise to return the result. |
+| [isFloatingBallEnabled](arkts-arkui-floatingball-isfloatingballenabled-f.md#isfloatingballenabled-1) | Checks whether the device supports floating balls. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [FloatingBallConfiguration](arkts-arkui-floatingballconfiguration-i.md) | Describes the parameters for creating a floating ball controller. |
-| [FloatingBallController](arkts-arkui-floatingballcontroller-i.md) | Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks.Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-create-f.md#create-1) to create a floating ball controller instance. |
-| [FloatingBallParams](arkts-arkui-floatingballparams-i.md) | Describes the parameters for starting and updating the floating ball. |
-| [FloatingBallWindowInfo](arkts-arkui-floatingballwindowinfo-i.md) | Describes the floating ball window information. |
+| [FloatingBallConfiguration](arkts-arkui-floatingball-floatingballconfiguration-i.md) | Describes the parameters for creating a floating ball controller. |
+| [FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md) | Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks.Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md#create-1) to create a floating ball controller instance. |
+| [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Describes the parameters for starting and updating the floating ball. |
+| [FloatingBallWindowInfo](arkts-arkui-floatingball-floatingballwindowinfo-i.md) | Describes the floating ball window information. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [FloatingBallState](arkts-arkui-floatingballstate-e.md) | Enumerates the lifecycle states of the floating ball. |
-| [FloatingBallTemplate](arkts-arkui-floatingballtemplate-e.md) | Enumerates the types of the floating ball template. |
-| [FloatingBallTextUpdateAnimationType](arkts-arkui-floatingballtextupdateanimationtype-e.md) | Enumerates the animation types used when the floating ball text is updated. |
+| [FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md) | Enumerates the lifecycle states of the floating ball. |
+| [FloatingBallTemplate](arkts-arkui-floatingball-floatingballtemplate-e.md) | Enumerates the types of the floating ball template. |
+| [FloatingBallTextUpdateAnimationType](arkts-arkui-floatingball-floatingballtextupdateanimationtype-e.md) | Enumerates the animation types used when the floating ball text is updated. |
 

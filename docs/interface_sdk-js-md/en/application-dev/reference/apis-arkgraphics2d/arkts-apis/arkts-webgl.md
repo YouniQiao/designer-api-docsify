@@ -6,19 +6,19 @@
 
 | Name | Description |
 | --- | --- |
-| [WebGLActiveInfo](arkts-arkgraphics2d-webglactiveinfo-i.md) | WebGL 1.0 |
-| [WebGLBuffer](arkts-arkgraphics2d-webglbuffer-i.md) | WebGL 1.0 |
-| [WebGLContextAttributes](arkts-arkgraphics2d-webglcontextattributes-i.md) | WebGL 1.0 |
-| [WebGLFramebuffer](arkts-arkgraphics2d-webglframebuffer-i.md) | WebGL 1.0 |
-| [WebGLProgram](arkts-arkgraphics2d-webglprogram-i.md) | WebGL 1.0 |
-| [WebGLRenderbuffer](arkts-arkgraphics2d-webglrenderbuffer-i.md) | WebGL 1.0 |
-| [WebGLRenderingContext](arkts-arkgraphics2d-webglrenderingcontext-i.md) | WebGL 1.0 |
-| [WebGLRenderingContextBase](arkts-arkgraphics2d-webglrenderingcontextbase-i.md) | WebGL 1.0 |
-| [WebGLRenderingContextOverloads](arkts-arkgraphics2d-webglrenderingcontextoverloads-i.md) | WebGL 1.0 |
-| [WebGLShader](arkts-arkgraphics2d-webglshader-i.md) | WebGL 1.0 |
-| [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webglshaderprecisionformat-i.md) | WebGL 1.0 |
-| [WebGLTexture](arkts-arkgraphics2d-webgltexture-i.md) | WebGL 1.0 |
-| [WebGLUniformLocation](arkts-arkgraphics2d-webgluniformlocation-i.md) | WebGL 1.0 |
+| [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) | WebGL 1.0 |
+| [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) | WebGL 1.0 |
+| [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | WebGL 1.0 |
+| [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) | WebGL 1.0 |
+| [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | WebGL 1.0 |
+| [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) | WebGL 1.0 |
+| [WebGLRenderingContext](arkts-arkgraphics2d-webgl-webglrenderingcontext-i.md) | WebGL 1.0 |
+| [WebGLRenderingContextBase](arkts-arkgraphics2d-webgl-webglrenderingcontextbase-i.md) | WebGL 1.0 |
+| [WebGLRenderingContextOverloads](arkts-arkgraphics2d-webgl-webglrenderingcontextoverloads-i.md) | WebGL 1.0 |
+| [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | WebGL 1.0 |
+| [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webgl-webglshaderprecisionformat-i.md) | WebGL 1.0 |
+| [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) | WebGL 1.0 |
+| [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) | WebGL 1.0 |
 
 ### Types
 

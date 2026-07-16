@@ -27,7 +27,7 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 
 | Name | Description |
 | --- | --- |
-| [verifyAuthToken](arkts-userauthentication-verifyauthtoken-f-sys.md#verifyauthtoken-1) | Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed **AuthToken** is returned. This API uses a promise to return the result. |
+| [verifyAuthToken](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md#verifyauthtoken-1) | Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed **AuthToken** is returned. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -35,7 +35,7 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 
 | Name | Description |
 | --- | --- |
-| [AuthToken](arkts-userauthentication-authtoken-i-sys.md) | Authentication token data. It indicates the parsed **AuthToken** data returned after the verification is successful, including detailed authentication information such as the challenge value, authentication trust level,authentication type, and user ID. |
+| [AuthToken](arkts-userauthentication-useraccessctrl-authtoken-i-sys.md) | Authentication token data. It indicates the parsed **AuthToken** data returned after the verification is successful, including detailed authentication information such as the challenge value, authentication trust level,authentication type, and user ID. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -43,6 +43,6 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 
 | Name | Description |
 | --- | --- |
-| [AuthTokenType](arkts-userauthentication-authtokentype-e-sys.md) | Enumerates the authentication token types. They are used to identify the source of the token. |
+| [AuthTokenType](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md) | Enumerates the authentication token types. They are used to identify the source of the token. |
 <!--DelEnd-->
 

@@ -6,7 +6,7 @@ type ImageErrorCallback = (error: ImageError) => void
 
 图片加载异常时触发此回调。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-animateddrawabledescriptor-c.md)时该事件不触发。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
 
 **起始版本：** 9
 

@@ -1,6 +1,6 @@
 # ApplicationStateObserver
 
-应用状态监听器，可以作为入参传入[on('applicationState')](arkts-ability-on-f.md#on-1)方法，监听应用的生命周期变化。
+应用状态监听器，可以作为入参传入[on('applicationState')](arkts-ability-appmanager-on-f.md#on-1)方法，监听应用的生命周期变化。
 
 **起始版本：** 14
 
@@ -46,7 +46,7 @@ onAppStarted(appStateData: AppStateData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-t.md) | 是 | 应用状态信息。 |
+| appStateData | [AppStateData](arkts-ability-appmanager-appstatedata-t.md) | 是 | 应用状态信息。 |
 
 ## onAppStopped
 
@@ -66,7 +66,7 @@ onAppStopped(appStateData: AppStateData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-t.md) | 是 | 应用状态信息。 |
+| appStateData | [AppStateData](arkts-ability-appmanager-appstatedata-t.md) | 是 | 应用状态信息。 |
 
 ## onForegroundApplicationChanged
 
@@ -86,7 +86,7 @@ onForegroundApplicationChanged(appStateData: AppStateData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-t.md) | 是 | 应用状态信息。 |
+| appStateData | [AppStateData](arkts-ability-appmanager-appstatedata-t.md) | 是 | 应用状态信息。 |
 
 ## onProcessCreated
 

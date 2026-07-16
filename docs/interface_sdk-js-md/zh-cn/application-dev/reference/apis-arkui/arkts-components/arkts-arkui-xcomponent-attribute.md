@@ -105,7 +105,7 @@ hdrBrightness(brightness: number, type?: HdrType)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | brightness | number | 是 | 控制HDR视频的亮度。 |
-| type | [HdrType](arkts-arkui-hdrtype-e.md) | 否 | XComponent的HDR类型。 |
+| type | [HdrType](arkts-arkui-xcomponent-hdrtype-e.md) | 否 | XComponent的HDR类型。 |
 
 ## onDestroy
 

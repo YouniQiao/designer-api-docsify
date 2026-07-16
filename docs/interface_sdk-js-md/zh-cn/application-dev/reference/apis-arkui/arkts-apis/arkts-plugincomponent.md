@@ -20,5 +20,5 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [PluginComponentTemplate](arkts-arkui-plugincomponenttemplate-i.md) | 插件组件模板属性。 |
+| [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) | 插件组件模板属性。 |
 

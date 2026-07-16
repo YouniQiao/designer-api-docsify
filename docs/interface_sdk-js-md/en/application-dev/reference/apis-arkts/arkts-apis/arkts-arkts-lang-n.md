@@ -20,5 +20,5 @@ import { Retention, RetentionPolicy } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [ISendable](arkts-arkts-isendable-i.md) | Base interface for all Sendable classes/interfaces. |
+| [ISendable](arkts-arkts-lang-isendable-i.md) | Base interface for all Sendable classes/interfaces. |
 

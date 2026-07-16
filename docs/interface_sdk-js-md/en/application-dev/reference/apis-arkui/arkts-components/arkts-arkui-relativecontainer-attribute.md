@@ -1,8 +1,8 @@
 # RelativeContainer properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-commonmethod-c.md), the following attributes are supported.
 
-The [universal events](arkts-arkui-commonmethod-c.md) are supported.
+The [universal events](arkts-arkui-common-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** RelativeContainerAttribute extends [CommonMethod<RelativeContainerAttribute>](CommonMethod<RelativeContainerAttribute>)
 
@@ -34,7 +34,7 @@ Sets the [barriers](../../../../ui/arkts-layout-development-relative-layout.md#s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<BarrierStyle> | Yes | Barriers in the **RelativeContainer** component. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<BarrierStyle> | Yes | Barriers in the **RelativeContainer** component. |
 
 ## barrier
 
@@ -58,7 +58,7 @@ Sets barriers in the **RelativeContainer** component. Each array element defines
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| barrierStyle | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<LocalizedBarrierStyle> | Yes | Barriers in the **RelativeContainer** component. |
+| barrierStyle | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<LocalizedBarrierStyle> | Yes | Barriers in the **RelativeContainer** component. |
 
 ## guideLine
 
@@ -82,5 +82,5 @@ Sets the [guidelines](../../../../ui/arkts-layout-development-relative-layout.md
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<GuideLineStyle> | Yes | Guidelines in the **RelativeContainer** component. |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<GuideLineStyle> | Yes | Guidelines in the **RelativeContainer** component. |
 

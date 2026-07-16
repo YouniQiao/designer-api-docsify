@@ -21,7 +21,7 @@ Represents the callback used to set the parallel relationship between gestures o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | current | GestureRecognizer | Yes | Gesture recognizer of the current component. Currently only a gesturerecognizer of the [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md).PAN_GESTURE type is supported. |
-| others | Array&lt;GestureRecognizer&gt; | Yes | Gesture recognizers of the same [GestureType](../arkts-apis/arkts-arkui-gesturetype-e.md) fromother components with higher priority in the response chain. |
+| others | Array&lt;GestureRecognizer&gt; | Yes | Gesture recognizers of the same [GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md) fromother components with higher priority in the response chain. |
 
 **Return value:**
 

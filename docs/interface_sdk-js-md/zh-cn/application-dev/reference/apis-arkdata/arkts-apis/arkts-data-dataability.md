@@ -20,17 +20,17 @@ import { dataAbility } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createRdbPredicates](arkts-arkdata-createrdbpredicates-f.md#createrdbpredicates-1) | 通过表名和DataAbility谓词对象创建Rdb谓词对象。 |
+| [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md#createrdbpredicates-1) | 通过表名和DataAbility谓词对象创建Rdb谓词对象。 |
 
 ### 类
 
 | 名称 | 说明 |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataabilitypredicates-c.md) | 提供用于实现不同查询方法的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 提供用于实现不同查询方法的谓词。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [ValueType](arkts-arkdata-valuetype-t.md) | 用于表示允许的数据字段类型。 |
+| [ValueType](arkts-arkdata-dataability-valuetype-t.md) | 用于表示允许的数据字段类型。 |
 

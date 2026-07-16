@@ -31,7 +31,7 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isAccessibilityFocus | boolean | Yes | Whether the obtained focus element is an accessibility focus. The value **True** means that the obtained focus element is an accessibility focus, and **False** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AccessibilityElement> | Yes | Callback used to return the current focus element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<AccessibilityElement> | Yes | Callback used to return the current focus element. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ Obtains the focus element. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AccessibilityElement> | Promise used to return the current focus element. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<AccessibilityElement> | Promise used to return the current focus element. |
 
 **Error codes:**
 
@@ -95,7 +95,7 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AccessibilityElement> | Yes | Callback used to return the current focus element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<AccessibilityElement> | Yes | Callback used to return the current focus element. |
 
 **Error codes:**
 
@@ -125,7 +125,7 @@ Obtains the root element of a window. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowId | number | Yes | ID of the window whose root element is to be obtained. If this parameter is not specified, it indicates the current active window. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AccessibilityElement> | Yes | Callback used to return the root element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<AccessibilityElement> | Yes | Callback used to return the root element. |
 
 **Error codes:**
 
@@ -160,7 +160,7 @@ Obtains the root element of a window. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AccessibilityElement> | Promise used to return the root element of the specified window. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<AccessibilityElement> | Promise used to return the root element of the specified window. |
 
 **Error codes:**
 
@@ -189,7 +189,7 @@ Obtains the root element of a window. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AccessibilityElement> | Yes | Callback used to return the root element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<AccessibilityElement> | Yes | Callback used to return the root element. |
 
 **Error codes:**
 
@@ -219,7 +219,7 @@ Obtains the list of windows on a display. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayId | number | Yes | ID of the display from which the window information is obtained. If this parameter is not specified, it indicates the default main display. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AccessibilityElement>> | Yes | Callback used to return the window list. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<Array<AccessibilityElement>> | Yes | Callback used to return the window list. |
 
 **Error codes:**
 
@@ -254,7 +254,7 @@ Obtains the list of windows on a display. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<AccessibilityElement>> | Promise used to return the window list. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Array<AccessibilityElement>> | Promise used to return the window list. |
 
 **Error codes:**
 
@@ -283,7 +283,7 @@ Obtains the list of windows on a display. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<AccessibilityElement>> | Yes | Callback used to return the window list. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<Array<AccessibilityElement>> | Yes | Callback used to return the window list. |
 
 **Error codes:**
 
@@ -314,8 +314,8 @@ Injects a gesture. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-gesturepath-c.md) | Yes | Path of the gesture to inject. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
+| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -346,13 +346,13 @@ Injects a gesture. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-gesturepath-c.md) | Yes | Path of the gesture to inject. |
+| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -381,7 +381,7 @@ Injects a gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesturePath | [GesturePath](arkts-accessibility-gesturepath-c.md) | Yes | Path of the gesture to inject. |
+| gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
 
 **Error codes:**
 
@@ -410,8 +410,8 @@ Sets the concerned target bundle. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetNames | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Bundle name of the concerned target application. The service receives accessibility events of the concerned application. By default, accessibility events of all applications are received. Pass in an empty array if there is no concerned application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
+| targetNames | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<string> | Yes | Bundle name of the concerned target application. The service receives accessibility events of the concerned application. By default, accessibility events of all applications are received. Pass in an empty array if there is no concerned application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
 
 **Error codes:**
 
@@ -439,13 +439,13 @@ Sets the concerned target bundle. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetNames | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Bundle name of the concerned target application. The service receives accessibility events of the concerned application. By default, accessibility events of all applications are received. Pass in an empty array if there is no concerned application. |
+| targetNames | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<string> | Yes | Bundle name of the concerned target application. The service receives accessibility events of the concerned application. By default, accessibility events of all applications are received. Pass in an empty array if there is no concerned application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

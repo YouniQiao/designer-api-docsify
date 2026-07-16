@@ -29,18 +29,18 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [LevelOrder](arkts-arkui-levelorder-c.md) | 弹窗层级，可以控制弹窗显示的顺序。 |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 弹窗层级，可以控制弹窗显示的顺序。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | Dialog关闭的信息。 |
+| [DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md) | Dialog关闭的信息。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ImmersiveMode](arkts-arkui-immersivemode-e.md) | 页面内弹窗蒙层显示区域模式。 |
-| [LevelMode](arkts-arkui-levelmode-e.md) | 弹窗显示层级模式。 |
+| [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md) | 页面内弹窗蒙层显示区域模式。 |
+| [LevelMode](arkts-arkui-promptaction-levelmode-e.md) | 弹窗显示层级模式。 |
 

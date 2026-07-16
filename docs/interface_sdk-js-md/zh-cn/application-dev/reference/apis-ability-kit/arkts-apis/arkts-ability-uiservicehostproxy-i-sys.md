@@ -1,6 +1,6 @@
 # UIServiceHostProxy（系统接口）
 
-UIServiceHostProxy提供代理能力，可以将数据从[UIServiceExtension](arkts-ability-uiserviceextensionability-c-sys.md)服务端发送到客户端。
+UIServiceHostProxy提供代理能力，可以将数据从[UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)服务端发送到客户端。
 
 > **说明：**  
 >  
@@ -20,7 +20,7 @@ UIServiceHostProxy提供代理能力，可以将数据从[UIServiceExtension](ar
 sendData(data: Record<string, Object>): void
 ```
 
-从[UIServiceExtension](arkts-ability-uiserviceextensionability-c-sys.md)服务端给客户端发送数据。
+从[UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)服务端给客户端发送数据。
 
 **起始版本：** 14
 
@@ -36,7 +36,7 @@ sendData(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record<string, Object> | 是 | 待发送到[UIServiceExtension](arkts-ability-uiserviceextensionability-c-sys.md)客户端的数据。 |
+| data | Record<string, Object> | 是 | 待发送到[UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)客户端的数据。 |
 
 **错误码：**
 

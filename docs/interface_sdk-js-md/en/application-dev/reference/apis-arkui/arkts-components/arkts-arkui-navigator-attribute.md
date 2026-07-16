@@ -52,7 +52,7 @@ Sets the data that needs to be passed to the target page during redirection.
 
 **Deprecated since:** 13
 
-**Substitutes:** [param](arkts-arkui-navpathinfo-c.md#param)
+**Substitutes:** [param](arkts-arkui-navigation-navpathinfo-c.md#param)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +64,7 @@ Sets the data that needs to be passed to the target page during redirection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | object | Yes | Data that needs to be passed to the target page during redirection. You can use [router.getParams()](../arkts-apis/arkts-arkui-getparams-f.md#getparams-1) to obtain the data on the target page. |
+| value | object | Yes | Data that needs to be passed to the target page during redirection. You can use [router.getParams()](../arkts-apis/arkts-arkui-router-getparams-f.md#getparams-1) to obtain the data on the target page. |
 
 ## target
 
@@ -116,5 +116,5 @@ Sets the navigation type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NavigationType](arkts-arkui-navigationtype-e.md) | Yes | Navigation type.<br>Default value: **NavigationType.Push** |
+| value | [NavigationType](arkts-arkui-navigator-navigationtype-e.md) | Yes | Navigation type.<br>Default value: **NavigationType.Push** |
 

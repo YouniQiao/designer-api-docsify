@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ShellCmdResult](arkts-ability-shellcmdresult-i.md) | The **ShellCmdResult** module provides the shell command execution result. |
+| [ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md) | The **ShellCmdResult** module provides the shell command execution result. |
 

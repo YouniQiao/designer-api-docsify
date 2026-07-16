@@ -29,5 +29,5 @@ Creates a stream based on the file path. This API returns the result synchronous
 
 | Type | Description |
 | --- | --- |
-| [Stream](arkts-corefile-stream-i.md) | File stream. |
+| [Stream](arkts-corefile-file-fs-stream-i.md) | File stream. |
 

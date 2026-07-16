@@ -17,28 +17,28 @@ When **typeNode** is used to create [Text](../../apis-arkgraphics2d/arkts-apis/a
 | Name | Description |
 | --- | --- |
 | [FrameNode](arkts-arkui-framenode-c.md) | Defines FrameNode. |
-| [NodeAdapter](arkts-arkui-nodeadapter-c.md) | Provides lazy loading capabilities for FrameNode data, implementing [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md) API functionality. |
+| [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Provides lazy loading capabilities for FrameNode data, implementing [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md) API functionality. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CrossLanguageOptions](arkts-arkui-crosslanguageoptions-i.md) | Provides options for configuring or querying the cross-language access permissions for a FrameNode. For example, for nodes created using ArkTS, this API can control whether non-ArkTS languages are allowed to access or modify the attributes of these nodes. |
-| [InteractionEventBindingInfo](arkts-arkui-interactioneventbindinginfo-i.md) | Describes the binding state of interaction events on components. When querying reveals an interaction event bound to the current node, this object provides detailed event binding information. |
-| [LayoutConstraint](arkts-arkui-layoutconstraint-i.md) | Describes the layout constraints of the component. |
-| [TypedFrameNode](arkts-arkui-typedframenode-i.md) | Extends [FrameNode](arkts-arkui-framenode-c.md) to define a FrameNode with specific type constraints. |
+| [CrossLanguageOptions](arkts-arkui-framenode-crosslanguageoptions-i.md) | Provides options for configuring or querying the cross-language access permissions for a FrameNode. For example, for nodes created using ArkTS, this API can control whether non-ArkTS languages are allowed to access or modify the attributes of these nodes. |
+| [InteractionEventBindingInfo](arkts-arkui-framenode-interactioneventbindinginfo-i.md) | Describes the binding state of interaction events on components. When querying reveals an interaction event bound to the current node, this object provides detailed event binding information. |
+| [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Describes the layout constraints of the component. |
+| [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md) | Extends [FrameNode](arkts-arkui-framenode-c.md) to define a FrameNode with specific type constraints. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ChildrenCountMode](arkts-arkui-childrencountmode-e.md) | Enum for children count mode.Specifies how to count children when querying number of child nodes. |
-| [ExpandMode](arkts-arkui-expandmode-e.md) | Enumerates the expansion mode of child nodes. |
-| [UIState](arkts-arkui-uistate-e.md) | Enumerates polymorphic style states, which are used to process polymorphic styles. |
+| [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | Enum for children count mode.Specifies how to count children when querying number of child nodes. |
+| [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | Enumerates the expansion mode of child nodes. |
+| [UIState](arkts-arkui-framenode-uistate-e.md) | Enumerates polymorphic style states, which are used to process polymorphic styles. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | Defines the callback triggered when the UI state changes. Defines the callback triggered on UI state changes. It receives the current [UIState](arkts-arkui-uistate-e.md) value when triggered. The parameter represents **UIState** enumerated values or their bitwise combinations. |
+| [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | Defines the callback triggered when the UI state changes. Defines the callback triggered on UI state changes. It receives the current [UIState](arkts-arkui-framenode-uistate-e.md) value when triggered. The parameter represents **UIState** enumerated values or their bitwise combinations. |
 

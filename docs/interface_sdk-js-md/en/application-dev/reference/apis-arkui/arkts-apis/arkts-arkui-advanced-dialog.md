@@ -12,23 +12,23 @@ import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, P
 
 | Name | Description |
 | --- | --- |
-| [ButtonOptions](arkts-arkui-buttonoptions-c.md) | Declare ButtonOptions |
+| [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md) | Declare ButtonOptions |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [AlertDialog](arkts-arkui-alertdialog-s.md) | Declare CustomDialog AlertDialog |
-| [ConfirmDialog](arkts-arkui-confirmdialog-s.md) | Declare CustomDialog ConfirmDialog |
-| [CustomContentDialog](arkts-arkui-customcontentdialog-s.md) | Declare custom content dialog |
-| [LoadingDialog](arkts-arkui-loadingdialog-s.md) | Declare CustomDialog LoadingDialog |
-| [PopoverDialog](arkts-arkui-popoverdialog-s.md) | Declare struct PopoverDialog |
-| [SelectDialog](arkts-arkui-selectdialog-s.md) | Declare CustomDialog SelectDialog |
-| [TipsDialog](arkts-arkui-tipsdialog-s.md) | Declare CustomDialog TipsDialog |
+| [AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md) | Declare CustomDialog AlertDialog |
+| [ConfirmDialog](arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md) | Declare CustomDialog ConfirmDialog |
+| [CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md) | Declare custom content dialog |
+| [LoadingDialog](arkts-arkui-arkui-advanced-dialog-loadingdialog-s.md) | Declare CustomDialog LoadingDialog |
+| [PopoverDialog](arkts-arkui-arkui-advanced-dialog-popoverdialog-s.md) | Declare struct PopoverDialog |
+| [SelectDialog](arkts-arkui-arkui-advanced-dialog-selectdialog-s.md) | Declare CustomDialog SelectDialog |
+| [TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md) | Declare CustomDialog TipsDialog |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PopoverOptions](arkts-arkui-popoveroptions-i.md) | Defines PopoverDialog Options |
+| [PopoverOptions](arkts-arkui-arkui-advanced-dialog-popoveroptions-i.md) | Defines PopoverDialog Options |
 

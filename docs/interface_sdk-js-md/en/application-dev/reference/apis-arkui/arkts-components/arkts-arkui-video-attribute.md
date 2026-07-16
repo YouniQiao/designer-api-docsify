@@ -1,8 +1,8 @@
 # Video properties/events
 
-In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-commonmethod-c.md), the following attributes are supported.
 
-In addition to the [universal events](arkts-arkui-commonmethod-c.md), the following events are supported.
+In addition to the [universal events](arkts-arkui-common-commonmethod-c.md), the following events are supported.
 
 **Inheritance/Implementation:** VideoAttribute extends [CommonMethod<VideoAttribute>](CommonMethod<VideoAttribute>)
 
@@ -18,11 +18,11 @@ In addition to the [universal events](arkts-arkui-commonmethod-c.md), the follow
 analyzerConfig(config: ImageAnalyzerConfig)
 ```
 
-Sets the AI image analysis types, including subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets the AI image analysis types, including subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Sets the AI image analysis types, including subject recognition, text recognitio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | AI image analysis types. |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-image-common-imageanalyzerconfig-i.md) | Yes | AI image analysis types. |
 
 ## autoPlay
 
@@ -46,7 +46,7 @@ Sets the AI image analysis types, including subject recognition, text recognitio
 autoPlay(value: boolean)
 ```
 
-Sets whether to enable autoplay. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets whether to enable autoplay. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 7
 
@@ -68,7 +68,7 @@ Sets whether to enable autoplay. This attribute can be dynamically set using [at
 controls(value: boolean)
 ```
 
-Sets whether to display the video playback control bar. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets whether to display the video playback control bar. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 7
 
@@ -90,15 +90,15 @@ Sets whether to display the video playback control bar. This attribute can be dy
 enableAnalyzer(enable: boolean)
 ```
 
-Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
 
-Note that if this attribute and the [overlay](arkts-arkui-commonmethod-c.md#overlay-1) attribute are both set,[CustomBuilder](arkts-arkui-custombuilder-t.md) specified in [overlay](arkts-arkui-commonmethod-c.md) has no effect.
+Note that if this attribute and the [overlay](arkts-arkui-common-commonmethod-c.md#overlay-1) attribute are both set,[CustomBuilder](arkts-arkui-custombuilder-t.md) specified in [overlay](arkts-arkui-common-commonmethod-c.md) has no effect.
 
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called within [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 After this feature is enabled, the video automatically enters an analysis state to process the current frame when playback is paused, and exits the analysis state when playback is resumed.
 
@@ -124,7 +124,7 @@ After this feature is enabled, the video automatically enters an analysis state 
 enableShortcutKey(enabled: boolean)
 ```
 
-Sets whether the component responds to keyboard shortcuts when it has focus. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets whether the component responds to keyboard shortcuts when it has focus. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 Currently, the component can respond to the following keys when it is in focus: spacebar for playing or pausing the video, up or down arrow key for adjusting the video volume, and left or right arrow key for fast forwarding or rewinding the video.
 
@@ -150,7 +150,7 @@ Currently, the component can respond to the following keys when it is in focus: 
 loop(value: boolean)
 ```
 
-Sets whether to repeat the video. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets whether to repeat the video. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 7
 
@@ -172,7 +172,7 @@ Sets whether to repeat the video. This attribute can be dynamically set using [a
 muted(value: boolean)
 ```
 
-Sets whether to mute the video. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets whether to mute the video. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 7
 
@@ -194,7 +194,7 @@ Sets whether to mute the video. This attribute can be dynamically set using [att
 objectFit(value: ImageFit)
 ```
 
-Sets the fill mode for the video content. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets the fill mode for the video content. This attribute can be dynamically set using [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1).
 
 **Since:** 7
 
@@ -208,7 +208,7 @@ Sets the fill mode for the video content. This attribute can be dynamically set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | Yes | Fill mode of the video content.<br>Default value: **Cover**<br>Constraints: The enumerated value **Matrix** in **ImageFit** is not supported and will behave as **Cover**.<br>Invalid values,including **undefined**, **null**, and values outside the [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) enumeration range,will result in an effect the same as **Cover**. |
+| value | [ImageFit](../arkts-apis/arkts-arkui-enums-imagefit-e.md) | Yes | Fill mode of the video content.<br>Default value: **Cover**<br>Constraints: The enumerated value **Matrix** in **ImageFit** is not supported and will behave as **Cover**.<br>Invalid values,including **undefined**, **null**, and values outside the [ImageFit](../arkts-apis/arkts-arkui-enums-imagefit-e.md) enumeration range,will result in an effect the same as **Cover**. |
 
 ## onError
 
@@ -274,7 +274,7 @@ Called when the video enters and exits the full screen.Anonymous Object Rectific
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<FullscreenInfo> | Yes | [since 7 - 17] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<FullscreenInfo> | Yes | [since 7 - 17] |
 
 ## onPause
 
@@ -318,7 +318,7 @@ Called when the video preparation is complete.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PreparedInfo> | Yes | [since 7 - 17] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<PreparedInfo> | Yes | [since 7 - 17] |
 
 ## onSeeked
 
@@ -340,7 +340,7 @@ Called when the playback time information is reported after the operation progre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PlaybackInfo> | Yes | [since 7 - 17] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<PlaybackInfo> | Yes | [since 7 - 17] |
 
 ## onSeeking
 
@@ -362,7 +362,7 @@ Called when the time information is reported when the progress bar process is op
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PlaybackInfo> | Yes | [since 7 - 17] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<PlaybackInfo> | Yes | [since 7 - 17] |
 
 ## onStart
 
@@ -408,7 +408,7 @@ Called when the video is stopped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<void> | Yes |  |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<void> | Yes |  |
 
 ## onUpdate
 
@@ -430,5 +430,5 @@ Called when the playback progress changes.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PlaybackInfo> | Yes | [since 7 - 17] |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)<PlaybackInfo> | Yes | [since 7 - 17] |
 

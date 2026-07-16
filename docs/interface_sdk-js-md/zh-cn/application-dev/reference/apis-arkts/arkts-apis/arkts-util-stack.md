@@ -12,5 +12,5 @@ import { Stack } from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Stack](arkts-arkts-stack-c.md) | Stack基于数组的数据结构实现，特点是先进后出，只能在一端进行数据的插入和删除。 |
+| [Stack](arkts-arkts-util-stack-stack-c.md) | Stack基于数组的数据结构实现，特点是先进后出，只能在一端进行数据的插入和删除。 |
 

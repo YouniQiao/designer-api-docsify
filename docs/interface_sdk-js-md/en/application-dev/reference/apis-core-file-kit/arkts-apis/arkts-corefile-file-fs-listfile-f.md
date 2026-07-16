@@ -38,13 +38,13 @@ You can configure the **recursion** parameter in **options** to recursively list
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileOptions](arkts-corefile-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string[]> | Promise used to return the file name array, which is encoded in UTF-8 format by default. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<string[]> | Promise used to return the file name array, which is encoded in UTF-8 format by default. |
 
 **Error codes:**
 
@@ -80,7 +80,7 @@ You can configure the **recursion** parameter in **options** to recursively list
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string[]> | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<string[]> | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
 
 **Error codes:**
 
@@ -128,8 +128,8 @@ You can configure the **recursion** parameter in **options** to recursively list
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileOptions](arkts-corefile-listfileoptions-i.md) | Yes | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string[]> | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | Yes | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)<string[]> | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
 
 **Error codes:**
 

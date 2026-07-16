@@ -29,5 +29,5 @@ declare function createStreamSync(path: string, mode: string): Stream
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stream](arkts-corefile-stream-i.md) | 返回文件流的结果。 |
+| [Stream](arkts-corefile-file-fs-stream-i.md) | 返回文件流的结果。 |
 

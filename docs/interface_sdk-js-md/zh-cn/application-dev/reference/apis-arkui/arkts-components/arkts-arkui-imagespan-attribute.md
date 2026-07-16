@@ -1,6 +1,6 @@
 # ImageSpan属性/事件
 
-属性继承自[BaseSpan](arkts-arkui-basespan-c.md)，通用属性方法支持[尺寸设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)、[背景设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)、[边框设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+属性继承自[BaseSpan](arkts-arkui-span-basespan-c.md)，通用属性方法支持[尺寸设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)、[背景设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)、[边框设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
 通用事件仅支持[点击控制事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。还支持以下事件：
 
@@ -34,7 +34,7 @@ alt(value: PixelMap)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md) | 是 | 设置图片加载过程中显示的占位图，支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)类型。<br/>默认值：null |
+| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 设置图片加载过程中显示的占位图，支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型。<br/>默认值：null |
 
 ## colorFilter
 
@@ -82,7 +82,7 @@ objectFit(value: ImageFit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | 是 | 图片的缩放类型。<br/>默认值：ImageFit.Cover |
+| value | [ImageFit](../arkts-apis/arkts-arkui-enums-imagefit-e.md) | 是 | 图片的缩放类型。<br/>默认值：ImageFit.Cover |
 
 ## onComplete
 
@@ -180,5 +180,5 @@ verticalAlign(value: ImageSpanAlignment)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageSpanAlignment](../arkts-apis/arkts-arkui-imagespanalignment-e.md) | 是 | 图片基于行高的对齐方式。<br />默认值：ImageSpanAlignment.BOTTOM |
+| value | [ImageSpanAlignment](../arkts-apis/arkts-arkui-enums-imagespanalignment-e.md) | 是 | 图片基于行高的对齐方式。<br />默认值：ImageSpanAlignment.BOTTOM |
 

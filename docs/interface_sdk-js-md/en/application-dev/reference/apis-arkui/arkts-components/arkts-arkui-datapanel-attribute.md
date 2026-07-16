@@ -58,7 +58,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<DataPanelConfiguration> | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<DataPanelConfiguration> | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## strokeWidth
 
@@ -130,7 +130,7 @@ Sets the shadow style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DataPanelShadowOptions](arkts-arkui-datapanelshadowoptions-i.md) | Yes | Shadow style.<br>**NOTE**<br>If this parameter is set to **null**, the shadow effect is disabled. |
+| value | [DataPanelShadowOptions](arkts-arkui-data-panel-datapanelshadowoptions-i.md) | Yes | Shadow style.<br>**NOTE**<br>If this parameter is set to **null**, the shadow effect is disabled. |
 
 ## valueColors
 
@@ -154,5 +154,5 @@ Sets an array of data segment colors.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<ResourceColor \| LinearGradient> | Yes | Array of data segment colors. A value of the **ResourceColor** type indicates a solid color, and a value of the **LinearGradient** type indicates a color gradient. The array defaults to gradient colors.<br>Default colors for the nine data segments:[{ color: '#F7CE00', offset: 0 }, { color: '#F99B11', offset: 1 }],[{ color: '#F76223', offset: 0 }, { color: '#F2400A', offset: 1 }],[{ color: '#F772AC', offset: 0 }, { color: '#E65392', offset: 1 }],[{ color: '#A575EB', offset: 0 }, { color: '#A12DF7', offset: 1 }],[{ color: '#7B79F7', offset: 0 }, { color: '#4B48F7', offset: 1 }],[{ color: '#4B8AF3', offset: 0 }, { color: '#007DFF', offset: 1 }],[{ color: '#73C1E6', offset: 0 }, { color: '#4FB4E3', offset: 1 }],[{ color: '#A5D61D', offset: 0 }, { color: '#69D14F', offset: 1 }],[{ color: '#A2A2B0', offset: 0 }, { color: '#8E8E93', offset: 1 }] |
+| value | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<ResourceColor \| LinearGradient> | Yes | Array of data segment colors. A value of the **ResourceColor** type indicates a solid color, and a value of the **LinearGradient** type indicates a color gradient. The array defaults to gradient colors.<br>Default colors for the nine data segments:[{ color: '#F7CE00', offset: 0 }, { color: '#F99B11', offset: 1 }],[{ color: '#F76223', offset: 0 }, { color: '#F2400A', offset: 1 }],[{ color: '#F772AC', offset: 0 }, { color: '#E65392', offset: 1 }],[{ color: '#A575EB', offset: 0 }, { color: '#A12DF7', offset: 1 }],[{ color: '#7B79F7', offset: 0 }, { color: '#4B48F7', offset: 1 }],[{ color: '#4B8AF3', offset: 0 }, { color: '#007DFF', offset: 1 }],[{ color: '#73C1E6', offset: 0 }, { color: '#4FB4E3', offset: 1 }],[{ color: '#A5D61D', offset: 0 }, { color: '#69D14F', offset: 1 }],[{ color: '#A2A2B0', offset: 0 }, { color: '#8E8E93', offset: 1 }] |
 

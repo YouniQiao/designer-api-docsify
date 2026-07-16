@@ -12,5 +12,5 @@ import { EnvironmentCallback } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [EnvironmentCallback](arkts-ability-environmentcallback-c.md) | The EnvironmentCallback module provides capabilities to listen for system environment changes. |
+| [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | The EnvironmentCallback module provides capabilities to listen for system environment changes. |
 

@@ -20,15 +20,15 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 
 | Name | Description |
 | --- | --- |
-| [ThreadWorker](arkts-arkts-threadworker-c.md) | Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget. |
-| [Worker](arkts-arkts-worker-c.md) | The Worker class contains all Worker functions. |
+| [ThreadWorker](arkts-arkts-worker-threadworker-c.md) | Before using the following APIs, you must create a ThreadWorker instance. The ThreadWorker class inherits from WorkerEventTarget. |
+| [Worker](arkts-arkts-worker-worker-c.md) | The Worker class contains all Worker functions. |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [RestrictedWorker](arkts-arkts-restrictedworker-c-sys.md) | The RestrictedWorker class contains all Worker functions. |
+| [RestrictedWorker](arkts-arkts-worker-restrictedworker-c-sys.md) | The RestrictedWorker class contains all Worker functions. |
 <!--DelEnd-->
 
 ### Constants

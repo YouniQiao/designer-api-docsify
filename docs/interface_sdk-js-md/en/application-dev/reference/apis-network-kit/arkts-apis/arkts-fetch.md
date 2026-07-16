@@ -6,11 +6,11 @@
 
 | Name | Description |
 | --- | --- |
-| [Fetch](arkts-network-fetch-depr-c.md) | Obtains data through a network. |
+| [Fetch](arkts-network-fetch-fetch-depr-c.md) | Obtains data through a network. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [FetchResponse](arkts-network-fetchresponse-depr-i.md) | This module provides the Fetch Response. |
+| [FetchResponse](arkts-network-fetch-fetchresponse-depr-i.md) | This module provides the Fetch Response. |
 

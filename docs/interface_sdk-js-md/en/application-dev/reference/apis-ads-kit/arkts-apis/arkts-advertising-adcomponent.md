@@ -12,5 +12,5 @@ import { AdComponent } from '@kit.AdsKit';
 
 | Name | Description |
 | --- | --- |
-| [AdComponent](arkts-ads-adcomponent-s.md) | This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles. |
+| [AdComponent](arkts-ads-advertising-adcomponent-adcomponent-s.md) | This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles. |
 

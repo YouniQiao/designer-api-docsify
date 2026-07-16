@@ -6,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [BundleInfo](arkts-ability-bundleinfo-depr-i.md) |  |
-| [ReqPermissionDetail](arkts-ability-reqpermissiondetail-depr-i.md) |  |
-| [UsedScene](arkts-ability-usedscene-depr-i.md) |  |
+| [BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md) |  |
+| [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md) |  |
+| [UsedScene](arkts-ability-bundleinfo-usedscene-depr-i.md) |  |
 

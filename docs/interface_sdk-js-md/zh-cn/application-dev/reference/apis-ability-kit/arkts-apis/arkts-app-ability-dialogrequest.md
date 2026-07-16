@@ -27,21 +27,21 @@ import { dialogRequest } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getRequestCallback](arkts-ability-getrequestcallback-f.md#getrequestcallback-1) | 从Want中获取请求方的RequestCallback。 |
-| [getRequestInfo](arkts-ability-getrequestinfo-f.md#getrequestinfo-1) | 从Want中获取请求方的RequestInfo。 |
+| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getrequestcallback-1) | 从Want中获取请求方的RequestCallback。 |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getrequestinfo-1) | 从Want中获取请求方的RequestInfo。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [RequestCallback](arkts-ability-requestcallback-i.md) | 用于设置模态弹框请求结果的callback接口。 |
-| [RequestInfo](arkts-ability-requestinfo-i.md) | 表示发起方请求信息，作为窗口绑定模态弹框的入参。 |
-| [RequestResult](arkts-ability-requestresult-i.md) | 模态弹框请求结果，包含结果码ResultCode和请求结果ResultWant。 |
-| [WindowRect](arkts-ability-windowrect-i.md) | 表示模态弹框的属性。 |
+| [RequestCallback](arkts-ability-dialogrequest-requestcallback-i.md) | 用于设置模态弹框请求结果的callback接口。 |
+| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) | 表示发起方请求信息，作为窗口绑定模态弹框的入参。 |
+| [RequestResult](arkts-ability-dialogrequest-requestresult-i.md) | 模态弹框请求结果，包含结果码ResultCode和请求结果ResultWant。 |
+| [WindowRect](arkts-ability-dialogrequest-windowrect-i.md) | 表示模态弹框的属性。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ResultCode](arkts-ability-resultcode-e.md) | 模态弹框请求结果码。 |
+| [ResultCode](arkts-ability-dialogrequest-resultcode-e.md) | 模态弹框请求结果码。 |
 

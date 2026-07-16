@@ -1,20 +1,20 @@
 # Context
 
 ```TypeScript
-export type Context = _Context.default
+export type Context = _Context
 ```
 
-Defines the context base class for the [stage model](../../../../application-models/ability-terminology.md#stage-model).
+Provides the context for the ability or application, which can be used to access application resources.
 
-**Since:** 9
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-common-export type Context = _Context.default--><!--Device-common-export type Context = _Context.default-End-->
+<!--Device-unnamed-export type Context = _Context--><!--Device-unnamed-export type Context = _Context-End-->
 
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+**System capability:** SystemCapability.Security.AccessToken
 
-**Property type:** _Context.default
+**Property type:** _Context
 

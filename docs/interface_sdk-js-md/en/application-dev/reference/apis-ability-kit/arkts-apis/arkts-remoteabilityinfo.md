@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-i-sys.md) | The module provides information about a remote ability. |
+| [RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md) | The module provides information about a remote ability. |
 <!--DelEnd-->
 

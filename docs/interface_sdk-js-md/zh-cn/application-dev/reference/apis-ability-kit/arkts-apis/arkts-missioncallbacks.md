@@ -7,7 +7,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [MissionCallback](arkts-ability-missioncallback-i-sys.md) | 任务回调已注册 |
+| [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | 任务回调已注册 |
 <!--DelEnd-->
 
 <!--Del-->

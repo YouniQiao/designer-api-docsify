@@ -20,9 +20,9 @@ color(value: ResourceColor | LinearGradient)
 
 Sets the foreground color of the progress indicator.
 
-Since API version 10, [LinearGradient](arkts-arkui-lineargradient-i.md) can be used to set a gradient color for the ring style. Setting opacity is not recommended for the ring type. If opacity is required, use [DataPanel](arkts-arkui-datapanel.md).
+Since API version 10, [LinearGradient](arkts-arkui-common-lineargradient-i.md) can be used to set a gradient color for the ring style. Setting opacity is not recommended for the ring type. If opacity is required, use [DataPanel](arkts-arkui-datapanel.md).
 
-Since API version 23, [LinearGradient](arkts-arkui-lineargradient-i.md) can be used to set gradient colors for the linear and capsule styles. In API version 22 and earlier versions, setting gradient colors via **LinearGradient** for the **Linear** and **Capsule** styles will not render the custom colors; the system's default theme colors will be used instead.
+Since API version 23, [LinearGradient](arkts-arkui-common-lineargradient-i.md) can be used to set gradient colors for the linear and capsule styles. In API version 22 and earlier versions, setting gradient colors via **LinearGradient** for the **Linear** and **Capsule** styles will not render the custom colors; the system's default theme colors will be used instead.
 
 **Since:** 7
 
@@ -62,7 +62,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<ProgressConfiguration> | Yes | The contentModifier of progress. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<ProgressConfiguration> | Yes | The contentModifier of progress. |
 
 ## privacySensitive
 
@@ -74,7 +74,7 @@ Sets whether to enable privacy-sensitive mode.
 
 > **NOTE**  
 >  
-> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-common-commonmethod-c.md#attributemodifier-1) since API version 20.
 
 **Since:** 12
 
@@ -92,7 +92,7 @@ Sets whether to enable privacy-sensitive mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)<boolean> | Yes | Whether to enable privacy-sensitive mode, in which the progress indicator is cleared and text content is masked. **true**: The privacy-sensitive mode is enabled.**false**: The privacy-sensitive mode is disabled.<br> Default value: **false**<br>**NOTE**<br>Setting this parameter to **null** indicates that no specific privacy sensitivity is applied.&lt;!--Del--&gt;<br>For widgets, this property must be used with [FormComponent](arkts-arkui-formcomponent.md) and the [obscured](arkts-arkui-commonmethod-c.md#obscured-1) attribute to display privacy masking effects.&lt;!--DelEnd--&gt; |
+| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)<boolean> | Yes | Whether to enable privacy-sensitive mode, in which the progress indicator is cleared and text content is masked. **true**: The privacy-sensitive mode is enabled.**false**: The privacy-sensitive mode is disabled.<br> Default value: **false**<br>**NOTE**<br>Setting this parameter to **null** indicates that no specific privacy sensitivity is applied.&lt;!--Del--&gt;<br>For widgets, this property must be used with [FormComponent](arkts-arkui-formcomponent.md) and the [obscured](arkts-arkui-common-commonmethod-c.md#obscured-1) attribute to display privacy masking effects.&lt;!--DelEnd--&gt; |
 
 ## style
 

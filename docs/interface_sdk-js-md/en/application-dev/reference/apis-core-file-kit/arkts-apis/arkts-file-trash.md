@@ -29,9 +29,9 @@ import { trash } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [completelyDelete](arkts-corefile-completelydelete-f-sys.md#completelydelete-1) | Permanently deletes a file or directory from the **Recently deleted** list. |
-| [listFile](arkts-corefile-listfile-f-sys.md#listfile-1) | Lists the files and directories in the **Recently deleted** list. |
-| [recover](arkts-corefile-recover-f-sys.md#recover-1) | Recovers a file or directory from the trash. |
+| [completelyDelete](arkts-corefile-trash-completelydelete-f-sys.md#completelydelete-1) | Permanently deletes a file or directory from the **Recently deleted** list. |
+| [listFile](arkts-corefile-trash-listfile-f-sys.md#listfile-1) | Lists the files and directories in the **Recently deleted** list. |
+| [recover](arkts-corefile-trash-recover-f-sys.md#recover-1) | Recovers a file or directory from the trash. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -39,6 +39,6 @@ import { trash } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [FileInfo](arkts-corefile-fileinfo-i-sys.md) | Represents information about a file or directory in the **Recently deleted** list. |
+| [FileInfo](arkts-corefile-trash-fileinfo-i-sys.md) | Represents information about a file or directory in the **Recently deleted** list. |
 <!--DelEnd-->
 

@@ -20,7 +20,7 @@ cachedCount(value: number)
 
 Number of items to be preloaded.
 
-This attribute takes effect only in [LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with [virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll-1) enabled. **FlowItem** components that are outside the display and cache range will be released.
+This attribute takes effect only in [LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) and [Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) with [virtualScroll](../arkts-apis/arkts-arkui-repeat-repeatattribute-c.md#virtualscroll-1) enabled. **FlowItem** components that are outside the display and cache range will be released.
 
 **Since:** 11
 
@@ -46,7 +46,7 @@ cachedCount(count: number, show: boolean)
 
 Sets the number of flow items to be cached (preloaded) and specifies whether to display the preloaded nodes.
 
-This attribute can be combined with the [clip](arkts-arkui-commonmethod-c.md#clip-1) or [clipContent](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
+This attribute can be combined with the [clip](arkts-arkui-common-commonmethod-c.md#clip-1) or [clipContent](../../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
 
 This parameter takes effect only when used with [LazyForEach](../../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or the [Repeat](../../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) component that has virtualScroll enabled. **FlowItem** elements outside the visible area and cache range will be released.
 
@@ -171,7 +171,7 @@ Sets whether to support the scrolling gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroller-c.md).<br>Default value: **true** |
+| value | boolean | Yes | Whether to support scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the [Scroller](arkts-arkui-scroll-scroller-c.md).<br>Default value: **true** |
 
 ## friction
 
@@ -217,7 +217,7 @@ Sets the size constraints of the child components during layout. For details abo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraints of the child components during layout. If the value specified is less than **0**, this parameter does not take effect.<br>**NOTE**<br>1. If both **itemConstraintSize** and the [constraintSize](arkts-arkui-commonmethod-c.md#constraintsize-1) attribute of the **FlowItem** are set, the **minWidth** (or **minHeight**) will be the larger of the two values, and the **maxWidth** (or **maxHeight**) will be the smaller of the two values. The resulting values will then be used as the **constraintSize** for the **FlowItem**.<br>2. When only **itemConstraintSize** is set, it effectively applies a uniform size constraint to all child components in the **WaterFlow**.<br>3. The **itemConstraintSize** attribute, once converted to the **constraintSize** attribute of the **FlowItem** through the two methods mentioned above, follows the same rules for taking effect as the universal attribute [constraintSize](arkts-arkui-commonmethod-c.md#constraintsize-1). |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-units-constraintsizeoptions-i.md) | Yes | Size constraints of the child components during layout. If the value specified is less than **0**, this parameter does not take effect.<br>**NOTE**<br>1. If both **itemConstraintSize** and the [constraintSize](arkts-arkui-common-commonmethod-c.md#constraintsize-1) attribute of the **FlowItem** are set, the **minWidth** (or **minHeight**) will be the larger of the two values, and the **maxWidth** (or **maxHeight**) will be the smaller of the two values. The resulting values will then be used as the **constraintSize** for the **FlowItem**.<br>2. When only **itemConstraintSize** is set, it effectively applies a uniform size constraint to all child components in the **WaterFlow**.<br>3. The **itemConstraintSize** attribute, once converted to the **constraintSize** attribute of the **FlowItem** through the two methods mentioned above, follows the same rules for taking effect as the universal attribute [constraintSize](arkts-arkui-common-commonmethod-c.md#constraintsize-1). |
 
 ## layoutDirection
 
@@ -239,7 +239,7 @@ Sets the main axis direction of the layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md) | Yes | Main axis direction of the layout.<br>Default value: **FlexDirection.Column** |
+| value | [FlexDirection](../arkts-apis/arkts-arkui-enums-flexdirection-e.md) | Yes | Main axis direction of the layout.<br>Default value: **FlexDirection.Column** |
 
 ## nestedScroll
 
@@ -263,7 +263,7 @@ Sets the nested scrolling mode in the forward and backward directions to impleme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | Nested scrolling options. |
+| value | [NestedScrollOptions](arkts-arkui-common-nestedscrolloptions-i.md) | Yes | Nested scrolling options. |
 
 ## onReachEnd
 
@@ -319,11 +319,11 @@ When this API is called back, the event parameter passes the scroll offset that 
 
 This event is triggered when either of the following conditions is met:
 
-1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation).2. The **WaterFlow** component scrolls by inertia.3. Scrolling is triggered by calling the [fling](arkts-arkui-scroller-c.md#fling-1) API.
+1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation).2. The **WaterFlow** component scrolls by inertia.3. Scrolling is triggered by calling the [fling](arkts-arkui-scroll-scroller-c.md#fling-1) API.
 
 This event is not triggered in the following scenarios:
 
-1. A scroll control API other than [fling](arkts-arkui-scroller-c.md#fling-1) is called.2. The out-of-bounds bounce effect is active.3. The scrollbar is dragged.
+1. A scroll control API other than [fling](arkts-arkui-scroll-scroller-c.md#fling-1) is called.2. The out-of-bounds bounce effect is active.3. The scrollbar is dragged.
 
 **Since:** 10
 
@@ -423,9 +423,9 @@ Defines whether the **WaterFlow** component supports the generation of empty bra
 
 > **NOTE**  
 >  
-> When [WaterFlowSections](arkts-arkui-waterflowsections-c.md) is set using the [sections](arkts-arkui-waterflowoptions-i.md) parameter,  
-> or when the [SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md) layout mode is set using the  
-> [layoutMode](arkts-arkui-waterflowoptions-i.md) parameter, the **FlowItem** after the empty branch is displayed regardless  
+> When [WaterFlowSections](arkts-arkui-water-flow-waterflowsections-c.md) is set using the [sections](arkts-arkui-water-flow-waterflowoptions-i.md) parameter,  
+> or when the [SLIDING_WINDOW](arkts-arkui-water-flow-waterflowlayoutmode-e.md) layout mode is set using the  
+> [layoutMode](arkts-arkui-water-flow-waterflowoptions-i.md) parameter, the **FlowItem** after the empty branch is displayed regardless  
 > of the **supportEmptyBranchInLazyLoading** setting.
 
 **Since:** 26.0.0
@@ -466,5 +466,5 @@ Sets whether to synchronously load all child components in the **WaterFlow** com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to synchronously load all child components in the **WaterFlow** component.<br>**true**: synchronous loading; false: asynchronous loading<br>Default value: **true**<br>**NOTE**<br>When this parameter is set to **false**, in the first display or [scrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex-1) jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the **WaterFlow** component are delayed to the next frame for layout. |
+| enable | boolean | Yes | Whether to synchronously load all child components in the **WaterFlow** component.<br>**true**: synchronous loading; false: asynchronous loading<br>Default value: **true**<br>**NOTE**<br>When this parameter is set to **false**, in the first display or [scrollToIndex](arkts-arkui-scroll-scroller-c.md#scrolltoindex-1) jumps without animation, if the time consumed by the frame layout exceeds 50 ms, the child components that have not been laid out in the **WaterFlow** component are delayed to the next frame for layout. |
 

@@ -26,14 +26,14 @@ import { deviceInfo } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [apiAvailable](arkts-basicservices-apiavailable-f.md#apiavailable-1) | 检查指定的API版本在当前设备上是否可用。此方法提供跨不同OpenHarmony/分布式操作系统版本的兼容性检查。它会根据输入格式和API版本范围自动选择合适的版本检查方法。 |
+| [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md#apiavailable-1) | 检查指定的API版本在当前设备上是否可用。此方法提供跨不同OpenHarmony/分布式操作系统版本的兼容性检查。它会根据输入格式和API版本范围自动选择合适的版本检查方法。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [DeviceTypes](arkts-basicservices-devicetypes-e.md) | 设备类型枚举值，可用于校验deviceType的返回值。 |
-| [PerformanceClassLevel](arkts-basicservices-performanceclasslevel-e.md) | 表示设备能力定级的枚举。 |
+| [DeviceTypes](arkts-basicservices-deviceinfo-devicetypes-e.md) | 设备类型枚举值，可用于校验deviceType的返回值。 |
+| [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md) | 表示设备能力定级的枚举。 |
 
 ### 常量
 

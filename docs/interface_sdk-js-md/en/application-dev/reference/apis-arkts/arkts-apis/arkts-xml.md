@@ -20,28 +20,28 @@ import { xml } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [XmlDynamicSerializer](arkts-arkts-xmldynamicserializer-c.md) | The XmlDynamicSerializer interface is used to dynamically generate an xml file. |
-| [XmlPullParser](arkts-arkts-xmlpullparser-c.md) | The XmlPullParser interface is used to parse the existing xml file. |
-| [XmlSAXParser](arkts-arkts-xmlsaxparser-c.md) | The XmlSAXParser provides the capability of parsing XML in a streaming manner. |
-| [XmlSerializer](arkts-arkts-xmlserializer-c.md) | The XmlSerializer interface is used to generate an xml file. |
+| [XmlDynamicSerializer](arkts-arkts-xml-xmldynamicserializer-c.md) | The XmlDynamicSerializer interface is used to dynamically generate an xml file. |
+| [XmlPullParser](arkts-arkts-xml-xmlpullparser-c.md) | The XmlPullParser interface is used to parse the existing xml file. |
+| [XmlSAXParser](arkts-arkts-xml-xmlsaxparser-c.md) | The XmlSAXParser provides the capability of parsing XML in a streaming manner. |
+| [XmlSerializer](arkts-arkts-xml-xmlserializer-c.md) | The XmlSerializer interface is used to generate an xml file. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ParseInfo](arkts-arkts-parseinfo-i.md) | The current parse info. |
-| [ParseOptions](arkts-arkts-parseoptions-i.md) | Parse options for XmlPullParser. |
-| [XmlSAXHandler](arkts-arkts-xmlsaxhandler-i.md) | A simple API for XML handling |
+| [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | The current parse info. |
+| [ParseOptions](arkts-arkts-xml-parseoptions-i.md) | Parse options for XmlPullParser. |
+| [XmlSAXHandler](arkts-arkts-xml-xmlsaxhandler-i.md) | A simple API for XML handling |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [EventType](arkts-arkts-eventtype-e.md) | The event types represented by XML elements. |
+| [EventType](arkts-arkts-xml-eventtype-e.md) | The event types represented by XML elements. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AttributeWithTagCb](arkts-arkts-attributewithtagcb-t.md) | The type of ParseOptions attributeWithTagCallbackFunction. |
+| [AttributeWithTagCb](arkts-arkts-xml-attributewithtagcb-t.md) | The type of ParseOptions attributeWithTagCallbackFunction. |
 

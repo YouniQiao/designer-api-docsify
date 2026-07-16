@@ -6,7 +6,7 @@
 const VISIBILITY_COMPLETION: 1
 ```
 
-([Notification](arkts-basicservices-notification-i.md)visibility type) Displays completion notifications.
+([Notification](arkts-basicservices-agent-notification-i.md)visibility type) Displays completion notifications.
 
 **Since:** 21
 
@@ -20,7 +20,7 @@ const VISIBILITY_COMPLETION: 1
 const VISIBILITY_PROGRESS: 2
 ```
 
-([Notification](arkts-basicservices-notification-i.md)visibility type) Displays progress notifications.
+([Notification](arkts-basicservices-agent-notification-i.md)visibility type) Displays progress notifications.
 
 **Since:** 21
 

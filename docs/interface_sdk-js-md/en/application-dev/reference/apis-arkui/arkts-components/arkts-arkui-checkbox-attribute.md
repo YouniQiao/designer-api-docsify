@@ -34,7 +34,7 @@ Creates a content modifier for the **Checkbox** component. Setting this attribut
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)<CheckBoxConfiguration> | Yes | Content modifier to apply to the **Checkbox** component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | [ContentModifier](arkts-arkui-common-contentmodifier-i.md)<CheckBoxConfiguration> | Yes | Content modifier to apply to the **Checkbox** component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## contentModifier
 
@@ -82,7 +82,7 @@ Sets the check mark style of the check box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | Yes | Check mark style of the check box. Since API version 12, if **indicatorBuilder** is set, the style is determined by **indicatorBuilder**.<br>Default value: {<br>strokeColor :`$r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth:`$r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
+| value | [MarkStyle](../arkts-apis/arkts-arkui-units-markstyle-i.md) | Yes | Check mark style of the check box. Since API version 12, if **indicatorBuilder** is set, the style is determined by **indicatorBuilder**.<br>Default value: {<br>strokeColor :`$r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth:`$r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
 
 ## mark
 
@@ -288,7 +288,7 @@ Sets the check box shape. To adjust the style of the current check box, use [con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | Yes | Shape of the check box.<br>Default value: **CheckBoxShape.CIRCLE** |
+| value | [CheckBoxShape](../arkts-apis/arkts-arkui-enums-checkboxshape-e.md) | Yes | Shape of the check box.<br>Default value: **CheckBoxShape.CIRCLE** |
 
 ## shape
 

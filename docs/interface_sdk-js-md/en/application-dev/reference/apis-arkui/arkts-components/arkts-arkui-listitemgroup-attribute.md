@@ -37,7 +37,7 @@ Sets the size information of the child components of a **ListItemGroup** compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | Yes | Size information of child components in the main axis direction. |
+| value | [ChildrenMainSize](arkts-arkui-common-childrenmainsize-c.md) | Yes | Size information of child components in the main axis direction. |
 
 ## divider
 
