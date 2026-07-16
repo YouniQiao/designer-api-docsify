@@ -2,33 +2,35 @@
 
 Provides APIs for accessing application resources and system resources.
 
-> **NOTE**
->
-> - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative development
-> paradigm.
->
-> - Resource files are defined in the **resources** directory of the project. You can obtain resource values such
-> as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.
-> **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through `$r(
-> *resource-address*).id`, for example, `$r('app.string.test').id`.
->
-> - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with
-> **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are
-> in different HAPs or HSPs, you first need to use
-> [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-createmodulecontext-f.md#createmodulecontext-1)
-> to create the context of the corresponding module and then call the API with **resName** or **resId** specified.
-> For details, see
-> [Accessing Resources](../../../../quick-start/resource-categories-and-access.md#accessing-resources).
->
-> - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code
-> HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the
-> intermediate-code HAR or bytecode HAR can properly access resources through resource ID-related APIs.
-> For details, see [Accessing Resources](../../../../quick-start/resource-categories-and-access.md#accessing-resources).
->
-> - For details about the content of the test files used in the sample code, see
+> **NOTE**  
+>  
+> - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative development  
+> paradigm.  
+>  
+> - Resource files are defined in the **resources** directory of the project. You can obtain resource values such  
+> as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.  
+> **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through `$r(  
+> *resource-address*).id`, for example, `$r('app.string.test').id`.  
+>  
+> - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with  
+> **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are  
+> in different HAPs or HSPs, you first need to use  
+> [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-createmodulecontext-f.md#createmodulecontext-1)  
+> to create the context of the corresponding module and then call the API with **resName** or **resId** specified.  
+> For details, see  
+> [Accessing Resources](../../../../quick-start/resource-categories-and-access.md#accessing-resources).  
+>  
+> - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code  
+> HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the  
+> intermediate-code HAR or bytecode HAR can properly access resources through resource ID-related APIs.  
+> For details, see [Accessing Resources](../../../../quick-start/resource-categories-and-access.md#accessing-resources).  
+>  
+> - For details about the content of the test files used in the sample code, see  
 > [Appendix](../../../../reference/apis-localization-kit/js-apis-resource-manager.md#appendix).
 
 **Since:** 6
+
+<!--Device-resourceManager-export interface ResourceManager--><!--Device-resourceManager-export interface ResourceManager-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -46,13 +48,15 @@ addResource(path: string) : void
 
 Loads resources from the specified path.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-addResource(path: string) : void--><!--Device-ResourceManager-addResource(path: string) : void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -97,12 +101,13 @@ export default class EntryAbility extends UIAbility {
 closeRawFd(path: string, callback: _AsyncCallback<void>): void
 ```
 
-Closes the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API
-uses an asynchronous callback to return the result.
+Closes the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-closeRawFd(path: string, callback: _AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFd(path: string, callback: _AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -111,7 +116,7 @@ uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the rawfile. |
-| callback | _AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | _AsyncCallback<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -155,12 +160,13 @@ export default class EntryAbility extends UIAbility {
 closeRawFd(path: string): Promise<void>
 ```
 
-Closes the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API
-uses a promise to return the result.
+Closes the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-closeRawFd(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFd(path: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -174,7 +180,7 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -213,12 +219,13 @@ export default class EntryAbility extends UIAbility {
 closeRawFdSync(path: string): void
 ```
 
-Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **resources/rawfile** directory is
-located. This API returns the result synchronously.
+Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **resources/rawfile** directory is located. This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-closeRawFdSync(path: string): void--><!--Device-ResourceManager-closeRawFdSync(path: string): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -266,14 +273,15 @@ export default class EntryAbility extends UIAbility {
 closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
 ```
 
-Closes the fd of the rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to
-return the result.
+Closes the fd of the rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** closeRawFd(path:
+
+<!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -282,7 +290,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the rawfile. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -305,14 +313,15 @@ resourceManager.getResourceManager((error, mgr) => {
 closeRawFileDescriptor(path: string): Promise<void>
 ```
 
-Closes the fd of the rawfile in the **resources/rawfile** directory. This API uses a promise to return the
-result.
+Closes the fd of the rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** closeRawFd(path:
+
+<!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -326,7 +335,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 
@@ -350,6 +359,8 @@ Obtains a Boolean value based on the specified resource ID. This API returns the
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getBoolean(resId: long): boolean--><!--Device-ResourceManager-getBoolean(resId: long): boolean-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -428,13 +439,15 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getBoolean(resource: Resource): boolean--><!--Device-ResourceManager-getBoolean(resource: Resource): boolean-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -498,6 +511,8 @@ Obtains a Boolean value based on the specified resource name. This API returns t
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getBooleanByName(resName: string): boolean--><!--Device-ResourceManager-getBooleanByName(resName: string): boolean-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -564,12 +579,13 @@ export default class EntryAbility extends UIAbility {
 getColor(resId: number, callback: _AsyncCallback<number>): void
 ```
 
-Obtains a color value based on the specified resource ID. This API uses an asynchronous callback to return the
-result.
+Obtains a color value based on the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getColor(resId: long, callback: _AsyncCallback<long>): void--><!--Device-ResourceManager-getColor(resId: long, callback: _AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -578,7 +594,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
+| callback | _AsyncCallback<number> | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -601,6 +617,8 @@ Obtains a color value based on the specified resource ID. This API uses a promis
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getColor(resId: long): Promise<long>--><!--Device-ResourceManager-getColor(resId: long): Promise<long>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -613,7 +631,7 @@ Obtains a color value based on the specified resource ID. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the color value (decimal). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -665,8 +683,7 @@ export default class EntryAbility extends UIAbility {
 getColor(resource: Resource, callback: _AsyncCallback<number>): void
 ```
 
-Obtains a color value based on the specified resource object. This API uses an asynchronous callback to return
-the result.
+Obtains a color value based on the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -678,14 +695,16 @@ the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getColor(resource: Resource, callback: _AsyncCallback<number>): void--><!--Device-ResourceManager-getColor(resource: Resource, callback: _AsyncCallback<number>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| callback | _AsyncCallback&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| callback | _AsyncCallback<number> | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -749,19 +768,21 @@ Obtains a color value based on the specified resource object. This API uses a pr
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getColor(resource: Resource): Promise<number>--><!--Device-ResourceManager-getColor(resource: Resource): Promise<number>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the color value (decimal). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -813,12 +834,13 @@ this.context.resourceManager.getColor(resource)
 getColorByName(resName: string, callback: _AsyncCallback<number>): void
 ```
 
-Obtains a color value based on the specified resource name. This API uses an asynchronous callback to return the
-result.
+Obtains a color value based on the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getColorByName(resName: string, callback: _AsyncCallback<long>): void--><!--Device-ResourceManager-getColorByName(resName: string, callback: _AsyncCallback<long>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -827,7 +849,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
+| callback | _AsyncCallback<number> | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -885,6 +907,8 @@ Obtains a color value based on the specified resource name. This API uses a prom
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getColorByName(resName: string): Promise<long>--><!--Device-ResourceManager-getColorByName(resName: string): Promise<long>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -897,7 +921,7 @@ Obtains a color value based on the specified resource name. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the color value (decimal). |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -954,6 +978,8 @@ Obtains a color value based on the specified resource name. This API returns the
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getColorByNameSync(resName: string) : long--><!--Device-ResourceManager-getColorByNameSync(resName: string) : long-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1025,6 +1051,8 @@ Obtains a color value based on the specified resource ID. This API returns the r
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getColorSync(resId: long) : long--><!--Device-ResourceManager-getColorSync(resId: long) : long-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1103,13 +1131,15 @@ Obtains a color value based on the specified resource object. This API returns t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getColorSync(resource: Resource) : number--><!--Device-ResourceManager-getColorSync(resource: Resource) : number-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -1174,13 +1204,15 @@ Obtains the device configuration. This API uses an asynchronous callback to retu
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getConfiguration(callback: _AsyncCallback<Configuration>): void--><!--Device-ResourceManager-getConfiguration(callback: _AsyncCallback<Configuration>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback&lt;Configuration&gt; | Yes | Callback used to return the device configuration. |
+| callback | _AsyncCallback<Configuration> | Yes | Callback used to return the device configuration. |
 
 **Example**
 
@@ -1220,13 +1252,15 @@ Obtains the device configuration. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getConfiguration(): Promise<Configuration>--><!--Device-ResourceManager-getConfiguration(): Promise<Configuration>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Configuration&gt; | Promise used to return the device configuration. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Configuration> | Promise used to return the device configuration. |
 
 **Example**
 
@@ -1264,13 +1298,15 @@ Obtains the device configuration. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getConfigurationSync(): Configuration--><!--Device-ResourceManager-getConfigurationSync(): Configuration-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Configuration | Device configuration. |
+| [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-configuration-i.md) | Device configuration. |
 
 **Example**
 
@@ -1303,13 +1339,15 @@ Obtains the device capability. This API uses an asynchronous callback to return 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void--><!--Device-ResourceManager-getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback&lt;DeviceCapability&gt; | Yes | Callback used to return the device capability. |
+| callback | _AsyncCallback<DeviceCapability> | Yes | Callback used to return the device capability. |
 
 **Example**
 
@@ -1349,13 +1387,15 @@ Obtains the device capability. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getDeviceCapability(): Promise<DeviceCapability>--><!--Device-ResourceManager-getDeviceCapability(): Promise<DeviceCapability>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeviceCapability&gt; | Promise used to return the device capability. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DeviceCapability> | Promise used to return the device capability. |
 
 **Example**
 
@@ -1393,13 +1433,15 @@ Obtains the device capability. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getDeviceCapabilitySync(): DeviceCapability--><!--Device-ResourceManager-getDeviceCapabilitySync(): DeviceCapability-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DeviceCapability | Device capability. |
+| [DeviceCapability](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-devicecapability-i.md) | Device capability. |
 
 **Example**
 
@@ -1426,20 +1468,21 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified
-resource name and formats the string based on the **args** parameter. This API returns the result synchronously.
+Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified resource name and formats the string based on the **args** parameter. This API returns the result synchronously.
 
-> **NOTE**
->
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
->
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
+> **NOTE**  
+>  
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).  
+>  
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for  
 > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1448,8 +1491,8 @@ resource name and formats the string based on the **args** parameter. This API r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding stringrepresentation based on the current language's[plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameterin **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameteris used. |
+| num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number> | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
 
 **Return value:**
 
@@ -1519,20 +1562,21 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified
-resource ID and formats the string based on the **args** parameter. This API returns the result synchronously.
+Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified resource ID and formats the string based on the **args** parameter. This API returns the result synchronously.
 
-> **NOTE**
->
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
->
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
+> **NOTE**  
+>  
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).  
+>  
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for  
 > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ResourceManager-getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1541,8 +1585,8 @@ resource ID and formats the string based on the **args** parameter. This API ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding stringrepresentation based on the current language's[plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameterin **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameteris used. |
+| num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number> | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
 
 **Return value:**
 
@@ -1612,13 +1656,11 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified
-resource object and formats the string based on the **args** parameter. This API returns the result
-synchronously.
+Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified resource object and formats the string based on the **args** parameter. This API returns the result synchronously.
 
-> **NOTE**
->
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 18
@@ -1631,15 +1673,17 @@ synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ResourceManager-getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding stringrepresentation based on the current language's[plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameterin **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameteris used. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number> | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
 
 **Return value:**
 
@@ -1710,12 +1754,13 @@ try {
 getDrawableDescriptor(resId: number, density?: number, type?: number): DrawableDescriptor
 ```
 
-Obtains a **DrawableDescriptor** object for icon display based on the specified resource ID. This API returns the
-result synchronously.
+Obtains a **DrawableDescriptor** object for icon display based on the specified resource ID. This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1731,7 +1776,7 @@ result synchronously.
 
 | Type | Description |
 | --- | --- |
-| DrawableDescriptor | **DrawableDescriptor** object corresponding to the specified resource ID. |
+| [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md) | **DrawableDescriptor** object corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -1785,8 +1830,7 @@ export default class EntryAbility extends UIAbility {
 getDrawableDescriptor(resource: Resource, density?: number, type?: number): DrawableDescriptor
 ```
 
-Obtains a **DrawableDescriptor** object for icon display based on the specified resource object. This API returns
-the result synchronously.
+Obtains a **DrawableDescriptor** object for icon display based on the specified resource object. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -1798,21 +1842,23 @@ the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getDrawableDescriptor(resource: Resource, density?: number, type?: number): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptor(resource: Resource, density?: number, type?: number): DrawableDescriptor-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screendensity. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
 | type | number | No | Icon type. The Default value is **0**.<br>**0**: Icon resource of the application.<br>**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| DrawableDescriptor | **DrawableDescriptor** object corresponding to the specified resource ID. |
+| [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md) | **DrawableDescriptor** object corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -1864,12 +1910,13 @@ try {
 getDrawableDescriptorByName(resName: string, density?: number, type?: number): DrawableDescriptor
 ```
 
-Obtains a **DrawableDescriptor** object for icon display based on the specified resource name. This API returns
-the result synchronously.
+Obtains a **DrawableDescriptor** object for icon display based on the specified resource name. This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1885,7 +1932,7 @@ the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| DrawableDescriptor | **DrawableDescriptor** object. |
+| [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md) | **DrawableDescriptor** object. |
 
 **Error codes:**
 
@@ -1939,20 +1986,21 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified
-resource name and formats the string based on the **args** parameter. This API returns the result synchronously.
+Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified resource name and formats the string based on the **args** parameter. This API returns the result synchronously.
 
-> **NOTE**
->
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
->
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
+> **NOTE**  
+>  
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).  
+>  
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for  
 > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -1961,8 +2009,8 @@ resource name and formats the string based on the **args** parameter. This API r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| num | number | Yes | Integer number used to obtain the corresponding string representation based on thecurrent language's[plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameterin **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameteris used. |
+| num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number> | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
 
 **Return value:**
 
@@ -2032,20 +2080,21 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified
-resource ID and formats the string based on the **args** parameter. This API returns the result synchronously.
+Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified resource ID and formats the string based on the **args** parameter. This API returns the result synchronously.
 
-> **NOTE**
->
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
->
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
+> **NOTE**  
+>  
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
+> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).  
+>  
+> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for  
 > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ResourceManager-getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2054,8 +2103,8 @@ resource ID and formats the string based on the **args** parameter. This API ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Integer number used to obtain the corresponding string representation based on thecurrent language's[plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameterin **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameteris used. |
+| num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number> | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
 
 **Return value:**
 
@@ -2125,13 +2174,11 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified
-resource object and formats the string based on the **args** parameter. This API returns the result
-synchronously.
+Obtains a [singular/plural](../../../../internationalization/l10n-singular-plural.md) string based on the specified resource object and formats the string based on the **args** parameter. This API returns the result synchronously.
 
-> **NOTE**
->
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 18
@@ -2144,15 +2191,17 @@ synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-ResourceManager-getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| num | number | Yes | Integer number used to obtain the corresponding string representation based on thecurrent language's[plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameterin **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameteris used. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number> | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
 
 **Return value:**
 
@@ -2229,6 +2278,8 @@ Obtains the language list of an application.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>--><!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -2241,7 +2292,7 @@ Obtains the language list of an application.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | Language list. The strings in the list are comprised of the language, script (optional), and region (optional), which are connected by a hyphen (-). |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Language list. The strings in the list are comprised of the language, script (optional), and region (optional), which are connected by a hyphen (-). |
 
 **Error codes:**
 
@@ -2292,14 +2343,15 @@ export default class EntryAbility extends UIAbility {
 getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void
 ```
 
-Obtains media file content based on the specified resource ID. This API uses an asynchronous callback to return
-the result.
+Obtains media file content based on the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** getMediaContent(resId:
+
+<!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2308,7 +2360,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Uint8Array> | Yes | Callback used to return the media file content. |
 
 **Example**
 
@@ -2339,6 +2391,8 @@ Obtains media file content based on the specified resource ID. This API uses a p
 
 **Substitutes:** getMediaContent(resId:
 
+<!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -2351,7 +2405,7 @@ Obtains media file content based on the specified resource ID. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the media file content. |
 
 **Example**
 
@@ -2374,14 +2428,15 @@ resourceManager.getResourceManager((error, mgr) => {
 getMediaBase64(resId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code based on the specified resource ID. This API uses an asynchronous callback to
-return the result.
+Obtains an image's Base64 code based on the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** getMediaContentBase64(resId:
+
+<!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2390,7 +2445,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the Base64 code of the image. |
 
 **Example**
 
@@ -2421,6 +2476,8 @@ Obtains an image's Base64 code based on the specified resource ID. This API uses
 
 **Substitutes:** getMediaContentBase64(resId:
 
+<!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>--><!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -2433,7 +2490,7 @@ Obtains an image's Base64 code based on the specified resource ID. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the Base64 code of the image. |
 
 **Example**
 
@@ -2456,12 +2513,13 @@ resourceManager.getResourceManager((error, mgr) => {
 getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code based on the specified resource name. This API uses an asynchronous callback to
-return the result.
+Obtains an image's Base64 code based on the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2470,7 +2528,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -2513,12 +2571,13 @@ export default class EntryAbility extends UIAbility {
 getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource name. This API
-uses an asynchronous callback to return the result.
+Obtains an image's Base64 code for the specified screen density based on the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2528,7 +2587,7 @@ uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -2571,12 +2630,13 @@ export default class EntryAbility extends UIAbility {
 getMediaBase64ByName(resName: string): Promise<string>
 ```
 
-Obtains an image's Base64 code based on the specified resource name. This API uses a promise to return the
-result.
+Obtains an image's Base64 code based on the specified resource name. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string): Promise<string>--><!--Device-ResourceManager-getMediaBase64ByName(resName: string): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2590,7 +2650,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -2631,12 +2691,13 @@ export default class EntryAbility extends UIAbility {
 getMediaBase64ByName(resName: string, density: number): Promise<string>
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource name. This API
-uses a promise to return the result.
+Obtains an image's Base64 code for the specified screen density based on the specified resource name. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int): Promise<string>--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2651,7 +2712,7 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -2692,12 +2753,13 @@ export default class EntryAbility extends UIAbility {
 getMediaBase64ByNameSync(resName: string, density?: number): string
 ```
 
-Obtains an image's Base64 code for the default or specified screen density based on the specified resource name.
-This API returns the result synchronously.
+Obtains an image's Base64 code for the default or specified screen density based on the specified resource name.This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaBase64ByNameSync(resName: string, density?: int): string--><!--Device-ResourceManager-getMediaBase64ByNameSync(resName: string, density?: int): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2758,12 +2820,13 @@ export default class EntryAbility extends UIAbility {
 getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains media file content based on the specified resource name. This API uses an asynchronous callback to return
-the result.
+Obtains media file content based on the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2772,7 +2835,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | _AsyncCallback<Uint8Array> | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -2815,12 +2878,13 @@ export default class EntryAbility extends UIAbility {
 getMediaByName(resName: string, density: number, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains the media file content for the specified screen density based on the specified resource name. This API
-uses an asynchronous callback to return the result.
+Obtains the media file content for the specified screen density based on the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2830,7 +2894,7 @@ uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | _AsyncCallback<Uint8Array> | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -2879,6 +2943,8 @@ Obtains media file content based on the specified resource name. This API uses a
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaByName(resName: string): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaByName(resName: string): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -2891,7 +2957,7 @@ Obtains media file content based on the specified resource name. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -2932,12 +2998,13 @@ export default class EntryAbility extends UIAbility {
 getMediaByName(resName: string, density: number): Promise<Uint8Array>
 ```
 
-Obtains the media file content for the specified screen density based on the specified resource name. This API
-uses a promise to return the result.
+Obtains the media file content for the specified screen density based on the specified resource name. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaByName(resName: string, density: int): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaByName(resName: string, density: int): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -2952,7 +3019,7 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -2993,12 +3060,13 @@ export default class EntryAbility extends UIAbility {
 getMediaByNameSync(resName: string, density?: number): Uint8Array
 ```
 
-Obtains the media file content for the default or specified screen density based on the specified resource name.
-This API returns the result synchronously.
+Obtains the media file content for the default or specified screen density based on the specified resource name.This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaByNameSync(resName: string, density?: int): Uint8Array--><!--Device-ResourceManager-getMediaByNameSync(resName: string, density?: int): Uint8Array-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3013,7 +3081,7 @@ This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Promise used to return the result, which is the content of the media file correspondingto the specified resource name. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Promise used to return the result, which is the content of the media file corresponding to the specified resource name. |
 
 **Error codes:**
 
@@ -3059,8 +3127,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains media file content based on the specified resource object. This API uses an asynchronous callback to
-return the result.
+Obtains media file content based on the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3072,14 +3139,16 @@ return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| callback | _AsyncCallback<Uint8Array> | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3122,8 +3191,7 @@ try {
 getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains media file content for the specified screen density based on the specified resource object. This API uses
-an asynchronous callback to return the result.
+Obtains media file content for the specified screen density based on the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -3135,15 +3203,17 @@ an asynchronous callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Uint8Array>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | _AsyncCallback<Uint8Array> | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3198,19 +3268,21 @@ Obtains media file content based on the specified resource object. This API uses
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContent(resource: Resource): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resource: Resource): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -3251,8 +3323,7 @@ try {
 getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 ```
 
-Obtains media file content for the specified screen density based on the specified resource object. This API uses
-a promise to return the result.
+Obtains media file content for the specified screen density based on the specified resource object. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -3264,20 +3335,22 @@ a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContent(resource: Resource, density: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resource: Resource, density: number): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -3318,12 +3391,13 @@ try {
 getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains media file content based on the specified resource ID. This API uses an asynchronous callback to return
-the result.
+Obtains media file content based on the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3332,7 +3406,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | _AsyncCallback<Uint8Array> | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3376,12 +3450,13 @@ export default class EntryAbility extends UIAbility {
 getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains the media file content for the specified screen density based on the specified resource ID. This API uses
-an asynchronous callback to return the result.
+Obtains the media file content for the specified screen density based on the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3391,7 +3466,7 @@ an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | _AsyncCallback<Uint8Array> | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3440,6 +3515,8 @@ Obtains media file content based on the specified resource ID. This API uses a p
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContent(resId: long): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resId: long): Promise<Uint8Array>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -3452,7 +3529,7 @@ Obtains media file content based on the specified resource ID. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -3493,12 +3570,13 @@ export default class EntryAbility extends UIAbility {
 getMediaContent(resId: number, density: number): Promise<Uint8Array>
 ```
 
-Obtains the media file content for the specified screen density based on the specified resource ID. This API uses
-a promise to return the result.
+Obtains the media file content for the specified screen density based on the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContent(resId: long, density: int): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resId: long, density: int): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3513,7 +3591,7 @@ a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -3554,8 +3632,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code based on the specified resource object. This API uses an asynchronous callback to
-return the result.
+Obtains an image's Base64 code based on the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3567,14 +3644,16 @@ return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -3617,8 +3696,7 @@ try {
 getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource object. This API
-uses an asynchronous callback to return the result.
+Obtains an image's Base64 code for the specified screen density based on the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -3630,15 +3708,17 @@ uses an asynchronous callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -3681,8 +3761,7 @@ try {
 getMediaContentBase64(resource: Resource): Promise<string>
 ```
 
-Obtains an image's Base64 code based on the specified resource object. This API uses a promise to return the
-result.
+Obtains an image's Base64 code based on the specified resource object. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3694,19 +3773,21 @@ result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -3747,8 +3828,7 @@ try {
 getMediaContentBase64(resource: Resource, density: number): Promise<string>
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource object. This API
-uses a promise to return the result.
+Obtains an image's Base64 code for the specified screen density based on the specified resource object. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -3760,20 +3840,22 @@ uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resource: Resource, density: number): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -3814,12 +3896,13 @@ try {
 getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code based on the specified resource ID. This API uses an asynchronous callback to
-return the result.
+Obtains an image's Base64 code based on the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3828,7 +3911,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -3871,12 +3954,13 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource ID. This API uses
-an asynchronous callback to return the result.
+Obtains an image's Base64 code for the specified screen density based on the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -3886,7 +3970,7 @@ an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -3935,6 +4019,8 @@ Obtains an image's Base64 code based on the specified resource ID. This API uses
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentBase64(resId: long): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resId: long): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -3947,7 +4033,7 @@ Obtains an image's Base64 code based on the specified resource ID. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -3988,12 +4074,13 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64(resId: number, density: number): Promise<string>
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource ID. This API uses
-a promise to return the result.
+Obtains an image's Base64 code for the specified screen density based on the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int): Promise<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4008,7 +4095,7 @@ a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the Base64 code of the image. |
 
 **Error codes:**
 
@@ -4049,12 +4136,13 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64Sync(resId: number, density?: number): string
 ```
 
-Obtains an image's Base64 code for the default or specified screen density based on the specified resource ID.
-This API returns the result synchronously.
+Obtains an image's Base64 code for the default or specified screen density based on the specified resource ID.This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContentBase64Sync(resId: long, density?: int): string--><!--Device-ResourceManager-getMediaContentBase64Sync(resId: long, density?: int): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4115,8 +4203,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64Sync(resource: Resource, density?: number): string
 ```
 
-Obtains an image's Base64 code for the default or specified screen density based on the specified resource
-object. This API returns the result synchronously.
+Obtains an image's Base64 code for the default or specified screen density based on the specified resource object. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -4128,14 +4215,16 @@ object. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentBase64Sync(resource: Resource, density?: number): string--><!--Device-ResourceManager-getMediaContentBase64Sync(resource: Resource, density?: number): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screendensity. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
 
 **Return value:**
 
@@ -4186,12 +4275,13 @@ try {
 getMediaContentSync(resId: number, density?: number): Uint8Array
 ```
 
-Obtains the media file content for the default or specified screen density based on the specified resource ID.
-This API returns the result synchronously.
+Obtains the media file content for the default or specified screen density based on the specified resource ID.This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getMediaContentSync(resId: long, density?: int): Uint8Array--><!--Device-ResourceManager-getMediaContentSync(resId: long, density?: int): Uint8Array-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4206,7 +4296,7 @@ This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Content of the media file corresponding to the specified resource ID. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Content of the media file corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -4252,8 +4342,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContentSync(resource: Resource, density?: number): Uint8Array
 ```
 
-Obtains the media file content for the default or specified screen density based on the specified resource
-object. This API returns the result synchronously.
+Obtains the media file content for the default or specified screen density based on the specified resource object. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -4265,20 +4354,22 @@ object. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getMediaContentSync(resource: Resource, density?: number): Uint8Array--><!--Device-ResourceManager-getMediaContentSync(resource: Resource, density?: number): Uint8Array-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screendensity. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Content of the media file corresponding to the specified resource object. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Content of the media file corresponding to the specified resource object. |
 
 **Error codes:**
 
@@ -4329,6 +4420,8 @@ Obtains an integer or float number based on the specified resource ID. This API 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getNumber(resId: number): number--><!--Device-ResourceManager-getNumber(resId: number): number-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -4341,7 +4434,7 @@ Obtains an integer or float number based on the specified resource ID. This API 
 
 | Type | Description |
 | --- | --- |
-| number | Integer or float value corresponding to the specified resource ID.An integer indicates the original value, and a float number without a unit indicates the original value anda float number with the unit of vp or fp indicates the px value. For details, see the sample code. |
+| number | Integer or float value corresponding to the specified resource ID.An integer indicates the original value, and a float number without a unit indicates the original value and a float number with the unit of vp or fp indicates the px value. For details, see the sample code. |
 
 **Error codes:**
 
@@ -4421,8 +4514,7 @@ export default class EntryAbility extends UIAbility {
 getNumber(resource: Resource): number
 ```
 
-Obtains an integer or float number based on the specified resource object. This API returns the result
-synchronously.
+Obtains an integer or float number based on the specified resource object. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -4434,19 +4526,21 @@ synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getNumber(resource: Resource): number--><!--Device-ResourceManager-getNumber(resource: Resource): number-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Integer or float number.An integer indicates the original value, and a float number without a unit indicates the original value anda float number with the unit of vp or fp indicates the px value. |
+| number | Integer or float number.An integer indicates the original value, and a float number without a unit indicates the original value and a float number with the unit of vp or fp indicates the px value. |
 
 **Error codes:**
 
@@ -4500,12 +4594,13 @@ try {
 getNumberByName(resName: string): number
 ```
 
-Obtains an integer or float number based on the specified resource name. This API returns the result
-synchronously.
+Obtains an integer or float number based on the specified resource name. This API returns the result synchronously.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getNumberByName(resName: string): number--><!--Device-ResourceManager-getNumberByName(resName: string): number-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4519,7 +4614,7 @@ synchronously.
 
 | Type | Description |
 | --- | --- |
-| number | Integer or float value corresponding to the specified resource name.An integer indicates the original value, and a float number without a unit indicates the original value anda float number with the unit of vp or fp indicates the px value. |
+| number | Integer or float value corresponding to the specified resource name.An integer indicates the original value, and a float number without a unit indicates the original value and a float number with the unit of vp or fp indicates the px value. |
 
 **Error codes:**
 
@@ -4599,14 +4694,13 @@ export default class EntryAbility extends UIAbility {
 getOverrideConfiguration(): Configuration
 ```
 
-Obtains the configuration of differentiated resources. This API returns the result synchronously. This API allows
-a common **ResourceManager** object and a **ResourceManager** object obtained through
-[getOverrideResourceManager](arkts-localization-resourcemanager-i.md#getoverrideresourcemanager-1) to obtain the
-configuration of differentiated resources.
+Obtains the configuration of differentiated resources. This API returns the result synchronously. This API allows a common **ResourceManager** object and a **ResourceManager** object obtained through [getOverrideResourceManager](arkts-localization-resourcemanager-i.md#getoverrideresourcemanager-1) to obtain the configuration of differentiated resources.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ResourceManager-getOverrideConfiguration(): Configuration--><!--Device-ResourceManager-getOverrideConfiguration(): Configuration-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4614,7 +4708,7 @@ configuration of differentiated resources.
 
 | Type | Description |
 | --- | --- |
-| Configuration | Configuration of differentiated resources. |
+| [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-configuration-i.md) | Configuration of differentiated resources. |
 
 **Example**
 
@@ -4646,16 +4740,13 @@ export default class EntryAbility extends UIAbility {
 getOverrideResourceManager(configuration?: Configuration): ResourceManager
 ```
 
-Obtains a **ResourceManager** object for loading differentiated resources. This API returns the result
-synchronously.
-The resource configuration (including the language, color mode, resolution, and orientation) obtained by a common
-**ResourceManager** object is determined by the system. With this API, an application can obtain resources of the
-specified configuration (that is, differentiated resources), for example, dark color resources in light color
-mode.
+Obtains a **ResourceManager** object for loading differentiated resources. This API returns the result synchronously.The resource configuration (including the language, color mode, resolution, and orientation) obtained by a common **ResourceManager** object is determined by the system. With this API, an application can obtain resources of the specified configuration (that is, differentiated resources), for example, dark color resources in light color mode.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager--><!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -4663,13 +4754,13 @@ mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | Configuration | No | Resource configuration.<br>After obtaining the configuration ofdifferentiated resources through[getOverrideConfiguration](arkts-localization-resourcemanager-i.md#getoverrideconfiguration-1), modify theconfiguration items as required, and then pass these items as input parameters to the API.<br>If noconfiguration is specified, the current system configuration is used. |
+| configuration | [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-configuration-i.md) | No | Resource configuration.<br>After obtaining the configuration of differentiated resources through [getOverrideConfiguration](arkts-localization-resourcemanager-i.md#getoverrideconfiguration-1), modify the configuration items as required, and then pass these items as input parameters to the API.<br>If no configuration is specified, the current system configuration is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ResourceManager | **ResourceManager** object for loading differentiated resources. |
+| [ResourceManager](arkts-localization-resourcemanager-i.md) | **ResourceManager** object for loading differentiated resources. |
 
 **Error codes:**
 
@@ -4707,12 +4798,11 @@ export default class EntryAbility extends UIAbility {
 getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource ID. This API uses an asynchronous
-callback to return the result.
+Obtains singular/plural strings based on the specified quantity and resource ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 6
@@ -4721,6 +4811,8 @@ callback to return the result.
 
 **Substitutes:** getPluralStringValue(resId:
 
+<!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -4728,8 +4820,8 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the obtained singular/plural string. |
 
 **Example**
 
@@ -4754,12 +4846,11 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralString(resId: number, num: number): Promise<string>
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource ID. This API uses a promise to
-return the result.
+Obtains singular/plural strings based on the specified quantity and resource ID. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 6
@@ -4768,6 +4859,8 @@ return the result.
 
 **Substitutes:** getPluralStringValue(resId:
 
+<!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -4775,13 +4868,13 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the obtained singular/plural string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the obtained singular/plural string. |
 
 **Example**
 
@@ -4804,12 +4897,11 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource name. This API uses an asynchronous
-callback to return the result.
+Obtains singular/plural strings based on the specified quantity and resource name. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
@@ -4820,6 +4912,8 @@ callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -4827,8 +4921,8 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -4885,12 +4979,11 @@ this.context.resourceManager.getPluralStringByName("test", 1, (error: BusinessEr
 getPluralStringByName(resName: string, num: number): Promise<string>
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource name. This API uses a promise to
-return the result.
+Obtains singular/plural strings based on the specified quantity and resource name. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
@@ -4901,6 +4994,8 @@ return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringByName(resName: string, num: number): Promise<string>--><!--Device-ResourceManager-getPluralStringByName(resName: string, num: number): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -4908,13 +5003,13 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result, which is the singular/plural string correspondingto the specified resource name. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the result, which is the singular/plural string corresponding to the specified resource name. |
 
 **Error codes:**
 
@@ -4971,12 +5066,11 @@ this.context.resourceManager.getPluralStringByName("test", 1)
 getPluralStringByNameSync(resName: string, num: number): string
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource name. This API returns the result
-synchronously.
+Obtains singular/plural strings based on the specified quantity and resource name. This API returns the result synchronously.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
@@ -4987,6 +5081,8 @@ synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringByNameSync(resName: string, num: number): string--><!--Device-ResourceManager-getPluralStringByNameSync(resName: string, num: number): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -4994,7 +5090,7 @@ synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
@@ -5058,12 +5154,11 @@ try {
 getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource object. This API uses an
-asynchronous callback to return the result.
+Obtains singular/plural strings based on the specified quantity and resource object. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
@@ -5076,15 +5171,17 @@ asynchronous callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -5148,12 +5245,11 @@ this.context.resourceManager.getPluralStringValue(resource, 1,
 getPluralStringValue(resource: Resource, num: number): Promise<string>
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource object. This API uses a promise to
-return the result.
+Obtains singular/plural strings based on the specified quantity and resource object. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
@@ -5166,20 +5262,22 @@ return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number): Promise<string>--><!--Device-ResourceManager-getPluralStringValue(resource: Resource, num: number): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the obtained singular/plural string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -5242,12 +5340,11 @@ this.context.resourceManager.getPluralStringValue(resource, 1)
 getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource ID. This API uses an asynchronous
-callback to return the result.
+Obtains singular/plural strings based on the specified quantity and resource ID. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
@@ -5258,6 +5355,8 @@ callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -5265,8 +5364,8 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -5324,12 +5423,11 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1,
 getPluralStringValue(resId: number, num: number): Promise<string>
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource ID. This API uses a promise to
-return the result.
+Obtains singular/plural strings based on the specified quantity and resource ID. This API uses a promise to return the result.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
@@ -5340,6 +5438,8 @@ return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringValue(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralStringValue(resId: number, num: number): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -5347,13 +5447,13 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the obtained singular/plural string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -5410,12 +5510,11 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1)
 getPluralStringValueSync(resId: number, num: number): string
 ```
 
-Obtains singular/plural strings based on the specified resource ID and quantity. This API returns the result
-synchronously.
+Obtains singular/plural strings based on the specified resource ID and quantity. This API returns the result synchronously.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
@@ -5426,6 +5525,8 @@ synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringValueSync(resId: number, num: number): string--><!--Device-ResourceManager-getPluralStringValueSync(resId: number, num: number): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -5433,7 +5534,7 @@ synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
@@ -5497,12 +5598,11 @@ try {
 getPluralStringValueSync(resource: Resource, num: number): string
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource object. This API returns the result
-synchronously.
+Obtains singular/plural strings based on the specified quantity and resource object. This API returns the result synchronously.
 
-> **NOTE**
->
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
+> **NOTE**  
+>  
+> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
 > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
@@ -5515,14 +5615,16 @@ synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getPluralStringValueSync(resource: Resource, num: number): string--><!--Device-ResourceManager-getPluralStringValueSync(resource: Resource, num: number): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based onthe current language's plural rules. For details about the plural rules of a language, see[Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
@@ -5592,18 +5694,19 @@ try {
 getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 ```
 
-Obtains the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API
-uses an asynchronous callback to return the result.
+Obtains the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1) or
-> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1) to
+> **NOTE**  
+>  
+> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1) or  
+> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1) to  
 > close the fd after use.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5612,7 +5715,7 @@ uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the rawfile. |
-| callback | _AsyncCallback&lt;RawFileDescriptor&gt; | Yes | Callback used to return the fd of the HAP. |
+| callback | _AsyncCallback<RawFileDescriptor> | Yes | Callback used to return the fd of the HAP. |
 
 **Error codes:**
 
@@ -5657,18 +5760,19 @@ export default class EntryAbility extends UIAbility {
 getRawFd(path: string): Promise<RawFileDescriptor>
 ```
 
-Obtains the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API
-uses a promise to return the result.
+Obtains the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result.
 
-> **NOTE**
->
-> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1) or
-> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1) to
+> **NOTE**  
+>  
+> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1) or  
+> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1) to  
 > close the fd after use.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getRawFd(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFd(path: string): Promise<RawFileDescriptor>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5682,7 +5786,7 @@ uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RawFileDescriptor&gt; | Promise used to return the fd of the HAP. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RawFileDescriptor> | Promise used to return the fd of the HAP. |
 
 **Error codes:**
 
@@ -5725,18 +5829,19 @@ export default class EntryAbility extends UIAbility {
 getRawFdSync(path: string): RawFileDescriptor
 ```
 
-Obtains the file descriptor (fd) of the HAP where the rawfile file in the resources/rawfile directory is located.
-This API is called in synchronous mode.
+Obtains the file descriptor (fd) of the HAP where the rawfile file in the resources/rawfile directory is located.This API is called in synchronous mode.
 
-> **NOTE**
->
-> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1) or
-> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1) to
+> **NOTE**  
+>  
+> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-i.md#closerawfdsync-1) or  
+> [closeRawFd](arkts-localization-resourcemanager-i.md#closerawfd-1) to  
 > close the fd after use.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getRawFdSync(path: string): RawFileDescriptor--><!--Device-ResourceManager-getRawFdSync(path: string): RawFileDescriptor-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5750,7 +5855,7 @@ This API is called in synchronous mode.
 
 | Type | Description |
 | --- | --- |
-| RawFileDescriptor | fd of the HAP where the rawfile is located. |
+| [RawFileDescriptor](arkts-localization-rawfiledescriptor-t.md) | fd of the HAP where the rawfile is located. |
 
 **Error codes:**
 
@@ -5786,14 +5891,15 @@ export default class EntryAbility extends UIAbility {
 getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void
 ```
 
-Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback
-to return the result.
+Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** getRawFileContent(path:
+
+<!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5802,7 +5908,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the rawfile. |
-| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the rawfile content. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Uint8Array> | Yes | Callback used to return the rawfile content. |
 
 **Example**
 
@@ -5827,14 +5933,15 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFile(path: string): Promise<Uint8Array>
 ```
 
-Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses a promise to return the
-result.
+Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** getRawFileContent(path:
+
+<!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5848,7 +5955,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the rawfile content. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the rawfile content. |
 
 **Example**
 
@@ -5871,12 +5978,13 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback
-to return the result.
+Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5885,7 +5993,7 @@ to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the rawfile. |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the content of the rawfile. |
+| callback | _AsyncCallback<Uint8Array> | Yes | Callback used to return the content of the rawfile. |
 
 **Error codes:**
 
@@ -5927,12 +6035,13 @@ export default class EntryAbility extends UIAbility {
 getRawFileContent(path: string): Promise<Uint8Array>
 ```
 
-Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses a promise to return the
-result.
+Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -5946,7 +6055,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise used to return the content of the rawfile. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Uint8Array> | Promise used to return the content of the rawfile. |
 
 **Error codes:**
 
@@ -5986,12 +6095,13 @@ export default class EntryAbility extends UIAbility {
 getRawFileContentSync(path: string): Uint8Array
 ```
 
-Obtains the content of a rawfile in the **resources/rawfile** directory. This API returns the result
-synchronously.
+Obtains the content of a rawfile in the **resources/rawfile** directory. This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array--><!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6005,7 +6115,7 @@ synchronously.
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Content of the rawfile. |
+| [Uint8Array](../../apis-na/arkts-apis/arkts-na-uint8array-i.md) | Content of the rawfile. |
 
 **Error codes:**
 
@@ -6041,14 +6151,15 @@ export default class EntryAbility extends UIAbility {
 getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void
 ```
 
-Obtains the fd of the rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to
-return the result.
+Obtains the fd of the rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** getRawFd(path:
+
+<!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6057,7 +6168,7 @@ return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the rawfile. |
-| callback | AsyncCallback&lt;RawFileDescriptor&gt; | Yes | Callback used to return the obtained fd. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RawFileDescriptor> | Yes | Callback used to return the obtained fd. |
 
 **Example**
 
@@ -6084,14 +6195,15 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 ```
 
-Obtains the fd of the rawfile in the **resources/rawfile** directory. This API uses a promise to return the
-result.
+Obtains the fd of the rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
 **Substitutes:** getRawFd(path:
+
+<!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6105,7 +6217,7 @@ result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RawFileDescriptor&gt; | Promise used to return the obtained fd. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<RawFileDescriptor> | Promise used to return the obtained fd. |
 
 **Example**
 
@@ -6130,17 +6242,18 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 ```
 
-Obtains the list of folders and files in the **resources/rawfile** directory. This API uses an asynchronous
-callback to return the result.
+Obtains the list of folders and files in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
+> **NOTE**  
+>  
+> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the  
 > directory, the list of the folders and files is returned.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6149,7 +6262,7 @@ callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | **rawfile** directory. |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the list of folders and files. |
+| callback | _AsyncCallback<Array<string>> | Yes | Callback used to return the list of folders and files. |
 
 **Error codes:**
 
@@ -6187,17 +6300,18 @@ export default class EntryAbility extends UIAbility {
 getRawFileList(path: string): Promise<Array<string>>
 ```
 
-Obtains the list of folders and files in the **resources/rawfile** directory. This API uses a promise to return
-the result.
+Obtains the list of folders and files in the **resources/rawfile** directory. This API uses a promise to return the result.
 
-> **NOTE**
->
-> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
+> **NOTE**  
+>  
+> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the  
 > directory, the list of the folders and files is returned.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getRawFileList(path: string): Promise<Array<string>>--><!--Device-ResourceManager-getRawFileList(path: string): Promise<Array<string>>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6211,7 +6325,7 @@ the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of folders and files. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the list of folders and files. |
 
 **Error codes:**
 
@@ -6249,17 +6363,18 @@ export default class EntryAbility extends UIAbility {
 getRawFileListSync(path: string): Array<string>
 ```
 
-Obtains the list of folders and files in the **resources/rawfile** directory. This API returns the result
-synchronously.
+Obtains the list of folders and files in the **resources/rawfile** directory. This API returns the result synchronously.
 
-> **NOTE**
->
-> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
+> **NOTE**  
+>  
+> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the  
 > directory, the list of the folders and files is returned.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getRawFileListSync(path: string): Array<string>--><!--Device-ResourceManager-getRawFileListSync(path: string): Array<string>-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6273,7 +6388,7 @@ synchronously.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of folders and files in the **rawfile** directory. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | List of folders and files in the **rawfile** directory. |
 
 **Error codes:**
 
@@ -6319,6 +6434,8 @@ Obtains the resource name based on the specified resource ID.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ResourceManager-getResourceName(resId: long): string--><!--Device-ResourceManager-getResourceName(resId: long): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6390,6 +6507,8 @@ Obtains a string based on the specified resource ID. This API uses an asynchrono
 
 **Substitutes:** getStringValue(resId:
 
+<!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6397,7 +6516,7 @@ Obtains a string based on the specified resource ID. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the obtained string. |
 
 **Example**
 
@@ -6428,6 +6547,8 @@ Obtains a string based on the specified resource ID. This API uses a promise to 
 
 **Substitutes:** getStringValue(resId:
 
+<!--Device-ResourceManager-getString(resId: number): Promise<string>--><!--Device-ResourceManager-getString(resId: number): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6440,7 +6561,7 @@ Obtains a string based on the specified resource ID. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the obtained string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the obtained string. |
 
 **Example**
 
@@ -6463,14 +6584,15 @@ resourceManager.getResourceManager((error, mgr) => {
 getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains a string array based on the specified resource ID. This API uses an asynchronous callback to return the
-result.
+Obtains a string array based on the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
 **Substitutes:** getStringArrayValue(resId:
+
+<!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6479,7 +6601,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<string>> | Yes | Callback used to return the obtained string array. |
 
 **Example**
 
@@ -6510,6 +6632,8 @@ Obtains a string array based on the specified resource ID. This API uses a promi
 
 **Substitutes:** getStringArrayValue(resId:
 
+<!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>--><!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6522,7 +6646,7 @@ Obtains a string array based on the specified resource ID. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained string array. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the obtained string array. |
 
 **Example**
 
@@ -6545,12 +6669,13 @@ resourceManager.getResourceManager((error, mgr) => {
 getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void
 ```
 
-Obtains a string array based on the specified resource name. This API uses an asynchronous callback to return the
-result.
+Obtains a string array based on the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6559,7 +6684,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
+| callback | _AsyncCallback<Array<string>> | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6622,6 +6747,8 @@ Obtains a string array based on the specified resource name. This API uses a pro
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringArrayByName(resName: string): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayByName(resName: string): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6634,7 +6761,7 @@ Obtains a string array based on the specified resource name. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained string array. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6696,6 +6823,8 @@ Obtains a string array based on the specified resource name. This API returns th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringArrayByNameSync(resName: string): Array<string>--><!--Device-ResourceManager-getStringArrayByNameSync(resName: string): Array<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -6708,7 +6837,7 @@ Obtains a string array based on the specified resource name. This API returns th
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | String array corresponding to the specified resource name. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | String array corresponding to the specified resource name. |
 
 **Error codes:**
 
@@ -6765,8 +6894,7 @@ export default class EntryAbility extends UIAbility {
 getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>): void
 ```
 
-Obtains a string array based on the specified resource object. This API uses an asynchronous callback to return
-the result.
+Obtains a string array based on the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -6778,14 +6906,16 @@ the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| callback | _AsyncCallback<Array<string>> | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6853,19 +6983,21 @@ Obtains a string array based on the specified resource object. This API uses a p
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringArrayValue(resource: Resource): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayValue(resource: Resource): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained string array. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6921,12 +7053,13 @@ this.context.resourceManager.getStringArrayValue(resource)
 getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): void
 ```
 
-Obtains a string array based on the specified resource ID. This API uses an asynchronous callback to return the
-result.
+Obtains a string array based on the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -6935,7 +7068,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
+| callback | _AsyncCallback<Array<string>> | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6998,6 +7131,8 @@ Obtains a string array based on the specified resource ID. This API uses a promi
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringArrayValue(resId: long): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayValue(resId: long): Promise<Array<string>>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -7010,7 +7145,7 @@ Obtains a string array based on the specified resource ID. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained string array. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<string>> | Promise used to return the obtained string array. |
 
 **Error codes:**
 
@@ -7072,6 +7207,8 @@ Obtains a string array based on the specified resource ID. This API returns the 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringArrayValueSync(resId: long): Array<string>--><!--Device-ResourceManager-getStringArrayValueSync(resId: long): Array<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -7084,7 +7221,7 @@ Obtains a string array based on the specified resource ID. This API returns the 
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | String array corresponding to the specified resource ID. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | String array corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -7153,19 +7290,21 @@ Obtains a string array based on the specified resource object. This API returns 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringArrayValueSync(resource: Resource): Array<string>--><!--Device-ResourceManager-getStringArrayValueSync(resource: Resource): Array<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | String array corresponding to the specified resource object. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | String array corresponding to the specified resource object. |
 
 **Error codes:**
 
@@ -7222,12 +7361,13 @@ try {
 getStringByName(resName: string, callback: _AsyncCallback<string>): void
 ```
 
-Obtains a string based on the specified resource name. This API uses an asynchronous callback to return the
-result.
+Obtains a string based on the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getStringByName(resName: string, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringByName(resName: string, callback: _AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7236,7 +7376,7 @@ result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
@@ -7294,6 +7434,8 @@ Obtains a string based on the specified resource name. This API uses a promise t
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringByName(resName: string): Promise<string>--><!--Device-ResourceManager-getStringByName(resName: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -7306,7 +7448,7 @@ Obtains a string based on the specified resource name. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the obtained string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the obtained string. |
 
 **Error codes:**
 
@@ -7361,6 +7503,8 @@ Obtains a string based on the specified resource name. This API returns the resu
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getStringByNameSync(resName: string): string--><!--Device-ResourceManager-getStringByNameSync(resName: string): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7427,12 +7571,13 @@ export default class EntryAbility extends UIAbility {
 getStringByNameSync(resName: string, ...args: Array<string | number>): string
 ```
 
-Obtains a string based on the specified resource name and formats the string based on **args**. This API returns
-the result synchronously.
+Obtains a string based on the specified resource name and formats the string based on **args**. This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7441,7 +7586,7 @@ the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameterin **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameteris used. |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number> | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
 
 **Return value:**
 
@@ -7506,6 +7651,8 @@ Obtains a string based on the specified resource ID. This API returns the result
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getStringSync(resId: long): string--><!--Device-ResourceManager-getStringSync(resId: long): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7572,12 +7719,13 @@ export default class EntryAbility extends UIAbility {
 getStringSync(resId: number, ...args: Array<string | number>): string
 ```
 
-Obtains a string based on the specified resource ID and formats the string based on **args**. This API returns
-the result synchronously.
+Obtains a string based on the specified resource ID and formats the string based on **args**. This API returns the result synchronously.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -7586,7 +7734,7 @@ the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameterin **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameteris used. |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number> | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
 
 **Return value:**
 
@@ -7658,13 +7806,15 @@ Obtains a string based on the specified resource object. This API returns the re
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringSync(resource: Resource): string--><!--Device-ResourceManager-getStringSync(resource: Resource): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -7723,8 +7873,7 @@ try {
 getStringSync(resource: Resource, ...args: Array<string | number>): string
 ```
 
-Obtains a string based on the specified resource object and formats the string based on **args**. This API
-returns the result synchronously.
+Obtains a string based on the specified resource object and formats the string based on **args**. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -7736,14 +7885,16 @@ returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringSync(resource: Resource, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringSync(resource: Resource, ...args: Array<string | number>): string-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameterin **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameteris used. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| args | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string \| number> | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
 
 **Return value:**
 
@@ -7803,8 +7954,7 @@ try {
 getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
 ```
 
-Obtains a string based on the specified resource object. This API uses an asynchronous callback to return the
-result.
+Obtains a string based on the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -7816,14 +7966,16 @@ result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringValue(resource: Resource, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringValue(resource: Resource, callback: _AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
@@ -7887,19 +8039,21 @@ Obtains a string based on the specified resource object. This API uses a promise
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringValue(resource: Resource): Promise<string>--><!--Device-ResourceManager-getStringValue(resource: Resource): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the obtained string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the obtained string. |
 
 **Error codes:**
 
@@ -7944,6 +8098,8 @@ Obtains a string based on the specified resource ID. This API uses an asynchrono
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringValue(resId: long, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringValue(resId: long, callback: _AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -7951,7 +8107,7 @@ Obtains a string based on the specified resource ID. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
+| callback | _AsyncCallback<string> | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
@@ -7974,6 +8130,8 @@ Obtains a string based on the specified resource ID. This API uses a promise to 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getStringValue(resId: long): Promise<string>--><!--Device-ResourceManager-getStringValue(resId: long): Promise<string>-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -7986,7 +8144,7 @@ Obtains a string based on the specified resource ID. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the obtained string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the obtained string. |
 
 **Error codes:**
 
@@ -8036,12 +8194,13 @@ export default class EntryAbility extends UIAbility {
 getSymbol(resId: number) : number
 ```
 
-Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol) based on the
-specified resource ID. This API returns the result synchronously.
+Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol) based on the specified resource ID. This API returns the result synchronously.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getSymbol(resId: long) : long--><!--Device-ResourceManager-getSymbol(resId: long) : long-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -8095,8 +8254,7 @@ export default class EntryAbility extends UIAbility {
 getSymbol(resource: Resource) : number
 ```
 
-Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol) based on the
-specified resource object. This API returns the result synchronously.
+Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol) based on the specified resource object. This API returns the result synchronously.
 
 **Since:** 11
 
@@ -8108,13 +8266,15 @@ specified resource object. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-getSymbol(resource: Resource) : number--><!--Device-ResourceManager-getSymbol(resource: Resource) : number-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | Resource | Yes | Resource object. |
+| resource | [Resource](arkts-localization-resource-i.md) | Yes | Resource object. |
 
 **Return value:**
 
@@ -8160,12 +8320,13 @@ try {
 getSymbolByName(resName: string) : number
 ```
 
-Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol) based on the
-specified resource name. This API returns the result synchronously.
+Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol) based on the specified resource name. This API returns the result synchronously.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-getSymbolByName(resName: string) : long--><!--Device-ResourceManager-getSymbolByName(resName: string) : long-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -8225,6 +8386,8 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ResourceManager-isRawDir(path: string): boolean--><!--Device-ResourceManager-isRawDir(path: string): boolean-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Parameters:**
@@ -8237,7 +8400,7 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the path is a subdirectory in the **rawfile** directory.- **true**: The path is a subdirectory in the **rawfile** directory.- **false**: The path is not a subdirectory in the **rawfile** directory. |
+| boolean | Whether the path is a subdirectory in the **rawfile** directory.  - **true**: The path is a subdirectory in the **rawfile** directory.  - **false**: The path is not a subdirectory in the **rawfile** directory. |
 
 **Error codes:**
 
@@ -8290,6 +8453,8 @@ Releases a **ResourceManager** object. This API is not supported currently.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ResourceManager-release()--><!--Device-ResourceManager-release()-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Example**
@@ -8311,13 +8476,15 @@ removeResource(path: string) : void
 
 Removes the resources loaded from the specified path to restore the original resources.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ResourceManager-removeResource(path: string) : void--><!--Device-ResourceManager-removeResource(path: string) : void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -8362,14 +8529,13 @@ export default class EntryAbility extends UIAbility {
 updateOverrideConfiguration(configuration: Configuration): void
 ```
 
-Updated configuration of differentiated resources. This API allows a common **ResourceManager** object and a
-**ResourceManager** object obtained through
-[getOverrideResourceManager](arkts-localization-resourcemanager-i.md#getoverrideresourcemanager-1) to update the
-configuration of differentiated resources.
+Updated configuration of differentiated resources. This API allows a common **ResourceManager** object and a **ResourceManager** object obtained through [getOverrideResourceManager](arkts-localization-resourcemanager-i.md#getoverrideresourcemanager-1) to update the configuration of differentiated resources.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void--><!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -8377,7 +8543,7 @@ configuration of differentiated resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | Configuration | Yes | Configuration of differentiated resources. After obtaining theconfiguration of differentiated resources through[getOverrideConfiguration](arkts-localization-resourcemanager-i.md#getoverrideconfiguration-1), modify theconfiguration items as required, and then pass these items as input parameters to the API. |
+| configuration | [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-configuration-i.md) | Yes | Configuration of differentiated resources. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](arkts-localization-resourcemanager-i.md#getoverrideconfiguration-1), modify the configuration items as required, and then pass these items as input parameters to the API. |
 
 **Error codes:**
 

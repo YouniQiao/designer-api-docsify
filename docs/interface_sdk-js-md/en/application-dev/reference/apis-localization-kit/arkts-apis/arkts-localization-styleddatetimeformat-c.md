@@ -4,6 +4,8 @@ Provide a DateTime formatting interface which could format DateTime to StyleStri
 
 **Since:** 23
 
+<!--Device-i18n-export class StyledDateTimeFormat--><!--Device-i18n-export class StyledDateTimeFormat-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 ## Modules to Import
@@ -25,6 +27,10 @@ Creates an object for formatting the time and date that need to be displayed in 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
+        options?: StyledDateTimeFormatOptions)--><!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
+        options?: StyledDateTimeFormatOptions)-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
@@ -32,7 +38,7 @@ Creates an object for formatting the time and date that need to be displayed in 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dateTimeFormat | Intl.DateTimeFormat \| SimpleDateTimeFormat | Yes | Object used to format the date and time. |
-| options | StyledDateTimeFormatOptions | No |  |
+| options | [StyledDateTimeFormatOptions](arkts-localization-styleddatetimeformatoptions-i.md) | No |  |
 
 **Example**
 
@@ -84,19 +90,21 @@ Formats the date and time as a rich text object.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-StyledDateTimeFormat-format(date: Date): StyledString--><!--Device-StyledDateTimeFormat-format(date: Date): StyledString-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | Date and time to be formatted. |
+| date | [Date](../../apis-na/arkts-apis/arkts-na-date-i.md) | Yes | Date and time to be formatted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| StyledString | Rich text object after formatting. |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | Rich text object after formatting. |
 
 **Example**
 

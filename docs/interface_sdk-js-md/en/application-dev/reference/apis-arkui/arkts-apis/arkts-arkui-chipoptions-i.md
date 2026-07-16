@@ -2,29 +2,31 @@
 
 Defines the type and style parameters of the chip.
 
-> **NOTE**
->
-> 1. When **suffixSymbol** is provided with an argument, **suffixIcon** and **allowClose** will not take effect. If
-> **suffixSymbol** is not provided, but **suffixIcon** is, **allowClose** still will not take effect. When neither
-> **suffixSymbol** nor **suffixIcon** is provided with arguments, **allowClose** determines whether the deletion icon
-> is displayed.
->
-> 2. If **undefined** is assigned to **backgroundColor** or **activatedBackgroundColor**, the default background
-> color is used. If an invalid value is specified, the background color is transparent.
->
-> 3. Default font colors for **prefixSymbol** and **suffixSymbol**: **normalFontColor**:
-> **[$r('sys.color.ohos_id_color_primary')]**; **activatedFontColor**:
-> **[$r('sys.color.ohos_id_color_text_primary_contrary')]**. The default value of **fontColor** is **16**.
->
-> 4. The default value of **fillColor** is **$r('sys.color.ohos_id_color_secondary')** for **prefixIcon** and
-> **$r('sys.color.ohos_id_color_primary')** for **suffixIcon**. The color parsing of **fillColor** is the same as
-> that of the **Image** component.
->
-> 5. The default value of **activatedFillColor** in **prefixIcon** and **suffixIcon** is
-> **$r('sys.color.ohos_id_color_text_primary_contrary')**. The color parsing of **activatedFillColor** is the same as
+> **NOTE**  
+>  
+> 1. When **suffixSymbol** is provided with an argument, **suffixIcon** and **allowClose** will not take effect. If  
+> **suffixSymbol** is not provided, but **suffixIcon** is, **allowClose** still will not take effect. When neither  
+> **suffixSymbol** nor **suffixIcon** is provided with arguments, **allowClose** determines whether the deletion icon  
+> is displayed.  
+>  
+> 2. If **undefined** is assigned to **backgroundColor** or **activatedBackgroundColor**, the default background  
+> color is used. If an invalid value is specified, the background color is transparent.  
+>  
+> 3. Default font colors for **prefixSymbol** and **suffixSymbol**: **normalFontColor**:  
+> **[$r('sys.color.ohos_id_color_primary')]**; **activatedFontColor**:  
+> **[$r('sys.color.ohos_id_color_text_primary_contrary')]**. The default value of **fontColor** is **16**.  
+>  
+> 4. The default value of **fillColor** is **$r('sys.color.ohos_id_color_secondary')** for **prefixIcon** and  
+> **$r('sys.color.ohos_id_color_primary')** for **suffixIcon**. The color parsing of **fillColor** is the same as  
+> that of the **Image** component.  
+>  
+> 5. The default value of **activatedFillColor** in **prefixIcon** and **suffixIcon** is  
+> **$r('sys.color.ohos_id_color_text_primary_contrary')**. The color parsing of **activatedFillColor** is the same as  
 > that of the **Image** component.
 
 **Since:** 11
+
+<!--Device-unnamed-export interface ChipOptions--><!--Device-unnamed-export interface ChipOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,11 +42,7 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 accessibilityDescription?: ResourceStr
 ```
 
-Accessible description of the chip. You can provide comprehensive text explanations to help users understand the
-operation they are about to perform and its potential consequences, especially when these cannot be inferred from
-the component's attributes and accessibility text alone. If a component contains both text information and the
-accessible description, the text is announced first and then the accessible description, when the component is
-selected.
+Accessible description of the chip. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.
 
 The default value is an empty string.
 
@@ -57,6 +55,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ChipOptions-accessibilityDescription?: ResourceStr--><!--Device-ChipOptions-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,8 +76,7 @@ The options are as follows:
 
 **"no"**: The component cannot be recognized by accessibility services.
 
-**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility
-services.
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
 
 Default value: **"auto"**
 
@@ -93,6 +92,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-ChipOptions-accessibilityLevel?: string--><!--Device-ChipOptions-accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilitySelectedType
@@ -105,8 +106,7 @@ Type of selected state for the chip.
 
 Default value:
 
-If the **activated** property is set but **accessibilitySelectedType** is not specified, the default type is
-**CHECKED**. If the **activated** property is not set, the default type is **CLICKED**.
+If the **activated** property is set but **accessibilitySelectedType** is not specified, the default type is **CHECKED**. If the **activated** property is not set, the default type is **CLICKED**.
 
 If the value is **undefined**, the default value is used.
 
@@ -117,6 +117,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ChipOptions-accessibilitySelectedType?: AccessibilitySelectedType--><!--Device-ChipOptions-accessibilitySelectedType?: AccessibilitySelectedType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,6 +146,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipOptions-activated?: boolean--><!--Device-ChipOptions-activated?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activatedBackgroundColor
@@ -166,6 +170,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipOptions-activatedBackgroundColor?: ResourceColor--><!--Device-ChipOptions-activatedBackgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activatedBackgroundSystemMaterial
@@ -174,9 +180,7 @@ If the value is **undefined**, the default value is used.
 activatedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component which is activated. Different materials have different effects, which
-can influence
-the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component which is activated. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
@@ -185,6 +189,8 @@ the backgroundColor, border, shadow, and other visual attributes of the componen
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipOptions-activatedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipOptions-activatedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -210,6 +216,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipOptions-allowClose?: boolean--><!--Device-ChipOptions-allowClose?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundColor
@@ -232,6 +240,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipOptions-backgroundColor?: ResourceColor--><!--Device-ChipOptions-backgroundColor?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundSystemMaterial
@@ -240,8 +250,7 @@ If the value is **undefined**, the default value is used.
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component. Different materials have different effects, which can influence
-the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
@@ -250,6 +259,8 @@ the backgroundColor, border, shadow, and other visual attributes of the componen
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipOptions-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipOptions-backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -273,6 +284,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipOptions-borderRadius?: Dimension--><!--Device-ChipOptions-borderRadius?: Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## closeOptions
@@ -292,6 +305,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ChipOptions-closeOptions?: CloseOptions--><!--Device-ChipOptions-closeOptions?: CloseOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -314,6 +329,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipOptions-direction?: Direction--><!--Device-ChipOptions-direction?: Direction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -341,6 +358,8 @@ If the value is **undefined**, the default value is used.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipOptions-enabled?: boolean--><!--Device-ChipOptions-enabled?: boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSize
@@ -351,15 +370,12 @@ fontSize?: Dimension
 
 Uniform font size for both text and icons in the chip. Percentage values are not supported.
 
-The priority of **fontSize** is lower than the **fontSize** property in **prefixSymbol**, **label**,
-**suffixSymbol**, and **closeOptions**.
+The priority of **fontSize** is lower than the **fontSize** property in **prefixSymbol**, **label**,**suffixSymbol**, and **closeOptions**.
 
 Default value:
 
-- When **size** is **ChipSize.SMALL**: **$r('sys.float.chip_small_font_size')** for text and
-**$r('sys.float.chip_small_icon_size')** for icons.
-- Other cases: **$r('sys.float.chip_normal_font_size')** for text and **$r('sys.float.chip_normal_icon_size')** for
-icons.
+- When **size** is **ChipSize.SMALL**: **$r('sys.float.chip_small_font_size')** for text and **$r('sys.float.chip_small_icon_size')** for icons.  
+- Other cases: **$r('sys.float.chip_normal_font_size')** for text and **$r('sys.float.chip_normal_icon_size')** for icons.
 
 If the value is **undefined**, the default value is used.
 
@@ -370,6 +386,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ChipOptions-fontSize?: Dimension--><!--Device-ChipOptions-fontSize?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -389,6 +407,8 @@ Text of the chip.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipOptions-label: LabelOptions--><!--Device-ChipOptions-label: LabelOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxFontScale
@@ -397,8 +417,7 @@ Text of the chip.
 maxFontScale?: number | Resource
 ```
 
-Maximum font scale factor for the text and icon of the chip.
-Value range: [1, +∞).
+Maximum font scale factor for the text and icon of the chip.Value range: [1, +∞).
 
 **Type:** number | Resource
 
@@ -407,6 +426,8 @@ Value range: [1, +∞).
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ChipOptions-maxFontScale?: number | Resource--><!--Device-ChipOptions-maxFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -416,8 +437,7 @@ Value range: [1, +∞).
 minFontScale?: number | Resource
 ```
 
-Minimum font scale factor for the text and icon of the chip.
-Value range: [0, 1].
+Minimum font scale factor for the text and icon of the chip.Value range: [0, 1].
 
 **Type:** number | Resource
 
@@ -426,6 +446,8 @@ Value range: [0, 1].
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ChipOptions-minFontScale?: number | Resource--><!--Device-ChipOptions-minFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -447,6 +469,8 @@ If the value is **undefined**, the chip cannot be clicked.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipOptions-onClicked?: Callback<void>--><!--Device-ChipOptions-onClicked?: Callback<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onClose
@@ -467,6 +491,8 @@ If the value is **undefined**, clicking the close icon will not trigger any even
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-ChipOptions-onClose?: () => void--><!--Device-ChipOptions-onClose?: () => void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## padding
@@ -479,22 +505,10 @@ Padding of the chip.
 
 Default value:
 
-- When **size** is **ChipSize.SMALL** and **activated** is **true**:
-**{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'),
-end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'),
-top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.
-- When **size** is **ChipSize.SMALL** and **activated** is **false**:
-**{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'),
-end: LengthMetrics.resource('sys.float.chip_small_text_padding'),
-top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.
-- When **size** is not **ChipSize.SMALL** and **activated** is **true**:
-**{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'),
-end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'),
-top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.
-- When **size** is not **ChipSize.SMALL** and **activated** is **false**:
-**{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'),
-end: LengthMetrics.resource('sys.float.chip_normal_text_padding'),
-top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.
+- When **size** is **ChipSize.SMALL** and **activated** is **true**:**{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'),end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
+- When **size** is **ChipSize.SMALL** and **activated** is **false**:**{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'),end: LengthMetrics.resource('sys.float.chip_small_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
+- When **size** is not **ChipSize.SMALL** and **activated** is **true**:**{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'),end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
+- When **size** is not **ChipSize.SMALL** and **activated** is **false**:**{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'),end: LengthMetrics.resource('sys.float.chip_normal_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.
 
 If the value is **undefined**, the default value is used.
 
@@ -505,6 +519,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ChipOptions-padding?: LocalizedPadding--><!--Device-ChipOptions-padding?: LocalizedPadding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -520,8 +536,7 @@ Default value: The prefix icon is not displayed.
 
 If the value is **undefined**, the default value is used.
 
-If both **prefixIcon** and **prefixSymbol** are set, the effect specified by **prefixSymbol** will be displayed,
-and **prefixIcon** will be ignored.
+If both **prefixIcon** and **prefixSymbol** are set, the effect specified by **prefixSymbol** will be displayed,and **prefixIcon** will be ignored.
 
 **Type:** PrefixIconOptions
 
@@ -530,6 +545,8 @@ and **prefixIcon** will be ignored.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipOptions-prefixIcon?: PrefixIconOptions--><!--Device-ChipOptions-prefixIcon?: PrefixIconOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -545,8 +562,7 @@ Default value: The prefix icon is not displayed.
 
 If the value is **undefined**, the default value is used.
 
-If both **prefixIcon** and **prefixSymbol** are set, the effect specified by **prefixSymbol** will be displayed,
-and **prefixIcon** will be ignored.
+If both **prefixIcon** and **prefixSymbol** are set, the effect specified by **prefixSymbol** will be displayed,and **prefixIcon** will be ignored.
 
 **Type:** ChipSymbolGlyphOptions
 
@@ -555,6 +571,8 @@ and **prefixIcon** will be ignored.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipOptions-prefixSymbol?: ChipSymbolGlyphOptions--><!--Device-ChipOptions-prefixSymbol?: ChipSymbolGlyphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -568,11 +586,9 @@ Chip size.
 
 Default value: **ChipSize.NORMAL**
 
-The SizeOptions type parameter does not support percentage values. If an invalid value is provided, the system will
-use the default value instead.
+The SizeOptions type parameter does not support percentage values. If an invalid value is provided, the system will use the default value instead.
 
-Note: [Aging-friendly design implementation](../../../../ui/arkui-support-for-aging-adaptation.md) does not take
-effect when size specifies specific width and height, except when size is set to { height: 0, width: 0 }.
+Note: [Aging-friendly design implementation](../../../../ui/arkui-support-for-aging-adaptation.md) does not take effect when size specifies specific width and height, except when size is set to { height: 0, width: 0 }.
 
 **Type:** ChipSize | SizeOptions
 
@@ -581,6 +597,8 @@ effect when size specifies specific width and height, except when size is set to
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipOptions-size?: ChipSize | SizeOptions--><!--Device-ChipOptions-size?: ChipSize | SizeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -596,8 +614,7 @@ Default value: The suffix icon is not displayed.
 
 If the value is **undefined**, the default value is used.
 
-If both **suffixIcon** and **suffixSymbol** are set, the effect specified by **suffixSymbol** will be displayed,
-and **suffixIcon** will be ignored.
+If both **suffixIcon** and **suffixSymbol** are set, the effect specified by **suffixSymbol** will be displayed,and **suffixIcon** will be ignored.
 
 **Type:** SuffixIconOptions
 
@@ -606,6 +623,8 @@ and **suffixIcon** will be ignored.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipOptions-suffixIcon?: SuffixIconOptions--><!--Device-ChipOptions-suffixIcon?: SuffixIconOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -621,8 +640,7 @@ Default value: The suffix icon is not displayed.
 
 If the value is **undefined**, the default value is used.
 
-If both **suffixIcon** and **suffixSymbol** are set, the effect specified by **suffixSymbol** will be displayed,
-and **suffixIcon** will be ignored.
+If both **suffixIcon** and **suffixSymbol** are set, the effect specified by **suffixSymbol** will be displayed,and **suffixIcon** will be ignored.
 
 **Type:** ChipSymbolGlyphOptions
 
@@ -631,6 +649,8 @@ and **suffixIcon** will be ignored.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChipOptions-suffixSymbol?: ChipSymbolGlyphOptions--><!--Device-ChipOptions-suffixSymbol?: ChipSymbolGlyphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -653,6 +673,8 @@ If the value is **undefined**, the default value is used.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-ChipOptions-suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions--><!--Device-ChipOptions-suffixSymbolOptions?: ChipSuffixSymbolGlyphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

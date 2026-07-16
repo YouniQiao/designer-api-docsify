@@ -6,6 +6,8 @@ Defines items of chip group.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ChipGroupV2Items extends Array<ChipGroupV2Item>--><!--Device-unnamed-export declare class ChipGroupV2Items extends Array<ChipGroupV2Item>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -28,11 +30,13 @@ The constructor of ChipGroupV2Items
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2Items-constructor(items: ChipGroupV2ItemConfig[])--><!--Device-ChipGroupV2Items-constructor(items: ChipGroupV2ItemConfig[])-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | ChipGroupV2ItemConfig[] | Yes | config array of chip group items |
+| items | [ChipGroupV2ItemConfig](arkts-arkui-chipgroupv2itemconfig-i.md)[] | Yes | config array of chip group items |
 

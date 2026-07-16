@@ -4,6 +4,8 @@
 
 **Deprecated since:** 6
 
+<!--Device-unnamed-export default class Storage--><!--Device-unnamed-export default class Storage-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 ## clear
@@ -22,13 +24,15 @@ Clears the stored content.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Storage-static clear(options?: ClearStorageOptions): void--><!--Device-Storage-static clear(options?: ClearStorageOptions): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ClearStorageOptions | No | Indicates the target options. |
+| options | [ClearStorageOptions](arkts-arkdata-clearstorageoptions-i.md) | No | Indicates the target options. |
 
 ## delete
 
@@ -46,13 +50,15 @@ Deletes the stored content.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Storage-static delete(options: DeleteStorageOptions): void--><!--Device-Storage-static delete(options: DeleteStorageOptions): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | DeleteStorageOptions | Yes | Indicates the target options. |
+| options | [DeleteStorageOptions](arkts-arkdata-deletestorageoptions-i.md) | Yes | Indicates the target options. |
 
 ## get
 
@@ -70,13 +76,15 @@ Reads the stored content.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Storage-static get(options: GetStorageOptions): void--><!--Device-Storage-static get(options: GetStorageOptions): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GetStorageOptions | Yes | Indicates the target options. |
+| options | [GetStorageOptions](arkts-arkdata-getstorageoptions-i.md) | Yes | Indicates the target options. |
 
 ## set
 
@@ -92,11 +100,13 @@ Modifies the stored content.
 
 **Model restriction:** This API can be used only in the FA model.
 
+<!--Device-Storage-static set(options: SetStorageOptions): void--><!--Device-Storage-static set(options: SetStorageOptions): void-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SetStorageOptions | Yes | Indicates the target options. |
+| options | [SetStorageOptions](arkts-arkdata-setstorageoptions-i.md) | Yes | Indicates the target options. |
 

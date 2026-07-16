@@ -18,6 +18,8 @@ Updates the printer extension information. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updateExtensionInfo(info: string, callback: AsyncCallback<void>): void--><!--Device-print-function updateExtensionInfo(info: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Updates the printer extension information. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | string | Yes | New printer extension information. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Updates the printer extension information. This API uses a promise to return the
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function updateExtensionInfo(info: string): Promise<void>--><!--Device-print-function updateExtensionInfo(info: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ Updates the printer extension information. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

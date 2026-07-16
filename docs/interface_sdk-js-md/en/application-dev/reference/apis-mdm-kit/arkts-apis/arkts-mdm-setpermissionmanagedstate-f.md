@@ -17,8 +17,7 @@ function setPermissionManagedState(
   ): void
 ```
 
-Sets the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) of a specified
-application.
+Sets the management policy for the [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) of a specified application.
 
 **Since:** 20
 
@@ -26,16 +25,28 @@ application.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function setPermissionManagedState(
+    admin: Want,
+    applicationInstance: ApplicationInstance,
+    permissions: Array<string>,
+    managedState: PermissionManagedState
+  ): void--><!--Device-securityManager-function setPermissionManagedState(
+    admin: Want,
+    applicationInstance: ApplicationInstance,
+    permissions: Array<string>,
+    managedState: PermissionManagedState
+  ): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| applicationInstance | ApplicationInstance | Yes | Application instance. |
-| permissions | Array&lt;string&gt; | Yes | List of permissions to be managed. Only[user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) is supported. The list is grouped by[application permission groups](../../../../security/AccessToken/app-permission-group-list.md) and must includeall permissions in the same permission group declared by the application in[module.json5](../../../../quick-start/module-configuration-file.md). For example, if an application declaresohos.permission.READ_CALENDAR and ohos.permission.WRITE_CALENDAR in **module.json5**, the input permission listmust contain both ohos.permission.READ_CALENDAR and ohos.permission.WRITE_CALENDAR. |
-| managedState | PermissionManagedState | Yes | Management policy for application permissions. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| applicationInstance | [ApplicationInstance](arkts-mdm-applicationinstance-i.md) | Yes | Application instance. |
+| permissions | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | List of permissions to be managed. Only [user_grant permission](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md) is supported. The list is grouped by [application permission groups](../../../../security/AccessToken/app-permission-group-list.md) and must include all permissions in the same permission group declared by the application in [module.json5](../../../../quick-start/module-configuration-file.md). For example, if an application declares ohos.permission.READ_CALENDAR and ohos.permission.WRITE_CALENDAR in **module.json5**, the input permission list must contain both ohos.permission.READ_CALENDAR and ohos.permission.WRITE_CALENDAR. |
+| managedState | [PermissionManagedState](arkts-mdm-permissionmanagedstate-e.md) | Yes | Management policy for application permissions. |
 
 **Error codes:**
 

@@ -18,6 +18,8 @@ Enters the special code on the keypad.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function inputDialerSpecialCode(inputCode: string, callback: AsyncCallback<void>): void--><!--Device-call-function inputDialerSpecialCode(inputCode: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Enters the special code on the keypad.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputCode | string | Yes | Indicates the special code to enter. |
-| callback | AsyncCallback&lt;void&gt; | Yes | The callback of inputDialerSpecialCode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | The callback of inputDialerSpecialCode. |
 
 **Error codes:**
 
@@ -68,6 +70,8 @@ Enters the special code on the keypad.
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
+<!--Device-call-function inputDialerSpecialCode(inputCode: string): Promise<void>--><!--Device-call-function inputDialerSpecialCode(inputCode: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -82,7 +86,7 @@ Enters the special code on the keypad.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the inputDialerSpecialCode. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the inputDialerSpecialCode. |
 
 **Error codes:**
 

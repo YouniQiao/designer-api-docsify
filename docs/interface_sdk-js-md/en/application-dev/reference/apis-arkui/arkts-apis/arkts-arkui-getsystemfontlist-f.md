@@ -16,15 +16,13 @@ Obtains this system font list.
 
 This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices.
 
-You are advised to use the
-[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype-1) API to obtain the
-latest system-supported font list data.
+You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype-1) API to obtain the latest system-supported font list data.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getFont](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Font](arkts-arkui-uicontext.md) object associated with
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getFont](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Font](arkts-arkui-uicontext.md) object associated with  
 > the current UI context.
 
 **Since:** 10
@@ -37,13 +35,15 @@ latest system-supported font list data.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-font-function getSystemFontList(): Array<string>--><!--Device-font-function getSystemFontList(): Array<string>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | List of supported fonts. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | List of supported fonts. |
 
 **Example**
 

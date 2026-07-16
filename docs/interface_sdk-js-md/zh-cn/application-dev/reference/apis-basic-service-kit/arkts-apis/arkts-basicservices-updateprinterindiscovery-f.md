@@ -1,5 +1,11 @@
 # updatePrinterInDiscovery
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## updatePrinterInDiscovery
 
 ```TypeScript
@@ -12,19 +18,21 @@ function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promi
 
 **需要权限：** ohos.permission.PRINT
 
+<!--Device-print-function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promise<void>--><!--Device-print-function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| printerInformation | PrinterInformation | 是 | 表示待更新能力的打印机。 |
+| printerInformation | [PrinterInformation](arkts-basicservices-printerinformation-i.md) | 是 | 表示待更新能力的打印机。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

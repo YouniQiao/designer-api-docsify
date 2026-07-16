@@ -4,6 +4,8 @@ AI Text Model Abstract Interface.
 
 **Since:** 23
 
+<!--Device-imageGeneration-export interface TextGenerationModel--><!--Device-imageGeneration-export interface TextGenerationModel-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -25,6 +27,8 @@ Cancel AI text generation task.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TextGenerationModel-cancelTextGeneration(sessionId: int): void--><!--Device-TextGenerationModel-cancelTextGeneration(sessionId: int): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,6 +52,8 @@ User use complaint menu to complain the result of an AI-generated text task.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TextGenerationModel-onComplain(sessionId: int, request: string, result: GenerateTextTaskResult): void--><!--Device-TextGenerationModel-onComplain(sessionId: int, request: string, result: GenerateTextTaskResult): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -58,7 +64,7 @@ User use complaint menu to complain the result of an AI-generated text task.
 | --- | --- | --- | --- |
 | sessionId | number | Yes | The session id of AI text generation task.<br>Value: range: [0, +∞] |
 | request | string | Yes | The origin request for AI-generated text task. |
-| result | GenerateTextTaskResult | Yes | The result for AI-generated text task. |
+| result | [GenerateTextTaskResult](arkts-arkui-generatetexttaskresult-i-sys.md) | Yes | The result for AI-generated text task. |
 
 ## requestTextGeneration
 
@@ -73,6 +79,10 @@ Request AI text generation task to get the generated text.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-TextGenerationModel-requestTextGeneration(sessionId: int, value: string,
+      callback: Callback<GenerateTextTaskPartialResult>): void--><!--Device-TextGenerationModel-requestTextGeneration(sessionId: int, value: string,
+      callback: Callback<GenerateTextTaskPartialResult>): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -83,5 +93,5 @@ Request AI text generation task to get the generated text.
 | --- | --- | --- | --- |
 | sessionId | number | Yes | The session id for requesting an AI text generation task.<br>Value range: [0, +∞] |
 | value | string | Yes | Parameters for requesting an AI text generation task. |
-| callback | Callback&lt;GenerateTextTaskPartialResult&gt; | Yes | the callbackused to return the GenerateTextTaskPartialResult. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)<GenerateTextTaskPartialResult> | Yes | the callback used to return the GenerateTextTaskPartialResult. |
 

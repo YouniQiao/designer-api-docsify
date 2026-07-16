@@ -1,9 +1,10 @@
 # ContextMenuEditStateFlags
 
-Enumerates the context menu edit state flags. This enum can be used in bitwise OR mode. For example, to support
-**CAN_CUT**, **CAN_COPY**, and **CAN_SELECT_ALL** at the same time, use **CAN_CUT | CAN_COPY | CAN_SELECT_ALL**.
+Enumerates the context menu edit state flags. This enum can be used in bitwise OR mode. For example, to support **CAN_CUT**, **CAN_COPY**, and **CAN_SELECT_ALL** at the same time, use **CAN_CUT | CAN_COPY | CAN_SELECT_ALL**.
 
 **Since:** 9
+
+<!--Device-unnamed-declare enum ContextMenuEditStateFlags--><!--Device-unnamed-declare enum ContextMenuEditStateFlags-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -19,6 +20,8 @@ Editing is not allowed.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ContextMenuEditStateFlags-NONE = 0--><!--Device-ContextMenuEditStateFlags-NONE = 0-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## CAN_CUT
@@ -32,6 +35,8 @@ Cutting is supported.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContextMenuEditStateFlags-CAN_CUT = 1 << 0--><!--Device-ContextMenuEditStateFlags-CAN_CUT = 1 << 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -47,6 +52,8 @@ Copying is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ContextMenuEditStateFlags-CAN_COPY = 1 << 1--><!--Device-ContextMenuEditStateFlags-CAN_COPY = 1 << 1-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## CAN_PASTE
@@ -61,6 +68,8 @@ Pasting is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ContextMenuEditStateFlags-CAN_PASTE = 1 << 2--><!--Device-ContextMenuEditStateFlags-CAN_PASTE = 1 << 2-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## CAN_SELECT_ALL
@@ -74,6 +83,8 @@ Selecting all is supported.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContextMenuEditStateFlags-CAN_SELECT_ALL = 1 << 3--><!--Device-ContextMenuEditStateFlags-CAN_SELECT_ALL = 1 << 3-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

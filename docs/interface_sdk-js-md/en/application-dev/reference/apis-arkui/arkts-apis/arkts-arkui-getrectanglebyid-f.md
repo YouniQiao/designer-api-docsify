@@ -12,19 +12,18 @@ import { componentUtils } from '@kit.ArkUI';
 function getRectangleById(id: string): ComponentInfo
 ```
 
-Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of
-the component.
+Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component.
 
-> **NOTE**
->
-> - Since API version 10, you can use the
-> [getComponentUtils](arkts-arkui-uicontext-c.md#getcomponentutils-1) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentUtils](arkts-arkui-uicontext.md) object
-> associated with the current UI context. This API provides access to component coordinates and size information
-> after the target component completes layout. It is recommended that you invoke this API within
-> [layout completion callbacks](arkts-arkui-inspector.md). Note that dynamically created components
-> must be mounted to the component tree before this API can obtain their information, as unmounted components are
-> not measured or laid out by the UI framework. Always ensure that component mounting precedes information
+> **NOTE**  
+>  
+> - Since API version 10, you can use the  
+> [getComponentUtils](arkts-arkui-uicontext-c.md#getcomponentutils-1) API in  
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentUtils](arkts-arkui-uicontext.md) object  
+> associated with the current UI context. This API provides access to component coordinates and size information  
+> after the target component completes layout. It is recommended that you invoke this API within  
+> [layout completion callbacks](arkts-arkui-inspector.md). Note that dynamically created components  
+> must be mounted to the component tree before this API can obtain their information, as unmounted components are  
+> not measured or laid out by the UI framework. Always ensure that component mounting precedes information  
 > retrieval attempts.
 
 **Since:** 10
@@ -36,6 +35,8 @@ the component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-componentUtils-function getRectangleById(id: string): ComponentInfo--><!--Device-componentUtils-function getRectangleById(id: string): ComponentInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -49,7 +50,7 @@ the component.
 
 | Type | Description |
 | --- | --- |
-| ComponentInfo | **ComponentInfo** object, which provides the size, position, translation, scaling,rotation, and affine matrix information of the component. |
+| [ComponentInfo](arkts-arkui-componentinfo-i.md) | **ComponentInfo** object, which provides the size, position, translation, scaling,rotation, and affine matrix information of the component. |
 
 **Error codes:**
 

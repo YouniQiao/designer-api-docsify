@@ -1,5 +1,11 @@
 # getPermissionManagedState
 
+## 导入模块
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+```
+
 ## getPermissionManagedState
 
 ```TypeScript
@@ -18,21 +24,31 @@ function getPermissionManagedState(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-securityManager-function getPermissionManagedState(
+    admin: Want,
+    applicationInstance: ApplicationInstance,
+    permission: string
+  ): PermissionManagedState--><!--Device-securityManager-function getPermissionManagedState(
+    admin: Want,
+    applicationInstance: ApplicationInstance,
+    permission: string
+  ): PermissionManagedState-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| applicationInstance | ApplicationInstance | 是 | 指定应用实例。 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| applicationInstance | [ApplicationInstance](arkts-mdm-applicationinstance-i.md) | 是 | 指定应用实例。 |
 | permission | string | 是 | 需要获取管理策略的权限名称，仅支持user_grant权限。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PermissionManagedState | 应用权限的管理策略。 |
+| [PermissionManagedState](arkts-mdm-permissionmanagedstate-e.md) | 应用权限的管理策略。 |
 
 **错误码：**
 

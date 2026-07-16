@@ -1,5 +1,11 @@
 # setFoldStatusLocked（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+```
+
 ## setFoldStatusLocked
 
 ```TypeScript
@@ -9,6 +15,8 @@ function setFoldStatusLocked(locked: boolean): void
 设置可折叠设备当前折叠状态的锁定状态。
 
 **起始版本：** 11
+
+<!--Device-display-function setFoldStatusLocked(locked: boolean): void--><!--Device-display-function setFoldStatusLocked(locked: boolean): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 

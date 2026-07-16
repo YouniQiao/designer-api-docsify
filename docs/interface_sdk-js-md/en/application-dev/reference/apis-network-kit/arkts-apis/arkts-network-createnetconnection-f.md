@@ -18,20 +18,22 @@ Create a network connection with optional netSpecifier and timeout.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection--><!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netSpecifier | NetSpecifier | No | Indicates the network specifier. See {@link NetSpecifier}. |
+| netSpecifier | [NetSpecifier](arkts-network-netspecifier-i.md) | No | Indicates the network specifier. See {@link NetSpecifier}. |
 | timeout | number | No | The time in milliseconds to attempt looking for a suitable network before{@link NetConnection#netUnavailable} is called. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| NetConnection | the NetConnection of the NetSpecifier. |
+| [NetConnection](arkts-network-netconnection-i.md) | the NetConnection of the NetSpecifier. |
 
 **Example**
 

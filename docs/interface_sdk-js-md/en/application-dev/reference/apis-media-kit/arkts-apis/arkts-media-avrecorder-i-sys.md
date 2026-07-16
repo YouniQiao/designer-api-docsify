@@ -1,20 +1,17 @@
 # AVRecorder
 
-AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before
-calling any API in AVRecorder, you must use
-[createAVRecorder()](arkts-media-createavrecorder-f.md#createavrecorder-1) to
-create an AVRecorder instance.
+AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-createavrecorder-f.md#createavrecorder-1) to create an AVRecorder instance.
 
-For details about the audio and video recording demo, see
-[Audio Recording](../../../../media/media/using-avrecorder-for-recording.md) and
-[Video Recording](../../../../media/media/video-recording.md).
+For details about the audio and video recording demo, see [Audio Recording](../../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../../media/media/video-recording.md).
 
-> **NOTE**
->
-> > To use the camera to record videos, the camera module is required. For details about how to use the APIs
+> **NOTE**  
+>  
+> > To use the camera to record videos, the camera module is required. For details about how to use the APIs  
 > provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md).
 
 **Since:** 9
+
+<!--Device-media-interface AVRecorder--><!--Device-media-interface AVRecorder-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -34,6 +31,8 @@ Get input meta surface for specified meta source type. it must be called between
 
 **Since:** 12
 
+<!--Device-AVRecorder-getInputMetaSurface(type: MetaSourceType): Promise<string>--><!--Device-AVRecorder-getInputMetaSurface(type: MetaSourceType): Promise<string>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 **System API:** This is a system API.
@@ -42,13 +41,13 @@ Get input meta surface for specified meta source type. it must be called between
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | MetaSourceType | Yes | Meta source type. |
+| type | [MetaSourceType](arkts-media-metasourcetype-e-sys.md) | Yes | Meta source type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | A Promise instance used to return the input surface id in string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | A Promise instance used to return the input surface id in string. |
 
 **Error codes:**
 
@@ -72,6 +71,8 @@ This API can be called after the prepare(), start(), or paused() event is trigge
 
 **Since:** 13
 
+<!--Device-AVRecorder-isWatermarkSupported(): Promise<boolean>--><!--Device-AVRecorder-isWatermarkSupported(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
 **System API:** This is a system API.
@@ -80,7 +81,7 @@ This API can be called after the prepare(), start(), or paused() event is trigge
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the check result. The value **true** means thatthe device supports the hardware digital watermark, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the check result. The value **true** means that the device supports the hardware digital watermark, and **false** means the opposite. |
 
 **Example**
 
@@ -101,14 +102,13 @@ avRecorder.isWatermarkSupported().then((isWatermarkSupported: boolean) => {
 setMetadata(metadata: Record<string, string>): void
 ```
 
-Set metadata (key-value pairs) for the recording file of the recorder.
-This metadata overwrites the value in config.metadata.customInfo (see {prepare()} and {AVRecorderConfig})
-if they have same key.
+Set metadata (key-value pairs) for the recording file of the recorder.This metadata overwrites the value in config.metadata.customInfo (see {prepare()} and {AVRecorderConfig})if they have same key.
 
-This API can be called only after the prepare() event is successfully triggered and
-before the stop() API is called.
+This API can be called only after the prepare() event is successfully triggered and before the stop() API is called.
 
 **Since:** 26.0.0
+
+<!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void--><!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -118,7 +118,7 @@ before the stop() API is called.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadata | Record&lt;string, string&gt; | Yes | Tag and value of the metadata in key-value pairs.<br>- The first string is the key.<br>- The second string is the value.<br> The key string should start with "com.openharmony.", the length of value can't be more than 256 bytes. |
+| metadata | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string> | Yes | Tag and value of the metadata in key-value pairs.<br>- The first string is the key.<br>- The second string is the value.<br> The key string should start with "com.openharmony.", the length of value can't be more than 256 bytes. |
 
 **Error codes:**
 
@@ -137,10 +137,11 @@ setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 
 Sets a watermark for the AVRecorder. This API uses a promise to return the result.
 
-This API can be called only after the prepare() event is triggered and before
-the start() event is triggered.
+This API can be called only after the prepare() event is triggered and before the start() event is triggered.
 
 **Since:** 13
+
+<!--Device-AVRecorder-setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>--><!--Device-AVRecorder-setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -151,13 +152,13 @@ the start() event is triggered.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | watermark | image.PixelMap | Yes | : Watermark image. |
-| config | WatermarkConfig | Yes | : Configures of the watermark. |
+| config | [WatermarkConfig](arkts-media-watermarkconfig-i-sys.md) | Yes | : Configures of the watermark. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

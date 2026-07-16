@@ -4,6 +4,8 @@ Defines the information about an auto-fill request.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface FillRequest--><!--Device-unnamed-export interface FillRequest-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -21,6 +23,8 @@ Custom data.
 **Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FillRequest-customData: CustomData--><!--Device-FillRequest-customData: CustomData-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -44,6 +48,8 @@ Whether a dialog box is displayed for the auto-fill request.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FillRequest-isPopup: boolean--><!--Device-FillRequest-isPopup: boolean-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -63,6 +69,8 @@ Trigger type for the autofill service.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-FillRequest-triggerType?: AutoFillTriggerType--><!--Device-FillRequest-triggerType?: AutoFillTriggerType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -84,6 +92,8 @@ Type of the element to be automatically filled in.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-FillRequest-type: AutoFillType--><!--Device-FillRequest-type: AutoFillType-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
@@ -103,6 +113,8 @@ Page data.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-FillRequest-viewData: ViewData--><!--Device-FillRequest-viewData: ViewData-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

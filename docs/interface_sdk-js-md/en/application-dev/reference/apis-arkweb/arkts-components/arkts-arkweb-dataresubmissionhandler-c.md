@@ -4,6 +4,8 @@ Defines the onDataResubmission callback, related to {@link onDataResubmission} m
 
 **Since:** 9
 
+<!--Device-unnamed-declare class DataResubmissionHandler--><!--Device-unnamed-declare class DataResubmissionHandler-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## cancel
@@ -17,6 +19,8 @@ Do not resend related form data.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DataResubmissionHandler-cancel(): void--><!--Device-DataResubmissionHandler-cancel(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -32,6 +36,8 @@ Constructor.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-DataResubmissionHandler-constructor()--><!--Device-DataResubmissionHandler-constructor()-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## resend
@@ -45,6 +51,8 @@ Resend related form data.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DataResubmissionHandler-resend(): void--><!--Device-DataResubmissionHandler-resend(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -4,9 +4,17 @@
 
 **起始版本：** 21
 
+<!--Device-dlpPermission-export interface DLPProperty--><!--Device-dlpPermission-export interface DLPProperty-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+```
 
 ## allowedOpenCount
 
@@ -19,6 +27,8 @@ allowedOpenCount?: number
 **类型：** number
 
 **起始版本：** 21
+
+<!--Device-DLPProperty-allowedOpenCount?: number--><!--Device-DLPProperty-allowedOpenCount?: number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
@@ -36,6 +46,8 @@ countdown?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DLPProperty-countdown?: number--><!--Device-DLPProperty-countdown?: number-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## extensionFields
@@ -52,6 +64,8 @@ extensionFields?: Record<string, Object>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DLPProperty-extensionFields?: Record<string, Object>--><!--Device-DLPProperty-extensionFields?: Record<string, Object>-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## fileId
@@ -66,6 +80,8 @@ fileId?: string
 
 **起始版本：** 21
 
+<!--Device-DLPProperty-fileId?: string--><!--Device-DLPProperty-fileId?: string-End-->
+
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
 ## waterMarkConfig
@@ -79,6 +95,8 @@ waterMarkConfig?: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+<!--Device-DLPProperty-waterMarkConfig?: boolean--><!--Device-DLPProperty-waterMarkConfig?: boolean-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 

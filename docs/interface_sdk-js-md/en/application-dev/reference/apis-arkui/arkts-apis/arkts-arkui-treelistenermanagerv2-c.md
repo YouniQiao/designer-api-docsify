@@ -4,6 +4,8 @@ Declare class TreeListenerManagerV2
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class TreeListenerManagerV2--><!--Device-unnamed-export declare class TreeListenerManagerV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Get instance of treeListenerManagerV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerManagerV2-static getInstance(): TreeListenerManagerV2--><!--Device-TreeListenerManagerV2-static getInstance(): TreeListenerManagerV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TreeListenerManagerV2 | - Returns the treeListenerManagerV2 instance.@static |
+| [TreeListenerManagerV2](arkts-arkui-treelistenermanagerv2-c.md) | - Returns the treeListenerManagerV2 instance.@static |
 
 ## getTreeListener
 
@@ -48,11 +52,13 @@ Get treeListenerV2.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-TreeListenerManagerV2-getTreeListener(): TreeListenerV2--><!--Device-TreeListenerManagerV2-getTreeListener(): TreeListenerV2-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| TreeListenerV2 | - Returns the treeListenerV2 object. |
+| [TreeListenerV2](arkts-arkui-treelistenerv2-c.md) | - Returns the treeListenerV2 object. |
 

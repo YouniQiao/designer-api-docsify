@@ -18,6 +18,8 @@ Sets the window layout mode. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 26.0.0
 
+<!--Device-window-function setWindowLayoutMode(mode: WindowLayoutMode, callback: AsyncCallback<void>): void--><!--Device-window-function setWindowLayoutMode(mode: WindowLayoutMode, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -26,14 +28,14 @@ Sets the window layout mode. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | WindowLayoutMode | Yes | Window layout mode to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| mode | [WindowLayoutMode](arkts-arkui-windowlayoutmode-e-sys.md) | Yes | Window layout mode to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
@@ -70,6 +72,8 @@ Sets the window layout mode. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
+<!--Device-window-function setWindowLayoutMode(mode: WindowLayoutMode): Promise<void>--><!--Device-window-function setWindowLayoutMode(mode: WindowLayoutMode): Promise<void>-End-->
+
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
 **System API:** This is a system API.
@@ -78,19 +82,19 @@ Sets the window layout mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | WindowLayoutMode | Yes | Window layout mode to set. |
+| mode | [WindowLayoutMode](arkts-arkui-windowlayoutmode-e-sys.md) | Yes | Window layout mode to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a systemAPI.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare interface RandomAccessFile--><!--Device-unnamed-declare interface RandomAccessFile-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
 
 ## close
 
@@ -15,6 +23,8 @@ close(): void
 以同步方式关闭RandomAccessFile对象。
 
 **起始版本：** 10
+
+<!--Device-RandomAccessFile-close(): void--><!--Device-RandomAccessFile-close(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
@@ -48,13 +58,15 @@ getReadStream(): ReadStream
 
 **起始版本：** 12
 
+<!--Device-RandomAccessFile-getReadStream(): ReadStream--><!--Device-RandomAccessFile-getReadStream(): ReadStream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ReadStream | 文件可读流。 |
+| [ReadStream](arkts-corefile-readstream-c.md) | 文件可读流。 |
 
 **错误码：**
 
@@ -88,13 +100,15 @@ getWriteStream(): WriteStream
 
 **起始版本：** 12
 
+<!--Device-RandomAccessFile-getWriteStream(): WriteStream--><!--Device-RandomAccessFile-getWriteStream(): WriteStream-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| WriteStream | 文件可写流。 |
+| [WriteStream](arkts-corefile-writestream-c.md) | 文件可写流。 |
 
 **错误码：**
 
@@ -131,20 +145,28 @@ read(
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-read(
+    buffer: ArrayBuffer,
+    options?: ReadOptions
+  ): Promise<number>--><!--Device-RandomAccessFile-read(
+    buffer: ArrayBuffer,
+    options?: ReadOptions
+  ): Promise<number>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | ReadOptions | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset，number类型，表示期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。<br>**起始版本：** 11 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-readoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset，number类型，表示期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回读取的结果，单位为Byte。 |
+| Promise<number> | Promise对象。返回读取的结果，单位为Byte。 |
 
 **错误码：**
 
@@ -197,14 +219,16 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-RandomAccessFile-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 异步读取完成后的回调。返回实际读取的数据长度，单位为Byte。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 异步读取完成后的回调。返回实际读取的数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -259,15 +283,25 @@ read(
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-read(
+    buffer: ArrayBuffer,
+    options: ReadOptions,
+    callback: AsyncCallback<number>
+  ): void--><!--Device-RandomAccessFile-read(
+    buffer: ArrayBuffer,
+    options: ReadOptions,
+    callback: AsyncCallback<number>
+  ): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | ReadOptions | 是 | 支持如下选项：<br/>- length，number类型，表示读取数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset，number类型，表示读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从filePointer开始读。<br>**起始版本：** 11 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 异步读取完成后的回调。返回实际读取的数据长度，单位为Byte。 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-readoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示读取数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset，number类型，表示读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从filePointer开始读。<br>**起始版本：** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 异步读取完成后的回调。返回实际读取的数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -325,14 +359,22 @@ readSync(
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-readSync(
+    buffer: ArrayBuffer,
+    options?: ReadOptions
+  ): number--><!--Device-RandomAccessFile-readSync(
+    buffer: ArrayBuffer,
+    options?: ReadOptions
+  ): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
-| options | ReadOptions | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。<br/><br>**起始版本：** 11 |
+| buffer | [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | 是 | 用于读取文件的缓冲区。 |
+| options | [ReadOptions](arkts-corefile-readoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。<br/><br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -379,6 +421,8 @@ setFilePointer(filePointer: number): void
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-setFilePointer(filePointer: number): void--><!--Device-RandomAccessFile-setFilePointer(filePointer: number): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -420,6 +464,14 @@ write(
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-write(
+    buffer: ArrayBuffer | string,
+    options?: WriteOptions
+  ): Promise<number>--><!--Device-RandomAccessFile-write(
+    buffer: ArrayBuffer | string,
+    options?: WriteOptions
+  ): Promise<number>-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -427,13 +479,13 @@ write(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | WriteOptions | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。<br/>- offset，number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
+| options | [WriteOptions](arkts-corefile-writeoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。<br/>- offset，number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回实际写入的长度，单位为Byte。 |
+| Promise<number> | Promise对象。返回实际写入的长度，单位为Byte。 |
 
 **错误码：**
 
@@ -490,6 +542,8 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-RandomAccessFile-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -497,7 +551,7 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 异步写入完成后执行的回调函数。返回实际写入数据长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 异步写入完成后执行的回调函数。返回实际写入数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -554,6 +608,16 @@ write(
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-write(
+    buffer: ArrayBuffer | string,
+    options: WriteOptions,
+    callback: AsyncCallback<number>
+  ): void--><!--Device-RandomAccessFile-write(
+    buffer: ArrayBuffer | string,
+    options: WriteOptions,
+    callback: AsyncCallback<number>
+  ): void-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -561,8 +625,8 @@ write(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | WriteOptions | 是 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset，number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 异步写入完成后执行的回调函数。返回实际写入数据长度，单位为Byte。 |
+| options | [WriteOptions](arkts-corefile-writeoptions-i.md) | 是 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认为缓冲区长度。<br/>- offset，number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 异步写入完成后执行的回调函数。返回实际写入数据长度，单位为Byte。 |
 
 **错误码：**
 
@@ -624,6 +688,14 @@ writeSync(
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-writeSync(
+    buffer: ArrayBuffer | string,
+    options?: WriteOptions
+  ): number--><!--Device-RandomAccessFile-writeSync(
+    buffer: ArrayBuffer | string,
+    options?: WriteOptions
+  ): number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **参数：**
@@ -631,7 +703,7 @@ writeSync(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | WriteOptions | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
+| options | [WriteOptions](arkts-corefile-writeoptions-i.md) | 否 | 支持如下选项：<br/>- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。<br/>- offset，number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。<br/>- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8'。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -685,6 +757,8 @@ readonly fd: number
 
 **起始版本：** 10
 
+<!--Device-RandomAccessFile-readonly fd: number--><!--Device-RandomAccessFile-readonly fd: number-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
 ## filePointer
@@ -698,6 +772,8 @@ RandomAccessFile对象的偏移指针，单位为Byte。
 **类型：** number
 
 **起始版本：** 10
+
+<!--Device-RandomAccessFile-readonly filePointer: number--><!--Device-RandomAccessFile-readonly filePointer: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

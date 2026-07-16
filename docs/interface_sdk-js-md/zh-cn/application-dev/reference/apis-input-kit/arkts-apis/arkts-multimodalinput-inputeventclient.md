@@ -2,15 +2,23 @@
 
 输入事件注入模块，提供输入按键、鼠标/触控板、触屏输入事件注入能力。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本模块接口为系统接口。
 
 **起始版本：** 26.0.0
 
+<!--Device-unnamed-declare namespace inputEventClient--><!--Device-unnamed-declare namespace inputEventClient-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { inputEventClient } from '@kit.InputKit';
+```
 
 ## 汇总
 

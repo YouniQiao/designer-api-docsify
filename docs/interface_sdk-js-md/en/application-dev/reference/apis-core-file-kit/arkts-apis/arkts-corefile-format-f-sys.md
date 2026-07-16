@@ -12,13 +12,13 @@ import { volumeManager } from '@kit.CoreFileKit';
 function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void
 ```
 
-Formats a volume. This API uses an asynchronous callback to return the result. Currently, only the virtual file
-allocation table (VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After
-a volume is formatted, the UUID, mounting path, and description of the volume will change.
+Formats a volume. This API uses an asynchronous callback to return the result. Currently, only the virtual file allocation table (VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After a volume is formatted, the UUID, mounting path, and description of the volume will change.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
+
+<!--Device-volumeManager-function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void--><!--Device-volumeManager-function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -30,7 +30,7 @@ a volume is formatted, the UUID, mounting path, and description of the volume wi
 | --- | --- | --- | --- |
 | volumeId | string | Yes | Volume ID. |
 | fsType | string | Yes | File system type, which can be VFAT or exFAT. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -52,13 +52,13 @@ a volume is formatted, the UUID, mounting path, and description of the volume wi
 function format(volumeId: string, fsType: string): Promise<void>
 ```
 
-Formats a volume. This API uses a promise to return the result. Currently, only the virtual file allocation table (
-VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After a volume is
-formatted, the UUID, mounting path, and description of the volume will change.
+Formats a volume. This API uses a promise to return the result. Currently, only the virtual file allocation table (VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After a volume is formatted, the UUID, mounting path, and description of the volume will change.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
+
+<!--Device-volumeManager-function format(volumeId: string, fsType: string): Promise<void>--><!--Device-volumeManager-function format(volumeId: string, fsType: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
 
@@ -75,7 +75,7 @@ formatted, the UUID, mounting path, and description of the volume will change.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

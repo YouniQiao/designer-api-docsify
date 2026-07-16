@@ -1,10 +1,14 @@
 # ArrayBufferConstructor
 
+<!--Device-unnamed-interface ArrayBufferConstructor--><!--Device-unnamed-interface ArrayBufferConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(byteLength: number): ArrayBuffer
 ```
+
+<!--Device-ArrayBufferConstructor-new(byteLength: number): ArrayBuffer--><!--Device-ArrayBufferConstructor-new(byteLength: number): ArrayBuffer-End-->
 
 **Parameters:**
 
@@ -16,13 +20,15 @@ new(byteLength: number): ArrayBuffer
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer |  |
+| [ArrayBuffer](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) |  |
 
 ## isView
 
 ```TypeScript
 isView(arg: any): arg is ArrayBufferView
 ```
+
+<!--Device-ArrayBufferConstructor-isView(arg: any): arg is ArrayBufferView--><!--Device-ArrayBufferConstructor-isView(arg: any): arg is ArrayBufferView-End-->
 
 **Parameters:**
 
@@ -43,4 +49,6 @@ readonly prototype: ArrayBuffer
 ```
 
 **Type:** ArrayBuffer
+
+<!--Device-ArrayBufferConstructor-readonly prototype: ArrayBuffer--><!--Device-ArrayBufferConstructor-readonly prototype: ArrayBuffer-End-->
 

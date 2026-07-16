@@ -1,10 +1,14 @@
 # DateTimeFormat
 
+<!--Device-Intl-interface DateTimeFormat--><!--Device-Intl-interface DateTimeFormat-End-->
+
 ## format
 
 ```TypeScript
 format(date?: Date | number): string
 ```
+
+<!--Device-DateTimeFormat-format(date?: Date | number): string--><!--Device-DateTimeFormat-format(date?: Date | number): string-End-->
 
 **Parameters:**
 
@@ -24,9 +28,11 @@ format(date?: Date | number): string
 resolvedOptions(): ResolvedDateTimeFormatOptions
 ```
 
+<!--Device-DateTimeFormat-resolvedOptions(): ResolvedDateTimeFormatOptions--><!--Device-DateTimeFormat-resolvedOptions(): ResolvedDateTimeFormatOptions-End-->
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ResolvedDateTimeFormatOptions |  |
+| [ResolvedDateTimeFormatOptions](arkts-na-resolveddatetimeformatoptions-i.md) |  |
 

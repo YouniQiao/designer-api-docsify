@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare enum FileSelectorMode--><!--Device-unnamed-declare enum FileSelectorMode-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## FileOpenMode
@@ -16,7 +18,9 @@ FileOpenMode = 0
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorMode-FileOpenMode = 0--><!--Device-FileSelectorMode-FileOpenMode = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -30,7 +34,9 @@ FileOpenMultipleMode = 1
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorMode-FileOpenMultipleMode = 1--><!--Device-FileSelectorMode-FileOpenMultipleMode = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -44,7 +50,9 @@ FileOpenFolderMode = 2
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorMode-FileOpenFolderMode = 2--><!--Device-FileSelectorMode-FileOpenFolderMode = 2-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -58,7 +66,9 @@ FileSaveMode = 3
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FileSelectorMode-FileSaveMode = 3--><!--Device-FileSelectorMode-FileSaveMode = 3-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

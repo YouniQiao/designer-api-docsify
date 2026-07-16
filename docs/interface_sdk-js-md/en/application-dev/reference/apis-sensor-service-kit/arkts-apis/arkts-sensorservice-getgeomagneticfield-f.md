@@ -12,8 +12,7 @@ import { sensor } from '@kit.SensorServiceKit';
 function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void
 ```
 
-Obtains the geomagnetic field of a geographic location. This API uses an asynchronous callback to return the
-result.
+Obtains the geomagnetic field of a geographic location. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -21,15 +20,17 @@ result.
 
 **Substitutes:** getGeomagneticInfo(locationOptions:
 
+<!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locationOptions | LocationOptions | Yes | Geographic location. |
+| locationOptions | [LocationOptions](arkts-sensorservice-locationoptions-i.md) | Yes | Geographic location. |
 | timeMillis | number | Yes | Time for obtaining the magnetic declination, in milliseconds. |
-| callback | AsyncCallback&lt;GeomagneticResponse&gt; | Yes | Callback used to return the geomagnetic field. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<GeomagneticResponse> | Yes | Callback used to return the geomagnetic field. |
 
 **Example**
 
@@ -65,20 +66,22 @@ Obtains the geomagnetic field of a geographic location. This API uses a promise 
 
 **Substitutes:** getGeomagneticInfo(locationOptions:
 
+<!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>-End-->
+
 **System capability:** SystemCapability.Sensors.Sensor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locationOptions | LocationOptions | Yes | Geographic location. |
+| locationOptions | [LocationOptions](arkts-sensorservice-locationoptions-i.md) | Yes | Geographic location. |
 | timeMillis | number | Yes | Time for obtaining the magnetic declination, in milliseconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GeomagneticResponse&gt; | Promise used to return the geomagnetic field. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GeomagneticResponse> | Promise used to return the geomagnetic field. |
 
 **Example**
 

@@ -12,6 +12,8 @@ Enumerates the types of accessibility applications.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
+<!--Device-accessibility-type AbilityType = 'audible' | 'generic' | 'haptic' | 'spoken' | 'visual' | 'all'--><!--Device-accessibility-type AbilityType = 'audible' | 'generic' | 'haptic' | 'spoken' | 'visual' | 'all'-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 | Type | Description |

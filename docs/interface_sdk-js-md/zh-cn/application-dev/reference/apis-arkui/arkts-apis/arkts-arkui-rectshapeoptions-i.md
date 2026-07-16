@@ -8,7 +8,15 @@ RectShape 的构造函数参数。
 
 **起始版本：** 12
 
+<!--Device-unnamed-interface RectShapeOptions extends ShapeSize--><!--Device-unnamed-interface RectShapeOptions extends ShapeSize-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+```
 
 ## radius
 
@@ -18,7 +26,7 @@ radius?: number | string | Array<number | string>
 
 矩形形状的圆角半径。
 
-类型为number时取值范围是[0, +∞)，string时是[Length](../arkts-components/arkts-arkui-length-t.md)。
+类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。
 
 单位：vp
 
@@ -30,9 +38,11 @@ radius?: number | string | Array<number | string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-RectShapeOptions-radius?: number | string | Array<number | string>--><!--Device-RectShapeOptions-radius?: number | string | Array<number | string>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

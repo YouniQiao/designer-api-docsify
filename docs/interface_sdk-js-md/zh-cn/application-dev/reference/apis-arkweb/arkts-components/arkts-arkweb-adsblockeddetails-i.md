@@ -4,6 +4,8 @@ Defines the ads block details.
 
 **起始版本：** 12
 
+<!--Device-unnamed-declare interface AdsBlockedDetails--><!--Device-unnamed-declare interface AdsBlockedDetails-End-->
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## adsBlocked
@@ -18,7 +20,9 @@ adsBlocked: Array<string>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AdsBlockedDetails-adsBlocked: Array<string>--><!--Device-AdsBlockedDetails-adsBlocked: Array<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -34,7 +38,9 @@ url: string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AdsBlockedDetails-url: string--><!--Device-AdsBlockedDetails-url: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

@@ -12,9 +12,7 @@ import { skillManager } from '@kit.AbilityKit';
 function getAllSkillInfos(flags: number, userId?: number): Promise<Array<SkillInfo>>
 ```
 
-Obtains all SkillInfo objects installed on the device.
-To query information for other local accounts, the permission
-ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
+Obtains all SkillInfo objects installed on the device.To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
 
 **Since:** 26.0.0
 
@@ -23,6 +21,8 @@ ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-skillManager-function getAllSkillInfos(flags: int, userId?: int): Promise<Array<SkillInfo>>--><!--Device-skillManager-function getAllSkillInfos(flags: int, userId?: int): Promise<Array<SkillInfo>>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -37,7 +37,7 @@ ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SkillInfo&gt;&gt; | Returns the list of SkillInfo objects. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<SkillInfo>> | Returns the list of SkillInfo objects. |
 
 **Error codes:**
 

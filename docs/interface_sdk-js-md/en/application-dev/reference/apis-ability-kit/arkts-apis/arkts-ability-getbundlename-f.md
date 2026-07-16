@@ -12,12 +12,13 @@ import { WantAgent } from '@kit.AbilityKit';
 function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void
 ```
 
-Obtains the bundle name of a WantAgent object.
-This API uses an asynchronous callback to return the result.
+Obtains the bundle name of a WantAgent object.This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void--><!--Device-wantAgent-function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,8 +26,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | Target WantAgent object. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the bundle name. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Target WantAgent object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Callback used to return the bundle name. |
 
 **Error codes:**
 
@@ -110,12 +111,13 @@ try {
 function getBundleName(agent: WantAgent): Promise<string>
 ```
 
-Obtains the bundle name of a WantAgent object.
-This API uses a promise to return the result.
+Obtains the bundle name of a WantAgent object.This API uses a promise to return the result.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function getBundleName(agent: WantAgent): Promise<string>--><!--Device-wantAgent-function getBundleName(agent: WantAgent): Promise<string>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -123,13 +125,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | WantAgent | Yes | Target WantAgent object. |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Yes | Target WantAgent object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the bundle name. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Promise used to return the bundle name. |
 
 **Error codes:**
 

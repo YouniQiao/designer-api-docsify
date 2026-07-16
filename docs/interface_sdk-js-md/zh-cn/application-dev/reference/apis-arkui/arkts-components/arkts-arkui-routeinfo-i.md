@@ -8,6 +8,8 @@
 
 **替代接口：** NavPathStack
 
+<!--Device-unnamed-declare interface RouteInfo--><!--Device-unnamed-declare interface RouteInfo-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## name
@@ -28,7 +30,9 @@ name: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RouteInfo-name: string--><!--Device-RouteInfo-name: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,7 +54,9 @@ param?: unknown
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-RouteInfo-param?: unknown--><!--Device-RouteInfo-param?: unknown-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

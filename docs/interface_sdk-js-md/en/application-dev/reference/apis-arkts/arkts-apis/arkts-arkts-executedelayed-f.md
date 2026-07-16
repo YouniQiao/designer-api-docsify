@@ -12,14 +12,13 @@ import { taskpool } from '@kit.ArkTS';
 function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>
 ```
 
-Executes a task after a given delay. In this execution mode, you can set the task priority and call **cancel()** to
-cancel the execution. The task cannot be a task in a task group, serial queue, or asynchronous queue, or a periodic
-task. This API can be called only once for a continuous task, but multiple times for a non-continuous task. This
-API uses a promise to return the result.
+Executes a task after a given delay. In this execution mode, you can set the task priority and call **cancel()** to cancel the execution. The task cannot be a task in a task group, serial queue, or asynchronous queue, or a periodic task. This API can be called only once for a continuous task, but multiple times for a non-continuous task. This API uses a promise to return the result.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-taskpool-function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function executeDelayed(delayTime: number, task: Task, priority?: Priority): Promise<Object>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -28,14 +27,14 @@ API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | delayTime | number | Yes | Delay, in ms. The value must be greater than or equal to 0.The value should be an integer.<br>Unit:milliseconds. |
-| task | Task | Yes | Task to be executed with a delay. |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-task-i.md) | Yes | Task to be executed with a delay. |
+| priority | [Priority](arkts-arkts-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Object> | Promise used to return an object that carries the function execution result. |
 
 **Error codes:**
 
@@ -76,14 +75,13 @@ taskpool.executeDelayed(1000, task).then(() => { // 1000: delayTime is 1000ms
 function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>
 ```
 
-Executes the generic task with a delay without verifying the parameter type and return value type of the task. This
-API uses a promise to return the result.
-The verification of the **executeDelayed** task works in conjunction with **new GenericsTask**, requiring that the
-parameter and return value types match those specified in **new GenericsTask**.
+Executes the generic task with a delay without verifying the parameter type and return value type of the task. This API uses a promise to return the result.The verification of the **executeDelayed** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
 
 **Since:** 13
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-taskpool-function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>--><!--Device-taskpool-function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -92,14 +90,14 @@ parameter and return value types match those specified in **new GenericsTask**.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | delayTime | number | Yes | Delay, in ms. The value must be greater than or equal to 0.The value should be an integer.<br>Unit:milliseconds. |
-| task | GenericsTask&lt;A, R&gt; | Yes | Generic task to be executed with a delay. |
-| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| task | [GenericsTask](arkts-arkts-genericstask-c.md)<A, R> | Yes | Generic task to be executed with a delay. |
+| priority | [Priority](arkts-arkts-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;R&gt; | Promise used to return an object that carries the function execution result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<R> | Promise used to return an object that carries the function execution result. |
 
 **Error codes:**
 

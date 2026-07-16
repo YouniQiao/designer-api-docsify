@@ -14,12 +14,11 @@ function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void
 
 Obtains the default {@link HttpProxy} proxy settings.
 
-If an application level proxy is set, the application level proxy parameters are returned.
-If a global proxy is set, the global proxy parameters are returned.
-If the process is bound to a {@link NetHandle} using {@link setAppNet}, the {@link NetHandle} proxy settings are returned.
-In other cases, the proxy settings of default network are returned.
+If an application level proxy is set, the application level proxy parameters are returned.If a global proxy is set, the global proxy parameters are returned.If the process is bound to a {@link NetHandle} using {@link setAppNet}, the {@link NetHandle} proxy settings are returned.In other cases, the proxy settings of default network are returned.
 
 **Since:** 10
+
+<!--Device-connection-function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void--><!--Device-connection-function getDefaultHttpProxy(callback: AsyncCallback<HttpProxy>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -27,7 +26,7 @@ In other cases, the proxy settings of default network are returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;HttpProxy&gt; | Yes | Returns the default {@link HttpProxy} settings. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HttpProxy> | Yes | Returns the default {@link HttpProxy} settings. |
 
 **Error codes:**
 
@@ -61,12 +60,11 @@ function getDefaultHttpProxy(): Promise<HttpProxy>
 
 Obtains the default {@link HttpProxy} proxy settings.
 
-If an application level proxy is set, the application level proxy parameters are returned.
-If a global proxy is set, the global proxy parameters are returned.
-If the process is bound to a {@link NetHandle} using {@link setAppNet}, the {@link NetHandle} proxy settings are returned.
-In other cases, the proxy settings of default network are returned.
+If an application level proxy is set, the application level proxy parameters are returned.If a global proxy is set, the global proxy parameters are returned.If the process is bound to a {@link NetHandle} using {@link setAppNet}, the {@link NetHandle} proxy settings are returned.In other cases, the proxy settings of default network are returned.
 
 **Since:** 10
+
+<!--Device-connection-function getDefaultHttpProxy(): Promise<HttpProxy>--><!--Device-connection-function getDefaultHttpProxy(): Promise<HttpProxy>-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -74,7 +72,7 @@ In other cases, the proxy settings of default network are returned.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HttpProxy&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HttpProxy> | the promise returned by the function. |
 
 **Error codes:**
 

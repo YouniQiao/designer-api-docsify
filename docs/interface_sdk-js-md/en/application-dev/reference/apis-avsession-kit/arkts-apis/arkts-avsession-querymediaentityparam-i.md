@@ -4,6 +4,8 @@ The definition of QueryMediaEntityParam.
 
 **Since:** 23
 
+<!--Device-avMusicTemplate-interface QueryMediaEntityParam--><!--Device-avMusicTemplate-interface QueryMediaEntityParam-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## Modules to Import
@@ -26,6 +28,8 @@ entityId.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-QueryMediaEntityParam-entityId: string--><!--Device-QueryMediaEntityParam-entityId: string-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## episodeRange
@@ -41,6 +45,8 @@ episodeRange.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-QueryMediaEntityParam-episodeRange?: EpisodeRange--><!--Device-QueryMediaEntityParam-episodeRange?: EpisodeRange-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -58,6 +64,8 @@ pageIndex.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-QueryMediaEntityParam-pageIndex: int--><!--Device-QueryMediaEntityParam-pageIndex: int-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## sort
@@ -73,6 +81,8 @@ sort.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-QueryMediaEntityParam-sort?: Sort--><!--Device-QueryMediaEntityParam-sort?: Sort-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -90,6 +100,8 @@ subEntityType.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-QueryMediaEntityParam-subEntityType?: EntityType--><!--Device-QueryMediaEntityParam-subEntityType?: EntityType-End-->
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
 ## type
@@ -105,6 +117,8 @@ type.
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-QueryMediaEntityParam-type: EntityType--><!--Device-QueryMediaEntityParam-type: EntityType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

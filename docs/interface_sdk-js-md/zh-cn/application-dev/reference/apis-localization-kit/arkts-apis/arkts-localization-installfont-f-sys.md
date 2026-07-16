@@ -1,5 +1,11 @@
 # installFont（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { fontManager } from '@kit.LocalizationKit';
+```
+
 ## installFont
 
 ```TypeScript
@@ -11,6 +17,8 @@ function installFont(path: string): Promise<number>
 **起始版本：** 19
 
 **需要权限：** ohos.permission.UPDATE_FONT
+
+<!--Device-fontManager-function installFont(path: string): Promise<int>--><!--Device-fontManager-function installFont(path: string): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Global.FontManager
 
@@ -26,7 +34,7 @@ function installFont(path: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 返回安装结果。返回为0表示安装成功，否则安装失败。 |
+| Promise<number> | 返回安装结果。返回为0表示安装成功，否则安装失败。 |
 
 **错误码：**
 

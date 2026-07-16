@@ -4,6 +4,8 @@ Enumerates the device-cloud file sync states.
 
 **Since:** 11
 
+<!--Device-cloudSync-enum FileSyncState--><!--Device-cloudSync-enum FileSyncState-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ UPLOADING = 0
 The file is being uploaded.
 
 **Since:** 11
+
+<!--Device-FileSyncState-UPLOADING = 0--><!--Device-FileSyncState-UPLOADING = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -32,6 +36,8 @@ The file is being downloaded.
 
 **Since:** 11
 
+<!--Device-FileSyncState-DOWNLOADING = 1--><!--Device-FileSyncState-DOWNLOADING = 1-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -45,6 +51,8 @@ COMPLETED = 2
 Sync completed.
 
 **Since:** 11
+
+<!--Device-FileSyncState-COMPLETED = 2--><!--Device-FileSyncState-COMPLETED = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -60,6 +68,8 @@ Sync stopped.
 
 **Since:** 11
 
+<!--Device-FileSyncState-STOPPED = 3--><!--Device-FileSyncState-STOPPED = 3-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -73,6 +83,8 @@ TO_BE_UPLOADED = 4
 The file is going to be uploaded.
 
 **Since:** 12
+
+<!--Device-FileSyncState-TO_BE_UPLOADED = 4--><!--Device-FileSyncState-TO_BE_UPLOADED = 4-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
@@ -88,6 +100,8 @@ The file has been successfully uploaded.
 
 **Since:** 12
 
+<!--Device-FileSyncState-UPLOAD_SUCCESS = 5--><!--Device-FileSyncState-UPLOAD_SUCCESS = 5-End-->
+
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
 **System API:** This is a system API.
@@ -101,6 +115,8 @@ UPLOAD_FAILURE = 6
 The file fails to be uploaded.
 
 **Since:** 12
+
+<!--Device-FileSyncState-UPLOAD_FAILURE = 6--><!--Device-FileSyncState-UPLOAD_FAILURE = 6-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 

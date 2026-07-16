@@ -8,7 +8,15 @@ continuationManager模块提供了流转/协同入口管理服务能力，包括
 
 **替代接口：** [distributedDeviceManager:distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md)
 
+<!--Device-unnamed-declare namespace continuationManager--><!--Device-unnamed-declare namespace continuationManager-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
+
+## 导入模块
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

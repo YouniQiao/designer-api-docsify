@@ -4,6 +4,8 @@ Enumerates the form card types.
 
 **Since:** 20
 
+<!--Device-unnamed-declare enum FormType--><!--Device-unnamed-declare enum FormType-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## TYPE_BIG
@@ -17,6 +19,8 @@ Big form card, with fixed size of 4 x 4.
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormType-TYPE_BIG = 0--><!--Device-FormType-TYPE_BIG = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -32,6 +36,8 @@ Medium-sized form card, with fixed size of 4 x 2.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-FormType-TYPE_MID = 1--><!--Device-FormType-TYPE_MID = 1-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## TYPE_SMALL
@@ -45,6 +51,8 @@ Small form card, with fixed size of 2 x 1.
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormType-TYPE_SMALL = 2--><!--Device-FormType-TYPE_SMALL = 2-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

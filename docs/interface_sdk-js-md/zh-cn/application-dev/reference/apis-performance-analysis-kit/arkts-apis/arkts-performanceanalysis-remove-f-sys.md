@@ -1,5 +1,11 @@
 # remove（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+```
+
 ## remove
 
 ```TypeScript
@@ -11,6 +17,8 @@ function remove(logType: string, logName: string): void
 **起始版本：** 10
 
 **需要权限：** ohos.permission.WRITE_HIVIEW_SYSTEM
+
+<!--Device-logLibrary-function remove(logType: string, logName: string): void--><!--Device-logLibrary-function remove(logType: string, logName: string): void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.LogLibrary
 

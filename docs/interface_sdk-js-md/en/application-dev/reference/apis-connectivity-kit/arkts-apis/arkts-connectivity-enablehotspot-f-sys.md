@@ -12,12 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function enableHotspot(): void
 ```
 
-Enable Wi-Fi hotspot function.
-This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
+Enable Wi-Fi hotspot function.This method is asynchronous. After the Wi-Fi hotspot is enabled, Wi-Fi may be disabled.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
+
+<!--Device-wifiManager-function enableHotspot(): void--><!--Device-wifiManager-function enableHotspot(): void-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 

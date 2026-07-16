@@ -20,19 +20,21 @@ Obtains the list of applications in the shortcut bar currently.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function getDockApps(admin: Want): Array<DockInfo>--><!--Device-applicationManager-function getDockApps(admin: Want): Array<DockInfo>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DockInfo&gt; | Array of application information in the shortcut bar. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<DockInfo> | Array of application information in the shortcut bar. |
 
 **Error codes:**
 

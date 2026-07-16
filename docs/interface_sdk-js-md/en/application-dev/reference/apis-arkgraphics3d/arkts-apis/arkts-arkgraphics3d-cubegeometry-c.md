@@ -6,6 +6,8 @@ Define a rectangular cuboid.
 
 **Since:** 18
 
+<!--Device-unnamed-export declare class CubeGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class CubeGeometry extends GeometryDefinition-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## size
@@ -19,6 +21,8 @@ The width, height and depth of the cube, the unit is the scene unit in the world
 **Type:** Vec3
 
 **Since:** 18
+
+<!--Device-CubeGeometry-set size(value: Vec3)--><!--Device-CubeGeometry-set size(value: Vec3)-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

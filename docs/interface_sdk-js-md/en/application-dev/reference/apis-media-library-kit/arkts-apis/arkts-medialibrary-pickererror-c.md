@@ -4,6 +4,8 @@ PickerError
 
 **Since:** 23
 
+<!--Device-unnamed-export declare class PickerError--><!--Device-unnamed-export declare class PickerError-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -28,6 +30,8 @@ Code of the error.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PickerError-errorCode: number--><!--Device-PickerError-errorCode: number-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## functionName
@@ -46,6 +50,8 @@ Name of function.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-PickerError-functionName: string--><!--Device-PickerError-functionName: string-End-->
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## message
@@ -63,6 +69,8 @@ Message of the error.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PickerError-message: string--><!--Device-PickerError-message: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

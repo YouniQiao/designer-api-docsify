@@ -8,6 +8,8 @@ Defines the options of ShowToast.
 
 **Substitutes:** ShowToastOptions
 
+<!--Device-unnamed-export interface ShowToastOptions--><!--Device-unnamed-export interface ShowToastOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The distance between toast dialog box and the bottom of screen.
 
 **Substitutes:** bottom
 
+<!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## duration
@@ -40,9 +44,7 @@ The distance between toast dialog box and the bottom of screen.
 duration?: number
 ```
 
-Duration of toast dialog box. The default value is 1500.
-The recommended value ranges from 1500 ms to 10000ms.
-NOTE: A value less than 1500 is automatically changed to 1500. The maximum value is 10000 ms.
+Duration of toast dialog box. The default value is 1500.The recommended value ranges from 1500 ms to 10000ms.NOTE: A value less than 1500 is automatically changed to 1500. The maximum value is 10000 ms.
 
 **Type:** number
 
@@ -51,6 +53,8 @@ NOTE: A value less than 1500 is automatically changed to 1500. The maximum value
 **Deprecated since:** 8
 
 **Substitutes:** duration
+
+<!--Device-ShowToastOptions-duration?: number--><!--Device-ShowToastOptions-duration?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,6 +73,8 @@ Text to display.
 **Deprecated since:** 8
 
 **Substitutes:** message
+
+<!--Device-ShowToastOptions-message: string--><!--Device-ShowToastOptions-message: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

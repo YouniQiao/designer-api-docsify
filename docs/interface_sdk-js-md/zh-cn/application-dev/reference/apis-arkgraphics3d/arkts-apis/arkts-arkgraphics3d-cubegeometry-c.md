@@ -6,6 +6,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-export declare class CubeGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class CubeGeometry extends GeometryDefinition-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## size
@@ -19,6 +21,8 @@ set size(value: Vec3)
 **类型：** Vec3
 
 **起始版本：** 18
+
+<!--Device-CubeGeometry-set size(value: Vec3)--><!--Device-CubeGeometry-set size(value: Vec3)-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

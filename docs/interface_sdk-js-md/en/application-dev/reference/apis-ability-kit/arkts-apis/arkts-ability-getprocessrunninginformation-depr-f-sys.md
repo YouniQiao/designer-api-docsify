@@ -8,8 +8,8 @@ function getProcessRunningInformation(): Promise<Array<ProcessRunningInfo>>
 
 Obtains information about the running processes. This API uses a promise to return the result.
 
-> This API is deprecated since API version 9. You are advised to use
-> [appManager.getRunningProcessInformation](arkts-ability-getrunningprocessinformation-f.md#getrunningprocessinformation-1)
+> This API is deprecated since API version 9. You are advised to use  
+> [appManager.getRunningProcessInformation](arkts-ability-getrunningprocessinformation-f.md#getrunningprocessinformation-1)  
 > instead.
 
 **Since:** 8
@@ -21,6 +21,8 @@ Obtains information about the running processes. This API uses a promise to retu
 **Required permissions:** 
 - API version 8 - 10: ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getProcessRunningInformation(): Promise<Array<ProcessRunningInfo>>--><!--Device-appManager-function getProcessRunningInformation(): Promise<Array<ProcessRunningInfo>>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -29,7 +31,7 @@ Obtains information about the running processes. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessRunningInfo&gt;&gt; | Promise used to return the information about the running processes. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ProcessRunningInfo>> | Promise used to return the information about the running processes. |
 
 **Error codes:**
 
@@ -46,8 +48,8 @@ function getProcessRunningInformation(callback: AsyncCallback<Array<ProcessRunni
 
 Obtains information about the running processes. This API uses an asynchronous callback to return the result.
 
-> This API is deprecated since API version 9. You are advised to use
-> [appManager.getRunningProcessInformation]{
+> This API is deprecated since API version 9. You are advised to use  
+> [appManager.getRunningProcessInformation]{  
 > @link @ohos.app.ability.appManager:appManager.getRunningProcessInformation()} instead.
 
 **Since:** 8
@@ -59,6 +61,8 @@ Obtains information about the running processes. This API uses an asynchronous c
 **Required permissions:** 
 - API version 8 - 10: ohos.permission.GET_RUNNING_INFO
 
+<!--Device-appManager-function getProcessRunningInformation(callback: AsyncCallback<Array<ProcessRunningInfo>>): void--><!--Device-appManager-function getProcessRunningInformation(callback: AsyncCallback<Array<ProcessRunningInfo>>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **System API:** This is a system API.
@@ -67,7 +71,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;ProcessRunningInfo&gt;&gt; | Yes | Callback used to return the result. If the API callis successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise,**err** is an error object. You can perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<ProcessRunningInfo>> | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise,**err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 

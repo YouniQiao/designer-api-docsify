@@ -4,6 +4,8 @@ Enumerates the application [distribution types](../../../../security/app-provisi
 
 **Since:** 12
 
+<!--Device-bundleManager-export enum AppDistributionType--><!--Device-bundleManager-export enum AppDistributionType-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -17,6 +19,8 @@ APP_GALLERY = 1
 Application installed from AppGallery.
 
 **Since:** 12
+
+<!--Device-AppDistributionType-APP_GALLERY = 1--><!--Device-AppDistributionType-APP_GALLERY = 1-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -32,6 +36,8 @@ Enterprise application that can be installed on personal devices.
 
 **Since:** 12
 
+<!--Device-AppDistributionType-ENTERPRISE = 2--><!--Device-AppDistributionType-ENTERPRISE = 2-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -42,10 +48,11 @@ Enterprise application that can be installed on personal devices.
 ENTERPRISE_NORMAL = 3
 ```
 
-Common enterprise application that can be installed on enterprise devices only through an enterprise mobile
-device management (MDM) application.
+Common enterprise application that can be installed on enterprise devices only through an enterprise mobile device management (MDM) application.
 
 **Since:** 12
+
+<!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3--><!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -57,12 +64,11 @@ device management (MDM) application.
 ENTERPRISE_MDM = 4
 ```
 
-Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise
-application, you must have
-[administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-enableadmin-f-sys.md#enableadmin-1)
-.
+Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-enableadmin-f-sys.md#enableadmin-1).
 
 **Since:** 12
+
+<!--Device-AppDistributionType-ENTERPRISE_MDM = 4--><!--Device-AppDistributionType-ENTERPRISE_MDM = 4-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -78,6 +84,8 @@ Preinstalled system application.
 
 **Since:** 12
 
+<!--Device-AppDistributionType-OS_INTEGRATION = 5--><!--Device-AppDistributionType-OS_INTEGRATION = 5-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -88,11 +96,11 @@ Preinstalled system application.
 CROWDTESTING = 6
 ```
 
-Application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a
-set expiration date. When the system detects that the validity period of the application expires, it prompts the
-user to update to the release version available on AppGallery.
+Application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery.
 
 **Since:** 12
+
+<!--Device-AppDistributionType-CROWDTESTING = 6--><!--Device-AppDistributionType-CROWDTESTING = 6-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -107,6 +115,8 @@ NONE = 7
 Other.
 
 **Since:** 12
+
+<!--Device-AppDistributionType-NONE = 7--><!--Device-AppDistributionType-NONE = 7-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

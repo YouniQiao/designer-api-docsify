@@ -14,10 +14,10 @@ export function getSystemResourceManager(): ResourceManager
 
 Obtains a system **ResourceManager** object.
 
-> **NOTE**
->
-> The **Configuration** field in the **ResourceManager** object obtained via this API uses the default value,
-> which is as follows:
+> **NOTE**  
+>  
+> The **Configuration** field in the **ResourceManager** object obtained via this API uses the default value,  
+> which is as follows:  
 > {"locale": "", "direction": -1, "deviceType": -1, "screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}.
 
 **Since:** 10
@@ -28,13 +28,15 @@ Obtains a system **ResourceManager** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-resourceManager-export function getSystemResourceManager(): ResourceManager--><!--Device-resourceManager-export function getSystemResourceManager(): ResourceManager-End-->
+
 **System capability:** SystemCapability.Global.ResourceManager
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ResourceManager | The system **ResourceManager** object. |
+| [ResourceManager](arkts-localization-resourcemanager-i.md) | The system **ResourceManager** object. |
 
 **Error codes:**
 

@@ -2,18 +2,13 @@
 
 Mouse event historical point information.
 
-Historical points are arranged in chronological order. The first historical point obtained is the earliest event, and
-the last is the most recent event. The number of historical points depends on the system event queue configuration
-and hardware performance. Historical points are mainly used for the following scenarios:
+Historical points are arranged in chronological order. The first historical point obtained is the earliest event, and the last is the most recent event. The number of historical points depends on the system event queue configuration and hardware performance. Historical points are mainly used for the following scenarios:
 
-1. Smooth drawing: Historical points enable smoother drawing effects, especially when the mouse moves quickly.
-2. Gesture recognition: By analyzing the trajectory of historical points, various mouse gestures can be recognized.
-3. Performance optimization: Processing multiple historical points in one event callback reduces event processing
-frequency and improves performance.
-4. Trajectory analysis: Analyzing mouse movement trajectories for drawing applications or gesture control.
-5. Data analysis: The **timestamp** in historical points can be used to calculate mouse movement speed.
+1. Smooth drawing: Historical points enable smoother drawing effects, especially when the mouse moves quickly.2. Gesture recognition: By analyzing the trajectory of historical points, various mouse gestures can be recognized.3. Performance optimization: Processing multiple historical points in one event callback reduces event processing frequency and improves performance.4. Trajectory analysis: Analyzing mouse movement trajectories for drawing applications or gesture control.5. Data analysis: The **timestamp** in historical points can be used to calculate mouse movement speed.
 
 **Since:** 26.0.0
+
+<!--Device-unnamed-declare interface MouseHistoricalPoint--><!--Device-unnamed-declare interface MouseHistoricalPoint-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,6 +30,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MouseHistoricalPoint-displayX: double--><!--Device-MouseHistoricalPoint-displayX: double-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## displayY
@@ -55,6 +52,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MouseHistoricalPoint-displayY: double--><!--Device-MouseHistoricalPoint-displayY: double-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## globalDisplayX
@@ -63,8 +62,7 @@ Unit: vp
 globalDisplayX: number
 ```
 
-X coordinate of the mouse position in the
-[global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
+X coordinate of the mouse position in the [global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp
 
@@ -75,6 +73,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MouseHistoricalPoint-globalDisplayX: double--><!--Device-MouseHistoricalPoint-globalDisplayX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,8 +84,7 @@ Unit: vp
 globalDisplayY: number
 ```
 
-Y coordinate of the mouse position in the
-[global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
+Y coordinate of the mouse position in the [global coordinate system](../../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp
 
@@ -96,6 +95,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MouseHistoricalPoint-globalDisplayY: double--><!--Device-MouseHistoricalPoint-globalDisplayY: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,6 +118,8 @@ Unit: ns
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MouseHistoricalPoint-timestamp: long--><!--Device-MouseHistoricalPoint-timestamp: long-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## windowX
@@ -136,6 +139,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MouseHistoricalPoint-windowX: double--><!--Device-MouseHistoricalPoint-windowX: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -157,6 +162,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MouseHistoricalPoint-windowY: double--><!--Device-MouseHistoricalPoint-windowY: double-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
@@ -177,6 +184,8 @@ Unit: vp
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-MouseHistoricalPoint-x: double--><!--Device-MouseHistoricalPoint-x: double-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
@@ -196,6 +205,8 @@ Unit: vp
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-MouseHistoricalPoint-y: double--><!--Device-MouseHistoricalPoint-y: double-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

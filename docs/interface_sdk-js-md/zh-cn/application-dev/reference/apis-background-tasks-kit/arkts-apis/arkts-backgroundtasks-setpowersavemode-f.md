@@ -1,5 +1,11 @@
 # setPowerSaveMode
 
+## 导入模块
+
+```TypeScript
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
+```
+
 ## setPowerSaveMode
 
 ```TypeScript
@@ -10,13 +16,15 @@ function setPowerSaveMode(pid: number, powerSaveMode: PowerSaveMode): Promise<vo
 
 当应用满足以下条件时，可以设置自身是否进入能效模式：
 
-- 应用未获取系统焦点，未执行音频或界面刷新操作。
-- 无法通过框架层获取电源锁。
+- 应用未获取系统焦点，未执行音频或界面刷新操作。  
+- 无法通过框架层获取电源锁。  
 - 应用需要执行压缩、解压缩、编译等耗时较长的计算任务，不希望这些任务受到显著的CPU资源限制（即被迫进入能效模式）。
 
 **起始版本：** 20
 
 **需要权限：** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
+
+<!--Device-backgroundProcessManager-function setPowerSaveMode(pid: int, powerSaveMode: PowerSaveMode): Promise<void>--><!--Device-backgroundProcessManager-function setPowerSaveMode(pid: int, powerSaveMode: PowerSaveMode): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
@@ -25,13 +33,13 @@ function setPowerSaveMode(pid: number, powerSaveMode: PowerSaveMode): Promise<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pid | number | 是 | 进程号。 |
-| powerSaveMode | PowerSaveMode | 是 | 能效模式。 |
+| powerSaveMode | [PowerSaveMode](arkts-backgroundtasks-powersavemode-e.md) | 是 | 能效模式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -20,13 +20,15 @@ Sets the OTA update nonce enable.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-systemManager-function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void--><!--Device-systemManager-function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the enterprise admin extension ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the enterprise admin extension ability information. |
 | isEnable | boolean | Yes | true indicates enable OTA update nonce, otherwise disable. |
 
 **Error codes:**

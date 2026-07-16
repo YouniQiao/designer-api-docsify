@@ -4,6 +4,8 @@ Describes the continuous task information.
 
 **Since:** 20
 
+<!--Device-backgroundTaskManager-interface ContinuousTaskInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskInfo-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## Modules to Import
@@ -24,6 +26,8 @@ UIAbility ID.
 
 **Since:** 20
 
+<!--Device-ContinuousTaskInfo-abilityId: int--><!--Device-ContinuousTaskInfo-abilityId: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## abilityName
@@ -37,6 +41,8 @@ UIAbility name.
 **Type:** string
 
 **Since:** 20
+
+<!--Device-ContinuousTaskInfo-abilityName: string--><!--Device-ContinuousTaskInfo-abilityName: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -52,6 +58,8 @@ Index of an application clone.
 
 **Since:** 23
 
+<!--Device-ContinuousTaskInfo-appIndex?: int--><!--Device-ContinuousTaskInfo-appIndex?: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## backgroundModes
@@ -65,6 +73,8 @@ backgroundModes: string[]
 **Type:** string[]
 
 **Since:** 20
+
+<!--Device-ContinuousTaskInfo-backgroundModes: string[]--><!--Device-ContinuousTaskInfo-backgroundModes: string[]-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -80,6 +90,8 @@ backgroundSubModes: string[]
 
 **Since:** 20
 
+<!--Device-ContinuousTaskInfo-backgroundSubModes: string[]--><!--Device-ContinuousTaskInfo-backgroundSubModes: string[]-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## bundleName
@@ -93,6 +105,8 @@ Application bundle name.
 **Type:** string
 
 **Since:** 23
+
+<!--Device-ContinuousTaskInfo-bundleName?: string--><!--Device-ContinuousTaskInfo-bundleName?: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -108,6 +122,8 @@ Continuous task ID.
 
 **Since:** 20
 
+<!--Device-ContinuousTaskInfo-continuousTaskId: int--><!--Device-ContinuousTaskInfo-continuousTaskId: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## isFromWebView
@@ -116,13 +132,13 @@ Continuous task ID.
 isFromWebView: boolean
 ```
 
-Whether to request a continuous task in WebView mode, that is, whether to request a continuous task through the
-system proxy application. The value **true** indicates that the Webview mode is used, and the value **false**
-indicates that the Webview mode is not used.
+Whether to request a continuous task in WebView mode, that is, whether to request a continuous task through the system proxy application. The value **true** indicates that the Webview mode is used, and the value **false** indicates that the Webview mode is not used.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-ContinuousTaskInfo-isFromWebView: boolean--><!--Device-ContinuousTaskInfo-isFromWebView: boolean-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -138,6 +154,8 @@ Notification ID.
 
 **Since:** 20
 
+<!--Device-ContinuousTaskInfo-notificationId: int--><!--Device-ContinuousTaskInfo-notificationId: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## pid
@@ -152,6 +170,8 @@ Application PID.
 
 **Since:** 20
 
+<!--Device-ContinuousTaskInfo-pid: int--><!--Device-ContinuousTaskInfo-pid: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## suspendState
@@ -160,12 +180,13 @@ Application PID.
 suspendState: boolean
 ```
 
-Whether the requested continuous task is suspended. The value **true** indicates that the task is suspended, and
-the value **false** indicates that the task is activated.
+Whether the requested continuous task is suspended. The value **true** indicates that the task is suspended, and the value **false** indicates that the task is activated.
 
 **Type:** boolean
 
 **Since:** 20
+
+<!--Device-ContinuousTaskInfo-suspendState: boolean--><!--Device-ContinuousTaskInfo-suspendState: boolean-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -181,6 +202,8 @@ Application UID.
 
 **Since:** 20
 
+<!--Device-ContinuousTaskInfo-uid: int--><!--Device-ContinuousTaskInfo-uid: int-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 ## wantAgentAbilityName
@@ -189,12 +212,13 @@ Application UID.
 wantAgentAbilityName: string
 ```
 
-Ability name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md). **WantAgent** is a notification
-parameter used to specify the target page when a continuous task notification is tapped.
+Ability name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
 
 **Type:** string
 
 **Since:** 20
+
+<!--Device-ContinuousTaskInfo-wantAgentAbilityName: string--><!--Device-ContinuousTaskInfo-wantAgentAbilityName: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -204,12 +228,13 @@ parameter used to specify the target page when a continuous task notification is
 wantAgentBundleName: string
 ```
 
-Bundle name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md). **WantAgent** is a notification
-parameter used to specify the target page when a continuous task notification is tapped.
+Bundle name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
 
 **Type:** string
 
 **Since:** 20
+
+<!--Device-ContinuousTaskInfo-wantAgentBundleName: string--><!--Device-ContinuousTaskInfo-wantAgentBundleName: string-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

@@ -1,9 +1,10 @@
 # Callee
 
-Background communication object created by the system for the UIAbility, known as the Callee UIAbility (Callee),
-which is capable of receiving data sent from the Caller object.
+Background communication object created by the system for the UIAbility, known as the Callee UIAbility (Callee),which is capable of receiving data sent from the Caller object.
 
 **Since:** 9
+
+<!--Device-unnamed-export interface Callee--><!--Device-unnamed-export interface Callee-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -24,6 +25,8 @@ Unregisters a caller notification callback, which is invoked when the target UIA
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Callee-off(method: string): void--><!--Device-Callee-off(method: string): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -73,14 +76,16 @@ Registers a caller notification callback, which is invoked when the target UIAbi
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Callee-on(method: string, callback: CalleeCallback): void--><!--Device-Callee-on(method: string, callback: CalleeCallback): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the CalleeUIAbility to identify the type of message. |
-| callback | CalleeCallback | Yes | JS notification synchronization callback of the[rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-messagesequence-c.md) type. The callback must return at least one empty[rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-parcelable-i.md) object. Otherwise, the function execution fails. |
+| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
+| callback | [CalleeCallback](arkts-ability-calleecallback-i.md) | Yes | JS notification synchronization callback of the [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-messagesequence-c.md) type. The callback must return at least one empty [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-parcelable-i.md) object. Otherwise, the function execution fails. |
 
 **Error codes:**
 

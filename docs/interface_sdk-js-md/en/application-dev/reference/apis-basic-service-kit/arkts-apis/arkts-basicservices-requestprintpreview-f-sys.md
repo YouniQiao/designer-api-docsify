@@ -18,6 +18,8 @@ Requests print preview data. This API uses a callback to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void--><!--Device-print-function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -26,8 +28,8 @@ Requests print preview data. This API uses a callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | PrintJob | Yes | Information about the print job. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the result. |
+| jobInfo | [PrintJob](arkts-basicservices-printjob-i-sys.md) | Yes | Information about the print job. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -79,6 +81,8 @@ Requests print preview data. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-print-function requestPrintPreview(jobInfo: PrintJob): Promise<int>--><!--Device-print-function requestPrintPreview(jobInfo: PrintJob): Promise<int>-End-->
+
 **System capability:** SystemCapability.Print.PrintFramework
 
 **System API:** This is a system API.
@@ -87,13 +91,13 @@ Requests print preview data. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | PrintJob | Yes | Information about the print job. |
+| jobInfo | [PrintJob](arkts-basicservices-printjob-i-sys.md) | Yes | Information about the print job. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the preview result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the preview result. |
 
 **Error codes:**
 

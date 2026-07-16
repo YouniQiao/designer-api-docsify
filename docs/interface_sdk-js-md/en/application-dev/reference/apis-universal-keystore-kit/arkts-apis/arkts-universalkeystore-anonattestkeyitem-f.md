@@ -14,13 +14,11 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: Asy
 
 Attests an anonymous key. This API uses an asynchronous callback to return the result.
 
-This operation requires Internet access and takes time. If error code 12000012 is returned, the network is
-abnormal. If the device is not connected to the network, display a message, indicating that the network is not
-connected. If the network is connected, the failure may be caused by network jitter. Try again later.
+This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Try again later.
 
-> **NOTE**
->
-> Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+>  
+> Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 <!--RP1--><!--RP1End-->
@@ -29,6 +27,8 @@ connected. If the network is connected, the failure may be caused by network jit
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-huks-function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void--><!--Device-huks-function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -36,14 +36,14 @@ connected. If the network is connected, the failure may be caused by network jit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
-| options | HuksOptions | Yes | Parameters and data required for obtaining the certificate. |
-| callback | AsyncCallback&lt;HuksReturnResult&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** isan error object. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameters and data required for obtaining the certificate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<HuksReturnResult> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
@@ -159,13 +159,11 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<Huks
 
 Attests an anonymous key. This API uses a promise to return the result.
 
-This operation requires Internet access and takes time. If error code 12000012 is returned, the network is
-abnormal. If the device is not connected to the network, display a message, indicating that the network is not
-connected. If the network is connected, the failure may be caused by network jitter. Try again later.
+This operation requires Internet access and takes time. If error code 12000012 is returned, the network is abnormal. If the device is not connected to the network, display a message, indicating that the network is not connected. If the network is connected, the failure may be caused by network jitter. Try again later.
 
-> **NOTE**
->
-> Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)
+> **NOTE**  
+>  
+> Attesting SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
 <!--RP1--><!--RP1End-->
@@ -174,6 +172,8 @@ connected. If the network is connected, the failure may be caused by network jit
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-huks-function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>-End-->
+
 **System capability:** SystemCapability.Security.Huks.Extension
 
 **Parameters:**
@@ -181,19 +181,19 @@ connected. If the network is connected, the failure may be caused by network jit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
-| options | HuksOptions | Yes | Parameters and data required for obtaining the certificate. |
+| options | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | Yes | Parameters and data required for obtaining the certificate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. When the call is successful, the**certChains** member of **HuksReturnResult** is the obtained certificate chain. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<HuksReturnResult> | Promise that returns the operation result. When the call is successful, the **certChains** member of **HuksReturnResult** is the obtained certificate chain. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly becausethe ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
 | [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |

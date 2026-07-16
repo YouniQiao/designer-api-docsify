@@ -1,10 +1,10 @@
 # WantAgentInfo
 
-Defines the information required for triggering a WantAgent object. The information can be used as an input parameter
-in [getWantAgent](../../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagentgetwantagent) to
-obtain a specified WantAgent object.
+Defines the information required for triggering a WantAgent object. The information can be used as an input parameter in [getWantAgent](../../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagentgetwantagent) to obtain a specified WantAgent object.
 
 **Since:** 7
+
+<!--Device-unnamed-export interface WantAgentInfo--><!--Device-unnamed-export interface WantAgentInfo-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,6 +22,8 @@ Array of flags for using the WantAgent object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WantAgentInfo-actionFlags?: Array<abilityWantAgent.WantAgentFlags>--><!--Device-WantAgentInfo-actionFlags?: Array<abilityWantAgent.WantAgentFlags>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## actionType
@@ -37,6 +39,8 @@ Operation type.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WantAgentInfo-actionType?: abilityWantAgent.OperationType--><!--Device-WantAgentInfo-actionType?: abilityWantAgent.OperationType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -54,6 +58,8 @@ Extra information.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WantAgentInfo-extraInfo?: { [key: string]: any }--><!--Device-WantAgentInfo-extraInfo?: { [key: string]: any }-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## extraInfos
@@ -62,14 +68,15 @@ Extra information.
 extraInfos?: Record<string, Object>
 ```
 
-Extra information. You are advised to use this property to replace **extraInfo**. When this property is set,
-**extraInfo** does not take effect.
+Extra information. You are advised to use this property to replace **extraInfo**. When this property is set,**extraInfo** does not take effect.
 
 **Type:** Record<string, Object>
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WantAgentInfo-extraInfos?: Record<string, Object>--><!--Device-WantAgentInfo-extraInfos?: Record<string, Object>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -81,8 +88,7 @@ operationType?: wantAgent.OperationType
 
 Operation type.
 
-This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use
-actionType<sup>11+</sup> instead.
+This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionType<sup>11+</sup> instead.
 
 **Type:** wantAgent.OperationType
 
@@ -93,6 +99,8 @@ actionType<sup>11+</sup> instead.
 **Substitutes:** [actionType](arkts-ability-wantagentinfo-i.md#actiontype)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WantAgentInfo-operationType?: wantAgent.OperationType--><!--Device-WantAgentInfo-operationType?: wantAgent.OperationType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -110,6 +118,8 @@ Custom request code, which is used to identify the operation to execute.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WantAgentInfo-requestCode: int--><!--Device-WantAgentInfo-requestCode: int-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## wantAgentFlags
@@ -120,8 +130,7 @@ wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 
 Array of flags for using the WantAgent object.
 
-This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use
-actionFlags<sup>11+</sup> instead.
+This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionFlags<sup>11+</sup> instead.
 
 **Type:** Array<wantAgent.WantAgentFlags>
 
@@ -133,6 +142,8 @@ actionFlags<sup>11+</sup> instead.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-WantAgentInfo-wantAgentFlags?: Array<wantAgent.WantAgentFlags>--><!--Device-WantAgentInfo-wantAgentFlags?: Array<wantAgent.WantAgentFlags>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## wants
@@ -141,14 +152,15 @@ actionFlags<sup>11+</sup> instead.
 wants: Array<Want>
 ```
 
-Array of all Want objects. Currently, only one Want is supported. The array is reserved for future capability
-expansion. If multiple values are passed in, only the first member in the array is used.
+Array of all Want objects. Currently, only one Want is supported. The array is reserved for future capability expansion. If multiple values are passed in, only the first member in the array is used.
 
 **Type:** Array<Want>
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WantAgentInfo-wants: Array<Want>--><!--Device-WantAgentInfo-wants: Array<Want>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -22,6 +22,8 @@ Checks whether the last execution of a task timed out. This API uses an asynchro
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-workScheduler-function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boolean--><!--Device-workScheduler-function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boolean-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**
@@ -29,13 +31,13 @@ Checks whether the last execution of a task timed out. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | workId | number | Yes | ID of the deferred task. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the last execution of a deferred task timed out. If **workId** is valid, it returnswhether the last execution of the task obtained from WorkSchedulerService timed out; otherwise, an exception isthrown. **true** indicates that the last execution of the deferred task corresponding to the **workId** timedout, while **false** indicates the opposite. |
+| boolean | Whether the last execution of a deferred task timed out. If **workId** is valid, it returns whether the last execution of the task obtained from WorkSchedulerService timed out; otherwise, an exception is thrown. **true** indicates that the last execution of the deferred task corresponding to the **workId** timed out, while **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -60,6 +62,8 @@ Checks whether the last execution of a task timed out. This API uses an asynchro
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-workScheduler-function isLastWorkTimeOut(workId: int, callback: AsyncCallback<boolean>): void--><!--Device-workScheduler-function isLastWorkTimeOut(workId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**
@@ -67,7 +71,7 @@ Checks whether the last execution of a task timed out. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | workId | number | Yes | ID of the deferred task. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -108,6 +112,8 @@ Checks whether the last execution of a task timed out. This API uses a promise t
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-workScheduler-function isLastWorkTimeOut(workId: int): Promise<boolean>--><!--Device-workScheduler-function isLastWorkTimeOut(workId: int): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
 **Parameters:**
@@ -120,7 +126,7 @@ Checks whether the last execution of a task timed out. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the last executionof the specified task times out, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that the last execution of the specified task times out, and **false** means the opposite. |
 
 **Error codes:**
 

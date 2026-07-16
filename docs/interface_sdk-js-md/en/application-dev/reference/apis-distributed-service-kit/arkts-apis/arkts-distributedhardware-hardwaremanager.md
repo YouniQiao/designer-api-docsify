@@ -1,13 +1,14 @@
 # @ohos.distributedHardware.hardwareManager
 
-The **hardwareManager** module provides the capability of controlling distributed hardware, including pausing,
-resuming, and stopping the distributed hardware service on the controlled device.
+The **hardwareManager** module provides the capability of controlling distributed hardware, including pausing,resuming, and stopping the distributed hardware service on the controlled device.
 
 > **NOTE**
 
 > The APIs provided by this module are system APIs.
 
 **Since:** 11
+
+<!--Device-unnamed-declare namespace hardwareManager--><!--Device-unnamed-declare namespace hardwareManager-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DistributedHardwareFWK
 

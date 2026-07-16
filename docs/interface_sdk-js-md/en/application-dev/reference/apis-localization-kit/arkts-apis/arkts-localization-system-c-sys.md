@@ -1,9 +1,10 @@
 # System
 
-Provides system attribute configuration functions, including translating language and country/region names,
-obtaining the list of supported languages and countries/regions, and obtaining the system language and region.
+Provides system attribute configuration functions, including translating language and country/region names,obtaining the list of supported languages and countries/regions, and obtaining the system language and region.
 
 **Since:** 9
+
+<!--Device-i18n-export class System--><!--Device-i18n-export class System-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -25,6 +26,8 @@ Adds a preferred language to the specified position on the preferred language li
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static addPreferredLanguage(language: string, index?: int): void--><!--Device-System-static addPreferredLanguage(language: string, index?: int): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -34,13 +37,13 @@ Adds a preferred language to the specified position on the preferred language li
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | language | string | Yes | Valid ID of the language to be added as a preferred language. |
-| index | number | No | Position to which the preferred language is added. The default value is the lengthof the preferred language list. |
+| index | number | No | Position to which the preferred language is added. The default value is the length of the preferred language list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
@@ -73,6 +76,8 @@ Gets collations supported by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getSystemCollations(): Map<string, string>--><!--Device-System-static getSystemCollations(): Map<string, string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -81,7 +86,7 @@ Gets collations supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | The map will containing the collation's identifier and name.If the map is empty of the collation for given locale does not need to be set. |
+| [Map](../../apis-na/arkts-apis/arkts-na-map-i.md)<string, string> | The map will containing the collation's identifier and name.If the map is empty of the collation for given locale does not need to be set. |
 
 **Error codes:**
 
@@ -114,6 +119,8 @@ Gets measurements supported by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getSystemMeasurements(): Map<string, string>--><!--Device-System-static getSystemMeasurements(): Map<string, string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -122,7 +129,7 @@ Gets measurements supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | a map will containing identifier and name of measurements supported by systemlocale. |
+| [Map](../../apis-na/arkts-apis/arkts-na-map-i.md)<string, string> | a map will containing identifier and name of measurements supported by system locale. |
 
 **Error codes:**
 
@@ -155,6 +162,8 @@ Gets commonly used number patterns for system locale.
 
 **Since:** 20
 
+<!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -163,7 +172,7 @@ Gets commonly used number patterns for system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | a map containing the used number patterns and example of system locale. |
+| [Map](../../apis-na/arkts-apis/arkts-na-map-i.md)<string, string> | a map containing the used number patterns and example of system locale. |
 
 **Error codes:**
 
@@ -196,6 +205,8 @@ Gets numbering systems supported by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getSystemNumberingSystems(): Map<string, string>--><!--Device-System-static getSystemNumberingSystems(): Map<string, string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -204,7 +215,7 @@ Gets numbering systems supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | a map will containing the numbering system 's identifier and sample.If the map is empty, there is no local digit for given locale. |
+| [Map](../../apis-na/arkts-apis/arkts-na-map-i.md)<string, string> | a map will containing the numbering system 's identifier and sample.If the map is empty, there is no local digit for given locale. |
 
 **Error codes:**
 
@@ -237,6 +248,8 @@ Gets numerical date patterns and examples supported by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getSystemNumericalDatePatterns(): Map<string, string>--><!--Device-System-static getSystemNumericalDatePatterns(): Map<string, string>-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -245,7 +258,7 @@ Gets numerical date patterns and examples supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;string, string&gt; | a map containing the date patterns and examples |
+| [Map](../../apis-na/arkts-apis/arkts-na-map-i.md)<string, string> | a map containing the date patterns and examples |
 
 **Error codes:**
 
@@ -277,6 +290,8 @@ static getUsingCollation(): string
 Gets collation currently used by system locale.
 
 **Since:** 20
+
+<!--Device-System-static getUsingCollation(): string--><!--Device-System-static getUsingCollation(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -319,6 +334,8 @@ Gets measurement currently used by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getUsingMeasurement(): string--><!--Device-System-static getUsingMeasurement(): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -359,6 +376,8 @@ static getUsingNumberPattern(): string
 Gets number pattern used by system locale.
 
 **Since:** 20
+
+<!--Device-System-static getUsingNumberPattern(): string--><!--Device-System-static getUsingNumberPattern(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -401,6 +420,8 @@ Gets numbering system currently used by system locale.
 
 **Since:** 20
 
+<!--Device-System-static getUsingNumberingSystem(): string--><!--Device-System-static getUsingNumberingSystem(): string-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -426,6 +447,8 @@ static getUsingNumericalDatePattern(): string
 Gets numerical date pattern currently used by system locale.
 
 **Since:** 20
+
+<!--Device-System-static getUsingNumericalDatePattern(): string--><!--Device-System-static getUsingNumericalDatePattern(): string-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -470,6 +493,8 @@ Removes a preferred language from the specified position on the preferred langua
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static removePreferredLanguage(index: int): void--><!--Device-System-static removePreferredLanguage(index: int): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -484,7 +509,7 @@ Removes a preferred language from the specified position on the preferred langua
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed.<br>**Applicable version:** 9 - 24 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
@@ -518,6 +543,8 @@ Sets whether to use the 24-hour clock.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static set24HourClock(option: boolean): void--><!--Device-System-static set24HourClock(option: boolean): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -532,7 +559,7 @@ Sets whether to use the 24-hour clock.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed.<br>**Applicable version:** 9 - 24 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
@@ -565,6 +592,8 @@ Sets the first day of a week.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setFirstDayOfWeek(type: WeekDay): void--><!--Device-System-static setFirstDayOfWeek(type: WeekDay): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -573,13 +602,13 @@ Sets the first day of a week.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | WeekDay | Yes | Start day of a week. |
+| type | [WeekDay](arkts-localization-weekday-e.md) | Yes | Start day of a week. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
@@ -610,6 +639,8 @@ Sets the system collation mode.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemCollation(identifier: string): void--><!--Device-System-static setSystemCollation(identifier: string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -624,7 +655,7 @@ Sets the system collation mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
@@ -655,6 +686,8 @@ Sets the system language.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemLanguage(language: string): void--><!--Device-System-static setSystemLanguage(language: string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -669,7 +702,7 @@ Sets the system language.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
@@ -704,6 +737,8 @@ Sets the system locale.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemLocale(locale: string): void--><!--Device-System-static setSystemLocale(locale: string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -718,7 +753,7 @@ Sets the system locale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
@@ -749,6 +784,8 @@ Sets the measurement system used by the system locale.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemMeasurement(identifier: string): void--><!--Device-System-static setSystemMeasurement(identifier: string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -763,7 +800,7 @@ Sets the measurement system used by the system locale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
@@ -794,6 +831,8 @@ Sets the number pattern used by the system locale.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemNumberPattern(pattern: string): void--><!--Device-System-static setSystemNumberPattern(pattern: string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -808,7 +847,7 @@ Sets the number pattern used by the system locale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
@@ -839,6 +878,8 @@ Sets the numbering system used by the system locale.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemNumberingSystem(identifier: string): void--><!--Device-System-static setSystemNumberingSystem(identifier: string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -853,7 +894,7 @@ Sets the numbering system used by the system locale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
@@ -884,6 +925,8 @@ Sets the numerical date pattern used by the system locale.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemNumericalDatePattern(identifier : string): void--><!--Device-System-static setSystemNumericalDatePattern(identifier : string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -898,7 +941,7 @@ Sets the numerical date pattern used by the system locale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
@@ -929,6 +972,8 @@ Sets the system region.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setSystemRegion(region: string): void--><!--Device-System-static setSystemRegion(region: string): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -943,7 +988,7 @@ Sets the system region.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |
@@ -975,6 +1020,8 @@ Sets the temperature unit of the system.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setTemperatureType(type: TemperatureType): void--><!--Device-System-static setTemperatureType(type: TemperatureType): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -983,13 +1030,13 @@ Sets the temperature unit of the system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | TemperatureType | Yes | Temperature unit. |
+| type | [TemperatureType](arkts-localization-temperaturetype-e.md) | Yes | Temperature unit. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
@@ -1020,6 +1067,8 @@ Specifies whether to enable use of local digits.
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-System-static setUsingLocalDigit(flag: boolean): void--><!--Device-System-static setUsingLocalDigit(flag: boolean): void-End-->
+
 **System capability:** SystemCapability.Global.I18n
 
 **System API:** This is a system API.
@@ -1028,13 +1077,13 @@ Specifies whether to enable use of local digits.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | boolean | Yes | Whether to turn on the local digit switch. The value "true" means to turn on the localdigit switch, and the value "false" indicates the opposite. |
+| flag | boolean | Yes | Whether to turn on the local digit switch. The value "true" means to turn on the local digit switch, and the value "false" indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed.<br>**Applicable version:** 9 - 24 |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 26.0.0 and later |

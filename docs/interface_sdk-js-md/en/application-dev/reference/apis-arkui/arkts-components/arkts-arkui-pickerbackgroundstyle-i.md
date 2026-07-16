@@ -4,6 +4,8 @@ Defines the background style configuration for selected picker items.
 
 **Since:** 20
 
+<!--Device-unnamed-declare interface PickerBackgroundStyle--><!--Device-unnamed-declare interface PickerBackgroundStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderRadius
@@ -18,9 +20,7 @@ Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corne
 
 **NOTE**
 
-1. [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-c.md): uniform radius with a customizable unit
-2. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md): per-corner radius values (vp units only)
-3. [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md): per-corner radius values with individual units
+1. [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-c.md): uniform radius with a customizable unit2. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md): per-corner radius values (vp units only)3. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md): per-corner radius values with individual units
 
 **Type:** LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
@@ -31,6 +31,8 @@ Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corne
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PickerBackgroundStyle-borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses--><!--Device-PickerBackgroundStyle-borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,6 +55,8 @@ Default value: 'sys.color.comp_background_tertiary'
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PickerBackgroundStyle-color?: ResourceColor--><!--Device-PickerBackgroundStyle-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

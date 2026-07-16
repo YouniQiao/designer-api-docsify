@@ -20,13 +20,15 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 **Substitutes:** selectContacts(callback:
 
+<!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation issuccessful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<Contact>> | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of selected contacts is returned. If the operation fails, an error code is returned. |
 
 **Example**
 
@@ -60,13 +62,15 @@ Selects a contact. This API uses a promise to return the result.
 
 **Substitutes:** [selectContacts()](arkts-contacts-selectcontacts-f.md#selectcontacts-2)
 
+<!--Device-contact-function selectContact(): Promise<Array<Contact>>--><!--Device-contact-function selectContact(): Promise<Array<Contact>>-End-->
+
 **System capability:** SystemCapability.Applications.Contacts
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of selected contacts. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<Contact>> | Promise used to return the result, which is an array of selected contacts. |
 
 **Example**
 

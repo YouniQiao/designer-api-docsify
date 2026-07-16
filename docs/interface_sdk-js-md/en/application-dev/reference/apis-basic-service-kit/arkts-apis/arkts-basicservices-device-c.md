@@ -6,6 +6,8 @@ getInfo interface
 
 **Deprecated since:** 6
 
+<!--Device-unnamed-export default class Device--><!--Device-unnamed-export default class Device-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 ## Modules to Import
@@ -26,13 +28,15 @@ Obtains the device information.
 
 **Deprecated since:** 6
 
+<!--Device-Device-static getInfo(options?: GetDeviceOptions): void--><!--Device-Device-static getInfo(options?: GetDeviceOptions): void-End-->
+
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | GetDeviceOptions | No | Options |
+| options | [GetDeviceOptions](arkts-basicservices-getdeviceoptions-i.md) | No | Options |
 
 **Example**
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-appRecovery-enum SaveModeFlag--><!--Device-appRecovery-enum SaveModeFlag-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 ## SAVE_WITH_FILE
@@ -16,7 +18,9 @@ SAVE_WITH_FILE = 0x0001
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SaveModeFlag-SAVE_WITH_FILE = 0x0001--><!--Device-SaveModeFlag-SAVE_WITH_FILE = 0x0001-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,7 +34,9 @@ SAVE_WITH_SHARED_MEMORY = 0x0002
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-SaveModeFlag-SAVE_WITH_SHARED_MEMORY = 0x0002--><!--Device-SaveModeFlag-SAVE_WITH_SHARED_MEMORY = 0x0002-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 

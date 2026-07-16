@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+<!--Device-unnamed-export interface Quaternion--><!--Device-unnamed-export interface Quaternion-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## w
@@ -17,6 +19,8 @@ w: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Quaternion-w: double--><!--Device-Quaternion-w: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -32,6 +36,8 @@ x: number
 
 **起始版本：** 12
 
+<!--Device-Quaternion-x: double--><!--Device-Quaternion-x: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## y
@@ -46,6 +52,8 @@ y: number
 
 **起始版本：** 12
 
+<!--Device-Quaternion-y: double--><!--Device-Quaternion-y: double-End-->
+
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
 ## z
@@ -59,6 +67,8 @@ z: number
 **类型：** number
 
 **起始版本：** 12
+
+<!--Device-Quaternion-z: double--><!--Device-Quaternion-z: double-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 

@@ -1,13 +1,10 @@
 # TaskGroup
 
-Implements a task group, in which tasks are associated with each other and all tasks are executed at a time. If all
-the tasks are executed normally, an array of task results is returned asynchronously, and the sequence of elements
-in the array is the same as the sequence of tasks added by calling
-[addTask](arkts-arkts-taskgroup-c.md#addtask-2). If any task fails, the corresponding exception is thrown.
-If multiple tasks in the task group fail, the exception of the first failed task is thrown. A task group can be
-executed for multiple times, but no task can be added after the task group is executed.
+Implements a task group, in which tasks are associated with each other and all tasks are executed at a time. If all the tasks are executed normally, an array of task results is returned asynchronously, and the sequence of elements in the array is the same as the sequence of tasks added by calling [addTask](arkts-arkts-taskgroup-c.md#addtask-2). If any task fails, the corresponding exception is thrown.If multiple tasks in the task group fail, the exception of the first failed task is thrown. A task group can be executed for multiple times, but no task can be added after the task group is executed.
 
 **Since:** 10
+
+<!--Device-taskpool-class TaskGroup--><!--Device-taskpool-class TaskGroup-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -23,12 +20,13 @@ import { taskpool } from '@kit.ArkTS';
 addTask(func: Function, ...args: Object[]): void
 ```
 
-Adds the function to be executed to this task group. Before using this API, you must create a **TaskGroup**
-instance.
+Adds the function to be executed to this task group. Before using this API, you must create a **TaskGroup** instance.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TaskGroup-addTask(func: Function, ...args: Object[]): void--><!--Device-TaskGroup-addTask(func: Function, ...args: Object[]): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -36,8 +34,8 @@ instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | Function | Yes | Function that must be decorated using[@Concurrent](../../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about thesupported return value types, see[Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
-| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see[Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). Thedefault value is **undefined**. |
+| func | [Function](../../apis-na/arkts-apis/arkts-na-function-i.md) | Yes | Function that must be decorated using [@Concurrent](../../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types, see [Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | [Object](../../apis-na/arkts-apis/arkts-na-object-i.md)[] | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Error codes:**
 
@@ -65,13 +63,13 @@ taskGroup.addTask(printArgs, 100); // 100: test number
 addTask(task: Task): void
 ```
 
-Adds a created task to this task group. Before using this API, you must create a **TaskGroup** instance. Tasks in
-another task group, serial queue, or asynchronous queue, dependent tasks, continuous tasks, tasks that have been
-executed, and periodic tasks cannot be added to the task group.
+Adds a created task to this task group. Before using this API, you must create a **TaskGroup** instance. Tasks in another task group, serial queue, or asynchronous queue, dependent tasks, continuous tasks, tasks that have been executed, and periodic tasks cannot be added to the task group.
 
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TaskGroup-addTask(task: Task): void--><!--Device-TaskGroup-addTask(task: Task): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -79,7 +77,7 @@ executed, and periodic tasks cannot be added to the task group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | Task | Yes | Task to be added to the task group. |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-task-i.md) | Yes | Task to be added to the task group. |
 
 **Error codes:**
 
@@ -116,6 +114,8 @@ Constructor used to create a **TaskGroup** instance.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-TaskGroup-constructor()--><!--Device-TaskGroup-constructor()-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Example**
@@ -136,6 +136,8 @@ A constructor used to create a **TaskGroup** instance, with the task group name 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TaskGroup-constructor(name: string)--><!--Device-TaskGroup-constructor(name: string)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -167,6 +169,8 @@ Name of the task group specified when the task group is created.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TaskGroup-name: string--><!--Device-TaskGroup-name: string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

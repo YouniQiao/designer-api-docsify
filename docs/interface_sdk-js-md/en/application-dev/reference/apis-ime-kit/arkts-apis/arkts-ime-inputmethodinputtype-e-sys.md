@@ -4,6 +4,8 @@ Defines the input type.
 
 **Since:** 26.0.0
 
+<!--Device-inputMethodSystemPanelManager-export enum InputMethodInputType--><!--Device-inputMethodSystemPanelManager-export enum InputMethodInputType-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
@@ -19,6 +21,8 @@ No input type, the panel is not in any input type.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodInputType-NONE = -1--><!--Device-InputMethodInputType-NONE = -1-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -36,6 +40,8 @@ Camera input type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-InputMethodInputType-CAMERA_INPUT = 0--><!--Device-InputMethodInputType-CAMERA_INPUT = 0-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
@@ -51,6 +57,8 @@ Security input type.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodInputType-SECURITY_INPUT = 1--><!--Device-InputMethodInputType-SECURITY_INPUT = 1-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -68,6 +76,8 @@ Voice input type.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-InputMethodInputType-VOICE_INPUT = 2--><!--Device-InputMethodInputType-VOICE_INPUT = 2-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
@@ -83,6 +93,8 @@ Floating voice input type.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodInputType-FLOATING_VOICE_INPUT = 3--><!--Device-InputMethodInputType-FLOATING_VOICE_INPUT = 3-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

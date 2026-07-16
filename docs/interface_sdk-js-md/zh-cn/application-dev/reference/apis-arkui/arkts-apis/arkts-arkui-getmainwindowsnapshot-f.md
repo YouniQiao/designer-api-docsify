@@ -1,5 +1,11 @@
 # getMainWindowSnapshot
 
+## 导入模块
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+```
+
 ## getMainWindowSnapshot
 
 ```TypeScript
@@ -13,27 +19,31 @@ function getMainWindowSnapshot(windowId: Array<number>, config: WindowSnapshotCo
 
 **需要权限：** ohos.permission.CUSTOM_SCREEN_CAPTURE
 
+<!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):
+    Promise<Array<image.PixelMap | undefined>>--><!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):
+    Promise<Array<image.PixelMap | undefined>>-End-->
+
 **系统能力：** SystemCapability.Window.SessionManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | Array&lt;number&gt; | 是 | 需要获取截图的主窗口ID列表。可通过[window.getAllMainWindowInfo()](arkts-arkui-getallmainwindowinfo-f.md#getallmainwindowinfo-1)获取到主窗口windowId。当windowId为null、undefined、小于0、存在重复值或数量超过512个时，返回错误码401；当windowId大于0但不存在对应窗口时，返回undefined。 |
-| config | WindowSnapshotConfiguration | 是 | 获取窗口截图时的配置信息。 |
+| windowId | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<number> | 是 | 需要获取截图的主窗口ID列表。可通过[window.getAllMainWindowInfo()](arkts-arkui-getallmainwindowinfo-f.md#getallmainwindowinfo-1)获取到主窗口windowId。当windowId为null、undefined、小于0、存在重复值或数量超过512个时，返回错误码401；当windowId大于0但不存在对应窗口时，返回undefined。 |
+| config | [WindowSnapshotConfiguration](arkts-arkui-windowsnapshotconfiguration-i.md) | 是 | 获取窗口截图时的配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;image.PixelMap \| undefined&gt;&gt; | Promise used to return an array of PixelMap objects of thescreenshots, representing the screenshots, in the order of the provided window ID array. If a window ID isvalid but the corresponding main window cannot be found, undefined is returned. |
+| Promise<Array<image.PixelMap \| undefined>> | Promise used to return an array of PixelMap objects of the screenshots, representing the screenshots, in the order of the provided window ID array. If a window ID is valid but the corresponding main window cannot be found, undefined is returned. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited devicecapabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
 **示例：**

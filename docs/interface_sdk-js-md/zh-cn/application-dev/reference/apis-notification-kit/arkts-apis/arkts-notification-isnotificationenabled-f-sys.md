@@ -18,6 +18,8 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,8 +28,8 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 获取通知使能状态回调函数（true：使能，false：禁止）。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 获取通知使能状态回调函数（true：使能，false：禁止）。 |
 
 **错误码：**
 
@@ -75,6 +77,8 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption): Promise<boolean>--><!--Device-notificationManager-function isNotificationEnabled(bundle: BundleOption): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -83,13 +87,13 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回获取指定应用的通知使能状态的结果（true：使能，false：禁止）。 |
+| Promise<boolean> | 以Promise形式返回获取指定应用的通知使能状态的结果（true：使能，false：禁止）。 |
 
 **错误码：**
 
@@ -135,6 +139,8 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 **需要权限：** 
 - API版本9 - 10：ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationEnabled(callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -143,7 +149,7 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。返回true，表示允许发布通知；返回false，表示禁止发布通知；调用失败返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。返回true，表示允许发布通知；返回false，表示禁止发布通知；调用失败返回错误对象。 |
 
 **错误码：**
 
@@ -191,6 +197,8 @@ function isNotificationEnabled(): Promise<boolean>
 **需要权限：** 
 - API版本9 - 10：ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(): Promise<boolean>--><!--Device-notificationManager-function isNotificationEnabled(): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -199,7 +207,7 @@ function isNotificationEnabled(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true，表示允许发布通知；返回false，表示禁止发布通知。 |
+| Promise<boolean> | Promise对象。返回true，表示允许发布通知；返回false，表示禁止发布通知。 |
 
 **错误码：**
 
@@ -239,6 +247,8 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isNotificationEnabled(userId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -248,7 +258,7 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 指定的用户ID。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 获取通知使能状态回调函数（true：使能，false：禁止）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 获取通知使能状态回调函数（true：使能，false：禁止）。 |
 
 **错误码：**
 
@@ -295,6 +305,8 @@ function isNotificationEnabled(userId: number): Promise<boolean>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isNotificationEnabled(userId: int): Promise<boolean>--><!--Device-notificationManager-function isNotificationEnabled(userId: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -309,7 +321,7 @@ function isNotificationEnabled(userId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回获取通知使能状态的结果（true：使能，false：禁止）。 |
+| Promise<boolean> | 以Promise形式返回获取通知使能状态的结果（true：使能，false：禁止）。 |
 
 **错误码：**
 

@@ -18,6 +18,8 @@ Preload callUI.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function preloadCallUI(): Promise<boolean>--><!--Device-call-function preloadCallUI(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Preload callUI.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the preloadCallUI. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the preloadCallUI. |
 
 **Error codes:**
 

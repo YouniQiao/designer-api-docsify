@@ -4,6 +4,8 @@ Module for AI-generated images using UI Component.
 
 **Since:** 23
 
+<!--Device-unnamed-declare namespace imageGeneration--><!--Device-unnamed-declare namespace imageGeneration-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

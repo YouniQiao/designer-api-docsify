@@ -2,12 +2,14 @@
 
 Provides the detailed information of the permissions to request from the system.
 
-> **NOTE**
->
-> - If multiple packages of an application have requested the same permission but with different reasons, the system
+> **NOTE**  
+>  
+> - If multiple packages of an application have requested the same permission but with different reasons, the system  
 > returns only one reason based on a descending priority order: entry HAP > feature HAP > in-app HSP.
 
 **Since:** 9
+
+<!--Device-unnamed-export interface ReqPermissionDetail--><!--Device-unnamed-export interface ReqPermissionDetail-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -25,6 +27,8 @@ Name of the module that requests the permission.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ReqPermissionDetail-moduleName: string--><!--Device-ReqPermissionDetail-moduleName: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## name
@@ -40,6 +44,8 @@ name: string
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ReqPermissionDetail-name: string--><!--Device-ReqPermissionDetail-name: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -57,6 +63,8 @@ Reason for requesting the permission.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ReqPermissionDetail-reason: string--><!--Device-ReqPermissionDetail-reason: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## reasonId
@@ -73,6 +81,8 @@ ID of the reason for requesting the permission.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-ReqPermissionDetail-reasonId: long--><!--Device-ReqPermissionDetail-reasonId: long-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 ## usedScene
@@ -88,6 +98,8 @@ Use scenario and timing for using the permission.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ReqPermissionDetail-usedScene: UsedScene--><!--Device-ReqPermissionDetail-usedScene: UsedScene-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

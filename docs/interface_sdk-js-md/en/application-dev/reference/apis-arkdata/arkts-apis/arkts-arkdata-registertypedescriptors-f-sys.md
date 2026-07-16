@@ -22,6 +22,8 @@ Register type descriptors into the system.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
+<!--Device-uniformTypeDescriptor-function registerTypeDescriptors(typeDescriptors: Array<TypeDescriptor>): Promise<void>--><!--Device-uniformTypeDescriptor-function registerTypeDescriptors(typeDescriptors: Array<TypeDescriptor>): Promise<void>-End-->
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 **System API:** This is a system API.
@@ -30,19 +32,19 @@ Register type descriptors into the system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeDescriptors | Array&lt;TypeDescriptor&gt; | Yes | The list of type descriptors to be registered. |
+| typeDescriptors | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<TypeDescriptor> | Yes | The list of type descriptors to be registered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [20400002](../errorcode-udmf.md#20400002-invalid-utd-format) | The format of one or more typeDescriptors are invalid. |
 | [20400003](../errorcode-udmf.md#20400003-invalid-utd-content) | The content of one or more typeDescriptors violate rules. |

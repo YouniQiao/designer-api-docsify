@@ -18,8 +18,8 @@ Obtains the current system dark mode configuration.
 
 > **NOTE**
 
-> This API is a system API in API version 19 and earlier. Using this API requires the
-> [ohos.permission.UPDATE_CONFIGURATION](../../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration)
+> This API is a system API in API version 19 and earlier. Using this API requires the  
+> [ohos.permission.UPDATE_CONFIGURATION](../../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration)  
 > permission.
 
 <!--DelEnd-->
@@ -29,6 +29,8 @@ Obtains the current system dark mode configuration.
 **Required permissions:** 
 - API version 10 - 19: ohos.permission.UPDATE_CONFIGURATION
 
+<!--Device-uiAppearance-function getDarkMode(): DarkMode--><!--Device-uiAppearance-function getDarkMode(): DarkMode-End-->
+
 **System capability:** SystemCapability.ArkUI.UiAppearance
 
 **System API:** This is a system API.
@@ -37,7 +39,7 @@ Obtains the current system dark mode configuration.
 
 | Type | Description |
 | --- | --- |
-| DarkMode | current dark-mode. |
+| [DarkMode](arkts-arkui-darkmode-e-sys.md) | current dark-mode. |
 
 **Error codes:**
 

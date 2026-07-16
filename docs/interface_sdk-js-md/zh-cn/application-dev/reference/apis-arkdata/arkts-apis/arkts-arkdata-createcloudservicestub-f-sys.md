@@ -1,5 +1,11 @@
 # createCloudServiceStub（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { cloudExtension } from '@kit.ArkData';
+```
+
 ## createCloudServiceStub
 
 ```TypeScript
@@ -10,6 +16,8 @@ function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObjec
 
 **起始版本：** 11
 
+<!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>--><!--Device-cloudExtension-function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObject>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Server
 
 **系统接口：** 此接口为系统接口。
@@ -18,13 +26,13 @@ function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObjec
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| instance | CloudService | 是 | CloudService类的实例。 |
+| instance | [CloudService](arkts-arkdata-cloudservice-i-sys.md) | 是 | CloudService类的实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudService的RemoteObject对象。 |
+| Promise<rpc.RemoteObject> | Promise对象，返回CloudService的RemoteObject对象。 |
 
 **示例：**
 

@@ -2,16 +2,24 @@
 
 一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md)实现。
 
-> **说明**
->
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
+> **说明**  
+>  
+> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。  
 > **装饰器类型：** \@Sendable
 
 **起始版本：** 12
 
 **装饰器类型：** @Sendable
 
+<!--Device-collections-class Uint8Array--><!--Device-collections-class Uint8Array-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { collections } from '@kit.ArkTS';
+```
 
 ## [Symbol.iterator]
 
@@ -23,7 +31,9 @@
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-[Symbol.iterator](): IterableIterator<number>--><!--Device-Uint8Array-[Symbol.iterator](): IterableIterator<number>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -31,7 +41,7 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 生成数字的迭代器对象。 |
+| IterableIterator<number> | 生成数字的迭代器对象。 |
 
 **错误码：**
 
@@ -49,7 +59,9 @@ at(index: number): number | undefined
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-at(index: number): number | undefined--><!--Device-Uint8Array-at(index: number): number | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -82,7 +94,9 @@ constructor()
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-constructor()--><!--Device-Uint8Array-constructor()-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -102,7 +116,9 @@ constructor(length: number)
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-constructor(length: number)--><!--Device-Uint8Array-constructor(length: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -128,7 +144,9 @@ constructor(elements: Iterable<number>)
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-constructor(elements: Iterable<number>)--><!--Device-Uint8Array-constructor(elements: Iterable<number>)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -136,7 +154,7 @@ constructor(elements: Iterable<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | Iterable&lt;number&gt; | 是 | 可迭代数字集合，用于构造ArkTS Uint8Array对象。 |
+| elements | Iterable<number> | 是 | 可迭代数字集合，用于构造ArkTS Uint8Array对象。 |
 
 **错误码：**
 
@@ -154,7 +172,9 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-constructor(array: ArrayLike<number> | ArrayBuffer)--><!--Device-Uint8Array-constructor(array: ArrayLike<number> | ArrayBuffer)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -162,7 +182,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint8Array的对象。当参数类型是ArrayBuffer时，buffer所占的字节数须是4的整数倍。 |
+| array | ArrayLike<number> \| ArrayBuffer | 是 | 用于构造ArkTS Uint8Array的对象。当参数类型是ArrayBuffer时，buffer所占的字节数须是4的整数倍。 |
 
 **错误码：**
 
@@ -180,7 +200,9 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)--><!--Device-Uint8Array-constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -188,7 +210,7 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于构造ArkTS Uint8Array的ArrayBuffer对象。buffer所占的字节数须是4的整数倍。 |
+| buffer | [ArrayBuffer](arkts-arkts-arraybuffer-c.md) | 是 | 用于构造ArkTS Uint8Array的ArrayBuffer对象。buffer所占的字节数须是4的整数倍。 |
 | byteOffset | number | 否 | 指定buffer的字节偏移，从0开始。默认值为**0**。 |
 | length | number | 否 | 指定ArkTS Uint8Array的长度。默认值为**0**。 |
 
@@ -208,7 +230,9 @@ copyWithin(target: number, start: number, end?: number): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-copyWithin(target: number, start: number, end?: number): Uint8Array--><!--Device-Uint8Array-copyWithin(target: number, start: number, end?: number): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -224,7 +248,7 @@ copyWithin(target: number, start: number, end?: number): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 修改后的ArkTS Uint8Array。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 修改后的ArkTS Uint8Array。 |
 
 **错误码：**
 
@@ -243,7 +267,9 @@ entries(): IterableIterator<[number, number]>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-entries(): IterableIterator<[number, number]>--><!--Device-Uint8Array-entries(): IterableIterator<[number, number]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -251,7 +277,7 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[number, number]&gt; | 迭代器对象。 |
+| IterableIterator<[number, number]> | 迭代器对象。 |
 
 **错误码：**
 
@@ -270,7 +296,9 @@ every(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-every(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean--><!--Device-Uint8Array-every(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -278,7 +306,7 @@ every(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Uint8Array&gt; | 是 | 用于测试的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Uint8Array> | 是 | 用于测试的断言函数。 |
 
 **返回值：**
 
@@ -303,7 +331,9 @@ fill(value: number, start?: number, end?: number): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-fill(value: number, start?: number, end?: number): Uint8Array--><!--Device-Uint8Array-fill(value: number, start?: number, end?: number): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -319,7 +349,7 @@ fill(value: number, start?: number, end?: number): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 填充后的ArkTS Uint8Array。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 填充后的ArkTS Uint8Array。 |
 
 **错误码：**
 
@@ -338,7 +368,9 @@ filter(predicate: TypedArrayPredicateFn<number, Uint8Array>): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-filter(predicate: TypedArrayPredicateFn<number, Uint8Array>): Uint8Array--><!--Device-Uint8Array-filter(predicate: TypedArrayPredicateFn<number, Uint8Array>): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -346,13 +378,13 @@ filter(predicate: TypedArrayPredicateFn<number, Uint8Array>): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Uint8Array&gt; | 是 | 用于元素过滤的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Uint8Array> | 是 | 用于元素过滤的断言函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 过滤后的ArkTS Uint8Array对象。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 过滤后的ArkTS Uint8Array对象。 |
 
 **错误码：**
 
@@ -371,7 +403,9 @@ find(predicate: TypedArrayPredicateFn<number, Uint8Array>): number | undefined
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-find(predicate: TypedArrayPredicateFn<number, Uint8Array>): number | undefined--><!--Device-Uint8Array-find(predicate: TypedArrayPredicateFn<number, Uint8Array>): number | undefined-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -379,7 +413,7 @@ find(predicate: TypedArrayPredicateFn<number, Uint8Array>): number | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Uint8Array&gt; | 是 | 用于元素查找的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Uint8Array> | 是 | 用于元素查找的断言函数。 |
 
 **返回值：**
 
@@ -404,7 +438,9 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8Array>): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-findIndex(predicate: TypedArrayPredicateFn<number, Uint8Array>): number--><!--Device-Uint8Array-findIndex(predicate: TypedArrayPredicateFn<number, Uint8Array>): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -412,7 +448,7 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8Array>): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Uint8Array&gt; | 是 | 用于元素查找的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Uint8Array> | 是 | 用于元素查找的断言函数。 |
 
 **返回值：**
 
@@ -437,7 +473,9 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint8Array>): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-forEach(callbackFn: TypedArrayForEachCallback<number, Uint8Array>): void--><!--Device-Uint8Array-forEach(callbackFn: TypedArrayForEachCallback<number, Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -445,7 +483,7 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint8Array>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayForEachCallback&lt;number, Uint8Array&gt; | 是 | 用于对每个元素执行的回调函数。 |
+| callbackFn | [TypedArrayForEachCallback](arkts-arkts-typedarrayforeachcallback-t.md)<number, Uint8Array> | 是 | 用于对每个元素执行的回调函数。 |
 
 **错误码：**
 
@@ -464,7 +502,9 @@ static from(arrayLike: ArrayLike<number>): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-static from(arrayLike: ArrayLike<number>): Uint8Array--><!--Device-Uint8Array-static from(arrayLike: ArrayLike<number>): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -472,13 +512,13 @@ static from(arrayLike: ArrayLike<number>): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Uint8Array的ArrayLike对象。 |
+| arrayLike | ArrayLike<number> | 是 | 用于构造ArkTS Uint8Array的ArrayLike对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 新创建的ArkTS Uint8Array对象。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 新创建的ArkTS Uint8Array对象。 |
 
 ## from
 
@@ -490,7 +530,9 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Uint8Array--><!--Device-Uint8Array-static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -498,14 +540,14 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArkTS Uint8Array的ArrayLike对象。 |
-| mapFn | TypedArrayFromMapFn&lt;T, number&gt; | 是 | 映射函数，对数组的每个元素调用。 |
+| arrayLike | ArrayLike<T> | 是 | 用于构造ArkTS Uint8Array的ArrayLike对象。 |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-typedarrayfrommapfn-t.md)<T, number> | 是 | 映射函数，对数组的每个元素调用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 新创建的ArkTS Uint8Array对象。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 新创建的ArkTS Uint8Array对象。 |
 
 ## from
 
@@ -517,7 +559,9 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint8Array--><!--Device-Uint8Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -525,14 +569,14 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | Iterable&lt;number&gt; | 是 | 用于构造ArkTS Uint8Array的可迭代对象。 |
-| mapFn | TypedArrayFromMapFn&lt;number, number&gt; | 否 | 映射函数，对数组的每个元素调用。 |
+| arrayLike | Iterable<number> | 是 | 用于构造ArkTS Uint8Array的可迭代对象。 |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-typedarrayfrommapfn-t.md)<number, number> | 否 | 映射函数，对数组的每个元素调用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 新创建的ArkTS Uint8Array对象。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 新创建的ArkTS Uint8Array对象。 |
 
 ## includes
 
@@ -544,7 +588,9 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Uint8Array-includes(searchElement: number, fromIndex?: number): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -578,7 +624,9 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-indexOf(searchElement: number, fromIndex?: number): number--><!--Device-Uint8Array-indexOf(searchElement: number, fromIndex?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -612,7 +660,9 @@ join(separator?: string): string
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-join(separator?: string): string--><!--Device-Uint8Array-join(separator?: string): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -645,7 +695,9 @@ keys(): IterableIterator<number>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-keys(): IterableIterator<number>--><!--Device-Uint8Array-keys(): IterableIterator<number>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -653,7 +705,7 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 迭代器对象。 |
+| IterableIterator<number> | 迭代器对象。 |
 
 **错误码：**
 
@@ -672,7 +724,9 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-lastIndexOf(searchElement: number, fromIndex?: number): number--><!--Device-Uint8Array-lastIndexOf(searchElement: number, fromIndex?: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -706,7 +760,9 @@ map(callbackFn: TypedArrayMapCallback<number, Uint8Array>): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-map(callbackFn: TypedArrayMapCallback<number, Uint8Array>): Uint8Array--><!--Device-Uint8Array-map(callbackFn: TypedArrayMapCallback<number, Uint8Array>): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -714,13 +770,13 @@ map(callbackFn: TypedArrayMapCallback<number, Uint8Array>): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayMapCallback&lt;number, Uint8Array&gt; | 是 | 一个最多接受三个参数的函数。map方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-typedarraymapcallback-t.md)<number, Uint8Array> | 是 | 一个最多接受三个参数的函数。map方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 新的ArkTS Uint8Array对象。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 新的ArkTS Uint8Array对象。 |
 
 **错误码：**
 
@@ -739,7 +795,9 @@ static of(...items: number[]): Uint8Array
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-static of(...items: number[]): Uint8Array--><!--Device-Uint8Array-static of(...items: number[]): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -753,7 +811,7 @@ static of(...items: number[]): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 新的ArkTS Uint8Array实例。可能的原因：1.必填参数未指定；<br>2.参数类型不正确；3.参数校验失败。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 新的ArkTS Uint8Array实例。可能的原因：1.必填参数未指定；<br>2.参数类型不正确；3.参数校验失败。 |
 
 ## reduce
 
@@ -765,7 +823,9 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number--><!--Device-Uint8Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -773,7 +833,7 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;number, number, Uint8Array&gt; | 是 | 一个最多接受四个参数的函数。reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<number, number, Uint8Array> | 是 | 一个最多接受四个参数的函数。reduce方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
@@ -798,7 +858,9 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>, initial
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>, initialValue: number): number--><!--Device-Uint8Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>, initialValue: number): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -806,7 +868,7 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>, initial
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;number, number, Uint8Array&gt; | 是 | 一个最多接受四个参数的函数。reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<number, number, Uint8Array> | 是 | 一个最多接受四个参数的函数。reduce方法对数组中的每个元素调用一次callbackfn函数。 |
 | initialValue | number | 是 | 如果指定了initialValue，则将其作为初始值开始累加。首次调用callbackfn函数时，将该值作为参数提供，而不是使用数组元素的值。 |
 
 **返回值：**
@@ -832,7 +894,9 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialVa
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialValue: U): U--><!--Device-Uint8Array-reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialValue: U): U-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -840,7 +904,7 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialVa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;U, number, Uint8Array&gt; | 是 | 归约函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<U, number, Uint8Array> | 是 | 归约函数。 |
 | initialValue | U | 是 | 初始值。 |
 
 **返回值：**
@@ -862,12 +926,13 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialVa
 reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialValue: U): U
 ```
 
-反向遍历ArkTS Uint8Array，对每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回
-最终的归约结果。
+反向遍历ArkTS Uint8Array，对每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialValue: U): U--><!--Device-Uint8Array-reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialValue: U): U-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -875,7 +940,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Arr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;U, number, Uint8Array&gt; | 是 | 对Uint8Array中的每个元素调用的函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<U, number, Uint8Array> | 是 | 对Uint8Array中的每个元素调用的函数。 |
 | initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。<br>如果未提供初始值，则使用Uint8Array的最后一个元素，<br>回调将从倒数第二个元素开始调用。 |
 
 **返回值：**
@@ -901,7 +966,9 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): n
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number--><!--Device-Uint8Array-reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -909,7 +976,7 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): n
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | TypedArrayReduceCallback&lt;number, number, Uint8Array&gt; | 是 | 对Uint8Array中的每个元素调用的函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-typedarrayreducecallback-t.md)<number, number, Uint8Array> | 是 | 对Uint8Array中的每个元素调用的函数。 |
 
 **返回值：**
 
@@ -934,7 +1001,9 @@ reverse(): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-reverse(): Uint8Array--><!--Device-Uint8Array-reverse(): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -942,7 +1011,7 @@ reverse(): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 反转后的ArkTS Uint8Array对象。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 反转后的ArkTS Uint8Array对象。 |
 
 **错误码：**
 
@@ -961,7 +1030,9 @@ set(array: ArrayLike<number>, offset?: number): void
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-set(array: ArrayLike<number>, offset?: number): void--><!--Device-Uint8Array-set(array: ArrayLike<number>, offset?: number): void-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -969,7 +1040,7 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | ArrayLike<number> | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 当前数组中要写入值的起始位置索引。 |
 
 **错误码：**
@@ -989,7 +1060,9 @@ slice(start?: number, end?: number): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-slice(start?: number, end?: number): Uint8Array--><!--Device-Uint8Array-slice(start?: number, end?: number): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1004,7 +1077,7 @@ slice(start?: number, end?: number): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 新的ArkTS Uint8Array对象。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 新的ArkTS Uint8Array对象。 |
 
 **错误码：**
 
@@ -1023,7 +1096,9 @@ some(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-some(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean--><!--Device-Uint8Array-some(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1031,7 +1106,7 @@ some(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | TypedArrayPredicateFn&lt;number, Uint8Array&gt; | 是 | 用于测试的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-typedarraypredicatefn-t.md)<number, Uint8Array> | 是 | 用于测试的断言函数。 |
 
 **返回值：**
 
@@ -1056,7 +1131,9 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-sort(compareFn?: TypedArrayCompareFn<number>): Uint8Array--><!--Device-Uint8Array-sort(compareFn?: TypedArrayCompareFn<number>): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1064,13 +1141,13 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| compareFn | TypedArrayCompareFn&lt;number&gt; | 否 | 用于确定元素顺序的函数。默认使用升序排序。 |
+| compareFn | [TypedArrayCompareFn](arkts-arkts-typedarraycomparefn-t.md)<number> | 否 | 用于确定元素顺序的函数。默认使用升序排序。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 排序后的ArkTS Uint8Array对象。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 排序后的ArkTS Uint8Array对象。 |
 
 **错误码：**
 
@@ -1089,7 +1166,9 @@ subarray(begin?: number, end?: number): Uint8Array
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-subarray(begin?: number, end?: number): Uint8Array--><!--Device-Uint8Array-subarray(begin?: number, end?: number): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1104,7 +1183,7 @@ subarray(begin?: number, end?: number): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 新的ArkTS Uint8Array对象。 |
+| [Uint8Array](arkts-arkts-uint8array-c.md) | 新的ArkTS Uint8Array对象。 |
 
 **错误码：**
 
@@ -1123,7 +1202,9 @@ toLocaleString(): string
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-toLocaleString(): string--><!--Device-Uint8Array-toLocaleString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1150,7 +1231,9 @@ toString(): string
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-toString(): string--><!--Device-Uint8Array-toString(): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1177,7 +1260,9 @@ values(): IterableIterator<number>
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-values(): IterableIterator<number>--><!--Device-Uint8Array-values(): IterableIterator<number>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1185,7 +1270,7 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 迭代器对象。 |
+| IterableIterator<number> | 迭代器对象。 |
 
 **错误码：**
 
@@ -1206,7 +1291,9 @@ ArkTS Uint8Array中每个元素所占用的字节数。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8Array-static readonly BYTES_PER_ELEMENT: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1222,7 +1309,9 @@ ArkTS Uint8Array底层使用的buffer。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-readonly buffer: ArrayBuffer--><!--Device-Uint8Array-readonly buffer: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1238,7 +1327,9 @@ ArkTS Uint8Array所占的字节数。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-readonly byteLength: number--><!--Device-Uint8Array-readonly byteLength: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1254,7 +1345,9 @@ ArkTS Uint8Array距离其ArrayBuffer起始位置的偏移。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-readonly byteOffset: number--><!--Device-Uint8Array-readonly byteOffset: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1270,7 +1363,9 @@ ArkTS Uint8Array距离其ArrayBuffer起始位置的偏移。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-[index: number]: number--><!--Device-Uint8Array-[index: number]: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1286,7 +1381,9 @@ ArkTS Uint8Array元素个数。
 
 **起始版本：** 12
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Uint8Array-readonly length: number--><!--Device-Uint8Array-readonly length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

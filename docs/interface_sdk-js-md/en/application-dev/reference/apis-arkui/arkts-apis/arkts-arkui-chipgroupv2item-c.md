@@ -4,6 +4,8 @@ Defines chip group item.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare class ChipGroupV2Item--><!--Device-unnamed-export declare class ChipGroupV2Item-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -26,13 +28,15 @@ The constructor of ChipGroupV2Item
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2Item-constructor(config: ChipGroupV2ItemConfig)--><!--Device-ChipGroupV2Item-constructor(config: ChipGroupV2ItemConfig)-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ChipGroupV2ItemConfig | Yes | config of the chip group item |
+| config | [ChipGroupV2ItemConfig](arkts-arkui-chipgroupv2itemconfig-i.md) | Yes | config of the chip group item |
 
 ## accessibilityDescription
 
@@ -49,6 +53,8 @@ Set accessibility description for ChipGroupV2 item.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Item-public accessibilityDescription?: ResourceStr--><!--Device-ChipGroupV2Item-public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,6 +76,8 @@ Set accessibility level for ChipGroupV2 item.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2Item-public accessibilityLevel?: string--><!--Device-ChipGroupV2Item-public accessibilityLevel?: string-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## allowClose
@@ -87,6 +95,8 @@ Allow close.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Item-public allowClose?: boolean--><!--Device-ChipGroupV2Item-public allowClose?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,6 +116,8 @@ Set config for default close icon when 'allowClose' is true.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2Item-public closeIcon?: ChipV2CloseConfig--><!--Device-ChipGroupV2Item-public closeIcon?: ChipV2CloseConfig-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## label
@@ -123,6 +135,8 @@ Chip label.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Item-public label: ChipV2Label--><!--Device-ChipGroupV2Item-public label: ChipV2Label-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,6 +156,8 @@ Prefix icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2Item-public prefixIcon?: ChipV2PrefixImageIcon--><!--Device-ChipGroupV2Item-public prefixIcon?: ChipV2PrefixImageIcon-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## prefixSymbolIcon
@@ -159,6 +175,8 @@ Prefix symbol icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Item-public prefixSymbolIcon?: ChipV2PrefixSymbolIcon--><!--Device-ChipGroupV2Item-public prefixSymbolIcon?: ChipV2PrefixSymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -178,6 +196,8 @@ Suffix icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-ChipGroupV2Item-public suffixIcon?: ChipV2SuffixImageIcon--><!--Device-ChipGroupV2Item-public suffixIcon?: ChipV2SuffixImageIcon-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## suffixSymbolIcon
@@ -195,6 +215,8 @@ Suffix symbol icon.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2Item-public suffixSymbolIcon?: ChipV2SuffixSymbolIcon--><!--Device-ChipGroupV2Item-public suffixSymbolIcon?: ChipV2SuffixSymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

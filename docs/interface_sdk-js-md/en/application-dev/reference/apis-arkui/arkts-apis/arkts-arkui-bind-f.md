@@ -13,25 +13,22 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
     floatingBallParams: floatingBall.FloatingBallParams): Promise<void>
 ```
 
-Binds the float view and floating ball. You need to create the
-[float view controller](arkts-arkui-floatviewcontroller-i.md) and
-[floating ball controller](arkts-arkui-floatingballcontroller-i.md) first, and neither
-of them has been started. This API uses a promise to return the result.
+Binds the float view and floating ball. You need to create the [float view controller](arkts-arkui-floatviewcontroller-i.md) and [floating ball controller](arkts-arkui-floatingballcontroller-i.md) first, and neither of them has been started. This API uses a promise to return the result.
 
-> **NOTE**
->
-> - After the binding is successful, calling [start()](arkts-arkui-floatviewcontroller-i.md#start-1) or
-> [startFloatingBall()](arkts-arkui-floatingballcontroller-i.md#startfloatingball-1) will
-> create both a float view and the floating ball window, and trigger the status callback registered for the
-> corresponding window. However, only one window is displayed at a time, and the display sequence depends on which
-> controller's start API is called first.
->
-> - After the binding is successful, users can switch between the float view and the floating ball window by
-> clicking.
->
-> - After the binding is successful, calling the stop API ([stop()](arkts-arkui-floatviewcontroller-i.md#stop-1) or
-> [stopFloatingBall()](arkts-arkui-floatingballcontroller-i.md#stopfloatingball-1)) of
-> either controller will destroy both the float view and the floating ball window, and trigger the status callback
+> **NOTE**  
+>  
+> - After the binding is successful, calling [start()](arkts-arkui-floatviewcontroller-i.md#start-1) or  
+> [startFloatingBall()](arkts-arkui-floatingballcontroller-i.md#startfloatingball-1) will  
+> create both a float view and the floating ball window, and trigger the status callback registered for the  
+> corresponding window. However, only one window is displayed at a time, and the display sequence depends on which  
+> controller's start API is called first.  
+>  
+> - After the binding is successful, users can switch between the float view and the floating ball window by  
+> clicking.  
+>  
+> - After the binding is successful, calling the stop API ([stop()](arkts-arkui-floatviewcontroller-i.md#stop-1) or  
+> [stopFloatingBall()](arkts-arkui-floatingballcontroller-i.md#stopfloatingball-1)) of  
+> either controller will destroy both the float view and the floating ball window, and trigger the status callback  
 > registered for the corresponding window.
 
 **Since:** 26.0.0
@@ -40,21 +37,25 @@ of them has been started. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-floatView-function bind(floatViewController: FloatViewController, floatingBallController: floatingBall.FloatingBallController,
+    floatingBallParams: floatingBall.FloatingBallParams): Promise<void>--><!--Device-floatView-function bind(floatViewController: FloatViewController, floatingBallController: floatingBall.FloatingBallController,
+    floatingBallParams: floatingBall.FloatingBallParams): Promise<void>-End-->
+
 **System capability:** SystemCapability.Window.SessionManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| floatViewController | FloatViewController | Yes | Float view controller. |
+| floatViewController | [FloatViewController](arkts-arkui-floatviewcontroller-i.md) | Yes | Float view controller. |
 | floatingBallController | floatingBall.FloatingBallController | Yes | Floating ball controller. |
-| floatingBallParams | floatingBall.FloatingBallParams | Yes | Floating ball parameters. The parameters set duringbinding will overwrite the parameters saved when the floating ball controller is started. |
+| floatingBallParams | floatingBall.FloatingBallParams | Yes | Floating ball parameters. The parameters set during binding will overwrite the parameters saved when the floating ball controller is started. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

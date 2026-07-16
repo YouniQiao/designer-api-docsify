@@ -12,15 +12,13 @@ import { WantAgent } from '@kit.AbilityKit';
 function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent
 ```
 
-Create a local WantAgent object.
-The WantAgent created by this interface stores data on the client side
-and is not managed by the WantAgent servcer.
-If this WantAgent object is passed across processes,
-its contained data will be serialized and transmitted to the target process.
+Create a local WantAgent object.The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer.If this WantAgent object is passed across processes,its contained data will be serialized and transmitted to the target process.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-wantAgent-function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent--><!--Device-wantAgent-function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,13 +28,13 @@ its contained data will be serialized and transmitted to the target process.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | LocalWantAgentInfo | Yes | Information about the local WantAgent object to create. |
+| info | [LocalWantAgentInfo](arkts-ability-localwantagentinfo-t-sys.md) | Yes | Information about the local WantAgent object to create. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WantAgent | Returns the created WantAgent. |
+| [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-wantagent-i.md) | Returns the created WantAgent. |
 
 **Error codes:**
 

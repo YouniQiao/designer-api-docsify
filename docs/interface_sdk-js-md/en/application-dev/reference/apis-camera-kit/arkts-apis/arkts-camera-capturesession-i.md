@@ -1,14 +1,14 @@
 # CaptureSession
 
-Implements a capture session, which saves all [CameraInput](arkts-camera-camerainput-i.md) and
-[CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera and requests the camera
-to complete shooting or video recording.
+Implements a capture session, which saves all [CameraInput](arkts-camera-camerainput-i.md) and [CameraOutput](arkts-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
 **Substitutes:** [VideoSession](arkts-camera-videosession-i.md)
+
+<!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -32,13 +32,15 @@ Adds a [CameraInput](arkts-camera-camerainput-i.md) instance to this session.
 
 **Substitutes:** [addInput](arkts-camera-session-i.md#addinput-1)
 
+<!--Device-CaptureSession-addInput(cameraInput: CameraInput): void--><!--Device-CaptureSession-addInput(cameraInput: CameraInput): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | CameraInput | Yes | CameraInput instance to add. |
+| cameraInput | [CameraInput](arkts-camera-camerainput-i.md) | Yes | CameraInput instance to add. |
 
 **Error codes:**
 
@@ -61,13 +63,15 @@ Adds a [CameraOutput](arkts-camera-cameraoutput-i.md) instance to this session.
 
 **Substitutes:** [addOutput](arkts-camera-session-i.md#addoutput-1)
 
+<!--Device-CaptureSession-addOutput(cameraOutput: CameraOutput): void--><!--Device-CaptureSession-addOutput(cameraOutput: CameraOutput): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | CameraOutput | Yes | CameraOutput instance to add. |
+| cameraOutput | [CameraOutput](arkts-camera-cameraoutput-i.md) | Yes | CameraOutput instance to add. |
 
 **Error codes:**
 
@@ -89,6 +93,8 @@ Starts configuration for the session.
 **Deprecated since:** 11
 
 **Substitutes:** [beginConfig](arkts-camera-session-i.md#beginconfig-1)
+
+<!--Device-CaptureSession-beginConfig(): void--><!--Device-CaptureSession-beginConfig(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -112,13 +118,15 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 **Substitutes:** commitConfig(callback:
 
+<!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the configuration issuccessfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -141,13 +149,15 @@ Commits the configuration for this session. This API uses a promise to return th
 
 **Substitutes:** [commitConfig()](arkts-camera-session-i.md#commitconfig-2)
 
+<!--Device-CaptureSession-commitConfig(): Promise<void>--><!--Device-CaptureSession-commitConfig(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -170,13 +180,15 @@ Obtains the video stabilization mode in use.
 
 **Substitutes:** [getActiveVideoStabilizationMode](arkts-camera-stabilization-i.md#getactivevideostabilizationmode-1)
 
+<!--Device-CaptureSession-getActiveVideoStabilizationMode(): VideoStabilizationMode--><!--Device-CaptureSession-getActiveVideoStabilizationMode(): VideoStabilizationMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VideoStabilizationMode | Video stabilization mode obtained. If the operation fails, an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [VideoStabilizationMode](arkts-camera-videostabilizationmode-e.md) | Video stabilization mode obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -198,13 +210,15 @@ Obtains the exposure compensation values of the camera device.
 
 **Substitutes:** [getExposureBiasRange](arkts-camera-autoexposurequery-i.md#getexposurebiasrange-1)
 
+<!--Device-CaptureSession-getExposureBiasRange(): Array<number>--><!--Device-CaptureSession-getExposureBiasRange(): Array<number>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array of compensation values. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -226,13 +240,15 @@ Obtains the exposure mode in use.
 
 **Substitutes:** [getExposureMode](arkts-camera-autoexposure-i.md#getexposuremode-1)
 
+<!--Device-CaptureSession-getExposureMode(): ExposureMode--><!--Device-CaptureSession-getExposureMode(): ExposureMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ExposureMode | Exposure mode obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [ExposureMode](arkts-camera-exposuremode-e.md) | Exposure mode obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -254,13 +270,15 @@ Obtains the exposure value in use.
 
 **Substitutes:** [getExposureValue](arkts-camera-autoexposure-i.md#getexposurevalue-1)
 
+<!--Device-CaptureSession-getExposureValue(): number--><!--Device-CaptureSession-getExposureValue(): number-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and thisparameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| number | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -282,13 +300,15 @@ Obtains the flash mode in use.
 
 **Substitutes:** [getFlashMode](arkts-camera-flash-i.md#getflashmode-1)
 
+<!--Device-CaptureSession-getFlashMode(): FlashMode--><!--Device-CaptureSession-getFlashMode(): FlashMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FlashMode | Flash mode obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [FlashMode](arkts-camera-flashmode-e.md) | Flash mode obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -310,13 +330,15 @@ Obtains the focal length of the camera device.
 
 **Substitutes:** [getFocalLength](arkts-camera-focus-i.md#getfocallength-1)
 
+<!--Device-CaptureSession-getFocalLength(): number--><!--Device-CaptureSession-getFocalLength(): number-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Focal length obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| number | Focal length obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -338,13 +360,15 @@ Obtains the focus mode in use.
 
 **Substitutes:** [getFocusMode](arkts-camera-focus-i.md#getfocusmode-1)
 
+<!--Device-CaptureSession-getFocusMode(): FocusMode--><!--Device-CaptureSession-getFocusMode(): FocusMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FocusMode | Focus mode obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [FocusMode](arkts-camera-focusmode-e.md) | Focus mode obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -366,13 +390,15 @@ Obtains the focal point of the camera device.
 
 **Substitutes:** [getFocusPoint](arkts-camera-focus-i.md#getfocuspoint-1)
 
+<!--Device-CaptureSession-getFocusPoint(): Point--><!--Device-CaptureSession-getFocusPoint(): Point-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Point | Focal point obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -394,13 +420,15 @@ Obtains the metering point of the camera device.
 
 **Substitutes:** [getMeteringPoint](arkts-camera-autoexposure-i.md#getmeteringpoint-1)
 
+<!--Device-CaptureSession-getMeteringPoint(): Point--><!--Device-CaptureSession-getMeteringPoint(): Point-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Point | Metering point obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | Metering point obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -422,13 +450,15 @@ Obtains the zoom ratio in use.
 
 **Substitutes:** [getZoomRatio](arkts-camera-zoom-i.md#getzoomratio-1)
 
+<!--Device-CaptureSession-getZoomRatio(): number--><!--Device-CaptureSession-getZoomRatio(): number-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Zoom ratio obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| number | Zoom ratio obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -450,13 +480,15 @@ Obtains the supported zoom ratio range.
 
 **Substitutes:** [getZoomRatioRange](arkts-camera-zoomquery-i.md#getzoomratiorange-1)
 
+<!--Device-CaptureSession-getZoomRatioRange(): Array<number>--><!--Device-CaptureSession-getZoomRatioRange(): Array<number>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, an errorcode defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Array containing the minimum and maximum zoom ratios. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -478,13 +510,15 @@ Checks whether the camera device has flash.
 
 **Substitutes:** [hasFlash](arkts-camera-flashquery-i.md#hasflash-1)
 
+<!--Device-CaptureSession-hasFlash(): boolean--><!--Device-CaptureSession-hasFlash(): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the camera device has flash. **true** if it has flash, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for whether the camera device has flash. **true** if it has flash, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -506,19 +540,21 @@ Checks whether an exposure mode is supported.
 
 **Substitutes:** [isExposureModeSupported](arkts-camera-autoexposurequery-i.md#isexposuremodesupported-1)
 
+<!--Device-CaptureSession-isExposureModeSupported(aeMode: ExposureMode): boolean--><!--Device-CaptureSession-isExposureModeSupported(aeMode: ExposureMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMode | ExposureMode | Yes | Exposure mode. |
+| aeMode | [ExposureMode](arkts-camera-exposuremode-e.md) | Yes | Exposure mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the exposure mode. **true** if supported, **false**otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for the support of the exposure mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -540,19 +576,21 @@ Checks whether the flash mode is supported.
 
 **Substitutes:** [isFlashModeSupported](arkts-camera-flashquery-i.md#isflashmodesupported-1)
 
+<!--Device-CaptureSession-isFlashModeSupported(flashMode: FlashMode): boolean--><!--Device-CaptureSession-isFlashModeSupported(flashMode: FlashMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flashMode | FlashMode | Yes | Flash mode. |
+| flashMode | [FlashMode](arkts-camera-flashmode-e.md) | Yes | Flash mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the flash mode. **true** if supported, **false** otherwise.If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for the support of the flash mode. **true** if supported, **false** otherwise.If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -574,19 +612,21 @@ Checks whether a focus mode is supported.
 
 **Substitutes:** [isFocusModeSupported](arkts-camera-focusquery-i.md#isfocusmodesupported-1)
 
+<!--Device-CaptureSession-isFocusModeSupported(afMode: FocusMode): boolean--><!--Device-CaptureSession-isFocusModeSupported(afMode: FocusMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | FocusMode | Yes | Focus mode. |
+| afMode | [FocusMode](arkts-camera-focusmode-e.md) | Yes | Focus mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise.If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise.If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -608,19 +648,21 @@ Checks whether a video stabilization mode is supported.
 
 **Substitutes:** [isVideoStabilizationModeSupported](arkts-camera-stabilizationquery-i.md#isvideostabilizationmodesupported-1)
 
+<!--Device-CaptureSession-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean--><!--Device-CaptureSession-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| vsMode | VideoStabilizationMode | Yes | Video stabilization mode. If the input parameter is null or undefined,it is treated as 0 and video stabilization is disabled. |
+| vsMode | [VideoStabilizationMode](arkts-camera-videostabilizationmode-e.md) | Yes | Video stabilization mode. If the input parameter is null or undefined,it is treated as 0 and video stabilization is disabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the video stabilization mode. **true** if supported,**false** otherwise. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for the support of the video stabilization mode. **true** if supported,**false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -642,14 +684,16 @@ Unsubscribes from focus state change events.
 
 **Substitutes:** off(type:
 
+<!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can belistened for when a session is created. |
-| callback | AsyncCallback&lt;FocusState&gt; | No | Callback used to return the result. If this parameter isspecified, the subscription to the specified event with the specified callback is canceled. (The callbackobject cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all thecallbacks are canceled. |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FocusState> | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('error')
 
@@ -665,14 +709,16 @@ Unsubscribes from CaptureSession error events. This API uses a callback to retur
 
 **Substitutes:** off(type:
 
+<!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. |
-| callback | ErrorCallback | No | Callback used to return the result. If this parameter is specified, thesubscription to the specified event with the specified callback is canceled. (The callback object cannot bean anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks arecanceled. |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## on('focusStateChange')
 
@@ -682,8 +728,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
@@ -692,14 +738,16 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Substitutes:** on(type:
 
+<!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can belistened for when a session is created. This event is triggered only when the camera focus state changes inauto focus mode. |
-| callback | AsyncCallback&lt;FocusState&gt; | Yes | Callback used to return the focus state change. |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<FocusState> | Yes | Callback used to return the focus state change. |
 
 ## on('error')
 
@@ -709,8 +757,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 Subscribes to CaptureSession error events. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
@@ -719,14 +767,16 @@ Subscribes to CaptureSession error events. This API uses an asynchronous callbac
 
 **Substitutes:** on(type:
 
+<!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when asession is created. This event is triggered and the error message is returned when an error occurs during thecalling of a session-related API such as [beginConfig](arkts-camera-capturesession-i.md#beginconfig-1),[commitConfig](arkts-camera-capturesession-i.md#commitconfig-2), and[addInput](arkts-camera-capturesession-i.md#addinput-1). |
-| callback | ErrorCallback | Yes | Callback used to return an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-capturesession-i.md#beginconfig-1),[commitConfig](arkts-camera-capturesession-i.md#commitconfig-2), and [addInput](arkts-camera-capturesession-i.md#addinput-1). |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 ## release
 
@@ -742,13 +792,15 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 **Substitutes:** release(callback:
 
+<!--Device-CaptureSession-release(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session is releasedsuccessfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -770,13 +822,15 @@ Releases this session. This API uses a promise to return the result.
 
 **Substitutes:** [release()](arkts-camera-session-i.md#release-2)
 
+<!--Device-CaptureSession-release(): Promise<void>--><!--Device-CaptureSession-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -798,13 +852,15 @@ Removes a [CameraInput](arkts-camera-camerainput-i.md) instance from this sessio
 
 **Substitutes:** [removeInput](arkts-camera-session-i.md#removeinput-1)
 
+<!--Device-CaptureSession-removeInput(cameraInput: CameraInput): void--><!--Device-CaptureSession-removeInput(cameraInput: CameraInput): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | CameraInput | Yes | CameraInput instance to remove. |
+| cameraInput | [CameraInput](arkts-camera-camerainput-i.md) | Yes | CameraInput instance to remove. |
 
 **Error codes:**
 
@@ -827,13 +883,15 @@ Removes a [CameraOutput](arkts-camera-cameraoutput-i.md) instance from this sess
 
 **Substitutes:** [removeOutput](arkts-camera-session-i.md#removeoutput-1)
 
+<!--Device-CaptureSession-removeOutput(cameraOutput: CameraOutput): void--><!--Device-CaptureSession-removeOutput(cameraOutput: CameraOutput): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | CameraOutput | Yes | CameraOutput instance to remove. |
+| cameraOutput | [CameraOutput](arkts-camera-cameraoutput-i.md) | Yes | CameraOutput instance to remove. |
 
 **Error codes:**
 
@@ -848,9 +906,7 @@ Removes a [CameraOutput](arkts-camera-cameraoutput-i.md) instance from this sess
 setExposureBias(exposureBias: number): void
 ```
 
-Sets an exposure compensation value (EV).
-Before the setting, you are advised to use
-[getExposureBiasRange](arkts-camera-capturesession-i.md#getexposurebiasrange-1) to obtain the supported values.
+Sets an exposure compensation value (EV).Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-capturesession-i.md#getexposurebiasrange-1) to obtain the supported values.
 
 **Since:** 10
 
@@ -858,13 +914,15 @@ Before the setting, you are advised to use
 
 **Substitutes:** [setExposureBias](arkts-camera-autoexposure-i.md#setexposurebias-1)
 
+<!--Device-CaptureSession-setExposureBias(exposureBias: number): void--><!--Device-CaptureSession-setExposureBias(exposureBias: number): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling[getExposureBiasRange](arkts-camera-autoexposurequery-i.md#getexposurebiasrange-1). If thevalue passed is not within the supported range, the nearest critical point is used. There is a step for EV.For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If theoperation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. If the input parameteris null or undefined, the EV is set to 0. |
+| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-autoexposurequery-i.md#getexposurebiasrange-1). If the value passed is not within the supported range, the nearest critical point is used. There is a step for EV.For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. If the input parameter is null or undefined, the EV is set to 0. |
 
 **Error codes:**
 
@@ -878,9 +936,7 @@ Before the setting, you are advised to use
 setExposureMode(aeMode: ExposureMode): void
 ```
 
-Sets an exposure mode. Before the setting, call
-[isExposureModeSupported](arkts-camera-capturesession-i.md#isexposuremodesupported-1) to check whether the target
-exposure mode is supported.
+Sets an exposure mode. Before the setting, call [isExposureModeSupported](arkts-camera-capturesession-i.md#isexposuremodesupported-1) to check whether the target exposure mode is supported.
 
 **Since:** 10
 
@@ -888,13 +944,15 @@ exposure mode is supported.
 
 **Substitutes:** [setExposureMode](arkts-camera-autoexposure-i.md#setexposuremode-1)
 
+<!--Device-CaptureSession-setExposureMode(aeMode: ExposureMode): void--><!--Device-CaptureSession-setExposureMode(aeMode: ExposureMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMode | ExposureMode | Yes | Exposure mode. |
+| aeMode | [ExposureMode](arkts-camera-exposuremode-e.md) | Yes | Exposure mode. |
 
 **Error codes:**
 
@@ -908,12 +966,9 @@ exposure mode is supported.
 setFlashMode(flashMode: FlashMode): void
 ```
 
-Sets a flash mode.
-Before the setting, do the following checks:
+Sets a flash mode.Before the setting, do the following checks:
 
-1. Use [hasFlash](arkts-camera-capturesession-i.md#hasflash-1) to check whether the camera device has flash.
-2. Use [isFlashModeSupported](arkts-camera-capturesession-i.md#isflashmodesupported-1) to check whether the camera
-device supports the flash mode.
+1. Use [hasFlash](arkts-camera-capturesession-i.md#hasflash-1) to check whether the camera device has flash.2. Use [isFlashModeSupported](arkts-camera-capturesession-i.md#isflashmodesupported-1) to check whether the camera device supports the flash mode.
 
 **Since:** 10
 
@@ -921,13 +976,15 @@ device supports the flash mode.
 
 **Substitutes:** [setFlashMode](arkts-camera-flash-i.md#setflashmode-1)
 
+<!--Device-CaptureSession-setFlashMode(flashMode: FlashMode): void--><!--Device-CaptureSession-setFlashMode(flashMode: FlashMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flashMode | FlashMode | Yes | Flash mode. |
+| flashMode | [FlashMode](arkts-camera-flashmode-e.md) | Yes | Flash mode. |
 
 **Error codes:**
 
@@ -941,9 +998,7 @@ device supports the flash mode.
 setFocusMode(afMode: FocusMode): void
 ```
 
-Sets a focus mode.
-Before the setting, call [isFocusModeSupported](arkts-camera-capturesession-i.md#isfocusmodesupported-1) to check
-whether the focus mode is supported.
+Sets a focus mode.Before the setting, call [isFocusModeSupported](arkts-camera-capturesession-i.md#isfocusmodesupported-1) to check whether the focus mode is supported.
 
 **Since:** 10
 
@@ -951,13 +1006,15 @@ whether the focus mode is supported.
 
 **Substitutes:** [setFocusMode](arkts-camera-focus-i.md#setfocusmode-1)
 
+<!--Device-CaptureSession-setFocusMode(afMode: FocusMode): void--><!--Device-CaptureSession-setFocusMode(afMode: FocusMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | FocusMode | Yes | Focus mode. |
+| afMode | [FocusMode](arkts-camera-focusmode-e.md) | Yes | Focus mode. |
 
 **Error codes:**
 
@@ -971,13 +1028,9 @@ whether the focus mode is supported.
 setFocusPoint(point: Point): void
 ```
 
-Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0}
-and the bottom-right corner is {1, 1}.
+Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0}and the bottom-right corner is {1, 1}.
 
-The coordinate system is based on the horizontal device direction with the device's charging port on the right.
-If the layout of the preview screen of an application is based on the vertical direction with the charging port
-on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate
-point after conversion is {y/h, 1-x/w}.
+The coordinate system is based on the horizontal device direction with the device's charging port on the right.If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 10
 
@@ -985,13 +1038,15 @@ point after conversion is {y/h, 1-x/w}.
 
 **Substitutes:** [setFocusPoint](arkts-camera-focus-i.md#setfocuspoint-1)
 
+<!--Device-CaptureSession-setFocusPoint(point: Point): void--><!--Device-CaptureSession-setFocusPoint(point: Point): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | Point | Yes | Focal point. The value range of x and y must be within [0,1]. If a value less than 0 ispassed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | Yes | Focal point. The value range of x and y must be within [0,1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
 
 **Error codes:**
 
@@ -1005,13 +1060,9 @@ point after conversion is {y/h, 1-x/w}.
 setMeteringPoint(point: Point): void
 ```
 
-Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the
-coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
+Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
 
-The coordinate system is based on the horizontal device direction with the device's charging port on the right.
-If the layout of the preview screen of an application is based on the vertical direction with the charging port
-on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate
-point after conversion is {y/h, 1-x/w}.
+The coordinate system is based on the horizontal device direction with the device's charging port on the right.If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 10
 
@@ -1019,13 +1070,15 @@ point after conversion is {y/h, 1-x/w}.
 
 **Substitutes:** [setMeteringPoint](arkts-camera-autoexposure-i.md#setmeteringpoint-1)
 
+<!--Device-CaptureSession-setMeteringPoint(point: Point): void--><!--Device-CaptureSession-setMeteringPoint(point: Point): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | Point | Yes | Metering point. The value range of x and y must be within [0,1]. If a value less than 0is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | Yes | Metering point. The value range of x and y must be within [0,1]. If a value less than 0is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
 
 **Error codes:**
 
@@ -1039,9 +1092,7 @@ point after conversion is {y/h, 1-x/w}.
 setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
-Sets a video stabilization mode. Before the setting, call
-[isVideoStabilizationModeSupported](arkts-camera-capturesession-i.md#isvideostabilizationmodesupported-1) to check
-whether the target video stabilization mode is supported.
+Sets a video stabilization mode. Before the setting, call [isVideoStabilizationModeSupported](arkts-camera-capturesession-i.md#isvideostabilizationmodesupported-1) to check whether the target video stabilization mode is supported.
 
 **Since:** 10
 
@@ -1049,13 +1100,15 @@ whether the target video stabilization mode is supported.
 
 **Substitutes:** [setVideoStabilizationMode](arkts-camera-stabilization-i.md#setvideostabilizationmode-1)
 
+<!--Device-CaptureSession-setVideoStabilizationMode(mode: VideoStabilizationMode): void--><!--Device-CaptureSession-setVideoStabilizationMode(mode: VideoStabilizationMode): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | VideoStabilizationMode | Yes | Video stabilization mode. If the input parameter is null or undefined,it is treated as 0 and video stabilization is disabled. |
+| mode | [VideoStabilizationMode](arkts-camera-videostabilizationmode-e.md) | Yes | Video stabilization mode. If the input parameter is null or undefined,it is treated as 0 and video stabilization is disabled. |
 
 **Error codes:**
 
@@ -1077,13 +1130,15 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 **Substitutes:** [setZoomRatio](arkts-camera-zoom-i.md#setzoomratio-1)
 
+<!--Device-CaptureSession-setZoomRatio(zoomRatio: number): void--><!--Device-CaptureSession-setZoomRatio(zoomRatio: number): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoomRatio | number | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling[getZoomRatioRange](arkts-camera-zoomquery-i.md#getzoomratiorange-1). If the value passed inis not within the supported range, the value within the precision range is retained. If the input parameteris null or undefined, it is treated as 0 and the minimum zoom ratio is used. |
+| zoomRatio | number | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-zoomquery-i.md#getzoomratiorange-1). If the value passed in is not within the supported range, the value within the precision range is retained. If the input parameter is null or undefined, it is treated as 0 and the minimum zoom ratio is used. |
 
 **Error codes:**
 
@@ -1105,13 +1160,15 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 **Substitutes:** start(callback:
 
+<!--Device-CaptureSession-start(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-start(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the session starts successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -1134,13 +1191,15 @@ Starts this session. This API uses a promise to return the result.
 
 **Substitutes:** [start()](arkts-camera-session-i.md#start-2)
 
+<!--Device-CaptureSession-start(): Promise<void>--><!--Device-CaptureSession-start(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1163,13 +1222,15 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 **Substitutes:** stop(callback:
 
+<!--Device-CaptureSession-stop(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-stop(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the session stops successfully,**err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
@@ -1191,13 +1252,15 @@ Stops this session. This API uses a promise to return the result.
 
 **Substitutes:** [stop()](arkts-camera-session-i.md#stop-2)
 
+<!--Device-CaptureSession-stop(): Promise<void>--><!--Device-CaptureSession-stop(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

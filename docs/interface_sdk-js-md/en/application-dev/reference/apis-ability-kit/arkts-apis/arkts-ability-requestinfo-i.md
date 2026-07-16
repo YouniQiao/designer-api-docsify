@@ -4,6 +4,8 @@ Defines the request information, which is used as an input parameter for binding
 
 **Since:** 9
 
+<!--Device-dialogRequest-export interface RequestInfo--><!--Device-dialogRequest-export interface RequestInfo-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## Modules to Import
@@ -25,6 +27,8 @@ Location attributes of a modal dialog box.
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RequestInfo-windowRect?: WindowRect--><!--Device-RequestInfo-windowRect?: WindowRect-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

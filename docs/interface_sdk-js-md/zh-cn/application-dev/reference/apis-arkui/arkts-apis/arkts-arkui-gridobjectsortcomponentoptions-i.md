@@ -4,7 +4,15 @@
 
 **起始版本：** 11
 
+<!--Device-unnamed-export interface GridObjectSortComponentOptions--><!--Device-unnamed-export interface GridObjectSortComponentOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { GridObjectSortComponentType, GridObjectSortComponentOptions, GridObjectSortComponent, GridObjectSortComponentItem } from '@kit.ArkUI';
+```
 
 ## addAreaTitle
 
@@ -22,7 +30,9 @@ addAreaTitle?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GridObjectSortComponentOptions-addAreaTitle?: ResourceStr--><!--Device-GridObjectSortComponentOptions-addAreaTitle?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,7 +52,9 @@ editTitle?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GridObjectSortComponentOptions-editTitle?: ResourceStr--><!--Device-GridObjectSortComponentOptions-editTitle?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,7 +76,9 @@ imageSize?: number | Resource
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GridObjectSortComponentOptions-imageSize?: number | Resource--><!--Device-GridObjectSortComponentOptions-imageSize?: number | Resource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,7 +98,9 @@ normalTitle?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GridObjectSortComponentOptions-normalTitle?: ResourceStr--><!--Device-GridObjectSortComponentOptions-normalTitle?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,7 +120,9 @@ showAreaTitle?: ResourceStr
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GridObjectSortComponentOptions-showAreaTitle?: ResourceStr--><!--Device-GridObjectSortComponentOptions-showAreaTitle?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -126,7 +144,9 @@ type?: GridObjectSortComponentType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-GridObjectSortComponentOptions-type?: GridObjectSortComponentType--><!--Device-GridObjectSortComponentOptions-type?: GridObjectSortComponentType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

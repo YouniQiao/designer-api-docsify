@@ -18,13 +18,15 @@ Unsubscribes from the NearLink ACB connection status change event.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-remoteDevice-function offAcbStateChange(callback?: Callback<AcbStateParam>): void--><!--Device-remoteDevice-function offAcbStateChange(callback?: Callback<AcbStateParam>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;AcbStateParam&gt; | No | Callback of the event to be listened to. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<AcbStateParam> | No | Callback of the event to be listened to. |
 
 **Error codes:**
 

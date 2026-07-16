@@ -2,14 +2,22 @@
 
 CmsGenerator对象用于生成CMS（Cryptographic Message Syntax）格式的消息。
 
-> **说明：**
->
-> PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、
+> **说明：**  
+>  
+> PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、  
 > 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
 
 **起始版本：** 18
 
+<!--Device-cert-interface CmsGenerator--><!--Device-cert-interface CmsGenerator-End-->
+
 **系统能力：** SystemCapability.Security.Cert
+
+## 导入模块
+
+```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
+```
 
 ## addCert
 
@@ -23,7 +31,9 @@ addCert(cert: X509Cert): void
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsGenerator-addCert(cert: X509Cert): void--><!--Device-CmsGenerator-addCert(cert: X509Cert): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -31,7 +41,7 @@ addCert(cert: X509Cert): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | X509Cert | 是 | 要添加的X509证书。 |
+| cert | [X509Cert](arkts-devicecertificate-x509cert-i.md) | 是 | 要添加的X509证书。 |
 
 **错误码：**
 
@@ -112,7 +122,9 @@ addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsGenerator-addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>--><!--Device-CmsGenerator-addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -120,13 +132,13 @@ addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| recipientInfo | CmsRecipientInfo | 是 | 接收者信息。 |
+| recipientInfo | [CmsRecipientInfo](arkts-devicecertificate-cmsrecipientinfo-i.md) | 是 | 接收者信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -231,7 +243,9 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsGenerator-addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void--><!--Device-CmsGenerator-addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -239,9 +253,9 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | X509Cert | 是 | 指定X509证书。 |
-| keyInfo | PrivateKeyInfo | 是 | 指定私钥信息。 |
-| config | CmsSignerConfig | 是 | 指定签名者选项。 |
+| cert | [X509Cert](arkts-devicecertificate-x509cert-i.md) | 是 | 指定X509证书。 |
+| keyInfo | [PrivateKeyInfo](arkts-devicecertificate-privatekeyinfo-i.md) | 是 | 指定私钥信息。 |
+| config | [CmsSignerConfig](arkts-devicecertificate-cmssignerconfig-i.md) | 是 | 指定签名者选项。 |
 
 **错误码：**
 
@@ -350,7 +364,9 @@ doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | s
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsGenerator-doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | string>--><!--Device-CmsGenerator-doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | string>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -358,14 +374,14 @@ doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Uint8Array | 是 | Cms操作的内容。 |
-| options | CmsGeneratorOptions | 否 | Cms操作的配置选项。 |
+| data | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | Cms操作的内容。 |
+| options | [CmsGeneratorOptions](arkts-devicecertificate-cmsgeneratoroptions-i.md) | 否 | Cms操作的配置选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array \| string&gt; | Promise对象，返回CMS消息。 |
+| Promise<Uint8Array \| string> | Promise对象，返回CMS消息。 |
 
 **错误码：**
 
@@ -486,7 +502,9 @@ doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | strin
 
 **起始版本：** 18
 
-**元服务API：** 从API版本18开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsGenerator-doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | string--><!--Device-CmsGenerator-doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | string-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -494,14 +512,14 @@ doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | strin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Uint8Array | 是 | Cms操作的内容。 |
-| options | CmsGeneratorOptions | 否 | Cms操作的配置选项。 |
+| data | [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 是 | Cms操作的内容。 |
+| options | [CmsGeneratorOptions](arkts-devicecertificate-cmsgeneratoroptions-i.md) | 否 | Cms操作的配置选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 生成的CMS消息。 |
+| [Uint8Array](../../apis-arkts/arkts-apis/arkts-arkts-uint8array-c.md) | 生成的CMS消息。 |
 
 **错误码：**
 
@@ -621,7 +639,9 @@ getEncryptedContentData(): Promise<Uint8Array>
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsGenerator-getEncryptedContentData(): Promise<Uint8Array>--><!--Device-CmsGenerator-getEncryptedContentData(): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -629,7 +649,7 @@ getEncryptedContentData(): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回加密的数据内容。 |
+| Promise<Uint8Array> | Promise对象，返回加密的数据内容。 |
 
 **错误码：**
 
@@ -749,7 +769,9 @@ setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): voi
 
 **起始版本：** 22
 
-**元服务API：** 从API版本22开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CmsGenerator-setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void--><!--Device-CmsGenerator-setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 
@@ -757,7 +779,7 @@ setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algorithm | CmsRecipientEncryptionAlgorithm | 是 | 用于CMS封装数据的加密算法。 |
+| algorithm | [CmsRecipientEncryptionAlgorithm](arkts-devicecertificate-cmsrecipientencryptionalgorithm-e.md) | 是 | 用于CMS封装数据的加密算法。 |
 
 **错误码：**
 

@@ -1,5 +1,11 @@
 # addProcessorFromConfig
 
+## 导入模块
+
+```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+```
+
 ## addProcessorFromConfig
 
 ```TypeScript
@@ -10,7 +16,9 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 **起始版本：** 20
 
-**元服务API：** 从API版本20开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>--><!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -25,7 +33,7 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回添加的事件数据处理者的唯一ID，可用于移除该数据处理者。 添加失败返回11105001错误码。 |
+| Promise<number> | Promise对象。返回添加的事件数据处理者的唯一ID，可用于移除该数据处理者。 添加失败返回11105001错误码。 |
 
 **错误码：**
 

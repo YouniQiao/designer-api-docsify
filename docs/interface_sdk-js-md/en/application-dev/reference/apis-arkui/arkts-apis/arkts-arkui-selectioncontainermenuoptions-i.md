@@ -4,6 +4,8 @@ Defines selection menu options for SelectionContainer.
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export interface SelectionContainerMenuOptions--><!--Device-unnamed-export interface SelectionContainerMenuOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 onAppear?: Callback<string>
 ```
 
-Called when the selection menu appears.
-The callback parameter is the selected text concatenated in the visual order of Text components.
+Called when the selection menu appears.The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** Callback<string>
 
@@ -28,6 +29,8 @@ The callback parameter is the selected text concatenated in the visual order of 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerMenuOptions-onAppear?: Callback<string>--><!--Device-SelectionContainerMenuOptions-onAppear?: Callback<string>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,6 +50,8 @@ Called when the selection menu disappears.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-SelectionContainerMenuOptions-onDisappear?: Callback<void>--><!--Device-SelectionContainerMenuOptions-onDisappear?: Callback<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onMenuHide
@@ -55,8 +60,7 @@ Called when the selection menu disappears.
 onMenuHide?: Callback<string>
 ```
 
-Called when the selection menu is hidden.
-The callback parameter is the selected text concatenated in the visual order of Text components.
+Called when the selection menu is hidden.The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** Callback<string>
 
@@ -65,6 +69,8 @@ The callback parameter is the selected text concatenated in the visual order of 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerMenuOptions-onMenuHide?: Callback<string>--><!--Device-SelectionContainerMenuOptions-onMenuHide?: Callback<string>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,8 +80,7 @@ The callback parameter is the selected text concatenated in the visual order of 
 onMenuShow?: Callback<string>
 ```
 
-Called when the selection menu is displayed.
-The callback parameter is the selected text concatenated in the visual order of Text components.
+Called when the selection menu is displayed.The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** Callback<string>
 
@@ -84,6 +89,8 @@ The callback parameter is the selected text concatenated in the visual order of 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SelectionContainerMenuOptions-onMenuShow?: Callback<string>--><!--Device-SelectionContainerMenuOptions-onMenuShow?: Callback<string>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

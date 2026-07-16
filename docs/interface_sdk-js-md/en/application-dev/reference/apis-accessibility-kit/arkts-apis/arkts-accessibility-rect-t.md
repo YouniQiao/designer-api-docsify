@@ -8,6 +8,8 @@ Defines a rectangle. For details, see [Rect](arkts-accessibility-rect-i.md).
 
 **Since:** 10
 
+<!--Device-unnamed-export type Rect = _Rect--><!--Device-unnamed-export type Rect = _Rect-End-->
+
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 **Property type:** _Rect

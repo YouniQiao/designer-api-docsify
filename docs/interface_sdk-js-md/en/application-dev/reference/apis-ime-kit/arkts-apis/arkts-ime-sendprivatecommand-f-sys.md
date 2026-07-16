@@ -18,6 +18,8 @@ Send private command.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-inputMethodSystemPanelManager-function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>--><!--Device-inputMethodSystemPanelManager-function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **System API:** This is a system API.
@@ -26,13 +28,13 @@ Send private command.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | Yes | command data which will be sent. Max size 32KB. |
+| commandData | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, CommandDataType> | Yes | command data which will be sent. Max size 32KB. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by the function. |
 
 **Error codes:**
 

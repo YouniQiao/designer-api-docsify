@@ -18,6 +18,8 @@ Obtain the Wi-Fi hotspot configuration.
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
+<!--Device-wifiManager-function getHotspotConfig(): HotspotConfig--><!--Device-wifiManager-function getHotspotConfig(): HotspotConfig-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtain the Wi-Fi hotspot configuration.
 
 | Type | Description |
 | --- | --- |
-| HotspotConfig | Returns the configuration of an existed or enabled Wi-Fi hotspot. |
+| [HotspotConfig](arkts-connectivity-hotspotconfig-i-sys.md) | Returns the configuration of an existed or enabled Wi-Fi hotspot. |
 
 **Error codes:**
 

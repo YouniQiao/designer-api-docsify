@@ -18,13 +18,15 @@ Removes one or more assets. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
+<!--Device-asset-function removeSync(query: AssetMap): void--><!--Device-asset-function removeSync(query: AssetMap): void-End-->
+
 **System capability:** SystemCapability.Security.Asset
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | AssetMap | Yes | Attributes of the asset to remove, such as the asset alias, access control attributes,and custom data. |
+| query | [AssetMap](arkts-assetstore-assetmap-t.md) | Yes | Attributes of the asset to remove, such as the asset alias, access control attributes,and custom data. |
 
 **Error codes:**
 

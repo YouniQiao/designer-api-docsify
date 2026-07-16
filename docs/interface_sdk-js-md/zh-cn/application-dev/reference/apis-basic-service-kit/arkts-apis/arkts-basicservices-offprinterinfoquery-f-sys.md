@@ -1,5 +1,11 @@
 # offPrinterInfoQuery（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## offPrinterInfoQuery
 
 ```TypeScript
@@ -14,6 +20,8 @@ function offPrinterInfoQuery(callback?: PrinterInfoQueryCallback): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-print-function offPrinterInfoQuery(callback?: PrinterInfoQueryCallback): void--><!--Device-print-function offPrinterInfoQuery(callback?: PrinterInfoQueryCallback): void-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -22,7 +30,7 @@ function offPrinterInfoQuery(callback?: PrinterInfoQueryCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | PrinterInfoQueryCallback | 否 | 查询到的打印机信息的回调函数。 |
+| callback | [PrinterInfoQueryCallback](arkts-basicservices-printerinfoquerycallback-t-sys.md) | 否 | 查询到的打印机信息的回调函数。 |
 
 **错误码：**
 

@@ -12,13 +12,9 @@ import { bundleManager } from '@kit.MDMKit';
 function removeInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array<AppDistributionType>): void
 ```
 
-Removes the distribution type of an application. If only some distribution types in the array are removed, the
-current device can install applications of the remaining distribution types in the array, but cannot install
-applications of the distribution types not included in
-[AppDistributionType](arkts-mdm-appdistributiontype-e.md).
+Removes the distribution type of an application. If only some distribution types in the array are removed, the current device can install applications of the remaining distribution types in the array, but cannot install applications of the distribution types not included in [AppDistributionType](arkts-mdm-appdistributiontype-e.md).
 
-For details about the distribution type of the application signing certificate, refer to the
-**appDistributionType** attribute in [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md).
+For details about the distribution type of the application signing certificate, refer to the **appDistributionType** attribute in [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md).
 
 **Since:** 20
 
@@ -26,14 +22,16 @@ For details about the distribution type of the application signing certificate, 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-bundleManager-function removeInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array<AppDistributionType>): void--><!--Device-bundleManager-function removeInstallationAllowedAppDistributionTypes(admin: Want, appDistributionTypes: Array<AppDistributionType>): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appDistributionTypes | Array&lt;AppDistributionType&gt; | Yes | Distribution types of the application signingcertificate. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| appDistributionTypes | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<AppDistributionType> | Yes | Distribution types of the application signing certificate. |
 
 **Error codes:**
 

@@ -8,6 +8,8 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 
 **Substitutes:** [BundleInstaller](arkts-ability-bundleinstaller-i-sys.md)
 
+<!--Device-unnamed-export interface BundleInstaller--><!--Device-unnamed-export interface BundleInstaller-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -28,6 +30,8 @@ Install an application in a HAP.
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-BundleInstaller-install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -36,9 +40,9 @@ Install an application in a HAP.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFilePaths | Array&lt;string&gt; | Yes | Sandbox path where the HAP files of the bundle are stored. |
-| param | InstallParam | Yes | Parameters required for bundle installation. |
-| callback | AsyncCallback&lt;InstallStatus&gt; | Yes | Callback used to return the result. Ifinstall is successful, **err** is **undefined**, and return the installation status.Otherwise, **err** is an error object. |
+| bundleFilePaths | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Sandbox path where the HAP files of the bundle are stored. |
+| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-installparam-i.md) | Yes | Parameters required for bundle installation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<InstallStatus> | Yes | Callback used to return the result. If install is successful, **err** is **undefined**, and return the installation status.Otherwise, **err** is an error object. |
 
 ## recover
 
@@ -56,6 +60,8 @@ recover an application.
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-BundleInstaller-recover(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-recover(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -65,8 +71,8 @@ recover an application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| param | InstallParam | Yes | Parameters required for bundle recovery. |
-| callback | AsyncCallback&lt;InstallStatus&gt; | Yes | Callback used to return the result. Ifrecover is successful, **err** is **undefined**, and return the installation status.Otherwise, **err** is an error object. |
+| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-installparam-i.md) | Yes | Parameters required for bundle recovery. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<InstallStatus> | Yes | Callback used to return the result. If recover is successful, **err** is **undefined**, and return the installation status.Otherwise, **err** is an error object. |
 
 ## uninstall
 
@@ -84,6 +90,8 @@ Uninstall an application.
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
+<!--Device-BundleInstaller-uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void--><!--Device-BundleInstaller-uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<InstallStatus>): void-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
 **System API:** This is a system API.
@@ -93,6 +101,6 @@ Uninstall an application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| param | InstallParam | Yes | Parameters required for bundle uninstall. |
-| callback | AsyncCallback&lt;InstallStatus&gt; | Yes | Callback used to return the result. Ifuninstall is successful, **err** is **undefined**, and return the installation status.Otherwise, **err** is an error object. |
+| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-installparam-i.md) | Yes | Parameters required for bundle uninstall. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<InstallStatus> | Yes | Callback used to return the result. If uninstall is successful, **err** is **undefined**, and return the installation status.Otherwise, **err** is an error object. |
 

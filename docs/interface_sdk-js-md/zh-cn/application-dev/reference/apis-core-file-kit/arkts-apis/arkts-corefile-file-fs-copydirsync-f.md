@@ -1,5 +1,11 @@
 # copyDirSync
 
+## 导入模块
+
+```TypeScript
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+```
+
 ## copyDirSync
 
 ```TypeScript
@@ -9,6 +15,8 @@ declare function copyDirSync(src: string, dest: string, mode?: number): void
 以同步方法复制源目录至目标路径下。
 
 **起始版本：** 10
+
+<!--Device-unnamed-declare function copyDirSync(src: string, dest: string, mode?: number): void--><!--Device-unnamed-declare function copyDirSync(src: string, dest: string, mode?: number): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 

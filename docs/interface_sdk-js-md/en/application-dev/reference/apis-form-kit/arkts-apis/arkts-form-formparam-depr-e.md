@@ -8,6 +8,8 @@ Enumerates the widget parameters.
 
 **Substitutes:** FormParam
 
+<!--Device-formInfo-enum FormParam--><!--Device-formInfo-enum FormParam-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## DIMENSION_KEY
@@ -23,6 +25,8 @@ Widget dimension.
 **Deprecated since:** 9
 
 **Substitutes:** DIMENSION_KEY
+
+<!--Device-FormParam-DIMENSION_KEY = 'ohos.extra.param.key.form_dimension'--><!--Device-FormParam-DIMENSION_KEY = 'ohos.extra.param.key.form_dimension'-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -40,6 +44,8 @@ Widget name.
 
 **Substitutes:** NAME_KEY
 
+<!--Device-FormParam-NAME_KEY = 'ohos.extra.param.key.form_name'--><!--Device-FormParam-NAME_KEY = 'ohos.extra.param.key.form_name'-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## MODULE_NAME_KEY
@@ -55,6 +61,8 @@ Name of the module to which the widget belongs.
 **Deprecated since:** 9
 
 **Substitutes:** MODULE_NAME_KEY
+
+<!--Device-FormParam-MODULE_NAME_KEY = 'ohos.extra.param.key.module_name'--><!--Device-FormParam-MODULE_NAME_KEY = 'ohos.extra.param.key.module_name'-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -72,6 +80,8 @@ Widget width.
 
 **Substitutes:** WIDTH_KEY
 
+<!--Device-FormParam-WIDTH_KEY = 'ohos.extra.param.key.form_width'--><!--Device-FormParam-WIDTH_KEY = 'ohos.extra.param.key.form_width'-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## HEIGHT_KEY
@@ -88,6 +98,8 @@ Widget height.
 
 **Substitutes:** HEIGHT_KEY
 
+<!--Device-FormParam-HEIGHT_KEY = 'ohos.extra.param.key.form_height'--><!--Device-FormParam-HEIGHT_KEY = 'ohos.extra.param.key.form_height'-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 ## TEMPORARY_KEY
@@ -103,6 +115,8 @@ Temporary widget.
 **Deprecated since:** 9
 
 **Substitutes:** TEMPORARY_KEY
+
+<!--Device-FormParam-TEMPORARY_KEY = 'ohos.extra.param.key.form_temporary'--><!--Device-FormParam-TEMPORARY_KEY = 'ohos.extra.param.key.form_temporary'-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

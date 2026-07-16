@@ -18,13 +18,15 @@ Obtains the value set through **setUserProperty**.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-hiAppEvent-function getUserProperty(name: string): string--><!--Device-hiAppEvent-function getUserProperty(name: string): string-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Key of a user property. The value is string that contains a maximum of 256 characters,including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign ($). It must not start with adigit. |
+| name | string | Yes | Key of a user property. The value is string that contains a maximum of 256 characters,including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign ($). It must not start with a digit. |
 
 **Return value:**
 

@@ -1,15 +1,12 @@
 # CipherSpecItem
 
-Enumerates encryption and decryption parameters, which can be set by using
-[setCipherSpec](arkts-cryptoarchitecture-cipher-i.md#setcipherspec-1) and obtained by using
-[getCipherSpec](arkts-cryptoarchitecture-cipher-i.md#getcipherspec-1).
+Enumerates encryption and decryption parameters, which can be set by using [setCipherSpec](arkts-cryptoarchitecture-cipher-i.md#setcipherspec-1) and obtained by using [getCipherSpec](arkts-cryptoarchitecture-cipher-i.md#getcipherspec-1).
 
-Currently, only RSA and SM2 are supported. Since API version 11, the **SM2_MD_NAME_STR** parameter is supported.
-For details, see
-[Asymmetric Key Encryption and Decryption Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-asym-encrypt-decrypt-spec.md)
-.
+Currently, only RSA and SM2 are supported. Since API version 11, the **SM2_MD_NAME_STR** parameter is supported.For details, see [Asymmetric Key Encryption and Decryption Algorithm Specifications](../../../../security/CryptoArchitectureKit/crypto-asym-encrypt-decrypt-spec.md).
 
 **Since:** 10
+
+<!--Device-cryptoFramework-enum CipherSpecItem--><!--Device-cryptoFramework-enum CipherSpecItem-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
@@ -27,6 +24,8 @@ Message digest algorithm used with the PKCS1_OAEP padding mode in RSA.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CipherSpecItem-OAEP_MD_NAME_STR = 100--><!--Device-CipherSpecItem-OAEP_MD_NAME_STR = 100-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -42,6 +41,8 @@ Mask generation algorithm used with the PKCS1_OAEP padding mode in RSA. Currentl
 **Since:** 10
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101--><!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
@@ -59,6 +60,8 @@ Message digest algorithm for the MGF1 mask generation used with the PKCS1_OAEP p
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CipherSpecItem-OAEP_MGF1_MD_STR = 102--><!--Device-CipherSpecItem-OAEP_MGF1_MD_STR = 102-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -75,6 +78,8 @@ OAEP_MGF1_PSRC_UINT8ARR = 103
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-CipherSpecItem-OAEP_MGF1_PSRC_UINT8ARR = 103--><!--Device-CipherSpecItem-OAEP_MGF1_PSRC_UINT8ARR = 103-End-->
+
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API version 10 to 11: SystemCapability.Security.CryptoFramework
@@ -90,6 +95,8 @@ Message digest algorithm used in SM2.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CipherSpecItem-SM2_MD_NAME_STR = 104--><!--Device-CipherSpecItem-SM2_MD_NAME_STR = 104-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher

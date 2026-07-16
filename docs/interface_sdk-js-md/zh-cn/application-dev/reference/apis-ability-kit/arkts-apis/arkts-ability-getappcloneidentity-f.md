@@ -1,5 +1,11 @@
 # getAppCloneIdentity
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## getAppCloneIdentity
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getAppCloneIdentity(uid: number): Promise<AppCloneIdentity>
 **起始版本：** 14
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAppCloneIdentity(uid: int): Promise<AppCloneIdentity>--><!--Device-bundleManager-function getAppCloneIdentity(uid: int): Promise<AppCloneIdentity>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -24,7 +32,7 @@ function getAppCloneIdentity(uid: number): Promise<AppCloneIdentity>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AppCloneIdentity&gt; | Promise对象，返回&lt;AppCloneIdentity&gt;。 |
+| Promise<AppCloneIdentity> | Promise对象，返回&lt;AppCloneIdentity&gt;。 |
 
 **错误码：**
 

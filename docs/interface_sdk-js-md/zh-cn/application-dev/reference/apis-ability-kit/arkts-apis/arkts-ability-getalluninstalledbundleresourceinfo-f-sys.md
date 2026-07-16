@@ -1,5 +1,11 @@
 # getAllUninstalledBundleResourceInfo（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+```
+
 ## getAllUninstalledBundleResourceInfo
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: number): Promise<Arr
 **起始版本：** 21
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
+
+<!--Device-bundleResourceManager-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>--><!--Device-bundleResourceManager-function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<BundleResourceInfo>>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -26,7 +34,7 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: number): Promise<Arr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleResourceInfo&gt;&gt; | Promise对象，返回BundleResourceInfo数组。 |
+| Promise<Array<BundleResourceInfo>> | Promise对象，返回BundleResourceInfo数组。 |
 
 **错误码：**
 

@@ -16,13 +16,15 @@ Get current input method
 
 **Since:** 9
 
+<!--Device-inputMethod-function getCurrentInputMethod(): InputMethodProperty--><!--Device-inputMethod-function getCurrentInputMethod(): InputMethodProperty-End-->
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| InputMethodProperty | the property of current inputmethod. |
+| [InputMethodProperty](arkts-ime-inputmethodproperty-i.md) | the property of current inputmethod. |
 
 **Example**
 

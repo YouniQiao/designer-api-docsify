@@ -20,19 +20,21 @@ Creates a ColorPicker instance based on a pixel map. This API uses a promise to 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-effectKit-function createColorPicker(source: image.PixelMap): Promise<ColorPicker>--><!--Device-effectKit-function createColorPicker(source: image.PixelMap): Promise<ColorPicker>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can beobtained by decoding an image or directly created. For details, see Image Overview. |
+| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Image Overview. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ColorPicker&gt; | - Promise used to return the ColorPicker instance created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ColorPicker> | - Promise used to return the ColorPicker instance created. |
 
 **Error codes:**
 
@@ -74,8 +76,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 function createColorPicker(source: image.PixelMap, region: Array<number>): Promise<ColorPicker>
 ```
 
-Creates a ColorPicker instance for the selected region based on a pixel map. This API uses a promise to return the
-result.
+Creates a ColorPicker instance for the selected region based on a pixel map. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -83,20 +84,22 @@ result.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>): Promise<ColorPicker>--><!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>): Promise<ColorPicker>-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained bydecodingan image or directly created. For details, see Image Overview. |
-| region | Array&lt;number&gt; | Yes | Region of the image from which the color is picked.The array consists of four elements, representing the left, top, right, and bottom positions of the image,respectively.The value of each element must be in the range [0, 1]. The leftmost and topmost positions of the imagecorrespond to 0,and the rightmost and bottom positions correspond to 1. In the array, the third element must be greater thanthe first element,and the fourth element must be greater than the second element. |
+| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Image Overview. |
+| region | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Region of the image from which the color is picked.The array consists of four elements, representing the left, top, right, and bottom positions of the image,respectively.The value of each element must be in the range [0, 1]. The leftmost and topmost positions of the image correspond to 0,and the rightmost and bottom positions correspond to 1. In the array, the third element must be greater than the first element,and the fourth element must be greater than the second element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ColorPicker&gt; | - Promise used to return the ColorPicker instance created. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<ColorPicker> | - Promise used to return the ColorPicker instance created. |
 
 **Error codes:**
 
@@ -146,14 +149,16 @@ Creates a ColorPicker instance based on a pixel map. This API uses an asynchrono
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-effectKit-function createColorPicker(source: image.PixelMap, callback: AsyncCallback<ColorPicker>): void--><!--Device-effectKit-function createColorPicker(source: image.PixelMap, callback: AsyncCallback<ColorPicker>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained bydecoding an image or directly created. For details, see Image Overview. |
-| callback | AsyncCallback&lt;ColorPicker&gt; | Yes | the callback of createColorPicker. |
+| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Image Overview. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ColorPicker> | Yes | the callback of createColorPicker. |
 
 **Error codes:**
 
@@ -195,8 +200,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 function createColorPicker(source: image.PixelMap, region: Array<number>, callback: AsyncCallback<ColorPicker>): void
 ```
 
-Creates a ColorPicker instance for the selected region based on a pixel map. This API uses an asynchronous callback
-to return the result.
+Creates a ColorPicker instance for the selected region based on a pixel map. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -204,15 +208,17 @@ to return the result.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
+<!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>, callback: AsyncCallback<ColorPicker>): void--><!--Device-effectKit-function createColorPicker(source: image.PixelMap, region: Array<double>, callback: AsyncCallback<ColorPicker>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained bydecoding an image or directly created. For details, see Image Overview. |
-| region | Array&lt;number&gt; | Yes | Region of the image from which the color is picked.The array consists of four elements, representing the left, top, right, and bottom positions of the image,respectively.The value of each element must be in the range [0, 1]. The leftmost and topmost positions of the imagecorrespond to 0,and the rightmost and bottom positions correspond to 1. In the array, the third element must be greater thanthe first element,and the fourth element must be greater than the second element. |
-| callback | AsyncCallback&lt;ColorPicker&gt; | Yes | Callback used to return the ColorPicker instance created. |
+| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Image Overview. |
+| region | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Region of the image from which the color is picked.The array consists of four elements, representing the left, top, right, and bottom positions of the image,respectively.The value of each element must be in the range [0, 1]. The leftmost and topmost positions of the image correspond to 0,and the rightmost and bottom positions correspond to 1. In the array, the third element must be greater than the first element,and the fourth element must be greater than the second element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ColorPicker> | Yes | Callback used to return the ColorPicker instance created. |
 
 **Error codes:**
 

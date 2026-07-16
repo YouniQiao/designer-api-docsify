@@ -6,6 +6,8 @@ Defines the values of **mode** used in **FileInfo**.
 
 **Deprecated since:** 23
 
+<!--Device-fileExtensionInfo-namespace DocumentFlag--><!--Device-fileExtensionInfo-namespace DocumentFlag-End-->
+
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.

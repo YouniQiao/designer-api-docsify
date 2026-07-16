@@ -1,5 +1,11 @@
 # getAddedPrinters
 
+## 导入模块
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+```
+
 ## getAddedPrinters
 
 ```TypeScript
@@ -12,13 +18,15 @@ function getAddedPrinters(): Promise<Array<string>>
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
 
+<!--Device-print-function getAddedPrinters(): Promise<Array<string>>--><!--Device-print-function getAddedPrinters(): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回包含所有已添加打印机的打印机ID的列表。 |
+| Promise<Array<string>> | Promise对象，返回包含所有已添加打印机的打印机ID的列表。 |
 
 **错误码：**
 

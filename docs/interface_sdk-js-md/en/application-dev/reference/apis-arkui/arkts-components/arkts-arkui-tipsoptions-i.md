@@ -4,6 +4,8 @@ Defines the parameters of the tooltip.
 
 **Since:** 19
 
+<!--Device-unnamed-declare interface TipsOptions--><!--Device-unnamed-declare interface TipsOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## appearingTime
@@ -26,6 +28,8 @@ Unit: ms.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-TipsOptions-appearingTime?: number--><!--Device-TipsOptions-appearingTime?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## appearingTimeWithContinuousOperation
@@ -34,8 +38,7 @@ Unit: ms.
 appearingTimeWithContinuousOperation?: number
 ```
 
-Delay before the tooltip appears when multiple tooltips are displayed consecutively. The maximum delay is 4000 ms.
-Values exceeding 4000 ms are capped at 4000 ms.
+Delay before the tooltip appears when multiple tooltips are displayed consecutively. The maximum delay is 4000 ms.Values exceeding 4000 ms are capped at 4000 ms.
 
 Default value: **300**.
 
@@ -48,6 +51,8 @@ Unit: ms.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-TipsOptions-appearingTimeWithContinuousOperation?: number--><!--Device-TipsOptions-appearingTimeWithContinuousOperation?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,6 +82,8 @@ Percentage values are not supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-TipsOptions-arrowHeight?: Dimension--><!--Device-TipsOptions-arrowHeight?: Dimension-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## arrowPointPosition
@@ -85,9 +92,7 @@ Percentage values are not supported.
 arrowPointPosition?: ArrowPointPosition
 ```
 
-Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and
-**End**, in both vertical and horizontal directions. These positions are within the parent component area and do
-not exceed its boundaries or cover rounded corners.
+Position of the tooltip arrow relative to its parent component. Available positions are **Start**, **Center**, and **End**, in both vertical and horizontal directions. These positions are within the parent component area and do not exceed its boundaries or cover rounded corners.
 
 Default value: **ArrowPointPosition.CENTER**.
 
@@ -99,6 +104,8 @@ Default value: **ArrowPointPosition.CENTER**.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-TipsOptions-arrowPointPosition?: ArrowPointPosition--><!--Device-TipsOptions-arrowPointPosition?: ArrowPointPosition-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## arrowWidth
@@ -107,8 +114,7 @@ Default value: **ArrowPointPosition.CENTER**.
 arrowWidth?: Dimension
 ```
 
-Width of the tooltip arrow. If the set width exceeds the length of the edge minus twice the tooltip's corner
-radius, the arrow is not drawn.
+Width of the tooltip arrow. If the set width exceeds the length of the edge minus twice the tooltip's corner radius, the arrow is not drawn.
 
 Default value: **16**.
 
@@ -127,6 +133,8 @@ Percentage values are not supported.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-TipsOptions-arrowWidth?: Dimension--><!--Device-TipsOptions-arrowWidth?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -150,6 +158,8 @@ Unit: ms.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-TipsOptions-disappearingTime?: number--><!--Device-TipsOptions-disappearingTime?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## disappearingTimeWithContinuousOperation
@@ -158,8 +168,7 @@ Unit: ms.
 disappearingTimeWithContinuousOperation?: number
 ```
 
-Delay before the tooltip disappears when multiple tooltips are displayed consecutively. The maximum delay is 4000
-ms. Values exceeding 4000 ms are capped at 4000 ms.
+Delay before the tooltip disappears when multiple tooltips are displayed consecutively. The maximum delay is 4000ms. Values exceeding 4000 ms are capped at 4000 ms.
 
 Default value: **0**.
 
@@ -172,6 +181,8 @@ Unit: ms.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-TipsOptions-disappearingTimeWithContinuousOperation?: number--><!--Device-TipsOptions-disappearingTimeWithContinuousOperation?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -189,8 +200,7 @@ Default value: **true**.
 
 **NOTE**
 
-If the available space on the screen is insufficient, the tooltip will cover part of the component and the arrow
-will not be displayed.
+If the available space on the screen is insufficient, the tooltip will cover part of the component and the arrow will not be displayed.
 
 **Type:** boolean
 
@@ -201,6 +211,8 @@ will not be displayed.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-TipsOptions-enableArrow?: boolean--><!--Device-TipsOptions-enableArrow?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -226,6 +238,8 @@ If the anchor type of the tooltip is **TipsAnchorType.CURSOR**, the tooltip does
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-TipsOptions-showAtAnchor?: TipsAnchorType--><!--Device-TipsOptions-showAtAnchor?: TipsAnchorType-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## systemMaterial
@@ -234,8 +248,7 @@ If the anchor type of the tooltip is **TipsAnchorType.CURSOR**, the tooltip does
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for tips. Different materials have different effects, which can influence
-backgroundColor, border, shadow, and other visual attributes of tips.
+Set system-styled materials for tips. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of tips.
 
 **Type:** SystemUiMaterial
 
@@ -244,6 +257,8 @@ backgroundColor, border, shadow, and other visual attributes of tips.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TipsOptions-systemMaterial?: SystemUiMaterial--><!--Device-TipsOptions-systemMaterial?: SystemUiMaterial-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

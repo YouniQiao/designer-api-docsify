@@ -4,17 +4,23 @@
 
 KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
 
-在调用KVStoreResultSet的方法前，需要先通过
-[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)
-构建一个SingleKVStore或者DeviceKVStore实例。
+在调用KVStoreResultSet的方法前，需要先通过[getKVStore](arkts-arkdata-kvmanager-i.md#getkvstore-1)构建一个SingleKVStore或者DeviceKVStore实例。
 
-> **说明：**
->
+> **说明：**  
+>  
 > KVStoreResultSet的游标起始位置为-1。
 
 **起始版本：** 9
 
+<!--Device-distributedKVStore-interface KVStoreResultSet--><!--Device-distributedKVStore-interface KVStoreResultSet-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+## 导入模块
+
+```TypeScript
+import { distributedKVStore } from '@kit.ArkData';
+```
 
 ## getCount
 
@@ -27,6 +33,8 @@ getCount(): number
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVStoreResultSet-getCount(): int--><!--Device-KVStoreResultSet-getCount(): int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -71,13 +79,15 @@ getEntry(): Entry
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KVStoreResultSet-getEntry(): Entry--><!--Device-KVStoreResultSet-getEntry(): Entry-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Entry | 返回键值对。 |
+| [Entry](arkts-arkdata-entry-i.md) | 返回键值对。 |
 
 **示例：**
 
@@ -107,12 +117,13 @@ try {
 getPosition(): number
 ```
 
-获取结果集中当前的读取位置。读取位置会因[moveToFirst](arkts-arkdata-kvstoreresultset-i.md#movetofirst-1)、
-[moveToLast](arkts-arkdata-kvstoreresultset-i.md#movetolast-1)等操作而发生变化。
+获取结果集中当前的读取位置。读取位置会因[moveToFirst](arkts-arkdata-kvstoreresultset-i.md#movetofirst-1)、[moveToLast](arkts-arkdata-kvstoreresultset-i.md#movetolast-1)等操作而发生变化。
 
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVStoreResultSet-getPosition(): int--><!--Device-KVStoreResultSet-getPosition(): int-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -157,6 +168,8 @@ isAfterLast(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KVStoreResultSet-isAfterLast(): boolean--><!--Device-KVStoreResultSet-isAfterLast(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -199,6 +212,8 @@ isBeforeFirst(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KVStoreResultSet-isBeforeFirst(): boolean--><!--Device-KVStoreResultSet-isBeforeFirst(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -240,6 +255,8 @@ isFirst(): boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVStoreResultSet-isFirst(): boolean--><!--Device-KVStoreResultSet-isFirst(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -284,6 +301,8 @@ isLast(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KVStoreResultSet-isLast(): boolean--><!--Device-KVStoreResultSet-isLast(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -326,6 +345,8 @@ move(offset: number): boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVStoreResultSet-move(offset: int): boolean--><!--Device-KVStoreResultSet-move(offset: int): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -382,6 +403,8 @@ moveToFirst(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KVStoreResultSet-moveToFirst(): boolean--><!--Device-KVStoreResultSet-moveToFirst(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -425,6 +448,8 @@ moveToLast(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-KVStoreResultSet-moveToLast(): boolean--><!--Device-KVStoreResultSet-moveToLast(): boolean-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
 **返回值：**
@@ -467,6 +492,8 @@ moveToNext(): boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVStoreResultSet-moveToNext(): boolean--><!--Device-KVStoreResultSet-moveToNext(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -512,6 +539,8 @@ moveToPosition(position: number): boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVStoreResultSet-moveToPosition(position: int): boolean--><!--Device-KVStoreResultSet-moveToPosition(position: int): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -567,6 +596,8 @@ moveToPrevious(): boolean
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVStoreResultSet-moveToPrevious(): boolean--><!--Device-KVStoreResultSet-moveToPrevious(): boolean-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 

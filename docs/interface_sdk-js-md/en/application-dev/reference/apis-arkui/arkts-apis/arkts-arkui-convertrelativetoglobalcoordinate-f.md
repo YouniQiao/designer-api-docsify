@@ -12,13 +12,13 @@ import { display } from '@kit.ArkUI';
 function convertRelativeToGlobalCoordinate(relativePosition: RelativePosition): Position
 ```
 
-Converts relative coordinates (based on the top-left corner of the screen) into global coordinates (based on the
-top-left corner of the primary screen). This API supports only coordinate conversion between the primary screen and
-extended screen.
+Converts relative coordinates (based on the top-left corner of the screen) into global coordinates (based on the top-left corner of the primary screen). This API supports only coordinate conversion between the primary screen and extended screen.
 
 **Since:** 20
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-display-function convertRelativeToGlobalCoordinate(relativePosition: RelativePosition): Position--><!--Device-display-function convertRelativeToGlobalCoordinate(relativePosition: RelativePosition): Position-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -26,13 +26,13 @@ extended screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| relativePosition | RelativePosition | Yes | Relative coordinates to convert. |
+| relativePosition | [RelativePosition](arkts-arkui-relativeposition-i.md) | Yes | Relative coordinates to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Position | Global coordinates based on the top-left corner of the primary screen. |
+| [Position](arkts-arkui-position-i.md) | Global coordinates based on the top-left corner of the primary screen. |
 
 **Error codes:**
 

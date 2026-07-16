@@ -20,15 +20,17 @@ Connects the current ability to the specified web native message extension abili
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-webNativeMessagingExtensionManager-function connectNative(context: UIAbilityContext, want: Want, callback: WebExtensionConnectionCallback): number--><!--Device-webNativeMessagingExtensionManager-function connectNative(context: UIAbilityContext, want: Want, callback: WebExtensionConnectionCallback): number-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | UIAbilityContext | Yes | Context of the caller UIAbility. |
-| want | Want | Yes | Want information about the target ability. |
-| callback | WebExtensionConnectionCallback | Yes | Callback object of the WebExtensionConnection status. |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-t.md) | Yes | Context of the caller UIAbility. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
+| callback | [WebExtensionConnectionCallback](arkts-arkweb-webextensionconnectioncallback-i.md) | Yes | Callback object of the WebExtensionConnection status. |
 
 **Return value:**
 

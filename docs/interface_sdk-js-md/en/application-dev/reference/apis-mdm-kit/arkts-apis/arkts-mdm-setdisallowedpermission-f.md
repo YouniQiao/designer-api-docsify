@@ -20,13 +20,15 @@ Sets the permissions that are disallowed to be granted for an account.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-securityManager-function setDisallowedPermission(admin: Want, permission: string, disallow: boolean, accountId: number): void--><!--Device-securityManager-function setDisallowedPermission(admin: Want, permission: string, disallow: boolean, accountId: number): void-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | admin indicates the administrator ability information. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | admin indicates the administrator ability information. |
 | permission | string | Yes | permission indicates the name of the permission. |
 | disallow | boolean | Yes | true if disallowed granted for the account, otherwise false. |
 | accountId | number | Yes | accountId indicates the ID of OS account<br>The value must be an integer greater than or equal to 0. |

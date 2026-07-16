@@ -16,6 +16,8 @@ Adds an array of notification slots. This API uses an asynchronous callback to r
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>): void--><!--Device-notification-function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -24,8 +26,8 @@ Adds an array of notification slots. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slots | Array&lt;NotificationSlot&gt; | Yes | Notification slots to add. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. |
+| slots | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NotificationSlot> | Yes | Notification slots to add. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. |
 
 
 ## addSlots
@@ -44,6 +46,8 @@ Adds an array of notification slots. This API uses a promise to return the resul
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notification-function addSlots(slots: Array<NotificationSlot>): Promise<void>--><!--Device-notification-function addSlots(slots: Array<NotificationSlot>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -52,11 +56,11 @@ Adds an array of notification slots. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slots | Array&lt;NotificationSlot&gt; | Yes | Notification slots to add. |
+| slots | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<NotificationSlot> | Yes | Notification slots to add. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 

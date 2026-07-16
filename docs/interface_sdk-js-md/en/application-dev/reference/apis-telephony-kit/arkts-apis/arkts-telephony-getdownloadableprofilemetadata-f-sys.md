@@ -19,6 +19,10 @@ Fills in and gets the metadata for a downloadable profile.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
+<!--Device-eSIM-function getDownloadableProfileMetadata(slotId: int, portIndex: int,
+                                          profile: DownloadableProfile, forceDisableProfile: boolean): Promise<GetDownloadableProfileMetadataResult>--><!--Device-eSIM-function getDownloadableProfileMetadata(slotId: int, portIndex: int,
+                                          profile: DownloadableProfile, forceDisableProfile: boolean): Promise<GetDownloadableProfileMetadataResult>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
 **System API:** This is a system API.
@@ -29,14 +33,14 @@ Fills in and gets the metadata for a downloadable profile.
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number. |
 | portIndex | number | Yes | Index of the port for the slot. |
-| profile | DownloadableProfile | Yes | The Bound Profile Package data returned by SM-DP+ server. |
-| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform theoperation. Otherwise, the resultCode should return {@link RESULT_MUST_DISABLE_PROFILE} to allowthe user to agree to this operation first. |
+| profile | [DownloadableProfile](arkts-telephony-downloadableprofile-i.md) | Yes | The Bound Profile Package data returned by SM-DP+ server. |
+| forceDisableProfile | boolean | Yes | If true, the active profile must be disabled in order to perform the operation. Otherwise, the resultCode should return {@link RESULT_MUST_DISABLE_PROFILE} to allow the user to agree to this operation first. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GetDownloadableProfileMetadataResult&gt; | Return the metadata for profile. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<GetDownloadableProfileMetadataResult> | Return the metadata for profile. |
 
 **Error codes:**
 

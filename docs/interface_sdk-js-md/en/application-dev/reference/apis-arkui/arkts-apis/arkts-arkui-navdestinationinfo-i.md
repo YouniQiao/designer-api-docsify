@@ -4,6 +4,8 @@ Information about the **NavDestination** component, returned by the system to de
 
 **Since:** 11
 
+<!--Device-uiObserver-export interface NavDestinationInfo--><!--Device-uiObserver-export interface NavDestinationInfo-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -18,8 +20,7 @@ import { uiObserver } from '@kit.ArkUI';
 index: number
 ```
 
-Index of the **NavDestination** component in the navigation stack.
-The value must be greater than or equal to 0.
+Index of the **NavDestination** component in the navigation stack.The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -29,6 +30,8 @@ The value must be greater than or equal to 0.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavDestinationInfo-index: number--><!--Device-NavDestinationInfo-index: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## mode
@@ -37,8 +40,7 @@ The value must be greater than or equal to 0.
 mode?: NavDestinationMode
 ```
 
-Mode of the **NavDestination** component.
-Default value: NavDestinationMode.Standard.
+Mode of the **NavDestination** component.Default value: NavDestinationMode.Standard.
 
 **Type:** NavDestinationMode
 
@@ -47,6 +49,8 @@ Default value: NavDestinationMode.Standard.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-NavDestinationInfo-mode?: NavDestinationMode--><!--Device-NavDestinationInfo-mode?: NavDestinationMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,6 +70,8 @@ Name of the **NavDestination** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavDestinationInfo-name: ResourceStr--><!--Device-NavDestinationInfo-name: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## navDestinationId
@@ -83,6 +89,8 @@ Unique ID of the **NavDestination** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavDestinationInfo-navDestinationId: string--><!--Device-NavDestinationInfo-navDestinationId: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -102,6 +110,8 @@ ID of the **Navigation** component that contains the target **NavDestination** c
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavDestinationInfo-navigationId: ResourceStr--><!--Device-NavDestinationInfo-navigationId: ResourceStr-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## param
@@ -119,6 +129,8 @@ Parameters of the **NavDestination** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavDestinationInfo-param?: Object--><!--Device-NavDestinationInfo-param?: Object-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -138,6 +150,8 @@ Size of the **NavDestination** component, in vp.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
+<!--Device-NavDestinationInfo-size?: Size--><!--Device-NavDestinationInfo-size?: Size-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## state
@@ -156,6 +170,8 @@ State of the **NavDestination** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-NavDestinationInfo-state: NavDestinationState--><!--Device-NavDestinationInfo-state: NavDestinationState-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## uniqueId
@@ -173,6 +189,8 @@ Unique ID of the **NavDestination** component.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-NavDestinationInfo-uniqueId?: number--><!--Device-NavDestinationInfo-uniqueId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

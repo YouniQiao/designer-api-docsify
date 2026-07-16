@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+<!--Device-certificateManager-export enum CmKeyPurpose--><!--Device-certificateManager-export enum CmKeyPurpose-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_KEY_PURPOSE_SIGN
@@ -16,6 +18,8 @@ CM_KEY_PURPOSE_SIGN = 4
 
 **起始版本：** 11
 
+<!--Device-CmKeyPurpose-CM_KEY_PURPOSE_SIGN = 4--><!--Device-CmKeyPurpose-CM_KEY_PURPOSE_SIGN = 4-End-->
+
 **系统能力：** SystemCapability.Security.CertificateManager
 
 ## CM_KEY_PURPOSE_VERIFY
@@ -27,6 +31,8 @@ CM_KEY_PURPOSE_VERIFY = 8
 验签。
 
 **起始版本：** 11
+
+<!--Device-CmKeyPurpose-CM_KEY_PURPOSE_VERIFY = 8--><!--Device-CmKeyPurpose-CM_KEY_PURPOSE_VERIFY = 8-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 

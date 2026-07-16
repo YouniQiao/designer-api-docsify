@@ -1,9 +1,10 @@
 # @ohos.geoLocationManager
 
-Provides interfaces for acquiring location information, managing location switches,
-geocoding, reverse geocoding, country code, fencing and other functions.
+Provides interfaces for acquiring location information, managing location switches,geocoding, reverse geocoding, country code, fencing and other functions.
 
 **Since:** 9
+
+<!--Device-unnamed-declare namespace geoLocationManager--><!--Device-unnamed-declare namespace geoLocationManager-End-->
 
 **System capability:** 
 - API version 11 and later: SystemCapability.Location.Location.Core
@@ -43,7 +44,7 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [getGeofenceSupportedCoordTypes](arkts-location-getgeofencesupportedcoordtypes-f.md#getgeofencesupportedcoordtypes-1) | Obtains the coordinate system types supported by geofence. |
 | [getLastLocation](arkts-location-getlastlocation-f.md#getlastlocation-1) | Obtain last known location. |
 | [getPoiInfo](arkts-location-getpoiinfo-f.md#getpoiinfo-1) | Obtaining POI Information. |
-| [getPostProcessingTrack](arkts-location-getpostprocessingtrack-f.md#getpostprocessingtrack-1) | Obtain post-processing trajectory information under specific sport mode. Only[SKIING](arkts-location-sportstype-e.md#skiing) is supported currently.Before calling this API, you need to call[on('locationChange')](geoLocationManager.on('locationChange')) and set the input parameter[sportsType](arkts-location-continuouslocationrequest-i-sys.md#sportstype) to the specific sport mode to starttracking.Returns data within 24 hours since tracking started; Subsequent calls return only new records. |
+| [getPostProcessingTrack](arkts-location-getpostprocessingtrack-f.md#getpostprocessingtrack-1) | Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-sportstype-e.md#skiing) is supported currently.Before calling this API, you need to call [on('locationChange')](geoLocationManager.on('locationChange')) and set the input parameter [sportsType](arkts-location-continuouslocationrequest-i-sys.md#sportstype) to the specific sport mode to start tracking.Returns data within 24 hours since tracking started; Subsequent calls return only new records. |
 | [isBeaconFenceSupported](arkts-location-isbeaconfencesupported-f.md#isbeaconfencesupported-1) | Check whether the BeaconFence service is supported. |
 | [isCachedGnssServiceSupported](arkts-location-iscachedgnssservicesupported-f.md#iscachedgnssservicesupported-1) | Check whether the cached GNSS service is supported. |
 | [isGeocoderAvailable](arkts-location-isgeocoderavailable-f.md#isgeocoderavailable-1) | Obtain geocoding service status. |
@@ -76,7 +77,7 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [removeGnssGeofence](arkts-location-removegnssgeofence-f.md#removegnssgeofence-1) | Remove a geofence. |
 | [sendCommand](arkts-location-sendcommand-f.md#sendcommand-1) | Send extended commands to location subsystem. |
 | [sendCommand](arkts-location-sendcommand-f.md#sendcommand-2) | Send extended commands to location subsystem. |
-| [startBluetoothSearch](arkts-location-startbluetoothsearch-f.md#startbluetoothsearch-1) | Starts Bluetooth scanning and matches the device ID list in the input parameterwith the Bluetooth scanning result. If the matching is successful, the Bluetoothdevice information is returned through the callback. |
+| [startBluetoothSearch](arkts-location-startbluetoothsearch-f.md#startbluetoothsearch-1) | Starts Bluetooth scanning and matches the device ID list in the input parameter with the Bluetooth scanning result. If the matching is successful, the Bluetooth device information is returned through the callback. |
 | [stopBluetoothSearch](arkts-location-stopbluetoothsearch-f.md#stopbluetoothsearch-1) | Stop Bluetooth scanning and searching. |
 
 <!--Del-->

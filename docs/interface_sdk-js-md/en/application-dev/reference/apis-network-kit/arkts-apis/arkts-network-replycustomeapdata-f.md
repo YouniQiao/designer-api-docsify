@@ -18,14 +18,16 @@ send Customized eap packets to system
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
+<!--Device-eap-function replyCustomEapData(result: CustomResult, data: EapData): void--><!--Device-eap-function replyCustomEapData(result: CustomResult, data: EapData): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Eap
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | CustomResult | Yes | Indicates the result of custom authentication. |
-| data | EapData | Yes | Indicates eap packet data after customization. |
+| result | [CustomResult](arkts-network-customresult-e.md) | Yes | Indicates the result of custom authentication. |
+| data | [EapData](arkts-network-eapdata-i.md) | Yes | Indicates eap packet data after customization. |
 
 **Error codes:**
 

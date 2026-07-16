@@ -2,16 +2,24 @@
 
 本模块提供应用管理能力，包括添加应用运行禁止名单、获取应用运行禁止名单、移除应用运行禁止名单等。
 
-> **说明：**
->
-> 本模块接口仅可在Stage模型下使用。
->
-> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。
+> **说明：**  
+>  
+> 本模块接口仅可在Stage模型下使用。  
+>  
+> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../../mdm/mdm-kit-guide.md)。  
 > [applicationManager.isAppKioskAllowed](arkts-mdm-isappkioskallowed-f.md#isappkioskallowed-1)除外，该接口对所有应用开放。
 
 **起始版本：** 10
 
+<!--Device-unnamed-declare namespace applicationManager--><!--Device-unnamed-declare namespace applicationManager-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+## 导入模块
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+```
 
 ## 汇总
 
@@ -19,8 +27,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [addAllowedDistributeAbilityConnBundles](arkts-mdm-addalloweddistributeabilityconnbundles-f.md#addalloweddistributeabilityconnbundles-1) | 为指定用户添加允许使用分布式能力的应用名单，名单中的应用在指定用户下可以使用指定的分布式能力。当前支持的分布式类型有：[协同服务](arkts-mdm-servicetype-e.md)。@link @ohos.enterprise.restrictions:restrictions.setDisallowedPolicyForAccount(admin: Want, feature: string, disallow: boolean, accountId: number)}&gt; 接口禁用了向其他设备传输数据的设备间单向传输数据的能力，否则会抛出错误码9201043。&gt; 2.当向其他设备传输数据的设备间单向传输数据的能力被解除禁用时，通过本接口设置的允许使用协同服务的应用名单会被同步清除。 |
-| [addAllowedNotificationBundles](arkts-mdm-addallowednotificationbundles-f.md#addallowednotificationbundles-1) | 添加允许发送通知的应用名单。设置通知白名单后，不在此名单内的应用无法发送通知。@link @ohos.enterprise.restrictions:restrictions.setDisallowedPolicy(admin: Want, feature: string, disallow: boolean)}&gt; 设置了禁用设备通知能力时，再通过本接口设置通知白名单，会抛出错误码9200010。&gt; 3.通知白名单对系统服务不生效，系统服务始终可以发送通知。系统应用受通知白名单管控。&gt; 4.支持跨用户设置，设置后跨用户立即生效。 |
+| [addAllowedDistributeAbilityConnBundles](arkts-mdm-addalloweddistributeabilityconnbundles-f.md#addalloweddistributeabilityconnbundles-1) | 为指定用户添加允许使用分布式能力的应用名单，名单中的应用在指定用户下可以使用指定的分布式能力。当前支持的分布式类型有：[协同服务](arkts-mdm-servicetype-e.md)。 |
+| [addAllowedNotificationBundles](arkts-mdm-addallowednotificationbundles-f.md#addallowednotificationbundles-1) | 添加允许发送通知的应用名单。设置通知白名单后，不在此名单内的应用无法发送通知。 |
 | [addAllowedRunningBundles](arkts-mdm-addallowedrunningbundles-f.md#addallowedrunningbundles-1) | 添加应用至应用运行允许名单，添加至允许名单的应用允许在指定用户下运行，不在允许名单的应用不允许在指定用户下运行。 |
 | [addAutoStartApps](arkts-mdm-addautostartapps-f.md#addautostartapps-1) | 为当前用户添加开机自启动应用名单。通过本接口添加至自启动名单的应用，禁止用户在设备上手动取消应用自启动&lt;!--RP4--&gt;&lt;!--RP4End--&gt;，但可通过[removeAutoStartApps](arkts-mdm-removeautostartapps-f.md#removeautostartapps-1)接口将应用从自启动名单中移除。 |
 | [addAutoStartApps](arkts-mdm-addautostartapps-f.md#addautostartapps-2) | 为指定用户添加开机自启动应用名单，并设置是否禁止该用户手动取消应用自启动&lt;!--RP4--&gt;&lt;!--RP4End--&gt;。通过本接口、[addAutoStartApps](arkts-mdm-addautostartapps-f.md#addautostartapps-1)接口均可添加开机自启动应用名单，两个接口的设置可同时生效。同一用户下，开机自启动应用名单最多支持包含10个应用。例如：若当前名单中已有3个应用，则最多还能通过本接口为当前用户添加7个应用。 |

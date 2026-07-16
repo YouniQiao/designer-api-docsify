@@ -4,6 +4,8 @@ Defines a tool class for updating the system online.
 
 **Since:** 9
 
+<!--Device-update-export interface Updater--><!--Device-update-export interface Updater-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Checks whether a new version is available. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-checkNewVersion(callback: AsyncCallback<CheckResult>): void--><!--Device-Updater-checkNewVersion(callback: AsyncCallback<CheckResult>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -34,7 +38,7 @@ Checks whether a new version is available. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CheckResult&gt; | Yes | Callback used to return the package check result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CheckResult> | Yes | Callback used to return the package check result. |
 
 **Error codes:**
 
@@ -79,6 +83,8 @@ Checks whether a new version is available. This API uses a promise to return the
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-checkNewVersion(): Promise<CheckResult>--><!--Device-Updater-checkNewVersion(): Promise<CheckResult>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -87,7 +93,7 @@ Checks whether a new version is available. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CheckResult&gt; | Promise used to return the package check result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CheckResult> | Promise used to return the package check result. |
 
 **Error codes:**
 
@@ -131,12 +137,13 @@ try {
 clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, callback: AsyncCallback<void>): void
 ```
 
-Clears errors. If an exception occurs during version download or installation, the update package and update
-status are cleared. This API uses an asynchronous callback to return the result.
+Clears errors. If an exception occurs during version download or installation, the update package and update status are cleared. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, callback: AsyncCallback<void>): void--><!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -146,9 +153,9 @@ status are cleared. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| clearOptions | ClearOptions | Yes | Clear options. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If errors are cleared successfully,**err** is **undefined**; otherwise, **err** is an error object. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| clearOptions | [ClearOptions](arkts-basicservices-clearoptions-i-sys.md) | Yes | Clear options. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If errors are cleared successfully,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -197,12 +204,13 @@ try {
 clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Promise<void>
 ```
 
-Clears errors. If an exception occurs during version download or installation, the update package and update
-status are cleared. This API uses a promise to return the result.
+Clears errors. If an exception occurs during version download or installation, the update package and update status are cleared. This API uses a promise to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
+
+<!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Promise<void>--><!--Device-Updater-clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
 
@@ -212,14 +220,14 @@ status are cleared. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| clearOptions | ClearOptions | Yes | Clear options. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| clearOptions | [ClearOptions](arkts-basicservices-clearoptions-i-sys.md) | Yes | Clear options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -280,6 +288,16 @@ Downloads the new version. This API uses an asynchronous callback to return the 
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-download(
+      versionDigestInfo: VersionDigestInfo,
+      downloadOptions: DownloadOptions,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-Updater-download(
+      versionDigestInfo: VersionDigestInfo,
+      downloadOptions: DownloadOptions,
+      callback: AsyncCallback<void>
+    ): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -288,9 +306,9 @@ Downloads the new version. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| downloadOptions | DownloadOptions | Yes | Download options. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the download is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| downloadOptions | [DownloadOptions](arkts-basicservices-downloadoptions-i-sys.md) | Yes | Download options. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the download is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -346,6 +364,8 @@ Downloads the new version. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions): Promise<void>--><!--Device-Updater-download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -354,14 +374,14 @@ Downloads the new version. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| downloadOptions | DownloadOptions | Yes | Download options. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| downloadOptions | [DownloadOptions](arkts-basicservices-downloadoptions-i-sys.md) | Yes | Download options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -422,6 +442,14 @@ Obtains the description of the current version. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionDescription(
+      descriptionOptions: DescriptionOptions,
+      callback: AsyncCallback<Array<ComponentDescription>>
+    ): void--><!--Device-Updater-getCurrentVersionDescription(
+      descriptionOptions: DescriptionOptions,
+      callback: AsyncCallback<Array<ComponentDescription>>
+    ): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -430,8 +458,8 @@ Obtains the description of the current version. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptionOptions | DescriptionOptions | Yes | Options of the description file. |
-| callback | AsyncCallback&lt;Array&lt;ComponentDescription&gt;&gt; | Yes | Callback used to return the description of thecurrent version. |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-descriptionoptions-i-sys.md) | Yes | Options of the description file. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<ComponentDescription>> | Yes | Callback used to return the description of the current version. |
 
 **Error codes:**
 
@@ -482,6 +510,8 @@ Obtains the description of the current version. This API uses a promise to retur
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Array<ComponentDescription>>--><!--Device-Updater-getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Array<ComponentDescription>>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -490,13 +520,13 @@ Obtains the description of the current version. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptionOptions | DescriptionOptions | Yes | Options of the description file. |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-descriptionoptions-i-sys.md) | Yes | Options of the description file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ComponentDescription&gt;&gt; | Promise used to return the description of the current version. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ComponentDescription>> | Promise used to return the description of the current version. |
 
 **Error codes:**
 
@@ -548,6 +578,8 @@ Obtains information about the current version. This API uses an asynchronous cal
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void--><!--Device-Updater-getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -556,7 +588,7 @@ Obtains information about the current version. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;CurrentVersionInfo&gt; | Yes | Callback used to return information about the currentversion. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<CurrentVersionInfo> | Yes | Callback used to return information about the current version. |
 
 **Error codes:**
 
@@ -603,6 +635,8 @@ Obtains information about the current version. This API uses a promise to return
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getCurrentVersionInfo(): Promise<CurrentVersionInfo>--><!--Device-Updater-getCurrentVersionInfo(): Promise<CurrentVersionInfo>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -611,7 +645,7 @@ Obtains information about the current version. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CurrentVersionInfo&gt; | Promise used to return information about the current version. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<CurrentVersionInfo> | Promise used to return information about the current version. |
 
 **Error codes:**
 
@@ -663,6 +697,16 @@ Obtains the description of the new version. This API uses an asynchronous callba
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getNewVersionDescription(
+      versionDigestInfo: VersionDigestInfo,
+      descriptionOptions: DescriptionOptions,
+      callback: AsyncCallback<Array<ComponentDescription>>
+    ): void--><!--Device-Updater-getNewVersionDescription(
+      versionDigestInfo: VersionDigestInfo,
+      descriptionOptions: DescriptionOptions,
+      callback: AsyncCallback<Array<ComponentDescription>>
+    ): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -671,9 +715,9 @@ Obtains the description of the new version. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| descriptionOptions | DescriptionOptions | Yes | Options of the description file. |
-| callback | AsyncCallback&lt;Array&lt;ComponentDescription&gt;&gt; | Yes | Callback used to return the description of thenew version. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-descriptionoptions-i-sys.md) | Yes | Options of the description file. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<Array<ComponentDescription>> | Yes | Callback used to return the description of the new version. |
 
 **Error codes:**
 
@@ -734,6 +778,14 @@ Obtains the description of the new version. This API uses a promise to return th
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getNewVersionDescription(
+      versionDigestInfo: VersionDigestInfo,
+      descriptionOptions: DescriptionOptions
+    ): Promise<Array<ComponentDescription>>--><!--Device-Updater-getNewVersionDescription(
+      versionDigestInfo: VersionDigestInfo,
+      descriptionOptions: DescriptionOptions
+    ): Promise<Array<ComponentDescription>>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -742,14 +794,14 @@ Obtains the description of the new version. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| descriptionOptions | DescriptionOptions | Yes | Options of the description file. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| descriptionOptions | [DescriptionOptions](arkts-basicservices-descriptionoptions-i-sys.md) | Yes | Options of the description file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ComponentDescription&gt;&gt; | Promise used to return the description of the new version. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<ComponentDescription>> | Promise used to return the description of the new version. |
 
 **Error codes:**
 
@@ -809,6 +861,8 @@ Obtains information about the new version. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void--><!--Device-Updater-getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -817,7 +871,7 @@ Obtains information about the new version. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;NewVersionInfo&gt; | Yes | Callback used to return the new version information. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<NewVersionInfo> | Yes | Callback used to return the new version information. |
 
 **Error codes:**
 
@@ -862,6 +916,8 @@ Obtains information about the new version. This API uses a promise to return the
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getNewVersionInfo(): Promise<NewVersionInfo>--><!--Device-Updater-getNewVersionInfo(): Promise<NewVersionInfo>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -870,7 +926,7 @@ Obtains information about the new version. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NewVersionInfo&gt; | Promise used to return the new version information. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NewVersionInfo> | Promise used to return the new version information. |
 
 **Error codes:**
 
@@ -917,6 +973,8 @@ Obtains information about the update task. This API uses an asynchronous callbac
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getTaskInfo(callback: AsyncCallback<TaskInfo>): void--><!--Device-Updater-getTaskInfo(callback: AsyncCallback<TaskInfo>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -925,7 +983,7 @@ Obtains information about the update task. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;TaskInfo&gt; | Yes | Callback used to return information about the update task. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<TaskInfo> | Yes | Callback used to return information about the update task. |
 
 **Error codes:**
 
@@ -970,6 +1028,8 @@ Obtains information about the update task. This API uses a promise to return the
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getTaskInfo(): Promise<TaskInfo>--><!--Device-Updater-getTaskInfo(): Promise<TaskInfo>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -978,7 +1038,7 @@ Obtains information about the update task. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise used to return information about the update task. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<TaskInfo> | Promise used to return information about the update task. |
 
 **Error codes:**
 
@@ -1025,6 +1085,8 @@ Obtains the update policy. This API uses an asynchronous callback to return the 
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void--><!--Device-Updater-getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1033,7 +1095,7 @@ Obtains the update policy. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;UpgradePolicy&gt; | Yes | Callback used to return the update policy. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<UpgradePolicy> | Yes | Callback used to return the update policy. |
 
 **Error codes:**
 
@@ -1078,6 +1140,8 @@ Obtains the update policy. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-getUpgradePolicy(): Promise<UpgradePolicy>--><!--Device-Updater-getUpgradePolicy(): Promise<UpgradePolicy>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1086,7 +1150,7 @@ Obtains the update policy. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UpgradePolicy&gt; | Promise used to return the update policy. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<UpgradePolicy> | Promise used to return the update policy. |
 
 **Error codes:**
 
@@ -1131,6 +1195,8 @@ Disables listening for update events. This API uses an asynchronous callback to 
 
 **Since:** 9
 
+<!--Device-Updater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void--><!--Device-Updater-off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1139,8 +1205,8 @@ Disables listening for update events. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventClassifyInfo | EventClassifyInfo | Yes | Event information. |
-| taskCallback | UpgradeTaskCallback | No | Event callback. |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-eventclassifyinfo-i-sys.md) | Yes | Event information. |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-upgradetaskcallback-t-sys.md) | No | Event callback. |
 
 **Error codes:**
 
@@ -1183,6 +1249,8 @@ Enables listening for update events. This API uses an asynchronous callback to r
 
 **Since:** 9
 
+<!--Device-Updater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void--><!--Device-Updater-on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1191,8 +1259,8 @@ Enables listening for update events. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventClassifyInfo | EventClassifyInfo | Yes | Event information. |
-| taskCallback | UpgradeTaskCallback | Yes | Event callback. |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-eventclassifyinfo-i-sys.md) | Yes | Event information. |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-upgradetaskcallback-t-sys.md) | Yes | Event callback. |
 
 **Error codes:**
 
@@ -1241,6 +1309,16 @@ Pauses download of the new version. This API uses an asynchronous callback to re
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-pauseDownload(
+      versionDigestInfo: VersionDigestInfo,
+      pauseDownloadOptions: PauseDownloadOptions,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-Updater-pauseDownload(
+      versionDigestInfo: VersionDigestInfo,
+      pauseDownloadOptions: PauseDownloadOptions,
+      callback: AsyncCallback<void>
+    ): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1249,9 +1327,9 @@ Pauses download of the new version. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| pauseDownloadOptions | PauseDownloadOptions | Yes | Options for pausing download. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the download is pausedsuccessfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-pausedownloadoptions-i-sys.md) | Yes | Options for pausing download. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the download is paused successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1306,6 +1384,8 @@ Pauses download of the new version. This API uses a promise to return the result
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseDownloadOptions): Promise<void>--><!--Device-Updater-pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseDownloadOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1314,14 +1394,14 @@ Pauses download of the new version. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| pauseDownloadOptions | PauseDownloadOptions | Yes | Options for pausing download. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| pauseDownloadOptions | [PauseDownloadOptions](arkts-basicservices-pausedownloadoptions-i-sys.md) | Yes | Options for pausing download. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1382,6 +1462,16 @@ Resumes download of the new version. This API uses an asynchronous callback to r
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-resumeDownload(
+      versionDigestInfo: VersionDigestInfo,
+      resumeDownloadOptions: ResumeDownloadOptions,
+      callback: AsyncCallback<void>
+    ): void--><!--Device-Updater-resumeDownload(
+      versionDigestInfo: VersionDigestInfo,
+      resumeDownloadOptions: ResumeDownloadOptions,
+      callback: AsyncCallback<void>
+    ): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1390,9 +1480,9 @@ Resumes download of the new version. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| resumeDownloadOptions | ResumeDownloadOptions | Yes | Options for resuming download. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the download is resumedsuccessfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-resumedownloadoptions-i-sys.md) | Yes | Options for resuming download. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the download is resumed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1447,6 +1537,8 @@ Resumes download of the new version. This API uses a promise to return the resul
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: ResumeDownloadOptions): Promise<void>--><!--Device-Updater-resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: ResumeDownloadOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1455,14 +1547,14 @@ Resumes download of the new version. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| resumeDownloadOptions | ResumeDownloadOptions | Yes | Options for resuming download. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| resumeDownloadOptions | [ResumeDownloadOptions](arkts-basicservices-resumedownloadoptions-i-sys.md) | Yes | Options for resuming download. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1519,6 +1611,8 @@ Sets the update policy. This API uses an asynchronous callback to return the res
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void--><!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1527,8 +1621,8 @@ Sets the update policy. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | UpgradePolicy | Yes | Update policy. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the upgrade policy is setsuccessfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| policy | [UpgradePolicy](arkts-basicservices-upgradepolicy-i-sys.md) | Yes | Update policy. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the upgrade policy is set successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1578,6 +1672,8 @@ Sets the update policy. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy): Promise<void>--><!--Device-Updater-setUpgradePolicy(policy: UpgradePolicy): Promise<void>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1586,13 +1682,13 @@ Sets the update policy. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | UpgradePolicy | Yes | Update policy. |
+| policy | [UpgradePolicy](arkts-basicservices-upgradepolicy-i-sys.md) | Yes | Update policy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1644,6 +1740,8 @@ Terminates the update. This API uses an asynchronous callback to return the resu
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-terminateUpgrade(callback: AsyncCallback<void>): void--><!--Device-Updater-terminateUpgrade(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1652,7 +1750,7 @@ Terminates the update. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the update is terminatedsuccessfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the update is terminated successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1696,6 +1794,8 @@ Terminates the update. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-terminateUpgrade(): Promise<void>--><!--Device-Updater-terminateUpgrade(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1704,7 +1804,7 @@ Terminates the update. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1750,6 +1850,8 @@ Updates the version. This API uses an asynchronous callback to return the result
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, callback: AsyncCallback<void>): void--><!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1758,9 +1860,9 @@ Updates the version. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| upgradeOptions | UpgradeOptions | Yes | Update options. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the update is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| upgradeOptions | [UpgradeOptions](arkts-basicservices-upgradeoptions-i-sys.md) | Yes | Update options. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the update is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1815,6 +1917,8 @@ Updates the version. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.UPDATE_SYSTEM
 
+<!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): Promise<void>--><!--Device-Updater-upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): Promise<void>-End-->
+
 **System capability:** SystemCapability.Update.UpdateService
 
 **System API:** This is a system API.
@@ -1823,14 +1927,14 @@ Updates the version. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| versionDigestInfo | VersionDigestInfo | Yes | Version digest information. |
-| upgradeOptions | UpgradeOptions | Yes | Update options. |
+| versionDigestInfo | [VersionDigestInfo](arkts-basicservices-versiondigestinfo-i-sys.md) | Yes | Version digest information. |
+| upgradeOptions | [UpgradeOptions](arkts-basicservices-upgradeoptions-i-sys.md) | Yes | Update options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

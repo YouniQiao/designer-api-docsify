@@ -18,6 +18,8 @@ Get the background network policy for the specified uid.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getBackgroundPolicyByUid(uid: number, callback: AsyncCallback<NetBackgroundPolicy>): void--><!--Device-policy-function getBackgroundPolicyByUid(uid: number, callback: AsyncCallback<NetBackgroundPolicy>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Get the background network policy for the specified uid.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | The specified UID of application. |
-| callback | AsyncCallback&lt;NetBackgroundPolicy&gt; | Yes | the callback of getBackgroundPolicyByUid. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<NetBackgroundPolicy> | Yes | the callback of getBackgroundPolicyByUid. |
 
 **Error codes:**
 
@@ -65,6 +67,8 @@ Get the background network policy for the specified uid.
 
 **Required permissions:** ohos.permission.MANAGE_NET_STRATEGY
 
+<!--Device-policy-function getBackgroundPolicyByUid(uid: number): Promise<NetBackgroundPolicy>--><!--Device-policy-function getBackgroundPolicyByUid(uid: number): Promise<NetBackgroundPolicy>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -79,7 +83,7 @@ Get the background network policy for the specified uid.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetBackgroundPolicy&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<NetBackgroundPolicy> | The promise returned by the function. |
 
 **Error codes:**
 

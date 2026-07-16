@@ -6,7 +6,15 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace pointer--><!--Device-unnamed-declare namespace pointer-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.Pointer
+
+## 导入模块
+
+```TypeScript
+import { pointer } from '@kit.InputKit';
+```
 
 ## 汇总
 
@@ -74,9 +82,9 @@
 | [setMouseScrollDirection](arkts-input-setmousescrolldirection-f-sys.md#setmousescrolldirection-1) | 设置鼠标滚轮滚动的方向，使用Promise异步回调。 |
 | [setMouseScrollRows](arkts-input-setmousescrollrows-f-sys.md#setmousescrollrows-1) | 设置鼠标滚动行数，使用callback异步回调。 |
 | [setMouseScrollRows](arkts-input-setmousescrollrows-f-sys.md#setmousescrollrows-2) | 设置鼠标滚动行数，使用Promise异步回调。 |
-| [setPointerColor](arkts-input-setpointercolor-f-sys.md#setpointercolor-1) | 设置鼠标光标颜色，使用callback异步回调。&gt; **说明**：&gt;&gt; 设置和调试时，需连接外部设备，如鼠标、蓝牙等。 |
-| [setPointerColor](arkts-input-setpointercolor-f-sys.md#setpointercolor-2) | 设置鼠标光标颜色，使用Promise异步回调。&gt; **说明**：&gt;&gt; 设置和调试时，需连接外部设备，如鼠标、蓝牙等。 |
-| [setPointerColorSync](arkts-input-setpointercolorsync-f-sys.md#setpointercolorsync-1) | 设置鼠标光标颜色，使用同步方式进行设置。&gt; **说明**：&gt;&gt; 设置和调试时，需连接外部设备，如鼠标、蓝牙等。 |
+| [setPointerColor](arkts-input-setpointercolor-f-sys.md#setpointercolor-1) | 设置鼠标光标颜色，使用callback异步回调。&gt; **说明**： &gt; &gt; 设置和调试时，需连接外部设备，如鼠标、蓝牙等。 |
+| [setPointerColor](arkts-input-setpointercolor-f-sys.md#setpointercolor-2) | 设置鼠标光标颜色，使用Promise异步回调。&gt; **说明**： &gt; &gt; 设置和调试时，需连接外部设备，如鼠标、蓝牙等。 |
+| [setPointerColorSync](arkts-input-setpointercolorsync-f-sys.md#setpointercolorsync-1) | 设置鼠标光标颜色，使用同步方式进行设置。&gt; **说明**： &gt; &gt; 设置和调试时，需连接外部设备，如鼠标、蓝牙等。 |
 | [setPointerSize](arkts-input-setpointersize-f-sys.md#setpointersize-1) | 设置鼠标光标大小，使用callback异步回调。 |
 | [setPointerSize](arkts-input-setpointersize-f-sys.md#setpointersize-2) | 设置鼠标光标大小，使用Promise异步回调。 |
 | [setPointerSizeSync](arkts-input-setpointersizesync-f-sys.md#setpointersizesync-1) | 设置鼠标光标大小，使用同步方式进行设置。 |

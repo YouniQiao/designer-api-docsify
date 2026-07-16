@@ -4,6 +4,8 @@ The bundle options of bundle manager
 
 **Since:** 20
 
+<!--Device-unnamed-export interface BundleOptions--><!--Device-unnamed-export interface BundleOptions-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -22,6 +24,8 @@ Indicates ability name
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BundleOptions-abilityName?: string--><!--Device-BundleOptions-abilityName?: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -37,6 +41,8 @@ Indicates the app index.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-BundleOptions-appIndex?: int--><!--Device-BundleOptions-appIndex?: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -56,6 +62,8 @@ Indicates bundle name
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BundleOptions-bundleName?: string--><!--Device-BundleOptions-bundleName?: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -74,6 +82,8 @@ Indicates module name
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-BundleOptions-moduleName?: string--><!--Device-BundleOptions-moduleName?: string-End-->
+
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
@@ -89,6 +99,8 @@ Indicates the user id.
 **Type:** number
 
 **Since:** 20
+
+<!--Device-BundleOptions-userId?: int--><!--Device-BundleOptions-userId?: int-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

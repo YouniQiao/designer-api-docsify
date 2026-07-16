@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-audio-interface VolumeEvent--><!--Device-audio-interface VolumeEvent-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## updateUi
 
@@ -17,6 +25,8 @@ updateUi: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+<!--Device-VolumeEvent-updateUi: boolean--><!--Device-VolumeEvent-updateUi: boolean-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -32,6 +42,8 @@ volume: number
 
 **起始版本：** 9
 
+<!--Device-VolumeEvent-volume: int--><!--Device-VolumeEvent-volume: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## volumeMode
@@ -46,6 +58,8 @@ volumeMode?: AudioVolumeMode
 
 **起始版本：** 19
 
+<!--Device-VolumeEvent-volumeMode?: AudioVolumeMode--><!--Device-VolumeEvent-volumeMode?: AudioVolumeMode-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 ## volumeType
@@ -59,6 +73,8 @@ volumeType: AudioVolumeType
 **类型：** AudioVolumeType
 
 **起始版本：** 9
+
+<!--Device-VolumeEvent-volumeType: AudioVolumeType--><!--Device-VolumeEvent-volumeType: AudioVolumeType-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

@@ -1,5 +1,11 @@
 # @ohos.arkui.advanced.Popup
 
+## 导入模块
+
+```TypeScript
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from '@kit.ArkUI';
+```
+
 ## 汇总
 
 ### 函数

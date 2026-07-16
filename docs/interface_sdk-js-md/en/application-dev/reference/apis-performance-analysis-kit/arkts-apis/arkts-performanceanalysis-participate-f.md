@@ -18,13 +18,15 @@ Participate the HiRetrieval project with given HiRetrievalConfig.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-hiRetrieval-function participate(config: HiRetrievalConfig): void--><!--Device-hiRetrieval-function participate(config: HiRetrievalConfig): void-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiRetrieval
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | HiRetrievalConfig | Yes | The config set by the developers. |
+| config | [HiRetrievalConfig](arkts-performanceanalysis-hiretrievalconfig-i.md) | Yes | The config set by the developers. |
 
 **Error codes:**
 

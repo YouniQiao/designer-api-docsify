@@ -12,12 +12,13 @@ import { abilityManager } from '@kit.AbilityKit';
 function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>
 ```
 
-Checks whether the [EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md) can be
-started in embedded mode. This API uses a promise to return the result.
+Checks whether the [EmbeddableUIAbility](arkts-ability-embeddableuiability-c.md) can be started in embedded mode. This API uses a promise to return the result.
 
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-abilityManager-function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>--><!--Device-abilityManager-function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -27,14 +28,14 @@ started in embedded mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Context of the caller. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Context of the caller. |
 | appId | string | Yes | Unique ID of the application, which is allocated by the cloud. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. **true** if embedded startup is allowed, **false**otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. **true** if embedded startup is allowed, **false** otherwise. |
 
 **Error codes:**
 

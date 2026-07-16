@@ -18,6 +18,8 @@ Set the dfx data of car key.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-connection-function setCarKeyDfxData(deviceId: string, action: CarKeyActionType): void--><!--Device-connection-function setCarKeyDfxData(deviceId: string, action: CarKeyActionType): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Set the dfx data of car key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| action | CarKeyActionType | Yes | Indicates the action to set the data. |
+| action | [CarKeyActionType](arkts-connectivity-carkeyactiontype-e-sys.md) | Yes | Indicates the action to set the data. |
 
 **Error codes:**
 

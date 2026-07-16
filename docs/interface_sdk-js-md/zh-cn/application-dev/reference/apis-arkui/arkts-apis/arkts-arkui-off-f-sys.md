@@ -1,5 +1,11 @@
 # off（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+```
+
 ## off('systemBarTintChange')
 
 ```TypeScript
@@ -10,6 +16,8 @@ function off(type: 'systemBarTintChange', callback?: Callback<SystemBarTintState
 
 **起始版本：** 8
 
+<!--Device-window-function off(type: 'systemBarTintChange', callback?: Callback<SystemBarTintState>): void--><!--Device-window-function off(type: 'systemBarTintChange', callback?: Callback<SystemBarTintState>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -19,7 +27,7 @@ function off(type: 'systemBarTintChange', callback?: Callback<SystemBarTintState
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemBarTintChange' | 是 | 监听事件，固定为'systemBarTintChange'，即导航栏、状态栏属性变化事件。 |
-| callback | Callback&lt;SystemBarTintState&gt; | 否 | 回调函数。返回当前的状态栏、导航栏信息集合。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有状态栏、导航栏属性变化的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<SystemBarTintState> | 否 | 回调函数。返回当前的状态栏、导航栏信息集合。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有状态栏、导航栏属性变化的监听。 |
 
 **错误码：**
 
@@ -57,6 +65,8 @@ function off(type: 'gestureNavigationEnabledChange', callback?: Callback<boolean
 
 **起始版本：** 10
 
+<!--Device-window-function off(type: 'gestureNavigationEnabledChange', callback?: Callback<boolean>): void--><!--Device-window-function off(type: 'gestureNavigationEnabledChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -66,7 +76,7 @@ function off(type: 'gestureNavigationEnabledChange', callback?: Callback<boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'gestureNavigationEnabledChange' | 是 | 监听事件，固定为'gestureNavigationEnabledChange'，即手势导航启用状态变化事件。 |
-| callback | Callback&lt;boolean&gt; | 否 | 已注册的回调函数。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有手势导航启用状态变化的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> | 否 | 已注册的回调函数。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有手势导航启用状态变化的监听。 |
 
 **错误码：**
 
@@ -105,6 +115,8 @@ function off(type: 'waterMarkFlagChange', callback?: Callback<boolean>): void
 
 **起始版本：** 10
 
+<!--Device-window-function off(type: 'waterMarkFlagChange', callback?: Callback<boolean>): void--><!--Device-window-function off(type: 'waterMarkFlagChange', callback?: Callback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
 **系统接口：** 此接口为系统接口。
@@ -114,7 +126,7 @@ function off(type: 'waterMarkFlagChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'waterMarkFlagChange' | 是 | 监听事件，固定为'waterMarkFlagChange'，即水印启用状态变化事件。 |
-| callback | Callback&lt;boolean&gt; | 否 | 已注册的回调函数。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有水印启用状态变化的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<boolean> | 否 | 已注册的回调函数。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有水印启用状态变化的监听。 |
 
 **错误码：**
 

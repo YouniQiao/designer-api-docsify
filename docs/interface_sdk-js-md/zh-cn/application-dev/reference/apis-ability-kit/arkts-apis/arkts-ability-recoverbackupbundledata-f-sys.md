@@ -1,5 +1,11 @@
 # recoverBackupBundleData（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+```
+
 ## recoverBackupBundleData
 
 ```TypeScript
@@ -11,6 +17,8 @@ function recoverBackupBundleData(bundleName: string, userId: number, appIndex: n
 **起始版本：** 21
 
 **需要权限：** ohos.permission.RECOVER_BUNDLE
+
+<!--Device-bundleManager-function recoverBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>--><!--Device-bundleManager-function recoverBackupBundleData(bundleName: string, userId: int, appIndex: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -28,7 +36,7 @@ function recoverBackupBundleData(bundleName: string, userId: number, appIndex: n
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

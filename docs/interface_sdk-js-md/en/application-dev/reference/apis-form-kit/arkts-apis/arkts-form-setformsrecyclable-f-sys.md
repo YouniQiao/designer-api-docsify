@@ -20,6 +20,8 @@ Sets widgets to be recyclable. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formHost-function setFormsRecyclable(formIds: Array<string>): Promise<void>--><!--Device-formHost-function setFormsRecyclable(formIds: Array<string>): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Sets widgets to be recyclable. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of widget IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -62,6 +64,8 @@ Sets widgets to be recyclable. This API uses an asynchronous callback to return 
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-formHost-function setFormsRecyclable(formIds: Array<string>, callback: AsyncCallback<void>): void--><!--Device-formHost-function setFormsRecyclable(formIds: Array<string>, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -70,8 +74,8 @@ Sets widgets to be recyclable. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the widgets are set to berecyclable, **error** is **undefined**; otherwise, an exception is thrown. |
+| formIds | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | Yes | Array of widget IDs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the widgets are set to be recyclable, **error** is **undefined**; otherwise, an exception is thrown. |
 
 **Error codes:**
 

@@ -18,6 +18,8 @@ Unregister appGroup change callback from service.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function unregisterAppGroupCallBack(callback: AsyncCallback<void>): void--><!--Device-usageStatistics-function unregisterAppGroupCallBack(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Unregister appGroup change callback from service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result.If the cancellation of registration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result.If the cancellation of registration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -71,6 +73,8 @@ Unregister appGroup change callback from service.
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function unregisterAppGroupCallBack(): Promise<void>--><!--Device-usageStatistics-function unregisterAppGroupCallBack(): Promise<void>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -79,7 +83,7 @@ Unregister appGroup change callback from service.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by unregisterAppGroupCallBack. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise returned by unregisterAppGroupCallBack. |
 
 **Error codes:**
 

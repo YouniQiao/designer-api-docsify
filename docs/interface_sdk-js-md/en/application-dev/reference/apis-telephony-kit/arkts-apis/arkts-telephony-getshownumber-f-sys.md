@@ -18,6 +18,8 @@ Get the SIM card number of the specified card slot.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getShowNumber(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getShowNumber(slotId: int, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Get the SIM card number of the specified card slot.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Indicates the callback for getting the SIM card number. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Indicates the callback for getting the SIM card number. |
 
 **Error codes:**
 
@@ -67,6 +69,8 @@ Get the SIM card number of the specified card slot.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getShowNumber(slotId: int): Promise<string>--><!--Device-sim-function getShowNumber(slotId: int): Promise<string>-End-->
+
 **System capability:** SystemCapability.Telephony.CoreService
 
 **System API:** This is a system API.
@@ -81,7 +85,7 @@ Get the SIM card number of the specified card slot.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the SIM card number. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | Returns the SIM card number. |
 
 **Error codes:**
 

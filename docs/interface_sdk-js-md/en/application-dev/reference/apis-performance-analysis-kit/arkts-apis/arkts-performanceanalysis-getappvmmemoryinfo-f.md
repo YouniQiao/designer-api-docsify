@@ -16,13 +16,15 @@ Obtains VM memory information.
 
 **Since:** 12
 
+<!--Device-hidebug-function getAppVMMemoryInfo(): VMMemoryInfo--><!--Device-hidebug-function getAppVMMemoryInfo(): VMMemoryInfo-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| VMMemoryInfo | VM memory information. |
+| [VMMemoryInfo](arkts-performanceanalysis-vmmemoryinfo-i.md) | VM memory information. |
 
 **Example**
 

@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace statfs--><!--Device-unnamed-declare namespace statfs-End-->
+
 **系统能力：** SystemCapability.FileManagement.File.FileIO
+
+## 导入模块
+
+```TypeScript
+import { statfs } from '@kit.CoreFileKit';
+```
 
 ## 汇总
 

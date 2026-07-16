@@ -1,12 +1,10 @@
 # InsightIntentContext
 
-The module provides the context for intent execution. It is used as a property in both the
-[intent execution base class](arkts-ability-insightintentexecutor-c.md) and
-[base class decorated with @InsightIntentEntry](arkts-ability-insightintententryexecutor-c.md)
-, offering essential capabilities for intent implementation, for example, starting
-[UIAbility components](arkts-app-ability-uiability.md) within the same application.
+The module provides the context for intent execution. It is used as a property in both the [intent execution base class](arkts-ability-insightintentexecutor-c.md) and [base class decorated with @InsightIntentEntry](arkts-ability-insightintententryexecutor-c.md), offering essential capabilities for intent implementation, for example, starting [UIAbility components](arkts-app-ability-uiability.md) within the same application.
 
 **Since:** 11
+
+<!--Device-unnamed-declare class InsightIntentContext--><!--Device-unnamed-declare class InsightIntentContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,14 +20,15 @@ import { InsightIntentContext } from '@kit.AbilityKit';
 setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 ```
 
-Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set
-to [UI_ABILITY_FOREGROUND](arkts-ability-executemode-e.md).
+Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_ABILITY_FOREGROUND](arkts-ability-executemode-e.md).
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-InsightIntentContext-setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void--><!--Device-InsightIntentContext-setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -43,7 +42,7 @@ to [UI_ABILITY_FOREGROUND](arkts-ability-executemode-e.md).
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. Possible causes: 1.The context isnot insightIntentContext; 2.The context is not for UIAbility foreground insight intent execute mode. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIAbility foreground insight intent execute mode. |
 
 **Example**
 
@@ -95,14 +94,15 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 ```
 
-Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set
-to [UI_EXTENSION_ABILITY](arkts-ability-executemode-e.md).
+Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_EXTENSION_ABILITY](arkts-ability-executemode-e.md).
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-InsightIntentContext-setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void--><!--Device-InsightIntentContext-setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -116,7 +116,7 @@ to [UI_EXTENSION_ABILITY](arkts-ability-executemode-e.md).
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. Possible causes: 1.The context is notinsightIntentContext; 2.The context is not for UIExtensionAbility insight intent execute mode. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIExtensionAbility insight intent execute mode. |
 
 **Example**
 
@@ -167,8 +167,7 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts a UIAbility. This API can only be used to start UIAbility components within the same application. This API
-uses an asynchronous callback to return the result.
+Starts a UIAbility. This API can only be used to start UIAbility components within the same application. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -176,14 +175,16 @@ uses an asynchronous callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-InsightIntentContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-InsightIntentContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information for starting the UIAbility. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information for starting the UIAbility. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -251,8 +252,7 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 startAbility(want: Want): Promise<void>
 ```
 
-Starts a UIAbility. This API can only be used to start UIAbility components within the same application. This API
-uses a promise to return the result.
+Starts a UIAbility. This API can only be used to start UIAbility components within the same application. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -260,19 +260,21 @@ uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-InsightIntentContext-startAbility(want: Want): Promise<void>--><!--Device-InsightIntentContext-startAbility(want: Want): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | Want | Yes | Want information for starting the UIAbility. |
+| want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information for starting the UIAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -335,11 +337,7 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: number
 ```
 
-Unique ID of an intent instance. Its execution result can be returned through
-[insightIntentProvider.sendExecuteResult]
-{@link @ohos.app.ability.insightIntentProvider:insightIntentProvider.sendExecuteResult} and
-[insightIntentProvider.sendIntentResult]
-{@link @ohos.app.ability.insightIntentProvider:insightIntentProvider.sendIntentResult}.
+Unique ID of an intent instance. Its execution result can be returned through [insightIntentProvider.sendExecuteResult](arkts-ability-sendexecuteresult-f.md#sendexecuteresult-1) and [insightIntentProvider.sendIntentResult](arkts-ability-sendintentresult-f.md#sendintentresult-1).
 
 **Type:** number
 
@@ -348,6 +346,8 @@ Unique ID of an intent instance. Its execution result can be returned through
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-InsightIntentContext-instanceId: int--><!--Device-InsightIntentContext-instanceId: int-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

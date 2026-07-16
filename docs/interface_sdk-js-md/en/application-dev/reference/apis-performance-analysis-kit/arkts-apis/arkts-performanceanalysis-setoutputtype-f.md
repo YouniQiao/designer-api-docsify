@@ -18,19 +18,21 @@ Sets the output type of hilog.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-hilog-function setOutputType(type: OutputType): OutputType--><!--Device-hilog-function setOutputType(type: OutputType): OutputType-End-->
+
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | OutputType | Yes | output type of hilog. |
+| type | [OutputType](arkts-performanceanalysis-outputtype-e.md) | Yes | output type of hilog. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| OutputType | previous output type of hilog. |
+| [OutputType](arkts-performanceanalysis-outputtype-e.md) | previous output type of hilog. |
 
 **Example**
 

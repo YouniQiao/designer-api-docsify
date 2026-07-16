@@ -20,6 +20,8 @@ Updates the AgentCard within specified agent id.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-agentManager-function updateAgentCard(agentCard: AgentCard): Promise<void>--><!--Device-agentManager-function updateAgentCard(agentCard: AgentCard): Promise<void>-End-->
+
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
 **System API:** This is a system API.
@@ -28,13 +30,13 @@ Updates the AgentCard within specified agent id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agentCard | AgentCard | Yes | The AgentCard information to update. |
+| agentCard | [AgentCard](arkts-ability-agentcard-i.md) | Yes | The AgentCard information to update. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

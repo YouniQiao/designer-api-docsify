@@ -1,11 +1,18 @@
 # UnifiedRecord
 
-对UDMF支持的数据内容的抽象定义，称为数据记录。一个统一数据对象内包含一条或多条数据记录，例如一条文本记录、一条图片记录、一条HTML记录等。从API version 15开始，支持往数据记录中增加同一内容的不同数据格式（例如同
-一文本可同时以纯文本、HTML或超链接等格式存储），数据使用方根据业务需要通过getEntry方法获取对应格式。
+对UDMF支持的数据内容的抽象定义，称为数据记录。一个统一数据对象内包含一条或多条数据记录，例如一条文本记录、一条图片记录、一条HTML记录等。从API version 15开始，支持往数据记录中增加同一内容的不同数据格式（例如同一文本可同时以纯文本、HTML或超链接等格式存储），数据使用方根据业务需要通过getEntry方法获取对应格式。
 
 **起始版本：** 10
 
+<!--Device-unifiedDataChannel-class UnifiedRecord--><!--Device-unifiedDataChannel-class UnifiedRecord-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
+## 导入模块
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+```
 
 ## addEntry
 
@@ -19,7 +26,9 @@ addEntry(type: string, value: ValueType): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedRecord-addEntry(type: string, value: ValueType): void--><!--Device-UnifiedRecord-addEntry(type: string, value: ValueType): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -28,7 +37,7 @@ addEntry(type: string, value: ValueType): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 要创建的数据类型，见[UniformDataType](arkts-arkdata-uniformdatatype-e.md)。 |
-| value | ValueType | 是 | 要创建的数据的值。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 要创建的数据的值。 |
 
 **错误码：**
 
@@ -76,7 +85,9 @@ constructor()
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedRecord-constructor()--><!--Device-UnifiedRecord-constructor()-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -95,19 +106,17 @@ constructor(type: string, value: ValueType)
 
 用于创建指定类型和值的数据记录。调用成功后，返回包含指定类型和值的UnifiedRecord对象。
 
-当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)类型时，参数type必须对应为
-[UniformDataType](arkts-arkdata-uniformdatatype-e.md)中
-OPENHARMONY_PIXEL_MAP的值；
+当参数value为[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-pixelmap-i.md)类型时，参数type必须对应为[UniformDataType](arkts-arkdata-uniformdatatype-e.md)中OPENHARMONY_PIXEL_MAP的值；
 
-当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md)类型时，参数type必须对应为
-[UniformDataType](arkts-arkdata-uniformdatatype-e.md)中OPENHARMONY_WANT的
-值。
+当参数value为[Want](../../apis-ability-kit/arkts-apis/arkts-ability-want-c.md)类型时，参数type必须对应为[UniformDataType](arkts-arkdata-uniformdatatype-e.md)中OPENHARMONY_WANT的值。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedRecord-constructor(type: string, value: ValueType)--><!--Device-UnifiedRecord-constructor(type: string, value: ValueType)-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -116,7 +125,7 @@ OPENHARMONY_PIXEL_MAP的值；
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 要创建的数据记录的类型，用于标识数据记录的具体类型。取值见[UniformDataType](arkts-arkdata-uniformdatatype-e.md)，如'general.plain-text'、'general.hyperlink'等。 |
-| value | ValueType | 是 | 要创建的数据记录的值。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 要创建的数据记录的值。 |
 
 **错误码：**
 
@@ -172,7 +181,9 @@ getEntries(): Record<string, ValueType>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedRecord-getEntries(): Record<string, ValueType>--><!--Device-UnifiedRecord-getEntries(): Record<string, ValueType>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -180,7 +191,7 @@ getEntries(): Record<string, ValueType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Record&lt;string, ValueType&gt; | 当前数据记录对应的类型和内容。 |
+| Record<string, ValueType> | 当前数据记录对应的类型和内容。 |
 
 **示例：**
 
@@ -244,7 +255,9 @@ getEntry(type: string): ValueType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedRecord-getEntry(type: string): ValueType--><!--Device-UnifiedRecord-getEntry(type: string): ValueType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -258,7 +271,7 @@ getEntry(type: string): ValueType
 
 | 类型 | 说明 |
 | --- | --- |
-| ValueType | 当前数据记录对应的值。 |
+| [ValueType](arkts-arkdata-valuetype-t.md) | 当前数据记录对应的值。 |
 
 **错误码：**
 
@@ -323,14 +336,15 @@ for (let i = 0; i < records.length; i++) {
 getType(): string
 ```
 
-获取当前数据记录的类型。由于从统一数据对象中调用[getRecords](arkts-arkdata-unifieddata-c.md#getrecords-1)所取出的数据是UnifiedRecord对象，因此需要通
-过本接口查询此记录的具体类型，再将该UnifiedRecord对象转换为其子类，调用子类接口。
+获取当前数据记录的类型。由于从统一数据对象中调用[getRecords](arkts-arkdata-unifieddata-c.md#getrecords-1)所取出的数据是UnifiedRecord对象，因此需要通过本接口查询此记录的具体类型，再将该UnifiedRecord对象转换为其子类，调用子类接口。
 
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedRecord-getType(): string--><!--Device-UnifiedRecord-getType(): string-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -367,14 +381,15 @@ if (records[0].getType() == uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) {
 getTypes(): Array<string>
 ```
 
-获取数据记录中数据的所有类型集合。可通过UnifiedRecord数据记录对象调用本接口，查询出此记录中数据的所有类型集合，包括使用
-[addEntry](arkts-arkdata-unifiedrecord-c.md#addentry-1)函数添加的数据类型。
+获取数据记录中数据的所有类型集合。可通过UnifiedRecord数据记录对象调用本接口，查询出此记录中数据的所有类型集合，包括使用[addEntry](arkts-arkdata-unifiedrecord-c.md#addentry-1)函数添加的数据类型。
 
 **起始版本：** 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本15开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedRecord-getTypes(): Array<string>--><!--Device-UnifiedRecord-getTypes(): Array<string>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -382,7 +397,7 @@ getTypes(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | [UniformDataType](arkts-arkdata-uniformdatatype-e.md)类型的数组，表示当前统一数据对象所有数据记录对应的数据类型，元素值如'general.plain-text'、'general.hyperlink'、'general.html'等。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | [UniformDataType](arkts-arkdata-uniformdatatype-e.md)类型的数组，表示当前统一数据对象所有数据记录对应的数据类型，元素值如'general.plain-text'、'general.hyperlink'、'general.html'等。 |
 
 **示例：**
 
@@ -441,7 +456,9 @@ getValue(): ValueType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UnifiedRecord-getValue(): ValueType--><!--Device-UnifiedRecord-getValue(): ValueType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -449,7 +466,7 @@ getValue(): ValueType
 
 | 类型 | 说明 |
 | --- | --- |
-| ValueType | 当前数据记录对应的值。 |
+| [ValueType](arkts-arkdata-valuetype-t.md) | 当前数据记录对应的值。 |
 
 **示例：**
 

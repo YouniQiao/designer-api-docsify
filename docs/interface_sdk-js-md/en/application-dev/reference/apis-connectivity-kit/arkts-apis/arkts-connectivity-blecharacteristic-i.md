@@ -8,6 +8,8 @@ Describes the Gatt characteristic.
 
 **Substitutes:** BLECharacteristic
 
+<!--Device-bluetoothManager-interface BLECharacteristic--><!--Device-bluetoothManager-interface BLECharacteristic-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ The UUID of a BLECharacteristic instance
 
 **Substitutes:** characteristicUuid
 
+<!--Device-BLECharacteristic-characteristicUuid: string--><!--Device-BLECharacteristic-characteristicUuid: string-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## characteristicValue
@@ -49,6 +53,8 @@ The value of a BLECharacteristic instance
 **Deprecated since:** 10
 
 **Substitutes:** characteristicValue
+
+<!--Device-BLECharacteristic-characteristicValue: ArrayBuffer--><!--Device-BLECharacteristic-characteristicValue: ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -68,6 +74,8 @@ The list of {@link BLEDescriptor} contained in the characteristic
 
 **Substitutes:** descriptors
 
+<!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>--><!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## serviceUuid
@@ -85,6 +93,8 @@ The UUID of the {@link GattService} instance to which the characteristic belongs
 **Deprecated since:** 10
 
 **Substitutes:** serviceUuid
+
+<!--Device-BLECharacteristic-serviceUuid: string--><!--Device-BLECharacteristic-serviceUuid: string-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

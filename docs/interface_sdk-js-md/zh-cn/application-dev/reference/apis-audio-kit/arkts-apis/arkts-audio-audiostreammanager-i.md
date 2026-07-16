@@ -4,13 +4,21 @@
 
 在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audiomanager-i.md#getstreammanager-1)获取AudioStreamManager实例。
 
-> **说明：**
->
+> **说明：**  
+>  
 > - 本Interface首批接口从API version 9开始支持。
 
 **起始版本：** 9
 
+<!--Device-audio-interface AudioStreamManager--><!--Device-audio-interface AudioStreamManager-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## getAudioEffectInfoArray
 
@@ -22,14 +30,16 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 
 **起始版本：** 10
 
+<!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | StreamUsage | 是 | 音频流使用类型。 |
-| callback | AsyncCallback&lt;AudioEffectInfoArray&gt; | 是 | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为获取到的当前音效模式的信息；否则为错误对象。 |
+| usage | [StreamUsage](arkts-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioEffectInfoArray> | 是 | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为获取到的当前音效模式的信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -48,19 +58,21 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 
 **起始版本：** 10
 
+<!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | StreamUsage | 是 | 音频流使用类型。 |
+| usage | [StreamUsage](arkts-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioEffectInfoArray&gt; | Promise对象，返回当前音效模式的信息。 |
+| Promise<AudioEffectInfoArray> | Promise对象，返回当前音效模式的信息。 |
 
 **错误码：**
 
@@ -79,19 +91,21 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 
 **起始版本：** 10
 
+<!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray--><!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| usage | StreamUsage | 是 | 音频流使用类型。 |
+| usage | [StreamUsage](arkts-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioEffectInfoArray | 返回当前音效模式的信息。 |
+| [AudioEffectInfoArray](arkts-audio-audioeffectinfoarray-t.md) | 返回当前音效模式的信息。 |
 
 **错误码：**
 
@@ -108,11 +122,13 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 
 获取当前音频采集器的信息。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -120,7 +136,7 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AudioCapturerChangeInfoArray&gt; | 是 | 回调函数。当获取当前音频采集器的信息成功，err为undefined，data为获取到的当前音频采集器的信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioCapturerChangeInfoArray> | 是 | 回调函数。当获取当前音频采集器的信息成功，err为undefined，data为获取到的当前音频采集器的信息；否则为错误对象。 |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -130,11 +146,13 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 
 获取当前音频采集器的信息。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -142,7 +160,7 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioCapturerChangeInfoArray&gt; | Promise对象，返回当前音频采集器信息。 |
+| Promise<AudioCapturerChangeInfoArray> | Promise对象，返回当前音频采集器信息。 |
 
 ## getCurrentAudioCapturerInfoArraySync
 
@@ -152,11 +170,13 @@ getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 
 获取当前音频采集器的信息。同步返回结果。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 10
+
+<!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -164,7 +184,7 @@ getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioCapturerChangeInfoArray | 返回当前音频采集器信息。 |
+| [AudioCapturerChangeInfoArray](arkts-audio-audiocapturerchangeinfoarray-t.md) | 返回当前音频采集器信息。 |
 
 ## getCurrentAudioRendererInfoArray
 
@@ -174,11 +194,13 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 
 获取当前音频渲染器的信息。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -186,7 +208,7 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AudioRendererChangeInfoArray&gt; | 是 | 回调函数。当获取当前音频渲染器的信息成功，err为undefined，data为获取到的当前音频渲染器的信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AudioRendererChangeInfoArray> | 是 | 回调函数。当获取当前音频渲染器的信息成功，err为undefined，data为获取到的当前音频渲染器的信息；否则为错误对象。 |
 
 ## getCurrentAudioRendererInfoArray
 
@@ -196,11 +218,13 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 
 获取当前音频渲染器的信息。使用Promise异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -208,7 +232,7 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioRendererChangeInfoArray&gt; | Promise对象，返回当前音频渲染器信息。 |
+| Promise<AudioRendererChangeInfoArray> | Promise对象，返回当前音频渲染器信息。 |
 
 ## getCurrentAudioRendererInfoArraySync
 
@@ -218,11 +242,13 @@ getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 
 获取当前音频渲染器的信息。同步返回结果。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 10
+
+<!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -230,7 +256,7 @@ getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 
 | 类型 | 说明 |
 | --- | --- |
-| AudioRendererChangeInfoArray | 返回当前音频渲染器信息。 |
+| [AudioRendererChangeInfoArray](arkts-audio-audiorendererchangeinfoarray-t.md) | 返回当前音频渲染器信息。 |
 
 ## isAcousticEchoCancelerSupported
 
@@ -242,13 +268,15 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 
 **起始版本：** 20
 
+<!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sourceType | SourceType | 是 | 音源类型。 |
+| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-sourcetype-e.md) | 是 | 音源类型。 |
 
 **返回值：**
 
@@ -276,14 +304,16 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 **替代接口：** isStreamActive
 
+<!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频流类型。 |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | 回调函数。当获取指定音频流活跃状态成功，err为undefined，data为true表示活跃，false表示不活跃；否则为错误对象。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频流类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | 回调函数。当获取指定音频流活跃状态成功，err为undefined，data为true表示活跃，false表示不活跃；否则为错误对象。 |
 
 ## isActive
 
@@ -299,19 +329,21 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 **替代接口：** isStreamActive
 
+<!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频流类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频流类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示流状态为活跃；返回false表示流状态不活跃。 |
+| Promise<boolean> | Promise对象。返回true表示流状态为活跃；返回false表示流状态不活跃。 |
 
 ## isActiveSync
 
@@ -327,13 +359,15 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 **替代接口：** isStreamActive
 
+<!--Device-AudioStreamManager-isActiveSync(volumeType: AudioVolumeType): boolean--><!--Device-AudioStreamManager-isActiveSync(volumeType: AudioVolumeType): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | AudioVolumeType | 是 | 音频流类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audiovolumetype-e.md) | 是 | 音频流类型。 |
 
 **返回值：**
 
@@ -358,13 +392,15 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 
 **起始版本：** 20
 
+<!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean--><!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | AudioLoopbackMode | 是 | 音频返听模式。 |
+| mode | [AudioLoopbackMode](arkts-audio-audioloopbackmode-e.md) | 是 | 音频返听模式。 |
 
 **返回值：**
 
@@ -390,14 +426,16 @@ isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): bool
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioStreamManager-isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamInfo | AudioStreamInfo | 是 | 音频流信息，用于描述基础音频格式。 |
-| usage | StreamUsage | 是 | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
+| streamInfo | [AudioStreamInfo](arkts-audio-audiostreaminfo-i.md) | 是 | 音频流信息，用于描述基础音频格式。 |
+| usage | [StreamUsage](arkts-audio-streamusage-e.md) | 是 | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
 
 **返回值：**
 
@@ -417,14 +455,16 @@ isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolea
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioStreamManager-isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamInfo | AudioStreamInfo | 是 | 音频流信息，用于描述基础音频格式。 |
-| usage | StreamUsage | 是 | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
+| streamInfo | [AudioStreamInfo](arkts-audio-audiostreaminfo-i.md) | 是 | 音频流信息，用于描述基础音频格式。 |
+| usage | [StreamUsage](arkts-audio-streamusage-e.md) | 是 | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
 
 **返回值：**
 
@@ -444,14 +484,16 @@ isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boole
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioStreamManager-isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean--><!--Device-AudioStreamManager-isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamInfo | AudioStreamInfo | 是 | 音频流信息，用于描述基础音频格式。 |
-| source | SourceType | 是 | 音源类型，用于决定音频设备和通路类型的选择结果。 |
+| streamInfo | [AudioStreamInfo](arkts-audio-audiostreaminfo-i.md) | 是 | 音频流信息，用于描述基础音频格式。 |
+| source | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-sourcetype-e.md) | 是 | 音源类型，用于决定音频设备和通路类型的选择结果。 |
 
 **返回值：**
 
@@ -469,13 +511,15 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 
 **起始版本：** 21
 
+<!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sourceType | SourceType | 是 | 表示音源类型。 |
+| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-sourcetype-e.md) | 是 | 表示音源类型。 |
 
 **返回值：**
 
@@ -501,14 +545,16 @@ isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioStreamManager-isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamInfo | AudioStreamInfo | 是 | 音频流信息，用于描述基础音频格式。 |
-| usage | StreamUsage | 是 | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
+| streamInfo | [AudioStreamInfo](arkts-audio-audiostreaminfo-i.md) | 是 | 音频流信息，用于描述基础音频格式。 |
+| usage | [StreamUsage](arkts-audio-streamusage-e.md) | 是 | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
 
 **返回值：**
 
@@ -528,14 +574,16 @@ isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boo
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-AudioStreamManager-isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamInfo | AudioStreamInfo | 是 | 音频流信息，用于描述基础音频格式。 |
-| usage | StreamUsage | 是 | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
+| streamInfo | [AudioStreamInfo](arkts-audio-audiostreaminfo-i.md) | 是 | 音频流信息，用于描述基础音频格式。 |
+| usage | [StreamUsage](arkts-audio-streamusage-e.md) | 是 | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
 
 **返回值：**
 
@@ -553,13 +601,15 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 
 **起始版本：** 20
 
+<!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean--><!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capturerInfo | AudioCapturerInfo | 是 | 音频采集器信息。 |
+| capturerInfo | [AudioCapturerInfo](arkts-audio-audiocapturerinfo-i.md) | 是 | 音频采集器信息。 |
 
 **返回值：**
 
@@ -583,13 +633,15 @@ isStreamActive(streamUsage: StreamUsage): boolean
 
 **起始版本：** 20
 
+<!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean--><!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streamUsage | StreamUsage | 是 | 音频流使用类型。 |
+| streamUsage | [StreamUsage](arkts-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
 
 **返回值：**
 
@@ -611,11 +663,13 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 
 取消监听音频渲染器更改事件。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -624,7 +678,7 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'，当取消监听音频渲染器更改事件时，触发该事件。 |
-| callback | Callback&lt;AudioRendererChangeInfoArray&gt; | 否 | 回调函数，返回当前音频渲染器信息。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioRendererChangeInfoArray> | 否 | 回调函数，返回当前音频渲染器信息。<br>**起始版本：** 18 |
 
 **错误码：**
 
@@ -640,11 +694,13 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 
 取消监听音频采集器更改事件。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -653,7 +709,7 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 事件回调类型，支持的事件为'audioCapturerChange'，当取消监听音频采集器更改事件时，触发该事件。 |
-| callback | Callback&lt;AudioCapturerChangeInfoArray&gt; | 否 | 回调函数，返回当前音频采集器信息。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioCapturerChangeInfoArray> | 否 | 回调函数，返回当前音频采集器信息。<br>**起始版本：** 18 |
 
 **错误码：**
 
@@ -669,11 +725,13 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 
 监听音频渲染器更改事件（当音频播放流状态变化或设备变化时触发）。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -682,7 +740,7 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'，当音频播放流状态变化或设备变化时，触发该事件。 |
-| callback | Callback&lt;AudioRendererChangeInfoArray&gt; | 是 | 回调函数，返回当前音频渲染器信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioRendererChangeInfoArray> | 是 | 回调函数，返回当前音频渲染器信息。 |
 
 **错误码：**
 
@@ -699,11 +757,13 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 
 监听音频采集器更改事件（当音频录制流状态变化或设备变化时触发）。使用callback异步回调。
 
-> **说明：**
->
+> **说明：**  
+>  
 > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
+
+<!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -712,7 +772,7 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 事件回调类型，支持的事件为'audioCapturerChange'，当音频录制流状态变化或设备变化时，触发该事件。 |
-| callback | Callback&lt;AudioCapturerChangeInfoArray&gt; | 是 | 回调函数，返回当前音频采集器信息。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<AudioCapturerChangeInfoArray> | 是 | 回调函数，返回当前音频采集器信息。 |
 
 **错误码：**
 

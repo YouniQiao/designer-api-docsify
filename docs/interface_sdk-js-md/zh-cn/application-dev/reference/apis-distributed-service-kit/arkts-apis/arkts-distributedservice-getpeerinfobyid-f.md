@@ -1,5 +1,11 @@
 # getPeerInfoById
 
+## 导入模块
+
+```TypeScript
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+```
+
 ## getPeerInfoById
 
 ```TypeScript
@@ -11,6 +17,8 @@ function getPeerInfoById(sessionId: number): PeerInfo | undefined
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-abilityConnectionManager-function getPeerInfoById(sessionId: int): PeerInfo | undefined--><!--Device-abilityConnectionManager-function getPeerInfoById(sessionId: int): PeerInfo | undefined-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -24,7 +32,7 @@ function getPeerInfoById(sessionId: number): PeerInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| PeerInfo | 若存在对应PeerInfo，则返回接收端的协作应用信息。若sessionId未找到，则查询失败，返回undefined。 |
+| [PeerInfo](arkts-distributedservice-peerinfo-i.md) | 若存在对应PeerInfo，则返回接收端的协作应用信息。若sessionId未找到，则查询失败，返回undefined。 |
 
 **错误码：**
 

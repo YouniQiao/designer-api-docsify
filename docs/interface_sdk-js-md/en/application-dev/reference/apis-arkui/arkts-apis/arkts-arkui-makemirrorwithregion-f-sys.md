@@ -12,10 +12,11 @@ import { screen } from '@kit.ArkUI';
 function makeMirrorWithRegion(mainScreen: number, mirrorScreen: Array<number>, mainScreenRegion: Rect): Promise<number>
 ```
 
-Sets a rectangle on the screen to mirror mode. This API uses a promise to return the result. After this API is
-called, you are advised not to rotate or fold the screen further. Otherwise, the mirrored content may be abnormal.
+Sets a rectangle on the screen to mirror mode. This API uses a promise to return the result. After this API is called, you are advised not to rotate or fold the screen further. Otherwise, the mirrored content may be abnormal.
 
 **Since:** 19
+
+<!--Device-screen-function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainScreenRegion: Rect): Promise<long>--><!--Device-screen-function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainScreenRegion: Rect): Promise<long>-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -26,14 +27,14 @@ called, you are advised not to rotate or fold the screen further. Otherwise, the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainScreen | number | Yes | ID of the primary screen. The ID must be a positive integer. |
-| mirrorScreen | Array&lt;number&gt; | Yes | Array of IDs of secondary screens. Each ID must be a positive integer. |
-| mainScreenRegion | Rect | Yes | Rectangle on the primary screen to be mirrored. |
+| mirrorScreen | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<number> | Yes | Array of IDs of secondary screens. Each ID must be a positive integer. |
+| mainScreenRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-rect-i.md) | Yes | Rectangle on the primary screen to be mirrored. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the group ID of the secondary screens, where the ID is a positiveinteger. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the group ID of the secondary screens, where the ID is a positive integer. |
 
 **Error codes:**
 

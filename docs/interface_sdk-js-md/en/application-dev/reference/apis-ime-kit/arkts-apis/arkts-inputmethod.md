@@ -1,10 +1,10 @@
 # @ohos.inputMethod
 
-The **inputMethod** module is oriented to common foreground applications (system applications such as Notes,
-Messaging, and Settings). It provides input method control and management capabilities, including displaying or
-hiding the soft keyboard, switching between input methods, and obtaining the list of all input methods.
+The **inputMethod** module is oriented to common foreground applications (system applications such as Notes,Messaging, and Settings). It provides input method control and management capabilities, including displaying or hiding the soft keyboard, switching between input methods, and obtaining the list of all input methods.
 
 **Since:** 6
+
+<!--Device-unnamed-declare namespace inputMethod--><!--Device-unnamed-declare namespace inputMethod-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

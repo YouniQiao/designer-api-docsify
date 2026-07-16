@@ -1,5 +1,11 @@
 # hasOperatorPrivileges
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## hasOperatorPrivileges
 
 ```TypeScript
@@ -10,6 +16,8 @@ Checks whether your application (the caller) has been granted the operator permi
 
 **起始版本：** 7
 
+<!--Device-sim-function hasOperatorPrivileges(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sim-function hasOperatorPrivileges(slotId: int, callback: AsyncCallback<boolean>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -17,7 +25,7 @@ Checks whether your application (the caller) has been granted the operator permi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number,ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | AsyncCallback&lt;boolean&gt; | 是 | Indicates the callback of hasOperatorPrivileges.Returns {@code true} if your application has been granted the operator permissions; returns {@code false} otherwise.If no SIM card is inserted or the SIM card is deactivated will be return {@code false}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | 是 | Indicates the callback of hasOperatorPrivileges.Returns {@code true} if your application has been granted the operator permissions; returns {@code false} otherwise.If no SIM card is inserted or the SIM card is deactivated will be return {@code false}. |
 
 **错误码：**
 
@@ -52,6 +60,8 @@ Checks whether your application (the caller) has been granted the operator permi
 
 **起始版本：** 7
 
+<!--Device-sim-function hasOperatorPrivileges(slotId: int): Promise<boolean>--><!--Device-sim-function hasOperatorPrivileges(slotId: int): Promise<boolean>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **参数：**
@@ -64,7 +74,7 @@ Checks whether your application (the caller) has been granted the operator permi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} if your application has been granted the operator permissions;returns {@code false} otherwise. If no SIM card is inserted or the SIM card is deactivated will bereturn {@code false}. |
+| Promise<boolean> | Returns {@code true} if your application has been granted the operator permissions;returns {@code false} otherwise. If no SIM card is inserted or the SIM card is deactivated will be return {@code false}. |
 
 **错误码：**
 

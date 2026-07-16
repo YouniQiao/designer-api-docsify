@@ -2,11 +2,15 @@
 
 **Inheritance/Implementation:** ReferenceErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
+<!--Device-unnamed-interface ReferenceErrorConstructor extends ErrorConstructor--><!--Device-unnamed-interface ReferenceErrorConstructor extends ErrorConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(message?: string): ReferenceError
 ```
+
+<!--Device-ReferenceErrorConstructor-new(message?: string): ReferenceError--><!--Device-ReferenceErrorConstructor-new(message?: string): ReferenceError-End-->
 
 **Parameters:**
 
@@ -18,7 +22,7 @@ new(message?: string): ReferenceError
 
 | Type | Description |
 | --- | --- |
-| ReferenceError |  |
+| [ReferenceError](arkts-na-referenceerror-i.md) |  |
 
 ## constructor
 
@@ -26,6 +30,8 @@ new(message?: string): ReferenceError
 (message?: string): ReferenceError
 ```
 
+<!--Device-ReferenceErrorConstructor-(message?: string): ReferenceError--><!--Device-ReferenceErrorConstructor-(message?: string): ReferenceError-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -36,7 +42,7 @@ new(message?: string): ReferenceError
 
 | Type | Description |
 | --- | --- |
-| ReferenceError |  |
+| [ReferenceError](arkts-na-referenceerror-i.md) |  |
 
 ## prototype
 
@@ -45,4 +51,6 @@ readonly prototype: ReferenceError
 ```
 
 **Type:** ReferenceError
+
+<!--Device-ReferenceErrorConstructor-readonly prototype: ReferenceError--><!--Device-ReferenceErrorConstructor-readonly prototype: ReferenceError-End-->
 

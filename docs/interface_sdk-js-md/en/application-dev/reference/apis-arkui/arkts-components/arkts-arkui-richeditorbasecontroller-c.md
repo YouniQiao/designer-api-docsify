@@ -2,9 +2,11 @@
 
 Represents the base class of the **RichEditor** component controller.
 
-**Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](arkts-arkui-texteditcontrollerex-i.md)
+**Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-texteditcontrollerex-i.md)
 
 **Since:** 12
+
+<!--Device-unnamed-declare class RichEditorBaseController implements TextEditControllerEx--><!--Device-unnamed-declare class RichEditorBaseController implements TextEditControllerEx-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,6 +24,8 @@ Closes the custom or default context menu on selection.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RichEditorBaseController-closeSelectionMenu(): void--><!--Device-RichEditorBaseController-closeSelectionMenu(): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## deleteBackward
@@ -30,8 +34,7 @@ Closes the custom or default context menu on selection.
 deleteBackward(): void
 ```
 
-The capability of deleting characters is provided. If no content is selected, the character before the caret is
-deleted. If some content is selected, the selected content is deleted.
+The capability of deleting characters is provided. If no content is selected, the character before the caret is deleted. If some content is selected, the selected content is deleted.
 
 This API cannot be used in the pre-screen display scenario.
 
@@ -40,6 +43,8 @@ This API cannot be used in the pre-screen display scenario.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-RichEditorBaseController-deleteBackward(): void--><!--Device-RichEditorBaseController-deleteBackward(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,6 +64,8 @@ If the caret position cannot be obtained (for example, the controller is not bou
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-RichEditorBaseController-getCaretOffset(): number--><!--Device-RichEditorBaseController-getCaretOffset(): number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
@@ -73,8 +80,7 @@ If the caret position cannot be obtained (for example, the controller is not bou
 getCaretRect(): RectResult | undefined
 ```
 
-Obtains the relative position of the caret in the **RichEditor** component. If the caret is not blinking, the API
-returns **undefined**.
+Obtains the relative position of the caret in the **RichEditor** component. If the caret is not blinking, the API returns **undefined**.
 
 **Since:** 18
 
@@ -82,13 +88,15 @@ returns **undefined**.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
+<!--Device-RichEditorBaseController-getCaretRect(): RectResult | undefined--><!--Device-RichEditorBaseController-getCaretRect(): RectResult | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RectResult | Relative position of the caret in the **RichEditor** component. |
+| [RectResult](arkts-arkui-rectresult-i.md) | Relative position of the caret in the **RichEditor** component. |
 
 ## getLayoutManager
 
@@ -104,13 +112,15 @@ Obtains a **LayoutManager** object.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RichEditorBaseController-getLayoutManager(): LayoutManager--><!--Device-RichEditorBaseController-getLayoutManager(): LayoutManager-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| LayoutManager | **LayoutManager** object.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined**is returned. |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | **LayoutManager** object.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getPreviewText
 
@@ -126,13 +136,15 @@ Obtains the preview text.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RichEditorBaseController-getPreviewText(): PreviewText--><!--Device-RichEditorBaseController-getPreviewText(): PreviewText-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PreviewText | Preview text.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined**is returned. |
+| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) | Preview text.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTypingStyle
 
@@ -148,13 +160,15 @@ Obtains the preset text style of a user.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RichEditorBaseController-getTypingStyle(): RichEditorTextStyle--><!--Device-RichEditorBaseController-getTypingStyle(): RichEditorTextStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RichEditorTextStyle | Preset typing style.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined**is returned. |
+| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Preset typing style.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## isEditing
 
@@ -170,13 +184,15 @@ Obtains the editing state of this **RichEditor** component.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RichEditorBaseController-isEditing(): boolean--><!--Device-RichEditorBaseController-isEditing(): boolean-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Editing state. The value **true** indicates the editing state, and **false** indicates the non-editing state. |
+| boolean | Editing state. The value **true** indicates the editing state, and **false** indicates the non  -editing state. |
 
 ## scrollToVisible
 
@@ -190,13 +206,15 @@ Scroll the input field component to make the specified content visible.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-RichEditorBaseController-scrollToVisible(range?: TextRange): void--><!--Device-RichEditorBaseController-scrollToVisible(range?: TextRange): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | TextRange | No | The visible range.If the parameter is invalid, this method will have no effect. |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | The visible range.If the parameter is invalid, this method will have no effect. |
 
 ## setCaretOffset
 
@@ -211,6 +229,8 @@ Sets the cursor offset.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RichEditorBaseController-setCaretOffset(offset: number): boolean--><!--Device-RichEditorBaseController-setCaretOffset(offset: number): boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -234,28 +254,23 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 
 Sets the range of content selection. The selected content is highlighted.
 
-If both selectionStart and selectionEnd are set to -1, all the content is selected. If both selectionStart and
-selectionEnd are set to 0, the selected content can be cleared.
+If both selectionStart and selectionEnd are set to -1, all the content is selected. If both selectionStart and selectionEnd are set to 0, the selected content can be cleared.
 
 If this API is called when the text box is not focused, the selected effect is not displayed.
 
-Since API version 12, on 2-in-1 devices, regardless of the value of **options**, calling the **setSelection** API
-will not display the menu. In addition, if there is already a menu present within the component, calling the
-**setSelection** API will close the menu.
+Since API version 12, on 2-in-1 devices, regardless of the value of **options**, calling the **setSelection** API will not display the menu. In addition, if there is already a menu present within the component, calling the **setSelection** API will close the menu.
 
 On non-2-in-1 devices, when **options** is set to **MenuPolicy.DEFAULT**, the following rules apply:
 
-1. If the component has a selection handle menu, calling the API will not close the menu,
-and the menu position will be adjusted.
-2. If the component has a menu without a selection handle, calling the API will not close the menu,
-and the menu position will remain unchanged.
-3. If there is no menu within the component, calling the API will not display the menu.
+1. If the component has a selection handle menu, calling the API will not close the menu,and the menu position will be adjusted.2. If the component has a menu without a selection handle, calling the API will not close the menu,and the menu position will remain unchanged.3. If there is no menu within the component, calling the API will not display the menu.
 
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RichEditorBaseController-setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void--><!--Device-RichEditorBaseController-setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -265,7 +280,7 @@ and the menu position will remain unchanged.
 | --- | --- | --- | --- |
 | selectionStart | number | Yes | Start position of the selection. |
 | selectionEnd | number | Yes | End position of the selection. |
-| options | SelectionOptions | No | Configuration of options.<br>**Since:** 12 |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration of options.<br>**Since:** 12 |
 
 ## setStyledPlaceholder
 
@@ -281,13 +296,15 @@ Set the styledString placeholder.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
+<!--Device-RichEditorBaseController-setStyledPlaceholder(styledString: StyledString): void--><!--Device-RichEditorBaseController-setStyledPlaceholder(styledString: StyledString): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | StyledString | Yes | The styledString for placeholder.If the parameter is invalid, this method will have no effect. |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | The styledString for placeholder.If the parameter is invalid, this method will have no effect. |
 
 ## setTypingParagraphStyle
 
@@ -295,8 +312,7 @@ Set the styledString placeholder.
 setTypingParagraphStyle(style: RichEditorParagraphStyle): void
 ```
 
-Sets the preset paragraph style. The input text takes effect only when the component content is empty or a line
-break is added at the end of the component.
+Sets the preset paragraph style. The input text takes effect only when the component content is empty or a line break is added at the end of the component.
 
 **Since:** 20
 
@@ -304,13 +320,15 @@ break is added at the end of the component.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-RichEditorBaseController-setTypingParagraphStyle(style: RichEditorParagraphStyle): void--><!--Device-RichEditorBaseController-setTypingParagraphStyle(style: RichEditorParagraphStyle): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | RichEditorParagraphStyle | Yes | Preset paragraph style. |
+| style | [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | Yes | Preset paragraph style. |
 
 ## setTypingStyle
 
@@ -326,13 +344,15 @@ Sets the preset typing style.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-RichEditorBaseController-setTypingStyle(value: RichEditorTextStyle): void--><!--Device-RichEditorBaseController-setTypingStyle(value: RichEditorTextStyle): void-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | RichEditorTextStyle | Yes | Preset typing style. |
+| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Yes | Preset typing style. |
 
 ## stopEditing
 
@@ -347,6 +367,8 @@ Exits the editing state.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RichEditorBaseController-stopEditing(): void--><!--Device-RichEditorBaseController-stopEditing(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

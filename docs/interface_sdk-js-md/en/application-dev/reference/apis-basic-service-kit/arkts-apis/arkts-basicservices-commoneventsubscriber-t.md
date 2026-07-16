@@ -10,6 +10,8 @@ Describes the subscriber of a common event.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-commonEventManager-export type CommonEventSubscriber = _CommonEventSubscriber--><!--Device-commonEventManager-export type CommonEventSubscriber = _CommonEventSubscriber-End-->
+
 **System capability:** SystemCapability.Notification.CommonEvent
 
 **Property type:** _CommonEventSubscriber

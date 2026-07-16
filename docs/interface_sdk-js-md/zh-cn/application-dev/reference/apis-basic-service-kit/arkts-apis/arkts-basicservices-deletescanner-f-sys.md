@@ -1,5 +1,11 @@
 # deleteScanner（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.BasicServicesKit';
+```
+
 ## deleteScanner
 
 ```TypeScript
@@ -12,6 +18,8 @@ function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): P
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
+<!--Device-scan-function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise<void>--><!--Device-scan-function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Print.PrintFramework
 
 **系统接口：** 此接口为系统接口。
@@ -21,13 +29,13 @@ function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uniqueId | string | 是 | 扫描仪的唯一ID。 |
-| discoveryMode | ScannerDiscoveryMode | 是 | 发现模式。 |
+| discoveryMode | [ScannerDiscoveryMode](arkts-basicservices-scannerdiscoverymode-e.md) | 是 | 发现模式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

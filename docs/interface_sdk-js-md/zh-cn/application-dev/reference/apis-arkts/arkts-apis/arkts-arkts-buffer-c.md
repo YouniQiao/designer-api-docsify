@@ -4,7 +4,15 @@ Buffer对象是处理二进制数据的缓存区。
 
 **起始版本：** 9
 
+<!--Device-buffer-class Buffer--><!--Device-buffer-class Buffer-End-->
+
 **系统能力：** SystemCapability.Utils.Lang
+
+## 导入模块
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+```
 
 ## compare
 
@@ -22,7 +30,21 @@ compare(
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-compare(
+      target: Buffer | Uint8Array,
+      targetStart?: number,
+      targetEnd?: number,
+      sourceStart?: number,
+      sourceEnd?: number
+    ): -1 | 0 | 1--><!--Device-Buffer-compare(
+      target: Buffer | Uint8Array,
+      targetStart?: number,
+      targetEnd?: number,
+      sourceStart?: number,
+      sourceEnd?: number
+    ): -1 | 0 | 1-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -46,7 +68,7 @@ compare(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out ofrange.It must be &gt;= 0 and &lt;= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range.It must be &gt;= 0 and &lt;= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
 **示例：**
 
@@ -75,7 +97,9 @@ copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, so
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int--><!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -98,7 +122,7 @@ copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, so
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It mustbe &gt;= 0.Received value is: [targetStart/sourceStart/sourceEnd] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be &gt;= 0.Received value is: [targetStart/sourceStart/sourceEnd] |
 
 **示例：**
 
@@ -128,7 +152,9 @@ entries(): IterableIterator<[number, number]>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-entries(): IterableIterator<[int, long]>--><!--Device-Buffer-entries(): IterableIterator<[int, long]>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -136,8 +162,8 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;[number, number]&gt; | 包含key和value的迭代器，同时两者皆为number类型。<br>**适用版本：** 9 - 10 |
-| IterableIterator&lt;[number, number]&gt; | <br>**适用版本：** 11+ |
+| IterableIterator<[number, number]> | 包含key和value的迭代器，同时两者皆为number类型。<br>**适用版本：** 9 - 10 |
+| IterableIterator<[number, number]> | <br>**适用版本：** 11+ |
 
 **示例：**
 
@@ -172,7 +198,9 @@ equals(otherBuffer: Uint8Array | Buffer): boolean
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean--><!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -219,7 +247,19 @@ fill(
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-fill(
+      value: string | Buffer | Uint8Array | int | double | long,
+      offset?: int,
+      end?: int,
+      encoding?: BufferEncoding
+    ): Buffer--><!--Device-Buffer-fill(
+      value: string | Buffer | Uint8Array | int | double | long,
+      offset?: int,
+      end?: int,
+      encoding?: BufferEncoding
+    ): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -230,13 +270,13 @@ fill(
 | value | string \| Buffer \| Uint8Array \| number \| number \| number | 是 | 用于填充的值。<br>**起始版本：** 11 |
 | offset | number | 否 | 起始偏移量。默认值：0。 |
 | end | number | 否 | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
-| encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Buffer | 返回填充后的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-c.md) | 返回填充后的Buffer对象。 |
 
 **错误码：**
 
@@ -254,7 +294,9 @@ includes(value: string | number | number | number | Buffer | Uint8Array, byteOff
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean--><!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -264,7 +306,7 @@ includes(value: string | number | number | number | Buffer | Uint8Array, byteOff
 | --- | --- | --- | --- |
 | value | string \| number \| number \| number \| Buffer \| Uint8Array | 是 | 要搜索的内容。<br>**起始版本：** 11 |
 | byteOffset | number | 否 | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：0。 |
-| encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
 **返回值：**
 
@@ -282,7 +324,9 @@ indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffs
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int--><!--Device-Buffer-indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -292,7 +336,7 @@ indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffs
 | --- | --- | --- | --- |
 | value | string \| number \| number \| number \| Buffer \| Uint8Array | 是 | 要查找的内容。<br>**起始版本：** 11 |
 | byteOffset | number | 否 | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：0。 |
-| encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
 **返回值：**
 
@@ -310,7 +354,9 @@ keys(): IterableIterator<number>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-keys(): IterableIterator<int>--><!--Device-Buffer-keys(): IterableIterator<int>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -318,7 +364,7 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 返回一个包含key值的迭代器。 |
+| IterableIterator<number> | 返回一个包含key值的迭代器。 |
 
 **示例：**
 
@@ -351,7 +397,9 @@ lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byte
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int--><!--Device-Buffer-lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -361,7 +409,7 @@ lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byte
 | --- | --- | --- | --- |
 | value | string \| number \| number \| number \| Buffer \| Uint8Array | 是 | 要搜索的内容。<br>**起始版本：** 11 |
 | byteOffset | number | 否 | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：Buffer.length。 |
-| encoding | BufferEncoding | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
+| encoding | [BufferEncoding](arkts-arkts-bufferencoding-t.md) | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
 **返回值：**
 
@@ -379,7 +427,9 @@ readBigInt64BE(offset?: number): bigint
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readBigInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigInt64BE(offset?: int): bigint-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -428,7 +478,9 @@ readBigInt64LE(offset?: number): bigint
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readBigInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigInt64LE(offset?: int): bigint-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -477,7 +529,9 @@ readBigUInt64BE(offset?: number): bigint
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readBigUInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64BE(offset?: int): bigint-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -525,7 +579,9 @@ readBigUInt64LE(offset?: number): bigint
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readBigUInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64LE(offset?: int): bigint-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -574,7 +630,9 @@ readDoubleBE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readDoubleBE(offset?: int): double--><!--Device-Buffer-readDoubleBE(offset?: int): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -621,7 +679,9 @@ readDoubleLE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readDoubleLE(offset?: int): double--><!--Device-Buffer-readDoubleLE(offset?: int): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -668,7 +728,9 @@ readFloatBE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readFloatBE(offset?: int): double--><!--Device-Buffer-readFloatBE(offset?: int): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -715,7 +777,9 @@ readFloatLE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readFloatLE(offset?: int): double--><!--Device-Buffer-readFloatLE(offset?: int): double-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -762,7 +826,9 @@ readInt16BE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readInt16BE(offset?: int): long--><!--Device-Buffer-readInt16BE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -809,7 +875,9 @@ readInt16LE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readInt16LE(offset?: int): long--><!--Device-Buffer-readInt16LE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -856,7 +924,9 @@ readInt32BE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readInt32BE(offset?: int): long--><!--Device-Buffer-readInt32BE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -903,7 +973,9 @@ readInt32LE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readInt32LE(offset?: int): long--><!--Device-Buffer-readInt32LE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -950,7 +1022,9 @@ readInt8(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readInt8(offset?: int): long--><!--Device-Buffer-readInt8(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -999,7 +1073,9 @@ readIntBE(offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readIntBE(offset: int, byteLength: int): long--><!--Device-Buffer-readIntBE(offset: int, byteLength: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1048,7 +1124,9 @@ readIntLE(offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readIntLE(offset: int, byteLength: int): long--><!--Device-Buffer-readIntLE(offset: int, byteLength: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1096,7 +1174,9 @@ readUInt16BE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readUInt16BE(offset?: int): long--><!--Device-Buffer-readUInt16BE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1145,7 +1225,9 @@ readUInt16LE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readUInt16LE(offset?: int): long--><!--Device-Buffer-readUInt16LE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1194,7 +1276,9 @@ readUInt32BE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readUInt32BE(offset?: int): long--><!--Device-Buffer-readUInt32BE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1241,7 +1325,9 @@ readUInt32LE(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readUInt32LE(offset?: int): long--><!--Device-Buffer-readUInt32LE(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1288,7 +1374,9 @@ readUInt8(offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readUInt8(offset?: int): long--><!--Device-Buffer-readUInt8(offset?: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1337,7 +1425,9 @@ readUIntBE(offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readUIntBE(offset: int, byteLength: int): long--><!--Device-Buffer-readUIntBE(offset: int, byteLength: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1385,7 +1475,9 @@ readUIntLE(offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-readUIntLE(offset: int, byteLength: int): long--><!--Device-Buffer-readUIntLE(offset: int, byteLength: int): long-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1433,7 +1525,9 @@ subarray(start?: number, end?: number): Buffer
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-subarray(start?: int, end?: int): Buffer--><!--Device-Buffer-subarray(start?: int, end?: int): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1448,7 +1542,7 @@ subarray(start?: number, end?: number): Buffer
 
 | 类型 | 说明 |
 | --- | --- |
-| Buffer | 返回新的Buffer对象。当start &lt; 0或end &lt; 0时返回空Buffer。 |
+| [Buffer](arkts-arkts-buffer-c.md) | 返回新的Buffer对象。当start &lt; 0或end &lt; 0时返回空Buffer。 |
 
 **示例：**
 
@@ -1476,7 +1570,9 @@ swap16(): Buffer
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-swap16(): Buffer--><!--Device-Buffer-swap16(): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1484,7 +1580,7 @@ swap16(): Buffer
 
 | 类型 | 说明 |
 | --- | --- |
-| Buffer | 交换之后的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-c.md) | 交换之后的Buffer对象。 |
 
 **错误码：**
 
@@ -1516,7 +1612,9 @@ swap32(): Buffer
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-swap32(): Buffer--><!--Device-Buffer-swap32(): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1524,7 +1622,7 @@ swap32(): Buffer
 
 | 类型 | 说明 |
 | --- | --- |
-| Buffer | 交换之后的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-c.md) | 交换之后的Buffer对象。 |
 
 **错误码：**
 
@@ -1556,7 +1654,9 @@ swap64(): Buffer
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-swap64(): Buffer--><!--Device-Buffer-swap64(): Buffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1564,7 +1664,7 @@ swap64(): Buffer
 
 | 类型 | 说明 |
 | --- | --- |
-| Buffer | 交换之后的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-c.md) | 交换之后的Buffer对象。 |
 
 **错误码：**
 
@@ -1596,7 +1696,9 @@ toJSON(): Object
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-toJSON(): Object--><!--Device-Buffer-toJSON(): Object-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1628,7 +1730,9 @@ toString(encoding?: string, start?: number, end?: number): string
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1670,7 +1774,9 @@ values(): IterableIterator<number>
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-values(): IterableIterator<long>--><!--Device-Buffer-values(): IterableIterator<long>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1678,7 +1784,7 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator&lt;number&gt; | 迭代器。 |
+| IterableIterator<number> | 迭代器。 |
 
 **示例：**
 
@@ -1713,7 +1819,9 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int--><!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1765,7 +1873,9 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeBigInt64BE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigInt64BE(value: bigint, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1810,7 +1920,9 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeBigInt64LE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigInt64LE(value: bigint, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1855,7 +1967,9 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeBigUInt64BE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigUInt64BE(value: bigint, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1900,7 +2014,9 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeBigUInt64LE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigUInt64LE(value: bigint, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1945,7 +2061,9 @@ writeDoubleBE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeDoubleBE(value: double, offset?: int): int--><!--Device-Buffer-writeDoubleBE(value: double, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1990,7 +2108,9 @@ writeDoubleLE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeDoubleLE(value: double, offset?: int): int--><!--Device-Buffer-writeDoubleLE(value: double, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2035,7 +2155,9 @@ writeFloatBE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeFloatBE(value: double, offset?: int): int--><!--Device-Buffer-writeFloatBE(value: double, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2080,7 +2202,9 @@ writeFloatLE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeFloatLE(value: double, offset?: int): int--><!--Device-Buffer-writeFloatLE(value: double, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2125,7 +2249,9 @@ writeInt16BE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeInt16BE(value: long, offset?: int): int--><!--Device-Buffer-writeInt16BE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2170,7 +2296,9 @@ writeInt16LE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeInt16LE(value: long, offset?: int): int--><!--Device-Buffer-writeInt16LE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2215,7 +2343,9 @@ writeInt32BE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeInt32BE(value: long, offset?: int): int--><!--Device-Buffer-writeInt32BE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2260,7 +2390,9 @@ writeInt32LE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeInt32LE(value: long, offset?: int): int--><!--Device-Buffer-writeInt32LE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2305,7 +2437,9 @@ writeInt8(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeInt8(value: long, offset?: int): int--><!--Device-Buffer-writeInt8(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2353,7 +2487,9 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeIntBE(value: long, offset: int, byteLength: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2399,7 +2535,9 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeIntLE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeIntLE(value: long, offset: int, byteLength: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2445,7 +2583,9 @@ writeUInt16BE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeUInt16BE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt16BE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2493,7 +2633,9 @@ writeUInt16LE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeUInt16LE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt16LE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2541,7 +2683,9 @@ writeUInt32BE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeUInt32BE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt32BE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2586,7 +2730,9 @@ writeUInt32LE(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeUInt32LE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt32LE(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2631,7 +2777,9 @@ writeUInt8(value: number, offset?: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeUInt8(value: long, offset?: int): int--><!--Device-Buffer-writeUInt8(value: long, offset?: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2685,7 +2833,9 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2731,7 +2881,9 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-writeUIntLE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntLE(value: long, offset: int, byteLength: int): int-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2779,7 +2931,9 @@ ArrayBuffer对象。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-buffer: ArrayBuffer--><!--Device-Buffer-buffer: ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2789,16 +2943,15 @@ ArrayBuffer对象。
 byteOffset: number
 ```
 
-当前Buffer所在内存池的偏移量。
-当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-allocuninitializedfrompool-f.md#allocuninitializedfrompool-1)创建Buffer，
-或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。
-当Buffer直接分配内存时（如使用[alloc](arkts-arkts-alloc-f.md#alloc-1)），返回值为0。
+当前Buffer所在内存池的偏移量。当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-allocuninitializedfrompool-f.md#allocuninitializedfrompool-1)创建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。当Buffer直接分配内存时（如使用[alloc](arkts-arkts-alloc-f.md#alloc-1)），返回值为0。
 
 **类型：** number
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-byteOffset: number--><!--Device-Buffer-byteOffset: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -2814,7 +2967,9 @@ Buffer对象的字节长度。
 
 **起始版本：** 9
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Buffer-length: number--><!--Device-Buffer-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 

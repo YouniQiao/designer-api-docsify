@@ -10,6 +10,8 @@ Enum for location privacy type
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export enum LocationPrivacyType--><!--Device-geolocation-export enum LocationPrivacyType-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## OTHERS
@@ -23,6 +25,8 @@ OTHERS = 0
 **Deprecated since:** 9
 
 **Substitutes:** OTHERS
+
+<!--Device-LocationPrivacyType-OTHERS = 0--><!--Device-LocationPrivacyType-OTHERS = 0-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -38,6 +42,8 @@ STARTUP
 
 **Substitutes:** STARTUP
 
+<!--Device-LocationPrivacyType-STARTUP--><!--Device-LocationPrivacyType-STARTUP-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## CORE_LOCATION
@@ -51,6 +57,8 @@ CORE_LOCATION
 **Deprecated since:** 9
 
 **Substitutes:** CORE_LOCATION
+
+<!--Device-LocationPrivacyType-CORE_LOCATION--><!--Device-LocationPrivacyType-CORE_LOCATION-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

@@ -8,6 +8,8 @@
 
 **起始版本：** 18
 
+<!--Device-unnamed-interface AlphabetIndexerOptions--><!--Device-unnamed-interface AlphabetIndexerOptions-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## arrayValue
@@ -22,7 +24,9 @@ Alphabetical index string array.
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AlphabetIndexerOptions-arrayValue: Array<string>--><!--Device-AlphabetIndexerOptions-arrayValue: Array<string>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,7 +42,9 @@ ID of the selected item.
 
 **起始版本：** 7
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AlphabetIndexerOptions-selected: number--><!--Device-AlphabetIndexerOptions-selected: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

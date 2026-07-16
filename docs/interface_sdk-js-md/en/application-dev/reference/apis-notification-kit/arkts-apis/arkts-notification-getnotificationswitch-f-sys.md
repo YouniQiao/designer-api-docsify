@@ -20,6 +20,8 @@ Obtains the notification switch state. This API uses a promise to return the res
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-notificationManager-function getNotificationSwitch(switchName: string, userId: int): Promise<SwitchState>--><!--Device-notificationManager-function getNotificationSwitch(switchName: string, userId: int): Promise<SwitchState>-End-->
+
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
@@ -28,14 +30,14 @@ Obtains the notification switch state. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| switchName | string | Yes | Name of the notification switch. The value can be **DEAL** (aggregatedswitch for transaction notifications) or **LOGISTICS** (aggregated switch for logisticsnotifications). |
+| switchName | string | Yes | Name of the notification switch. The value can be **DEAL** (aggregated switch for transaction notifications) or **LOGISTICS** (aggregated switch for logistics notifications). |
 | userId | number | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SwitchState&gt; | Promise used to return the notification switch state. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<SwitchState> | Promise used to return the notification switch state. |
 
 **Error codes:**
 

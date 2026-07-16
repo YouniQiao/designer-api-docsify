@@ -4,6 +4,8 @@ Wi-Fi hotspot configuration information.
 
 **Since:** 9
 
+<!--Device-wifiManager-interface HotspotConfig--><!--Device-wifiManager-interface HotspotConfig-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ The frequency band of the Wi-Fi hotspot
 
 **Since:** 9
 
+<!--Device-HotspotConfig-band: int--><!--Device-HotspotConfig-band: int-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -41,6 +45,8 @@ The channel of the Wi-Fi hotspot.
 **Type:** number
 
 **Since:** 10
+
+<!--Device-HotspotConfig-channel?: int--><!--Device-HotspotConfig-channel?: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -58,6 +64,8 @@ IP address of the dhcp server, it's a string, For example 192.168.43.1
 
 **Since:** 10
 
+<!--Device-HotspotConfig-ipAddress?: string--><!--Device-HotspotConfig-ipAddress?: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -73,6 +81,8 @@ The maximum number of connections allowed by the Wi-Fi hotspot
 **Type:** number
 
 **Since:** 9
+
+<!--Device-HotspotConfig-maxConn: int--><!--Device-HotspotConfig-maxConn: int-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
@@ -90,6 +100,8 @@ The password of the Wi-Fi hotspot
 
 **Since:** 9
 
+<!--Device-HotspotConfig-preSharedKey: string--><!--Device-HotspotConfig-preSharedKey: string-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -106,6 +118,8 @@ The encryption mode of the Wi-Fi hotspot
 
 **Since:** 9
 
+<!--Device-HotspotConfig-securityType: WifiSecurityType--><!--Device-HotspotConfig-securityType: WifiSecurityType-End-->
+
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 
 **System API:** This is a system API.
@@ -121,6 +135,8 @@ The SSID of the Wi-Fi hotspot
 **Type:** string
 
 **Since:** 9
+
+<!--Device-HotspotConfig-ssid: string--><!--Device-HotspotConfig-ssid: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Core
 

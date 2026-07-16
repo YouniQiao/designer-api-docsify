@@ -4,6 +4,8 @@ Defines mode for playback capture, each mode means different target streams to c
 
 **Since:** 26.0.0
 
+<!--Device-audio-enum AudioPlaybackCaptureMode--><!--Device-audio-enum AudioPlaybackCaptureMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 
 ## MODE_ONLY_VOIP
@@ -12,17 +14,13 @@ Defines mode for playback capture, each mode means different target streams to c
 MODE_ONLY_VOIP = 0x4000
 ```
 
-Only voip mode. Capture only voice/video communication streams.
-If {@link AudioCapturerOptions#playbackCaptureUid} is set, only the
-voice/video communication stream of the specified application is captured.
-The {@link AudioCapturerOptions#playbackCaptureUid} takes effect only when
-this mode is set.
-This mode requires the `ohos.permission.CAPTURE_VOICE_DOWNLINK_AUDIO`
-permission; otherwise {@link createAudioCapturer} fails.
+Only voip mode. Capture only voice/video communication streams.If {@link AudioCapturerOptions#playbackCaptureUid} is set, only the voice/video communication stream of the specified application is captured.The {@link AudioCapturerOptions#playbackCaptureUid} takes effect only when this mode is set.This mode requires the `ohos.permission.CAPTURE_VOICE_DOWNLINK_AUDIO`permission; otherwise {@link createAudioCapturer} fails.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioPlaybackCaptureMode-MODE_ONLY_VOIP = 0x4000--><!--Device-AudioPlaybackCaptureMode-MODE_ONLY_VOIP = 0x4000-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.PlaybackCapture
 

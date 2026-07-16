@@ -16,6 +16,8 @@ Judge whether to allow another new call.
 
 **Since:** 8
 
+<!--Device-call-function isNewCallAllowed(callback: AsyncCallback<boolean>): void--><!--Device-call-function isNewCallAllowed(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -24,7 +26,7 @@ Judge whether to allow another new call.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | The callback of isNewCallAllowed. Returns {@code true} ifthe device currently allows new calls; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | The callback of isNewCallAllowed. Returns {@code true} if the device currently allows new calls; returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -63,6 +65,8 @@ Judge whether to allow another new call.
 
 **Since:** 8
 
+<!--Device-call-function isNewCallAllowed(): Promise<boolean>--><!--Device-call-function isNewCallAllowed(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -71,7 +75,7 @@ Judge whether to allow another new call.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns {@code true} If the device currently allows new calls.Returns {@code false} otherwise. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Returns {@code true} If the device currently allows new calls.Returns {@code false} otherwise. |
 
 **Error codes:**
 

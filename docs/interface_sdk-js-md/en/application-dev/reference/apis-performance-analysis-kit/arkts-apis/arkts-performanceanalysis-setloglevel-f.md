@@ -14,16 +14,17 @@ function setLogLevel(level: LogLevel, prefer: PreferStrategy): void
 
 Sets the minimum log level of the current application process.
 
-You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy
-has the same effect as the **setMinLogLevel()** function.
+You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy has the same effect as the **setMinLogLevel()** function.
 
-> **NOTE**
->
+> **NOTE**  
+>  
 > This function does not take effect for debug applications.
 
 **Since:** 21
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-hilog-function setLogLevel(level: LogLevel, prefer: PreferStrategy): void--><!--Device-hilog-function setLogLevel(level: LogLevel, prefer: PreferStrategy): void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
@@ -31,6 +32,6 @@ has the same effect as the **setMinLogLevel()** function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | LogLevel | Yes | Log level. |
-| prefer | PreferStrategy | Yes | Preference strategy. |
+| level | [LogLevel](arkts-performanceanalysis-loglevel-e.md) | Yes | Log level. |
+| prefer | [PreferStrategy](arkts-performanceanalysis-preferstrategy-e.md) | Yes | Preference strategy. |
 

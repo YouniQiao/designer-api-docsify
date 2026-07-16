@@ -4,7 +4,15 @@
 
 **起始版本：** 26.0.0
 
+<!--Device-remoteDevice-interface ConnectionStateParam--><!--Device-remoteDevice-interface ConnectionStateParam-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
+
+## 导入模块
+
+```TypeScript
+import { remoteDevice } from '@kit.ConnectivityKit';
+```
 
 ## address
 
@@ -12,14 +20,15 @@
 address: string
 ```
 
-设备地址。
-长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
 
 **类型：** string
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionStateParam-address: string--><!--Device-ConnectionStateParam-address: string-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -37,6 +46,8 @@ connectionReason: ConnectionReason
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectionStateParam-connectionReason: ConnectionReason--><!--Device-ConnectionStateParam-connectionReason: ConnectionReason-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## preState
@@ -52,6 +63,8 @@ preState: ConnectionState
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionStateParam-preState: ConnectionState--><!--Device-ConnectionStateParam-preState: ConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -69,6 +82,8 @@ reasonMsg?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ConnectionStateParam-reasonMsg?: string--><!--Device-ConnectionStateParam-reasonMsg?: string-End-->
+
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
 ## state
@@ -84,6 +99,8 @@ state: ConnectionState
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ConnectionStateParam-state: ConnectionState--><!--Device-ConnectionStateParam-state: ConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

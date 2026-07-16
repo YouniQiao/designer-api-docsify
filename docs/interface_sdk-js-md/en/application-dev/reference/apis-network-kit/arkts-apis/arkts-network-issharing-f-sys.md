@@ -18,6 +18,8 @@ Return the global network sharing state.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function isSharing(callback: AsyncCallback<boolean>): void--><!--Device-sharing-function isSharing(callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Return the global network sharing state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Returns {@code true} indicating network sharing is running;returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Returns {@code true} indicating network sharing is running;returns {@code false} otherwise. |
 
 **Error codes:**
 
@@ -64,6 +66,8 @@ Return the global network sharing state.
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
+<!--Device-sharing-function isSharing(): Promise<boolean>--><!--Device-sharing-function isSharing(): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.NetSharing
 
 **System API:** This is a system API.
@@ -72,7 +76,7 @@ Return the global network sharing state.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | The promise returned by the function. |
 
 **Error codes:**
 

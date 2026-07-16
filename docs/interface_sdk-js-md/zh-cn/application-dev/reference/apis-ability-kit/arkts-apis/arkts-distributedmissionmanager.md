@@ -4,9 +4,17 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-declare namespace distributedMissionManager--><!--Device-unnamed-declare namespace distributedMissionManager-End-->
+
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+```
 
 ## 汇总
 

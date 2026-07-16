@@ -1,14 +1,20 @@
 # DataShareHelper（系统接口）
 
-DataShare管理工具实例，可使用此实例访问或管理服务端的数据。在调用DataShareHelper提供的方法前，需要先通过
-[createDataShareHelper](arkts-arkdata-createdatasharehelper-f-sys.md#createdatasharehelper-1)
-构建一个实例。
+DataShare管理工具实例，可使用此实例访问或管理服务端的数据。在调用DataShareHelper提供的方法前，需要先通过[createDataShareHelper](arkts-arkdata-createdatasharehelper-f-sys.md#createdatasharehelper-1)构建一个实例。
 
 **起始版本：** 9
+
+<!--Device-dataShare-interface DataShareHelper--><!--Device-dataShare-interface DataShareHelper-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
+
+## 导入模块
+
+```TypeScript
+import { dataShare } from '@kit.ArkData';
+```
 
 ## addTemplate
 
@@ -24,6 +30,8 @@ addTemplate(uri: string, subscriberId: string, template: Template): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-addTemplate(uri: string, subscriberId: string, template: Template): void--><!--Device-DataShareHelper-addTemplate(uri: string, subscriberId: string, template: Template): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -34,13 +42,13 @@ addTemplate(uri: string, subscriberId: string, template: Template): void
 | --- | --- | --- | --- |
 | uri | string | 是 | 要插入的数据的路径。 |
 | subscriberId | string | 是 | 要添加模板的订阅者ID，每个订阅者的ID是唯一的。 |
-| template | Template | 是 | 要添加的数据模板。 |
+| template | [Template](arkts-arkdata-template-i-sys.md) | 是 | 要添加的数据模板。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
@@ -82,6 +90,8 @@ batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<nu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -91,14 +101,14 @@ batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<nu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要插入的数据的路径。 |
-| values | Array&lt;ValuesBucket&gt; | 是 | 要插入的数据。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当将批量数据插入数据库成功，err为undefined，data为获取到的插入的数据记录数；否则为错误对象。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回插入的数据记录数。 |
+| values | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ValuesBucket> | 是 | 要插入的数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当将批量数据插入数据库成功，err为undefined，data为获取到的插入的数据记录数；否则为错误对象。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回插入的数据记录数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -145,6 +155,8 @@ batchInsert(uri: string, values: Array<ValuesBucket>): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>--><!--Device-DataShareHelper-batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -154,19 +166,19 @@ batchInsert(uri: string, values: Array<ValuesBucket>): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要插入的数据的路径。 |
-| values | Array&lt;ValuesBucket&gt; | 是 | 要插入的数据。 |
+| values | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<ValuesBucket> | 是 | 要插入的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回插入的数据记录数。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回插入的数据记录数。 |
+| Promise<number> | Promise对象。返回插入的数据记录数。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回插入的数据记录数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -211,6 +223,8 @@ batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<string, Array<int>>>--><!--Device-DataShareHelper-batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<string, Array<int>>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -219,13 +233,13 @@ batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| operations | Record&lt;string, Array&lt;UpdateOperation&gt;&gt; | 是 | 要更新数据的路径、筛选条件和数据集合。 |
+| operations | Record<string, Array<UpdateOperation>> | 是 | 要更新数据的路径、筛选条件和数据集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Promise used to return an array of updated data records. The value**-1** means the update operation fails.The number of updated data records is not returned if the APIs of the database in use(for example, KVDB) do not support this return. |
+| Promise<Record<string, Array<number>>> | Promise used to return an array of updated data records. The value **-1** means the update operation fails.The number of updated data records is not returned if the APIs of the database in use(for example, KVDB) do not support this return. |
 
 **错误码：**
 
@@ -307,6 +321,8 @@ close(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-close(): Promise<void>--><!--Device-DataShareHelper-close(): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -315,13 +331,13 @@ close(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 19+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
 | [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. |
 
 **示例：**
@@ -347,6 +363,8 @@ delTemplate(uri: string, subscriberId: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-delTemplate(uri: string, subscriberId: string): void--><!--Device-DataShareHelper-delTemplate(uri: string, subscriberId: string): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -362,7 +380,7 @@ delTemplate(uri: string, subscriberId: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
@@ -406,6 +424,8 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callbac
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -416,13 +436,13 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callbac
 | --- | --- | --- | --- |
 | uri | string | 是 | 要删除的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。<br />delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当从数据库中删除一条或多条数据记录成功，err为undefined，data为获取到的已删除的数据记录数；否则为错误对象。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回删除的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当从数据库中删除一条或多条数据记录成功，err为undefined，data为获取到的已删除的数据记录数；否则为错误对象。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回删除的数据记录数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -469,6 +489,8 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promis
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>--><!--Device-DataShareHelper-delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -484,13 +506,13 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promis
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回已删除的数据记录数。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回删除的数据记录数。 |
+| Promise<number> | Promise对象。返回已删除的数据记录数。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回删除的数据记录数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -531,6 +553,8 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -540,13 +564,13 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要反规范化的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-c.md)。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数。当将指定的URI转换为非规范化URI，err为undefined，data为获取到的反规范化URI（如果反规范化成功，则返回反规范化的URI；如果无需进行反规范化，则返回原始URI；若不支持则返回空）；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数。当将指定的URI转换为非规范化URI，err为undefined，data为获取到的反规范化URI（如果反规范化成功，则返回反规范化的URI；如果无需进行反规范化，则返回原始URI；若不支持则返回空）；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**适用版本：** 12+ |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -580,6 +604,8 @@ denormalizeUri(uri: string): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-denormalizeUri(uri: string): Promise<string>--><!--Device-DataShareHelper-denormalizeUri(uri: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -594,13 +620,13 @@ denormalizeUri(uri: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。如果反规范化成功，则返回反规范化的URI；如果无需执行任何操作，则返回原始URI；若不支持则返回空。 |
+| Promise<string> | Promise对象。如果反规范化成功，则返回反规范化的URI；如果无需执行任何操作，则返回原始URI；若不支持则返回空。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**适用版本：** 12+ |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -634,6 +660,8 @@ getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem>>): void--><!--Device-DataShareHelper-getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem>>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -643,13 +671,13 @@ getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示数据所属的APP。 |
-| callback | AsyncCallback&lt;Array&lt;PublishedItem&gt;&gt; | 是 | 回调函数，返回给定的APP和模板发布的数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<PublishedItem>> | 是 | 回调函数，返回给定的APP和模板发布的数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area does not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
@@ -682,6 +710,8 @@ getPublishedData(bundleName: string): Promise<Array<PublishedItem>>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-getPublishedData(bundleName: string): Promise<Array<PublishedItem>>--><!--Device-DataShareHelper-getPublishedData(bundleName: string): Promise<Array<PublishedItem>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -696,13 +726,13 @@ getPublishedData(bundleName: string): Promise<Array<PublishedItem>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;PublishedItem&gt;&gt; | Promise对象，返回给定的APP和模板发布的数据。 |
+| Promise<Array<PublishedItem>> | Promise对象，返回给定的APP和模板发布的数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area does not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
@@ -732,6 +762,8 @@ insert(uri: string, value: ValuesBucket, callback: AsyncCallback<number>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket, callback: AsyncCallback<int>): void--><!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket, callback: AsyncCallback<int>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -741,14 +773,14 @@ insert(uri: string, value: ValuesBucket, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要插入的数据的路径。 |
-| value | ValuesBucket | 是 | 要插入的数据的值。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当将单条数据插入数据库成功，err为undefined，data为获取到的插入数据记录的索引；否则为错误对象。<br />因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此callback也无法返回索引值。 |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当将单条数据插入数据库成功，err为undefined，data为获取到的插入数据记录的索引；否则为错误对象。<br />因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此callback也无法返回索引值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -804,6 +836,8 @@ insert(uri: string, value: ValuesBucket): Promise<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket): Promise<int>--><!--Device-DataShareHelper-insert(uri: string, value: ValuesBucket): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -813,19 +847,19 @@ insert(uri: string, value: ValuesBucket): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要插入的数据的路径。 |
-| value | ValuesBucket | 是 | 要插入的数据的值。 |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回插入数据记录的索引。<br />因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此Promise也无法返回索引值。 |
+| Promise<number> | Promise对象。返回插入数据记录的索引。<br />因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此Promise也无法返回索引值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -875,6 +909,8 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -884,13 +920,13 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要规范化的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-c.md)。 |
-| callback | AsyncCallback&lt;string&gt; | 是 | 回调函数。当将给定的DataShare URI转换为规范化URI成功，err为undefined，data为获取到的规范化URI（如果支持URI规范化，则返回规范化URI，否则返回空）；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | 是 | 回调函数。当将给定的DataShare URI转换为规范化URI成功，err为undefined，data为获取到的规范化URI（如果支持URI规范化，则返回规范化URI，否则返回空）；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**适用版本：** 12+ |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -924,6 +960,8 @@ normalizeUri(uri: string): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-normalizeUri(uri: string): Promise<string>--><!--Device-DataShareHelper-normalizeUri(uri: string): Promise<string>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -938,13 +976,13 @@ normalizeUri(uri: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。如果支持URI规范化，则返回规范化URI，否则返回空。 |
+| Promise<string> | Promise对象。如果支持URI规范化，则返回规范化URI，否则返回空。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**适用版本：** 12+ |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -978,6 +1016,8 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void--><!--Device-DataShareHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -987,13 +1027,13 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示指定的数据路径。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当通知已注册的观察者指定URI对应的数据资源已发生变更成功，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当通知已注册的观察者指定URI对应的数据资源已发生变更成功，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Mandatory parameters are left unspecified.<br>**适用版本：** 12+ |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1023,6 +1063,8 @@ notifyChange(uri: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-notifyChange(uri: string): Promise<void>--><!--Device-DataShareHelper-notifyChange(uri: string): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1037,13 +1079,13 @@ notifyChange(uri: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Mandatory parameters are left unspecified.<br>**适用版本：** 12+ |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1071,6 +1113,8 @@ notifyChange(data: ChangeInfo): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-notifyChange(data: ChangeInfo): Promise<void>--><!--Device-DataShareHelper-notifyChange(data: ChangeInfo): Promise<void>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1079,13 +1123,13 @@ notifyChange(data: ChangeInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | ChangeInfo | 是 | 表示数据变更类型、变化的uri、变更的数据内容。 |
+| data | [ChangeInfo](arkts-arkdata-changeinfo-i-sys.md) | 是 | 表示数据变更类型、变化的uri、变更的数据内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise<void> | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1120,12 +1164,13 @@ if (dataShareHelper != undefined) {
 off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 ```
 
-取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口
-[on](arkts-arkdata-datasharehelper-i-sys.md#on-1)相对应。
+取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口[on](arkts-arkdata-datasharehelper-i-sys.md#on-1)相对应。
 
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void--><!--Device-DataShareHelper-off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1137,13 +1182,13 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | type | 'dataChange' | 是 | 取消订阅的事件/回调类型，支持的事件为'dataChange'。 |
 | uri | string | 是 | 表示指定的数据路径。 |
-| callback | AsyncCallback&lt;void&gt; | 否 | 表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 否 | 表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**适用版本：** 12+ |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1167,13 +1212,13 @@ if (dataShareHelper != undefined) {
 off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void
 ```
 
-取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口
-[on](arkts-arkdata-datasharehelper-i-sys.md#on-2)
-相对应。
+取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口[on](arkts-arkdata-datasharehelper-i-sys.md#on-2)相对应。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void--><!--Device-DataShareHelper-off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1184,9 +1229,9 @@ off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取消订阅的事件/回调类型，支持的事件为'dataChange'。 |
-| type | SubscriptionType | 是 | 表示数据更改时按指定数据路径通知变更。 |
+| type | [SubscriptionType](arkts-arkdata-subscriptiontype-e-sys.md) | 是 | 表示数据更改时按指定数据路径通知变更。 |
 | uri | string | 是 | 表示指定的数据路径。 |
-| callback | AsyncCallback&lt;ChangeInfo&gt; | 否 | 表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。如果不为空，传入的callback必须和注册为同一个。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ChangeInfo> | 否 | 表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。如果不为空，传入的callback必须和注册为同一个。 |
 
 **错误码：**
 
@@ -1229,6 +1274,18 @@ off(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-off(
+       type: 'rdbDataChange',
+       uris: Array<string>,
+       templateId: TemplateId,
+       callback?: AsyncCallback<RdbDataChangeNode>
+     ): Array<OperationResult>--><!--Device-DataShareHelper-off(
+       type: 'rdbDataChange',
+       uris: Array<string>,
+       templateId: TemplateId,
+       callback?: AsyncCallback<RdbDataChangeNode>
+     ): Array<OperationResult>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1238,21 +1295,21 @@ off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'rdbDataChange' | 是 | 取消订阅的事件类型，支持的事件为'rdbDataChange'，表示rdb数据的变更事件。 |
-| uris | Array&lt;string&gt; | 是 | 要操作的数据的路径。 |
-| templateId | TemplateId | 是 | 处理回调的templateId。 |
-| callback | AsyncCallback&lt;RdbDataChangeNode&gt; | 否 | 回调函数。表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。 |
+| uris | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 要操作的数据的路径。 |
+| templateId | [TemplateId](arkts-arkdata-templateid-i-sys.md) | 是 | 处理回调的templateId。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RdbDataChangeNode> | 否 | 回调函数。表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<OperationResult> | 返回操作结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1284,6 +1341,18 @@ off(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-off(
+       type: 'publishedDataChange',
+       uris: Array<string>,
+       subscriberId: string,
+       callback?: AsyncCallback<PublishedDataChangeNode>
+     ): Array<OperationResult>--><!--Device-DataShareHelper-off(
+       type: 'publishedDataChange',
+       uris: Array<string>,
+       subscriberId: string,
+       callback?: AsyncCallback<PublishedDataChangeNode>
+     ): Array<OperationResult>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1293,21 +1362,21 @@ off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishedDataChange' | 是 | 取消订阅的事件类型，支持的事件为'publishedDataChange'，表示已发布数据的变更事件。 |
-| uris | Array&lt;string&gt; | 是 | 要操作的数据的路径。 |
+| uris | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 要操作的数据的路径。 |
 | subscriberId | string | 是 | 指定处理回调的用户ID。 |
-| callback | AsyncCallback&lt;PublishedDataChangeNode&gt; | 否 | 回调函数。表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PublishedDataChangeNode> | 否 | 回调函数。表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<OperationResult> | 返回操作结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1333,15 +1402,15 @@ if (dataShareHelper != undefined) {
 on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。若订阅者已注册了观察者，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知。使用callback异步回调。该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限
-为51次。
+订阅指定URI对应数据的数据变更事件。若订阅者已注册了观察者，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知。使用callback异步回调。该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
 
-触发通知：非静默场景下，调用[notifyChange](arkts-arkdata-datasharehelper-i-sys.md#notifychange-2)方法，就会触发对指定URI订阅者的通知；或者静默场景
-下，使用指定URI的静默访问修改了数据，也会自动触发通知。
+触发通知：非静默场景下，调用[notifyChange](arkts-arkdata-datasharehelper-i-sys.md#notifychange-2)方法，就会触发对指定URI订阅者的通知；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知。
 
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void--><!--Device-DataShareHelper-on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1353,13 +1422,13 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | type | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'，当数据更改时，触发该事件。 |
 | uri | string | 是 | 表示指定的数据路径。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当有其他用户触发了变更通知时调用，err为undefined；否则不被触发或为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当有其他用户触发了变更通知时调用，err为undefined；否则不被触发或为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types.<br>**适用版本：** 12+ |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1382,15 +1451,15 @@ if (dataShareHelper !== undefined) {
 on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。若订阅者已注册变更通知，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知，通知携带数据变更类型、变化的uri、变更的数据内容。使用callback回调。该功能不支持跨用
-户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
+订阅指定URI对应数据的数据变更事件。若订阅者已注册变更通知，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知，通知携带数据变更类型、变化的uri、变更的数据内容。使用callback回调。该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
 
-触发通知：非静默场景下，调用[notifyChange](arkts-arkdata-datasharehelper-i-sys.md#notifychange-3)方法，就会触发对指定URI订阅者的通知；或
-者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知, 但此时callback通知中的changeInfo无效。
+触发通知：非静默场景下，调用[notifyChange](arkts-arkdata-datasharehelper-i-sys.md#notifychange-3)方法，就会触发对指定URI订阅者的通知；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知, 但此时callback通知中的changeInfo无效。
 
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void--><!--Device-DataShareHelper-on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1401,9 +1470,9 @@ on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 订阅的事件/回调类型，支持的事件为'dataChange'，当有其他用户触发了变更通知时，触发该事件。 |
-| type | SubscriptionType | 是 | 表示数据更改时按指定数据路径通知变更。 |
+| type | [SubscriptionType](arkts-arkdata-subscriptiontype-e-sys.md) | 是 | 表示数据更改时按指定数据路径通知变更。 |
 | uri | string | 是 | 表示指定的数据路径。 |
-| callback | AsyncCallback&lt;ChangeInfo&gt; | 是 | 回调函数。当有其他用户触发了变更通知时会回调该函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<ChangeInfo> | 是 | 回调函数。当有其他用户触发了变更通知时会回调该函数。 |
 
 **错误码：**
 
@@ -1445,6 +1514,18 @@ on(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-on(
+       type: 'rdbDataChange',
+       uris: Array<string>,
+       templateId: TemplateId,
+       callback: AsyncCallback<RdbDataChangeNode>
+     ): Array<OperationResult>--><!--Device-DataShareHelper-on(
+       type: 'rdbDataChange',
+       uris: Array<string>,
+       templateId: TemplateId,
+       callback: AsyncCallback<RdbDataChangeNode>
+     ): Array<OperationResult>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1454,21 +1535,21 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'rdbDataChange' | 是 | 订阅的事件类型，支持的事件为'rdbDataChange'，表示rdb数据的变更事件。type是固定值以外时，接口无响应。 |
-| uris | Array&lt;string&gt; | 是 | 要操作的数据的路径。 |
-| templateId | TemplateId | 是 | 处理回调的templateId。 |
-| callback | AsyncCallback&lt;RdbDataChangeNode&gt; | 是 | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为错误对象。 |
+| uris | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 要操作的数据的路径。 |
+| templateId | [TemplateId](arkts-arkdata-templateid-i-sys.md) | 是 | 处理回调的templateId。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<RdbDataChangeNode> | 是 | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为错误对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<OperationResult> | 返回操作结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1515,6 +1596,18 @@ on(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-on(
+       type: 'publishedDataChange',
+       uris: Array<string>,
+       subscriberId: string,
+       callback: AsyncCallback<PublishedDataChangeNode>
+     ): Array<OperationResult>--><!--Device-DataShareHelper-on(
+       type: 'publishedDataChange',
+       uris: Array<string>,
+       subscriberId: string,
+       callback: AsyncCallback<PublishedDataChangeNode>
+     ): Array<OperationResult>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1524,21 +1617,21 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'publishedDataChange' | 是 | 订阅的事件类型，支持的事件为'publishedDataChange'，表示已发布数据的变更事件。 |
-| uris | Array&lt;string&gt; | 是 | 要操作的数据的路径。 |
+| uris | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 要操作的数据的路径。 |
 | subscriberId | string | 是 | 指定处理回调的用户ID。 |
-| callback | AsyncCallback&lt;PublishedDataChangeNode&gt; | 是 | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<PublishedDataChangeNode> | 是 | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为错误对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<OperationResult> | 返回操作结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1587,6 +1680,18 @@ publish(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-publish(
+       data: Array<PublishedItem>,
+       bundleName: string,
+       version: int,
+       callback: AsyncCallback<Array<OperationResult>>
+     ): void--><!--Device-DataShareHelper-publish(
+       data: Array<PublishedItem>,
+       bundleName: string,
+       version: int,
+       callback: AsyncCallback<Array<OperationResult>>
+     ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1595,16 +1700,16 @@ publish(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Array&lt;PublishedItem&gt; | 是 | 要发布的数据。 |
+| data | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<PublishedItem> | 是 | 要发布的数据。 |
 | bundleName | string | 是 | 表示要发布数据所属的APP，对发布的私有数据生效，仅该app可以读取数据。 |
 | version | number | 是 | 要发布的数据版本，越大表示数据版本越新。如果发布的版本号小于数据库中的记录，则更新失败。 |
-| callback | AsyncCallback&lt;Array&lt;OperationResult&gt;&gt; | 是 | 回调函数。当发布数据时调用，err为undefined，result为发布数据结果；否则不被触发或为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<OperationResult>> | 是 | 回调函数。当发布数据时调用，err为undefined，result为发布数据结果；否则不被触发或为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
@@ -1649,6 +1754,16 @@ publish(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-publish(
+       data: Array<PublishedItem>,
+       bundleName: string,
+       callback: AsyncCallback<Array<OperationResult>>
+     ): void--><!--Device-DataShareHelper-publish(
+       data: Array<PublishedItem>,
+       bundleName: string,
+       callback: AsyncCallback<Array<OperationResult>>
+     ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1657,15 +1772,15 @@ publish(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Array&lt;PublishedItem&gt; | 是 | 要发布的数据。 |
+| data | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<PublishedItem> | 是 | 要发布的数据。 |
 | bundleName | string | 是 | 表示要发布数据所属的APP，对发布的私有数据生效，仅该app可以读取数据。 |
-| callback | AsyncCallback&lt;Array&lt;OperationResult&gt;&gt; | 是 | 回调函数。当发布数据时调用，err为undefined，result为发布数据结果；否则不被触发或为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<OperationResult>> | 是 | 回调函数。当发布数据时调用，err为undefined，result为发布数据结果；否则不被触发或为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
@@ -1702,6 +1817,8 @@ publish(data: Array<PublishedItem>, bundleName: string, version?: number): Promi
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-publish(data: Array<PublishedItem>, bundleName: string, version?: int): Promise<Array<OperationResult>>--><!--Device-DataShareHelper-publish(data: Array<PublishedItem>, bundleName: string, version?: int): Promise<Array<OperationResult>>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1710,7 +1827,7 @@ publish(data: Array<PublishedItem>, bundleName: string, version?: number): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Array&lt;PublishedItem&gt; | 是 | 要发布的数据。 |
+| data | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<PublishedItem> | 是 | 要发布的数据。 |
 | bundleName | string | 是 | 表示要发布数据所属的APP，对发布的私有数据生效，仅该app可以读取数据。 |
 | version | number | 否 | 要发布的数据版本，越大表示数据版本越新。如果发布的版本号小于数据库中的记录，则更新失败。 如果不检查要发布的数据版本，则不填。 |
 
@@ -1718,13 +1835,13 @@ publish(data: Array<PublishedItem>, bundleName: string, version?: number): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;OperationResult&gt;&gt; | 发布数据结果。 |
+| Promise<Array<OperationResult>> | 发布数据结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area is not exist. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
@@ -1759,13 +1876,23 @@ query(
 
 静默场景下，调用此接口时，传入的uri、predicates和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
-使用此接口查询数据库数据时，如查询内容达到资源上限，操作将失败并返回错误，用户可根据场景考虑重试。有关于资源上限的详细说明，请参见
-[通过数据管理服务实现数据共享静默访问](../../../../database/share-data-by-silent-access-sys.md#约束与限制)和
-[通过DataShareExtensionAbility实现数据共享](../../../../database/share-data-by-datashareextensionability-sys.md#约束与限制)。
+使用此接口查询数据库数据时，如查询内容达到资源上限，操作将失败并返回错误，用户可根据场景考虑重试。有关于资源上限的详细说明，请参见[通过数据管理服务实现数据共享静默访问](../../../../database/share-data-by-silent-access-sys.md#约束与限制)和[通过DataShareExtensionAbility实现数据共享](../../../../database/share-data-by-datashareextensionability-sys.md#约束与限制)。
 
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-query(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       columns: Array<string>,
+       callback: AsyncCallback<DataShareResultSet>
+     ): void--><!--Device-DataShareHelper-query(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       columns: Array<string>,
+       callback: AsyncCallback<DataShareResultSet>
+     ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1777,14 +1904,14 @@ query(
 | --- | --- | --- | --- |
 | uri | string | 是 | 要查询的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。<br />query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
-| columns | Array&lt;string&gt; | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
-| callback | AsyncCallback&lt;DataShareResultSet&gt; | 是 | 回调函数。当查询数据库中的数据成功，err为undefined，data为获取到的查询到的结果集；否则为错误对象。 |
+| columns | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DataShareResultSet> | 是 | 回调函数。当查询数据库中的数据成功，err为undefined，data为获取到的查询到的结果集；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1832,13 +1959,21 @@ query(
 
 静默场景下，调用此接口时，传入的uri、predicates和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
 
-使用此接口查询数据库数据时，如查询内容达到资源上限，操作将失败并返回错误，用户可根据场景考虑重试。有关于资源上限的详细说明，请参见
-[通过数据管理服务实现数据共享静默访问](../../../../database/share-data-by-silent-access-sys.md#约束与限制)和
-[通过DataShareExtensionAbility实现数据共享](../../../../database/share-data-by-datashareextensionability-sys.md#约束与限制)。
+使用此接口查询数据库数据时，如查询内容达到资源上限，操作将失败并返回错误，用户可根据场景考虑重试。有关于资源上限的详细说明，请参见[通过数据管理服务实现数据共享静默访问](../../../../database/share-data-by-silent-access-sys.md#约束与限制)和[通过DataShareExtensionAbility实现数据共享](../../../../database/share-data-by-datashareextensionability-sys.md#约束与限制)。
 
 **起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareHelper-query(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       columns: Array<string>
+     ): Promise<DataShareResultSet>--><!--Device-DataShareHelper-query(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       columns: Array<string>
+     ): Promise<DataShareResultSet>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1850,19 +1985,19 @@ query(
 | --- | --- | --- | --- |
 | uri | string | 是 | 要查询的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。<br />query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
-| columns | Array&lt;string&gt; | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
+| columns | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 要查询的列。如果此参数为空，则查询所有列。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataShareResultSet&gt; | Promise对象。返回查询到的结果集。 |
+| Promise<DataShareResultSet> | Promise对象。返回查询到的结果集。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1913,6 +2048,18 @@ update(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-update(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       value: ValuesBucket,
+       callback: AsyncCallback<int>
+     ): void--><!--Device-DataShareHelper-update(
+       uri: string,
+       predicates: dataSharePredicates.DataSharePredicates,
+       value: ValuesBucket,
+       callback: AsyncCallback<int>
+     ): void-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1923,14 +2070,14 @@ update(
 | --- | --- | --- | --- |
 | uri | string | 是 | 要更新的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。<br />update接口是否支持谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
-| value | ValuesBucket | 是 | 要更新的数据的值。 |
-| callback | AsyncCallback&lt;number&gt; | 是 | 回调函数。当更新数据库中的数据记录成功，err为undefined，data为获取到的更新的数据记录数；否则为错误对象。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回更新的数据记录数。 |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | 是 | 回调函数。当更新数据库中的数据记录成功，err为undefined，data为获取到的更新的数据记录数；否则为错误对象。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回更新的数据记录数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 
@@ -1988,6 +2135,8 @@ update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: 
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-DataShareHelper-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>--><!--Device-DataShareHelper-update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>-End-->
+
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
 **系统接口：** 此接口为系统接口。
@@ -1998,19 +2147,19 @@ update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: 
 | --- | --- | --- | --- |
 | uri | string | 是 | 要更新的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。<br />update接口是否支持谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
-| value | ValuesBucket | 是 | 要更新的数据的值。 |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回更新的数据记录数。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回更新的数据记录数。 |
+| Promise<number> | Promise对象。返回更新的数据记录数。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回更新的数据记录数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a systemAPI.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameters types. |
 | [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
 

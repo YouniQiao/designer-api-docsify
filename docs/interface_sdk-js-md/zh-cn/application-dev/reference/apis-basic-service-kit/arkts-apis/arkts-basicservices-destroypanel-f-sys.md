@@ -1,5 +1,11 @@
 # destroyPanel（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { selectionManager } from '@kit.BasicServicesKit';
+```
+
 ## destroyPanel
 
 ```TypeScript
@@ -12,6 +18,8 @@ function destroyPanel(panel: Panel): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-selectionManager-function destroyPanel(panel: Panel): Promise<void>--><!--Device-selectionManager-function destroyPanel(panel: Panel): Promise<void>-End-->
+
 **系统能力：** SystemCapability.SelectionInput.Selection
 
 **系统接口：** 此接口为系统接口。
@@ -20,13 +28,13 @@ function destroyPanel(panel: Panel): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| panel | Panel | 是 | 要销毁的面板对象。 |
+| panel | [Panel](arkts-basicservices-panel-i-sys.md) | 是 | 要销毁的面板对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise<void> | Promise对象，无返回结果。 |
 
 **错误码：**
 

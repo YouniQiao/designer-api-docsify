@@ -4,6 +4,8 @@ Provides methods for managing the web cookies.
 
 **Since:** 9
 
+<!--Device-webview-class WebCookieManager--><!--Device-webview-class WebCookieManager-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Remove all cookies Asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static clearAllCookies(): Promise<void>--><!--Device-WebCookieManager-static clearAllCookies(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - A promise resolved after the cookies have been deleted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - A promise resolved after the cookies have been deleted. |
 
 **Error codes:**
 
@@ -50,13 +54,15 @@ Remove all cookies Asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static clearAllCookies(callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static clearAllCookies(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Called after the cookies have been deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Called after the cookies have been deleted. |
 
 **Error codes:**
 
@@ -75,6 +81,8 @@ Remove all cookies.
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebCookieManager-static clearAllCookiesSync(incognito?: boolean): void--><!--Device-WebCookieManager-static clearAllCookiesSync(incognito?: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -96,13 +104,15 @@ Delete the session cookies Asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static clearSessionCookie(): Promise<void>--><!--Device-WebCookieManager-static clearSessionCookie(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - A promise resolved after the cookies have been deleted. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - A promise resolved after the cookies have been deleted. |
 
 **Error codes:**
 
@@ -122,13 +132,15 @@ Delete the session cookies Asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static clearSessionCookie(callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static clearSessionCookie(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Called after the cookies have been deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Called after the cookies have been deleted. |
 
 **Error codes:**
 
@@ -148,6 +160,8 @@ Delete the session cookies.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static clearSessionCookieSync(): void--><!--Device-WebCookieManager-static clearSessionCookieSync(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## configCookie
@@ -162,6 +176,8 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static configCookie(url: string, value: string): Promise<void>--><!--Device-WebCookieManager-static configCookie(url: string, value: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -175,7 +191,7 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - A promise resolved after the cookies of given URL have been set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - A promise resolved after the cookies of given URL have been set. |
 
 **Error codes:**
 
@@ -195,6 +211,8 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 **Since:** 14
 
+<!--Device-WebCookieManager-static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>--><!--Device-WebCookieManager-static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -203,14 +221,14 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 | --- | --- | --- | --- |
 | url | string | Yes | The URL for which the cookie is to be set. |
 | value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| incognito | boolean | Yes | {@code true} set a single cookie (key-value pair) for the given URLin incognito mode; {@code false} otherwise. |
+| incognito | boolean | Yes | {@code true} set a single cookie (key-value pair) for the given URL in incognito mode; {@code false} otherwise. |
 | includeHttpOnly | boolean | Yes | {@code true} HTTP-only cookies can also be overwritten;{@code false} otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - A promise resolved after the cookies of given URL have been set. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - A promise resolved after the cookies of given URL have been set. |
 
 **Error codes:**
 
@@ -232,6 +250,8 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static configCookie(url: string, value: string, callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static configCookie(url: string, value: string, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -240,7 +260,7 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 | --- | --- | --- | --- |
 | url | string | Yes | The URL for which the cookie is to be set. |
 | value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Called after the cookies have been set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Called after the cookies have been set. |
 
 **Error codes:**
 
@@ -258,31 +278,33 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 
 Set a single cookie (key-value pair) for the given URL.
 
-> **NOTE**
->
-> You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on
-> the page.
->
-> Cookies are periodically saved to the disk every 30s. You can also use the
-> **saveCookieAsync** API to forcibly save cookies to the disk.
->
-> The **value** parameter must comply with the format of the Set-Cookie HTTP response header. The value is in the
-> format of "key=value", followed by a list of cookie attributes separated by semicolons, for example,
-> **"key=value;Max-Age=100"**.
->
-> If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie has
-> expired, it will not be stored. To set multiple cookies, call this method multiple times.
->
-> If **configCookieSync()** is used to set cookies for two or more times, the cookies set each time are separated
-> by semicolons.
->
-> If the specified value contains the **Secure** attribute, the URL must use the **https://** protocol.
->
+> **NOTE**  
+>  
+> You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on  
+> the page.  
+>  
+> Cookies are periodically saved to the disk every 30s. You can also use the  
+> **saveCookieAsync** API to forcibly save cookies to the disk.  
+>  
+> The **value** parameter must comply with the format of the Set-Cookie HTTP response header. The value is in the  
+> format of "key=value", followed by a list of cookie attributes separated by semicolons, for example,  
+> **"key=value;Max-Age=100"**.  
+>  
+> If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie has  
+> expired, it will not be stored. To set multiple cookies, call this method multiple times.  
+>  
+> If **configCookieSync()** is used to set cookies for two or more times, the cookies set each time are separated  
+> by semicolons.  
+>  
+> If the specified value contains the **Secure** attribute, the URL must use the **https://** protocol.  
+>  
 > To override HttpOnly cookies, the HttpOnly attribute must be specified in the value.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito?: boolean): void--><!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito?: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -292,7 +314,7 @@ Set a single cookie (key-value pair) for the given URL.
 | --- | --- | --- | --- |
 | url | string | Yes | The URL for which the cookie is to be set. |
 | value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| incognito | boolean | No | {@code true} set a single cookie (key-value pair) for the given URLin incognito mode; {@code false} otherwise. |
+| incognito | boolean | No | {@code true} set a single cookie (key-value pair) for the given URL in incognito mode; {@code false} otherwise. |
 
 **Error codes:**
 
@@ -310,29 +332,31 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 
 Set a single cookie (key-value pair) for the given URL.
 
-> **NOTE**
->
-> You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on
-> the page.
->
-> It is recommended that cookie syncing be completed before the **Web** component is loaded.
->
-> Cookies are periodically saved to the disk every 30s. You can also use the
-> **saveCookieAsync** API to forcibly save cookies to the disk.
->
-> The **value** parameter must comply with the format of the Set-Cookie HTTP response header. The value is in the
-> format of "key=value", followed by a list of cookie attributes separated by semicolons, for example,
-> **"key=value;Max-Age=100"**.
->
-> If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie has
-> expired, it will not be stored. To set multiple cookies, call this method multiple times.
->
-> If **configCookieSync()** is used to set cookies for two or more times, the cookies set each time are separated
-> by semicolons.
->
+> **NOTE**  
+>  
+> You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on  
+> the page.  
+>  
+> It is recommended that cookie syncing be completed before the **Web** component is loaded.  
+>  
+> Cookies are periodically saved to the disk every 30s. You can also use the  
+> **saveCookieAsync** API to forcibly save cookies to the disk.  
+>  
+> The **value** parameter must comply with the format of the Set-Cookie HTTP response header. The value is in the  
+> format of "key=value", followed by a list of cookie attributes separated by semicolons, for example,  
+> **"key=value;Max-Age=100"**.  
+>  
+> If a cookie with the same host, path, and name exists, it will be replaced by the new cookie. If the cookie has  
+> expired, it will not be stored. To set multiple cookies, call this method multiple times.  
+>  
+> If **configCookieSync()** is used to set cookies for two or more times, the cookies set each time are separated  
+> by semicolons.  
+>  
 > If the specified value contains the **Secure** attribute, the URL must use the **https://** protocol.
 
 **Since:** 14
+
+<!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void--><!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -342,7 +366,7 @@ Set a single cookie (key-value pair) for the given URL.
 | --- | --- | --- | --- |
 | url | string | Yes | The URL for which the cookie is to be set. |
 | value | string | Yes | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| incognito | boolean | Yes | {@code true} set a single cookie (key-value pair) for the given URLin incognito mode; {@code false} otherwise. |
+| incognito | boolean | Yes | {@code true} set a single cookie (key-value pair) for the given URL in incognito mode; {@code false} otherwise. |
 | includeHttpOnly | boolean | Yes | {@code true} HTTP-only cookies can also be overwritten;{@code false} otherwise. |
 
 **Error codes:**
@@ -367,6 +391,8 @@ Remove all cookies.
 
 **Substitutes:** clearAllCookiesSync
 
+<!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## deleteSessionCookie
@@ -383,6 +409,8 @@ Delete the session cookies.
 
 **Substitutes:** clearSessionCookieSync
 
+<!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## existCookie
@@ -396,6 +424,8 @@ Check whether exists any cookies.
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebCookieManager-static existCookie(incognito?: boolean): boolean--><!--Device-WebCookieManager-static existCookie(incognito?: boolean): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -421,6 +451,8 @@ Fetches all stored cookies asynchronously.
 
 **Since:** 23
 
+<!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>--><!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -433,7 +465,7 @@ Fetches all stored cookies asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WebHttpCookie&gt;&gt; | - A promise resolved after the cookies gotten. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<WebHttpCookie>> | - A promise resolved after the cookies gotten. |
 
 ## fetchCookie
 
@@ -447,6 +479,8 @@ Gets all cookies for the given URL Asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static fetchCookie(url: string): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -459,7 +493,7 @@ Gets all cookies for the given URL Asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | - A promise resolved after the cookies of given URL have been gotten. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | - A promise resolved after the cookies of given URL have been gotten. |
 
 **Error codes:**
 
@@ -478,6 +512,8 @@ Gets all cookies for the given URL Asynchronously.
 
 **Since:** 14
 
+<!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean): Promise<string>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -485,13 +521,13 @@ Gets all cookies for the given URL Asynchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | The URL for which the cookies are requested. |
-| incognito | boolean | Yes | {@code true} gets all cookies for the given URLin incognito mode; {@code false} otherwise. |
+| incognito | boolean | Yes | {@code true} gets all cookies for the given URL in incognito mode; {@code false} otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | - A promise resolved after the cookies of given URL have been gotten. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | - A promise resolved after the cookies of given URL have been gotten. |
 
 **Error codes:**
 
@@ -512,6 +548,8 @@ Gets all cookies for the given URL Asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static fetchCookie(url: string, callback: AsyncCallback<string>): void--><!--Device-WebCookieManager-static fetchCookie(url: string, callback: AsyncCallback<string>): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -519,7 +557,7 @@ Gets all cookies for the given URL Asynchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | The URL for which the cookies are requested. |
-| callback | AsyncCallback&lt;string&gt; | Yes | Called after the cookies of given URL have been gotten. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<string> | Yes | Called after the cookies of given URL have been gotten. |
 
 **Error codes:**
 
@@ -540,6 +578,8 @@ Gets all cookies for the given URL Asynchronously.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: boolean): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: boolean): Promise<string>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
@@ -554,7 +594,7 @@ Gets all cookies for the given URL Asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | A promise resolved with the cookie string. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | A promise resolved with the cookie string. |
 
 **Error codes:**
 
@@ -572,13 +612,13 @@ Gets all cookies for the given URL.
 
 <p><strong>API Note</strong>:<br>
 
-**fetchCookieSync()** is used to obtain all cookie values. Cookie values are separated by semicolons. However,
-a specific cookie value cannot be obtained separately.
-</p>
+**fetchCookieSync()** is used to obtain all cookie values. Cookie values are separated by semicolons. However,a specific cookie value cannot be obtained separately.</p>
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebCookieManager-static fetchCookieSync(url: string, incognito?: boolean): string--><!--Device-WebCookieManager-static fetchCookieSync(url: string, incognito?: boolean): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -587,7 +627,7 @@ a specific cookie value cannot be obtained separately.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | The URL for which the cookies are requested. |
-| incognito | boolean | No | {@code true} gets all cookies for the given URLin incognito mode; {@code false} otherwise. |
+| incognito | boolean | No | {@code true} gets all cookies for the given URL in incognito mode; {@code false} otherwise. |
 
 **Return value:**
 
@@ -612,12 +652,13 @@ Gets all cookies for the given URL.
 
 <strong>API Note</strong>:<br>
 
-**fetchCookieSync()** is used to obtain all cookie values. Cookie values are separated by semicolons. However,
-a specific cookie value cannot be obtained separately.
+**fetchCookieSync()** is used to obtain all cookie values. Cookie values are separated by semicolons. However,a specific cookie value cannot be obtained separately.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebCookieManager-static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCookies?: boolean): string--><!--Device-WebCookieManager-static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCookies?: boolean): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -626,7 +667,7 @@ a specific cookie value cannot be obtained separately.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | The URL for which the cookies are requested. |
-| incognito | boolean | No | {@code true} gets all cookies for the given URLin incognito mode; {@code false} otherwise. Default is false. |
+| incognito | boolean | No | {@code true} gets all cookies for the given URL in incognito mode; {@code false} otherwise. Default is false. |
 | includePartitionedCookies | boolean | No | If true, allows fetching first-party partitioned cookies.Default is false. |
 
 **Return value:**
@@ -654,6 +695,8 @@ Gets all cookies for the given URL.
 **Deprecated since:** 11
 
 **Substitutes:** fetchCookieSync
+
+<!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -688,6 +731,8 @@ Get whether the instance can send and accept cookies.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static isCookieAllowed(): boolean--><!--Device-WebCookieManager-static isCookieAllowed(): boolean-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -708,6 +753,8 @@ Get whether the instance can send and accept thirdparty cookies.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static isThirdPartyCookieAllowed(): boolean--><!--Device-WebCookieManager-static isThirdPartyCookieAllowed(): boolean-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
@@ -722,12 +769,13 @@ Get whether the instance can send and accept thirdparty cookies.
 static putAcceptCookieEnabled(accept: boolean): void
 ```
 
-Set whether the instance should send and accept cookies.
-By default this is set to be true.
+Set whether the instance should send and accept cookies.By default this is set to be true.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebCookieManager-static putAcceptCookieEnabled(accept: boolean): void--><!--Device-WebCookieManager-static putAcceptCookieEnabled(accept: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -749,12 +797,13 @@ By default this is set to be true.
 static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 ```
 
-Set whether the instance should send and accept thirdparty cookies.
-By default this is set to be false.
+Set whether the instance should send and accept thirdparty cookies.By default this is set to be false.
 
 **Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebCookieManager-static putAcceptThirdPartyCookieEnabled(accept: boolean): void--><!--Device-WebCookieManager-static putAcceptThirdPartyCookieEnabled(accept: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -782,13 +831,15 @@ Save the cookies Asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static saveCookieAsync(): Promise<void>--><!--Device-WebCookieManager-static saveCookieAsync(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - A promise resolved after the cookies have been saved. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - A promise resolved after the cookies have been saved. |
 
 **Error codes:**
 
@@ -808,13 +859,15 @@ Save the cookies Asynchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
+<!--Device-WebCookieManager-static saveCookieAsync(callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static saveCookieAsync(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Web.Webview.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Called after the cookies have been saved. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Called after the cookies have been saved. |
 
 **Error codes:**
 
@@ -830,15 +883,13 @@ static saveCookieSync(): void
 
 Save the cookies synchronously.
 
-<p><strong>API Note</strong>:<br>
-**saveCookieSync** is used to forcibly write cookies that need to be persisted to disks. Session cookies are
-not persisted on PCs, 2-in-1 devices, or tablets, even if **saveCookieSync** is invoked.
+<p><strong>API Note</strong>:<br>**saveCookieSync** is used to forcibly write cookies that need to be persisted to disks. Session cookies are not persisted on PCs, 2-in-1 devices, or tablets, even if **saveCookieSync** is invoked.
 
-**saveCookieSync** blocks the caller until the operation is complete. During this period, I/O operations may be
-performed.
-</p>
+**saveCookieSync** blocks the caller until the operation is complete. During this period, I/O operations may be performed.</p>
 
 **Since:** 15
+
+<!--Device-WebCookieManager-static saveCookieSync(): void--><!--Device-WebCookieManager-static saveCookieSync(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -855,6 +906,8 @@ Set a single cookie (key-value pair) for the given URL.
 **Deprecated since:** 11
 
 **Substitutes:** configCookieSync
+
+<!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -879,12 +932,11 @@ Set a single cookie (key-value pair) for the given URL.
 static setLazyInitializeWebEngine(lazy: boolean): void
 ```
 
-Delays the initialization of the web engine. By default, the web engine is initialized when the CookieManager
-interface is called. By setting the 'lazy' parameter to true, the web engine will not be initialized when the
-CookieManager interface is called. Instead, the web engine will be initialized either when the web component is
-created or when initializeWebEngine is called.
+Delays the initialization of the web engine. By default, the web engine is initialized when the CookieManager interface is called. By setting the 'lazy' parameter to true, the web engine will not be initialized when the CookieManager interface is called. Instead, the web engine will be initialized either when the web component is created or when initializeWebEngine is called.
 
 **Since:** 22
+
+<!--Device-WebCookieManager-static setLazyInitializeWebEngine(lazy: boolean): void--><!--Device-WebCookieManager-static setLazyInitializeWebEngine(lazy: boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

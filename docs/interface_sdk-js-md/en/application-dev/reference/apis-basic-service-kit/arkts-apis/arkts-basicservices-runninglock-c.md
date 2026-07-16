@@ -4,6 +4,8 @@ Defines a **RunningLock** object.
 
 **Since:** 7
 
+<!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 ## Modules to Import
@@ -24,13 +26,15 @@ Holds a running lock.
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
+<!--Device-RunningLock-hold(timeout: int): void--><!--Device-RunningLock-hold(timeout: int): void-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | number | Yes | Duration for locking and holding the **RunningLock** object, in ms.<br>The value must bea number:<br>**-1**: The lock is permanently held and needs to be released automatically.<br>**0**: The lockis released 3 seconds after the timer expires by default.<br>&gt; 0: The lock is released based on the inputvalue after the timer expires. |
+| timeout | number | Yes | Duration for locking and holding the **RunningLock** object, in ms.<br>The value must be a number:<br>**-1**: The lock is permanently held and needs to be released automatically.<br>**0**: The lock is released 3 seconds after the timer expires by default.<br>&gt; 0: The lock is released based on the input value after the timer expires. |
 
 **Error codes:**
 
@@ -81,13 +85,15 @@ Checks whether this running lock is being held.
 
 **Since:** 9
 
+<!--Device-RunningLock-isHolding(): boolean--><!--Device-RunningLock-isHolding(): boolean-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** indicates that the **RunningLock** object is held; and the value**false** indicates that the **RunningLock** object is released. |
+| boolean | The value **true** indicates that the **RunningLock** object is held; and the value **false** indicates that the **RunningLock** object is released. |
 
 **Example**
 
@@ -131,6 +137,8 @@ Checks whether this running lock is used.
 
 **Substitutes:** [isHolding](arkts-basicservices-runninglock-c.md#isholding-1)
 
+<!--Device-RunningLock-isUsed(): boolean--><!--Device-RunningLock-isUsed(): boolean-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Return value:**
@@ -169,6 +177,8 @@ Locks and holds a **RunningLock** object.
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
+<!--Device-RunningLock-lock(timeout: number): void--><!--Device-RunningLock-lock(timeout: number): void-End-->
+
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
 **Parameters:**
@@ -202,6 +212,8 @@ Releases this running lock.
 **Since:** 9
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
+
+<!--Device-RunningLock-unhold(): void--><!--Device-RunningLock-unhold(): void-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 
@@ -258,6 +270,8 @@ Releases this running lock.
 **Substitutes:** [unhold](arkts-basicservices-runninglock-c.md#unhold-1)
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
+
+<!--Device-RunningLock-unlock(): void--><!--Device-RunningLock-unlock(): void-End-->
 
 **System capability:** SystemCapability.PowerManager.PowerManager.Core
 

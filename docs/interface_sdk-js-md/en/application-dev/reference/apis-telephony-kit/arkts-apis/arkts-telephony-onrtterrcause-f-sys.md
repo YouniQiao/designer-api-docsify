@@ -18,6 +18,8 @@ Subscribe to the rtt error event.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
+<!--Device-call-function onRttErrCause(callback: Callback<RttErrorInfo>): void--><!--Device-call-function onRttErrCause(callback: Callback<RttErrorInfo>): void-End-->
+
 **System capability:** SystemCapability.Telephony.CallManager
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Subscribe to the rtt error event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;RttErrorInfo&gt; | Yes | Indicates the callback for getting the rtt error report. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<RttErrorInfo> | Yes | Indicates the callback for getting the rtt error report. |
 
 **Error codes:**
 

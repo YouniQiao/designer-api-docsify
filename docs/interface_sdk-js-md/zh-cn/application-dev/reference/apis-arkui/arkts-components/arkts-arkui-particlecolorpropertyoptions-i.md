@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+<!--Device-unnamed-interface ParticleColorPropertyOptions<UPDATER extends ParticleUpdater>--><!--Device-unnamed-interface ParticleColorPropertyOptions<UPDATER extends ParticleUpdater>-End-->
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## distributionType
@@ -24,7 +26,9 @@ distributionType?: DistributionType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本12开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParticleColorPropertyOptions-distributionType?: DistributionType--><!--Device-ParticleColorPropertyOptions-distributionType?: DistributionType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,7 +48,9 @@ range: ParticleTuple<ResourceColor, ResourceColor>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParticleColorPropertyOptions-range: ParticleTuple<ResourceColor, ResourceColor>--><!--Device-ParticleColorPropertyOptions-range: ParticleTuple<ResourceColor, ResourceColor>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -56,21 +62,17 @@ updater?: ParticleColorUpdaterOptions<UPDATER>
 
 颜色属性变化配置。颜色属性变化类型type有三类：
 
-1、当type为ParticleUpdater.NONE，表示无变化，则config类型为
-[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.NONE]。
+1、当type为ParticleUpdater.NONE，表示无变化，则config类型为[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.NONE]。
 
-2、type为ParticleUpdater.RANDOM，表示随机变化，则config类型为
-[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]。
+2、type为ParticleUpdater.RANDOM，表示随机变化，则config类型为[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]。
 
-3、type为ParticleUpdater.CURVE,表示按动画曲线变化，则config类型为
-[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE]。
+3、type为ParticleUpdater.CURVE,表示按动画曲线变化，则config类型为[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE]。
 
 默认值：type默认为 ParticleUpdater.NONE。
 
 **说明**：
 
-当type为ParticleUpdater.RANDOM或者ParticleUpdater.CURVE时，updater中颜色配置的优先级高于range中的颜色配置。在updater配置的动画时间周期内，以updater中的颜色配
-置来变化；在updater配置的动画时间周期外，以range中的颜色配置来变化。
+当type为ParticleUpdater.RANDOM或者ParticleUpdater.CURVE时，updater中颜色配置的优先级高于range中的颜色配置。在updater配置的动画时间周期内，以updater中的颜色配置来变化；在updater配置的动画时间周期外，以range中的颜色配置来变化。
 
 **类型：** ParticleColorUpdaterOptions<UPDATER>
 
@@ -80,7 +82,9 @@ updater?: ParticleColorUpdaterOptions<UPDATER>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ParticleColorPropertyOptions-updater?: ParticleColorUpdaterOptions<UPDATER>--><!--Device-ParticleColorPropertyOptions-updater?: ParticleColorUpdaterOptions<UPDATER>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

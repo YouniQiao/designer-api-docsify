@@ -10,6 +10,8 @@ Manager handsfree AG profile.
 
 **Substitutes:** HandsFreeAudioGatewayProfile
 
+<!--Device-bluetoothManager-interface HandsFreeAudioGatewayProfile extends BaseProfile--><!--Device-bluetoothManager-interface HandsFreeAudioGatewayProfile extends BaseProfile-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 ## Modules to Import
@@ -24,9 +26,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 connect(device: string): void
 ```
 
-Connect to device with hfp.
-On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to
-ACCESS_BLUETOOTH.
+Connect to device with hfp.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -37,6 +37,8 @@ ACCESS_BLUETOOTH.
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-HandsFreeAudioGatewayProfile-connect(device: string): void--><!--Device-HandsFreeAudioGatewayProfile-connect(device: string): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -77,9 +79,7 @@ try {
 disconnect(device: string): void
 ```
 
-Disconnect to device with hfp.
-On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to
-ACCESS_BLUETOOTH.
+Disconnect to device with hfp.On API 10 and above, the permission required by this interface is changed from DISCOVER_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -90,6 +90,8 @@ ACCESS_BLUETOOTH.
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
+
+<!--Device-HandsFreeAudioGatewayProfile-disconnect(device: string): void--><!--Device-HandsFreeAudioGatewayProfile-disconnect(device: string): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -130,8 +132,7 @@ try {
 off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 ```
 
-Unsubscribe the event reported when the profile connection state changes.
-On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
+Unsubscribe the event reported when the profile connection state changes.On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -142,6 +143,8 @@ On API 10 and above, the permission required by this interface is changed to ACC
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-HandsFreeAudioGatewayProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void--><!--Device-HandsFreeAudioGatewayProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -149,7 +152,7 @@ On API 10 and above, the permission required by this interface is changed to ACC
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | Callback&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<StateChangeParam> | No | Callback used to listen for event. |
 
 **Error codes:**
 
@@ -164,8 +167,7 @@ On API 10 and above, the permission required by this interface is changed to ACC
 on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 ```
 
-Subscribe the event reported when the profile connection state changes.
-On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
+Subscribe the event reported when the profile connection state changes.On API 10 and above, the permission required by this interface is changed to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -176,6 +178,8 @@ On API 10 and above, the permission required by this interface is changed to ACC
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
 
+<!--Device-HandsFreeAudioGatewayProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void--><!--Device-HandsFreeAudioGatewayProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
 **Parameters:**
@@ -183,7 +187,7 @@ On API 10 and above, the permission required by this interface is changed to ACC
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | Callback&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<StateChangeParam> | Yes | Callback used to listen for event. |
 
 **Error codes:**
 

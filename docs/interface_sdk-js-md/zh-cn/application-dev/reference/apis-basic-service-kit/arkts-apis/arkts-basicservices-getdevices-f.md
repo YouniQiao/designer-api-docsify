@@ -1,5 +1,11 @@
 # getDevices
 
+## 导入模块
+
+```TypeScript
+import { usbManager } from '@kit.BasicServicesKit';
+```
+
 ## getDevices
 
 ```TypeScript
@@ -8,12 +14,14 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 获取接入主设备的USB设备列表。
 
-> **说明：**
->
-> 三方应用没有权限获取serial字段读取设备序列号，需要通过
+> **说明：**  
+>  
+> 三方应用没有权限获取serial字段读取设备序列号，需要通过  
 > [usbManager.requestRight](arkts-basicservices-requestright-f.md#requestright-1)申请权限后，自行发起控制传输获取。
 
 **起始版本：** 9
+
+<!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -21,7 +29,7 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; | 设备信息列表。 |
+| [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<Readonly<USBDevice>> | 设备信息列表。 |
 
 **错误码：**
 

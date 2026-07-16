@@ -12,6 +12,8 @@ Indicates the options of the image item.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-unnamed-export type EditableTitleBarItemV2Options = EditableTitleBarMenuItemV2Options--><!--Device-unnamed-export type EditableTitleBarItemV2Options = EditableTitleBarMenuItemV2Options-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** EditableTitleBarMenuItemV2Options

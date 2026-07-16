@@ -12,12 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function isDistributedEnabledBySlot(slot: SlotType, deviceType: string): Promise<boolean>
 ```
 
-Queries whether notifications of a specified slot can be sent to devices of a specified type. This API uses a
-promise to return the result.
+Queries whether notifications of a specified slot can be sent to devices of a specified type. This API uses a promise to return the result.
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
+
+<!--Device-notificationManager-function isDistributedEnabledBySlot(slot: SlotType, deviceType: string): Promise<boolean>--><!--Device-notificationManager-function isDistributedEnabledBySlot(slot: SlotType, deviceType: string): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -27,14 +28,14 @@ promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | SlotType | Yes | Types of the notification slot. |
-| deviceType | string | Yes | Device type.<br>Since API version 18, the following device types are supported:<br>-**headset**: wearable audio device<br>- **liteWearable**: lite wearable<br>- **wearable**: wearable<br>SinceAPI version 20, the following device types are supported:<br>- **headset**: wearable audio device<br>-**liteWearable**: lite wearable<br>- **wearable**: wearable<br>- **current**: current device<br>- **2in1**: PC&lt;br&gt;- **tablet**: tablet |
+| slot | [SlotType](arkts-notification-slottype-e-sys.md) | Yes | Types of the notification slot. |
+| deviceType | string | Yes | Device type.<br>Since API version 18, the following device types are supported:<br>-**headset**: wearable audio device<br>- **liteWearable**: lite wearable<br>- **wearable**: wearable<br>Since API version 20, the following device types are supported:<br>- **headset**: wearable audio device<br>-**liteWearable**: lite wearable<br>- **wearable**: wearable<br>- **current**: current device<br>- **2in1**: PC<br>- **tablet**: tablet |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that cross-devicecollaboration is supported, and **false** means the opposite. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | Promise used to return the result. The value **true** means that cross-device collaboration is supported, and **false** means the opposite. |
 
 **Error codes:**
 

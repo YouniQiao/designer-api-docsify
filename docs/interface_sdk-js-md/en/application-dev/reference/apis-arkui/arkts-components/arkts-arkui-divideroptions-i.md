@@ -4,6 +4,8 @@ Define the divider configuration options.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface DividerOptions--><!--Device-unnamed-declare interface DividerOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -26,6 +28,8 @@ Default value: **'#33000000'**
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-DividerOptions-color?: ResourceColor--><!--Device-DividerOptions-color?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## endMargin
@@ -40,8 +44,7 @@ Default value: **0**
 
 Unit: vp (default) or px.
 
-Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not
-supported.
+Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
 
 **Type:** Dimension
 
@@ -52,6 +55,8 @@ supported.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DividerOptions-endMargin?: Dimension--><!--Device-DividerOptions-endMargin?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,8 +72,7 @@ Default value: **0**
 
 Unit: vp (default) or px.
 
-Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not
-supported.
+Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
 
 **Type:** Dimension
 
@@ -79,6 +83,8 @@ supported.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DividerOptions-startMargin?: Dimension--><!--Device-DividerOptions-startMargin?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -94,8 +100,7 @@ Default value: **2.0px**
 
 Unit: vp (default) or px.
 
-If the value is less than 0, the default value is used. The maximum value allowed is half the height of the column.
-Percentages are not supported.
+If the value is less than 0, the default value is used. The maximum value allowed is half the height of the column.Percentages are not supported.
 
 **Type:** Dimension
 
@@ -106,6 +111,8 @@ Percentages are not supported.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DividerOptions-strokeWidth?: Dimension--><!--Device-DividerOptions-strokeWidth?: Dimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

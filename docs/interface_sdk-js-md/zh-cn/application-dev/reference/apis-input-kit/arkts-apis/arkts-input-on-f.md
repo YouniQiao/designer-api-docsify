@@ -1,5 +1,11 @@
 # on
 
+## 导入模块
+
+```TypeScript
+import { inputDevice } from '@kit.InputKit';
+```
+
 ## on('change')
 
 ```TypeScript
@@ -10,6 +16,8 @@ function on(type: 'change', listener: Callback<DeviceListener>): void
 
 **起始版本：** 9
 
+<!--Device-inputDevice-function on(type: 'change', listener: Callback<DeviceListener>): void--><!--Device-inputDevice-function on(type: 'change', listener: Callback<DeviceListener>): void-End-->
+
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
 **参数：**
@@ -17,7 +25,7 @@ function on(type: 'change', listener: Callback<DeviceListener>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 输入设备的事件类型，固定值为'change'。 |
-| listener | Callback&lt;DeviceListener&gt; | 是 | 回调函数，返回输入设备热插拔事件。 |
+| listener | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<DeviceListener> | 是 | 回调函数，返回输入设备热插拔事件。 |
 
 **错误码：**
 

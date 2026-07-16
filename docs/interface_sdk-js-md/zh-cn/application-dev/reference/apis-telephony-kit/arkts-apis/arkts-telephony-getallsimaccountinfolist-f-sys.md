@@ -1,5 +1,11 @@
 # getAllSimAccountInfoList（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+```
+
 ## getAllSimAccountInfoList
 
 ```TypeScript
@@ -12,6 +18,8 @@ Get the list of all SIM card account information.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getAllSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void--><!--Device-sim-function getAllSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -20,7 +28,7 @@ Get the list of all SIM card account information.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;IccAccountInfo&gt;&gt; | 是 | The callback is used toreturn the array of {@link IccAccountInfo}. The ICCID and phone number will be nullif has no ohos.permission.GET_TELEPHONY_STATE. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<IccAccountInfo>> | 是 | The callback is used to return the array of {@link IccAccountInfo}. The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **错误码：**
 
@@ -59,6 +67,8 @@ Get the list of all SIM card account information.
 
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
+<!--Device-sim-function getAllSimAccountInfoList(): Promise<Array<IccAccountInfo>>--><!--Device-sim-function getAllSimAccountInfoList(): Promise<Array<IccAccountInfo>>-End-->
+
 **系统能力：** SystemCapability.Telephony.CoreService
 
 **系统接口：** 此接口为系统接口。
@@ -67,7 +77,7 @@ Get the list of all SIM card account information.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;IccAccountInfo&gt;&gt; | Returns the array of {@link IccAccountInfo}. The ICCIDand phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
+| Promise<Array<IccAccountInfo>> | Returns the array of {@link IccAccountInfo}. The ICCID and phone number will be null if has no ohos.permission.GET_TELEPHONY_STATE. |
 
 **错误码：**
 

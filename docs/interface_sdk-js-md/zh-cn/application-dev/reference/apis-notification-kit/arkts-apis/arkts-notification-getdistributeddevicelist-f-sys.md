@@ -18,6 +18,8 @@ function getDistributedDeviceList(): Promise<Array<string>>
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function getDistributedDeviceList(): Promise<Array<string>>--><!--Device-notificationManager-function getDistributedDeviceList(): Promise<Array<string>>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,7 +28,7 @@ function getDistributedDeviceList(): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | 返回支持跨设备协同通知的设备列表。Promise对象。 |
+| Promise<Array<string>> | 返回支持跨设备协同通知的设备列表。Promise对象。 |
 
 **错误码：**
 

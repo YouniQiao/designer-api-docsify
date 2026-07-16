@@ -4,6 +4,8 @@ Represents the access records of all applications or devices.
 
 **Since:** 9
 
+<!--Device-privacyManager-interface PermissionUsedResponse--><!--Device-privacyManager-interface PermissionUsedResponse-End-->
+
 **System capability:** SystemCapability.Security.AccessToken
 
 **System API:** This is a system API.
@@ -20,12 +22,13 @@ import { privacyManager } from '@kit.AbilityKit';
 beginTime: number
 ```
 
-Start time of the query.
-Unit: milliseconds.
+Start time of the query.Unit: milliseconds.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-PermissionUsedResponse-beginTime: long--><!--Device-PermissionUsedResponse-beginTime: long-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -37,12 +40,13 @@ Unit: milliseconds.
 bundleRecords: Array<BundleUsedRecord>
 ```
 
-Each element represents the permission access record under an application dimension. Developers can further
-traverse permissionRecords to obtain specific permission usage details.
+Each element represents the permission access record under an application dimension. Developers can further traverse permissionRecords to obtain specific permission usage details.
 
 **Type:** Array<BundleUsedRecord>
 
 **Since:** 9
+
+<!--Device-PermissionUsedResponse-bundleRecords: Array<BundleUsedRecord>--><!--Device-PermissionUsedResponse-bundleRecords: Array<BundleUsedRecord>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -54,12 +58,13 @@ traverse permissionRecords to obtain specific permission usage details.
 endTime: number
 ```
 
-End time of the query.
-Unit: milliseconds.
+End time of the query.Unit: milliseconds.
 
 **Type:** number
 
 **Since:** 9
+
+<!--Device-PermissionUsedResponse-endTime: long--><!--Device-PermissionUsedResponse-endTime: long-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 

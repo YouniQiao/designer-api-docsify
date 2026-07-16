@@ -20,6 +20,8 @@ Gets the applications that are allowed to distribute ability connection.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-applicationManager-function getAllowedDistributeAbilityConnBundles(admin: Want | null, serviceType: ServiceType, accountId: number): Array<string>--><!--Device-applicationManager-function getAllowedDistributeAbilityConnBundles(admin: Want | null, serviceType: ServiceType, accountId: number): Array<string>-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **Parameters:**
@@ -27,14 +29,14 @@ Gets the applications that are allowed to distribute ability connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | Want \| null | Yes | admin indicates the enterprise admin extension ability information. |
-| serviceType | ServiceType | Yes | serviceType indicates the type of distribute ability. |
+| serviceType | [ServiceType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-servicetype-e.md) | Yes | serviceType indicates the type of distribute ability. |
 | accountId | number | Yes | accountId indicates the ID of OS account.<br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | returns the list of application appIdentifiers. |
+| [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<string> | returns the list of application appIdentifiers. |
 
 **Error codes:**
 

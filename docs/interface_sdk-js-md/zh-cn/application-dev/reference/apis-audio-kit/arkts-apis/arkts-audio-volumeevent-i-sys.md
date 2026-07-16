@@ -4,7 +4,15 @@
 
 **起始版本：** 9
 
+<!--Device-audio-interface VolumeEvent--><!--Device-audio-interface VolumeEvent-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
+
+## 导入模块
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+```
 
 ## networkId
 
@@ -17,6 +25,8 @@ Device network id
 **类型：** string
 
 **起始版本：** 9
+
+<!--Device-VolumeEvent-networkId: string--><!--Device-VolumeEvent-networkId: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
@@ -34,6 +44,8 @@ Volume percentage, which is an integer ranging from [0, 100].
 
 **起始版本：** 23
 
+<!--Device-VolumeEvent-percentage?: int--><!--Device-VolumeEvent-percentage?: int-End-->
+
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
 **系统接口：** 此接口为系统接口。
@@ -49,6 +61,8 @@ volumeGroup id
 **类型：** number
 
 **起始版本：** 9
+
+<!--Device-VolumeEvent-volumeGroupId: int--><!--Device-VolumeEvent-volumeGroupId: int-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 

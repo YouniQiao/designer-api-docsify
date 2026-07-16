@@ -2,20 +2,19 @@
 
 A non-linear data structure.
 
-> **NOTE**
->
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
+> **NOTE**  
+>  
+> - This module can be imported only to ArkTS files (with the file name extension .ets).  
 > This section uses the following to identify the use of generics:
 
-- K: key.
-- V: value.
-The K and V types must be any of the
-[sendable data types](../../../../arkts-utils/arkts-sendable.md#sendable-data-types).
-**Decorator**: \@Sendable
+- K: key.  
+- V: value.The K and V types must be any of the [sendable data types](../../../../arkts-utils/arkts-sendable.md#sendable-data-types).**Decorator**: \@Sendable
 
 **Since:** 12
 
 **Decorator:** @Sendable
+
+<!--Device-collections-class Map<K, V>--><!--Device-collections-class Map<K, V>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -31,13 +30,13 @@ import { collections } from '@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-Returns an iterator, each item of which is a JavaScript object.
-NOTE:
-This API cannot be used in .ets files.
+Returns an iterator, each item of which is a JavaScript object.NOTE:This API cannot be used in .ets files.
 
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Map-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-Map-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -45,7 +44,7 @@ This API cannot be used in .ets files.
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | Iterator object that yields key-value pairs. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[K, V]> | Iterator object that yields key-value pairs. |
 
 **Error codes:**
 
@@ -64,6 +63,8 @@ Removes all elements from this ArkTS map.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Map-clear(): void--><!--Device-Map-clear(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -85,6 +86,8 @@ A constructor used to create an ArkTS map.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Map-constructor(entries?: readonly (readonly [K, V])[] | null)--><!--Device-Map-constructor(entries?: readonly (readonly [K, V])[] | null)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -112,13 +115,15 @@ A constructor used to create an ArkTS map.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Map-constructor(iterable: Iterable<readonly [K, V]>)--><!--Device-Map-constructor(iterable: Iterable<readonly [K, V]>)-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;readonly [K, V]&gt; | Yes | Object used to construct the ArkTS map. |
+| iterable | [Iterable](../../apis-na/arkts-apis/arkts-na-iterable-i.md)<readonly [K, V]> | Yes | Object used to construct the ArkTS map. |
 
 **Error codes:**
 
@@ -137,6 +142,8 @@ Deletes a specified key from this ArkTS map.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Map-delete(key: K): boolean--><!--Device-Map-delete(key: K): boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -171,13 +178,15 @@ Returns a map iterator object that contains the key-value pair of each element i
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Map-entries(): IterableIterator<[K, V]>--><!--Device-Map-entries(): IterableIterator<[K, V]>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;[K, V]&gt; | Map iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<[K, V]> | Map iterator object. |
 
 **Error codes:**
 
@@ -198,13 +207,15 @@ Calls a callback function for each key-value pair in this ArkTS map.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Map-forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void--><!--Device-Map-forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: V, key: K, map: Map&lt;K, V&gt;) =&gt; void | Yes | Callback function to run for each key-value pair. |
+| callbackFn | (value: V, key: K, map: Map<K, V>) => void | Yes | Callback function to run for each key-value pair. |
 
 **Error codes:**
 
@@ -224,6 +235,8 @@ Obtains the value of the specified key in this ArkTS map.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Map-get(key: K): V | undefined--><!--Device-Map-get(key: K): V | undefined-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -258,6 +271,8 @@ Checks whether a key exists in this ArkTS map.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Map-has(key: K): boolean--><!--Device-Map-has(key: K): boolean-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -270,7 +285,7 @@ Checks whether a key exists in this ArkTS map.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the key exists; otherwise, **false** isreturned. |
+| boolean | Check result. The value **true** is returned if the key exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
@@ -291,13 +306,15 @@ Returns a map iterator object that contains the key of each element in this ArkT
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Map-keys(): IterableIterator<K>--><!--Device-Map-keys(): IterableIterator<K>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;K&gt; | Map iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<K> | Map iterator object. |
 
 **Error codes:**
 
@@ -318,6 +335,8 @@ Adds or updates a key-value pair to this ArkTS map.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Map-set(key: K, value: V): Map<K, V>--><!--Device-Map-set(key: K, value: V): Map<K, V>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -331,7 +350,7 @@ Adds or updates a key-value pair to this ArkTS map.
 
 | Type | Description |
 | --- | --- |
-| Map&lt;K, V&gt; | New map obtained. |
+| [Map](../../apis-na/arkts-apis/arkts-na-map-i.md)<K, V> | New map obtained. |
 
 **Error codes:**
 
@@ -352,13 +371,15 @@ Returns a map iterator object that contains the value of each element in this Ar
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-Map-values(): IterableIterator<V>--><!--Device-Map-values(): IterableIterator<V>-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IterableIterator&lt;V&gt; | Map iterator object. |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-iterableiterator-i.md)<V> | Map iterator object. |
 
 **Error codes:**
 
@@ -380,6 +401,8 @@ Number of elements in a map.
 **Since:** 12
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Map-readonly size: number--><!--Device-Map-readonly size: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

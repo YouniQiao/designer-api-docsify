@@ -1,9 +1,10 @@
 # DistributedAccountAbility
 
-Provides APIs for querying and updating the login state of a distributed account. You must obtain a
-**DistributedAccountAbility** instance first.
+Provides APIs for querying and updating the login state of a distributed account. You must obtain a **DistributedAccountAbility** instance first.
 
 **Since:** 7
+
+<!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -25,13 +26,15 @@ Obtains the distributed account information. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the distributed account information obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DistributedInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -76,13 +79,15 @@ Obtains the distributed account information. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-getOsAccountDistributedInfo(): Promise<DistributedInfo>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise used to return the distributed account information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DistributedInfo> | Promise used to return the distributed account information obtained. |
 
 **Error codes:**
 
@@ -119,10 +124,10 @@ queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 Queries the distributed account information. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#getosaccountdistributedinfo-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#getosaccountdistributedinfo-1)  
 > instead.
 
 **Since:** 7
@@ -133,13 +138,15 @@ Queries the distributed account information. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void--><!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;DistributedInfo&gt; | Yes | Callback used to return the result. If the operation issuccessful, **err** is **undefined** and **data** is the distributed account information obtained.Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<DistributedInfo> | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the distributed account information obtained.Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -167,10 +174,10 @@ queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 Queries the distributed account information. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#getosaccountdistributedinfo-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [getOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#getosaccountdistributedinfo-2)  
 > instead.
 
 **Since:** 7
@@ -181,13 +188,15 @@ Queries the distributed account information. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
+<!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(): Promise<DistributedInfo>--><!--Device-DistributedAccountAbility-queryOsAccountDistributedInfo(): Promise<DistributedInfo>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DistributedInfo&gt; | Promise used to return the distributed account information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DistributedInfo> | Promise used to return the distributed account information obtained. |
 
 **Example**
 
@@ -210,12 +219,13 @@ accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.Di
 setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-Sets the distributed account information. This API uses an asynchronous callback to return the result.
-This API can be called only by system applications.
+Sets the distributed account information. This API uses an asynchronous callback to return the result.This API can be called only by system applications.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -223,8 +233,8 @@ This API can be called only by system applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | Yes | Distributed account information to set. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the distributed accountinformation is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | Yes | Distributed account information to set. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the distributed account information is set successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -267,12 +277,13 @@ try {
 setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-Sets the distributed account information. This API uses a promise to return the result.
-This API can be called only by system applications.
+Sets the distributed account information. This API uses a promise to return the result.This API can be called only by system applications.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
+
+<!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -280,13 +291,13 @@ This API can be called only by system applications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | Yes | Distributed account information to set. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | Yes | Distributed account information to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -329,10 +340,10 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCall
 
 Updates the distributed account information. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#setosaccountdistributedinfo-1)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#setosaccountdistributedinfo-1)  
 > instead.
 
 **Since:** 7
@@ -343,14 +354,16 @@ Updates the distributed account information. This API uses an asynchronous callb
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void--><!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | Yes | Distributed account information to update. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the distributed accountinformation is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | Yes | Distributed account information to update. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the distributed account information is updated successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Example**
 
@@ -380,10 +393,10 @@ updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 
 Updates the distributed account information. This API uses a promise to return the result.
 
-> **NOTE**
->
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#setosaccountdistributedinfo-2)
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use  
+> [setOsAccountDistributedInfo](arkts-basicservices-distributedaccountability-i.md#setosaccountdistributedinfo-2)  
 > instead.
 
 **Since:** 7
@@ -394,19 +407,21 @@ Updates the distributed account information. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
+<!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>--><!--Device-DistributedAccountAbility-updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>-End-->
+
 **System capability:** SystemCapability.Account.OsAccount
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountInfo | DistributedInfo | Yes | Distributed account information to update. |
+| accountInfo | [DistributedInfo](arkts-basicservices-distributedinfo-i.md) | Yes | Distributed account information to update. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Example**
 

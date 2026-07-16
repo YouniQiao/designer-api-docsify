@@ -12,12 +12,13 @@ import { serial } from '@kit.BasicServicesKit';
 function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>
 ```
 
-Adds the permission for applications to access the serial port.
-This API is open only to system applications that display a pop-up window for serial port authorization.
+Adds the permission for applications to access the serial port.This API is open only to system applications that display a pop-up window for serial port authorization.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-serial-function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>--><!--Device-serial-function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.BusManager.Serial
 
@@ -28,13 +29,13 @@ This API is open only to system applications that display a pop-up window for se
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tokenId | string | Yes | Token ID of the authorized application. |
-| deviceId | string | Yes | Serial port device ID.<br>For an onboard serial port, the value is portName. For a USB virtual serial port, the value is thecombination of VID+PID+SN. |
+| deviceId | string | Yes | Serial port device ID.<br>For an onboard serial port, the value is portName. For a USB virtual serial port, the value is the combination of VID+PID+SN. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | - Promise that returns no value. |
 
 **Error codes:**
 

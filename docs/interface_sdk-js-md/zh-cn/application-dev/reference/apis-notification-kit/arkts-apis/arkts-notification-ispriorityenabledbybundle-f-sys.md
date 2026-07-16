@@ -18,6 +18,8 @@ function isPriorityEnabledByBundle(bundle: BundleOption): Promise<PriorityEnable
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
+<!--Device-notificationManager-function isPriorityEnabledByBundle(bundle: BundleOption): Promise<PriorityEnableStatus>--><!--Device-notificationManager-function isPriorityEnabledByBundle(bundle: BundleOption): Promise<PriorityEnableStatus>-End-->
+
 **系统能力：** SystemCapability.Notification.Notification
 
 **系统接口：** 此接口为系统接口。
@@ -26,13 +28,13 @@ function isPriorityEnabledByBundle(bundle: BundleOption): Promise<PriorityEnable
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-bundleoption-i.md) | 是 | 指定应用的包信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PriorityEnableStatus&gt; | Promise对象，返回包含应用通知优先级开关状态的Promise对象。 |
+| Promise<PriorityEnableStatus> | Promise对象，返回包含应用通知优先级开关状态的Promise对象。 |
 
 **错误码：**
 

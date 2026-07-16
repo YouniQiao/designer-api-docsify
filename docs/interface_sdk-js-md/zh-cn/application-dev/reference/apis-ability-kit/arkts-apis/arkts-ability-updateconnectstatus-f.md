@@ -1,5 +1,11 @@
 # updateConnectStatus
 
+## 导入模块
+
+```TypeScript
+import { continuationManager } from '@kit.AbilityKit';
+```
+
 ## updateConnectStatus
 
 ```TypeScript
@@ -21,6 +27,18 @@ function updateConnectStatus(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-continuationManager-function updateConnectStatus(
+    token: number,
+    deviceId: string,
+    status: DeviceConnectState,
+    callback: AsyncCallback<void>
+  ): void--><!--Device-continuationManager-function updateConnectStatus(
+    token: number,
+    deviceId: string,
+    status: DeviceConnectState,
+    callback: AsyncCallback<void>
+  ): void-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -29,8 +47,8 @@ function updateConnectStatus(
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
 | deviceId | string | 是 | 设备ID。 |
-| status | DeviceConnectState | 是 | 设备连接状态。 |
-| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当通知设备成功，err为undefined，否则返回错误对象。 |
+| status | [DeviceConnectState](arkts-ability-deviceconnectstate-e.md) | 是 | 设备连接状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | 是 | 回调函数。当通知设备成功，err为undefined，否则返回错误对象。 |
 
 **示例：**
 
@@ -66,6 +84,8 @@ function updateConnectStatus(token: number, deviceId: string, status: DeviceConn
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-continuationManager-function updateConnectStatus(token: number, deviceId: string, status: DeviceConnectState): Promise<void>--><!--Device-continuationManager-function updateConnectStatus(token: number, deviceId: string, status: DeviceConnectState): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Ability.DistributedAbilityManager
 
 **参数：**
@@ -74,13 +94,13 @@ function updateConnectStatus(token: number, deviceId: string, status: DeviceConn
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
 | deviceId | string | 是 | 设备ID。 |
-| status | DeviceConnectState | 是 | 设备连接状态。 |
+| status | [DeviceConnectState](arkts-ability-deviceconnectstate-e.md) | 是 | 设备连接状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise形式返回接口调用结果。 |
+| Promise<void> | Promise形式返回接口调用结果。 |
 
 **示例：**
 

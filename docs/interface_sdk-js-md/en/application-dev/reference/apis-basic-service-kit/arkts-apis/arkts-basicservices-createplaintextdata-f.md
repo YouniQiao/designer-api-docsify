@@ -20,6 +20,8 @@ Creates a **PasteData** object of the plain text type.
 
 **Substitutes:** createData(mimeType:
 
+<!--Device-pasteboard-function createPlainTextData(text: string): PasteData--><!--Device-pasteboard-function createPlainTextData(text: string): PasteData-End-->
+
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
 **Parameters:**
@@ -32,7 +34,7 @@ Creates a **PasteData** object of the plain text type.
 
 | Type | Description |
 | --- | --- |
-| PasteData | **PasteData** object. |
+| [PasteData](arkts-basicservices-pastedata-i.md) | **PasteData** object. |
 
 **Example**
 

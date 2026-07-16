@@ -1,5 +1,11 @@
 # getHardwareUnitPowerValue（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { batteryStats } from '@kit.BasicServicesKit';
+```
+
 ## getHardwareUnitPowerValue
 
 ```TypeScript
@@ -10,6 +16,8 @@ function getHardwareUnitPowerValue(type: ConsumptionType): number
 
 **起始版本：** 8
 
+<!--Device-batteryStats-function getHardwareUnitPowerValue(type: ConsumptionType): double--><!--Device-batteryStats-function getHardwareUnitPowerValue(type: ConsumptionType): double-End-->
+
 **系统能力：** SystemCapability.PowerManager.BatteryStatistics
 
 **系统接口：** 此接口为系统接口。
@@ -18,7 +26,7 @@ function getHardwareUnitPowerValue(type: ConsumptionType): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | ConsumptionType | 是 | 电量消耗类型；该参数类型是枚举类。 |
+| type | [ConsumptionType](arkts-basicservices-consumptiontype-e-sys.md) | 是 | 电量消耗类型；该参数类型是枚举类。 |
 
 **返回值：**
 

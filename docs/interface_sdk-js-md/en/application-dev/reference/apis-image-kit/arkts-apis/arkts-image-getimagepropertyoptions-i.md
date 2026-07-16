@@ -8,6 +8,8 @@ Describes the image properties.
 
 **Substitutes:** [ImagePropertyOptions](arkts-image-imagepropertyoptions-i.md)
 
+<!--Device-image-interface GetImagePropertyOptions--><!--Device-image-interface GetImagePropertyOptions-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## Modules to Import
@@ -32,6 +34,8 @@ Default property value. The default value is null.
 
 **Substitutes:** [defaultValue](arkts-image-imagepropertyoptions-i.md#defaultvalue)
 
+<!--Device-GetImagePropertyOptions-defaultValue?: string--><!--Device-GetImagePropertyOptions-defaultValue?: string-End-->
+
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
 ## index
@@ -49,6 +53,8 @@ Index of the image. The default value is **0**.
 **Deprecated since:** 11  
 
 **Substitutes:** [index](arkts-image-imagepropertyoptions-i.md#index)
+
+<!--Device-GetImagePropertyOptions-index?: number--><!--Device-GetImagePropertyOptions-index?: number-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 

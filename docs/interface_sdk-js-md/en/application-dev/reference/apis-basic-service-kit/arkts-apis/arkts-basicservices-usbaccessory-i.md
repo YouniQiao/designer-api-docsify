@@ -4,6 +4,8 @@ Describes the USB accessory information.
 
 **Since:** 14
 
+<!--Device-usbManager-interface USBAccessory--><!--Device-usbManager-interface USBAccessory-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## Modules to Import
@@ -24,6 +26,8 @@ Description of an accessory.
 
 **Since:** 14
 
+<!--Device-USBAccessory-description: string--><!--Device-USBAccessory-description: string-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## manufacturer
@@ -37,6 +41,8 @@ Manufacturer of an accessory.
 **Type:** string
 
 **Since:** 14
+
+<!--Device-USBAccessory-manufacturer: string--><!--Device-USBAccessory-manufacturer: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -52,6 +58,8 @@ Product type of an accessory.
 
 **Since:** 14
 
+<!--Device-USBAccessory-product: string--><!--Device-USBAccessory-product: string-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## serialNumber
@@ -66,6 +74,8 @@ SN of an accessory.
 
 **Since:** 14
 
+<!--Device-USBAccessory-serialNumber: string--><!--Device-USBAccessory-serialNumber: string-End-->
+
 **System capability:** SystemCapability.USB.USBManager
 
 ## version
@@ -79,6 +89,8 @@ Version of an accessory.
 **Type:** string
 
 **Since:** 14
+
+<!--Device-USBAccessory-version: string--><!--Device-USBAccessory-version: string-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

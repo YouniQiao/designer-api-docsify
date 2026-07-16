@@ -1,9 +1,10 @@
 # Server
 
-Manages SSAP server. Before calling a SSAP server method,
-you must use {@link createServer} to create a SSAP server instance.
+Manages SSAP server. Before calling a SSAP server method,you must use {@link createServer} to create a SSAP server instance.
 
 **Since:** 26.0.0
+
+<!--Device-ssap-interface Server--><!--Device-ssap-interface Server-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -27,13 +28,15 @@ Adds a SSAP service.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Server-addService(service: Service): void--><!--Device-Server-addService(service: Service): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| service | Service | Yes | ssap service need to be added and registered. |
+| service | [Service](arkts-connectivity-service-i.md) | Yes | ssap service need to be added and registered. |
 
 **Error codes:**
 
@@ -59,6 +62,8 @@ Closes this {@code Server} object and unregisters its callbacks.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Server-close(): void--><!--Device-Server-close(): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Error codes:**
@@ -83,6 +88,8 @@ Notifies the client that the value of a property on the server has changed.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Server-notifyPropertyChanged(address: string, property: Property): Promise<void>--><!--Device-Server-notifyPropertyChanged(address: string, property: Property): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
@@ -90,13 +97,13 @@ Notifies the client that the value of a property on the server has changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | address | string | Yes | Indicates the device address.<br>The length must be 17, The value consists of hexadecimal digits and colons (:),for example, 11:22:33:AA:BB:FF. |
-| property | Property | Yes | Indicates the property to notify. |
+| property | [Property](arkts-connectivity-property-i.md) | Yes | Indicates the property to notify. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Returns the promise object. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Returns the promise object. |
 
 **Error codes:**
 
@@ -121,13 +128,15 @@ Unsubscribes from server connection state changed events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Server-offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void--><!--Device-Server-offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ConnectionChangeState&gt; | No | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ConnectionChangeState> | No | Callback used to listen for the SSAP connection state changed event. |
 
 ## offMtuChange
 
@@ -141,13 +150,15 @@ Unsubscribes from MTU changed events.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Server-offMtuChange(callback?: Callback<int>): void--><!--Device-Server-offMtuChange(callback?: Callback<int>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;number&gt; | No | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<number> | No | Callback used to listen for the MTU changed event. |
 
 ## offPropertyRead
 
@@ -161,13 +172,15 @@ Unsubscribes from property read events from the client.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Server-offPropertyRead(callback?: Callback<PropertyReadRequest>): void--><!--Device-Server-offPropertyRead(callback?: Callback<PropertyReadRequest>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PropertyReadRequest&gt; | No | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PropertyReadRequest> | No | Callback used to listen for the property operation event. |
 
 ## offPropertyWrite
 
@@ -181,13 +194,15 @@ Unsubscribes from property write events from the client.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Server-offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void--><!--Device-Server-offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PropertyWriteRequest&gt; | No | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PropertyWriteRequest> | No | Callback used to listen for the property operation event. |
 
 ## onConnectionStateChange
 
@@ -197,13 +212,13 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 Subscribes to server connection state changed events.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
-If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,
-the callback returns the real device address; otherwise, a random device address is returned.
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-onConnectionStateChange(callback: Callback<ConnectionChangeState>): void--><!--Device-Server-onConnectionStateChange(callback: Callback<ConnectionChangeState>): void-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -211,7 +226,7 @@ the callback returns the real device address; otherwise, a random device address
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;ConnectionChangeState&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<ConnectionChangeState> | Yes | Callback used to listen for the SSAP connection state changed event. |
 
 ## onMtuChange
 
@@ -227,13 +242,15 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Server-onMtuChange(callback: Callback<int>): void--><!--Device-Server-onMtuChange(callback: Callback<int>): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;number&gt; | Yes | Callback used to listen for the MTU changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<number> | Yes | Callback used to listen for the MTU changed event. |
 
 ## onPropertyRead
 
@@ -243,13 +260,13 @@ onPropertyRead(callback: Callback<PropertyReadRequest>): void
 
 Subscribes to property read events from the client.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
-If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,
-the callback returns the real device address; otherwise, a random device address is returned.
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-onPropertyRead(callback: Callback<PropertyReadRequest>): void--><!--Device-Server-onPropertyRead(callback: Callback<PropertyReadRequest>): void-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -257,7 +274,7 @@ the callback returns the real device address; otherwise, a random device address
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PropertyReadRequest&gt; | Yes | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PropertyReadRequest> | Yes | Callback used to listen for the property operation event. |
 
 ## onPropertyWrite
 
@@ -267,13 +284,13 @@ onPropertyWrite(callback: Callback<PropertyWriteRequest>): void
 
 Subscribes to property write events from the client.
 
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
-If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,
-the callback returns the real device address; otherwise, a random device address is returned.
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-onPropertyWrite(callback: Callback<PropertyWriteRequest>): void--><!--Device-Server-onPropertyWrite(callback: Callback<PropertyWriteRequest>): void-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -281,7 +298,7 @@ the callback returns the real device address; otherwise, a random device address
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;PropertyWriteRequest&gt; | Yes | Callback used to listen for the property operation event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-i.md)<PropertyWriteRequest> | Yes | Callback used to listen for the property operation event. |
 
 ## removeService
 
@@ -296,6 +313,8 @@ Removes a specific SSAP service.
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-removeService(serviceUuid: string): void--><!--Device-Server-removeService(serviceUuid: string): void-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -329,13 +348,15 @@ Responds to read or write requests from the client.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-Server-sendResponse(response: ServerResponse): void--><!--Device-Server-sendResponse(response: ServerResponse): void-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | ServerResponse | Yes | Indicates the response. |
+| response | [ServerResponse](arkts-connectivity-serverresponse-i.md) | Yes | Indicates the response. |
 
 **Error codes:**
 

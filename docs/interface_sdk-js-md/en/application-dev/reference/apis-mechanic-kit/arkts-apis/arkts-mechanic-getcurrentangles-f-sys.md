@@ -16,6 +16,8 @@ Obtains the current angles of a mechanical device.
 
 **Since:** 20
 
+<!--Device-mechanicManager-function getCurrentAngles(mechId: int): EulerAngles--><!--Device-mechanicManager-function getCurrentAngles(mechId: int): EulerAngles-End-->
+
 **System capability:** SystemCapability.Mechanic.Core
 
 **System API:** This is a system API.
@@ -30,7 +32,7 @@ Obtains the current angles of a mechanical device.
 
 | Type | Description |
 | --- | --- |
-| EulerAngles | Rotation angles. |
+| [EulerAngles](arkts-mechanic-eulerangles-i-sys.md) | Rotation angles. |
 
 **Error codes:**
 

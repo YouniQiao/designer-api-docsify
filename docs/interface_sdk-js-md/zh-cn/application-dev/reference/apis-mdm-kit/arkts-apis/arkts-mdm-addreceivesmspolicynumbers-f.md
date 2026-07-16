@@ -1,5 +1,11 @@
 # addReceiveSmsPolicyNumbers
 
+## 导入模块
+
+```TypeScript
+import { telephonyManager } from '@kit.MDMKit';
+```
+
 ## addReceiveSmsPolicyNumbers
 
 ```TypeScript
@@ -14,15 +20,17 @@ function addReceiveSmsPolicyNumbers(admin: Want, policy: adminManager.Policy, nu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-telephonyManager-function addReceiveSmsPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array<string>): void--><!--Device-telephonyManager-function addReceiveSmsPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array<string>): void-End-->
+
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | Want | 是 | 企业设备管理扩展组件 |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件 |
 | policy | adminManager.Policy | 是 | 允许或禁用名单策略。 |
-| numbers | Array&lt;string&gt; | 是 | 接收短信号码列表，当前仅支持全号码匹配。 |
+| numbers | [Array](../../apis-arkts/arkts-apis/arkts-arkts-array-c.md)<string> | 是 | 接收短信号码列表，当前仅支持全号码匹配。 |
 
 **错误码：**
 

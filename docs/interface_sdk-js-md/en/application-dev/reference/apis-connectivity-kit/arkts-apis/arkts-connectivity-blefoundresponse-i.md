@@ -2,6 +2,8 @@
 
 **Since:** 6
 
+<!--Device-unnamed-export interface BLEFoundResponse--><!--Device-unnamed-export interface BLEFoundResponse-End-->
+
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 
 ## Modules to Import
@@ -23,6 +25,8 @@ The devices of BLEFoundResponse
 **Since:** 6
 
 **Model restriction:** This API can be used only in the FA model.
+
+<!--Device-BLEFoundResponse-devices: Array<BluetoothDevice>--><!--Device-BLEFoundResponse-devices: Array<BluetoothDevice>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
 

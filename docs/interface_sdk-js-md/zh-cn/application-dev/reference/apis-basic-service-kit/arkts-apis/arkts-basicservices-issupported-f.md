@@ -1,5 +1,11 @@
 # isSupported
 
+## 导入模块
+
+```TypeScript
+import { runningLock } from '@kit.BasicServicesKit';
+```
+
 ## isSupported
 
 ```TypeScript
@@ -10,13 +16,15 @@ function isSupported(type: RunningLockType): boolean
 
 **起始版本：** 9
 
+<!--Device-runningLock-function isSupported(type: RunningLockType): boolean--><!--Device-runningLock-function isSupported(type: RunningLockType): boolean-End-->
+
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | RunningLockType | 是 | 需要查询的锁的类型；该参数必须是一个枚举类。 |
+| type | [RunningLockType](arkts-basicservices-runninglocktype-e.md) | 是 | 需要查询的锁的类型；该参数必须是一个枚举类。 |
 
 **返回值：**
 

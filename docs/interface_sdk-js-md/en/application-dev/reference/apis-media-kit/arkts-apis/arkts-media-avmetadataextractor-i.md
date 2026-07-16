@@ -1,14 +1,12 @@
 # AVMetadataExtractor
 
-AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from
-media assets. Before calling any API of AVMetadataExtractor, you must use
-[media.createAVMetadataExtractor](arkts-media-createavmetadataextractor-f.md#createavmetadataextractor-3)
-to create an AVMetadataExtractor instance.
+AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-createavmetadataextractor-f.md#createavmetadataextractor-3)to create an AVMetadataExtractor instance.
 
-For details about the demo of obtaining audio or video metadata and video thumbnails, see
-[Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../../media/media/avmetadataextractor.md).
+For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../../media/media/avmetadataextractor.md).
 
 **Since:** 11
+
+<!--Device-media-interface AVMetadataExtractor--><!--Device-media-interface AVMetadataExtractor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -24,12 +22,13 @@ import { media } from '@kit.MediaKit';
 cancelAllFetchFrames(): void
 ```
 
-Cancels the ongoing task of obtaining thumbnails in batches. (The thumbnails that have been obtained are not
-affected.)
+Cancels the ongoing task of obtaining thumbnails in batches. (The thumbnails that have been obtained are not affected.)
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVMetadataExtractor-cancelAllFetchFrames(): void--><!--Device-AVMetadataExtractor-cancelAllFetchFrames(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -43,13 +42,15 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 **Since:** 11
 
+<!--Device-AVMetadataExtractor-fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void--><!--Device-AVMetadataExtractor-fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | Yes | Callback used to return the album cover. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | Yes | Callback used to return the album cover. |
 
 **Error codes:**
 
@@ -68,13 +69,15 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 
 **Since:** 11
 
+<!--Device-AVMetadataExtractor-fetchAlbumCover(): Promise<image.PixelMap>--><!--Device-AVMetadataExtractor-fetchAlbumCover(): Promise<image.PixelMap>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the album cover. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | Promise used to return the album cover. |
 
 **Error codes:**
 
@@ -93,6 +96,8 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 
 **Since:** 20
 
+<!--Device-AVMetadataExtractor-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>--><!--Device-AVMetadataExtractor-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **Parameters:**
@@ -100,14 +105,14 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeUs | number | Yes | Time of the video for which a thumbnail is to be obtained, in us. |
-| options | AVImageQueryOptions | Yes | Relationship between the time passed in and the video frame. |
-| param | PixelMapParams | Yes | Format parameters of the thumbnail to be obtained. |
+| options | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
+| param | [PixelMapParams](arkts-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the video thumbnail. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
@@ -125,12 +130,15 @@ fetchFrameByTimeWithTimeout(timeUs: number, options: AVImageQueryOptions, param:
       timeoutMs: number): Promise<image.PixelMap | undefined>
 ```
 
-Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs**) for obtaining the thumbnail.
-This API uses a promise to return the result.
+Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs**) for obtaining the thumbnail.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVMetadataExtractor-fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,
+      timeoutMs: long): Promise<image.PixelMap | undefined>--><!--Device-AVMetadataExtractor-fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,
+      timeoutMs: long): Promise<image.PixelMap | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -139,15 +147,15 @@ This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeUs | number | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
-| options | AVImageQueryOptions | Yes | Relationship between the time passed in and the video frame. |
-| param | PixelMapParams | Yes | Format parameters of the thumbnail to be obtained. |
-| timeoutMs | number | Yes | Timeout interval for obtaining the thumbnail. The value range is (0, 20000], inmilliseconds.<br>If the thumbnail is not obtained within the specified timeout interval, error code 5400104is returned. |
+| options | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
+| param | [PixelMapParams](arkts-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
+| timeoutMs | number | Yes | Timeout interval for obtaining the thumbnail. The value range is (0, 20000], in milliseconds.<br>If the thumbnail is not obtained within the specified timeout interval, error code 5400104is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap \| undefined&gt; | Promise used to return the video thumbnail. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap \| undefined> | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
@@ -168,18 +176,22 @@ fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: P
 
 Obtains video thumbnails in batches. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> - The given video resource is decoded first, and then image frames are extracted from each time point in the
-> **timesUs** array based on the provided **options** and **param**.
->
-> - When each image extraction is complete, the system calls the callback function and passes the extraction
-> result. Note that the execution order of the callback function may be inconsistent with the time points in the
+> **NOTE**  
+>  
+> - The given video resource is decoded first, and then image frames are extracted from each time point in the  
+> **timesUs** array based on the provided **options** and **param**.  
+>  
+> - When each image extraction is complete, the system calls the callback function and passes the extraction  
+> result. Note that the execution order of the callback function may be inconsistent with the time points in the  
 > **timesUs** array.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVMetadataExtractor-fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
+        callback: OnFrameFetched): void--><!--Device-AVMetadataExtractor-fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
+        callback: OnFrameFetched): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -187,10 +199,10 @@ Obtains video thumbnails in batches. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timesUs | number[] | Yes | Set of time points of all thumbnails to be obtained in the video.<br>The unit ismicrosecond (μs), and the value range of the array length is (0, 4096]. |
-| queryOption | AVImageQueryOptions | Yes | Relationship between the time passed in and the video frame. |
-| param | PixelMapParams | Yes | Format parameters of the thumbnail to be obtained. |
-| callback | OnFrameFetched | Yes | Thumbnail information to be returned and possible exception types.<br>Fordetails about the exception types, see the returned error code information. |
+| timesUs | number[] | Yes | Set of time points of all thumbnails to be obtained in the video.<br>The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
+| queryOption | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
+| param | [PixelMapParams](arkts-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
+| callback | [OnFrameFetched](arkts-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.<br>For details about the exception types, see the returned error code information. |
 
 **Error codes:**
 
@@ -210,24 +222,27 @@ fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOption
       timeoutMs: number, callback: OnFrameFetched): void
 ```
 
-Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each
-thumbnail. This API uses an asynchronous callback to return the result.
+Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each thumbnail. This API uses an asynchronous callback to return the result.
 
-> **NOTE**
->
-> - The given video resource is decoded first, and then image frames are extracted from each time point in the
-> **timesUs** array based on the provided **options** and **param**.
->
-> - When each image extraction is complete, the system calls the callback function and passes the extraction
-> result. Note that the execution order of the callback function may be inconsistent with the time points in the
-> **timesUs** array.
->
-> - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not
+> **NOTE**  
+>  
+> - The given video resource is decoded first, and then image frames are extracted from each time point in the  
+> **timesUs** array based on the provided **options** and **param**.  
+>  
+> - When each image extraction is complete, the system calls the callback function and passes the extraction  
+> result. Note that the execution order of the callback function may be inconsistent with the time points in the  
+> **timesUs** array.  
+>  
+> - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not  
 > the entire batch thumbnail extraction process.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVMetadataExtractor-fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
+      timeoutMs: long, callback: OnFrameFetched): void--><!--Device-AVMetadataExtractor-fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
+      timeoutMs: long, callback: OnFrameFetched): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -235,11 +250,11 @@ thumbnail. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timesUs | number[] | Yes | Set of time points of all thumbnails to be obtained in the video.<br>The unit ismicrosecond (μs), and the value range of the array length is (0, 4096]. |
-| queryOption | AVImageQueryOptions | Yes | Relationship between the time passed in and the video frame. |
-| param | PixelMapParams | Yes | Format parameters of the thumbnail to be obtained. |
-| timeoutMs | number | Yes | Timeout interval for obtaining each thumbnail. The value range is (0, 20000], inmilliseconds.<br>If a thumbnail is not obtained within the specified timeout interval, error code 5400104 isreturned. |
-| callback | OnFrameFetched | Yes | Thumbnail information to be returned and possible exception types.<br>Fordetails about the exception types, see the returned error code information. |
+| timesUs | number[] | Yes | Set of time points of all thumbnails to be obtained in the video.<br>The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
+| queryOption | [AVImageQueryOptions](arkts-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
+| param | [PixelMapParams](arkts-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
+| timeoutMs | number | Yes | Timeout interval for obtaining each thumbnail. The value range is (0, 20000], in milliseconds.<br>If a thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
+| callback | [OnFrameFetched](arkts-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.<br>For details about the exception types, see the returned error code information. |
 
 **Error codes:**
 
@@ -262,13 +277,15 @@ Obtains the media metadata. This API uses an asynchronous callback to return the
 
 **Since:** 11
 
+<!--Device-AVMetadataExtractor-fetchMetadata(callback: AsyncCallback<AVMetadata>): void--><!--Device-AVMetadataExtractor-fetchMetadata(callback: AsyncCallback<AVMetadata>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;AVMetadata&gt; | Yes | Callback used to return the result, which is an AVMetadatainstance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<AVMetadata> | Yes | Callback used to return the result, which is an AVMetadata instance. |
 
 **Error codes:**
 
@@ -288,13 +305,15 @@ Obtains the media metadata. This API uses a promise to return the result.
 
 **Since:** 11
 
+<!--Device-AVMetadataExtractor-fetchMetadata(): Promise<AVMetadata>--><!--Device-AVMetadataExtractor-fetchMetadata(): Promise<AVMetadata>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVMetadata&gt; | Promise used to return the result, which is an AVMetadata instance. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVMetadata> | Promise used to return the result, which is an AVMetadata instance. |
 
 **Error codes:**
 
@@ -310,12 +329,13 @@ Obtains the media metadata. This API uses a promise to return the result.
 fetchMetadataWithTimeout(timeoutMs: number): Promise<AVMetadata | undefined>
 ```
 
-Obtains the media metadata. You can set the maximum timeout interval (**timeoutMs**) for obtaining the metadata.
-This API uses a promise to return the result.
+Obtains the media metadata. You can set the maximum timeout interval (**timeoutMs**) for obtaining the metadata.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVMetadataExtractor-fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>--><!--Device-AVMetadataExtractor-fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -323,13 +343,13 @@ This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeoutMs | number | Yes | Timeout interval for obtaining media metadata. The value range is (0, 20000], inmilliseconds.<br>If no metadata is returned within the specified timeout interval, error code 5400104 isreturned. |
+| timeoutMs | number | Yes | Timeout interval for obtaining media metadata. The value range is (0, 20000], in milliseconds.<br>If no metadata is returned within the specified timeout interval, error code 5400104 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVMetadata \| undefined&gt; | Promise used to return the audio and video metadata object (**AVMetadata**) asynchronously. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<AVMetadata \| undefined> | Promise used to return the audio and video metadata object (**AVMetadata**) asynchronously. |
 
 **Error codes:**
 
@@ -351,13 +371,15 @@ Releases this AVMetadataExtractor instance. This API uses an asynchronous callba
 
 **Since:** 11
 
+<!--Device-AVMetadataExtractor-release(callback: AsyncCallback<void>): void--><!--Device-AVMetadataExtractor-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -375,13 +397,15 @@ Releases this AVMetadataExtractor instance. This API uses a promise to return th
 
 **Since:** 11
 
+<!--Device-AVMetadataExtractor-release(): Promise<void>--><!--Device-AVMetadataExtractor-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -395,13 +419,11 @@ Releases this AVMetadataExtractor instance. This API uses a promise to return th
 setUrlSource(url: string, headers?: Record<string, string>): void
 ```
 
-Sets the data source for a network on-demand resource. Only network metadata (
-[fetchMetadata](arkts-media-avmetadataextractor-i.md#fetchmetadata-1)) and
-thumbnails (
-[fetchFrameByTime](arkts-media-avmetadataextractor-i.md#fetchframebytime-1)
-) can be obtained. The media resource URL must be set before the retrieval.
+Sets the data source for a network on-demand resource. Only network metadata ([fetchMetadata](arkts-media-avmetadataextractor-i.md#fetchmetadata-1)) and thumbnails ([fetchFrameByTime](arkts-media-avmetadataextractor-i.md#fetchframebytime-1)) can be obtained. The media resource URL must be set before the retrieval.
 
 **Since:** 20
+
+<!--Device-AVMetadataExtractor-setUrlSource(url: string, headers?: Record<string, string>): void--><!--Device-AVMetadataExtractor-setUrlSource(url: string, headers?: Record<string, string>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -409,8 +431,8 @@ thumbnails (
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | URL of the media resource.<br>1. The video formats MP4, MPEG-TS, and MKV are supported.&lt;br&gt;2. The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported.<br>**Example of supported URLs**:<br>1. HTTP: http://xx<br>2. HTTPS: https://xx<br>Note: HLS/DASH and livestreaming resources are not supported. |
-| headers | Record&lt;string, string&gt; | No | Custom HTTP headers for accessing the network resource. The defaultvalue is empty. |
+| url | string | Yes | URL of the media resource.<br>1. The video formats MP4, MPEG-TS, and MKV are supported.<br>2. The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported.<br>**Example of supported URLs**:<br>1. HTTP: http://xx<br>2. HTTPS: https://xx<br>Note: HLS/DASH and live streaming resources are not supported. |
+| headers | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, string> | No | Custom HTTP headers for accessing the network resource. The default value is empty. |
 
 ## dataSrc
 
@@ -418,15 +440,15 @@ thumbnails (
 dataSrc ?: AVDataSrcDescriptor
 ```
 
-Streaming media resource descriptor, which specifies the data source. Before obtaining metadata, you must set the
-data source through either **fdSrc** or **dataSrc**.
+Streaming media resource descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.
 
-When an application obtains a media file from the remote, you can set **dataSrc** to obtain the metadata before
-the application finishes the downloading.
+When an application obtains a media file from the remote, you can set **dataSrc** to obtain the metadata before the application finishes the downloading.
 
 **Type:** AVDataSrcDescriptor
 
 **Since:** 11
+
+<!--Device-AVMetadataExtractor-dataSrc ?: AVDataSrcDescriptor--><!--Device-AVMetadataExtractor-dataSrc ?: AVDataSrcDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -436,23 +458,19 @@ the application finishes the downloading.
 fdSrc ?: AVFileDescriptor
 ```
 
-Media file descriptor, which specifies the data source. Before obtaining metadata, you must set the data source
-through either **fdSrc** or **dataSrc**.
+Media file descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.
 
-There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its
-file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
+There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
 
 **NOTE**
 
-After the resource handle (FD) is transferred to an AVMetadataExtractor instance, do not use the resource handle
-to perform other read and write operations, including but not limited to transferring this handle to other
-AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple
-AVMetadataExtractor use the same resource handle to read and write files at the same time, resulting in errors in
-obtaining data.
+After the resource handle (FD) is transferred to an AVMetadataExtractor instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVMetadataExtractor use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** AVFileDescriptor
 
 **Since:** 11
+
+<!--Device-AVMetadataExtractor-fdSrc ?: AVFileDescriptor--><!--Device-AVMetadataExtractor-fdSrc ?: AVFileDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 

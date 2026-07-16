@@ -8,6 +8,8 @@ Enum for error code
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-geolocation-export enum GeoLocationErrorCode--><!--Device-geolocation-export enum GeoLocationErrorCode-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## INPUT_PARAMS_ERROR
@@ -23,6 +25,8 @@ Indicates input parameter error.
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
+
+<!--Device-GeoLocationErrorCode-INPUT_PARAMS_ERROR--><!--Device-GeoLocationErrorCode-INPUT_PARAMS_ERROR-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -40,6 +44,8 @@ Indicates reverse geocode query failed.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-GeoLocationErrorCode-REVERSE_GEOCODE_ERROR--><!--Device-GeoLocationErrorCode-REVERSE_GEOCODE_ERROR-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## GEOCODE_ERROR
@@ -55,6 +61,8 @@ Indicates geocode query failed.
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
+
+<!--Device-GeoLocationErrorCode-GEOCODE_ERROR--><!--Device-GeoLocationErrorCode-GEOCODE_ERROR-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -72,6 +80,8 @@ Indicates positioning failed.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-GeoLocationErrorCode-LOCATOR_ERROR--><!--Device-GeoLocationErrorCode-LOCATOR_ERROR-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## LOCATION_SWITCH_ERROR
@@ -87,6 +97,8 @@ Indicates operation failure caused by abnormal location switch.
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
+
+<!--Device-GeoLocationErrorCode-LOCATION_SWITCH_ERROR--><!--Device-GeoLocationErrorCode-LOCATION_SWITCH_ERROR-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -104,6 +116,8 @@ Indicates failed to get the last known location.
 
 **Required permissions:** ohos.permission.LOCATION
 
+<!--Device-GeoLocationErrorCode-LAST_KNOWN_LOCATION_ERROR--><!--Device-GeoLocationErrorCode-LAST_KNOWN_LOCATION_ERROR-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 ## LOCATION_REQUEST_TIMEOUT_ERROR
@@ -119,6 +133,8 @@ Indicates location request timeout.
 **Deprecated since:** 9
 
 **Required permissions:** ohos.permission.LOCATION
+
+<!--Device-GeoLocationErrorCode-LOCATION_REQUEST_TIMEOUT_ERROR--><!--Device-GeoLocationErrorCode-LOCATION_REQUEST_TIMEOUT_ERROR-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

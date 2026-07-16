@@ -1,19 +1,26 @@
 # startScan
 
+## 导入模块
+
+```TypeScript
+import { scan } from '@kit.ConnectivityKit';
+```
+
 ## startScan
 
 ```TypeScript
 function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promise<void>
 ```
 
-开始使用过滤器扫描指定的NearLink设备。
-如果不想使用过滤器，可以将过滤器参数设置为{@code null}。
+开始使用过滤器扫描指定的NearLink设备。如果不想使用过滤器，可以将过滤器参数设置为{@code null}。
 
 **起始版本：** 26.0.0
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-scan-function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promise<void>--><!--Device-scan-function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -22,13 +29,13 @@ function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filters | ScanFilters[] \| null | 是 | 过滤器列表，必选。如果不需要使用filter，可以设置为{@code null}。如果要使用过滤器，至少要设置一个过滤器。 |
-| options | ScanOptions | 否 | 扫描的参数。默认为低功率模式。 |
+| options | [ScanOptions](arkts-connectivity-scanoptions-i.md) | 否 | 扫描的参数。默认为低功率模式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise<void> | 返回promise对象。 |
 
 **错误码：**
 

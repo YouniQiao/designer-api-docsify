@@ -1,5 +1,11 @@
 # off
 
+## 导入模块
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+```
+
 ## off('continuousTaskCancel')
 
 ```TypeScript
@@ -12,6 +18,8 @@ function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCan
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCancelInfo>): void--><!--Device-backgroundTaskManager-function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCancelInfo>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
@@ -19,7 +27,7 @@ function off(type: 'continuousTaskCancel', callback?: Callback<ContinuousTaskCan
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'continuousTaskCancel' | 是 | 取消长时任务，固定取值为'continuousTaskCancel'。 |
-| callback | Callback&lt;ContinuousTaskCancelInfo&gt; | 否 | 需要取消监听的回调函数，未传入则取消所有注册回调。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuousTaskCancelInfo> | 否 | 需要取消监听的回调函数，未传入则取消所有注册回调。 |
 
 **错误码：**
 
@@ -65,6 +73,8 @@ function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSu
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSuspendInfo>): void--><!--Device-backgroundTaskManager-function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSuspendInfo>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
@@ -72,7 +82,7 @@ function off(type: 'continuousTaskSuspend', callback?: Callback<ContinuousTaskSu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'continuousTaskSuspend' | 是 | 事件回调类型，固定取值为'continuousTaskSuspend'，表示长时任务暂停。 |
-| callback | Callback&lt;ContinuousTaskSuspendInfo&gt; | 否 | 需要取消监听的回调函数，未传入则取消所有注册的暂停回调。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuousTaskSuspendInfo> | 否 | 需要取消监听的回调函数，未传入则取消所有注册的暂停回调。 |
 
 **错误码：**
 
@@ -119,6 +129,8 @@ function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskAct
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
+<!--Device-backgroundTaskManager-function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskActiveInfo>): void--><!--Device-backgroundTaskManager-function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskActiveInfo>): void-End-->
+
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
 **参数：**
@@ -126,7 +138,7 @@ function off(type: 'continuousTaskActive', callback?: Callback<ContinuousTaskAct
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'continuousTaskActive' | 是 | 事件回调类型，固定取值为'continuousTaskActive'，表示长时任务激活。 |
-| callback | Callback&lt;ContinuousTaskActiveInfo&gt; | 否 | 需要取消监听的回调函数，未传入则取消所有注册的激活回调。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ContinuousTaskActiveInfo> | 否 | 需要取消监听的回调函数，未传入则取消所有注册的激活回调。 |
 
 **错误码：**
 

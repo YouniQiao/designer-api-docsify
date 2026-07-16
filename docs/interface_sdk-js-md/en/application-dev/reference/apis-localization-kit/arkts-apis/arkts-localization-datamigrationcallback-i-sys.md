@@ -4,6 +4,8 @@ Callback type used during data migration.
 
 **Since:** 23
 
+<!--Device-fontManager-interface DataMigrationCallback--><!--Device-fontManager-interface DataMigrationCallback-End-->
+
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
@@ -23,6 +25,8 @@ onHeartBeat(): void
 Callback function used to return the heartbeat callback.
 
 **Since:** 23
+
+<!--Device-DataMigrationCallback-onHeartBeat(): void--><!--Device-DataMigrationCallback-onHeartBeat(): void-End-->
 
 **System capability:** SystemCapability.Global.FontManager
 
@@ -66,6 +70,8 @@ Callback used to return the data migration progress.
 
 **Since:** 23
 
+<!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void--><!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void-End-->
+
 **System capability:** SystemCapability.Global.FontManager
 
 **System API:** This is a system API.
@@ -74,7 +80,7 @@ Callback used to return the data migration progress.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | DataMigrationProgress | Yes | Data migration progress. |
+| progress | [DataMigrationProgress](arkts-localization-datamigrationprogress-i-sys.md) | Yes | Data migration progress. |
 
 **Example**
 
@@ -113,6 +119,8 @@ onResult(result : number): void
 Callback used to return the data migration result.
 
 **Since:** 23
+
+<!--Device-DataMigrationCallback-onResult(result : int): void--><!--Device-DataMigrationCallback-onResult(result : int): void-End-->
 
 **System capability:** SystemCapability.Global.FontManager
 

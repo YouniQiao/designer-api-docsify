@@ -1,11 +1,12 @@
 # Focus
 
-Focus extends [FocusQuery](arkts-camera-focusquery-i.md)
-Provides APIs to obtain and set the camera focus mode and focus position.
+Focus extends [FocusQuery](arkts-camera-focusquery-i.md)Provides APIs to obtain and set the camera focus mode and focus position.
 
 **Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-focusquery-i.md)
 
 **Since:** 11
+
+<!--Device-camera-interface Focus extends FocusQuery--><!--Device-camera-interface Focus extends FocusQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,13 +28,15 @@ Obtains the focal length in use.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Focus-getFocalLength(): double--><!--Device-Focus-getFocalLength(): double-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Focal length, in units of mm. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| number | Focal length, in units of mm. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -53,13 +56,15 @@ Obtains the focus mode in use.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Focus-getFocusMode(): FocusMode--><!--Device-Focus-getFocusMode(): FocusMode-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| FocusMode | Focus mode obtained. If the operation fails, undefined is returned and an error codedefined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
+| [FocusMode](arkts-camera-focusmode-e.md) | Focus mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is thrown. |
 
 **Error codes:**
 
@@ -79,13 +84,15 @@ Obtains the focal point in use.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-Focus-getFocusPoint(): Point--><!--Device-Focus-getFocusPoint(): Point-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Point | Focal point obtained. If the operation fails, an error code defined in[CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
+| [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -107,13 +114,15 @@ Lock focus tracking.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-Focus-lockFocusTracking(focusPoint: Point): void--><!--Device-Focus-lockFocusTracking(focusPoint: Point): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| focusPoint | Point | Yes | lock focus tracking point. |
+| focusPoint | [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | Yes | lock focus tracking point. |
 
 **Error codes:**
 
@@ -128,14 +137,13 @@ Lock focus tracking.
 setFocusMode(afMode: FocusMode): void
 ```
 
-Sets a focus mode.
-Before the setting, call
-[isFocusModeSupported](arkts-camera-focusquery-i.md#isfocusmodesupported-1) to check whether the
-focus mode is supported.
+Sets a focus mode.Before the setting, call [isFocusModeSupported](arkts-camera-focusquery-i.md#isfocusmodesupported-1) to check whether the focus mode is supported.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Focus-setFocusMode(afMode: FocusMode): void--><!--Device-Focus-setFocusMode(afMode: FocusMode): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -143,7 +151,7 @@ focus mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | FocusMode | Yes | Focus mode. If the input parameter is null or undefined, it is treated as 0 andmanual focus is used. |
+| afMode | [FocusMode](arkts-camera-focusmode-e.md) | Yes | Focus mode. If the input parameter is null or undefined, it is treated as 0 and manual focus is used. |
 
 **Error codes:**
 
@@ -157,17 +165,15 @@ focus mode is supported.
 setFocusPoint(point: Point): void
 ```
 
-Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0}
-and the bottom-right corner is {1, 1}.
+Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0}and the bottom-right corner is {1, 1}.
 
-The coordinate system is based on the horizontal device direction with the device's charging port on the right.
-If the layout of the preview screen of an application is based on the vertical direction with the charging port
-on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate
-point after conversion is {y/h, 1-x/w}.
+The coordinate system is based on the horizontal device direction with the device's charging port on the right.If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 11
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Focus-setFocusPoint(point: Point): void--><!--Device-Focus-setFocusPoint(point: Point): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -175,7 +181,7 @@ point after conversion is {y/h, 1-x/w}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | Point | Yes | Focal point. The value range of x and y must be within [0, 1]. If a value less than 0 ispassed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-point-i.md) | Yes | Focal point. The value range of x and y must be within [0, 1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
 
 **Error codes:**
 
@@ -196,6 +202,8 @@ Unlock focus tracking.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Focus-unlockFocusTracking(): void--><!--Device-Focus-unlockFocusTracking(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

@@ -4,6 +4,8 @@ Describes the connection state parameters.
 
 **Since:** 26.0.0
 
+<!--Device-remoteDevice-interface ConnectionStateParam--><!--Device-remoteDevice-interface ConnectionStateParam-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## Modules to Import
@@ -18,14 +20,15 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address.
-The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionStateParam-address: string--><!--Device-ConnectionStateParam-address: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -43,6 +46,8 @@ Connection reason.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ConnectionStateParam-connectionReason: ConnectionReason--><!--Device-ConnectionStateParam-connectionReason: ConnectionReason-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## preState
@@ -59,6 +64,8 @@ Indicates the previous connection state.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-ConnectionStateParam-preState: ConnectionState--><!--Device-ConnectionStateParam-preState: ConnectionState-End-->
+
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 ## reasonMsg
@@ -67,14 +74,15 @@ Indicates the previous connection state.
 reasonMsg?: string
 ```
 
-Indicates reason message. This field is intended for log information only
-and should not be used for logic processing.
+Indicates reason message. This field is intended for log information only and should not be used for logic processing.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionStateParam-reasonMsg?: string--><!--Device-ConnectionStateParam-reasonMsg?: string-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -91,6 +99,8 @@ Indicates the current connection state.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionStateParam-state: ConnectionState--><!--Device-ConnectionStateParam-state: ConnectionState-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

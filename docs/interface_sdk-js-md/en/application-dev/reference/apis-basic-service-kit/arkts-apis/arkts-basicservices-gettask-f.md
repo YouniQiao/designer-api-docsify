@@ -16,13 +16,15 @@ Obtains task information based on the task ID. This API uses a promise to return
 
 **Since:** 11
 
+<!--Device-agent-function getTask(context: BaseContext, id: string, token?: string): Promise<Task>--><!--Device-agent-function getTask(context: BaseContext, id: string, token?: string): Promise<Task>-End-->
+
 **System capability:** SystemCapability.Request.FileTransferAgent
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | BaseContext | Yes | Application-based context. |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-t.md) | Yes | Application-based context. |
 | id | string | Yes | Task ID. |
 | token | string | No | Token for task query. The default value is empty. |
 
@@ -30,7 +32,7 @@ Obtains task information based on the task ID. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Task&gt; | Promise used to return the created task. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Task> | Promise used to return the created task. |
 
 **Error codes:**
 

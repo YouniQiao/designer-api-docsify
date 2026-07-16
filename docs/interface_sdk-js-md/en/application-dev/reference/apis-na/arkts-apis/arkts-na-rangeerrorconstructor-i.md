@@ -2,11 +2,15 @@
 
 **Inheritance/Implementation:** RangeErrorConstructor extends [ErrorConstructor](arkts-na-errorconstructor-i.md)
 
+<!--Device-unnamed-interface RangeErrorConstructor extends ErrorConstructor--><!--Device-unnamed-interface RangeErrorConstructor extends ErrorConstructor-End-->
+
 ## constructor
 
 ```TypeScript
 new(message?: string): RangeError
 ```
+
+<!--Device-RangeErrorConstructor-new(message?: string): RangeError--><!--Device-RangeErrorConstructor-new(message?: string): RangeError-End-->
 
 **Parameters:**
 
@@ -18,7 +22,7 @@ new(message?: string): RangeError
 
 | Type | Description |
 | --- | --- |
-| RangeError |  |
+| [RangeError](arkts-na-rangeerror-i.md) |  |
 
 ## constructor
 
@@ -26,6 +30,8 @@ new(message?: string): RangeError
 (message?: string): RangeError
 ```
 
+<!--Device-RangeErrorConstructor-(message?: string): RangeError--><!--Device-RangeErrorConstructor-(message?: string): RangeError-End-->
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -36,7 +42,7 @@ new(message?: string): RangeError
 
 | Type | Description |
 | --- | --- |
-| RangeError |  |
+| [RangeError](arkts-na-rangeerror-i.md) |  |
 
 ## prototype
 
@@ -45,4 +51,6 @@ readonly prototype: RangeError
 ```
 
 **Type:** RangeError
+
+<!--Device-RangeErrorConstructor-readonly prototype: RangeError--><!--Device-RangeErrorConstructor-readonly prototype: RangeError-End-->
 

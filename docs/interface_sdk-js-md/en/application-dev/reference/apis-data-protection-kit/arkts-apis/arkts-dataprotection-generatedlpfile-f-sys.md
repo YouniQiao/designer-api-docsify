@@ -12,16 +12,15 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty): Promise<DLPFile>
 ```
 
-Generates a **DLPFile** object, which is an encrypted file that can be accessed only by authorized users. The
-users can have the full control permission or read-only permission on the DLP file. This API uses a promise to
-return the result.
+Generates a **DLPFile** object, which is an encrypted file that can be accessed only by authorized users. The users can have the full control permission or read-only permission on the DLP file. This API uses a promise to return the result.
 
-After calling **generateDLPFile** to return a **DLPFile** object, the system must call **closeDLPFile** to
-release resources after using the object.
+After calling **generateDLPFile** to return a **DLPFile** object, the system must call **closeDLPFile** to release resources after using the object.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty): Promise<DLPFile>--><!--Device-dlpPermission-function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty): Promise<DLPFile>-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -31,15 +30,15 @@ release resources after using the object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| plaintextFd | number | Yes | FD of the plaintext file to be encrypted. The value range is[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the functionstops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
-| ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the valueof **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd**is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
-| property | DLPProperty | Yes | Authorization information, which includes the authorized user list, owneraccount, and contact account information. |
+| plaintextFd | number | Yes | FD of the plaintext file to be encrypted. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| property | [DLPProperty](arkts-dataprotection-dlpproperty-i-sys.md) | Yes | Authorization information, which includes the authorized user list, owner account, and contact account information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DLPFile&gt; | Promise used to return the result. If the value is **resolve**, a **DLPFile**object is returned, indicating that a DLP file is successfully generated. If the value is **reject**, anerror is returned, indicating that the DLP file fails to be generated. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<DLPFile> | Promise used to return the result. If the value is **resolve**, a **DLPFile** object is returned, indicating that a DLP file is successfully generated. If the value is **reject**, an error is returned, indicating that the DLP file fails to be generated. |
 
 **Error codes:**
 
@@ -102,17 +101,15 @@ ExampleFunction();
 function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty, callback: AsyncCallback<DLPFile>): void
 ```
 
-Generates a DLP file, which is an encrypted file that can be accessed only by authorized users. The users can
-have the full control permission or read-only permission on the DLP file. Obtains a **DLPFile** object. This API
-uses an asynchronous callback to return the result. After using the **DLPFile** object, call **closeDLPFile** to
-close the object to prevent resource leakage.
+Generates a DLP file, which is an encrypted file that can be accessed only by authorized users. The users can have the full control permission or read-only permission on the DLP file. Obtains a **DLPFile** object. This API uses an asynchronous callback to return the result. After using the **DLPFile** object, call **closeDLPFile** to close the object to prevent resource leakage.
 
-After calling **generateDLPFile()** to return a **DLPFile** object, the system must call **closeDLPFile()** to
-release resources after using the object.
+After calling **generateDLPFile()** to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
+
+<!--Device-dlpPermission-function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty, callback: AsyncCallback<DLPFile>): void--><!--Device-dlpPermission-function generateDLPFile(plaintextFd: number, ciphertextFd: number, property: DLPProperty, callback: AsyncCallback<DLPFile>): void-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
@@ -122,10 +119,10 @@ release resources after using the object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| plaintextFd | number | Yes | FD of the plaintext file to be encrypted. The value range is[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the functionstops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
-| ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the valueof **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd**is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
-| property | DLPProperty | Yes | Authorization information, which includes the authorized user list, owneraccount, and contact account information. |
-| callback | AsyncCallback&lt;DLPFile&gt; | Yes | Callback used to return the result. If the DLP file generation issuccessful, **err** is **undefined**, and **data** is the DLP file information obtained. Otherwise, **err**is an error object. |
+| plaintextFd | number | Yes | FD of the plaintext file to be encrypted. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| property | [DLPProperty](arkts-dataprotection-dlpproperty-i-sys.md) | Yes | Authorization information, which includes the authorized user list, owner account, and contact account information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<DLPFile> | Yes | Callback used to return the result. If the DLP file generation is successful, **err** is **undefined**, and **data** is the DLP file information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

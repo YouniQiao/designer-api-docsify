@@ -1,5 +1,11 @@
 # showAlertBeforeBackPage
 
+## 导入模块
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+```
+
 ## showAlertBeforeBackPage
 
 ```TypeScript
@@ -8,16 +14,16 @@ function showAlertBeforeBackPage(options: EnableAlertOptions): void
 
 开启页面返回询问对话框。
 
-> **说明：**
->
-> - 从API version 9开始支持，从API version 18开始废弃，建议使用
-> [showAlertBeforeBackPage](arkts-arkui-router-c.md#showalertbeforebackpage-1)替代。showAlertBeforeBackPage需先
-> 通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
->
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
+> **说明：**  
+>  
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用  
+> [showAlertBeforeBackPage](arkts-arkui-router-c.md#showalertbeforebackpage-1)替代。showAlertBeforeBackPage需先  
+> 通过[UIContext](arkts-arkui-uicontext.md)中的  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取  
+> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。  
+>  
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的  
+> [getRouter](../../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的  
 > [Router](arkts-arkui-uicontext.md)对象。
 
 **起始版本：** 9
@@ -26,7 +32,9 @@ function showAlertBeforeBackPage(options: EnableAlertOptions): void
 
 **替代接口：** [showAlertBeforeBackPage](arkts-arkui-router-c.md#showalertbeforebackpage-1)
 
-**元服务API：** 从API版本11开始，该接口支持在元服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-router-function showAlertBeforeBackPage(options: EnableAlertOptions): void--><!--Device-router-function showAlertBeforeBackPage(options: EnableAlertOptions): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,7 +42,7 @@ function showAlertBeforeBackPage(options: EnableAlertOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | EnableAlertOptions | 是 | 文本弹窗信息描述。 |
+| options | [EnableAlertOptions](arkts-arkui-enablealertoptions-i.md) | 是 | 文本弹窗信息描述。 |
 
 **错误码：**
 

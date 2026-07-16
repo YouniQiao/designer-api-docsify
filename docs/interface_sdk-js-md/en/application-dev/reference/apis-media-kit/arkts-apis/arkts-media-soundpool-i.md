@@ -1,33 +1,32 @@
 # SoundPool
 
-Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds,
-setting the volume, and setting the number of loops. Before using these APIs, you must call
-[media.createSoundPool](../../../../reference/apis-media-kit/arkts-apis-media-f.md)
-to create a SoundPool instance.
+Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds,setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](../../../../reference/apis-media-kit/arkts-apis-media-f.md)to create a SoundPool instance.
 
-> **NOTE**
->
-> - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain
-> status changes:
-> > - [on('loadComplete')](arkts-media-soundpool-i.md#on-1): listens for the
-> event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that
-> the audio is played after being loaded.
-> > -
-> [on('playFinishedWithStreamId')](arkts-media-soundpool-i.md#on-2):
-> listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes
-> playing.
-> > - [on('playFinished')](arkts-media-soundpool-i.md#on-2): listens
-> for the event indicating that the playback is finished.
-> > - [on('error')](arkts-media-soundpool-i.md#on-4): listens for error events.
-> > - [on('errorOccurred')](arkts-media-soundpool-i.md#on-5): listens for
-> error events and returns [errorInfo](arkts-media-errorinfo-i.md).
->
-> - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or
-> skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using
-> SoundPool, see
+> **NOTE**  
+>  
+> - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain  
+> status changes:  
+> > - [on('loadComplete')](arkts-media-soundpool-i.md#on-1): listens for the  
+> event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that  
+> the audio is played after being loaded.  
+> > -  
+> [on('playFinishedWithStreamId')](arkts-media-soundpool-i.md#on-2):  
+> listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes  
+> playing.  
+> > - [on('playFinished')](arkts-media-soundpool-i.md#on-2): listens  
+> for the event indicating that the playback is finished.  
+> > - [on('error')](arkts-media-soundpool-i.md#on-4): listens for error events.  
+> > - [on('errorOccurred')](arkts-media-soundpool-i.md#on-5): listens for  
+> error events and returns [errorInfo](arkts-media-errorinfo-i.md).  
+>  
+> - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or  
+> skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using  
+> SoundPool, see  
 > [Using SoundPool to Play Short Sounds (ArkTS)](../../../../media/media/using-soundpool-for-playback.md).
 
 **Since:** 10
+
+<!--Device-unnamed-export declare interface SoundPool--><!--Device-unnamed-export declare interface SoundPool-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -39,25 +38,22 @@ load(uri: string, callback: AsyncCallback<number>): void
 
 Loads a sound. This API uses an asynchronous callback to return the result.
 
-This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with
-**fd://**, which is generated based on the file descriptor (FD) obtained.
+This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.
 
-This API cannot be used to load resources in the **rawfile** directory. Instead, use
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](arkts-media-soundpool-i.md#load-3)
-or
-[load(fd: number, offset: number, length: number): Promise\<number>](arkts-media-soundpool-i.md#load-4)
-.
+This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](arkts-media-soundpool-i.md#load-3)or [load(fd: number, offset: number, length: number): Promise\<number>](arkts-media-soundpool-i.md#load-4).
 
-> **NOTE**
->
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
->
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> **NOTE**  
+>  
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to  
+> the player, do not use the resource handle or path description in read or write operations, including but not  
+> limited to transferring it to multiple players.  
+>  
+> - Competition occurs when multiple players use the same resource handle or path description to read and write  
 > files at the same time, resulting in playback errors.
 
 **Since:** 10
+
+<!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(uri: string, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -66,7 +62,7 @@ or
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the audio file to load. Generally, the URI starts with **fd://**. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
@@ -84,25 +80,22 @@ load(uri: string): Promise<number>
 
 Loads a sound. This API uses a promise to return the result.
 
-This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**,
-which is generated based on the file descriptor (FD) obtained.
+This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**,which is generated based on the file descriptor (FD) obtained.
 
-This API cannot be used to load resources in the **rawfile** directory. Instead, use
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](arkts-media-soundpool-i.md#load-3)
-or
-[load(fd: number, offset: number, length: number): Promise\<number>](arkts-media-soundpool-i.md#load-4)
-.
+This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](arkts-media-soundpool-i.md#load-3)or [load(fd: number, offset: number, length: number): Promise\<number>](arkts-media-soundpool-i.md#load-4).
 
-> **NOTE**
->
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
->
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> **NOTE**  
+>  
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to  
+> the player, do not use the resource handle or path description in read or write operations, including but not  
+> limited to transferring it to multiple players.  
+>  
+> - Competition occurs when multiple players use the same resource handle or path description to read and write  
 > files at the same time, resulting in playback errors.
 
 **Since:** 10
+
+<!--Device-SoundPool-load(uri: string): Promise<int>--><!--Device-SoundPool-load(uri: string): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -116,7 +109,7 @@ or
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the sound ID. A valid value must be greater than 0 |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the sound ID. A valid value must be greater than 0 |
 
 **Error codes:**
 
@@ -134,19 +127,20 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 
 Loads a sound. This API uses an asynchronous callback to return the result.
 
-This API uses an asynchronous callback to obtain the resource ID. For the input parameter, resource information can
-be passed in manually or acquired automatically by reading the application's built-in resources.
+This API uses an asynchronous callback to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
 
-> **NOTE**
->
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
->
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> **NOTE**  
+>  
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to  
+> the player, do not use the resource handle or path description in read or write operations, including but not  
+> limited to transferring it to multiple players.  
+>  
+> - Competition occurs when multiple players use the same resource handle or path description to read and write  
 > files at the same time, resulting in playback errors.
 
 **Since:** 10
+
+<!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void--><!--Device-SoundPool-load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -154,10 +148,10 @@ be passed in manually or acquired automatically by reading the application's bui
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | Resource handle, which is obtained by calling[resourceManager.getRawFd](../../../../reference/apis-localization-kit/js-apis-resource-manager.md). |
-| offset | number | Yes | Resource offset, which needs to be entered based on the preset resource information. Aninvalid value causes a failure to parse audio and video resources. |
-| length | number | Yes | Resource length, which needs to be entered based on the preset resource information. Aninvalid value causes a failure to parse audio and video resources. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
+| fd | number | Yes | Resource handle, which is obtained by calling [resourceManager.getRawFd](../../../../reference/apis-localization-kit/js-apis-resource-manager.md). |
+| offset | number | Yes | Resource offset, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
+| length | number | Yes | Resource length, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
@@ -175,19 +169,20 @@ load(fd: number, offset: number, length: number): Promise<number>
 
 Loads a sound. This API uses a promise to return the result.
 
-This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in
-manually or acquired automatically by reading the application's built-in resources.
+This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
 
-> **NOTE**
->
-> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
-> the player, do not use the resource handle or path description in read or write operations, including but not
-> limited to transferring it to multiple players.
->
-> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> **NOTE**  
+>  
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to  
+> the player, do not use the resource handle or path description in read or write operations, including but not  
+> limited to transferring it to multiple players.  
+>  
+> - Competition occurs when multiple players use the same resource handle or path description to read and write  
 > files at the same time, resulting in playback errors.
 
 **Since:** 10
+
+<!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>--><!--Device-SoundPool-load(fd: int, offset: long, length: long): Promise<int>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -195,15 +190,15 @@ manually or acquired automatically by reading the application's built-in resourc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | Resource handle, which is obtained by calling[resourceManager.getRawFd](../../../../reference/apis-localization-kit/js-apis-resource-manager.md) |
-| offset | number | Yes | Resource offset, which needs to be entered based on the preset resource information. Aninvalid value causes a failure to parse audio and video resources. |
-| length | number | Yes | Resource length, which needs to be entered based on the preset resource information. Aninvalid value causes a failure to parse audio and video resources. |
+| fd | number | Yes | Resource handle, which is obtained by calling [resourceManager.getRawFd](../../../../reference/apis-localization-kit/js-apis-resource-manager.md) |
+| offset | number | Yes | Resource offset, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
+| length | number | Yes | Resource length, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the sound ID. A valid value must be greater than 0 |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the sound ID. A valid value must be greater than 0 |
 
 **Error codes:**
 
@@ -223,6 +218,8 @@ Unsubscribes from events indicating that a sound finishes loading.
 
 **Since:** 10
 
+<!--Device-SoundPool-off(type: 'loadComplete'): void--><!--Device-SoundPool-off(type: 'loadComplete'): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -240,6 +237,8 @@ off(type: 'playFinishedWithStreamId'): void
 Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 18
+
+<!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void--><!--Device-SoundPool-off(type: 'playFinishedWithStreamId'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -259,6 +258,8 @@ Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 10
 
+<!--Device-SoundPool-off(type: 'playFinished'): void--><!--Device-SoundPool-off(type: 'playFinished'): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -276,6 +277,8 @@ off(type: 'error'): void
 Unsubscribes from error events of a SoundPool instance.
 
 **Since:** 10
+
+<!--Device-SoundPool-off(type: 'error'): void--><!--Device-SoundPool-off(type: 'error'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -295,6 +298,8 @@ Unsubscribes from error events of a SoundPool instance.
 
 **Since:** 20
 
+<!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -302,7 +307,7 @@ Unsubscribes from error events of a SoundPool instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. |
-| callback | Callback&lt;ErrorInfo&gt; | No | Callback used to return [ErrorInfo](arkts-media-errorinfo-i.md) if an error occursduring the use of the player. If the callback is not set, no related information is provided. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ErrorInfo> | No | Callback used to return [ErrorInfo](arkts-media-errorinfo-i.md) if an error occurs during the use of the player. If the callback is not set, no related information is provided. |
 
 ## on('loadComplete')
 
@@ -310,10 +315,11 @@ Unsubscribes from error events of a SoundPool instance.
 on(type: 'loadComplete', callback: Callback<number>): void
 ```
 
-Subscribes to events indicating that a sound finishes loading. This API uses an asynchronous callback to return the
-result.
+Subscribes to events indicating that a sound finishes loading. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'loadComplete', callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -321,8 +327,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'loadComplete' | Yes | Event type, which is **'loadComplete'** in this case. This event is triggered when asound is loaded. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the ID of the resource that has been loaded. |
+| type | 'loadComplete' | Yes | Event type, which is **'loadComplete'** in this case. This event is triggered when a sound is loaded. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to return the ID of the resource that has been loaded. |
 
 ## on('playFinishedWithStreamId')
 
@@ -330,19 +336,15 @@ result.
 on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
 ```
 
-Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that
-finishes playing. This API uses an asynchronous callback to return the result.
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result.
 
-When only [on('playFinished')](arkts-media-soundpool-i.md#on-2) or
-[on('playFinishedWithStreamId')](arkts-media-soundpool-i.md#on-2) is
-subscribed to, the registered callback is triggered when the audio playback is complete.
+When only [on('playFinished')](arkts-media-soundpool-i.md#on-2) or [on('playFinishedWithStreamId')](arkts-media-soundpool-i.md#on-2) is subscribed to, the registered callback is triggered when the audio playback is complete.
 
-When both [on('playFinished')](arkts-media-soundpool-i.md#on-2) and
-[on('playFinishedWithStreamId')](arkts-media-soundpool-i.md#on-2) are
-subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not
-triggered, when the audio playback is complete.
+When both [on('playFinished')](arkts-media-soundpool-i.md#on-2) and [on('playFinishedWithStreamId')](arkts-media-soundpool-i.md#on-2) are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
 
 **Since:** 18
+
+<!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void--><!--Device-SoundPool-on(type: 'playFinishedWithStreamId', callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -350,8 +352,8 @@ triggered, when the audio playback is complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playFinishedWithStreamId' | Yes | Event type, which is **'playFinishedWithStreamId'** in this case. Thisevent is triggered when an audio stream finishes playing, and the stream ID is returned. |
-| callback | Callback&lt;number&gt; | Yes | Callback used to return the stream ID of the audio that has finished playing. |
+| type | 'playFinishedWithStreamId' | Yes | Event type, which is **'playFinishedWithStreamId'** in this case. This event is triggered when an audio stream finishes playing, and the stream ID is returned. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<number> | Yes | Callback used to return the stream ID of the audio that has finished playing. |
 
 ## on('playFinished')
 
@@ -359,10 +361,11 @@ triggered, when the audio playback is complete.
 on(type: 'playFinished', callback: Callback<void>): void
 ```
 
-Subscribes to events indicating that a sound finishes playing. This API uses an asynchronous callback to return the
-result.
+Subscribes to events indicating that a sound finishes playing. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void--><!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -370,8 +373,8 @@ result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playFinished' | Yes | Event type, which is **'playFinished'** in this case. This event is triggered when asound finishes playing. |
-| callback | Callback&lt;void&gt; | Yes | Callback used to return the result. |
+| type | 'playFinished' | Yes | Event type, which is **'playFinished'** in this case. This event is triggered when a sound finishes playing. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | Callback used to return the result. |
 
 ## on('error')
 
@@ -379,11 +382,11 @@ result.
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to error events of a
-[SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance. This
-event is used only for error prompt. This API uses an asynchronous callback to return the result.
+Subscribes to error events of a [SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance. This event is used only for error prompt. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void--><!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -391,8 +394,8 @@ event is used only for error prompt. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case. This event can be triggered by both useroperations and the system. |
-| callback | ErrorCallback | Yes | Callback used to return the error code ID and error message. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case. This event can be triggered by both user operations and the system. |
+| callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return the error code ID and error message. |
 
 ## on('errorOccurred')
 
@@ -400,12 +403,11 @@ event is used only for error prompt. This API uses an asynchronous callback to r
 on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 ```
 
-Subscribes to error events of a
-[SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and
-returns [ErrorInfo](arkts-media-errorinfo-i.md) that contains the error code, error stage, resource ID, and audio stream ID.
-This API uses an asynchronous callback to return the result.
+Subscribes to error events of a [SoundPool](../../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and returns [ErrorInfo](arkts-media-errorinfo-i.md) that contains the error code, error stage, resource ID, and audio stream ID.This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+<!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -413,8 +415,8 @@ This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. This event can betriggered by both user operations and the system. |
-| callback | Callback&lt;ErrorInfo&gt; | Yes | Callback used to return [ErrorInfo](arkts-media-errorinfo-i.md). |
+| type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. This event can be triggered by both user operations and the system. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<ErrorInfo> | Yes | Callback used to return [ErrorInfo](arkts-media-errorinfo-i.md). |
 
 ## play
 
@@ -426,6 +428,8 @@ Plays a sound and obtains the stream ID. This API uses an asynchronous callback 
 
 **Since:** 10
 
+<!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -433,8 +437,8 @@ Plays a sound and obtains the stream ID. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | soundID | number | Yes | Sound ID, which is obtained by calling **load()**. |
-| params | PlayParameters | Yes | Playback parameters. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the audio stream ID. A valid value must be greaterthan 0. |
+| params | [PlayParameters](arkts-media-playparameters-t.md) | Yes | Playback parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the audio stream ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
@@ -450,10 +454,11 @@ Plays a sound and obtains the stream ID. This API uses an asynchronous callback 
 play(soundID: number, callback: AsyncCallback<number>): void
 ```
 
-Plays a sound using default parameters and obtains the stream ID. This API uses an asynchronous callback to return
-the result.
+Plays a sound using default parameters and obtains the stream ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+<!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void--><!--Device-SoundPool-play(soundID: int, callback: AsyncCallback<int>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -462,7 +467,7 @@ the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | soundID | number | Yes | Sound ID, which is obtained by calling **load()**. |
-| callback | AsyncCallback&lt;number&gt; | Yes | Callback used to return the audio stream ID. A valid value must be greaterthan 0. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<number> | Yes | Callback used to return the audio stream ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
@@ -482,6 +487,8 @@ Plays a sound and obtains the stream ID. This API uses a promise to return the r
 
 **Since:** 10
 
+<!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>--><!--Device-SoundPool-play(soundID: int, params?: PlayParameters): Promise<int>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -489,13 +496,13 @@ Plays a sound and obtains the stream ID. This API uses a promise to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | soundID | number | Yes | Sound ID, which is obtained by calling **load()**. |
-| params | PlayParameters | No | Playback parameters. |
+| params | [PlayParameters](arkts-media-playparameters-t.md) | No | Playback parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the audio stream ID. A valid value must be greater than 0 |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<number> | Promise used to return the audio stream ID. A valid value must be greater than 0 |
 
 **Error codes:**
 
@@ -515,13 +522,15 @@ Releases a **SoundPool** instance. This API uses an asynchronous callback to ret
 
 **Since:** 10
 
+<!--Device-SoundPool-release(callback: AsyncCallback<void>): void--><!--Device-SoundPool-release(callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -539,13 +548,15 @@ Releases a **SoundPool** instance. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-SoundPool-release(): Promise<void>--><!--Device-SoundPool-release(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -559,16 +570,13 @@ Releases a **SoundPool** instance. This API uses a promise to return the result.
 setInterruptMode(interruptMode: media.SoundInterruptMode): void
 ```
 
-Sets the interruption mode of the audio files with the same ID during playback. After the **SoundPool** is created,
-this API is valid only when the **Play** function of the **SoundPool** is called for the first time. You can set
-the interruption mode for multiple times. If the interruption mode is not set, the
-[SAME_SOUND_INTERRUPT](../../../../reference/apis-media-kit/arkts-apis-media-e.md) mode is used by default. That is
-, if the former audio file is not completely played, the latter audio file with the same ID interrupts the former
-audio file.
+Sets the interruption mode of the audio files with the same ID during playback. After the **SoundPool** is created,this API is valid only when the **Play** function of the **SoundPool** is called for the first time. You can set the interruption mode for multiple times. If the interruption mode is not set, the [SAME_SOUND_INTERRUPT](../../../../reference/apis-media-kit/arkts-apis-media-e.md) mode is used by default. That is, if the former audio file is not completely played, the latter audio file with the same ID interrupts the former audio file.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SoundPool-setInterruptMode(interruptMode: media.SoundInterruptMode): void--><!--Device-SoundPool-setInterruptMode(interruptMode: media.SoundInterruptMode): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -576,7 +584,7 @@ audio file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interruptMode | media.SoundInterruptMode | Yes | Interruption mode of the audio files with the same ID duringplayback, which is obtained through the **media.SoundInterruptMode** enum. |
+| interruptMode | media.SoundInterruptMode | Yes | Interruption mode of the audio files with the same ID during playback, which is obtained through the **media.SoundInterruptMode** enum. |
 
 ## setLoop
 
@@ -588,6 +596,8 @@ Sets the loop mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
+<!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -595,8 +605,8 @@ Sets the loop mode. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| loop | number | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the numberof times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to avalue less than 0, the content is played repeatedly. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| loop | number | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to a value less than 0, the content is played repeatedly. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -616,6 +626,8 @@ Sets the loop mode. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>--><!--Device-SoundPool-setLoop(streamID: int, loop: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -623,13 +635,13 @@ Sets the loop mode. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| loop | number | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the numberof times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to avalue less than 0, the content is played repeatedly. |
+| loop | number | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to a value less than 0, the content is played repeatedly. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -649,6 +661,8 @@ Sets the priority for an audio stream. This API uses an asynchronous callback to
 
 **Since:** 10
 
+<!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -656,8 +670,8 @@ Sets the priority for an audio stream. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| priority | number | Yes | Priority. The value **0** means the lowest priority. The value is an integer greater thanor equal to 0. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| priority | number | Yes | Priority. The value **0** means the lowest priority. The value is an integer greater than or equal to 0. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -677,6 +691,8 @@ Sets the priority for an audio stream. This API uses a promise to return the res
 
 **Since:** 10
 
+<!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>--><!--Device-SoundPool-setPriority(streamID: int, priority: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -684,13 +700,13 @@ Sets the priority for an audio stream. This API uses a promise to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| priority | number | Yes | Priority. The value **0** means the lowest priority. The value is an integer greater thanor equal to 0. |
+| priority | number | Yes | Priority. The value **0** means the lowest priority. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -710,6 +726,8 @@ Sets the playback rate for an audio stream. This API uses an asynchronous callba
 
 **Since:** 10
 
+<!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -718,7 +736,7 @@ Sets the playback rate for an audio stream. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
 | rate | audio.AudioRendererRate | Yes | Playback rate. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -738,6 +756,8 @@ Sets the playback rate for an audio stream. This API uses a promise to return th
 
 **Since:** 10
 
+<!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>--><!--Device-SoundPool-setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -751,7 +771,7 @@ Sets the playback rate for an audio stream. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -771,6 +791,8 @@ Sets the volume for an audio stream. This API uses an asynchronous callback to r
 
 **Since:** 10
 
+<!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -779,8 +801,8 @@ Sets the volume for an audio stream. This API uses an asynchronous callback to r
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
 | leftVolume | number | Yes | Volume of the left channel. The value range is [0.0, 1.0]. |
-| rightVolume | number | Yes | Volume of the right channel. The value range is [0.0, 1.0]. Currently, setting thevolume for the right channel does not take effect. The volume set for the left channel is used. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| rightVolume | number | Yes | Volume of the right channel. The value range is [0.0, 1.0]. Currently, setting the volume for the right channel does not take effect. The volume set for the left channel is used. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -800,6 +822,8 @@ Sets the volume for an audio stream. This API uses a promise to return the resul
 
 **Since:** 10
 
+<!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>--><!--Device-SoundPool-setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -808,13 +832,13 @@ Sets the volume for an audio stream. This API uses a promise to return the resul
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
 | leftVolume | number | Yes | Volume of the left channel. The value range is [0.0, 1.0]. |
-| rightVolume | number | Yes | Volume of the right channel. The value range is [0.0, 1.0]. Currently, setting thevolume for the right channel does not take effect. The volume set for the left channel is used. |
+| rightVolume | number | Yes | Volume of the right channel. The value range is [0.0, 1.0]. Currently, setting the volume for the right channel does not take effect. The volume set for the left channel is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -834,6 +858,8 @@ Stops audio playback. This API uses an asynchronous callback to return the resul
 
 **Since:** 10
 
+<!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-stop(streamID: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -841,7 +867,7 @@ Stops audio playback. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -861,6 +887,8 @@ Stops audio playback. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-SoundPool-stop(streamID: int): Promise<void>--><!--Device-SoundPool-stop(streamID: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -873,7 +901,7 @@ Stops audio playback. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 
@@ -893,6 +921,8 @@ Unloads a sound. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
+<!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void--><!--Device-SoundPool-unload(soundID: int, callback: AsyncCallback<void>): void-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -900,7 +930,7 @@ Unloads a sound. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | soundID | number | Yes | Sound ID, which is obtained by calling **load()**. |
-| callback | AsyncCallback&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is**undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<void> | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -920,6 +950,8 @@ Unloads a sound. This API uses a promise to return the result.
 
 **Since:** 10
 
+<!--Device-SoundPool-unload(soundID: int): Promise<void>--><!--Device-SoundPool-unload(soundID: int): Promise<void>-End-->
+
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
 **Parameters:**
@@ -932,7 +964,7 @@ Unloads a sound. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise that returns no value. |
 
 **Error codes:**
 

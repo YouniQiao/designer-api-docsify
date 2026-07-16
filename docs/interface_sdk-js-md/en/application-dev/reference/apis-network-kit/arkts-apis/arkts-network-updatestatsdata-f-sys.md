@@ -20,6 +20,8 @@ Updates network statistics data.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-statistics-function updateStatsData(): Promise<void>--><!--Device-statistics-function updateStatsData(): Promise<void>-End-->
+
 **System capability:** SystemCapability.Communication.NetManager.Core
 
 **System API:** This is a system API.
@@ -28,7 +30,7 @@ Updates network statistics data.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | The promise returned by the function. |
 
 **Error codes:**
 

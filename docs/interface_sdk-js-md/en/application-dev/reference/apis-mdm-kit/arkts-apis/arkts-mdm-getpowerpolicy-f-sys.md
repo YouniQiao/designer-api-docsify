@@ -24,6 +24,8 @@ Obtains the power policy.
 
 **Model restriction:** This API can be used only in the stage model.
 
+<!--Device-deviceSettings-function getPowerPolicy(admin: Want, powerScene: PowerScene): PowerPolicy--><!--Device-deviceSettings-function getPowerPolicy(admin: Want, powerScene: PowerScene): PowerPolicy-End-->
+
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
 **System API:** This is a system API.
@@ -32,14 +34,14 @@ Obtains the power policy.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | Want | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of theEnterpriseAdminExtensionAbility and the bundle name of the application. |
-| powerScene | PowerScene | Yes | Scenario to which the power policy applies. Currently, only the timeout scenariois supported. |
+| admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| powerScene | [PowerScene](arkts-mdm-powerscene-e-sys.md) | Yes | Scenario to which the power policy applies. Currently, only the timeout scenario is supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PowerPolicy | Power policy. |
+| [PowerPolicy](arkts-mdm-powerpolicy-i-sys.md) | Power policy. |
 
 **Error codes:**
 
@@ -47,7 +49,7 @@ Obtains the power policy.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permissionrequired to call the API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 

@@ -16,6 +16,8 @@ Opens the widget editing page.
 
 **Since:** 18
 
+<!--Device-formProvider-function openFormEditAbility(abilityName: string, formId: string, isMainPage?: boolean): void--><!--Device-formProvider-function openFormEditAbility(abilityName: string, formId: string, isMainPage?: boolean): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **Parameters:**
@@ -24,13 +26,13 @@ Opens the widget editing page.
 | --- | --- | --- | --- |
 | abilityName | string | Yes | Ability name on the editing page. |
 | formId | string | Yes | Widget ID. |
-| isMainPage | boolean | No | Whether the page is the main editing page.<br>- **true**: The page is the main editingpage.<br>- **false**: The page is not the main editing page.<br>Default value: **true**. |
+| isMainPage | boolean | No | Whether the page is the main editing page.<br>- **true**: The page is the main editing page.<br>- **false**: The page is not the main editing page.<br>Default value: **true**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function openFormEditAbility cannot work correctly due tolimited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function openFormEditAbility cannot work correctly due to limited device capabilities. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |

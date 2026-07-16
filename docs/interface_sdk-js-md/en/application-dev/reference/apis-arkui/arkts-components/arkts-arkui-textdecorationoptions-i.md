@@ -4,6 +4,8 @@ Provides text decoration options.
 
 **Since:** 12
 
+<!--Device-unnamed-declare interface TextDecorationOptions--><!--Device-unnamed-declare interface TextDecorationOptions-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
@@ -12,8 +14,7 @@ Provides text decoration options.
 color?: ResourceColor
 ```
 
-Color of the text decoration.
-Default value: Color.Black.
+Color of the text decoration.Default value: Color.Black.
 
 **Type:** ResourceColor
 
@@ -23,6 +24,8 @@ Default value: Color.Black.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextDecorationOptions-color?: ResourceColor--><!--Device-TextDecorationOptions-color?: ResourceColor-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## style
@@ -31,8 +34,7 @@ Default value: Color.Black.
 style?: TextDecorationStyle
 ```
 
-Style of the text decoration.
-Default value: TextDecorationStyle.SOLID.
+Style of the text decoration.Default value: TextDecorationStyle.SOLID.
 
 **Type:** TextDecorationStyle
 
@@ -42,6 +44,8 @@ Default value: TextDecorationStyle.SOLID.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-TextDecorationOptions-style?: TextDecorationStyle--><!--Device-TextDecorationOptions-style?: TextDecorationStyle-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## thicknessScale
@@ -50,8 +54,7 @@ Default value: TextDecorationStyle.SOLID.
 thicknessScale?: number
 ```
 
-The scale value of decoration thickness.
-Value constraint: Negative values are handled as default values. Default value: 1.
+The scale value of decoration thickness.Value constraint: Negative values are handled as default values. Default value: 1.
 
 **Type:** number
 
@@ -60,6 +63,8 @@ Value constraint: Negative values are handled as default values. Default value: 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TextDecorationOptions-thicknessScale?: number--><!--Device-TextDecorationOptions-thicknessScale?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +83,8 @@ Type of the text decoration.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextDecorationOptions-type: TextDecorationType--><!--Device-TextDecorationOptions-type: TextDecorationType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

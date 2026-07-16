@@ -20,6 +20,8 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleStatsInfos(begin: long, end: long, callback: AsyncCallback<BundleStatsMap>): void--><!--Device-usageStatistics-function queryBundleStatsInfos(begin: long, end: long, callback: AsyncCallback<BundleStatsMap>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -30,7 +32,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 | --- | --- | --- | --- |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds.<br> Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds.<br> Unit:ms |
-| callback | AsyncCallback&lt;BundleStatsMap&gt; | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the {@link BundleStatsMap} objects containingthe usage information about each bundle. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<BundleStatsMap> | Yes | Callback used to return the result.If the query is successful, **err** is **undefined**, and data is the {@link BundleStatsMap} objects containing the usage information about each bundle. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -79,6 +81,8 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function queryBundleStatsInfos(begin: long, end: long): Promise<BundleStatsMap>--><!--Device-usageStatistics-function queryBundleStatsInfos(begin: long, end: long): Promise<BundleStatsMap>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
 **System API:** This is a system API.
@@ -94,7 +98,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleStatsMap&gt; | the promise returned by queryBundleStatsInfos.the {@link BundleStatsMap} objects containing the usage information about each bundle. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<BundleStatsMap> | the promise returned by queryBundleStatsInfos.the {@link BundleStatsMap} objects containing the usage information about each bundle. |
 
 **Error codes:**
 

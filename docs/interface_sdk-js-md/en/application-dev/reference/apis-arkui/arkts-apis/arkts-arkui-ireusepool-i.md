@@ -4,6 +4,8 @@ The **IReusePool** API provides the features related to the global reuse pool of
 
 **Since:** 26.0.0
 
+<!--Device-unnamed-export declare interface IReusePool--><!--Device-unnamed-export declare interface IReusePool-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,20 +29,24 @@ Obtains the information about the recycling instance of a given reusable compone
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IReusePool-getReusableInfo(constructor: ReusableComponentConstructor,
+    reuseId?: string): IReusableInfo[] | IReusableInfo | undefined--><!--Device-IReusePool-getReusableInfo(constructor: ReusableComponentConstructor,
+    reuseId?: string): IReusableInfo[] | IReusableInfo | undefined-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constructor | ReusableComponentConstructor | Yes | Name of the reusable custom component to be queried. |
-| reuseId | string | No | Reuse ID for filtering. If specified, only the information about the reuse pool withthe reuse ID is returned. The default value is **undefined**, indicating that information about all reuse poolsis returned. |
+| constructor | [ReusableComponentConstructor](arkts-arkui-reusablecomponentconstructor-t.md) | Yes | Name of the reusable custom component to be queried. |
+| reuseId | string | No | Reuse ID for filtering. If specified, only the information about the reuse pool with the reuse ID is returned. The default value is **undefined**, indicating that information about all reuse pools is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IReusableInfo[] | If the reuse pool is not configured to accept the givencomponent type, **undefined** is returned.<br>If **reuseId** is specified, a single **IReusableInfo** is returned (even if **count** is set to **0** and**maxCount** is set to the default value).<br>If **reuseId** is not specified and the reusable component does not use **reuseId**, a single **IReusableInfo**is returned.<br>If **reuseId** is not specified but the reusable component uses **reuseId**, an **Array&lt;IReusableInfo&gt;** isreturned, providing a separate entry for each **reuseId** that has a positive value of **count** or a non-default value of **maxCount** as well as an entry of **reuseId: undefined**. |
+| [IReusableInfo](arkts-arkui-ireusableinfo-i.md)[] | If the reuse pool is not configured to accept the given component type, **undefined** is returned.<br>If **reuseId** is specified, a single **IReusableInfo** is returned (even if **count** is set to **0** and **maxCount** is set to the default value).<br>If **reuseId** is not specified and the reusable component does not use **reuseId**, a single **IReusableInfo** is returned.<br>If **reuseId** is not specified but the reusable component uses **reuseId**, an **Array&lt;IReusableInfo&gt;** is returned, providing a separate entry for each **reuseId** that has a positive value of **count** or a non-default value of **maxCount** as well as an entry of **reuseId: undefined**. |
 
 **Example**
 
@@ -124,20 +130,22 @@ Pre-creates @Reusable/@ReusableV2 decorated components and places them in this r
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-IReusePool-preRender(builder: WrappedBuilder<[]>, times: number): Promise<void>--><!--Device-IReusePool-preRender(builder: WrappedBuilder<[]>, times: number): Promise<void>-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | WrappedBuilder&lt;[]&gt; | Yes | **WrappedBuilder** that contains the @Builder decorated function to beexecuted *n* times. Each execution should create one or more @Reusable/@ReusableV2 decorated components. |
+| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)<[]> | Yes | **WrappedBuilder** that contains the @Builder decorated function to be executed *n* times. Each execution should create one or more @Reusable/@ReusableV2 decorated components. |
 | times | number | Yes | Number of times the @Builder decorated function is executed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise parsed when the idle task is successfully completed. This promise returns novalue. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | Promise parsed when the idle task is successfully completed. This promise returns no value. |
 
 **Example**
 

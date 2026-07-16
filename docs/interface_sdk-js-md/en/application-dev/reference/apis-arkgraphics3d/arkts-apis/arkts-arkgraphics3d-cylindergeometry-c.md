@@ -6,6 +6,8 @@ Define a cylinder.
 
 **Since:** 23
 
+<!--Device-unnamed-export declare class CylinderGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class CylinderGeometry extends GeometryDefinition-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## height
@@ -19,6 +21,8 @@ The height of the cylinder, the unit is the scene unit in the world coordinate s
 **Type:** number
 
 **Since:** 23
+
+<!--Device-CylinderGeometry-set height(value: double)--><!--Device-CylinderGeometry-set height(value: double)-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -34,6 +38,8 @@ The radius of the base of the cylinder, the unit is the scene unit in the world 
 
 **Since:** 23
 
+<!--Device-CylinderGeometry-set radius(value: double)--><!--Device-CylinderGeometry-set radius(value: double)-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## segmentCount
@@ -42,12 +48,13 @@ The radius of the base of the cylinder, the unit is the scene unit in the world 
 set segmentCount(value: number)
 ```
 
-Use regular polygons to approximate the circular base of the cylinder,
-where segmentCount is the number of sides of the regular polygon used.
+Use regular polygons to approximate the circular base of the cylinder,where segmentCount is the number of sides of the regular polygon used.
 
 **Type:** number
 
 **Since:** 23
+
+<!--Device-CylinderGeometry-set segmentCount(value: int)--><!--Device-CylinderGeometry-set segmentCount(value: int)-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

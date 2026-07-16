@@ -4,6 +4,8 @@ Provides animation configuration options.
 
 **Since:** 11
 
+<!--Device-unnamed-declare interface KeyframeAnimateParam--><!--Device-unnamed-declare interface KeyframeAnimateParam-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## delay
@@ -20,11 +22,7 @@ Default value: **0**.
 
 A value greater than 0 means to begin the animation after the specified amount of time has elapsed.
 
-A value less than 0 means to begin the animation in advance. If the absolute value of **delay** is less than the
-actual animation duration, the animation starts its first frame from the state at the absolute value. If the
-absolute value of **delay** is greater than or equal to the actual animation duration, the animation starts its
-first frame from the end state. The actual animation duration is equal to the duration of a single animation
-multiplied by the number of animation playback times.
+A value less than 0 means to begin the animation in advance. If the absolute value of **delay** is less than the actual animation duration, the animation starts its first frame from the state at the absolute value. If the absolute value of **delay** is greater than or equal to the actual animation duration, the animation starts its first frame from the end state. The actual animation duration is equal to the duration of a single animation multiplied by the number of animation playback times.
 
 **Type:** number
 
@@ -35,6 +33,8 @@ multiplied by the number of animation playback times.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyframeAnimateParam-delay?: number--><!--Device-KeyframeAnimateParam-delay?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,9 +50,7 @@ Default value: {min:0, max:0, expected:0} (following the application's frame rat
 
 **NOTE**
 
-After a valid expected frame rate is set, the system collects the configured frame rate and divides the frequency
-on the rendering pipeline. The actual frame rate may be different from the expected one configured. It is limited
-by the system capability and screen refresh rate.
+After a valid expected frame rate is set, the system collects the configured frame rate and divides the frequency on the rendering pipeline. The actual frame rate may be different from the expected one configured. It is limited by the system capability and screen refresh rate.
 
 **Type:** ExpectedFrameRateRange
 
@@ -64,6 +62,8 @@ by the system capability and screen refresh rate.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
+<!--Device-KeyframeAnimateParam-expectedFrameRateRange?: ExpectedFrameRateRange--><!--Device-KeyframeAnimateParam-expectedFrameRateRange?: ExpectedFrameRateRange-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iterations
@@ -72,9 +72,7 @@ by the system capability and screen refresh rate.
 iterations?: number
 ```
 
-Number of times that the animation is played. By default, the animation is played once. The value **-1** indicates
-that the animation is played for an unlimited number of times. The value **0** indicates that there is no
-animation.
+Number of times that the animation is played. By default, the animation is played once. The value **-1** indicates that the animation is played for an unlimited number of times. The value **0** indicates that there is no animation.
 
 Default value: **1**.
 
@@ -94,6 +92,8 @@ Value range: [–1, +∞).
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
+<!--Device-KeyframeAnimateParam-iterations?: number--><!--Device-KeyframeAnimateParam-iterations?: number-End-->
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onFinish
@@ -102,10 +102,7 @@ Value range: [–1, +∞).
 onFinish?: () => void
 ```
 
-Callback invoked when the animation playback is complete. This API is called after the keyframe animation has
-played for the specified number of times. If transition animations are disabled in developer options, or if a
-**UIAbility** switches from the foreground to the background, any ongoing finite keyframe animation will stop
-immediately and trigger the playback completion callback.
+Callback invoked when the animation playback is complete. This API is called after the keyframe animation has played for the specified number of times. If transition animations are disabled in developer options, or if a **UIAbility** switches from the foreground to the background, any ongoing finite keyframe animation will stop immediately and trigger the playback completion callback.
 
 **Type:** () => void
 
@@ -114,6 +111,8 @@ immediately and trigger the playback completion callback.
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyframeAnimateParam-onFinish?: () => void--><!--Device-KeyframeAnimateParam-onFinish?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

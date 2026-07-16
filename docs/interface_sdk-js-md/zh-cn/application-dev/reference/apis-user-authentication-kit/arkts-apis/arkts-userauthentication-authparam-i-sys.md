@@ -4,7 +4,15 @@
 
 **起始版本：** 10
 
+<!--Device-userAuth-interface AuthParam--><!--Device-userAuth-interface AuthParam-End-->
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## 导入模块
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+```
 
 ## credentialIdList
 
@@ -19,6 +27,8 @@ credentialIdList?: Uint8Array[]
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AuthParam-credentialIdList?: Uint8Array[]--><!--Device-AuthParam-credentialIdList?: Uint8Array[]-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -37,6 +47,8 @@ userId?: number
 **默认值：** The ID of the current user. The value is a positive integer greater than or equal to 0.
 
 **起始版本：** 18
+
+<!--Device-AuthParam-userId?: int--><!--Device-AuthParam-userId?: int-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 

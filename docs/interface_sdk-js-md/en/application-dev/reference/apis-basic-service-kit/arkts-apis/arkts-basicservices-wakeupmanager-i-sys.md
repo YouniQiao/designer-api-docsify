@@ -4,6 +4,8 @@ Implements wakeup management.
 
 **Since:** 12
 
+<!--Device-intelligentVoice-interface WakeupManager--><!--Device-intelligentVoice-interface WakeupManager-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -26,6 +28,8 @@ Clears user data.
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupManager-clearUserData(): Promise<void>--><!--Device-WakeupManager-clearUserData(): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -34,7 +38,7 @@ Clears user data.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 
@@ -71,6 +75,8 @@ Enrolls with wakeup files for result. This method uses a promise to return the e
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupManager-enrollWithWakeupFilesForResult(wakeupFiles: Array<WakeupSourceFile>, wakeupInfo: string): Promise<EnrollResult>--><!--Device-WakeupManager-enrollWithWakeupFilesForResult(wakeupFiles: Array<WakeupSourceFile>, wakeupInfo: string): Promise<EnrollResult>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -79,14 +85,14 @@ Enrolls with wakeup files for result. This method uses a promise to return the e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wakeupFiles | Array&lt;WakeupSourceFile&gt; | Yes | the wakeup source files needed. |
+| wakeupFiles | [Array](../../apis-na/arkts-apis/arkts-na-array-i.md)<WakeupSourceFile> | Yes | the wakeup source files needed. |
 | wakeupInfo | string | Yes | wakeup information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EnrollResult&gt; | the promise used to return the enroll result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<EnrollResult> | the promise used to return the enroll result. |
 
 **Error codes:**
 
@@ -133,6 +139,8 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupManager-getParameter(key: string): Promise<string>--><!--Device-WakeupManager-getParameter(key: string): Promise<string>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -147,7 +155,7 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | the promise used to return the value of the intelligent voice parameter. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<string> | the promise used to return the value of the intelligent voice parameter. |
 
 **Error codes:**
 
@@ -187,6 +195,8 @@ Obtains files needed to upload. This method uses a promise to return the files n
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupManager-getUploadFiles (maxCount: int): Promise<Array<UploadFile>>--><!--Device-WakeupManager-getUploadFiles (maxCount: int): Promise<Array<UploadFile>>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -201,7 +211,7 @@ Obtains files needed to upload. This method uses a promise to return the files n
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UploadFile&gt;&gt; | the promise used to return the upload files. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<UploadFile>> | the promise used to return the upload files. |
 
 **Error codes:**
 
@@ -242,6 +252,8 @@ Obtains wakeup source files. This method uses a promise to return the wakeup sou
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupManager-getWakeupSourceFiles(): Promise<Array<WakeupSourceFile>>--><!--Device-WakeupManager-getWakeupSourceFiles(): Promise<Array<WakeupSourceFile>>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -250,7 +262,7 @@ Obtains wakeup source files. This method uses a promise to return the wakeup sou
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;WakeupSourceFile&gt;&gt; | the promise used to return the wakeup source files. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<WakeupSourceFile>> | the promise used to return the wakeup source files. |
 
 **Error codes:**
 
@@ -290,6 +302,8 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
+<!--Device-WakeupManager-setParameter(key: string, value: string): Promise<void>--><!--Device-WakeupManager-setParameter(key: string, value: string): Promise<void>-End-->
+
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
 **System API:** This is a system API.
@@ -305,7 +319,7 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise used to return the result. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<void> | the promise used to return the result. |
 
 **Error codes:**
 

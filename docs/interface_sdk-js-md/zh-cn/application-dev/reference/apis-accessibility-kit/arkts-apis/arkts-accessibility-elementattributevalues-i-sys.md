@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+<!--Device-unnamed-export interface ElementAttributeValues--><!--Device-unnamed-export interface ElementAttributeValues-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## accessibilityStateDescription
@@ -19,6 +21,8 @@ accessibilityStateDescription?: string
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ElementAttributeValues-accessibilityStateDescription?: string--><!--Device-ElementAttributeValues-accessibilityStateDescription?: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -38,6 +42,8 @@ accessibilityVisible?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ElementAttributeValues-accessibilityVisible?: boolean--><!--Device-ElementAttributeValues-accessibilityVisible?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -55,6 +61,8 @@ belongTreeId?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ElementAttributeValues-belongTreeId?: int--><!--Device-ElementAttributeValues-belongTreeId?: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -74,6 +82,8 @@ childrenIds?: Array<number>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ElementAttributeValues-childrenIds?: Array<long>--><!--Device-ElementAttributeValues-childrenIds?: Array<long>-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -91,6 +101,8 @@ childrenTreeId?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ElementAttributeValues-childrenTreeId?: int--><!--Device-ElementAttributeValues-childrenTreeId?: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -110,6 +122,8 @@ currentItem?: AccessibilityGrid
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ElementAttributeValues-currentItem?: AccessibilityGrid--><!--Device-ElementAttributeValues-currentItem?: AccessibilityGrid-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -127,6 +141,8 @@ Indicates the custom actions supported by the component.
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ElementAttributeValues-customActions?: Array<string>--><!--Device-ElementAttributeValues-customActions?: Array<string>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -146,6 +162,8 @@ isEssential?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ElementAttributeValues-isEssential?: boolean--><!--Device-ElementAttributeValues-isEssential?: boolean-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -163,6 +181,8 @@ mainWindowId?: number
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ElementAttributeValues-mainWindowId?: int--><!--Device-ElementAttributeValues-mainWindowId?: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -182,6 +202,8 @@ navDestinationId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ElementAttributeValues-navDestinationId?: long--><!--Device-ElementAttributeValues-navDestinationId?: long-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -200,6 +222,8 @@ parentId?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+<!--Device-ElementAttributeValues-parentId?: long--><!--Device-ElementAttributeValues-parentId?: long-End-->
+
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 **系统接口：** 此接口为系统接口。
@@ -217,6 +241,8 @@ span?: AccessibilitySpan[]
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ElementAttributeValues-span?: AccessibilitySpan[]--><!--Device-ElementAttributeValues-span?: AccessibilitySpan[]-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

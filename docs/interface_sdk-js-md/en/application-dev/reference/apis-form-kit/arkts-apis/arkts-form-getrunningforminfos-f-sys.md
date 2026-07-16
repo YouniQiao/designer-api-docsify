@@ -18,6 +18,8 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
+<!--Device-formObserver-function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormInfo>>, hostBundleName?: string): void--><!--Device-formObserver-function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormInfo>>, hostBundleName?: string): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -26,7 +28,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return theRunningFormInfo. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<formInfo.RunningFormInfo>> | Yes | The callback is used to return the RunningFormInfo. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
 
 **Error codes:**
@@ -56,6 +58,16 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
+<!--Device-formObserver-function getRunningFormInfos(
+    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>,
+    isUnusedIncluded: boolean,
+    hostBundleName?: string
+  ): void--><!--Device-formObserver-function getRunningFormInfos(
+    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>,
+    isUnusedIncluded: boolean,
+    hostBundleName?: string
+  ): void-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -64,7 +76,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | AsyncCallback&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes | The callback is used to return theRunningFormInfo. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<Array<formInfo.RunningFormInfo>> | Yes | The callback is used to return the RunningFormInfo. |
 | isUnusedIncluded | boolean | Yes | Indicates whether to include unused form. |
 | hostBundleName | string | No | Indicates the bundle name of the form host application. |
 
@@ -91,6 +103,8 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
+<!--Device-formObserver-function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formObserver-function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.RunningFormInfo>>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -105,7 +119,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Returns the RunningFormInfo. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<formInfo.RunningFormInfo>> | Returns the RunningFormInfo. |
 
 **Error codes:**
 
@@ -133,6 +147,14 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
+<!--Device-formObserver-function getRunningFormInfos(
+    isUnusedIncluded: boolean,
+    hostBundleName?: string
+  ): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formObserver-function getRunningFormInfos(
+    isUnusedIncluded: boolean,
+    hostBundleName?: string
+  ): Promise<Array<formInfo.RunningFormInfo>>-End-->
+
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
@@ -148,7 +170,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Returns the RunningFormInfo. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<Array<formInfo.RunningFormInfo>> | Returns the RunningFormInfo. |
 
 **Error codes:**
 

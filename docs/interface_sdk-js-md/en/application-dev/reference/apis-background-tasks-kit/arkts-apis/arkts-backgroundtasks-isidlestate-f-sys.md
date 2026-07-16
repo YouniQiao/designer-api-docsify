@@ -18,6 +18,8 @@ Checks whether the application with a specified bundle name is in the idle state
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-usageStatistics-function isIdleState(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -27,7 +29,7 @@ Checks whether the application with a specified bundle name is in the idle state
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Indicates the bundle name of the application to query. |
-| callback | AsyncCallback&lt;boolean&gt; | Yes | Callback used to return the result.The value **true** indicates the application is idle in a particular period, and **false** indicates otherwise.The time range of the particular period is defined by the system, which may be hours or days. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<boolean> | Yes | Callback used to return the result.The value **true** indicates the application is idle in a particular period, and **false** indicates otherwise.The time range of the particular period is defined by the system, which may be hours or days. |
 
 **Error codes:**
 
@@ -72,6 +74,8 @@ Checks whether the application with a specified bundle name is in the idle state
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
+<!--Device-usageStatistics-function isIdleState(bundleName: string): Promise<boolean>--><!--Device-usageStatistics-function isIdleState(bundleName: string): Promise<boolean>-End-->
+
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
 
 **System API:** This is a system API.
@@ -86,7 +90,7 @@ Checks whether the application with a specified bundle name is in the idle state
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | the promise returned by isIdleState.boolean value is true mean the application is idle in a particular period; false mean otherwise.The time range of the particular period is defined by the system, which may be hours or days. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<boolean> | the promise returned by isIdleState.boolean value is true mean the application is idle in a particular period; false mean otherwise.The time range of the particular period is defined by the system, which may be hours or days. |
 
 **Error codes:**
 

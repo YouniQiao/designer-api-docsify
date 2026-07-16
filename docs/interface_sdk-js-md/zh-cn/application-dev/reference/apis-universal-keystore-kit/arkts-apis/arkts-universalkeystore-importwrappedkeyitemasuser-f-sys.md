@@ -1,5 +1,11 @@
 # importWrappedKeyItemAsUser（系统接口）
 
+## 导入模块
+
+```TypeScript
+import { huks } from '@kit.UniversalKeystoreKit';
+```
+
 ## importWrappedKeyItemAsUser
 
 ```TypeScript
@@ -16,6 +22,16 @@ Import Wrapped Key As User.
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
+<!--Device-huks-function importWrappedKeyItemAsUser(
+    userId: number, keyAlias: string,
+    wrappingKeyAlias: string,
+    huksOptions: HuksOptions
+  ): Promise<void>--><!--Device-huks-function importWrappedKeyItemAsUser(
+    userId: number, keyAlias: string,
+    wrappingKeyAlias: string,
+    huksOptions: HuksOptions
+  ): Promise<void>-End-->
+
 **系统能力：** SystemCapability.Security.Huks.Extension
 
 **系统接口：** 此接口为系统接口。
@@ -27,13 +43,13 @@ Import Wrapped Key As User.
 | userId | number | 是 | User ID. |
 | keyAlias | string | 是 | Alias of the wrapped key to import. |
 | wrappingKeyAlias | string | 是 | Alias of the key used to decrypt the wrapped key. |
-| huksOptions | HuksOptions | 是 | Options for importing the wrapped key. The algorithm, key purpose, and keylength are mandatory. |
+| huksOptions | [HuksOptions](arkts-universalkeystore-huksoptions-i.md) | 是 | Options for importing the wrapped key. The algorithm, key purpose, and key length are mandatory. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise<void> | Promise that returns no value. |
 
 **错误码：**
 

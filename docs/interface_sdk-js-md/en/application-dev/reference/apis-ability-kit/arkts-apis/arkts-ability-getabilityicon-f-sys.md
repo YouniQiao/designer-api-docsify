@@ -12,8 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Obtains the PixelMap of an icon based on the bundle name, module name, and ability name.
-This API uses a promise to return the result.
+Obtains the PixelMap of an icon based on the bundle name, module name, and ability name.This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -22,6 +21,8 @@ This API uses a promise to return the result.
 **Substitutes:** getMediaContent
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void--><!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -34,7 +35,7 @@ This API uses a promise to return the result.
 | bundleName | string | Yes | Bundle name of the application to be queried. |
 | moduleName | string | Yes | Module name of the application to be queried. |
 | abilityName | string | Yes | Ability component name to be queried. |
-| callback | AsyncCallback&lt;image.PixelMap&gt; | Yes | Callback used to return the result. IfgetApplicationInfos is successful, **err** is **undefined**, and PixelMap as the input parameterfor starting the application. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<image.PixelMap> | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and PixelMap as the input parameter for starting the application. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -56,8 +57,7 @@ This API uses a promise to return the result.
 function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-Obtains the PixelMap of an icon based on the bundle name, module name, and ability name.
-This API uses a promise to return the result.
+Obtains the PixelMap of an icon based on the bundle name, module name, and ability name.This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -66,6 +66,8 @@ This API uses a promise to return the result.
 **Substitutes:** getMediaContent
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
+
+<!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string): Promise<image.PixelMap>--><!--Device-bundleManager-function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -83,7 +85,7 @@ This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise used to return the PixelMap. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<image.PixelMap> | Promise used to return the PixelMap. |
 
 **Error codes:**
 

@@ -20,6 +20,8 @@ Check whether the GNSS service is supported.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+<!--Device-geoLocationManager-function isGnssServiceSupported(): boolean--><!--Device-geoLocationManager-function isGnssServiceSupported(): boolean-End-->
+
 **System capability:** SystemCapability.Location.Location.Core
 
 **Return value:**

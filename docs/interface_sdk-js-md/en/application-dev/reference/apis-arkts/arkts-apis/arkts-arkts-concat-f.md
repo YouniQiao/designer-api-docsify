@@ -18,6 +18,8 @@ Returns a new `FastBuffer` which is the result of concatenating all the `FastBuf
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
+<!--Device-fastbuffer-function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBuffer--><!--Device-fastbuffer-function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBuffer-End-->
+
 **System capability:** SystemCapability.Utils.Lang
 
 **Parameters:**
@@ -31,7 +33,7 @@ Returns a new `FastBuffer` which is the result of concatenating all the `FastBuf
 
 | Type | Description |
 | --- | --- |
-| FastBuffer | Return a new allocated FastBuffer |
+| [FastBuffer](arkts-arkts-fastbuffer-c.md) | Return a new allocated FastBuffer |
 
 **Error codes:**
 

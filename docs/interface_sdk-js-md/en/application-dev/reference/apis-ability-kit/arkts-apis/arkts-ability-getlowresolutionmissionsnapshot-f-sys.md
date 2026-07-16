@@ -16,12 +16,21 @@ function getLowResolutionMissionSnapShot(
   ): void
 ```
 
-Obtains the low-resolution snapshot of a given mission. This API uses an asynchronous callback to return the
-result.
+Obtains the low-resolution snapshot of a given mission. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function getLowResolutionMissionSnapShot(
+    deviceId: string,
+    missionId: int,
+    callback: AsyncCallback<MissionSnapshot>
+  ): void--><!--Device-missionManager-function getLowResolutionMissionSnapShot(
+    deviceId: string,
+    missionId: int,
+    callback: AsyncCallback<MissionSnapshot>
+  ): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -33,7 +42,7 @@ result.
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | missionId | number | Yes | Mission ID. |
-| callback | AsyncCallback&lt;MissionSnapshot&gt; | Yes | Callback used to return the snapshot information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-i.md)<MissionSnapshot> | Yes | Callback used to return the snapshot information obtained. |
 
 **Error codes:**
 
@@ -80,6 +89,8 @@ Obtains the low-resolution snapshot of a given mission. This API uses a promise 
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
+<!--Device-missionManager-function getLowResolutionMissionSnapShot(deviceId: string, missionId: int): Promise<MissionSnapshot>--><!--Device-missionManager-function getLowResolutionMissionSnapShot(deviceId: string, missionId: int): Promise<MissionSnapshot>-End-->
+
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
 **System API:** This is a system API.
@@ -95,7 +106,7 @@ Obtains the low-resolution snapshot of a given mission. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MissionSnapshot&gt; | Promise used to return the snapshot information obtained. |
+| [Promise](../../apis-na/arkts-apis/arkts-na-promise-i.md)<MissionSnapshot> | Promise used to return the snapshot information obtained. |
 
 **Error codes:**
 

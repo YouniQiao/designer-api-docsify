@@ -6,6 +6,8 @@ Animation resource.
 
 **Since:** 12
 
+<!--Device-unnamed-export interface Animation extends SceneResource--><!--Device-unnamed-export interface Animation extends SceneResource-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## finish
@@ -17,6 +19,8 @@ finish(): void
 Finish the animation and seek the position to the end.
 
 **Since:** 12
+
+<!--Device-Animation-finish(): void--><!--Device-Animation-finish(): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -30,13 +34,15 @@ Register a callback when animation finished.
 
 **Since:** 12
 
+<!--Device-Animation-onFinished(callback: Callback<void>): void--><!--Device-Animation-onFinished(callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | Yes | the callback invoked when animation finished |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | the callback invoked when animation finished |
 
 ## onStarted
 
@@ -48,13 +54,15 @@ Register a callback when animation started.
 
 **Since:** 12
 
+<!--Device-Animation-onStarted(callback: Callback<void>): void--><!--Device-Animation-onStarted(callback: Callback<void>): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;void&gt; | Yes | the callback invoked when animation started |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)<void> | Yes | the callback invoked when animation started |
 
 ## pause
 
@@ -65,6 +73,8 @@ pause(): void
 Pause the animation.
 
 **Since:** 12
+
+<!--Device-Animation-pause(): void--><!--Device-Animation-pause(): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -78,6 +88,8 @@ Restart the animation.
 
 **Since:** 12
 
+<!--Device-Animation-restart(): void--><!--Device-Animation-restart(): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## seek
@@ -89,6 +101,8 @@ seek(position: number): void
 Seek the animation to the position.
 
 **Since:** 12
+
+<!--Device-Animation-seek(position: double): void--><!--Device-Animation-seek(position: double): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -108,6 +122,8 @@ Start the animation.
 
 **Since:** 12
 
+<!--Device-Animation-start(): void--><!--Device-Animation-start(): void-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## stop
@@ -119,6 +135,8 @@ stop(): void
 Stop the animation and seek the position to the beginning.
 
 **Since:** 12
+
+<!--Device-Animation-stop(): void--><!--Device-Animation-stop(): void-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -134,6 +152,8 @@ The duration of the animation, the unit is second.
 
 **Since:** 12
 
+<!--Device-Animation-readonly duration: double--><!--Device-Animation-readonly duration: double-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## enabled
@@ -147,6 +167,8 @@ The animation is enabled.
 **Type:** boolean
 
 **Since:** 12
+
+<!--Device-Animation-enabled: boolean--><!--Device-Animation-enabled: boolean-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -162,6 +184,8 @@ The progress of the animation between 0~1.
 
 **Since:** 12
 
+<!--Device-Animation-readonly progress: double--><!--Device-Animation-readonly progress: double-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## running
@@ -176,6 +200,8 @@ Whether the animation is running.
 
 **Since:** 12
 
+<!--Device-Animation-readonly running: boolean--><!--Device-Animation-readonly running: boolean-End-->
+
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 ## speed
@@ -184,12 +210,13 @@ Whether the animation is running.
 speed?: number
 ```
 
-Animation speed factor
-A negative value runs the animation in reverse using the given speed factor
+Animation speed factor A negative value runs the animation in reverse using the given speed factor
 
 **Type:** number
 
 **Since:** 20
+
+<!--Device-Animation-speed?: double--><!--Device-Animation-speed?: double-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

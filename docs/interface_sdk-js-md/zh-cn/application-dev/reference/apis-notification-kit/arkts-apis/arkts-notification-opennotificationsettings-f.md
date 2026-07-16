@@ -12,16 +12,15 @@ import { notificationManager } from '@kit.NotificationKit';
 function openNotificationSettings(context: UIAbilityContext): Promise<void>
 ```
 
-拉起应用的通知设置界面，该页面以半模态形式呈现，可用于设置通知开关、
-通知提醒方式等。使用Promise异步回调。
+拉起应用的通知设置界面，该页面以半模态形式呈现，可用于设置通知开关、通知提醒方式等。使用Promise异步回调。
 
-适用于用户需要手动修改通知设置的场景，如用户拒绝授权后二次申请，或需要
-修改通知提醒方式（振动、响铃等）。当requestEnableNotification弹窗被
-用户拒绝后，开发者可调用此接口引导用户前往通知设置页面手动开启。
+适用于用户需要手动修改通知设置的场景，如用户拒绝授权后二次申请，或需要修改通知提醒方式（振动、响铃等）。当requestEnableNotification弹窗被用户拒绝后，开发者可调用此接口引导用户前往通知设置页面手动开启。
 
 **起始版本：** 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-notificationManager-function openNotificationSettings(context: UIAbilityContext): Promise<void>--><!--Device-notificationManager-function openNotificationSettings(context: UIAbilityContext): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.NotificationSettings
 
@@ -29,13 +28,13 @@ function openNotificationSettings(context: UIAbilityContext): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | UIAbilityContext | 是 | 通知设置页面绑定Ability的上下文。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-t.md) | 是 | 通知设置页面绑定Ability的上下文。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise<void> | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
