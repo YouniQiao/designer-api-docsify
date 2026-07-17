@@ -16,7 +16,7 @@ Enumerates description file formats.
 STANDARD = 0
 ```
 
-Standard format.
+Standard format. This format is applicable to scenarios where complete description is required.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Standard format.
 SIMPLIFIED = 1
 ```
 
-Simple format.
+Simple format. This format is applicable to scenarios where only simplified description is required.
 
 **Since:** 9
 

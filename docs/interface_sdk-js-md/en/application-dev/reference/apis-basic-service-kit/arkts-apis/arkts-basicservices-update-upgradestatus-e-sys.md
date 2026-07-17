@@ -112,7 +112,7 @@ Updating.
 WAITING_APPLY = 40
 ```
 
-Waiting for applying the update.
+Waiting for applying the upgrade.
 
 **Since:** 9
 

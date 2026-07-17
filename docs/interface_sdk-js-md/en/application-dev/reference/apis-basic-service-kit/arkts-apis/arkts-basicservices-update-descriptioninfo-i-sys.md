@@ -40,7 +40,7 @@ Content of the description file.
 descriptionType: DescriptionType
 ```
 
-Type of the description file.
+Description type. The value **CONTENT** indicates that the description is content, which is applicable to scenarios where the description content is short or needs to be displayed immediately. **URI** indicates that the description is a link, which is applicable to scenarios where the description content is long or needs to be obtained from external resources. Select a value based on the description length and display mode.
 
 **Type:** DescriptionType
 

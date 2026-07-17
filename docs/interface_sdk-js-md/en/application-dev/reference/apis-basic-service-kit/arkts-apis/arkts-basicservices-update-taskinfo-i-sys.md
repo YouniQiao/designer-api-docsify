@@ -1,6 +1,6 @@
 # TaskInfo (System API)
 
-Task information.
+Represents the task information.
 
 **Since:** 9
 
@@ -22,9 +22,9 @@ import { update } from '@kit.BasicServicesKit';
 existTask: boolean
 ```
 
-Whether a task exists.
+Whether an upgrade task exists, which is used to determine whether an upgrade task is in progress.
 
-The value **true** indicates that the task exists, and the value **false** indicates the opposite.
+Use scenarios: Query the task status before the upgrade to avoid repeated operations. Monitor the task status change during the upgrade. The value **true** indicates that an upgrade task (for example, a download or installation task) is in progress. You need to wait until the task is complete or canceled before executing a new task. The value **false** indicates that no task is running and a new upgrade process can be started.
 
 **Type:** boolean
 

@@ -22,7 +22,7 @@ import { update } from '@kit.BasicServicesKit';
 versionDigest: string
 ```
 
-Version digest information.
+Version digest information. The value is a string of 1 to 128 characters. The value is obtained from the version check result and is used to identify a specific version. An exception is thrown if the value is out of range.
 
 **Type:** string
 

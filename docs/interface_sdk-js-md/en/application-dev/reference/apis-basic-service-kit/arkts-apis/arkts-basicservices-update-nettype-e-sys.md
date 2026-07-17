@@ -1,6 +1,6 @@
 # NetType (System API)
 
-Enumerates network types.
+Enumerates the network types allowed for download. The value **CELLULAR** indicates that only download over the cellular network is allowed; **WiFi** that only download using Wi-Fi is allowed; **CELLULAR_AND_WIFI** indicates that download over both the cellular network and Wi-Fi is allowed.
 
 **Since:** 9
 

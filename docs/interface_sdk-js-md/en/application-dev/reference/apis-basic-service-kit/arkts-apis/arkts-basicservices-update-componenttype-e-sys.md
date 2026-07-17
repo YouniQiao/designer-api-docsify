@@ -16,7 +16,7 @@ Represents a component type.
 OTA = 1
 ```
 
-Firmware.
+OTA upgrade package, which is a complete upgrade package used for firmware upgrade
 
 **Since:** 9
 

@@ -22,7 +22,7 @@ import { update } from '@kit.BasicServicesKit';
 componentId: string
 ```
 
-Component ID.
+Component ID, which uniquely identifies a component in the upgrade package. The value is obtained from the **versionComponents** array in the version check result and is used for subsequent description query or component information display.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ Display version number.
 effectiveMode: EffectiveMode
 ```
 
-Effective mode.
+Effective mode. The value **COLD** indicates the cold upgrade, which takes effect after the device is restarted;**LIVE** indicates the hot upgrade, which does not require restarting the device to take effect;**LIVE_AND_COLD** indicates the integrated upgrade, which combines the characteristics of **COLD** and **LIVE**.
 
 **Type:** EffectiveMode
 
@@ -130,7 +130,7 @@ Internal version number.
 otaMode?: OtaMode
 ```
 
-OTA mode.
+OTA mode. Pass this parameter to specify a specific upgrade mode, which is applicable to special scenarios such as the upgrade with limited storage space, fast upgrade, and A/B partition device upgrade. The value **REGULAR_OTA** indicates a regular upgrade, which is applicable to most common upgrade scenarios. **STREAM_OTA** indicates a streaming upgrade, which is applicable to scenarios where the storage space is limited or a fast upgrade is required. **AB_REGULAR_OTA** indicates the normal A/B upgrade and applies to the A/B partition device.**AB_STREAM_OTA** indicates the A/B streaming upgrade and applies to the A/B partition device. If this parameter is not specified, the default value **REGULAR_OTA** is used, indicating that the regular upgrade mode is used.
 
 **Type:** OtaMode
 
@@ -148,7 +148,7 @@ OTA mode.
 size: number
 ```
 
-Size of the update package, in bytes.
+Size of the upgrade package, in bytes. The value range is [0, +∞]. An exception is thrown if the value is out of range.
 
 **Type:** number
 
@@ -166,7 +166,7 @@ Size of the update package, in bytes.
 upgradeAction: UpgradeAction
 ```
 
-Update mode.
+Upgrade action. The value **UPGRADE** indicates that the upgrade package is a differential package, which applies to incremental upgrade. The value **RECOVERY** indicates that the upgrade package is a repair package, which applies to system failure repair.
 
 **Type:** UpgradeAction
 

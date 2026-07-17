@@ -1,6 +1,6 @@
 # UpgradeFile (System API)
 
-Represents an update file.
+Represents the upgrade file, including the file type and file path, which are used to specify the local upgrade package to be installed.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { update } from '@kit.BasicServicesKit';
 filePath: string
 ```
 
-File path.
+File path, which can be an absolute path or a relative path. The path length ranges from 1 to 255 characters. If the path length is out of the range, an exception is thrown.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ File path.
 fileType: ComponentType
 ```
 
-File type.
+File type, which specifies the type of the upgrade package. If this parameter is set to **OTA**, the system performs the firmware upgrade based on the OTA type, including integrity check and system partition writing.
 
 **Type:** ComponentType
 

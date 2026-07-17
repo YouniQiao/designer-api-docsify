@@ -1,6 +1,6 @@
 # FactoryResetStrategy (System API)
 
-Describes the factory reset strategy.
+Represents the factory reset strategy, which contains the **scope** (reset scope) and **strategy** (reset strategy description) fields.
 
 **Since:** 26.0.0
 
@@ -22,11 +22,7 @@ import { update } from '@kit.BasicServicesKit';
 scope: FactoryResetScope
 ```
 
-Reset scope.Available values:
-
-- DATA: Indicates "quick erase", erasing only the user data partition (app data, user settings, account info, etc.).Factory reset takes less time.
-
-- DATA_AND_OS: Indicates "deep erase", erasing both the user data partition and the system partition.Factory reset takes longer time.
+Reset scope. The value **DATA** indicates that only data in the user partition is cleared; **DATA_AND_OS** indicates that data in both the user partition and OS partition is cleared.
 
 **Type:** FactoryResetScope
 
@@ -46,7 +42,7 @@ Reset scope.Available values:
 strategy: string
 ```
 
-Reset scope description, providing supplementary details for the scope field.A meaningful value must be provided to match the corresponding erase scenario. If left empty, logs will lack effective information when anomalies occur, increasing troubleshooting difficulty.
+Reset strategy, which specifies the specific strategy for the reset operation. The value is a string of 0 to 64characters. The value can contain letters, digits, underscores (_), hyphens (-), and spaces. An exception is thrown if the value is out of range or contains invalid characters. This parameter describes the reset operation.For example, **quick erase** indicates fast data erasure, and **deep erase** indicates deep erasure.
 
 **Type:** string
 

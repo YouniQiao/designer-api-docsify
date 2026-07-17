@@ -22,7 +22,7 @@ import { update } from '@kit.BasicServicesKit';
 duration: number
 ```
 
-Duration required for restoring factory settings, in seconds.
+Duration required for restoring factory settings, in minutes. The value range is [0, +∞]. An exception is thrown if the value is out of range.
 
 **Type:** number
 

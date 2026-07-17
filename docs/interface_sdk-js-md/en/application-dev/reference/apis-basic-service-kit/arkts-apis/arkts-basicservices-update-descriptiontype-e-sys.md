@@ -16,7 +16,7 @@ Enumerates description file types.
 CONTENT = 0
 ```
 
-Content.
+Content. This type indicates that the description content is directly provided, which is applicable to scenarios where the description content is short or needs to be displayed immediately.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Content.
 URI = 1
 ```
 
-Link.
+Link. This type indicates that the description is provided through a link, which is applicable to scenarios where the description content is long or needs to be obtained from external resources.
 
 **Since:** 9
 

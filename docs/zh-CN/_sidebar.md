@@ -1,4 +1,4 @@
-- [Ability Kit (1226)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability.md)
+- [Ability Kit (1227)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability.md)
 - [Accessibility Kit (114)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-accessibility-kit/arkts-apis/arkts-accessibility.md)
 - [Ads Kit (27)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ads-kit/arkts-apis/arkts-advertising.md)
 - [Ark Uikit (7)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-ark-uikit/c-apis/capi-arkui-nativemodule-arkui-margin.md)

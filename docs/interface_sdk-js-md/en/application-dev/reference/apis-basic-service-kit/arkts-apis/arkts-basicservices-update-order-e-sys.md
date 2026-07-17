@@ -16,7 +16,7 @@ Enumerates update commands.
 DOWNLOAD = 1
 ```
 
-Download.
+Download. This command is applicable to the scenario where only the upgrade package is downloaded.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ Download.
 INSTALL = 2
 ```
 
-Install.
+Install. This command is applicable to the scenario where the downloaded upgrade package is directly installed.
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Install.
 DOWNLOAD_AND_INSTALL = 3
 ```
 
-Download and install.
+Download and install. This command is applicable to the scenario where the upgrade package is downloaded and installed.
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ Download and install.
 APPLY = 4
 ```
 
-Apply.
+Apply. This command is applicable only to the scenario where the installed upgrade package takes effect. The device will restart to apply the new version. This command is applicable to the scenario where the installation is complete and the device needs to be restarted for the installation to take effect.
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Apply.
 INSTALL_AND_APPLY = 6
 ```
 
-Install and apply.
+Install and apply. After the installation, the device restarts to apply the new version. This command is applicable to the scenario where the system upgrade needs to be completed quickly and take effect immediately.
 
 **Since:** 9
 

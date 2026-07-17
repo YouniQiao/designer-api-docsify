@@ -124,3 +124,23 @@ Emergency usage.
 
 **System API:** This is a system API.
 
+## STREAM_USAGE_VOICE_ASSISTANT_SYSTEM
+
+```TypeScript
+STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27
+```
+
+Voice assistant broadcast usage for system app.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27--><!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**System API:** This is a system API.
+

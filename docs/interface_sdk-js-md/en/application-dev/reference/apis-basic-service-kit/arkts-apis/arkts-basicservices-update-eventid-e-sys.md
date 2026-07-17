@@ -176,7 +176,7 @@ Download failed.
 EVENT_UPGRADE_WAIT = 0x0100000a
 ```
 
-Waiting for update.
+Waiting for upgrade.
 
 **Since:** 9
 
@@ -192,7 +192,7 @@ Waiting for update.
 EVENT_UPGRADE_START = 0x0100000b
 ```
 
-Update started.
+Upgrade started.
 
 **Since:** 9
 
@@ -208,7 +208,7 @@ Update started.
 EVENT_UPGRADE_UPDATE = 0x0100000c
 ```
 
-Update in progress.
+Upgrade in progress.
 
 **Since:** 9
 
@@ -224,7 +224,7 @@ Update in progress.
 EVENT_APPLY_WAIT = 0x0100000d
 ```
 
-Waiting for applying the update.
+Waiting for applying the upgrade.
 
 **Since:** 9
 
@@ -240,7 +240,7 @@ Waiting for applying the update.
 EVENT_APPLY_START = 0x0100000e
 ```
 
-Applying the update.
+Applying the upgrade.
 
 **Since:** 9
 
@@ -256,7 +256,7 @@ Applying the update.
 EVENT_UPGRADE_SUCCESS = 0x0100000f
 ```
 
-Update succeeded.
+Upgrade succeeded.
 
 **Since:** 9
 
