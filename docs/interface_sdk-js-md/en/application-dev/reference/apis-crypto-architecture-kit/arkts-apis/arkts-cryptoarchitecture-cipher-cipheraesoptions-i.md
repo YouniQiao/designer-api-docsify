@@ -48,7 +48,7 @@ complete: () => void
 
 Called when the execution is complete.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -68,7 +68,7 @@ fail: (data: string, code: number) => void
 
 Called when data fails to be encrypted or decrypted.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -168,7 +168,7 @@ success: (data: CipherResponse) => void
 
 Called when data is encrypted or decrypted successfully.
 
-**Type:** (data: CipherResponse) => void
+**Type:** (data: CipherResponse) =&gt; void
 
 **Since:** 3
 

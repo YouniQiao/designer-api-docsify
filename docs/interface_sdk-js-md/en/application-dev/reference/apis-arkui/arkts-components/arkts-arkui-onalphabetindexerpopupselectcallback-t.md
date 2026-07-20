@@ -20,5 +20,5 @@ Represents the callback invoked when a secondary index item in the pop-up window
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | selected index |
+| index | number | Yes | selected index  |
 

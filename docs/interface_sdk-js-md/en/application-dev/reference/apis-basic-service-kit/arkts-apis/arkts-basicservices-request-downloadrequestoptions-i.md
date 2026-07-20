@@ -29,7 +29,7 @@ complete?: () => void
 
 Called when API call is complete.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -69,7 +69,7 @@ fail?: (data: any, code: number) => void
 
 Called when downloading fails.
 
-**Type:** (data: any, code: number) => void
+**Type:** (data: any, code: number) =&gt; void
 
 **Since:** 3
 
@@ -129,7 +129,7 @@ success?: (data: DownloadResponse) => void
 
 Called when the files are successfully downloaded.
 
-**Type:** (data: DownloadResponse) => void
+**Type:** (data: DownloadResponse) =&gt; void
 
 **Since:** 3
 

@@ -62,7 +62,7 @@ Sets the CustomContentDialog content area padding.
 
 Sets the CustomContentDialog content.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 12
 
@@ -164,7 +164,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** Theme | CustomTheme
+**Type:** Theme \| CustomTheme
 
 **Since:** 12
 

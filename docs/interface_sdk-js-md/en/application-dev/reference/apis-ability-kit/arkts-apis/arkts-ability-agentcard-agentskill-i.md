@@ -36,7 +36,7 @@ examples?: Array<string>
 
 Example prompts or scenarios that this skill can handle.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 24
 
@@ -96,7 +96,7 @@ inputModes?: Array<string>
 
 The set of supported input media types for this skill, overriding the agent's defaults.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 24
 
@@ -136,7 +136,7 @@ outputModes?: Array<string>
 
 The set of supported output media types for this skill, overriding the agent's defaults.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 24
 
@@ -156,7 +156,7 @@ tags: Array<string>
 
 A set of keywords describing the skill's capabilities.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 24
 

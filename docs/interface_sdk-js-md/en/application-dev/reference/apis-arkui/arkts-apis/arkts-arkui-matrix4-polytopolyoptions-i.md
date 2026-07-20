@@ -22,7 +22,7 @@ dst:Array<Point>
 
 Coordinates of the destination point.
 
-**Type:** Array<Point>
+**Type:** Array&lt;Point&gt;
 
 **Since:** 12
 
@@ -94,7 +94,7 @@ src: Array<Point>
 
 Coordinates of the source point.
 
-**Type:** Array<Point>
+**Type:** Array&lt;Point&gt;
 
 **Since:** 12
 

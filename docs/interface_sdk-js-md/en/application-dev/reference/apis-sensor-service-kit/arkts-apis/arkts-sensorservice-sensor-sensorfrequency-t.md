@@ -16,7 +16,7 @@ Defines the reporting frequency mode of the sensor.
 
 | Type | Description |
 | --- | --- |
-| 'game' | Game mode, which specifies a sensor data reporting frequency of 20,000,000 ns. Thisparameter takes effect only when the frequency is within the frequency range supported by the hardware. |
-| 'ui' | UI mode, which specifies a sensor data reporting frequency of 60,000,000 ns. This parametertakes effect only when the frequency is within the frequency range supported by the hardware. |
-| 'normal' | Normal mode, which specifies a sensor data reporting frequency of 200,000,000 ns. Thisparameter takes effect only when the frequency is within the frequency range supported by the hardware. |
+| 'game' | Game mode, which specifies a sensor data reporting frequency of 20,000,000 ns. This parameter takes effect only when the frequency is within the frequency range supported by the hardware. |
+| 'ui' | UI mode, which specifies a sensor data reporting frequency of 60,000,000 ns. This parameter takes effect only when the frequency is within the frequency range supported by the hardware. |
+| 'normal' | Normal mode, which specifies a sensor data reporting frequency of 200,000,000 ns. This parameter takes effect only when the frequency is within the frequency range supported by the hardware. |
 

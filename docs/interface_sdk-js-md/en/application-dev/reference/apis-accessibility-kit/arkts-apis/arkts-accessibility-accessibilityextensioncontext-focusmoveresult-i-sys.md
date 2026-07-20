@@ -36,7 +36,7 @@ target: Array<AccessibilityElement>
 
 Target accessibility nodes.
 
-**Type:** Array<AccessibilityElement>
+**Type:** Array&lt;AccessibilityElement&gt;
 
 **Since:** 23
 

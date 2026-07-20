@@ -22,7 +22,7 @@ appEventInfos: Array<AppEventInfo>
 
 Event object group.
 
-**Type:** Array<AppEventInfo>
+**Type:** Array&lt;AppEventInfo&gt;
 
 **Since:** 11
 

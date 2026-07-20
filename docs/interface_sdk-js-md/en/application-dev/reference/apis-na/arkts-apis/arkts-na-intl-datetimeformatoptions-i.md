@@ -8,7 +8,7 @@
 day?: "numeric" | "2-digit" | undefined
 ```
 
-**Type:** "numeric" | "2-digit" | undefined
+**Type:** "numeric" \| "2-digit" \| undefined
 
 <!--Device-DateTimeFormatOptions-day?: "numeric" | "2-digit" | undefined--><!--Device-DateTimeFormatOptions-day?: "numeric" | "2-digit" | undefined-End-->
 
@@ -18,7 +18,7 @@ day?: "numeric" | "2-digit" | undefined
 era?: "number" | "short" | "narrow" | undefined
 ```
 
-**Type:** "number" | "short" | "narrow" | undefined
+**Type:** "number" \| "short" \| "narrow" \| undefined
 
 <!--Device-DateTimeFormatOptions-era?: "long" | "short" | "narrow" | undefined--><!--Device-DateTimeFormatOptions-era?: "long" | "short" | "narrow" | undefined-End-->
 
@@ -28,7 +28,7 @@ era?: "number" | "short" | "narrow" | undefined
 formatMatcher?: "best fit" | "basic" | undefined
 ```
 
-**Type:** "best fit" | "basic" | undefined
+**Type:** "best fit" \| "basic" \| undefined
 
 <!--Device-DateTimeFormatOptions-formatMatcher?: "best fit" | "basic" | undefined--><!--Device-DateTimeFormatOptions-formatMatcher?: "best fit" | "basic" | undefined-End-->
 
@@ -38,7 +38,7 @@ formatMatcher?: "best fit" | "basic" | undefined
 hour?: "numeric" | "2-digit" | undefined
 ```
 
-**Type:** "numeric" | "2-digit" | undefined
+**Type:** "numeric" \| "2-digit" \| undefined
 
 <!--Device-DateTimeFormatOptions-hour?: "numeric" | "2-digit" | undefined--><!--Device-DateTimeFormatOptions-hour?: "numeric" | "2-digit" | undefined-End-->
 
@@ -48,7 +48,7 @@ hour?: "numeric" | "2-digit" | undefined
 hour12?: boolean | undefined
 ```
 
-**Type:** boolean | undefined
+**Type:** boolean \| undefined
 
 <!--Device-DateTimeFormatOptions-hour12?: boolean | undefined--><!--Device-DateTimeFormatOptions-hour12?: boolean | undefined-End-->
 
@@ -58,7 +58,7 @@ hour12?: boolean | undefined
 localeMatcher?: "best fit" | "lookup" | undefined
 ```
 
-**Type:** "best fit" | "lookup" | undefined
+**Type:** "best fit" \| "lookup" \| undefined
 
 <!--Device-DateTimeFormatOptions-localeMatcher?: "best fit" | "lookup" | undefined--><!--Device-DateTimeFormatOptions-localeMatcher?: "best fit" | "lookup" | undefined-End-->
 
@@ -68,7 +68,7 @@ localeMatcher?: "best fit" | "lookup" | undefined
 minute?: "numeric" | "2-digit" | undefined
 ```
 
-**Type:** "numeric" | "2-digit" | undefined
+**Type:** "numeric" \| "2-digit" \| undefined
 
 <!--Device-DateTimeFormatOptions-minute?: "numeric" | "2-digit" | undefined--><!--Device-DateTimeFormatOptions-minute?: "numeric" | "2-digit" | undefined-End-->
 
@@ -78,7 +78,7 @@ minute?: "numeric" | "2-digit" | undefined
 month?: "numeric" | "2-digit" | "number" | "short" | "narrow" | undefined
 ```
 
-**Type:** "numeric" | "2-digit" | "number" | "short" | "narrow" | undefined
+**Type:** "numeric" \| "2-digit" \| "number" \| "short" \| "narrow" \| undefined
 
 <!--Device-DateTimeFormatOptions-month?: "numeric" | "2-digit" | "long" | "short" | "narrow" | undefined--><!--Device-DateTimeFormatOptions-month?: "numeric" | "2-digit" | "long" | "short" | "narrow" | undefined-End-->
 
@@ -88,7 +88,7 @@ month?: "numeric" | "2-digit" | "number" | "short" | "narrow" | undefined
 second?: "numeric" | "2-digit" | undefined
 ```
 
-**Type:** "numeric" | "2-digit" | undefined
+**Type:** "numeric" \| "2-digit" \| undefined
 
 <!--Device-DateTimeFormatOptions-second?: "numeric" | "2-digit" | undefined--><!--Device-DateTimeFormatOptions-second?: "numeric" | "2-digit" | undefined-End-->
 
@@ -98,7 +98,7 @@ second?: "numeric" | "2-digit" | undefined
 timeZone?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-DateTimeFormatOptions-timeZone?: string | undefined--><!--Device-DateTimeFormatOptions-timeZone?: string | undefined-End-->
 
@@ -108,7 +108,7 @@ timeZone?: string | undefined
 timeZoneName?: "short" | "number" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined
 ```
 
-**Type:** "short" | "number" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined
+**Type:** "short" \| "number" \| "shortOffset" \| "longOffset" \| "shortGeneric" \| "longGeneric" \| undefined
 
 <!--Device-DateTimeFormatOptions-timeZoneName?: "short" | "long" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined--><!--Device-DateTimeFormatOptions-timeZoneName?: "short" | "long" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined-End-->
 
@@ -118,7 +118,7 @@ timeZoneName?: "short" | "number" | "shortOffset" | "longOffset" | "shortGeneric
 weekday?: "number" | "short" | "narrow" | undefined
 ```
 
-**Type:** "number" | "short" | "narrow" | undefined
+**Type:** "number" \| "short" \| "narrow" \| undefined
 
 <!--Device-DateTimeFormatOptions-weekday?: "long" | "short" | "narrow" | undefined--><!--Device-DateTimeFormatOptions-weekday?: "long" | "short" | "narrow" | undefined-End-->
 
@@ -128,7 +128,7 @@ weekday?: "number" | "short" | "narrow" | undefined
 year?: "numeric" | "2-digit" | undefined
 ```
 
-**Type:** "numeric" | "2-digit" | undefined
+**Type:** "numeric" \| "2-digit" \| undefined
 
 <!--Device-DateTimeFormatOptions-year?: "numeric" | "2-digit" | undefined--><!--Device-DateTimeFormatOptions-year?: "numeric" | "2-digit" | undefined-End-->
 

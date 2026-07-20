@@ -26,7 +26,7 @@ productIdList: Array<number>
 
 Product ID list of the USB devices supported by the driver.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
 
@@ -44,7 +44,7 @@ vendorIdList: Array<number>
 
 Vendor ID list of the USB devices supported by the driver.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
 

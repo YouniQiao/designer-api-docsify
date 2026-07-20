@@ -20,5 +20,5 @@ Callback for updating the forms.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configInfo | Array&lt;FormCustomConfig&gt; | Yes | the config info list of the forms. |
+| configInfo | Array&lt;FormCustomConfig&gt; | Yes | the config info list of the forms.  |
 

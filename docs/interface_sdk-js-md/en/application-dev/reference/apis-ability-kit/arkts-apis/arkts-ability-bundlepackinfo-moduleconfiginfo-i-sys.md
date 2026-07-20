@@ -18,7 +18,7 @@ readonly abilities: Array<ModuleAbilityInfo>
 
 Ability information of the module.
 
-**Type:** Array<ModuleAbilityInfo>
+**Type:** Array&lt;ModuleAbilityInfo&gt;
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ readonly deviceTypes: Array<string>
 
 Device types supported by the module.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ readonly extensionAbilities: Array<ExtensionAbility>
 
 ExtensionAbility information of the module.
 
-**Type:** Array<ExtensionAbility>
+**Type:** Array&lt;ExtensionAbility&gt;
 
 **Since:** 9
 

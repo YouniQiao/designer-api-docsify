@@ -18,5 +18,5 @@ Triggered when an AI session is destroyed.Used for cleaning up resources associa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | The session task ID. |
+| id | string | Yes | The session task ID.  |
 

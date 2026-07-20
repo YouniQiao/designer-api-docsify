@@ -24,7 +24,7 @@ permList: Array<CliCommandPermissionResult>
 
 List of CLI permission information.
 
-**Type:** Array<CliCommandPermissionResult>
+**Type:** Array&lt;CliCommandPermissionResult&gt;
 
 **Since:** 26.0.0
 

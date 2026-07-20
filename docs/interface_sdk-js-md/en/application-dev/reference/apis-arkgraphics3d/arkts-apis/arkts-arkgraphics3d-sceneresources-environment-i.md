@@ -34,7 +34,7 @@ environmentImage?: Image | null
 
 The environment image of the environment.
 
-**Type:** Image | null
+**Type:** Image \| null
 
 **Since:** 12
 
@@ -134,7 +134,7 @@ radianceImage?: Image | null
 
 The radiance image of the environment.
 
-**Type:** Image | null
+**Type:** Image \| null
 
 **Since:** 12
 

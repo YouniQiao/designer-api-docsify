@@ -40,7 +40,7 @@ value: Uint8Array | string | number | boolean
 
 Value of the KV pair stored in the KV store.
 
-**Type:** Uint8Array | string | number | boolean
+**Type:** Uint8Array \| string \| number \| boolean
 
 **Since:** 7
 

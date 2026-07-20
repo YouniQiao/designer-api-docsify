@@ -132,7 +132,7 @@ ripplePosition?: Array<[number, number]>
 
 Defines ripple animation position for material effect.
 
-**Type:** Array<[number, number]>
+**Type:** Array&lt;[number, number]&gt;
 
 **Since:** 22
 

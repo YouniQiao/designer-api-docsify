@@ -18,7 +18,7 @@ readonly packages: Array<PackageConfig>
 
 Package configuration information in the **pack.info** file.
 
-**Type:** Array<PackageConfig>
+**Type:** Array&lt;PackageConfig&gt;
 
 **Since:** 9
 

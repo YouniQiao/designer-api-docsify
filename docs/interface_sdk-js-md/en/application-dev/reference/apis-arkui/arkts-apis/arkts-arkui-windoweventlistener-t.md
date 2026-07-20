@@ -18,6 +18,6 @@ Callback function for window event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | The id of the window which triggers the event |
-| event | window.WindowEventType | Yes | Window callback event type |
+| windowId | number | Yes | The id of the window which triggers the event  |
+| event | window.WindowEventType | Yes | Window callback event type  |
 

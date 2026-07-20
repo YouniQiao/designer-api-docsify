@@ -20,5 +20,5 @@ Implements a handler for the **onHoverStatusChange** event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | HoverModeStatus | Yes | Callback function triggered when the foldable device enters or exitsthe semi-folded state. |
+| status | [HoverModeStatus](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermodestatus-i.md) | Yes | Callback function triggered when the foldable device enters or exits the semi-folded state.  |
 

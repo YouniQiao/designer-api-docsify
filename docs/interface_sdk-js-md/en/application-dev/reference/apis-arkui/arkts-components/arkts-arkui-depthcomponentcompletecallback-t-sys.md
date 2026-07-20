@@ -22,5 +22,5 @@ Callback invoked when the background resource is loaded successfully.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | DepthComponentCompleteEvent | Yes |  |
+| event | [DepthComponentCompleteEvent](arkts-arkui-depthcomponentcompleteevent-i-sys.md) | Yes |  |
 

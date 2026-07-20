@@ -42,7 +42,7 @@ bundleRecords: Array<BundleUsedRecord>
 
 Each element represents the permission access record under an application dimension. Developers can further traverse permissionRecords to obtain specific permission usage details.
 
-**Type:** Array<BundleUsedRecord>
+**Type:** Array&lt;BundleUsedRecord&gt;
 
 **Since:** 9
 

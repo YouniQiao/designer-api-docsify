@@ -20,12 +20,12 @@ Function that returns typed string to render one template.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | Each data item in the **arr** array. **T** indicates the data type passed in. |
-| index | number | Yes | Index corresponding to the current data item. |
+| item | T | Yes | Each data item in the **arr** array. **T** indicates the data type passed in.  |
+| index | number | Yes | Index corresponding to the current data item.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | template type. |
+| string | template type.  |
 

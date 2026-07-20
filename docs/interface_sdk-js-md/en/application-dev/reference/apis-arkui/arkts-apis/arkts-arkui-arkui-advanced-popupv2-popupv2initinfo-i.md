@@ -148,7 +148,7 @@ onClose?: Callback<void>
 
 The close button callback of Popup.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
 
@@ -166,7 +166,7 @@ showClose?: boolean | Resource
 
 The show close of Popup.
 
-**Type:** boolean | Resource
+**Type:** boolean \| Resource
 
 **Since:** 26.0.0
 

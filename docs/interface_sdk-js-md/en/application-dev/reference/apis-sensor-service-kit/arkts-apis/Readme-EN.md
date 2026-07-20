@@ -21,9 +21,11 @@
   - [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md)
   - [getSingleSensorByDeviceSync](arkts-sensorservice-sensor-getsinglesensorbydevicesync-f.md)
   - [getSingleSensorSync](arkts-sensorservice-sensor-getsinglesensorsync-f.md)
-  - [off](arkts-sensorservice-sensor-off-f.md)<!--Del-->
+  - [off](arkts-sensorservice-sensor-off-f.md)
+  <!--Del-->
   - [off(system api)](arkts-sensorservice-sensor-off-f-sys.md)<!--DelEnd-->
-  - [on](arkts-sensorservice-sensor-on-f.md)<!--Del-->
+  - [on](arkts-sensorservice-sensor-on-f.md)
+  <!--Del-->
   - [on(system api)](arkts-sensorservice-sensor-on-f-sys.md)<!--DelEnd-->
   - [once](arkts-sensorservice-sensor-once-f.md)
   - [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md)
@@ -31,7 +33,8 @@
   - [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md)
   - [AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md)
   - [AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)
-  - [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md)<!--Del-->
+  - [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md)
+  <!--Del-->
   - [ColorResponse(system api)](arkts-sensorservice-sensor-colorresponse-i-sys.md)<!--DelEnd-->
   - [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md)
   - [FusionPressureResponse](arkts-sensorservice-sensor-fusionpressureresponse-i.md)
@@ -54,7 +57,8 @@
   - [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md)
   - [Response](arkts-sensorservice-sensor-response-i.md)
   - [RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)
-  - [RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)<!--Del-->
+  - [RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)
+  <!--Del-->
   - [SarResponse(system api)](arkts-sensorservice-sensor-sarresponse-i-sys.md)<!--DelEnd-->
   - [Sensor](arkts-sensorservice-sensor-sensor-i.md)
   - [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md)
@@ -63,7 +67,8 @@
   - [WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md)
   - [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md)
   - [SensorAccuracy](arkts-sensorservice-sensor-sensoraccuracy-e.md)
-  - [SensorId](arkts-sensorservice-sensor-sensorid-e.md)<!--Del-->
+  - [SensorId](arkts-sensorservice-sensor-sensorid-e.md)
+  <!--Del-->
   - [SensorId(system api)](arkts-sensorservice-sensor-sensorid-e-sys.md)<!--DelEnd-->
   - [SensorType](arkts-sensorservice-sensor-sensortype-e.md)
 - [@ohos.vibrator](arkts-vibrator.md)
@@ -84,7 +89,8 @@
   - [EffectInfo](arkts-sensorservice-vibrator-effectinfo-i.md)
   - [HapticFileDescriptor](arkts-sensorservice-vibrator-hapticfiledescriptor-i.md)
   - [TransientParam](arkts-sensorservice-vibrator-transientparam-i.md)
-  - [VibrateAttribute](arkts-sensorservice-vibrator-vibrateattribute-i.md)<!--Del-->
+  - [VibrateAttribute](arkts-sensorservice-vibrator-vibrateattribute-i.md)
+  <!--Del-->
   - [VibrateAttribute(system api)](arkts-sensorservice-vibrator-vibrateattribute-i-sys.md)<!--DelEnd-->
   - [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md)
   - [VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)

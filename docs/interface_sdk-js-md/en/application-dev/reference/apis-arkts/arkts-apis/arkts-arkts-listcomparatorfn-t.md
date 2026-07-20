@@ -18,12 +18,12 @@ This type specifies the comparator of sort in comparation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstValue | T | Yes | firstValue (required) previous element. |
-| secondValue | T | Yes | secondValue (required) next element. |
+| firstValue | T | Yes | firstValue (required) previous element.  |
+| secondValue | T | Yes | secondValue (required) next element.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double | the number type |
+| number | the number type  |
 

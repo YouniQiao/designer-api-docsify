@@ -22,7 +22,7 @@ albumChangeDatas: AlbumChangeData[] | null
 
 Array of changed albums. If all albums need to be queried again, **albumChangeDatas** is null.
 
-**Type:** AlbumChangeData[] | null
+**Type:** AlbumChangeData[] \| null
 
 **Since:** 20
 

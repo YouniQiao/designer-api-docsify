@@ -146,7 +146,7 @@ Callback for the popup close button.
 
 By default, the callback for the close button is not set.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 11
 
@@ -172,7 +172,7 @@ Whether to show the close button.
 
 Default value: **true**
 
-**Type:** boolean | Resource
+**Type:** boolean \| Resource
 
 **Since:** 11
 

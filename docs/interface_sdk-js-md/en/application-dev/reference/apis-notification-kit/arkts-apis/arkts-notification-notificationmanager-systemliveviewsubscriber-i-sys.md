@@ -24,7 +24,7 @@ onResponse?: (notificationId: number, buttonOptions: ButtonOptions) => void
 
 Callback when the button is touched.
 
-**Type:** (notificationId: number, buttonOptions: ButtonOptions) => void
+**Type:** (notificationId: number, buttonOptions: ButtonOptions) =&gt; void
 
 **Since:** 11
 

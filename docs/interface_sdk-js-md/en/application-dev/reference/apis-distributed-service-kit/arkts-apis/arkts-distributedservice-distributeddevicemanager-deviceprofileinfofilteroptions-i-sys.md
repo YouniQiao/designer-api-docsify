@@ -24,7 +24,7 @@ deviceIdList?: Array<string>
 
 Device ID list.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 15
 

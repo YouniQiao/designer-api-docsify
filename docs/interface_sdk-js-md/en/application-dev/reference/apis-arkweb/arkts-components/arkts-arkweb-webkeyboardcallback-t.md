@@ -18,11 +18,11 @@ Defines a callback to intercept the soft keyboard initiated from editable elemen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyboardCallbackInfo | WebKeyboardCallbackInfo | Yes | Input parameter of the callback used to intercept the softkeyboard initiated from editable elements on a web page, including [WebKeyboardController](arkts-arkweb-web.md) andeditable element attributes. |
+| keyboardCallbackInfo | [WebKeyboardCallbackInfo](arkts-arkweb-webkeyboardcallbackinfo-i.md) | Yes | Input parameter of the callback used to intercept the soft keyboard initiated from editable elements on a web page, including [WebKeyboardController](arkts-arkweb-web.md) and editable element attributes.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| WebKeyboardOptions | R[WebKeyboardOptions](arkts-arkweb-web-webkeyboardoptions-i.md) instance, which is used todetermine which type of soft keyboard to start by the ArkWeb kernel. |
+| [WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) | R[WebKeyboardOptions](arkts-arkweb-webkeyboardoptions-i.md) instance, which is used to determine which type of soft keyboard to start by the ArkWeb kernel.  |
 

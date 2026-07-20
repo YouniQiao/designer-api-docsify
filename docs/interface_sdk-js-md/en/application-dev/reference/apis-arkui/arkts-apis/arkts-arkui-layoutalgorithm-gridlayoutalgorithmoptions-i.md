@@ -46,7 +46,7 @@ Default value: **'1fr'**
 
 Invalid values are treated as the default value.
 
-**Type:** string | ItemFillPolicy
+**Type:** string \| ItemFillPolicy
 
 **Default:** '1fr'
 

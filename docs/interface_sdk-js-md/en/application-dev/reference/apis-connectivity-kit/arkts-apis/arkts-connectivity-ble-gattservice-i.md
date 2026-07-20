@@ -22,7 +22,7 @@ characteristics: Array<BLECharacteristic>
 
 The {@link BLECharacteristic} list belongs to this GattService instance
 
-**Type:** Array<BLECharacteristic>
+**Type:** Array&lt;BLECharacteristic&gt;
 
 **Since:** 10
 
@@ -42,7 +42,7 @@ includeServices?: Array<GattService>
 
 The list of GATT services contained in the service
 
-**Type:** Array<GattService>
+**Type:** Array&lt;GattService&gt;
 
 **Since:** 10
 

@@ -20,7 +20,7 @@ import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, Ge
 types: Array<string>
 ```
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 3
 

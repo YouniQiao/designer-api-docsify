@@ -32,7 +32,7 @@ When this API is used with components that come with the caching mechanism, such
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | CheckboxGroupOptions | No | Check box group parameters. |
+| options | [CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md) | No | Check box group parameters.  |
 
 ## Summary
 

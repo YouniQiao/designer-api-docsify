@@ -38,7 +38,7 @@ parameters?: Record<string, Object>
 
 Custom parameter object. By default, no value is passed in.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ requiredLabels?: Array<string>
 
 Required labels. By default, no value is passed in.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 

@@ -116,7 +116,7 @@ descriptions?: Array<string>
 
 Indicates additional information.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 7
 

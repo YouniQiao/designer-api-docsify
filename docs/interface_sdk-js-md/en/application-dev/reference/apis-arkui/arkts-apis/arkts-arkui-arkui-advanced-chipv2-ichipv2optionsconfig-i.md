@@ -322,7 +322,7 @@ maxFontScale?: number | Resource
 
 Maximum font scale for Chip.
 
-**Type:** number | Resource
+**Type:** number \| Resource
 
 **Since:** 26.0.0
 
@@ -342,7 +342,7 @@ minFontScale?: number | Resource
 
 Minimum font scale for Chip.
 
-**Type:** number | Resource
+**Type:** number \| Resource
 
 **Since:** 26.0.0
 
@@ -362,7 +362,7 @@ onClicked?: Callback<void>
 
 On clicked action.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
 
@@ -442,7 +442,7 @@ size?: ChipV2Size | SizeT<LengthMetrics>
 
 Chip size.
 
-**Type:** ChipV2Size | SizeT<LengthMetrics>
+**Type:** ChipV2Size \| SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
 

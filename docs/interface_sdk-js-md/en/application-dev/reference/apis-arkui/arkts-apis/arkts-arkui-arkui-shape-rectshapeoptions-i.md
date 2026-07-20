@@ -32,7 +32,7 @@ Unit: vp.
 
 If the value is invalid, 0 vp is used.
 
-**Type:** number | string | Array<number | string>
+**Type:** number \| string \| Array&lt;number \| string&gt;
 
 **Since:** 12
 

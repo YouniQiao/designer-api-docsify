@@ -104,7 +104,7 @@ onCheckedChange?: Callback<boolean>
 
 Sets the ConfirmDialog CheckBox Callback.
 
-**Type:** Callback<boolean>
+**Type:** Callback&lt;boolean&gt;
 
 **Since:** 18
 
@@ -164,7 +164,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** Theme | CustomTheme
+**Type:** Theme \| CustomTheme
 
 **Since:** 12
 

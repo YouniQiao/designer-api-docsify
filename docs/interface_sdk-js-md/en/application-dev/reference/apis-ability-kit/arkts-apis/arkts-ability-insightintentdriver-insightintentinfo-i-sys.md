@@ -124,7 +124,7 @@ readonly entities: Array<EntityInfo>
 
 Entity information contained in the intent.
 
-**Type:** Array<EntityInfo>
+**Type:** Array&lt;EntityInfo&gt;
 
 **Since:** 20
 
@@ -288,7 +288,7 @@ readonly parameters: Record<string, Object>
 
 Data format of intent parameters, which is used to define the input data format during intent calls.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 20
 
@@ -308,7 +308,7 @@ readonly result: Record<string, Object>
 
 Execution result returned.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 20
 
@@ -352,7 +352,7 @@ Intent information for specific intent decorators.
 
 For intents developed using a configuration file, the return value of this field is [EntryIntentInfo](#entryintentinfo20) by default.
 
-**Type:** LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo
+**Type:** LinkIntentInfo \| PageIntentInfo \| FunctionIntentInfo \| FormIntentInfo \| EntryIntentInfo
 
 **Since:** 20
 

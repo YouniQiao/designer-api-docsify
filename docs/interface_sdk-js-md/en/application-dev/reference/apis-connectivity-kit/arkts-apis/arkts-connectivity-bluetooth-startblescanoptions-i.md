@@ -20,7 +20,7 @@ complete: () => void
 
 StartBLEScanOptions completed
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 6
 
@@ -38,7 +38,7 @@ fail: (data: string, code: number) => void
 
 StartBLEScanOptions failed
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 6
 
@@ -74,7 +74,7 @@ success: () => void
 
 StartBLEScanOptions success
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 6
 

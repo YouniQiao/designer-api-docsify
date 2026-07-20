@@ -20,5 +20,5 @@ The hover callback of CounterV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isHover | boolean | Yes | isHover |
+| isHover | boolean | Yes | isHover  |
 

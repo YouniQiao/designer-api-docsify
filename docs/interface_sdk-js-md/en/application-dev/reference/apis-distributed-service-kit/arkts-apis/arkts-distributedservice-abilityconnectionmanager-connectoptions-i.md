@@ -40,7 +40,7 @@ parameters?: Record<string, string>
 
 Additional configuration for the connection.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 18
 

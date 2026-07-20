@@ -4,6 +4,8 @@ Declare Component ProgressButtonV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ProgressButtonV2--><!--Device-unnamed-export declare struct ProgressButtonV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Set Color options of the ProgressButtonV2.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -45,6 +49,8 @@ Sets the ProgressButtonV2 content.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Sets the ProgressButtonV2 isEnabled state.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -85,6 +93,8 @@ Sets the ProgressButtonV2 onClicked.
 **Type:** ClickCallback
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +116,8 @@ Sets the ProgressButtonV2 progress.
 
 **Since:** 18
 
+**Decorator:** @Require, @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -126,6 +138,8 @@ Set border rounded corner radius of progress.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -145,6 +159,8 @@ Sets the ProgressButtonV2 progressButtonWidth.
 **Type:** LengthMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

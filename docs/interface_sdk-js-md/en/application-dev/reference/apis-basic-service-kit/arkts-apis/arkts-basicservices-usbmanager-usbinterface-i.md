@@ -54,7 +54,7 @@ endpoints: Array<USBEndpoint>
 
 Endpoints that belong to the USB interface.
 
-**Type:** Array<USBEndpoint>
+**Type:** Array&lt;USBEndpoint&gt;
 
 **Since:** 9
 

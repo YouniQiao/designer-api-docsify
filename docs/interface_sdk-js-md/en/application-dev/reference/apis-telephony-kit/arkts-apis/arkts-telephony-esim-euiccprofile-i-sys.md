@@ -24,7 +24,7 @@ accessRules: Array<AccessRule>
 
 Optional access rules that specify which apps can manage this profile. Default platform management when not set.
 
-**Type:** Array<AccessRule>
+**Type:** Array&lt;AccessRule&gt;
 
 **Since:** 18
 

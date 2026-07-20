@@ -28,7 +28,7 @@ complete?: () => void
 
 Called when the API call is complete.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -52,7 +52,7 @@ fail?: (data: string, code: number) => void
 
 Called when the API call fails.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -76,7 +76,7 @@ mode?: 'number' | 'short'
 
 Vibration mode. The value **long** indicates long vibration, and **short** indicates short vibration. The default value is **long**.
 
-**Type:** 'number' | 'short'
+**Type:** 'number' \| 'short'
 
 **Since:** 3
 
@@ -100,7 +100,7 @@ success: () => void
 
 Called when the vibrator data changes.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 

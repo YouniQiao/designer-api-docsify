@@ -16,16 +16,13 @@ import { systemConfiguration } from '@kit.AbilityKit';
 
 ## Summary
 
-<!--Del-->
-### Interfaces（系统接口）
+### Interfaces
 
 | Name | Description |
 | --- | --- |
 | [UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | System configuration updated callback. |
-<!--DelEnd-->
 
-<!--Del-->
-### Types（系统接口）
+### Types
 
 | Name | Description |
 | --- | --- |
@@ -38,5 +35,4 @@ import { systemConfiguration } from '@kit.AbilityKit';
 | [OnLocaleUpdatedFn](arkts-ability-systemconfiguration-onlocaleupdatedfn-t.md) | Defines an OnLocaleUpdatedFn function. |
 | [OnMCCUpdatedFn](arkts-ability-systemconfiguration-onmccupdatedfn-t.md) | Defines an OnMCCUpdatedFn function. |
 | [OnMNCUpdatedFn](arkts-ability-systemconfiguration-onmncupdatedfn-t.md) | Defines an OnMNCUpdatedFn function. |
-<!--DelEnd-->
 

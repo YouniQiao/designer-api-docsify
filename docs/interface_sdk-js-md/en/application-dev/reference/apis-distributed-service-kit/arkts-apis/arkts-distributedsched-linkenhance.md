@@ -20,8 +20,8 @@ import { linkEnhance } from '@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [createConnection](arkts-distributedservice-linkenhance-createconnection-f.md#createconnection-1) | Creates a **Connection** object on the device that functions as the client. The device can then initiate connection requests to the device that functions as the server. |
-| [createServer](arkts-distributedservice-linkenhance-createserver-f.md#createserver-1) | Creates a **Server** object. After **start()** is called, the device can be connected to other devices as a server. |
+| [createConnection](arkts-distributedservice-linkenhance-createconnection-f.md#createconnection) | Creates a **Connection** object on the device that functions as the client. The device can then initiate connection requests to the device that functions as the server. |
+| [createServer](arkts-distributedservice-linkenhance-createserver-f.md#createserver) | Creates a **Server** object. After **start()** is called, the device can be connected to other devices as a server. |
 
 ### Interfaces
 

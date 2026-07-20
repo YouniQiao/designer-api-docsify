@@ -20,5 +20,5 @@ Current fold state of the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | OnFoldStatusChangeInfo | Yes | Current fold state of the device. |
+| event | [OnFoldStatusChangeInfo](arkts-arkui-onfoldstatuschangeinfo-i.md) | Yes | Current fold state of the device.  |
 

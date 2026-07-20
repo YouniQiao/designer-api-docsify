@@ -24,7 +24,7 @@ callback: Callback<GeneratorResult>
 
 Icon click event callback.
 
-**Type:** Callback<GeneratorResult>
+**Type:** Callback&lt;GeneratorResult&gt;
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ image: image.PixelMap | string | Resource
 
 Icon image information.
 
-**Type:** image.PixelMap | string | Resource
+**Type:** image.PixelMap \| string \| Resource
 
 **Since:** 23
 

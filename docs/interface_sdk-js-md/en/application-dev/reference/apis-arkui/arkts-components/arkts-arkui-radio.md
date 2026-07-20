@@ -33,7 +33,7 @@ Creates a radio button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RadioOptions | Yes | Parameters of the radio button. |
+| options | [RadioOptions](arkts-arkui-radiooptions-i.md) | Yes | Parameters of the radio button.  |
 
 ## Summary
 

@@ -40,7 +40,7 @@ fontFamily?: string | Resource
 
 Font family.
 
-**Type:** string | Resource
+**Type:** string \| Resource
 
 **Since:** 12
 
@@ -94,7 +94,7 @@ fontWeight?: number | FontWeight | string
 
 Font weight.
 
-**Type:** number | FontWeight | string
+**Type:** number \| FontWeight \| string
 
 **Since:** 12
 

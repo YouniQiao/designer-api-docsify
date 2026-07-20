@@ -20,5 +20,5 @@ Indicates the type of the result of batch operation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | ResultInfo | Yes | result info. |
+| result | [ResultInfo](arkts-medialibrary-photoaccesshelper-resultinfo-i-sys.md) | Yes | result info.  |
 

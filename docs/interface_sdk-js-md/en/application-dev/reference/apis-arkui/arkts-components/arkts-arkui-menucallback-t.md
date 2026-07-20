@@ -20,6 +20,6 @@ Represents the callback invoked when the custom context menu on selection is sho
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Start position of the selected content. |
-| end | number | Yes | End position of the selected content. |
+| start | number | Yes | Start position of the selected content.  |
+| end | number | Yes | End position of the selected content.  |
 

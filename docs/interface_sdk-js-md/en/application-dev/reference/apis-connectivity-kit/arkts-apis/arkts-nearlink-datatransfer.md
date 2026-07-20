@@ -20,16 +20,16 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [connect](arkts-connectivity-datatransfer-connect-f.md#connect-1) | Connects to a server. If the connection is successful, data can be sent to the server. |
-| [createPort](arkts-connectivity-datatransfer-createport-f.md#createport-1) | Creates a NearLink listening port that can receive data by UUID. |
-| [destroyPort](arkts-connectivity-datatransfer-destroyport-f.md#destroyport-1) | Destroys a listen port and releases related resources by UUID. |
-| [disconnect](arkts-connectivity-datatransfer-disconnect-f.md#disconnect-1) | Disconnects or stops an ongoing connection to a server. |
-| [getConnectionState](arkts-connectivity-datatransfer-getconnectionstate-f.md#getconnectionstate-1) | Obtains the connection status for data transfer. |
-| [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md#offconnectionstatechanged-1) | Unsubscribes from the connection state change event. |
-| [offReadData](arkts-connectivity-datatransfer-offreaddata-f.md#offreaddata-1) | Unsubscribes from the event reported when data is read from the port. |
-| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md#onconnectionstatechanged-1) | Subscribes to the connection state change event.This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. |
-| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md#onreaddata-1) | Subscribes to the event reported when data is read from the port.This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. |
-| [writeData](arkts-connectivity-datatransfer-writedata-f.md#writedata-1) | Writes data by address and UUID. |
+| [connect](arkts-connectivity-datatransfer-connect-f.md#connect) | Connects to a server. If the connection is successful, data can be sent to the server. |
+| [createPort](arkts-connectivity-datatransfer-createport-f.md#createport) | Creates a NearLink listening port that can receive data by UUID. |
+| [destroyPort](arkts-connectivity-datatransfer-destroyport-f.md#destroyport) | Destroys a listen port and releases related resources by UUID. |
+| [disconnect](arkts-connectivity-datatransfer-disconnect-f.md#disconnect) | Disconnects or stops an ongoing connection to a server. |
+| [getConnectionState](arkts-connectivity-datatransfer-getconnectionstate-f.md#getconnectionstate) | Obtains the connection status for data transfer. |
+| [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md#offconnectionstatechanged) | Unsubscribes from the connection state change event. |
+| [offReadData](arkts-connectivity-datatransfer-offreaddata-f.md#offreaddata) | Unsubscribes from the event reported when data is read from the port. |
+| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md#onconnectionstatechanged) | Subscribes to the connection state change event.  This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. |
+| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md#onreaddata) | Subscribes to the event reported when data is read from the port.  This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. |
+| [writeData](arkts-connectivity-datatransfer-writedata-f.md#writedata) | Writes data by address and UUID. |
 
 ### Interfaces
 

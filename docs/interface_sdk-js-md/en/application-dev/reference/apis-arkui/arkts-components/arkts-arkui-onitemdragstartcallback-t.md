@@ -18,12 +18,12 @@ Defines the callback type used in onItemDragStart.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | ItemDragInfo | Yes | Information about the dragged item. |
-| itemIndex | number | Yes | The index number of the dragged item. |
+| event | [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | Yes | Information about the dragged item.  |
+| itemIndex | number | Yes | The index number of the dragged item.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| CustomBuilder | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@atomicservice |
+| [CustomBuilder](arkts-arkui-custombuilder-t.md) | @syscap SystemCapability.ArkUI.ArkUI.Full @FaAndStageModel @crossplatform @atomicservice  |
 

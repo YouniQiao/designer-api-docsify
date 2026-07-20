@@ -33,7 +33,7 @@ Create TextClock component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TextClockOptions | No | Options of the text clock. |
+| options | [TextClockOptions](arkts-arkui-textclockoptions-i.md) | No | Options of the text clock. |
 
 ## Summary
 

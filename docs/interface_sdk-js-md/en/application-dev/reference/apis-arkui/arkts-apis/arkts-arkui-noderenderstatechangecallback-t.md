@@ -20,6 +20,6 @@ Defines the callback type for listening for the rendering state of a specific no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | NodeRenderState | Yes | Information about the gesture event that triggers the callback. |
-| node | FrameNode | No | Component bound to the gesture event that triggers the listener; returns **null** ifthe component has been released. |
+| state | [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md) | Yes | Information about the gesture event that triggers the callback.  |
+| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | No | Component bound to the gesture event that triggers the listener; returns **null** if the component has been released.  |
 

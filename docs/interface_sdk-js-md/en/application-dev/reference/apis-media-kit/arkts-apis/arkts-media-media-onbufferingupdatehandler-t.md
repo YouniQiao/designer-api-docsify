@@ -18,6 +18,6 @@ Describes the callback invoked for the buffering update event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| infoType | BufferingInfoType | Yes | Buffering information type. |
-| value | int | Yes | Value of the buffering information type. |
+| infoType | [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) | Yes | Buffering information type.  |
+| value | number | Yes | Value of the buffering information type.  |
 

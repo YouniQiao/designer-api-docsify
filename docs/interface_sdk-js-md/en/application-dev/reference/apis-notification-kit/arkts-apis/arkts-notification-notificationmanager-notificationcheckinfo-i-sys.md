@@ -84,7 +84,7 @@ extraInfos?: Record<string, Object>
 
 Extra information about the live view.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 11
 

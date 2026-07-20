@@ -24,7 +24,7 @@ customIcons?: Array<GeneratorResultPageIcon>
 
 Custom icons used on the AI generated image results page.
 
-**Type:** Array<GeneratorResultPageIcon>
+**Type:** Array&lt;GeneratorResultPageIcon&gt;
 
 **Since:** 23
 

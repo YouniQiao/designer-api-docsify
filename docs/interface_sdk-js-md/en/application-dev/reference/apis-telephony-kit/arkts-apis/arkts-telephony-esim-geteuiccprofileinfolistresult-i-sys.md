@@ -42,7 +42,7 @@ profiles: Array<EuiccProfile>
 
 Gets the profile list (only upon success).
 
-**Type:** Array<EuiccProfile>
+**Type:** Array&lt;EuiccProfile&gt;
 
 **Since:** 18
 

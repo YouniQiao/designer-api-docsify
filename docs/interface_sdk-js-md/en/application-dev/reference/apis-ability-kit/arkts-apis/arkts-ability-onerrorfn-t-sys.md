@@ -20,7 +20,7 @@ Defines a OnError function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | The code returned if the UIAbility or UIExtensionAbility failed to start. |
-| name | string | Yes | The name returned if the UIAbility or UIExtensionAbility failed to start. |
-| message | string | Yes | The message returned if the UIAbility or UIExtensionAbility failed to start. |
+| code | number | Yes | The code returned if the UIAbility or UIExtensionAbility failed to start.  |
+| name | string | Yes | The name returned if the UIAbility or UIExtensionAbility failed to start.  |
+| message | string | Yes | The message returned if the UIAbility or UIExtensionAbility failed to start.  |
 

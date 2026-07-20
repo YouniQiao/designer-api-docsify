@@ -16,5 +16,5 @@ The callback of verify pin.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| verifyPinEvent | VerifyPinEvent | Yes | The event of verify PIN. |
+| verifyPinEvent | [VerifyPinEvent](arkts-arkweb-verifypinevent-i.md) | Yes | The event of verify PIN.  |
 

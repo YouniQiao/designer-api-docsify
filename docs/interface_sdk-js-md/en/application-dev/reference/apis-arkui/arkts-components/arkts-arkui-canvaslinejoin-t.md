@@ -18,7 +18,7 @@ Defines the type of join between two non-zero-length segments (lines, arcs, and 
 
 | Type | Description |
 | --- | --- |
-| "bevel" | The intersection is a triangle. The rectangular corner of each lineis independent. |
-| "miter" | The intersection has a miter corner by extending the outside edgesof the lines until they meet. You can view the effect of this attribute in **miterLimit**. |
-| "round" | The intersection is a sector, whose radius at the rounded corner isequal to the line width. |
+| "bevel" | The intersection is a triangle. The rectangular corner of each line is independent. |
+| "miter" | The intersection has a miter corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in **miterLimit**. |
+| "round" | The intersection is a sector, whose radius at the rounded corner is equal to the line width. |
 

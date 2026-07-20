@@ -54,7 +54,7 @@ interfaces: Array<USBInterface>
 
 Supported interface attributes.
 
-**Type:** Array<USBInterface>
+**Type:** Array&lt;USBInterface&gt;
 
 **Since:** 9
 

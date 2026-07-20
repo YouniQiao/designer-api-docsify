@@ -16,5 +16,5 @@ The callback of onNativeEmbedVisibilityChange.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nativeEmbedVisibilityInfo | NativeEmbedVisibilityInfo | Yes | callback information ofonNativeEmbedVisibilityChange. |
+| nativeEmbedVisibilityInfo | [NativeEmbedVisibilityInfo](arkts-arkweb-nativeembedvisibilityinfo-i.md) | Yes | callback information of onNativeEmbedVisibilityChange.  |
 

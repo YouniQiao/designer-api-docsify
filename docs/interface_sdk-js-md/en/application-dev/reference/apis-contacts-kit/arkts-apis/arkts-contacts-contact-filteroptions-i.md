@@ -40,7 +40,7 @@ value?: string | ValueType[]
 
 Filter value. The default value is **undefined**.
 
-**Type:** string | ValueType[]
+**Type:** string \| ValueType[]
 
 **Since:** 15
 

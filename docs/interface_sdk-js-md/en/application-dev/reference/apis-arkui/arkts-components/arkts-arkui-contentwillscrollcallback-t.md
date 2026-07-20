@@ -22,11 +22,11 @@ Defines the callback triggered when the **Swiper** component is about to scroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | SwiperContentWillScrollResult | Yes | Information related to the upcoming scroll action, including theindex of the current page, the index of the page that will be displayed in the scroll direction, and thedisplacement of the scroll action. |
+| result | [SwiperContentWillScrollResult](arkts-arkui-swipercontentwillscrollresult-i.md) | Yes | Information related to the upcoming scroll action, including the index of the current page, the index of the page that will be displayed in the scroll direction, and the displacement of the scroll action.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the scroll action is allowed. The value **true** means the scroll action is allowed, and**false** means the opposite. |
+| boolean | Whether the scroll action is allowed. The value **true** means the scroll action is allowed, and **false** means the opposite.  |
 

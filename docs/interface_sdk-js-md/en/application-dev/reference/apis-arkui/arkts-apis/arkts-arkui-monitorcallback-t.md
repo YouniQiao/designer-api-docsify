@@ -4,7 +4,7 @@
 export declare type MonitorCallback = (monitorValue: IMonitor) => void
 ```
 
-Listener callback function of the [IMonitor](../arkts-components/arkts-arkui-common-imonitor-i.md) type.
+Listener callback function of the [IMonitor](../arkts-components/arkts-arkui-imonitor-i.md) type.
 
 **Since:** 20
 
@@ -20,5 +20,5 @@ Listener callback function of the [IMonitor](../arkts-components/arkts-arkui-com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorValue | IMonitor | Yes | Change information passed by the callback. |
+| monitorValue | [IMonitor](../arkts-components/arkts-arkui-imonitor-i.md) | Yes | Change information passed by the callback.  |
 

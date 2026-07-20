@@ -102,7 +102,7 @@ customInfo?: Record<string, string>
 
 Custom key-value mappings obtained from **moov.meta.list**.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 12
 
@@ -344,7 +344,7 @@ tracks?: Array<MediaDescription>
 
 Tracks info of the media asset. This parameter is not supported in AVRecorder settings.
 
-**Type:** Array<MediaDescription>
+**Type:** Array&lt;MediaDescription&gt;
 
 **Since:** 20
 

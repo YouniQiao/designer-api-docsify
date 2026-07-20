@@ -20,6 +20,6 @@ Represents a callback for item changes in the visible area of the **Grid** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| first | number | Yes | Index of the first item of the **Grid** component. |
-| last | number | Yes | Index of the last item of the **Grid** component. |
+| first | number | Yes | Index of the first item of the **Grid** component.  |
+| last | number | Yes | Index of the last item of the **Grid** component.  |
 

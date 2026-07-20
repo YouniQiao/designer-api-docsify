@@ -64,7 +64,7 @@ onSelect?: (index: number, value?: string) => void
 
 Callback when the select is selected.
 
-**Type:** (index: number, value?: string) => void
+**Type:** (index: number, value?: string) =&gt; void
 
 **Since:** 18
 
@@ -84,7 +84,7 @@ options: Array<SelectOption>
 
 SubOption array of the select.
 
-**Type:** Array<SelectOption>
+**Type:** Array&lt;SelectOption&gt;
 
 **Since:** 18
 

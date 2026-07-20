@@ -42,7 +42,7 @@ options: Array<ResourceStr>
 
 filter options.
 
-**Type:** Array<ResourceStr>
+**Type:** Array&lt;ResourceStr&gt;
 
 **Since:** 22
 

@@ -22,7 +22,7 @@ readonly certChain: Array<X509Cert>
 
 Indicates the authenticated certificate chain. Upon successful authentication, the complete certificate chain is returned, from the end-entity certificate to the trust anchor. It can be used for subsequent certificate information query or other verification operations.
 
-**Type:** Array<X509Cert>
+**Type:** Array&lt;X509Cert&gt;
 
 **Since:** 26.0.0
 

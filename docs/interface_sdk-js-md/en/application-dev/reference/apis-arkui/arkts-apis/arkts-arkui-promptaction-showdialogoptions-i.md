@@ -126,7 +126,7 @@ buttons?: Array<Button>
 
 Array of buttons in the dialog box.The array structure is {text:'button',&nbsp;color:&nbsp;'\#666666'}. More than one button is supported.
 
-**Type:** Array<Button>
+**Type:** Array&lt;Button&gt;
 
 **Since:** 9
 
@@ -316,7 +316,7 @@ message?: string | Resource
 
 Text body.<br>Default value: **undefined**, which indicates that no content is displayed by default.
 
-**Type:** string | Resource
+**Type:** string \| Resource
 
 **Since:** 9
 
@@ -354,7 +354,7 @@ onDidAppear?: Callback<void>
 
 Callback invoked after the dialog box appears.<br>**NOTE**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.<br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.The settings take effect next time the dialog box appears.<br>3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.<br>4. If the dialog box is dismissed before its appearance animation is finished, the animation will be interrupted, and **onDidAppear** will not be invoked.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -374,7 +374,7 @@ onDidDisappear?: Callback<void>
 
 Callback invoked after the dialog box disappears.<br>**NOTE**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -394,7 +394,7 @@ onWillAppear?: Callback<void>
 
 Callback invoked before the dialog box appearance animation.<br>**NOTE**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.<br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.The settings take effect next time the dialog box appears.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -414,7 +414,7 @@ onWillDisappear?: Callback<void>
 
 Callback invoked before the dialog box disappearance animation.<br>**NOTE**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -434,7 +434,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.<br> Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
 
-**Type:** ShadowOptions | ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 12
 
@@ -496,7 +496,7 @@ title?: string | Resource
 
 Title of the dialog box.<br>Default value: **undefined**, which indicates that no title is not displayed by default.
 
-**Type:** string | Resource
+**Type:** string \| Resource
 
 **Since:** 9
 

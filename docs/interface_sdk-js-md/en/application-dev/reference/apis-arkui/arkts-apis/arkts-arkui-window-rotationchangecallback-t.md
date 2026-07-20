@@ -20,11 +20,11 @@ In this callback function, the parameter type is [RotationChangeInfo](arkts-arku
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | T | Yes | Parameter of type [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) passed bythe system when the callback function is called. |
+| info | T | Yes | Parameter of type [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) passed by the system when the callback function is called.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| U | Value of type [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void. |
+| U | Value of type [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void.  |
 

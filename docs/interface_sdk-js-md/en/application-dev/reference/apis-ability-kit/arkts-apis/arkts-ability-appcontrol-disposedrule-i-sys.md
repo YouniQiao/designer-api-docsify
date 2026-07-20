@@ -78,7 +78,7 @@ elementList: Array<ElementName>
 
 List of application components to be disposed of or exempted.
 
-**Type:** Array<ElementName>
+**Type:** Array&lt;ElementName&gt;
 
 **Since:** 11
 

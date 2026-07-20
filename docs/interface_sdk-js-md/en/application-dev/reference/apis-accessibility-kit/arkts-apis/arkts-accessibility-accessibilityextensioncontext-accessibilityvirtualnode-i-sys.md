@@ -138,7 +138,7 @@ childNodeIds?: Array<number>
 
 List of child accessibility virtual node ids of a component.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
 
@@ -298,7 +298,7 @@ supportedActionNames?: Array<string>
 
 Supported action names.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

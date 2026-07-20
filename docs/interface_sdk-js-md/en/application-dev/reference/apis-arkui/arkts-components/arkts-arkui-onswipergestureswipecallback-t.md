@@ -20,6 +20,6 @@ Defines the callback triggered on a frame-by-frame basis when the page is turned
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the currently displayed element. If there are multiple columns, **index**indicates the index of the leftmost component. |
-| extraInfo | SwiperAnimationEvent | Yes | Extra information of the animation, which is the offset of the currentlydisplayed element relative to the start position of the **Swiper** along the main axis. |
+| index | number | Yes | Index of the currently displayed element. If there are multiple columns, **index** indicates the index of the leftmost component.  |
+| extraInfo | [SwiperAnimationEvent](arkts-arkui-swiperanimationevent-i.md) | Yes | Extra information of the animation, which is the offset of the currently displayed element relative to the start position of the **Swiper** along the main axis.  |
 

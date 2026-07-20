@@ -16,11 +16,11 @@ The callback of onOverrideErrorPage.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errorPageEvent | OnErrorReceiveEvent | Yes | The information of error. |
+| errorPageEvent | [OnErrorReceiveEvent](arkts-arkweb-onerrorreceiveevent-i.md) | Yes | The information of error.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | - Return an HTML text content encoded in Base64. |
+| string | - Return an HTML text content encoded in Base64.  |
 

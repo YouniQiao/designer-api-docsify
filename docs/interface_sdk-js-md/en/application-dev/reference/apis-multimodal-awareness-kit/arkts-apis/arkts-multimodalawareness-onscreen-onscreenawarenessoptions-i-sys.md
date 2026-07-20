@@ -24,7 +24,7 @@ parameters?: Record<string, Object>
 
 List of awareness parameters. The parameter result is a key-value data object.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
 

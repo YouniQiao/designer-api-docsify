@@ -102,7 +102,7 @@ sampleRate?: Array<number>
 
 Audio sampling rate, including all available audio sampling rates, in Hz. The value depends on the encoder type,and this parameter is available only for audio encoders.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 11
 

@@ -20,11 +20,11 @@ Defines a callback for unmarshalling an ArrayBuffer to obtain [StyledStringMarsh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | Marshaled data of [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
+| buf | ArrayBuffer | Yes | Marshaled data of [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| StyledStringMarshallingValue | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) obtainedafter unmarshalling. |
+| [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) obtained after unmarshalling.  |
 

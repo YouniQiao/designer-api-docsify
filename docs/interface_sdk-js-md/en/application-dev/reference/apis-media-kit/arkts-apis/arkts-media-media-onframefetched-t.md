@@ -18,6 +18,6 @@ Describes the callback invoked when thumbnails are obtained in batches.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameInfo | FrameInfo | Yes | Thumbnail information. |
-| err | BusinessError&lt;void&gt; | No | Error that occurs when the thumbnail is obtained. The default value is**null**. |
+| frameInfo | [FrameInfo](arkts-media-media-frameinfo-i.md) | Yes | Thumbnail information.  |
+| err | [BusinessError](../../apis-arkui/arkts-components/arkts-arkui-businesserror-t.md)&lt;void&gt; | No | Error that occurs when the thumbnail is obtained. The default value is **null**.  |
 

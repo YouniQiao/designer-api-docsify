@@ -24,7 +24,7 @@ businessParams: Record<string, Object>
 
 Service parameters customized by the service party based on the request protocol.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 10
 

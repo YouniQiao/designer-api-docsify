@@ -36,7 +36,7 @@ readonly modules: Array<ModuleConfigInfo>
 
 Module configuration information of the bundle.
 
-**Type:** Array<ModuleConfigInfo>
+**Type:** Array&lt;ModuleConfigInfo&gt;
 
 **Since:** 9
 

@@ -22,7 +22,7 @@ complete?: () => void
 
 Called when the execution is completed.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -40,7 +40,7 @@ fail?: (data: any, code: number) => void
 
 Called when the device information fails to be obtained.
 
-**Type:** (data: any, code: number) => void
+**Type:** (data: any, code: number) =&gt; void
 
 **Since:** 3
 
@@ -58,7 +58,7 @@ success?: (data: DeviceResponse) => void
 
 Called when the device information is obtained.
 
-**Type:** (data: DeviceResponse) => void
+**Type:** (data: DeviceResponse) =&gt; void
 
 **Since:** 3
 

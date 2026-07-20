@@ -20,8 +20,8 @@ import { ssap } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createClient](arkts-connectivity-ssap-createclient-f.md#createclient-1) | Creates a SSAP client instance. |
-| [createServer](arkts-connectivity-ssap-createserver-f.md#createserver-1) | Creates a SSAP server instance. |
+| [createClient](arkts-connectivity-ssap-createclient-f.md#createclient) | Creates a SSAP client instance. |
+| [createServer](arkts-connectivity-ssap-createserver-f.md#createserver) | Creates a SSAP server instance. |
 
 ### Interfaces
 

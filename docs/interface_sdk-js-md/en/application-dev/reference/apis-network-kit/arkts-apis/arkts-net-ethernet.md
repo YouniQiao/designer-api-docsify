@@ -20,27 +20,27 @@ import { ethernet } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [getMacAddress](arkts-network-ethernet-getmacaddress-f.md#getmacaddress-1) | Get the ethernet mac address list. |
+| [getMacAddress](arkts-network-ethernet-getmacaddress-f.md#getmacaddress) | Get the ethernet mac address list. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [disableEthernetInterface](arkts-network-ethernet-disableethernetinterface-f-sys.md#disableethernetinterface-1) | Disable the ethernet interface. |
-| [enableEthernetInterface](arkts-network-ethernet-enableethernetinterface-f-sys.md#enableethernetinterface-1) | Enable the ethernet interface. |
+| [disableEthernetInterface](arkts-network-ethernet-disableethernetinterface-f-sys.md#disableethernetinterface) | Disable the ethernet interface. |
+| [enableEthernetInterface](arkts-network-ethernet-enableethernetinterface-f-sys.md#enableethernetinterface) | Enable the ethernet interface. |
+| [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md#getallactiveifaces) | Gets the names of all active network interfaces. |
 | [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md#getallactiveifaces-1) | Gets the names of all active network interfaces. |
-| [getAllActiveIfaces](arkts-network-ethernet-getallactiveifaces-f-sys.md#getallactiveifaces-2) | Gets the names of all active network interfaces. |
-| [getEthernetDeviceInfos](arkts-network-ethernet-getethernetdeviceinfos-f-sys.md#getethernetdeviceinfos-1) | Get the ethernet mac address list. |
+| [getEthernetDeviceInfos](arkts-network-ethernet-getethernetdeviceinfos-f-sys.md#getethernetdeviceinfos) | Get the ethernet mac address list. |
+| [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md#getifaceconfig) | Get the specified network interface information. |
 | [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md#getifaceconfig-1) | Get the specified network interface information. |
-| [getIfaceConfig](arkts-network-ethernet-getifaceconfig-f-sys.md#getifaceconfig-2) | Get the specified network interface information. |
-| [isEthernetEnabled](arkts-network-ethernet-isethernetenabled-f-sys.md#isethernetenabled-1) | Check whether the global ethernet switch is enabled. |
+| [isEthernetEnabled](arkts-network-ethernet-isethernetenabled-f-sys.md#isethernetenabled) | Check whether the global ethernet switch is enabled. |
+| [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isifaceactive) | Check whether the specified network is active. |
 | [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isifaceactive-1) | Check whether the specified network is active. |
-| [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isifaceactive-2) | Check whether the specified network is active. |
-| [off](arkts-network-ethernet-off-f-sys.md#off-1) | Unregister a callback from the ethernet interface active state change. |
-| [on](arkts-network-ethernet-on-f-sys.md#on-1) | Register a callback for the ethernet interface active state change. |
+| [off](arkts-network-ethernet-off-f-sys.md#off) | Unregister a callback from the ethernet interface active state change. |
+| [on](arkts-network-ethernet-on-f-sys.md#on) | Register a callback for the ethernet interface active state change. |
+| [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setifaceconfig) | Set the specified network interface parameters. |
 | [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setifaceconfig-1) | Set the specified network interface parameters. |
-| [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setifaceconfig-2) | Set the specified network interface parameters. |
 <!--DelEnd-->
 
 ### Interfaces

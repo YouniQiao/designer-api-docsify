@@ -20,12 +20,12 @@ import { drm } from '@kit.DrmKit';
 
 | Name | Description |
 | --- | --- |
-| [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem-1) | Creates a MediaKeySystem instance. |
-| [getMediaKeySystemUuid](arkts-drm-drm-getmediakeysystemuuid-f.md#getmediakeysystemuuid-1) | Get a MediaKeySystem's UUID. |
-| [getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md#getmediakeysystems-1) | Get all media key systems supported. |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-1) | Judge whether a system that specifies name, mimetype and content protection level is supported. |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-2) | Judge whether a system that specifies name, mimetype is supported. |
-| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-3) | Judge whether a system that specifies name is supported. |
+| [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem) | Creates a MediaKeySystem instance. |
+| [getMediaKeySystemUuid](arkts-drm-drm-getmediakeysystemuuid-f.md#getmediakeysystemuuid) | Get a MediaKeySystem's UUID. |
+| [getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md#getmediakeysystems) | Get all media key systems supported. |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported) | Judge whether a system that specifies name, mimetype and content protection level is supported. |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-1) | Judge whether a system that specifies name, mimetype is supported. |
+| [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#ismediakeysystemsupported-2) | Judge whether a system that specifies name is supported. |
 
 ### Interfaces
 

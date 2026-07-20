@@ -70,7 +70,7 @@ Sample area offset relative to the component, calculated from the component's up
 
 The component's own area is used by default.
 
-**Type:** Edges<LengthMetrics>
+**Type:** Edges&lt;LengthMetrics&gt;
 
 **Since:** 23
 

@@ -18,6 +18,6 @@ Provides information about the tooltip.
 
 | Type | Description |
 | --- | --- |
-| ResourceStr | Type used to represent the types that can be used by input parameters of the stringtype. |
+| ResourceStr | Type used to represent the types that can be used by input parameters of the string type. |
 | StyledString | Styled string. |
 

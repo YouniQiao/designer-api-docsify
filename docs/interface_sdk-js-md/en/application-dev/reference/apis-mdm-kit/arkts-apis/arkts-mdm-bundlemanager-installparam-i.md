@@ -46,7 +46,7 @@ parameters?: Record<string, string>
 
 Extended parameters. The default value is null. The key can be **ohos.bms.param.enterpriseForAllUser**. If the corresponding value is set **true**, the application is installed for all users.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 19
 

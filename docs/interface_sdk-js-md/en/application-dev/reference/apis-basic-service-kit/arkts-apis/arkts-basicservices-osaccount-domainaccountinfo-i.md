@@ -38,7 +38,7 @@ additionalInfo?: Record<string, Object>
 
 Additional information about the domain account.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.0.0
 

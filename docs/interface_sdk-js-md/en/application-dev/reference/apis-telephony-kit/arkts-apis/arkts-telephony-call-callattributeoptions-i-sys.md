@@ -150,7 +150,7 @@ extraParams?: Record<string, Object>
 
 Indicates the extra call parameters.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 14
 

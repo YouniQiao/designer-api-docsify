@@ -22,5 +22,5 @@ Represents the type of callback for the end of a component's transition animatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transitionIn | boolean | Yes | Type of callback for the end of the transition animation.<br>The value **true**indicates that the callback is for the end of an appearance animation, and **false** indicates that the callbackis for the end of a disappearance animation. |
+| transitionIn | boolean | Yes | Type of callback for the end of the transition animation.<br>The value **true** indicates that the callback is for the end of an appearance animation, and **false** indicates that the callback is for the end of a disappearance animation.  |
 

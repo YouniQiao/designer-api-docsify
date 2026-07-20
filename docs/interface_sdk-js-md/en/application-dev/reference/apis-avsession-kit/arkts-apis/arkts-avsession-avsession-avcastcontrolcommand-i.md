@@ -40,7 +40,7 @@ parameter?: media.PlaybackSpeed | number | string | LoopMode
 
 Parameter carried in the command.The seek command must carry the number parameter.The setVolume command must carry the number parameter.The toggleFavorite command must carry the {@link AVMediaDescription.assetId} parameter.The setSpeed command must carry the {@link #media.PlaybackSpeed} parameter.The setLoopMode command must carry the {@link LoopMode} parameter.Other commands do not need to carry parameters.
 
-**Type:** media.PlaybackSpeed | number | string | LoopMode
+**Type:** media.PlaybackSpeed \| number \| string \| LoopMode
 
 **Since:** 10
 

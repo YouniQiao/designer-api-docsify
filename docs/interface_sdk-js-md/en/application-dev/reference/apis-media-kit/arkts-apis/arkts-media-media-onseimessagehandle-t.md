@@ -18,6 +18,6 @@ Describes the handle used to obtain SEI messages. This is used when in subscript
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messages | Array&lt;SeiMessage&gt; | Yes | Array of SEI messages. |
-| playbackPosition | int | No | Current playback position, in milliseconds. |
+| messages | Array&lt;SeiMessage&gt; | Yes | Array of SEI messages.  |
+| playbackPosition | number | No | Current playback position, in milliseconds.  |
 

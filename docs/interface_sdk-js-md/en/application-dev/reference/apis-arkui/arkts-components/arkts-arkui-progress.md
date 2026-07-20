@@ -29,7 +29,7 @@ Creates a progress indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ProgressOptions&lt;Type&gt; | Yes | Options of the progress indicator, which vary by progress indicatortype. |
+| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;Type&gt; | Yes | Options of the progress indicator, which vary by progress indicator type.  |
 
 ## Summary
 

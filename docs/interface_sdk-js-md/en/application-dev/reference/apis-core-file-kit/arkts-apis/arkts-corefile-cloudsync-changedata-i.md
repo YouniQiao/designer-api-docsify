@@ -22,7 +22,7 @@ isDirectory: Array<boolean>
 
 Whether the URIs with data changed are of directories. The value **true** means the URIs are of directories; the value **false** means the opposite.
 
-**Type:** Array<boolean>
+**Type:** Array&lt;boolean&gt;
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ uris: Array<string>
 
 List of URIs whose data needs to be changed.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 

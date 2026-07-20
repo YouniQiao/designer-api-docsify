@@ -22,7 +22,7 @@ data: Array<NetFirewallRule>
 
 Page data: all records displayed on this page.
 
-**Type:** Array<NetFirewallRule>
+**Type:** Array&lt;NetFirewallRule&gt;
 
 **Since:** 15
 

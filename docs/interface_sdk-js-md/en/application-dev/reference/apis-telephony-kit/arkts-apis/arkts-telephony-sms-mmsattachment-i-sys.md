@@ -150,7 +150,7 @@ inBuff?: Array<number>
 
 Indicates whether the message is in the buffer.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 8
 

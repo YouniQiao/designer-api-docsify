@@ -54,7 +54,7 @@ docUris: Array<string>
 
 URI list of the DLP files. The array has no length limit, but each string cannot exceed 4095 bytes.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 

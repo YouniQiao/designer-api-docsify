@@ -84,7 +84,7 @@ partitions: Array<PartitionInfo>
 
 Array of partition information.
 
-**Type:** Array<PartitionInfo>
+**Type:** Array&lt;PartitionInfo&gt;
 
 **Since:** 26.0.0
 

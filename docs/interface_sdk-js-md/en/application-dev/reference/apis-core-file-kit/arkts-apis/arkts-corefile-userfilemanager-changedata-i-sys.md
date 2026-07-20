@@ -28,7 +28,7 @@ subUris: Array<string>
 
 URIs of the changed files in the album. The value may be undefined. Check whether the value is undefined before using it.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ uris: Array<string>
 
 Array of all file asset or album URIs with the same [NotifyType](arkts-corefile-userfilemanager-notifytype-e-sys.md).
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 

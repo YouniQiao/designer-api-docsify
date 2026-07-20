@@ -18,12 +18,12 @@ The execute action event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | string | Yes | action type |
-| params | string | Yes | params |
+| actionType | string | Yes | action type  |
+| params | string | Yes | params  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | (string) returned through promise |
+| Promise&lt;string&gt; | (string) returned through promise  |
 

@@ -54,7 +54,7 @@ channels: Array<GainmapChannel>
 
 The per-channel metadata.
 
-**Type:** Array<GainmapChannel>
+**Type:** Array&lt;GainmapChannel&gt;
 
 **Since:** 12
 

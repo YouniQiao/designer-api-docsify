@@ -22,7 +22,7 @@ poiArray: Array<Poi>
 
 Indicates POI information list.
 
-**Type:** Array<Poi>
+**Type:** Array&lt;Poi&gt;
 
 **Since:** 19
 

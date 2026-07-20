@@ -24,7 +24,7 @@ serverParams?: Record<string, Object>
 
 Configuration parameters of the domain account authentication server. which is **undefined** by default.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 24
 

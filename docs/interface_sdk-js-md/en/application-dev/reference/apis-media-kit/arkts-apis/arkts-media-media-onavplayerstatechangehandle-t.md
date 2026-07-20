@@ -18,6 +18,6 @@ Describes the callback invoked for the AVPlayer state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AVPlayerState | Yes | State of the AVPlayer. |
-| reason | StateChangeReason | Yes | Reason for the state change. |
+| state | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | Yes | State of the AVPlayer.  |
+| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | Yes | Reason for the state change.  |
 

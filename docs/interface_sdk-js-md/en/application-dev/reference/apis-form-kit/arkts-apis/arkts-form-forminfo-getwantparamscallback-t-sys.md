@@ -20,11 +20,11 @@ Get want parameters callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formInfo | Array&lt;formInfo.FormInfo&gt; | Yes | The list of the form information. |
+| formInfo | Array&lt;formInfo.FormInfo&gt; | Yes | The list of the form information.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Record&lt;string, Object&gt;&gt; | The want parameters list of the forms. |
+| Array&lt;Record&lt;string, Object&gt;&gt; | The want parameters list of the forms.  |
 

@@ -247,7 +247,7 @@ readonly wants: Array<ShortcutWant>
 
 Want list for the shortcut.
 
-**Type:** Array<ShortcutWant>
+**Type:** Array&lt;ShortcutWant&gt;
 
 **Since:** 7
 

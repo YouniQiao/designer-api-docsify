@@ -26,7 +26,7 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -48,7 +48,7 @@ success: (data: ProximityResponse) => void
 
 Defines a **ProximityResponse** object.
 
-**Type:** (data: ProximityResponse) => void
+**Type:** (data: ProximityResponse) =&gt; void
 
 **Since:** 3
 

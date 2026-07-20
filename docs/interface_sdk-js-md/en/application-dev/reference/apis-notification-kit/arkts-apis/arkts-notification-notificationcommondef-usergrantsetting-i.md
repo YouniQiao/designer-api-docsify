@@ -16,7 +16,7 @@ readonly grantedBundleInfos?: Array<GrantedBundleInfo>
 
 List of apps for which the **Allow access to notifications on this device** switch is toggled on.
 
-**Type:** Array<GrantedBundleInfo>
+**Type:** Array&lt;GrantedBundleInfo&gt;
 
 **Since:** 26.0.0
 

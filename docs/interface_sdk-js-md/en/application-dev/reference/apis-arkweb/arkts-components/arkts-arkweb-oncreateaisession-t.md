@@ -18,13 +18,13 @@ Triggered when an AI session is created.Allows custom model initialization and r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | The session task ID. |
-| params | string | Yes | Contextual data passed during creation. |
-| result | OnAISessionCallback | Yes | Callback function to notify the system of the creation result. |
+| id | string | Yes | The session task ID.  |
+| params | string | Yes | Contextual data passed during creation.  |
+| result | [OnAISessionCallback](arkts-arkweb-onaisessioncallback-t.md) | Yes | Callback function to notify the system of the creation result.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | - Whether to use custom logic. `true` = use custom, `false` = proceed with default. |
+| boolean | - Whether to use custom logic. `true` = use custom, `false` = proceed with default.  |
 

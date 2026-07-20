@@ -20,5 +20,5 @@ Defines the callback for successful ability launches.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the launched ability or system operation.* The ability component name is in the format of '[bundleName]#[moduleName]#[abilityName]'. |
+| name | string | Yes | Name of the launched ability or system operation. * The ability component name is in the format of '[bundleName]#[moduleName]#[abilityName]'.  |
 

@@ -36,7 +36,7 @@ readonly deviceTypes: Array<string>
 
 Device types supported by the bundle.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 

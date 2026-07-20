@@ -22,7 +22,7 @@ inclination: Array<number>
 
 Inclination matrix.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 8
 
@@ -38,7 +38,7 @@ rotation: Array<number>
 
 Rotation matrix.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 8
 

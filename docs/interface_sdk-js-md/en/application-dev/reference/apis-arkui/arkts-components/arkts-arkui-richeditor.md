@@ -30,7 +30,7 @@ Called when create RichEditor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | RichEditorOptions | Yes | Options for initializing the component. |
+| value | [RichEditorOptions](arkts-arkui-richeditoroptions-i.md) | Yes | Options for initializing the component.  |
 
 ## RichEditor
 
@@ -54,7 +54,7 @@ Called when create RichEditor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | RichEditorStyledStringOptions | Yes | Options for initializing the component. |
+| options | [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) | Yes | Options for initializing the component.  |
 
 ## Summary
 

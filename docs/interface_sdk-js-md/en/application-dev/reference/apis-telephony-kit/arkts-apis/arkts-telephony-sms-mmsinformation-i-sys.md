@@ -24,7 +24,7 @@ attachment?: Array<MmsAttachment>
 
 Indicates the attachment for the MMS message.
 
-**Type:** Array<MmsAttachment>
+**Type:** Array&lt;MmsAttachment&gt;
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ mmsType: MmsSendReq | MmsSendConf | MmsNotificationInd | MmsRespInd | MmsRetriev
 
 Indicates the PDU header type for the MMS message.
 
-**Type:** MmsSendReq | MmsSendConf | MmsNotificationInd | MmsRespInd | MmsRetrieveConf | MmsAcknowledgeInd | MmsDeliveryInd | MmsReadOrigInd | MmsReadRecInd
+**Type:** MmsSendReq \| MmsSendConf \| MmsNotificationInd \| MmsRespInd \| MmsRetrieveConf \| MmsAcknowledgeInd \| MmsDeliveryInd \| MmsReadOrigInd \| MmsReadRecInd
 
 **Since:** 8
 

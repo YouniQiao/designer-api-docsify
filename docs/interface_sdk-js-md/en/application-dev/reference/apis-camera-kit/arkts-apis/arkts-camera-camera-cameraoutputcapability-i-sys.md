@@ -22,7 +22,7 @@ readonly depthProfiles: Array<DepthProfile>
 
 Supported depth stream profiles.
 
-**Type:** Array<DepthProfile>
+**Type:** Array&lt;DepthProfile&gt;
 
 **Since:** 13
 

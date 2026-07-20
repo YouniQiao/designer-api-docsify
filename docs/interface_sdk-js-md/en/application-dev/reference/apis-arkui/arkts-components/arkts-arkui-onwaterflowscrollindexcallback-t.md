@@ -20,6 +20,6 @@ Represents a callback for item changes in the visible area of the **WaterFlow** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| first | number | Yes | Index of the first item of the component. |
-| last | number | Yes | Index of the last item of the component. |
+| first | number | Yes | Index of the first item of the component.  |
+| last | number | Yes | Index of the last item of the component.  |
 

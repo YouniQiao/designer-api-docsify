@@ -24,7 +24,7 @@ apps: Record<string, AppBriefInfo>
 
 Brief application information.
 
-**Type:** Record<string, AppBriefInfo>
+**Type:** Record&lt;string, AppBriefInfo&gt;
 
 **Since:** 11
 

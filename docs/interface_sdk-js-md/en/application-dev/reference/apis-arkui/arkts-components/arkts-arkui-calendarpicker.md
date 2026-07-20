@@ -31,7 +31,7 @@ Creates a calendar picker.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | CalendarOptions | No | Parameters of the calendar picker. |
+| options | [CalendarOptions](arkts-arkui-calendaroptions-i.md) | No | Parameters of the calendar picker.  |
 
 ## Summary
 

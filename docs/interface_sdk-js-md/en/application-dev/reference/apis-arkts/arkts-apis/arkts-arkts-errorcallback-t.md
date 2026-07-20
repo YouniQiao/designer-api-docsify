@@ -18,5 +18,5 @@ The event handler to be called when an exception occurs during worker execution.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | ErrorEvent | Yes | Error event class,which provides detailed information about the exception occurred during Worker execution. |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes | Error event class, which provides detailed information about the exception occurred during Worker execution.  |
 

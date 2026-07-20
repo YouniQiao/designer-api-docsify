@@ -18,5 +18,5 @@ Defines a callback invoked when the first meaningful paint occurs on the page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstMeaningfulPaint | FirstMeaningfulPaint | Yes | Information about the first meaningful paint. |
+| firstMeaningfulPaint | [FirstMeaningfulPaint](arkts-arkweb-firstmeaningfulpaint-i.md) | Yes | Information about the first meaningful paint.  |
 

@@ -42,7 +42,7 @@ databases: Array<Database>
 
 Database information of the application.
 
-**Type:** Array<Database>
+**Type:** Array&lt;Database&gt;
 
 **Since:** 11
 

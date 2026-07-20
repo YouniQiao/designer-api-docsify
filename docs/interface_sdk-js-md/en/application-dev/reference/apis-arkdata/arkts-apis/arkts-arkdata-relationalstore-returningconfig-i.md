@@ -22,7 +22,7 @@ columns: Array<string>
 
 Fields returned in the result set. One to four fields are supported for input. Note: Field names containing spaces ( ), commas (,), or asterisks (*) are not allowed.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 23
 

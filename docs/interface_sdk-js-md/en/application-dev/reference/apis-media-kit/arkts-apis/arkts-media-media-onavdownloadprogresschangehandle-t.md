@@ -18,6 +18,6 @@ Describes the callback invoked for the AVDownloader progress change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | Yes | ID of the task whose status changes. |
-| progress | double | Yes |  |
+| taskId | string | Yes | ID of the task whose status changes.  |
+| progress | number | Yes |  |
 

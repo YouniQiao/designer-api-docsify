@@ -20,18 +20,18 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-multimodalawareness-userstatus-off-f.md#off-1) | Disables the age group detection function. |
-| [on](arkts-multimodalawareness-userstatus-on-f.md#on-1) | Enables the age group detection function.When the function is enabled, the application can recommend content based on the age group detection result. |
+| [off](arkts-multimodalawareness-userstatus-off-f.md#off) | Disables the age group detection function. |
+| [on](arkts-multimodalawareness-userstatus-on-f.md#on) | Enables the age group detection function.  When the function is enabled, the application can recommend content based on the age group detection result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure-1) | Configures feature parameters. |
-| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#querycapabilities-1) | Queries device-supported atomic capabilities. |
-| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe-1) | Subscribes to user status monitoring. |
-| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe-1) | Unsubscribes from user status monitoring. |
+| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure) | Configures feature parameters. |
+| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#querycapabilities) | Queries device-supported atomic capabilities. |
+| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe) | Subscribes to user status monitoring. |
+| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe) | Unsubscribes from user status monitoring. |
 <!--DelEnd-->
 
 ### Interfaces

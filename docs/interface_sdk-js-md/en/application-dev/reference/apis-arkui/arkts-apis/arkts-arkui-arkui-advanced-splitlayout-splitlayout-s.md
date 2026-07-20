@@ -4,6 +4,8 @@ Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts.
 
 **Since:** 22
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct SplitLayout--><!--Device-unnamed-export declare struct SplitLayout-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,7 +24,7 @@ import { SplitLayout } from '@kit.ArkUI';
 
 Container in the user-defined splitlayout display area.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 22
 

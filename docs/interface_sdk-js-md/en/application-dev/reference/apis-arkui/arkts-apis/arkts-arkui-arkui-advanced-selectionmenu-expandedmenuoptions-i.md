@@ -2,9 +2,9 @@
 
 Describes the expanded drop-down menu options.
 
-Inherits from [MenuItemOptions](../arkts-components/arkts-arkui-menu-item-menuitemoptions-i.md).
+Inherits from [MenuItemOptions](../arkts-components/arkts-arkui-menuitemoptions-i.md).
 
-**Inheritance/Implementation:** ExpandedMenuOptions extends [MenuItemOptions](../arkts-components/arkts-arkui-menu-item-menuitemoptions-i.md)
+**Inheritance/Implementation:** ExpandedMenuOptions extends [MenuItemOptions](../arkts-components/arkts-arkui-menuitemoptions-i.md)
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ action?: () => void
 
 Action triggered when the menu option is clicked.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 11
 

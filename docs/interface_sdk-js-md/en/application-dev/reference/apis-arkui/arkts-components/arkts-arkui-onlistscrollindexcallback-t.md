@@ -22,7 +22,7 @@ Represents a callback for item changes in the visible area of the **List** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Index of the first child component in the list display area. |
-| end | number | Yes | Index of the last child component in the list display area. |
-| center | number | Yes | Index of the center child component in the list display area. |
+| start | number | Yes | Index of the first child component in the list display area.  |
+| end | number | Yes | Index of the last child component in the list display area.  |
+| center | number | Yes | Index of the center child component in the list display area.  |
 

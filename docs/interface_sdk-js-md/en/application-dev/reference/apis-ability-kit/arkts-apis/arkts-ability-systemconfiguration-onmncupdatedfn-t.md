@@ -20,5 +20,5 @@ Defines an OnMNCUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mnc | string | Yes | Indicates the mobile network code |
+| mnc | string | Yes | Indicates the mobile network code  |
 

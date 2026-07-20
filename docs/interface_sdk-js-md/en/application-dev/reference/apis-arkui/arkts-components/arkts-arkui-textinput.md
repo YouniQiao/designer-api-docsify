@@ -30,7 +30,7 @@ Defines the constructor of TextInput.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TextInputOptions | No | Parameters of the **TextInput** component. |
+| value | [TextInputOptions](arkts-arkui-textinputoptions-i.md) | No | Parameters of the **TextInput** component.  |
 
 ## Summary
 

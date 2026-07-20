@@ -22,7 +22,7 @@ assetChangeDatas: PhotoAssetChangeData[] | null
 
 Array of changed media assets. If all media assets need to be queried again, **assetChangeDatas** is null.
 
-**Type:** PhotoAssetChangeData[] | null
+**Type:** PhotoAssetChangeData[] \| null
 
 **Since:** 20
 

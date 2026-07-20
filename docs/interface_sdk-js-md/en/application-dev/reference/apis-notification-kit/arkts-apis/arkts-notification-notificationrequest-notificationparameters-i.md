@@ -34,7 +34,7 @@ wantParameters?:Record<string, Object>
 
 **parameters** field passed in **want** when **wantAgent** is created. For details, see [parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md).
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 24
 

@@ -20,5 +20,5 @@ Callback function on continue mission done.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | int | Yes | The result code of continue mission. |
+| result | number | Yes | The result code of continue mission.  |
 

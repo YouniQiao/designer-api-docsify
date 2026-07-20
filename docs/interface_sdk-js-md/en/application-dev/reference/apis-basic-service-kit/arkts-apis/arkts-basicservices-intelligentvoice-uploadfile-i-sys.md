@@ -24,7 +24,7 @@ filesContent: Array<ArrayBuffer>
 
 Files content.
 
-**Type:** Array<ArrayBuffer>
+**Type:** Array&lt;ArrayBuffer&gt;
 
 **Since:** 12
 

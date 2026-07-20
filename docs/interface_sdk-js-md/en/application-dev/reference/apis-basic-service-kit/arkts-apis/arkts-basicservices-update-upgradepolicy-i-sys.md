@@ -26,7 +26,7 @@ Automatic update period.
 
 This parameter is optional and is used when the automatic upgrade needs to be performed in a specified period(for example, at night). If this parameter is not passed, the value is an empty array **[]** by default,indicating that the automatic upgrade period is not limited and the upgrade can be performed at any time.
 
-**Type:** Array<UpgradePeriod>
+**Type:** Array&lt;UpgradePeriod&gt;
 
 **Since:** 9
 

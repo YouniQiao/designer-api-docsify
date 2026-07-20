@@ -34,7 +34,7 @@ Use new to create Path.Annonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | PathOptions | No | path options |
+| options | [PathOptions](arkts-arkui-pathoptions-i.md) | No | path options |
 
 ## Path
 
@@ -58,7 +58,7 @@ Defines the constructor of Path component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | PathOptions | No | - Options of the path.<br>The **undefined** and **null** values are treated asinvalid and will not take effect. |
+| options | [PathOptions](arkts-arkui-pathoptions-i.md) | No | - Options of the path.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

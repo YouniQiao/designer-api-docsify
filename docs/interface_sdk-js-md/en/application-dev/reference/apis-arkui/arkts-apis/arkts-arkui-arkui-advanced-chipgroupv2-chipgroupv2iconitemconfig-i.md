@@ -84,7 +84,7 @@ action: Callback<void>
 
 Icon Action.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
 

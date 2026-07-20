@@ -16,5 +16,5 @@ Defines a callback invoked when the rendering process does not respond.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | RenderProcessNotRespondingData | Yes | details of onRenderProcessNotResponding. |
+| data | [RenderProcessNotRespondingData](arkts-arkweb-renderprocessnotrespondingdata-i.md) | Yes | details of onRenderProcessNotResponding.  |
 

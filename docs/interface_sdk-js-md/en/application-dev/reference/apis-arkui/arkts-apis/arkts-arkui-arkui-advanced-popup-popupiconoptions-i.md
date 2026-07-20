@@ -24,7 +24,7 @@ Rounded corner of the icon.
 
 Default value: **$r('sys.float.ohos_id_corner_radius_default_s')**
 
-**Type:** Length | BorderRadiuses
+**Type:** Length \| BorderRadiuses
 
 **Since:** 11
 

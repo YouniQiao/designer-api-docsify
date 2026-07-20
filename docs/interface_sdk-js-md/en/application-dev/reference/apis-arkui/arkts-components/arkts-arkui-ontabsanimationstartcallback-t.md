@@ -20,7 +20,7 @@ Defines the callback triggered when the tab switching animation starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the currently displayed element. The index is zero-based. |
-| targetIndex | number | Yes | Index of the target element to switch to. The index is zero-based. |
-| extraInfo | TabsAnimationEvent | Yes | Extra information of the animation, including the offset of the currentlydisplayed element and target element relative to the start position of the **Tabs** along the main axis, and thehands-off velocity. |
+| index | number | Yes | Index of the currently displayed element. The index is zero-based.  |
+| targetIndex | number | Yes | Index of the target element to switch to. The index is zero-based.  |
+| extraInfo | [TabsAnimationEvent](arkts-arkui-tabsanimationevent-i.md) | Yes | Extra information of the animation, including the offset of the currently displayed element and target element relative to the start position of the **Tabs** along the main axis, and the hands-off velocity.  |
 

@@ -58,7 +58,7 @@ trustlist?: Array<BundleOption>
 
 Trustlist in Do Not Disturb profile.
 
-**Type:** Array<BundleOption>
+**Type:** Array&lt;BundleOption&gt;
 
 **Since:** 12
 

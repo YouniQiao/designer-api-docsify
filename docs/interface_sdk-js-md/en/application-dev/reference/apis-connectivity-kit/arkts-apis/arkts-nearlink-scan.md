@@ -20,10 +20,10 @@ import { scan } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md#offdevicefound-1) | Unsubscribes from NearLink scan results. |
-| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md#ondevicefound-1) | Subscribes to NearLink scan results.This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned. |
-| [startScan](arkts-connectivity-scan-startscan-f.md#startscan-1) | Starts scanning for specified NearLink devices with filters.It is allowed to set filter parameter to {@code null} if you do not want to use filter. |
-| [stopScan](arkts-connectivity-scan-stopscan-f.md#stopscan-1) | Stops scanning. |
+| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md#offdevicefound) | Unsubscribes from NearLink scan results. |
+| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md#ondevicefound) | Subscribes to NearLink scan results.  This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned. |
+| [startScan](arkts-connectivity-scan-startscan-f.md#startscan) | Starts scanning for specified NearLink devices with filters.It is allowed to set filter parameter to {@code null} if you do not want to use filter. |
+| [stopScan](arkts-connectivity-scan-stopscan-f.md#stopscan) | Stops scanning. |
 
 ### Interfaces
 

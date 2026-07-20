@@ -26,7 +26,7 @@ bottom?: string | number
 
 The distance between toast dialog box and the bottom of screen.
 
-**Type:** string | number
+**Type:** string \| number
 
 **Since:** 5
 

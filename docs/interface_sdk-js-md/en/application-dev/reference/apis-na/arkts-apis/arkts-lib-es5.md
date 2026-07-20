@@ -12,17 +12,17 @@
 
 | Name | Description |
 | --- | --- |
-| [decodeURI](arkts-na-lib-es5-decodeuri-f.md#decodeuri-1) | Gets the unencoded version of an encoded Uniform Resource Identifier (URI). |
-| [decodeURIComponent](arkts-na-lib-es5-decodeuricomponent-f.md#decodeuricomponent-1) | Gets the unencoded version of an encoded component of a Uniform Resource Identifier (URI). |
-| [encodeURI](arkts-na-lib-es5-encodeuri-f.md#encodeuri-1) | Encodes a text string as a valid Uniform Resource Identifier (URI) |
-| [encodeURIComponent](arkts-na-lib-es5-encodeuricomponent-f.md#encodeuricomponent-1) | Encodes a text string as a valid component of a Uniform Resource Identifier (URI). |
-| [escape](arkts-na-lib-es5-escape-f.md#escape-1) | Computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. |
-| [eval](arkts-na-lib-es5-eval-f.md#eval-1) | Evaluates JavaScript code and executes it. |
-| [isFinite](arkts-na-lib-es5-isfinite-f.md#isfinite-1) | Determines whether a supplied number is finite. |
-| [isNaN](arkts-na-lib-es5-isnan-f.md#isnan-1) | Returns a Boolean value that indicates whether a value is the reserved value NaN (not a number). |
-| [parseFloat](arkts-na-lib-es5-parsefloat-f.md#parsefloat-1) | Converts a string to a floating-point number. |
-| [parseInt](arkts-na-lib-es5-parseint-f.md#parseint-1) | Converts a string to an integer. |
-| [unescape](arkts-na-lib-es5-unescape-f.md#unescape-1) | Computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. |
+| [decodeURI](arkts-na-lib-es5-decodeuri-f.md#decodeuri) | Gets the unencoded version of an encoded Uniform Resource Identifier (URI). |
+| [decodeURIComponent](arkts-na-lib-es5-decodeuricomponent-f.md#decodeuricomponent) | Gets the unencoded version of an encoded component of a Uniform Resource Identifier (URI). |
+| [encodeURI](arkts-na-lib-es5-encodeuri-f.md#encodeuri) | Encodes a text string as a valid Uniform Resource Identifier (URI) |
+| [encodeURIComponent](arkts-na-lib-es5-encodeuricomponent-f.md#encodeuricomponent) | Encodes a text string as a valid component of a Uniform Resource Identifier (URI). |
+| [escape](arkts-na-lib-es5-escape-f.md#escape) | Computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. |
+| [eval](arkts-na-lib-es5-eval-f.md#eval) | Evaluates JavaScript code and executes it. |
+| [isFinite](arkts-na-lib-es5-isfinite-f.md#isfinite) | Determines whether a supplied number is finite. |
+| [isNaN](arkts-na-lib-es5-isnan-f.md#isnan) | Returns a Boolean value that indicates whether a value is the reserved value NaN (not a number). |
+| [parseFloat](arkts-na-lib-es5-parsefloat-f.md#parsefloat) | Converts a string to a floating-point number. |
+| [parseInt](arkts-na-lib-es5-parseint-f.md#parseint) | Converts a string to an integer. |
+| [unescape](arkts-na-lib-es5-unescape-f.md#unescape) | Computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. |
 
 ### Interfaces
 
@@ -55,8 +55,8 @@
 | [FunctionConstructor](arkts-na-lib-es5-functionconstructor-i.md) |  |
 | [IArguments](arkts-na-lib-es5-iarguments-i.md) |  |
 | [ImportAssertions](arkts-na-lib-es5-importassertions-i.md) | The type for the `assert` property of the optional second argument to `import()`. |
-| [ImportCallOptions](arkts-na-lib-es5-importcalloptions-i.md) | The type for the optional second argument to `import()`.If your host environment supports additional options, this type may be augmented via interface merging. |
-| [ImportMeta](arkts-na-lib-es5-importmeta-i.md) | The type of `import.meta`.If you need to declare that a given property exists on `import.meta`,this type may be augmented via interface merging. |
+| [ImportCallOptions](arkts-na-lib-es5-importcalloptions-i.md) | The type for the optional second argument to `import()`.  If your host environment supports additional options, this type may be augmented via interface merging. |
+| [ImportMeta](arkts-na-lib-es5-importmeta-i.md) | The type of `import.meta`.  If you need to declare that a given property exists on `import.meta`,this type may be augmented via interface merging. |
 | [Int16Array](arkts-na-lib-es5-int16array-i.md) | A typed array of 16-bit signed integer values. The contents are initialized to 0. If the requested number of bytes could not be allocated an exception is raised. |
 | [Int16ArrayConstructor](arkts-na-lib-es5-int16arrayconstructor-i.md) |  |
 | [Int32Array](arkts-na-lib-es5-int32array-i.md) | A typed array of 32-bit signed integer values. The contents are initialized to 0. If the requested number of bytes could not be allocated an exception is raised. |

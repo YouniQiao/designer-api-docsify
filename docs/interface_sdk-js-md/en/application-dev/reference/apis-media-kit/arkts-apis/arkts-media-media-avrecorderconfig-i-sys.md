@@ -24,7 +24,7 @@ metaSourceTypes?: Array<MetaSourceType>
 
 Meta source types, details see @MetaSourceType .
 
-**Type:** Array<MetaSourceType>
+**Type:** Array&lt;MetaSourceType&gt;
 
 **Since:** 12
 

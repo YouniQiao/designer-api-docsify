@@ -2,7 +2,7 @@
 
 Defines PopoverDialog Options
 
-**Inheritance/Implementation:** PopoverOptions extends [CustomPopupOptions](../arkts-components/arkts-arkui-common-custompopupoptions-i.md)
+**Inheritance/Implementation:** PopoverOptions extends [CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md)
 
 **Since:** 14
 

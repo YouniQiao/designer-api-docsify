@@ -22,7 +22,7 @@ devices: Array<DeviceInfo>
 
 Arrays of device information
 
-**Type:** Array<DeviceInfo>
+**Type:** Array&lt;DeviceInfo&gt;
 
 **Since:** 10
 

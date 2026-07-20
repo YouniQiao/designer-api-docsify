@@ -54,7 +54,7 @@ runningAppClones?: Array<RunningAppClone>
 
 Information about application clones with the specific bundle name in the running state.
 
-**Type:** Array<RunningAppClone>
+**Type:** Array&lt;RunningAppClone&gt;
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ runningMultiInstances?: Array<RunningMultiInstanceInfo>
 
 Information about a multi-instance application with the specific bundle name in the running state.
 
-**Type:** Array<RunningMultiInstanceInfo>
+**Type:** Array&lt;RunningMultiInstanceInfo&gt;
 
 **Since:** 14
 

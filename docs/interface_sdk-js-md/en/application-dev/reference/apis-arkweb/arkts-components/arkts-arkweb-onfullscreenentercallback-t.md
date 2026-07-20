@@ -18,5 +18,5 @@ Defines a callback invoked when the **Web** component enters full screen mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | FullScreenEnterEvent | Yes | Callback event for the **Web** component to enter full screen mode. |
+| event | [FullScreenEnterEvent](arkts-arkweb-fullscreenenterevent-i.md) | Yes | Callback event for the **Web** component to enter full screen mode.  |
 

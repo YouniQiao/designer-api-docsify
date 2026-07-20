@@ -20,12 +20,12 @@ Invoke upon clicking an item, capable of intercepting the default system menu ex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItem | TextMenuItem | Yes | current clicked menu item. |
-| value | string | Yes | selected text content. |
+| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | Yes | current clicked menu item.  |
+| value | string | Yes | selected text content.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Return true if the event is consumed; false otherwise. |
+| boolean | Return true if the event is consumed; false otherwise.  |
 

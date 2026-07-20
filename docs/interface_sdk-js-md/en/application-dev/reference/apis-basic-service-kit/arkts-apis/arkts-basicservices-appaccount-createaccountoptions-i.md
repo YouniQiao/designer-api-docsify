@@ -22,7 +22,7 @@ customData?: Record<string, string>
 
 Custom data. By default, no value is passed in.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 9
 

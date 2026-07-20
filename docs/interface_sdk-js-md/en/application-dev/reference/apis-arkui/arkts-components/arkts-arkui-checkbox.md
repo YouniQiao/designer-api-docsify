@@ -32,7 +32,7 @@ Creates a check box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | CheckboxOptions | No | Check box parameters. |
+| options | [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | No | Check box parameters.  |
 
 ## Summary
 

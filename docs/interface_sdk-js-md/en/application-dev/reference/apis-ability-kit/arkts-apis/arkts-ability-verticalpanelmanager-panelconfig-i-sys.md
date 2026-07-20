@@ -31,7 +31,7 @@ Indicates the info about source app
 -SOURCE_APP_WINDOW_ID: the window ID of the caller. The value is a string.  
 -SOURCE_APP_SCREEN_MODE: the screen mode of the split screen. The value is a string. The value is "1".
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 20
 

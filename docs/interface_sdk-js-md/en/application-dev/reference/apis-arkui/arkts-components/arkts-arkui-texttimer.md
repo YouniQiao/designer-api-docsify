@@ -28,7 +28,7 @@ Create TextTimer component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TextTimerOptions | No | Parameters of the **TextTimer** component. The default value is inheritedfrom [TextTimerOptions]{@link TextTimerOptions}. |
+| options | [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | No | Parameters of the **TextTimer** component. The default value is inherited from [TextTimerOptions]{@link TextTimerOptions}.  |
 
 ## Summary
 

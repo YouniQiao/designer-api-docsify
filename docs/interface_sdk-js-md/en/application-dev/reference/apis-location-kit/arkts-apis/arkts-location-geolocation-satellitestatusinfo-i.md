@@ -26,7 +26,7 @@ import { geolocation } from '@kit.LocationKit';
 altitudes: Array<number>
 ```
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 8
 
@@ -44,7 +44,7 @@ altitudes: Array<number>
 azimuths: Array<number>
 ```
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 8
 
@@ -62,7 +62,7 @@ azimuths: Array<number>
 carrierFrequencies: Array<number>
 ```
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ carrierFrequencies: Array<number>
 carrierToNoiseDensitys: Array<number>
 ```
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 8
 
@@ -98,7 +98,7 @@ carrierToNoiseDensitys: Array<number>
 satelliteIds: Array<number>
 ```
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 8
 

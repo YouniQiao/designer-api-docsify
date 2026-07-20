@@ -96,7 +96,7 @@ pageSize: Array<PrintPageSize>
 
 List of page sizes supported by the printer.
 
-**Type:** Array<PrintPageSize>
+**Type:** Array&lt;PrintPageSize&gt;
 
 **Since:** 24
 
@@ -114,7 +114,7 @@ resolution?: Array<PrintResolution>
 
 List of resolutions supported by the printer.
 
-**Type:** Array<PrintResolution>
+**Type:** Array&lt;PrintResolution&gt;
 
 **Since:** 24
 

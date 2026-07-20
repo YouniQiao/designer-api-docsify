@@ -24,7 +24,7 @@ cellInfos: Array<CellInfo>
 
 Indicates CELL information array.
 
-**Type:** Array<CellInfo>
+**Type:** Array&lt;CellInfo&gt;
 
 **Since:** 26.0.0
 

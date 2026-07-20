@@ -24,7 +24,7 @@ errorMessages: Array<ErrorMessage>
 
 错误信息。
 
-**类型：** Array<ErrorMessage>
+**类型：** Array&lt;ErrorMessage&gt;
 
 **起始版本：** 9
 
@@ -114,7 +114,7 @@ versionComponents: Array<VersionComponent>
 
 版本组件。
 
-**类型：** Array<VersionComponent>
+**类型：** Array&lt;VersionComponent&gt;
 
 **起始版本：** 9
 

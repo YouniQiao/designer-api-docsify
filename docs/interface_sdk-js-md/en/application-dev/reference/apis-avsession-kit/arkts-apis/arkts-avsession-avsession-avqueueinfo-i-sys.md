@@ -42,7 +42,7 @@ avQueueImage: image.PixelMap | string
 
 The artwork of play list, can be a {@link PixelMap} or a URI formatted string,
 
-**Type:** image.PixelMap | string
+**Type:** image.PixelMap \| string
 
 **Since:** 11
 

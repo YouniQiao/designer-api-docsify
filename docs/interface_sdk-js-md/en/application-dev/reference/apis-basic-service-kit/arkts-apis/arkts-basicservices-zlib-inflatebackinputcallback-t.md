@@ -18,11 +18,11 @@ A callback function for reading input data provided by a user. When the decompre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inDesc | object | Yes | A universal user-defined data object.The specific type and content depend on the actual application scenario, which can include configuration data,file handles, etc. |
+| inDesc | object | Yes | A universal user-defined data object. The specific type and content depend on the actual application scenario, which can include configuration data, file handles, etc.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Return the buffer successfully read by the data source through the input descriptor. |
+| ArrayBuffer | Return the buffer successfully read by the data source through the input descriptor.  |
 

@@ -20,6 +20,6 @@ Defines the callback invoked when a drop-down menu option is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the selected option. The index is zero-based. |
-| selectStr | string | Yes | Value of the selected option. |
+| index | number | Yes | Index of the selected option. The index is zero-based.  |
+| selectStr | string | Yes | Value of the selected option.  |
 

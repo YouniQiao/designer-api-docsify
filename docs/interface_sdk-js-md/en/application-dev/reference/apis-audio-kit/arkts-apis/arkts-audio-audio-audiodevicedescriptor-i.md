@@ -42,7 +42,7 @@ readonly capabilities?: Array<AudioStreamInfo>
 
 Audio stream capabilities supported by the device.
 
-**Type:** Array<AudioStreamInfo>
+**Type:** Array&lt;AudioStreamInfo&gt;
 
 **Since:** 22
 
@@ -58,7 +58,7 @@ readonly channelCounts: Array<number>
 
 Number of channels supported.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 
@@ -76,7 +76,7 @@ readonly channelMasks: Array<number>
 
 Supported channel masks.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 
@@ -148,7 +148,7 @@ readonly encodingTypes?: Array<AudioEncodingType>
 
 Supported encoding types.
 
-**Type:** Array<AudioEncodingType>
+**Type:** Array&lt;AudioEncodingType&gt;
 
 **Since:** 11
 
@@ -222,7 +222,7 @@ Supported sampling rates.
 
 SystemCapability.Multimedia.Audio.Device
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 

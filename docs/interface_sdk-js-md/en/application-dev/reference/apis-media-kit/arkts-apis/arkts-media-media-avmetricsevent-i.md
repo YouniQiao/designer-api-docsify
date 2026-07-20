@@ -22,7 +22,7 @@ details: Record<string, Object>
 
 The detailed information of the event.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
 

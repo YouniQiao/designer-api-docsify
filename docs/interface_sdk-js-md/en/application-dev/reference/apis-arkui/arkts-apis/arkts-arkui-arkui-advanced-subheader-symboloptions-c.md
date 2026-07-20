@@ -42,7 +42,7 @@ fontColor?: Array<ResourceColor>
 
 The color of symbol icon.
 
-**Type:** Array<ResourceColor>
+**Type:** Array&lt;ResourceColor&gt;
 
 **Since:** 18
 
@@ -62,7 +62,7 @@ fontSize?: number | string | Resource
 
 The size of symbol icon.
 
-**Type:** number | string | Resource
+**Type:** number \| string \| Resource
 
 **Since:** 18
 
@@ -82,7 +82,7 @@ fontWeight?: number | FontWeight | string
 
 The fontWeight of symbol icon.
 
-**Type:** number | FontWeight | string
+**Type:** number \| FontWeight \| string
 
 **Since:** 18
 

@@ -4,6 +4,8 @@ Declare Component ToolBar
 
 **Since:** 18
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ToolBar--><!--Device-unnamed-export declare struct ToolBar-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

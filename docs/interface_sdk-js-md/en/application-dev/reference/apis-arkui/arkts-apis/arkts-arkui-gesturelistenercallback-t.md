@@ -20,5 +20,5 @@ Defines the callback type for listening for specific gesture trigger information
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | GestureTriggerInfo | Yes | Details of the gesture triggered by the interaction. |
+| info | [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md) | Yes | Details of the gesture triggered by the interaction.  |
 

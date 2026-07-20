@@ -18,7 +18,7 @@ info: CliCmdInfo | Permissions
 
 Operation detail information.
 
-**Type:** CliCmdInfo | Permissions
+**Type:** CliCmdInfo \| Permissions
 
 **Since:** 26.0.0
 

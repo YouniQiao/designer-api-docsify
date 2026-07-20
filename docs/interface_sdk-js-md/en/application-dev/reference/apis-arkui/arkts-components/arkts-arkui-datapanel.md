@@ -32,7 +32,7 @@ Creates a data panel component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | DataPanelOptions | Yes | Parameters of the data panel. |
+| options | [DataPanelOptions](arkts-arkui-datapaneloptions-i.md) | Yes | Parameters of the data panel.  |
 
 ## Summary
 

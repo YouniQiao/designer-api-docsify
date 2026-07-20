@@ -174,7 +174,7 @@ readonly previewImages?: Array<number>
 
 Indicates the form previewImage IDs map corresponds to the \"supportDimensions\". The maximum length is +∞,positive integer.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 18
 

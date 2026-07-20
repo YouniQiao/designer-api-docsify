@@ -26,7 +26,7 @@ complete?: () => void
 
 Callback invoked when the API call is complete.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -48,7 +48,7 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -70,7 +70,7 @@ success: (data: OnBodyStateResponse) => void
 
 Callback upon a successful API call.
 
-**Type:** (data: OnBodyStateResponse) => void
+**Type:** (data: OnBodyStateResponse) =&gt; void
 
 **Since:** 3
 

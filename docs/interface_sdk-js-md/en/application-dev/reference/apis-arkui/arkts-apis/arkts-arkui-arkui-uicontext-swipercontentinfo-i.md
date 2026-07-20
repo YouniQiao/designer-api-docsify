@@ -42,7 +42,7 @@ swiperItemInfos: Array<SwiperItemInfo>
 
 Information about the currently visible child components within the **Swiper** container.
 
-**Type:** Array<SwiperItemInfo>
+**Type:** Array&lt;SwiperItemInfo&gt;
 
 **Since:** 22
 

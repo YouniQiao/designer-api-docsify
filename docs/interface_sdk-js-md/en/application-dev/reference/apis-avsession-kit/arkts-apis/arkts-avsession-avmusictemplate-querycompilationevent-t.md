@@ -18,12 +18,12 @@ The query compilation event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compilationId | string | Yes | compilation id |
-| pageIndex | int | Yes | page index |
+| compilationId | string | Yes | compilation id  |
+| pageIndex | number | Yes | page index  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | (PageMediaEntity) returned through promise |
+| Promise&lt;PageMediaEntity&gt; | (PageMediaEntity) returned through promise  |
 

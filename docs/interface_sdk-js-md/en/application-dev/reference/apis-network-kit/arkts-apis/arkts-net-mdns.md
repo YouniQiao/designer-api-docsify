@@ -20,13 +20,13 @@ import { mdns } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
+| [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice) | Adds an mDNS service. |
 | [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice-1) | Adds an mDNS service. |
-| [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice-2) | Adds an mDNS service. |
-| [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md#creatediscoveryservice-1) | Create an mDNS based discovery service with context and serviceType. |
+| [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md#creatediscoveryservice) | Create an mDNS based discovery service with context and serviceType. |
+| [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice) | Removes an mDNS service. |
 | [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice-1) | Removes an mDNS service. |
-| [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice-2) | Removes an mDNS service. |
+| [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolvelocalservice) | Resolves an mDNS service. |
 | [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolvelocalservice-1) | Resolves an mDNS service. |
-| [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolvelocalservice-2) | Resolves an mDNS service. |
 
 ### Interfaces
 

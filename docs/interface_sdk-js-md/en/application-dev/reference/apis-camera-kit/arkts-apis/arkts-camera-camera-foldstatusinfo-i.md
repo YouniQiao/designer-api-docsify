@@ -40,7 +40,7 @@ readonly supportedCameras: Array<CameraDevice>
 
 List of cameras supported in the current fold state.
 
-**Type:** Array<CameraDevice>
+**Type:** Array&lt;CameraDevice&gt;
 
 **Since:** 12
 

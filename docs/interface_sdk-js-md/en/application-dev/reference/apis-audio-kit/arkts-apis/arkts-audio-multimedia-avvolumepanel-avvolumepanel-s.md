@@ -4,6 +4,8 @@ A panel to set the system audio output volume.
 
 **Since:** 12
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct AVVolumePanel--><!--Device-unnamed-export declare struct AVVolumePanel-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume

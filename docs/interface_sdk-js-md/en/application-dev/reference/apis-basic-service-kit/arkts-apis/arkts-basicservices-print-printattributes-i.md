@@ -102,7 +102,7 @@ pageSize?: PrintPageSize | PrintPageType
 
 Page size of the file to print.
 
-**Type:** PrintPageSize | PrintPageType
+**Type:** PrintPageSize \| PrintPageType
 
 **Since:** 11
 

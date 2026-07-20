@@ -24,7 +24,7 @@ dnsServers: Array<string>
 
 DNS servers.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 20
 
@@ -42,7 +42,7 @@ domains: Array<string>
 
 Domains.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 20
 

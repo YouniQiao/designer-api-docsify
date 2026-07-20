@@ -18,5 +18,5 @@ Defines a listener for progress data changes. If the default progress indicator 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | ProgressInfo | Yes | Defines the progress information. This information is reported only when[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**. |
+| progress | [ProgressInfo](arkts-basicservices-pasteboard-progressinfo-i.md) | Yes | Defines the progress information. This information is reported only when [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**.  |
 

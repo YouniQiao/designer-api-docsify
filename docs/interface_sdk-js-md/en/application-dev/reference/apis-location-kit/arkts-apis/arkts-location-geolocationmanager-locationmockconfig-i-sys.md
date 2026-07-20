@@ -24,7 +24,7 @@ locations: Array<Location>
 
 Mock location array.
 
-**Type:** Array<Location>
+**Type:** Array&lt;Location&gt;
 
 **Since:** 9
 

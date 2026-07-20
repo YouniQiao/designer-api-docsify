@@ -21,9 +21,9 @@ import { batteryInfo } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [getBatteryConfig](arkts-basicservices-batteryinfo-getbatteryconfig-f-sys.md#getbatteryconfig-1) | Obtains the battery configuration based on the specified scenario. |
-| [isBatteryConfigSupported](arkts-basicservices-batteryinfo-isbatteryconfigsupported-f-sys.md#isbatteryconfigsupported-1) | Checks whether the battery configuration is enabled based on the specified scenario. |
-| [setBatteryConfig](arkts-basicservices-batteryinfo-setbatteryconfig-f-sys.md#setbatteryconfig-1) | Sets the battery configuration based on the specified scenario. |
+| [getBatteryConfig](arkts-basicservices-batteryinfo-getbatteryconfig-f-sys.md#getbatteryconfig) | Obtains the battery configuration based on the specified scenario. |
+| [isBatteryConfigSupported](arkts-basicservices-batteryinfo-isbatteryconfigsupported-f-sys.md#isbatteryconfigsupported) | Checks whether the battery configuration is enabled based on the specified scenario. |
+| [setBatteryConfig](arkts-basicservices-batteryinfo-setbatteryconfig-f-sys.md#setbatteryconfig) | Sets the battery configuration based on the specified scenario. |
 <!--DelEnd-->
 
 ### Enums
@@ -45,7 +45,7 @@ import { batteryInfo } from '@kit.BasicServicesKit';
 | [batteryTemperature](arkts-basicservices-batteryinfo-con.md#batterytemperature) | Battery temperature of the device, in unit of 0.1°C. |
 | [chargingStatus](arkts-basicservices-batteryinfo-con.md#chargingstatus) | Battery charging state of the current device. |
 | [healthStatus](arkts-basicservices-batteryinfo-con.md#healthstatus) | Battery health status of the device. |
-| [isBatteryPresent](arkts-basicservices-batteryinfo-con.md#isbatterypresent) | Whether the battery is supported or present. The value **true** means that the battery is supported or present;**false** means the opposite.Default value: **false**. |
+| [isBatteryPresent](arkts-basicservices-batteryinfo-con.md#isbatterypresent) | Whether the battery is supported or present. The value **true** means that the battery is supported or present;**false** means the opposite.  Default value: **false**. |
 | [nowCurrent](arkts-basicservices-batteryinfo-con.md#nowcurrent) | Battery current of the device, in unit of mA. |
 | [pluggedType](arkts-basicservices-batteryinfo-con.md#pluggedtype) | Charger type of the device. |
 | [technology](arkts-basicservices-batteryinfo-con.md#technology) | Battery technology of the device. |

@@ -20,5 +20,5 @@ Define cli event callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | CliToolEvent | Yes | The event send by cli tool. |
+| event | [CliToolEvent](arkts-ability-common-clitoolevent-t-sys.md) | Yes | The event send by cli tool.  |
 

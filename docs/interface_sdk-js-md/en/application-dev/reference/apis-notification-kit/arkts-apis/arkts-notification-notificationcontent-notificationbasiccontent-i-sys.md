@@ -16,7 +16,7 @@ structuredText?: Map<string, string>
 
 Structured notification. Currently, only service reminder messages can be displayed in structured format in the notification center. This parameter is left empty by default. (The size of key or value cannot exceed 512bytes; otherwise, the excess part will be truncated. Only a maximum of three pairs of structured data are supported.)
 
-**Type:** Map<string, string>
+**Type:** Map&lt;string, string&gt;
 
 **Since:** 21
 

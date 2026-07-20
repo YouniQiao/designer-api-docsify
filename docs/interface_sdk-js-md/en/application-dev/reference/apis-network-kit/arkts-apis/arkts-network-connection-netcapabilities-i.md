@@ -22,7 +22,7 @@ bearerTypes: Array<NetBearType>
 
 Network type.
 
-**Type:** Array<NetBearType>
+**Type:** Array&lt;NetBearType&gt;
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ networkCap?: Array<NetCap>
 
 Network-specific capabilities.
 
-**Type:** Array<NetCap>
+**Type:** Array&lt;NetCap&gt;
 
 **Since:** 11
 

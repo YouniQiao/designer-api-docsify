@@ -23,7 +23,7 @@ Called when the remote window interface is used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | WindowAnimationTarget | Yes |  |
+| target | [WindowAnimationTarget](arkts-arkui-windowanimationtarget-i-sys.md) | Yes |  |
 
 ## Summary
 

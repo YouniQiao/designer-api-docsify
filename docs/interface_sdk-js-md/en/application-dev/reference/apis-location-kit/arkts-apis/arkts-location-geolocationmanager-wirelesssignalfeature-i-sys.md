@@ -24,7 +24,7 @@ mac: Array<string>
 
 Indicates MAC array.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

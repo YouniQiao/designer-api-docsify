@@ -4,6 +4,8 @@ Defines a content form card.
 
 **Since:** 20
 
+**Decorator:** @Component
+
 <!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core

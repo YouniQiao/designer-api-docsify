@@ -16,7 +16,7 @@ readonly targets: Record<string, number>
 
 Morph target names and weights
 
-**Type:** Record<string, number>
+**Type:** Record&lt;string, number&gt;
 
 **Since:** 20
 

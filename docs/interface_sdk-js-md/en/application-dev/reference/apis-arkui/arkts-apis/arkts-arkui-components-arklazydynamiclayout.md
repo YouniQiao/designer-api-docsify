@@ -12,7 +12,7 @@ import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md#lazydynamiclayout-1) | Defines LazyDynamicLayout Component. |
+| [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md#lazydynamiclayout) | Defines LazyDynamicLayout Component. |
 
 ### Classes
 

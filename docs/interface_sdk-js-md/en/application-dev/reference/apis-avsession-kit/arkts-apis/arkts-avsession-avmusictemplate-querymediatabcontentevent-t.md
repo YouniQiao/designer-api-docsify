@@ -18,11 +18,11 @@ The query media tab content event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabId | string | Yes | tab id |
+| tabId | string | Yes | tab id  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MediaTabContent&gt; | (MediaTabContent) returned through promise |
+| Promise&lt;MediaTabContent&gt; | (MediaTabContent) returned through promise  |
 

@@ -20,6 +20,6 @@ Callback function on network disconnect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Indicates the deviceId network disconnect. |
-| state | int | Yes | Indicates the state of network. |
+| deviceId | string | Yes | Indicates the deviceId network disconnect.  |
+| state | number | Yes | Indicates the state of network.  |
 

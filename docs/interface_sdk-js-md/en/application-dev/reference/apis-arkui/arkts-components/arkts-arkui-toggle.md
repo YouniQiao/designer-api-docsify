@@ -28,7 +28,7 @@ Toggle(options: ToggleOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ToggleOptions | Yes | Options of the toggle. |
+| options | [ToggleOptions](arkts-arkui-toggleoptions-i.md) | Yes | Options of the toggle. |
 
 ## Summary
 

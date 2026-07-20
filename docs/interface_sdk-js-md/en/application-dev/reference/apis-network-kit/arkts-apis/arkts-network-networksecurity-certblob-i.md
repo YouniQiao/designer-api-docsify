@@ -22,7 +22,7 @@ data: string | ArrayBuffer
 
 Certificate data.
 
-**Type:** string | ArrayBuffer
+**Type:** string \| ArrayBuffer
 
 **Since:** 11
 

@@ -4,6 +4,8 @@ Declare CustomDialog ConfirmDialogV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ConfirmDialogV2--><!--Device-unnamed-export declare struct ConfirmDialogV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Sets the ConfirmDialogV2 checkbox tips.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -45,6 +49,8 @@ Sets the ConfirmDialogV2 checkbox state.
 **Type:** boolean
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Sets the ConfirmDialogV2 content.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -85,6 +93,8 @@ Sets the ConfirmDialogV2 CheckBox Callback.
 **Type:** AdvancedDialogV2OnCheckedChange
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +116,8 @@ Sets the ConfirmDialogV2 primary button.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -126,6 +138,8 @@ Sets the ConfirmDialogV2 secondary button.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -145,6 +159,8 @@ Sets the ConfirmDialogV2 title.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

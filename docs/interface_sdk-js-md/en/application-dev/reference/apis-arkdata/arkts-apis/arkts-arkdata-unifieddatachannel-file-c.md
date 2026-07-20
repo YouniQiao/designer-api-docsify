@@ -34,7 +34,7 @@ A dictionary type object, where both the key and value are of the string type an
 
 The default value is an empty dictionary object.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 10
 
@@ -74,7 +74,7 @@ set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 
 Defines URI authorization policies for drag intention.
 
-**Type:** Array<UriPermission>
+**Type:** Array&lt;UriPermission&gt;
 
 **Since:** 26.0.0
 

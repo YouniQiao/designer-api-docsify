@@ -24,7 +24,7 @@ Types of media files that PhotoPicker allows users to filter by. The maximum arr
 
 The filter type is defined by the MIME type, for example, image/jpeg and video/mp4.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 19
 

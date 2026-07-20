@@ -20,6 +20,6 @@ Callback function on snapshot changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Indicates the deviceId snapshot changed. |
-| mission | int | Yes | Indicates the id of mission. |
+| deviceId | string | Yes | Indicates the deviceId snapshot changed.  |
+| mission | number | Yes | Indicates the id of mission.  |
 

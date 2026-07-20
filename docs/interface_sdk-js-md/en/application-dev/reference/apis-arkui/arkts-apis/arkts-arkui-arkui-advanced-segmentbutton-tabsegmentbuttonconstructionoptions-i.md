@@ -26,7 +26,7 @@ buttons: ItemRestriction<SegmentButtonTextItem>
 
 Button information.
 
-**Type:** ItemRestriction<SegmentButtonTextItem>
+**Type:** ItemRestriction&lt;SegmentButtonTextItem&gt;
 
 **Since:** 11
 

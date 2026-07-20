@@ -142,7 +142,7 @@ size?: ChipV2Size | SizeT<LengthMetrics>
 
 ChipV2 size.
 
-**Type:** ChipV2Size | SizeT<LengthMetrics>
+**Type:** ChipV2Size \| SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
 

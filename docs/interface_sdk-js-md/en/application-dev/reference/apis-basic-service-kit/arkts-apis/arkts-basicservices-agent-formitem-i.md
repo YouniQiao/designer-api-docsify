@@ -40,7 +40,7 @@ value: string | FileSpec | Array<FileSpec>
 
 Form parameter value.
 
-**Type:** string | FileSpec | Array<FileSpec>
+**Type:** string \| FileSpec \| Array&lt;FileSpec&gt;
 
 **Since:** 10
 

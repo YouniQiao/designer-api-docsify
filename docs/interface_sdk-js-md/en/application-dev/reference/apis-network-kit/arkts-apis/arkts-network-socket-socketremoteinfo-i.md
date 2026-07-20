@@ -38,7 +38,7 @@ family: 'IPv4' | 'IPv6'
 
 Network protocol type. The options are as follows: IPv4, IPv6.
 
-**Type:** 'IPv4' | 'IPv6'
+**Type:** 'IPv4' \| 'IPv6'
 
 **Since:** 10
 

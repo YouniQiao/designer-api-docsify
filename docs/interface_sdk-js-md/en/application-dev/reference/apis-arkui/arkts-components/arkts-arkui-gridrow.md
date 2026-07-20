@@ -31,7 +31,7 @@ Creates a **GridRow** container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | GridRowOptions | No |  |
+| option | [GridRowOptions](arkts-arkui-gridrowoptions-i.md) | No |  |
 
 ## Summary
 

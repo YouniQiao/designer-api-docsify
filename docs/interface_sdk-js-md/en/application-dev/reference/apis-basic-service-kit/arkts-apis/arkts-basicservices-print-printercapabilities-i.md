@@ -38,7 +38,7 @@ supportedColorModes: Array<PrintColorMode>
 
 List of color modes supported by the printer.
 
-**Type:** Array<PrintColorMode>
+**Type:** Array&lt;PrintColorMode&gt;
 
 **Since:** 14
 
@@ -54,7 +54,7 @@ supportedDuplexModes: Array<PrintDuplexMode>
 
 List of single- and double-sided modes supported by the printer.
 
-**Type:** Array<PrintDuplexMode>
+**Type:** Array&lt;PrintDuplexMode&gt;
 
 **Since:** 14
 
@@ -70,7 +70,7 @@ supportedMediaTypes?: Array<string>
 
 List of paper types supported by the printer.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 14
 
@@ -86,7 +86,7 @@ supportedOrientations?: Array<PrintOrientationMode>
 
 List of print directions supported by the printer.
 
-**Type:** Array<PrintOrientationMode>
+**Type:** Array&lt;PrintOrientationMode&gt;
 
 **Since:** 14
 
@@ -102,7 +102,7 @@ supportedPageSizes: Array<PrintPageSize>
 
 List of paper sizes supported by the printer.
 
-**Type:** Array<PrintPageSize>
+**Type:** Array&lt;PrintPageSize&gt;
 
 **Since:** 14
 
@@ -118,7 +118,7 @@ supportedQualities?: Array<PrintQuality>
 
 List of print quality supported by the printer.
 
-**Type:** Array<PrintQuality>
+**Type:** Array&lt;PrintQuality&gt;
 
 **Since:** 14
 

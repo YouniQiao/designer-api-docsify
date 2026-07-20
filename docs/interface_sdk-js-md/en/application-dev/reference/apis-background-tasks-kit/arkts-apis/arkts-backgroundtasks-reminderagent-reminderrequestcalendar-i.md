@@ -48,7 +48,7 @@ repeatDays?: Array<number>
 
 Date on which the reminder repeats.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 7
 
@@ -68,7 +68,7 @@ repeatMonths?: Array<number>
 
 Month in which the reminder repeats.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 7
 

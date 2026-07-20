@@ -20,5 +20,5 @@ template form detail info callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | Array&lt;TemplateFormDetailInfo&gt; | Yes | Template form detail info. |
+| info | Array&lt;TemplateFormDetailInfo&gt; | Yes | Template form detail info.  |
 

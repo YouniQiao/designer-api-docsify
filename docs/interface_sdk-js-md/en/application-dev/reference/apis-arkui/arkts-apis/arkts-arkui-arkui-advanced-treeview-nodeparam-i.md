@@ -22,7 +22,7 @@ container?: () => void
 
 set subcomponent binded on tree item.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 22
 

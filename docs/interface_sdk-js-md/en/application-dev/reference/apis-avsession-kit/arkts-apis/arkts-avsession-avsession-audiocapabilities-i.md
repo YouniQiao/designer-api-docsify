@@ -22,7 +22,7 @@ readonly streamInfos: Array<audio.AudioStreamInfo>
 
 Audio stream information.
 
-**Type:** Array<audio.AudioStreamInfo>
+**Type:** Array&lt;audio.AudioStreamInfo&gt;
 
 **Since:** 20
 

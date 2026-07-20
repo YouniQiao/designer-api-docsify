@@ -22,7 +22,7 @@ parameters?: Record<string, Object>
 
 Custom parameter object. By default, no value is passed in.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ properties?: Record<string, Object>
 
 Property object. By default, no value is passed in.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 9
 

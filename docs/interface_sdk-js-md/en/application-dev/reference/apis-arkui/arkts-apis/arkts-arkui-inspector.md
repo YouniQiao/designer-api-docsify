@@ -20,7 +20,7 @@ import { inspector } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver-1) | Sets the component after layout or draw criteria and returns the corresponding listening handle |
+| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver) | Sets the component after layout or draw criteria and returns the corresponding listening handle |
 
 ### Interfaces
 

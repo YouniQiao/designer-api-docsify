@@ -18,12 +18,12 @@ The login event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | LoginType | Yes | control type |
-| id | string | No | id |
+| controlType | [LoginType](arkts-avsession-avmusictemplate-logintype-t.md) | Yes | control type  |
+| id | string | No | id  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;QrCodeInfo[]&gt; | (QrCodeInfo[]) returned through promise |
+| Promise&lt;QrCodeInfo[]&gt; | (QrCodeInfo[]) returned through promise  |
 

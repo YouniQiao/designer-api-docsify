@@ -145,7 +145,7 @@ Custom parameter.
 
 <!--RP2--><!--RP2End-->
 
-**Type:** number | boolean | string | undefined
+**Type:** number \| boolean \| string \| undefined
 
 **Since:** 11
 

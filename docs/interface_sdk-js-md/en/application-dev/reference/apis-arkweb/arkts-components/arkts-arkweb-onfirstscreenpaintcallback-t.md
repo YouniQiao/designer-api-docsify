@@ -16,5 +16,5 @@ Defines a callback triggered when the first screen paint is complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstScreenPaint | FirstScreenPaint | Yes | Details about the first screen paint. |
+| firstScreenPaint | [FirstScreenPaint](arkts-arkweb-firstscreenpaint-i.md) | Yes | Details about the first screen paint.  |
 

@@ -22,7 +22,7 @@ details?: Record<string, number | number | number | string | Uint8Array>
 
 Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 
-**Type:** Record<string, number | number | number | string | Uint8Array>
+**Type:** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
 
 **Since:** 15
 
@@ -94,7 +94,7 @@ uriAuthorizationPolicies?: Array<number>
 
 Defines URI authorization policies for drag intention.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
 

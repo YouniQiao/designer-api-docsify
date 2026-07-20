@@ -20,5 +20,5 @@ Called when auto fill request is failed to be handled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | FillFailureResult | Yes | Indicates the ui context where the filling operation will be performed. |
+| result | [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md) | Yes | Indicates the ui context where the filling operation will be performed.  |
 

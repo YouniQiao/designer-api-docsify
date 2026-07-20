@@ -24,7 +24,7 @@ onComplete: (reason: number, total: number) => void
 
 Callback used to return the query result statistics: (reason: int, total: int) => void
 
-**Type:** (reason: number, total: number) => void
+**Type:** (reason: number, total: number) =&gt; void
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ onQuery: (infos: SysEventInfo[]) => void
 
 Callback used to return the queried system events: (infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) =>void.
 
-**Type:** (infos: SysEventInfo[]) => void
+**Type:** (infos: SysEventInfo[]) =&gt; void
 
 **Since:** 9
 

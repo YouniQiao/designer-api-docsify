@@ -24,7 +24,7 @@ refFields: Record<string, string>
 
 Indicates the reference fields.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 11
 

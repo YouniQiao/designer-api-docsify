@@ -20,5 +20,5 @@ Defines the callback triggered for receiving notifications of template status ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateStatusList | TemplateStatus[] | Yes | Template status list. The list contains the status informationof all registered templates of the current user. The application can determine whether a template is validbased on the **isValid** field and whether the data is real-time data based on the **isConfirmed** field. |
+| templateStatusList | [TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)[] | Yes | Template status list. The list contains the status information of all registered templates of the current user. The application can determine whether a template is valid based on the **isValid** field and whether the data is real-time data based on the **isConfirmed** field.  |
 

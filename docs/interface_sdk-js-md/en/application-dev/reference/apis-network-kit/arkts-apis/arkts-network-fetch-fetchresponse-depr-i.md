@@ -32,7 +32,7 @@ data: string | object
 
 Data returned by the success function.
 
-**Type:** string | object
+**Type:** string \| object
 
 **Since:** 3
 

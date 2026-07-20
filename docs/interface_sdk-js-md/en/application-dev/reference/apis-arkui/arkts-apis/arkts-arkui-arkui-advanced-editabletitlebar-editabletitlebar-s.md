@@ -4,6 +4,8 @@ Declaration of the editable title bar.
 
 **Since:** 22
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct EditableTitleBar--><!--Device-unnamed-export declare struct EditableTitleBar-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -131,7 +133,7 @@ menuItems?: Array<EditableTitleBarMenuItem>
 
 Menu items on the right side.
 
-**Type:** Array<EditableTitleBarMenuItem>
+**Type:** Array&lt;EditableTitleBarMenuItem&gt;
 
 **Since:** 22
 
@@ -151,7 +153,7 @@ onCancel?: () => void
 
 Callback function when click on the cancel icon at the left side.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 22
 
@@ -171,7 +173,7 @@ onSave?: () => void
 
 Callback function when click on the save icon at the right side.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 22
 

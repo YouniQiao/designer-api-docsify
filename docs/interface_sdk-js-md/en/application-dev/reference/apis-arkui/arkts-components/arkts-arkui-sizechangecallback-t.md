@@ -22,6 +22,6 @@ Defines the callback type used in onSizeChange.The value of oldValue is last siz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldValue | SizeOptions | Yes |  |
-| newValue | SizeOptions | Yes |  |
+| oldValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes |  |
+| newValue | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes |  |
 

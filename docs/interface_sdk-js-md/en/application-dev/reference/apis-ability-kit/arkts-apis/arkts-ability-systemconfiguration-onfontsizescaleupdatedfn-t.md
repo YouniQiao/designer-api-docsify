@@ -20,5 +20,5 @@ Defines an OnFontSizeScaleUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontSizeScale | double | Yes | Indicates the system's font size |
+| fontSizeScale | number | Yes | Indicates the system's font size  |
 

@@ -12,7 +12,7 @@ import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) | The [universal attributes](../arkts-components/arkts-arkui-common-commonmethod-c.md) are supported. |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) | The [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md) are supported. |
 
 ### Interfaces
 
@@ -24,6 +24,6 @@ import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayout) | Defines the dynamic layout container component, which supports dynamically switching between different layout algorithms at runtime without changing the status of child components. &gt; **Child Components** &gt; &gt; Child components are supported. |
+| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayout) | Defines the dynamic layout container component, which supports dynamically switching between different layout algorithms at runtime without changing the status of child components.  > **Child Components**  >  > Child components are supported. |
 | [DynamicLayoutInstance](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayoutinstance) | Defines DynamicLayout Component instance. |
 

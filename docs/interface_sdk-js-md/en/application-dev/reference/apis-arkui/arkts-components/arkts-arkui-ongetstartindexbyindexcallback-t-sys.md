@@ -20,11 +20,11 @@ Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetIndex | int | Yes | The target index to scroll to. |
+| targetIndex | number | Yes | The target index to scroll to.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| StartLineInfo | @syscap SystemCapability.ArkUI.ArkUI.Full@systemapi@stagemodelonly |
+| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | @syscap SystemCapability.ArkUI.ArkUI.Full @systemapi @stagemodelonly  |
 

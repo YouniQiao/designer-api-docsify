@@ -24,7 +24,7 @@ Click callback of the button.
 
 By default, no operation is performed.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ The string value must be convertible to a number (for example, **'10'**) or incl
 
 Invalid values are handled as default values.
 
-**Type:** number | string | Resource
+**Type:** number \| string \| Resource
 
 **Since:** 11
 

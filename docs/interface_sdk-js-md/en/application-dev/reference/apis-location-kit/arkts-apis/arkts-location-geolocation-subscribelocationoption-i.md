@@ -46,7 +46,7 @@ fail?: (data: string, code: number) => void
 
 Called when the listening fails.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -66,7 +66,7 @@ success: (data: GeolocationResponse) => void
 
 Called whenever the geographical location changes.
 
-**Type:** (data: GeolocationResponse) => void
+**Type:** (data: GeolocationResponse) =&gt; void
 
 **Since:** 3
 

@@ -20,5 +20,5 @@ Callback method of event registration and processing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackParam | CallbackParamV2 | Yes | The result of event. |
+| callbackParam | [CallbackParamV2](arkts-arkui-arkui-advanced-treeviewv2-callbackparamv2-i.md) | Yes | The result of event.  |
 

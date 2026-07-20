@@ -20,11 +20,11 @@ Define Env Decorator type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | SystemProperties | Yes | key value input by the user |
+| value | [SystemProperties](arkts-arkui-systemproperties-e.md) | Yes | key value input by the user  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PropertyDecorator | Env decorator |
+| [PropertyDecorator](../../apis-na/arkts-apis/arkts-na-propertydecorator-t.md) | Env decorator  |
 

@@ -87,7 +87,7 @@ Creates a **UIPickerComponent** container, whose selected item is determined by 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | UIPickerComponentOptions | No | Parameters of the **UIPickerComponent** container. If the parameteris left empty, the component is a placeholder but the content is empty. |
+| options | [UIPickerComponentOptions](arkts-arkui-uipickercomponentoptions-i.md) | No | Parameters of the **UIPickerComponent** container. If the parameter is left empty, the component is a placeholder but the content is empty.  |
 
 ## Summary
 

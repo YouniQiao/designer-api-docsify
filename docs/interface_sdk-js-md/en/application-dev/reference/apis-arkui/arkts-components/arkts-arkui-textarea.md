@@ -32,7 +32,7 @@ Defines the constructor of TextArea.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TextAreaOptions | No | Parameters of the **TextArea** component. |
+| value | [TextAreaOptions](arkts-arkui-textareaoptions-i.md) | No | Parameters of the **TextArea** component.  |
 
 ## Summary
 

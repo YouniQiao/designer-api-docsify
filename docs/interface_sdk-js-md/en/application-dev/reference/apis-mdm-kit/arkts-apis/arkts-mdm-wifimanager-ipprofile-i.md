@@ -40,7 +40,7 @@ domains: Array<string>
 
 Domain information.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 

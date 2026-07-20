@@ -18,7 +18,7 @@ Represents the callback triggered when a child component enters or leaves the vi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Index of the first child component in the visible area of the**ArcList** component. |
-| end | number | Yes | Index of the last child component in the visible area of the**ArcList** component. |
-| center | number | Yes | Index of the center child component in the visible area of the**ArcList** component. |
+| start | number | Yes | Index of the first child component in the visible area of the **ArcList** component.  |
+| end | number | Yes | Index of the last child component in the visible area of the **ArcList** component.  |
+| center | number | Yes | Index of the center child component in the visible area of the **ArcList** component.  |
 

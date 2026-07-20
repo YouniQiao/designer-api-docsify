@@ -44,7 +44,7 @@ wifiFeatures: Array<WirelessSignalFeature>
 
 Indicates Wi-Fi features.
 
-**Type:** Array<WirelessSignalFeature>
+**Type:** Array&lt;WirelessSignalFeature&gt;
 
 **Since:** 26.0.0
 

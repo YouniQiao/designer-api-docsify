@@ -18,5 +18,5 @@ The callback of ads block
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| details | AdsBlockedDetails | Yes | details of OnAdsBlockedCallback. |
+| details | [AdsBlockedDetails](arkts-arkweb-adsblockeddetails-i.md) | Yes | details of OnAdsBlockedCallback.  |
 

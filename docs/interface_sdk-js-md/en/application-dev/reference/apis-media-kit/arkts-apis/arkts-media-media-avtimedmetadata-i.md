@@ -40,7 +40,7 @@ contents: Record<string, object>
 
 Key-value pair set corresponding to time primitive information
 
-**Type:** Record<string, object>
+**Type:** Record&lt;string, object&gt;
 
 **Since:** 26.0.0
 

@@ -22,7 +22,7 @@ displayName?: Array<string>
 
 Locate files that fuzzy match the specified file names, which are of the OR relationship. Currently, only the wildcard * is supported.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ mimeType?: Array<string>
 
 Locate files that fully match the specified MIME types, which are of the OR relationship. This parameter is reserved.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 
@@ -114,7 +114,7 @@ suffix?: Array<string>
 
 Locate files that fully match the specified file name extensions, which are of the OR relationship.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 

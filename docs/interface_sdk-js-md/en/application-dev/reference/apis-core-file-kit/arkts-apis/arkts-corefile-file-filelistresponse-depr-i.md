@@ -18,7 +18,7 @@ fileList: Array<FileResponse>
 
 File list. The format of each file is as follows:{uri:'file1',lastModifiedTime:1589965924479,length:10240,type:'file'}
 
-**Type:** Array<FileResponse>
+**Type:** Array&lt;FileResponse&gt;
 
 **Since:** 3
 

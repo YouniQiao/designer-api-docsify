@@ -24,7 +24,7 @@ onAcquireInfo?: (module: number, acquire: number, extraInfo: Uint8Array) => void
 
 Called to acquire identity authentication information.
 
-**Type:** (module: number, acquire: number, extraInfo: Uint8Array) => void
+**Type:** (module: number, acquire: number, extraInfo: Uint8Array) =&gt; void
 
 **Since:** 8
 
@@ -42,7 +42,7 @@ onResult: (result: number, extraInfo: AuthResult) => void
 
 Called to return the result code and authentication result.
 
-**Type:** (result: number, extraInfo: AuthResult) => void
+**Type:** (result: number, extraInfo: AuthResult) =&gt; void
 
 **Since:** 8
 

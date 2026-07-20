@@ -60,7 +60,7 @@ softwareResultDetail: Array<number>
 
 Software result detail array that includes versionId, patchLevel,rootHash and a reserved space.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 

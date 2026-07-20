@@ -22,5 +22,5 @@ Super resolution is automatically disabled in either of the following cases:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether super resolution is enabled. **true** if enabled, **false** otherwise. |
+| enabled | boolean | Yes | Whether super resolution is enabled. **true** if enabled, **false** otherwise.  |
 

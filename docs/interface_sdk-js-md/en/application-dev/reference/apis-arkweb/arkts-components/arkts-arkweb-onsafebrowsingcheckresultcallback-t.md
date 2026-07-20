@@ -18,5 +18,5 @@ The callback of safe browsing check.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| threatType | ThreatType | Yes | callback information of onSafeBrowsingCheckResult. |
+| threatType | [ThreatType](arkts-arkweb-threattype-e.md) | Yes | callback information of onSafeBrowsingCheckResult.  |
 

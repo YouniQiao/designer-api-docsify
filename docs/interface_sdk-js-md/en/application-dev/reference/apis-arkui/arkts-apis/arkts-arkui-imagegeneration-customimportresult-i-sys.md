@@ -44,7 +44,7 @@ images?: Array<ImageItem>
 
 Array of image items for import operation.
 
-**Type:** Array<ImageItem>
+**Type:** Array&lt;ImageItem&gt;
 
 **Since:** 26.0.0
 

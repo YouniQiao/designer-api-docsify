@@ -28,7 +28,7 @@ use new function to set the value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | CircleOptions | No |  |
+| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No |  |
 
 ## Circle
 
@@ -52,7 +52,7 @@ set the value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | CircleOptions | No | - Options of the circle.<br>The **undefined** and **null** values are treated asinvalid and will not take effect. |
+| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No | - Options of the circle.<br>The **undefined** and **null** values are treated as invalid and will not take effect.  |
 
 ## Summary
 

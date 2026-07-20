@@ -19,21 +19,36 @@
     - [write](arkts-performanceanalysis-hiappevent-write-depr-f.md)
     - [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-depr-i.md)
     - [EventType](arkts-performanceanalysis-hiappevent-eventtype-depr-e.md)
-- [@ohos.hiSysEvent](arkts-hisysevent.md)<!--Del-->
-  - [addWatcher(system api)](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md)<!--DelEnd--><!--Del-->
-  - [exportSysEvents(system api)](arkts-performanceanalysis-hisysevent-exportsysevents-f-sys.md)<!--DelEnd--><!--Del-->
-  - [query(system api)](arkts-performanceanalysis-hisysevent-query-f-sys.md)<!--DelEnd--><!--Del-->
-  - [removeWatcher(system api)](arkts-performanceanalysis-hisysevent-removewatcher-f-sys.md)<!--DelEnd--><!--Del-->
-  - [subscribe(system api)](arkts-performanceanalysis-hisysevent-subscribe-f-sys.md)<!--DelEnd--><!--Del-->
-  - [unsubscribe(system api)](arkts-performanceanalysis-hisysevent-unsubscribe-f-sys.md)<!--DelEnd--><!--Del-->
-  - [write(system api)](arkts-performanceanalysis-hisysevent-write-f-sys.md)<!--DelEnd--><!--Del-->
-  - [Querier(system api)](arkts-performanceanalysis-hisysevent-querier-i-sys.md)<!--DelEnd--><!--Del-->
-  - [QueryArg(system api)](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md)<!--DelEnd--><!--Del-->
-  - [QueryRule(system api)](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)<!--DelEnd--><!--Del-->
-  - [SysEventInfo(system api)](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)<!--DelEnd--><!--Del-->
-  - [Watcher(system api)](arkts-performanceanalysis-hisysevent-watcher-i-sys.md)<!--DelEnd--><!--Del-->
-  - [WatchRule(system api)](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)<!--DelEnd--><!--Del-->
-  - [EventType(system api)](arkts-performanceanalysis-hisysevent-eventtype-e-sys.md)<!--DelEnd--><!--Del-->
+- [@ohos.hiSysEvent](arkts-hisysevent.md)
+  <!--Del-->
+  - [addWatcher(system api)](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [exportSysEvents(system api)](arkts-performanceanalysis-hisysevent-exportsysevents-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [query(system api)](arkts-performanceanalysis-hisysevent-query-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [removeWatcher(system api)](arkts-performanceanalysis-hisysevent-removewatcher-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [subscribe(system api)](arkts-performanceanalysis-hisysevent-subscribe-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unsubscribe(system api)](arkts-performanceanalysis-hisysevent-unsubscribe-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [write(system api)](arkts-performanceanalysis-hisysevent-write-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Querier(system api)](arkts-performanceanalysis-hisysevent-querier-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [QueryArg(system api)](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [QueryRule(system api)](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SysEventInfo(system api)](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Watcher(system api)](arkts-performanceanalysis-hisysevent-watcher-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [WatchRule(system api)](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EventType(system api)](arkts-performanceanalysis-hisysevent-eventtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [RuleType(system api)](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md)<!--DelEnd-->
 - [@ohos.hiTraceChain](arkts-hitracechain.md)
   - [begin](arkts-performanceanalysis-hitracechain-begin-f.md)
@@ -122,8 +137,8 @@
     - [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md)
     - [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md)
     - [RequestTraceConfig](arkts-performanceanalysis-hidebug-requesttraceconfig-i.md)
-    - [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md)<!--Del-->
-    - [SystemMemInfo(system api)](arkts-performanceanalysis-hidebug-systemmeminfo-i.md)<!--DelEnd-->
+    - [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md)
+    - [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md)
     - [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)
     - [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md)
     - [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md)
@@ -211,9 +226,14 @@
   - [watch](arkts-performanceanalysis-jsleakwatcher-watch-f.md)
   - [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md)
   - [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md)
-- [@ohos.logLibrary](arkts-loglibrary.md)<!--Del-->
-  - [copy(system api)](arkts-performanceanalysis-loglibrary-copy-f-sys.md)<!--DelEnd--><!--Del-->
-  - [list(system api)](arkts-performanceanalysis-loglibrary-list-f-sys.md)<!--DelEnd--><!--Del-->
-  - [move(system api)](arkts-performanceanalysis-loglibrary-move-f-sys.md)<!--DelEnd--><!--Del-->
-  - [remove(system api)](arkts-performanceanalysis-loglibrary-remove-f-sys.md)<!--DelEnd--><!--Del-->
+- [@ohos.logLibrary](arkts-loglibrary.md)
+  <!--Del-->
+  - [copy(system api)](arkts-performanceanalysis-loglibrary-copy-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [list(system api)](arkts-performanceanalysis-loglibrary-list-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [move(system api)](arkts-performanceanalysis-loglibrary-move-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [remove(system api)](arkts-performanceanalysis-loglibrary-remove-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [LogEntry(system api)](arkts-performanceanalysis-loglibrary-logentry-i-sys.md)<!--DelEnd-->

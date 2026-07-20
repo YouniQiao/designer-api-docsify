@@ -20,5 +20,5 @@ Defines an OnFontWeightScaleUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeightScale | double | Yes | Indicates the system's font weight |
+| fontWeightScale | number | Yes | Indicates the system's font weight  |
 

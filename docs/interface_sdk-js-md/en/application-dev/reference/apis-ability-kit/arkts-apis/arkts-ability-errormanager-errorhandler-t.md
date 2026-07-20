@@ -18,5 +18,5 @@ The ErrorHandler will be called when the ArkTS runtime throws an exception that 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errObject | Error | Yes | Event name, message, and error stack of the exception. |
+| errObject | Error | Yes | Event name, message, and error stack of the exception.  |
 

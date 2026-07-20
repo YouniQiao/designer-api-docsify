@@ -45,7 +45,7 @@ types?: Set<string>
 
 Represents the data type or supported types to load.<br>This parameter is mandatory when used by the data provider.
 
-**Type:** Set<string>
+**Type:** Set&lt;string&gt;
 
 **Since:** 20
 

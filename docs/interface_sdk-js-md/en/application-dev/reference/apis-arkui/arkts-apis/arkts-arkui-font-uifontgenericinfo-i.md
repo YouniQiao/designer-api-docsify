@@ -22,7 +22,7 @@ adjust: Array<UIFontAdjustInfo>
 
 Weight of the font when displayed, which corresponds to the original weight.
 
-**Type:** Array<UIFontAdjustInfo>
+**Type:** Array&lt;UIFontAdjustInfo&gt;
 
 **Since:** 11
 
@@ -42,7 +42,7 @@ alias: Array<UIFontAliasInfo>
 
 Font alias configuration information.
 
-**Type:** Array<UIFontAliasInfo>
+**Type:** Array&lt;UIFontAliasInfo&gt;
 
 **Since:** 11
 

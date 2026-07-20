@@ -38,7 +38,7 @@ readonly eventSchemas?: Record<string, Record<string, Object>>
 
 Schemas about custom event.
 
-**Type:** Record<string, Record<string, Object>>
+**Type:** Record&lt;string, Record&lt;string, Object&gt;&gt;
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ readonly eventTypes?: Array<string>
 
 Supported event types for custom event.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -118,7 +118,7 @@ readonly inputSchema: Record<string, Object>
 
 The input schema of the CLI tool.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.0.0
 
@@ -180,7 +180,7 @@ readonly outputSchema: Record<string, Object>
 
 The output schema of the CLI tool.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.0.0
 
@@ -200,7 +200,7 @@ readonly requirePermissions?: Array<string>
 
 The require permissions of the CLI tool.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -220,7 +220,7 @@ readonly subcommands?: Record<string, SubCommandInfo>
 
 SubCommandInfo list.
 
-**Type:** Record<string, SubCommandInfo>
+**Type:** Record&lt;string, SubCommandInfo&gt;
 
 **Since:** 26.0.0
 

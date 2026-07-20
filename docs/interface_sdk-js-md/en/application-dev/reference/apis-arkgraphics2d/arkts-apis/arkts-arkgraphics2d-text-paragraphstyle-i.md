@@ -152,7 +152,7 @@ headIndents?: Array<number>
 
 Sets the line-start indent array. Each element in the array represents the indent value of a single line. If the actual number of text lines exceeds the length of the indent array, the last value of the array is applied to the extra lines. All indent values must be greater than or equal to 0. By default, the array is empty.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
 
@@ -302,7 +302,7 @@ tailIndents?: Array<number>
 
 Sets the end-of-line indent array. Each element in the array represents the indent value of a single line. If the actual number of text lines exceeds the length of the indent array, the last value of the array is applied to the extra lines. All indent values must be greater than or equal to 0. By default, the array is empty.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
 

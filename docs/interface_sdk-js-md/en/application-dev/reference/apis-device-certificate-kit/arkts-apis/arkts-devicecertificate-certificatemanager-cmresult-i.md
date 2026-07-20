@@ -22,7 +22,7 @@ appUidList?: Array<string>
 
 List of authorized applications.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ certList?: Array<CertAbstract>
 
 Brief certificate information.
 
-**Type:** Array<CertAbstract>
+**Type:** Array&lt;CertAbstract&gt;
 
 **Since:** 11
 
@@ -86,7 +86,7 @@ credentialDetailList?: Array<Credential>
 
 Represents detailed information about a credential.
 
-**Type:** Array<Credential>
+**Type:** Array&lt;Credential&gt;
 
 **Since:** 22
 
@@ -102,7 +102,7 @@ credentialList?: Array<CredentialAbstract>
 
 Brief credential information.
 
-**Type:** Array<CredentialAbstract>
+**Type:** Array&lt;CredentialAbstract&gt;
 
 **Since:** 11
 
@@ -150,7 +150,7 @@ uriList?: Array<string>
 
 Certificate URI list.**Since**: 26.0.0
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

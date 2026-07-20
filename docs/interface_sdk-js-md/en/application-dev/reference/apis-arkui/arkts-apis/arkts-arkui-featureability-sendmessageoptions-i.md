@@ -52,7 +52,7 @@ complete?: () => void
 
 Called when the execution is completed.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 5
 
@@ -88,7 +88,7 @@ fail?: (data: string, code: number) => void
 
 Called when the messages fail to be sent.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 5
 
@@ -124,7 +124,7 @@ success?: () => void
 
 Called when the messages are sent successfully.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 5
 

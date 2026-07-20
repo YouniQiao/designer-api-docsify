@@ -68,7 +68,7 @@ onChange?: (value: number) => void
 
 Trigger an event when the value of the counter has been changed.
 
-**Type:** (value: number) => void
+**Type:** (value: number) =&gt; void
 
 **Since:** 11
 

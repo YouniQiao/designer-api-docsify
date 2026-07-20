@@ -24,7 +24,7 @@ detailList: Array<PermissionDialogDetail>
 
 List of permission dialog information.
 
-**Type:** Array<PermissionDialogDetail>
+**Type:** Array&lt;PermissionDialogDetail&gt;
 
 **Since:** 26.0.0
 

@@ -16,6 +16,6 @@ Callback function when a client connection is closed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientConnection | WebSocketConnection | Yes | the connection which is closed. |
-| closeReason | CloseResult | Yes | the error code and reason why the connection is closed. |
+| clientConnection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Yes | the connection which is closed.  |
+| closeReason | [CloseResult](arkts-network-websocket-closeresult-i.md) | Yes | the error code and reason why the connection is closed.  |
 

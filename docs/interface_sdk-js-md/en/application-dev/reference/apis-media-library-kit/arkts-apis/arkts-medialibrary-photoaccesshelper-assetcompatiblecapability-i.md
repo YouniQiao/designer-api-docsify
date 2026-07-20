@@ -42,7 +42,7 @@ supportedMimeType?: Array<string>
 
 Supported MIME types.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

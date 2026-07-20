@@ -62,7 +62,7 @@ result?: Record<string, Object>
 
 Indicates execute result.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.0.0
 
@@ -82,7 +82,7 @@ uris?: Array<string>
 
 Indicates the URIs will be authorized to the caller.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

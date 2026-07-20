@@ -22,5 +22,5 @@ Represents the callback invoked when the selected state of the check box changes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the check box is selected. The value **true** means that the check box isselected, and **false** means the opposite. |
+| value | boolean | Yes | Whether the check box is selected. The value **true** means that the check box is selected, and **false** means the opposite.  |
 

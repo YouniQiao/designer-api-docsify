@@ -22,7 +22,7 @@ interval?: number | SensorFrequency
 
 Frequency at which a sensor reports data. The default value is 200,000,000 ns. The maximum and minimum values of this parameter are determined by the reporting frequency supported by the hardware. If the configured frequency is greater than the maximum value, the maximum value is used for data reporting. If the configured frequency is less than the minimum value, the minimum value is used for data reporting.
 
-**Type:** number | SensorFrequency
+**Type:** number \| SensorFrequency
 
 **Since:** 8
 

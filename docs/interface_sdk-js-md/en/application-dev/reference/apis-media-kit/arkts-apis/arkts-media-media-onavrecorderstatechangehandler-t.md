@@ -18,6 +18,6 @@ Describes the callback invoked for the AVRecorder state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AVRecorderState | Yes | AVRecorder state. |
-| reason | StateChangeReason | Yes | Reason for the state change. |
+| state | [AVRecorderState](arkts-media-media-avrecorderstate-t.md) | Yes | AVRecorder state.  |
+| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | Yes | Reason for the state change.  |
 

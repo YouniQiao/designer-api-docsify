@@ -22,7 +22,7 @@ height?: Array<number>
 
 Optional array of height breakpoint values in vp units.Defines the height thresholds for container height analysis.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ width?: Array<number>
 
 Optional array of width breakpoint values in vp units.Defines the width thresholds for container width analysis.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
 

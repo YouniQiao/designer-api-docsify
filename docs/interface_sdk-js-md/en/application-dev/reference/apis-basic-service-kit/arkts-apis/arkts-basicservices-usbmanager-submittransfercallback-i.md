@@ -38,7 +38,7 @@ isoPacketDescs: Array<Readonly<UsbIsoPacketDescriptor>>
 
 Packet information transferred in real time.
 
-**Type:** Array<Readonly<UsbIsoPacketDescriptor>>
+**Type:** Array&lt;Readonly&lt;UsbIsoPacketDescriptor&gt;&gt;
 
 **Since:** 18
 

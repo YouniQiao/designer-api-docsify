@@ -64,7 +64,7 @@ env?: Record<string, string>
 
 Indicates the environment variables for the command.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 26.0.0
 

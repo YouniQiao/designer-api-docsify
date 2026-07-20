@@ -58,7 +58,7 @@ fontFeatures?: Array<string>
 
 Font features.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -152,7 +152,7 @@ languages?: Array<string>
 
 Font languages.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -370,7 +370,7 @@ variationAxisRecords?: Array<FontVariationAxis>
 
 Font variable axis record array, which is used to describe the variable axis information supported by the font.For non-variable fonts, this field is **undefined**.
 
-**Type:** Array<FontVariationAxis>
+**Type:** Array&lt;FontVariationAxis&gt;
 
 **Since:** 24
 
@@ -388,7 +388,7 @@ variationInstanceRecords?: Array<FontVariationInstance>
 
 Font variable instance record array, which is used to describe the variable instance information supported by the font. For non-variable fonts, this field is **undefined**.
 
-**Type:** Array<FontVariationInstance>
+**Type:** Array&lt;FontVariationInstance&gt;
 
 **Since:** 24
 

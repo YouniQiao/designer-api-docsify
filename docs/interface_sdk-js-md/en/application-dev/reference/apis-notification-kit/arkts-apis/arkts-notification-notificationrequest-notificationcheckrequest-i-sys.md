@@ -36,7 +36,7 @@ extraInfoKeys: Array<string>
 
 Extra information about the live view.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 11
 

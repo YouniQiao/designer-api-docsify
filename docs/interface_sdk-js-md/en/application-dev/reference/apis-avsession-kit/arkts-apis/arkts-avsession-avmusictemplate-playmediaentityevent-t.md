@@ -18,11 +18,11 @@ The play media entity event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaEntity | MediaEntity | Yes | media entity |
+| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | media entity  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | (void) returned through promise |
+| Promise&lt;void&gt; | (void) returned through promise  |
 

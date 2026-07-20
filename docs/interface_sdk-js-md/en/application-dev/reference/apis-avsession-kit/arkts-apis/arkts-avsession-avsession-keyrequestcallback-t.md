@@ -18,6 +18,6 @@ The callback of key request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetId | string | Yes | request key for current assetId |
-| requestData | Uint8Array | Yes | media key request data sent to media key server |
+| assetId | string | Yes | request key for current assetId  |
+| requestData | Uint8Array | Yes | media key request data sent to media key server  |
 

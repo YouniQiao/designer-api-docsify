@@ -27,7 +27,7 @@ Called when a indicator is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | IndicatorComponentController | No | indicator component controller. |
+| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponentcontroller-c.md) | No | indicator component controller.  |
 
 ## Summary
 

@@ -18,6 +18,6 @@ The report tab content event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabId | string | Yes | tab id |
-| tabContent | MediaTabContent | Yes | tab content |
+| tabId | string | Yes | tab id  |
+| tabContent | [MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md) | Yes | tab content  |
 

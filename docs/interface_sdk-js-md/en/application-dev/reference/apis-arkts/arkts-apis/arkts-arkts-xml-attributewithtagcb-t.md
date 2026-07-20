@@ -18,13 +18,13 @@ The type of ParseOptions attributeWithTagCallbackFunction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tagName | string | Yes | The tag in xml parse node |
-| key | string | Yes | The key in xml parse node |
-| value | string | Yes | The value in xml parse node |
+| tagName | string | Yes | The tag in xml parse node  |
+| key | string | Yes | The key in xml parse node  |
+| value | string | Yes | The value in xml parse node  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | - whether continue to parse xml data |
+| boolean | - whether continue to parse xml data  |
 

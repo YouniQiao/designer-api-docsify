@@ -18,5 +18,5 @@ Describes the callback invoked for the event indicating that the playback rate s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | double | Yes | Playback rate. |
+| rate | number | Yes | Playback rate.  |
 

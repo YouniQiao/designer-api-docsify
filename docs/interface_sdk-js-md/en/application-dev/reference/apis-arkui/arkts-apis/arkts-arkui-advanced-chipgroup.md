@@ -26,6 +26,6 @@ import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixI
 | [IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) | Defines the configuration for the trailing builder, with constraints applied to background size and color settings. |
 | [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md) | Defines the common attributes of icons. |
 | [LabelOptions](arkts-arkui-arkui-advanced-chipgroup-labeloptions-i.md) | Defines the label configuration options. |
-| [SuffixImageIconOptions](arkts-arkui-arkui-advanced-chipgroup-suffiximageiconoptions-i.md) | Defines the configuration options for suffix icons.Inherits from [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md). |
+| [SuffixImageIconOptions](arkts-arkui-arkui-advanced-chipgroup-suffiximageiconoptions-i.md) | Defines the configuration options for suffix icons.  Inherits from [IconOptions](arkts-arkui-arkui-advanced-chipgroup-iconoptions-i.md). |
 | [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md) | Suffix icon option type of ChipGroup. |
 

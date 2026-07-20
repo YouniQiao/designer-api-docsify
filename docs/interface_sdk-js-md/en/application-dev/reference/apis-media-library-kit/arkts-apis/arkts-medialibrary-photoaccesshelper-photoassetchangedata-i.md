@@ -22,7 +22,7 @@ assetAfterChange: PhotoAssetChangeInfo | null
 
 Data of the media asset after change. In the case of asset deletion, **assetAfterChange** is null.
 
-**Type:** PhotoAssetChangeInfo | null
+**Type:** PhotoAssetChangeInfo \| null
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ assetBeforeChange: PhotoAssetChangeInfo | null
 
 Data of the media asset before change. In the case of asset addition, **assetBeforeChange** is null.
 
-**Type:** PhotoAssetChangeInfo | null
+**Type:** PhotoAssetChangeInfo \| null
 
 **Since:** 20
 

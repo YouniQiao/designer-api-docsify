@@ -20,5 +20,5 @@ Represents the callback invoked when the mode of the **MultiNavigation** compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | NavigationMode | Yes | Navigation mode when the callback is invoked. |
+| mode | [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md) | Yes | Navigation mode when the callback is invoked.  |
 

@@ -20,6 +20,6 @@ Defines the callback type used in **ButtonConfiguration**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xPos | number | Yes | X-coordinate of the click point.<br>Unit: vp |
-| yPos | number | Yes | Y-coordinate of the click point.<br>Unit: vp |
+| xPos | number | Yes | X-coordinate of the click point.<br>Unit: vp  |
+| yPos | number | Yes | Y-coordinate of the click point.<br>Unit: vp  |
 

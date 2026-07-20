@@ -18,11 +18,11 @@ The query member purchase event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| memberPurchaseType | MemberPurchaseType | Yes | memberPurchaseType |
+| memberPurchaseType | [MemberPurchaseType](arkts-avsession-avmusictemplate-memberpurchasetype-e.md) | Yes | memberPurchaseType  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MemberPurchaseInfo[]&gt; | (MemberPurchaseInfo[]) returned through promise |
+| Promise&lt;MemberPurchaseInfo[]&gt; | (MemberPurchaseInfo[]) returned through promise  |
 

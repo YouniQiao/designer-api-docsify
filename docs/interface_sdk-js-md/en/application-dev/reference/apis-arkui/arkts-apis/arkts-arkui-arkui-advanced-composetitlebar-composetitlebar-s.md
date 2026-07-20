@@ -4,6 +4,8 @@ Declaration of the composable title bar.
 
 **Since:** 20
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ComposeTitleBar--><!--Device-unnamed-export declare struct ComposeTitleBar-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -42,7 +44,7 @@ menuItems?: Array<ComposeTitleBarMenuItem>
 
 Menu items on the right side.
 
-**Type:** Array<ComposeTitleBarMenuItem>
+**Type:** Array&lt;ComposeTitleBarMenuItem&gt;
 
 **Since:** 20
 

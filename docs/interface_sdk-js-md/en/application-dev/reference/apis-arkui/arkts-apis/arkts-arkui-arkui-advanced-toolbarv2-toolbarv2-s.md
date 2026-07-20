@@ -4,6 +4,8 @@ Declare Component ToolBarV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ToolBarV2--><!--Device-unnamed-export declare struct ToolBarV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Define toolbarV2 activate item index, default is -1.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -45,6 +49,8 @@ Define divider Modifier.
 **Type:** DividerModifier
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Define toolbarV2 item list.
 
 **Since:** 18
 
+**Decorator:** @Require, @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -85,6 +93,8 @@ Define toolbarV2 modifier.
 **Type:** ToolBarV2Modifier
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

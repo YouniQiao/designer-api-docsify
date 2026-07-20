@@ -22,7 +22,7 @@ axisRanges: Array<AxisRange>
 
 Axis information of the input device.
 
-**Type:** Array<AxisRange>
+**Type:** Array&lt;AxisRange&gt;
 
 **Since:** 8
 
@@ -154,7 +154,7 @@ sources: Array<SourceType>
 
 Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick.
 
-**Type:** Array<SourceType>
+**Type:** Array&lt;SourceType&gt;
 
 **Since:** 8
 

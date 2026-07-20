@@ -22,7 +22,7 @@ onRequestContinued?: () => void
 
 Called to continue to process the request.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ onRequestRedirected: (request: Want) => void
 
 Called to redirect a request.
 
-**Type:** (request: Want) => void
+**Type:** (request: Want) =&gt; void
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ onResult: (code: number, result?: AuthResult) => void
 
 Called to return the result of an authentication request.
 
-**Type:** (code: number, result?: AuthResult) => void
+**Type:** (code: number, result?: AuthResult) =&gt; void
 
 **Since:** 9
 

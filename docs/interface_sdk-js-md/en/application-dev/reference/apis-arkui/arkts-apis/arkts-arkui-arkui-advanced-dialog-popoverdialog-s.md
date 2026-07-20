@@ -4,6 +4,8 @@ Declare struct PopoverDialog
 
 **Since:** 14
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct PopoverDialog--><!--Device-unnamed-export declare struct PopoverDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,7 +28,7 @@ Sets the PopoverDialog options.
 
 **Since:** 14
 
-**Decorator:** @Prop
+**Decorator:** @Require, @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,11 +46,11 @@ targetBuilder: Callback<void>
 
 Sets the targetBuilder content.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 14
 
-**Decorator:** @BuilderParam
+**Decorator:** @Require, @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

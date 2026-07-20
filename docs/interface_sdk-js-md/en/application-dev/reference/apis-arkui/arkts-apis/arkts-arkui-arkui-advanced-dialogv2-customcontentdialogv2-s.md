@@ -4,6 +4,8 @@ Declare custom content dialog
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct CustomContentDialogV2--><!--Device-unnamed-export declare struct CustomContentDialogV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Sets the CustomContentDialogV2 buttons.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -45,6 +49,8 @@ Sets the CustomContentDialogV2 content area padding.
 **Type:** LocalizedPadding
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,6 +94,8 @@ Sets the CustomContentDialogV2 title.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -107,6 +115,8 @@ Sets the CustomContentDialogV2 secondary title.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

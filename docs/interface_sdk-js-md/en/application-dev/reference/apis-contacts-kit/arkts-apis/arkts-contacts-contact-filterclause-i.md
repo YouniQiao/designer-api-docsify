@@ -40,7 +40,7 @@ focusModeList?: Array<FilterOptions>
 
 Focus mode list.
 
-**Type:** Array<FilterOptions>
+**Type:** Array&lt;FilterOptions&gt;
 
 **Since:** 15
 
@@ -58,7 +58,7 @@ id?: Array<FilterOptions>
 
 Contact ID.
 
-**Type:** Array<FilterOptions>
+**Type:** Array&lt;FilterOptions&gt;
 
 **Since:** 15
 
@@ -76,7 +76,7 @@ name?: Array<FilterOptions>
 
 Contact name.
 
-**Type:** Array<FilterOptions>
+**Type:** Array&lt;FilterOptions&gt;
 
 **Since:** 15
 

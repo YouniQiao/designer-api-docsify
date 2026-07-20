@@ -96,7 +96,7 @@ defaultInputModes: Array<string>
 
 The set of interaction modes that the agent supports across all skills.This can be overridden per skill. Defined as media types.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 24
 
@@ -116,7 +116,7 @@ defaultOutputModes: Array<string>
 
 The media types supported as outputs from this agent.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 24
 
@@ -256,7 +256,7 @@ skills: Array<AgentSkill>
 
 Skills represent the abilities of an agent.
 
-**Type:** Array<AgentSkill>
+**Type:** Array&lt;AgentSkill&gt;
 
 **Since:** 24
 

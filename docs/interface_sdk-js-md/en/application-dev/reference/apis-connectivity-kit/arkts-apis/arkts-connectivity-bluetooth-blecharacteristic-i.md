@@ -66,7 +66,7 @@ descriptors: Array<BLEDescriptor>
 
 The list of {@link BLEDescriptor} contained in the characteristic
 
-**Type:** Array<BLEDescriptor>
+**Type:** Array&lt;BLEDescriptor&gt;
 
 **Since:** 7
 

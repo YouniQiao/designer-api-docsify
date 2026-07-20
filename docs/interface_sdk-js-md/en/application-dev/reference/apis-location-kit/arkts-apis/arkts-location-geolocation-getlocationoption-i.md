@@ -26,7 +26,7 @@ complete?: () => void
 
 Called when the execution is completed.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -68,7 +68,7 @@ fail?: (data: string, code: number) => void
 
 Called when the location types fail to be obtained
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -90,7 +90,7 @@ success?: (data: GeolocationResponse) => void
 
 Called when the geographic location is obtained.
 
-**Type:** (data: GeolocationResponse) => void
+**Type:** (data: GeolocationResponse) =&gt; void
 
 **Since:** 3
 

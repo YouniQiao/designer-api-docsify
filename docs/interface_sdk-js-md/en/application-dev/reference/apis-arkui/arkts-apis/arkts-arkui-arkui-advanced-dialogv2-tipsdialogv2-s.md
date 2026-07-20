@@ -4,6 +4,8 @@ Declare CustomDialog TipsDialogV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct TipsDialogV2--><!--Device-unnamed-export declare struct TipsDialogV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Sets the TipsDialogV2 checkbox tips.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -45,6 +49,8 @@ Sets the TipsDialogV2 checkbox check state.
 **Type:** boolean
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Sets the TipsDialogV2 content.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -85,6 +93,8 @@ Sets the borderColor of TipsDialogV2 image.
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +116,8 @@ Sets the borderWidth of TipsDialogV2 image.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -122,9 +134,11 @@ imageRes: ResourceStr | PixelMap
 
 Sets the TipsDialogV2 imageRes.
 
-**Type:** ResourceStr | PixelMap
+**Type:** ResourceStr \| PixelMap
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,6 +160,8 @@ Sets the TipsDialogV2 image size.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -165,6 +181,8 @@ Sets the TipsDialogV2 CheckBox Callback.
 **Type:** AdvancedDialogV2OnCheckedChange
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,6 +204,8 @@ Sets the TipsDialogV2 primary button.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -206,6 +226,8 @@ Sets the TipsDialogV2 secondary button.
 
 **Since:** 18
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -225,6 +247,8 @@ Sets the TipsDialogV2 title.
 **Type:** ResourceStr
 
 **Since:** 18
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

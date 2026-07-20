@@ -82,7 +82,7 @@ If the value of **frameDurations** is inconsistent with the image count, animati
 
 Unit: ms.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 21
 

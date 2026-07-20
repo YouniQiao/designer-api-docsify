@@ -42,7 +42,7 @@ fitStrRange: Array<Range>
 
 Array of character ranges that can be completely displayed after text layout calculation.
 
-**Type:** Array<Range>
+**Type:** Array&lt;Range&gt;
 
 **Since:** 24
 

@@ -29,7 +29,7 @@ Called when content is added to a placeholder component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | Content | Yes | Manager of the **ContentSlot** component. Through the APIs provided by the nativeside, it can register and trigger the attach and detach event callbacks for **ContentSlot**, as well as managethe child components of **ContentSlot**. |
+| content | [Content](../arkts-apis/arkts-arkui-content-c.md) | Yes | Manager of the **ContentSlot** component. Through the APIs provided by the native side, it can register and trigger the attach and detach event callbacks for **ContentSlot**, as well as manage the child components of **ContentSlot**.  |
 
 ## Summary
 

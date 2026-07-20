@@ -80,7 +80,7 @@ bottom?: string | number
 
 Distance from the bottom of the toast to the navigation bar. If the soft keyboard is raised and the **bottom** value is too small, the toast will automatically avoid being blocked by the soft keyboard by moving up 80 vp above it.<br>Default value: **80vp**<br>**NOTE**<br>When there is no navigation bar at the bottom, **bottom** sets the distance from the bottom of the toast to the bottom of the window.<br>If the **alignment** property is set, **bottom** will not take effect.
 
-**Type:** string | number
+**Type:** string \| number
 
 **Since:** 9
 
@@ -160,7 +160,7 @@ message: string | Resource
 
 Text to display.<br>**NOTE**<br>The default font is **'Harmony Sans'**. Other fonts are not supported.<br>
 
-**Type:** string | Resource
+**Type:** string \| Resource
 
 **Since:** 9
 
@@ -198,7 +198,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the toast background.<br>Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 
-**Type:** ShadowOptions | ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 12
 

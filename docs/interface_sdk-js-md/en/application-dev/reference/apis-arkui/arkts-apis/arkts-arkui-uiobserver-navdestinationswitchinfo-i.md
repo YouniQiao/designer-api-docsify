@@ -22,7 +22,7 @@ context: UIAbilityContext | UIContext
 
 Context information corresponding to **Navigation** component that triggers page switching.
 
-**Type:** UIAbilityContext | UIContext
+**Type:** UIAbilityContext \| UIContext
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ from: NavDestinationInfo | NavBar
 
 Source page for page switching.
 
-**Type:** NavDestinationInfo | NavBar
+**Type:** NavDestinationInfo \| NavBar
 
 **Since:** 12
 
@@ -82,7 +82,7 @@ to: NavDestinationInfo | NavBar
 
 Destination page for page switching.
 
-**Type:** NavDestinationInfo | NavBar
+**Type:** NavDestinationInfo \| NavBar
 
 **Since:** 12
 

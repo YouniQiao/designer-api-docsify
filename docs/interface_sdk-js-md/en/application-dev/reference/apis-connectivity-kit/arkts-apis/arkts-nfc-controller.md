@@ -20,16 +20,16 @@ import { nfcController } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [closeNfc](arkts-connectivity-nfccontroller-closenfc-f.md#closenfc-1) | Disables NFC. |
-| [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md#disablenfc-1) | Disables NFC.This API can be called only by system applications |
-| [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md#enablenfc-1) | Enables NFC.This API can be called only by system applications |
-| [getNfcState](arkts-connectivity-nfccontroller-getnfcstate-f.md#getnfcstate-1) | Obtains the NFC status.&lt;p&gt;The NFC status can be any of the following: &lt;ul&gt;&lt;li&gt;{@link #STATE_OFF}: Indicates that NFC is disabled. &lt;li&gt;{@link #STATE_TURNING_ON}: Indicates that NFC is being enabled.&lt;li&gt;{@link #STATE_ON}: Indicates that NFC is enabled. &lt;li&gt;{@link #STATE_TURNING_OFF}: Indicates that NFC is being disabled.&lt;/ul&gt; |
-| [isNfcAvailable](arkts-connectivity-nfccontroller-isnfcavailable-f.md#isnfcavailable-1) | Checks whether a device supports NFC. |
-| [isNfcOpen](arkts-connectivity-nfccontroller-isnfcopen-f.md#isnfcopen-1) | Checks whether NFC is enabled. |
-| [isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md#isnfcsupported-1) | Checks whether a device supports NFC. |
-| [off](arkts-connectivity-nfccontroller-off-f.md#off-1) | unregister nfc state changed event. |
-| [on](arkts-connectivity-nfccontroller-on-f.md#on-1) | register nfc state changed event. |
-| [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md#opennfc-1) | Enables NFC. |
+| [closeNfc](arkts-connectivity-nfccontroller-closenfc-f.md#closenfc) | Disables NFC. |
+| [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md#disablenfc) | Disables NFC.This API can be called only by system applications |
+| [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md#enablenfc) | Enables NFC.This API can be called only by system applications |
+| [getNfcState](arkts-connectivity-nfccontroller-getnfcstate-f.md#getnfcstate) | Obtains the NFC status.<p>The NFC status can be any of the following: <ul><li>{@link #STATE_OFF}: Indicates that NFC is disabled. <li>{@link #STATE_TURNING_ON}: Indicates that NFC is being enabled.<li>{@link #STATE_ON}: Indicates that NFC is enabled. <li>{@link #STATE_TURNING_OFF}: Indicates that NFC is being disabled.</ul> |
+| [isNfcAvailable](arkts-connectivity-nfccontroller-isnfcavailable-f.md#isnfcavailable) | Checks whether a device supports NFC. |
+| [isNfcOpen](arkts-connectivity-nfccontroller-isnfcopen-f.md#isnfcopen) | Checks whether NFC is enabled. |
+| [isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md#isnfcsupported) | Checks whether a device supports NFC. |
+| [off](arkts-connectivity-nfccontroller-off-f.md#off) | unregister nfc state changed event. |
+| [on](arkts-connectivity-nfccontroller-on-f.md#on) | register nfc state changed event. |
+| [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md#opennfc) | Enables NFC. |
 
 ### Enums
 

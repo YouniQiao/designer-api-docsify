@@ -20,5 +20,5 @@ Defines an OnLanguageUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | Indicates the system's language |
+| language | string | Yes | Indicates the system's language  |
 

@@ -22,7 +22,7 @@ altitudes: Array<number>
 
 Satellite altitude array.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ azimuths: Array<number>
 
 Satellite azimuth array.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ carrierFrequencies: Array<number>
 
 Satellite carrier frequency array.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ carrierToNoiseDensitys: Array<number>
 
 Carrier to noise density array.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 
@@ -86,7 +86,7 @@ satelliteAdditionalInfo?: Array<number>
 
 Satellite additional information array.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
 
@@ -102,7 +102,7 @@ satelliteConstellation?: Array<SatelliteConstellationCategory>
 
 Satellite constellation type array.
 
-**Type:** Array<SatelliteConstellationCategory>
+**Type:** Array&lt;SatelliteConstellationCategory&gt;
 
 **Since:** 12
 
@@ -118,7 +118,7 @@ satelliteIds: Array<number>
 
 Satellite ID array.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 

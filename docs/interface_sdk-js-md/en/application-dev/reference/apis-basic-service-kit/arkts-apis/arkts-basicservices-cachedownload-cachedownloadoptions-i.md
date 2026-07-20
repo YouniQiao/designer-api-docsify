@@ -54,7 +54,7 @@ headers?: Record<string, string>
 
 Request header used by a download task during HTTP transfer. The default value is empty.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 18
 

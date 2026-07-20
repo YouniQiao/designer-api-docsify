@@ -26,7 +26,7 @@ Callback for the blankless frame interpolation, which is used to return the blan
 
 Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-**Type:** Callback<BlanklessFrameInterpolationInfo>
+**Type:** Callback&lt;BlanklessFrameInterpolationInfo&gt;
 
 **Since:** 23
 

@@ -24,7 +24,7 @@ requiredCliPermissions: Array<CliPermissionDetail>
 
 List of CLI permission information that the current CLI command depends on.
 
-**Type:** Array<CliPermissionDetail>
+**Type:** Array&lt;CliPermissionDetail&gt;
 
 **Since:** 26.0.0
 

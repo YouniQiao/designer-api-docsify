@@ -52,7 +52,7 @@ uris: Array<string>
 
 URIs of the changed files. Currently, only one notification is supported. A collection of multiple notifications will be supported in later versions.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 

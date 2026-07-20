@@ -22,7 +22,7 @@ actionPhases: Array<GestureActionPhase>
 
 Gesture event object.
 
-**Type:** Array<GestureActionPhase>
+**Type:** Array&lt;GestureActionPhase&gt;
 
 **Since:** 20
 

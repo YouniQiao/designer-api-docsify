@@ -24,7 +24,7 @@ Baseline offset of the measured text.
 
 Default value: **0**
 
-**Type:** number | string
+**Type:** number \| string
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Layout width of the measured text.
 
 The default unit is vp. The value cannot be a percentage. If this parameter is not set, the value of **SizeOptions** is the maximum width allowed for the single-line text.
 
-**Type:** number | string | Resource
+**Type:** number \| string \| Resource
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ Font family of the measured text. Default value: **'HarmonyOS Sans'**
 
 Only the default font is supported.
 
-**Type:** string | Resource
+**Type:** string \| Resource
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ The value cannot be a percentage.
 
 Since API version 12, the fp unit is used when **fontSize** is of the number type.
 
-**Type:** number | string | Resource
+**Type:** number \| string \| Resource
 
 **Since:** 9
 
@@ -118,7 +118,7 @@ Default value: **FontStyle.Normal**
 
 Value range for the number type: [0, 1], with intervals of 1, corresponding to the values in the **FontStyle** enum
 
-**Type:** number | FontStyle
+**Type:** number \| FontStyle
 
 **Since:** 9
 
@@ -138,7 +138,7 @@ Font width of the measured text. For the number type, the value ranges from 100 
 
 Default value: **FontWeight.Normal**
 
-**Type:** number | string | FontWeight
+**Type:** number \| string \| FontWeight
 
 **Since:** 9
 
@@ -158,7 +158,7 @@ Letter spacing of the measured text.
 
 Default value: **0**
 
-**Type:** number | string
+**Type:** number \| string
 
 **Since:** 9
 
@@ -176,7 +176,7 @@ lineHeight?: number | string | Resource
 
 Line height of the measured text.
 
-**Type:** number | string | Resource
+**Type:** number \| string \| Resource
 
 **Since:** 10
 
@@ -222,7 +222,7 @@ Default value: **1**
 
 Value range for the number type: [0, 3], with intervals of 1, corresponding to the values in the **TextOverflow** enum
 
-**Type:** number | TextOverflow
+**Type:** number \| TextOverflow
 
 **Since:** 10
 
@@ -246,7 +246,7 @@ Default value: **TextAlign.Start**
 
 Value range for the number type: [0, 3], with intervals of 1, corresponding to the values in the **TextAlign** enum
 
-**Type:** number | TextAlign
+**Type:** number \| TextAlign
 
 **Since:** 10
 
@@ -270,7 +270,7 @@ Default value: **TextCase.Normal**
 
 Value range for the number type: [0, 2], with intervals of 1, corresponding to the values in the **TextCase** enum
 
-**Type:** number | TextCase
+**Type:** number \| TextCase
 
 **Since:** 10
 
@@ -290,7 +290,7 @@ textContent: string | Resource
 
 Content of the measured text.
 
-**Type:** string | Resource
+**Type:** string \| Resource
 
 **Since:** 9
 
@@ -308,7 +308,7 @@ textIndent?: number | string
 
 Indentation of the first line. Default value: **0**.
 
-**Type:** number | string
+**Type:** number \| string
 
 **Since:** 11
 

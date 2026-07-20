@@ -100,7 +100,7 @@ action?: () => void
 
 Click event of the icon or arrow on the right.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 10
 

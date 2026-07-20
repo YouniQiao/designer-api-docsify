@@ -22,7 +22,7 @@ action?: () => void
 
 Sets the Button Callback.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 18
 

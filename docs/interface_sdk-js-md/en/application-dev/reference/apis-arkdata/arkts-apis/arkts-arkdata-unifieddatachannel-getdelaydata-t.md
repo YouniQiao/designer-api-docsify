@@ -20,11 +20,11 @@ Defines a function used to obtain a deferred **UnifiedData** object. Currently, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Identifier of the deferred encapsulation. |
+| type | string | Yes | Identifier of the deferred encapsulation.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| UnifiedData | **UnifiedData** object. |
+| [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | **UnifiedData** object.  |
 

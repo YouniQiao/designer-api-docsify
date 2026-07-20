@@ -24,7 +24,7 @@ data: Array<string>
 
 Data of the callback. If an error occurs during callback data processing, the callback will not be triggered.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 

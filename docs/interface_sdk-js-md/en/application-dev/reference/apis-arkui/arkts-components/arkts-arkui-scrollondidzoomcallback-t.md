@@ -20,5 +20,5 @@ callback of Scroll, using in onDidZoom.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number | Yes | current zoom scale. |
+| scale | number | Yes | current zoom scale.  |
 

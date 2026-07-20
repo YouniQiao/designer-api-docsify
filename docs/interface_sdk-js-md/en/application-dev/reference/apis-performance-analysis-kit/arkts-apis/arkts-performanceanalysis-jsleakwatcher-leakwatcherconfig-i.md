@@ -90,7 +90,7 @@ Configuration item conflict priority: ID list > trustlist.
 
 The default value is an empty array.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 24
 
@@ -168,7 +168,7 @@ For example, if the object class name ID set in the trustlist is the same as tha
 
 The default value is an empty array.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 24
 

@@ -22,7 +22,7 @@ issuer?: Array<Uint8Array>
 
 CRL issuer, in DER format.
 
-**Type:** Array<Uint8Array>
+**Type:** Array&lt;Uint8Array&gt;
 
 **Since:** 11
 

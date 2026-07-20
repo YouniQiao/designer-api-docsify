@@ -4,6 +4,8 @@ Declare Component DownloadFileButton
 
 **Since:** 12
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct DownloadFileButton--><!--Device-unnamed-export declare struct DownloadFileButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

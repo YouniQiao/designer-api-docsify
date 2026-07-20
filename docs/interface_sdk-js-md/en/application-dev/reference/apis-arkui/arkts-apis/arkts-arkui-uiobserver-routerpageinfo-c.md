@@ -22,7 +22,7 @@ context: UIAbilityContext | UIContext
 
 Context of the router page that invokes the lifecycle callback.
 
-**Type:** UIAbilityContext | UIContext
+**Type:** UIAbilityContext \| UIContext
 
 **Since:** 11
 

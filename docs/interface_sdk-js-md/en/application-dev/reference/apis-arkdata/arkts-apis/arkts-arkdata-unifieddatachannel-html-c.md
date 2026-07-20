@@ -64,7 +64,7 @@ set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 
 Defines URI authorization policies for drag intention.
 
-**Type:** Array<UriPermission>
+**Type:** Array&lt;UriPermission&gt;
 
 **Since:** 26.0.0
 

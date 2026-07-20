@@ -18,13 +18,13 @@ The output data provided by the user is written into the callback function. When
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outDesc | object | Yes | Object passed to output function. Object dependency requirement implementation. |
-| buf | ArrayBuffer | Yes | Used to store data to be written. |
-| length | int | Yes | Write the length of the output buffer. |
+| outDesc | object | Yes | Object passed to output function. Object dependency requirement implementation.  |
+| buf | ArrayBuffer | Yes | Used to store data to be written.  |
+| length | number | Yes | Write the length of the output buffer.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | Return the number of bytes output. |
+| number | Return the number of bytes output.  |
 

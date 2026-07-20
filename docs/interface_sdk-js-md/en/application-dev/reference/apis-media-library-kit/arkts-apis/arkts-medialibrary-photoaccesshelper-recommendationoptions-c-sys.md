@@ -46,7 +46,7 @@ recommendationTypeList?: Array<RecommendationType>
 
 List of recommendation types. If images of multiple categories need to be recommended based on the enumerated value, set this parameter.
 
-**Type:** Array<RecommendationType>
+**Type:** Array&lt;RecommendationType&gt;
 
 **Since:** 23
 

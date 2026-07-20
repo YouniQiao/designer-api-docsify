@@ -23,8 +23,8 @@ import { bundleMonitor } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-ability-bundlemonitor-off-f-sys.md#off-1) | Unregister to monitor the installation status |
-| [on](arkts-ability-bundlemonitor-on-f-sys.md#on-1) | Register to monitor the installation status |
+| [off](arkts-ability-bundlemonitor-off-f-sys.md#off) | Unregister to monitor the installation status |
+| [on](arkts-ability-bundlemonitor-on-f-sys.md#on) | Register to monitor the installation status |
 <!--DelEnd-->
 
 <!--Del-->

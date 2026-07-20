@@ -82,7 +82,7 @@ radioContent: Array<SheetInfo>
 
 Sets the SelectDialog sheets.
 
-**Type:** Array<SheetInfo>
+**Type:** Array&lt;SheetInfo&gt;
 
 **Since:** 18
 
@@ -122,7 +122,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** Theme | CustomTheme
+**Type:** Theme \| CustomTheme
 
 **Since:** 12
 

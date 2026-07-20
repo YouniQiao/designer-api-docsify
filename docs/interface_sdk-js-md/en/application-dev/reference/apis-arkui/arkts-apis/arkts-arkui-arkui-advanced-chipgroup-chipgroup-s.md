@@ -15,6 +15,8 @@
 
 **Since:** 12
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ChipGroup--><!--Device-unnamed-export declare struct ChipGroup-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -145,7 +147,7 @@ If the value is **undefined**, the **ChipGroup** component is empty by default.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**Decorator:** @Require, @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -193,7 +195,7 @@ Callback invoked when the chip status changes.
 
 If the value is **undefined**, the event is unbound.
 
-**Type:** Callback<Array<number>>
+**Type:** Callback&lt;Array&lt;number&gt;&gt;
 
 **Since:** 12
 
@@ -239,7 +241,7 @@ Default value: **[0]**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
 
@@ -265,7 +267,7 @@ By default, if this parameter is not passed, there is no suffix.
 
 If the value is **undefined**, there is no suffix.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 12
 

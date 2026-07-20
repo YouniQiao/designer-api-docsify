@@ -18,12 +18,12 @@ Describes the sort function of the ArkTS typed array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| first | ElementType | Yes | First element to be compared. |
-| second | ElementType | Yes | Second element to be compared. |
+| first | ElementType | Yes | First element to be compared.  |
+| second | ElementType | Yes | Second element to be compared.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | The result of the comparison. |
+| number | The result of the comparison.  |
 

@@ -22,7 +22,7 @@ args: Array<ValueType>
 
 Parameters in the SQL statements to be executed.
 
-**Type:** Array<ValueType>
+**Type:** Array&lt;ValueType&gt;
 
 **Since:** 20
 

@@ -20,7 +20,7 @@ import { pbap } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md#createpbapserverprofile-1) | create the instance of PBAP server profile. |
+| [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md#createpbapserverprofile) | create the instance of PBAP server profile. |
 
 <!--Del-->
 ### Interfaces（系统接口）

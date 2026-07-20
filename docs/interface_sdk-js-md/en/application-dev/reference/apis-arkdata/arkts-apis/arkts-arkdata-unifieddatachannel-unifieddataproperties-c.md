@@ -22,7 +22,7 @@ extras?: Record<string, object>
 
 Object of the dictionary type used to set other properties. The default value is an empty dictionary object.
 
-**Type:** Record<string, object>
+**Type:** Record&lt;string, object&gt;
 
 **Since:** 12
 
@@ -122,7 +122,7 @@ uriAuthorizationPolicies?: Array<UriPermission>
 
 Defines URI authorization policies for drag intention.
 
-**Type:** Array<UriPermission>
+**Type:** Array&lt;UriPermission&gt;
 
 **Since:** 26.0.0
 

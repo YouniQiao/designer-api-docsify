@@ -22,11 +22,11 @@ This API is an asynchronous function, which uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| acceptableInfo | DataLoadInfo | No | Data type and quantity to receive. The default value is empty. |
+| acceptableInfo | [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | No | Data type and quantity to receive. The default value is empty.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UnifiedData \| null&gt; | Promise used to return the result. |
+| Promise&lt;UnifiedData \| null&gt; | Promise used to return the result.  |
 

@@ -22,5 +22,5 @@ On scroll callback using in scrollable onDidStopDragging.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| willFling | boolean | Yes | whether start fling animation. |
+| willFling | boolean | Yes | whether start fling animation.  |
 

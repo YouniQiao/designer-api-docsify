@@ -24,7 +24,7 @@ authorizationResults: Array<boolean>
 
 List of authorization results, and the array length must be equal to permissionNames.length. The value **true** indicates that the authorization is successful and the CLI command can obtain the corresponding permission. The value **false** indicates that the authorization is denied and the CLI command cannot obtain the corresponding permission.
 
-**Type:** Array<boolean>
+**Type:** Array&lt;boolean&gt;
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ permissionNames: Array<Permissions>
 
 List of permission names. Each element cannot be empty and its length cannot exceed 256 characters.
 
-**Type:** Array<Permissions>
+**Type:** Array&lt;Permissions&gt;
 
 **Since:** 26.0.0
 

@@ -49,7 +49,7 @@ Creates a **GridItem** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | GridItemOptions | No | Parameters of the grid item, containing the **style** parameter of the[GridItemStyle]{@link GridItemStyle} enum type. |
+| value | [GridItemOptions](arkts-arkui-griditemoptions-i.md) | No | Parameters of the grid item, containing the **style** parameter of the [GridItemStyle]{@link GridItemStyle} enum type. |
 
 ## Summary
 

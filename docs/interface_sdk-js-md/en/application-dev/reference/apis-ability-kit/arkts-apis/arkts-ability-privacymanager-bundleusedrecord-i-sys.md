@@ -96,7 +96,7 @@ permissionRecords: Array<PermissionUsedRecord>
 
 Collection of permission usage records under the current application or device. Each element corresponds to a specific permission, allowing further viewing of access count, rejection count, last access time, and detailed records.
 
-**Type:** Array<PermissionUsedRecord>
+**Type:** Array&lt;PermissionUsedRecord&gt;
 
 **Since:** 9
 

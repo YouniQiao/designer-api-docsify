@@ -22,7 +22,7 @@ ca?: string | Array<string>
 
 Certificate used to verify the identity of the server, if it is not set, use system ca.
 
-**Type:** string | Array<string>
+**Type:** string \| Array&lt;string&gt;
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ cert?: string | Array<string>
 
 Certificate proving the identity of the client
 
-**Type:** string | Array<string>
+**Type:** string \| Array&lt;string&gt;
 
 **Since:** 24
 
@@ -118,7 +118,7 @@ protocols?: Protocol | Array<Protocol>
 
 TLS protocol version
 
-**Type:** Protocol | Array<Protocol>
+**Type:** Protocol \| Array&lt;Protocol&gt;
 
 **Since:** 10
 

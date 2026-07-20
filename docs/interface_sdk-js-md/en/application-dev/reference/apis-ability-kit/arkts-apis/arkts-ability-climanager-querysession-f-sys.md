@@ -6,6 +6,7 @@
 import { cliManager } from '@kit.AbilityKit';
 ```
 
+<a id="querysession"></a>
 ## querySession
 
 ```TypeScript
@@ -36,7 +37,7 @@ Query session status.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<CliSessionInfo> | The promise returned by the function. |
+| Promise&lt;CliSessionInfo&gt; | The promise returned by the function. |
 
 **Error codes:**
 

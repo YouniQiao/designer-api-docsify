@@ -48,7 +48,7 @@ Creates a button that can contain a single child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ButtonOptions | Yes | Button settings. |
+| options | [ButtonOptions](arkts-arkui-buttonoptions-i.md) | Yes | Button settings.  |
 
 ## Button
 
@@ -74,8 +74,8 @@ By default, the text content is displayed in a one line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | ResourceStr | Yes | Button text.<br>Note: If the text is longer than the width of the button, it istruncated. |
-| options | ButtonOptions | No | Button settings. |
+| label | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Button text.<br>Note: If the text is longer than the width of the button, it is truncated.  |
+| options | [ButtonOptions](arkts-arkui-buttonoptions-i.md) | No | Button settings.  |
 
 ## Summary
 

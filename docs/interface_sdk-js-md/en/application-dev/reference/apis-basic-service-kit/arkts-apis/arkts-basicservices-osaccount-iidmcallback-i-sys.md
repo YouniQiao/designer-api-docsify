@@ -24,7 +24,7 @@ onAcquireInfo?: (module: number, acquire: number, extraInfo: Uint8Array) => void
 
 Called to acquire IDM information.
 
-**Type:** (module: number, acquire: number, extraInfo: Uint8Array) => void
+**Type:** (module: number, acquire: number, extraInfo: Uint8Array) =&gt; void
 
 **Since:** 8
 
@@ -42,7 +42,7 @@ onResult: (result: number, extraInfo: RequestResult) => void
 
 Called to return the result code and request result information.
 
-**Type:** (result: number, extraInfo: RequestResult) => void
+**Type:** (result: number, extraInfo: RequestResult) =&gt; void
 
 **Since:** 8
 

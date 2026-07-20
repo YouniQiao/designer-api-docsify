@@ -41,7 +41,7 @@ Creates a text picker based on the specified data list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TextPickerOptions | No | Parameters of the text picker. |
+| options | [TextPickerOptions](arkts-arkui-textpickeroptions-i.md) | No | Parameters of the text picker.  |
 
 ## Summary
 

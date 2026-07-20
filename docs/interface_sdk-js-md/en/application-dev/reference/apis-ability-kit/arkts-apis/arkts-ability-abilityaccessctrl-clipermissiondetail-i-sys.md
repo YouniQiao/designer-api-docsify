@@ -64,7 +64,7 @@ usedPermissions: Array<Permissions>
 
 List of runtime permissions mapped from requiredCliPermission.
 
-**Type:** Array<Permissions>
+**Type:** Array&lt;Permissions&gt;
 
 **Since:** 26.0.0
 

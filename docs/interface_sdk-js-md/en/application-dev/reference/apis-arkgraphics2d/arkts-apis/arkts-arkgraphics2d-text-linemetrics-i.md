@@ -148,7 +148,7 @@ runMetrics: Map<number, RunMetrics>
 
 Mapping between the text index range and the associated font measurement information.
 
-**Type:** Map<number, RunMetrics>
+**Type:** Map&lt;number, RunMetrics&gt;
 
 **Since:** 12
 

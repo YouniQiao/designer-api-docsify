@@ -4,14 +4,21 @@
   - [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md)
   - [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md)
   - [Color](arkts-arkgraphics2d-effectkit-color-i.md)
-  - [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)<!--Del-->
+  - [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)
+  <!--Del-->
   - [ColorPicker(system api)](arkts-arkgraphics2d-effectkit-colorpicker-i-sys.md)<!--DelEnd-->
-  - [Filter](arkts-arkgraphics2d-effectkit-filter-i.md)<!--Del-->
-  - [Filter(system api)](arkts-arkgraphics2d-effectkit-filter-i-sys.md)<!--DelEnd--><!--Del-->
-  - [EllipticalMaskCenter(system api)](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md)<!--DelEnd--><!--Del-->
-  - [EllipticalMaskRadius(system api)](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md)<!--DelEnd--><!--Del-->
-  - [PictureComplexityDegree(system api)](arkts-arkgraphics2d-effectkit-picturecomplexitydegree-e-sys.md)<!--DelEnd--><!--Del-->
-  - [PictureLightDegree(system api)](arkts-arkgraphics2d-effectkit-picturelightdegree-e-sys.md)<!--DelEnd--><!--Del-->
+  - [Filter](arkts-arkgraphics2d-effectkit-filter-i.md)
+  <!--Del-->
+  - [Filter(system api)](arkts-arkgraphics2d-effectkit-filter-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EllipticalMaskCenter(system api)](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EllipticalMaskRadius(system api)](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PictureComplexityDegree(system api)](arkts-arkgraphics2d-effectkit-picturecomplexitydegree-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PictureLightDegree(system api)](arkts-arkgraphics2d-effectkit-picturelightdegree-e-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [PictureShadeDegree(system api)](arkts-arkgraphics2d-effectkit-pictureshadedegree-e-sys.md)<!--DelEnd-->
   - [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)
 - [@ohos.graphics.colorSpaceManager](arkts-graphics-colorspacemanager.md)
@@ -135,8 +142,8 @@
   - [LineHeightStyle](arkts-arkgraphics2d-text-lineheightstyle-e.md)
   - [PlaceholderAlignment](arkts-arkgraphics2d-text-placeholderalignment-e.md)
   - [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md)
-  - [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md)<!--Del-->
-  - [SystemFontType(system api)](arkts-arkgraphics2d-text-systemfonttype-e.md)<!--DelEnd-->
+  - [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md)
+  - [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md)
   - [TextAlign](arkts-arkgraphics2d-text-textalign-e.md)
   - [TextBadgeType](arkts-arkgraphics2d-text-textbadgetype-e.md)
   - [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md)
@@ -151,28 +158,46 @@
   - [TextVerticalAlign](arkts-arkgraphics2d-text-textverticalalign-e.md)
   - [WordBreak](arkts-arkgraphics2d-text-wordbreak-e.md)
 - [@ohos.graphics.uiEffect](arkts-graphics-uieffect.md)
-  - [uiEffect](arkts-arkgraphics2d-uieffect-n.md)<!--Del-->
+  - [uiEffect](arkts-arkgraphics2d-uieffect-n.md)
+    <!--Del-->
     - [createBrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md)<!--DelEnd-->
     - [createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md)
-    - [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md)<!--Del-->
-    - [createHdrBrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-createhdrbrightnessblender-f-sys.md)<!--DelEnd--><!--Del-->
-    - [createHdrDarkenBlender(system api)](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md)<!--DelEnd--><!--Del-->
-    - [Mask(system api)](arkts-arkgraphics2d-uieffect-mask-c-sys.md)<!--DelEnd--><!--Del-->
-    - [BlurBubblesRiseEffectParam(system api)](arkts-arkgraphics2d-uieffect-blurbubblesriseeffectparam-i-sys.md)<!--DelEnd--><!--Del-->
-    - [BrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md)<!--DelEnd--><!--Del-->
-    - [BrightnessParam(system api)](arkts-arkgraphics2d-uieffect-brightnessparam-i-sys.md)<!--DelEnd--><!--Del-->
+    - [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md)
+    <!--Del-->
+    - [createHdrBrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-createhdrbrightnessblender-f-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [createHdrDarkenBlender(system api)](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [Mask(system api)](arkts-arkgraphics2d-uieffect-mask-c-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [BlurBubblesRiseEffectParam(system api)](arkts-arkgraphics2d-uieffect-blurbubblesriseeffectparam-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [BrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [BrightnessParam(system api)](arkts-arkgraphics2d-uieffect-brightnessparam-i-sys.md)<!--DelEnd-->
+    <!--Del-->
     - [Color(system api)](arkts-arkgraphics2d-uieffect-color-i-sys.md)<!--DelEnd-->
-    - [Filter](arkts-arkgraphics2d-uieffect-filter-i.md)<!--Del-->
+    - [Filter](arkts-arkgraphics2d-uieffect-filter-i.md)
+    <!--Del-->
     - [Filter(system api)](arkts-arkgraphics2d-uieffect-filter-i-sys.md)<!--DelEnd-->
-    - [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md)<!--Del-->
-    - [HdrDarkenBlender(system api)](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md)<!--DelEnd--><!--Del-->
-    - [HeatDistortionEffectParam(system api)](arkts-arkgraphics2d-uieffect-heatdistortioneffectparam-i-sys.md)<!--DelEnd--><!--Del-->
-    - [LiquidMaterialEffectParam(system api)](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md)<!--DelEnd--><!--Del-->
-    - [VisualEffect(system api)](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md)<!--DelEnd--><!--Del-->
-    - [Blender(system api)](arkts-arkgraphics2d-uieffect-blender-t-sys.md)<!--DelEnd--><!--Del-->
-    - [FlyMode(system api)](arkts-arkgraphics2d-uieffect-flymode-e-sys.md)<!--DelEnd--><!--Del-->
-    - [TileMode(system api)](arkts-arkgraphics2d-uieffect-tilemode-e-sys.md)<!--DelEnd--><!--Del-->
-    - [WaterRippleMode(system api)](arkts-arkgraphics2d-uieffect-waterripplemode-e-sys.md)<!--DelEnd--><!--Del-->
+    - [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md)
+    <!--Del-->
+    - [HdrDarkenBlender(system api)](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [HeatDistortionEffectParam(system api)](arkts-arkgraphics2d-uieffect-heatdistortioneffectparam-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [LiquidMaterialEffectParam(system api)](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [VisualEffect(system api)](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [Blender(system api)](arkts-arkgraphics2d-uieffect-blender-t-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [FlyMode(system api)](arkts-arkgraphics2d-uieffect-flymode-e-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [TileMode(system api)](arkts-arkgraphics2d-uieffect-tilemode-e-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [WaterRippleMode(system api)](arkts-arkgraphics2d-uieffect-waterripplemode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [BrightnessBlenderParam(system api)](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md)<!--DelEnd-->
 - common<!--arkts-arkgraphics2d-common-->
   - [webgl](arkts-webgl.md)

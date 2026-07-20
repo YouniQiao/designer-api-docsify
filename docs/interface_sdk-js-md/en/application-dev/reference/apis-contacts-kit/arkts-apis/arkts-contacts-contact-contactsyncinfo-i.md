@@ -24,7 +24,7 @@ Indicates the array of batch identifiers for contacts that have been synchronize
 
 The range of values is from 1 to totalBatches.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
 

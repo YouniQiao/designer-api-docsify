@@ -22,7 +22,7 @@ checkAction?: (isChecked: boolean) => void
 
 Sets the TipsDialog CheckBox Callback.
 
-**Type:** (isChecked: boolean) => void
+**Type:** (isChecked: boolean) =&gt; void
 
 **Since:** 18
 
@@ -102,7 +102,7 @@ imageRes: ResourceStr | PixelMap
 
 Sets the TipsDialog imageRes.
 
-**Type:** ResourceStr | PixelMap
+**Type:** ResourceStr \| PixelMap
 
 **Since:** 18
 
@@ -164,7 +164,7 @@ onCheckedChange?: Callback<boolean>
 
 Sets the TipsDialog CheckBox Callback.
 
-**Type:** Callback<boolean>
+**Type:** Callback&lt;boolean&gt;
 
 **Since:** 18
 
@@ -224,7 +224,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** Theme | CustomTheme
+**Type:** Theme \| CustomTheme
 
 **Since:** 12
 

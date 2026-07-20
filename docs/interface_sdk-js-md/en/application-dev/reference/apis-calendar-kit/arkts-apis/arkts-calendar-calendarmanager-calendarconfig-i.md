@@ -22,7 +22,7 @@ color?: number | string
 
 Color of the calendar
 
-**Type:** number | string
+**Type:** number \| string
 
 **Since:** 10
 

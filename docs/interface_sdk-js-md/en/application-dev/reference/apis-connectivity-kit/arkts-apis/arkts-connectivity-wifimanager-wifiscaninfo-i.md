@@ -156,7 +156,7 @@ infoElems: Array<WifiInfoElem>
 
 Information elements.
 
-**Type:** Array<WifiInfoElem>
+**Type:** Array&lt;WifiInfoElem&gt;
 
 **Since:** 9
 

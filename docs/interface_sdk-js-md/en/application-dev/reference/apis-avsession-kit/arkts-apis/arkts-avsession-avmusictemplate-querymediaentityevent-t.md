@@ -18,11 +18,11 @@ The query media entity event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | QueryMediaEntityParam | Yes | query params |
+| params | [QueryMediaEntityParam](arkts-avsession-avmusictemplate-querymediaentityparam-i.md) | Yes | query params  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | (PageMediaEntity) returned through promise |
+| Promise&lt;PageMediaEntity&gt; | (PageMediaEntity) returned through promise  |
 

@@ -18,5 +18,5 @@ Defines the callback invoked to notify the application when the progress value o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | number | Yes | Current progress of the slider. |
+| progress | number | Yes | Current progress of the slider.  |
 

@@ -42,7 +42,7 @@ pages?: Array<number>
 
 Page range set of the file to print. The default value is empty.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 24
 

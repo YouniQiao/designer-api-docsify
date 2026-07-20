@@ -20,5 +20,5 @@ Represents the callback triggered when scrolling reaches an edge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| side | Edge | Yes | Edge position to scroll to. |
+| side | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | Edge position to scroll to.  |
 

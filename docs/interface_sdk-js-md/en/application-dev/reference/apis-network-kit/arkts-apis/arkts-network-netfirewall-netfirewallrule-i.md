@@ -102,7 +102,7 @@ domains?: Array<NetFirewallDomainParams>
 
 Domain name list: valid when ruleType = RULE_DOMAIN, otherwise it will be ignored.
 
-**Type:** Array<NetFirewallDomainParams>
+**Type:** Array&lt;NetFirewallDomainParams&gt;
 
 **Since:** 15
 
@@ -168,7 +168,7 @@ localIps?: Array<NetFirewallIpParams>
 
 Local IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
-**Type:** Array<NetFirewallIpParams>
+**Type:** Array&lt;NetFirewallIpParams&gt;
 
 **Since:** 15
 
@@ -184,7 +184,7 @@ localPorts?: Array<NetFirewallPortParams>
 
 Local ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
-**Type:** Array<NetFirewallPortParams>
+**Type:** Array&lt;NetFirewallPortParams&gt;
 
 **Since:** 15
 
@@ -232,7 +232,7 @@ remoteIps?: Array<NetFirewallIpParams>
 
 Remote IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
-**Type:** Array<NetFirewallIpParams>
+**Type:** Array&lt;NetFirewallIpParams&gt;
 
 **Since:** 15
 
@@ -248,7 +248,7 @@ remotePorts?: Array<NetFirewallPortParams>
 
 Remote ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
-**Type:** Array<NetFirewallPortParams>
+**Type:** Array&lt;NetFirewallPortParams&gt;
 
 **Since:** 15
 

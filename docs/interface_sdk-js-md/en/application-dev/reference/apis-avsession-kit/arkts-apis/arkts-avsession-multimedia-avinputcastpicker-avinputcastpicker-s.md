@@ -4,6 +4,8 @@ Picker used to show available input devices.
 
 **Since:** 20
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct AVInputCastPicker--><!--Device-unnamed-export declare struct AVInputCastPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVInputCast

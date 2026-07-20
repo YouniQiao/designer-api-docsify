@@ -26,7 +26,7 @@ interfaceDescList: Array<Readonly<USBInterfaceDesc>>
 
 List of interface descriptors of the USB device.
 
-**Type:** Array<Readonly<USBInterfaceDesc>>
+**Type:** Array&lt;Readonly&lt;USBInterfaceDesc&gt;&gt;
 
 **Since:** 12
 

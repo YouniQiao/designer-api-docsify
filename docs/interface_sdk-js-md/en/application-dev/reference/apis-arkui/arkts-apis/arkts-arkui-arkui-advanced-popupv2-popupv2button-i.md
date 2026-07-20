@@ -22,7 +22,7 @@ action?: Callback<void>
 
 Set the button callback.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
 

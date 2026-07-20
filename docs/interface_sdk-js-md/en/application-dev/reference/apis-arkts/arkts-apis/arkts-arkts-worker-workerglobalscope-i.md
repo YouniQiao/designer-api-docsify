@@ -48,7 +48,7 @@ onerror?: (ev: ErrorEvent) => void
 
 The onerror attribute of parentPort specifies the event handler to be called when an exception occurs during worker execution.The event handler is executed in the worker thread.
 
-**Type:** (ev: ErrorEvent) => void
+**Type:** (ev: ErrorEvent) =&gt; void
 
 **Since:** 7
 

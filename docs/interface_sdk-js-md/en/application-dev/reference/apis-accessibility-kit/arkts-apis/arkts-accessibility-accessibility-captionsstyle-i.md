@@ -28,7 +28,7 @@ Background color of captions.
 
 Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
 
-**Type:** number | string
+**Type:** number \| string
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ Font color of captions.
 
 Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
 
-**Type:** number | string
+**Type:** number \| string
 
 **Since:** 8
 
@@ -140,7 +140,7 @@ Window color of captions.
 
 Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
 
-**Type:** number | string
+**Type:** number \| string
 
 **Since:** 8
 

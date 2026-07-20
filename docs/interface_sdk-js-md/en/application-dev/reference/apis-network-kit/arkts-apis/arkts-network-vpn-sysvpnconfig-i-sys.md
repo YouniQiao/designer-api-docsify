@@ -44,7 +44,7 @@ localAddresses?: Array<LinkAddress>
 
 The array of local addresses for VPN interface.
 
-**Type:** Array<LinkAddress>
+**Type:** Array&lt;LinkAddress&gt;
 
 **Since:** 26.0.0
 
@@ -118,7 +118,7 @@ remoteAddresses?: Array<string>
 
 The array of addresses for remote server.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 20
 

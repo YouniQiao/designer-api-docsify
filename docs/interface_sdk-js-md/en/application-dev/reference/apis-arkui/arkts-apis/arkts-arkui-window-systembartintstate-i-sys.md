@@ -42,7 +42,7 @@ regionTint: Array<SystemBarRegionTint>
 
 All system bar information that has been changed.
 
-**Type:** Array<SystemBarRegionTint>
+**Type:** Array&lt;SystemBarRegionTint&gt;
 
 **Since:** 8
 

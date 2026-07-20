@@ -184,7 +184,7 @@ screenShape: 'rect' | 'circle'
 
 Screen shape. The options are as follows:rect: Rectangle screen.circle: Circle screen.
 
-**Type:** 'rect' | 'circle'
+**Type:** 'rect' \| 'circle'
 
 **Since:** 4
 

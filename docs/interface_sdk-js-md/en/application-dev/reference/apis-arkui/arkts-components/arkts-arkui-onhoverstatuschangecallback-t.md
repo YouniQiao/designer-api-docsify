@@ -20,5 +20,5 @@ Defines the current callback invoked when the hover state of the device changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | HoverEventParam | Yes | Parameters related to the hover state of the device, including the fold state,hover state, application orientation, and window mode enumeration of the device. |
+| param | [HoverEventParam](arkts-arkui-hovereventparam-i.md) | Yes | Parameters related to the hover state of the device, including the fold state, hover state, application orientation, and window mode enumeration of the device.  |
 

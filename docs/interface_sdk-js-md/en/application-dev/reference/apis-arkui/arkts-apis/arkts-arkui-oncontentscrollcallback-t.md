@@ -18,6 +18,6 @@ Callback when the content in the search box scrolls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| totalOffsetX | number | Yes | Indicates horizontal coordinate offset of the text in the content area, in px. |
-| totalOffsetY | number | Yes | Indicates the vertical coordinate offset of the text in the content area, in px. |
+| totalOffsetX | number | Yes | Indicates horizontal coordinate offset of the text in the content area, in px.  |
+| totalOffsetY | number | Yes | Indicates the vertical coordinate offset of the text in the content area, in px.  |
 

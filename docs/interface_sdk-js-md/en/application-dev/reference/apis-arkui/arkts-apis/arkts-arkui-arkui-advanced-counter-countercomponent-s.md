@@ -4,6 +4,8 @@ Defines Counter Component.
 
 **Since:** 11
 
+**Decorator:** @Component
+
 <!--Device-unnamed-declare struct CounterComponent--><!--Device-unnamed-declare struct CounterComponent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

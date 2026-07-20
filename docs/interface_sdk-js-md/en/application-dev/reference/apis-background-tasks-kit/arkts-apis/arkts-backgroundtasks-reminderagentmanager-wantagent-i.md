@@ -38,7 +38,7 @@ parameters?: Record<string, Object>
 
 Parameters to be transferred to the target.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 12
 

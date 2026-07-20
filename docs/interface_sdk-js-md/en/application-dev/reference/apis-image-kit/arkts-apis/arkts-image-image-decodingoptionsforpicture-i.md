@@ -24,7 +24,7 @@ Auxiliary picture type. If no auxiliary picture type is specified or an empty ar
 
 To exclude all auxiliary picture, you can decode the auxiliary picture to a PixelMap and use the PixelMap to create a Picture that contains only the main picture.
 
-**Type:** Array<AuxiliaryPictureType>
+**Type:** Array&lt;AuxiliaryPictureType&gt;
 
 **Since:** 13
 

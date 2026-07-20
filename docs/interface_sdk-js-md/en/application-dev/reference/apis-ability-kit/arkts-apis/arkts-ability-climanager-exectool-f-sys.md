@@ -6,6 +6,7 @@
 import { cliManager } from '@kit.AbilityKit';
 ```
 
+<a id="exectool"></a>
 ## execTool
 
 ```TypeScript
@@ -35,7 +36,7 @@ Execute a CLI command
 | --- | --- | --- | --- |
 | toolName | string | Yes | The name of target tool. |
 | subCommand | string | Yes | The subCommand of this execute action. |
-| args | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)<string, Object> | Yes | The input args of tool. |
+| args | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes | The input args of tool. |
 | challenge | string | Yes | The unique identifier get from access token manager. |
 | execOptions | [ExecOptions](arkts-ability-climanager-execoptions-i-sys.md) | No | The options of this action. |
 
@@ -43,7 +44,7 @@ Execute a CLI command
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<CliSessionInfo> | execute result. |
+| Promise&lt;CliSessionInfo&gt; | execute result. |
 
 **Error codes:**
 

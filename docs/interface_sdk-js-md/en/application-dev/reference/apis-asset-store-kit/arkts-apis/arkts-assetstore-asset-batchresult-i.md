@@ -38,7 +38,7 @@ failedErrorInfos: Array<BatchErrInfo>
 
 An array of error details for assets that failed in the batch operation,including {@link BatchResult#failedCount} items, which is an empty array if all succeed.
 
-**Type:** Array<BatchErrInfo>
+**Type:** Array&lt;BatchErrInfo&gt;
 
 **Since:** 26.0.0
 

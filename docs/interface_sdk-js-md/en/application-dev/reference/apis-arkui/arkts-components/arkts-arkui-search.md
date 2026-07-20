@@ -30,7 +30,7 @@ Defines the constructor of Search.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SearchOptions | No | Initialization options of the **Search** component. |
+| options | [SearchOptions](arkts-arkui-searchoptions-i.md) | No | Initialization options of the **Search** component. |
 
 ## Summary
 

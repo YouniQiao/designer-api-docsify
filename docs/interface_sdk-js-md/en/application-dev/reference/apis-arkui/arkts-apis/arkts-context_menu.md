@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ContextMenu](arkts-arkui-context-menu-contextmenu-c.md) | Defines Close contextMenu. |
+| [ContextMenu](arkts-arkui-contextmenu-c.md) | Defines Close contextMenu. |
 

@@ -96,7 +96,7 @@ to: Array<MmsAddress>
 
 Indicates the destination address for the MMS message reading indication.
 
-**Type:** Array<MmsAddress>
+**Type:** Array&lt;MmsAddress&gt;
 
 **Since:** 8
 

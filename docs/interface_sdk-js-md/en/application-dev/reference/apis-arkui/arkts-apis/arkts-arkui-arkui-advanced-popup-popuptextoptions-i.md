@@ -50,7 +50,7 @@ The string value must be convertible to a number (for example, **'10'**) or incl
 
 Value range of number values: (0, +∞)
 
-**Type:** number | string | Resource
+**Type:** number \| string \| Resource
 
 **Since:** 11
 
@@ -76,7 +76,7 @@ For the string type, only strings of the number type are supported, for example,
 
 Default value: **FontWeight.Regular**
 
-**Type:** number | FontWeight | string
+**Type:** number \| FontWeight \| string
 
 **Since:** 11
 

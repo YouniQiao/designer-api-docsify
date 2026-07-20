@@ -68,7 +68,7 @@ onDateChange?: (date: DateData) => void
 
 Trigger an event when the date of the counter has been changed.
 
-**Type:** (date: DateData) => void
+**Type:** (date: DateData) =&gt; void
 
 **Since:** 11
 

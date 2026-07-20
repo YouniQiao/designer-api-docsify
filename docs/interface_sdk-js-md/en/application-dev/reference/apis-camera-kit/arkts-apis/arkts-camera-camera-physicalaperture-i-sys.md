@@ -24,7 +24,7 @@ apertures: Array<number>
 
 Supported physical aperture.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 24
 

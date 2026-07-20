@@ -16,7 +16,7 @@ abilities: Array<string>
 
 Abilities that use the permission.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 

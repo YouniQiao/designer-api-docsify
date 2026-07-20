@@ -36,7 +36,7 @@ extraInfoKeys?: Array<string>
 
 List of extra keys. If this parameter is left empty, all extra information is included.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 11
 

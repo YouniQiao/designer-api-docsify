@@ -42,7 +42,7 @@ fields: Array<Field>
 
 Field information in the table.
 
-**Type:** Array<Field>
+**Type:** Array&lt;Field&gt;
 
 **Since:** 11
 

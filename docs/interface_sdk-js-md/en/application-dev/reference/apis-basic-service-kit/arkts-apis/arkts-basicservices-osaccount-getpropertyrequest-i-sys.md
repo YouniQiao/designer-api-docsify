@@ -60,7 +60,7 @@ keys: Array<GetPropertyType>
 
 An array of the types of the properties to obtain.
 
-**Type:** Array<GetPropertyType>
+**Type:** Array&lt;GetPropertyType&gt;
 
 **Since:** 8
 

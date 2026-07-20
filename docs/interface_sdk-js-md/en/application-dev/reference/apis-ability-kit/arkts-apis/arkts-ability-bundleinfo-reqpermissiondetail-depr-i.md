@@ -3,7 +3,7 @@
 > **NOTE**  
 >  
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use  
-> [ReqPermissionDetail](arkts-bundleinfo.md) instead.
+> [ReqPermissionDetail](arkts-ability-bundleinfo-i.md) instead.
 
 Provides the detailed information of the permissions to request from the system.
 
@@ -11,7 +11,7 @@ Provides the detailed information of the permissions to request from the system.
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleInfo](arkts-bundleinfo.md)
+**Substitutes:** [bundleInfo](arkts-ability-bundleinfo-i.md)
 
 <!--Device-unnamed-export interface ReqPermissionDetail--><!--Device-unnamed-export interface ReqPermissionDetail-End-->
 

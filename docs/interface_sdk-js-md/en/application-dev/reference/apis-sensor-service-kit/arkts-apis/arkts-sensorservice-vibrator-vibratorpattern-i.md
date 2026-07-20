@@ -22,7 +22,7 @@ events: Array<VibratorEvent>
 
 Vibration event array, which is the **VibratorPattern** object returned by **build() **.
 
-**Type:** Array<VibratorEvent>
+**Type:** Array&lt;VibratorEvent&gt;
 
 **Since:** 18
 

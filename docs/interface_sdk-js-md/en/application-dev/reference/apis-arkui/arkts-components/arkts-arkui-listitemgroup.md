@@ -90,7 +90,7 @@ Creates a **ListItemGroup** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ListItemGroupOptions | No | Parameters of the list item group. |
+| options | [ListItemGroupOptions](arkts-arkui-listitemgroupoptions-i.md) | No | Parameters of the list item group.  |
 
 ## Summary
 

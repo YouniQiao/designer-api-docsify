@@ -4,6 +4,8 @@ Declare type ToolBarOption
 
 **Since:** 18
 
+**Decorator:** @Observed
+
 <!--Device-unnamed-export declare class ToolBarOption--><!--Device-unnamed-export declare class ToolBarOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -84,7 +86,7 @@ action?: () => void
 
 Define the action event.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 18
 

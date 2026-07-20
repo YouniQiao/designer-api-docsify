@@ -54,7 +54,7 @@ configs: Array<USBConfiguration>
 
 Device configuration descriptor information.
 
-**Type:** Array<USBConfiguration>
+**Type:** Array&lt;USBConfiguration&gt;
 
 **Since:** 9
 

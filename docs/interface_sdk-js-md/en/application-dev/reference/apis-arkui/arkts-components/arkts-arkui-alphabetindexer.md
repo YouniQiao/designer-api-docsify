@@ -28,7 +28,7 @@ Creates an **AlphabetIndexer** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | AlphabetIndexerOptions | Yes | Options of the **AlphabetIndexer** component. |
+| options | [AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md) | Yes | Options of the **AlphabetIndexer** component. |
 
 ## Summary
 

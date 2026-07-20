@@ -60,7 +60,7 @@ triggerTypes?: Array<SceneAnimationTriggerType>
 
 The trigger types of the scene animation.
 
-**Type:** Array<SceneAnimationTriggerType>
+**Type:** Array&lt;SceneAnimationTriggerType&gt;
 
 **Since:** 26.0.0
 

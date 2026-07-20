@@ -20,11 +20,11 @@ Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| marshallableVal | StyledStringMarshallingValue | Yes | Object to be marshaled. |
+| marshallableVal | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | Yes | Object to be marshaled.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Marshaled data of [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
+| ArrayBuffer | Marshaled data of [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).  |
 

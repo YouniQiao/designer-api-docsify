@@ -24,7 +24,7 @@ data: Array<InterceptedRecord>
 
 Page data: all records displayed on this page.
 
-**Type:** Array<InterceptedRecord>
+**Type:** Array&lt;InterceptedRecord&gt;
 
 **Since:** 14
 

@@ -130,7 +130,7 @@ Callback invoked when the selected state of the switch, check box, or radio butt
 
 **false**: from selected to not selected.
 
-**Type:** (value: boolean) => void
+**Type:** (value: boolean) =&gt; void
 
 **Since:** 10
 

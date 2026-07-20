@@ -22,7 +22,7 @@ fallbackGroups: Array<UIFontFallbackGroupInfo>
 
 List of fallback generic font families.
 
-**Type:** Array<UIFontFallbackGroupInfo>
+**Type:** Array&lt;UIFontFallbackGroupInfo&gt;
 
 **Since:** 11
 
@@ -42,7 +42,7 @@ fontDir: Array<string>
 
 Path to the system font file.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 11
 
@@ -62,7 +62,7 @@ generic: Array<UIFontGenericInfo>
 
 List of supported generic font families.
 
-**Type:** Array<UIFontGenericInfo>
+**Type:** Array&lt;UIFontGenericInfo&gt;
 
 **Since:** 11
 

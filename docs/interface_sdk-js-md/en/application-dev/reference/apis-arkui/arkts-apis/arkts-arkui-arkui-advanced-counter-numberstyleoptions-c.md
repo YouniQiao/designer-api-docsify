@@ -44,7 +44,7 @@ onBlurDecrease?: () => void
 
 Trigger an event when the decrease button loses focus.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ onBlurIncrease?: () => void
 
 Trigger an event when the increase button loses focus.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 11
 
@@ -84,7 +84,7 @@ onFocusDecrease?: () => void
 
 Trigger an event when the decrease button gets focus.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 11
 
@@ -104,7 +104,7 @@ onFocusIncrease?: () => void
 
 Trigger an event when the increase button gets focus.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 11
 

@@ -18,6 +18,6 @@ Describes the callback invoked for the AVDownloader state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | Yes | ID of the task whose status changes. |
-| state | AVDownloadTaskState | Yes |  |
+| taskId | string | Yes | ID of the task whose status changes.  |
+| state | [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | Yes |  |
 

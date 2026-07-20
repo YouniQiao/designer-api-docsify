@@ -18,12 +18,12 @@ Defines the ArkTS Array reduction function, which is used by the 'from' API of t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FromElementType | Yes | Element that is being processed. |
-| index | number | Yes | Index of the element in the ArkTS array. |
+| value | FromElementType | Yes | Element that is being processed.  |
+| index | number | Yes | Index of the element in the ArkTS array.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ToElementType | The transformed value. |
+| ToElementType | The transformed value.  |
 

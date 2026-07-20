@@ -20,5 +20,5 @@ Defines builder function to render one template type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| repeatItem | RepeatItem&lt;T&gt; | Yes | State variable that combines **item** and **index**. |
+| repeatItem | [RepeatItem](arkts-arkui-repeatitem-i.md)&lt;T&gt; | Yes | State variable that combines **item** and **index**.  |
 

@@ -24,7 +24,7 @@ errorMessages: Array<ErrorMessage>
 
 Error message.
 
-**Type:** Array<ErrorMessage>
+**Type:** Array&lt;ErrorMessage&gt;
 
 **Since:** 9
 
@@ -114,7 +114,7 @@ versionComponents: Array<VersionComponent>
 
 Version components.
 
-**Type:** Array<VersionComponent>
+**Type:** Array&lt;VersionComponent&gt;
 
 **Since:** 9
 

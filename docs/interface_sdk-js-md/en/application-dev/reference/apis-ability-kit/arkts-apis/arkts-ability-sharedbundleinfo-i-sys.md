@@ -54,7 +54,7 @@ readonly sharedModuleInfo: Array<SharedModuleInfo>
 
 Information about the shared module.
 
-**Type:** Array<SharedModuleInfo>
+**Type:** Array&lt;SharedModuleInfo&gt;
 
 **Since:** 10
 

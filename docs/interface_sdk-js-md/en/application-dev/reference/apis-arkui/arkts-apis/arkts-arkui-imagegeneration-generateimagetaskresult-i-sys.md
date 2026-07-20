@@ -24,7 +24,7 @@ imageData: Array<string>
 
 The image result corresponding to AI-generated image task.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 23
 

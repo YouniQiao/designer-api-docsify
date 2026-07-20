@@ -84,7 +84,7 @@ action?: () => void
 
 callback function when operate the text or icon.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 18
 

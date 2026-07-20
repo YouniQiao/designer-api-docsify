@@ -86,7 +86,7 @@ pdu: Array<number>
 
 Indicates Protocol Data Units (PDUs) from an SMS message.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 6
 

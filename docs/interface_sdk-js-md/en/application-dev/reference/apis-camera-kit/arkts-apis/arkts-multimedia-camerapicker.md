@@ -20,7 +20,7 @@ import { cameraPicker } from '@kit.CameraKit';
 
 | Name | Description |
 | --- | --- |
-| [pick](arkts-camera-camerapicker-pick-f.md#pick-1) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
+| [pick](arkts-camera-camerapicker-pick-f.md#pick) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
 
 ### Classes
 

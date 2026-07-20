@@ -22,5 +22,5 @@ Progress callback, which can be the size or numberof files.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | Progress | Yes | progress info. |
+| progress | [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | Yes | progress info.  |
 

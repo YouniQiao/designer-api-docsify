@@ -20,5 +20,5 @@ Defines a onResult function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | AbilityResult | Yes | The Parameter returned if the UIExtensionAbility call terminateSelfWithResult. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | The Parameter returned if the UIExtensionAbility call terminateSelfWithResult.  |
 

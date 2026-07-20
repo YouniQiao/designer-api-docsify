@@ -22,11 +22,11 @@ This API is a synchronous function and is applicable to simple service logic. If
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| acceptableInfo | DataLoadInfo | No | Data type and quantity to receive. The default value is empty. |
+| acceptableInfo | [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | No | Data type and quantity to receive. The default value is empty.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| UnifiedData \| null | Returns **UnifiedData** or **null** when the processing function for lazy dataloading is triggered. |
+| [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) \| null | Returns **UnifiedData** or **null** when the processing function for lazy data loading is triggered.  |
 

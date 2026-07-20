@@ -25,7 +25,7 @@ Defines the constructor of GridContainer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | GridContainerOptions | No |  |
+| value | [GridContainerOptions](arkts-arkui-gridcontaineroptions-i.md) | No |  |
 
 ## Summary
 

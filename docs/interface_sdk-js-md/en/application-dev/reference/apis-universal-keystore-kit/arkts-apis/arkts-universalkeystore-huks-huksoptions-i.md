@@ -40,7 +40,7 @@ properties?: Array<HuksParam>
 
 Tag.
 
-**Type:** Array<HuksParam>
+**Type:** Array&lt;HuksParam&gt;
 
 **Since:** 8
 

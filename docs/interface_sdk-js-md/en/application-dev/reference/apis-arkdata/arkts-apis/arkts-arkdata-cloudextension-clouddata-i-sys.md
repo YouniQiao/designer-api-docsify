@@ -60,7 +60,7 @@ values: Array<Record<string, CloudType>>
 
 Array of data to be queried, which consists of the data value and ExtensionValue.
 
-**Type:** Array<Record<string, CloudType>>
+**Type:** Array&lt;Record&lt;string, CloudType&gt;&gt;
 
 **Since:** 11
 

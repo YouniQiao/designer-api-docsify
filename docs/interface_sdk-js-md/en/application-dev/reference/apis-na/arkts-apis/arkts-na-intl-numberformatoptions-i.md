@@ -8,7 +8,7 @@
 currency?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-NumberFormatOptions-currency?: string | undefined--><!--Device-NumberFormatOptions-currency?: string | undefined-End-->
 
@@ -18,7 +18,7 @@ currency?: string | undefined
 currencySign?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-NumberFormatOptions-currencySign?: string | undefined--><!--Device-NumberFormatOptions-currencySign?: string | undefined-End-->
 
@@ -28,7 +28,7 @@ currencySign?: string | undefined
 localeMatcher?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-NumberFormatOptions-localeMatcher?: string | undefined--><!--Device-NumberFormatOptions-localeMatcher?: string | undefined-End-->
 
@@ -38,7 +38,7 @@ localeMatcher?: string | undefined
 maximumFractionDigits?: number | undefined
 ```
 
-**Type:** number | undefined
+**Type:** number \| undefined
 
 <!--Device-NumberFormatOptions-maximumFractionDigits?: number | undefined--><!--Device-NumberFormatOptions-maximumFractionDigits?: number | undefined-End-->
 
@@ -48,7 +48,7 @@ maximumFractionDigits?: number | undefined
 maximumSignificantDigits?: number | undefined
 ```
 
-**Type:** number | undefined
+**Type:** number \| undefined
 
 <!--Device-NumberFormatOptions-maximumSignificantDigits?: number | undefined--><!--Device-NumberFormatOptions-maximumSignificantDigits?: number | undefined-End-->
 
@@ -58,7 +58,7 @@ maximumSignificantDigits?: number | undefined
 minimumFractionDigits?: number | undefined
 ```
 
-**Type:** number | undefined
+**Type:** number \| undefined
 
 <!--Device-NumberFormatOptions-minimumFractionDigits?: number | undefined--><!--Device-NumberFormatOptions-minimumFractionDigits?: number | undefined-End-->
 
@@ -68,7 +68,7 @@ minimumFractionDigits?: number | undefined
 minimumIntegerDigits?: number | undefined
 ```
 
-**Type:** number | undefined
+**Type:** number \| undefined
 
 <!--Device-NumberFormatOptions-minimumIntegerDigits?: number | undefined--><!--Device-NumberFormatOptions-minimumIntegerDigits?: number | undefined-End-->
 
@@ -78,7 +78,7 @@ minimumIntegerDigits?: number | undefined
 minimumSignificantDigits?: number | undefined
 ```
 
-**Type:** number | undefined
+**Type:** number \| undefined
 
 <!--Device-NumberFormatOptions-minimumSignificantDigits?: number | undefined--><!--Device-NumberFormatOptions-minimumSignificantDigits?: number | undefined-End-->
 
@@ -88,7 +88,7 @@ minimumSignificantDigits?: number | undefined
 numberingSystem?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-NumberFormatOptions-numberingSystem?: string | undefined--><!--Device-NumberFormatOptions-numberingSystem?: string | undefined-End-->
 
@@ -98,7 +98,7 @@ numberingSystem?: string | undefined
 roundingIncrement?: number | undefined
 ```
 
-**Type:** number | undefined
+**Type:** number \| undefined
 
 <!--Device-NumberFormatOptions-roundingIncrement?: number | undefined--><!--Device-NumberFormatOptions-roundingIncrement?: number | undefined-End-->
 
@@ -108,7 +108,7 @@ roundingIncrement?: number | undefined
 roundingMode?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-NumberFormatOptions-roundingMode?: string | undefined--><!--Device-NumberFormatOptions-roundingMode?: string | undefined-End-->
 
@@ -118,7 +118,7 @@ roundingMode?: string | undefined
 roundingPriority?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-NumberFormatOptions-roundingPriority?: string | undefined--><!--Device-NumberFormatOptions-roundingPriority?: string | undefined-End-->
 
@@ -128,7 +128,7 @@ roundingPriority?: string | undefined
 style?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-NumberFormatOptions-style?: string | undefined--><!--Device-NumberFormatOptions-style?: string | undefined-End-->
 
@@ -138,7 +138,7 @@ style?: string | undefined
 useGrouping?: boolean | undefined
 ```
 
-**Type:** boolean | undefined
+**Type:** boolean \| undefined
 
 <!--Device-NumberFormatOptions-useGrouping?: boolean | undefined--><!--Device-NumberFormatOptions-useGrouping?: boolean | undefined-End-->
 

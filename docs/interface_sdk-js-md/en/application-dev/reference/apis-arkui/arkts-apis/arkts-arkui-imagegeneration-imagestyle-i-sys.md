@@ -24,7 +24,7 @@ icon: image.PixelMap | string | Resource
 
 The style icon information which will display in style list.
 
-**Type:** image.PixelMap | string | Resource
+**Type:** image.PixelMap \| string \| Resource
 
 **Since:** 23
 

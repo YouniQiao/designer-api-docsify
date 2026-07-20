@@ -198,7 +198,7 @@ wants?: Array<ShortcutWant>
 
 A collection of target Wants information defined within the shortcut.
 
-**Type:** Array<ShortcutWant>
+**Type:** Array&lt;ShortcutWant&gt;
 
 **Since:** 20
 

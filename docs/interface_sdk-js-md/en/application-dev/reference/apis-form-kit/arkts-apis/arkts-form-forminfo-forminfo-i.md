@@ -78,7 +78,7 @@ customizeData: Record<string, string>
 
 Obtains the custom data defined in this form.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 9
 
@@ -330,7 +330,7 @@ supportDimensions: Array<number>
 
 Obtains the grid styles supported by this form.The minimum length is 1, refer to {@link formInfo.FormDimension}.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 
@@ -348,7 +348,7 @@ supportedShapes: Array<number>
 
 Obtains the shape supported by this form.The minimum length is 1, refer to {@link formInfo.FormShape}.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
 

@@ -24,7 +24,7 @@ autoUpgradePeriods: Array<UpgradePeriod>
 
 自动升级时间段，当需要在特定时间段内自动升级时传入此参数(如夜间时段)，此参数为可选参数。不传入此参数时默认为空数组[]，表示不限制自动升级时间段，可在任意时间自动升级。
 
-**类型：** Array<UpgradePeriod>
+**类型：** Array&lt;UpgradePeriod&gt;
 
 **起始版本：** 9
 

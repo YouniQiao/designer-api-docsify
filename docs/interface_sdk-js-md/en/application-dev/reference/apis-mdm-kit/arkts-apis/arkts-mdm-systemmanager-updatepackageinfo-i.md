@@ -58,7 +58,7 @@ packages: Array<Package>
 
 Details about the system update packages.
 
-**Type:** Array<Package>
+**Type:** Array&lt;Package&gt;
 
 **Since:** 12
 

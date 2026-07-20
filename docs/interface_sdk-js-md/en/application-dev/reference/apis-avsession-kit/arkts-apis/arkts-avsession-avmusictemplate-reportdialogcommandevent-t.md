@@ -18,6 +18,6 @@ The report dialog command event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | DialogControlType | Yes | type |
-| buttonInfo | DialogInfo | Yes | button info |
+| type | [DialogControlType](arkts-avsession-avmusictemplate-dialogcontroltype-t.md) | Yes | type  |
+| buttonInfo | [DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md) | Yes | button info  |
 

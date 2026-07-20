@@ -24,7 +24,7 @@ trustedPairedDevices: Array<TrustedPairedDevice>
 
 The list of cloud pair devices.
 
-**Type:** Array<TrustedPairedDevice>
+**Type:** Array&lt;TrustedPairedDevice&gt;
 
 **Since:** 15
 

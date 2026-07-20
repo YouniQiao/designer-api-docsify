@@ -58,7 +58,7 @@ ratioLimits: Array<RatioLimit>
 
 Aspect ratio range of the float view.
 
-**Type:** Array<RatioLimit>
+**Type:** Array&lt;RatioLimit&gt;
 
 **Since:** 26.0.0
 

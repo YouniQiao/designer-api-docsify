@@ -20,11 +20,11 @@ Defines the attribute decorator, which is used to decorate attributes of the cus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | TypeConstructor&lt;T&gt; | Yes | Type of the class property. |
+| type | [TypeConstructor](arkts-arkui-arkui-statemanagement-typeconstructor-i.md)&lt;T&gt; | Yes | Type of the class property.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PropertyDecorator | Property decorator. |
+| [PropertyDecorator](../../apis-na/arkts-apis/arkts-na-propertydecorator-t.md) | Property decorator.  |
 

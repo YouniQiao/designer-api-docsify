@@ -148,7 +148,7 @@ supportedDrmCapabilities?: Array<string>
 
 The drm capability supported by current device, each drm is represented by uuid.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 
@@ -184,7 +184,7 @@ supportedPullClients?: Array<number>
 
 Whether the device supports pull-end playback, including a collection of pull-end client IDs.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 20
 

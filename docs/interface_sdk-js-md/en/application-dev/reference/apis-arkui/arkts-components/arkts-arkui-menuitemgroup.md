@@ -33,7 +33,7 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | MenuItemGroupOptions | No | Header and footer of the menu item group. |
+| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | No | Header and footer of the menu item group.  |
 
 ## Summary
 

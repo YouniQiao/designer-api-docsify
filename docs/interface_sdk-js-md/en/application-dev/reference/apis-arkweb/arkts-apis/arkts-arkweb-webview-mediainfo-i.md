@@ -22,7 +22,7 @@ attributes: Record<string, string>
 
 Attributes in **<video>** or **<audio>**.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 12
 
@@ -92,7 +92,7 @@ headers: Record<string, string>
 
 HTTP headers that need to be included in the player's request for media resources.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 12
 

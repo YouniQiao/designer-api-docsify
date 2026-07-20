@@ -20,6 +20,6 @@ Called when the search icon, search button, or soft keyboard search button is cl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchContent | string | Yes | Current text input. |
-| event | SubmitEvent | No | Submit event. |
+| searchContent | string | Yes | Current text input.  |
+| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | No | Submit event.  |
 

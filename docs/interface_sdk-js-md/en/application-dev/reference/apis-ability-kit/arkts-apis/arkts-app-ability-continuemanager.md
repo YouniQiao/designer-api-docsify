@@ -20,8 +20,8 @@ import { continueManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-ability-continuemanager-off-f.md#off-1) | Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
-| [on](arkts-ability-continuemanager-on-f.md#on-1) | Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
+| [off](arkts-ability-continuemanager-off-f.md#off) | Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
+| [on](arkts-ability-continuemanager-on-f.md#on) | Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
 
 ### Interfaces
 

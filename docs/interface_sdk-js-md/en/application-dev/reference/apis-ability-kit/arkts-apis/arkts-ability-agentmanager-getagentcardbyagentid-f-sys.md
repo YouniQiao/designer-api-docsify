@@ -6,6 +6,7 @@
 import { agentManager } from '@kit.AbilityKit';
 ```
 
+<a id="getagentcardbyagentid"></a>
 ## getAgentCardByAgentId
 
 ```TypeScript
@@ -37,7 +38,7 @@ Gets the AgentCard within specified agent id.
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<AgentCard> | Returns the specified AgentCard. |
+| Promise&lt;AgentCard&gt; | Returns the specified AgentCard. |
 
 **Error codes:**
 

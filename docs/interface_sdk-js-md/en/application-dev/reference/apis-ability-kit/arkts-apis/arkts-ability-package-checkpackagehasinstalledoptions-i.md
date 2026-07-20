@@ -46,7 +46,7 @@ complete?: () => void
 
 Called when API call is complete.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -64,7 +64,7 @@ fail?: (data: any, code: number) => void
 
 Called when API call has failed.
 
-**Type:** (data: any, code: number) => void
+**Type:** (data: any, code: number) =&gt; void
 
 **Since:** 3
 
@@ -82,7 +82,7 @@ success?: (data: CheckPackageHasInstalledResponse) => void
 
 Called when API call is successful.
 
-**Type:** (data: CheckPackageHasInstalledResponse) => void
+**Type:** (data: CheckPackageHasInstalledResponse) =&gt; void
 
 **Since:** 3
 

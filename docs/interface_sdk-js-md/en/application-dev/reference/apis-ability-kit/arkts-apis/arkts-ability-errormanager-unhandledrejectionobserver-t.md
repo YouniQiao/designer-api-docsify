@@ -18,6 +18,6 @@ Defines an observer to capture the cause of a rejected promise.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | Error \| any | Yes | Generally, the value is of the **Error** type, indicating the reason for rejection. |
-| promise | Promise&lt;any&gt; | Yes | Rejected promise. |
+| reason | Error \| any | Yes | Generally, the value is of the **Error** type, indicating the reason for rejection.  |
+| promise | Promise&lt;any&gt; | Yes | Rejected promise.  |
 

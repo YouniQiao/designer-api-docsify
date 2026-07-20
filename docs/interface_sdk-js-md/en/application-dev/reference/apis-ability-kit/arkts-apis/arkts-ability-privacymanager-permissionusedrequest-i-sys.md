@@ -144,7 +144,7 @@ permissionNames?: Array<Permissions>
 
 Set of permissions to query.Default value: Empty string. Means querying usage records of all permissions.
 
-**Type:** Array<Permissions>
+**Type:** Array&lt;Permissions&gt;
 
 **Since:** 9
 

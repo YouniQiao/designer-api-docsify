@@ -22,6 +22,6 @@ On scroll callback using in scrollable onDidScroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scrollOffset | number | Yes | offset this frame did scroll. |
-| scrollState | ScrollState | Yes | current scroll state. |
+| scrollOffset | number | Yes | offset this frame did scroll.  |
+| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | current scroll state.  |
 

@@ -84,7 +84,7 @@ manufactureData: Array<ManufactureData>
 
 The specified manufacturer data list to this advertisement
 
-**Type:** Array<ManufactureData>
+**Type:** Array&lt;ManufactureData&gt;
 
 **Since:** 10
 
@@ -104,7 +104,7 @@ serviceData: Array<ServiceData>
 
 The specified service data list to this advertisement
 
-**Type:** Array<ServiceData>
+**Type:** Array&lt;ServiceData&gt;
 
 **Since:** 10
 
@@ -124,7 +124,7 @@ serviceUuids: Array<string>
 
 The specified service UUID list to this advertisement
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 

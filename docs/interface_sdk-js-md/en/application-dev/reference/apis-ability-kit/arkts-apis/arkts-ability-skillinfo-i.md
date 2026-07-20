@@ -96,7 +96,7 @@ readonly permissions?: Array<string>
 
 Indicates the permissions required by the skill.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -116,7 +116,7 @@ readonly requestPermissions?: Array<string>
 
 Indicates the permissions declared under requestPermissions in the module manifest.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -196,7 +196,7 @@ readonly srcEntries?: Array<string>
 
 Indicates the source entries of the skill.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

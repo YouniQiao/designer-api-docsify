@@ -22,7 +22,7 @@ references?: Array<Reference>
 
 Specifies the reference relationships between tables.
 
-**Type:** Array<Reference>
+**Type:** Array&lt;Reference&gt;
 
 **Since:** 11
 

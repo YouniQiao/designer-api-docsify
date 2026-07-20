@@ -53,7 +53,7 @@ Creates a **Flex** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FlexOptions | No | Parameters of the child components in the **Flex** component. |
+| value | [FlexOptions](arkts-arkui-flexoptions-i.md) | No | Parameters of the child components in the **Flex** component.  |
 
 ## Summary
 

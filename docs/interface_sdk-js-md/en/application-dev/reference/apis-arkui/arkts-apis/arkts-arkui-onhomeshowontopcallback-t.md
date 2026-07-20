@@ -20,5 +20,5 @@ Represents the callback invoked when the home page is displayed at the top of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | ID of the page displayed at the top of the stack. |
+| name | string | Yes | ID of the page displayed at the top of the stack.  |
 

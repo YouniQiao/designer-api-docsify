@@ -42,7 +42,7 @@ domains: Array<string>
 
 Domains.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 

@@ -37,7 +37,7 @@ Creates a pattern lock component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | PatternLockController | No | Controller of a component to reset the component status. |
+| controller | [PatternLockController](arkts-arkui-patternlockcontroller-c.md) | No | Controller of a component to reset the component status.  |
 
 ## Summary
 

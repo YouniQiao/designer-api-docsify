@@ -38,7 +38,7 @@ certs?: Array<HuksCryptoExtensionCertInfo>
 
 The cert array.
 
-**Type:** Array<HuksCryptoExtensionCertInfo>
+**Type:** Array&lt;HuksCryptoExtensionCertInfo&gt;
 
 **Since:** 22
 
@@ -104,7 +104,7 @@ property?: Array<huksExternalCrypto.HuksExternalCryptoParam>
 
 Returned property info.
 
-**Type:** Array<huksExternalCrypto.HuksExternalCryptoParam>
+**Type:** Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt;
 
 **Since:** 22
 

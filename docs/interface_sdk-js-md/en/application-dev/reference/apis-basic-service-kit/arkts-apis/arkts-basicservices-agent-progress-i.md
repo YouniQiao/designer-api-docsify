@@ -76,7 +76,7 @@ readonly sizes: Array<number>
 
 Size of a file in a task, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **sizes** is treated as **-1**.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 10
 

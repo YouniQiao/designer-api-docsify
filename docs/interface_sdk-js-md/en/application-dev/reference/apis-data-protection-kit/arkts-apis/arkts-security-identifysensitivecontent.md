@@ -1,6 +1,6 @@
 # @ohos.security.identifySensitiveContent
 
-This module identifies sensitive information in a specified file based on the input [Policy](identifySensitiveContent.policy).The system matches the file content against the provided [Policy](identifySensitiveContent.policy) (including sensitive labels,keyword sets, and regular expressions) and returns the matched sensitive content.
+This module identifies sensitive information in a specified file based on the input [Policy](arkts-dataprotection-identifysensitivecontent-policy-i.md).The system matches the file content against the provided [Policy](arkts-dataprotection-identifysensitivecontent-policy-i.md) (including sensitive labels,keyword sets, and regular expressions) and returns the matched sensitive content.
 
 **Since:** 21
 
@@ -20,7 +20,7 @@ import { identifySensitiveContent } from '@kit.DataProtectionKit';
 
 | Name | Description |
 | --- | --- |
-| [scanFile](arkts-dataprotection-identifysensitivecontent-scanfile-f.md#scanfile-1) | Identifies sensitive content in a specified file based on the configured policy and returns the identified result array,including the matched sensitivity labels, matched content, and number of matched items. This API uses a promise to return the result. |
+| [scanFile](arkts-dataprotection-identifysensitivecontent-scanfile-f.md#scanfile) | Identifies sensitive content in a specified file based on the configured policy and returns the identified result array,including the matched sensitivity labels, matched content, and number of matched items. This API uses a promise to return the result. |
 
 ### Interfaces
 

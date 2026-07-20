@@ -22,11 +22,11 @@ Defines the callback type used in accessibility action intercept.The value of ac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | AccessibilityAction | Yes | the enum of accessibility action type. |
+| action | [AccessibilityAction](arkts-arkui-accessibilityaction-e.md) | Yes | the enum of accessibility action type.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AccessibilityActionInterceptResult | the result of continuing to execute the action or interrupting it orbubbling up |
+| [AccessibilityActionInterceptResult](arkts-arkui-accessibilityactioninterceptresult-e.md) | the result of continuing to execute the action or interrupting it or bubbling up  |
 

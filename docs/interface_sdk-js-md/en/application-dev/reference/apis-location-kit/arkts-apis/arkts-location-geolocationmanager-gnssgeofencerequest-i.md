@@ -54,7 +54,7 @@ geofenceTransitionCallback: AsyncCallback<GeofenceTransition>
 
 Indicates the callback for reporting the geofence transition status.
 
-**Type:** AsyncCallback<GeofenceTransition>
+**Type:** AsyncCallback&lt;GeofenceTransition&gt;
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ monitorTransitionEvents: Array<GeofenceTransitionEvent>
 
 Indicates geofence transition status monitored.
 
-**Type:** Array<GeofenceTransitionEvent>
+**Type:** Array&lt;GeofenceTransitionEvent&gt;
 
 **Since:** 12
 
@@ -102,7 +102,7 @@ notifications?: Array<NotificationRequest>
 
 Indicates the geofence notifications to publish.
 
-**Type:** Array<NotificationRequest>
+**Type:** Array&lt;NotificationRequest&gt;
 
 **Since:** 12
 

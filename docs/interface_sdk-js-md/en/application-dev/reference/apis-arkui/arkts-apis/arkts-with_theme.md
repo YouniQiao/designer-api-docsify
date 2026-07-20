@@ -6,13 +6,13 @@
 
 | Name | Description |
 | --- | --- |
-| [WithThemeAttribute](arkts-arkui-with-theme-withthemeattribute-c.md) | The [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are not supported.The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are not supported. |
+| [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md) | The [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are not supported.  The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are not supported. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [WithThemeOptions](arkts-arkui-with-theme-withthemeoptions-i.md) | Defines the default theme and color mode for components within the **WithTheme** scope. |
+| [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) | Defines the default theme and color mode for components within the **WithTheme** scope. |
 
 ### Types
 

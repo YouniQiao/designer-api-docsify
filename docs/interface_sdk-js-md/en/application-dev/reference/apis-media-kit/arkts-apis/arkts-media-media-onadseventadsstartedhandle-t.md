@@ -18,6 +18,6 @@ Describes the callback function of the ad content playback start event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adsId | string | Yes | ID of the ad resource that is being played. |
-| duration | int | Yes | Playing duration of the advertisement, in milliseconds.<br>The value should be an integer. |
+| adsId | string | Yes | ID of the ad resource that is being played.  |
+| duration | number | Yes | Playing duration of the advertisement, in milliseconds. <br>The value should be an integer.  |
 

@@ -23,8 +23,8 @@ import { functionManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [invokeFunction](arkts-ability-functionmanager-invokefunction-f-sys.md#invokefunction-1) | Invoke a function by functionNamespace and functionName. |
-| [queryFunctions](arkts-ability-functionmanager-queryfunctions-f-sys.md#queryfunctions-1) | Query all available functions. |
+| [invokeFunction](arkts-ability-functionmanager-invokefunction-f-sys.md#invokefunction) | Invoke a function by functionNamespace and functionName. |
+| [queryFunctions](arkts-ability-functionmanager-queryfunctions-f-sys.md#queryfunctions) | Query all available functions. |
 <!--DelEnd-->
 
 <!--Del-->

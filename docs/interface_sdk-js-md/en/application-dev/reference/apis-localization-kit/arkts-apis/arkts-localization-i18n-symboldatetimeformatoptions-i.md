@@ -24,7 +24,7 @@ amPMSymbol?: string[] | undefined
 
 AM and PM symbol of date time period part, such as "PM" of "2:23 PM". The parameter array must be greater than 2, If greater than 2, the first two will be selected.
 
-**Type:** string[] | undefined
+**Type:** string[] \| undefined
 
 **Since:** 26.0.0
 

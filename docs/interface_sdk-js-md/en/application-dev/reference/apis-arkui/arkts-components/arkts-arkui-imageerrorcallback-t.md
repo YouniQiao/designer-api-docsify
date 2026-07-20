@@ -22,5 +22,5 @@ This event is not triggered if the parameter type of the component is [AnimatedD
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | ImageError | Yes | Object returned by the callback triggered when an exception occurs during imageloading. |
+| error | [ImageError](arkts-arkui-imageerror-i.md) | Yes | Object returned by the callback triggered when an exception occurs during image loading. |
 

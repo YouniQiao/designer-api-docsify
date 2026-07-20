@@ -20,11 +20,11 @@ import { eap } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [logOffEthEap](arkts-network-eap-logoffetheap-f.md#logoffetheap-1) | Check whether the specified network is active. |
-| [regCustomEapHandler](arkts-network-eap-regcustomeaphandler-f.md#regcustomeaphandler-1) | Customize eap packets by callback |
-| [replyCustomEapData](arkts-network-eap-replycustomeapdata-f.md#replycustomeapdata-1) | send Customized eap packets to system |
-| [startEthEap](arkts-network-eap-startetheap-f.md#startetheap-1) | Set the specified network interface parameters. |
-| [unregCustomEapHandler](arkts-network-eap-unregcustomeaphandler-f.md#unregcustomeaphandler-1) | unreg the callback of eap packet customization. |
+| [logOffEthEap](arkts-network-eap-logoffetheap-f.md#logoffetheap) | Check whether the specified network is active. |
+| [regCustomEapHandler](arkts-network-eap-regcustomeaphandler-f.md#regcustomeaphandler) | Customize eap packets by callback |
+| [replyCustomEapData](arkts-network-eap-replycustomeapdata-f.md#replycustomeapdata) | send Customized eap packets to system |
+| [startEthEap](arkts-network-eap-startetheap-f.md#startetheap) | Set the specified network interface parameters. |
+| [unregCustomEapHandler](arkts-network-eap-unregcustomeaphandler-f.md#unregcustomeaphandler) | unreg the callback of eap packet customization. |
 
 ### Interfaces
 

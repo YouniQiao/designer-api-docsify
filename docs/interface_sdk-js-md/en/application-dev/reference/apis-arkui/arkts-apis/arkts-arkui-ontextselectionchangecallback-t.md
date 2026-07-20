@@ -18,6 +18,6 @@ Callback when the position of the cursor entered in the search box changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | Indicates the start position of the text selection area. |
-| selectionEnd | number | Yes | Indicates end position of the text selection area. |
+| selectionStart | number | Yes | Indicates the start position of the text selection area.  |
+| selectionEnd | number | Yes | Indicates end position of the text selection area.  |
 

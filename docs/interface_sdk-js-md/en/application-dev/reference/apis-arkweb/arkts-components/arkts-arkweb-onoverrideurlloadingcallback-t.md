@@ -18,11 +18,11 @@ The callback of onOverrideUrlLoading.Should not call WebviewController.loadUrl w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| webResourceRequest | WebResourceRequest | Yes | callback information of onOverrideUrlLoading. |
+| webResourceRequest | [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md) | Yes | callback information of onOverrideUrlLoading.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | - Returning true causes the current Web to abort loading the URL,false causes the Web to continue loading the url as usual. |
+| boolean | - Returning true causes the current Web to abort loading the URL, false causes the Web to continue loading the url as usual.  |
 

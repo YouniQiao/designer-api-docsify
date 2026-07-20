@@ -22,7 +22,7 @@ content: string | Array<number>
 
 If the content is a string, this is a short message. If the content is a byte array, this is a data message.
 
-**Type:** string | Array<number>
+**Type:** string \| Array&lt;number&gt;
 
 **Since:** 6
 
@@ -38,7 +38,7 @@ deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 
 Indicates the callback invoked after the SMS message is delivered.
 
-**Type:** AsyncCallback<IDeliveryShortMessageCallback>
+**Type:** AsyncCallback&lt;IDeliveryShortMessageCallback&gt;
 
 **Since:** 6
 
@@ -86,7 +86,7 @@ sendCallback?: AsyncCallback<ISendShortMessageCallback>
 
 Indicates the callback invoked after the SMS message is sent.
 
-**Type:** AsyncCallback<ISendShortMessageCallback>
+**Type:** AsyncCallback&lt;ISendShortMessageCallback&gt;
 
 **Since:** 6
 

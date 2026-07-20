@@ -9,7 +9,8 @@
   - [createImageReceiver](arkts-image-image-createimagereceiver-f.md)
   - [createImageSource](arkts-image-image-createimagesource-f.md)
   - [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md)
-  - [createPicture](arkts-image-image-createpicture-f.md)<!--Del-->
+  - [createPicture](arkts-image-image-createpicture-f.md)
+  <!--Del-->
   - [createPictureByHdrAndSdrPixelMap(system api)](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md)<!--DelEnd-->
   - [createPictureFromParcel](arkts-image-image-createpicturefromparcel-f.md)
   - [createPixelMap](arkts-image-image-createpixelmap-f.md)
@@ -24,7 +25,8 @@
   - [createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md)
   - [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md)
   - [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md)
-  - [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md)<!--Del-->
+  - [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md)
+  <!--Del-->
   - [decomposeToPicture(system api)](arkts-image-image-decomposetopicture-f-sys.md)<!--DelEnd-->
   - [getImagePackerSupportedFormats](arkts-image-image-getimagepackersupportedformats-f.md)
   - [getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md)
@@ -43,14 +45,17 @@
   - [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md)
   - [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md)
   - [Component](arkts-image-image-component-i.md)
-  - [DecodingOptions](arkts-image-image-decodingoptions-i.md)<!--Del-->
+  - [DecodingOptions](arkts-image-image-decodingoptions-i.md)
+  <!--Del-->
   - [DecodingOptions(system api)](arkts-image-image-decodingoptions-i-sys.md)<!--DelEnd-->
   - [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md)
   - [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md)
-  - [GainmapChannel](arkts-image-image-gainmapchannel-i.md)<!--Del-->
+  - [GainmapChannel](arkts-image-image-gainmapchannel-i.md)
+  <!--Del-->
   - [GainmapParams(system api)](arkts-image-image-gainmapparams-i-sys.md)<!--DelEnd-->
   - [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md)
-  - [HdrComposeOptions](arkts-image-image-hdrcomposeoptions-i.md)<!--Del-->
+  - [HdrComposeOptions](arkts-image-image-hdrcomposeoptions-i.md)
+  <!--Del-->
   - [HdrDecomposeOptions(system api)](arkts-image-image-hdrdecomposeoptions-i-sys.md)<!--DelEnd-->
   - [HdrGainmapMetadata](arkts-image-image-hdrgainmapmetadata-i.md)
   - [HdrStaticMetadata](arkts-image-image-hdrstaticmetadata-i.md)
@@ -64,7 +69,8 @@
   - [ImageRawData](arkts-image-image-imagerawdata-i.md)
   - [ImageReceiver](arkts-image-image-imagereceiver-i.md)
   - [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md)
-  - [ImageSource](arkts-image-image-imagesource-i.md)<!--Del-->
+  - [ImageSource](arkts-image-image-imagesource-i.md)
+  <!--Del-->
   - [ImageSource(system api)](arkts-image-image-imagesource-i-sys.md)<!--DelEnd-->
   - [InitializationOptions](arkts-image-image-initializationoptions-i.md)
   - [Metadata](arkts-image-image-metadata-i.md)
@@ -104,8 +110,10 @@
   - [PackingDynamicRange](arkts-image-image-packingdynamicrange-e.md)
   - [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
   - [PngPropertyKey](arkts-image-image-pngpropertykey-e.md)
-  - [PropertyKey](arkts-image-image-propertykey-e.md)<!--Del-->
-  - [PropertyKey(system api)](arkts-image-image-propertykey-e-sys.md)<!--DelEnd--><!--Del-->
+  - [PropertyKey](arkts-image-image-propertykey-e.md)
+  <!--Del-->
+  - [PropertyKey(system api)](arkts-image-image-propertykey-e-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [ResolutionQuality(system api)](arkts-image-image-resolutionquality-e-sys.md)<!--DelEnd-->
   - [ScaleMode](arkts-image-image-scalemode-e.md)
   - [TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)

@@ -41,7 +41,7 @@ Creates a ListItem component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ListItemOptions | No |  |
+| value | [ListItemOptions](arkts-arkui-listitemoptions-i.md) | No |  |
 
 ## ListItem
 

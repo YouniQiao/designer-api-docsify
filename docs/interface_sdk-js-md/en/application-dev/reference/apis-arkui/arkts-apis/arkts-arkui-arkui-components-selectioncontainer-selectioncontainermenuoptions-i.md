@@ -22,7 +22,7 @@ onAppear?: Callback<string>
 
 Called when the selection menu appears.The callback parameter is the selected text concatenated in the visual order of Text components.
 
-**Type:** Callback<string>
+**Type:** Callback&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ onDisappear?: Callback<void>
 
 Called when the selection menu disappears.
 
-**Type:** Callback<void>
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ onMenuHide?: Callback<string>
 
 Called when the selection menu is hidden.The callback parameter is the selected text concatenated in the visual order of Text components.
 
-**Type:** Callback<string>
+**Type:** Callback&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -82,7 +82,7 @@ onMenuShow?: Callback<string>
 
 Called when the selection menu is displayed.The callback parameter is the selected text concatenated in the visual order of Text components.
 
-**Type:** Callback<string>
+**Type:** Callback&lt;string&gt;
 
 **Since:** 26.0.0
 

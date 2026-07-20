@@ -28,7 +28,7 @@ Creates a **GridCol** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | GridColOptions | No |  |
+| option | [GridColOptions](arkts-arkui-gridcoloptions-i.md) | No |  |
 
 ## Summary
 

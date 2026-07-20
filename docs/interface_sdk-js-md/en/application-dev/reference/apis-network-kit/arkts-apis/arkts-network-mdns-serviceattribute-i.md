@@ -40,7 +40,7 @@ value: Array<number>
 
 TXT record value.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 11
 

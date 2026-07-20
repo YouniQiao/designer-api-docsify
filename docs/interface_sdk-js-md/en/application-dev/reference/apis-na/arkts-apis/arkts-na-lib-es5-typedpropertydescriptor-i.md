@@ -28,7 +28,7 @@ enumerable?: boolean
 get?: () => T
 ```
 
-**Type:** () => T
+**Type:** () =&gt; T
 
 <!--Device-TypedPropertyDescriptor-get?: () => T--><!--Device-TypedPropertyDescriptor-get?: () => T-End-->
 
@@ -38,7 +38,7 @@ get?: () => T
 set?: (value: T) => void
 ```
 
-**Type:** (value: T) => void
+**Type:** (value: T) =&gt; void
 
 <!--Device-TypedPropertyDescriptor-set?: (value: T) => void--><!--Device-TypedPropertyDescriptor-set?: (value: T) => void-End-->
 

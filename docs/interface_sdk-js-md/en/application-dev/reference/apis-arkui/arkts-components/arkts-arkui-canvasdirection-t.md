@@ -18,7 +18,7 @@ Defines the current text direction. The value type is a union of the types liste
 
 | Type | Description |
 | --- | --- |
-| "inherit" | Inherits the text direction set in the general attributes of the canvascomponent. If the **direction** attribute is not set on the canvas component, the system textdirection is used. |
+| "inherit" | Inherits the text direction set in the general attributes of the canvas component. If the **direction** attribute is not set on the canvas component, the system text direction is used. |
 | "ltr" | The text direction is from left to right. |
 | "rtl" | The text direction is from right to left. |
 

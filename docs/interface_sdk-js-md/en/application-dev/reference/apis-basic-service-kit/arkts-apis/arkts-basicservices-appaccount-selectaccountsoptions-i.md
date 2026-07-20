@@ -22,7 +22,7 @@ allowedAccounts?: Array<AppAccountInfo>
 
 Array of allowed accounts. By default, no value is passed in.
 
-**Type:** Array<AppAccountInfo>
+**Type:** Array&lt;AppAccountInfo&gt;
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ allowedOwners?: Array<string>
 
 Array of the owners of the allowed accounts. By default, no value is passed in.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ requiredLabels?: Array<string>
 
 Labels of the authenticator. By default, no value is passed in.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 

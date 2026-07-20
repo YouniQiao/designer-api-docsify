@@ -6,6 +6,8 @@ Declare ToolBarOptions use in ToolBar
 
 **Since:** 18
 
+**Decorator:** @Observed
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.

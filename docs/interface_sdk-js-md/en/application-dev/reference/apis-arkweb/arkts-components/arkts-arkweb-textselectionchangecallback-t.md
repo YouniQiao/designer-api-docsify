@@ -16,5 +16,5 @@ Defines a callback triggered when the text selection changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionText | string | Yes | Selected text. |
+| selectionText | string | Yes | Selected text.  |
 

@@ -42,7 +42,7 @@ networkSearchResult: Array<NetworkInformation>
 
 Obtains the network search results.
 
-**Type:** Array<NetworkInformation>
+**Type:** Array&lt;NetworkInformation&gt;
 
 **Since:** 6
 

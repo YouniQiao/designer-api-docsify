@@ -40,7 +40,7 @@ exclusionList?: Array<string>
 
 Exclusion list for proxy servers.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

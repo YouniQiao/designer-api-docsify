@@ -22,5 +22,5 @@ Information about the check box group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | CheckboxGroupResult | Yes | Information about the check box group. |
+| value | [CheckboxGroupResult](arkts-arkui-checkboxgroupresult-i.md) | Yes | Information about the check box group.  |
 

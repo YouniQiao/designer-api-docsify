@@ -18,12 +18,12 @@ Describes the mapping function of the ArkTS typed array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FromElementType | Yes | Element that is currently traversed and used to construct an ArkTS typed array. |
-| index | number | Yes | Index of the element. |
+| value | FromElementType | Yes | Element that is currently traversed and used to construct an ArkTS typed array.  |
+| index | number | Yes | Index of the element.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ToElementType | The transformed value. |
+| ToElementType | The transformed value.  |
 

@@ -24,7 +24,7 @@ images: Array<ImageItem>
 
 image information.
 
-**Type:** Array<ImageItem>
+**Type:** Array&lt;ImageItem&gt;
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ shapePath: Array<common2D.Point>
 
 Indicates the path points information.
 
-**Type:** Array<common2D.Point>
+**Type:** Array&lt;common2D.Point&gt;
 
 **Since:** 23
 

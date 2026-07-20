@@ -24,7 +24,7 @@ audioDeviceList: Array<AudioDevice>
 
 Indicates the list of support audio device.
 
-**Type:** Array<AudioDevice>
+**Type:** Array&lt;AudioDevice&gt;
 
 **Since:** 10
 

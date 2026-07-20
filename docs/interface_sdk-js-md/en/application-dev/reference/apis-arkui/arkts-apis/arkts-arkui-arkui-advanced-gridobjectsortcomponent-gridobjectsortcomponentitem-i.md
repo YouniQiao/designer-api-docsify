@@ -24,7 +24,7 @@ Data ID, which must be unique.
 
 The default value is an empty string.
 
-**Type:** number | string
+**Type:** number \| string
 
 **Since:** 11
 

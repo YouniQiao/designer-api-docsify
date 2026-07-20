@@ -22,7 +22,7 @@ action: (index: number) => void
 
 Mandatory. Callback invoked when the pattern option changes.
 
-**Type:** (index: number) => void
+**Type:** (index: number) =&gt; void
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ patterns: Array<Pattern>
 
 Mandatory. Resource of the pattern option.
 
-**Type:** Array<Pattern>
+**Type:** Array&lt;Pattern&gt;
 
 **Since:** 11
 

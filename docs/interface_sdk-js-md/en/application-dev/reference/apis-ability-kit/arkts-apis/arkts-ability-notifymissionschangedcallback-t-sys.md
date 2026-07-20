@@ -20,5 +20,5 @@ Callback function on mission changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Indicates the deviceId mission changed. |
+| deviceId | string | Yes | Indicates the deviceId mission changed.  |
 

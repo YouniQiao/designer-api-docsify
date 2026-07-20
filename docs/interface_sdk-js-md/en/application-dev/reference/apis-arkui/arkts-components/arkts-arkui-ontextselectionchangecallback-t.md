@@ -20,6 +20,6 @@ Defines the callback for text selection changes or caret position changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | Start position of the selected text. The start position of text is 0. |
-| selectionEnd | number | Yes | End position of the selected text. |
+| selectionStart | number | Yes | Start position of the selected text. The start position of text is 0.  |
+| selectionEnd | number | Yes | End position of the selected text.  |
 

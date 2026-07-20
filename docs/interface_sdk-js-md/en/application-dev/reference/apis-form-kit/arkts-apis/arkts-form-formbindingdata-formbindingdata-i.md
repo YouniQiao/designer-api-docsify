@@ -40,7 +40,7 @@ proxies?: Array<ProxyData>
 
 proxies for updating.
 
-**Type:** Array<ProxyData>
+**Type:** Array&lt;ProxyData&gt;
 
 **Since:** 10
 

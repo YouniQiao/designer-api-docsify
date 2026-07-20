@@ -20,14 +20,14 @@ import { serial } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist-1) | Obtains the serial port list. This API returns the result asynchronously through a promise. |
+| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist) | Obtains the serial port list. This API returns the result asynchronously through a promise. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addPortAuthorization](arkts-basicservices-serial-addportauthorization-f-sys.md#addportauthorization-1) | Adds the permission for applications to access the serial port.This API is open only to system applications that display a pop-up window for serial port authorization. |
+| [addPortAuthorization](arkts-basicservices-serial-addportauthorization-f-sys.md#addportauthorization) | Adds the permission for applications to access the serial port.This API is open only to system applications that display a pop-up window for serial port authorization. |
 <!--DelEnd-->
 
 ### Interfaces

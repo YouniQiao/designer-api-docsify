@@ -18,6 +18,6 @@ Callback triggered when the size of the input method panel changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | window.Size | Yes | Panel size. |
-| keyboardArea | KeyboardArea | Yes | Size of the keyboard area. |
+| size | window.Size | Yes | Panel size.  |
+| keyboardArea | [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) | Yes | Size of the keyboard area.  |
 

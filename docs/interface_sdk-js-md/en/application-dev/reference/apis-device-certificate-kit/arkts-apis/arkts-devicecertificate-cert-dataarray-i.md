@@ -22,7 +22,7 @@ data: Array<Uint8Array>
 
 Indicates the content of the data array.
 
-**Type:** Array<Uint8Array>
+**Type:** Array&lt;Uint8Array&gt;
 
 **Since:** 9
 

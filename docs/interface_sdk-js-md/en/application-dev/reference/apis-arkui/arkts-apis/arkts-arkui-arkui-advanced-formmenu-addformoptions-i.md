@@ -22,7 +22,7 @@ callback?: AsyncCallback<string>
 
 The callback is used to return the form id.
 
-**Type:** AsyncCallback<string>
+**Type:** AsyncCallback&lt;string&gt;
 
 **Since:** 12
 

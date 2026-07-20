@@ -7,7 +7,7 @@
 
 | Name | Description |
 | --- | --- |
-| [extendViewModel](arkts-arkui-viewmodel-extendviewmodel-f-sys.md#extendviewmodel-1) |  |
+| [extendViewModel](arkts-arkui-viewmodel-extendviewmodel-f-sys.md#extendviewmodel) |  |
 <!--DelEnd-->
 
 ### Interfaces
@@ -20,8 +20,8 @@
 | [ListElement](arkts-arkui-viewmodel-listelement-i.md) | List element |
 | [ListScrollToOptions](arkts-arkui-viewmodel-listscrolltooptions-i.md) | List scroll to options |
 | [Options](arkts-arkui-viewmodel-options-i.md) | Options type |
-| [PickerElement](arkts-arkui-viewmodel-pickerelement-i.md) | The &lt;picker&gt; component supports common, date, time, and multi-column text. |
-| [SwiperElement](arkts-arkui-viewmodel-swiperelement-i.md) | The &lt;swiper&gt; component provides a swiper container. |
+| [PickerElement](arkts-arkui-viewmodel-pickerelement-i.md) | The <picker> component supports common, date, time, and multi-column text. |
+| [SwiperElement](arkts-arkui-viewmodel-swiperelement-i.md) | The <swiper> component provides a swiper container. |
 | [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) | View model |
 
 <!--Del-->

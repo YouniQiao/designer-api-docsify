@@ -4,6 +4,8 @@ A picker view to show available streaming device list.
 
 **Since:** 10
 
+**Decorator:** @Component
+
 <!--Device-unnamed-declare struct AVCastPicker--><!--Device-unnamed-declare struct AVCastPicker-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -22,7 +24,7 @@ activeColor?: Color | number | string
 
 Assigns the color of picker component at active state.
 
-**Type:** Color | number | string
+**Type:** Color \| number \| string
 
 **Since:** 11
 
@@ -82,7 +84,7 @@ normalColor?: Color | number | string
 
 Assigns the color of picker component at normal state .
 
-**Type:** Color | number | string
+**Type:** Color \| number \| string
 
 **Since:** 11
 
@@ -102,7 +104,7 @@ onStateChange?: (state: AVCastPickerState) => void
 
 Picker state change callback.
 
-**Type:** (state: AVCastPickerState) => void
+**Type:** (state: AVCastPickerState) =&gt; void
 
 **Since:** 11
 

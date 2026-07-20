@@ -18,11 +18,11 @@ The settings change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settingItem | SettingItem | Yes | setting item |
+| settingItem | [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md) | Yes | setting item  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SettingItem&gt; | (SettingItem) returned through promise |
+| Promise&lt;SettingItem&gt; | (SettingItem) returned through promise  |
 

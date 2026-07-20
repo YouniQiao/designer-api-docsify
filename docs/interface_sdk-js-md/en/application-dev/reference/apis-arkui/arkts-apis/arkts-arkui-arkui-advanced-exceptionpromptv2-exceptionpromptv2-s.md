@@ -4,6 +4,8 @@ Declare struct ExceptionPromptV2 higher-order component.The exception prompt com
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ExceptionPromptV2--><!--Device-unnamed-export declare struct ExceptionPromptV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -65,6 +67,8 @@ ExceptionPromptV2 configuration.
 **Type:** PromptOptionsV2
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

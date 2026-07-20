@@ -22,7 +22,7 @@ sharedAlbumAssets: Array<SharedAlbumAsset>
 
 sharedAlbumAssets of the same type
 
-**Type:** Array<SharedAlbumAsset>
+**Type:** Array&lt;SharedAlbumAsset&gt;
 
 **Since:** 14
 
@@ -40,7 +40,7 @@ sharedExtraPhotoAssets: Array<SharedPhotoAsset>
 
 sharedExtraPhotoAssets of the same type
 
-**Type:** Array<SharedPhotoAsset>
+**Type:** Array&lt;SharedPhotoAsset&gt;
 
 **Since:** 14
 
@@ -58,7 +58,7 @@ sharedPhotoAssets: Array<SharedPhotoAsset>
 
 sharedPhotoAssets of the same type
 
-**Type:** Array<SharedPhotoAsset>
+**Type:** Array&lt;SharedPhotoAsset&gt;
 
 **Since:** 14
 

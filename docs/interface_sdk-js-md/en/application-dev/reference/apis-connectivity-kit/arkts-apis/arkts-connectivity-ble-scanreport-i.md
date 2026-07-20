@@ -42,7 +42,7 @@ scanResult: Array<ScanResult>
 
 Describes the contents of the scan results.
 
-**Type:** Array<ScanResult>
+**Type:** Array&lt;ScanResult&gt;
 
 **Since:** 15
 

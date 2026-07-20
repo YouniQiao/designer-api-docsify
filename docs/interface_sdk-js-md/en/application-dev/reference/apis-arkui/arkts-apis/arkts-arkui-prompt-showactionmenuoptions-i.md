@@ -40,7 +40,7 @@ complete?: () => void
 
 Called when the dialog box is closed.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 11
 
@@ -58,7 +58,7 @@ fail?: (errMsg: string) => void
 
 Called when the operation is cancelled.
 
-**Type:** (errMsg: string) => void
+**Type:** (errMsg: string) =&gt; void
 
 **Since:** 11
 
@@ -76,7 +76,7 @@ success?: (tapIndex: number, errMsg: string) => void
 
 Called when the dialog box is displayed.
 
-**Type:** (tapIndex: number, errMsg: string) => void
+**Type:** (tapIndex: number, errMsg: string) =&gt; void
 
 **Since:** 11
 

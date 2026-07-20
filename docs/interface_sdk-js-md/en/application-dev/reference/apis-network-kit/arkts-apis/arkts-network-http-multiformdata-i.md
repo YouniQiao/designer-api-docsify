@@ -38,7 +38,7 @@ data?: string | Object | ArrayBuffer
 
 This parameter sets a mime part's body content from memory data.
 
-**Type:** string | Object | ArrayBuffer
+**Type:** string \| Object \| ArrayBuffer
 
 **Since:** 12
 

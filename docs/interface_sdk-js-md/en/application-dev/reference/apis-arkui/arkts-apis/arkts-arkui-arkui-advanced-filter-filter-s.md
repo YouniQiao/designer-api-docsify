@@ -4,6 +4,8 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 
 **Since:** 22
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct Filter--><!--Device-unnamed-export declare struct Filter-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -44,7 +46,7 @@ FilterParams, Additional filter item parameter. The filter item name is displaye
 
 Container in the user-defined filtering result display area.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 22
 
@@ -88,7 +90,7 @@ FilterType, Filter display style type.
 
 Multi-dimensional filtering parameters.
 
-**Type:** Array<FilterParams>
+**Type:** Array&lt;FilterParams&gt;
 
 **Since:** 22
 
@@ -110,7 +112,7 @@ onFilterChanged: (filterResults: Array<FilterResult>) => void
 
 FilterParams, Callback method after a user clicks a filter item.
 
-**Type:** (filterResults: Array<FilterResult>) => void
+**Type:** (filterResults: Array&lt;FilterResult&gt;) =&gt; void
 
 **Since:** 22
 

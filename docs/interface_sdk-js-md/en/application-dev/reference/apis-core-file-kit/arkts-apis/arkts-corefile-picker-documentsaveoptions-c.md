@@ -62,7 +62,7 @@ Document suffix of the document to save.
 
 The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix.If there is no "|", the option does not have the description. By default, all documents are saved.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 
@@ -80,7 +80,7 @@ newFileNames?: Array<string>
 
 Name of the document to save. If this parameter is not specified, the user needs to enter the file name.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 

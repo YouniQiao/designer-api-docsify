@@ -4,6 +4,8 @@ Declare TreeView Component
 
 **Since:** 22
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct TreeView--><!--Device-unnamed-export declare struct TreeView-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -64,7 +64,7 @@ polygon?: Array<Point>
 
 Indicates polygonal fence.
 
-**Type:** Array<Point>
+**Type:** Array&lt;Point&gt;
 
 **Since:** 26.0.0
 

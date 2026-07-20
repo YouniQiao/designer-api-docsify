@@ -42,7 +42,7 @@ authUserList?: Array<AuthUser>
 
 List of users who are authorized to access the DLP file. By default, this parameter is left blank.
 
-**Type:** Array<AuthUser>
+**Type:** Array&lt;AuthUser&gt;
 
 **Since:** 21
 
@@ -78,7 +78,7 @@ everyoneAccessList?: Array<DLPFileAccess>
 
 Permission granted to everyone. This parameter is left blank by default.
 
-**Type:** Array<DLPFileAccess>
+**Type:** Array&lt;DLPFileAccess&gt;
 
 **Since:** 21
 

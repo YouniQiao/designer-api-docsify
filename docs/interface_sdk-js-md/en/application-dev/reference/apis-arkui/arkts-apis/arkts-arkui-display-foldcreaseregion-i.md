@@ -22,7 +22,7 @@ readonly creaseRects: Array<Rect>
 
 Crease region.
 
-**Type:** Array<Rect>
+**Type:** Array&lt;Rect&gt;
 
 **Since:** 10
 

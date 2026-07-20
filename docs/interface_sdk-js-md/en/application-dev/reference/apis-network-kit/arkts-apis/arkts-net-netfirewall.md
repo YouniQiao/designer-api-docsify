@@ -20,20 +20,20 @@ import { netFirewall } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md#addnetfirewallrule-1) | Add a firewall rule. |
-| [getNetFirewallPolicy](arkts-network-netfirewall-getnetfirewallpolicy-f.md#getnetfirewallpolicy-1) | Get firewall policy by userId. |
-| [getNetFirewallRule](arkts-network-netfirewall-getnetfirewallrule-f.md#getnetfirewallrule-1) | Get a specified firewall rule by userId and ruleId. |
-| [getNetFirewallRules](arkts-network-netfirewall-getnetfirewallrules-f.md#getnetfirewallrules-1) | Get firewall rules by userId, and it is necessary to specify the pagination query parameters. |
-| [removeNetFirewallRule](arkts-network-netfirewall-removenetfirewallrule-f.md#removenetfirewallrule-1) | Delete a firewall rule by userId and ruleId. |
-| [setNetFirewallPolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md#setnetfirewallpolicy-1) | Set firewall policy by userId.&lt;p&gt;Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.&lt;/p&gt; |
-| [updateNetFirewallRule](arkts-network-netfirewall-updatenetfirewallrule-f.md#updatenetfirewallrule-1) | Update a firewall rule. |
+| [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md#addnetfirewallrule) | Add a firewall rule. |
+| [getNetFirewallPolicy](arkts-network-netfirewall-getnetfirewallpolicy-f.md#getnetfirewallpolicy) | Get firewall policy by userId. |
+| [getNetFirewallRule](arkts-network-netfirewall-getnetfirewallrule-f.md#getnetfirewallrule) | Get a specified firewall rule by userId and ruleId. |
+| [getNetFirewallRules](arkts-network-netfirewall-getnetfirewallrules-f.md#getnetfirewallrules) | Get firewall rules by userId, and it is necessary to specify the pagination query parameters. |
+| [removeNetFirewallRule](arkts-network-netfirewall-removenetfirewallrule-f.md#removenetfirewallrule) | Delete a firewall rule by userId and ruleId. |
+| [setNetFirewallPolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md#setnetfirewallpolicy) | Set firewall policy by userId.<p>Enables or disables the firewall function, and specifies the default actions for inbound connections and outbound connections.</p> |
+| [updateNetFirewallRule](arkts-network-netfirewall-updatenetfirewallrule-f.md#updatenetfirewallrule) | Update a firewall rule. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getInterceptedRecords](arkts-network-netfirewall-getinterceptedrecords-f-sys.md#getinterceptedrecords-1) | Get intercepted records by userId, and it is necessary to specify the pagination query parameters. |
+| [getInterceptedRecords](arkts-network-netfirewall-getinterceptedrecords-f-sys.md#getinterceptedrecords) | Get intercepted records by userId, and it is necessary to specify the pagination query parameters. |
 <!--DelEnd-->
 
 ### Interfaces

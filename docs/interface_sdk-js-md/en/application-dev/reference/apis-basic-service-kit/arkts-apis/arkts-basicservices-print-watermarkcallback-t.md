@@ -18,6 +18,6 @@ Defines the callback type used in registering to listen for watermark handling.T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | the print job ID<br>Print job ID in preview. |
-| fd | int | Yes | File Descriptor<br>File descriptor in preview. |
+| jobId | string | Yes | the print job ID <br>Print job ID in preview.  |
+| fd | number | Yes | File Descriptor <br>File descriptor in preview.  |
 

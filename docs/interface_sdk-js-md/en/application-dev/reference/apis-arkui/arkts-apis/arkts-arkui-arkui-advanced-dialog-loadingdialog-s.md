@@ -62,7 +62,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** Theme | CustomTheme
+**Type:** Theme \| CustomTheme
 
 **Since:** 12
 

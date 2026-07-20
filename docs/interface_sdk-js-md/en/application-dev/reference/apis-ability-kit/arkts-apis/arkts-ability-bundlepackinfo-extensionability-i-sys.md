@@ -18,7 +18,7 @@ readonly forms: Array<AbilityFormInfo>
 
 Widget information.
 
-**Type:** Array<AbilityFormInfo>
+**Type:** Array&lt;AbilityFormInfo&gt;
 
 **Since:** 9
 

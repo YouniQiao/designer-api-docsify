@@ -22,7 +22,7 @@ coordinates: Array<FontVariation>
 
 Array of font variations.
 
-**Type:** Array<FontVariation>
+**Type:** Array&lt;FontVariation&gt;
 
 **Since:** 24
 

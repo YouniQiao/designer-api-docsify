@@ -23,14 +23,14 @@ import { securityGuard } from '@kit.SecurityGuardKit';
 
 | Name | Description |
 | --- | --- |
-| [getModelResult](arkts-securityguard-securityguard-getmodelresult-f-sys.md#getmodelresult-1) | Request security model result from security guard. |
-| [off](arkts-securityguard-securityguard-off-f-sys.md#off-1) | Unsubscribe the security event. |
-| [on](arkts-securityguard-securityguard-on-f-sys.md#on-1) | Subscribe the security event. |
-| [querySecurityEvent](arkts-securityguard-securityguard-querysecurityevent-f-sys.md#querysecurityevent-1) | Query security event information from security guard. |
-| [reportSecurityEvent](arkts-securityguard-securityguard-reportsecurityevent-f-sys.md#reportsecurityevent-1) | Report security information to the security guard. |
-| [startSecurityEventCollector](arkts-securityguard-securityguard-startsecurityeventcollector-f-sys.md#startsecurityeventcollector-1) | start the collector to collect data |
-| [stopSecurityEventCollector](arkts-securityguard-securityguard-stopsecurityeventcollector-f-sys.md#stopsecurityeventcollector-1) | stop the collector. |
-| [updatePolicyFile](arkts-securityguard-securityguard-updatepolicyfile-f-sys.md#updatepolicyfile-1) | Update the policy file. |
+| [getModelResult](arkts-securityguard-securityguard-getmodelresult-f-sys.md#getmodelresult) | Request security model result from security guard. |
+| [off](arkts-securityguard-securityguard-off-f-sys.md#off) | Unsubscribe the security event. |
+| [on](arkts-securityguard-securityguard-on-f-sys.md#on) | Subscribe the security event. |
+| [querySecurityEvent](arkts-securityguard-securityguard-querysecurityevent-f-sys.md#querysecurityevent) | Query security event information from security guard. |
+| [reportSecurityEvent](arkts-securityguard-securityguard-reportsecurityevent-f-sys.md#reportsecurityevent) | Report security information to the security guard. |
+| [startSecurityEventCollector](arkts-securityguard-securityguard-startsecurityeventcollector-f-sys.md#startsecurityeventcollector) | start the collector to collect data |
+| [stopSecurityEventCollector](arkts-securityguard-securityguard-stopsecurityeventcollector-f-sys.md#stopsecurityeventcollector) | stop the collector. |
+| [updatePolicyFile](arkts-securityguard-securityguard-updatepolicyfile-f-sys.md#updatepolicyfile) | Update the policy file. |
 <!--DelEnd-->
 
 <!--Del-->

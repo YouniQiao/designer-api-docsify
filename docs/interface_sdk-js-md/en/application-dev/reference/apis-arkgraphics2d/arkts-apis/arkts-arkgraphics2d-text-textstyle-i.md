@@ -186,7 +186,7 @@ fontFamilies?: Array<string>
 
 Array of font families. By default, the array is empty, indicating that all system fonts are matched.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 
@@ -204,7 +204,7 @@ fontFeatures?: Array<FontFeature>
 
 Array of font features.
 
-**Type:** Array<FontFeature>
+**Type:** Array&lt;FontFeature&gt;
 
 **Since:** 12
 
@@ -258,7 +258,7 @@ fontTypefaces?: Array<drawing.Typeface>
 
 Array of font typefaces
 
-**Type:** Array<drawing.Typeface>
+**Type:** Array&lt;drawing.Typeface&gt;
 
 **Since:** 26.0.0
 
@@ -278,7 +278,7 @@ fontVariations?: Array<FontVariation>
 
 Array of font variations.
 
-**Type:** Array<FontVariation>
+**Type:** Array&lt;FontVariation&gt;
 
 **Since:** 12
 
@@ -476,7 +476,7 @@ textShadows?: Array<TextShadow>
 
 Array of shadows.
 
-**Type:** Array<TextShadow>
+**Type:** Array&lt;TextShadow&gt;
 
 **Since:** 12
 

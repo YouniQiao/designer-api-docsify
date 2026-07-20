@@ -90,7 +90,7 @@ responseCode: ResponseCode | number
 
 Server status code.
 
-**Type:** ResponseCode | number
+**Type:** ResponseCode \| number
 
 **Since:** 11
 
@@ -108,7 +108,7 @@ result: string | Object | ArrayBuffer
 
 result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated from API 8.If {@link HttpRequestOptions#expectDataType} is set, the system preferentially returns this parameter.
 
-**Type:** string | Object | ArrayBuffer
+**Type:** string \| Object \| ArrayBuffer
 
 **Since:** 11
 

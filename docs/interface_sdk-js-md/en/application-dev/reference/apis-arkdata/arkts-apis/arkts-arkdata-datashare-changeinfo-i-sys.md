@@ -64,7 +64,7 @@ values: Array<ValuesBucket>
 
 Changed data.
 
-**Type:** Array<ValuesBucket>
+**Type:** Array&lt;ValuesBucket&gt;
 
 **Since:** 12
 

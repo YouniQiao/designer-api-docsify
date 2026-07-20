@@ -22,7 +22,7 @@ authorizedUris?: Array<string>
 
 URIs that have been created and granted the save permission.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ invalidUris?: Array<string>
 
 URIs that may be deleted, hidden, or renamed.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 23
 

@@ -22,7 +22,7 @@ exclusionList: Array<string>
 
 Do not use a blocking list for proxy servers.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 11
 

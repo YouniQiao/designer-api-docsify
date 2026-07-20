@@ -42,7 +42,7 @@ itemSpace?: string | number
 
 Space between items.
 
-**Type:** string | number
+**Type:** string \| number
 
 **Since:** 26.0.0
 

@@ -22,7 +22,7 @@ readonly abilityTypes: Array<AbilityType>
 
 Accessibility application type.
 
-**Type:** Array<AbilityType>
+**Type:** Array&lt;AbilityType&gt;
 
 **Since:** 7
 
@@ -62,7 +62,7 @@ readonly capabilities: Array<Capability>
 
 Capabilities list of the accessibility application.
 
-**Type:** Array<Capability>
+**Type:** Array&lt;Capability&gt;
 
 **Since:** 7
 
@@ -102,7 +102,7 @@ readonly eventTypes: Array<EventType>
 
 List of events that the accessibility application focuses on.
 
-**Type:** Array<EventType>
+**Type:** Array&lt;EventType&gt;
 
 **Since:** 7
 
@@ -202,7 +202,7 @@ readonly targetBundleNames: Array<string>
 
 Name of the target bundle.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # ContinuableInfo (System API)
 
-The module provides the mission continuation information to be returned when the listener for listening for the mission continuation state is registered. For details about the registration, see [on('continueStateChange')](arkts-ability-distributedmissionmanager-on-f-sys.md#on-1).
+The module provides the mission continuation information to be returned when the listener for listening for the mission continuation state is registered. For details about the registration, see [on('continueStateChange')](@ohos.distributedMissionManager:distributedMissionManager.on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo>)).
 
 **Since:** 10
 
@@ -98,7 +98,7 @@ targetAppIds?: Array<string>
 
 Target AppId list of the application to which the mission belongs.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

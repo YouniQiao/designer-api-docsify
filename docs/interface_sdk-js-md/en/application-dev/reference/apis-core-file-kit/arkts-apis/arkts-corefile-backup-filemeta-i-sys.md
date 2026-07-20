@@ -60,7 +60,7 @@ uris?: Array<string>
 
 Indicates uris to files.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

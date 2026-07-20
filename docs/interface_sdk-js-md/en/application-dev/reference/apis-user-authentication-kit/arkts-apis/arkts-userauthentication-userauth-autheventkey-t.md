@@ -18,6 +18,6 @@ It consists of the fields in **Type** in the following table.
 
 | Type | Description |
 | --- | --- |
-| 'result' | If the first parameter of[on]{ |
-| 'tip' | If the first parameter of[on]{ |
+| 'result' | If the first parameter of [on]{ |
+| 'tip' | If the first parameter of [on]{ |
 

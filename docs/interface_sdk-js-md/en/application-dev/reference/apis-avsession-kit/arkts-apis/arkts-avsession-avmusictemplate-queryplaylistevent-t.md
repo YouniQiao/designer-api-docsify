@@ -18,12 +18,12 @@ The query play list event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageIndex | int | Yes | page index |
-| sort | Sort | Yes | sort |
+| pageIndex | number | Yes | page index  |
+| sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | Yes | sort  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | (PageMediaEntity) returned through promise |
+| Promise&lt;PageMediaEntity&gt; | (PageMediaEntity) returned through promise  |
 

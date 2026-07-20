@@ -22,7 +22,7 @@ readonly photoProfiles: Array<Profile>
 
 Supported photo profiles.
 
-**Type:** Array<Profile>
+**Type:** Array&lt;Profile&gt;
 
 **Since:** 10
 
@@ -40,7 +40,7 @@ readonly previewProfiles: Array<Profile>
 
 Supported preview profiles.
 
-**Type:** Array<Profile>
+**Type:** Array&lt;Profile&gt;
 
 **Since:** 10
 
@@ -58,7 +58,7 @@ readonly supportedMetadataObjectTypes: Array<MetadataObjectType>
 
 Supported metadata object types.
 
-**Type:** Array<MetadataObjectType>
+**Type:** Array&lt;MetadataObjectType&gt;
 
 **Since:** 10
 
@@ -76,7 +76,7 @@ readonly videoProfiles: Array<VideoProfile>
 
 Supported video profiles.
 
-**Type:** Array<VideoProfile>
+**Type:** Array&lt;VideoProfile&gt;
 
 **Since:** 10
 

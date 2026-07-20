@@ -22,9 +22,9 @@ import { dataShare } from '@kit.ArkData';
 predicates: Record<string, string>
 ```
 
-Predicates to use. When [**on**](arkts-arkdata-datashare-datasharehelper-i-sys.md#on-3)is called, the predicates are used to generate data. This parameter applies only to RDB data storage.
+Predicates to use. When [**on**](dataShare.DataShareHelper.on(type: 'rdbDataChange', uris: Array<string>, templateId: TemplateId, callback: AsyncCallback<RdbDataChangeNode>))is called, the predicates are used to generate data. This parameter applies only to RDB data storage.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 10
 
@@ -66,7 +66,7 @@ The scheduler SQL statement is triggered when:
 update?: string
 ```
 
-Update SQL statement of a specified template. The default value is an empty string. When [on](arkts-arkdata-datashare-datasharehelper-i-sys.md#on-3)is called, the **update** parameter is used to update data. This parameter applies only to RDB data storage.
+Update SQL statement of a specified template. The default value is an empty string. When [on](dataShare.DataShareHelper.on(type: 'rdbDataChange', uris: Array<string>, templateId: TemplateId, callback: AsyncCallback<RdbDataChangeNode>))is called, the **update** parameter is used to update data. This parameter applies only to RDB data storage.
 
 **Type:** string
 

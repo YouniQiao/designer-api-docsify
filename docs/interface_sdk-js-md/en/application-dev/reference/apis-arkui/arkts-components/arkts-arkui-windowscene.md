@@ -25,7 +25,7 @@ Called when the WindowScene is used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| persistentId | number | Yes | indicates the persistent identifier of WindowScene. |
+| persistentId | number | Yes | indicates the persistent identifier of WindowScene.  |
 
 ## Summary
 

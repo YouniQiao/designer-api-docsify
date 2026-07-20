@@ -24,7 +24,7 @@ bcc?: Array<MmsAddress>
 
 Indicates the blind carbon copy address for the MMS message sending request.
 
-**Type:** Array<MmsAddress>
+**Type:** Array&lt;MmsAddress&gt;
 
 **Since:** 8
 
@@ -42,7 +42,7 @@ cc?: Array<MmsAddress>
 
 Indicates the carbon copy address for the MMS message sending request.
 
-**Type:** Array<MmsAddress>
+**Type:** Array&lt;MmsAddress&gt;
 
 **Since:** 8
 
@@ -240,7 +240,7 @@ to?: Array<MmsAddress>
 
 Indicates the destination address for the MMS message sending request.
 
-**Type:** Array<MmsAddress>
+**Type:** Array&lt;MmsAddress&gt;
 
 **Since:** 8
 

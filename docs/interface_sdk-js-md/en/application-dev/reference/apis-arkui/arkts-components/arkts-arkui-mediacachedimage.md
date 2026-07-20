@@ -25,7 +25,7 @@ Image resource to be obtained.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | PixelMap \| ResourceStr \| DrawableDescriptor \| ASTCResource | Yes |  |
+| src | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr \| DrawableDescriptor \| ASTCResource | Yes |  |
 
 ## Summary
 

@@ -14,7 +14,7 @@ authResults: Array<number>
 
 Permission request result.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Default:** The results for the corresponding request permissions
 
@@ -34,7 +34,7 @@ permissions: Array<string>
 
 Permissions requested.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Default:** The permissions passed in by the user
 

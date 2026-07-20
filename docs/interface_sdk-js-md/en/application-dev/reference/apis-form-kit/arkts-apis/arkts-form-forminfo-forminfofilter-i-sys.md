@@ -40,7 +40,7 @@ supportedDimensions?: Array<number>
 
 optional supportedDimensions that used to ask getFormsInfo to return form infos with the same supportedDimensions.The minimum length is 1, refer to {@link formInfo.FormDimension}.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
 
@@ -58,7 +58,7 @@ supportedShapes?: Array<number>
 
 optional supportedShapes that used to ask getFormsInfo to return form infos with the same supportedShapes.The minimum length is 1, Refer to {@link formInfo.FormShape}.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 12
 

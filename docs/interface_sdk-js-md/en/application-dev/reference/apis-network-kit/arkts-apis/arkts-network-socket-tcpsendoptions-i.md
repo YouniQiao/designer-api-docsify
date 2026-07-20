@@ -22,7 +22,7 @@ data: string | ArrayBuffer
 
 Data to send.
 
-**Type:** string | ArrayBuffer
+**Type:** string \| ArrayBuffer
 
 **Since:** 10
 

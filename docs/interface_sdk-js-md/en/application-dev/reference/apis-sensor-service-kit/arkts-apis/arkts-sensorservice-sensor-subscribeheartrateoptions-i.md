@@ -28,7 +28,7 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -52,7 +52,7 @@ success: (data: HeartRateResponse) => void
 
 Callback invoked when the heart rate sensor data changes. This callback is invoked every five seconds.
 
-**Type:** (data: HeartRateResponse) => void
+**Type:** (data: HeartRateResponse) =&gt; void
 
 **Since:** 3
 

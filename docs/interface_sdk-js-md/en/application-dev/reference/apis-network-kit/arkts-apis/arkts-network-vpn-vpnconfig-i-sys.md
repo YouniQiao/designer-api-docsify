@@ -24,7 +24,7 @@ addresses: Array<LinkAddress>
 
 The array of addresses for VPN interface.
 
-**Type:** Array<LinkAddress>
+**Type:** Array&lt;LinkAddress&gt;
 
 **Since:** 10
 
@@ -42,7 +42,7 @@ blockedApplications?: Array<string>
 
 The array of blocklist for the VPN network. The string indicates package name.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 
@@ -60,7 +60,7 @@ dnsAddresses?: Array<string>
 
 The array of DNS servers for the VPN network.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 
@@ -168,7 +168,7 @@ routes?: Array<RouteInfo>
 
 The array of routes for VPN interface.
 
-**Type:** Array<RouteInfo>
+**Type:** Array&lt;RouteInfo&gt;
 
 **Since:** 10
 
@@ -186,7 +186,7 @@ searchDomains?: Array<string>
 
 The array of search domains for the DNS resolver.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 
@@ -204,7 +204,7 @@ trustedApplications?: Array<string>
 
 The array of trustlist for the VPN network. The string indicates package name.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 

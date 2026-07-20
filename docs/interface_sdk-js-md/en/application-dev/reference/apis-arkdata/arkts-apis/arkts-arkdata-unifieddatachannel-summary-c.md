@@ -22,7 +22,7 @@ get overview(): Record<string, number>
 
 Indicates the overview information of unifiedData.
 
-**Type:** Record<string, number>
+**Type:** Record&lt;string, number&gt;
 
 **Since:** 22
 
@@ -42,7 +42,7 @@ set summary(value: Record<string, number>)
 
 A map for each type and data size, key is data type, value is the corresponding data size
 
-**Type:** Record<string, number>
+**Type:** Record&lt;string, number&gt;
 
 **Since:** 10
 

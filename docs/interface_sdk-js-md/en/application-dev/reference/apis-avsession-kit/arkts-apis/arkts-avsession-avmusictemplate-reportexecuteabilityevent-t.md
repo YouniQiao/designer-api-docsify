@@ -18,5 +18,5 @@ The report extension ability event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | WantAgent | Yes | ability info |
+| want | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | Yes | ability info  |
 

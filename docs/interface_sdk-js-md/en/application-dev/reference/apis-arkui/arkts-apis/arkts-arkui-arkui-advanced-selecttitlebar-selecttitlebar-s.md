@@ -4,6 +4,8 @@ Declaration of the selectable title bar.
 
 **Since:** 20
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct SelectTitleBar--><!--Device-unnamed-export declare struct SelectTitleBar-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -62,7 +64,7 @@ menuItems?: Array<SelectTitleBarMenuItem>
 
 Menu items on the right side.
 
-**Type:** Array<SelectTitleBarMenuItem>
+**Type:** Array&lt;SelectTitleBarMenuItem&gt;
 
 **Since:** 20
 
@@ -82,7 +84,7 @@ onSelected?: ((index: number) => void)
 
 Callback function when an option is selected
 
-**Type:** ((index: number) => void)
+**Type:** ((index: number) =&gt; void)
 
 **Since:** 20
 
@@ -102,7 +104,7 @@ options: Array<SelectOption>
 
 Options inside the drop-down list.
 
-**Type:** Array<SelectOption>
+**Type:** Array&lt;SelectOption&gt;
 
 **Since:** 20
 

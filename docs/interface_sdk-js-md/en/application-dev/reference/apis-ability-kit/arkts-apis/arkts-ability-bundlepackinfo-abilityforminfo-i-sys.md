@@ -72,7 +72,7 @@ readonly supportDimensions: Array<string>
 
 Dimensions of the widget. The value can be **1*2**, **2*2**, **2*4**, **4*4**, or a combination of these options.At least one option must be specified when defining the widget.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 

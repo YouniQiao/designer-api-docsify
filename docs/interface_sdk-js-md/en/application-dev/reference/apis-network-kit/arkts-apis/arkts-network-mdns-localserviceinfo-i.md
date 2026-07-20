@@ -58,7 +58,7 @@ serviceAttribute?: Array<ServiceAttribute>
 
 DNS-SD TXT record pairs.
 
-**Type:** Array<ServiceAttribute>
+**Type:** Array&lt;ServiceAttribute&gt;
 
 **Since:** 11
 

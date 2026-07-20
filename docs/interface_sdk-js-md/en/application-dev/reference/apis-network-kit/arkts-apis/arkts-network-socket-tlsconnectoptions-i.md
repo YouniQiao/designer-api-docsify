@@ -22,7 +22,7 @@ ALPNProtocols?: Array<string>
 
 Application layer protocol negotiation extension, such as "spdy/1", "http/1.1", "h2"
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 

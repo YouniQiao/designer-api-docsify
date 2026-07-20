@@ -40,7 +40,7 @@ certTypes: Array<CertificateType>
 
 List of certificate types.
 
-**Type:** Array<CertificateType>
+**Type:** Array&lt;CertificateType&gt;
 
 **Since:** 22
 
@@ -58,7 +58,7 @@ issuers?: Array<Uint8Array>
 
 Indicates the certificate issuer, which is encoded in DER format. This parameter is used to filter the list of certificates that can be selected by users in the Authorization dialog box. Only the certificates that match the certificate issuer are displayed.
 
-**Type:** Array<Uint8Array>
+**Type:** Array&lt;Uint8Array&gt;
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ keyAlgIDs?: Array<string>
 
 Indicates the algorithm type of the public key of the certificate. It is used to filter the list of certificates that can be selected in the authorization dialog box. Only the certificates that match the public key algorithm are displayed.The value can only be RSA, EC, or ECDSA (case sensitive). If this parameter is not specified, certificates are not filtered by algorithm type.If the keyAlgIDs array contains an unsupported algorithm type,the keyAlgIDs filter does not take effect.The maximum length is 20.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

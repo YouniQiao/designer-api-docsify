@@ -28,7 +28,7 @@ This attribute can be used only in the stage model.
 
 This API can be used in atomic services since API version 11.
 
-**Type:** string | null | undefined
+**Type:** string \| null \| undefined
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ Storage mode to be used by the **Preferences** instance. This parameter is optio
 
 This API can be used in atomic services since API version 18.
 
-**Type:** StorageType | null | undefined
+**Type:** StorageType \| null \| undefined
 
 **Since:** 18
 

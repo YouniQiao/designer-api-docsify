@@ -110,7 +110,7 @@ avQueueImage?: image.PixelMap | string
 
 The artwork of play list as a {@link PixelMap} or an uri formatted String,
 
-**Type:** image.PixelMap | string
+**Type:** image.PixelMap \| string
 
 **Since:** 11
 
@@ -208,7 +208,7 @@ drmSchemes?: Array<string>
 
 The drm schemes supported by this session which are represented by uuid.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 
@@ -294,7 +294,7 @@ mediaImage?: image.PixelMap | string
 
 The image of the media as a {@link PixelMap} or an uri formatted String,used to display in media center.
 
-**Type:** image.PixelMap | string
+**Type:** image.PixelMap \| string
 
 **Since:** 10
 

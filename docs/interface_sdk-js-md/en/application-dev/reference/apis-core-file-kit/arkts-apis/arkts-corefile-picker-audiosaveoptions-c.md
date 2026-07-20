@@ -22,7 +22,7 @@ newFileNames?: Array<string>
 
 Name of the document to save. If this parameter is not specified, the user needs to enter the file name.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 9
 

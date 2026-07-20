@@ -22,7 +22,7 @@ Defines the callback triggered when the page transition animation starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the currently displayed element. If there are multiple columns, **index**indicates the index of the leftmost component. |
-| targetIndex | number | Yes | Index of the target element to switch to. |
-| extraInfo | SwiperAnimationEvent | Yes | Extra information of the animation, including the offset of the currentlydisplayed element and target element relative to the start position of the **Swiper** along the main axis, andthe hands-off velocity. |
+| index | number | Yes | Index of the currently displayed element. If there are multiple columns, **index** indicates the index of the leftmost component.  |
+| targetIndex | number | Yes | Index of the target element to switch to.  |
+| extraInfo | [SwiperAnimationEvent](arkts-arkui-swiperanimationevent-i.md) | Yes | Extra information of the animation, including the offset of the currently displayed element and target element relative to the start position of the **Swiper** along the main axis, and the hands-off velocity.  |
 

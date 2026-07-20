@@ -20,5 +20,5 @@ Declare the callback when the visibility of PopoverDialogV2 is changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | The visibility of PopoverDialogV2. |
+| visible | boolean | Yes | The visibility of PopoverDialogV2.  |
 

@@ -86,7 +86,7 @@ samplingRate: AudioSamplingRate | number
 
 Audio sampling rate.
 
-**Type:** AudioSamplingRate | number
+**Type:** AudioSamplingRate \| number
 
 **Since:** 8
 

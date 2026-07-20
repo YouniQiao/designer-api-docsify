@@ -20,6 +20,6 @@ The callback function that will be invoked when the selectedIndex of the SubHead
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedIndex | number | Yes | the index of selected item |
-| selectedContent | string | No | the content of selected item |
+| selectedIndex | number | Yes | the index of selected item  |
+| selectedContent | string | No | the content of selected item  |
 

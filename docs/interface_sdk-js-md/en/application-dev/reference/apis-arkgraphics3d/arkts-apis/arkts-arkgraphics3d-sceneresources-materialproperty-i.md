@@ -32,7 +32,7 @@ image: Image | null
 
 Texture to use. If undefined, factor defines the diffuse color.
 
-**Type:** Image | null
+**Type:** Image \| null
 
 **Since:** 20
 

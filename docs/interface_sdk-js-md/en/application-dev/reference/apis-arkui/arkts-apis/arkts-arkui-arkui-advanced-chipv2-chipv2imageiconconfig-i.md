@@ -82,7 +82,7 @@ size?: SizeT<LengthMetrics>
 
 Image size option.
 
-**Type:** SizeT<LengthMetrics>
+**Type:** SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
 

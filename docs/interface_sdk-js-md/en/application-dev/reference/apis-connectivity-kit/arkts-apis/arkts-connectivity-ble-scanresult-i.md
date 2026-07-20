@@ -60,7 +60,7 @@ advertisingDataMap?: Map<number, Uint8Array>
 
 Map of advertising data fields.
 
-**Type:** Map<number, Uint8Array>
+**Type:** Map&lt;number, Uint8Array&gt;
 
 **Since:** 22
 
@@ -160,7 +160,7 @@ manufacturerDataMap?: Map<number, Uint8Array>
 
 Map of manufacturer data.
 
-**Type:** Map<number, Uint8Array>
+**Type:** Map&lt;number, Uint8Array&gt;
 
 **Since:** 22
 
@@ -200,7 +200,7 @@ serviceDataMap?: Map<string, Uint8Array>
 
 Map of service data.
 
-**Type:** Map<string, Uint8Array>
+**Type:** Map&lt;string, Uint8Array&gt;
 
 **Since:** 22
 

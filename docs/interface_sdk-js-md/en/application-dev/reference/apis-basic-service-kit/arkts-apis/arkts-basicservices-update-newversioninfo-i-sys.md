@@ -24,7 +24,7 @@ versionComponents: Array<VersionComponent>
 
 Version components.
 
-**Type:** Array<VersionComponent>
+**Type:** Array&lt;VersionComponent&gt;
 
 **Since:** 9
 

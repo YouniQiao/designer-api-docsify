@@ -4,6 +4,8 @@ Declare struct PopoverDialogV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct PopoverDialogV2--><!--Device-unnamed-export declare struct PopoverDialogV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -46,6 +48,8 @@ Sets the PopoverDialogV2 options.
 
 **Since:** 18
 
+**Decorator:** @Require, @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -87,6 +91,8 @@ Sets the PopoverDialogV2 Visible Status.
 **Type:** boolean
 
 **Since:** 18
+
+**Decorator:** @Require, @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

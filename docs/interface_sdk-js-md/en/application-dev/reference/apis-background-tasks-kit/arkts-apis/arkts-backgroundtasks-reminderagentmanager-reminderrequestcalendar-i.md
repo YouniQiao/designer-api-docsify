@@ -42,7 +42,7 @@ daysOfWeek?: Array<number>
 
 Days of a week when the reminder repeats. The value ranges from 1 to 7, corresponding to the data from Monday to Sunday. This parameter is left empty by default.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 11
 
@@ -74,7 +74,7 @@ repeatDays?: Array<number>
 
 Day in which the reminder repeats. The value range is [1, 31]. This parameter is left empty by default. This parameter must be used together with **repeatMonths**.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ repeatMonths?: Array<number>
 
 Month in which the reminder repeats. The value range is [1, 12]. This parameter is left empty by default. This parameter must be used together with **repeatDays**.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 9
 

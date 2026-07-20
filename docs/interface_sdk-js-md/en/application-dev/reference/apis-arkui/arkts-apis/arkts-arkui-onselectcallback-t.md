@@ -18,6 +18,6 @@ Callback when the Select option is clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Indicates the index of the selected item. |
-| selectValue | string | Yes | Indicates the value of the selected item. |
+| index | number | Yes | Indicates the index of the selected item.  |
+| selectValue | string | Yes | Indicates the value of the selected item.  |
 

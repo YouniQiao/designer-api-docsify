@@ -64,7 +64,7 @@ images: Array<ImageItem>
 
 image information used for AI-generated image tasks.
 
-**Type:** Array<ImageItem>
+**Type:** Array&lt;ImageItem&gt;
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ selectPath?: Array<common2D.Point>
 
 Path information for lasso selection in AI-generated image tasks.
 
-**Type:** Array<common2D.Point>
+**Type:** Array&lt;common2D.Point&gt;
 
 **Since:** 23
 

@@ -40,7 +40,7 @@ certPolicy?: Array<string>
 
 Certificate policy.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 
@@ -58,7 +58,7 @@ extendedKeyUsage?: Array<string>
 
 Extended key usage.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 
@@ -94,7 +94,7 @@ keyUsage?: Array<boolean>
 
 Whether to match the key usage. **true**: yes; **false**: no.
 
-**Type:** Array<boolean>
+**Type:** Array&lt;boolean&gt;
 
 **Since:** 11
 
@@ -166,7 +166,7 @@ privateKey?: string | Uint8Array
 
 Specifies the certificate private key. string indicates a private key in PEM format, and Uint8Array indicates a private key in DER format.
 
-**Type:** string | Uint8Array
+**Type:** string \| Uint8Array
 
 **Since:** 26.0.0
 
@@ -276,7 +276,7 @@ subjectAlternativeNames?: Array<GeneralName>
 
 Subject Alternative Names (SANs) of the certificate.
 
-**Type:** Array<GeneralName>
+**Type:** Array&lt;GeneralName&gt;
 
 **Since:** 12
 

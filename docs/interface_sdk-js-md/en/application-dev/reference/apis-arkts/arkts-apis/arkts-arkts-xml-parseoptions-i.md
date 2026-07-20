@@ -22,7 +22,7 @@ attributeValueCallbackFunction?: (name: string, value: string) => boolean
 
 Attribute value callback function.
 
-**Type:** (name: string, value: string) => boolean
+**Type:** (name: string, value: string) =&gt; boolean
 
 **Since:** 8
 
@@ -94,7 +94,7 @@ tagValueCallbackFunction?: (name: string, value: string) => boolean
 
 Tag value callback function.
 
-**Type:** (name: string, value: string) => boolean
+**Type:** (name: string, value: string) =&gt; boolean
 
 **Since:** 8
 
@@ -112,7 +112,7 @@ tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 
 Token value callback function.
 
-**Type:** (eventType: EventType, value: ParseInfo) => boolean
+**Type:** (eventType: EventType, value: ParseInfo) =&gt; boolean
 
 **Since:** 8
 

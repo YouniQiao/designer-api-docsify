@@ -6,6 +6,7 @@
 import { cliManager } from '@kit.AbilityKit';
 ```
 
+<a id="gettoolinfobyname"></a>
 ## getToolInfoByName
 
 ```TypeScript
@@ -36,7 +37,7 @@ Get detailed information of a single tool by its name
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<ToolInfo> | detailed information of tool. |
+| Promise&lt;ToolInfo&gt; | detailed information of tool. |
 
 **Error codes:**
 

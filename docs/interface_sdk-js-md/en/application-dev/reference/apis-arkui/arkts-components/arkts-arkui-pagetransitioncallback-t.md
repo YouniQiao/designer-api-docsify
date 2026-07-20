@@ -20,6 +20,6 @@ Represents the callback for page transition events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | RouteType | Yes | transition route type |
-| progress | number | Yes | transition progess |
+| type | [RouteType](arkts-arkui-routetype-e.md) | Yes | transition route type  |
+| progress | number | Yes | transition progess  |
 

@@ -18,5 +18,5 @@ Represents an event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventInfo | EventInfo | Yes | Event information, including the eventId(eventID) andtaskBody(task data) fields. |
+| eventInfo | [EventInfo](arkts-basicservices-update-eventinfo-i-sys.md) | Yes | Event information, including the eventId(eventID) and taskBody(task data) fields. |
 

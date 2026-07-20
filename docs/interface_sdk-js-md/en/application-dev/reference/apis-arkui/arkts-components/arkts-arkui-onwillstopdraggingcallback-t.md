@@ -22,5 +22,5 @@ On scroll callback using in scrollable onWillStopDragging.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| velocity | number | Yes | The veolicity of the scroll view at the moment the touch was released. |
+| velocity | number | Yes | The veolicity of the scroll view at the moment the touch was released.  |
 

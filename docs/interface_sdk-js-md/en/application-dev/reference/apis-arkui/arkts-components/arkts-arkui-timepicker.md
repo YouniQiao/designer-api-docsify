@@ -36,7 +36,7 @@ Creates a time picker, which uses the 24-hour time format by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | TimePickerOptions | No | Parameters of the time picker. |
+| options | [TimePickerOptions](arkts-arkui-timepickeroptions-i.md) | No | Parameters of the time picker.  |
 
 ## Summary
 

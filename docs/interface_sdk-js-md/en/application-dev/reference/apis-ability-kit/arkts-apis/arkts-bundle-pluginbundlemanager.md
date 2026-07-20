@@ -20,9 +20,9 @@ import { pluginBundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md#getalllocalplugininfoforself-1) | Obtains information about all local plugins installed on the current application. |
-| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md#installlocalplugin-1) | Install the plugin for self application. |
-| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md#uninstalllocalplugin-1) | Uninstall the plugin for self application. |
+| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md#getalllocalplugininfoforself) | Obtains information about all local plugins installed on the current application. |
+| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md#installlocalplugin) | Install the plugin for self application. |
+| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md#uninstalllocalplugin) | Uninstall the plugin for self application. |
 
 ### Types
 

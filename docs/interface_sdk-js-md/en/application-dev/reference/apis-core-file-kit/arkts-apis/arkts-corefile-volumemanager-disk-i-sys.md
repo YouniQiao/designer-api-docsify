@@ -124,7 +124,7 @@ volumeIds: Array<string>
 
 Indicates the volume of a disk. A disk may contain multiple volumes.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

@@ -19,9 +19,9 @@ Defines the text baseline type. The value type is a union of the types listed in
 | Type | Description |
 | --- | --- |
 | "alphabetic" | The text baseline is the normal alphabetic baseline. |
-| "bottom" | The text baseline is at the bottom of the text bounding box. Its differencefrom the ideographic baseline is that the ideographic baseline does not consider letters in thenext line. |
+| "bottom" | The text baseline is at the bottom of the text bounding box. Its difference from the ideographic baseline is that the ideographic baseline does not consider letters in the next line. |
 | "hanging" | The text baseline is a hanging baseline over the text. |
-| "ideographic" | The text baseline is the ideographic baseline. If a character exceedsthe alphabetic baseline, the ideographic baseline is located at the bottom of the excessivecharacter. |
+| "ideographic" | The text baseline is the ideographic baseline. If a character exceeds the alphabetic baseline, the ideographic baseline is located at the bottom of the excessive character. |
 | "middle" | The text baseline is in the middle of the text bounding box. |
 | "top" | The text baseline is on the top of the text bounding box. |
 

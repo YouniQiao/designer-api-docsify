@@ -94,7 +94,7 @@ readonly roundValues: Array<number>
 
 Measurement data value of each round of the tested performance metric. If data collection fails, the value **-1** is returned.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 20
 

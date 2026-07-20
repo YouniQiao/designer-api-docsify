@@ -18,12 +18,12 @@ The request dialog info event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | DialogActionType | Yes | action type |
-| actionInfo | DialogActionInfo | No | action info |
+| actionType | [DialogActionType](arkts-avsession-avmusictemplate-dialogactiontype-t.md) | Yes | action type  |
+| actionInfo | [DialogActionInfo](arkts-avsession-avmusictemplate-dialogactioninfo-i.md) | No | action info  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | (DialogInfo) returned through promise |
+| Promise&lt;DialogInfo&gt; | (DialogInfo) returned through promise  |
 

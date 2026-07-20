@@ -22,5 +22,5 @@ Defines the CustomBuilder type with parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| t | T | Yes | the parameter |
+| t | T | Yes | the parameter  |
 

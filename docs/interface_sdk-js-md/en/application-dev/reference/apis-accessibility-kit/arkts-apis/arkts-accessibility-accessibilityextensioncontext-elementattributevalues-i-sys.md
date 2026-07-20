@@ -76,7 +76,7 @@ childrenIds?: Array<number>
 
 ID of the child component of the element.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
 
@@ -136,7 +136,7 @@ customActions?: Array<string>
 
 Indicates the custom actions supported by the component.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

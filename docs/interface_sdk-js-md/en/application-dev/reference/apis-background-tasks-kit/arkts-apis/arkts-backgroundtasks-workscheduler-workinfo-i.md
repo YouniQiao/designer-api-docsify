@@ -252,7 +252,7 @@ parameters?: Record<string, number | number | string | boolean>
 
 Carried parameters.
 
-**Type:** Record<string, number | number | string | boolean>
+**Type:** Record&lt;string, number \| number \| string \| boolean&gt;
 
 **Since:** 9
 

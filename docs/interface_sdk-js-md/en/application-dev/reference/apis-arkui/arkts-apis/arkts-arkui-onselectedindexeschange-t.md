@@ -20,5 +20,5 @@ Defines a callback invoked when the selected segmented button items change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedIndexes | number[] | Yes | Indexes of selected segmented button items. |
+| selectedIndexes | number[] | Yes | Indexes of selected segmented button items.  |
 

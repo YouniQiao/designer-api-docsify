@@ -20,6 +20,6 @@ Represents the function used by the **MultiNavigation** component to load naviga
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | ID of the navigation destination page. |
-| param | object | No | Parameters passed when the page is created during navigation. |
+| name | string | Yes | ID of the navigation destination page.  |
+| param | object | No | Parameters passed when the page is created during navigation.  |
 

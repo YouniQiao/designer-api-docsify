@@ -28,7 +28,7 @@ use new function to set the value.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | EllipseOptions | No | ellipse options |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | ellipse options |
 
 ## Ellipse
 
@@ -52,7 +52,7 @@ Set the value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | EllipseOptions | No | Options of the ellipse.<br>The **undefined** and **null** values are treatedas invalid and will not take effect. |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | Options of the ellipse.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

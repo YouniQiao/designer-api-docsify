@@ -50,7 +50,7 @@ Callback to be executed by the user.
 
 The default value is empty.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 7
 

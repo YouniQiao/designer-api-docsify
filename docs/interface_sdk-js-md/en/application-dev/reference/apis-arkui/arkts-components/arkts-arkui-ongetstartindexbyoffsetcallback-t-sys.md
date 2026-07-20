@@ -20,11 +20,11 @@ Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| totalOffset | double | Yes | Total scrolling offset,that is, the offset between the top of the first **GridItem** in the **Grid** componentand the top of the **Grid** component.<br>Unit:vp. |
+| totalOffset | number | Yes | Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component. <br>Unit:vp.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| StartLineInfo | @syscap SystemCapability.ArkUI.ArkUI.Full@systemapi@stagemodelonly |
+| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | @syscap SystemCapability.ArkUI.ArkUI.Full @systemapi @stagemodelonly  |
 

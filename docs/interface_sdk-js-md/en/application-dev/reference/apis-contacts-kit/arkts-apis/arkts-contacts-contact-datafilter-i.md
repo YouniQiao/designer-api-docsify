@@ -40,7 +40,7 @@ options: Array<FilterOptions>
 
 Contact filtering parameter. Multiple filter options in the array are ORed. The maximum length of the array is 3.
 
-**Type:** Array<FilterOptions>
+**Type:** Array&lt;FilterOptions&gt;
 
 **Since:** 15
 

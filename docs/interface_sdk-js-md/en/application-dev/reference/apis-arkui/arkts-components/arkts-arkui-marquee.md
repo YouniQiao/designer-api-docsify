@@ -41,7 +41,7 @@ Creates a marquee.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | MarqueeOptions | Yes | Parameters of the marquee. |
+| options | [MarqueeOptions](arkts-arkui-marqueeoptions-i.md) | Yes | Parameters of the marquee. |
 
 ## Summary
 

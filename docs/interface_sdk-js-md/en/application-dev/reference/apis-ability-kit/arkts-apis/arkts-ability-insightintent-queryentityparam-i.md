@@ -22,7 +22,7 @@ parameters?: Record<string, Object>
 
 Indicates the parameters when querying entities by property.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.0.0
 

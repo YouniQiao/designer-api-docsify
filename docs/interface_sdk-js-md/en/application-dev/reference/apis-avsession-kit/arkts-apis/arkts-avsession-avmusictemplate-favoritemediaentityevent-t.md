@@ -18,12 +18,12 @@ The favorite media entity event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | MediaFavoriteType | Yes | action type |
-| mediaEntity | MediaEntity | Yes | media entity |
+| actionType | [MediaFavoriteType](arkts-avsession-avmusictemplate-mediafavoritetype-t.md) | Yes | action type  |
+| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | media entity  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | (OperResult) returned through promise |
+| Promise&lt;OperResult&gt; | (OperResult) returned through promise  |
 

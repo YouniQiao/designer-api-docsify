@@ -8,6 +8,8 @@ Provides initial data and custom properties for the **SegmentButton** component.
 
 **Since:** 11
 
+**Decorator:** @Observed
+
 <!--Device-unnamed-declare class SegmentButtonOptions--><!--Device-unnamed-declare class SegmentButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

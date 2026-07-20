@@ -38,7 +38,7 @@ data: string | ArrayBuffer
 
 Content of the message.
 
-**Type:** string | ArrayBuffer
+**Type:** string \| ArrayBuffer
 
 **Since:** 24
 

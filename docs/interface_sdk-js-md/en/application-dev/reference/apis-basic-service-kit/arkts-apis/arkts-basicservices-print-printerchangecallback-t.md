@@ -16,6 +16,6 @@ Defines a callback that takes the printer event and printer information as param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | PrinterEvent | Yes | Printer event. |
-| printerInformation | PrinterInformation | Yes | Printer information. |
+| event | [PrinterEvent](arkts-basicservices-print-printerevent-e.md) | Yes | Printer event.  |
+| printerInformation | [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) | Yes | Printer information.  |
 

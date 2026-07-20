@@ -16,5 +16,5 @@ Defines a callback triggered when the camera state of the page changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | CameraCaptureStateChangeInfo | Yes | Original and new camera state. |
+| event | [CameraCaptureStateChangeInfo](arkts-arkweb-cameracapturestatechangeinfo-i.md) | Yes | Original and new camera state.  |
 

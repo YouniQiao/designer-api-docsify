@@ -20,12 +20,12 @@ Represents the callback triggered before each frame scrolling starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Amount to scroll by, in vp. |
-| state | ScrollState | Yes | Current scroll state. |
+| offset | number | Yes | Amount to scroll by, in vp.  |
+| state | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | Current scroll state.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| OnScrollFrameBeginHandlerResult | data - the scroll data return by handler |
+| [OnScrollFrameBeginHandlerResult](arkts-arkui-onscrollframebeginhandlerresult-i.md) | data - the scroll data return by handler  |
 

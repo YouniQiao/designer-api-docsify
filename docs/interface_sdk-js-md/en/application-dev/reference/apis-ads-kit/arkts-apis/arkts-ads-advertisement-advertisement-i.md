@@ -92,7 +92,7 @@ userId: "12345"
 
 }
 
-**Type:** Map<string, string>
+**Type:** Map&lt;string, string&gt;
 
 **Since:** 11
 

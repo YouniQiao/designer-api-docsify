@@ -54,7 +54,7 @@ subFiles?: Array<FileResponse>
 
 List of files. When the recursive value is true and the type is dir, the file information under the subdirectory will be returned. Otherwise, no value will be returned.
 
-**Type:** Array<FileResponse>
+**Type:** Array&lt;FileResponse&gt;
 
 **Since:** 3
 
@@ -72,7 +72,7 @@ type: 'dir' | 'file'
 
 File type. Available values are as follows:**dir**: directory **file**: file
 
-**Type:** 'dir' | 'file'
+**Type:** 'dir' \| 'file'
 
 **Since:** 3
 

@@ -20,37 +20,37 @@ import { process } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [abort](arkts-arkts-process-abort-f.md#abort-1) | Aborts a process and generates a core file. This method will cause a process to exit immediately. Exercise caution when using this method. |
-| [exit](arkts-arkts-process-exit-f.md#exit-1) | Terminates this process.Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur. |
-| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md#getenvironmentvar-1) | Obtains the value of an environment variable. |
-| [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md#getpastcputime-1) | Obtains the CPU time (in milliseconds) from the time the process starts to the current time. |
-| [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md#getstartrealtime-1) | Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts. |
-| [getSystemConfig](arkts-arkts-process-getsystemconfig-f.md#getsystemconfig-1) | Obtains the system configuration. |
-| [getThreadPriority](arkts-arkts-process-getthreadpriority-f.md#getthreadpriority-1) | Obtains the thread priority based on the specified TID. |
-| [getUidForName](arkts-arkts-process-getuidforname-f.md#getuidforname-1) | Obtains the UID of a user from the user database of the system based on the specified user name. |
-| [is64Bit](arkts-arkts-process-is64bit-f.md#is64bit-1) | Checks whether this process is running in a 64-bit environment. |
-| [isAppUid](arkts-arkts-process-isappuid-f.md#isappuid-1) | Checks whether a UID belongs to this application. |
-| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md#isisolatedprocess-1) | Checks whether this process is isolated. |
-| [kill](arkts-arkts-process-kill-f.md#kill-1) | Sends a signal to a specified process to terminate it. |
-| [uptime](arkts-arkts-process-uptime-f.md#uptime-1) | Obtains the running time of the current system, in seconds. |
+| [abort](arkts-arkts-process-abort-f.md#abort) | Aborts a process and generates a core file. This method will cause a process to exit immediately. Exercise caution when using this method. |
+| [exit](arkts-arkts-process-exit-f.md#exit) | Terminates this process.  Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur. |
+| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md#getenvironmentvar) | Obtains the value of an environment variable. |
+| [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md#getpastcputime) | Obtains the CPU time (in milliseconds) from the time the process starts to the current time. |
+| [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md#getstartrealtime) | Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts. |
+| [getSystemConfig](arkts-arkts-process-getsystemconfig-f.md#getsystemconfig) | Obtains the system configuration. |
+| [getThreadPriority](arkts-arkts-process-getthreadpriority-f.md#getthreadpriority) | Obtains the thread priority based on the specified TID. |
+| [getUidForName](arkts-arkts-process-getuidforname-f.md#getuidforname) | Obtains the UID of a user from the user database of the system based on the specified user name. |
+| [is64Bit](arkts-arkts-process-is64bit-f.md#is64bit) | Checks whether this process is running in a 64-bit environment. |
+| [isAppUid](arkts-arkts-process-isappuid-f.md#isappuid) | Checks whether a UID belongs to this application. |
+| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md#isisolatedprocess) | Checks whether this process is isolated. |
+| [kill](arkts-arkts-process-kill-f.md#kill) | Sends a signal to a specified process to terminate it. |
+| [uptime](arkts-arkts-process-uptime-f.md#uptime) | Obtains the running time of the current system, in seconds. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [chdir](arkts-arkts-process-chdir-f-sys.md#chdir-1) | Change current directory |
-| [cwd](arkts-arkts-process-cwd-f-sys.md#cwd-1) | Return the current work directory; |
-| [off](arkts-arkts-process-off-f-sys.md#off-1) | Remove registered event |
-| [on](arkts-arkts-process-on-f-sys.md#on-1) | Register for an event |
-| [runCmd](arkts-arkts-process-runcmd-f-sys.md#runcmd-1) | Returns a child process object and spawns a new ChildProcess to run the command. |
+| [chdir](arkts-arkts-process-chdir-f-sys.md#chdir) | Change current directory |
+| [cwd](arkts-arkts-process-cwd-f-sys.md#cwd) | Return the current work directory; |
+| [off](arkts-arkts-process-off-f-sys.md#off) | Remove registered event |
+| [on](arkts-arkts-process-on-f-sys.md#on) | Register for an event |
+| [runCmd](arkts-arkts-process-runcmd-f-sys.md#runcmd) | Returns a child process object and spawns a new ChildProcess to run the command. |
 <!--DelEnd-->
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [ProcessManager](arkts-arkts-process-processmanager-c.md) | Provides APIs for throwing exceptions during the addition of a process.Construct a **ProcessManager** object. |
+| [ProcessManager](arkts-arkts-process-processmanager-c.md) | Provides APIs for throwing exceptions during the addition of a process.  Construct a **ProcessManager** object. |
 
 <!--Del-->
 ### Interfaces（系统接口）

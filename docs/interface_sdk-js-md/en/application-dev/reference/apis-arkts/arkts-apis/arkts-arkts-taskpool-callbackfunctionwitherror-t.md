@@ -18,5 +18,5 @@ Describes a callback function with an error message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| e | Error | Yes | Error message. |
+| e | Error | Yes | Error message.  |
 

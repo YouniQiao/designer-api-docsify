@@ -4,6 +4,8 @@ Declare component SwipeRefresher
 
 **Since:** 20
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct SwipeRefresher--><!--Device-unnamed-export declare struct SwipeRefresher-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

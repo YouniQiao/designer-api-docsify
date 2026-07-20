@@ -22,7 +22,7 @@ dnses: Array<NetAddress>
 
 Network address, refer to [NetAddress].
 
-**Type:** Array<NetAddress>
+**Type:** Array&lt;NetAddress&gt;
 
 **Since:** 8
 
@@ -106,7 +106,7 @@ linkAddresses: Array<LinkAddress>
 
 Link information.
 
-**Type:** Array<LinkAddress>
+**Type:** Array&lt;LinkAddress&gt;
 
 **Since:** 8
 
@@ -138,7 +138,7 @@ routes: Array<RouteInfo>
 
 Routing information.
 
-**Type:** Array<RouteInfo>
+**Type:** Array&lt;RouteInfo&gt;
 
 **Since:** 8
 

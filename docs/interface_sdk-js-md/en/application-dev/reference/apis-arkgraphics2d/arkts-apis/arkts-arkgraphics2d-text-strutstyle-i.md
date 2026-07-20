@@ -40,7 +40,7 @@ fontFamilies?: Array<string>
 
 Array of font families. By default, the array is empty, indicating that all system fonts are matched.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 

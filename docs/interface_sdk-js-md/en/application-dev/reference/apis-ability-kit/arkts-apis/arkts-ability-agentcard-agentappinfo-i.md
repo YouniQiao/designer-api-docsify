@@ -56,7 +56,7 @@ deviceTypes?: Array<string>
 
 Device types supported by the agent.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 24
 

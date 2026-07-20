@@ -94,7 +94,7 @@ settingValue?: string | boolean | SettingContent[] | WantAgent
 
 Value of the setting item.SWITCH: bool, LIST: SettingContent, JUMP: string.
 
-**Type:** string | boolean | SettingContent[] | WantAgent
+**Type:** string \| boolean \| SettingContent[] \| WantAgent
 
 **Since:** 23
 

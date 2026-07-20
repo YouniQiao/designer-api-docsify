@@ -4,6 +4,8 @@ Declaration of the tabbed title bar.
 
 **Since:** 22
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct TabTitleBar--><!--Device-unnamed-export declare struct TabTitleBar-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,7 +24,7 @@ menuItems?: Array<TabTitleBarMenuItem>
 
 Menu items on the right side.
 
-**Type:** Array<TabTitleBarMenuItem>
+**Type:** Array&lt;TabTitleBarMenuItem&gt;
 
 **Since:** 22
 
@@ -42,7 +44,7 @@ swiperContent: () => void
 
 Content builder. Each component corresponds to a tab item.The builder needs to be transferred.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 22
 
@@ -64,7 +66,7 @@ tabItems: Array<TabTitleBarTabItem>
 
 Tab items on the left side.
 
-**Type:** Array<TabTitleBarTabItem>
+**Type:** Array&lt;TabTitleBarTabItem&gt;
 
 **Since:** 22
 

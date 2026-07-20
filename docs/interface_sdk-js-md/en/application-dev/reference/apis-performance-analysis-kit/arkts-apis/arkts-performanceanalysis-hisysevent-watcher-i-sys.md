@@ -24,7 +24,7 @@ onEvent: (info: SysEventInfo) => void
 
 Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) => void
 
-**Type:** (info: SysEventInfo) => void
+**Type:** (info: SysEventInfo) =&gt; void
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ onServiceDied: () => void
 
 Callback for disabling of event subscription: () => void
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 9
 

@@ -25,7 +25,7 @@ Creates a DistortionComponent with content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | DistortionComponentOptions | No | DistortionComponent Options. |
+| options | [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md) | No | DistortionComponent Options.  |
 
 ## Summary
 

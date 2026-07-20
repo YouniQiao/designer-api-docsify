@@ -16,7 +16,7 @@ readonly actions: Array<string>
 
 Indicates the actions of the skill
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ readonly entities: Array<string>
 
 Indicates the entities of the skill
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ readonly uris: Array<SkillUri>
 
 Indicates the uris of the skill
 
-**Type:** Array<SkillUri>
+**Type:** Array&lt;SkillUri&gt;
 
 **Since:** 12
 

@@ -40,7 +40,7 @@ readonly modes: Array<SceneMode>
 
 Scene mode.
 
-**Type:** Array<SceneMode>
+**Type:** Array&lt;SceneMode&gt;
 
 **Since:** 18
 
@@ -58,7 +58,7 @@ readonly outputCapabilities: Array<CameraOutputCapability>
 
 Output capabilities of the camera.
 
-**Type:** Array<CameraOutputCapability>
+**Type:** Array&lt;CameraOutputCapability&gt;
 
 **Since:** 18
 

@@ -18,12 +18,12 @@ The download media entity event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | DownloadControlType | Yes | control type |
-| mediaEntity | MediaEntity | Yes | media entity |
+| controlType | [DownloadControlType](arkts-avsession-avmusictemplate-downloadcontroltype-t.md) | Yes | control type  |
+| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | media entity  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | (OperResult) returned through promise |
+| Promise&lt;OperResult&gt; | (OperResult) returned through promise  |
 

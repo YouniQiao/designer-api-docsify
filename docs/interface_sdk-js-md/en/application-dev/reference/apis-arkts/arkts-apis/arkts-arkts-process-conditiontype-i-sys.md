@@ -24,7 +24,7 @@ killSignal?: number | string
 
 Signal sent to the child process when the running time of a child process exceeds the timeout period.
 
-**Type:** number | string
+**Type:** number \| string
 
 **Since:** 10
 

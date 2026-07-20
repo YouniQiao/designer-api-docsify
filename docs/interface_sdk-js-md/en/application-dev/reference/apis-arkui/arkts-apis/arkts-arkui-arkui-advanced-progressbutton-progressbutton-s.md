@@ -4,6 +4,8 @@ Declare Component ProgressButton
 
 **Since:** 22
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct ProgressButton--><!--Device-unnamed-export declare struct ProgressButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,7 +24,7 @@ clickCallback: () => void
 
 Sets the ProgressButton clickCallback.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 22
 

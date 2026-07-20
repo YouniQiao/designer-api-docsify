@@ -20,11 +20,11 @@ Callback function when the selection menu create.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItems | Array&lt;TextMenuItem&gt; | Yes | currently displayed menu items. |
+| menuItems | Array&lt;TextMenuItem&gt; | Yes | currently displayed menu items.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextMenuItem&gt; | Return the menu items will displayed after operations. |
+| Array&lt;TextMenuItem&gt; | Return the menu items will displayed after operations.  |
 

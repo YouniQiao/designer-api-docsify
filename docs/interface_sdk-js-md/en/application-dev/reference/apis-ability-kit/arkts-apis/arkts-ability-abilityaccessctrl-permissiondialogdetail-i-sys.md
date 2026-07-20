@@ -64,7 +64,7 @@ permissionNameList: Array<Permissions>
 
 List of permission names that the agent initiating CLI-related operations currently does not satisfy. If the related permissions are not satisfied, the CLI cannot be started, or the started CLI process cannot obtain the corresponding permissions.
 
-**Type:** Array<Permissions>
+**Type:** Array&lt;Permissions&gt;
 
 **Since:** 26.0.0
 
@@ -84,7 +84,7 @@ statusList: Array<PermissionDecisionStatus>
 
 List of permission decision statuses.
 
-**Type:** Array<PermissionDecisionStatus>
+**Type:** Array&lt;PermissionDecisionStatus&gt;
 
 **Since:** 26.0.0
 

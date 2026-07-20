@@ -78,7 +78,7 @@ fdList: Array<number>
 
 FD list of files to print.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 24
 

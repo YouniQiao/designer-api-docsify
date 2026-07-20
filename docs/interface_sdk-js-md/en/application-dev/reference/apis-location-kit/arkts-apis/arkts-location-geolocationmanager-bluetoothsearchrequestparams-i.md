@@ -22,7 +22,7 @@ deviceIdArray: Array<string>
 
 Indicates the list of Bluetooth device ID that need to be search.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 

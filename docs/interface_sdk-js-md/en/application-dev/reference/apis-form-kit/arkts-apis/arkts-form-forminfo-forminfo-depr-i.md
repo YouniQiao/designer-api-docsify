@@ -304,7 +304,7 @@ supportDimensions: Array<number>
 
 Dimensions supported by the widget.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 8
 

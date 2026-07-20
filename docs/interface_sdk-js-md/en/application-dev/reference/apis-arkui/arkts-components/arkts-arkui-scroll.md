@@ -23,7 +23,7 @@ Called when a scrollable container is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | Scroller | No |  |
+| scroller | [Scroller](arkts-arkui-scroller-c.md) | No |  |
 
 ## Summary
 

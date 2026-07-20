@@ -20,7 +20,7 @@ Defines the callback for failed ability launches.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the launched ability or system operation.The ability component name is in the format of '[bundleName]#[moduleName]#[abilityName]'. If the user cancels thelaunch automatically, this parameter is empty. |
-| failureCode | AbilityStartFailureCode | Yes | Error code of the failure cause. |
-| failureMessage | string | Yes | Description of the failure cause. |
+| name | string | Yes | Name of the launched ability or system operation. The ability component name is in the format of '[bundleName]#[moduleName]#[abilityName]'. If the user cancels the launch automatically, this parameter is empty.  |
+| failureCode | [AbilityStartFailureCode](arkts-ability-app-ability-completionhandlerforabilitystartcallback-abilitystartfailurecode-e.md) | Yes | Error code of the failure cause.  |
+| failureMessage | string | Yes | Description of the failure cause.  |
 

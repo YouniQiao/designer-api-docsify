@@ -58,7 +58,7 @@ localNames?: Array<HolidayLocalName>
 
 Local names of the holiday.
 
-**Type:** Array<HolidayLocalName>
+**Type:** Array&lt;HolidayLocalName&gt;
 
 **Since:** 11
 

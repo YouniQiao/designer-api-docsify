@@ -26,7 +26,7 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -48,7 +48,7 @@ success: (data: CompassResponse) => void
 
 Callback invoked when the compass sensor data changes.
 
-**Type:** (data: CompassResponse) => void
+**Type:** (data: CompassResponse) =&gt; void
 
 **Since:** 3
 

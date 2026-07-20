@@ -84,7 +84,7 @@ action?: () => void
 
 Callback function when click on this menu item.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 22
 

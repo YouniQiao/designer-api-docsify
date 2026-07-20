@@ -23,7 +23,7 @@ Sets the page entrance animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PageTransitionOptions | Yes | pageTransition options |
+| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | Yes | pageTransition options  |
 
 ## PageTransitionEnter
 
@@ -45,7 +45,7 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | PageTransitionCallback | Yes | Callback invoked on a per-frame basis until the entrance animation iscomplete, with the **progress** parameter changing from 0 to 1. |
+| event | [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | Yes | Callback invoked on a per-frame basis until the entrance animation is complete, with the **progress** parameter changing from 0 to 1. |
 
 ## Summary
 

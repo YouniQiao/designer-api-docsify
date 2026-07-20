@@ -20,5 +20,5 @@ Defines an OnMCCUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mcc | string | Yes | Indicates the mobile country code |
+| mcc | string | Yes | Indicates the mobile country code  |
 

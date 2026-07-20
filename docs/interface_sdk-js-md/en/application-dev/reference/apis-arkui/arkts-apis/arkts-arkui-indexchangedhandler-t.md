@@ -18,5 +18,5 @@ Defines the callback to notify the application when the index of the currently d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the currently displayed element. The index is zero-based. |
+| index | number | Yes | Index of the currently displayed element. The index is zero-based.  |
 

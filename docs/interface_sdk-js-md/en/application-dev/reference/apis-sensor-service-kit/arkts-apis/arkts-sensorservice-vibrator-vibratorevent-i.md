@@ -102,7 +102,7 @@ points?: Array<VibratorCurvePoint>
 
 Adjustment points of the vibration curve.
 
-**Type:** Array<VibratorCurvePoint>
+**Type:** Array&lt;VibratorCurvePoint&gt;
 
 **Since:** 18
 

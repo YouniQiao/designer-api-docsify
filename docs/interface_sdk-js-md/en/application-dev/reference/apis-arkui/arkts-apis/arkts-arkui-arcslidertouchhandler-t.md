@@ -18,5 +18,5 @@ Defines the callback invoked to notify the application when the arc slider is to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | TouchEvent | Yes | **TouchEvent** object. |
+| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | Yes | **TouchEvent** object.  |
 

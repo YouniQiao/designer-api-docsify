@@ -18,6 +18,6 @@ Describes the callback invoked for the video size change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | int | Yes | Video width, in px. |
-| height | int | Yes | Video height, in px. |
+| width | number | Yes | Video width, in px.  |
+| height | number | Yes | Video height, in px.  |
 

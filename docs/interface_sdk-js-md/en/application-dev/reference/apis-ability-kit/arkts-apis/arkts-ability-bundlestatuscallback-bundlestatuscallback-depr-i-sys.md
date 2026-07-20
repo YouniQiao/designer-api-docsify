@@ -31,7 +31,7 @@ add: (bundleName: string, userId: number) => void
 
 Used to obtain information when a bundle is installed.
 
-**Type:** (bundleName: string, userId: number) => void
+**Type:** (bundleName: string, userId: number) =&gt; void
 
 **Since:** 8
 
@@ -55,7 +55,7 @@ remove: (bundleName: string, userId: number) => void
 
 Used to obtain information when a bundle is uninstalled.
 
-**Type:** (bundleName: string, userId: number) => void
+**Type:** (bundleName: string, userId: number) =&gt; void
 
 **Since:** 8
 
@@ -79,7 +79,7 @@ update: (bundleName: string, userId: number) => void
 
 Used to obtain information when a bundle is updated.
 
-**Type:** (bundleName: string, userId: number) => void
+**Type:** (bundleName: string, userId: number) =&gt; void
 
 **Since:** 8
 

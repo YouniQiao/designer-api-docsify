@@ -28,7 +28,7 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 6
 
@@ -82,7 +82,7 @@ success: (data: GyroscopeResponse) => void
 
 Callback invoked when the gyroscope sensor data changes.
 
-**Type:** (data: GyroscopeResponse) => void
+**Type:** (data: GyroscopeResponse) =&gt; void
 
 **Since:** 6
 

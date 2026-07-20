@@ -28,7 +28,7 @@ Slider(options?: SliderOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | SliderOptions | No | Parameters of the slider. |
+| options | [SliderOptions](arkts-arkui-slideroptions-i.md) | No | Parameters of the slider.  |
 
 ## Summary
 

@@ -78,7 +78,7 @@ readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>
 
 Quick fix information at the HAP file level.
 
-**Type:** Array<HapModuleQuickFixInfo>
+**Type:** Array&lt;HapModuleQuickFixInfo&gt;
 
 **Since:** 9
 

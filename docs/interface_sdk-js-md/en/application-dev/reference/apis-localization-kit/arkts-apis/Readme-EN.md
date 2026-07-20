@@ -1,10 +1,15 @@
 # ArkTS API<!--arkts-localizationkit-->
 
-- [@ohos.fontManager](arkts-fontmanager.md)<!--Del-->
-  - [dataMigration(system api)](arkts-localization-fontmanager-datamigration-f-sys.md)<!--DelEnd--><!--Del-->
-  - [installFont(system api)](arkts-localization-fontmanager-installfont-f-sys.md)<!--DelEnd--><!--Del-->
-  - [uninstallFont(system api)](arkts-localization-fontmanager-uninstallfont-f-sys.md)<!--DelEnd--><!--Del-->
-  - [DataMigrationCallback(system api)](arkts-localization-fontmanager-datamigrationcallback-i-sys.md)<!--DelEnd--><!--Del-->
+- [@ohos.fontManager](arkts-fontmanager.md)
+  <!--Del-->
+  - [dataMigration(system api)](arkts-localization-fontmanager-datamigration-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [installFont(system api)](arkts-localization-fontmanager-installfont-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [uninstallFont(system api)](arkts-localization-fontmanager-uninstallfont-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DataMigrationCallback(system api)](arkts-localization-fontmanager-datamigrationcallback-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [DataMigrationProgress(system api)](arkts-localization-fontmanager-datamigrationprogress-i-sys.md)<!--DelEnd-->
 - [@ohos.i18n](arkts-i18n.md)
   - [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md)
@@ -44,9 +49,11 @@
   - [StyledDateTimeFormat](arkts-localization-i18n-styleddatetimeformat-c.md)
   - [StyledNumberFormat](arkts-localization-i18n-stylednumberformat-c.md)
   - [SymbolDateTimeFormat](arkts-localization-i18n-symboldatetimeformat-c.md)
-  - [SymbolNumberFormat](arkts-localization-i18n-symbolnumberformat-c.md)<!--Del-->
-  - [System(system api)](arkts-localization-i18n-system-c.md)<!--DelEnd--><!--Del-->
-  - [System(system api)](arkts-localization-i18n-system-c-sys.md)<!--DelEnd--><!--Del-->
+  - [SymbolNumberFormat](arkts-localization-i18n-symbolnumberformat-c.md)
+  - [System](arkts-localization-i18n-system-c.md)
+  <!--Del-->
+  - [System(system api)](arkts-localization-i18n-system-c-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [SystemLocaleManager(system api)](arkts-localization-i18n-systemlocalemanager-c-sys.md)<!--DelEnd-->
   - [TimeZone](arkts-localization-i18n-timezone-c.md)
   - [Transliterator](arkts-localization-i18n-transliterator-c.md)
@@ -59,20 +66,24 @@
   - [EntityInfoItem](arkts-localization-i18n-entityinfoitem-i.md)
   - [HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md)
   - [HolidayLocalName](arkts-localization-i18n-holidaylocalname-i.md)
-  - [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md)<!--Del-->
+  - [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md)
+  <!--Del-->
   - [LocaleItem(system api)](arkts-localization-i18n-localeitem-i-sys.md)<!--DelEnd-->
   - [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md)
   - [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md)
-  - [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md)<!--Del-->
+  - [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md)
+  <!--Del-->
   - [SortOptions(system api)](arkts-localization-i18n-sortoptions-i-sys.md)<!--DelEnd-->
   - [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md)
   - [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md)
   - [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md)
-  - [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md)<!--Del-->
+  - [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md)
+  <!--Del-->
   - [TimeZoneCityItem(system api)](arkts-localization-i18n-timezonecityitem-i-sys.md)<!--DelEnd-->
   - [UnitInfo](arkts-localization-i18n-unitinfo-i.md)
   - [Util](arkts-localization-i18n-util-i.md)
-  - [NormalizerMode](arkts-localization-i18n-normalizermode-e.md)<!--Del-->
+  - [NormalizerMode](arkts-localization-i18n-normalizermode-e.md)
+  <!--Del-->
   - [SuggestionType(system api)](arkts-localization-i18n-suggestiontype-e-sys.md)<!--DelEnd-->
   - [TemperatureType](arkts-localization-i18n-temperaturetype-e.md)
   - [UnitUsage](arkts-localization-i18n-unitusage-e.md)

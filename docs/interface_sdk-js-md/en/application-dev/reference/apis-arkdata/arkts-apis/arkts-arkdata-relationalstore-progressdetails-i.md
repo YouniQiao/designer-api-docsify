@@ -40,7 +40,7 @@ Statistics of each table.
 
 The key indicates the table name, and the value indicates the device-cloud sync statistics of the table.
 
-**Type:** Record<string, TableDetails>
+**Type:** Record&lt;string, TableDetails&gt;
 
 **Since:** 10
 

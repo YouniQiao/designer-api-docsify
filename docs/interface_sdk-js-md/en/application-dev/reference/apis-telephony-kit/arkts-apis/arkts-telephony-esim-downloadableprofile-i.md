@@ -22,7 +22,7 @@ accessRules?: Array<AccessRule>
 
 Gets the accessRules.
 
-**Type:** Array<AccessRule>
+**Type:** Array&lt;AccessRule&gt;
 
 **Since:** 18
 

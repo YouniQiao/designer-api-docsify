@@ -22,7 +22,7 @@ tcpPortStatesInfo?: Array<TcpNetPortStatesInfo>
 
 Port information of the TCP network.
 
-**Type:** Array<TcpNetPortStatesInfo>
+**Type:** Array&lt;TcpNetPortStatesInfo&gt;
 
 **Since:** 24
 
@@ -40,7 +40,7 @@ udpPortStatesInfo?: Array<UdpNetPortStatesInfo>
 
 Port information of the UDP network.
 
-**Type:** Array<UdpNetPortStatesInfo>
+**Type:** Array&lt;UdpNetPortStatesInfo&gt;
 
 **Since:** 24
 

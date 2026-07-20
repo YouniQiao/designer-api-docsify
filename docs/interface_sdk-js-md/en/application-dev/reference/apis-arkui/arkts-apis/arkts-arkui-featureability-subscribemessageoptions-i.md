@@ -16,7 +16,7 @@ fail?: (data: string, code: number) => void
 
 Called when the messages fail to be sent.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 5
 
@@ -34,7 +34,7 @@ success?: (data: SubscribeMessageResponse) => void
 
 Called when the messages are sent successfully.
 
-**Type:** (data: SubscribeMessageResponse) => void
+**Type:** (data: SubscribeMessageResponse) =&gt; void
 
 **Since:** 5
 

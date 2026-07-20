@@ -20,7 +20,7 @@ devices: Array<BluetoothDevice>
 
 The devices of BLEFoundResponse
 
-**Type:** Array<BluetoothDevice>
+**Type:** Array&lt;BluetoothDevice&gt;
 
 **Since:** 6
 

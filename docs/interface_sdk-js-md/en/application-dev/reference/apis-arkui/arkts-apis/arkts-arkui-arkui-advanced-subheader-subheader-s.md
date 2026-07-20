@@ -4,6 +4,8 @@ Declare struct SubHeader
 
 **Since:** 18
 
+**Decorator:** @Component
+
 <!--Device-unnamed-export declare struct SubHeader--><!--Device-unnamed-export declare struct SubHeader-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -115,7 +117,7 @@ operationItem?: Array<OperationOption>
 
 operation item.
 
-**Type:** Array<OperationOption>
+**Type:** Array&lt;OperationOption&gt;
 
 **Since:** 18
 
@@ -135,7 +137,7 @@ operationSymbolOptions?: Array<SymbolOptions>
 
 Attributes of Symbol icons in operation area.
 
-**Type:** Array<SymbolOptions>
+**Type:** Array&lt;SymbolOptions&gt;
 
 **Since:** 18
 
@@ -303,7 +305,7 @@ Set the ability to customize the broadcast of the title.
 
 Set the title content.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 18
 

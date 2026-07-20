@@ -24,7 +24,7 @@ downloadableProfiles: Array<DownloadableProfile>
 
 Gets the downloadable Profiles with filled-in metadata.
 
-**Type:** Array<DownloadableProfile>
+**Type:** Array&lt;DownloadableProfile&gt;
 
 **Since:** 18
 

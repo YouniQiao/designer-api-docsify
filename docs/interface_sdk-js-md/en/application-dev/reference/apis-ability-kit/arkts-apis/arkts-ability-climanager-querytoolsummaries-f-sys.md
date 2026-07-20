@@ -6,6 +6,7 @@
 import { cliManager } from '@kit.AbilityKit';
 ```
 
+<a id="querytoolsummaries"></a>
 ## queryToolSummaries
 
 ```TypeScript
@@ -30,7 +31,7 @@ Query all tool summary information. The summary information only contains the fi
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<Array<ToolSummary>> | List of full tool summaries. |
+| Promise&lt;Array&lt;ToolSummary&gt;&gt; | List of full tool summaries. |
 
 **Error codes:**
 

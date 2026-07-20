@@ -20,5 +20,5 @@ Defines an OnColorModeUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes | Indicates the system's light or dark color mode |
+| colorMode | ConfigurationConstant.ColorMode | Yes | Indicates the system's light or dark color mode  |
 

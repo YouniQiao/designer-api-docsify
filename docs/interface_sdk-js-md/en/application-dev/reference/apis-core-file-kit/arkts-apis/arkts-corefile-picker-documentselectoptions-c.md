@@ -92,7 +92,7 @@ By default, no filtering is performed, that is, all documents are selected. The 
 
 This parameter is available only to the devices that have the required system capability.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 
@@ -196,7 +196,7 @@ Whether to pass the URIs for batch authorization (only files are supported). Thi
 
 This parameter can be used on smartphones but has no effect on other devices.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 15
 

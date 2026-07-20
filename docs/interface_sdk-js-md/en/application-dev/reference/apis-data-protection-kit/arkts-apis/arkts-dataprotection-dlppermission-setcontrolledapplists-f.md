@@ -6,6 +6,7 @@
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
+<a id="setcontrolledapplists"></a>
 ## setControlledAppLists
 
 ```TypeScript
@@ -28,14 +29,14 @@ Set the list of applications that are subject to enterprise DLP control.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appLists | [Array](../../apis-na/arkts-apis/arkts-na-lib-es5-array-i.md)<string> | Yes | The appIdentifiers of applications to be put under controlled<br>The maximum length is 100.<br>The value range of Array is [0, 100], and the value range of String is [0, 4096]. |
+| appLists | Array&lt;string&gt; | Yes | The appIdentifiers of applications to be put under controlled<br>The maximum length is 100.<br>The value range of Array is [0, 100], and the value range of String is [0, 4096]. |
 | userId | number | No | The target userId for which the controlled app list is configured.If not specified, the current user is used by default<br>The value range is all integers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Promise](../../apis-na/arkts-apis/arkts-na-lib-es5-promise-i.md)<void> | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

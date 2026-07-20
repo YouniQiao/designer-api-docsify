@@ -20,5 +20,5 @@ Defines the callback function when the preloaded [UIExtensionAbility](arkts-abil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preloadId | int | Yes | The preload UIExtensionAbility ID. |
+| preloadId | number | Yes | The preload UIExtensionAbility ID.  |
 

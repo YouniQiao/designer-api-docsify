@@ -20,8 +20,8 @@ Represents the interception callback invoked before and after page redirection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | NavDestinationContext \| NavBar | Yes | Information about the top page in the routing stack afterpage redirection. The value **navBar** indicates that the top page is the home page. |
-| to | NavDestinationContext \| NavBar | Yes | Information about the top page in the routing stack afterpage redirection. The value **navBar** indicates that the top page is the home page. |
-| operation | NavigationOperation | Yes | Current page redirection type. |
-| isAnimated | boolean | Yes | Whether to enable the transition animation.<br>**true**: Enable the transition animation.<br>**false**: Disable the transition animation. |
+| from | [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) \| NavBar | Yes | Information about the top page in the routing stack after page redirection. The value **navBar** indicates that the top page is the home page.  |
+| to | [NavDestinationContext](arkts-arkui-navdestinationcontext-i.md) \| NavBar | Yes | Information about the top page in the routing stack after page redirection. The value **navBar** indicates that the top page is the home page.  |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | Current page redirection type.  |
+| isAnimated | boolean | Yes | Whether to enable the transition animation. <br>**true**: Enable the transition animation.<br>**false**: Disable the transition animation.  |
 

@@ -44,7 +44,7 @@ parameters?: Record<string, Object>
 
 Other parameters.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ targetAbilityInfos: Array<DialogAbilityInfo>
 
 List of target ability information.
 
-**Type:** Array<DialogAbilityInfo>
+**Type:** Array&lt;DialogAbilityInfo&gt;
 
 **Since:** 11
 

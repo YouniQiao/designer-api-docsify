@@ -44,7 +44,7 @@ customIcons?: Array<GeneratorResultPageIcon>
 
 Custom icons used on the AI generated image results page.
 
-**Type:** Array<GeneratorResultPageIcon>
+**Type:** Array&lt;GeneratorResultPageIcon&gt;
 
 **Since:** 23
 
@@ -104,7 +104,7 @@ images?: Array<ImageItem>
 
 Initial image parameters used for AI-generated image tasks.
 
-**Type:** Array<ImageItem>
+**Type:** Array&lt;ImageItem&gt;
 
 **Since:** 23
 
@@ -164,7 +164,7 @@ onAreaDidChange?: Callback<common2D.Rect>
 
 Callback triggered when the ImageGeneratorDialog changes in size or position.
 
-**Type:** Callback<common2D.Rect>
+**Type:** Callback&lt;common2D.Rect&gt;
 
 **Since:** 23
 

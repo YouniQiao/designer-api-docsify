@@ -58,7 +58,7 @@ transitionCallback?: Callback<GeofenceTransition>
 
 Indicates the callback for reporting the BeaconFence transition status.
 
-**Type:** Callback<GeofenceTransition>
+**Type:** Callback&lt;GeofenceTransition&gt;
 
 **Since:** 20
 

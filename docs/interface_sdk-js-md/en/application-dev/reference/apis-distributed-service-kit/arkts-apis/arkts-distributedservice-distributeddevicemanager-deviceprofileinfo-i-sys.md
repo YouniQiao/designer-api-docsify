@@ -369,7 +369,7 @@ services?: Array<ServiceProfileInfo>
 
 Service list. This parameter is left unspecified by default.
 
-**Type:** Array<ServiceProfileInfo>
+**Type:** Array&lt;ServiceProfileInfo&gt;
 
 **Since:** 15
 

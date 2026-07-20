@@ -46,7 +46,7 @@ buttons?: Array<DialogButton>
 
 Array of buttons in the dialog box.When provided, the dialog displays as an alert-style dialog with buttons.When used together with sheets, buttons are displayed below the sheet list.
 
-**Type:** Array<DialogButton>
+**Type:** Array&lt;DialogButton&gt;
 
 **Since:** 26.1.0
 
@@ -106,7 +106,7 @@ sheets?: Array<DialogSheet>
 
 Array of sheet items for action-sheet style.When provided, the dialog displays sheet items for user selection.
 
-**Type:** Array<DialogSheet>
+**Type:** Array&lt;DialogSheet&gt;
 
 **Since:** 26.1.0
 

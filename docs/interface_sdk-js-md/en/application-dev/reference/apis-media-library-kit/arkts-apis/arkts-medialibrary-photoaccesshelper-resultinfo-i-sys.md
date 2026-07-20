@@ -44,7 +44,7 @@ readonly result: Array<string|null>
 
 result info of batch operations.
 
-**Type:** Array<string|null>
+**Type:** Array&lt;string\|null&gt;
 
 **Since:** 26.0.0
 

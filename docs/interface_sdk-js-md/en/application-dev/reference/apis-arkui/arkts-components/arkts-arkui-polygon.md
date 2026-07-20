@@ -35,7 +35,7 @@ Uses new to create Polygon.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | PolygonOptions | No | Polygon options |
+| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No | Polygon options |
 
 ## Polygon
 
@@ -59,7 +59,7 @@ Defines the constructor of Polygon component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | PolygonOptions | No | Options of the polygon.<br>The **undefined** and **null** values aretreated as invalid and will not take effect. |
+| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No | Options of the polygon.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

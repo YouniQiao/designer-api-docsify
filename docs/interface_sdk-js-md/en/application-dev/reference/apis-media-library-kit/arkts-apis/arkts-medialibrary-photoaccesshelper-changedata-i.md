@@ -22,7 +22,7 @@ extraUris: Array<string>
 
 URIs of the changed files in the album. The value may be undefined. Check whether the value is undefined before using it.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ uris: Array<string>
 
 All URIs with the same [NotifyType](arkts-medialibrary-photoaccesshelper-notifytype-e.md), which can be **PhotoAsset** or **Album**.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 10
 

@@ -44,7 +44,7 @@ onHoverDecrease?: (isHover: boolean) => void
 
 Trigger a mouse hover event at the decrease button.
 
-**Type:** (isHover: boolean) => void
+**Type:** (isHover: boolean) =&gt; void
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ onHoverIncrease?: (isHover: boolean) => void
 
 Trigger a mouse hover event at the increase button.
 
-**Type:** (isHover: boolean) => void
+**Type:** (isHover: boolean) =&gt; void
 
 **Since:** 11
 

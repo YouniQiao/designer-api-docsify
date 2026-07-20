@@ -18,5 +18,5 @@ Callback for picker state
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | AVCastPickerState | Yes | the picker state. |
+| state | [AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md) | Yes | the picker state.  |
 

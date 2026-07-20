@@ -20,9 +20,9 @@ Defines the callback triggered before a navigation page is redirected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | NavPathInfo \| NavBar | Yes | Information about the exit page.The value **navBar** indicates that the top page is the home page. |
-| to | NavPathInfo \| NavBar | Yes | Information about the enter page.The value **navBar** indicates that the top page is the home page. |
-| pathStack | NavPathStack | Yes | Page stack. |
-| operation | NavigationOperation | Yes | Current page redirection type. |
-| isAnimated | boolean | Yes | Whether to enable the transition animation.<br>**true**: Enable the transition animation.<br>**false**: Disable the transition animation. |
+| from | [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| NavBar | Yes | Information about the exit page. The value **navBar** indicates that the top page is the home page.  |
+| to | [NavPathInfo](arkts-arkui-navpathinfo-c.md) \| NavBar | Yes | Information about the enter page. The value **navBar** indicates that the top page is the home page.  |
+| pathStack | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes | Page stack.  |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | Current page redirection type.  |
+| isAnimated | boolean | Yes | Whether to enable the transition animation. <br>**true**: Enable the transition animation.<br>**false**: Disable the transition animation.  |
 

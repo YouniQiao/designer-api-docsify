@@ -42,7 +42,7 @@ subscribe: Record<string, Array<SubscribeId>>
 
 Subscription information.
 
-**Type:** Record<string, Array<SubscribeId>>
+**Type:** Record&lt;string, Array&lt;SubscribeId&gt;&gt;
 
 **Since:** 11
 

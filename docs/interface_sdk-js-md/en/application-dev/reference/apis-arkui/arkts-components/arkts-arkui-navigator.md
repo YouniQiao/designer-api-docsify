@@ -30,7 +30,7 @@ Called when the route jumps.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { target: string; type?: NavigationType } | No | Information about the page to be redirected to.<br/>target: Path of the target page to beredirected to. <br/>type: Navigation type.<br>Default value: **NavigationType.Push** |
+| value | { target: string; type?: NavigationType } | No | Information about the page to be redirected to.<br/>target: Path of the target page to be redirected to. <br/>type: Navigation type.<br>Default value: **NavigationType.Push**  |
 
 ## Navigator
 

@@ -37,7 +37,7 @@ Defines the constructor of SymbolSpan.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Resource | Yes | Resource of the **SymbolSpan** component, for example, **$r('sys.symbol.ohos_wifi')**. |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Resource of the **SymbolSpan** component, for example, **$r('sys.symbol.ohos_wifi')**.  |
 
 ## Summary
 

@@ -44,7 +44,7 @@ data: Array<PublishedItem>
 
 Data of the callback.
 
-**Type:** Array<PublishedItem>
+**Type:** Array&lt;PublishedItem&gt;
 
 **Since:** 10
 

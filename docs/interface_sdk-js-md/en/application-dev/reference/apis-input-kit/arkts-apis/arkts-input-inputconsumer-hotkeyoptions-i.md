@@ -58,7 +58,7 @@ Modifier key set (including Ctrl, Shift, and Alt). One to four modifier keys are
 
 For example, in **Ctrl+Shift+Esc**, **Ctrl** and **Shift** are modifier keys.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 14
 

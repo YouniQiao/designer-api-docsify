@@ -18,11 +18,11 @@ The handle member purchase event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | MemberPurchaseInfo | Yes | info |
+| info | [MemberPurchaseInfo](arkts-avsession-avmusictemplate-memberpurchaseinfo-i.md) | Yes | info  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | (DialogInfo) returned through promise |
+| Promise&lt;DialogInfo&gt; | (DialogInfo) returned through promise  |
 

@@ -108,7 +108,7 @@ readonly pluginModuleInfos: Array<PluginModuleInfo>
 
 Module information of the plugin.
 
-**Type:** Array<PluginModuleInfo>
+**Type:** Array&lt;PluginModuleInfo&gt;
 
 **Since:** 26.0.0
 

@@ -20,11 +20,11 @@ Represents the callback invoked when an index item is selected and [usingPopup](
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | selected index |
+| index | number | Yes | selected index  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | string array corresponding to the index |
+| Array&lt;string&gt; | string array corresponding to the index  |
 

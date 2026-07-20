@@ -20,6 +20,6 @@ Represents the callback invoked after text changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rangeBefore | TextRange | Yes | Range of the text to be changed. |
-| rangeAfter | TextRange | Yes | Range of the text added. |
+| rangeBefore | [TextRange](arkts-arkui-textrange-i.md) | Yes | Range of the text to be changed.  |
+| rangeAfter | [TextRange](arkts-arkui-textrange-i.md) | Yes | Range of the text added.  |
 

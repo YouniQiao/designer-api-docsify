@@ -18,11 +18,11 @@ The query custom content event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| queryType | CustomType[] | Yes | query type |
+| queryType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md)[] | Yes | query type  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CustomElement&gt; | (CustomElement) returned through promise |
+| Promise&lt;CustomElement&gt; | (CustomElement) returned through promise  |
 

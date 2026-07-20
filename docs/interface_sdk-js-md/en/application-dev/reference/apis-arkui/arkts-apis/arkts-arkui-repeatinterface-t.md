@@ -22,11 +22,11 @@ Indicates the type of Repeat.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | RepeatArray&lt;T&gt; | Yes | The Data Source |
+| arr | [RepeatArray](arkts-arkui-repeatarray-t.md)&lt;T&gt; | Yes | The Data Source  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| RepeatAttribute&lt;T&gt; | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
+| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; | @syscap SystemCapability.ArkUI.ArkUI.Full @stagemodelonly @crossplatform @form @atomicservice  |
 

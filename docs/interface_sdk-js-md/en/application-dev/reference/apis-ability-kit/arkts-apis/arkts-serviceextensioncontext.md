@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [ServiceExtensionContext](arkts-ability-serviceextensioncontext-c-sys.md) | The ServiceExtensionContext module provides the context environment for the ServiceExtensionAbility. It inherits from ExtensionContext.You can use the APIs of this module to start, terminate, connect, and disconnect an ability. |
+| [ServiceExtensionContext](arkts-ability-serviceextensioncontext-c-sys.md) | The ServiceExtensionContext module provides the context environment for the ServiceExtensionAbility. It inherits from ExtensionContext.  You can use the APIs of this module to start, terminate, connect, and disconnect an ability. |
 <!--DelEnd-->
 

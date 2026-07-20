@@ -112,7 +112,7 @@ Action of the suffix icon.
 
 If the value is **undefined**, no action is configured for the suffix icon.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 11
 

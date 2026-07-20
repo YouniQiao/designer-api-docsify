@@ -24,7 +24,7 @@ complete?: () => void
 
 Called when API call is complete.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -44,7 +44,7 @@ fail?: (data: any, code: number) => void
 
 Called when API call has failed. Header information and HTTP status code returned when the upload task fails.
 
-**Type:** (data: any, code: number) => void
+**Type:** (data: any, code: number) =&gt; void
 
 **Since:** 3
 
@@ -64,7 +64,7 @@ success?: (data: OnDownloadCompleteResponse) => void
 
 Called when API call is successful.
 
-**Type:** (data: OnDownloadCompleteResponse) => void
+**Type:** (data: OnDownloadCompleteResponse) =&gt; void
 
 **Since:** 3
 

@@ -82,7 +82,7 @@ safeAreaEdges?: Array<SafeAreaEdge>
 
 Indicates the edges of the safe area.
 
-**Type:** Array<SafeAreaEdge>
+**Type:** Array&lt;SafeAreaEdge&gt;
 
 **Since:** 26.0.0
 
@@ -102,7 +102,7 @@ safeAreaTypes?: Array<SafeAreaType>
 
 Indicates the types of the safe area.
 
-**Type:** Array<SafeAreaType>
+**Type:** Array&lt;SafeAreaType&gt;
 
 **Since:** 26.0.0
 

@@ -155,7 +155,7 @@ readonly mode?: 'upper' | 'lower'
 
 Optional. Mode of the input method subtype, including **upper** (uppercase) and **lower** (lowercase).
 
-**Type:** 'upper' | 'lower'
+**Type:** 'upper' \| 'lower'
 
 **Since:** 9
 

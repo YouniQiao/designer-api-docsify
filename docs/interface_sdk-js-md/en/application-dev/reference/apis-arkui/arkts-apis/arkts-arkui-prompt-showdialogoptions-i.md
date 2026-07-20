@@ -40,7 +40,7 @@ cancel?: (data: string, code: string) => void
 
 Called when the operation is cancelled.
 
-**Type:** (data: string, code: string) => void
+**Type:** (data: string, code: string) =&gt; void
 
 **Since:** 11
 
@@ -58,7 +58,7 @@ complete?: (data: string) => void
 
 Called when the dialog box is closed.
 
-**Type:** (data: string) => void
+**Type:** (data: string) =&gt; void
 
 **Since:** 11
 
@@ -94,7 +94,7 @@ success?: (data: ShowDialogSuccessResponse) => void
 
 Called when the dialog box is displayed.
 
-**Type:** (data: ShowDialogSuccessResponse) => void
+**Type:** (data: ShowDialogSuccessResponse) =&gt; void
 
 **Since:** 11
 

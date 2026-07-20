@@ -24,7 +24,7 @@ complete?: () => void
 
 Called when an API call is complete.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -42,7 +42,7 @@ fail?: (data: string, code: number) => void
 
 Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -60,7 +60,7 @@ success?: (data: BrightnessModeResponse) => void
 
 Called when an API call is successful. **data** is a return value of the [BrightnessModeResponse](arkts-basicservices-brightness-brightnessmoderesponse-i.md) type.
 
-**Type:** (data: BrightnessModeResponse) => void
+**Type:** (data: BrightnessModeResponse) =&gt; void
 
 **Since:** 3
 

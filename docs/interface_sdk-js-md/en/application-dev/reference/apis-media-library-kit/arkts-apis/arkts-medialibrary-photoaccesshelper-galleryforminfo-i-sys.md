@@ -30,7 +30,7 @@ If you attempt to create or update a widget with more than 500 URIs in **assetUr
 
 When deleting a widget, this parameter can be omitted.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 18
 

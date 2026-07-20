@@ -29,7 +29,7 @@ complete?: () => void
 
 Called when the execution is completed.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -49,7 +49,7 @@ data?: Array<RequestData>
 
 Form data in the request body.
 
-**Type:** Array<RequestData>
+**Type:** Array&lt;RequestData&gt;
 
 **Since:** 3
 
@@ -69,7 +69,7 @@ fail?: (data: any, code: number) => void
 
 Called when uploading fails.
 
-**Type:** (data: any, code: number) => void
+**Type:** (data: any, code: number) =&gt; void
 
 **Since:** 3
 
@@ -89,7 +89,7 @@ files: Array<RequestFile>
 
 List of files to upload, which is submitted through multipart/form-data.
 
-**Type:** Array<RequestFile>
+**Type:** Array&lt;RequestFile&gt;
 
 **Since:** 3
 
@@ -149,7 +149,7 @@ success?: (data: UploadResponse) => void
 
 Called when the files are uploaded successfully.
 
-**Type:** (data: UploadResponse) => void
+**Type:** (data: UploadResponse) =&gt; void
 
 **Since:** 3
 

@@ -20,5 +20,5 @@ Defines an OnHasPointerDeviceUpdatedFn function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hasPointerDevice | boolean | Yes | Indicates whether a pointing device is connected,such as a mouse, keyboard, or touchpad |
+| hasPointerDevice | boolean | Yes | Indicates whether a pointing device is connected, such as a mouse, keyboard, or touchpad  |
 

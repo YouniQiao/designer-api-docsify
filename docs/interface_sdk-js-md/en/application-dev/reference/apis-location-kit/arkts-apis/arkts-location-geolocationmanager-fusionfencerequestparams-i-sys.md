@@ -24,7 +24,7 @@ cellFences?: Array<CellFence>
 
 Indicates CELL fence array.
 
-**Type:** Array<CellFence>
+**Type:** Array&lt;CellFence&gt;
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ fenceTransitionCallback: Callback<FusionFenceTransition>
 
 Indicates the callback for reporting the fence transition status.
 
-**Type:** Callback<FusionFenceTransition>
+**Type:** Callback&lt;FusionFenceTransition&gt;
 
 **Since:** 26.0.0
 
@@ -104,7 +104,7 @@ gnssFences?: Array<GnssFence>
 
 Indicates GNSS fence array.
 
-**Type:** Array<GnssFence>
+**Type:** Array&lt;GnssFence&gt;
 
 **Since:** 26.0.0
 
@@ -244,7 +244,7 @@ wifiFences?: Array<WifiFence>
 
 Indicates Wi-Fi fence array.
 
-**Type:** Array<WifiFence>
+**Type:** Array&lt;WifiFence&gt;
 
 **Since:** 26.0.0
 

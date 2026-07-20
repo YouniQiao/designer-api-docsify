@@ -39,7 +39,7 @@ Defines the constructor of video component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | VideoOptions | Yes | Video information. |
+| value | [VideoOptions](arkts-arkui-videooptions-i.md) | Yes | Video information.  |
 
 ## Summary
 

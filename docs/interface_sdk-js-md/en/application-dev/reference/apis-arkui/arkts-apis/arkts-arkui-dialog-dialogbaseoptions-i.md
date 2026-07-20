@@ -148,7 +148,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Border color of the dialog box.
 
-**Type:** ResourceColor | EdgeColors | LocalizedEdgeColors
+**Type:** ResourceColor \| EdgeColors \| LocalizedEdgeColors
 
 **Default:** Color.Black
 
@@ -170,7 +170,7 @@ borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 Border radius of the background.
 
-**Type:** Dimension | BorderRadiuses | LocalizedBorderRadiuses
+**Type:** Dimension \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Default:** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
@@ -192,7 +192,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Border style of the dialog box.
 
-**Type:** BorderStyle | EdgeStyles
+**Type:** BorderStyle \| EdgeStyles
 
 **Default:** BorderStyle.Solid
 
@@ -214,7 +214,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Border width of the dialog box.
 
-**Type:** Dimension | EdgeWidths | LocalizedEdgeWidths
+**Type:** Dimension \| EdgeWidths \| LocalizedEdgeWidths
 
 **Default:** 0
 
@@ -696,7 +696,7 @@ onWillDismiss?: Callback<DialogDismissal>
 
 Callback for interactive closure of the dialog box.<br>If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button.The reason parameter in the callback is used to determine whether the dialog can be closed.
 
-**Type:** Callback<DialogDismissal>
+**Type:** Callback&lt;DialogDismissal&gt;
 
 **Since:** 26.1.0
 
@@ -716,7 +716,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.
 
-**Type:** ShadowOptions | ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 26.1.0
 

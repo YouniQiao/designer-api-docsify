@@ -20,5 +20,5 @@ Callback function when operate the checkbox/switch/radio.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | The value of checkbox/switch/radio. |
+| value | boolean | Yes | The value of checkbox/switch/radio.  |
 

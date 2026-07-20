@@ -304,7 +304,7 @@ mediaImage?: image.PixelMap | string
 
 The image of this media asset displayed in the media center.It can be a {@link PixelMap} or a URI formatted string,
 
-**Type:** image.PixelMap | string
+**Type:** image.PixelMap \| string
 
 **Since:** 10
 

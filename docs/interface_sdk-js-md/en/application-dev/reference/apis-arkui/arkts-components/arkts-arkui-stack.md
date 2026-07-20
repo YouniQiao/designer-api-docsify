@@ -39,7 +39,7 @@ Stack(options?: StackOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | StackOptions | No | Alignment of child components in the container. |
+| options | [StackOptions](arkts-arkui-stackoptions-i.md) | No | Alignment of child components in the container. |
 
 ## Summary
 

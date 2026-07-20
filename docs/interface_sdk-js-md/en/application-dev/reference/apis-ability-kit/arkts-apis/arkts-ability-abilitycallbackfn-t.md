@@ -20,5 +20,5 @@ The callback is called when only an ability is monitored.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | any | Yes | Indicates the ability to register for listening. |
+| ability | any | Yes | Indicates the ability to register for listening.  |
 

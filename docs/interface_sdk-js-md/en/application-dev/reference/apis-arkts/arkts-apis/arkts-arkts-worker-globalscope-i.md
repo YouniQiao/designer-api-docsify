@@ -42,7 +42,7 @@ onerror?: (ev: ErrorEvent) => void
 
 Called when an exception occurs during worker execution. The event handler is executed in the Worker thread.In the callback function, the ev type is ErrorEvent, indicating the received abnormal data.
 
-**Type:** (ev: ErrorEvent) => void
+**Type:** (ev: ErrorEvent) =&gt; void
 
 **Since:** 9
 

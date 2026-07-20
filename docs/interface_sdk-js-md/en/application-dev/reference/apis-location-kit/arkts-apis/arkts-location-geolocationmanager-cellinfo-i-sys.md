@@ -24,7 +24,7 @@ additionsMap?: Map<string, string>
 
 Indicates additional information map.
 
-**Type:** Map<string, string>
+**Type:** Map&lt;string, string&gt;
 
 **Since:** 23
 

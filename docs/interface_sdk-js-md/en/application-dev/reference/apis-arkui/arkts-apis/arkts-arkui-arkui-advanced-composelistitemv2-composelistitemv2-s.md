@@ -4,6 +4,8 @@ Declare ComposeListItemV2
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct ComposeListItemV2--><!--Device-unnamed-export declare struct ComposeListItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ The ContentItem.
 
 **Since:** 26.0.0
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -45,6 +49,8 @@ The OperateItem.
 **Type:** OperateItemV2
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

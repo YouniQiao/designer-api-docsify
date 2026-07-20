@@ -18,6 +18,6 @@ Describes the callback invoked for the track change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the track that has changed. |
-| isSelected | boolean | Yes | Whether the track at the current index is selected. **true** if selected, **false**otherwise. |
+| index | number | Yes | Index of the track that has changed.  |
+| isSelected | boolean | Yes | Whether the track at the current index is selected. **true** if selected, **false** otherwise.  |
 

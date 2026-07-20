@@ -22,7 +22,7 @@ keywords: Array<string>
 
 Keyword set, which is used to match sensitive keywords in a file.The system searches for these keywords in the file content and returns the identification result if a keyword is matched.The keywords are case-sensitive.The array can contain a maximum of 50 elements, and each element can contain a maximum of 30 bytes.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 21
 

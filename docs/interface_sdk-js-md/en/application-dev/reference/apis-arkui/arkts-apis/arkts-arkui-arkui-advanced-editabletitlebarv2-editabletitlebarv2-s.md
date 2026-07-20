@@ -4,6 +4,8 @@ Declaration of the editable title bar.
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct EditableTitleBarV2--><!--Device-unnamed-export declare struct EditableTitleBarV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Image item configuration, displayed on the left side of the title.
 
 **Since:** 26.0.0
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -46,6 +50,8 @@ Left icon configuration.
 
 **Since:** 26.0.0
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -62,9 +68,11 @@ menuItems?: Array<EditableTitleBarMenuItemV2>
 
 Custom menu items array, maximum 2-3 items.
 
-**Type:** Array<EditableTitleBarMenuItemV2>
+**Type:** Array&lt;EditableTitleBarMenuItemV2&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,6 +94,8 @@ Style and layout configuration.
 
 **Since:** 26.0.0
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -106,6 +116,8 @@ Save button configuration.
 
 **Since:** 26.0.0
 
+**Decorator:** @Param
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -122,9 +134,11 @@ title: ResourceStr | EditableTitleV2
 
 Title configuration, supports string or object form.
 
-**Type:** ResourceStr | EditableTitleV2
+**Type:** ResourceStr \| EditableTitleV2
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

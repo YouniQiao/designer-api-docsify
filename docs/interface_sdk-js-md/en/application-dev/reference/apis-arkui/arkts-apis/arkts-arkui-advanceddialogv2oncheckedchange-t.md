@@ -20,5 +20,5 @@ Declare the callback when the checkbox of dialog is changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| checked | boolean | Yes | Checkbox status. |
+| checked | boolean | Yes | Checkbox status.  |
 

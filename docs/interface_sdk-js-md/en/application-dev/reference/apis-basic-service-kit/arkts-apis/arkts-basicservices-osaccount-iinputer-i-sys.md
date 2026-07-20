@@ -24,7 +24,7 @@ onGetData: (authSubType: AuthSubType, callback: IInputData, options: GetInputDat
 
 Called to notify the caller that data is obtained.
 
-**Type:** (authSubType: AuthSubType, callback: IInputData, options: GetInputDataOptions) => void
+**Type:** (authSubType: AuthSubType, callback: IInputData, options: GetInputDataOptions) =&gt; void
 
 **Since:** 8
 

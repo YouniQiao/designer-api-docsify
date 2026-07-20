@@ -24,7 +24,7 @@ onComplete: () => void
 
 Triggered when data is complete.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ onError: (message: string) => void
 
 Triggered when error.
 
-**Type:** (message: string) => void
+**Type:** (message: string) =&gt; void
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ onQuery: (events: Array<SecurityEvent>) => void
 
 Triggered when data is returned.
 
-**Type:** (events: Array<SecurityEvent>) => void
+**Type:** (events: Array&lt;SecurityEvent&gt;) =&gt; void
 
 **Since:** 12
 

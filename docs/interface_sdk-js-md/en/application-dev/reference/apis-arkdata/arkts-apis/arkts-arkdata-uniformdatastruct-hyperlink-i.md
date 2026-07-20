@@ -50,7 +50,7 @@ Object of the dictionary type used to describe the attributes of the hyperlink. 
 
 By default, it is an empty dictionary object.
 
-**Type:** Record<string, string>
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 12
 

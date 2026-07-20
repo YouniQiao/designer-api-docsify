@@ -4,6 +4,8 @@ Declare TreeViewV2 Component
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-export declare struct TreeViewV2--><!--Device-unnamed-export declare struct TreeViewV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ Node data source of TreeViewV2.
 **Type:** TreeControllerV2
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,7 +16,7 @@ readonly metadata: Array<Metadata>
 
 Metadata list of the module.
 
-**Type:** Array<Metadata>
+**Type:** Array&lt;Metadata&gt;
 
 **Since:** 10
 

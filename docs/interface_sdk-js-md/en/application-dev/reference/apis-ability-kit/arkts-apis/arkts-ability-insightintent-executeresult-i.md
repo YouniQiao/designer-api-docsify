@@ -66,7 +66,7 @@ result?: Record<string, Object>
 
 Result data returned by the intent execution, typically containing information to be passed back to the system entry point.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 11
 
@@ -86,7 +86,7 @@ uris?: Array<string>
 
 List of URIs returned by the intent execution. This field must be used together with the **flags** field to grant the corresponding permissions for the URI list to the system entry point.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 18
 

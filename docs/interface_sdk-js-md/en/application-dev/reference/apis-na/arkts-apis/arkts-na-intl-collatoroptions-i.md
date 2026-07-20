@@ -8,7 +8,7 @@
 caseFirst?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-CollatorOptions-caseFirst?: string | undefined--><!--Device-CollatorOptions-caseFirst?: string | undefined-End-->
 
@@ -18,7 +18,7 @@ caseFirst?: string | undefined
 ignorePunctuation?: boolean | undefined
 ```
 
-**Type:** boolean | undefined
+**Type:** boolean \| undefined
 
 <!--Device-CollatorOptions-ignorePunctuation?: boolean | undefined--><!--Device-CollatorOptions-ignorePunctuation?: boolean | undefined-End-->
 
@@ -28,7 +28,7 @@ ignorePunctuation?: boolean | undefined
 localeMatcher?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-CollatorOptions-localeMatcher?: string | undefined--><!--Device-CollatorOptions-localeMatcher?: string | undefined-End-->
 
@@ -38,7 +38,7 @@ localeMatcher?: string | undefined
 numeric?: boolean | undefined
 ```
 
-**Type:** boolean | undefined
+**Type:** boolean \| undefined
 
 <!--Device-CollatorOptions-numeric?: boolean | undefined--><!--Device-CollatorOptions-numeric?: boolean | undefined-End-->
 
@@ -48,7 +48,7 @@ numeric?: boolean | undefined
 sensitivity?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-CollatorOptions-sensitivity?: string | undefined--><!--Device-CollatorOptions-sensitivity?: string | undefined-End-->
 
@@ -58,7 +58,7 @@ sensitivity?: string | undefined
 usage?: string | undefined
 ```
 
-**Type:** string | undefined
+**Type:** string \| undefined
 
 <!--Device-CollatorOptions-usage?: string | undefined--><!--Device-CollatorOptions-usage?: string | undefined-End-->
 

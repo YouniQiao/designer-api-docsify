@@ -26,7 +26,7 @@ itemInfo: Record<string, Object>
 
 Entity information of the awareness result, including the content, links, screenshots, and other entity information.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
 

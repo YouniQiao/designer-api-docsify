@@ -42,7 +42,7 @@ networkInfos: Array<NetworkInformation>
 
 the network search results.
 
-**Type:** Array<NetworkInformation>
+**Type:** Array&lt;NetworkInformation&gt;
 
 **Since:** 23
 

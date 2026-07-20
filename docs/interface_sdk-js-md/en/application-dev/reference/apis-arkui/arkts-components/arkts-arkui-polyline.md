@@ -34,7 +34,7 @@ Uses new to create Polyline.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | PolylineOptions | No | Poly line options |
+| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Poly line options |
 
 ## Polyline
 
@@ -58,7 +58,7 @@ Defines the constructor of Polyline component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | PolylineOptions | No | Options of the polyline.<br>The **undefined** and **null** values aretreated as invalid and will not take effect. |
+| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Options of the polyline.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

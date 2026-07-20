@@ -20,7 +20,7 @@ fail: (data: string, code: number) => void
 
 SubscribeBLEFoundOptions failed
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 6
 
@@ -38,7 +38,7 @@ success: (data: BLEFoundResponse) => void
 
 SubscribeBLEFoundOptions success
 
-**Type:** (data: BLEFoundResponse) => void
+**Type:** (data: BLEFoundResponse) =&gt; void
 
 **Since:** 6
 

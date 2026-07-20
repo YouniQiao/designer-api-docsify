@@ -22,7 +22,7 @@ readonly headers: Map<string, Array<string>>
 
 HTTP response header.
 
-**Type:** Map<string, Array<string>>
+**Type:** Map&lt;string, Array&lt;string&gt;&gt;
 
 **Since:** 12
 

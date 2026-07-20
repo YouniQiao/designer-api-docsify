@@ -18,25 +18,25 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 | Name | Description |
 | --- | --- |
+| [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename) | Obtains the bundle name of a WantAgent. |
 | [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename-1) | Obtains the bundle name of a WantAgent. |
-| [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename-2) | Obtains the bundle name of a WantAgent. |
+| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid) | Obtains the UID of a WantAgent. |
 | [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid-1) | Obtains the UID of a WantAgent. |
-| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid-2) | Obtains the UID of a WantAgent. |
+| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel) | Cancel a WantAgent. Only the application that creates the WantAgent can cancel it. |
 | [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel-1) | Cancel a WantAgent. Only the application that creates the WantAgent can cancel it. |
-| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel-2) | Cancel a WantAgent. Only the application that creates the WantAgent can cancel it. |
-| [trigger](arkts-ability-wantagent-trigger-depr-f.md#trigger-1) | Triggers a WantAgent. |
+| [trigger](arkts-ability-wantagent-trigger-depr-f.md#trigger) | Triggers a WantAgent. |
+| [equal](arkts-ability-wantagent-equal-depr-f.md#equal) | Checks whether two WantAgent objects are equal. |
 | [equal](arkts-ability-wantagent-equal-depr-f.md#equal-1) | Checks whether two WantAgent objects are equal. |
-| [equal](arkts-ability-wantagent-equal-depr-f.md#equal-2) | Checks whether two WantAgent objects are equal. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent) | Obtains a WantAgent object. |
 | [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent-1) | Obtains a WantAgent object. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent-2) | Obtains a WantAgent object. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant) | Obtains the {@link Want} of an {@link WantAgent}. |
 | [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant-1) | Obtains the {@link Want} of an {@link WantAgent}. |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant-2) | Obtains the {@link Want} of an {@link WantAgent}. |
 <!--DelEnd-->
 
 ### Interfaces

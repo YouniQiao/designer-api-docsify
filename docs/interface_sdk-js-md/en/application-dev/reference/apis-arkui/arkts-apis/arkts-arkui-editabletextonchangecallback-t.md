@@ -20,7 +20,7 @@ Represents the callback triggered when the content in the text box changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | Text displayed in the text box. |
-| previewText | PreviewText | No | Information about the preview text, including its start position and textcontent. |
-| options | TextChangeOptions | No | Information about the text change, including the selection range, textdisplayed in the text box, and preview text. |
+| value | string | Yes | Text displayed in the text box.  |
+| previewText | [PreviewText](arkts-arkui-previewtext-i.md) | No | Information about the preview text, including its start position and text content.  |
+| options | [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | No | Information about the text change, including the selection range, text displayed in the text box, and preview text. |
 

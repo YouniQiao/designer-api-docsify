@@ -40,7 +40,7 @@ otherCerts?: Array<X509Cert>
 
 Other certificates.
 
-**Type:** Array<X509Cert>
+**Type:** Array&lt;X509Cert&gt;
 
 **Since:** 18
 
@@ -58,7 +58,7 @@ privateKey?: string | Uint8Array
 
 Private key. **string** corresponds to PEM format, and **Uint8Array** corresponds to DER format.
 
-**Type:** string | Uint8Array
+**Type:** string \| Uint8Array
 
 **Since:** 18
 

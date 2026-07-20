@@ -22,7 +22,7 @@ key: string | Uint8Array
 
 Encrypted or unencrypted private key in PEM or DER format.
 
-**Type:** string | Uint8Array
+**Type:** string \| Uint8Array
 
 **Since:** 18
 

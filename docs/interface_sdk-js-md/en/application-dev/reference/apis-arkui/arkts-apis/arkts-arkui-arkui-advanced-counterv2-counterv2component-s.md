@@ -4,6 +4,8 @@ Defines Counter Component.
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 <!--Device-unnamed-declare struct CounterV2Component--><!--Device-unnamed-declare struct CounterV2Component-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ The options of a counter component.
 **Type:** CounterV2Options
 
 **Since:** 26.0.0
+
+**Decorator:** @Param
 
 **Model restriction:** This API can be used only in the stage model.
 

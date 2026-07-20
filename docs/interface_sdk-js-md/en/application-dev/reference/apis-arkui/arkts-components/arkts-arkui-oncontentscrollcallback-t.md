@@ -20,6 +20,6 @@ Defines the callback for text content scrolling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| totalOffsetX | number | Yes | Offset in the X coordinate of the text in the content area, in px. |
-| totalOffsetY | number | Yes | Offset in the Y coordinate of the text in the content area, in px. |
+| totalOffsetX | number | Yes | Offset in the X coordinate of the text in the content area, in px.  |
+| totalOffsetY | number | Yes | Offset in the Y coordinate of the text in the content area, in px.  |
 

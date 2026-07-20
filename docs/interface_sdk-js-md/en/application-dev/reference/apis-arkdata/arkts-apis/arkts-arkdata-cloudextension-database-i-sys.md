@@ -60,7 +60,7 @@ tables: Array<Table>
 
 Table in the database, including the detailed data information.
 
-**Type:** Array<Table>
+**Type:** Array&lt;Table&gt;
 
 **Since:** 11
 

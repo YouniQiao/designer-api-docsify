@@ -18,11 +18,11 @@ The problem and advice event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advice | string | Yes | advice |
+| advice | string | Yes | advice  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | (OperResult) returned through promise |
+| Promise&lt;OperResult&gt; | (OperResult) returned through promise  |
 

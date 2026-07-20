@@ -26,7 +26,7 @@ cancel?: (errMsg: string) => void
 
 Called when the dialog box fails to be closed. **errMsg** indicates the returned information.
 
-**Type:** (errMsg: string) => void
+**Type:** (errMsg: string) =&gt; void
 
 **Since:** 6
 
@@ -46,7 +46,7 @@ complete?: () => void
 
 Called when the dialog box is closed.
 
-**Type:** () => void
+**Type:** () =&gt; void
 
 **Since:** 6
 
@@ -66,7 +66,7 @@ success?: (errMsg: string) => void
 
 Called when the dialog box is closed. **errMsg** indicates the returned information.
 
-**Type:** (errMsg: string) => void
+**Type:** (errMsg: string) =&gt; void
 
 **Since:** 6
 

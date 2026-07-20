@@ -26,7 +26,7 @@ The unit is 10 milliseconds. For example, if this parameter is set to 10, the ac
 
 If the array length is less than **frameCount**, the last value in the array will be used for the remaining frames.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 18
 
@@ -47,7 +47,7 @@ Array that defines how each image frame transitions. If the array length is less
 - **2**: Restores the background color.  
 - **3**: Restores to the previous state.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 18
 

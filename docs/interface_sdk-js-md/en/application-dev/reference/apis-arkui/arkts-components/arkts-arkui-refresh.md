@@ -50,7 +50,7 @@ Creates a **Refresh** container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | RefreshOptions | Yes | Parameters of the **Refresh** component. |
+| value | [RefreshOptions](arkts-arkui-refreshoptions-i.md) | Yes | Parameters of the **Refresh** component.  |
 
 ## Summary
 

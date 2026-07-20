@@ -20,11 +20,11 @@ Provide an interface for the IsolatedComponent, which is used to render UI of ot
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | IsolatedOptions | Yes | Construction configuration of IsolatedComponentAttribute |
+| options | [IsolatedOptions](arkts-arkui-isolatedoptions-i-sys.md) | Yes | Construction configuration of IsolatedComponentAttribute  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| IsolatedComponentAttribute | Attribute of IsolatedComponent |
+| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) | Attribute of IsolatedComponent  |
 

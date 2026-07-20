@@ -22,7 +22,7 @@ keyAliases: Array<string>
 
 Array of key aliases.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Since:** 12
 

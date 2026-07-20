@@ -28,7 +28,7 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
-**Type:** (data: string, code: number) => void
+**Type:** (data: string, code: number) =&gt; void
 
 **Since:** 3
 
@@ -52,7 +52,7 @@ success: (data: StepCounterResponse) => void
 
 Defines a **StepCounterResponse** object.
 
-**Type:** (data: StepCounterResponse) => void
+**Type:** (data: StepCounterResponse) =&gt; void
 
 **Since:** 3
 

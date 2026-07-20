@@ -16,6 +16,6 @@ Defines an observer for obtaining the data change of a distributed object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | Session ID of the distributed data object, with a maximum length of 128 bytes. Thevalue can contain only letters, digits, and underscores (_). |
-| fields | Array&lt;string&gt; | Yes | Changed properties of the distributed data object, with a maximum length of 128bytes. The value can be customized and must be a non-empty string. |
+| sessionId | string | Yes | Session ID of the distributed data object, with a maximum length of 128 bytes. The value can contain only letters, digits, and underscores (_).  |
+| fields | Array&lt;string&gt; | Yes | Changed properties of the distributed data object, with a maximum length of 128 bytes. The value can be customized and must be a non-empty string.  |
 

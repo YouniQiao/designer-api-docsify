@@ -18,11 +18,11 @@ The query compilation by keyword event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyword | string | Yes | keyword |
+| keyword | string | Yes | keyword  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Compilation[]&gt; | (Compilation[]) returned through promise |
+| Promise&lt;Compilation[]&gt; | (Compilation[]) returned through promise  |
 

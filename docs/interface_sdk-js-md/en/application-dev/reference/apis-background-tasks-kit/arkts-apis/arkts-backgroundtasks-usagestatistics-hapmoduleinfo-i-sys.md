@@ -166,7 +166,7 @@ formRecords: Array<HapFormInfo>
 
 The form usage record list of current module.
 
-**Type:** Array<HapFormInfo>
+**Type:** Array&lt;HapFormInfo&gt;
 
 **Since:** 9
 

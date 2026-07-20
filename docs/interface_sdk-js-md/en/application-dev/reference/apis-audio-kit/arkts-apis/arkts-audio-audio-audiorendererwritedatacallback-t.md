@@ -16,11 +16,11 @@ Defines the callback function used to write data to the audio renderer. Once the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Data to be written to the buffer. |
+| data | ArrayBuffer | Yes | Data to be written to the buffer.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AudioDataCallbackResult \| void | If **void** or **AudioDataCallbackResult.VALID** is returned, the datais valid and the audio data is played. If **AudioDataCallbackResult.INVALID** is returned, the data is invalidand the audio data is not played. |
+| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) \| void | If **void** or **AudioDataCallbackResult.VALID** is returned, the data is valid and the audio data is played. If **AudioDataCallbackResult.INVALID** is returned, the data is invalid and the audio data is not played.  |
 

@@ -44,7 +44,7 @@ image: image.PixelMap | ResourceStr
 
 Icon image information.
 
-**Type:** image.PixelMap | ResourceStr
+**Type:** image.PixelMap \| ResourceStr
 
 **Since:** 26.0.0
 

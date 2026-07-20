@@ -20,5 +20,5 @@ The change callback of the inline CounterV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | value.<br>The value should be an integer. |
+| value | number | Yes | value. <br>The value should be an integer.  |
 

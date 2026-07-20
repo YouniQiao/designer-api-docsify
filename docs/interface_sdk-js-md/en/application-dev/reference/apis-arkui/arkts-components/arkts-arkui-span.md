@@ -43,7 +43,7 @@ Defines the constructor of Span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Plain text. |
+| value | string \| Resource | Yes | Plain text.  |
 
 ## Summary
 

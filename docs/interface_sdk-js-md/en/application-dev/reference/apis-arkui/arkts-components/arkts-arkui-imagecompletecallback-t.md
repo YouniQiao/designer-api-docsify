@@ -20,5 +20,5 @@ Defines the callback triggered when the image is successfully loaded or decoded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | ImageLoadResult | Yes | Object returned after the callback is triggered when an image is successfullyloaded or decoded. |
+| result | [ImageLoadResult](arkts-arkui-imageloadresult-i.md) | Yes | Object returned after the callback is triggered when an image is successfully loaded or decoded.  |
 

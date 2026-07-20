@@ -26,7 +26,7 @@ usages: Array<StreamUsage>
 
 Filter by stream usages. But not allow to capture voice streams.
 
-**Type:** Array<StreamUsage>
+**Type:** Array&lt;StreamUsage&gt;
 
 **Since:** 11
 

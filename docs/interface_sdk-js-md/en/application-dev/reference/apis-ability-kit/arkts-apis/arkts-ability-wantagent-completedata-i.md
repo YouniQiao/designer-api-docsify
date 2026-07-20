@@ -22,7 +22,7 @@ extraInfo?: Record<string, Object>
 
 Extra information.
 
-**Type:** Record<string, Object>
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 9
 

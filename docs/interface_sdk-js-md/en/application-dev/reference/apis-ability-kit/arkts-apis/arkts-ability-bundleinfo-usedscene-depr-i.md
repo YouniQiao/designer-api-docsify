@@ -25,7 +25,7 @@ abilities: Array<string>
 
 Abilities that use the permission.
 
-**Type:** Array<string>
+**Type:** Array&lt;string&gt;
 
 **Default:** Indicates the abilities that need the permission
 

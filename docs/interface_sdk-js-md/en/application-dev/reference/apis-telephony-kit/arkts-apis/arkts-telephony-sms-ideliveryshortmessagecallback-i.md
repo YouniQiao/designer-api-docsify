@@ -22,7 +22,7 @@ pdu: Array<number>
 
 Indicates the SMS delivery report.
 
-**Type:** Array<number>
+**Type:** Array&lt;number&gt;
 
 **Since:** 6
 

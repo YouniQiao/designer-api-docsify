@@ -18,6 +18,6 @@ The report execute action event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | string | Yes | action type |
-| params | string | Yes | params |
+| actionType | string | Yes | action type  |
+| params | string | Yes | params  |
 
