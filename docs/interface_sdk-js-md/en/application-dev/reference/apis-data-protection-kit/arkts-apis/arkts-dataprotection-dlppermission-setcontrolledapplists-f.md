@@ -46,6 +46,6 @@ Set the list of applications that are subject to enterprise DLP control.
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| 19100023 | The specified userId is inconsistent with the current userId. |
-| 19100024 | The specified userId belongs to a personal space user and cannot be managed. |
+| [19100023](../errorcode-dlp.md#19100023-specified-user-id-inconsistent-with-the-current-user-id) | The specified userId is inconsistent with the current userId. |
+| [19100024](../errorcode-dlp.md#19100024-personal-space-users-cannot-set-controlled-apps) | The specified userId belongs to a personal space user and cannot be managed. |
 

@@ -22,9 +22,11 @@ import { cliManager } from '@kit.AbilityKit';
 background?: boolean
 ```
 
-Indicates whether the command is executed in the background.Default value is false.
+Indicates whether the command is executed in the background.
 
 **Type:** boolean
+
+**Default:** false
 
 **Since:** 26.0.0
 
@@ -102,9 +104,11 @@ Indicates the security policy.
 timeout?: number
 ```
 
-Indicates the maximum execution time of the command, in seconds.Default value is 1800.
+Indicates the maximum execution time of the command, in seconds.
 
 **Type:** number
+
+**Default:** 1800
 
 **Since:** 26.0.0
 
@@ -142,9 +146,11 @@ Indicates the working directory for the command.
 yieldMs?: number
 ```
 
-Indicates the foreground waiting timeout in milliseconds.Default value is 0.
+Indicates the foreground waiting timeout in milliseconds.
 
 **Type:** number
+
+**Default:** 0
 
 **Since:** 26.0.0
 

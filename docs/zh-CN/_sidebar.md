@@ -33,7 +33,7 @@
 - [Kernel Enhance Kit (3)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-kernel-enhance-kit/c-apis/capi-qos-oh-qos-gewucreatesessionresult.md)
 - [Localization Kit (143)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-localization-kit/arkts-apis/arkts-fontmanager.md)
 - [Mdm Kit (442)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-enterprise-enterpriseadminextensionability.md)
-- [Mechanic Kit (58)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-distributedhardware-mechanicmanager.md)
+- [Mechanic Kit (63)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-distributedhardware-mechanicmanager.md)
 - [Media Kit (221)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-kit/arkts-apis/arkts-multimedia-media.md)
 - [Na (57)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-na/arkts-apis/arkts-arkui-advanced-foldsplitcontainer.md)
 - [Network Kit (52)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-http-type-h.md)

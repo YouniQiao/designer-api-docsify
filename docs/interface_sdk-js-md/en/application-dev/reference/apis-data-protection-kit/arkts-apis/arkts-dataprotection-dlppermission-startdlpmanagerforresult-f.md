@@ -50,7 +50,7 @@ This API starts the DLP manager application to configure file permissions and re
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 | [19100016](../errorcode-dlp.md#19100016-uri-missing-in-want) | The uri field is missing in the want parameter. |
-| [19100017](../errorcode-dlp.md#19100017-displayname-missing-in-want) | The displayName field is missing in the want parameter. |
+| [19100017](../errorcode-dlp.md#19100017-displayname-missing-in-parameters-of-want) | The displayName field is missing in the want parameter. |
 
 **Example**
 

@@ -2,6 +2,10 @@
 
 - [@ohos.distributedHardware.mechanicManager](arkts-distributedhardware-mechanicmanager.md)
   <!--Del-->
+  - [connectDevice(system api)](arkts-mechanic-mechanicmanager-connectdevice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [disconnectDevice(system api)](arkts-mechanic-mechanicmanager-disconnectdevice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [doAction(system api)](arkts-mechanic-mechanicmanager-doaction-f-sys.md)<!--DelEnd-->
   - [getAttachedMechDevices](arkts-mechanic-mechanicmanager-getattachedmechdevices-f.md)
   - [getCameraTrackingEnabled](arkts-mechanic-mechanicmanager-getcameratrackingenabled-f.md)
@@ -50,7 +54,11 @@
   - [turnBySpeed(system api)](arkts-mechanic-mechanicmanager-turnbyspeed-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [unSubscribe(system api)](arkts-mechanic-mechanicmanager-unsubscribe-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AddressInfo(system api)](arkts-mechanic-mechanicmanager-addressinfo-i-sys.md)<!--DelEnd-->
   - [AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md)
+  <!--Del-->
+  - [ConnectParam(system api)](arkts-mechanic-mechanicmanager-connectparam-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [EulerAngles(system api)](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -79,6 +87,8 @@
   - [TrackingEventInfo](arkts-mechanic-mechanicmanager-trackingeventinfo-i.md)
   <!--Del-->
   - [ActionType(system api)](arkts-mechanic-mechanicmanager-actiontype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AddressType(system api)](arkts-mechanic-mechanicmanager-addresstype-e-sys.md)<!--DelEnd-->
   - [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md)
   - [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md)
   <!--Del-->

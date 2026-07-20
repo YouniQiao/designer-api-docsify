@@ -36,7 +36,7 @@ Tool event data.
 toolEventType: ToolEventType
 ```
 
-Tool event data.
+Tool event type.
 
 **Type:** ToolEventType
 

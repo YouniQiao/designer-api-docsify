@@ -35,6 +35,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 
 | Name | Description |
 | --- | --- |
+| [connectDevice](arkts-mechanic-mechanicmanager-connectdevice-f-sys.md#connectdevice) | Connecting devices based on addresses |
+| [disconnectDevice](arkts-mechanic-mechanicmanager-disconnectdevice-f-sys.md#disconnectdevice) | Disconnect a device with mechanic id. |
 | [doAction](arkts-mechanic-mechanicmanager-doaction-f-sys.md#doaction) | Execute an action sequence. |
 | [getCurrentAngles](arkts-mechanic-mechanicmanager-getcurrentangles-f-sys.md#getcurrentangles) | Obtains the current angles of a mechanical device. |
 | [getMaxRotationSpeed](arkts-mechanic-mechanicmanager-getmaxrotationspeed-f-sys.md#getmaxrotationspeed) | Obtains the maximum rotation speed of a mechanical device. |
@@ -71,6 +73,8 @@ import { mechanicManager } from '@kit.MechanicKit';
 
 | Name | Description |
 | --- | --- |
+| [AddressInfo](arkts-mechanic-mechanicmanager-addressinfo-i-sys.md) | Definition of device adress information. |
+| [ConnectParam](arkts-mechanic-mechanicmanager-connectparam-i-sys.md) | Definition of connect parameter. |
 | [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | Absolute euler angles relative to the home position. |
 | [MechEvent](arkts-mechanic-mechanicmanager-mechevent-i-sys.md) | Definition of Mechanic device event. |
 | [MoveParams](arkts-mechanic-mechanicmanager-moveparams-i-sys.md) | Parameters for moving the target. |
@@ -100,6 +104,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 | Name | Description |
 | --- | --- |
 | [ActionType](arkts-mechanic-mechanicmanager-actiontype-e-sys.md) | Type of action sequence. |
+| [AddressType](arkts-mechanic-mechanicmanager-addresstype-e-sys.md) | Mechanic device address type. |
 | [MarchingMode](arkts-mechanic-mechanicmanager-marchingmode-e-sys.md) | Marching mode definition. |
 | [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e-sys.md) | Enumerates the mechanical device types. |
 | [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md) | Mechanic event definition. |

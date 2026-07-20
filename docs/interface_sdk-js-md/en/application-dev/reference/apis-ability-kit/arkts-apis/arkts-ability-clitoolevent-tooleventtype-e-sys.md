@@ -1,6 +1,6 @@
 # ToolEventType (System API)
 
-Enum for query entity mode.
+Enum for cli tool event types.
 
 **Since:** 26.0.0
 

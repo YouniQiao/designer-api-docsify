@@ -27,7 +27,7 @@ Obtains the maximum continuous rotation duration of a mechanical device.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | number | 是 | ID of the mechanical device. |
+| mechId | number | 是 | 机械设备ID |
 
 **返回值：**
 

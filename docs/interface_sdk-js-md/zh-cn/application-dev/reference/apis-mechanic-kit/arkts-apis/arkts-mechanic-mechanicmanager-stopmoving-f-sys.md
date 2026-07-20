@@ -13,7 +13,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function stopMoving(mechId: number): Promise<void>
 ```
 
-Stops a mechanical device from moving.
+停止转动
 
 **起始版本：** 20
 
@@ -27,13 +27,13 @@ Stops a mechanical device from moving.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | number | 是 | ID of the mechanical device. |
+| mechId | number | 是 | 机械设备ID |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | 返回操作结果 |
 
 **错误码：**
 

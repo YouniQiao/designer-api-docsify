@@ -13,7 +13,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function getRotationAxesStatus(mechId: number): RotationAxesStatus
 ```
 
-Obtains the status of the rotation axes.
+获取当前转轴状态
 
 **起始版本：** 20
 
@@ -27,7 +27,7 @@ Obtains the status of the rotation axes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | number | 是 | ID of the mechanical device. |
+| mechId | number | 是 | 机械设备ID |
 
 **返回值：**
 

@@ -15,6 +15,6 @@
 
 | Name | Description |
 | --- | --- |
-| [OnEventFn](arkts-ability-oneventfn-t-sys.md) | Define cli event callback function. |
+| [OnEventFn](arkts-ability-oneventfn-t-sys.md) | Defines cli event callback function. |
 <!--DelEnd-->
 

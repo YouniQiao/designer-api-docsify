@@ -104,6 +104,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 | [GestureListenerCallback](arkts-arkui-gesturelistenercallback-t.md) | Defines the callback type for listening for specific gesture trigger information in **UIObserver**. |
 | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Defines the type can be used for identiting the node, for the string type, it's the inspector id set through .[id](../arkts-components/arkts-arkui-commonmethod-c.md#id-1) attribute, and for the number type, it's the unique ID got from the FrameNode by [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid-1) method. |
 | [NodeRenderStateChangeCallback](arkts-arkui-noderenderstatechangecallback-t.md) | Defines the callback type for listening for the rendering state of a specific node in **UIObserver**. |
+| [OnOverlayBackPressCallback](arkts-arkui-onoverlaybackpresscallback-t.md) | Defines the callback type for intercepting a back-press event on an overlay. |
 | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Defines a callback for pan gesture events. |
 | [PointerStyle](arkts-arkui-pointerstyle-t.md) | Defines the pointer style. |
 

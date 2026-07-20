@@ -13,7 +13,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function setUserOperation(operation: Operation, mac: string, params: string): void
 ```
 
-Sets a user operation.
+设置用户操作
 
 **起始版本：** 20
 
@@ -29,7 +29,7 @@ Sets a user operation.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| operation | [Operation](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-operation-e.md) | 是 | Operation type. |
+| operation | [Operation](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-operation-e.md) | 是 | 操作类型 |
 | mac | string | 是 | MAC address. |
 | params | string | 是 | Operation parameters. |
 

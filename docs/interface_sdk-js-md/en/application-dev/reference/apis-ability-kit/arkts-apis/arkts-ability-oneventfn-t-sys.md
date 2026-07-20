@@ -4,7 +4,7 @@
 type OnEventFn = (event: CliToolEvent) => void
 ```
 
-Define cli event callback function.
+Defines cli event callback function.
 
 **Since:** 26.0.0
 
@@ -20,5 +20,5 @@ Define cli event callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [CliToolEvent](arkts-ability-common-clitoolevent-t-sys.md) | Yes | The event send by cli tool.  |
+| event | [CliToolEvent](arkts-ability-common-clitoolevent-t-sys.md) | Yes | The event sent by cli tool.  |
 

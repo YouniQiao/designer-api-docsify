@@ -122,7 +122,7 @@ Indicates the termination signal (if the tool process was terminated by a signal
 timeOut: boolean
 ```
 
-Indicates whether it timed out.
+Indicates whether it timed out. true means timeout occurred, false means no timeout.
 
 **Type:** boolean
 

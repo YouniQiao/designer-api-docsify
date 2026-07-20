@@ -36,6 +36,28 @@ hether to enable the swipe-to-dismiss gesture for **ComponentContent** under **O
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## onBackPress
+
+```TypeScript
+onBackPress?: OnOverlayBackPressCallback
+```
+
+Callback for intercepting back-press events on an overlay.
+
+**NOTE**1. When this callback is registered and **enableBackPressedEvent** is set to **true**,the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback to decide whether the event should be propagated to the underlying components.2. Return **true** to intercept the event (the event is consumed and will not be passed to lower layers), or **false** to allow the event to propagate through to the components below the overlay.
+
+**Type:** OnOverlayBackPressCallback
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback--><!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## renderRootOverlay
 
 ```TypeScript

@@ -22,7 +22,7 @@ import { cliManager } from '@kit.AbilityKit';
 result?: ExecResult
 ```
 
-Indicates the execution result, has a value when stats is completed or failed.
+Indicates the execution result, has a value when status is completed or failed.
 
 **Type:** ExecResult
 

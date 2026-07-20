@@ -57,7 +57,7 @@ console.info('Succeeded in unregistering callback.');
 function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>): void
 ```
 
-Unsubscribes from tracking events.
+设置相机跟踪布局
 
 **起始版本：** 20
 

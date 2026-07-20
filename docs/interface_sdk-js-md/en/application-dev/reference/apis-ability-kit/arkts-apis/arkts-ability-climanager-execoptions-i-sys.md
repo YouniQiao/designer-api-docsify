@@ -22,9 +22,11 @@ import { cliManager } from '@kit.AbilityKit';
 background?: boolean
 ```
 
-Indicates whether the tool is executed in the background
+Indicates whether the tool is executed in the background.
 
 **Type:** boolean
+
+**Default:** false
 
 **Since:** 26.0.0
 
@@ -46,6 +48,8 @@ Indicates the maximum execution time of the tool, in seconds.
 
 **Type:** number
 
+**Default:** 1800
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -65,6 +69,8 @@ yieldMs?: number
 Indicates the foreground waiting timeout in milliseconds.
 
 **Type:** number
+
+**Default:** 0
 
 **Since:** 26.0.0
 

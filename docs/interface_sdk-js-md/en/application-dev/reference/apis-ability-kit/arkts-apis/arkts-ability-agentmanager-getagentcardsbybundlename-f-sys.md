@@ -31,7 +31,7 @@ Gets all AgentCards within specified bundleName.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | The bundle name of the AgentCard belongs to. |
+| bundleName | string | Yes | The bundle name the AgentCard belongs to. |
 
 **Return value:**
 

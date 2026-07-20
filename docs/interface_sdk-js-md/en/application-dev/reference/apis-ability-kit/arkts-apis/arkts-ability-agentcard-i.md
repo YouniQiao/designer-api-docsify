@@ -278,6 +278,8 @@ The type of the AgentCard.When `type` is `agentConstant.AgentCardType.LOW_CODE`,
 
 **Type:** agentConstant.AgentCardType
 
+**Default:** AgentCardType.APP
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.

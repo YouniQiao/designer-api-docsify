@@ -13,7 +13,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function rotate(mechId: number, angles: RotationAngles, duration: number): Promise<Result>
 ```
 
-Rotates a mechanical device to the relative angles.
+将机械设备旋转到相对角度
 
 **起始版本：** 20
 

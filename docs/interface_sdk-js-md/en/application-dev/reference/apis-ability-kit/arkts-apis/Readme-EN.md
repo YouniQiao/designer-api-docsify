@@ -1426,6 +1426,8 @@
   - [setShortcutsEnabled(system api)](arkts-ability-shortcutmanager-setshortcutsenabled-f-sys.md)<!--DelEnd-->
   - [setShortcutVisibleForSelf](arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md)
   <!--Del-->
+  - [updateDesktopShortcutInfo(system api)](arkts-ability-shortcutmanager-updatedesktopshortcutinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [ParameterItem(system api)](arkts-ability-shortcutmanager-parameteritem-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ShortcutInfo(system api)](arkts-ability-shortcutmanager-shortcutinfo-t-sys.md)<!--DelEnd-->

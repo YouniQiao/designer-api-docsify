@@ -36,7 +36,7 @@ Ability name.
 bundleName: string
 ```
 
-Bundle name.
+Bundle name.The value cannot exceed 512 characters.
 
 **Type:** string
 
