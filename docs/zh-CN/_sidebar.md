@@ -24,7 +24,7 @@
 - [Data Protection Kit (66)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-data-protection-kit/arkts-apis/arkts-dlppermission.md)
 - [Default (1)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-default/arkts-apis/arkts-graphics-scene.md)
 - [Device Certificate Kit (166)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-device-certificate-kit/arkts-apis/arkts-security-cert.md)
-- [Distributed Service Kit (123)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-distributed-service-kit/arkts-apis/arkts-application-distributedextensionability.md)
+- [Distributed Service Kit (130)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-distributed-service-kit/arkts-apis/arkts-application-distributedextensionability.md)
 - [Driver Development Kit (81)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-driver-development-kit/arkts-apis/arkts-app-ability-driverextensionability.md)
 - [Game Controller Kit (15)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-game-controller-kit/c-apis/capi-game-pad-event-h.md)
 - [Image Kit (187)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-image-kit/arkts-apis/arkts-multimedia-image.md)

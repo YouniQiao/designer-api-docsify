@@ -683,6 +683,40 @@ async function example(context: Context) {
 
 ```
 
+<a id="getreadonlyfdwithcached"></a>
+## getReadOnlyFdWithCached
+
+```TypeScript
+getReadOnlyFdWithCached(): Promise<number>
+```
+
+Open the file and cache it in the gallery sandbox when streaming video from the cloud.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-getReadOnlyFdWithCached(): Promise<int>--><!--Device-PhotoAsset-getReadOnlyFdWithCached(): Promise<int>-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;number&gt; | Promise used to return the file fd. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes:The image and video files corresponding to the photoasset do not exist. |
+| 23800302 | Failed to open the file. Possible causes:1. Unable to access cloud images due to network connectivity issues;2. File system malfunction. |
+
 <a id="getthumbnaildata"></a>
 ## getThumbnailData
 

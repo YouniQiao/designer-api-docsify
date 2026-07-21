@@ -13,7 +13,7 @@ import { conversation } from '@kit.DistributedServiceKit';
 function unregisterConversationListener(bundleName: string, abilityName: string): void
 ```
 
-Unregisters the conversation listener for the specified bundle and ability. After calling this API, the application will no longer receive messages. If no listener was previously registered for the given bundle and ability, this API returns success without any effect.
+Unregisters the listener with the specified bundle name and ability name. This API must be used in pairs with [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener-1) to unregister a registered listener. When the listener is no longer needed, call this API to unregister the listener to release resources. If the listener is not unregistered, resources will be continuously occupied. Only one listener can be registered for the same bundle name and ability name. Duplicate registration will overwrite the previously registered listener.After the listener is unregistered, the listener that is currently in effect will be removed. After this API is called, the app will no longer receive session data of the specified bundle name and ability name. If no listener has been registered for the specified bundle name and ability name, this API returns a success message.
 
 **Since:** 26.1.0
 
@@ -31,8 +31,8 @@ Unregisters the conversation listener for the specified bundle and ability. Afte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the bundle whose listener will be unregistered. |
-| abilityName | string | Yes | Name of the ability within the bundle whose listener will be unregistered. |
+| bundleName | string | Yes | Name of the bundle whose listener is to be unregistered. The value contains 1 to 127bytes and must be the same as the bundle name used during listener registration. If an invalid or empty value is passed, error code 401 is returned. |
+| abilityName | string | Yes | Name of the ability whose listener is to be unregistered. The value contains 1 to127 bytes and must be the same as the ability name used during listener registration. If an invalid or empty value is passed, error code 401 is returned. |
 
 **Error codes:**
 

@@ -13,7 +13,7 @@ import { conversation } from '@kit.DistributedServiceKit';
 function getTrustedDevices(): DeviceNodeInfo[]
 ```
 
-Obtains device information about all trusted devices. Trusted devices are devices that have been previously authenticated. This API returns a list of all such devices currently visible on the network.
+Obtains the list of historical trusted devices. Typical use scenarios include querying available target devices before sending data across devices.
 
 **Since:** 26.1.0
 
@@ -31,7 +31,7 @@ Obtains device information about all trusted devices. Trusted devices are device
 
 | Type | Description |
 | --- | --- |
-| [DeviceNodeInfo](arkts-distributedservice-conversation-devicenodeinfo-i-sys.md)[] | list of the obtained device information in [DeviceNodeInfo](arkts-distributedservice-conversation-devicenodeinfo-i-sys.md). |
+| [DeviceNodeInfo](arkts-distributedservice-conversation-devicenodeinfo-i-sys.md)[] | Device node information. |
 
 **Error codes:**
 

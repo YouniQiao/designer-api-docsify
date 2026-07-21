@@ -17,7 +17,9 @@ function registerConversationListener(
   ): void
 ```
 
-Registers a conversation listener to receive messages from any trusted device. Once registered, the specified callback function will be invoked whenever a message is received by the specified bundle and ability combination.Only one listener can be registered for a given bundle/ability pair at a time; registering a new listener will replace any previously registered listener for the same bundle and ability.
+Registers a listener to receive data from trusted devices under the same account. When the remote device sends data to the local device by calling [postConversationData](arkts-distributedservice-conversation-postconversationdata-f-sys.md#postconversationdata-1), the data is distributed to the registered callback based on the specified bundle name and ability name. Only one listener can be registered for the same bundle name and ability name. Duplicate registration will overwrite the previously registered listener.
+
+**API called in pairs:** This API must be used in pairs with [unregisterConversationListener](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md#unregisterconversationlistener-1), which is called to unregister the listener to release resources.
 
 **Since:** 26.1.0
 
@@ -43,9 +45,9 @@ Registers a conversation listener to receive messages from any trusted device. O
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the bundle for which messages will be received. This must match the bundle name of the local application. |
-| abilityName | string | Yes | Name of the ability within the bundle that will receive the messages. This must match an ability name in the local application. |
-| dataCallback | [DataCallback](arkts-distributedservice-conversation-datacallback-t-sys.md) | Yes | Callback function called when a message is received. |
+| bundleName | string | Yes | Name of the bundle that receives data. The value contains 1 to 127 bytes and must be the same as the bundle name of the app. If this requirement is not met, the listener cannot receive data correctly. If an invalid or empty value is passed, error code 401 is returned. |
+| abilityName | string | Yes | Name of the ability that receives data. The value contains 1 to 127 bytes and must be the same as the ability name of the app. If this requirement is not met, the listener cannot receive data correctly. If an invalid or empty value is passed, error code 401 is returned. |
+| dataCallback | [DataCallback](arkts-distributedservice-conversation-datacallback-t-sys.md) | Yes | Callback function used to receive data transferred across devices. If an invalid value is passed, error code 401 is returned. |
 
 **Error codes:**
 

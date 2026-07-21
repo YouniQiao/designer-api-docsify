@@ -1,6 +1,10 @@
 # @ohos.distributedSoftBus.conversation
 
-The **conversation** module leverages softbus capabilities to provide agents with multi-device interaction capabilities. It offers fundamental agent interconnection tools, including retrieving the device list,waking up the device and sending messages. By utilizing this module, applications can obtain trusted devices on the same account, register listeners to receive cross-device messages and send messages to specific devices through a well-defined conversation channel.
+The DSoftBus module **conversation** provides APIs for cross-device interaction of apps, including obtaining the trusted device list, and sending and receiving session data. With this module, your app can obtain trusted devices under the same account, register a listener to receive cross-device data, and send data to a specified device through a session channel. This module is applicable to scenarios that require cross-device collaboration and multi-device data transfer, simplifying the development of cross-device interaction.
+
+> **NOTE**  
+>  
+> The APIs provided by this module are system APIs and can be used only in the stage model.
 
 **Since:** 26.1.0
 
@@ -23,10 +27,10 @@ import { conversation } from '@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [getTrustedDevices](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md#gettrusteddevices) | Obtains device information about all trusted devices. Trusted devices are devices that have been previously authenticated. This API returns a list of all such devices currently visible on the network. |
-| [postConversationData](arkts-distributedservice-conversation-postconversationdata-f-sys.md#postconversationdata) | Posts conversation data to a specified device. This API sends a message to the target device identified by its networkId or udid. The message will be delivered to the specified bundle and ability on the remote device. |
-| [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener) | Registers a conversation listener to receive messages from any trusted device. Once registered, the specified callback function will be invoked whenever a message is received by the specified bundle and ability combination.Only one listener can be registered for a given bundle/ability pair at a time; registering a new listener will replace any previously registered listener for the same bundle and ability. |
-| [unregisterConversationListener](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md#unregisterconversationlistener) | Unregisters the conversation listener for the specified bundle and ability. After calling this API, the application will no longer receive messages. If no listener was previously registered for the given bundle and ability, this API returns success without any effect. |
+| [getTrustedDevices](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md#gettrusteddevices) | Obtains the list of historical trusted devices. Typical use scenarios include querying available target devices before sending data across devices. |
+| [postConversationData](arkts-distributedservice-conversation-postconversationdata-f-sys.md#postconversationdata) | Sends session data to the target device. The target device must be a trusted device under the same account. The network ID or UDID of the target device is used for device addressing. Data is sent to the app with the registered listener on the target device based on the specified bundle name and ability name. Typical use scenarios include sending collaboration commands across devices. |
+| [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener) | Registers a listener to receive data from trusted devices under the same account. When the remote device sends data to the local device by calling [postConversationData](arkts-distributedservice-conversation-postconversationdata-f-sys.md#postconversationdata-1), the data is distributed to the registered callback based on the specified bundle name and ability name. Only one listener can be registered for the same bundle name and ability name. Duplicate registration will overwrite the previously registered listener.  **API called in pairs:** This API must be used in pairs with [unregisterConversationListener](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md#unregisterconversationlistener-1), which is called to unregister the listener to release resources. |
+| [unregisterConversationListener](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md#unregisterconversationlistener) | Unregisters the listener with the specified bundle name and ability name. This API must be used in pairs with [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener-1) to unregister a registered listener. When the listener is no longer needed, call this API to unregister the listener to release resources. If the listener is not unregistered, resources will be continuously occupied. Only one listener can be registered for the same bundle name and ability name. Duplicate registration will overwrite the previously registered listener.After the listener is unregistered, the listener that is currently in effect will be removed. After this API is called, the app will no longer receive session data of the specified bundle name and ability name. If no listener has been registered for the specified bundle name and ability name, this API returns a success message. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -34,7 +38,7 @@ import { conversation } from '@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [DeviceNodeInfo](arkts-distributedservice-conversation-devicenodeinfo-i-sys.md) | Represents the device node information, including the networkId, device name, device type, nearby status and udid. |
+| [DeviceNodeInfo](arkts-distributedservice-conversation-devicenodeinfo-i-sys.md) | Defines the device node information, including the network ID, device name, device type ID, near-field status, and UDID. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -42,6 +46,6 @@ import { conversation } from '@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [DataCallback](arkts-distributedservice-conversation-datacallback-t-sys.md) | Callback function invoked when a message is received. |
+| [DataCallback](arkts-distributedservice-conversation-datacallback-t-sys.md) | Defines a callback for receiving data. |
 <!--DelEnd-->
 
