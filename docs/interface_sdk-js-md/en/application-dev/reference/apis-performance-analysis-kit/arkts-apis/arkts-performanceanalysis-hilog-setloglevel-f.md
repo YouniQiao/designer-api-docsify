@@ -6,7 +6,6 @@
 import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="setloglevel"></a>
 ## setLogLevel
 
 ```TypeScript
@@ -16,7 +15,6 @@ function setLogLevel(level: LogLevel, prefer: PreferStrategy): void
 Sets the minimum log level of the current application process.
 
 You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy has the same effect as the **setMinLogLevel()** function.
-
 > **NOTE**  
 >  
 > This function does not take effect for debug applications.

@@ -2,7 +2,7 @@
 
 Defines a float view controller instance, which is used to start and stop the float view and register callbacks.
 
-Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md#create-1) to create a float view controller instance (that is, **floatViewController**).
+Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md#create) to create a float view controller instance (that is, **floatViewController**).
 
 **Since:** 26.0.0
 
@@ -16,7 +16,6 @@ Before calling the following APIs, you must use [floatView.create()](arkts-arkui
 import { floatView } from '@kit.ArkUI';
 ```
 
-<a id="getwindowproperties"></a>
 ## getWindowProperties
 
 ```TypeScript
@@ -59,7 +58,6 @@ try {
 
 ```
 
-<a id="offlimitschange"></a>
 ## offLimitsChange
 
 ```TypeScript
@@ -104,7 +102,6 @@ try {
 
 ```
 
-<a id="offrectchange"></a>
 ## offRectChange
 
 ```TypeScript
@@ -149,7 +146,6 @@ try {
 
 ```
 
-<a id="offstatechange"></a>
 ## offStateChange
 
 ```TypeScript
@@ -194,7 +190,6 @@ try {
 
 ```
 
-<a id="onlimitschange"></a>
 ## onLimitsChange
 
 ```TypeScript
@@ -240,7 +235,6 @@ try {
 
 ```
 
-<a id="onrectchange"></a>
 ## onRectChange
 
 ```TypeScript
@@ -286,7 +280,6 @@ try {
 
 ```
 
-<a id="onstatechange"></a>
 ## onStateChange
 
 ```TypeScript
@@ -332,7 +325,6 @@ try {
 
 ```
 
-<a id="restoremainwindow"></a>
 ## restoreMainWindow
 
 ```TypeScript
@@ -353,7 +345,7 @@ Restores the main window of the float view to display in the foreground. If this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParameters | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | No | Custom parameters passed to the main window when the main window of the float view is restored. The main window will receive the parameters when the [onNewWant](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md#onnewwant-1)callback is triggered. The default value is empty, indicating that no custom parameters are passed to the main window. |
+| wantParameters | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | No | Custom parameters passed to the main window when the main window of the float view is restored. The main window will receive the parameters when the [onNewWant](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md#onabilitycreate)callback is triggered. The default value is empty, indicating that no custom parameters are passed to the main window. |
 
 **Return value:**
 
@@ -394,7 +386,6 @@ try {
 
 ```
 
-<a id="setfloatviewvisibilityinapp"></a>
 ## setFloatViewVisibilityInApp
 
 ```TypeScript
@@ -451,7 +442,6 @@ try {
 
 ```
 
-<a id="setuicontext"></a>
 ## setUIContext
 
 ```TypeScript
@@ -508,14 +498,13 @@ try {
 
 ```
 
-<a id="setuicontextbyname"></a>
 ## setUIContextByName
 
 ```TypeScript
 setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 ```
 
-Sets the UI content of a [named route](docroot://ui/arkts-routing.md#named-route) page to this float view window.
+Sets the UI content of a [named route](../../../ui/arkts-routing.md#named-route) page to this float view window.
 
 **Since:** 26.0.0
 
@@ -595,14 +584,13 @@ export struct Hello {
 
 ```
 
-<a id="setwindowsize"></a>
 ## setWindowSize
 
 ```TypeScript
 setWindowSize(size: window.Size): Promise<void>
 ```
 
-Sets the size of the float view. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits-1) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](floatView.FloatViewController.onRectChange(callback: Callback<FloatViewRectChangeInfo>))API. This API uses a promise to return the result.
+Sets the size of the float view. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](floatView.FloatViewController.onRectChange(callback: Callback<FloatViewRectChangeInfo>))API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -616,7 +604,7 @@ Sets the size of the float view. You are advised to call the [getFloatViewLimits
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits-1) API. |
+| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API. |
 
 **Return value:**
 
@@ -656,14 +644,13 @@ try {
 
 ```
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
 start(): Promise<void>
 ```
 
-Starts the float view. The return value of this API does not indicate that the start process is complete. You need to use the [onStateChange](floatView.FloatViewController.onStateChange(callback: Callback<FloatViewStateChangeInfo>))API to listen for the **STARTED** callback to determine whether the start is successful. You are advised to call **start ()** after calling [setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext-1). This API uses a promise to return the result.
+Starts the float view. The return value of this API does not indicate that the start process is complete. You need to use the [onStateChange](floatView.FloatViewController.onStateChange(callback: Callback<FloatViewStateChangeInfo>))API to listen for the **STARTED** callback to determine whether the start is successful. You are advised to call **start ()** after calling [setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext). This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -712,7 +699,6 @@ try {
 
 ```
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -763,14 +749,13 @@ try {
 
 ```
 
-<a id="switchtemplate"></a>
 ## switchTemplate
 
 ```TypeScript
 switchTemplate(templateProperty: TemplateProperty): Promise<void>
 ```
 
-Switches the template of the flow view and changes the window size. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits-1) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](floatView.FloatViewController.onRectChange(callback: Callback<FloatViewRectChangeInfo>))API. This API uses a promise to return the result.
+Switches the template of the flow view and changes the window size. You are advised to call the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the [onRectChange](floatView.FloatViewController.onRectChange(callback: Callback<FloatViewRectChangeInfo>))API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -784,7 +769,7 @@ Switches the template of the flow view and changes the window size. You are advi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Yes | Target flow view template and window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits-1) API. |
+| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Yes | Target flow view template and window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API. |
 
 **Return value:**
 

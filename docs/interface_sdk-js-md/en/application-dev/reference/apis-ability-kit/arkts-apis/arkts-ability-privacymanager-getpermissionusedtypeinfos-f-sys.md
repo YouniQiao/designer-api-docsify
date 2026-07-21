@@ -6,7 +6,6 @@
 import { privacyManager } from '@kit.AbilityKit';
 ```
 
-<a id="getpermissionusedtypeinfos"></a>
 ## getPermissionUsedTypeInfos
 
 ```TypeScript
@@ -21,11 +20,7 @@ Obtains information about how a sensitive permission is used by an application.
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
-<!--Device-privacyManager-function getPermissionUsedTypeInfos(
-    tokenId?: int | null,
-    permissionName?: Permissions): Promise<Array<PermissionUsedTypeInfo>>--><!--Device-privacyManager-function getPermissionUsedTypeInfos(
-    tokenId?: int | null,
-    permissionName?: Permissions): Promise<Array<PermissionUsedTypeInfo>>-End-->
+<!--Device-privacyManager-function getPermissionUsedTypeInfos(    tokenId?: int | null,    permissionName?: Permissions): Promise<Array<PermissionUsedTypeInfo>>--><!--Device-privacyManager-function getPermissionUsedTypeInfos(    tokenId?: int | null,    permissionName?: Permissions): Promise<Array<PermissionUsedTypeInfo>>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 

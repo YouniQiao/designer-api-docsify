@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="updateformsize"></a>
 ## updateFormSize
 
 ```TypeScript

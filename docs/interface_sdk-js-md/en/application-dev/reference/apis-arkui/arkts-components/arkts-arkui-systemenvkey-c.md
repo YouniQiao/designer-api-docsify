@@ -8,7 +8,6 @@ Defines the class of System Env Key.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

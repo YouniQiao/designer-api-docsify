@@ -6,7 +6,6 @@
 import { dragController } from '@kit.ArkUI';
 ```
 
-<a id="createdragaction"></a>
 ## createDragAction
 
 ```TypeScript
@@ -14,11 +13,10 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 ```
 
 Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - Since API version 11, you can use the  
-> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller-1) API in  
+> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in  
 > [UIContext](arkts-arkui-uicontext.md) to obtain the  
 > [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object associated with the current UI context.  
 >  

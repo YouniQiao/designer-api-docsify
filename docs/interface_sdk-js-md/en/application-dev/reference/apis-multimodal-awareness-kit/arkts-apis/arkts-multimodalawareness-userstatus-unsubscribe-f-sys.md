@@ -6,7 +6,6 @@
 import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="unsubscribe"></a>
 ## unsubscribe
 
 ```TypeScript

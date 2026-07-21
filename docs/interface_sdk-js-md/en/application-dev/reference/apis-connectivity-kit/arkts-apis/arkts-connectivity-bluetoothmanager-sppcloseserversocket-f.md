@@ -6,7 +6,6 @@
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="sppcloseserversocket"></a>
 ## sppCloseServerSocket
 
 ```TypeScript

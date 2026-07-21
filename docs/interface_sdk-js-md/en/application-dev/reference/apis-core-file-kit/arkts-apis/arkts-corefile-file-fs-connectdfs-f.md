@@ -6,14 +6,13 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="connectdfs"></a>
 ## connectDfs
 
 ```TypeScript
 declare function connectDfs(networkId: string, listeners: DfsListeners): Promise<void>
 ```
 
-Triggers connection. If the peer device is abnormal, [onStatus](arkts-corefile-file-fs-dfslisteners-i.md#onstatus-1) in **DfsListeners** will be called to notify the application.
+Triggers connection. If the peer device is abnormal, [onStatus](arkts-corefile-file-fs-dfslisteners-i.md#onstatus) in **DfsListeners** will be called to notify the application.
 
 **Since:** 12
 

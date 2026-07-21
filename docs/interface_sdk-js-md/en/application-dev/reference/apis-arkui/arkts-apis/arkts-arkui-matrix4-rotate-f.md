@@ -6,7 +6,6 @@
 import { matrix4 } from '@kit.ArkUI';
 ```
 
-<a id="rotate"></a>
 ## rotate
 
 ```TypeScript
@@ -19,7 +18,7 @@ Rotates this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate-1)
+**Substitutes:** [rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate)
 
 <!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit--><!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit-End-->
 

@@ -6,7 +6,6 @@
 import { util } from '@kit.ArkTS';
 ```
 
-<a id="callbackwrapper"></a>
 ## callbackWrapper
 
 ```TypeScript
@@ -14,7 +13,6 @@ function callbackWrapper(original: Function): (err: Object, value: Object) => vo
 ```
 
 Calls back an asynchronous function. In the callback, the first parameter indicates the cause of the rejection (the value is **null** if the promise has been resolved), and the second parameter indicates the resolved value.
-
 > **NOTE**  
 >  
 > - **original** must be an asynchronous function. If a non-asynchronous function is passed in, the function is not  

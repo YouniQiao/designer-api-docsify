@@ -6,7 +6,6 @@
 import { socket } from '@kit.ConnectivityKit';
 ```
 
-<a id="getl2cappsm"></a>
 ## getL2capPsm
 
 ```TypeScript

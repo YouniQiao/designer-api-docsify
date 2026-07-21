@@ -6,7 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="createisoimage"></a>
 ## createIsoImage
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { WantAgent } from '@kit.AbilityKit';
 ```
 
-<a id="equal"></a>
 ## equal
 
 ```TypeScript
@@ -107,7 +106,6 @@ try {
 ```
 
 
-<a id="equal-1"></a>
 ## equal
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # getWant (System API)
 
-<a id="getwant"></a>
 ## getWant
 
 ```TypeScript
@@ -29,7 +28,6 @@ Obtains the {@link Want} of an {@link WantAgent}.
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Want&gt; | Yes | Obtain the callback method for Want in WantAgent. |
 
 
-<a id="getwant-1"></a>
 ## getWant
 
 ```TypeScript

@@ -1,7 +1,6 @@
 # TextOverflowOptions
 
 Defines the configuration object for text overflow behavior.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  

@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="getoperatorname"></a>
 ## getOperatorName
 
 ```TypeScript
@@ -55,7 +54,6 @@ radio.getOperatorName(slotId, (err: BusinessError, data: string) => {
 ```
 
 
-<a id="getoperatorname-1"></a>
 ## getOperatorName
 
 ```TypeScript

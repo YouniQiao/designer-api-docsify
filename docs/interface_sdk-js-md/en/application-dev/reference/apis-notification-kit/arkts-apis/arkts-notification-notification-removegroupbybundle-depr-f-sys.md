@@ -1,6 +1,5 @@
 # removeGroupByBundle (System API)
 
-<a id="removegroupbybundle"></a>
 ## removeGroupByBundle
 
 ```TypeScript
@@ -32,7 +31,6 @@ Removes notifications under a notification group of a specified application.This
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="removegroupbybundle-1"></a>
 ## removeGroupByBundle
 
 ```TypeScript

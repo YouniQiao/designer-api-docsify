@@ -1,6 +1,6 @@
 # AppDistributionType (System API)
 
-Enumerates the application [distribution types](docroot://security/app-provision-structure.md).
+Enumerates the application [distribution types](../../../security/app-provision-structure.md).
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Common enterprise application that can be installed on enterprise devices only t
 ENTERPRISE_MDM = 4
 ```
 
-Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md#enableadmin-1).
+Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md#enableadmin).
 
 **Since:** 12
 

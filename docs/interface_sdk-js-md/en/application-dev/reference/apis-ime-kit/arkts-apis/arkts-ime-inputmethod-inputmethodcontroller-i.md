@@ -1,6 +1,6 @@
 # InputMethodController
 
-A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller-1).
+A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller).
 
 **Since:** 6
 
@@ -14,7 +14,6 @@ A control class that encapsulates APIs for input method management, which can on
 import { inputMethod } from '@kit.IMEKit';
 ```
 
-<a id="attach"></a>
 ## attach
 
 ```TypeScript
@@ -65,7 +64,6 @@ inputMethod.getController().attach(true, textConfig, (err: BusinessError) => {
 
 ```
 
-<a id="attach-1"></a>
 ## attach
 
 ```TypeScript
@@ -119,7 +117,6 @@ inputMethod.getController().attach(true, textConfig).then(() => {
 
 ```
 
-<a id="attach-2"></a>
 ## attach
 
 ```TypeScript
@@ -176,7 +173,6 @@ inputMethod.getController().attach(true, textConfig, requestKeyboardReason).then
 
 ```
 
-<a id="attachwithuicontext"></a>
 ## attachWithUIContext
 
 ```TypeScript
@@ -235,7 +231,6 @@ inputMethod.getController().attachWithUIContext(uiContext, textConfig, attachOpt
 
 ```
 
-<a id="changeselection"></a>
 ## changeSelection
 
 ```TypeScript
@@ -283,7 +278,6 @@ inputMethod.getController().changeSelection('text', 0, 5, (err: BusinessError) =
 
 ```
 
-<a id="changeselection-1"></a>
 ## changeSelection
 
 ```TypeScript
@@ -334,7 +328,6 @@ inputMethod.getController().changeSelection('test', 0, 5).then(() => {
 
 ```
 
-<a id="detach"></a>
 ## detach
 
 ```TypeScript
@@ -377,7 +370,6 @@ inputMethod.getController().detach((err: BusinessError) => {
 
 ```
 
-<a id="detach-1"></a>
 ## detach
 
 ```TypeScript
@@ -418,7 +410,6 @@ inputMethod.getController().detach().then(() => {
 
 ```
 
-<a id="discardtypingtext"></a>
 ## discardTypingText
 
 ```TypeScript
@@ -460,7 +451,6 @@ inputMethod.getController().discardTypingText().then(() => {
 
 ```
 
-<a id="hidesoftkeyboard"></a>
 ## hideSoftKeyboard
 
 ```TypeScript
@@ -506,7 +496,6 @@ inputMethod.getController().hideSoftKeyboard((err: BusinessError) => {
 
 ```
 
-<a id="hidesoftkeyboard-1"></a>
 ## hideSoftKeyboard
 
 ```TypeScript
@@ -550,7 +539,6 @@ inputMethod.getController().hideSoftKeyboard().then(() => {
 
 ```
 
-<a id="hidetextinput"></a>
 ## hideTextInput
 
 ```TypeScript
@@ -594,7 +582,6 @@ inputMethod.getController().hideTextInput((err: BusinessError) => {
 
 ```
 
-<a id="hidetextinput-1"></a>
 ## hideTextInput
 
 ```TypeScript
@@ -636,7 +623,6 @@ inputMethod.getController().hideTextInput().then(() => {
 
 ```
 
-<a id="off"></a>
 ## off('selectByRange')
 
 ```TypeScript
@@ -673,7 +659,6 @@ inputMethodController.off('selectByRange');
 
 ```
 
-<a id="off-1"></a>
 ## off('selectByMovement')
 
 ```TypeScript
@@ -710,7 +695,6 @@ inputMethodController.off('selectByMovement');
 
 ```
 
-<a id="off-2"></a>
 ## off('insertText')
 
 ```TypeScript
@@ -747,7 +731,6 @@ inputMethodController.off('insertText');
 
 ```
 
-<a id="off-3"></a>
 ## off('deleteLeft')
 
 ```TypeScript
@@ -784,7 +767,6 @@ inputMethodController.off('deleteLeft');
 
 ```
 
-<a id="off-4"></a>
 ## off('deleteRight')
 
 ```TypeScript
@@ -820,7 +802,6 @@ inputMethodController.off('deleteRight');
 
 ```
 
-<a id="off-5"></a>
 ## off('sendKeyboardStatus')
 
 ```TypeScript
@@ -857,7 +838,6 @@ inputMethodController.off('sendKeyboardStatus');
 
 ```
 
-<a id="off-6"></a>
 ## off('sendFunctionKey')
 
 ```TypeScript
@@ -894,7 +874,6 @@ inputMethodController.off('sendFunctionKey');
 
 ```
 
-<a id="off-7"></a>
 ## off('moveCursor')
 
 ```TypeScript
@@ -931,7 +910,6 @@ inputMethodController.off('moveCursor');
 
 ```
 
-<a id="off-8"></a>
 ## off('handleExtendAction')
 
 ```TypeScript
@@ -968,7 +946,6 @@ inputMethodController.off('handleExtendAction');
 
 ```
 
-<a id="off-9"></a>
 ## off('getLeftTextOfCursor')
 
 ```TypeScript
@@ -1005,7 +982,6 @@ inputMethodController.off('getLeftTextOfCursor');
 
 ```
 
-<a id="off-10"></a>
 ## off('getRightTextOfCursor')
 
 ```TypeScript
@@ -1042,7 +1018,6 @@ inputMethodController.off('getRightTextOfCursor');
 
 ```
 
-<a id="off-11"></a>
 ## off('getTextIndexAtCursor')
 
 ```TypeScript
@@ -1079,7 +1054,6 @@ inputMethodController.off('getTextIndexAtCursor');
 
 ```
 
-<a id="off-12"></a>
 ## off('setPreviewText')
 
 ```TypeScript
@@ -1126,7 +1100,6 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 
 ```
 
-<a id="off-13"></a>
 ## off('finishTextPreview')
 
 ```TypeScript
@@ -1174,7 +1147,6 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 
 ```
 
-<a id="on"></a>
 ## on('selectByRange')
 
 ```TypeScript
@@ -1211,7 +1183,6 @@ inputMethod.getController().on('selectByRange', (range: inputMethod.Range) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('selectByMovement')
 
 ```TypeScript
@@ -1248,7 +1219,6 @@ inputMethod.getController().on('selectByMovement', (movement: inputMethod.Moveme
 
 ```
 
-<a id="on-2"></a>
 ## on('insertText')
 
 ```TypeScript
@@ -1299,7 +1269,6 @@ inputMethodController.off('insertText');
 
 ```
 
-<a id="on-3"></a>
 ## on('deleteLeft')
 
 ```TypeScript
@@ -1337,7 +1306,6 @@ inputMethod.getController().on('deleteLeft', (length: number) => {
 
 ```
 
-<a id="on-4"></a>
 ## on('deleteRight')
 
 ```TypeScript
@@ -1375,7 +1343,6 @@ inputMethod.getController().on('deleteRight', (length: number) => {
 
 ```
 
-<a id="on-5"></a>
 ## on('sendKeyboardStatus')
 
 ```TypeScript
@@ -1413,7 +1380,6 @@ inputMethod.getController().on('sendKeyboardStatus', (keyboardStatus: inputMetho
 
 ```
 
-<a id="on-6"></a>
 ## on('sendFunctionKey')
 
 ```TypeScript
@@ -1451,7 +1417,6 @@ inputMethod.getController().on('sendFunctionKey', (functionKey: inputMethod.Func
 
 ```
 
-<a id="on-7"></a>
 ## on('moveCursor')
 
 ```TypeScript
@@ -1489,7 +1454,6 @@ inputMethod.getController().on('moveCursor', (direction: inputMethod.Direction) 
 
 ```
 
-<a id="on-8"></a>
 ## on('handleExtendAction')
 
 ```TypeScript
@@ -1527,7 +1491,6 @@ inputMethod.getController().on('handleExtendAction', (action: inputMethod.Extend
 
 ```
 
-<a id="on-9"></a>
 ## on('getLeftTextOfCursor')
 
 ```TypeScript
@@ -1567,7 +1530,6 @@ inputMethod.getController().on('getLeftTextOfCursor', (length: number) => {
 
 ```
 
-<a id="on-10"></a>
 ## on('getRightTextOfCursor')
 
 ```TypeScript
@@ -1607,7 +1569,6 @@ inputMethod.getController().on('getRightTextOfCursor', (length: number) => {
 
 ```
 
-<a id="on-11"></a>
 ## on('getTextIndexAtCursor')
 
 ```TypeScript
@@ -1647,7 +1608,6 @@ inputMethod.getController().on('getTextIndexAtCursor', () => {
 
 ```
 
-<a id="on-12"></a>
 ## on('setPreviewText')
 
 ```TypeScript
@@ -1700,7 +1660,6 @@ console.info(`All callbacks unsubscribed from setPreviewText`);
 
 ```
 
-<a id="on-13"></a>
 ## on('finishTextPreview')
 
 ```TypeScript
@@ -1754,7 +1713,6 @@ console.info(`All callbacks unsubscribed from finishTextPreview`);
 
 ```
 
-<a id="recvmessage"></a>
 ## recvMessage
 
 ```TypeScript
@@ -1801,7 +1759,6 @@ inputMethodController.recvMessage();
 
 ```
 
-<a id="sendmessage"></a>
 ## sendMessage
 
 ```TypeScript
@@ -1855,7 +1812,6 @@ inputMethod.getController().sendMessage(msgId, msgParam).then(() => {
 
 ```
 
-<a id="setcallingwindow"></a>
 ## setCallingWindow
 
 ```TypeScript
@@ -1902,7 +1858,6 @@ inputMethod.getController().setCallingWindow(windowId, (err: BusinessError) => {
 
 ```
 
-<a id="setcallingwindow-1"></a>
 ## setCallingWindow
 
 ```TypeScript
@@ -1952,7 +1907,6 @@ inputMethod.getController().setCallingWindow(windowId).then(() => {
 
 ```
 
-<a id="showsoftkeyboard"></a>
 ## showSoftKeyboard
 
 ```TypeScript
@@ -1998,7 +1952,6 @@ inputMethod.getController().showSoftKeyboard((err: BusinessError) => {
 
 ```
 
-<a id="showsoftkeyboard-1"></a>
 ## showSoftKeyboard
 
 ```TypeScript
@@ -2042,7 +1995,6 @@ inputMethod.getController().showSoftKeyboard().then(() => {
 
 ```
 
-<a id="showtextinput"></a>
 ## showTextInput
 
 ```TypeScript
@@ -2086,7 +2038,6 @@ inputMethod.getController().showTextInput((err: BusinessError) => {
 
 ```
 
-<a id="showtextinput-1"></a>
 ## showTextInput
 
 ```TypeScript
@@ -2128,7 +2079,6 @@ inputMethod.getController().showTextInput().then(() => {
 
 ```
 
-<a id="showtextinput-2"></a>
 ## showTextInput
 
 ```TypeScript
@@ -2178,7 +2128,6 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 
 ```
 
-<a id="stopinput"></a>
 ## stopInput
 
 ```TypeScript
@@ -2191,7 +2140,7 @@ Stop input
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopInputSession](arkts-ime-inputmethod-inputmethodcontroller-i.md#stopinputsession-1)
+**Substitutes:** [stopInputSession](arkts-ime-inputmethod-inputmethodcontroller-i.md#stopinputsession)
 
 <!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void-End-->
 
@@ -2222,7 +2171,6 @@ inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
 
 ```
 
-<a id="stopinput-1"></a>
 ## stopInput
 
 ```TypeScript
@@ -2235,7 +2183,7 @@ Stop input
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopInputSession](arkts-ime-inputmethod-inputmethodcontroller-i.md#stopinputsession-1)
+**Substitutes:** [stopInputSession](arkts-ime-inputmethod-inputmethodcontroller-i.md#stopinputsession)
 
 <!--Device-InputMethodController-stopInput(): Promise<boolean>--><!--Device-InputMethodController-stopInput(): Promise<boolean>-End-->
 
@@ -2264,7 +2212,6 @@ inputMethod.getController().stopInput().then((result: boolean) => {
 
 ```
 
-<a id="stopinputsession"></a>
 ## stopInputSession
 
 ```TypeScript
@@ -2311,7 +2258,6 @@ inputMethod.getController().stopInputSession((err: BusinessError, result: boolea
 
 ```
 
-<a id="stopinputsession-1"></a>
 ## stopInputSession
 
 ```TypeScript
@@ -2356,7 +2302,6 @@ inputMethod.getController().stopInputSession().then((result: boolean) => {
 
 ```
 
-<a id="updateattribute"></a>
 ## updateAttribute
 
 ```TypeScript
@@ -2403,7 +2348,6 @@ inputMethod.getController().updateAttribute(inputAttribute, (err: BusinessError)
 
 ```
 
-<a id="updateattribute-1"></a>
 ## updateAttribute
 
 ```TypeScript
@@ -2453,7 +2397,6 @@ inputMethod.getController().updateAttribute(inputAttribute).then(() => {
 
 ```
 
-<a id="updatecursor"></a>
 ## updateCursor
 
 ```TypeScript
@@ -2506,7 +2449,6 @@ inputMethod.getController().updateCursor(cursorInfo, (err: BusinessError) => {
 
 ```
 
-<a id="updatecursor-1"></a>
 ## updateCursor
 
 ```TypeScript

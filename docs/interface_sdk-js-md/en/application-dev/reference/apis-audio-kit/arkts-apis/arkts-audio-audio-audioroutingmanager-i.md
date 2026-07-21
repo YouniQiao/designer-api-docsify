@@ -2,8 +2,7 @@
 
 This interface implements audio routing management.
 
-Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager-1) to obtain an AudioRoutingManager instance.
-
+Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
 > **NOTE**  
 >  
 > - The initial APIs of this interface are supported since API version 9.
@@ -20,7 +19,6 @@ Before calling any API in AudioRoutingManager, you must use [getRoutingManager](
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="declaredevicetypescompatibility"></a>
 ## declareDeviceTypesCompatibility
 
 ```TypeScript
@@ -49,7 +47,6 @@ Declares the original device types that the application has adapted to.By defaul
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, the param deviceTypes contains value that is invalid enum or is not device type introduced in API 20 onwards. |
 
-<a id="getavailabledevices"></a>
 ## getAvailableDevices
 
 ```TypeScript
@@ -83,7 +80,6 @@ Obtains the available audio devices. This API returns the result synchronously.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="getdevices"></a>
 ## getDevices
 
 ```TypeScript
@@ -105,7 +101,6 @@ Obtains the audio devices with a specific flag. This API uses an asynchronous ca
 | deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | Audio device flag. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio devices obtained; otherwise, **err** is an error object. |
 
-<a id="getdevices-1"></a>
 ## getDevices
 
 ```TypeScript
@@ -132,7 +127,6 @@ Obtains the audio devices with a specific flag. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;AudioDeviceDescriptors&gt; | Promise used to return the device list. |
 
-<a id="getdevicessync"></a>
 ## getDevicesSync
 
 ```TypeScript
@@ -166,7 +160,6 @@ Obtains the audio devices with a specific flag. This API returns the result sync
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="getpreferoutputdeviceforrendererinfo"></a>
 ## getPreferOutputDeviceForRendererInfo
 
 ```TypeScript
@@ -196,7 +189,6 @@ Obtains the output device with the highest priority based on the audio renderer 
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
 
-<a id="getpreferoutputdeviceforrendererinfo-1"></a>
 ## getPreferOutputDeviceForRendererInfo
 
 ```TypeScript
@@ -231,7 +223,6 @@ Obtains the output device with the highest priority based on the audio renderer 
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
-<a id="getpreferredinputdeviceforcapturerinfo"></a>
 ## getPreferredInputDeviceForCapturerInfo
 
 ```TypeScript
@@ -261,7 +252,6 @@ Obtains the input device with the highest priority based on the audio capturer i
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
 
-<a id="getpreferredinputdeviceforcapturerinfo-1"></a>
 ## getPreferredInputDeviceForCapturerInfo
 
 ```TypeScript
@@ -296,7 +286,6 @@ Obtains the input device with the highest priority based on the audio capturer i
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
-<a id="getpreferredinputdeviceforcapturerinfosync"></a>
 ## getPreferredInputDeviceForCapturerInfoSync
 
 ```TypeScript
@@ -330,7 +319,6 @@ Gets preferred input device for target audio capturer info.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="getpreferredoutputdeviceforrendererinfosync"></a>
 ## getPreferredOutputDeviceForRendererInfoSync
 
 ```TypeScript
@@ -364,7 +352,6 @@ Obtains the output device with the highest priority based on the audio renderer 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="iscommunicationdeviceactive"></a>
 ## isCommunicationDeviceActive
 
 ```TypeScript
@@ -386,7 +373,6 @@ Checks whether a communication device is active. This API uses an asynchronous c
 | deviceType | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Yes | Active audio device type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is **true** if the device is active or **false** if not active;otherwise, **err** is an error object. |
 
-<a id="iscommunicationdeviceactive-1"></a>
 ## isCommunicationDeviceActive
 
 ```TypeScript
@@ -413,7 +399,6 @@ Checks whether a communication device is active. This API uses a promise to retu
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the device is active.**true** if active, **false** otherwise. |
 
-<a id="iscommunicationdeviceactivesync"></a>
 ## isCommunicationDeviceActiveSync
 
 ```TypeScript
@@ -447,7 +432,6 @@ Checks whether a communication device is active. This API returns the result syn
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="ismicblockdetectionsupported"></a>
 ## isMicBlockDetectionSupported
 
 ```TypeScript
@@ -468,7 +452,6 @@ Checks whether the current device supports microphone blocking detection. This A
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating the support for microphone blocking detection. **true** if supported, **false** otherwise. |
 
-<a id="off"></a>
 ## off('deviceChange')
 
 ```TypeScript
@@ -497,7 +480,6 @@ Unsubscribes from the event indicating that the connection status of an audio de
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-1"></a>
 ## off('availableDeviceChange')
 
 ```TypeScript
@@ -526,7 +508,6 @@ Unsubscribes from the event indicating that the connection status of an availabl
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-2"></a>
 ## off('preferOutputDeviceChangeForRendererInfo')
 
 ```TypeScript
@@ -555,7 +536,6 @@ Unsubscribes from the change event of the output device with the highest priorit
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-3"></a>
 ## off('preferredInputDeviceChangeForCapturerInfo')
 
 ```TypeScript
@@ -584,7 +564,6 @@ Unsubscribes from the change event of the input device with the highest priority
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-4"></a>
 ## off('micBlockStatusChanged')
 
 ```TypeScript
@@ -613,7 +592,6 @@ Unsubscribes from the microphone blocked status change event. This API uses an a
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on"></a>
 ## on('deviceChange')
 
 ```TypeScript
@@ -643,7 +621,6 @@ Subscribes to the event indicating that the connection status of an audio device
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on-1"></a>
 ## on('availableDeviceChange')
 
 ```TypeScript
@@ -673,7 +650,6 @@ Subscribes to the event indicating that the connection status of an available au
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on-2"></a>
 ## on('preferOutputDeviceChangeForRendererInfo')
 
 ```TypeScript
@@ -703,7 +679,6 @@ Subscribes to the change event of the output device with the highest priority, w
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on-3"></a>
 ## on('preferredInputDeviceChangeForCapturerInfo')
 
 ```TypeScript
@@ -733,7 +708,6 @@ Subscribes to the change event of the input device with the highest priority, wh
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on-4"></a>
 ## on('micBlockStatusChanged')
 
 ```TypeScript
@@ -764,7 +738,6 @@ Before using this API, check whether the current device supports microphone bloc
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="setcommunicationdevice"></a>
 ## setCommunicationDevice
 
 ```TypeScript
@@ -775,7 +748,7 @@ Sets a communication device to the active state. This API uses an asynchronous c
 
 This API will be deprecated in a later version due to function design is changed. You are not advised to use it.
 
-You are advised to use the [AVCastPicker component](docroot://media/avsession/using-switch-call-devices.md)provided by AVSession to switch between call devices.
+You are advised to use the [AVCastPicker component](../../../media/avsession/using-switch-call-devices.md)provided by AVSession to switch between call devices.
 
 **Since:** 9
 
@@ -791,7 +764,6 @@ You are advised to use the [AVCastPicker component](docroot://media/avsession/us
 | active | boolean | Yes | Active state to set. **true** to set the device to the active state, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
-<a id="setcommunicationdevice-1"></a>
 ## setCommunicationDevice
 
 ```TypeScript
@@ -802,7 +774,7 @@ Sets a communication device to the active state. This API uses a promise to retu
 
 This API will be deprecated in a later version due to function design is changed. You are not advised to use it.
 
-You are advised to use the [AVCastPicker component](docroot://media/avsession/using-switch-call-devices.md)provided by AVSession to switch between call devices.
+You are advised to use the [AVCastPicker component](../../../media/avsession/using-switch-call-devices.md)provided by AVSession to switch between call devices.
 
 **Since:** 9
 

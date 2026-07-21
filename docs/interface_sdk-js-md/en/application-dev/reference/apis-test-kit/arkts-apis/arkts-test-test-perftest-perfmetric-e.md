@@ -1,7 +1,6 @@
 # PerfMetric
 
 Represents performance metrics that can be collected by the framework.
-
 > **NOTE**  
 >  
 > 1. The preceding metrics collect performance data for a specified application process, not for the system.  

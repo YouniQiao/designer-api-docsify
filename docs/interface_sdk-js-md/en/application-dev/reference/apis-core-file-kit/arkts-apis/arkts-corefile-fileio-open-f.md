@@ -1,6 +1,5 @@
 # open
 
-<a id="open"></a>
 ## open
 
 ```TypeScript
@@ -13,7 +12,7 @@ Opens a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:open](arkts-corefile-file-fs-open-f.md#open-1)
+**Substitutes:** [fs:open](arkts-corefile-fileio-open-f.md#open)
 
 <!--Device-unnamed-declare function open(path: string, flags?: number, mode?: number): Promise<number>--><!--Device-unnamed-declare function open(path: string, flags?: number, mode?: number): Promise<number>-End-->
 
@@ -34,7 +33,6 @@ Opens a file. This API uses a promise to return the result.
 | Promise&lt;number&gt; | Promise that returns the file descriptor of the file opened. |
 
 
-<a id="open-1"></a>
 ## open
 
 ```TypeScript
@@ -47,7 +45,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:open](arkts-corefile-file-fs-open-f.md#open-1)
+**Substitutes:** [fs:open](arkts-corefile-fileio-open-f.md#open)
 
 <!--Device-unnamed-declare function open(path: string, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function open(path: string, callback: AsyncCallback<number>): void-End-->
 
@@ -61,7 +59,6 @@ Opens a file. This API uses an asynchronous callback to return the result.
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the file is opened asynchronously, which is used to return the file descriptor. |
 
 
-<a id="open-2"></a>
 ## open
 
 ```TypeScript
@@ -74,7 +71,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:open](arkts-corefile-file-fs-open-f.md#open-1)
+**Substitutes:** [fs:open](arkts-corefile-fileio-open-f.md#open)
 
 <!--Device-unnamed-declare function open(path: string, flags: number, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function open(path: string, flags: number, callback: AsyncCallback<number>): void-End-->
 
@@ -89,7 +86,6 @@ Opens a file. This API uses an asynchronous callback to return the result.
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the file is opened asynchronously, which is used to return the file descriptor. |
 
 
-<a id="open-3"></a>
 ## open
 
 ```TypeScript
@@ -102,7 +98,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:open](arkts-corefile-file-fs-open-f.md#open-1)
+**Substitutes:** [fs:open](arkts-corefile-fileio-open-f.md#open)
 
 <!--Device-unnamed-declare function open(path: string, flags: number, mode: number, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function open(path: string, flags: number, mode: number, callback: AsyncCallback<number>): void-End-->
 

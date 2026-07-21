@@ -6,7 +6,6 @@
 import { window } from '@kit.ArkUI';
 ```
 
-<a id="find"></a>
 ## find
 
 ```TypeScript
@@ -19,7 +18,7 @@ Finds a window based on the ID. This API uses an asynchronous callback to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [findWindow](arkts-arkui-window-findwindow-f.md#findwindow-1)
+**Substitutes:** [findWindow](arkts-arkui-window-findwindow-f.md#findwindow)
 
 <!--Device-window-function find(id: string, callback: AsyncCallback<Window>): void--><!--Device-window-function find(id: string, callback: AsyncCallback<Window>): void-End-->
 
@@ -51,7 +50,6 @@ window.find('test', (err: BusinessError, data) => {
 ```
 
 
-<a id="find-1"></a>
 ## find
 
 ```TypeScript
@@ -64,7 +62,7 @@ Finds a window based on the ID. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [findWindow](arkts-arkui-window-findwindow-f.md#findwindow-1)
+**Substitutes:** [findWindow](arkts-arkui-window-findwindow-f.md#findwindow)
 
 <!--Device-window-function find(id: string): Promise<Window>--><!--Device-window-function find(id: string): Promise<Window>-End-->
 

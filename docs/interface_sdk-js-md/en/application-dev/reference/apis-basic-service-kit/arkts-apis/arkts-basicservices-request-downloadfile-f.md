@@ -6,7 +6,6 @@
 import { request } from '@kit.BasicServicesKit';
 ```
 
-<a id="downloadfile"></a>
 ## downloadFile
 
 ```TypeScript
@@ -14,11 +13,10 @@ function downloadFile(context: BaseContext, config: DownloadConfig, callback: As
 ```
 
 Downloads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'|'pause'|'remove')](request.DownloadTask.on(type: 'complete' | 'pause' | 'remove', callback: () => void))to obtain the download task state, including task completion, pause, and removal. You can also use [on('fail')](request.DownloadTask.on(type: 'fail', callback: (err: int) => void)) to obtain the task download error information.
-
 > **NOTE**  
 >  
 > For details about how to obtain the context in the example, see  
-> [Obtaining the Context of UIAbility](docroot://application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 9
@@ -73,7 +71,6 @@ try {
 ```
 
 
-<a id="downloadfile-1"></a>
 ## downloadFile
 
 ```TypeScript
@@ -81,11 +78,10 @@ function downloadFile(context: BaseContext, config: DownloadConfig): Promise<Dow
 ```
 
 Downloads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'|'pause'|'remove')](request.DownloadTask.on(type: 'complete' | 'pause' | 'remove', callback: () => void))to obtain the download task state, including task completion, pause, and removal. You can also use [on('fail')](request.DownloadTask.on(type: 'fail', callback: (err: int) => void)) to obtain the task download error information.
-
 > **NOTE**  
 >  
 > For details about how to obtain the context in the example, see  
-> [Obtaining the Context of UIAbility](docroot://application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 9

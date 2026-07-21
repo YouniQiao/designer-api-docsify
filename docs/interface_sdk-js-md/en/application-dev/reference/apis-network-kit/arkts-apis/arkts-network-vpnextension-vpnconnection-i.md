@@ -14,7 +14,6 @@ Defines a VPN connection.
 import { vpnExtension } from '@kit.NetworkKit';
 ```
 
-<a id="create"></a>
 ## create
 
 ```TypeScript
@@ -132,7 +131,6 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 
 ```
 
-<a id="destroy"></a>
 ## destroy
 
 ```TypeScript
@@ -183,7 +181,6 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 
 ```
 
-<a id="destroy-1"></a>
 ## destroy
 
 ```TypeScript
@@ -239,7 +236,6 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 
 ```
 
-<a id="generatevpnid"></a>
 ## generateVpnId
 
 ```TypeScript
@@ -288,7 +284,6 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 
 ```
 
-<a id="protect"></a>
 ## protect
 
 ```TypeScript
@@ -358,7 +353,6 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 
 ```
 
-<a id="protectprocessnet"></a>
 ## protectProcessNet
 
 ```TypeScript

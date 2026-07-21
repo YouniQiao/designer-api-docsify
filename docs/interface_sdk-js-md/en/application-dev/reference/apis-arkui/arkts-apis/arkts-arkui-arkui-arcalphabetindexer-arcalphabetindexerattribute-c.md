@@ -18,7 +18,6 @@ In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-ap
 import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 ```
 
-<a id="autocollapse"></a>
 ## autoCollapse
 
 ```TypeScript
@@ -47,7 +46,6 @@ Sets whether to enable the adaptive collapse behavior for the indexer.
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="color"></a>
 ## color
 
 ```TypeScript
@@ -76,7 +74,6 @@ Sets the text color of the index items in the normal state.
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="font"></a>
 ## font
 
 ```TypeScript
@@ -105,7 +102,6 @@ Sets the default font style of the index items.
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="itemsize"></a>
 ## itemSize
 
 ```TypeScript
@@ -134,7 +130,6 @@ Sets the size of the index item area.
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="onselect"></a>
 ## onSelect
 
 ```TypeScript
@@ -163,7 +158,6 @@ Triggered when an index item is selected. The return value is the index of the s
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="popupbackground"></a>
 ## popupBackground
 
 ```TypeScript
@@ -192,7 +186,6 @@ Sets the background color of the pop-up window.
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="popupbackgroundblurstyle"></a>
 ## popupBackgroundBlurStyle
 
 ```TypeScript
@@ -200,11 +193,9 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 ```
 
 Sets the background blur style of the pop-up window. If this API is not used, the blur is disabled by default. The corresponding value is **NONE** in **BlurStyle**.
-
 > **NOTE**
-
 > After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying  
-> background colors via [popupBackground](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#popupbackground-1).
+> background colors via [popupBackground](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#popupbackground).
 
 **Since:** 18
 
@@ -226,7 +217,6 @@ Sets the background blur style of the pop-up window. If this API is not used, th
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="popupcolor"></a>
 ## popupColor
 
 ```TypeScript
@@ -255,7 +245,6 @@ Sets the text color for the pop-up window.
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="popupfont"></a>
 ## popupFont
 
 ```TypeScript
@@ -284,7 +273,6 @@ Sets the font style of the pop-up window.
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="selected"></a>
 ## selected
 
 ```TypeScript
@@ -305,7 +293,7 @@ Sets the index of the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Index of the selected item.<br>Default value: **0**<br>This parameter supports two-way binding through [!!](docroot://ui/state-management/arkts-new-binding.md). |
+| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Index of the selected item.<br>Default value: **0**<br>This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md). |
 
 **Return value:**
 
@@ -313,7 +301,6 @@ Sets the index of the selected item.
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="selectedbackgroundcolor"></a>
 ## selectedBackgroundColor
 
 ```TypeScript
@@ -342,7 +329,6 @@ Sets the background color of the selected item.
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="selectedcolor"></a>
 ## selectedColor
 
 ```TypeScript
@@ -371,7 +357,6 @@ Sets the text color of the selected item.
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="selectedfont"></a>
 ## selectedFont
 
 ```TypeScript
@@ -400,7 +385,6 @@ Sets the font style of the selected item, including size, weight, style, and fon
 | --- | --- |
 | [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="usepopup"></a>
 ## usePopup
 
 ```TypeScript

@@ -8,7 +8,6 @@ KeyEvent object description.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getmodifierkeystate"></a>
 ## getModifierKeyState
 
 ```TypeScript
@@ -225,7 +224,7 @@ State of the Meta key (the key located next to the **Ctrl** key in the lower lef
 stopPropagation: () => void
 ```
 
-Blocks [event bubbling](docroot://ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
+Blocks [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
 
 **Type:** () =&gt; void
 

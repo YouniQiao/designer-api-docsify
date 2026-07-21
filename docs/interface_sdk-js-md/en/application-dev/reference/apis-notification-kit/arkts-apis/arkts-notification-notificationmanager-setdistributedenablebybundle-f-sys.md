@@ -6,7 +6,6 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="setdistributedenablebybundle"></a>
 ## setDistributedEnableByBundle
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sets whether to enable distributed notification for a specified application. Thi
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDistributedEnabledByBundle(bundle:](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md#setdistributedenabledbybundle-1)
+**Substitutes:** [setDistributedEnabledByBundle(bundle:](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md#setdistributedenabledbybundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -72,7 +71,6 @@ notificationManager.setDistributedEnableByBundle(bundle, enable, setDistributedE
 ```
 
 
-<a id="setdistributedenablebybundle-1"></a>
 ## setDistributedEnableByBundle
 
 ```TypeScript
@@ -85,7 +83,7 @@ Sets whether to enable distributed notification for a specified application. Thi
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDistributedEnabledByBundle(bundle:](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md#setdistributedenabledbybundle-1)
+**Substitutes:** [setDistributedEnabledByBundle(bundle:](arkts-notification-notificationmanager-setdistributedenabledbybundle-f-sys.md#setdistributedenabledbybundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

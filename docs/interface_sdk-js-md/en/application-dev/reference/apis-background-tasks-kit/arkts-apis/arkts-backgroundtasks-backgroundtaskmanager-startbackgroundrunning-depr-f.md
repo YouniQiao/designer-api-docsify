@@ -1,6 +1,5 @@
 # startBackgroundRunning
 
-<a id="startbackgroundrunning"></a>
 ## startBackgroundRunning
 
 ```TypeScript
@@ -13,7 +12,7 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [startBackgroundRunning(context:](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning-1)
+**Substitutes:** [startBackgroundRunning(context:](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning)
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -25,7 +24,7 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md). |
 | bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md) | Yes | Background mode requested. |
 | wantAgent | [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md) | Yes | Notification parameter, which is used to specify the target page that is redirected to when a continuous task notification is clicked. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
@@ -110,7 +109,6 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="startbackgroundrunning-1"></a>
 ## startBackgroundRunning
 
 ```TypeScript
@@ -123,7 +121,7 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [startBackgroundRunning(context:](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning-1)
+**Substitutes:** [startBackgroundRunning(context:](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning)
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -135,7 +133,7 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md). |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md). |
 | bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md) | Yes | Background mode requested. |
 | wantAgent | [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md) | Yes | Notification parameter, which is used to specify the target page that is redirected to when a continuous task notification is clicked. |
 

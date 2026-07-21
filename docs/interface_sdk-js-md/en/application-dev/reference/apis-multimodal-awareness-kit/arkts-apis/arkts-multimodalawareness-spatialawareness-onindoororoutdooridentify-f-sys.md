@@ -6,7 +6,6 @@
 import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="onindoororoutdooridentify"></a>
 ## onIndoorOrOutdoorIdentify
 
 ```TypeScript
@@ -22,9 +21,7 @@ Subscribe to the results of indoorand outdoor identification.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-spatialAwareness-function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams,
-    callback: Callback<DoorPositionResponse>): void--><!--Device-spatialAwareness-function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams,
-    callback: Callback<DoorPositionResponse>): void-End-->
+<!--Device-spatialAwareness-function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams,    callback: Callback<DoorPositionResponse>): void--><!--Device-spatialAwareness-function onIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParams,    callback: Callback<DoorPositionResponse>): void-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 

@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="getpacfileurl"></a>
 ## getPacFileUrl
 
 ```TypeScript

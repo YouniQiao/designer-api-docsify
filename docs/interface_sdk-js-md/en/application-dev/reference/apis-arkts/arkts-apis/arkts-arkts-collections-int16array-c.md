@@ -1,7 +1,6 @@
 # Int16Array
 
 A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md).
-
 > **NOTE**  
 >  
 > - This module can be imported only to ArkTS files (with the file name extension .ets).  
@@ -21,7 +20,6 @@ A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collect
 import { collections } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -50,7 +48,6 @@ Returns an iterator, each item of which is a JavaScript object.NOTE:This API can
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-<a id="at"></a>
 ## at
 
 ```TypeScript
@@ -86,7 +83,6 @@ Returns the element at the given index. If no element is found, **undefined** is
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The at method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -109,7 +105,6 @@ A constructor used to create an empty ArkTS Int16Array.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Int16Array's constructor cannot be directly invoked. |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -138,7 +133,6 @@ A constructor used to create an ArkTS Int16Array of a given length.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Int16Array's constructor cannot be directly invoked. |
 
-<a id="constructor-2"></a>
 ## constructor
 
 ```TypeScript
@@ -167,7 +161,6 @@ A constructor that creates an ArkTS Int16Array from an iterable object.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Int16Array's constructor cannot be directly invoked. |
 
-<a id="constructor-3"></a>
 ## constructor
 
 ```TypeScript
@@ -196,7 +189,6 @@ A constructor that creates an ArkTS Int16Array from an array-like object or ArkT
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Int16Array's constructor cannot be directly invoked. |
 
-<a id="constructor-4"></a>
 ## constructor
 
 ```TypeScript
@@ -227,7 +219,6 @@ A constructor that creates an ArkTS Int16Array from an ArrayBuffer.
 | --- | --- |
 | [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Int16Array's constructor cannot be directly invoked. |
 
-<a id="copywithin"></a>
 ## copyWithin
 
 ```TypeScript
@@ -265,7 +256,6 @@ Copies elements within a given range from this ArkTS Int16Array to another posit
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The copyWithin method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -295,7 +285,6 @@ Returns an iterator object that contains the key-value pair of each element in t
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="every"></a>
 ## every
 
 ```TypeScript
@@ -331,7 +320,6 @@ Checks whether all elements in this ArkTS Int16Array meet a given condition.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The every method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="fill"></a>
 ## fill
 
 ```TypeScript
@@ -369,7 +357,6 @@ Fills all elements in a given range in this ArkTS Int16Array with a value.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The fill method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="filter"></a>
 ## filter
 
 ```TypeScript
@@ -405,7 +392,6 @@ Returns a new ArkTS Int16Array that contains all elements that meet the given co
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The filter method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="find"></a>
 ## find
 
 ```TypeScript
@@ -441,7 +427,6 @@ Returns the value of the first element that passes a test provided by a callback
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The find method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="findindex"></a>
 ## findIndex
 
 ```TypeScript
@@ -477,7 +462,6 @@ Returns the index of the first element that passes a test provided by a callback
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The findIndex method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -507,7 +491,6 @@ Calls a callback function for each element in this ArkTS Int16Array.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="from"></a>
 ## from
 
 ```TypeScript
@@ -536,7 +519,6 @@ Creates an ArkTS Int16Array from an array-like or iterator object.
 | --- | --- |
 | Int16Array | New ArkTS Int16Array generated. |
 
-<a id="from-1"></a>
 ## from
 
 ```TypeScript
@@ -566,7 +548,6 @@ Creates an ArkTS Int16Array from an array-like object.
 | --- | --- |
 | Int16Array | New ArkTS Int16Array generated. |
 
-<a id="from-2"></a>
 ## from
 
 ```TypeScript
@@ -596,7 +577,6 @@ Creates an ArkTS Int16Array from an iterator object.
 | --- | --- |
 | Int16Array | New ArkTS Int16Array generated. |
 
-<a id="includes"></a>
 ## includes
 
 ```TypeScript
@@ -633,7 +613,6 @@ Checks whether elements are contained in this ArkTS Int16Array.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The includes method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="indexof"></a>
 ## indexOf
 
 ```TypeScript
@@ -670,7 +649,6 @@ Returns the index of the first occurrence of a value in this ArkTS Int16Array. I
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The indexOf method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="join"></a>
 ## join
 
 ```TypeScript
@@ -706,7 +684,6 @@ Concatenates all elements in this ArkTS Int16Array into a string, with a given s
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The join method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="keys"></a>
 ## keys
 
 ```TypeScript
@@ -736,7 +713,6 @@ Returns an iterator object that contains the key (index) of each element in this
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="lastindexof"></a>
 ## lastIndexOf
 
 ```TypeScript
@@ -773,7 +749,6 @@ Obtains the index of the last occurrence of the specified value in this ArkTS In
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The lastIndexOf method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="map"></a>
 ## map
 
 ```TypeScript
@@ -809,7 +784,6 @@ Applies a callback function to each element in this ArkTS Int16Array and uses th
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The map method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="of"></a>
 ## of
 
 ```TypeScript
@@ -838,7 +812,6 @@ Creates an ArkTS Int16Array with a variable number of parameters.
 | --- | --- |
 | Int16Array | New ArkTS Int16Array instance. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="reduce"></a>
 ## reduce
 
 ```TypeScript
@@ -874,7 +847,6 @@ Applies a reduce function on each element in this ArkTS Int16Array and returns t
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="reduce-1"></a>
 ## reduce
 
 ```TypeScript
@@ -911,7 +883,6 @@ Applies a reduce function for each element in this ArkTS Int16Array, receives an
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="reduce-2"></a>
 ## reduce
 
 ```TypeScript
@@ -948,7 +919,6 @@ Applies a reduce function for each element in this ArkTS Int16Array, receives an
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="reduceright"></a>
 ## reduceRight
 
 ```TypeScript
@@ -985,7 +955,6 @@ Reversely traverses this ArkTS Int16Array, applies a reduce function for each el
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="reduceright-1"></a>
 ## reduceRight
 
 ```TypeScript
@@ -1021,7 +990,6 @@ Reversely traverses this ArkTS Int16Array, applies a reduce function on each ele
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="reverse"></a>
 ## reverse
 
 ```TypeScript
@@ -1051,7 +1019,6 @@ Reverses this ArkTS Int16Array.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reverse method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
@@ -1082,7 +1049,6 @@ Writes the elements in an array-like object to the given start position in seque
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="slice"></a>
 ## slice
 
 ```TypeScript
@@ -1119,7 +1085,6 @@ Selects a range of elements in this ArkTS Int16Array to create an ArkTS Int16Arr
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="some"></a>
 ## some
 
 ```TypeScript
@@ -1155,7 +1120,6 @@ Checks whether any element in this ArkTS Int16Array meets a given condition.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The some method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="sort"></a>
 ## sort
 
 ```TypeScript
@@ -1191,7 +1155,6 @@ Sorts elements in this ArkTS Int16Array and returns the sorted ArkTS Int16Array.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="subarray"></a>
 ## subarray
 
 ```TypeScript
@@ -1228,7 +1191,6 @@ Truncates an array from a specified position and returns a new ArkTS Int16Array 
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subarray method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="tolocalestring"></a>
 ## toLocaleString
 
 ```TypeScript
@@ -1258,7 +1220,6 @@ Generates a string of digits that matches the cultural conventions of the curren
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toLocaleString method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -1288,7 +1249,6 @@ Converts an ArkTS Int16Array to a string.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="values"></a>
 ## values
 
 ```TypeScript

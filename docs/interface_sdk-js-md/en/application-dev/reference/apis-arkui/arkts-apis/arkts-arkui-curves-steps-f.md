@@ -6,7 +6,6 @@
 import { curves } from '@kit.ArkUI';
 ```
 
-<a id="steps"></a>
 ## steps
 
 ```TypeScript
@@ -19,7 +18,7 @@ Creates a step curve.
 
 **Deprecated since:** 9
 
-**Substitutes:** [stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve-1)
+**Substitutes:** [stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve)
 
 <!--Device-curves-function steps(count: number, end: boolean): string--><!--Device-curves-function steps(count: number, end: boolean): string-End-->
 

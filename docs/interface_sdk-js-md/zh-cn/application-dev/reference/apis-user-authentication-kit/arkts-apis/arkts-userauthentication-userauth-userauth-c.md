@@ -18,7 +18,6 @@
 import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
-<a id="auth"></a>
 ## auth
 
 ```TypeScript
@@ -40,17 +39,7 @@ auth(
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-<!--Device-UserAuth-auth(
-      challenge: Uint8Array,
-      authType: UserAuthType,
-      authTrustLevel: AuthTrustLevel,
-      callback: IUserAuthCallback
-    ): Uint8Array--><!--Device-UserAuth-auth(
-      challenge: Uint8Array,
-      authType: UserAuthType,
-      authTrustLevel: AuthTrustLevel,
-      callback: IUserAuthCallback
-    ): Uint8Array-End-->
+<!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: UserAuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array--><!--Device-UserAuth-auth(      challenge: Uint8Array,      authType: UserAuthType,      authTrustLevel: AuthTrustLevel,      callback: IUserAuthCallback    ): Uint8Array-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -67,7 +56,7 @@ auth(
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | ContextId，作为取消认证[cancelAuth](arkts-userauthentication-userauth-userauth-c.md#cancelauth-1)接口的入参。 |
+| Uint8Array | ContextId，作为取消认证[cancelAuth](arkts-userauthentication-userauth-userauth-c.md#cancelauth)接口的入参。 |
 
 **示例：**
 
@@ -93,7 +82,6 @@ auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
 
 ```
 
-<a id="cancelauth"></a>
 ## cancelAuth
 
 ```TypeScript
@@ -118,7 +106,7 @@ cancelAuth(contextID: Uint8Array): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contextID | Uint8Array | 是 | 上下文的标识，通过[auth](arkts-userauthentication-userauth-userauth-c.md#auth-1)接口获取。 |
+| contextID | Uint8Array | 是 | 上下文的标识，通过[auth](arkts-userauthentication-userauth-userauth-c.md#auth)接口获取。 |
 
 **返回值：**
 
@@ -143,7 +131,6 @@ if (cancelCode == userAuth.ResultCode.SUCCESS) {
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -156,7 +143,7 @@ constructor()
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance-1)
+**替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance)
 
 <!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
@@ -171,7 +158,6 @@ let auth = new userAuth.UserAuth();
 
 ```
 
-<a id="getavailablestatus"></a>
 ## getAvailableStatus
 
 ```TypeScript
@@ -184,7 +170,7 @@ getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): numb
 
 **废弃版本：** 9
 
-**替代接口：** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus-1)
+**替代接口：** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
@@ -220,7 +206,6 @@ if (checkCode == userAuth.ResultCode.SUCCESS) {
 
 ```
 
-<a id="getversion"></a>
 ## getVersion
 
 ```TypeScript

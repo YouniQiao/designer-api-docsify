@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="dumpjsrawheapdata"></a>
 ## dumpJsRawHeapData
 
 ```TypeScript
@@ -14,7 +13,6 @@ function dumpJsRawHeapData(needGC?: boolean): Promise<string>
 ```
 
 Dumps the original heap snapshot of the VM for the current thread and generates a .rawheap file. This API uses a promise to return the result. The file can be converted into a heapsnapshot file using rawheap-translator for parsing.
-
 > **NOTE**  
 >  
 > This API is resource-consuming. Therefore, the calling frequency and times are strictly limited. You need to  
@@ -69,7 +67,6 @@ hidebug.dumpJsRawHeapData().then((filePath: string) => {
 ```
 
 
-<a id="dumpjsrawheapdata-1"></a>
 ## dumpJsRawHeapData
 
 ```TypeScript
@@ -129,7 +126,6 @@ hidebug.dumpJsRawHeapData(true, true).then((filePath: string) => {
 ```
 
 
-<a id="dumpjsrawheapdata-2"></a>
 ## dumpJsRawHeapData
 
 ```TypeScript

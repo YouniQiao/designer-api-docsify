@@ -12,7 +12,6 @@ In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-ap
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="onwillhide"></a>
 ## onWillHide
 
 ```TypeScript
@@ -20,10 +19,9 @@ onWillHide(event: VoidCallback)
 ```
 
 Called when the tab content is about to be hidden. The scenarios include the tab switching, page switching, and window switching between the foreground and background.
-
 > **NOTE**  
 >  
-> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -41,7 +39,6 @@ Called when the tab content is about to be hidden. The scenarios include the tab
 | --- | --- | --- | --- |
 | event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback for when the tab content is about to be hidden. |
 
-<a id="onwillshow"></a>
 ## onWillShow
 
 ```TypeScript
@@ -49,10 +46,9 @@ onWillShow(event: VoidCallback)
 ```
 
 Called when the tab content is about to be displayed. The scenarios include the first-time display, tab switching,page switching, and window switching between the foreground and background.
-
 > **NOTE**  
 >  
-> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -70,7 +66,6 @@ Called when the tab content is about to be displayed. The scenarios include the 
 | --- | --- | --- | --- |
 | event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback for when the tab content is about to be displayed. |
 
-<a id="tabbar"></a>
 ## tabBar
 
 ```TypeScript
@@ -97,7 +92,6 @@ If the content exceeds the space provided by the tab bar, it will be clipped.
 | --- | --- | --- | --- |
 | options | string \| Resource \| CustomBuilder \| TabBarOptions | Yes | Content displayed on the tab bar.<br>**CustomBuilder**: builder, to which components can be passed (applicable to API version 8 and later versions).<br>**Since:** 18 |
 
-<a id="tabbar-1"></a>
 ## tabBar
 
 ```TypeScript
@@ -105,7 +99,6 @@ tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 ```
 
 Sets the content displayed on the tab bar. The bottom tab style does not include an indicator. When an icon display error occurs, a gray blank block is displayed.
-
 > **NOTE**  
 >  
 > - [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md): text + underline or text + board. The text style can be set. It is  
@@ -133,7 +126,6 @@ Sets the content displayed on the tab bar. The bottom tab style does not include
 | --- | --- | --- | --- |
 | value | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| BottomTabBarStyle | Yes | Content displayed on the tab bar.<br>**SubTabBarStyle**:subtab style.<br>**BottomTabBarStyle**: bottom and side tab style |
 
-<a id="tabbar-2"></a>
 ## tabBar
 
 ```TypeScript
@@ -153,9 +145,7 @@ If the content exceeds the space provided by the tab bar, it will be clipped.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-TabContentAttribute-tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string | Resource | CustomBuilder | 
-    TabBarOptions): TabContentAttribute--><!--Device-TabContentAttribute-tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string | Resource | CustomBuilder | 
-    TabBarOptions): TabContentAttribute-End-->
+<!--Device-TabContentAttribute-tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string | Resource | CustomBuilder |     TabBarOptions): TabContentAttribute--><!--Device-TabContentAttribute-tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string | Resource | CustomBuilder |     TabBarOptions): TabContentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

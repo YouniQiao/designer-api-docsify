@@ -1,6 +1,6 @@
 # WebHitTestType
 
-Enumerates the cursor node types for the [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest-1) API.
+Enumerates the cursor node types for the [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest) API.
 
 **Since:** 9
 

@@ -1,7 +1,6 @@
 # Canvas
 
 A carrier that carries the drawn content and drawing status.
-
 > **NOTE**  
 >  
 > - This module uses the physical pixel unit, px.  
@@ -25,7 +24,6 @@ A carrier that carries the drawn content and drawing status.
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="attachbrush"></a>
 ## attachBrush
 
 ```TypeScript
@@ -33,7 +31,6 @@ attachBrush(brush: Brush): void
 ```
 
 Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes.
-
 > **NOTE**  
 >  
 > If the brush effect changes after this API is called, you must call the API again if you want to use the new  
@@ -57,7 +54,6 @@ Attaches a brush to the canvas. When you draw on the canvas, the brush's style i
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="attachpen"></a>
 ## attachPen
 
 ```TypeScript
@@ -65,7 +61,6 @@ attachPen(pen: Pen): void
 ```
 
 Attaches a pen to the canvas. When you draw on the canvas, the pen's style is used to outline shapes.
-
 > **NOTE**  
 >  
 > If the pen effect changes after this API is called, you must call the API again if you want to use the new  
@@ -89,14 +84,13 @@ Attaches a pen to the canvas. When you draw on the canvas, the pen's style is us
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
 clear(color: common2D.Color): void
 ```
 
-Clears the canvas with a given color. This API has the same effect as [drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor-1).
+Clears the canvas with a given color. This API has the same effect as [drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor).
 
 **Since:** 12
 
@@ -116,7 +110,6 @@ Clears the canvas with a given color. This API has the same effect as [drawColor
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="clear-1"></a>
 ## clear
 
 ```TypeScript
@@ -137,7 +130,6 @@ Clears the canvas with a given color.
 | --- | --- | --- | --- |
 | color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
 
-<a id="clippath"></a>
 ## clipPath
 
 ```TypeScript
@@ -166,7 +158,6 @@ Clips the drawable area of the canvas using a custom path.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="cliprect"></a>
 ## clipRect
 
 ```TypeScript
@@ -195,7 +186,6 @@ Clips the drawable area of the canvas using a rectangle.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="clipregion"></a>
 ## clipRegion
 
 ```TypeScript
@@ -223,7 +213,6 @@ Clips a region on the canvas.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="cliproundrect"></a>
 ## clipRoundRect
 
 ```TypeScript
@@ -252,7 +241,6 @@ Clips a rounded rectangle on the canvas.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="concatmatrix"></a>
 ## concatMatrix
 
 ```TypeScript
@@ -279,7 +267,6 @@ Multiplies the current canvas matrix by the incoming matrix on the left. This AP
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -308,7 +295,6 @@ Creates a **Canvas** object that uses a **PixelMap** as the drawing target.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="detachbrush"></a>
 ## detachBrush
 
 ```TypeScript
@@ -323,7 +309,6 @@ Detaches the brush from the canvas. When you draw on the canvas, the brush is no
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-<a id="detachpen"></a>
 ## detachPen
 
 ```TypeScript
@@ -338,7 +323,6 @@ Detaches the pen from the canvas. When you draw on the canvas, the pen is no lon
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-<a id="drawarc"></a>
 ## drawArc
 
 ```TypeScript
@@ -367,7 +351,6 @@ Draws an arc on the canvas. with the start angle and sweep angle specified. If t
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawarcwithcenter"></a>
 ## drawArcWithCenter
 
 ```TypeScript
@@ -391,7 +374,6 @@ Draws an arc on the canvas. It enables you to define the start angle, sweep angl
 | sweepAngle | number | Yes | Angle to sweep, in degrees. The value is a floating point number. A positive number indicates a clockwise sweep, and a negative value indicates a counterclockwise swipe. The swipe angle can exceed 360 degrees, and a complete ellipse is drawn. |
 | useCenter | boolean | Yes | Whether the start point and end point of the arc are connected to its center. The value **true** means that they are connected to the center; the value **false** means the opposite. |
 
-<a id="drawbackground"></a>
 ## drawBackground
 
 ```TypeScript
@@ -418,7 +400,6 @@ Uses a brush to fill the drawable area of the canvas.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawcircle"></a>
 ## drawCircle
 
 ```TypeScript
@@ -447,7 +428,6 @@ Draws a circle. If the radius is less than or equal to zero, nothing is drawn. B
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="drawcolor"></a>
 ## drawColor
 
 ```TypeScript
@@ -475,14 +455,13 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="drawcolor-1"></a>
 ## drawColor
 
 ```TypeScript
 drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: BlendMode): void
 ```
 
-Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md). This API provides better performance than [drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor-1) and is recommended.
+Fills the drawable area of the canvas with the specified color and [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md). This API provides better performance than [drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor) and is recommended.
 
 **Since:** 12
 
@@ -506,7 +485,6 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="drawcolor-2"></a>
 ## drawColor
 
 ```TypeScript
@@ -534,7 +512,6 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="drawglyphs"></a>
 ## drawGlyphs
 
 ```TypeScript
@@ -548,9 +525,7 @@ Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Canvas-drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.Point>,
-      positionOffset: int, glyphCount: int, font: Font): void--><!--Device-Canvas-drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.Point>,
-      positionOffset: int, glyphCount: int, font: Font): void-End-->
+<!--Device-Canvas-drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.Point>,      positionOffset: int, glyphCount: int, font: Font): void--><!--Device-Canvas-drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.Point>,      positionOffset: int, glyphCount: int, font: Font): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -571,7 +546,6 @@ Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
-<a id="drawimage"></a>
 ## drawImage
 
 ```TypeScript
@@ -601,7 +575,6 @@ Draws an image. The coordinates of the upper left corner of the image are (left,
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawimagelattice"></a>
 ## drawImageLattice
 
 ```TypeScript
@@ -615,9 +588,7 @@ The intersections of even-numbered rows and columns (starting from 0) are fixed 
 
 **Since:** 18
 
-<!--Device-Canvas-drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,
-      filterMode: FilterMode): void--><!--Device-Canvas-drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,
-      filterMode: FilterMode): void-End-->
+<!--Device-Canvas-drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,      filterMode: FilterMode): void--><!--Device-Canvas-drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,      filterMode: FilterMode): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -636,7 +607,6 @@ The intersections of even-numbered rows and columns (starting from 0) are fixed 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="drawimagenine"></a>
 ## drawImageNine
 
 ```TypeScript
@@ -650,9 +620,7 @@ If the four corner sections are smaller than the target rectangle, they will be 
 
 **Since:** 18
 
-<!--Device-Canvas-drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,
-      filterMode: FilterMode): void--><!--Device-Canvas-drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,
-      filterMode: FilterMode): void-End-->
+<!--Device-Canvas-drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,      filterMode: FilterMode): void--><!--Device-Canvas-drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,      filterMode: FilterMode): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -671,7 +639,6 @@ If the four corner sections are smaller than the target rectangle, they will be 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="drawimagerect"></a>
 ## drawImageRect
 
 ```TypeScript
@@ -700,7 +667,6 @@ Draws an image onto a specified area of the canvas.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawimagerectwithsrc"></a>
 ## drawImageRectWithSrc
 
 ```TypeScript
@@ -712,9 +678,7 @@ Draws a portion of an image onto a specified area of the canvas.
 
 **Since:** 12
 
-<!--Device-Canvas-drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,
-      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void--><!--Device-Canvas-drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,
-      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void-End-->
+<!--Device-Canvas-drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void--><!--Device-Canvas-drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -734,7 +698,6 @@ Draws a portion of an image onto a specified area of the canvas.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawline"></a>
 ## drawLine
 
 ```TypeScript
@@ -764,7 +727,6 @@ Draws a line segment from the start point to the end point. If the coordinates o
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawnestedroundrect"></a>
 ## drawNestedRoundRect
 
 ```TypeScript
@@ -792,7 +754,6 @@ Draws two nested rounded rectangles. The outer rectangle boundary must contain t
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawoval"></a>
 ## drawOval
 
 ```TypeScript
@@ -819,7 +780,6 @@ Draws an oval on the canvas, where the shape and position of the oval are define
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawpath"></a>
 ## drawPath
 
 ```TypeScript
@@ -846,7 +806,6 @@ Draws a custom path, which contains a set of path outlines. Each path outline ca
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawpixelmapmesh"></a>
 ## drawPixelMapMesh
 
 ```TypeScript
@@ -858,9 +817,7 @@ Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed 
 
 **Since:** 12
 
-<!--Device-Canvas-drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,
-      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void--><!--Device-Canvas-drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,
-      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void-End-->
+<!--Device-Canvas-drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void--><!--Device-Canvas-drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -882,7 +839,6 @@ Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawpoint"></a>
 ## drawPoint
 
 ```TypeScript
@@ -910,7 +866,6 @@ Draws a point.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawpoints"></a>
 ## drawPoints
 
 ```TypeScript
@@ -938,7 +893,6 @@ Draws a group of points, line segments, or polygons on the canvas, with the spec
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="drawrect"></a>
 ## drawRect
 
 ```TypeScript
@@ -965,14 +919,13 @@ Draws a rectangle. By default, black is used for filling.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawrect-1"></a>
 ## drawRect
 
 ```TypeScript
 drawRect(left: number, top: number, right: number, bottom: number): void
 ```
 
-Draws a rectangle. By default, black is used for filling. This API provides better performance than [drawRect](arkts-arkgraphics2d-drawing-canvas-c.md#drawrect-1) and is recommended.
+Draws a rectangle. By default, black is used for filling. This API provides better performance than [drawRect](arkts-arkgraphics2d-drawing-canvas-c.md#drawrect) and is recommended.
 
 **Since:** 12
 
@@ -995,7 +948,6 @@ Draws a rectangle. By default, black is used for filling. This API provides bett
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawregion"></a>
 ## drawRegion
 
 ```TypeScript
@@ -1022,7 +974,6 @@ Draws a region.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawroundrect"></a>
 ## drawRoundRect
 
 ```TypeScript
@@ -1049,7 +1000,6 @@ Draws a rounded rectangle.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawshadow"></a>
 ## drawShadow
 
 ```TypeScript
@@ -1061,9 +1011,7 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 **Since:** 12
 
-<!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,
-      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void--><!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,
-      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void-End-->
+<!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void--><!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -1085,7 +1033,6 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="drawshadow-1"></a>
 ## drawShadow
 
 ```TypeScript
@@ -1097,9 +1044,7 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 **Since:** 18
 
-<!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,
-      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void--><!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,
-      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void-End-->
+<!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void--><!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -1121,7 +1066,6 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="drawsinglecharacter"></a>
 ## drawSingleCharacter
 
 ```TypeScript
@@ -1151,7 +1095,6 @@ Draws a single character. If the typeface of the current font does not support t
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="drawsinglecharacterwithfeatures"></a>
 ## drawSingleCharacterWithFeatures
 
 ```TypeScript
@@ -1182,7 +1125,6 @@ Draws a single character with font features. If the typeface of the current font
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
-<a id="drawtextblob"></a>
 ## drawTextBlob
 
 ```TypeScript
@@ -1211,7 +1153,6 @@ Draws a text blob. If the typeface used to construct **blob** does not support a
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="drawvertices"></a>
 ## drawVertices
 
 ```TypeScript
@@ -1224,11 +1165,7 @@ Draws a triangle mesh described by the vertex array.
 
 **Since:** 23
 
-<!--Device-Canvas-drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,
-      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,
-      indices: Array<int> | null, mode: BlendMode): void--><!--Device-Canvas-drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,
-      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,
-      indices: Array<int> | null, mode: BlendMode): void-End-->
+<!--Device-Canvas-drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,      indices: Array<int> | null, mode: BlendMode): void--><!--Device-Canvas-drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,      indices: Array<int> | null, mode: BlendMode): void-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -1251,7 +1188,6 @@ Draws a triangle mesh described by the vertex array.
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
-<a id="getheight"></a>
 ## getHeight
 
 ```TypeScript
@@ -1272,7 +1208,6 @@ Obtains the canvas height.
 | --- | --- |
 | number | Canvas height. The value is a floating point number. |
 
-<a id="getlocalclipbounds"></a>
 ## getLocalClipBounds
 
 ```TypeScript
@@ -1293,7 +1228,6 @@ Obtains the bounds of the cropping region of the canvas.
 | --- | --- |
 | common2D.Rect | Bounds of the cropping region. |
 
-<a id="getsavecount"></a>
 ## getSaveCount
 
 ```TypeScript
@@ -1314,7 +1248,6 @@ Obtains the number of canvas states (canvas matrix and clipping area) saved in t
 | --- | --- |
 | number | Number of canvas statuses that have been saved. The value is a positive integer. |
 
-<a id="gettotalmatrix"></a>
 ## getTotalMatrix
 
 ```TypeScript
@@ -1335,7 +1268,6 @@ Obtains the canvas matrix.
 | --- | --- |
 | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Canvas matrix. |
 
-<a id="getwidth"></a>
 ## getWidth
 
 ```TypeScript
@@ -1356,7 +1288,6 @@ Obtains the canvas width.
 | --- | --- |
 | number | Canvas width. The value is a floating point number. |
 
-<a id="isclipempty"></a>
 ## isClipEmpty
 
 ```TypeScript
@@ -1377,7 +1308,6 @@ Checks whether the region that can be drawn is empty after clipping.
 | --- | --- |
 | boolean | Check result. The value **true** means that the region is empty, and **false** means the opposite. |
 
-<a id="isopaque"></a>
 ## isOpaque
 
 ```TypeScript
@@ -1400,7 +1330,6 @@ Checks whether the current layer that drawn into the device is opaque.
 | --- | --- |
 | boolean | Returns true if the current layer that drawn into the device is opaque. |
 
-<a id="quickrejectpath"></a>
 ## quickRejectPath
 
 ```TypeScript
@@ -1427,7 +1356,6 @@ Checks whether the path is not intersecting with the canvas area. The canvas are
 | --- | --- |
 | boolean | Check result. The value **true** means that the path is not intersecting with the canvas area, and **false** means the opposite. |
 
-<a id="quickrejectrect"></a>
 ## quickRejectRect
 
 ```TypeScript
@@ -1454,7 +1382,6 @@ Checks whether the rectangle is not intersecting with the canvas area. The canva
 | --- | --- |
 | boolean | Check result. The value **true** means that the rectangle is not intersecting with the canvas area, and **false** means the opposite. |
 
-<a id="resetclip"></a>
 ## resetClip
 
 ```TypeScript
@@ -1471,7 +1398,6 @@ Resets the clip status.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-<a id="resetmatrix"></a>
 ## resetMatrix
 
 ```TypeScript
@@ -1486,7 +1412,6 @@ Resets the matrix of this canvas to an identity matrix.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-<a id="restore"></a>
 ## restore
 
 ```TypeScript
@@ -1501,7 +1426,6 @@ Restores the canvas state (canvas matrix and clipping area) saved on the top of 
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-<a id="restoretocount"></a>
 ## restoreToCount
 
 ```TypeScript
@@ -1528,7 +1452,6 @@ Restores the canvas state (canvas matrix and clipping area) to a specified numbe
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="rotate"></a>
 ## rotate
 
 ```TypeScript
@@ -1557,14 +1480,13 @@ Applies a rotation matrix on top of the current canvas matrix (identity matrix b
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="save"></a>
 ## save
 
 ```TypeScript
 save(): number
 ```
 
-Saves the canvas states (canvas matrix and drawable area) to the top of the stack. This API must be used in pair with [restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore-1).
+Saves the canvas states (canvas matrix and drawable area) to the top of the stack. This API must be used in pair with [restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore).
 
 **Since:** 12
 
@@ -1578,14 +1500,13 @@ Saves the canvas states (canvas matrix and drawable area) to the top of the stac
 | --- | --- |
 | number | Number of canvas statuses. The value is a positive integer. |
 
-<a id="savelayer"></a>
 ## saveLayer
 
 ```TypeScript
 saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): number
 ```
 
-Saves the matrix and cropping region of the canvas, and allocates a **PixelMap** for subsequent drawing. If you call [restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore-1), changes made to the matrix and clipping region are discarded, and the PixelMap is drawn.
+Saves the matrix and cropping region of the canvas, and allocates a **PixelMap** for subsequent drawing. If you call [restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore), changes made to the matrix and clipping region are discarded, and the PixelMap is drawn.
 
 **Since:** 12
 
@@ -1612,7 +1533,6 @@ Saves the matrix and cropping region of the canvas, and allocates a **PixelMap**
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
-<a id="scale"></a>
 ## scale
 
 ```TypeScript
@@ -1640,7 +1560,6 @@ Applies a scaling matrix on top of the current canvas matrix (identity matrix by
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="setmatrix"></a>
 ## setMatrix
 
 ```TypeScript
@@ -1667,7 +1586,6 @@ Sets a matrix for the canvas. Subsequent drawing and clipping operations will be
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="skew"></a>
 ## skew
 
 ```TypeScript
@@ -1695,7 +1613,6 @@ Applies a skewing matrix on top of the current canvas matrix (identity matrix by
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="translate"></a>
 ## translate
 
 ```TypeScript

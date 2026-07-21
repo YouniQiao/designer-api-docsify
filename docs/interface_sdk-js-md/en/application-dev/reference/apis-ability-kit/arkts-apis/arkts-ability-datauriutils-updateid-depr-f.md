@@ -1,6 +1,5 @@
 # updateId
 
-<a id="updateid"></a>
 ## updateId
 
 ```TypeScript

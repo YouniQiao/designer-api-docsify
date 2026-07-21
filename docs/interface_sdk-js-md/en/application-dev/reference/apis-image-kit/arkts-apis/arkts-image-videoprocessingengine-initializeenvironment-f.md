@@ -6,7 +6,6 @@
 import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
-<a id="initializeenvironment"></a>
 ## initializeEnvironment
 
 ```TypeScript

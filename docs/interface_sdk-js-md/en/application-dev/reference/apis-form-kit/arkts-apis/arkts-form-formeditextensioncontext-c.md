@@ -1,9 +1,7 @@
 # FormEditExtensionContext
 
 **FormEditExtensionContext**, inherited from [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md), is the context of [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md).
-
 > **NOTE**
-
 > - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** FormEditExtensionContext extends [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)
@@ -14,7 +12,6 @@
 
 **System capability:** SystemCapability.Ability.Form
 
-<a id="startsecondpage"></a>
 ## startSecondPage
 
 ```TypeScript
@@ -52,7 +49,6 @@ Starts the widget provider page to be edited. This API uses a promise to return 
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
-<a id="startuiability"></a>
 ## startUIAbility
 
 ```TypeScript

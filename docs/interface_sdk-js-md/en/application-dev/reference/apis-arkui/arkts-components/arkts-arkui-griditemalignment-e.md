@@ -1,7 +1,6 @@
 # GridItemAlignment
 
 Enumerates the alignment modes of grid items.
-
 > **NOTE**  
 >  
 > 1. The **STRETCH** option only takes effect in scrollable grids.<br>  

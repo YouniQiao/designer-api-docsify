@@ -6,7 +6,6 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
-<a id="getpublishedforminfos"></a>
 ## getPublishedFormInfos
 
 ```TypeScript
@@ -14,17 +13,16 @@ function getPublishedFormInfos(): Promise<Array<formInfo.FormInfo>>
 ```
 
 Obtains the information of all widgets that have been added to the home screen on the device. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This field is supported since API version 18 and deprecated since API version 20. You are advised to use  
-> [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md#getpublishedrunningforminfos-1) instead.
+> [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md#getpublishedrunningforminfos) instead.
 
 **Since:** 18
 
 **Deprecated since:** 20
 
-**Substitutes:** [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md#getpublishedrunningforminfos-1)
+**Substitutes:** [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md#getpublishedrunningforminfos)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

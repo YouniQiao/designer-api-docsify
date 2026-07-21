@@ -6,7 +6,6 @@
 import { contact } from '@kit.ContactsKit';
 ```
 
-<a id="ismycard"></a>
 ## isMyCard
 
 ```TypeScript
@@ -19,7 +18,7 @@ Checks whether a contact is included in my card. This API uses an asynchronous c
 
 **Deprecated since:** 10
 
-**Substitutes:** [isMyCard(context:](arkts-contacts-contact-ismycard-f.md#ismycard-1)
+**Substitutes:** [isMyCard(context:](arkts-contacts-contact-ismycard-f.md#ismycard)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -52,7 +51,6 @@ contact.isMyCard(1, (err: BusinessError, data) => {
 ```
 
 
-<a id="ismycard-1"></a>
 ## isMyCard
 
 ```TypeScript
@@ -106,7 +104,6 @@ In the sample code provided in this topic, this.context is used to obtain UIAbil
 ```
 
 
-<a id="ismycard-2"></a>
 ## isMyCard
 
 ```TypeScript
@@ -119,7 +116,7 @@ Checks whether a contact is included in my card. This API uses a promise to retu
 
 **Deprecated since:** 10
 
-**Substitutes:** [isMyCard(context:](arkts-contacts-contact-ismycard-f.md#ismycard-1)
+**Substitutes:** [isMyCard(context:](arkts-contacts-contact-ismycard-f.md#ismycard)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -153,7 +150,6 @@ promise.then((data) => {
 ```
 
 
-<a id="ismycard-3"></a>
 ## isMyCard
 
 ```TypeScript

@@ -16,7 +16,6 @@ Provides APIs to manage the file retrieval result.
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -63,7 +62,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getallobjects"></a>
 ## getAllObjects
 
 ```TypeScript
@@ -112,7 +110,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getcount"></a>
 ## getCount
 
 ```TypeScript
@@ -161,7 +158,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getfirstobject"></a>
 ## getFirstObject
 
 ```TypeScript
@@ -210,7 +206,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getlastobject"></a>
 ## getLastObject
 
 ```TypeScript
@@ -259,7 +254,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getnextobject"></a>
 ## getNextObject
 
 ```TypeScript
@@ -268,7 +262,7 @@ getNextObject(): Promise<T>
 
 Obtains the next asset in the result set. This API uses a promise to return the result.
 
-Before using this API, you must use [isAfterLast()](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md#isafterlast-1) to check whether the current position is the end of the result set.
+Before using this API, you must use [isAfterLast()](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 12
 
@@ -311,7 +305,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getobjectbyposition"></a>
 ## getObjectByPosition
 
 ```TypeScript
@@ -367,7 +360,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="isafterlast"></a>
 ## isAfterLast
 
 ```TypeScript

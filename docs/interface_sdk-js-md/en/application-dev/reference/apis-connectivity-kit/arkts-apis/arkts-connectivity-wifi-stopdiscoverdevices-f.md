@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="stopdiscoverdevices"></a>
 ## stopDiscoverDevices
 
 ```TypeScript

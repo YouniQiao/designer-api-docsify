@@ -6,7 +6,6 @@
 import { config } from '@kit.AccessibilityKit';
 ```
 
-<a id="enableabilitywithcallback"></a>
 ## enableAbilityWithCallback
 
 ```TypeScript
@@ -25,15 +24,7 @@ Enables the auxiliary extension ability and specifies [ConnectCallback](arkts-ac
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-config-function enableAbilityWithCallback(
-    name: string,
-    capability: Array<accessibility.Capability>,
-    connectCallback: ConnectCallback
-  ): Promise<void>--><!--Device-config-function enableAbilityWithCallback(
-    name: string,
-    capability: Array<accessibility.Capability>,
-    connectCallback: ConnectCallback
-  ): Promise<void>-End-->
+<!--Device-config-function enableAbilityWithCallback(    name: string,    capability: Array<accessibility.Capability>,    connectCallback: ConnectCallback  ): Promise<void>--><!--Device-config-function enableAbilityWithCallback(    name: string,    capability: Array<accessibility.Capability>,    connectCallback: ConnectCallback  ): Promise<void>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

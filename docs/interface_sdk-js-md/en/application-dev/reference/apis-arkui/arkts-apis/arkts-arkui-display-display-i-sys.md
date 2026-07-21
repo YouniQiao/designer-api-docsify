@@ -2,7 +2,7 @@
 
 Implements a Display instance, with attributes and APIs defined.
 
-Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1) to obtain a Display instance.
+Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync) to obtain a Display instance.
 
 **Since:** 7
 
@@ -16,7 +16,6 @@ Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-d
 import { display } from '@kit.ArkUI';
 ```
 
-<a id="hasimmersivewindow"></a>
 ## hasImmersiveWindow
 
 ```TypeScript
@@ -69,7 +68,6 @@ displayClass.hasImmersiveWindow((err: BusinessError, data: boolean) => {
 
 ```
 
-<a id="hasimmersivewindow-1"></a>
 ## hasImmersiveWindow
 
 ```TypeScript

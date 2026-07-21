@@ -6,7 +6,6 @@
 import { wifiext } from '@kit.ConnectivityKit';
 ```
 
-<a id="setpowermodel"></a>
 ## setPowerModel
 
 ```TypeScript

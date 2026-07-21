@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="cleanbundlecachefiles"></a>
 ## cleanBundleCacheFiles
 
 ```TypeScript
@@ -37,7 +36,6 @@ Clears the cache data of an application. This API uses an asynchronous callback 
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="cleanbundlecachefiles-1"></a>
 ## cleanBundleCacheFiles
 
 ```TypeScript

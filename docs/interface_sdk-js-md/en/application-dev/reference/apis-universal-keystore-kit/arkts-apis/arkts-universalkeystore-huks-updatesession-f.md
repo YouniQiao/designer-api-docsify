@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="updatesession"></a>
 ## updateSession
 
 ```TypeScript
@@ -59,7 +58,6 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 | [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
 
 
-<a id="updatesession-1"></a>
 ## updateSession
 
 ```TypeScript
@@ -79,17 +77,7 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-huks-function updateSession(
-    handle: long,
-    options: HuksOptions,
-    token: Uint8Array,
-    callback: AsyncCallback<HuksReturnResult>
-  ): void--><!--Device-huks-function updateSession(
-    handle: long,
-    options: HuksOptions,
-    token: Uint8Array,
-    callback: AsyncCallback<HuksReturnResult>
-  ): void-End-->
+<!--Device-huks-function updateSession(    handle: long,    options: HuksOptions,    token: Uint8Array,    callback: AsyncCallback<HuksReturnResult>  ): void--><!--Device-huks-function updateSession(    handle: long,    options: HuksOptions,    token: Uint8Array,    callback: AsyncCallback<HuksReturnResult>  ): void-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 
@@ -99,7 +87,7 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **updateSession** operation, which is of the uint64 type. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **updateSession** operation. |
-| token | Uint8Array | Yes | Authentication token for [refined key access control](docroot://security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). |
+| token | Uint8Array | Yes | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksReturnResult&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -124,7 +112,6 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 | [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
 
 
-<a id="updatesession-2"></a>
 ## updateSession
 
 ```TypeScript
@@ -149,7 +136,7 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 | --- | --- | --- | --- |
 | handle | number | Yes | Handle of the **updateSession** operation, which is of the uint64 type. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **updateSession** operation. |
-| token | Uint8Array | No | Authentication token for [refined key access control](docroot://security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). If this parameter is left blank, refined key access control is not performed. |
+| token | Uint8Array | No | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control). If this parameter is left blank, refined key access control is not performed. |
 
 **Return value:**
 

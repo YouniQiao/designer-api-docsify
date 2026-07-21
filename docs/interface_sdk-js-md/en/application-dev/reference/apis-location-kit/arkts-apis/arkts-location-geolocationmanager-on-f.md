@@ -6,7 +6,6 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
-<a id="on"></a>
 ## on('locationChange')
 
 ```TypeScript
@@ -22,9 +21,7 @@ Subscribe location changed.You are advised to use the {@link onLocationChange} i
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-geoLocationManager-function on(type: 'locationChange', request: LocationRequest | ContinuousLocationRequest,
-      callback: Callback<Location>): void--><!--Device-geoLocationManager-function on(type: 'locationChange', request: LocationRequest | ContinuousLocationRequest,
-      callback: Callback<Location>): void-End-->
+<!--Device-geoLocationManager-function on(type: 'locationChange', request: LocationRequest | ContinuousLocationRequest,      callback: Callback<Location>): void--><!--Device-geoLocationManager-function on(type: 'locationChange', request: LocationRequest | ContinuousLocationRequest,      callback: Callback<Location>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -86,7 +83,6 @@ try {
 ```
 
 
-<a id="on-1"></a>
 ## on('locationError')
 
 ```TypeScript
@@ -154,7 +150,6 @@ try {
 ```
 
 
-<a id="on-2"></a>
 ## on('locationEnabledChange')
 
 ```TypeScript
@@ -201,7 +196,6 @@ try {
 ```
 
 
-<a id="on-3"></a>
 ## on('cachedGnssLocationsChange')
 
 ```TypeScript
@@ -215,9 +209,7 @@ Subscribe to cache GNSS locations update messages.
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
-<!--Device-geoLocationManager-function on(type: 'cachedGnssLocationsChange', request: CachedGnssLocationsRequest, 
-      callback: Callback<Array<Location>>): void--><!--Device-geoLocationManager-function on(type: 'cachedGnssLocationsChange', request: CachedGnssLocationsRequest, 
-      callback: Callback<Array<Location>>): void-End-->
+<!--Device-geoLocationManager-function on(type: 'cachedGnssLocationsChange', request: CachedGnssLocationsRequest,       callback: Callback<Array<Location>>): void--><!--Device-geoLocationManager-function on(type: 'cachedGnssLocationsChange', request: CachedGnssLocationsRequest,       callback: Callback<Array<Location>>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Gnss
 
@@ -261,7 +253,6 @@ try {
 ```
 
 
-<a id="on-4"></a>
 ## on('satelliteStatusChange')
 
 ```TypeScript
@@ -342,7 +333,6 @@ try {
 ```
 
 
-<a id="on-5"></a>
 ## on('nmeaMessage')
 
 ```TypeScript
@@ -394,7 +384,6 @@ try {
 ```
 
 
-<a id="on-6"></a>
 ## on('gnssFenceStatusChange')
 
 ```TypeScript
@@ -465,7 +454,6 @@ wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
 ```
 
 
-<a id="on-7"></a>
 ## on('countryCodeChange')
 
 ```TypeScript
@@ -514,7 +502,6 @@ try {
 ```
 
 
-<a id="on-8"></a>
 ## on('bluetoothScanResultChange')
 
 ```TypeScript

@@ -14,7 +14,6 @@ Manages SSAP server. Before calling a SSAP server method,you must use {@link cre
 import { ssap } from '@kit.ConnectivityKit';
 ```
 
-<a id="addservice"></a>
 ## addService
 
 ```TypeScript
@@ -49,7 +48,6 @@ Adds a SSAP service.
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -76,7 +74,6 @@ Closes this {@code Server} object and unregisters its callbacks.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="notifypropertychanged"></a>
 ## notifyPropertyChanged
 
 ```TypeScript
@@ -119,7 +116,6 @@ Notifies the client that the value of a property on the server has changed.
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
 
-<a id="offconnectionstatechange"></a>
 ## offConnectionStateChange
 
 ```TypeScript
@@ -142,7 +138,6 @@ Unsubscribes from server connection state changed events.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionChangeState&gt; | No | Callback used to listen for the SSAP connection state changed event. |
 
-<a id="offmtuchange"></a>
 ## offMtuChange
 
 ```TypeScript
@@ -165,7 +160,6 @@ Unsubscribes from MTU changed events.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback used to listen for the MTU changed event. |
 
-<a id="offpropertyread"></a>
 ## offPropertyRead
 
 ```TypeScript
@@ -188,7 +182,6 @@ Unsubscribes from property read events from the client.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PropertyReadRequest&gt; | No | Callback used to listen for the property operation event. |
 
-<a id="offpropertywrite"></a>
 ## offPropertyWrite
 
 ```TypeScript
@@ -211,7 +204,6 @@ Unsubscribes from property write events from the client.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PropertyWriteRequest&gt; | No | Callback used to listen for the property operation event. |
 
-<a id="onconnectionstatechange"></a>
 ## onConnectionStateChange
 
 ```TypeScript
@@ -236,7 +228,6 @@ This event is accessible only to applications that granted the ohos.permission.N
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionChangeState&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
 
-<a id="onmtuchange"></a>
 ## onMtuChange
 
 ```TypeScript
@@ -261,7 +252,6 @@ This event is accessible only to applications that granted the ohos.permission.N
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to listen for the MTU changed event. |
 
-<a id="onpropertyread"></a>
 ## onPropertyRead
 
 ```TypeScript
@@ -286,7 +276,6 @@ This event is accessible only to applications that granted the ohos.permission.N
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PropertyReadRequest&gt; | Yes | Callback used to listen for the property operation event. |
 
-<a id="onpropertywrite"></a>
 ## onPropertyWrite
 
 ```TypeScript
@@ -311,7 +300,6 @@ This event is accessible only to applications that granted the ohos.permission.N
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PropertyWriteRequest&gt; | Yes | Callback used to listen for the property operation event. |
 
-<a id="removeservice"></a>
 ## removeService
 
 ```TypeScript
@@ -346,7 +334,6 @@ Removes a specific SSAP service.
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
 
-<a id="sendresponse"></a>
 ## sendResponse
 
 ```TypeScript

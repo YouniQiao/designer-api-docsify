@@ -6,7 +6,6 @@
 import { request } from '@kit.BasicServicesKit';
 ```
 
-<a id="search"></a>
 ## search
 
 ```TypeScript
@@ -35,7 +34,6 @@ Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). 
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 
-<a id="search-1"></a>
 ## search
 
 ```TypeScript
@@ -65,7 +63,6 @@ Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). 
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 
-<a id="search-2"></a>
 ## search
 
 ```TypeScript

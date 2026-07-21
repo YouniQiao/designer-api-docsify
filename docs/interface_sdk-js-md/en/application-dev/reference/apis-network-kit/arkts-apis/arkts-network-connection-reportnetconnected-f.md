@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="reportnetconnected"></a>
 ## reportNetConnected
 
 ```TypeScript
@@ -55,7 +54,6 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 ```
 
 
-<a id="reportnetconnected-1"></a>
 ## reportNetConnected
 
 ```TypeScript

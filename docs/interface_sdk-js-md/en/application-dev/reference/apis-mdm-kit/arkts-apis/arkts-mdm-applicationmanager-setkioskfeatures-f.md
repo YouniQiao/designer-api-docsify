@@ -6,14 +6,13 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
-<a id="setkioskfeatures"></a>
 ## setKioskFeatures
 
 ```TypeScript
 function setKioskFeatures(admin: Want, features: Array<KioskFeature>): void
 ```
 
-Sets the features of kiosk mode. This API is used to control whether the notification center and control panel can be accessed [in kiosk mode](../../apis-ability-kit/arkts-apis/arkts-ability-kioskmanager-enterkioskmode-f.md#enterkioskmode-1).
+Sets the features of kiosk mode. This API is used to control whether the notification center and control panel can be accessed [in kiosk mode](../../apis-ability-kit/arkts-apis/arkts-ability-kioskmanager-enterkioskmode-f.md#enterkioskmode).
 
 Since API version 24, you can set whether to allow users to swipe up from the bottom to access the recent taskbar and swipe left or right to display the side dock.
 

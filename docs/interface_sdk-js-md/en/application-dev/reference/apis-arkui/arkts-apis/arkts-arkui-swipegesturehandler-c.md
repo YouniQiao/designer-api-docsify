@@ -10,7 +10,6 @@ Defines a swipe gesture handler object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -35,7 +34,6 @@ Constructor used to create a swipe gesture handler instance.
 | --- | --- | --- | --- |
 | options | [SwipeGestureHandlerOptions](arkts-arkui-swipegesturehandleroptions-i.md) | No | Parameters of the swipe gesture handler. |
 
-<a id="onaction"></a>
 ## onAction
 
 ```TypeScript

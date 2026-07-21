@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="getabilityicon"></a>
 ## getAbilityIcon
 
 ```TypeScript
@@ -38,7 +37,6 @@ No permission is required for obtaining the caller's own information.
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md). |
 
 
-<a id="getabilityicon-1"></a>
 ## getAbilityIcon
 
 ```TypeScript

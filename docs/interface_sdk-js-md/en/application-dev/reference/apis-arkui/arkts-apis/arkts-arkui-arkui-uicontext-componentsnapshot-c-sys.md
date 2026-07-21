@@ -1,12 +1,11 @@
 # ComponentSnapshot
 
 Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 12.  
 >  
-> - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot-1)  
+> - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)  
 > in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.  
 >  
 > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the  
@@ -25,7 +24,6 @@ Provides APIs for obtaining component snapshots, including snapshots of componen
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="getwithrange"></a>
 ## getWithRange
 
 ```TypeScript
@@ -34,7 +32,6 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 ```
 
 Captures a snapshot of the area between two specified components. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The components corresponding to **start** and **end** must belong to the same component tree, and the **start**  
@@ -44,9 +41,7 @@ Captures a snapshot of the area between two specified components. This API uses 
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ComponentSnapshot-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
-    options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
-    options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
+<!--Device-ComponentSnapshot-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,    options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,    options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

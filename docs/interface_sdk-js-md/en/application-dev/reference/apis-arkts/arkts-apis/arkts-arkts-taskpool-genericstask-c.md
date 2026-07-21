@@ -1,6 +1,6 @@
 # GenericsTask
 
-Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-taskpool-execute-f.md#execute-1).During the creation of a generic task, the passed-in parameter types and return value types of concurrent functions are verified in the compilation phase. Other behaviors are the same as those during the creation of a task.
+Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-taskpool-execute-f.md#execute).During the creation of a generic task, the passed-in parameter types and return value types of concurrent functions are verified in the compilation phase. Other behaviors are the same as those during the creation of a task.
 
 **Inheritance/Implementation:** GenericsTask extends [Task](arkts-arkts-taskpool-task-c.md)
 
@@ -16,7 +16,6 @@ Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-tas
 import { taskpool } from '@kit.ArkTS';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -37,8 +36,8 @@ A constructor used to create a **GenericsTask** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](docroot://arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](docroot://reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
-| args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](docroot://reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
+| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Error codes:**
 
@@ -73,7 +72,6 @@ let task3: taskpool.Task = new taskpool.GenericsTask<[[number, string]], string>
 
 ```
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -95,8 +93,8 @@ A constructor used to create a **GenericsTask** instance, with the task name spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the generic task. |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](docroot://arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](docroot://reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
-| args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](docroot://reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
+| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Error codes:**
 

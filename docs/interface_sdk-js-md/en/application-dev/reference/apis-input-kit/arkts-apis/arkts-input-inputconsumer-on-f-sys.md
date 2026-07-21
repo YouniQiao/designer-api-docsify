@@ -6,7 +6,6 @@
 import { inputConsumer } from '@kit.InputKit';
 ```
 
-<a id="on"></a>
 ## on('key')
 
 ```TypeScript
@@ -14,7 +13,6 @@ function on(type: 'key', keyOptions: KeyOptions, callback: Callback<KeyOptions>)
 ```
 
 Enables listening for system hotkey change events. This API uses an asynchronous callback to return the system hotkey data when a system hotkey event that meets the specified condition occurs.
-
 > **NOTE**  
 >  
 > - You can subscribe to only the Down event of a key, or subscribe to both the Down and Up events of a key.  

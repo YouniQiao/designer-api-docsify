@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="setinterface"></a>
 ## setInterface
 
 ```TypeScript
@@ -14,14 +13,13 @@ function setInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
 Sets a USB interface.
-
 > **NOTE**  
 >  
 > A USB interface may have multiple selection modes and supports dynamic switching. It is used to reset the  
 > endpoint to match the transmission type during data transmission.  
 >  
 > Before calling this API, call the  
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface-1)  
+> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface)  
 > API to claim a communication interface.
 
 **Since:** 9
@@ -34,14 +32,14 @@ Sets a USB interface.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice-1) to obtain its value. |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface. You can use [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices-1)to obtain device information and identify the USB interface based on its **id** and **alternateSetting**. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface. You can use [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)to obtain device information and identify the USB interface based on its **id** and **alternateSetting**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns **0** if the USB interface is successfully set; returns an error code otherwise. The error codes are as follows:* - 88080389: The service is not started. Possible causes: 1. No device is inserted. 2. The service exits abnormally.* - 88080486: The service is being initialized. Try again later.* - 88080488: No device access permission. Call the [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright-1) API to request authorization.* - -1: The driver is abnormal. |
+| number | Returns **0** if the USB interface is successfully set; returns an error code otherwise. The error codes are as follows:* - 88080389: The service is not started. Possible causes: 1. No device is inserted. 2. The service exits abnormally.* - 88080486: The service is being initialized. Try again later.* - 88080488: No device access permission. Call the [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright) API to request authorization.* - -1: The driver is abnormal. |
 
 **Error codes:**
 

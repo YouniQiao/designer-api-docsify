@@ -10,14 +10,13 @@ In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the fo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="radius"></a>
 ## radius
 
 ```TypeScript
 radius(value: Length | Array<any>)
 ```
 
-Sets the radius of the rounded corner. The value must be greater than or equal to 0. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1). Invalid values are treated as the default value.
+Sets the radius of the rounded corner. The value must be greater than or equal to 0. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier). Invalid values are treated as the default value.
 
 **Since:** 7
 
@@ -35,14 +34,13 @@ Sets the radius of the rounded corner. The value must be greater than or equal t
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array&lt;any&gt; | Yes | Radius of the rounded corner. You can set separate radii for the four rounded corners.<br>Default value: **0**<br>Default unit: vp<br>Invalid values **undefined** and **null** are treated as **[[0, 0], [0, 0], [0, 0], [0, 0]]**.<br>**Since:** 20 |
 
-<a id="radiusheight"></a>
 ## radiusHeight
 
 ```TypeScript
 radiusHeight(value: Length)
 ```
 
-Sets the height of the rounded corner. The width and height are the same when only the height is set. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1). Invalid values are treated as the default value.
+Sets the height of the rounded corner. The width and height are the same when only the height is set. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier). Invalid values are treated as the default value.
 
 **Since:** 7
 
@@ -60,14 +58,13 @@ Sets the height of the rounded corner. The width and height are the same when on
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the rounded corner. The value must be greater than or equal to 0.<br>Default value: **0**<br>Default unit: vp<br>The **undefined** value is invalid and treated as the default value.<br>**Since:** 20 |
 
-<a id="radiuswidth"></a>
 ## radiusWidth
 
 ```TypeScript
 radiusWidth(value: Length)
 ```
 
-Sets the width of the rounded corner. The width and height are the same when only the width is set. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1). Invalid values are treated as the default value.
+Sets the width of the rounded corner. The width and height are the same when only the width is set. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier). Invalid values are treated as the default value.
 
 **Since:** 7
 

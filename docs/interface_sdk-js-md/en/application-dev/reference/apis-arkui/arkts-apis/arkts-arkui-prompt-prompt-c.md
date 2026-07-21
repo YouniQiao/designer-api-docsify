@@ -14,7 +14,6 @@ Defines the prompt interface.
 import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from '@kit.ArkUI';
 ```
 
-<a id="showactionmenu"></a>
 ## showActionMenu
 
 ```TypeScript
@@ -37,7 +36,6 @@ Displays the menu.
 | --- | --- | --- | --- |
 | options | [ShowActionMenuOptions](arkts-arkui-prompt-showactionmenuoptions-i.md) | Yes | Options. |
 
-<a id="showdialog"></a>
 ## showDialog
 
 ```TypeScript
@@ -60,7 +58,6 @@ Displays the dialog box.
 | --- | --- | --- | --- |
 | options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Options. |
 
-<a id="showtoast"></a>
 ## showToast
 
 ```TypeScript

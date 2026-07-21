@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface MapConstructor--><!--Device-unnamed-interface MapConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -17,7 +16,6 @@ new(): Map<any, any>
 | --- | --- |
 | Map&lt;any, any&gt; |  |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

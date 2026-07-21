@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="get5gchannellist"></a>
 ## get5GChannelList
 
 ```TypeScript

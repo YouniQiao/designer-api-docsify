@@ -6,7 +6,6 @@
 import { systemManager } from '@kit.MDMKit';
 ```
 
-<a id="finishlogcollected"></a>
 ## finishLogCollected
 
 ```TypeScript
@@ -14,17 +13,16 @@ function finishLogCollected(admin: Want): void
 ```
 
 Deletes the device logs collected by the current MDM app under the current user.
-
 > **NOTE**  
 >  
-> After the app calls [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startcollectlog-1) to initiate log collection and  
+> After the app calls [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startcollectlog) to initiate log collection and  
 > receives the  
-> [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected-1)  
+> [EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected)  
 > callback, you are advised to immediately copy or process the logs, and then call this API to delete the collected  
 > logs.  
 >  
 > If this API is not called, device logs will occupy the system storage space, which does not affect the next call  
-> of [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startcollectlog-1) to start a log collection task.
+> of [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startcollectlog) to start a log collection task.
 
 **Since:** 23
 

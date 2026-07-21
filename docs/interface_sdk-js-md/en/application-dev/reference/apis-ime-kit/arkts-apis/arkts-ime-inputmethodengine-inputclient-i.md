@@ -14,7 +14,6 @@ You must first use [on('inputStart')](inputMethodEngine.InputMethodAbility. on(t
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-<a id="deletebackward"></a>
 ## deleteBackward
 
 ```TypeScript
@@ -64,7 +63,6 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
 
 ```
 
-<a id="deletebackward-1"></a>
 ## deleteBackward
 
 ```TypeScript
@@ -117,7 +115,6 @@ inputClient.deleteBackward(length).then((result: boolean) => {
 
 ```
 
-<a id="deletebackwardsync"></a>
 ## deleteBackwardSync
 
 ```TypeScript
@@ -154,7 +151,6 @@ inputClient.deleteBackwardSync(length);
 
 ```
 
-<a id="deleteforward"></a>
 ## deleteForward
 
 ```TypeScript
@@ -204,7 +200,6 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 
 ```
 
-<a id="deleteforward-1"></a>
 ## deleteForward
 
 ```TypeScript
@@ -257,7 +252,6 @@ inputClient.deleteForward(length).then((result: boolean) => {
 
 ```
 
-<a id="deleteforwardsync"></a>
 ## deleteForwardSync
 
 ```TypeScript
@@ -294,7 +288,6 @@ inputClient.deleteForwardSync(length);
 
 ```
 
-<a id="finishtextpreview"></a>
 ## finishTextPreview
 
 ```TypeScript
@@ -302,7 +295,6 @@ finishTextPreview(): Promise<void>
 ```
 
 Finishes the text preview. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > If there is preview text in the current text box, calling this API will display the preview text on the screen.
@@ -339,7 +331,6 @@ inputClient.finishTextPreview().then(() => {
 
 ```
 
-<a id="finishtextpreviewsync"></a>
 ## finishTextPreviewSync
 
 ```TypeScript
@@ -347,7 +338,6 @@ finishTextPreviewSync(): void
 ```
 
 Finishes the text preview.
-
 > **NOTE**  
 >  
 > If there is preview text in the current text box, calling this API will display the preview text on the screen.
@@ -372,7 +362,6 @@ inputClient.finishTextPreviewSync();
 
 ```
 
-<a id="getattachoptions"></a>
 ## getAttachOptions
 
 ```TypeScript
@@ -407,7 +396,6 @@ console.info(`Succeeded in getting AttachOptions, AttachOptions is ${attachOptio
 
 ```
 
-<a id="getbackward"></a>
 ## getBackward
 
 ```TypeScript
@@ -453,7 +441,6 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
 
 ```
 
-<a id="getbackward-1"></a>
 ## getBackward
 
 ```TypeScript
@@ -502,7 +489,6 @@ inputClient.getBackward(length).then((text: string) => {
 
 ```
 
-<a id="getbackwardsync"></a>
 ## getBackwardSync
 
 ```TypeScript
@@ -546,7 +532,6 @@ console.info(`Succeeded in getting backward, text: ${text}`);
 
 ```
 
-<a id="getcallingwindowinfo"></a>
 ## getCallingWindowInfo
 
 ```TypeScript
@@ -554,7 +539,6 @@ getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
 Obtains information about the application window, in which the input box that starts an input method is located.This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md) as the  
@@ -594,7 +578,6 @@ inputClient.getCallingWindowInfo().then((windowInfo: inputMethodEngine.WindowInf
 
 ```
 
-<a id="geteditorattribute"></a>
 ## getEditorAttribute
 
 ```TypeScript
@@ -637,7 +620,6 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
 
 ```
 
-<a id="geteditorattribute-1"></a>
 ## getEditorAttribute
 
 ```TypeScript
@@ -678,7 +660,6 @@ inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Editor
 
 ```
 
-<a id="geteditorattributesync"></a>
 ## getEditorAttributeSync
 
 ```TypeScript
@@ -714,7 +695,6 @@ console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 
 ```
 
-<a id="getforward"></a>
 ## getForward
 
 ```TypeScript
@@ -760,7 +740,6 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
 
 ```
 
-<a id="getforward-1"></a>
 ## getForward
 
 ```TypeScript
@@ -809,7 +788,6 @@ inputClient.getForward(length).then((text: string) => {
 
 ```
 
-<a id="getforwardsync"></a>
 ## getForwardSync
 
 ```TypeScript
@@ -853,7 +831,6 @@ console.info(`Succeeded in getting forward, text: ${text}`);
 
 ```
 
-<a id="gettextindexatcursor"></a>
 ## getTextIndexAtCursor
 
 ```TypeScript
@@ -896,7 +873,6 @@ inputClient.getTextIndexAtCursor((err: BusinessError, index: number) => {
 
 ```
 
-<a id="gettextindexatcursor-1"></a>
 ## getTextIndexAtCursor
 
 ```TypeScript
@@ -937,7 +913,6 @@ inputClient.getTextIndexAtCursor().then((index: number) => {
 
 ```
 
-<a id="gettextindexatcursorsync"></a>
 ## getTextIndexAtCursorSync
 
 ```TypeScript
@@ -973,7 +948,6 @@ console.info(`Succeeded in getTextIndexAtCursorSync, index: ${index}`);
 
 ```
 
-<a id="inserttext"></a>
 ## insertText
 
 ```TypeScript
@@ -1023,7 +997,6 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
 
 ```
 
-<a id="inserttext-1"></a>
 ## insertText
 
 ```TypeScript
@@ -1075,7 +1048,6 @@ inputClient.insertText('test').then((result: boolean) => {
 
 ```
 
-<a id="inserttextsync"></a>
 ## insertTextSync
 
 ```TypeScript
@@ -1111,7 +1083,6 @@ inputClient.insertTextSync('test');
 
 ```
 
-<a id="movecursor"></a>
 ## moveCursor
 
 ```TypeScript
@@ -1155,7 +1126,6 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP, (err: BusinessErro
 
 ```
 
-<a id="movecursor-1"></a>
 ## moveCursor
 
 ```TypeScript
@@ -1202,7 +1172,6 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP).then(() => {
 
 ```
 
-<a id="movecursorsync"></a>
 ## moveCursorSync
 
 ```TypeScript
@@ -1237,7 +1206,6 @@ inputClient.moveCursorSync(inputMethodEngine.Direction.CURSOR_UP);
 
 ```
 
-<a id="off"></a>
 ## off('attachOptionsDidChange')
 
 ```TypeScript
@@ -1274,7 +1242,6 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 
 ```
 
-<a id="on"></a>
 ## on('attachOptionsDidChange')
 
 ```TypeScript
@@ -1317,7 +1284,6 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 
 ```
 
-<a id="recvmessage"></a>
 ## recvMessage
 
 ```TypeScript
@@ -1325,16 +1291,15 @@ recvMessage(msgHandler?: MessageHandler): void
 ```
 
 Registers or unregisters MessageHandler.
-
 > **NOTE**  
 >  
 > The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is globally unique. After multiple  
 > registrations, only the last registered object is valid and retained, and the  
-> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated-1) callback of the penultimate registered  
+> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered  
 > object is triggered.  
 >  
 > If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its  
-> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated-1) callback will be triggered.
+> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered.
 
 **Since:** 15
 
@@ -1346,7 +1311,7 @@ Registers or unregisters MessageHandler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage-1) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated-1).<br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated-1) callback will be triggered. |
+| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated).<br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1375,7 +1340,6 @@ inputMethodEngine.getInputMethodAbility()
 
 ```
 
-<a id="selectbymovement"></a>
 ## selectByMovement
 
 ```TypeScript
@@ -1420,7 +1384,6 @@ inputClient.selectByMovement(movement, (err: BusinessError) => {
 
 ```
 
-<a id="selectbymovement-1"></a>
 ## selectByMovement
 
 ```TypeScript
@@ -1468,7 +1431,6 @@ inputClient.selectByMovement(movement).then(() => {
 
 ```
 
-<a id="selectbymovementsync"></a>
 ## selectByMovementSync
 
 ```TypeScript
@@ -1504,7 +1466,6 @@ inputClient.selectByMovementSync(movement);
 
 ```
 
-<a id="selectbyrange"></a>
 ## selectByRange
 
 ```TypeScript
@@ -1549,7 +1510,6 @@ inputClient.selectByRange(range, (err: BusinessError) => {
 
 ```
 
-<a id="selectbyrange-1"></a>
 ## selectByRange
 
 ```TypeScript
@@ -1597,7 +1557,6 @@ inputClient.selectByRange(range).then(() => {
 
 ```
 
-<a id="selectbyrangesync"></a>
 ## selectByRangeSync
 
 ```TypeScript
@@ -1633,7 +1592,6 @@ inputClient.selectByRangeSync(range);
 
 ```
 
-<a id="sendextendaction"></a>
 ## sendExtendAction
 
 ```TypeScript
@@ -1641,7 +1599,6 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
 Sends an extended edit action. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > The input method applications call this API to send extended edit actions to the edit box. The edit box listens  
@@ -1650,7 +1607,7 @@ Sends an extended edit action. This API uses an asynchronous callback to return 
 >  
 > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md),  
 > the edit box application needs to apply for the  
-> [ohos.permission.READ_PASTEBOARD](docroot://security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)  
+> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)  
 > permission.
 
 **Since:** 10
@@ -1689,7 +1646,6 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 
 ```
 
-<a id="sendextendaction-1"></a>
 ## sendExtendAction
 
 ```TypeScript
@@ -1697,7 +1653,6 @@ sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
 Sends an extended edit action. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The input method applications call this API to send extended edit actions to the edit box. The edit box listens  
@@ -1707,7 +1662,7 @@ Sends an extended edit action. This API uses a promise to return the result.
 >  
 > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md),  
 > the edit box application needs to apply for the  
-> [ohos.permission.READ_PASTEBOARD](docroot://security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)  
+> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)  
 > permission.
 
 **Since:** 10
@@ -1749,7 +1704,6 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
 
 ```
 
-<a id="sendkeyfunction"></a>
 ## sendKeyFunction
 
 ```TypeScript
@@ -1799,7 +1753,6 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
 
 ```
 
-<a id="sendkeyfunction-1"></a>
 ## sendKeyFunction
 
 ```TypeScript
@@ -1851,7 +1804,6 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
 
 ```
 
-<a id="sendmessage"></a>
 ## sendMessage
 
 ```TypeScript
@@ -1859,7 +1811,6 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
 Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API can be called only when the edit box is attached to the input method and enter the edit mode, and the  
@@ -1912,7 +1863,6 @@ inputClient.sendMessage(msgId, msgParam).then(() => {
 
 ```
 
-<a id="sendprivatecommand"></a>
 ## sendPrivateCommand
 
 ```TypeScript
@@ -1920,7 +1870,6 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
 Sends private data to the system component that needs to communicate with the input method application. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - The private data channel allows communication between the system preset input method application and specific  
@@ -1976,7 +1925,6 @@ inputMethodEngine.getInputMethodAbility().on('inputStart', (kbController, textIn
 
 ```
 
-<a id="setpreviewtext"></a>
 ## setPreviewText
 
 ```TypeScript
@@ -2026,7 +1974,6 @@ inputClient.setPreviewText('test', range).then(() => {
 
 ```
 
-<a id="setpreviewtextsync"></a>
 ## setPreviewTextSync
 
 ```TypeScript

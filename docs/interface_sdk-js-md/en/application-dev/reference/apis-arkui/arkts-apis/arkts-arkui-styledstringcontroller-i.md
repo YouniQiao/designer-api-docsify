@@ -8,7 +8,6 @@ Defines a styled string controller.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getstyledstring"></a>
 ## getStyledString
 
 ```TypeScript
@@ -33,7 +32,6 @@ Obtains the styled string displayed in the rich text component.
 | --- | --- |
 | [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | Styled string displayed in the rich text component. |
 
-<a id="setstyledstring"></a>
 ## setStyledString
 
 ```TypeScript

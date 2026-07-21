@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="getdirection"></a>
 ## getDirection
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the device direction based on the rotation matrix. This API uses an asyn
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOrientation(rotationMatrix:](arkts-sensorservice-sensor-getorientation-f.md#getorientation-1)
+**Substitutes:** [getOrientation(rotationMatrix:](arkts-sensorservice-sensor-getorientation-f.md#getorientation)
 
 <!--Device-sensor-function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -52,7 +51,6 @@ sensor.getDirection([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data: Arra
 ```
 
 
-<a id="getdirection-1"></a>
 ## getDirection
 
 ```TypeScript
@@ -65,7 +63,7 @@ Obtains the device direction based on the rotation matrix. This API uses a promi
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOrientation(rotationMatrix:](arkts-sensorservice-sensor-getorientation-f.md#getorientation-1)
+**Substitutes:** [getOrientation(rotationMatrix:](arkts-sensorservice-sensor-getorientation-f.md#getorientation)
 
 <!--Device-sensor-function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>--><!--Device-sensor-function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>-End-->
 

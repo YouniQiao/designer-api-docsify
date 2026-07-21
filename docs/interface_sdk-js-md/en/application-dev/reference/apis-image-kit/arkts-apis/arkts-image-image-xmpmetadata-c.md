@@ -14,7 +14,6 @@ XMPMetadata instance.
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="enumeratetags"></a>
 ## enumerateTags
 
 ```TypeScript
@@ -31,15 +30,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-XMPMetadata-public enumerateTags(
-      callback: (path: string, tag: XMPTag) => boolean,
-      rootPath?: string,
-      options?: XMPEnumerateOptions
-    ): void--><!--Device-XMPMetadata-public enumerateTags(
-      callback: (path: string, tag: XMPTag) => boolean,
-      rootPath?: string,
-      options?: XMPEnumerateOptions
-    ): void-End-->
+<!--Device-XMPMetadata-public enumerateTags(      callback: (path: string, tag: XMPTag) => boolean,      rootPath?: string,      options?: XMPEnumerateOptions    ): void--><!--Device-XMPMetadata-public enumerateTags(      callback: (path: string, tag: XMPTag) => boolean,      rootPath?: string,      options?: XMPEnumerateOptions    ): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -57,7 +48,6 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 | --- | --- |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered.2. The rootPath syntax is invalid. |
 
-<a id="getblob"></a>
 ## getBlob
 
 ```TypeScript
@@ -87,7 +77,6 @@ Obtains the XMP metadata as a blob.
 | [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
 | [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
 
-<a id="gettag"></a>
 ## getTag
 
 ```TypeScript
@@ -122,7 +111,6 @@ Get a single XMP tag from specified path.
 | --- | --- |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered.2. The path syntax is invalid. |
 
-<a id="gettags"></a>
 ## getTags
 
 ```TypeScript
@@ -158,7 +146,6 @@ Get all XMP tags from specified path.
 | --- | --- |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered.2. The rootPath syntax is invalid. |
 
-<a id="registerxmpnamespace"></a>
 ## registerXMPNamespace
 
 ```TypeScript
@@ -193,7 +180,6 @@ Register a new namespace according to the xml namespace and prefix.
 | --- | --- |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Invalid namespace format.2. The uri is already registered. 3. The prefix is already registered. |
 
-<a id="removetag"></a>
 ## removeTag
 
 ```TypeScript
@@ -228,7 +214,6 @@ Remove the XMP tag from specified path.
 | --- | --- |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered.2. The path syntax is invalid. |
 
-<a id="setblob"></a>
 ## setBlob
 
 ```TypeScript
@@ -263,7 +248,6 @@ Set a blob into the XMP metadata.
 | --- | --- |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
 
-<a id="setvalue"></a>
 ## setValue
 
 ```TypeScript

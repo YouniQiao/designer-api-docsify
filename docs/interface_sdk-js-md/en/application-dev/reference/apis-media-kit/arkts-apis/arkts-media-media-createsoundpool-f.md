@@ -6,7 +6,6 @@
 import { media } from '@kit.MediaKit';
 ```
 
-<a id="createsoundpool"></a>
 ## createSoundPool
 
 ```TypeScript
@@ -18,7 +17,6 @@ function createSoundPool(
 ```
 
 Creates a SoundPool instance. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode.  
@@ -29,15 +27,7 @@ Creates a SoundPool instance. This API uses an asynchronous callback to return t
 
 **Since:** 10
 
-<!--Device-media-function createSoundPool(
-    maxStreams: number,
-    audioRenderInfo: audio.AudioRendererInfo,
-    callback: AsyncCallback<SoundPool>
-  ): void--><!--Device-media-function createSoundPool(
-    maxStreams: number,
-    audioRenderInfo: audio.AudioRendererInfo,
-    callback: AsyncCallback<SoundPool>
-  ): void-End-->
+<!--Device-media-function createSoundPool(    maxStreams: number,    audioRenderInfo: audio.AudioRendererInfo,    callback: AsyncCallback<SoundPool>  ): void--><!--Device-media-function createSoundPool(    maxStreams: number,    audioRenderInfo: audio.AudioRendererInfo,    callback: AsyncCallback<SoundPool>  ): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -79,7 +69,6 @@ media.createSoundPool(5, audioRendererInfo, (error, soundPool_: media.SoundPool)
 ```
 
 
-<a id="createsoundpool-1"></a>
 ## createSoundPool
 
 ```TypeScript
@@ -87,7 +76,6 @@ function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendere
 ```
 
 Creates a SoundPool instance. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - In versions earlier than API version 18, the bottom layer of the created SoundPool object is in singleton mode.  

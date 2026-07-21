@@ -1,6 +1,5 @@
 # getEvent
 
-<a id="getevent"></a>
 ## getEvent
 
 ```TypeScript
@@ -33,7 +32,6 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 | [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) | **UIScrollEvent** object for the **Scroll** node, or **undefined** if it fails to be obtained. |
 
 
-<a id="getevent-1"></a>
 ## getEvent
 
 ```TypeScript
@@ -66,7 +64,6 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 | [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) | **UIListEvent** object for the **List** node, or **undefined** if it fails to be obtained. |
 
 
-<a id="getevent-2"></a>
 ## getEvent
 
 ```TypeScript
@@ -99,7 +96,6 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 | [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) | **UIWaterFlowEvent** object for the **WaterFlow** node, or **undefined** if it fails to be obtained. |
 
 
-<a id="getevent-3"></a>
 ## getEvent
 
 ```TypeScript

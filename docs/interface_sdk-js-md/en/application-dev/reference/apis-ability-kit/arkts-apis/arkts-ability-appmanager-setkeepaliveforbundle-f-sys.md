@@ -6,7 +6,6 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="setkeepaliveforbundle"></a>
 ## setKeepAliveForBundle
 
 ```TypeScript
@@ -14,11 +13,10 @@ function setKeepAliveForBundle(bundleName: string, userId: number, enable: boole
 ```
 
 Sets or cancels the keep-alive status for an application that belongs to a specified user. This API uses a promise to return the result.Starting from API version 18, this API can be properly called only on 2-in-1 devices and wearables. For versions earlier than API version 18, this API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 801 is returned.
-
 > **NOTE**  
 >  
 > - To support keep-alive, **mainElement** in the  
-> [module.json5](docroot://quick-start/module-configuration-file.md) file of the application must be a UIAbility.  
+> [module.json5](../../../quick-start/module-configuration-file.md) file of the application must be a UIAbility.  
 > The system initiates the keep-alive operation only when this mainElement has been launched.  
 >  
 > - On 2-in-1 devices, the application must appear in the status bar within 5 seconds of launch. Otherwise, the  

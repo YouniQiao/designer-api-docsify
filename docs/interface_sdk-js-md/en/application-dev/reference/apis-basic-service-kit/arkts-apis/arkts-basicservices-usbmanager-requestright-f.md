@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="requestright"></a>
 ## requestRight
 
 ```TypeScript
@@ -25,7 +24,7 @@ Requests the temporary device access permission for the application. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceName | string | Yes | Device name, which is name of USBDevice, obtained from the device list returned by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices-1). |
+| deviceName | string | Yes | Device name, which is name of USBDevice, obtained from the device list returned by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices). |
 
 **Return value:**
 

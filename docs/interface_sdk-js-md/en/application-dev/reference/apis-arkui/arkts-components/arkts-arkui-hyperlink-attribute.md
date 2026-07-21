@@ -10,7 +10,6 @@ In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkt
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="color"></a>
 ## color
 
 ```TypeScript

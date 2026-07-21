@@ -6,7 +6,6 @@
 import { display } from '@kit.ArkUI';
 ```
 
-<a id="getdefaultdisplay"></a>
 ## getDefaultDisplay
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the default Display object. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1)
+**Substitutes:** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)
 
 <!--Device-display-function getDefaultDisplay(callback: AsyncCallback<Display>): void--><!--Device-display-function getDefaultDisplay(callback: AsyncCallback<Display>): void-End-->
 
@@ -50,7 +49,6 @@ display.getDefaultDisplay((err: BusinessError, data: display.Display) => {
 ```
 
 
-<a id="getdefaultdisplay-1"></a>
 ## getDefaultDisplay
 
 ```TypeScript
@@ -63,7 +61,7 @@ Obtains the default Display object. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1)
+**Substitutes:** [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)
 
 <!--Device-display-function getDefaultDisplay(): Promise<Display>--><!--Device-display-function getDefaultDisplay(): Promise<Display>-End-->
 

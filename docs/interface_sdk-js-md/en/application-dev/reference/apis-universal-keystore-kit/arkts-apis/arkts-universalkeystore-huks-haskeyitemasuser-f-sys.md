@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="haskeyitemasuser"></a>
 ## hasKeyItemAsUser
 
 ```TypeScript

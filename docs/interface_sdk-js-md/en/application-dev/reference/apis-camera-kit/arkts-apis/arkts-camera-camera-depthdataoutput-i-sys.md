@@ -18,7 +18,6 @@ Implements depth data output. It inherits from [CameraOutput](arkts-camera-camer
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="off"></a>
 ## off('depthDataAvailable')
 
 ```TypeScript
@@ -66,7 +65,6 @@ function unRegisterDepthDataAvailable(depthDataOutput: camera.DepthDataOutput): 
 
 ```
 
-<a id="off-1"></a>
 ## off('error')
 
 ```TypeScript
@@ -105,7 +103,6 @@ function unregisterDepthDataOutputError(depthDataOutput: camera.DepthDataOutput)
 
 ```
 
-<a id="on"></a>
 ## on('depthDataAvailable')
 
 ```TypeScript
@@ -113,7 +110,6 @@ on(type: 'depthDataAvailable', callback: AsyncCallback<DepthData>): void
 ```
 
 Subscribes to depth data availability events. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
@@ -157,7 +153,6 @@ function registerDepthDataAvailable(depthDataOutput: camera.DepthDataOutput): vo
 
 ```
 
-<a id="on-1"></a>
 ## on('error')
 
 ```TypeScript
@@ -165,7 +160,6 @@ on(type: 'error', callback: ErrorCallback): void
 ```
 
 Subscribes to DepthDataOutput error events. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
@@ -206,7 +200,6 @@ function registerDepthDataOutputError(depthDataOutput: camera.DepthDataOutput): 
 
 ```
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -252,7 +245,6 @@ function startDepthDataOutput(depthDataOutput: camera.DepthDataOutput): void {
 
 ```
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript

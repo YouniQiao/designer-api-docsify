@@ -6,7 +6,6 @@
 import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="requestexemptionresource"></a>
 ## requestExemptionResource
 
 ```TypeScript

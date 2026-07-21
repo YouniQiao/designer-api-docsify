@@ -6,7 +6,6 @@
 import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
-<a id="init"></a>
 ## init
 
 ```TypeScript

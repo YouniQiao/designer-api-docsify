@@ -16,7 +16,6 @@ Class of the photo editor ExtensionAbility, which provides APIs for you to edit 
 import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
 ```
 
-<a id="onbackground"></a>
 ## onBackground
 
 ```TypeScript
@@ -49,7 +48,6 @@ export default class ExamplePhotoEditorAbility extends PhotoEditorExtensionAbili
 
 ```
 
-<a id="oncreate"></a>
 ## onCreate
 
 ```TypeScript
@@ -82,7 +80,6 @@ export default class ExamplePhotoEditorAbility extends PhotoEditorExtensionAbili
 
 ```
 
-<a id="ondestroy"></a>
 ## onDestroy
 
 ```TypeScript
@@ -135,7 +132,6 @@ export default class ExamplePhotoEditorAbility extends PhotoEditorExtensionAbili
 
 ```
 
-<a id="onforeground"></a>
 ## onForeground
 
 ```TypeScript
@@ -168,7 +164,6 @@ export default class ExamplePhotoEditorAbility extends PhotoEditorExtensionAbili
 
 ```
 
-<a id="onstartcontentediting"></a>
 ## onStartContentEditing
 
 ```TypeScript

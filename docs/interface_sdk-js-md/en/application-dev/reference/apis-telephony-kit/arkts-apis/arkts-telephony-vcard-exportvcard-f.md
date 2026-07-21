@@ -6,7 +6,6 @@
 import { vcard } from '@kit.TelephonyKit';
 ```
 
-<a id="exportvcard"></a>
 ## exportVCard
 
 ```TypeScript
@@ -69,7 +68,6 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="exportvcard-1"></a>
 ## exportVCard
 
 ```TypeScript
@@ -138,7 +136,6 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="exportvcard-2"></a>
 ## exportVCard
 
 ```TypeScript

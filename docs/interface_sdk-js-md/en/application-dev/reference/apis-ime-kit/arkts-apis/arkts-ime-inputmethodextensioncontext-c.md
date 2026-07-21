@@ -1,7 +1,6 @@
 # InputMethodExtensionContext
 
 The **InputMethodExtensionContext** module, inherited from **ExtensionContext**, provides context for **InputMethodExtension** abilities. You can use the APIs of this module to start, terminate, connect, and disconnect abilities.
-
 > **NOTE**  
 >  
 > - The APIs of this module can be used only in the stage model.
@@ -20,7 +19,6 @@ The **InputMethodExtensionContext** module, inherited from **ExtensionContext**,
 import { InputMethodExtensionContext } from '@kit.IMEKit';
 ```
 
-<a id="destroy"></a>
 ## destroy
 
 ```TypeScript
@@ -68,7 +66,6 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
 
 ```
 
-<a id="destroy-1"></a>
 ## destroy
 
 ```TypeScript
@@ -114,7 +111,6 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
 
 ```
 
-<a id="startability"></a>
 ## startAbility
 
 ```TypeScript

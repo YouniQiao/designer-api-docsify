@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="isapplicationenabled"></a>
 ## isApplicationEnabled
 
 ```TypeScript
@@ -31,7 +30,6 @@ Checks whether an application is enabled based on a given bundle name. This API 
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if enabled, **false** otherwise. |
 
 
-<a id="isapplicationenabled-1"></a>
 ## isApplicationEnabled
 
 ```TypeScript

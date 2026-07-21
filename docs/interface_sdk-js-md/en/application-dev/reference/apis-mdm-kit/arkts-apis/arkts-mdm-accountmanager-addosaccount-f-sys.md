@@ -6,7 +6,6 @@
 import { accountManager } from '@kit.MDMKit';
 ```
 
-<a id="addosaccount"></a>
 ## addOsAccount
 
 ```TypeScript
@@ -19,7 +18,7 @@ Adds an account in the background.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md#addosaccountasync-1)
+**Substitutes:** [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md#addosaccountasync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 

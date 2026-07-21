@@ -16,7 +16,6 @@ In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkt
 import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
-<a id="autoscale"></a>
 ## autoScale
 
 ```TypeScript
@@ -45,7 +44,6 @@ Sets whether to enable auto-scaling for the **ArcListItem** component.
 | --- | --- |
 | [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="swipeaction"></a>
 ## swipeAction
 
 ```TypeScript

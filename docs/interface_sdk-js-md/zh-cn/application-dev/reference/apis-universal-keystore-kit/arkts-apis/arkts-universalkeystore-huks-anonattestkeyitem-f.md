@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="anonattestkeyitem"></a>
 ## anonAttestKeyItem
 
 ```TypeScript
@@ -16,7 +15,6 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions, callback: Asy
 获取匿名化密钥证书。使用callback异步回调。
 
 该操作需要联网进行，且耗时较长。返回12000012错误码时，可能是由于网络异常导致。此时如果没有联网，需要提示用户网络没有连接，如果已经联网，可能是由于网络抖动导致失败，建议重试。
-
 > **说明：**  
 >  
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥证书需要ohos.permission.ACCESS_SE_KEY权限。
@@ -155,7 +153,6 @@ async function generateKeyThenAttestKey(): Promise<void> {
 ```
 
 
-<a id="anonattestkeyitem-1"></a>
 ## anonAttestKeyItem
 
 ```TypeScript
@@ -165,7 +162,6 @@ function anonAttestKeyItem(keyAlias: string, options: HuksOptions): Promise<Huks
 获取匿名化密钥证书。使用Promise异步回调。
 
 该操作需要联网进行，且耗时较长。返回12000012错误码时，可能是由于网络异常导致。此时如果没有联网，需要提示用户网络没有连接，如果已经联网，可能是由于网络抖动导致失败，建议重试。
-
 > **说明：**  
 >  
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥证书需要ohos.permission.ACCESS_SE_KEY权限。

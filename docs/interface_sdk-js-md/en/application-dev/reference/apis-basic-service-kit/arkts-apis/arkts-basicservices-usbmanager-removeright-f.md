@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="removeright"></a>
 ## removeRight
 
 ```TypeScript
@@ -25,7 +24,7 @@ Removes the device access permission for the application. System applications ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceName | string | Yes | Device name, which is name of USBDevice, obtained from the device list returned by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices-1). |
+| deviceName | string | Yes | Device name, which is name of USBDevice, obtained from the device list returned by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices). |
 
 **Return value:**
 

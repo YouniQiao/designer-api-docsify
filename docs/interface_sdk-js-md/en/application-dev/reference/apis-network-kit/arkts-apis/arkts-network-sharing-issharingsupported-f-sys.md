@@ -6,7 +6,6 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
-<a id="issharingsupported"></a>
 ## isSharingSupported
 
 ```TypeScript
@@ -55,7 +54,6 @@ sharing.isSharingSupported((error: BusinessError, data: boolean) => {
 ```
 
 
-<a id="issharingsupported-1"></a>
 ## isSharingSupported
 
 ```TypeScript

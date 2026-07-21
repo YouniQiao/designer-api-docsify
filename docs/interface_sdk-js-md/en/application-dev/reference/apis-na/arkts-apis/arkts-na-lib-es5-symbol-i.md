@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface Symbol--><!--Device-unnamed-interface Symbol-End-->
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -19,7 +18,6 @@ Returns a string representation of an object.
 | --- | --- |
 | string |  |
 
-<a id="valueof"></a>
 ## valueOf
 
 ```TypeScript

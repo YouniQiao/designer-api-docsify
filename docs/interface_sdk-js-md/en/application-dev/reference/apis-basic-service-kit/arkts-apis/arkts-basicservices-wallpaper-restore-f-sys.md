@@ -6,7 +6,6 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
-<a id="restore"></a>
 ## restore
 
 ```TypeScript
@@ -56,7 +55,6 @@ wallpaper.restore(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessErro
 ```
 
 
-<a id="restore-1"></a>
 ## restore
 
 ```TypeScript

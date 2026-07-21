@@ -6,7 +6,6 @@
 import { screenLock } from '@kit.BasicServicesKit';
 ```
 
-<a id="unlockscreen"></a>
 ## unlockScreen
 
 ```TypeScript
@@ -45,7 +44,6 @@ screenLock.unlockScreen((err: BusinessError) => {
 ```
 
 
-<a id="unlockscreen-1"></a>
 ## unlockScreen
 
 ```TypeScript

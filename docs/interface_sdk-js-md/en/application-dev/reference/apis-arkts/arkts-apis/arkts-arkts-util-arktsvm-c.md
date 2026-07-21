@@ -14,7 +14,6 @@ A class that provides VM maintenance and test capabilities for developers.
 import { util } from '@kit.ArkTS';
 ```
 
-<a id="enablelocalhandledetection"></a>
 ## enableLocalHandleDetection
 
 ```TypeScript
@@ -31,7 +30,6 @@ Enable the local handle detection to avoid memory leakage in the event looper of
 
 **System capability:** SystemCapability.Utils.Lang
 
-<a id="getallvmheapmemoryinfo"></a>
 ## getAllVMHeapMemoryInfo
 
 ```TypeScript
@@ -54,7 +52,6 @@ Get all heap memory information from ArkTS-VMs and the shared heap.
 | --- | --- |
 | Promise&lt;HeapMemoryInfo[]&gt; | Returns a promise containing all the heap memory information from ArkTS-VMs' local heap and the shared heap. |
 
-<a id="offvmheapmemorypressure"></a>
 ## offVMHeapMemoryPressure
 
 ```TypeScript
@@ -71,7 +68,6 @@ Unregister the callback that is triggered when the heap memory exceeds the criti
 
 **System capability:** SystemCapability.Utils.Lang
 
-<a id="onvmheapmemorypressure"></a>
 ## onVMHeapMemoryPressure
 
 ```TypeScript
@@ -103,7 +99,6 @@ NOTE:There is no guarantee that the callback will be triggered before OOM.
 | --- | --- |
 | boolean | Returns {@code true} if the registration succeeds;returns {@code false} if not called on the main thread or if the callback is already registered.@static |
 
-<a id="setmultithreadingdetectionenabled"></a>
 ## setMultithreadingDetectionEnabled
 
 ```TypeScript
@@ -127,7 +122,6 @@ Sets whether to enable multithreading detection. When **enabled** is set to **tr
 | enabled | boolean | Yes | Controls whether to enable multithreading detection. **true** means enabling the detection, and **false** means disabling it. |
 | options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | No | Optional configuration items<br>**Since:** 26.0.0 |
 
-<a id="settrackglobalref"></a>
 ## setTrackGlobalRef
 
 ```TypeScript

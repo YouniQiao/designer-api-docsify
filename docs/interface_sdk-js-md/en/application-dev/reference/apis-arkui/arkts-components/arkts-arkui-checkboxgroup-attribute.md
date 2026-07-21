@@ -12,7 +12,6 @@ In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-ap
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="checkboxshape"></a>
 ## checkboxShape
 
 ```TypeScript
@@ -39,7 +38,6 @@ Sets the check box shape of the check box group.
 | --- | --- | --- | --- |
 | value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | Yes | Check box shape of the check box group.<br>Default value:**CheckBoxShape.CIRCLE**.<br>**NOTE**<br>The **CheckboxGroup** component is displayed according to the set shape.<br>All check boxes in the **CheckboxGroup** component that do not have their shape individually set will inherit the shape of the **CheckboxGroup**.<br>Check boxes in the **CheckboxGroup** component that have their shape individually set will prioritize their own shape setting over the shape of the **CheckboxGroup**. |
 
-<a id="checkboxshape-1"></a>
 ## checkboxShape
 
 ```TypeScript
@@ -66,7 +64,6 @@ Sets the check box shape of the check box group. Compared with [checkboxShape](C
 | --- | --- | --- | --- |
 | shape | [Optional](arkts-arkui-optional-t.md)&lt;CheckBoxShape&gt; | Yes | Check box shape of the check box group.<br>If **shape** is set to **undefined**, the default value **CheckBoxShape.CIRCLE** is used.<br>**NOTE**<br>The **CheckboxGroup** component is displayed according to the set shape.<br>All check boxes in the **CheckboxGroup** component that do not have their shape individually set will inherit the shape of the **CheckboxGroup**.<br>Check boxes in the **CheckboxGroup** component that have their shape individually set will prioritize their own shape setting over the shape of the **CheckboxGroup**. |
 
-<a id="contentmodifier"></a>
 ## contentModifier
 
 ```TypeScript
@@ -74,10 +71,9 @@ contentModifier(modifier: Optional<ContentModifier<CheckBoxGroupConfiguration>>)
 ```
 
 Customize the CheckboxGroup content area. When this attribute is set, the settings of other attributes become invalid.
-
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 21
 
@@ -95,7 +91,6 @@ Customize the CheckboxGroup content area. When this attribute is set, the settin
 | --- | --- | --- | --- |
 | modifier | [Optional](arkts-arkui-optional-t.md)&lt;ContentModifier&lt;CheckBoxGroupConfiguration&gt;&gt; | Yes | Content modifier to apply to the **TextTimer** component.<br>modifier: content modifier. You need to customize a class to implement the ContentModifier interface.<br>If **modifier** is set to **undefined**, no content modifier is used. |
 
-<a id="mark"></a>
 ## mark
 
 ```TypeScript
@@ -120,7 +115,6 @@ Sets the check mark style of the check box.
 | --- | --- | --- | --- |
 | value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | Yes | Check mark style of the check box. |
 
-<a id="mark-1"></a>
 ## mark
 
 ```TypeScript
@@ -145,7 +139,6 @@ Sets the check mark style of the check box. Compared with [mark](CheckboxGroupAt
 | --- | --- | --- | --- |
 | style | [Optional](arkts-arkui-optional-t.md)&lt;MarkStyle&gt; | Yes | Check mark style of the check box.<br>If **style** is set to **undefined**,the previous value is retained. |
 
-<a id="onchange"></a>
 ## onChange
 
 ```TypeScript
@@ -170,7 +163,6 @@ Triggered when the selected status of the check box group or any check box where
 | --- | --- | --- | --- |
 | callback | [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md) | Yes | Information about the check box group.<br>**Since:** 18 |
 
-<a id="onchange-1"></a>
 ## onChange
 
 ```TypeScript
@@ -197,7 +189,6 @@ Triggered when the selected status of the check box group or any check box where
 | --- | --- | --- | --- |
 | callback | [Optional](arkts-arkui-optional-t.md)&lt;OnCheckboxGroupChangeCallback&gt; | Yes | Information about the check box group.<br>If **callback** is set to **undefined**, the callback function is not used. |
 
-<a id="selectall"></a>
 ## selectAll
 
 ```TypeScript
@@ -208,9 +199,9 @@ Sets whether to select all check boxes in the group. If the **select** attribute
 
 When used with components that have caching functionality (such as [List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md)), the selection state of uncreated check boxes must be controlled by the developer.
 
-Since API version 10, this attribute supports two-way binding through [$$](docroot://ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
-Since API version 18, this attribute supports two-way binding through [!!](docroot://ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 8
 
@@ -228,7 +219,6 @@ Since API version 18, this attribute supports two-way binding through [!!](docro
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to select all.<br>Default value: **false**.<br>The value **true** means to select all check boxes in the group, and **false** means to deselect all check boxes in the group. |
 
-<a id="selectall-1"></a>
 ## selectAll
 
 ```TypeScript
@@ -239,7 +229,7 @@ Sets whether to select all. If the **select** attribute is set for a [Checkbox](
 
 When used with components that have caching functionality (such as [List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md)), the selection state of uncreated check boxes must be controlled by the developer.
 
-This attribute supports two-way binding through [$$](docroot://ui/state-management/arkts-two-way-sync.md) and [!!](docroot://ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+This attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 18
 
@@ -259,7 +249,6 @@ This attribute supports two-way binding through [$$](docroot://ui/state-manageme
 | --- | --- | --- | --- |
 | isAllSelected | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to select all.<br>If **isAllSelected** is set to **undefined**, the default value **false** is used.<br>The value **true** means to select all check boxes in the group, and **false** means to deselect all check boxes in the group. |
 
-<a id="selectedcolor"></a>
 ## selectedColor
 
 ```TypeScript
@@ -284,7 +273,6 @@ Sets the color of the selected check box.
 | --- | --- | --- | --- |
 | value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the selected check box.<br>Default value:**$r('sys.color.ohos_id_color_text_primary_activated')**<br>An invalid value is handled as the default value. |
 
-<a id="selectedcolor-1"></a>
 ## selectedColor
 
 ```TypeScript
@@ -311,7 +299,6 @@ Sets the color of the selected check box. Compared with [selectedColor](Checkbox
 | --- | --- | --- | --- |
 | resColor | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor&gt; | Yes | Color of the selected check box.<br>If **resColor** is set to **undefined**, the default value **$r('sys.color.ohos_id_color_text_primary_activated')** is used.<br>An invalid value is handled as the default value. |
 
-<a id="unselectedcolor"></a>
 ## unselectedColor
 
 ```TypeScript
@@ -336,7 +323,6 @@ Sets the border color of the check box when it is not selected.
 | --- | --- | --- | --- |
 | value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Border color of the check box when it is not selected.<br>Default value:**$r('sys.color.ohos_id_color_switch_outline_off')** |
 
-<a id="unselectedcolor-1"></a>
 ## unselectedColor
 
 ```TypeScript

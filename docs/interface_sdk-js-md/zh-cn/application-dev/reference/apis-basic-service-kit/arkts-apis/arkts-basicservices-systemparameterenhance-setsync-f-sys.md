@@ -6,7 +6,6 @@
 import { systemParameterEnhance } from '@kit.BasicServicesKit';
 ```
 
-<a id="setsync"></a>
 ## setSync
 
 ```TypeScript
@@ -14,7 +13,6 @@ function setSync(key: string, value: string): void
 ```
 
 设置系统参数key对应的值。
-
 > **说明：**  
 >  
 > setSync和set方法都用于设置系统参数值：  

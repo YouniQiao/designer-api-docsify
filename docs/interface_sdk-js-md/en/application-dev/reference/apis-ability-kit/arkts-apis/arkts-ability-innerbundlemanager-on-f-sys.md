@@ -6,7 +6,6 @@
 import { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
-<a id="on"></a>
 ## on('BundleStatusChange')
 
 ```TypeScript
@@ -15,7 +14,6 @@ function on(type: 'BundleStatusChange',
 ```
 
 Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  
@@ -30,9 +28,7 @@ Registers a callback to receive bundle status changes. This API uses an asynchro
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
-<!--Device-innerBundleManager-function on(type: 'BundleStatusChange',
-    bundleStatusCallback: BundleStatusCallback, callback: AsyncCallback<string>): void--><!--Device-innerBundleManager-function on(type: 'BundleStatusChange',
-    bundleStatusCallback: BundleStatusCallback, callback: AsyncCallback<string>): void-End-->
+<!--Device-innerBundleManager-function on(type: 'BundleStatusChange',    bundleStatusCallback: BundleStatusCallback, callback: AsyncCallback<string>): void--><!--Device-innerBundleManager-function on(type: 'BundleStatusChange',    bundleStatusCallback: BundleStatusCallback, callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -47,7 +43,6 @@ Registers a callback to receive bundle status changes. This API uses an asynchro
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a successful result or error Callback to register. |
 
 
-<a id="on-1"></a>
 ## on('BundleStatusChange')
 
 ```TypeScript
@@ -55,7 +50,6 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 ```
 
 Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  

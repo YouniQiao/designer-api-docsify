@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="getsignalinformation"></a>
 ## getSignalInformation
 
 ```TypeScript
@@ -55,7 +54,6 @@ radio.getSignalInformation(slotId, (err: BusinessError, data: Array<radio.Signal
 ```
 
 
-<a id="getsignalinformation-1"></a>
 ## getSignalInformation
 
 ```TypeScript

@@ -14,7 +14,6 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 
 **System API:** This is a system API.
 
-<a id="install"></a>
 ## install
 
 ```TypeScript
@@ -27,7 +26,7 @@ Install an application in a HAP.
 
 **Deprecated since:** 9
 
-**Substitutes:** [install](arkts-ability-installer-bundleinstaller-i-sys.md#install-1)
+**Substitutes:** [install](arkts-ability-installer-bundleinstaller-i-sys.md#install)
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -45,7 +44,6 @@ Install an application in a HAP.
 | param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | Parameters required for bundle installation. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | Yes | Callback used to return the result. If install is successful, **err** is **undefined**, and return the installation status.Otherwise, **err** is an error object. |
 
-<a id="recover"></a>
 ## recover
 
 ```TypeScript
@@ -58,7 +56,7 @@ recover an application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [recover](arkts-ability-installer-bundleinstaller-i-sys.md#recover-1)
+**Substitutes:** [recover](arkts-ability-installer-bundleinstaller-i-sys.md#recover)
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -76,7 +74,6 @@ recover an application.
 | param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes | Parameters required for bundle recovery. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | Yes | Callback used to return the result. If recover is successful, **err** is **undefined**, and return the installation status.Otherwise, **err** is an error object. |
 
-<a id="uninstall"></a>
 ## uninstall
 
 ```TypeScript
@@ -89,7 +86,7 @@ Uninstall an application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [uninstall](arkts-ability-installer-bundleinstaller-i-sys.md#uninstall-1)
+**Substitutes:** [uninstall](arkts-ability-installer-bundleinstaller-i-sys.md#uninstall)
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 

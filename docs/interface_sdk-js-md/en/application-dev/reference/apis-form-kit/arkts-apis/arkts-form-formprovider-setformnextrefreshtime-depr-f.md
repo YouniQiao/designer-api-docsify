@@ -1,6 +1,5 @@
 # setFormNextRefreshTime
 
-<a id="setformnextrefreshtime"></a>
 ## setFormNextRefreshTime
 
 ```TypeScript
@@ -13,7 +12,7 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md#setformnextrefreshtime-1)
+**Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setformnextrefreshtime)
 
 <!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number, callback: AsyncCallback<void>): void--><!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number, callback: AsyncCallback<void>): void-End-->
 
@@ -43,7 +42,6 @@ formProvider.setFormNextRefreshTime(formId, 5, (error: BusinessError) => {
 ```
 
 
-<a id="setformnextrefreshtime-1"></a>
 ## setFormNextRefreshTime
 
 ```TypeScript
@@ -56,7 +54,7 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md#setformnextrefreshtime-1)
+**Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setformnextrefreshtime)
 
 <!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number): Promise<void>--><!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number): Promise<void>-End-->
 

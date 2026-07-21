@@ -6,7 +6,6 @@
 import { curves } from '@kit.ArkUI';
 ```
 
-<a id="init"></a>
 ## init
 
 ```TypeScript
@@ -19,7 +18,7 @@ Implements initialization for the interpolation curve, which is used to create a
 
 **Deprecated since:** 9
 
-**Substitutes:** [initCurve](arkts-arkui-curves-initcurve-f.md#initcurve-1)
+**Substitutes:** [initCurve](arkts-arkui-curves-initcurve-f.md#initcurve)
 
 <!--Device-curves-function init(curve?: Curve): string--><!--Device-curves-function init(curve?: Curve): string-End-->
 

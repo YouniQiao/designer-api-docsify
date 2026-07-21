@@ -14,7 +14,6 @@ Represents a class for defining a uniform data type. It provides properties and 
 import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
-<a id="belongsto"></a>
 ## belongsTo
 
 ```TypeScript
@@ -68,7 +67,6 @@ try{
 
 ```
 
-<a id="equals"></a>
 ## equals
 
 ```TypeScript
@@ -122,7 +120,6 @@ try{
 
 ```
 
-<a id="ishigherleveltype"></a>
 ## isHigherLevelType
 
 ```TypeScript
@@ -176,7 +173,6 @@ try{
 
 ```
 
-<a id="islowerleveltype"></a>
 ## isLowerLevelType
 
 ```TypeScript

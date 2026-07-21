@@ -10,7 +10,6 @@ Defines the lazy grid layout attribute.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="columnsgap"></a>
 ## columnsGap
 
 ```TypeScript
@@ -41,7 +40,6 @@ Sets the gap between columns. Values less than 0 are treated as the default valu
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="footer"></a>
 ## footer
 
 ```TypeScript
@@ -72,7 +70,6 @@ Sets the footer of the lazy grid layout.
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="header"></a>
 ## header
 
 ```TypeScript
@@ -103,7 +100,6 @@ Sets the header of the lazy grid layout.
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onvisibleindexeschange"></a>
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -134,7 +130,6 @@ Sets a callback for **onVisibleIndexesChange**. This callback is triggered when 
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="rowsgap"></a>
 ## rowsGap
 
 ```TypeScript
@@ -165,7 +160,6 @@ Sets the gap between rows. Values less than 0 are treated as the default value.
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="sticky"></a>
 ## sticky
 
 ```TypeScript

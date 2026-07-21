@@ -59,7 +59,6 @@ the same as that of **ForEach**.
 Only the [ListItem]{@link list_item} and [ListItemGroup]{@link list_item_group} child components and custom components are supported. When using custom components inside **List**, you are advised to wrap the custom component with a **ListItem** or **ListItemGroup** as the top-level container. Setting attributes or event methods directly on custom components is not recommended.
 
 Child components can be dynamically generated using rendering control types [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md),[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
-
 > **NOTE**  
 >  
 > If performance lag occurs when you process a large number of child components, consider using lazy loading, list  

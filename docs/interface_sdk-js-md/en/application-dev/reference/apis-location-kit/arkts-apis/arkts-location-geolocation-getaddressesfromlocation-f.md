@@ -6,7 +6,6 @@
 import { geolocation } from '@kit.LocationKit';
 ```
 
-<a id="getaddressesfromlocation"></a>
 ## getAddressesFromLocation
 
 ```TypeScript
@@ -51,7 +50,6 @@ geolocation.getAddressesFromLocation(reverseGeocodeRequest, (err, data) => {
 ```
 
 
-<a id="getaddressesfromlocation-1"></a>
 ## getAddressesFromLocation
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # fsync
 
-<a id="fsync"></a>
 ## fsync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Synchronizes a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:fsync](arkts-corefile-file-fs-fsync-f.md#fsync-1)
+**Substitutes:** [fs:fsync](arkts-corefile-fileio-fsync-f.md#fsync)
 
 <!--Device-unnamed-declare function fsync(fd: number): Promise<void>--><!--Device-unnamed-declare function fsync(fd: number): Promise<void>-End-->
 
@@ -32,7 +31,6 @@ Synchronizes a file. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 
-<a id="fsync-1"></a>
 ## fsync
 
 ```TypeScript
@@ -45,7 +43,7 @@ Synchronizes a file. This API uses an asynchronous callback to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:fsync](arkts-corefile-file-fs-fsync-f.md#fsync-1)
+**Substitutes:** [fs:fsync](arkts-corefile-fileio-fsync-f.md#fsync)
 
 <!--Device-unnamed-declare function fsync(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function fsync(fd: number, callback: AsyncCallback<void>): void-End-->
 

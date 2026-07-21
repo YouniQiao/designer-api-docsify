@@ -6,7 +6,6 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
-<a id="openformmanager"></a>
 ## openFormManager
 
 ```TypeScript

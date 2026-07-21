@@ -52,7 +52,7 @@ Device name.
 deviceType: string
 ```
 
-[Device type](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicetype-1).
+[Device type](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicetype).
 
 **Type:** string
 

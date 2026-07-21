@@ -8,7 +8,6 @@ Describes the text baseline offset style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

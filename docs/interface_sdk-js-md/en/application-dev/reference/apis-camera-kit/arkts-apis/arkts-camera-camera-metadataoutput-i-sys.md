@@ -16,7 +16,6 @@ Implements metadata streams. It inherits from [CameraOutput](arkts-camera-camera
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="addmetadataobjecttypes"></a>
 ## addMetadataObjectTypes
 
 ```TypeScript
@@ -50,7 +49,6 @@ Adds the types of metadata objects to be detected.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="removemetadataobjecttypes"></a>
 ## removeMetadataObjectTypes
 
 ```TypeScript

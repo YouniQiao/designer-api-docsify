@@ -1,9 +1,7 @@
 # FormExtensionContext
 
 The FormExtensionContext module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md), provides the context environment for the [FormExtensionAbility](arkts-app-form-formextensionability.md).You can use the APIs of this module to start a FormExtensionAbility.
-
 > **NOTE**
-
 > - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** FormExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
@@ -14,7 +12,6 @@ The FormExtensionContext module, inherited from [ExtensionContext](../../apis-ab
 
 **System capability:** SystemCapability.Ability.Form
 
-<a id="connectserviceextensionability"></a>
 ## connectServiceExtensionAbility
 
 ```TypeScript
@@ -63,7 +60,6 @@ Connects this ability to a ServiceExtensionAbility.
 | [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
 
-<a id="disconnectserviceextensionability"></a>
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -86,7 +82,7 @@ Disconnects this ability from a **ServiceExtensionAbility** and after the succes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | number | Yes | Number returned after [connectServiceExtensionAbility](arkts-form-formextensioncontext-c-sys.md#connectserviceextensionability-1) is called. |
+| connection | number | Yes | Number returned after [connectServiceExtensionAbility](arkts-form-formextensioncontext-c-sys.md#connectserviceextensionability) is called. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is disconnected, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -97,7 +93,6 @@ Disconnects this ability from a **ServiceExtensionAbility** and after the succes
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-<a id="disconnectserviceextensionability-1"></a>
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -120,7 +115,7 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | number | Yes | Number returned after [connectServiceExtensionAbility](arkts-form-formextensioncontext-c-sys.md#connectserviceextensionability-1) is called. |
+| connection | number | Yes | Number returned after [connectServiceExtensionAbility](arkts-form-formextensioncontext-c-sys.md#connectserviceextensionability) is called. |
 
 **Return value:**
 
@@ -136,7 +131,6 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-<a id="startability"></a>
 ## startAbility
 
 ```TypeScript
@@ -173,7 +167,6 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | 16500101 | The application is not a system application.<br>**Applicable version:** 9 - 11 |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
-<a id="startability-1"></a>
 ## startAbility
 
 ```TypeScript

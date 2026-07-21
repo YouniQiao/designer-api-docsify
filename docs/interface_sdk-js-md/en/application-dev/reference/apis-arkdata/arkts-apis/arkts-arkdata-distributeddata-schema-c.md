@@ -12,7 +12,6 @@ Defines the schema of a KV store. You can create a **Schema** object and place i
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

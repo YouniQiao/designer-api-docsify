@@ -6,7 +6,6 @@
 import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="getoutputdir"></a>
 ## getOutputDir
 
 ```TypeScript

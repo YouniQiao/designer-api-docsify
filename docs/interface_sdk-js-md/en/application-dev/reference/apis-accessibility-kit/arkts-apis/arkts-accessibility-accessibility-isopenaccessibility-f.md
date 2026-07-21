@@ -6,7 +6,6 @@
 import { accessibility } from '@kit.AccessibilityKit';
 ```
 
-<a id="isopenaccessibility"></a>
 ## isOpenAccessibility
 
 ```TypeScript
@@ -19,7 +18,7 @@ Checks whether an accessibility application is enabled. This API uses an asynchr
 
 **Deprecated since:** 10
 
-**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync-1)
+**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync)
 
 <!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void-End-->
 
@@ -48,7 +47,6 @@ accessibility.isOpenAccessibility((err: BusinessError, data: boolean) => {
 ```
 
 
-<a id="isopenaccessibility-1"></a>
 ## isOpenAccessibility
 
 ```TypeScript
@@ -61,7 +59,7 @@ Checks whether an accessibility application is enabled. This API uses a promise 
 
 **Deprecated since:** 10
 
-**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync-1)
+**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync)
 
 <!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>--><!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>-End-->
 

@@ -12,7 +12,6 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="divider"></a>
 ## divider
 
 ```TypeScript
@@ -37,7 +36,6 @@ Margin of the divider.
 | --- | --- | --- | --- |
 | value | [ColumnSplitDividerStyle](arkts-arkui-columnsplitdividerstyle-i.md) \| null | Yes | Margin of the divider, that is, the distance between the divider and the child component.<br>Default value: **null**. When this parameter is set to null, the distance between the divider and the child component is 0 vp.<br>Invalid values are treated as the default value. |
 
-<a id="resizeable"></a>
 ## resizeable
 
 ```TypeScript

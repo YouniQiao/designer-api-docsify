@@ -8,7 +8,6 @@ global dom
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="createelement"></a>
 ## createElement
 
 ```TypeScript

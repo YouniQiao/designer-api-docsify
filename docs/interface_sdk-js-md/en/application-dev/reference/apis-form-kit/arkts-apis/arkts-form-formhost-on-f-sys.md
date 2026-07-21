@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="on"></a>
 ## on("formUninstall")
 
 ```TypeScript
@@ -14,7 +13,6 @@ function on(type: "formUninstall", callback: Callback<string>): void
 ```
 
 Subscribes to widget uninstall events. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Widget uninstall is different from widget removal. When an application is uninstalled, the corresponding widget  
@@ -43,7 +41,6 @@ Subscribes to widget uninstall events. This API uses an asynchronous callback to
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-1"></a>
 ## on('formOverflow')
 
 ```TypeScript
@@ -90,7 +87,6 @@ try {
 ```
 
 
-<a id="on-2"></a>
 ## on('changeSceneAnimationState')
 
 ```TypeScript
@@ -102,9 +98,7 @@ Subscribes to the event of switching the interactive widget state. An interactiv
 
 **Since:** 20
 
-<!--Device-formHost-function on(type: 'changeSceneAnimationState', 
-    callback: Callback<formInfo.ChangeSceneAnimationStateRequest>): void--><!--Device-formHost-function on(type: 'changeSceneAnimationState', 
-    callback: Callback<formInfo.ChangeSceneAnimationStateRequest>): void-End-->
+<!--Device-formHost-function on(type: 'changeSceneAnimationState',     callback: Callback<formInfo.ChangeSceneAnimationStateRequest>): void--><!--Device-formHost-function on(type: 'changeSceneAnimationState',     callback: Callback<formInfo.ChangeSceneAnimationStateRequest>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -140,7 +134,6 @@ try {
 ```
 
 
-<a id="on-3"></a>
 ## on('getFormRect')
 
 ```TypeScript
@@ -197,7 +190,6 @@ try {
 ```
 
 
-<a id="on-4"></a>
 ## on('getLiveFormStatus')
 
 ```TypeScript

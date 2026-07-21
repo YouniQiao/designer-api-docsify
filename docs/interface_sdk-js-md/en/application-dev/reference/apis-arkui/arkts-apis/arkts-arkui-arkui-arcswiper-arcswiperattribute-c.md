@@ -18,7 +18,6 @@ In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-ap
 import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
-<a id="customcontenttransition"></a>
 ## customContentTransition
 
 ```TypeScript
@@ -49,7 +48,6 @@ During finger-following swipes and post-release transition animations, the [Swip
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="digitalcrownsensitivity"></a>
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -78,7 +76,6 @@ Sets the sensitivity to the digital crown rotation.
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="disableswipe"></a>
 ## disableSwipe
 
 ```TypeScript
@@ -107,7 +104,6 @@ Sets whether to disable the swipe feature.
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="disabletransitionanimation"></a>
 ## disableTransitionAnimation
 
 ```TypeScript
@@ -136,7 +132,6 @@ Sets whether to disable the transition animation.
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="duration"></a>
 ## duration
 
 ```TypeScript
@@ -165,7 +160,6 @@ Sets the duration of the animation for child component switching.
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="effectmode"></a>
 ## effectMode
 
 ```TypeScript
@@ -194,7 +188,6 @@ Sets the effect used when the scroll boundary is reached. For details about the 
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="index"></a>
 ## index
 
 ```TypeScript
@@ -223,7 +216,6 @@ Sets the index of the child component currently displayed in the container. If t
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="indicator"></a>
 ## indicator
 
 ```TypeScript
@@ -252,7 +244,6 @@ Sets the style of the arc dot navigation indicator.
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="onanimationend"></a>
 ## onAnimationEnd
 
 ```TypeScript
@@ -283,7 +274,6 @@ This event is triggered when the page transition animation of the **ArcSwiper** 
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="onanimationstart"></a>
 ## onAnimationStart
 
 ```TypeScript
@@ -312,7 +302,6 @@ Triggered when the page transition animation starts.
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="onchange"></a>
 ## onChange
 
 ```TypeScript
@@ -321,7 +310,7 @@ onChange(handler: Optional<IndexChangedHandler>): ArcSwiperAttribute
 
 Triggered when the index of the currently displayed child component changes. The return value is the index of the currently displayed child component.
 
-When the **ArcSwiper** component is used together with [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), the subpage UI update cannot be triggered in the **onChange** event.
+When the **ArcSwiper** component is used together with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), the subpage UI update cannot be triggered in the **onChange** event.
 
 **Since:** 18
 
@@ -343,7 +332,6 @@ When the **ArcSwiper** component is used together with [LazyForEach](docroot://u
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="ongestureswipe"></a>
 ## onGestureSwipe
 
 ```TypeScript
@@ -372,7 +360,6 @@ Triggered on a frame-by-frame basis when the page is turned by a swipe.
 | --- | --- |
 | [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="vertical"></a>
 ## vertical
 
 ```TypeScript

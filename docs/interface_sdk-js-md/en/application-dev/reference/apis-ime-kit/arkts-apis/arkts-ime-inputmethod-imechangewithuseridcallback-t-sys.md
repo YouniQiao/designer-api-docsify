@@ -11,9 +11,7 @@ The callback of the inputmethod change event which carries the user ID whose inp
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-inputMethod-export type ImeChangeWithUserIdCallback =
-      (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype, userId: int) => void--><!--Device-inputMethod-export type ImeChangeWithUserIdCallback =
-      (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype, userId: int) => void-End-->
+<!--Device-inputMethod-export type ImeChangeWithUserIdCallback =      (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype, userId: int) => void--><!--Device-inputMethod-export type ImeChangeWithUserIdCallback =      (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype, userId: int) => void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

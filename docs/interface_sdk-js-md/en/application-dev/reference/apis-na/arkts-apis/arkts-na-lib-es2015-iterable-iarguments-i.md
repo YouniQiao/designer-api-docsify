@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface IArguments--><!--Device-unnamed-interface IArguments-End-->
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript

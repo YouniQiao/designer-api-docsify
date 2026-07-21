@@ -16,7 +16,6 @@ Manager HID device profile.
 import { hid } from '@kit.ConnectivityKit';
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -70,7 +69,6 @@ try {
 
 ```
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -111,7 +109,6 @@ try {
 
 ```
 
-<a id="offgetreport"></a>
 ## offGetReport
 
 ```TypeScript
@@ -159,7 +156,6 @@ try {
 
 ```
 
-<a id="offinterruptdatareceived"></a>
 ## offInterruptDataReceived
 
 ```TypeScript
@@ -207,7 +203,6 @@ try {
 
 ```
 
-<a id="offsetprotocol"></a>
 ## offSetProtocol
 
 ```TypeScript
@@ -255,7 +250,6 @@ try {
 
 ```
 
-<a id="offsetreport"></a>
 ## offSetReport
 
 ```TypeScript
@@ -303,7 +297,6 @@ try {
 
 ```
 
-<a id="offvirtualcableunplug"></a>
 ## offVirtualCableUnplug
 
 ```TypeScript
@@ -351,7 +344,6 @@ try {
 
 ```
 
-<a id="ongetreport"></a>
 ## onGetReport
 
 ```TypeScript
@@ -398,7 +390,6 @@ try {
 
 ```
 
-<a id="oninterruptdatareceived"></a>
 ## onInterruptDataReceived
 
 ```TypeScript
@@ -445,7 +436,6 @@ try {
 
 ```
 
-<a id="onsetprotocol"></a>
 ## onSetProtocol
 
 ```TypeScript
@@ -492,7 +482,6 @@ try {
 
 ```
 
-<a id="onsetreport"></a>
 ## onSetReport
 
 ```TypeScript
@@ -539,7 +528,6 @@ try {
 
 ```
 
-<a id="onvirtualcableunplug"></a>
 ## onVirtualCableUnplug
 
 ```TypeScript
@@ -586,7 +574,6 @@ try {
 
 ```
 
-<a id="registerhiddevice"></a>
 ## registerHidDevice
 
 ```TypeScript
@@ -677,7 +664,6 @@ try {
 
 ```
 
-<a id="replyreport"></a>
 ## replyReport
 
 ```TypeScript
@@ -730,7 +716,6 @@ try {
 
 ```
 
-<a id="reporterror"></a>
 ## reportError
 
 ```TypeScript
@@ -779,7 +764,6 @@ try {
 
 ```
 
-<a id="sendreport"></a>
 ## sendReport
 
 ```TypeScript
@@ -830,7 +814,6 @@ try {
 
 ```
 
-<a id="unregisterhiddevice"></a>
 ## unregisterHidDevice
 
 ```TypeScript

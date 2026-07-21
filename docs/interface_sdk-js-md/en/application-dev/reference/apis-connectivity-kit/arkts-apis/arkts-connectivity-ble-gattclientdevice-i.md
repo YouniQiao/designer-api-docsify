@@ -14,7 +14,6 @@ Manages GATT client. Before calling an Gatt client method, you must use {@link c
 import { ble } from '@kit.ConnectivityKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -60,7 +59,6 @@ try {
 
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -106,7 +104,6 @@ try {
 
 ```
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -150,7 +147,6 @@ try {
 
 ```
 
-<a id="getconnectedstate"></a>
 ## getConnectedState
 
 ```TypeScript
@@ -198,7 +194,6 @@ try {
 
 ```
 
-<a id="getdevicename"></a>
 ## getDeviceName
 
 ```TypeScript
@@ -260,7 +255,6 @@ try {
 
 ```
 
-<a id="getdevicename-1"></a>
 ## getDeviceName
 
 ```TypeScript
@@ -322,7 +316,6 @@ try {
 
 ```
 
-<a id="getrssivalue"></a>
 ## getRssiValue
 
 ```TypeScript
@@ -378,7 +371,6 @@ try {
 
 ```
 
-<a id="getrssivalue-1"></a>
 ## getRssiValue
 
 ```TypeScript
@@ -432,7 +424,6 @@ try {
 
 ```
 
-<a id="getservices"></a>
 ## getServices
 
 ```TypeScript
@@ -503,7 +494,6 @@ try {
 
 ```
 
-<a id="getservices-1"></a>
 ## getServices
 
 ```TypeScript
@@ -564,7 +554,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off('BLECharacteristicChange')
 
 ```TypeScript
@@ -613,7 +602,6 @@ try {
 
 ```
 
-<a id="off-1"></a>
 ## off('BLEConnectionStateChange')
 
 ```TypeScript
@@ -662,7 +650,6 @@ try {
 
 ```
 
-<a id="off-2"></a>
 ## off('BLEMtuChange')
 
 ```TypeScript
@@ -711,7 +698,6 @@ try {
 
 ```
 
-<a id="off-3"></a>
 ## off('serviceChange')
 
 ```TypeScript
@@ -762,7 +748,6 @@ try {
 
 ```
 
-<a id="offblephyupdate"></a>
 ## offBlePhyUpdate
 
 ```TypeScript
@@ -809,7 +794,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on('BLECharacteristicChange')
 
 ```TypeScript
@@ -863,7 +847,6 @@ try {
 
 ```
 
-<a id="on-1"></a>
 ## on('BLEConnectionStateChange')
 
 ```TypeScript
@@ -916,7 +899,6 @@ try {
 
 ```
 
-<a id="on-2"></a>
 ## on('BLEMtuChange')
 
 ```TypeScript
@@ -967,7 +949,6 @@ try {
 
 ```
 
-<a id="on-3"></a>
 ## on('serviceChange')
 
 ```TypeScript
@@ -1018,7 +999,6 @@ try {
 
 ```
 
-<a id="onblephyupdate"></a>
 ## onBlePhyUpdate
 
 ```TypeScript
@@ -1065,7 +1045,6 @@ try {
 
 ```
 
-<a id="readcharacteristicvalue"></a>
 ## readCharacteristicValue
 
 ```TypeScript
@@ -1148,7 +1127,6 @@ try {
 
 ```
 
-<a id="readcharacteristicvalue-1"></a>
 ## readCharacteristicValue
 
 ```TypeScript
@@ -1225,7 +1203,6 @@ try {
 
 ```
 
-<a id="readdescriptorvalue"></a>
 ## readDescriptorValue
 
 ```TypeScript
@@ -1299,7 +1276,6 @@ try {
 
 ```
 
-<a id="readdescriptorvalue-1"></a>
 ## readDescriptorValue
 
 ```TypeScript
@@ -1369,7 +1345,6 @@ try {
 
 ```
 
-<a id="readphy"></a>
 ## readPhy
 
 ```TypeScript
@@ -1418,7 +1393,6 @@ try {
 
 ```
 
-<a id="setblemtu"></a>
 ## setBLEMtu
 
 ```TypeScript
@@ -1461,7 +1435,6 @@ Asynchronous interface for setting the mtu size of a BLE peripheral device.The A
 | 2900099 | Operation failed. |
 | 2901003 | The connection is not established. |
 
-<a id="setblemtusize"></a>
 ## setBLEMtuSize
 
 ```TypeScript
@@ -1511,7 +1484,6 @@ try {
 
 ```
 
-<a id="setcharacteristicchangeindication"></a>
 ## setCharacteristicChangeIndication
 
 ```TypeScript
@@ -1532,15 +1504,7 @@ Enables or disables indication of a characteristic when value changed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-GattClientDevice-setCharacteristicChangeIndication(
-      characteristic: BLECharacteristic,
-      enable: boolean,
-      callback: AsyncCallback<void>
-    ): void--><!--Device-GattClientDevice-setCharacteristicChangeIndication(
-      characteristic: BLECharacteristic,
-      enable: boolean,
-      callback: AsyncCallback<void>
-    ): void-End-->
+<!--Device-GattClientDevice-setCharacteristicChangeIndication(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-GattClientDevice-setCharacteristicChangeIndication(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -1596,7 +1560,6 @@ try {
 
 ```
 
-<a id="setcharacteristicchangeindication-1"></a>
 ## setCharacteristicChangeIndication
 
 ```TypeScript
@@ -1668,7 +1631,6 @@ try {
 
 ```
 
-<a id="setcharacteristicchangenotification"></a>
 ## setCharacteristicChangeNotification
 
 ```TypeScript
@@ -1689,15 +1651,7 @@ Enables or disables notification of a characteristic when value changed.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-GattClientDevice-setCharacteristicChangeNotification(
-      characteristic: BLECharacteristic,
-      enable: boolean,
-      callback: AsyncCallback<void>
-    ): void--><!--Device-GattClientDevice-setCharacteristicChangeNotification(
-      characteristic: BLECharacteristic,
-      enable: boolean,
-      callback: AsyncCallback<void>
-    ): void-End-->
+<!--Device-GattClientDevice-setCharacteristicChangeNotification(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-GattClientDevice-setCharacteristicChangeNotification(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -1753,7 +1707,6 @@ try {
 
 ```
 
-<a id="setcharacteristicchangenotification-1"></a>
 ## setCharacteristicChangeNotification
 
 ```TypeScript
@@ -1825,7 +1778,6 @@ try {
 
 ```
 
-<a id="setphy"></a>
 ## setPhy
 
 ```TypeScript
@@ -1882,7 +1834,6 @@ try {
 
 ```
 
-<a id="updateconnectionparam"></a>
 ## updateConnectionParam
 
 ```TypeScript
@@ -1937,7 +1888,6 @@ try {
 
 ```
 
-<a id="writecharacteristicvalue"></a>
 ## writeCharacteristicValue
 
 ```TypeScript
@@ -1958,15 +1908,7 @@ Writes the characteristic of a BLE peripheral device.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-GattClientDevice-writeCharacteristicValue(
-      characteristic: BLECharacteristic,
-      writeType: GattWriteType,
-      callback: AsyncCallback<void>
-    ): void--><!--Device-GattClientDevice-writeCharacteristicValue(
-      characteristic: BLECharacteristic,
-      writeType: GattWriteType,
-      callback: AsyncCallback<void>
-    ): void-End-->
+<!--Device-GattClientDevice-writeCharacteristicValue(      characteristic: BLECharacteristic,      writeType: GattWriteType,      callback: AsyncCallback<void>    ): void--><!--Device-GattClientDevice-writeCharacteristicValue(      characteristic: BLECharacteristic,      writeType: GattWriteType,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -2029,7 +1971,6 @@ try {
 
 ```
 
-<a id="writecharacteristicvalue-1"></a>
 ## writeCharacteristicValue
 
 ```TypeScript
@@ -2108,7 +2049,6 @@ try {
 
 ```
 
-<a id="writedescriptorvalue"></a>
 ## writeDescriptorValue
 
 ```TypeScript
@@ -2181,7 +2121,6 @@ try {
 
 ```
 
-<a id="writedescriptorvalue-1"></a>
 ## writeDescriptorValue
 
 ```TypeScript

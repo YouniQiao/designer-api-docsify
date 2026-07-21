@@ -6,7 +6,6 @@
 import { cameraPicker } from '@kit.CameraKit';
 ```
 
-<a id="pick"></a>
 ## pick
 
 ```TypeScript
@@ -14,7 +13,6 @@ function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfil
 ```
 
 Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > When an application is running on a widescreen foldable device and the camera picker is launched while the device  

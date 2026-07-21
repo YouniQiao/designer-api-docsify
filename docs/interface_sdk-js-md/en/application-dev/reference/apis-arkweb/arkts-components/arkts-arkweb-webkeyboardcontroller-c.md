@@ -8,7 +8,6 @@ Define the controller to interact with a custom keyboard, related to the {@link 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -23,7 +22,6 @@ Closes this custom keyboard.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -40,7 +38,6 @@ Constructs a **WebKeyboardController** API.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="deletebackward"></a>
 ## deleteBackward
 
 ```TypeScript
@@ -61,7 +58,6 @@ Deletes a specified number of characters backward in a **Web** component text bo
 | --- | --- | --- | --- |
 | length | number | Yes | Length of characters to delete backward in a **Web** component text box.<br>Value range:[-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters after the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
 
-<a id="deleteforward"></a>
 ## deleteForward
 
 ```TypeScript
@@ -82,7 +78,6 @@ Deletes a specified number of characters forward in a **Web** component text box
 | --- | --- | --- | --- |
 | length | number | Yes | Length of characters to delete forward in a **Web** component text box.<br>Value range:[-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters before the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
 
-<a id="inserttext"></a>
 ## insertText
 
 ```TypeScript
@@ -103,7 +98,6 @@ Inserts characters into the **Web** component text box.
 | --- | --- | --- | --- |
 | text | string | Yes | Characters to insert into the **Web** component text box. |
 
-<a id="sendfunctionkey"></a>
 ## sendFunctionKey
 
 ```TypeScript

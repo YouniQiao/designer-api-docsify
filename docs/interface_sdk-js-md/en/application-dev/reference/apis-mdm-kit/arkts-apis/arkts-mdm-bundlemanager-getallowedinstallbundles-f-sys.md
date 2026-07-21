@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="getallowedinstallbundles"></a>
 ## getAllowedInstallBundles
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the applications that can be installed by the current user. This API use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync-1)
+**Substitutes:** [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -71,7 +70,6 @@ bundleManager.getAllowedInstallBundles(wantTemp, (err, result) => {
 ```
 
 
-<a id="getallowedinstallbundles-1"></a>
 ## getAllowedInstallBundles
 
 ```TypeScript
@@ -84,7 +82,7 @@ Obtains the applications that can be installed by the user specified by **userId
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync-1)
+**Substitutes:** [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -137,7 +135,6 @@ bundleManager.getAllowedInstallBundles(wantTemp, 100, (err, result) => {
 ```
 
 
-<a id="getallowedinstallbundles-2"></a>
 ## getAllowedInstallBundles
 
 ```TypeScript
@@ -150,7 +147,7 @@ Obtains the applications that can be installed by the current or specified user.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync-1)
+**Substitutes:** [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 

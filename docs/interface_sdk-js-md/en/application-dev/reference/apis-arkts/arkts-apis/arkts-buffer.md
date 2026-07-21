@@ -21,8 +21,8 @@ import { buffer } from '@kit.ArkTS';
 | Name | Description |
 | --- | --- |
 | [alloc](arkts-arkts-buffer-alloc-f.md#alloc) | Creates and initializes a **Buffer** object of the specified length. |
-| [allocUninitialized](arkts-arkts-buffer-allocuninitialized-f.md#allocuninitialized) | Creates a **Buffer** object of the specified size, without initializing it. This API does not allocate memory from the buffer pool.You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill-1) to initialize the **Buffer** object created. |
-| [allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool) | Creates a **Buffer** object of the specified size from the buffer pool, without initializing it.You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill-1) to initialize the **Buffer** object created. |
+| [allocUninitialized](arkts-arkts-buffer-allocuninitialized-f.md#allocuninitialized) | Creates a **Buffer** object of the specified size, without initializing it. This API does not allocate memory from the buffer pool.You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created. |
+| [allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool) | Creates a **Buffer** object of the specified size from the buffer pool, without initializing it.You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created. |
 | [byteLength](arkts-arkts-buffer-bytelength-f.md#bytelength) | Obtains the number of bytes of a string based on the encoding format. |
 | [compare](arkts-arkts-buffer-compare-f.md#compare) | Compares two **Buffer** objects. This API is used for sorting **Buffer** objects. |
 | [concat](arkts-arkts-buffer-concat-f.md#concat) | Concatenates an array of **Buffer** objects of the specified length into a new object. |

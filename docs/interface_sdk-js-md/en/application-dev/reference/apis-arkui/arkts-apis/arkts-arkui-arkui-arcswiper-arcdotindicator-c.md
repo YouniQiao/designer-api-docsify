@@ -14,7 +14,6 @@ Describes the properties and behavior of the arc dot navigation indicator.
 import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
-<a id="arcdirection"></a>
 ## arcDirection
 
 ```TypeScript
@@ -43,7 +42,6 @@ Sets the direction of the arc navigation indicator.
 | --- | --- |
 | [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
 
-<a id="backgroundcolor"></a>
 ## backgroundColor
 
 ```TypeScript
@@ -72,7 +70,6 @@ Sets the color of the arc navigation indicator when it is long-pressed.
 | --- | --- |
 | [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -89,7 +86,6 @@ A constructor used to create an **ArcDotIndicator** instance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
-<a id="itemcolor"></a>
 ## itemColor
 
 ```TypeScript
@@ -118,7 +114,6 @@ Sets the color of the unselected navigation points in the arc navigation indicat
 | --- | --- |
 | [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
 
-<a id="maskcolor"></a>
 ## maskColor
 
 ```TypeScript
@@ -147,7 +142,6 @@ Sets the mask gradient color of the arc navigation indicator.
 | --- | --- |
 | [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Properties and functionality of the arc navigation indicator. |
 
-<a id="selecteditemcolor"></a>
 ## selectedItemColor
 
 ```TypeScript

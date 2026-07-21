@@ -6,7 +6,6 @@
 import { drm } from '@kit.DrmKit';
 ```
 
-<a id="getmediakeysystemuuid"></a>
 ## getMediaKeySystemUuid
 
 ```TypeScript

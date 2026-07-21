@@ -14,7 +14,6 @@ Defines the schema of a KV store. You can create a **Schema** object and pass it
 import { distributedKVStore } from '@kit.ArkData';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

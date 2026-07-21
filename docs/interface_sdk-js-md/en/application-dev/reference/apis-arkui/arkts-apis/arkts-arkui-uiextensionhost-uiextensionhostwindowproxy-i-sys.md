@@ -16,7 +16,6 @@ Transition Controller
 import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
-<a id="createsubwindowwithoptions"></a>
 ## createSubWindowWithOptions
 
 ```TypeScript
@@ -105,7 +104,6 @@ export default class EntryAbility extends UIExtensionAbility {
 
 ```
 
-<a id="createsubwindowwithoptions-1"></a>
 ## createSubWindowWithOptions
 
 ```TypeScript
@@ -119,9 +117,7 @@ Create subwindow.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
-        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
-        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
+<!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-UIExtensionHostWindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -197,7 +193,6 @@ export default class EntryAbility extends UIExtensionAbility {
 
 ```
 
-<a id="getwindowavoidarea"></a>
 ## getWindowAvoidArea
 
 ```TypeScript
@@ -253,7 +248,6 @@ export default class EntryAbility extends UIExtensionAbility {
 
 ```
 
-<a id="hidenonsecurewindows"></a>
 ## hideNonSecureWindows
 
 ```TypeScript
@@ -261,7 +255,6 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 ```
 
 Sets whether to hide non-secure windows. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - A non-secure window refers to any window that may obstruct the  
@@ -342,7 +335,6 @@ export default class EntryAbility extends UIExtensionAbility {
 
 ```
 
-<a id="hideprivacycontentforhost"></a>
 ## hidePrivacyContentForHost
 
 ```TypeScript
@@ -350,12 +342,11 @@ hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 ```
 
 Sets whether to enable privacy protection for the UIExtension component during non-system screenshots. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > When privacy protection is enabled, neither  
 > [window.snapshot](@ohos.window:window.snapshot) nor  
-> [UIContext.getComponentSnapshot](docroot://reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12)  
+> [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12)  
 > will capture the content of the current component (excluding subwindows created under this component).
 
 **Since:** 13
@@ -409,7 +400,6 @@ export default class EntryAbility extends UIExtensionAbility {
 
 ```
 
-<a id="off"></a>
 ## off('avoidAreaChange')
 
 ```TypeScript
@@ -458,7 +448,6 @@ export default class EntryAbility extends UIExtensionAbility {
 
 ```
 
-<a id="off-1"></a>
 ## off('windowSizeChange')
 
 ```TypeScript
@@ -507,7 +496,6 @@ export default class EntryAbility extends UIExtensionAbility {
 
 ```
 
-<a id="on"></a>
 ## on('avoidAreaChange')
 
 ```TypeScript
@@ -558,7 +546,6 @@ export default class EntryAbility extends UIExtensionAbility {
 
 ```
 
-<a id="on-1"></a>
 ## on('windowSizeChange')
 
 ```TypeScript
@@ -609,7 +596,6 @@ export default class EntryAbility extends UIExtensionAbility {
 
 ```
 
-<a id="setwatermarkflag"></a>
 ## setWaterMarkFlag
 
 ```TypeScript
@@ -617,7 +603,6 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 ```
 
 Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground  
@@ -691,7 +676,7 @@ properties: UIExtensionHostWindowProxyProperties
 
 Information about the host application window and the **UIExtensionComponent**.
 
-Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate-1). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](@ohos.uiExtensionHost:uiExtensionHost.UIExtensionHostWindowProxy.on(type: 'windowSizeChange', callback: Callback<window.Size>))callback.
+Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](@ohos.uiExtensionHost:uiExtensionHost.UIExtensionHostWindowProxy.on(type: 'windowSizeChange', callback: Callback&lt;window.Size&gt;))callback.
 
 **Type:** UIExtensionHostWindowProxyProperties
 

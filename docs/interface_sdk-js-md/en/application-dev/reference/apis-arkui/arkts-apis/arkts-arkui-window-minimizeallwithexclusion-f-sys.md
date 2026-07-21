@@ -6,7 +6,6 @@
 import { window } from '@kit.ArkUI';
 ```
 
-<a id="minimizeallwithexclusion"></a>
 ## minimizeAllWithExclusion
 
 ```TypeScript
@@ -30,7 +29,7 @@ Minimizes all main windows on a display while keeping one window open. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayId | number | Yes | Display ID. The value must be an integer. Non-integer values are rounded down. |
-| excludeWindowId | number | Yes | Window ID. You can call [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties-1) to obtain the window properties, in which **id** is the window ID. If the window ID is less than or equal to 0, or the window ID is null or undefined, error code [401](docroot://reference/errorcode-universal.md#401-parameter-check-failed) is thrown.If the window ID is greater than 0 but does not exist, error code 1300002 is thrown. If the window ID is greater than 0 but the window exists on another display, all main windows on the specified display are minimized. The value must be an integer. Floating-point numbers are rounded down. |
+| excludeWindowId | number | Yes | Window ID. You can call [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window properties, in which **id** is the window ID. If the window ID is less than or equal to 0, or the window ID is null or undefined, error code [401](../../../reference/errorcode-universal.md#401-parameter-check-failed) is thrown.If the window ID is greater than 0 but does not exist, error code 1300002 is thrown. If the window ID is greater than 0 but the window exists on another display, all main windows on the specified display are minimized. The value must be an integer. Floating-point numbers are rounded down. |
 
 **Return value:**
 

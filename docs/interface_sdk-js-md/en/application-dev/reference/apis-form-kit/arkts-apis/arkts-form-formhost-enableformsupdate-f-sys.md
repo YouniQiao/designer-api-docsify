@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="enableformsupdate"></a>
 ## enableFormsUpdate
 
 ```TypeScript
@@ -45,7 +44,6 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
-<a id="enableformsupdate-1"></a>
 ## enableFormsUpdate
 
 ```TypeScript

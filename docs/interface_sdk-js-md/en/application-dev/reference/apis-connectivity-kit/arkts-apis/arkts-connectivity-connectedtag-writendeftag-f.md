@@ -6,7 +6,6 @@
 import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
-<a id="writendeftag"></a>
 ## writeNdefTag
 
 ```TypeScript
@@ -55,7 +54,6 @@ connectedTag.writeNdefTag(rawData).then(() => {
 ```
 
 
-<a id="writendeftag-1"></a>
 ## writeNdefTag
 
 ```TypeScript

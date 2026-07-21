@@ -6,7 +6,6 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="isdistributedenabled"></a>
 ## isDistributedEnabled
 
 ```TypeScript
@@ -19,7 +18,7 @@ Checks whether the device supports cross-device notifications. This API uses an 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isDistributedEnabled(deviceType:](arkts-notification-notificationmanager-isdistributedenabled-f.md#isdistributedenabled-1)
+**Substitutes:** [isDistributedEnabled(deviceType:](arkts-notification-notificationmanager-isdistributedenabled-f.md#isdistributedenabled)
 
 <!--Device-notificationManager-function isDistributedEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isDistributedEnabled(callback: AsyncCallback<boolean>): void-End-->
 
@@ -59,7 +58,6 @@ notificationManager.isDistributedEnabled(isDistributedEnabledCallback);
 ```
 
 
-<a id="isdistributedenabled-1"></a>
 ## isDistributedEnabled
 
 ```TypeScript
@@ -72,7 +70,7 @@ Checks whether the device supports cross-device notifications. This API uses a p
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isDistributedEnabled(deviceType:](arkts-notification-notificationmanager-isdistributedenabled-f.md#isdistributedenabled-1)
+**Substitutes:** [isDistributedEnabled(deviceType:](arkts-notification-notificationmanager-isdistributedenabled-f.md#isdistributedenabled)
 
 <!--Device-notificationManager-function isDistributedEnabled(): Promise<boolean>--><!--Device-notificationManager-function isDistributedEnabled(): Promise<boolean>-End-->
 

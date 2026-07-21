@@ -6,7 +6,6 @@
 import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
-<a id="releaseaccess"></a>
 ## releaseAccess
 
 ```TypeScript
@@ -15,7 +14,7 @@ function releaseAccess(): ReleaseStatus
 
 Releases the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After the release is successful, the reference count of the sensitive data key decreases. When the count reaches zero,the key can be destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold.
 
-Before calling this API, ensure that the app has enabled the sensitive data protection function under the lock screen, and that the [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess-1) API has been called to request the permission successfully first.
+Before calling this API, ensure that the app has enabled the sensitive data protection function under the lock screen, and that the [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess) API has been called to request the permission successfully first.
 
 **Since:** 12
 

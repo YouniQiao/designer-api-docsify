@@ -8,7 +8,6 @@ interface of form lifecycle.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
-<a id="onshare"></a>
 ## onShare
 
 ```TypeScript
@@ -39,7 +38,6 @@ Called when the system shares the form.
 | --- | --- |
 | { [key: string]: any } | Returns the wantParams object. |
 
-<a id="onshareform"></a>
 ## onShareForm
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="getworkstatus"></a>
 ## getWorkStatus
 
 ```TypeScript
@@ -57,7 +56,6 @@ Obtains the information a deferred task. This API uses an asynchronous callback 
 ```
 
 
-<a id="getworkstatus-1"></a>
 ## getWorkStatus
 
 ```TypeScript

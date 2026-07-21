@@ -6,7 +6,6 @@
 import { formObserver } from '@kit.FormKit';
 ```
 
-<a id="on"></a>
 ## on('formAdd')
 
 ```TypeScript
@@ -40,7 +39,6 @@ Listens to the event of add form.<p>You can use this method to listen to the eve
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-1"></a>
 ## on('formAdd')
 
 ```TypeScript
@@ -75,7 +73,6 @@ Listens to the event of add form.<p>You can use this method to listen to the eve
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-2"></a>
 ## on('formRemove')
 
 ```TypeScript
@@ -109,7 +106,6 @@ Listens to the event of remove form.<p>You can use this method to listen to the 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-3"></a>
 ## on('formRemove')
 
 ```TypeScript
@@ -144,7 +140,6 @@ Listens to the event of remove form.<p>You can use this method to listen to the 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-4"></a>
 ## on('notifyVisible')
 
 ```TypeScript
@@ -178,7 +173,6 @@ Listens to the event of notifyVisible type change.<p>You can use this method to 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-5"></a>
 ## on('notifyVisible')
 
 ```TypeScript
@@ -195,15 +189,7 @@ Listens to the event of notifyVisible type change.<p>You can use this method to 
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
-<!--Device-formObserver-function on(
-    type: 'notifyVisible',
-    hostBundleName: string,
-    observerCallback: Callback<Array<formInfo.RunningFormInfo>>
-  ): void--><!--Device-formObserver-function on(
-    type: 'notifyVisible',
-    hostBundleName: string,
-    observerCallback: Callback<Array<formInfo.RunningFormInfo>>
-  ): void-End-->
+<!--Device-formObserver-function on(    type: 'notifyVisible',    hostBundleName: string,    observerCallback: Callback<Array<formInfo.RunningFormInfo>>  ): void--><!--Device-formObserver-function on(    type: 'notifyVisible',    hostBundleName: string,    observerCallback: Callback<Array<formInfo.RunningFormInfo>>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -225,7 +211,6 @@ Listens to the event of notifyVisible type change.<p>You can use this method to 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-6"></a>
 ## on('notifyInvisible')
 
 ```TypeScript
@@ -259,7 +244,6 @@ Listens to the event of notifyInvisible type change.<p>You can use this method t
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-7"></a>
 ## on('notifyInvisible')
 
 ```TypeScript
@@ -276,15 +260,7 @@ Listens to the event of notifyInvisible type change.<p>You can use this method t
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
-<!--Device-formObserver-function on(
-    type: 'notifyInvisible',
-    hostBundleName: string,
-    observerCallback: Callback<Array<formInfo.RunningFormInfo>>,
-  ): void--><!--Device-formObserver-function on(
-    type: 'notifyInvisible',
-    hostBundleName: string,
-    observerCallback: Callback<Array<formInfo.RunningFormInfo>>,
-  ): void-End-->
+<!--Device-formObserver-function on(    type: 'notifyInvisible',    hostBundleName: string,    observerCallback: Callback<Array<formInfo.RunningFormInfo>>,  ): void--><!--Device-formObserver-function on(    type: 'notifyInvisible',    hostBundleName: string,    observerCallback: Callback<Array<formInfo.RunningFormInfo>>,  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -306,7 +282,6 @@ Listens to the event of notifyInvisible type change.<p>You can use this method t
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-8"></a>
 ## on('router')
 
 ```TypeScript
@@ -340,7 +315,6 @@ Router event listening in registered form.<p>This interface requires permission 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-9"></a>
 ## on('router')
 
 ```TypeScript
@@ -375,7 +349,6 @@ Router event listening in registered form.<p>This interface requires permission 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-10"></a>
 ## on('message')
 
 ```TypeScript
@@ -409,7 +382,6 @@ Message event listening in registered form.<p>This interface requires permission
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-11"></a>
 ## on('message')
 
 ```TypeScript
@@ -444,7 +416,6 @@ Message event listening in registered form.<p>This interface requires permission
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-12"></a>
 ## on('call')
 
 ```TypeScript
@@ -478,7 +449,6 @@ Call event listening in registered form.<p>This interface requires permission to
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="on-13"></a>
 ## on('call')
 
 ```TypeScript

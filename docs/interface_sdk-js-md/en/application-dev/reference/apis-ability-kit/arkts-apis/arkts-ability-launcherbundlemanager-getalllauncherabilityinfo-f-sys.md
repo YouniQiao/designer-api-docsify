@@ -6,14 +6,13 @@
 import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="getalllauncherabilityinfo"></a>
 ## getAllLauncherAbilityInfo
 
 ```TypeScript
 function getAllLauncherAbilityInfo(userId: number, callback: AsyncCallback<Array<LauncherAbilityInfo>>) : void
 ```
 
-Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) of all applications based on the given user ID. This API uses an asynchronous callback to return the result.
+Obtains the [launcher ability information](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) of all applications based on the given user ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -29,8 +28,8 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md) objects obtained.Otherwise, **err** is an error object. |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the array of [LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) objects obtained.Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -66,14 +65,13 @@ try {
 ```
 
 
-<a id="getalllauncherabilityinfo-1"></a>
 ## getAllLauncherAbilityInfo
 
 ```TypeScript
 function getAllLauncherAbilityInfo(userId: number) : Promise<Array<LauncherAbilityInfo>>
 ```
 
-Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) of all applications based on the given user ID. This API uses a promise to return the result.
+Obtains the [launcher ability information](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) of all applications based on the given user ID. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -89,13 +87,13 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Promise used to return the array of [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md) objects obtained. |
+| Promise&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Promise used to return the array of [LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) objects obtained. |
 
 **Error codes:**
 

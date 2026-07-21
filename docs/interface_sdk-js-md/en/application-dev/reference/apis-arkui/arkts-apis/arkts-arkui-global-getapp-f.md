@@ -1,6 +1,5 @@
 # getApp
 
-<a id="getapp"></a>
 ## getApp
 
 ```TypeScript

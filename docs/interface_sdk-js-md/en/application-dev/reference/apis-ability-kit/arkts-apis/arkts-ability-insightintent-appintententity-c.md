@@ -16,7 +16,6 @@ Define AppIntentEntity.
 import { insightIntent } from '@kit.AbilityKit';
 ```
 
-<a id="onqueryentity"></a>
 ## onQueryEntity
 
 ```TypeScript

@@ -1,7 +1,6 @@
 # NavRouteMode
 
 Defines the routing policy.
-
 > **NOTE**
 
 **Since:** 10

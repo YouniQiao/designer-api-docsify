@@ -10,7 +10,6 @@ Defines the lazy custom layout algorithm.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -35,7 +34,6 @@ Constructor.
 | --- | --- | --- | --- |
 | option | [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | No | set properties of lazy custom layout algorithm. |
 
-<a id="onlayout"></a>
 ## onLayout
 
 ```TypeScript
@@ -61,7 +59,6 @@ Method to assign a position to the DynamicLayout FrameNode and each of its child
 | self | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | Yes | The FrameNode of DynamicLayout component. |
 | position | [Position](arkts-arkui-position-i.md) | Yes | The position of the node, will be used when executing layout method. |
 
-<a id="onmeasure"></a>
 ## onMeasure
 
 ```TypeScript

@@ -9,7 +9,6 @@ The **Gauge** component represents a gauge that displays data in a circular form
 ## Child Components
 
 This component can contain only one child component.
-
 > **NOTE**  
 >  
 > - Supported child component types: built-in and custom components, including  

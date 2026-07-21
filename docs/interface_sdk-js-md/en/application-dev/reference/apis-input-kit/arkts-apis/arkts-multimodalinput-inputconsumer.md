@@ -1,7 +1,6 @@
 # @ohos.multimodalInput.inputConsumer
 
 The **inputConsumer** module implements listening for combination key events as well as listening and interception for volume key events.
-
 > **NOTE**  
 >  
 > - Global shortcut keys are combination keys defined by the system or application. System shortcut keys are defined  

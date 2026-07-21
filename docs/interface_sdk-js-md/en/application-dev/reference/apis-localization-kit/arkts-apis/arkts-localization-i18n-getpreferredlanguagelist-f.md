@@ -6,7 +6,6 @@
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="getpreferredlanguagelist"></a>
 ## getPreferredLanguageList
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the list of preferred languages.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPreferredLanguageList](arkts-localization-i18n-system-c.md#getpreferredlanguagelist-1)
+**Substitutes:** [getPreferredLanguageList](arkts-localization-i18n-system-c.md#getpreferredlanguagelist)
 
 <!--Device-i18n-export function getPreferredLanguageList(): Array<string>--><!--Device-i18n-export function getPreferredLanguageList(): Array<string>-End-->
 

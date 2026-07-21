@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="getpreferrednetwork"></a>
 ## getPreferredNetwork
 
 ```TypeScript
@@ -61,7 +60,6 @@ radio.getPreferredNetwork(slotId, (err: BusinessError, data: radio.PreferredNetw
 ```
 
 
-<a id="getpreferrednetwork-1"></a>
 ## getPreferredNetwork
 
 ```TypeScript

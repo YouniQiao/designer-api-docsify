@@ -16,7 +16,6 @@ Implements wakeup management.
 import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
-<a id="clearuserdata"></a>
 ## clearUserData
 
 ```TypeScript
@@ -64,7 +63,6 @@ if (wakeupManager != null) {
 
 ```
 
-<a id="enrollwithwakeupfilesforresult"></a>
 ## enrollWithWakeupFilesForResult
 
 ```TypeScript
@@ -129,7 +127,6 @@ if (wakeupManager != null) {
 
 ```
 
-<a id="getparameter"></a>
 ## getParameter
 
 ```TypeScript
@@ -186,7 +183,6 @@ if (wakeupManager != null) {
 
 ```
 
-<a id="getuploadfiles"></a>
 ## getUploadFiles
 
 ```TypeScript
@@ -244,7 +240,6 @@ if (wakeupManager != null) {
 
 ```
 
-<a id="getwakeupsourcefiles"></a>
 ## getWakeupSourceFiles
 
 ```TypeScript
@@ -295,7 +290,6 @@ if (wakeupManager != null) {
 
 ```
 
-<a id="setparameter"></a>
 ## setParameter
 
 ```TypeScript

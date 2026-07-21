@@ -14,7 +14,6 @@
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="addinput"></a>
 ## addInput
 
 ```TypeScript
@@ -46,7 +45,6 @@ Adds a [CameraInput](arkts-camera-camera-camerainput-i.md) instance to this sess
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 11 - 17 |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
-<a id="addoutput"></a>
 ## addOutput
 
 ```TypeScript
@@ -78,7 +76,6 @@ Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance to this se
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 11 - 17 |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
-<a id="beginconfig"></a>
 ## beginConfig
 
 ```TypeScript
@@ -102,14 +99,13 @@ Starts configuration for the session.
 | [7400105](../errorcode-camera.md#7400105-session-configuration-locked) | Session config locked. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
-<a id="canaddinput"></a>
 ## canAddInput
 
 ```TypeScript
 canAddInput(cameraInput: CameraInput): boolean
 ```
 
-Checks whether a **CameraInput** instance can be added to this session. This API must be called after [beginConfig](arkts-camera-camera-session-i.md#beginconfig-1) and before [commitConfig](arkts-camera-camera-session-i.md#commitconfig-1).
+Checks whether a **CameraInput** instance can be added to this session. This API must be called after [beginConfig](arkts-camera-camera-session-i.md#beginconfig) and before [commitConfig](arkts-camera-camera-session-i.md#commitconfig).
 
 **Since:** 11
 
@@ -131,14 +127,13 @@ Checks whether a **CameraInput** instance can be added to this session. This API
 | --- | --- |
 | boolean | Check result for adding the **CameraInput** instance. **true** if it can be added, **false** otherwise. |
 
-<a id="canaddoutput"></a>
 ## canAddOutput
 
 ```TypeScript
 canAddOutput(cameraOutput: CameraOutput): boolean
 ```
 
-Determines whether a CameraOutput instance can be added to this session. This API must be called after [addInput](arkts-camera-camera-session-i.md#addinput-1) and before [commitConfig](arkts-camera-camera-session-i.md#commitconfig-1).
+Determines whether a CameraOutput instance can be added to this session. This API must be called after [addInput](arkts-camera-camera-session-i.md#addinput) and before [commitConfig](arkts-camera-camera-session-i.md#commitconfig).
 
 **Since:** 11
 
@@ -160,7 +155,6 @@ Determines whether a CameraOutput instance can be added to this session. This AP
 | --- | --- |
 | boolean | Check result for adding the **CameraOutput** instance. **true** if it can be added,**false** otherwise. |
 
-<a id="commitconfig"></a>
 ## commitConfig
 
 ```TypeScript
@@ -190,7 +184,6 @@ Commits the configuration for this session. This API uses an asynchronous callba
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="commitconfig-1"></a>
 ## commitConfig
 
 ```TypeScript
@@ -220,7 +213,6 @@ Commits the configuration for this session. This API uses a promise to return th
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -249,7 +241,6 @@ Releases this session. This API uses an asynchronous callback to return the resu
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript
@@ -278,14 +269,13 @@ Releases this session. This API uses a promise to return the result.
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="removeinput"></a>
 ## removeInput
 
 ```TypeScript
 removeInput(cameraInput: CameraInput): void
 ```
 
-Removes a [CameraInput](arkts-camera-camera-camerainput-i.md) instance from this session. This API must be called after [beginConfig](arkts-camera-camera-session-i.md#beginconfig-1) and before [commitConfig](arkts-camera-camera-session-i.md#commitconfig-1).
+Removes a [CameraInput](arkts-camera-camera-camerainput-i.md) instance from this session. This API must be called after [beginConfig](arkts-camera-camera-session-i.md#beginconfig) and before [commitConfig](arkts-camera-camera-session-i.md#commitconfig).
 
 **Since:** 11
 
@@ -310,7 +300,6 @@ Removes a [CameraInput](arkts-camera-camera-camerainput-i.md) instance from this
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 11 - 17 |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
-<a id="removeoutput"></a>
 ## removeOutput
 
 ```TypeScript
@@ -342,7 +331,6 @@ Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance from th
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 11 - 17 |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -373,7 +361,6 @@ Starts this session. This API uses an asynchronous callback to return the result
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 
-<a id="start-1"></a>
 ## start
 
 ```TypeScript
@@ -404,7 +391,6 @@ Starts this session. This API uses a promise to return the result.
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -433,7 +419,6 @@ Stops this session. This API uses an asynchronous callback to return the result.
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="stop-1"></a>
 ## stop
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
@@ -54,7 +53,6 @@ try {
 ```
 
 
-<a id="set-1"></a>
 ## set
 
 ```TypeScript

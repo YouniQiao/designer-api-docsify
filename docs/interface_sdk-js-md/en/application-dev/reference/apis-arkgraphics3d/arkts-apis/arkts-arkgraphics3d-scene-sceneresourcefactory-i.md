@@ -10,7 +10,6 @@ The scene resource factory.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="createcamera"></a>
 ## createCamera
 
 ```TypeScript
@@ -37,7 +36,6 @@ Create a camera.
 | --- | --- |
 | Promise&lt;Camera&gt; | promise a camera |
 
-<a id="createcamera-1"></a>
 ## createCamera
 
 ```TypeScript
@@ -65,7 +63,6 @@ Create a camera.
 | --- | --- |
 | Promise&lt;Camera&gt; | promise a camera |
 
-<a id="createeffect"></a>
 ## createEffect
 
 ```TypeScript
@@ -92,7 +89,6 @@ Create an effect.
 | --- | --- |
 | Promise&lt;Effect&gt; | promise an effect. |
 
-<a id="createenvironment"></a>
 ## createEnvironment
 
 ```TypeScript
@@ -119,7 +115,6 @@ Create an environment.
 | --- | --- |
 | Promise&lt;Environment&gt; | promise an environment |
 
-<a id="creategeometry"></a>
 ## createGeometry
 
 ```TypeScript
@@ -147,7 +142,6 @@ Create a geometry node.
 | --- | --- |
 | Promise&lt;Geometry&gt; | promise a geometry |
 
-<a id="createlight"></a>
 ## createLight
 
 ```TypeScript
@@ -175,7 +169,6 @@ Create a light.
 | --- | --- |
 | Promise&lt;Light&gt; | promise a light |
 
-<a id="creatematerial"></a>
 ## createMaterial
 
 ```TypeScript
@@ -203,7 +196,6 @@ Create a material.
 | --- | --- |
 | Promise&lt;Material&gt; | promise a material |
 
-<a id="createnode"></a>
 ## createNode
 
 ```TypeScript

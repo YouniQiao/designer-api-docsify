@@ -6,7 +6,6 @@
 import { functionManager } from '@kit.AbilityKit';
 ```
 
-<a id="queryfunctions"></a>
 ## queryFunctions
 
 ```TypeScript

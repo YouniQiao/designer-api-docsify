@@ -40,63 +40,7 @@ Defines the length constrain property.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-unnamed-declare type LengthConstrain = {
-  /**
-   * minimum length.
-   *
-   *****/
-  /**
-   * minimum length.
-   *
-   ******/
-  /**
-   * minimum length.
-   *
-   *******/
-  minLength: Length;
-
-  /**
-   * maximum length.
-   *
-   *****/
-  /**
-   * maximum length.
-   *
-   ******/
-  /**
-   * maximum length.
-   *
-   *******/
-  maxLength: Length;
-}--><!--Device-unnamed-declare type LengthConstrain = {
-  /**
-   * minimum length.
-   *
-   *****/
-  /**
-   * minimum length.
-   *
-   ******/
-  /**
-   * minimum length.
-   *
-   *******/
-  minLength: Length;
-
-  /**
-   * maximum length.
-   *
-   *****/
-  /**
-   * maximum length.
-   *
-   ******/
-  /**
-   * maximum length.
-   *
-   *******/
-  maxLength: Length;
-}-End-->
+<!--Device-unnamed-declare type LengthConstrain = {  /**   * minimum length.   *   *****/  /**   * minimum length.   *   ******/  /**   * minimum length.   *   *******/  minLength: Length;  /**   * maximum length.   *   *****/  /**   * maximum length.   *   ******/  /**   * maximum length.   *   *******/  maxLength: Length;}--><!--Device-unnamed-declare type LengthConstrain = {  /**   * minimum length.   *   *****/  /**   * minimum length.   *   ******/  /**   * minimum length.   *   *******/  minLength: Length;  /**   * maximum length.   *   *****/  /**   * maximum length.   *   ******/  /**   * maximum length.   *   *******/  maxLength: Length;}-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

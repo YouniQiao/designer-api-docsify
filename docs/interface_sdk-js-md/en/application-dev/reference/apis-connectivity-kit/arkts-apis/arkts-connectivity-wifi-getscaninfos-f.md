@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="getscaninfos"></a>
 ## getScanInfos
 
 ```TypeScript
@@ -34,7 +33,6 @@ Obtains the hotspot information that scanned.
 | Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | Returns information about scanned Wi-Fi hotspot if any. |
 
 
-<a id="getscaninfos-1"></a>
 ## getScanInfos
 
 ```TypeScript

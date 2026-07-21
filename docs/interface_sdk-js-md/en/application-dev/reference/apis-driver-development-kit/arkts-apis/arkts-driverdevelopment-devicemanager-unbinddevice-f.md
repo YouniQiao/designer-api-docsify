@@ -6,7 +6,6 @@
 import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
-<a id="unbinddevice"></a>
 ## unbindDevice
 
 ```TypeScript
@@ -19,7 +18,7 @@ Unbinds a peripheral device.
 
 **Deprecated since:** 19
 
-**Substitutes:** [unbindDriverWithDeviceId(deviceId:](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid-1)
+**Substitutes:** [unbindDriverWithDeviceId(deviceId:](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -64,7 +63,6 @@ try {
 ```
 
 
-<a id="unbinddevice-1"></a>
 ## unbindDevice
 
 ```TypeScript
@@ -77,7 +75,7 @@ Unbinds a peripheral device. This API uses a promise to return the result.
 
 **Deprecated since:** 19
 
-**Substitutes:** [unbindDriverWithDeviceId(deviceId:](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid-1)
+**Substitutes:** [unbindDriverWithDeviceId(deviceId:](arkts-driverdevelopment-devicemanager-unbinddriverwithdeviceid-f.md#unbinddriverwithdeviceid)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 

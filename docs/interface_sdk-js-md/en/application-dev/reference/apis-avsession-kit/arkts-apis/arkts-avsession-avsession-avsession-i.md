@@ -14,7 +14,6 @@ AVSession object.
 import { avSession } from '@kit.AVSessionKit';
 ```
 
-<a id="activate"></a>
 ## activate
 
 ```TypeScript
@@ -42,7 +41,6 @@ Activate the session, indicating that the session can accept control commands
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="activate-1"></a>
 ## activate
 
 ```TypeScript
@@ -72,7 +70,6 @@ Activate the session, indicating that the session can accept control commands
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="deactivate"></a>
 ## deactivate
 
 ```TypeScript
@@ -100,7 +97,6 @@ Deactivate the session, indicating that the session not ready to accept control 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="deactivate-1"></a>
 ## deactivate
 
 ```TypeScript
@@ -130,7 +126,6 @@ Deactivate the session, indicating that the session not ready to accept control 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="destroy"></a>
 ## destroy
 
 ```TypeScript
@@ -158,7 +153,6 @@ Destroy this session, the server will clean up the session resources
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="destroy-1"></a>
 ## destroy
 
 ```TypeScript
@@ -188,7 +182,6 @@ Destroy this session, the server will clean up the session resources
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="dispatchsessionevent"></a>
 ## dispatchSessionEvent
 
 ```TypeScript
@@ -219,7 +212,6 @@ Dispatch the session event of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="dispatchsessionevent-1"></a>
 ## dispatchSessionEvent
 
 ```TypeScript
@@ -257,7 +249,6 @@ Dispatch the session event of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="enabledesktoplyric"></a>
 ## enableDesktopLyric
 
 ```TypeScript
@@ -294,7 +285,6 @@ Enable desktop lyric for this session.
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-<a id="getavcastcontroller"></a>
 ## getAVCastController
 
 ```TypeScript
@@ -322,7 +312,6 @@ Get the cast controller when the session is casted to remote device.If the avses
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
-<a id="getavcastcontroller-1"></a>
 ## getAVCastController
 
 ```TypeScript
@@ -352,7 +341,6 @@ Get the cast controller when the session is casted to remote device.If the avses
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
-<a id="getallcastdisplays"></a>
 ## getAllCastDisplays
 
 ```TypeScript
@@ -382,7 +370,6 @@ Get all the current virtual display information for extended display.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="getcontroller"></a>
 ## getController
 
 ```TypeScript
@@ -410,7 +397,6 @@ Get the current session's own controller
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="getcontroller-1"></a>
 ## getController
 
 ```TypeScript
@@ -440,7 +426,6 @@ Get the current session's own controller
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="getdesktoplyricstate"></a>
 ## getDesktopLyricState
 
 ```TypeScript
@@ -472,7 +457,6 @@ Get desktop lyric state such as lock state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-<a id="getoutputdevice"></a>
 ## getOutputDevice
 
 ```TypeScript
@@ -500,7 +484,6 @@ Get output device information
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="getoutputdevice-1"></a>
 ## getOutputDevice
 
 ```TypeScript
@@ -530,7 +513,6 @@ Get output device information
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="getoutputdevicesync"></a>
 ## getOutputDeviceSync
 
 ```TypeScript
@@ -560,7 +542,6 @@ Get output device information
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="isdesktoplyricvisible"></a>
 ## isDesktopLyricVisible
 
 ```TypeScript
@@ -592,7 +573,6 @@ Query desktop lyric visible state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-<a id="off"></a>
 ## off('play')
 
 ```TypeScript
@@ -624,7 +604,6 @@ Unregister play command callback.When canceling the callback, need to update the
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-1"></a>
 ## off('pause')
 
 ```TypeScript
@@ -656,7 +635,6 @@ Unregister pause command callback.When canceling the callback, need to update th
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-2"></a>
 ## off('stop')
 
 ```TypeScript
@@ -688,7 +666,6 @@ Unregister stop command callback.When canceling the callback, need to update the
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-3"></a>
 ## off('playNext')
 
 ```TypeScript
@@ -720,7 +697,6 @@ Unregister playNext command callback.When canceling the callback, need to update
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-4"></a>
 ## off('playPrevious')
 
 ```TypeScript
@@ -752,7 +728,6 @@ Unregister playPrevious command callback.When canceling the callback, need to up
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-5"></a>
 ## off('fastForward')
 
 ```TypeScript
@@ -784,7 +759,6 @@ Unregister fastForward command callback.When canceling the callback, need to upd
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-6"></a>
 ## off('rewind')
 
 ```TypeScript
@@ -816,7 +790,6 @@ Unregister rewind command callback.When canceling the callback, need to update t
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-7"></a>
 ## off('playFromAssetId')
 
 ```TypeScript
@@ -852,7 +825,6 @@ Unregister playFromAssetId command callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-8"></a>
 ## off('playWithAssetId')
 
 ```TypeScript
@@ -883,7 +855,6 @@ Unsubscribes from playWithAssetId events.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-9"></a>
 ## off('seek')
 
 ```TypeScript
@@ -915,7 +886,6 @@ Unregister seek command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-10"></a>
 ## off('setSpeed')
 
 ```TypeScript
@@ -947,7 +917,6 @@ Unregister setSpeed command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-11"></a>
 ## off('setLoopMode')
 
 ```TypeScript
@@ -979,7 +948,6 @@ Unregister setLoopMode command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-12"></a>
 ## off('setTargetLoopMode')
 
 ```TypeScript
@@ -1010,7 +978,6 @@ Unregister setTargetLoopMode command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-13"></a>
 ## off('toggleFavorite')
 
 ```TypeScript
@@ -1042,7 +1009,6 @@ Unregister toggle favorite command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-14"></a>
 ## off('handleKeyEvent')
 
 ```TypeScript
@@ -1074,7 +1040,6 @@ Unregister media key handling callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-15"></a>
 ## off('outputDeviceChange')
 
 ```TypeScript
@@ -1106,7 +1071,6 @@ Unregister session output device change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
 
-<a id="off-16"></a>
 ## off('commonCommand')
 
 ```TypeScript
@@ -1138,7 +1102,6 @@ Unregister session custom command change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-17"></a>
 ## off('skipToQueueItem')
 
 ```TypeScript
@@ -1170,7 +1133,6 @@ Unregister the item to play from the playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-18"></a>
 ## off('answer')
 
 ```TypeScript
@@ -1202,7 +1164,6 @@ Unregister answer command callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-19"></a>
 ## off('hangUp')
 
 ```TypeScript
@@ -1234,7 +1195,6 @@ Unregister hangUp command callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-20"></a>
 ## off('toggleCallMute')
 
 ```TypeScript
@@ -1266,7 +1226,6 @@ Unregister toggleCallMute command callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="off-21"></a>
 ## off('castDisplayChange')
 
 ```TypeScript
@@ -1298,7 +1257,6 @@ Unregister listener for cast display information changed.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
 
-<a id="off-22"></a>
 ## off('customDataChange')
 
 ```TypeScript
@@ -1329,7 +1287,6 @@ Unsubscribes from custom data changes.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="offdesktoplyricstatechanged"></a>
 ## offDesktopLyricStateChanged
 
 ```TypeScript
@@ -1359,7 +1316,6 @@ Unregister desktop lyric state changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="offdesktoplyricvisibilitychanged"></a>
 ## offDesktopLyricVisibilityChanged
 
 ```TypeScript
@@ -1389,7 +1345,6 @@ Unregister desktop lyric visible state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="offfastforward"></a>
 ## offFastForward
 
 ```TypeScript
@@ -1417,7 +1372,6 @@ Unregister fastForward command callback.When canceling the callback, need to upd
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="offplay"></a>
 ## offPlay
 
 ```TypeScript
@@ -1445,7 +1399,6 @@ Unregister play command callback.When canceling the callback, need to update the
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="offplaynext"></a>
 ## offPlayNext
 
 ```TypeScript
@@ -1473,7 +1426,6 @@ Unregister playNext command callback.When canceling the callback, need to update
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="offplayprevious"></a>
 ## offPlayPrevious
 
 ```TypeScript
@@ -1501,7 +1453,6 @@ Unregister playPrevious command callback.When canceling the callback, need to up
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="offrewind"></a>
 ## offRewind
 
 ```TypeScript
@@ -1529,7 +1480,6 @@ Unregister rewind command callback.When canceling the callback, need to update t
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on"></a>
 ## on('play')
 
 ```TypeScript
@@ -1561,7 +1511,6 @@ Register play command callback.As long as it is registered, it means that the ab
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-1"></a>
 ## on('pause')
 
 ```TypeScript
@@ -1593,7 +1542,6 @@ Register pause command callback.As long as it is registered, it means that the a
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-2"></a>
 ## on('stop')
 
 ```TypeScript
@@ -1625,7 +1573,6 @@ Register stop command callback.As long as it is registered, it means that the ab
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-3"></a>
 ## on('playNext')
 
 ```TypeScript
@@ -1657,7 +1604,6 @@ Register playNext command callback.As long as it is registered, it means that th
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-4"></a>
 ## on('playPrevious')
 
 ```TypeScript
@@ -1689,7 +1635,6 @@ Register playPrevious command callback.As long as it is registered, it means tha
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-5"></a>
 ## on('fastForward')
 
 ```TypeScript
@@ -1721,7 +1666,6 @@ Register fastForward command callback.As long as it is registered, it means that
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-6"></a>
 ## on('rewind')
 
 ```TypeScript
@@ -1753,7 +1697,6 @@ Register rewind command callback.As long as it is registered, it means that the 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-7"></a>
 ## on('playFromAssetId')
 
 ```TypeScript
@@ -1789,7 +1732,6 @@ Register playFromAssetId command callback.As long as it is registered, it means 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-8"></a>
 ## on('playWithAssetId')
 
 ```TypeScript
@@ -1820,7 +1762,6 @@ Subscribes to playWithAssetId events.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-9"></a>
 ## on('seek')
 
 ```TypeScript
@@ -1852,7 +1793,6 @@ Register seek command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-10"></a>
 ## on('setSpeed')
 
 ```TypeScript
@@ -1884,7 +1824,6 @@ Register setSpeed command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-11"></a>
 ## on('setLoopMode')
 
 ```TypeScript
@@ -1916,7 +1855,6 @@ Register setLoopMode command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-12"></a>
 ## on('setTargetLoopMode')
 
 ```TypeScript
@@ -1947,7 +1885,6 @@ Register setTargetLoopMode command callback Application should change playmode t
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-13"></a>
 ## on('toggleFavorite')
 
 ```TypeScript
@@ -1979,7 +1916,6 @@ Register toggle favorite command callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-14"></a>
 ## on('handleKeyEvent')
 
 ```TypeScript
@@ -2011,7 +1947,6 @@ Register media key handling callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-15"></a>
 ## on('outputDeviceChange')
 
 ```TypeScript
@@ -2043,7 +1978,6 @@ Register session output device change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
 
-<a id="on-16"></a>
 ## on('commonCommand')
 
 ```TypeScript
@@ -2075,7 +2009,6 @@ Register session custom command change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-17"></a>
 ## on('skipToQueueItem')
 
 ```TypeScript
@@ -2107,7 +2040,6 @@ Register the item to play from the playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-18"></a>
 ## on('answer')
 
 ```TypeScript
@@ -2139,7 +2071,6 @@ Register answer command callback.As long as it is registered, it means that the 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-19"></a>
 ## on('hangUp')
 
 ```TypeScript
@@ -2171,7 +2102,6 @@ Register hangUp command callback.As long as it is registered, it means that the 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-20"></a>
 ## on('toggleCallMute')
 
 ```TypeScript
@@ -2203,7 +2133,6 @@ Register toggleCallMute command callback.As long as it is registered, it means t
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="on-21"></a>
 ## on('castDisplayChange')
 
 ```TypeScript
@@ -2235,7 +2164,6 @@ Register listener for cast display information changed.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
 
-<a id="on-22"></a>
 ## on('customDataChange')
 
 ```TypeScript
@@ -2266,7 +2194,6 @@ Register listener for custom data sent from remote device.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="ondesktoplyricstatechanged"></a>
 ## onDesktopLyricStateChanged
 
 ```TypeScript
@@ -2296,7 +2223,6 @@ Register desktop lyric state changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="ondesktoplyricvisibilitychanged"></a>
 ## onDesktopLyricVisibilityChanged
 
 ```TypeScript
@@ -2326,7 +2252,6 @@ Register desktop lyric visible state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="onfastforward"></a>
 ## onFastForward
 
 ```TypeScript
@@ -2354,7 +2279,6 @@ Register fastForward command callback.The application will receive forward time 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="onplay"></a>
 ## onPlay
 
 ```TypeScript
@@ -2382,7 +2306,6 @@ Register play command callback.The application will receive {@link CommandInfo} 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="onplaynext"></a>
 ## onPlayNext
 
 ```TypeScript
@@ -2410,7 +2333,6 @@ Register playNext command callback.The application will receive {@link CommandIn
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="onplayprevious"></a>
 ## onPlayPrevious
 
 ```TypeScript
@@ -2440,7 +2362,6 @@ Register playPrevious command callback.The application will receive {@link Comma
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="onrewind"></a>
 ## onRewind
 
 ```TypeScript
@@ -2468,7 +2389,6 @@ Register rewind command callback.The application will receive rewind time and {@
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="sendcustomdata"></a>
 ## sendCustomData
 
 ```TypeScript
@@ -2504,7 +2424,6 @@ Sends custom data to a remote device.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception.You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setavcallstate"></a>
 ## setAVCallState
 
 ```TypeScript
@@ -2534,7 +2453,6 @@ Set the call state of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setavcallstate-1"></a>
 ## setAVCallState
 
 ```TypeScript
@@ -2569,7 +2487,6 @@ Set the call state of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setavmetadata"></a>
 ## setAVMetadata
 
 ```TypeScript
@@ -2599,7 +2516,6 @@ Set the metadata of this session.In addition to the required properties, users c
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setavmetadata-1"></a>
 ## setAVMetadata
 
 ```TypeScript
@@ -2636,7 +2552,6 @@ Set the metadata of this session.In addition to the required properties, users c
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setavplaybackstate"></a>
 ## setAVPlaybackState
 
 ```TypeScript
@@ -2666,7 +2581,6 @@ Set the playback state of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setavplaybackstate-1"></a>
 ## setAVPlaybackState
 
 ```TypeScript
@@ -2703,7 +2617,6 @@ Set the playback state of this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setavqueueitems"></a>
 ## setAVQueueItems
 
 ```TypeScript
@@ -2733,7 +2646,6 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setavqueueitems-1"></a>
 ## setAVQueueItems
 
 ```TypeScript
@@ -2770,7 +2682,6 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setavqueuetitle"></a>
 ## setAVQueueTitle
 
 ```TypeScript
@@ -2800,7 +2711,6 @@ Set the name of the playlist presented by this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setavqueuetitle-1"></a>
 ## setAVQueueTitle
 
 ```TypeScript
@@ -2837,7 +2747,6 @@ Set the name of the playlist presented by this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setbackgroundplaymode"></a>
 ## setBackgroundPlayMode
 
 ```TypeScript
@@ -2873,7 +2782,6 @@ Set the background playback mode.It is recommended that you associate it with th
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setcallmetadata"></a>
 ## setCallMetadata
 
 ```TypeScript
@@ -2903,7 +2811,6 @@ Set the metadata related with current call.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setcallmetadata-1"></a>
 ## setCallMetadata
 
 ```TypeScript
@@ -2938,7 +2845,6 @@ Set the metadata related with current call.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setdesktoplyricstate"></a>
 ## setDesktopLyricState
 
 ```TypeScript
@@ -2976,7 +2882,6 @@ Set desktop lyric state such as lock state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-<a id="setdesktoplyricvisible"></a>
 ## setDesktopLyricVisible
 
 ```TypeScript
@@ -3014,7 +2919,6 @@ Set desktop lyric visible state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-<a id="setextras"></a>
 ## setExtras
 
 ```TypeScript
@@ -3044,7 +2948,6 @@ Set the custom media packets for this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setextras-1"></a>
 ## setExtras
 
 ```TypeScript
@@ -3081,7 +2984,6 @@ Set the custom media packets for this session.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setlaunchability"></a>
 ## setLaunchAbility
 
 ```TypeScript
@@ -3111,7 +3013,6 @@ Set the ability to start the session corresponding to
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setlaunchability-1"></a>
 ## setLaunchAbility
 
 ```TypeScript
@@ -3148,7 +3049,6 @@ Set the ability to start the session corresponding to
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setmediacentercontroltype"></a>
 ## setMediaCenterControlType
 
 ```TypeScript
@@ -3184,7 +3084,6 @@ Set media control types that can be displayed on the media center.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setsupportedloopmodes"></a>
 ## setSupportedLoopModes
 
 ```TypeScript
@@ -3222,7 +3121,6 @@ Set supported loop modes supplied by application.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="setsupportedplayspeeds"></a>
 ## setSupportedPlaySpeeds
 
 ```TypeScript
@@ -3260,7 +3158,6 @@ Set supported speeds supplied by application.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
-<a id="stopcasting"></a>
 ## stopCasting
 
 ```TypeScript
@@ -3287,7 +3184,6 @@ Stop current cast and disconnect device connection.
 | --- | --- |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
-<a id="stopcasting-1"></a>
 ## stopCasting
 
 ```TypeScript

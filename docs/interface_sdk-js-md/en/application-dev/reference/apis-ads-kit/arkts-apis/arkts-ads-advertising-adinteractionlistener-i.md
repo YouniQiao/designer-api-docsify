@@ -14,7 +14,6 @@ Defines the ad status change callback.
 import { advertising } from '@kit.AdsKit';
 ```
 
-<a id="onstatuschanged"></a>
 ## onStatusChanged
 
 ```TypeScript

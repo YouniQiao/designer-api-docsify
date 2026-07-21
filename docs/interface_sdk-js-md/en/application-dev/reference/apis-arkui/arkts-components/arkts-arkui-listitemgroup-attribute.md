@@ -10,7 +10,6 @@ In addition to the universal attributes, the following attributes are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="childrenmainsize"></a>
 ## childrenMainSize
 
 ```TypeScript
@@ -18,7 +17,6 @@ childrenMainSize(value: ChildrenMainSize)
 ```
 
 Sets the size information of the child components of a **ListItemGroup** component along the main axis.
-
 > **NOTE**  
 >  
 > - The **childrenMainSize** attribute of the **List** component must be set at the same time for the attribute to  
@@ -40,7 +38,6 @@ Sets the size information of the child components of a **ListItemGroup** compone
 | --- | --- | --- | --- |
 | value | [ChildrenMainSize](arkts-arkui-childrenmainsize-c.md) | Yes | Size information of child components in the main axis direction. |
 
-<a id="divider"></a>
 ## divider
 
 ```TypeScript
@@ -59,11 +56,7 @@ When a list item has polymorphic styles applied, the dividers above and below th
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ListItemGroupAttribute-divider(
-    value: ListDividerOptions | null,
-  ): ListItemGroupAttribute--><!--Device-ListItemGroupAttribute-divider(
-    value: ListDividerOptions | null,
-  ): ListItemGroupAttribute-End-->
+<!--Device-ListItemGroupAttribute-divider(    value: ListDividerOptions | null,  ): ListItemGroupAttribute--><!--Device-ListItemGroupAttribute-divider(    value: ListDividerOptions | null,  ): ListItemGroupAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

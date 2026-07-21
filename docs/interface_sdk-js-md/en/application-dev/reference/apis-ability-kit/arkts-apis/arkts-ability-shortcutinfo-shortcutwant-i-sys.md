@@ -1,6 +1,6 @@
 # ShortcutWant (System API)
 
-Describes a collection of target [Wants](docroot://quick-start/module-configuration-file.md#wants) information defined within a shortcut.
+Describes a collection of target [Wants](../../../quick-start/module-configuration-file.md#wants) information defined within a shortcut.
 
 **Since:** 20
 

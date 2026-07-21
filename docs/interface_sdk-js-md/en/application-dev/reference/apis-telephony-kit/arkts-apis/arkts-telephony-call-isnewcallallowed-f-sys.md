@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="isnewcallallowed"></a>
 ## isNewCallAllowed
 
 ```TypeScript
@@ -56,7 +55,6 @@ call.isNewCallAllowed((err: BusinessError, data: boolean) => {
 ```
 
 
-<a id="isnewcallallowed-1"></a>
 ## isNewCallAllowed
 
 ```TypeScript

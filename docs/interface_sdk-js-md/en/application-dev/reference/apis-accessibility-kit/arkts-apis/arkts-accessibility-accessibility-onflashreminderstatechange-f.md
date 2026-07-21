@@ -6,7 +6,6 @@
 import { accessibility } from '@kit.AccessibilityKit';
 ```
 
-<a id="onflashreminderstatechange"></a>
 ## onFlashReminderStateChange
 
 ```TypeScript
@@ -14,7 +13,6 @@ function onFlashReminderStateChange(callback: Callback<boolean>): void
 ```
 
 Subscribes to the state changes in flash alerts mode. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.  

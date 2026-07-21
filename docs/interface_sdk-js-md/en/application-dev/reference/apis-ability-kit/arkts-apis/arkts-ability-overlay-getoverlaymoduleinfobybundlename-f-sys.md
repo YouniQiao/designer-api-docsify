@@ -6,7 +6,6 @@
 import { overlay } from '@kit.AbilityKit';
 ```
 
-<a id="getoverlaymoduleinfobybundlename"></a>
 ## getOverlayModuleInfoByBundleName
 
 ```TypeScript
@@ -22,9 +21,7 @@ No permission is required when the specified application is the caller itself.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
-<!--Device-overlay-function getOverlayModuleInfoByBundleName(bundleName: string,
-      callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getOverlayModuleInfoByBundleName(bundleName: string,
-      callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
+<!--Device-overlay-function getOverlayModuleInfoByBundleName(bundleName: string,      callback: AsyncCallback<Array<OverlayModuleInfo>>): void--><!--Device-overlay-function getOverlayModuleInfoByBundleName(bundleName: string,      callback: AsyncCallback<Array<OverlayModuleInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
@@ -35,7 +32,7 @@ No permission is required when the specified application is the caller itself.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -73,7 +70,6 @@ try {
 ```
 
 
-<a id="getoverlaymoduleinfobybundlename-1"></a>
 ## getOverlayModuleInfoByBundleName
 
 ```TypeScript
@@ -100,7 +96,7 @@ No permission is required when the specified application is the caller itself.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | Yes | Name of the module with the overlay feature. If this parameter is not specified, the API obtains the information of all modules with the overlay feature in that application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md) objects. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -141,7 +137,6 @@ try {
 ```
 
 
-<a id="getoverlaymoduleinfobybundlename-2"></a>
 ## getOverlayModuleInfoByBundleName
 
 ```TypeScript
@@ -173,7 +168,7 @@ No permission is required when the specified application is the caller itself.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) objects. |
+| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise used to return the result, which is an array of [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md) objects. |
 
 **Error codes:**
 

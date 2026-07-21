@@ -12,7 +12,6 @@ Sub component info passed from framework when layout and measure happens.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="layout"></a>
 ## layout
 
 ```TypeScript
@@ -39,7 +38,6 @@ Call this layout method in onLayout callback to assign layout info to sub compon
 | --- | --- | --- | --- |
 | childLayoutInfo | [LayoutInfo](arkts-arkui-layoutinfo-i.md) | Yes |  |
 
-<a id="measure"></a>
 ## measure
 
 ```TypeScript

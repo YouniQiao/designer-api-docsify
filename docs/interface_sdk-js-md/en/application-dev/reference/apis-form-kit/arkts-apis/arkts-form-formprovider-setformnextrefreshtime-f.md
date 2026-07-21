@@ -6,7 +6,6 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
-<a id="setformnextrefreshtime"></a>
 ## setFormNextRefreshTime
 
 ```TypeScript
@@ -66,7 +65,6 @@ try {
 ```
 
 
-<a id="setformnextrefreshtime-1"></a>
 ## setFormNextRefreshTime
 
 ```TypeScript

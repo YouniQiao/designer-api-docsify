@@ -18,7 +18,6 @@ ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreserv
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getcolorreservation"></a>
 ## getColorReservation
 
 ```TypeScript
@@ -67,14 +66,13 @@ function getColorReservation(session: camera.VideoSessionForSys): camera.ColorRe
 
 ```
 
-<a id="setcolorreservation"></a>
 ## setColorReservation
 
 ```TypeScript
 setColorReservation(type: ColorReservationType): void
 ```
 
-Sets a color reservation type. Before the setting, call [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes-1) to obtain the supported color reservation types.
+Sets a color reservation type. Before the setting, call [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes) to obtain the supported color reservation types.
 
 **Since:** 15
 
@@ -88,7 +86,7 @@ Sets a color reservation type. Before the setting, call [getSupportedColorReserv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md) | Yes | Color reservation type, which is obtained by calling [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes-1). |
+| type | [ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md) | Yes | Color reservation type, which is obtained by calling [getSupportedColorReservationTypes](arkts-camera-camera-colorreservationquery-i-sys.md#getsupportedcolorreservationtypes). |
 
 **Error codes:**
 

@@ -6,7 +6,6 @@
 import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="getdevicerotationradian"></a>
 ## getDeviceRotationRadian
 
 ```TypeScript

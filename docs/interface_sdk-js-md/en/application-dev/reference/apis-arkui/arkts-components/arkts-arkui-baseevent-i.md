@@ -8,7 +8,6 @@ Basic event type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getmodifierkeystate"></a>
 ## getModifierKeyState
 
 ```TypeScript
@@ -16,7 +15,6 @@ getModifierKeyState?(keys: Array<string>): boolean
 ```
 
 Obtains the pressed status of modifier keys. For details about the error message, see the following error codes.The Ctrl, Alt, and Shift keys are supported.
-
 > **NOTE**  
 >  
 > This API is not supported in stylus scenarios.

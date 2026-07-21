@@ -1,6 +1,6 @@
 # KVStore
 
-Provides APIs to manage data in a KV store, for example, adding or deleting data and subscribing to data changes or completion of data sync.Before calling any method in **KVStore**, you must use [getKVStore](distributedData.KVManager.getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>))to obtain a **KVStore** object.
+Provides APIs to manage data in a KV store, for example, adding or deleting data and subscribing to data changes or completion of data sync.Before calling any method in **KVStore**, you must use [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)to obtain a **KVStore** object.
 
 **Since:** 7
 
@@ -12,7 +12,6 @@ Provides APIs to manage data in a KV store, for example, adding or deleting data
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
-<a id="commit"></a>
 ## commit
 
 ```TypeScript
@@ -55,7 +54,6 @@ try {
 
 ```
 
-<a id="commit-1"></a>
 ## commit
 
 ```TypeScript
@@ -96,7 +94,6 @@ try {
 
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -149,7 +146,6 @@ try {
 
 ```
 
-<a id="delete-1"></a>
 ## delete
 
 ```TypeScript
@@ -203,7 +199,6 @@ try {
 
 ```
 
-<a id="deletebatch"></a>
 ## deleteBatch
 
 ```TypeScript
@@ -261,7 +256,6 @@ try {
 
 ```
 
-<a id="deletebatch-1"></a>
 ## deleteBatch
 
 ```TypeScript
@@ -328,7 +322,6 @@ try {
 
 ```
 
-<a id="enablesync"></a>
 ## enableSync
 
 ```TypeScript
@@ -372,7 +365,6 @@ try {
 
 ```
 
-<a id="enablesync-1"></a>
 ## enableSync
 
 ```TypeScript
@@ -419,7 +411,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -467,7 +458,6 @@ class KvstoreModel {
 
 ```
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -515,7 +505,6 @@ class KvstoreModel {
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -552,7 +541,6 @@ kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, fun
 
 ```
 
-<a id="on-1"></a>
 ## on
 
 ```TypeScript
@@ -588,7 +576,6 @@ kvStore.on('syncComplete', function (data) {
 
 ```
 
-<a id="put"></a>
 ## put
 
 ```TypeScript
@@ -635,7 +622,6 @@ try {
 
 ```
 
-<a id="put-1"></a>
 ## put
 
 ```TypeScript
@@ -685,7 +671,6 @@ try {
 
 ```
 
-<a id="putbatch"></a>
 ## putBatch
 
 ```TypeScript
@@ -743,7 +728,6 @@ try {
 
 ```
 
-<a id="putbatch-1"></a>
 ## putBatch
 
 ```TypeScript
@@ -809,7 +793,6 @@ try {
 
 ```
 
-<a id="rollback"></a>
 ## rollback
 
 ```TypeScript
@@ -852,7 +835,6 @@ try {
 
 ```
 
-<a id="rollback-1"></a>
 ## rollback
 
 ```TypeScript
@@ -893,7 +875,6 @@ try {
 
 ```
 
-<a id="setsyncrange"></a>
 ## setSyncRange
 
 ```TypeScript
@@ -936,7 +917,6 @@ try {
 
 ```
 
-<a id="setsyncrange-1"></a>
 ## setSyncRange
 
 ```TypeScript
@@ -986,7 +966,6 @@ try {
 
 ```
 
-<a id="starttransaction"></a>
 ## startTransaction
 
 ```TypeScript
@@ -1049,7 +1028,6 @@ try {
 
 ```
 
-<a id="starttransaction-1"></a>
 ## startTransaction
 
 ```TypeScript

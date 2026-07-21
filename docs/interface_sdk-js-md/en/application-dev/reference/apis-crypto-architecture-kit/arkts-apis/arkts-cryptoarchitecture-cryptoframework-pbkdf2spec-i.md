@@ -1,7 +1,6 @@
 # PBKDF2Spec
 
 Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is used as a parameter for PBKDF2 key derivation.
-
 > **NOTE**  
 >  
 > **password** is the original password. If **password** of the string type is used, pass in the actual data for  

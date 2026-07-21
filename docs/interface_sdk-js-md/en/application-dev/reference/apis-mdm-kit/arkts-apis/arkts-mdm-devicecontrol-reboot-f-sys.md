@@ -6,7 +6,6 @@
 import { deviceControl } from '@kit.MDMKit';
 ```
 
-<a id="reboot"></a>
 ## reboot
 
 ```TypeScript
@@ -19,7 +18,7 @@ Reboots the device.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [operateDevice(admin:](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice-1)
+**Substitutes:** [operateDevice(admin:](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice)
 
 **Required permissions:** ohos.permission.ENTERPRISE_REBOOT
 

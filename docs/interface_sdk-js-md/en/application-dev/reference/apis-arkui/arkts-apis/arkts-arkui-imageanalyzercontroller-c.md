@@ -8,7 +8,6 @@ Implements an AI image analysis controller, which provides control for image ana
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -27,7 +26,6 @@ A constructor used to create an **ImageAnalyzerController** instance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getimageanalyzersupporttypes"></a>
 ## getImageAnalyzerSupportTypes
 
 ```TypeScript

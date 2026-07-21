@@ -2,7 +2,7 @@
 
 Implements a Display instance, with attributes and APIs defined.
 
-Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1) to obtain a Display instance.
+Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync) to obtain a Display instance.
 
 **Since:** 7
 
@@ -16,7 +16,6 @@ Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-d
 import { display } from '@kit.ArkUI';
 ```
 
-<a id="getavailablearea"></a>
 ## getAvailableArea
 
 ```TypeScript
@@ -70,7 +69,6 @@ try {
 
 ```
 
-<a id="getcutoutinfo"></a>
 ## getCutoutInfo
 
 ```TypeScript
@@ -118,7 +116,6 @@ displayClass.getCutoutInfo((err: BusinessError, data: display.CutoutInfo) => {
 
 ```
 
-<a id="getcutoutinfo-1"></a>
 ## getCutoutInfo
 
 ```TypeScript
@@ -163,7 +160,6 @@ promise.then((data: display.CutoutInfo) => {
 
 ```
 
-<a id="getdisplaycapability"></a>
 ## getDisplayCapability
 
 ```TypeScript
@@ -194,7 +190,6 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-<a id="getlivecreaseregion"></a>
 ## getLiveCreaseRegion
 
 ```TypeScript
@@ -236,7 +231,6 @@ try {
 
 ```
 
-<a id="getroundedcorner"></a>
 ## getRoundedCorner
 
 ```TypeScript
@@ -283,7 +277,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off('availableAreaChange')
 
 ```TypeScript
@@ -334,7 +327,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on('availableAreaChange')
 
 ```TypeScript

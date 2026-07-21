@@ -6,7 +6,6 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
-<a id="getwallpaperbystate"></a>
 ## getWallpaperByState
 
 ```TypeScript

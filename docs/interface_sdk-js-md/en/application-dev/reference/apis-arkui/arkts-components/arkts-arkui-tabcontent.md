@@ -11,7 +11,6 @@ tab page.
 ## Child Components
 
 This component supports only one child component.
-
 > **NOTE**  
 >  
 > Built-in system and custom components, and rendering control types (  

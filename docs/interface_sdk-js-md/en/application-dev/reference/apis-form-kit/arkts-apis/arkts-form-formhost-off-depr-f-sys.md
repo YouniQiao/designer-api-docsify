@@ -1,6 +1,5 @@
 # off (System API)
 
-<a id="off"></a>
 ## off('formUninstall')
 
 ```TypeScript
@@ -8,7 +7,6 @@ function off(type: 'formUninstall', callback?: Callback<string>): void
 ```
 
 Unsubscribes from widget uninstall events. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Widget uninstall is different from widget removal. When an application is uninstalled, the corresponding widget  

@@ -8,7 +8,6 @@ Defines a scene object container.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="append"></a>
 ## append
 
 ```TypeScript
@@ -29,7 +28,6 @@ Append an item to the container.
 | --- | --- | --- | --- |
 | item | T | Yes | the item append to the end of container |
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -44,7 +42,6 @@ Clear all children.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="count"></a>
 ## count
 
 ```TypeScript
@@ -65,7 +62,6 @@ Returns the number of items in the container.
 | --- | --- |
 | number | the number of the container |
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -92,7 +88,6 @@ Returns a child at given index from this Container's child list.
 | --- | --- |
 | T | return the item specified by the index |
 
-<a id="insertafter"></a>
 ## insertAfter
 
 ```TypeScript
@@ -114,7 +109,6 @@ Insert an item.
 | item | T | Yes | the item insert to the container |
 | sibling | T \| null | Yes | insert after this item, insert to the head if sibling is null |
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript

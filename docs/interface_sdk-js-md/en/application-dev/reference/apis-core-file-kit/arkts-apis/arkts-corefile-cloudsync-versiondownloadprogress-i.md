@@ -1,6 +1,6 @@
 # VersionDownloadProgress
 
-Represents the download state and progress information of historical version files when the [downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion-1) method of the [FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called.
+Represents the download state and progress information of historical version files when the [downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion) method of the [FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called.
 
 **Since:** 20
 

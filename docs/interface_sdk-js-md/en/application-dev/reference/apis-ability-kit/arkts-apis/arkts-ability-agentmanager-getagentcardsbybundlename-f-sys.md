@@ -6,7 +6,6 @@
 import { agentManager } from '@kit.AbilityKit';
 ```
 
-<a id="getagentcardsbybundlename"></a>
 ## getAgentCardsByBundleName
 
 ```TypeScript

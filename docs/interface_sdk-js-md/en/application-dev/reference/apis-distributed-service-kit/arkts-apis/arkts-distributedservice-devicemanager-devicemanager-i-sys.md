@@ -18,7 +18,6 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
-<a id="authenticatedevice"></a>
 ## authenticateDevice
 
 ```TypeScript
@@ -35,19 +34,11 @@ Authenticates a device.
 
 **Deprecated since:** 11
 
-**Substitutes:** [bindTarget(deviceId:](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#bindtarget-1)
+**Substitutes:** [bindTarget(deviceId:](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#bindtarget)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
-<!--Device-DeviceManager-authenticateDevice(
-      deviceInfo: DeviceInfo,
-      authParam: AuthParam,
-      callback: AsyncCallback<{ deviceId: string, pinToken?: number }>
-    ): void--><!--Device-DeviceManager-authenticateDevice(
-      deviceInfo: DeviceInfo,
-      authParam: AuthParam,
-      callback: AsyncCallback<{ deviceId: string, pinToken?: number }>
-    ): void-End-->
+<!--Device-DeviceManager-authenticateDevice(      deviceInfo: DeviceInfo,      authParam: AuthParam,      callback: AsyncCallback<{ deviceId: string, pinToken?: number }>    ): void--><!--Device-DeviceManager-authenticateDevice(      deviceInfo: DeviceInfo,      authParam: AuthParam,      callback: AsyncCallback<{ deviceId: string, pinToken?: number }>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -136,7 +127,6 @@ try {
 
 ```
 
-<a id="deletecredential"></a>
 ## deleteCredential
 
 ```TypeScript
@@ -210,7 +200,6 @@ try {
 
 ```
 
-<a id="getdeviceinfo"></a>
 ## getDeviceInfo
 
 ```TypeScript
@@ -223,7 +212,7 @@ Obtains the information about a specific device based on the network ID. This AP
 
 **Deprecated since:** 11
 
-**Substitutes:** [getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicename-1)
+**Substitutes:** [getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicename)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -272,7 +261,6 @@ try {
 
 ```
 
-<a id="getdeviceinfo-1"></a>
 ## getDeviceInfo
 
 ```TypeScript
@@ -285,7 +273,7 @@ Obtains the information about a specific device based on the network ID. This AP
 
 **Deprecated since:** 11
 
-**Substitutes:** [getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicename-1)
+**Substitutes:** [getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicename)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -332,7 +320,6 @@ dmInstance.getDeviceInfo(networkId).then((data: deviceManager.DeviceInfo) => {
 
 ```
 
-<a id="getlocaldeviceinfo"></a>
 ## getLocalDeviceInfo
 
 ```TypeScript
@@ -345,7 +332,7 @@ Obtains local device information. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 11
 
-**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid-1)
+**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -392,7 +379,6 @@ try {
 
 ```
 
-<a id="getlocaldeviceinfo-1"></a>
 ## getLocalDeviceInfo
 
 ```TypeScript
@@ -405,7 +391,7 @@ Obtains local device information. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid-1)
+**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -443,7 +429,6 @@ dmInstance.getLocalDeviceInfo().then((data: deviceManager.DeviceInfo) => {
 
 ```
 
-<a id="getlocaldeviceinfosync"></a>
 ## getLocalDeviceInfoSync
 
 ```TypeScript
@@ -456,7 +441,7 @@ Obtains local device information synchronously.
 
 **Deprecated since:** 11
 
-**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid-1)
+**Substitutes:** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -497,7 +482,6 @@ try {
 
 ```
 
-<a id="gettrusteddevicelist"></a>
 ## getTrustedDeviceList
 
 ```TypeScript
@@ -510,7 +494,7 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 11
 
-**Substitutes:** [getAvailableDeviceList(callback:](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist-1)
+**Substitutes:** [getAvailableDeviceList(callback:](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -556,7 +540,6 @@ try {
 
 ```
 
-<a id="gettrusteddevicelist-1"></a>
 ## getTrustedDeviceList
 
 ```TypeScript
@@ -569,7 +552,7 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [getAvailableDeviceList()](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist-1)
+**Substitutes:** [getAvailableDeviceList()](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -607,7 +590,6 @@ dmInstance.getTrustedDeviceList().then((data: Array<deviceManager.DeviceInfo>) =
 
 ```
 
-<a id="gettrusteddevicelistsync"></a>
 ## getTrustedDeviceListSync
 
 ```TypeScript
@@ -620,7 +602,7 @@ Obtains all trusted devices synchronously.
 
 **Deprecated since:** 11
 
-**Substitutes:** [getAvailableDeviceListSync](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)
+**Substitutes:** [getAvailableDeviceListSync](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -661,7 +643,6 @@ try {
 
 ```
 
-<a id="gettrusteddevicelistsync-1"></a>
 ## getTrustedDeviceListSync
 
 ```TypeScript
@@ -720,7 +701,6 @@ try {
 
 ```
 
-<a id="importcredential"></a>
 ## importCredential
 
 ```TypeScript
@@ -823,7 +803,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off('uiStateChange')
 
 ```TypeScript
@@ -876,7 +855,6 @@ try {
 
 ```
 
-<a id="off-1"></a>
 ## off('deviceStateChange')
 
 ```TypeScript
@@ -944,7 +922,6 @@ try {
 
 ```
 
-<a id="off-2"></a>
 ## off('deviceFound')
 
 ```TypeScript
@@ -1012,7 +989,6 @@ try {
 
 ```
 
-<a id="off-3"></a>
 ## off('discoverFail')
 
 ```TypeScript
@@ -1072,7 +1048,6 @@ try {
 
 ```
 
-<a id="off-4"></a>
 ## off('publishSuccess')
 
 ```TypeScript
@@ -1129,7 +1104,6 @@ try {
 
 ```
 
-<a id="off-5"></a>
 ## off('publishFail')
 
 ```TypeScript
@@ -1187,7 +1161,6 @@ try {
 
 ```
 
-<a id="off-6"></a>
 ## off('serviceDie')
 
 ```TypeScript
@@ -1242,7 +1215,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on('uiStateChange')
 
 ```TypeScript
@@ -1308,7 +1280,6 @@ try {
 
 ```
 
-<a id="on-1"></a>
 ## on('deviceStateChange')
 
 ```TypeScript
@@ -1376,7 +1347,6 @@ try {
 
 ```
 
-<a id="on-2"></a>
 ## on('deviceFound')
 
 ```TypeScript
@@ -1444,7 +1414,6 @@ try {
 
 ```
 
-<a id="on-3"></a>
 ## on('discoverFail')
 
 ```TypeScript
@@ -1504,7 +1473,6 @@ try {
 
 ```
 
-<a id="on-4"></a>
 ## on('publishSuccess')
 
 ```TypeScript
@@ -1561,7 +1529,6 @@ try {
 
 ```
 
-<a id="on-5"></a>
 ## on('publishFail')
 
 ```TypeScript
@@ -1619,7 +1586,6 @@ try {
 
 ```
 
-<a id="on-6"></a>
 ## on('serviceDie')
 
 ```TypeScript
@@ -1674,7 +1640,6 @@ try {
 
 ```
 
-<a id="publishdevicediscovery"></a>
 ## publishDeviceDiscovery
 
 ```TypeScript
@@ -1743,7 +1708,6 @@ try {
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -1756,7 +1720,7 @@ Releases this **DeviceManager** instance when it is no longer used.
 
 **Deprecated since:** 11
 
-**Substitutes:** [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releasedevicemanager-1)
+**Substitutes:** [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releasedevicemanager)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1790,7 +1754,6 @@ try {
 
 ```
 
-<a id="requestcredentialregisterinfo"></a>
 ## requestCredentialRegisterInfo
 
 ```TypeScript
@@ -1861,7 +1824,6 @@ try {
 
 ```
 
-<a id="setuseroperation"></a>
 ## setUserOperation
 
 ```TypeScript
@@ -1874,7 +1836,7 @@ Sets a user operation.
 
 **Deprecated since:** 11
 
-**Substitutes:** [replyUiAction](arkts-distributedservice-distributeddevicemanager-devicemanager-i-sys.md#replyuiaction-1)
+**Substitutes:** [replyUiAction](arkts-distributedservice-distributeddevicemanager-devicemanager-i-sys.md#replyuiaction)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1924,7 +1886,6 @@ try {
 
 ```
 
-<a id="startdevicediscovery"></a>
 ## startDeviceDiscovery
 
 ```TypeScript
@@ -1937,7 +1898,7 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 **Deprecated since:** 11
 
-**Substitutes:** [startDiscovering(discoverParam:](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering-1)
+**Substitutes:** [startDiscovering(discoverParam:](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2000,7 +1961,6 @@ try {
 
 ```
 
-<a id="startdevicediscovery-1"></a>
 ## startDeviceDiscovery
 
 ```TypeScript
@@ -2013,7 +1973,7 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 **Deprecated since:** 11
 
-**Substitutes:** [startDiscovering(discoverParam:](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering-1)
+**Substitutes:** [startDiscovering(discoverParam:](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2099,7 +2059,6 @@ try {
 
 ```
 
-<a id="stopdevicediscovery"></a>
 ## stopDeviceDiscovery
 
 ```TypeScript
@@ -2112,7 +2071,7 @@ Stops device discovery.
 
 **Deprecated since:** 11
 
-**Substitutes:** [stopDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#stopdiscovering-1)
+**Substitutes:** [stopDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#stopdiscovering)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2155,7 +2114,6 @@ try {
 
 ```
 
-<a id="unauthenticatedevice"></a>
 ## unAuthenticateDevice
 
 ```TypeScript
@@ -2168,7 +2126,7 @@ Deauthenticates a device.
 
 **Deprecated since:** 11
 
-**Substitutes:** [unbindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#unbindtarget-1)
+**Substitutes:** [unbindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#unbindtarget)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2225,7 +2183,6 @@ try {
 
 ```
 
-<a id="unpublishdevicediscovery"></a>
 ## unPublishDeviceDiscovery
 
 ```TypeScript
@@ -2279,7 +2236,6 @@ try {
 
 ```
 
-<a id="verifyauthinfo"></a>
 ## verifyAuthInfo
 
 ```TypeScript

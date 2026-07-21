@@ -2,7 +2,7 @@
 
 Represents items of the **SegmentButtonV2** component.
 
-This parameter is inherited from Array\<[SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)>.
+This parameter is inherited from Array\&lt;[SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)&gt;.
 
 **Inheritance/Implementation:** SegmentButtonV2Items extends [Array<SegmentButtonV2Item>](Array<SegmentButtonV2Item>)
 
@@ -20,7 +20,6 @@ This parameter is inherited from Array\<[SegmentButtonV2Item](arkts-arkui-arkui-
 import { OnSelectedIndexesChange, TabSegmentButtonV2, SegmentButtonV2Items, MultiCapsuleSegmentButtonV2, OnSelectedIndexChange, SegmentButtonV2ItemOptions, SegmentButtonV2Item, CapsuleSegmentButtonV2 } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

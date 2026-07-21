@@ -6,7 +6,6 @@
 import { window } from '@kit.ArkUI';
 ```
 
-<a id="getmainwindowsnapshot"></a>
 ## getMainWindowSnapshot
 
 ```TypeScript
@@ -20,9 +19,7 @@ Obtains the screenshots of one or more main windows specified by **windowId**. T
 
 **Required permissions:** ohos.permission.CUSTOM_SCREEN_CAPTURE
 
-<!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):
-    Promise<Array<image.PixelMap | undefined>>--><!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):
-    Promise<Array<image.PixelMap | undefined>>-End-->
+<!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):    Promise<Array<image.PixelMap | undefined>>--><!--Device-window-function getMainWindowSnapshot(windowId: Array<int>, config: WindowSnapshotConfiguration):    Promise<Array<image.PixelMap | undefined>>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -30,7 +27,7 @@ Obtains the screenshots of one or more main windows specified by **windowId**. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | Array&lt;number&gt; | Yes | Array of main window IDs. These IDs can be obtained using [window.getAllMainWindowInfo()](arkts-arkui-window-getallmainwindowinfo-f.md#getallmainwindowinfo-1). If the array is null or undefined, contains any negative number, includes duplicates, or has more than 512 entries, error code 401 is returned. If the array contains any positive ID that does not match an existing window, undefined is returned. |
+| windowId | Array&lt;number&gt; | Yes | Array of main window IDs. These IDs can be obtained using [window.getAllMainWindowInfo()](arkts-arkui-window-getallmainwindowinfo-f.md#getallmainwindowinfo). If the array is null or undefined, contains any negative number, includes duplicates, or has more than 512 entries, error code 401 is returned. If the array contains any positive ID that does not match an existing window, undefined is returned. |
 | config | [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md) | Yes | Configuration for obtaining the window screenshot. |
 
 **Return value:**

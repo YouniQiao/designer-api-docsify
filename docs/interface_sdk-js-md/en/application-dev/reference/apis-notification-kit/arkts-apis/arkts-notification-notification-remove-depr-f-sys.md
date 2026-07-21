@@ -1,6 +1,5 @@
 # remove (System API)
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -22,17 +21,7 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
-<!--Device-notification-function remove(
-    bundle: BundleOption,
-    notificationKey: NotificationKey,
-    reason: RemoveReason,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-notification-function remove(
-    bundle: BundleOption,
-    notificationKey: NotificationKey,
-    reason: RemoveReason,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-notification-function remove(    bundle: BundleOption,    notificationKey: NotificationKey,    reason: RemoveReason,    callback: AsyncCallback<void>  ): void--><!--Device-notification-function remove(    bundle: BundleOption,    notificationKey: NotificationKey,    reason: RemoveReason,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -48,7 +37,6 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="remove-1"></a>
 ## remove
 
 ```TypeScript
@@ -86,7 +74,6 @@ Removes a notification for a specified bundle. This API uses a promise to return
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 
-<a id="remove-2"></a>
 ## remove
 
 ```TypeScript
@@ -118,7 +105,6 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="remove-3"></a>
 ## remove
 
 ```TypeScript

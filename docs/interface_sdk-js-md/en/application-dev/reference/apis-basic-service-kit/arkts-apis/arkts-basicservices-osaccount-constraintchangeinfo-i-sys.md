@@ -22,7 +22,7 @@ import { osAccount } from '@kit.BasicServicesKit';
 constraint: string
 ```
 
-[Constraint](docroot://reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) that has been changed.
+[Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) that has been changed.
 
 **Type:** string
 

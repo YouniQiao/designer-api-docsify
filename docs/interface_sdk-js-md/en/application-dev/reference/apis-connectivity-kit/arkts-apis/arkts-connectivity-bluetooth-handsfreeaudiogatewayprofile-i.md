@@ -20,7 +20,6 @@ Manager handsfree AG profile.
 import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -62,7 +61,6 @@ let ret : boolean = hfpAg.connect('XX:XX:XX:XX:XX:XX');
 
 ```
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -104,7 +102,6 @@ let ret : boolean = hfpAg.disconnect('XX:XX:XX:XX:XX:XX');
 
 ```
 
-<a id="off"></a>
 ## off('connectionStateChange')
 
 ```TypeScript
@@ -130,7 +127,6 @@ Unsubscribe the event reported when the profile connection state changes .
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
 
-<a id="on"></a>
 ## on('connectionStateChange')
 
 ```TypeScript

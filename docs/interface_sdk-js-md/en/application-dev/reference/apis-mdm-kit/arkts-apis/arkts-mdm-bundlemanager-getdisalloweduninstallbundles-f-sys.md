@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="getdisalloweduninstallbundles"></a>
 ## getDisallowedUninstallBundles
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the applications that cannot be uninstalled by the current user. This AP
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync-1)
+**Substitutes:** [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -71,7 +70,6 @@ bundleManager.getDisallowedUninstallBundles(wantTemp, (err, result) => {
 ```
 
 
-<a id="getdisalloweduninstallbundles-1"></a>
 ## getDisallowedUninstallBundles
 
 ```TypeScript
@@ -84,7 +82,7 @@ Obtains the applications that cannot be uninstalled by the user specified by **u
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync-1)
+**Substitutes:** [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -137,7 +135,6 @@ bundleManager.getDisallowedUninstallBundles(wantTemp, 100, (err, result) => {
 ```
 
 
-<a id="getdisalloweduninstallbundles-2"></a>
 ## getDisallowedUninstallBundles
 
 ```TypeScript
@@ -150,7 +147,7 @@ Obtains the applications that cannot be uninstalled by the current or specified 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync-1)
+**Substitutes:** [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 

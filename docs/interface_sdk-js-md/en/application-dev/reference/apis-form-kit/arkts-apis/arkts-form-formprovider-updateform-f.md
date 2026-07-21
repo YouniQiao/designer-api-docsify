@@ -6,7 +6,6 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
-<a id="updateform"></a>
 ## updateForm
 
 ```TypeScript
@@ -18,7 +17,6 @@ function updateForm(
 ```
 
 Updates a widget. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Starting from API version 20, when widget refresh data is updated via shared memory, the total size of the  
@@ -30,15 +28,7 @@ Updates a widget. This API uses an asynchronous callback to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-formProvider-function updateForm(
-    formId: string,
-    formBindingData: formBindingData.FormBindingData,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-formProvider-function updateForm(
-    formId: string,
-    formBindingData: formBindingData.FormBindingData,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void--><!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -89,7 +79,6 @@ try {
 ```
 
 
-<a id="updateform-1"></a>
 ## updateForm
 
 ```TypeScript
@@ -97,7 +86,6 @@ function updateForm(formId: string, formBindingData: formBindingData.FormBinding
 ```
 
 Updates a widget. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Starting from API version 20, when widget refresh data is updated via shared memory, the total size of the  

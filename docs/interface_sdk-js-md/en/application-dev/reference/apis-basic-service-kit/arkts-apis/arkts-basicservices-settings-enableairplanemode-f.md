@@ -6,7 +6,6 @@
 import { settings } from '@kit.BasicServicesKit';
 ```
 
-<a id="enableairplanemode"></a>
 ## enableAirplaneMode
 
 ```TypeScript
@@ -45,7 +44,6 @@ settings.enableAirplaneMode(isEnabled, (err:Error) => {
 ```
 
 
-<a id="enableairplanemode-1"></a>
 ## enableAirplaneMode
 
 ```TypeScript

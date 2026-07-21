@@ -8,7 +8,6 @@ Defines the gesture API.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="allowedtypes"></a>
 ## allowedTypes
 
 ```TypeScript
@@ -39,7 +38,6 @@ Sets the input types that can trigger the gesture response.
 | --- | --- |
 | T | Current component. |
 
-<a id="tag"></a>
 ## tag
 
 ```TypeScript

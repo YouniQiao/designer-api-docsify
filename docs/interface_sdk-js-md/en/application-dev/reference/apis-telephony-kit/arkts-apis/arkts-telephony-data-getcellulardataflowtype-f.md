@@ -6,7 +6,6 @@
 import { data } from '@kit.TelephonyKit';
 ```
 
-<a id="getcellulardataflowtype"></a>
 ## getCellularDataFlowType
 
 ```TypeScript
@@ -54,7 +53,6 @@ data.getCellularDataFlowType((err: BusinessError, contextData: data.DataFlowType
 ```
 
 
-<a id="getcellulardataflowtype-1"></a>
 ## getCellularDataFlowType
 
 ```TypeScript

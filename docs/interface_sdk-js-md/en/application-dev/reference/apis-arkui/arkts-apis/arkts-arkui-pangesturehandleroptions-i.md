@@ -50,7 +50,7 @@ Value range: [0, +∞). If the value specified is less than 0, the default value
 
 Since API version 19, the default value is **8**, in vp, for the stylus.
 
-When configuring this field with [gestureModifier](../arkts-components/arkts-arkui-commonmethod-c.md#gesturemodifier-1), the unit is px.
+When configuring this field with [gestureModifier](../arkts-components/arkts-arkui-commonmethod-c.md#gesturemodifier), the unit is px.
 
 **Type:** number
 

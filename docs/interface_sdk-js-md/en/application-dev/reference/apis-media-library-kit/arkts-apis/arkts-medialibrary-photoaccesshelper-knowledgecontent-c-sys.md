@@ -16,7 +16,6 @@ Knowledge Content class, used for geting related entity.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="getrelatedentity"></a>
 ## getRelatedEntity
 
 ```TypeScript
@@ -60,7 +59,6 @@ Get Related Entities, Smart Label
 | 13900020 | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes:<br>1. Database corrupted;<br>2. The file system is abnormal;<br>3. The IPC request timed out. |
 
-<a id="getsearchsuggestion"></a>
 ## getSearchSuggestion
 
 ```TypeScript

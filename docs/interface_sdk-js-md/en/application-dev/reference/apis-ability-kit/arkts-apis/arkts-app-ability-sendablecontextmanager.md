@@ -25,7 +25,7 @@ import { sendableContextManager } from '@kit.AbilityKit';
 | [convertToApplicationContext](arkts-ability-sendablecontextmanager-converttoapplicationcontext-f.md#converttoapplicationcontext) | Converts a SendableContext object to an ApplicationContext object. |
 | [convertToContext](arkts-ability-sendablecontextmanager-converttocontext-f.md#converttocontext) | Converts a SendableContext object to a Context object. |
 | [convertToUIAbilityContext](arkts-ability-sendablecontextmanager-converttouiabilitycontext-f.md#converttouiabilitycontext) | Converts a SendableContext object to a UIAbilityContext object. |
-| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md#seteventhubmultithreadingenabled) | Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md) in [Context](arkts-ability-context-context-depr-i.md). |
+| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md#seteventhubmultithreadingenabled) | Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md) in [Context](arkts-ability-context-t.md). |
 
 ### Types
 

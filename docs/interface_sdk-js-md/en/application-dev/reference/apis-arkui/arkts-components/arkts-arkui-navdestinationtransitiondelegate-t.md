@@ -13,9 +13,7 @@ Defines the delegate function for custom transition animations of the **NavDesti
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-unnamed-declare type NavDestinationTransitionDelegate =
-    (operation: NavigationOperation, isEnter: boolean) => Array<NavDestinationTransition> | undefined--><!--Device-unnamed-declare type NavDestinationTransitionDelegate =
-    (operation: NavigationOperation, isEnter: boolean) => Array<NavDestinationTransition> | undefined-End-->
+<!--Device-unnamed-declare type NavDestinationTransitionDelegate =    (operation: NavigationOperation, isEnter: boolean) => Array<NavDestinationTransition> | undefined--><!--Device-unnamed-declare type NavDestinationTransitionDelegate =    (operation: NavigationOperation, isEnter: boolean) => Array<NavDestinationTransition> | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

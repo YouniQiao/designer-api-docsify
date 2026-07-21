@@ -14,14 +14,13 @@ Defines a subscription data holder for processing event information.
 import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
 constructor(watcherName: string)
 ```
 
-Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher-1) to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
+Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher) to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
 
 **Since:** 9
 
@@ -35,7 +34,7 @@ Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcherName | string | Yes | Name of the event watcher added through [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher-1). If no watcher is added, no data is displayed by default. |
+| watcherName | string | Yes | Name of the event watcher added through [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher). If no watcher is added, no data is displayed by default. |
 
 **Example**
 
@@ -55,7 +54,6 @@ let holder1: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHo
 
 ```
 
-<a id="setrow"></a>
 ## setRow
 
 ```TypeScript
@@ -95,7 +93,6 @@ holder3.setRow(1000);
 
 ```
 
-<a id="setsize"></a>
 ## setSize
 
 ```TypeScript
@@ -135,7 +132,6 @@ holder2.setSize(1000);
 
 ```
 
-<a id="takenext"></a>
 ## takeNext
 
 ```TypeScript

@@ -14,7 +14,6 @@ Provide a simple date time formatting interface.
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="format"></a>
 ## format
 
 ```TypeScript

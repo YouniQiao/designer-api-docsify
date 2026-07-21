@@ -6,7 +6,6 @@
 import { componentSnapshot } from '@kit.ArkUI';
 ```
 
-<a id="createfrombuilder"></a>
 ## createFromBuilder
 
 ```TypeScript
@@ -15,10 +14,9 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
 ```
 
 Renders a custom component in the application background and outputs its snapshot. This API uses an asynchronous callback to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback.
-
 > **NOTE**  
 >  
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot-1)  
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)  
 > API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)  
 > object associated with the current UI context.  
 >  
@@ -42,9 +40,7 @@ Renders a custom component in the application background and outputs its snapsho
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,
-    delay?: number, checkImageStatus?: boolean, options?: SnapshotOptions): void--><!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,
-    delay?: number, checkImageStatus?: boolean, options?: SnapshotOptions): void-End-->
+<!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,    delay?: number, checkImageStatus?: boolean, options?: SnapshotOptions): void--><!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,    delay?: number, checkImageStatus?: boolean, options?: SnapshotOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -130,7 +126,6 @@ struct OffscreenSnapshotExample {
 ```
 
 
-<a id="createfrombuilder-1"></a>
 ## createFromBuilder
 
 ```TypeScript
@@ -139,10 +134,9 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
 ```
 
 Renders a custom component in the application background and outputs its snapshot. This API uses a promise to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback.
-
 > **NOTE**  
 >  
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot-1)  
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)  
 > API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)  
 > object associated with the current UI context.  
 >  
@@ -166,9 +160,7 @@ Renders a custom component in the application background and outputs its snapsho
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, delay?: number,
-    checkImageStatus?: boolean, options?: SnapshotOptions): Promise<image.PixelMap>--><!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, delay?: number,
-    checkImageStatus?: boolean, options?: SnapshotOptions): Promise<image.PixelMap>-End-->
+<!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, delay?: number,    checkImageStatus?: boolean, options?: SnapshotOptions): Promise<image.PixelMap>--><!--Device-componentSnapshot-function createFromBuilder(builder: CustomBuilder, delay?: number,    checkImageStatus?: boolean, options?: SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

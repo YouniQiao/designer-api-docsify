@@ -14,7 +14,6 @@ Provides system attribute configuration functions, including translating languag
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="addpreferredlanguage"></a>
 ## addPreferredLanguage
 
 ```TypeScript
@@ -67,7 +66,6 @@ try {
 
 ```
 
-<a id="getsystemcollations"></a>
 ## getSystemCollations
 
 ```TypeScript
@@ -111,7 +109,6 @@ try {
 
 ```
 
-<a id="getsystemmeasurements"></a>
 ## getSystemMeasurements
 
 ```TypeScript
@@ -155,7 +152,6 @@ try {
 
 ```
 
-<a id="getsystemnumberpatterns"></a>
 ## getSystemNumberPatterns
 
 ```TypeScript
@@ -199,7 +195,6 @@ try {
 
 ```
 
-<a id="getsystemnumberingsystems"></a>
 ## getSystemNumberingSystems
 
 ```TypeScript
@@ -243,7 +238,6 @@ try {
 
 ```
 
-<a id="getsystemnumericaldatepatterns"></a>
 ## getSystemNumericalDatePatterns
 
 ```TypeScript
@@ -287,7 +281,6 @@ try {
 
 ```
 
-<a id="getusingcollation"></a>
 ## getUsingCollation
 
 ```TypeScript
@@ -331,7 +324,6 @@ try {
 
 ```
 
-<a id="getusingmeasurement"></a>
 ## getUsingMeasurement
 
 ```TypeScript
@@ -375,7 +367,6 @@ try {
 
 ```
 
-<a id="getusingnumberpattern"></a>
 ## getUsingNumberPattern
 
 ```TypeScript
@@ -419,7 +410,6 @@ try {
 
 ```
 
-<a id="getusingnumberingsystem"></a>
 ## getUsingNumberingSystem
 
 ```TypeScript
@@ -448,7 +438,6 @@ Gets numbering system currently used by system locale.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-<a id="getusingnumericaldatepattern"></a>
 ## getUsingNumericalDatePattern
 
 ```TypeScript
@@ -492,7 +481,6 @@ try {
 
 ```
 
-<a id="removepreferredlanguage"></a>
 ## removePreferredLanguage
 
 ```TypeScript
@@ -543,7 +531,6 @@ try {
 
 ```
 
-<a id="set24hourclock"></a>
 ## set24HourClock
 
 ```TypeScript
@@ -593,7 +580,6 @@ try {
 
 ```
 
-<a id="setfirstdayofweek"></a>
 ## setFirstDayOfWeek
 
 ```TypeScript
@@ -641,7 +627,6 @@ try {
 
 ```
 
-<a id="setsystemcollation"></a>
 ## setSystemCollation
 
 ```TypeScript
@@ -689,7 +674,6 @@ try {
 
 ```
 
-<a id="setsystemlanguage"></a>
 ## setSystemLanguage
 
 ```TypeScript
@@ -739,7 +723,6 @@ try {
 
 ```
 
-<a id="setsystemlocale"></a>
 ## setSystemLocale
 
 ```TypeScript
@@ -789,7 +772,6 @@ try {
 
 ```
 
-<a id="setsystemmeasurement"></a>
 ## setSystemMeasurement
 
 ```TypeScript
@@ -837,7 +819,6 @@ try {
 
 ```
 
-<a id="setsystemnumberpattern"></a>
 ## setSystemNumberPattern
 
 ```TypeScript
@@ -885,7 +866,6 @@ try {
 
 ```
 
-<a id="setsystemnumberingsystem"></a>
 ## setSystemNumberingSystem
 
 ```TypeScript
@@ -933,7 +913,6 @@ try {
 
 ```
 
-<a id="setsystemnumericaldatepattern"></a>
 ## setSystemNumericalDatePattern
 
 ```TypeScript
@@ -981,7 +960,6 @@ try {
 
 ```
 
-<a id="setsystemregion"></a>
 ## setSystemRegion
 
 ```TypeScript
@@ -1030,7 +1008,6 @@ try {
 
 ```
 
-<a id="settemperaturetype"></a>
 ## setTemperatureType
 
 ```TypeScript
@@ -1078,7 +1055,6 @@ try {
 
 ```
 
-<a id="setusinglocaldigit"></a>
 ## setUsingLocalDigit
 
 ```TypeScript

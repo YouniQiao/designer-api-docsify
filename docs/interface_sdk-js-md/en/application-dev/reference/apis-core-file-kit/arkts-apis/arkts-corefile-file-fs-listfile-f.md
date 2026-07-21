@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="listfile"></a>
 ## listFile
 
 ```TypeScript
@@ -24,13 +23,7 @@ You can configure the **recursion** parameter in **options** to recursively list
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare function listFile(
-  path: string,
-  options?: ListFileOptions
-): Promise<string[]>--><!--Device-unnamed-declare function listFile(
-  path: string,
-  options?: ListFileOptions
-): Promise<string[]>-End-->
+<!--Device-unnamed-declare function listFile(  path: string,  options?: ListFileOptions): Promise<string[]>--><!--Device-unnamed-declare function listFile(  path: string,  options?: ListFileOptions): Promise<string[]>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -58,7 +51,6 @@ You can configure the **recursion** parameter in **options** to recursively list
 | 13900042 | Unknown error |
 
 
-<a id="listfile-1"></a>
 ## listFile
 
 ```TypeScript
@@ -95,7 +87,6 @@ You can configure the **recursion** parameter in **options** to recursively list
 | 13900042 | Unknown error |
 
 
-<a id="listfile-2"></a>
 ## listFile
 
 ```TypeScript
@@ -114,15 +105,7 @@ You can configure the **recursion** parameter in **options** to recursively list
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare function listFile(
-  path: string,
-  options: ListFileOptions,
-  callback: AsyncCallback<string[]>
-): void--><!--Device-unnamed-declare function listFile(
-  path: string,
-  options: ListFileOptions,
-  callback: AsyncCallback<string[]>
-): void-End-->
+<!--Device-unnamed-declare function listFile(  path: string,  options: ListFileOptions,  callback: AsyncCallback<string[]>): void--><!--Device-unnamed-declare function listFile(  path: string,  options: ListFileOptions,  callback: AsyncCallback<string[]>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

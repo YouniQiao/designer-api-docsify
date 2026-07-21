@@ -16,7 +16,6 @@ Object used for thread synchronization.
 import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -33,7 +32,6 @@ Default constructor.
 
 **System capability:** SystemCapability.Utils.Lang
 
-<a id="notifyall"></a>
 ## notifyAll
 
 ```TypeScript
@@ -50,7 +48,6 @@ Notify all waiting promise.
 
 **System capability:** SystemCapability.Utils.Lang
 
-<a id="notifyone"></a>
 ## notifyOne
 
 ```TypeScript
@@ -67,7 +64,6 @@ Notify one waiting promise.
 
 **System capability:** SystemCapability.Utils.Lang
 
-<a id="request"></a>
 ## request
 
 ```TypeScript
@@ -96,7 +92,6 @@ Find or create an instance of ConditionVariable using the specified name.
 | --- | --- |
 | [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | Returns an instance of ConditionVariable. |
 
-<a id="wait"></a>
 ## wait
 
 ```TypeScript
@@ -119,7 +114,6 @@ Waits for the ConditionVariable to be notified.
 | --- | --- |
 | Promise&lt;void&gt; | A promise will be resolved once the ConditionVariable is notified.. |
 
-<a id="waitfor"></a>
 ## waitFor
 
 ```TypeScript

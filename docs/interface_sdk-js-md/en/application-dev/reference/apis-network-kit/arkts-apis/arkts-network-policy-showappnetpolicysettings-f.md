@@ -6,7 +6,6 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-<a id="showappnetpolicysettings"></a>
 ## showAppNetPolicySettings
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="getallapplicationinfo"></a>
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -65,7 +64,6 @@ try {
 ```
 
 
-<a id="getallapplicationinfo-1"></a>
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -79,9 +77,7 @@ Obtains all the application information in the system based on the given applica
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
-<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int,
-    userId: int, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int,
-    userId: int, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
+<!--Device-bundleManager-function getAllApplicationInfo(appFlags: int,    userId: int, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundleManager-function getAllApplicationInfo(appFlags: int,    userId: int, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -92,7 +88,7 @@ Obtains all the application information in the system based on the given applica
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Type of the application information to obtain. |
-| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of application information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -130,7 +126,6 @@ try {
 ```
 
 
-<a id="getallapplicationinfo-2"></a>
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -154,7 +149,7 @@ Obtains all the application information in the system based on the given applica
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Type of the application information to obtain. |
-| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 

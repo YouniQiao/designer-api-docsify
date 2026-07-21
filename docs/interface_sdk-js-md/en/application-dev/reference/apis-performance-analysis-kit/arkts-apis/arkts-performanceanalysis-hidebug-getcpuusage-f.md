@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="getcpuusage"></a>
 ## getCpuUsage
 
 ```TypeScript
@@ -14,7 +13,6 @@ function getCpuUsage() : number
 ```
 
 Obtains the CPU usage of a process.
-
 > **NOTE**  
 >  
 > This API involves cross-process communication and takes a long time. To avoid performance problems, you are  

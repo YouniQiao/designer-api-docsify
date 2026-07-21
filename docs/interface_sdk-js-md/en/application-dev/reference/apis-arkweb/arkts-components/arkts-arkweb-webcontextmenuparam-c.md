@@ -8,7 +8,6 @@ Defines the context menu param, related to {@link WebContextMenuParam} method.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="existsimagecontents"></a>
 ## existsImageContents
 
 ```TypeScript
@@ -48,7 +46,6 @@ Long press menu location has image content.
 | --- | --- |
 | boolean | Return whether this context menu has image content. |
 
-<a id="getcontextmenumediatype"></a>
 ## getContextMenuMediaType
 
 ```TypeScript
@@ -69,7 +66,6 @@ Returns the type of context node.
 | --- | --- |
 | [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) | Returns the type of context node. |
 
-<a id="geteditstateflags"></a>
 ## getEditStateFlags
 
 ```TypeScript
@@ -92,7 +88,6 @@ Returns the context editable flags {@link ContextMenuEditStateFlags}.
 | --- | --- |
 | number | @syscap SystemCapability.Web.Webview.Core@atomicservice |
 
-<a id="getinputfieldtype"></a>
 ## getInputFieldType
 
 ```TypeScript
@@ -115,7 +110,6 @@ Returns input field type if the context menu was invoked on an input field.
 | --- | --- |
 | [ContextMenuInputFieldType](arkts-arkweb-contextmenuinputfieldtype-e.md) | Input field type if the context menu was invoked on an input field. |
 
-<a id="getlinkurl"></a>
 ## getLinkUrl
 
 ```TypeScript
@@ -138,7 +132,6 @@ If the long-press location is the link returns the link's security-checked URL.
 | --- | --- |
 | string | If relate to a link return link url, else return null. |
 
-<a id="getmediatype"></a>
 ## getMediaType
 
 ```TypeScript
@@ -161,7 +154,6 @@ Returns the type of context node.
 | --- | --- |
 | [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) | Returns the type of context node. |
 
-<a id="getpreviewheight"></a>
 ## getPreviewHeight
 
 ```TypeScript
@@ -182,7 +174,6 @@ Returns the selection menu preview height.
 | --- | --- |
 | number | The preview menu height. Unit: px. |
 
-<a id="getpreviewwidth"></a>
 ## getPreviewWidth
 
 ```TypeScript
@@ -203,7 +194,6 @@ Returns the selection menu preview width.
 | --- | --- |
 | number | The preview menu width. Unit: px. |
 
-<a id="getselectiontext"></a>
 ## getSelectionText
 
 ```TypeScript
@@ -226,7 +216,6 @@ Returns the text of the selection.
 | --- | --- |
 | string | Returns the text of the selection, or return null if no text is selected. |
 
-<a id="getsourcetype"></a>
 ## getSourceType
 
 ```TypeScript
@@ -249,7 +238,6 @@ Returns the context menu source type.
 | --- | --- |
 | [ContextMenuSourceType](arkts-arkweb-contextmenusourcetype-e.md) | @syscap SystemCapability.Web.Webview.Core@atomicservice |
 
-<a id="getsourceurl"></a>
 ## getSourceUrl
 
 ```TypeScript
@@ -272,7 +260,6 @@ Returns the SRC URL if the selected element has a SRC attribute.
 | --- | --- |
 | string | If this context menu is "src" attribute, return link url, else return null. |
 
-<a id="getunfilteredlinkurl"></a>
 ## getUnfilteredLinkUrl
 
 ```TypeScript
@@ -295,7 +282,6 @@ If the long-press location is the link returns the link's original URL.
 | --- | --- |
 | string | If relate to a link return unfiltered link url, else return null. |
 
-<a id="iseditable"></a>
 ## isEditable
 
 ```TypeScript
@@ -318,7 +304,6 @@ Returns whether the context is editable.
 | --- | --- |
 | boolean | @syscap SystemCapability.Web.Webview.Core@atomicservice |
 
-<a id="x"></a>
 ## x
 
 ```TypeScript
@@ -341,7 +326,6 @@ Horizontal offset coordinates of the menu within the Web component.
 | --- | --- |
 | number | The context menu x coordinate.Returns a non-negative integer if normal, otherwise returns -1.Unit: px. |
 
-<a id="y"></a>
 ## y
 
 ```TypeScript

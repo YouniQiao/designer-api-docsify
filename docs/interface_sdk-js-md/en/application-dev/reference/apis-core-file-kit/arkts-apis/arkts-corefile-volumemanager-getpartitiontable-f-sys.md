@@ -6,7 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="getpartitiontable"></a>
 ## getPartitionTable
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
-<a id="adddockapp"></a>
 ## addDockApp
 
 ```TypeScript
@@ -14,7 +13,6 @@ function addDockApp(admin: Want, bundleName: string, abilityName: string, index?
 ```
 
 Adds an application to the bottom shortcut bar of a PC/2-in-1 device based on the location index. Then users can tap the application icon in the shortcut bar to directly launch the application. The application icon is the default icon displayed on the home screen.
-
 > **NOTE**  
 >
 

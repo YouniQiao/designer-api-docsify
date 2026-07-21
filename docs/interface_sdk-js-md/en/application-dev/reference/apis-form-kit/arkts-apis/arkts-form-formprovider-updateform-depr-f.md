@@ -1,6 +1,5 @@
 # updateForm
 
-<a id="updateform"></a>
 ## updateForm
 
 ```TypeScript
@@ -17,17 +16,9 @@ Updates a widget. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [updateForm](arkts-form-formprovider-updateform-f.md#updateform-1)
+**Substitutes:** [updateForm](arkts-form-formprovider-updateform-depr-f.md#updateform)
 
-<!--Device-formProvider-function updateForm(
-    formId: string,
-    formBindingData: formBindingData.FormBindingData,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-formProvider-function updateForm(
-    formId: string,
-    formBindingData: formBindingData.FormBindingData,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void--><!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -61,7 +52,6 @@ formProvider.updateForm(formId, obj, (error: BusinessError) => {
 ```
 
 
-<a id="updateform-1"></a>
 ## updateForm
 
 ```TypeScript
@@ -74,7 +64,7 @@ Updates a widget. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [updateForm](arkts-form-formprovider-updateform-f.md#updateform-1)
+**Substitutes:** [updateForm](arkts-form-formprovider-updateform-depr-f.md#updateform)
 
 <!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>--><!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>-End-->
 

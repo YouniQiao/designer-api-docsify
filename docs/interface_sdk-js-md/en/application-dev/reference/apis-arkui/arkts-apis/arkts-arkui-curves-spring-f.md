@@ -6,7 +6,6 @@
 import { curves } from '@kit.ArkUI';
 ```
 
-<a id="spring"></a>
 ## spring
 
 ```TypeScript
@@ -19,7 +18,7 @@ Constructs a spring curve object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [springCurve](arkts-arkui-curves-springcurve-f.md#springcurve-1)
+**Substitutes:** [springCurve](arkts-arkui-curves-springcurve-f.md#springcurve)
 
 <!--Device-curves-function spring(velocity: number, mass: number, stiffness: number, damping: number): string--><!--Device-curves-function spring(velocity: number, mass: number, stiffness: number, damping: number): string-End-->
 

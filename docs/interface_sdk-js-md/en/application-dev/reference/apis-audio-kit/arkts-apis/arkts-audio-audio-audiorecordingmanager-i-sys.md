@@ -14,7 +14,6 @@ Provides recording strategy management, including collaborative recording and re
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="offsystemrecordcontrollerenabledchange"></a>
 ## offSystemRecordControllerEnabledChange
 
 ```TypeScript
@@ -47,7 +46,6 @@ Unsubscribes from the system recording controller panel enabled state change eve
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
 
-<a id="onsystemrecordcontrollerenabledchange"></a>
 ## onSystemRecordControllerEnabledChange
 
 ```TypeScript

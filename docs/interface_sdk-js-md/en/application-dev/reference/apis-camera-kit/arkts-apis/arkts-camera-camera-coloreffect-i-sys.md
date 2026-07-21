@@ -18,7 +18,6 @@ ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sy
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getcoloreffect"></a>
 ## getColorEffect
 
 ```TypeScript
@@ -58,14 +57,13 @@ function getColorEffect(session: camera.PhotoSessionForSys): camera.ColorEffectT
 
 ```
 
-<a id="setcoloreffect"></a>
 ## setColorEffect
 
 ```TypeScript
 setColorEffect(type: ColorEffectType): void
 ```
 
-Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-camera-camera-coloreffectquery-i-sys.md#getsupportedcoloreffects-1) to obtain the supported color effects.
+Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-camera-camera-coloreffectquery-i-sys.md#getsupportedcoloreffects) to obtain the supported color effects.
 
 **Since:** 11
 

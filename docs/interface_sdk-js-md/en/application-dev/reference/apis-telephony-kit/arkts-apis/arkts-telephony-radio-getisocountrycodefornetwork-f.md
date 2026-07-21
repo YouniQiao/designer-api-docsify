@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="getisocountrycodefornetwork"></a>
 ## getISOCountryCodeForNetwork
 
 ```TypeScript
@@ -55,7 +54,6 @@ radio.getISOCountryCodeForNetwork(slotId, (err: BusinessError, data: string) => 
 ```
 
 
-<a id="getisocountrycodefornetwork-1"></a>
 ## getISOCountryCodeForNetwork
 
 ```TypeScript

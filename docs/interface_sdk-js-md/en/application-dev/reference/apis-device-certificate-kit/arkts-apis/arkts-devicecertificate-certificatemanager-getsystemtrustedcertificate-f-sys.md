@@ -6,7 +6,6 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
-<a id="getsystemtrustedcertificate"></a>
 ## getSystemTrustedCertificate
 
 ```TypeScript
@@ -31,7 +30,7 @@ Obtains details about a CA certificate trusted by the system. This API is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certUri | string | Yes | Unique identifier of the certificate. You can obtain the value through [getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist-1). |
+| certUri | string | Yes | Unique identifier of the certificate. You can obtain the value through [getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist). |
 
 **Return value:**
 

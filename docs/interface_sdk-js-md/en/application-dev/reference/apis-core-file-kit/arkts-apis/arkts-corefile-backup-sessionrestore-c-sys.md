@@ -16,7 +16,6 @@ Control class for restore procedure.
 import { backup } from '@kit.CoreFileKit';
 ```
 
-<a id="appendbundles"></a>
 ## appendBundles
 
 ```TypeScript
@@ -155,7 +154,6 @@ async function appendBundles() {
 
 ```
 
-<a id="appendbundles-1"></a>
 ## appendBundles
 
 ```TypeScript
@@ -268,7 +266,6 @@ async function appendBundles() {
 
 ```
 
-<a id="cancel"></a>
 ## cancel
 
 ```TypeScript
@@ -368,7 +365,6 @@ async function cancelTest() {
 
 ```
 
-<a id="cleanbundletempdir"></a>
 ## cleanBundleTempDir
 
 ```TypeScript
@@ -473,7 +469,6 @@ let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a re
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -548,7 +543,6 @@ let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a re
 
 ```
 
-<a id="getapkfilehandle"></a>
 ## getApkFileHandle
 
 ```TypeScript
@@ -592,7 +586,6 @@ Get the file handle of an APK file.
 | 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
 
-<a id="getcompatibilityinfo"></a>
 ## getCompatibilityInfo
 
 ```TypeScript
@@ -697,7 +690,6 @@ async function getRestoreCompatibilityInfo() {
 
 ```
 
-<a id="getfilehandle"></a>
 ## getFileHandle
 
 ```TypeScript
@@ -800,7 +792,6 @@ async function getFileHandle() {
 
 ```
 
-<a id="getfilehandle-1"></a>
 ## getFileHandle
 
 ```TypeScript
@@ -895,7 +886,6 @@ sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
 
 ```
 
-<a id="getfilehandles"></a>
 ## getFileHandles
 
 ```TypeScript
@@ -938,7 +928,6 @@ Request to get shared files from the service. This interface is part of the zero
 | 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
 
-<a id="getlocalcapabilities"></a>
 ## getLocalCapabilities
 
 ```TypeScript
@@ -1103,7 +1092,6 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 
 ```
 
-<a id="migratefile"></a>
 ## migrateFile
 
 ```TypeScript
@@ -1147,7 +1135,6 @@ Migrate file from source path to destination path.
 | 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
 
-<a id="publishfile"></a>
 ## publishFile
 
 ```TypeScript
@@ -1262,7 +1249,6 @@ g_session = createSessionRestore();
 
 ```
 
-<a id="publishfile-1"></a>
 ## publishFile
 
 ```TypeScript
@@ -1374,7 +1360,6 @@ g_session = createSessionRestore();
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript

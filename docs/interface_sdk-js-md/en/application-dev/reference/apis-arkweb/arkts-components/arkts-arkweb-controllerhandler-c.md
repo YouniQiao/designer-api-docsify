@@ -8,7 +8,6 @@ Defines the onWindowNew callback, related to {@link onWindowNew} method.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ Constructs a **ControllerHandler** API.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="setwebcontroller"></a>
 ## setWebController
 
 ```TypeScript

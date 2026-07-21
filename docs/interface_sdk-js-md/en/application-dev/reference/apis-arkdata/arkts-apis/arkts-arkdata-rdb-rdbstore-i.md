@@ -2,7 +2,7 @@
 
 Provides APIs for managing data in an RDB store.
 
-Before using the APIs of this class, use [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql-1)to initialize the database table structure and related data.
+Before using the APIs of this class, use [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql)to initialize the database table structure and related data.
 
 **Since:** 7
 
@@ -14,7 +14,6 @@ Before using the APIs of this class, use [executeSql](arkts-arkdata-rdb-rdbstore
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-<a id="batchinsert"></a>
 ## batchInsert
 
 ```TypeScript
@@ -27,7 +26,7 @@ Inserts a batch of data into a table. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert-1)
+**Substitutes:** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void-End-->
 
@@ -92,7 +91,6 @@ rdbStore.batchInsert("EMPLOYEE", valueBuckets, (status: number, insertNum: numbe
 
 ```
 
-<a id="batchinsert-1"></a>
 ## batchInsert
 
 ```TypeScript
@@ -105,7 +103,7 @@ Inserts a batch of data into a table. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert-1)
+**Substitutes:** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>-End-->
 
@@ -174,7 +172,6 @@ promise.then((insertNum: number) => {
 
 ```
 
-<a id="begintransaction"></a>
 ## beginTransaction
 
 ```TypeScript
@@ -187,7 +184,7 @@ Starts the transaction before executing an SQL statement.
 
 **Deprecated since:** 9
 
-**Substitutes:** [beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction-1)
+**Substitutes:** [beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)
 
 <!--Device-RdbStore-beginTransaction(): void--><!--Device-RdbStore-beginTransaction(): void-End-->
 
@@ -223,7 +220,6 @@ data_rdb.getRdbStore(this.context, "RdbTest.db", 1, async (err: BusinessError, r
 
 ```
 
-<a id="commit"></a>
 ## commit
 
 ```TypeScript
@@ -236,7 +232,7 @@ Commits the executed SQL statements.
 
 **Deprecated since:** 9
 
-**Substitutes:** [commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit-1)
+**Substitutes:** [commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)
 
 <!--Device-RdbStore-commit(): void--><!--Device-RdbStore-commit(): void-End-->
 
@@ -272,7 +268,6 @@ data_rdb.getRdbStore(this.context, "RdbTest.db", 1, async (err: BusinessError, r
 
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -285,7 +280,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete-1)
+**Substitutes:** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
 
 <!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void--><!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void-End-->
 
@@ -313,7 +308,6 @@ rdbStore.delete(predicates, (err: BusinessError, rows: number) => {
 
 ```
 
-<a id="delete-1"></a>
 ## delete
 
 ```TypeScript
@@ -326,7 +320,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete-1)
+**Substitutes:** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
 
 <!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<number>--><!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<number>-End-->
 
@@ -358,7 +352,6 @@ promise.then((rows: number) => {
 
 ```
 
-<a id="executesql"></a>
 ## executeSql
 
 ```TypeScript
@@ -371,7 +364,7 @@ Executes an SQL statement that contains specified arguments but returns no value
 
 **Deprecated since:** 9
 
-**Substitutes:** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql-1)
+**Substitutes:** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void-End-->
 
@@ -399,7 +392,6 @@ rdbStore.executeSql(SQL_DELETE_TABLE, ['zhangsan'], (err: BusinessError) => {
 
 ```
 
-<a id="executesql-1"></a>
 ## executeSql
 
 ```TypeScript
@@ -412,7 +404,7 @@ Executes an SQL statement that contains specified arguments but returns no value
 
 **Deprecated since:** 9
 
-**Substitutes:** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql-1)
+**Substitutes:** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>--><!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>-End-->
 
@@ -444,7 +436,6 @@ promise.then(() => {
 
 ```
 
-<a id="insert"></a>
 ## insert
 
 ```TypeScript
@@ -457,7 +448,7 @@ Inserts a row of data into a table. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert-1)
+**Substitutes:** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void-End-->
 
@@ -501,7 +492,6 @@ rdbStore.insert("EMPLOYEE", valueBucket, (status: number, rowId: number) => {
 
 ```
 
-<a id="insert-1"></a>
 ## insert
 
 ```TypeScript
@@ -514,7 +504,7 @@ Inserts a row of data into a table. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert-1)
+**Substitutes:** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<number>--><!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<number>-End-->
 
@@ -562,7 +552,6 @@ promise.then((rowId: BusinessError) => {
 
 ```
 
-<a id="obtaindistributedtablename"></a>
 ## obtainDistributedTableName
 
 ```TypeScript
@@ -570,11 +559,9 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 ```
 
 Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses an asynchronous callback to return the result.
-
 > **NOTE**
-
 > The value of **device** can be obtained by <!--RP1-->  
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync-1)  
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)  
 > . <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system  
 > applications.
 
@@ -582,7 +569,7 @@ Obtains the distributed table name of a remote device based on the local table n
 
 **Deprecated since:** 9
 
-**Substitutes:** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename-1)
+**Substitutes:** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -625,7 +612,6 @@ rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE", (err: BusinessError, t
 
 ```
 
-<a id="obtaindistributedtablename-1"></a>
 ## obtainDistributedTableName
 
 ```TypeScript
@@ -633,11 +619,9 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 ```
 
 Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses a promise to return the result.
-
 > **NOTE**
-
 > The value of **device** can be obtained by <!--RP1-->  
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync-1)  
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)  
 > . <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system  
 > applications.
 
@@ -645,7 +629,7 @@ Obtains the distributed table name of a remote device based on the local table n
 
 **Deprecated since:** 9
 
-**Substitutes:** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename-1)
+**Substitutes:** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -692,7 +676,6 @@ promise.then((tableName: String) => {
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -736,7 +719,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -780,7 +762,6 @@ try {
 
 ```
 
-<a id="query"></a>
 ## query
 
 ```TypeScript
@@ -793,7 +774,7 @@ Queries data from the RDB store based on specified conditions. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query-1)
+**Substitutes:** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -823,7 +804,6 @@ rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"], (err: Busin
 
 ```
 
-<a id="query-1"></a>
 ## query
 
 ```TypeScript
@@ -836,7 +816,7 @@ Queries data from the RDB store based on specified conditions. This API uses a p
 
 **Deprecated since:** 9
 
-**Substitutes:** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query-1)
+**Substitutes:** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
 
@@ -870,7 +850,6 @@ promise.then((resultSet: void) => {
 
 ```
 
-<a id="querysql"></a>
 ## querySql
 
 ```TypeScript
@@ -883,7 +862,7 @@ Queries data using the specified SQL statement. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql-1)
+**Substitutes:** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -911,7 +890,6 @@ rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = ?", 
 
 ```
 
-<a id="querysql-1"></a>
 ## querySql
 
 ```TypeScript
@@ -924,7 +902,7 @@ Queries data using the specified SQL statement. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql-1)
+**Substitutes:** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>--><!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>-End-->
 
@@ -956,7 +934,6 @@ promise.then((resultSet: void) => {
 
 ```
 
-<a id="rollback"></a>
 ## rollBack
 
 ```TypeScript
@@ -969,7 +946,7 @@ Rolls back the SQL statements that have been executed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollback-1)
+**Substitutes:** [rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollback)
 
 <!--Device-RdbStore-rollBack(): void--><!--Device-RdbStore-rollBack(): void-End-->
 
@@ -1010,7 +987,6 @@ data_rdb.getRdbStore(this,context, "RdbTest.db", 1, async (err: BusinessError, r
 
 ```
 
-<a id="setdistributedtables"></a>
 ## setDistributedTables
 
 ```TypeScript
@@ -1023,7 +999,7 @@ Sets distributed tables. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables-1)
+**Substitutes:** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1051,7 +1027,6 @@ rdbStore.setDistributedTables(["EMPLOYEE"], (err: BusinessError) => {
 
 ```
 
-<a id="setdistributedtables-1"></a>
 ## setDistributedTables
 
 ```TypeScript
@@ -1064,7 +1039,7 @@ Sets distributed tables. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables-1)
+**Substitutes:** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1096,7 +1071,6 @@ promise.then(() => {
 
 ```
 
-<a id="sync"></a>
 ## sync
 
 ```TypeScript
@@ -1109,7 +1083,7 @@ Synchronizes data across devices. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync-1)
+**Substitutes:** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1159,7 +1133,6 @@ rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates, (err: BusinessError,
 
 ```
 
-<a id="sync-1"></a>
 ## sync
 
 ```TypeScript
@@ -1172,7 +1145,7 @@ Synchronizes data across devices. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync-1)
+**Substitutes:** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1226,7 +1199,6 @@ promise.then((result: void) =>{
 
 ```
 
-<a id="update"></a>
 ## update
 
 ```TypeScript
@@ -1239,7 +1211,7 @@ Updates data in the RDB store based on the specified **RdbPredicates** object. T
 
 **Deprecated since:** 9
 
-**Substitutes:** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update-1)
+**Substitutes:** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void-End-->
 
@@ -1285,7 +1257,6 @@ rdbStore.update(valueBucket, predicates, (err: BusinessError, rows: number) => {
 
 ```
 
-<a id="update-1"></a>
 ## update
 
 ```TypeScript
@@ -1298,7 +1269,7 @@ Updates data based on the specified **RdbPredicates** object. This API uses a pr
 
 **Deprecated since:** 9
 
-**Substitutes:** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update-1)
+**Substitutes:** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>-End-->
 

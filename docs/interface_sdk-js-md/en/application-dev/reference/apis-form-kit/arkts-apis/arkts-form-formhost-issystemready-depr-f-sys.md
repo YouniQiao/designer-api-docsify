@@ -1,6 +1,5 @@
 # isSystemReady (System API)
 
-<a id="issystemready"></a>
 ## isSystemReady
 
 ```TypeScript
@@ -13,7 +12,7 @@ Checks whether the system is ready. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#issystemready-1)
+**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-depr-f-sys.md#issystemready)
 
 <!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void--><!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void-End-->
 
@@ -28,7 +27,6 @@ Checks whether the system is ready. This API uses an asynchronous callback to re
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the check is successful,**error** is undefined; otherwise, **error** is an error object. |
 
 
-<a id="issystemready-1"></a>
 ## isSystemReady
 
 ```TypeScript
@@ -41,7 +39,7 @@ Checks whether the system is ready. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#issystemready-1)
+**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-depr-f-sys.md#issystemready)
 
 <!--Device-formHost-function isSystemReady(): Promise<void>--><!--Device-formHost-function isSystemReady(): Promise<void>-End-->
 

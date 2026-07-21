@@ -10,7 +10,6 @@ Defines the base class **BaseSpan**, including the universal attributes of the *
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="baselineoffset"></a>
 ## baselineOffset
 
 ```TypeScript
@@ -41,7 +40,6 @@ Sets the offset of the baseline. This attribute coexists with the **baselineOffs
 | --- | --- |
 | T | Attributes of the span. |
 
-<a id="textbackgroundstyle"></a>
 ## textBackgroundStyle
 
 ```TypeScript

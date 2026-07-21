@@ -18,7 +18,6 @@
 import { VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
-<a id="vibrate"></a>
 ## vibrate
 
 ```TypeScript
@@ -26,17 +25,16 @@ static vibrate(options?: VibrateOptions): void
 ```
 
 Triggers device vibration.
-
 > **NOTE**  
 >  
 > Except for lite wearables. You are advised to use  
-> [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1) since API version 8.
+> [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startvibration) since API version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [startVibration(effect:](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)
+**Substitutes:** [startVibration(effect:](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
 
 **Required permissions:** ohos.permission.VIBRATE
 

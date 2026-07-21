@@ -6,7 +6,6 @@
 import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
-<a id="activate"></a>
 ## activate
 
 ```TypeScript
@@ -19,7 +18,7 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 11
 
-**Substitutes:** [activateCooperate(targetNetworkId:](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate-1)
+**Substitutes:** [activateCooperate(targetNetworkId:](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate)
 
 <!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -65,7 +64,6 @@ try {
 ```
 
 
-<a id="activate-1"></a>
 ## activate
 
 ```TypeScript
@@ -78,7 +76,7 @@ Starts screen hopping. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [activateCooperate(targetNetworkId:](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate-1)
+**Substitutes:** [activateCooperate(targetNetworkId:](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate)
 
 <!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>-End-->
 

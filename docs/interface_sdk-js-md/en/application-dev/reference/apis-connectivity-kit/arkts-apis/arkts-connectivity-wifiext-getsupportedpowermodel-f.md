@@ -6,7 +6,6 @@
 import { wifiext } from '@kit.ConnectivityKit';
 ```
 
-<a id="getsupportedpowermodel"></a>
 ## getSupportedPowerModel
 
 ```TypeScript
@@ -34,7 +33,6 @@ Obtains the supported power model.
 | Promise&lt;Array&lt;PowerModel&gt;&gt; | Returns the array of supported power model. |
 
 
-<a id="getsupportedpowermodel-1"></a>
 ## getSupportedPowerModel
 
 ```TypeScript

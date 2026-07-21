@@ -1,6 +1,5 @@
 # clearMission (System API)
 
-<a id="clearmission"></a>
 ## clearMission
 
 ```TypeScript
@@ -51,7 +50,6 @@ try {
 ```
 
 
-<a id="clearmission-1"></a>
 ## clearMission
 
 ```TypeScript

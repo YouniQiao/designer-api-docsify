@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="setrouterproxy"></a>
 ## setRouterProxy
 
 ```TypeScript
@@ -14,7 +13,6 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 ```
 
 Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework  
@@ -54,7 +52,6 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
-<a id="setrouterproxy-1"></a>
 ## setRouterProxy
 
 ```TypeScript
@@ -62,7 +59,6 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 ```
 
 Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - Generally, for a widget added to the home screen, in the case of router-based redirection, the widget framework  

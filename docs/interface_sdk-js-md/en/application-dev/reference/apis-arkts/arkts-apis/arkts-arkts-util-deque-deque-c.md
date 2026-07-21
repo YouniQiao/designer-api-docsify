@@ -14,7 +14,6 @@ Double-ended queue (deque) is a sequence container implemented based on the queu
 import { Deque } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -79,7 +78,6 @@ Output: 4
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -109,7 +107,6 @@ let deque = new Deque<string | number | boolean | Object>();
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -159,7 +156,6 @@ Output: value:1 index:0
 
 ```
 
-<a id="getfirst"></a>
 ## getFirst
 
 ```TypeScript
@@ -202,7 +198,6 @@ console.info("result:", result);  // result: 4
 
 ```
 
-<a id="getlast"></a>
 ## getLast
 
 ```TypeScript
@@ -245,7 +240,6 @@ console.info("result:", result);  // result: 2
 
 ```
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -290,7 +284,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="insertend"></a>
 ## insertEnd
 
 ```TypeScript
@@ -339,7 +332,6 @@ console.info("result:", deque[0]);  // result: a
 
 ```
 
-<a id="insertfront"></a>
 ## insertFront
 
 ```TypeScript
@@ -388,7 +380,6 @@ console.info("result:", deque[0]);  // result: false
 
 ```
 
-<a id="popfirst"></a>
 ## popFirst
 
 ```TypeScript
@@ -432,7 +423,6 @@ console.info("result:", result);  // result: 4
 
 ```
 
-<a id="poplast"></a>
 ## popLast
 
 ```TypeScript

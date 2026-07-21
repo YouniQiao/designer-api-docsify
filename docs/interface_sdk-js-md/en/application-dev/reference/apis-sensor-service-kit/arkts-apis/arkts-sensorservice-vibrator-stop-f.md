@@ -6,7 +6,6 @@
 import { vibrator } from '@kit.SensorServiceKit';
 ```
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -19,7 +18,7 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopVibration(stopMode:](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-1)
+**Substitutes:** [stopVibration(stopMode:](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -63,7 +62,6 @@ vibrator.stop(vibrator.VibratorStopMode.VIBRATOR_STOP_MODE_PRESET).then(() => {
 ```
 
 
-<a id="stop-1"></a>
 ## stop
 
 ```TypeScript
@@ -76,7 +74,7 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopVibration(stopMode:](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-1)
+**Substitutes:** [stopVibration(stopMode:](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)
 
 **Required permissions:** ohos.permission.VIBRATE
 

@@ -1,6 +1,6 @@
 # UIGridEvent
 
-Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-1) method in **frameNode**,which can be used to set scroll events for a **Grid** node.
+Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent) method in **frameNode**,which can be used to set scroll events for a **Grid** node.
 
 **Inheritance/Implementation:** UIGridEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 
@@ -10,14 +10,13 @@ Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="setondidscroll"></a>
 ## setOnDidScroll
 
 ```TypeScript
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-Sets the callback for the [onDidScroll](docroot://reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.
+Sets the callback for the [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.
 
 If the input parameter is **undefined**, the event callback is reset.
 
@@ -37,14 +36,13 @@ If the input parameter is **undefined**, the event callback is reset.
 | --- | --- | --- | --- |
 | callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | Callback for the **onDidScroll** event. |
 
-<a id="setonscrollindex"></a>
 ## setOnScrollIndex
 
 ```TypeScript
 setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 ```
 
-Sets the callback of the [onScrollIndex](docroot://reference/apis-arkui/arkui-ts/ts-container-grid.md#onscrollindex) event.
+Sets the callback of the [onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#onscrollindex) event.
 
 If the input parameter is **undefined**, the event callback is reset.
 
@@ -64,14 +62,13 @@ If the input parameter is **undefined**, the event callback is reset.
 | --- | --- | --- | --- |
 | callback | [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md) \| undefined | Yes | Callback for the **onScrollIndex** event. |
 
-<a id="setonwillscroll"></a>
 ## setOnWillScroll
 
 ```TypeScript
 setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 ```
 
-Sets the callback for the [onWillScroll](docroot://reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.
+Sets the callback for the [onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.
 
 If the input parameter is **undefined**, the event callback is reset.
 

@@ -2,8 +2,7 @@
 
 This interface provides APIs for audio capture.
 
-Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer-1)to create an AudioCapturer instance.
-
+Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer)to create an AudioCapturer instance.
 > **NOTE**  
 >  
 > - The initial APIs of this interface are supported since API version 8.
@@ -20,7 +19,6 @@ Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkt
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="getaudiostreamid"></a>
 ## getAudioStreamId
 
 ```TypeScript
@@ -41,7 +39,6 @@ Obtains the stream ID of this audio capturer. This API uses an asynchronous call
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the stream ID obtained; otherwise, **err** is an error object. |
 
-<a id="getaudiostreamid-1"></a>
 ## getAudioStreamId
 
 ```TypeScript
@@ -62,7 +59,6 @@ Obtains the stream ID of this audio capturer. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the stream ID. |
 
-<a id="getaudiostreamidsync"></a>
 ## getAudioStreamIdSync
 
 ```TypeScript
@@ -83,7 +79,6 @@ Obtains the stream ID of this audio capturer. This API returns the result synchr
 | --- | --- |
 | number | Stream ID. |
 
-<a id="getaudiotime"></a>
 ## getAudioTime
 
 ```TypeScript
@@ -104,7 +99,6 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the number of nanoseconds obtained; otherwise, **err** is an error object. |
 
-<a id="getaudiotime-1"></a>
 ## getAudioTime
 
 ```TypeScript
@@ -125,7 +119,6 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return a timestamp representing the number of nanoseconds elapsed since the Unix epoch (January 1, 1970).<br>The timestamp unit is nanoseconds. |
 
-<a id="getaudiotimesync"></a>
 ## getAudioTimeSync
 
 ```TypeScript
@@ -146,7 +139,6 @@ Obtains the timestamp of the current recording position, measured in nanoseconds
 | --- | --- |
 | number | Timestamp. |
 
-<a id="getaudiotimestampinfo"></a>
 ## getAudioTimestampInfo
 
 ```TypeScript
@@ -175,7 +167,6 @@ This API obtains the actual recording position (specified by **framePos**) of th
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
-<a id="getaudiotimestampinfosync"></a>
 ## getAudioTimestampInfoSync
 
 ```TypeScript
@@ -202,7 +193,6 @@ Obtains the timestamp and position information of an input audio stream. This AP
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
-<a id="getbuffersize"></a>
 ## getBufferSize
 
 ```TypeScript
@@ -223,7 +213,6 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.<br>The unit is bytes. |
 
-<a id="getbuffersize-1"></a>
 ## getBufferSize
 
 ```TypeScript
@@ -244,7 +233,6 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API uses a
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the buffer size.<br>The unit is bytes. |
 
-<a id="getbuffersizesync"></a>
 ## getBufferSizeSync
 
 ```TypeScript
@@ -265,7 +253,6 @@ Obtains a reasonable minimum buffer size in bytes for capturing. This API return
 | --- | --- |
 | number | Buffer size, in bytes. |
 
-<a id="getcapturerinfo"></a>
 ## getCapturerInfo
 
 ```TypeScript
@@ -286,7 +273,6 @@ Obtains the audio capturer information. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturerInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the capturer information obtained; otherwise, **err** is an error object. |
 
-<a id="getcapturerinfo-1"></a>
 ## getCapturerInfo
 
 ```TypeScript
@@ -307,7 +293,6 @@ Obtains the audio capturer information. This API uses a promise to return the re
 | --- | --- |
 | Promise&lt;AudioCapturerInfo&gt; | Promise used to return the audio capturer information. |
 
-<a id="getcapturerinfosync"></a>
 ## getCapturerInfoSync
 
 ```TypeScript
@@ -328,7 +313,6 @@ Obtains the audio capturer information. This API returns the result synchronousl
 | --- | --- |
 | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Audio capturer information. |
 
-<a id="getcurrentaudiocapturerchangeinfo"></a>
 ## getCurrentAudioCapturerChangeInfo
 
 ```TypeScript
@@ -349,7 +333,6 @@ Obtains the configuration changes of the current audio capturer. This API return
 | --- | --- |
 | [AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md) | Configuration changes of the audio capturer. |
 
-<a id="getcurrentinputdevices"></a>
 ## getCurrentInputDevices
 
 ```TypeScript
@@ -370,7 +353,6 @@ Obtains the information of the current input devices. This API returns the resul
 | --- | --- |
 | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | An array of the audio device descriptors. |
 
-<a id="getnoisereductionmode"></a>
 ## getNoiseReductionMode
 
 ```TypeScript
@@ -393,7 +375,6 @@ Gets the noise reduction mode for current audio capturer.The mode will only cons
 | --- | --- |
 | [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | The noise reduction mode for current audio capturer,the default value is {@link NoiseReductionMode#FIDELITY}. |
 
-<a id="getoverflowcount"></a>
 ## getOverflowCount
 
 ```TypeScript
@@ -414,7 +395,6 @@ Obtains the number of overflow audio frames in the audio stream that is being ca
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the number of overflow audio frames. |
 
-<a id="getoverflowcountsync"></a>
 ## getOverflowCountSync
 
 ```TypeScript
@@ -435,7 +415,6 @@ Obtains the number of overflow audio frames in the audio stream that is being ca
 | --- | --- |
 | number | Number of overflow audio frames. |
 
-<a id="getstreaminfo"></a>
 ## getStreamInfo
 
 ```TypeScript
@@ -456,7 +435,6 @@ Obtains the stream information of this audio capturer. This API uses an asynchro
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioStreamInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream information obtained; otherwise, **err** is an error object. |
 
-<a id="getstreaminfo-1"></a>
 ## getStreamInfo
 
 ```TypeScript
@@ -477,7 +455,6 @@ Obtains the stream information of this audio capturer. This API uses a promise t
 | --- | --- |
 | Promise&lt;AudioStreamInfo&gt; | Promise used to return the stream information. |
 
-<a id="getstreaminfosync"></a>
 ## getStreamInfoSync
 
 ```TypeScript
@@ -498,7 +475,6 @@ Obtains the stream information of this audio capturer. This API returns the resu
 | --- | --- |
 | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Stream information. |
 
-<a id="getsupportednoisereductionmodes"></a>
 ## getSupportedNoiseReductionModes
 
 ```TypeScript
@@ -527,7 +503,6 @@ Gets all the supported noise reduction modes for current device platform.Current
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio server process died. |
 
-<a id="off"></a>
 ## off('markReach')
 
 ```TypeScript
@@ -549,7 +524,6 @@ Unsubscribes from the mark reached event. This API uses an asynchronous callback
 | type | 'markReach' | Yes | Event type. The event **'markReach'** is triggered when the number of frames captured reaches the value of the **frame** parameter. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
 
-<a id="off-1"></a>
 ## off('periodReach')
 
 ```TypeScript
@@ -571,7 +545,6 @@ Unsubscribes from the period reached event. This API uses an asynchronous callba
 | type | 'periodReach' | Yes | Event type. The event **'periodReach'** is triggered each time the number of frames captured reaches the value of the **frame** parameter. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | No | Callback used to return the value of the **frame** parameter.<br>**Since:** 18 |
 
-<a id="off-2"></a>
 ## off('stateChange')
 
 ```TypeScript
@@ -599,7 +572,6 @@ Unsubscribes from the audio capturer state change event. This API uses an asynch
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-3"></a>
 ## off
 
 ```TypeScript
@@ -627,7 +599,6 @@ Unsubscribes from the audio interruption event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-4"></a>
 ## off('inputDeviceChange')
 
 ```TypeScript
@@ -656,7 +627,6 @@ Unsubscribes from the audio input device change event. This API uses an asynchro
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-5"></a>
 ## off('audioCapturerChange')
 
 ```TypeScript
@@ -685,7 +655,6 @@ Unsubscribes from the audio capturer configuration change event. This API uses a
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-6"></a>
 ## off('readData')
 
 ```TypeScript
@@ -714,7 +683,6 @@ Unsubscribes from the audio data read event. This API uses an asynchronous callb
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on"></a>
 ## on('markReach')
 
 ```TypeScript
@@ -739,7 +707,6 @@ For example, if **frame** is set to **100**, the callback is invoked when the nu
 | frame | number | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | Callback used to return the value of the **frame** parameter. |
 
-<a id="on-1"></a>
 ## on('periodReach')
 
 ```TypeScript
@@ -764,7 +731,6 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 | frame | number | Yes | Number of frames to trigger the event. The value must be greater than **0**. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | Callback used to return the value of the **frame** parameter. |
 
-<a id="on-2"></a>
 ## on('stateChange')
 
 ```TypeScript
@@ -786,7 +752,6 @@ Subscribes to the audio capturer state change event, which is triggered when the
 | type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the state of the audio capturer is changed. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;AudioState&gt; | Yes | Callback used to return the audio status. |
 
-<a id="on-3"></a>
 ## on('audioInterrupt')
 
 ```TypeScript
@@ -797,7 +762,7 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 
 The AudioCapturer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
 
-After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](docroot://media/audio/audio-playback-concurrency.md).
+After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioCapturer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 10
 
@@ -819,7 +784,6 @@ After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on-4"></a>
 ## on('inputDeviceChange')
 
 ```TypeScript
@@ -848,7 +812,6 @@ Subscribes to the audio input device change event, which is triggered when an au
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on-5"></a>
 ## on('audioCapturerChange')
 
 ```TypeScript
@@ -877,7 +840,6 @@ Subscribes to the audio capturer configuration change event, which is triggered 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on-6"></a>
 ## on('readData')
 
 ```TypeScript
@@ -910,7 +872,6 @@ To eliminate power-on noise caused by the microphone hardware design, the first 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="read"></a>
 ## read
 
 ```TypeScript
@@ -937,7 +898,6 @@ Reads the buffer from the audio capturer. This method uses an asynchronous callb
 | isBlockingRead | boolean | Yes | Whether to block the read operation. **true** to block, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the buffer read; otherwise, **err** is an error object. |
 
-<a id="read-1"></a>
 ## read
 
 ```TypeScript
@@ -969,7 +929,6 @@ Reads the buffer. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise used to return the data read from the buffer. |
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -990,7 +949,6 @@ Releases this audio capturer. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript
@@ -1011,7 +969,6 @@ Releases this audio capturer. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-<a id="requestplaybackcapturestart"></a>
 ## requestPlaybackCaptureStart
 
 ```TypeScript
@@ -1034,7 +991,6 @@ Asynchronously request to start the playback capture stream.This function is non
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackCaptureStartState&gt; | Yes | Callback function used to receive the final result of start request. |
 
-<a id="setindependentaudiosessionstrategy"></a>
 ## setIndependentAudioSessionStrategy
 
 ```TypeScript
@@ -1042,11 +998,10 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 ```
 
 Sets the independent audio session strategy and behavior parameters.
-
 > **NOTE**  
 >  
 > If this API is called while an audio capturer is running, you must call the  
-> [start](arkts-audio-audio-audiocapturer-i.md#start-1) API again for  
+> [start](arkts-audio-audio-audiocapturer-i.md#start) API again for  
 > the settings to take effect.
 
 **Since:** 24
@@ -1071,7 +1026,6 @@ Sets the independent audio session strategy and behavior parameters.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 
-<a id="setmutehint"></a>
 ## setMuteHint
 
 ```TypeScript
@@ -1106,7 +1060,6 @@ Set mute hint for this capturer, this method is used as a hint for power optimiz
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at current state, stream is not running. |
 
-<a id="setnoisereductionmode"></a>
 ## setNoiseReductionMode
 
 ```TypeScript
@@ -1138,14 +1091,13 @@ Sets noise reduction mode for current audio capturer.The supported mode should b
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | The setted mode is not supported. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio server process died. |
 
-<a id="setwillmutewheninterrupted"></a>
 ## setWillMuteWhenInterrupted
 
 ```TypeScript
 setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 ```
 
-Sets whether to [mute the current audio recording stream when an audio interruption occurs](docroot://media/audio/using-audiocapturer-for-recording.md#setting-the-mute-interruption-mode). This API uses a promise to return the result.
+Sets whether to [mute the current audio recording stream when an audio interruption occurs](../../../media/audio/using-audiocapturer-for-recording.md#setting-the-mute-interruption-mode). This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -1171,7 +1123,6 @@ Sets whether to [mute the current audio recording stream when an audio interrupt
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at current state. |
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -1192,7 +1143,6 @@ Starts this audio capturer to start capturing audio data. This API uses an async
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
-<a id="start-1"></a>
 ## start
 
 ```TypeScript
@@ -1213,7 +1163,6 @@ Starts this audio capturer to start capturing audio data. This API uses a promis
 | --- | --- |
 | Promise&lt;void&gt; | Promise object, which indicates that the capturer is started successfully. If the operation fails, an error object with the following error code is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -1234,7 +1183,6 @@ Stops this audio capturer, ceasing the input audio stream. This API uses an asyn
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
-<a id="stop-1"></a>
 ## stop
 
 ```TypeScript

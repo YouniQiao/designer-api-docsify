@@ -6,7 +6,6 @@
 import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
-<a id="prepare"></a>
 ## prepare
 
 ```TypeScript
@@ -19,7 +18,7 @@ Prepares for screen hopping. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 11
 
-**Substitutes:** [prepareCooperate(callback:](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate-1)
+**Substitutes:** [prepareCooperate(callback:](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate)
 
 <!--Device-cooperate-function prepare(callback: AsyncCallback<void>): void--><!--Device-cooperate-function prepare(callback: AsyncCallback<void>): void-End-->
 
@@ -60,7 +59,6 @@ try {
 ```
 
 
-<a id="prepare-1"></a>
 ## prepare
 
 ```TypeScript
@@ -73,7 +71,7 @@ Prepares for screen hopping. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [prepareCooperate()](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate-1)
+**Substitutes:** [prepareCooperate()](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate)
 
 <!--Device-cooperate-function prepare(): Promise<void>--><!--Device-cooperate-function prepare(): Promise<void>-End-->
 

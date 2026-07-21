@@ -6,7 +6,6 @@
 import { ethernet } from '@kit.NetworkKit';
 ```
 
-<a id="getmacaddress"></a>
 ## getMacAddress
 
 ```TypeScript

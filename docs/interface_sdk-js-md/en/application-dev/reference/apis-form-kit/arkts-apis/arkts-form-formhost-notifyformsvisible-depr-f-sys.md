@@ -1,6 +1,5 @@
 # notifyFormsVisible (System API)
 
-<a id="notifyformsvisible"></a>
 ## notifyFormsVisible
 
 ```TypeScript
@@ -13,7 +12,7 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyformsvisible-1)
+**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-depr-f-sys.md#notifyformsvisible)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -32,7 +31,6 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent,**error** is undefined; otherwise, **error** is an error object. |
 
 
-<a id="notifyformsvisible-1"></a>
 ## notifyFormsVisible
 
 ```TypeScript
@@ -45,7 +43,7 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyformsvisible-1)
+**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-depr-f-sys.md#notifyformsvisible)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

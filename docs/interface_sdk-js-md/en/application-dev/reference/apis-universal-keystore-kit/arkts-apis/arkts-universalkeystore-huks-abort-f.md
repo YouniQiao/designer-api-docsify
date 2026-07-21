@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="abort"></a>
 ## abort
 
 ```TypeScript
@@ -19,7 +18,7 @@ Aborts a key operation. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [abortSession(handle:](arkts-universalkeystore-huks-abortsession-f.md#abortsession-1)
+**Substitutes:** [abortSession(handle:](arkts-universalkeystore-huks-abortsession-f.md#abortsession)
 
 <!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -126,7 +125,6 @@ async function huksAbort() {
 ```
 
 
-<a id="abort-1"></a>
 ## abort
 
 ```TypeScript
@@ -139,7 +137,7 @@ Aborts a key operation. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [abortSession(handle:](arkts-universalkeystore-huks-abortsession-f.md#abortsession-1)
+**Substitutes:** [abortSession(handle:](arkts-universalkeystore-huks-abortsession-f.md#abortsession)
 
 <!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
 

@@ -16,7 +16,6 @@ In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkt
 import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
-<a id="cachedcount"></a>
 ## cachedCount
 
 ```TypeScript
@@ -45,7 +44,6 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="chainanimation"></a>
 ## chainAnimation
 
 ```TypeScript
@@ -74,7 +72,6 @@ Sets whether to enable chained animations, which provide a visually connected, o
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="childrenmainsize"></a>
 ## childrenMainSize
 
 ```TypeScript
@@ -103,7 +100,6 @@ Sets the size information of the child components of the **ArcList** component a
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="digitalcrownsensitivity"></a>
 ## digitalCrownSensitivity
 
 ```TypeScript
@@ -132,7 +128,6 @@ Sets the sensitivity of the digital crown's event response.
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="enablescrollinteraction"></a>
 ## enableScrollInteraction
 
 ```TypeScript
@@ -161,7 +156,6 @@ Sets whether to enable scroll gestures.
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="fadingedge"></a>
 ## fadingEdge
 
 ```TypeScript
@@ -190,7 +184,6 @@ Sets whether to enable the edge fading effect.
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="flingspeedlimit"></a>
 ## flingSpeedLimit
 
 ```TypeScript
@@ -219,7 +212,6 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="friction"></a>
 ## friction
 
 ```TypeScript
@@ -248,7 +240,6 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="ondidscroll"></a>
 ## onDidScroll
 
 ```TypeScript
@@ -277,7 +268,6 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="onreachend"></a>
 ## onReachEnd
 
 ```TypeScript
@@ -306,7 +296,6 @@ Triggered when the list reaches the end position.If the edge scrolling effect is
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="onreachstart"></a>
 ## onReachStart
 
 ```TypeScript
@@ -335,7 +324,6 @@ Triggered when the list reaches the start position.This event is triggered durin
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="onscrollindex"></a>
 ## onScrollIndex
 
 ```TypeScript
@@ -364,7 +352,6 @@ Triggered when a child component enters or leaves the visible area of the **ArcL
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="onscrollstart"></a>
 ## onScrollStart
 
 ```TypeScript
@@ -393,7 +380,6 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="onscrollstop"></a>
 ## onScrollStop
 
 ```TypeScript
@@ -422,7 +408,6 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="onwillscroll"></a>
 ## onWillScroll
 
 ```TypeScript
@@ -451,7 +436,6 @@ Triggered before each frame during list scrolling. The callback returns the offs
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="scrollbar"></a>
 ## scrollBar
 
 ```TypeScript
@@ -480,7 +464,6 @@ Sets the state of the scrollbar.
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="scrollbarcolor"></a>
 ## scrollBarColor
 
 ```TypeScript
@@ -509,7 +492,6 @@ Sets the color of the scrollbar.
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="scrollbarwidth"></a>
 ## scrollBarWidth
 
 ```TypeScript
@@ -538,7 +520,6 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 | --- | --- |
 | [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Circle@crossplatform@atomicservice |
 
-<a id="space"></a>
 ## space
 
 ```TypeScript

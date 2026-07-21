@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="unloadcallui"></a>
 ## unloadCallUI
 
 ```TypeScript

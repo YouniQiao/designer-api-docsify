@@ -6,7 +6,6 @@
 import { conversation } from '@kit.DistributedServiceKit';
 ```
 
-<a id="postconversationdata"></a>
 ## postConversationData
 
 ```TypeScript
@@ -26,17 +25,7 @@ function postConversationData(
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-conversation-function postConversationData(
-    deviceId: string,
-    bundleName: string,
-    abilityName: string,
-    msg: ArrayBuffer
-): Promise<void>--><!--Device-conversation-function postConversationData(
-    deviceId: string,
-    bundleName: string,
-    abilityName: string,
-    msg: ArrayBuffer
-): Promise<void>-End-->
+<!--Device-conversation-function postConversationData(    deviceId: string,    bundleName: string,    abilityName: string,    msg: ArrayBuffer): Promise<void>--><!--Device-conversation-function postConversationData(    deviceId: string,    bundleName: string,    abilityName: string,    msg: ArrayBuffer): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Communication.SoftBus.Core
 
@@ -46,8 +35,8 @@ function postConversationData(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | string | 是 | 目标设备的networkId或UDID。可通过调用[getTrustedDevices()](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md#gettrusteddevices-1)获取。networkId、UDID的长度都应为64字节。传入无效值时返回错误码401。 |
-| bundleName | string | 是 | 数据发送目标Bundle名，Bundle名长度范围为1-127字节，需与目标设备上通过[registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener-1)注册会话监听的应用Bundle名一致。不满足此要求时，数据将无法送达目标应用。传入无效或空值时返回错误码401。 |
+| deviceId | string | 是 | 目标设备的networkId或UDID。可通过调用[getTrustedDevices()](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md#gettrusteddevices)获取。networkId、UDID的长度都应为64字节。传入无效值时返回错误码401。 |
+| bundleName | string | 是 | 数据发送目标Bundle名，Bundle名长度范围为1-127字节，需与目标设备上通过[registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener)注册会话监听的应用Bundle名一致。不满足此要求时，数据将无法送达目标应用。传入无效或空值时返回错误码401。 |
 | abilityName | string | 是 | 数据发送目标Ability名，Ability名长度范围为1-127字节，需与目标设备上已注册会话监听的Ability名一致。不满足此要求时，数据将无法送达目标应用。传入无效或空值时返回错误码401。 |
 | msg | ArrayBuffer | 是 | 要发送的数据内容，一次调用最大支持发送10240字节。数据结构由应用层协议定义。传入空数据或无效数据时返回错误码401。 |
 

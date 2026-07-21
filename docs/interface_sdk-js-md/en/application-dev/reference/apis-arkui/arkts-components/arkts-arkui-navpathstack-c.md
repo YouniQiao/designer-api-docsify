@@ -2,13 +2,11 @@
 
 A navigation controller that manages all child pages in the **Navigation** component with a stack data structure and provides stack operation methods for controlling page transitions.
 
-Starting from API version 12, **NavPathStack** is inheritable. Objects of a derived class can replace those of the base class. For details, see [Example 10](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-10-defining-a-derived-class-of-navpathstack).
-
+Starting from API version 12, **NavPathStack** is inheritable. Objects of a derived class can replace those of the base class. For details, see [Example 10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-10-defining-a-derived-class-of-navpathstack).
 > **NOTE**  
 >  
 > 1. When multiple navigation controller operations are triggered in succession, the intermediate states are  
 > bypassed, and only the final result of the operations is rendered.
-
 > For example, if a Page1 is popped and then immediately pushed back, the system considers that the states before and  
 > after these operations are identical, leading to no actual change in the stack. To ensure that a new instance of  
 > Page1 is pushed onto the stack despite the consecutive operations, use the **NEW_INSTANCE** mode.  
@@ -24,7 +22,6 @@ Starting from API version 12, **NavPathStack** is inheritable. Objects of a deri
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -49,7 +46,6 @@ Clears the routing stack.
 | --- | --- | --- | --- |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true**<br>**Since:** 11 |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -68,7 +64,6 @@ Creates a **NavPathStack** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="disableanimation"></a>
 ## disableAnimation
 
 ```TypeScript
@@ -93,7 +88,6 @@ Disables or enables the transition animation in the **Navigation** component.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to disable the transition animation.<br>Default value: **false**<br>**true**:Disable the transition animation.<br>**false**: Enable the transition animation. |
 
-<a id="getallpathname"></a>
 ## getAllPathName
 
 ```TypeScript
@@ -118,7 +112,6 @@ Obtains the names of all navigation destination pages in the routing stack.
 | --- | --- |
 | Array&lt;string&gt; | Names of all navigation destination pages in the routing stack. |
 
-<a id="getindexbyname"></a>
 ## getIndexByName
 
 ```TypeScript
@@ -149,7 +142,6 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 | --- | --- |
 | Array&lt;number&gt; | Indexes of all the matching navigation destination pages. If no pages with the specified name exist in the routing stack, an empty array is returned. The index range is [0, routing stack size - 1]. |
 
-<a id="getparambyindex"></a>
 ## getParamByIndex
 
 ```TypeScript
@@ -180,7 +172,6 @@ Obtains the parameter information of the navigation destination page specified b
 | --- | --- |
 | unknown | **unknown**: parameter information of the corresponding navigation destination page. **unknown** can represent a user-defined type.<br>**undefined**: an invalid index is provided. |
 
-<a id="getparambyname"></a>
 ## getParamByName
 
 ```TypeScript
@@ -211,7 +202,6 @@ Obtains the parameter information of all **NavDestination** pages with the speci
 | --- | --- |
 | Array&lt;unknown&gt; | Parameter information of all **NavDestination** pages with the specified name.**unknown** can represent a user-defined type. |
 
-<a id="getparent"></a>
 ## getParent
 
 ```TypeScript
@@ -238,7 +228,6 @@ When a **Navigation** component is nested (directly or indirectly) inside anothe
 | --- | --- |
 | [NavPathStack](arkts-arkui-navpathstack-c.md) | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
 
-<a id="getpathstack"></a>
 ## getPathStack
 
 ```TypeScript
@@ -263,7 +252,6 @@ Obtains the array of route page information from this routing stack.
 | --- | --- |
 | Array&lt;NavPathInfo&gt; | Array of route page information in the current routing stack. |
 
-<a id="moveindextotop"></a>
 ## moveIndexToTop
 
 ```TypeScript
@@ -289,7 +277,6 @@ Moves to the top of the routing stack the navigation destination page specified 
 | index | number | Yes | Index of the navigation destination page. The index is zero-based. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true**<br>**Since:** 11 |
 
-<a id="movetotop"></a>
 ## moveToTop
 
 ```TypeScript
@@ -321,7 +308,6 @@ Moves the first navigation destination page that matches **name** from the botto
 | --- | --- |
 | number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
-<a id="pop"></a>
 ## pop
 
 ```TypeScript
@@ -329,27 +315,18 @@ pop(animated?: boolean): NavPathInfo | undefined
 ```
 
 Pops the top element out of the routing stack.
-
 > **NOTE**  
 >  
 > When multiple navigation controller methods are called consecutively, any pages popped during the sequence are  
 > cached. If a page with the same name is later pushed, the system reuses the cached instance instead of  
 > instantiating a new page.
-
 > Example:
-
 > pathStack: NavPathStack = new NavPathStack()
-
 > //The initial page stack is [A].
-
 > pathStack.pop()
-
 > pathStack.pushPath(A)
-
 > pathStack.pushPath(B)
-
 > // The page stack after the operation is [A B].
-
 > In this case, page A is reused, and the new creation process is not performed.
 
 **Since:** 10
@@ -374,7 +351,6 @@ Pops the top element out of the routing stack.
 | --- | --- |
 | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | **NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
-<a id="pop-1"></a>
 ## pop
 
 ```TypeScript
@@ -382,27 +358,18 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 ```
 
 Pops the top element out of the routing stack and invokes the **onPop** callback to pass the page processing result.
-
 > **NOTE**  
 >  
 > When multiple navigation controller methods are called consecutively, any pages popped during the sequence are  
 > cached. If a page with the same name is later pushed, the system reuses the cached instance instead of  
 > instantiating a new page.
-
 > Example:
-
 > pathStack: NavPathStack = new NavPathStack()
-
 > //The initial page stack is [A].
-
 > pathStack.pop()
-
 > pathStack.pushPath(A)
-
 > pathStack.pushPath(B)
-
 > // The page stack after the operation is [A B].
-
 > In this case, page A is reused, and the new creation process is not performed.
 
 **Since:** 11
@@ -428,7 +395,6 @@ Pops the top element out of the routing stack and invokes the **onPop** callback
 | --- | --- |
 | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | **NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
-<a id="poptoindex"></a>
 ## popToIndex
 
 ```TypeScript
@@ -454,7 +420,6 @@ Returns the routing stack to the page specified by **index**.
 | index | number | Yes | Index of the navigation destination page. The index is zero-based. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true**<br>**Since:** 11 |
 
-<a id="poptoindex-1"></a>
 ## popToIndex
 
 ```TypeScript
@@ -481,7 +446,6 @@ Returns the routing stack to the page specified by **index** and invokes the **o
 | result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
-<a id="poptoname"></a>
 ## popToName
 
 ```TypeScript
@@ -513,7 +477,6 @@ Pops pages until the first navigation destination page that matches **name** fro
 | --- | --- |
 | number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
-<a id="poptoname-1"></a>
 ## popToName
 
 ```TypeScript
@@ -546,7 +509,6 @@ Pops pages until the first navigation destination page that matches **name** fro
 | --- | --- |
 | number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
-<a id="pushdestination"></a>
 ## pushDestination
 
 ```TypeScript
@@ -554,10 +516,9 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
 Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the  
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear), as the  
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation  
 > failures.
 
@@ -593,7 +554,6 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
-<a id="pushdestination-1"></a>
 ## pushDestination
 
 ```TypeScript
@@ -601,10 +561,9 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
 Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter,different behaviors will be implemented.
-
 > **NOTE**  
 >  
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the  
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear), as the  
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation  
 > failures.
 
@@ -640,7 +599,6 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
-<a id="pushdestinationbyname"></a>
 ## pushDestinationByName
 
 ```TypeScript
@@ -648,10 +606,9 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 ```
 
 Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the  
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear), as the  
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation  
 > failures.
 
@@ -688,7 +645,6 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
-<a id="pushdestinationbyname-1"></a>
 ## pushDestinationByName
 
 ```TypeScript
@@ -696,10 +652,9 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 ```
 
 Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses the **onPop** callback to handle the result returned when the page is popped out of the stack.It uses a promise to return the result.
-
 > **NOTE**  
 >  
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the  
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear), as the  
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation  
 > failures.
 
@@ -719,7 +674,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop-1),[popToName](arkts-arkui-navpathstack-c.md#poptoname-1), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex-1). |
+| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop),[popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex). |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
 **Return value:**
@@ -737,7 +692,6 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
-<a id="pushpath"></a>
 ## pushPath
 
 ```TypeScript
@@ -763,7 +717,6 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>If the input parameter is invalid, the value **true** is used.<br>**Since:** 11 |
 
-<a id="pushpath-1"></a>
 ## pushPath
 
 ```TypeScript
@@ -789,7 +742,6 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
 | options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
-<a id="pushpathbyname"></a>
 ## pushPathByName
 
 ```TypeScript
@@ -816,7 +768,6 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true**<br>**Since:** 11 |
 
-<a id="pushpathbyname-1"></a>
 ## pushPathByName
 
 ```TypeScript
@@ -841,10 +792,9 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | Yes | Callback used to receive the result. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop-1),[popToName](arkts-arkui-navpathstack-c.md#poptoname-1), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex-1). |
+| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | Yes | Callback used to receive the result. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop),[popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex). |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
-<a id="removebyindexes"></a>
 ## removeByIndexes
 
 ```TypeScript
@@ -875,7 +825,6 @@ Removes the navigation destination pages specified by **indexes** from the routi
 | --- | --- |
 | number | Number of the navigation destination pages removed. |
 
-<a id="removebyname"></a>
 ## removeByName
 
 ```TypeScript
@@ -906,7 +855,6 @@ Removes the navigation destination page specified by **name** from the routing s
 | --- | --- |
 | number | Number of the navigation destination pages removed. |
 
-<a id="removebynavdestinationid"></a>
 ## removeByNavDestinationId
 
 ```TypeScript
@@ -937,7 +885,6 @@ Removes the navigation destination page specified by **navDestinationId** from t
 | --- | --- |
 | boolean | Whether the page is removed successfully.<br>**true**: Removal succeeded.<br>**false**: Removal failed. |
 
-<a id="replacedestination"></a>
 ## replaceDestination
 
 ```TypeScript
@@ -978,7 +925,6 @@ Performs a replacement operation on the routing stack. This API uses a promise t
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
-<a id="replacepath"></a>
 ## replacePath
 
 ```TypeScript
@@ -1004,7 +950,6 @@ Replaces the top of the routing stack with the navigation destination page speci
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Parameters for the new top page of the routing stack. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
-<a id="replacepath-1"></a>
 ## replacePath
 
 ```TypeScript
@@ -1030,7 +975,6 @@ Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Parameters for the new top page of the routing stack. |
 | options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
-<a id="replacepathbyname"></a>
 ## replacePathByName
 
 ```TypeScript
@@ -1057,7 +1001,6 @@ Replaces the top of the routing stack with the page specified by **name**.
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
-<a id="setinterception"></a>
 ## setInterception
 
 ```TypeScript
@@ -1082,7 +1025,6 @@ Sets the interception callback for navigation page redirection.
 | --- | --- | --- | --- |
 | interception | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | Yes | Object to be intercepted during navigation redirection. |
 
-<a id="setpathstack"></a>
 ## setPathStack
 
 ```TypeScript
@@ -1090,7 +1032,6 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 ```
 
 Updates the array of route page information in this routing stack to the specified content and performs route transitions.
-
 > **NOTE**  
 >  
 > 1. You can add or remove pages in batches based on the existing stack. Among the pages added in batches, only the  
@@ -1103,7 +1044,7 @@ Updates the array of route page information in this routing stack to the specifi
 >  
 > 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md).  
 > This ID is system-generated and globally unique (it can be obtained using the  
-> [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack-1) API and should not be manually reassigned). If the specified ID  
+> [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack) API and should not be manually reassigned). If the specified ID  
 > does not exist in the current routing stack, it indicates a new page. If it exists and the corresponding name is  
 > the same, it indicates reuse of an existing page.
 
@@ -1124,7 +1065,6 @@ Updates the array of route page information in this routing stack to the specifi
 | pathStack | Array&lt;NavPathInfo&gt; | Yes | Array of route page information in the current routing stack.<br>**NOTE**<br>The array length is not limited. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>Default value: **true** |
 
-<a id="size"></a>
 ## size
 
 ```TypeScript

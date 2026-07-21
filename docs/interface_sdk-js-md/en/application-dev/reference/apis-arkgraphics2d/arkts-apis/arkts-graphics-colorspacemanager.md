@@ -27,7 +27,7 @@ import { colorSpaceManager } from '@kit.ArkGraphics2D';
 
 | Name | Description |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Implements management of color space objects.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create-1) to create a color space manager. |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Implements management of color space objects.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) to create a color space manager. |
 | [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | The three primary colors (red, green, blue) and white as defined by the gamut standard, whose positions in the color space are represented by (x, y) coordinates based on real-world chromaticity. |
 
 ### Enums

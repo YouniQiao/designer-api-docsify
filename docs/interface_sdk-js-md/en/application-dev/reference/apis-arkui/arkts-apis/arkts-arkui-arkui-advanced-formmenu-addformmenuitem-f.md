@@ -6,7 +6,6 @@
 import { AddFormMenuItem, AddFormOptions, FormMenuItemStyle } from '@kit.ArkUI';
 ```
 
-<a id="addformmenuitem"></a>
 ## AddFormMenuItem
 
 ```TypeScript
@@ -25,15 +24,7 @@ Build function of AddFormMenuItem.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-unnamed-export declare function AddFormMenuItem(
-  want: Want,
-  componentId: string,
-  options?: AddFormOptions
-): void--><!--Device-unnamed-export declare function AddFormMenuItem(
-  want: Want,
-  componentId: string,
-  options?: AddFormOptions
-): void-End-->
+<!--Device-unnamed-export declare function AddFormMenuItem(  want: Want,  componentId: string,  options?: AddFormOptions): void--><!--Device-unnamed-export declare function AddFormMenuItem(  want: Want,  componentId: string,  options?: AddFormOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

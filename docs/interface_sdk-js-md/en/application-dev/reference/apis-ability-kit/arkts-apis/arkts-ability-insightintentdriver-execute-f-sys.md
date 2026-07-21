@@ -6,7 +6,6 @@
 import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
-<a id="execute"></a>
 ## execute
 
 ```TypeScript
@@ -94,7 +93,6 @@ Executes a call to an intent. This API uses an asynchronous callback to return t
 ```
 
 
-<a id="execute-1"></a>
 ## execute
 
 ```TypeScript

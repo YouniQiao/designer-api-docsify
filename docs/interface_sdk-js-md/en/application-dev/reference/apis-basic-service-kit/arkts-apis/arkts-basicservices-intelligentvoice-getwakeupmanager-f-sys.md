@@ -6,7 +6,6 @@
 import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
-<a id="getwakeupmanager"></a>
 ## getWakeupManager
 
 ```TypeScript

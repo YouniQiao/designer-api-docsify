@@ -6,7 +6,6 @@
 import { dateTimeManager } from '@kit.MDMKit';
 ```
 
-<a id="setdatetime"></a>
 ## setDateTime
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setValue](arkts-mdm-devicesettings-setvalue-f.md#setvalue-1)
+**Substitutes:** [setValue](arkts-mdm-devicesettings-setvalue-f.md#setvalue)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_DATETIME
 
@@ -73,7 +72,6 @@ dateTimeManager.setDateTime(wantTemp, 1526003846000, (err) => {
 ```
 
 
-<a id="setdatetime-1"></a>
 ## setDateTime
 
 ```TypeScript
@@ -86,7 +84,7 @@ Sets the system time. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setValue](arkts-mdm-devicesettings-setvalue-f.md#setvalue-1)
+**Substitutes:** [setValue](arkts-mdm-devicesettings-setvalue-f.md#setvalue)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_DATETIME
 

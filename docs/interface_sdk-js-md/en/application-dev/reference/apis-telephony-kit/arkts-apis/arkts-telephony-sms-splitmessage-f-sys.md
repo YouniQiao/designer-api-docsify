@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="splitmessage"></a>
 ## splitMessage
 
 ```TypeScript
@@ -60,7 +59,6 @@ sms.splitMessage(content, (err: BusinessError, data: string[]) => {
 ```
 
 
-<a id="splitmessage-1"></a>
 ## splitMessage
 
 ```TypeScript

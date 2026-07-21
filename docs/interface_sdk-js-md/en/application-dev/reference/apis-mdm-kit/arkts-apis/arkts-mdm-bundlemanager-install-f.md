@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="install"></a>
 ## install
 
 ```TypeScript
@@ -15,8 +14,7 @@ function install(admin: Want, hapFilePaths: Array<string>, installParam?: Instal
 
 Installs specified applications. This API uses a promise to return the result.
 
-This API can be used to install only applications of the **enterprise_mdm** (MDM application) or **enterprise_normal** (common enterprise application) distribution type. You can call the [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself-1) API to query the [BundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-i.md) of an application, where **BundleInfo.appInfo.appDistributionType** indicates the distribution type.
-
+This API can be used to install only applications of the **enterprise_mdm** (MDM application) or **enterprise_normal** (common enterprise application) distribution type. You can call the [getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself) API to query the [BundleInfo](arkts-mdm-bundlemanager-bundleinfo-i.md) of an application, where **BundleInfo.appInfo.appDistributionType** indicates the distribution type.
 > **NOTE**  
 >  
 > This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait  
@@ -37,7 +35,7 @@ This API can be used to install only applications of the **enterprise_mdm** (MDM
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| hapFilePaths | Array&lt;string&gt; | Yes | Applications to install. The app bundle must be stored in the path that the app has the permission to access, such as the app sandbox path. For details about the mapping between the app sandbox path and the actual physical path, see [Mappings Between App Sandbox Paths and Physical Paths](docroot://file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
+| hapFilePaths | Array&lt;string&gt; | Yes | Applications to install. The app bundle must be stored in the path that the app has the permission to access, such as the app sandbox path. For details about the mapping between the app sandbox path and the actual physical path, see [Mappings Between App Sandbox Paths and Physical Paths](../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
 | installParam | [InstallParam](arkts-mdm-bundlemanager-installparam-i.md) | No | Application installation parameters. |
 
 **Return value:**

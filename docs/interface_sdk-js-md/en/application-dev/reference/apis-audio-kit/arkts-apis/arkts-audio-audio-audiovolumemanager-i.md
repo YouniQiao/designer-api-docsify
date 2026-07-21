@@ -2,8 +2,7 @@
 
 This interface implements audio volume management.
 
-Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager-1) to obtain an AudioVolumeManager instance.
-
+Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance.
 > **NOTE**  
 >  
 > - The initial APIs of this interface are supported since API version 9.
@@ -20,7 +19,6 @@ Before calling any API in AudioVolumeManager, you must use [getVolumeManager](ar
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="getappvolumepercentage"></a>
 ## getAppVolumePercentage
 
 ```TypeScript
@@ -43,7 +41,6 @@ Obtains the volume of the application. (The volume range is 0 to 100.) This API 
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the application volume. |
 
-<a id="getmaxvolumebystream"></a>
 ## getMaxVolumeByStream
 
 ```TypeScript
@@ -78,7 +75,6 @@ Obtains the maximum volume of a specified audio stream.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="getminvolumebystream"></a>
 ## getMinVolumeByStream
 
 ```TypeScript
@@ -113,7 +109,6 @@ Obtains the minimum volume of a specified audio stream.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="getvolumebystream"></a>
 ## getVolumeByStream
 
 ```TypeScript
@@ -148,7 +143,6 @@ Obtains the volume of a specified audio stream.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="getvolumegroupmanager"></a>
 ## getVolumeGroupManager
 
 ```TypeScript
@@ -170,7 +164,6 @@ Obtains a VolumeGroupManager instance. This API uses an asynchronous callback to
 | groupId | number | Yes | Volume group ID. The default value is **DEFAULT_VOLUME_GROUP_ID**. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioVolumeGroupManager&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the VolumeGroupManager instance obtained; otherwise,**err** is an error object. |
 
-<a id="getvolumegroupmanager-1"></a>
 ## getVolumeGroupManager
 
 ```TypeScript
@@ -197,7 +190,6 @@ Obtains a VolumeGroupManager instance. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;AudioVolumeGroupManager&gt; | Promise used to return the VolumeGroupManager instance. |
 
-<a id="getvolumegroupmanagersync"></a>
 ## getVolumeGroupManagerSync
 
 ```TypeScript
@@ -233,7 +225,6 @@ Obtains a VolumeGroupManager instance. This API returns the result synchronously
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="getvolumeinunitofdbbystream"></a>
 ## getVolumeInUnitOfDbByStream
 
 ```TypeScript
@@ -268,7 +259,6 @@ Obtains the volume (in dB) calculated by the system based on the audio stream, v
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="issystemmutedforstream"></a>
 ## isSystemMutedForStream
 
 ```TypeScript
@@ -301,7 +291,6 @@ Checks whether a specified audio stream is muted.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off"></a>
 ## off('volumeChange')
 
 ```TypeScript
@@ -334,7 +323,6 @@ Unsubscribes from the system volume change event. This API uses an asynchronous 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters missing;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-1"></a>
 ## off('appVolumeChange')
 
 ```TypeScript
@@ -362,7 +350,6 @@ Unsubscribes from the application-level volume change event of the application. 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-2"></a>
 ## off('streamVolumeChange')
 
 ```TypeScript
@@ -384,7 +371,6 @@ Unsubscribes from the system audio volume change event, which is triggered when 
 | type | 'streamVolumeChange' | Yes | Event type. The event **'volumeChange'** is triggered when the system volume is changed. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;StreamVolumeEvent&gt; | No | Callback used to return the changed volume. |
 
-<a id="on"></a>
 ## on('volumeChange')
 
 ```TypeScript
@@ -417,7 +403,6 @@ Subscribes to the system volume change event, which is triggered when the system
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on-1"></a>
 ## on('appVolumeChange')
 
 ```TypeScript
@@ -445,7 +430,6 @@ Subscribes to the application-level volume change event of the application (trig
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on-2"></a>
 ## on('streamVolumeChange')
 
 ```TypeScript
@@ -474,7 +458,6 @@ Subscribes to the system audio volume change event, which is triggered when the 
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="setappvolumepercentage"></a>
 ## setAppVolumePercentage
 
 ```TypeScript

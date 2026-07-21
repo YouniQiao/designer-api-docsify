@@ -2,9 +2,9 @@
 
 The **AuxiliaryPicture** class is used to read or write auxiliary picture data of an image and obtain auxiliary picture information of an image. The supported types of auxiliary pictures can be found in [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md).
 
-Before calling any API in AuxiliaryPicture, you must create an AuxiliaryPicture instance using [image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createauxiliarypicture-1) or [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture-1) in Picture.
+Before calling any API in AuxiliaryPicture, you must create an AuxiliaryPicture instance using [image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createauxiliarypicture) or [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture) in Picture.
 
-Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call [release](arkts-image-image-auxiliarypicture-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call [release](arkts-image-image-auxiliarypicture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -18,7 +18,6 @@ Images occupy a large amount of memory. When you finish using an AuxiliaryPictur
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="getauxiliarypictureinfo"></a>
 ## getAuxiliaryPictureInfo
 
 ```TypeScript
@@ -39,7 +38,6 @@ Obtains the auxiliary picture information.
 | --- | --- |
 | [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | Auxiliary picture information. |
 
-<a id="getmetadata"></a>
 ## getMetadata
 
 ```TypeScript
@@ -73,7 +71,6 @@ Obtains the metadata of this auxiliary picture. This API uses a promise to retur
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. 3.Parameter verification failed. |
 | [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
-<a id="gettype"></a>
 ## getType
 
 ```TypeScript
@@ -94,7 +91,6 @@ Obtains the type of this auxiliary picture.
 | --- | --- |
 | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | Type of the auxiliary picture. |
 
-<a id="readpixelstobuffer"></a>
 ## readPixelsToBuffer
 
 ```TypeScript
@@ -115,7 +111,6 @@ Reads pixels of this auxiliary picture and writes the data to an ArrayBuffer. Th
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise used to return the pixels of the auxiliary picture. |
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -134,7 +129,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
-<a id="setauxiliarypictureinfo"></a>
 ## setAuxiliaryPictureInfo
 
 ```TypeScript
@@ -161,7 +155,6 @@ Sets the auxiliary picture information.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. 3.Parameter verification failed. |
 
-<a id="setmetadata"></a>
 ## setMetadata
 
 ```TypeScript
@@ -196,7 +189,6 @@ Sets the metadata for this auxiliary picture. This API uses a promise to return 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. 3.Parameter verification failed. |
 | [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
-<a id="writepixelsfrombuffer"></a>
 ## writePixelsFromBuffer
 
 ```TypeScript

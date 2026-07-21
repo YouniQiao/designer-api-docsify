@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="requestform"></a>
 ## requestForm
 
 ```TypeScript
@@ -46,7 +45,6 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
-<a id="requestform-1"></a>
 ## requestForm
 
 ```TypeScript

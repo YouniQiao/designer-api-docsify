@@ -14,7 +14,6 @@ The **DistributedExtensionAbility** module provides distributed extension capabi
 import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
 ```
 
-<a id="oncollaborate"></a>
 ## onCollaborate
 
 ```TypeScript
@@ -64,7 +63,6 @@ export default class DistributedExtension extends DistributedExtensionAbility {
 
 ```
 
-<a id="oncreate"></a>
 ## onCreate
 
 ```TypeScript
@@ -103,7 +101,6 @@ export default class DistributedExtension extends DistributedExtensionAbility {
 
 ```
 
-<a id="ondestroy"></a>
 ## onDestroy
 
 ```TypeScript

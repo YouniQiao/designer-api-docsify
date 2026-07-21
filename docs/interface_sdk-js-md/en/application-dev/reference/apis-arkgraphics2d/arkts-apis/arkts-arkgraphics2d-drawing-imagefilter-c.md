@@ -1,7 +1,6 @@
 # ImageFilter
 
 Implements an image filter.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 12.  
@@ -23,7 +22,6 @@ Implements an image filter.
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="createblendimagefilter"></a>
 ## createBlendImageFilter
 
 ```TypeScript
@@ -58,7 +56,6 @@ Creates a filter by blending two existing filters in a certain way.
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
-<a id="createblurimagefilter"></a>
 ## createBlurImageFilter
 
 ```TypeScript
@@ -70,9 +67,7 @@ Creates an image filter with a given blur effect.
 
 **Since:** 12
 
-<!--Device-ImageFilter-static createBlurImageFilter(sigmaX: number, sigmaY: number,
-        tileMode: TileMode, imageFilter?: ImageFilter | null): ImageFilter--><!--Device-ImageFilter-static createBlurImageFilter(sigmaX: number, sigmaY: number,
-        tileMode: TileMode, imageFilter?: ImageFilter | null): ImageFilter-End-->
+<!--Device-ImageFilter-static createBlurImageFilter(sigmaX: number, sigmaY: number,        tileMode: TileMode, imageFilter?: ImageFilter | null): ImageFilter--><!--Device-ImageFilter-static createBlurImageFilter(sigmaX: number, sigmaY: number,        tileMode: TileMode, imageFilter?: ImageFilter | null): ImageFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -97,7 +92,6 @@ Creates an image filter with a given blur effect.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="createcomposeimagefilter"></a>
 ## createComposeImageFilter
 
 ```TypeScript
@@ -125,7 +119,6 @@ Cascades two image filters to create a new image filter. The first filter's outp
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Image filter created. |
 
-<a id="createfromcolorfilter"></a>
 ## createFromColorFilter
 
 ```TypeScript
@@ -159,7 +152,6 @@ Creates an image filter object with a given color filter effect.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="createfromimage"></a>
 ## createFromImage
 
 ```TypeScript
@@ -188,7 +180,6 @@ Creates an image filter from a given image. You are advised not to use the funct
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Image filter created. |
 
-<a id="createfromshadereffect"></a>
 ## createFromShaderEffect
 
 ```TypeScript
@@ -215,7 +206,6 @@ Creates an **ImageFilter** object based on a shader.
 | --- | --- |
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Image filter created. |
 
-<a id="createoffsetimagefilter"></a>
 ## createOffsetImageFilter
 
 ```TypeScript

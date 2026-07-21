@@ -14,7 +14,6 @@ Definition of the Ad Content Control Interface
 import { media } from '@kit.MediaKit';
 ```
 
-<a id="addadsmediasource"></a>
 ## addAdsMediaSource
 
 ```TypeScript
@@ -50,7 +49,6 @@ Add an advertisement film source to the advertisement controller,The insertion t
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Insert a media asset whose start value exceeds the value of the main content. |
 
-<a id="disablealladsmediasource"></a>
 ## disableAllAdsMediaSource
 
 ```TypeScript
@@ -67,7 +65,6 @@ Disable playback of the remaining broadcast content in the current session
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
-<a id="offadseventlistenerloadingerror"></a>
 ## offAdsEventListenerLoadingError
 
 ```TypeScript
@@ -90,7 +87,6 @@ Unregisters the event processing function when the ad content fails to be loaded
 | --- | --- | --- | --- |
 | callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | No | Ad content loading failure processing function.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
-<a id="offadslisteneradscompleted"></a>
 ## offAdsListenerAdsCompleted
 
 ```TypeScript
@@ -113,7 +109,6 @@ Unregisters the processing function of the event triggered by the completion of 
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;string&gt; | No | Processing function of the advertisement playing completion event.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
-<a id="offadslisteneradsskipped"></a>
 ## offAdsListenerAdsSkipped
 
 ```TypeScript
@@ -136,7 +131,6 @@ Unregisters the processing function of the event triggered when advertisement is
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;string&gt; | No | Advertisement Skipped Processing Function.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
-<a id="offadslisteneradsstarted"></a>
 ## offAdsListenerAdsStarted
 
 ```TypeScript
@@ -159,7 +153,6 @@ Unregisters the processing function for the event triggered when a new ad conten
 | --- | --- | --- | --- |
 | callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | No | Processing function when the ad content starts to be played.It is usually used to switch the logic of the playback page.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
-<a id="onadseventlistenerloadingerror"></a>
 ## onAdsEventListenerLoadingError
 
 ```TypeScript
@@ -182,7 +175,6 @@ Registers the event processing function when the ad content fails to be loaded.
 | --- | --- | --- | --- |
 | callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | Yes | This function is used to process ad content loading failures.This function needs to be implemented by the application.<br>The first parameter is used to transfer the advertisement ID, and the second parameter is used to transfer the failure cause. |
 
-<a id="onadslisteneradscompleted"></a>
 ## onAdsListenerAdsCompleted
 
 ```TypeScript
@@ -205,7 +197,6 @@ Registers the processing function of the event triggered by the completion of ad
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;string&gt; | Yes | Processing function of the ad event, which contains the ID of the ad that is played. |
 
-<a id="onadslisteneradsskipped"></a>
 ## onAdsListenerAdsSkipped
 
 ```TypeScript
@@ -228,7 +219,6 @@ Registers the processing function of the event triggered when advertisement is s
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;string&gt; | Yes | Processing function for the advertisement to be jumped out of date. The parameter is passed as the ID of the skipped advertisement. |
 
-<a id="onadslisteneradsstarted"></a>
 ## onAdsListenerAdsStarted
 
 ```TypeScript
@@ -251,7 +241,6 @@ Registers the processing function for the event triggered when a new ad content 
 | --- | --- | --- | --- |
 | callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | Yes | Processing function when the ad content starts to be played.The logic for switching the playback page is commonly used.<br>The first parameter indicates the ID of the advertisement that is being played, and the second parameter indicates the duration of the advertisement. |
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -268,7 +257,6 @@ Release the AVAdsController object.
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
-<a id="removeadsmediasource"></a>
 ## removeAdsMediaSource
 
 ```TypeScript
@@ -297,7 +285,6 @@ Remove the ad source specified in the AdsController.
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the AdsController. |
 
-<a id="skipcurrentadsmediasource"></a>
 ## skipCurrentAdsMediaSource
 
 ```TypeScript

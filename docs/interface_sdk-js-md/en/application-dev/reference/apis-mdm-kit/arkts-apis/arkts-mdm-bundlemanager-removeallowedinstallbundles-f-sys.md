@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="removeallowedinstallbundles"></a>
 ## removeAllowedInstallBundles
 
 ```TypeScript
@@ -19,7 +18,7 @@ Removes the applications that can be installed by the current user. This API use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeAllowedInstallBundlesSync](arkts-mdm-bundlemanager-removeallowedinstallbundlessync-f.md#removeallowedinstallbundlessync-1)
+**Substitutes:** [removeAllowedInstallBundlesSync](arkts-mdm-bundlemanager-removeallowedinstallbundlessync-f.md#removeallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -74,7 +73,6 @@ bundleManager.removeAllowedInstallBundles(wantTemp, appIds, (err) => {
 ```
 
 
-<a id="removeallowedinstallbundles-1"></a>
 ## removeAllowedInstallBundles
 
 ```TypeScript
@@ -87,7 +85,7 @@ Removes the applications that can be installed by the user specified by **userId
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeAllowedInstallBundlesSync](arkts-mdm-bundlemanager-removeallowedinstallbundlessync-f.md#removeallowedinstallbundlessync-1)
+**Substitutes:** [removeAllowedInstallBundlesSync](arkts-mdm-bundlemanager-removeallowedinstallbundlessync-f.md#removeallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -143,7 +141,6 @@ bundleManager.removeAllowedInstallBundles(wantTemp, appIds, 100, (err) => {
 ```
 
 
-<a id="removeallowedinstallbundles-2"></a>
 ## removeAllowedInstallBundles
 
 ```TypeScript
@@ -156,7 +153,7 @@ Removes the applications that can be installed by the current or specified user.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeAllowedInstallBundlesSync](arkts-mdm-bundlemanager-removeallowedinstallbundlessync-f.md#removeallowedinstallbundlessync-1)
+**Substitutes:** [removeAllowedInstallBundlesSync](arkts-mdm-bundlemanager-removeallowedinstallbundlessync-f.md#removeallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 

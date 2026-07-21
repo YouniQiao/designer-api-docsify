@@ -6,7 +6,6 @@
 import { vpnExtension } from '@kit.NetworkKit';
 ```
 
-<a id="setalwaysonvpnenabled"></a>
 ## setAlwaysOnVpnEnabled
 
 ```TypeScript

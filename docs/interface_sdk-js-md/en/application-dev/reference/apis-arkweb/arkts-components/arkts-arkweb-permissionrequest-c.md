@@ -1,7 +1,6 @@
 # PermissionRequest
 
 Implements the **PermissionRequest** object.For details about the sample code,see [onPermissionRequest](./arkts-basic-components-web-events.md#onpermissionrequest9).
-
 > **NOTE**  
 >  
 > - The initial APIs of this component are supported since API version 8.  
@@ -17,7 +16,6 @@ Implements the **PermissionRequest** object.For details about the sample code,se
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -34,7 +32,6 @@ Constructs a **PermissionRequest** object.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="deny"></a>
 ## deny
 
 ```TypeScript
@@ -51,7 +48,6 @@ Denies the permission requested by the web page.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="getaccessibleresource"></a>
 ## getAccessibleResource
 
 ```TypeScript
@@ -74,7 +70,6 @@ Obtains the list of accessible resources requested for the web page. For details
 | --- | --- |
 | Array&lt;string&gt; | @syscap SystemCapability.Web.Webview.Core@crossplatform |
 
-<a id="getorigin"></a>
 ## getOrigin
 
 ```TypeScript
@@ -97,7 +92,6 @@ Obtains the origin of this web page.
 | --- | --- |
 | string | @syscap SystemCapability.Web.Webview.Core@crossplatform |
 
-<a id="grant"></a>
 ## grant
 
 ```TypeScript

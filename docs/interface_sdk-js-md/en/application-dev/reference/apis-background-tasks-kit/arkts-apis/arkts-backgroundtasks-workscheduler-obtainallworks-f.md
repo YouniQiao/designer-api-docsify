@@ -6,7 +6,6 @@
 import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="obtainallworks"></a>
 ## obtainAllWorks
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 
 **Deprecated since:** 10
 
-**Substitutes:** [obtainAllWorks(callback:](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainallworks-1)
+**Substitutes:** [obtainAllWorks(callback:](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainallworks)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,7 +48,6 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 | [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
 
 
-<a id="obtainallworks-1"></a>
 ## obtainAllWorks
 
 ```TypeScript
@@ -98,7 +96,6 @@ Obtains all the deferred tasks. This API uses an asynchronous callback to return
 ```
 
 
-<a id="obtainallworks-2"></a>
 ## obtainAllWorks
 
 ```TypeScript

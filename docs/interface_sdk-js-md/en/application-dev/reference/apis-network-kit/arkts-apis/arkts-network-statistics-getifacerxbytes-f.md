@@ -6,7 +6,6 @@
 import { statistics } from '@kit.NetworkKit';
 ```
 
-<a id="getifacerxbytes"></a>
 ## getIfaceRxBytes
 
 ```TypeScript
@@ -56,7 +55,6 @@ statistics.getIfaceRxBytes("wlan0", (error: BusinessError, stats: number) => {
 ```
 
 
-<a id="getifacerxbytes-1"></a>
 ## getIfaceRxBytes
 
 ```TypeScript

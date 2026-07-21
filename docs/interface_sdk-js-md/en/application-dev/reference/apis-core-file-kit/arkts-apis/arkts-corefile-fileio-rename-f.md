@@ -1,6 +1,5 @@
 # rename
 
-<a id="rename"></a>
 ## rename
 
 ```TypeScript
@@ -13,7 +12,7 @@ Renames a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:rename](arkts-corefile-file-fs-rename-f.md#rename-1)
+**Substitutes:** [fs:rename](arkts-corefile-fileio-rename-f.md#rename)
 
 <!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>-End-->
 
@@ -33,7 +32,6 @@ Renames a file. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 
-<a id="rename-1"></a>
 ## rename
 
 ```TypeScript
@@ -46,7 +44,7 @@ Renames a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:rename](arkts-corefile-file-fs-rename-f.md#rename-1)
+**Substitutes:** [fs:rename](arkts-corefile-fileio-rename-f.md#rename)
 
 <!--Device-unnamed-declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void-End-->
 

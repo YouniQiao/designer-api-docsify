@@ -6,7 +6,6 @@
 import { display } from '@kit.ArkUI';
 ```
 
-<a id="addvirtualscreensurface"></a>
 ## addVirtualScreenSurface
 
 ```TypeScript
@@ -31,7 +30,7 @@ Add surface for the virtual screen.
 | --- | --- | --- | --- |
 | screenId | number | Yes | Indicates the screen id of the virtual screen. |
 | surfaceId | string | Yes | ID of the surface bound to the virtual screen. You can specify the ID of an existing surface. The maximum length for this parameter is 4096 bytes. If it goes beyond that, only the first 4096 bytes are used. |
-| surfaceRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | No | Rectangular area of the virtual screen displayed by the surface.If the virtual screen has not bound any surface via [setVirtualScreenSurface()](arkts-arkui-display-setvirtualscreensurface-f.md#setvirtualscreensurface-1) or [addVirtualScreenSurface()](arkts-arkui-display-addvirtualscreensurface-f-sys.md#addvirtualscreensurface-1), the surfaceRegion is invalid and defaults to full screen. In mirror mode, the surfaceRegion is invalid and defaults to full screen.In independent display mode, the surfaceRegion is valid. |
+| surfaceRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | No | Rectangular area of the virtual screen displayed by the surface.If the virtual screen has not bound any surface via [setVirtualScreenSurface()](arkts-arkui-display-setvirtualscreensurface-f.md#setvirtualscreensurface) or [addVirtualScreenSurface()](arkts-arkui-display-addvirtualscreensurface-f-sys.md#addvirtualscreensurface), the surfaceRegion is invalid and defaults to full screen. In mirror mode, the surfaceRegion is invalid and defaults to full screen.In independent display mode, the surfaceRegion is valid. |
 
 **Return value:**
 

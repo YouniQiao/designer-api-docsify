@@ -6,7 +6,6 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
-<a id="paircredibledevice"></a>
 ## pairCredibleDevice
 
 ```TypeScript
@@ -67,7 +66,6 @@ try {
 ```
 
 
-<a id="paircredibledevice-1"></a>
 ## pairCredibleDevice
 
 ```TypeScript

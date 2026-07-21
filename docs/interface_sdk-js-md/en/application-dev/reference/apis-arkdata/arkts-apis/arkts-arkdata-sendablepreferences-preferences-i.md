@@ -1,6 +1,6 @@
 # Preferences
 
-Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from [ISendable](docroot://arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference.Before calling any API of **Preferences**, obtain a **Preferences** instance by using [sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences-1).
+Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from [ISendable](../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference.Before calling any API of **Preferences**, obtain a **Preferences** instance by using [sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences).
 
 **Inheritance/Implementation:** Preferences extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md)
 
@@ -16,14 +16,13 @@ Provides APIs for obtaining and modifying **Preferences** instances. **Preferenc
 import { sendablePreferences } from '@kit.ArkData';
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
 clear(): Promise<void>
 ```
 
-Clears this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -59,14 +58,13 @@ promise.then(() => {
 
 ```
 
-<a id="clearsync"></a>
 ## clearSync
 
 ```TypeScript
 clearSync(): void
 ```
 
-Clears this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -89,14 +87,13 @@ preferences.clearSync();
 
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
 delete(key: string): Promise<void>
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -110,7 +107,7 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Return value:**
 
@@ -139,14 +136,13 @@ promise.then(() => {
 
 ```
 
-<a id="deletesync"></a>
 ## deleteSync
 
 ```TypeScript
 deleteSync(key: string): void
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -160,7 +156,7 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Error codes:**
 
@@ -176,7 +172,6 @@ preferences.deleteSync('startup');
 
 ```
 
-<a id="flush"></a>
 ## flush
 
 ```TypeScript
@@ -219,7 +214,6 @@ promise.then(() => {
 
 ```
 
-<a id="flushsync"></a>
 ## flushSync
 
 ```TypeScript
@@ -249,7 +243,6 @@ preferences.flushSync();
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -270,7 +263,7 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 | defValue | lang.ISendable | Yes | Default value to be returned. |
 
 **Return value:**
@@ -302,7 +295,6 @@ promise.then((data: lang.ISendable) => {
 
 ```
 
-<a id="getall"></a>
 ## getAll
 
 ```TypeScript
@@ -348,7 +340,6 @@ promise.then((keyValues: lang.ISendable) => {
 
 ```
 
-<a id="getallsync"></a>
 ## getAllSync
 
 ```TypeScript
@@ -389,7 +380,6 @@ for (let value of Object.keys(keyValues)) {
 
 ```
 
-<a id="getsync"></a>
 ## getSync
 
 ```TypeScript
@@ -410,7 +400,7 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 | defValue | lang.ISendable | Yes | Default value to be returned. |
 
 **Return value:**
@@ -434,7 +424,6 @@ let value: lang.ISendable = preferences.getSync('startup', 'default');
 
 ```
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -455,7 +444,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Return value:**
 
@@ -488,7 +477,6 @@ promise.then((val: boolean) => {
 
 ```
 
-<a id="hassync"></a>
 ## hasSync
 
 ```TypeScript
@@ -509,7 +497,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 
 **Return value:**
 
@@ -536,7 +524,6 @@ if (isExist) {
 
 ```
 
-<a id="off"></a>
 ## off('change')
 
 ```TypeScript
@@ -586,7 +573,6 @@ preferences.flush().then(() => {
 
 ```
 
-<a id="off-1"></a>
 ## off('multiProcessChange')
 
 ```TypeScript
@@ -636,7 +622,6 @@ preferences.flush().then(() => {
 
 ```
 
-<a id="off-2"></a>
 ## off('dataChange')
 
 ```TypeScript
@@ -690,14 +675,13 @@ preferences.flush().then(() => {
 
 ```
 
-<a id="on"></a>
 ## on('change')
 
 ```TypeScript
 on(type: 'change', callback: Callback<string>): void
 ```
 
-Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](arkts-arkdata-sendablepreferences-preferences-i.md#flush-1).
+Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](arkts-arkdata-sendablepreferences-preferences-i.md#flush).
 
 **Since:** 12
 
@@ -739,14 +723,13 @@ preferences.flush().then(() => {
 
 ```
 
-<a id="on-1"></a>
 ## on('multiProcessChange')
 
 ```TypeScript
 on(type: 'multiProcessChange', callback: Callback<string>): void
 ```
 
-Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush-1) in any process (including the current process) will trigger the callback in this API.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md).Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) in any process (including the current process) will trigger the callback in this API.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md).Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
 
@@ -789,14 +772,13 @@ preferences.flush().then(() => {
 
 ```
 
-<a id="on-2"></a>
 ## on('dataChange')
 
 ```TypeScript
 on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void
 ```
 
-Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](arkts-arkdata-sendablepreferences-preferences-i.md#flush-1).
+Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](arkts-arkdata-sendablepreferences-preferences-i.md#flush).
 
 **Since:** 12
 
@@ -842,14 +824,13 @@ preferences.flush().then(() => {
 
 ```
 
-<a id="put"></a>
 ## put
 
 ```TypeScript
 put(key: string, value: lang.ISendable): Promise<void>
 ```
 
-Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -863,7 +844,7 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 | value | lang.ISendable | Yes | Value to write. |
 
 **Return value:**
@@ -893,14 +874,13 @@ promise.then(() => {
 
 ```
 
-<a id="putsync"></a>
 ## putSync
 
 ```TypeScript
 putSync(key: string, value: lang.ISendable): void
 ```
 
-Writes data to this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -914,7 +894,7 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details,see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
 | value | lang.ISendable | Yes | Value to write. |
 
 **Error codes:**

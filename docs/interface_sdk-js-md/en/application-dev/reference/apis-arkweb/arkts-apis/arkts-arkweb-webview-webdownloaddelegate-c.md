@@ -14,7 +14,6 @@ The download state is notified through this delegate.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="onbeforedownload"></a>
 ## onBeforeDownload
 
 ```TypeScript
@@ -37,7 +36,6 @@ Callback will be triggered before web download start.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;WebDownloadItem&gt; | Yes | The callback of download will be start. |
 
-<a id="ondownloadfailed"></a>
 ## onDownloadFailed
 
 ```TypeScript
@@ -60,7 +58,6 @@ Callback will be triggered when web download is interrupted or canceled.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;WebDownloadItem&gt; | Yes | The callback of download did fail. |
 
-<a id="ondownloadfinish"></a>
 ## onDownloadFinish
 
 ```TypeScript
@@ -83,7 +80,6 @@ Callback will be triggered when web download is completed.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;WebDownloadItem&gt; | Yes | The callback of download did finish. |
 
-<a id="ondownloadupdated"></a>
 ## onDownloadUpdated
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { matrix4 } from '@kit.ArkUI';
 ```
 
-<a id="invert"></a>
 ## invert
 
 ```TypeScript
@@ -19,7 +18,7 @@ Inverts this matrix object.
 
 **Deprecated since:** 10
 
-**Substitutes:** [invert](arkts-arkui-matrix4-matrix4transit-i.md#invert-1)
+**Substitutes:** [invert](arkts-arkui-matrix4-matrix4transit-i.md#invert)
 
 <!--Device-matrix4-function invert(): Matrix4Transit--><!--Device-matrix4-function invert(): Matrix4Transit-End-->
 

@@ -6,7 +6,6 @@
 import { socket } from '@kit.ConnectivityKit';
 ```
 
-<a id="on"></a>
 ## on('sppRead')
 
 ```TypeScript

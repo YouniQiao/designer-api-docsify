@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="turnonmobiledata"></a>
 ## turnOnMobileData
 
 ```TypeScript
@@ -30,7 +29,7 @@ Turns on mobile data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| isForce | boolean | Yes | Whether to forcibly enable mobile data. <br>The value **true** means to forcibly enable mobile data. Once enabled, it cannot be turned off manually; it can only be disabled via the [turnOffMobileData](arkts-mdm-networkmanager-turnoffmobiledata-f.md#turnoffmobiledata-1) API. The value **false** means not to forcibly enable mobile data. It can be turned off manually. |
+| isForce | boolean | Yes | Whether to forcibly enable mobile data. <br>The value **true** means to forcibly enable mobile data. Once enabled, it cannot be turned off manually; it can only be disabled via the [turnOffMobileData](arkts-mdm-networkmanager-turnoffmobiledata-f.md#turnoffmobiledata) API. The value **false** means not to forcibly enable mobile data. It can be turned off manually. |
 
 **Error codes:**
 

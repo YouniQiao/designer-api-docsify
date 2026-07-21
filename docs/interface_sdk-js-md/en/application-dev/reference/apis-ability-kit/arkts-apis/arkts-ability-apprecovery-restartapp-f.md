@@ -6,7 +6,6 @@
 import { appRecovery } from '@kit.AbilityKit';
 ```
 
-<a id="restartapp"></a>
 ## restartApp
 
 ```TypeScript
@@ -15,7 +14,7 @@ function restartApp(): void
 
 Restarts the current process and starts the first ability that is displayed when the application is started. If the state of this ability is saved, the saved state data is passed into the **wantParam** property in the **want** parameter of the **onCreate** lifecycle callback of the ability.
 
-In API version 10, the ability specified by [setRestartWant](arkts-ability-apprecovery-setrestartwant-f.md#setrestartwant-1) is started. If no ability is specified, the following rules are used:
+In API version 10, the ability specified by [setRestartWant](arkts-ability-apprecovery-setrestartwant-f.md#setrestartwant) is started. If no ability is specified, the following rules are used:
 
 If the ability of the current application running in the foreground supports recovery, that ability is started.
 

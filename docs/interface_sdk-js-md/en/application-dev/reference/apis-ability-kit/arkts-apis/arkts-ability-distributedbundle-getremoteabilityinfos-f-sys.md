@@ -6,7 +6,6 @@
 import { distributedBundle } from '@kit.AbilityKit';
 ```
 
-<a id="getremoteabilityinfos"></a>
 ## getRemoteAbilityInfos
 
 ```TypeScript
@@ -24,9 +23,7 @@ Obtains the information about remote abilities that match the given element name
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
-<!--Device-distributedBundle-function getRemoteAbilityInfos(elementNames: Array<ElementName>,
-    callback: AsyncCallback<Array<RemoteAbilityInfo>>): void--><!--Device-distributedBundle-function getRemoteAbilityInfos(elementNames: Array<ElementName>,
-    callback: AsyncCallback<Array<RemoteAbilityInfo>>): void-End-->
+<!--Device-distributedBundle-function getRemoteAbilityInfos(elementNames: Array<ElementName>,    callback: AsyncCallback<Array<RemoteAbilityInfo>>): void--><!--Device-distributedBundle-function getRemoteAbilityInfos(elementNames: Array<ElementName>,    callback: AsyncCallback<Array<RemoteAbilityInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.DistributedBundleFramework
 
@@ -40,7 +37,6 @@ Obtains the information about remote abilities that match the given element name
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Yes | Callback used to return an array of the remote ability information. |
 
 
-<a id="getremoteabilityinfos-1"></a>
 ## getRemoteAbilityInfos
 
 ```TypeScript

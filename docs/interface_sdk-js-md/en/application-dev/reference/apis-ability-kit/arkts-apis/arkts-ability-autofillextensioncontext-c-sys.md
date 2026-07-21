@@ -12,7 +12,6 @@ The AutoFillExtensionContext module provides the context environment for the Aut
 
 **System API:** This is a system API.
 
-<a id="reloadinmodal"></a>
 ## reloadInModal
 
 ```TypeScript

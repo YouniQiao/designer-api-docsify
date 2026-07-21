@@ -6,7 +6,6 @@
 import { data } from '@kit.TelephonyKit';
 ```
 
-<a id="disablecellulardata"></a>
 ## disableCellularData
 
 ```TypeScript
@@ -60,7 +59,6 @@ data.disableCellularData((err: BusinessError) => {
 ```
 
 
-<a id="disablecellulardata-1"></a>
 ## disableCellularData
 
 ```TypeScript

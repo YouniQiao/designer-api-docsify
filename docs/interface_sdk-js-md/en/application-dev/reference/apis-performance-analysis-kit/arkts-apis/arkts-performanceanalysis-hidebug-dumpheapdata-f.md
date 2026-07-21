@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="dumpheapdata"></a>
 ## dumpHeapData
 
 ```TypeScript
@@ -19,7 +18,7 @@ Exports the VM heap data and generates a filename.heapsnapshot file.The input pa
 
 **Deprecated since:** 9
 
-**Substitutes:** [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata-1)
+**Substitutes:** [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata)
 
 <!--Device-hidebug-function dumpHeapData(filename: string): void--><!--Device-hidebug-function dumpHeapData(filename: string): void-End-->
 

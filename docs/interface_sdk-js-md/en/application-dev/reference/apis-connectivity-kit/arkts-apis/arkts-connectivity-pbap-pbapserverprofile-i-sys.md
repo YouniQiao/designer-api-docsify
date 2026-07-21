@@ -16,7 +16,6 @@ Manager PBAP server profile.
 import { pbap } from '@kit.ConnectivityKit';
 ```
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -67,7 +66,6 @@ try {
 
 ```
 
-<a id="getphonebookaccessauthorization"></a>
 ## getPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -121,7 +119,6 @@ try {
 
 ```
 
-<a id="getphonebookaccessauthorization-1"></a>
 ## getPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -180,7 +177,6 @@ try {
 
 ```
 
-<a id="getsharetype"></a>
 ## getShareType
 
 ```TypeScript
@@ -234,7 +230,6 @@ try {
 
 ```
 
-<a id="getsharetype-1"></a>
 ## getShareType
 
 ```TypeScript
@@ -293,7 +288,6 @@ try {
 
 ```
 
-<a id="setphonebookaccessauthorization"></a>
 ## setPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -310,15 +304,7 @@ Set the phone book access authorization.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
-<!--Device-PbapServerProfile-setPhoneBookAccessAuthorization(
-      deviceId: string,
-      authorization: AccessAuthorization,
-      callback: AsyncCallback<void>
-    ): void--><!--Device-PbapServerProfile-setPhoneBookAccessAuthorization(
-      deviceId: string,
-      authorization: AccessAuthorization,
-      callback: AsyncCallback<void>
-    ): void-End-->
+<!--Device-PbapServerProfile-setPhoneBookAccessAuthorization(      deviceId: string,      authorization: AccessAuthorization,      callback: AsyncCallback<void>    ): void--><!--Device-PbapServerProfile-setPhoneBookAccessAuthorization(      deviceId: string,      authorization: AccessAuthorization,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -360,7 +346,6 @@ try {
 
 ```
 
-<a id="setphonebookaccessauthorization-1"></a>
 ## setPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -420,7 +405,6 @@ try {
 
 ```
 
-<a id="setsharetype"></a>
 ## setShareType
 
 ```TypeScript
@@ -475,7 +459,6 @@ try {
 
 ```
 
-<a id="setsharetype-1"></a>
 ## setShareType
 
 ```TypeScript

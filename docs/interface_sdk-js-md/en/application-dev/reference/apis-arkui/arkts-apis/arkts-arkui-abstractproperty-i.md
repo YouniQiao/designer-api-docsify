@@ -1,6 +1,6 @@
 # AbstractProperty
 
-Provides a reference to properties stored in [AppStorage](docroot://ui/state-management/arkts-appstorage.md) or [LocalStorage](docroot://ui/state-management/arkts-localstorage.md).
+Provides a reference to properties stored in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 12
 
@@ -8,14 +8,13 @@ Provides a reference to properties stored in [AppStorage](docroot://ui/state-man
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
 get(): T
 ```
 
-Reads data of the referenced property from [AppStorage](docroot://ui/state-management/arkts-appstorage.md) or [LocalStorage](docroot://ui/state-management/arkts-localstorage.md).
+Reads data of the referenced property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 12
 
@@ -31,14 +30,13 @@ Reads data of the referenced property from [AppStorage](docroot://ui/state-manag
 | --- | --- |
 | T | Data of the referenced property in AppStorage or LocalStorage. |
 
-<a id="info"></a>
 ## info
 
 ```TypeScript
 info(): string
 ```
 
-Reads the property name of the referenced property from [AppStorage](docroot://ui/state-management/arkts-appstorage.md) or [LocalStorage](docroot://ui/state-management/arkts-localstorage.md).
+Reads the property name of the referenced property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 12
 
@@ -54,17 +52,14 @@ Reads the property name of the referenced property from [AppStorage](docroot://u
 | --- | --- |
 | string | Property name of the referenced property in AppStorage or LocalStorage. |
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
 set(newValue: T): void
 ```
 
-Updates the data of the referenced property in [AppStorage](docroot://ui/state-management/arkts-appstorage.md) or [LocalStorage](docroot://ui/state-management/arkts-localstorage.md). The value of **newValue** must be of the **T** type and can be **null** or **undefined**.
-
+Updates the data of the referenced property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). The value of **newValue** must be of the **T** type and can be **null** or **undefined**.
 > **NOTE**
-
 > Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**,  
 > **undefined**, and union types.
 

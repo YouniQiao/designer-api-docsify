@@ -16,14 +16,13 @@ MacroQuery provides the API to check the support for macro photography.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="ismacrosupported"></a>
 ## isMacroSupported
 
 ```TypeScript
 isMacroSupported(): boolean
 ```
 
-Checks whether macro photography is supported in the current state. This API must be called after [commitConfig](arkts-camera-camera-session-i.md#commitconfig-1).
+Checks whether macro photography is supported in the current state. This API must be called after [commitConfig](arkts-camera-camera-session-i.md#commitconfig).
 
 **Since:** 19
 

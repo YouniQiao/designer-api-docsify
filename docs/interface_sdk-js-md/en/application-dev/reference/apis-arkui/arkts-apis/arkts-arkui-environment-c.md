@@ -1,6 +1,6 @@
 # Environment
 
-For details about how to use environment parameters, see [Environment: Device Environment Query](docroot://ui/state-management/arkts-environment.md).
+For details about how to use environment parameters, see [Environment: Device Environment Query](../../../ui/state-management/arkts-environment.md).
 
 ## Built-in Environment Variables
 
@@ -19,14 +19,13 @@ For details about how to use environment parameters, see [Environment: Device En
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="envprop"></a>
 ## EnvProp
 
 ```TypeScript
 static EnvProp<S>(key: string, value: S): boolean
 ```
 
-Stores the built-in environment variable key from [Environment](docroot://ui/state-management/arkts-environment.md)into [AppStorage](docroot://ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.
+Stores the built-in environment variable key from [Environment](../../../ui/state-management/arkts-environment.md)into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.
 
 You are advised to call this API when the application is started.
 
@@ -36,7 +35,7 @@ It is incorrect to use AppStorage to read environment variables without calling 
 
 **Deprecated since:** 10
 
-**Substitutes:** [envProp](arkts-arkui-environment-c.md#envprop-1)
+**Substitutes:** [envProp](arkts-arkui-environment-c.md#envprop)
 
 <!--Device-Environment-static EnvProp<S>(key: string, value: S): boolean--><!--Device-Environment-static EnvProp<S>(key: string, value: S): boolean-End-->
 
@@ -55,7 +54,6 @@ It is incorrect to use AppStorage to read environment variables without calling 
 | --- | --- |
 | boolean | Returns **false** if the property corresponding to the key exists in AppStorage; creates a property with the key and the default value and returns **true** otherwise. |
 
-<a id="envprops"></a>
 ## EnvProps
 
 ```TypeScript
@@ -67,25 +65,15 @@ static EnvProps(
   ): void
 ```
 
-Works in a way similar to the [EnvProp](arkts-arkui-environment-c.md#envprop-1) API, with the difference that it allows for initialization of multiple attributes in batches. It is recommended that this API be called during application startup to store system environment variables to [AppStorage](docroot://ui/state-management/arkts-appstorage.md) in batches.
+Works in a way similar to the [EnvProp](arkts-arkui-environment-c.md#envprop) API, with the difference that it allows for initialization of multiple attributes in batches. It is recommended that this API be called during application startup to store system environment variables to [AppStorage](../../../ui/state-management/arkts-appstorage.md) in batches.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [envProps](arkts-arkui-environment-c.md#envprops-1)
+**Substitutes:** [envProps](arkts-arkui-environment-c.md#envprops)
 
-<!--Device-Environment-static EnvProps(
-    props: {
-      key: string;
-      defaultValue: any;
-    }[],
-  ): void--><!--Device-Environment-static EnvProps(
-    props: {
-      key: string;
-      defaultValue: any;
-    }[],
-  ): void-End-->
+<!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,7 +83,6 @@ Works in a way similar to the [EnvProp](arkts-arkui-environment-c.md#envprop-1) 
 | --- | --- | --- | --- |
 | props | {       key: string;       defaultValue: any;     }[] | Yes |  |
 
-<a id="keys"></a>
 ## Keys
 
 ```TypeScript
@@ -108,7 +95,7 @@ Returns the property key array of environment variables.
 
 **Deprecated since:** 10
 
-**Substitutes:** [keys](arkts-arkui-environment-c.md#keys-1)
+**Substitutes:** [keys](arkts-arkui-environment-c.md#keys)
 
 <!--Device-Environment-static Keys(): Array<string>--><!--Device-Environment-static Keys(): Array<string>-End-->
 
@@ -120,14 +107,13 @@ Returns the property key array of environment variables.
 | --- | --- |
 | Array&lt;string&gt; | Property key array of environment variables. |
 
-<a id="envprop"></a>
 ## envProp
 
 ```TypeScript
 static envProp<S>(key: string, value: S): boolean
 ```
 
-Stores the built-in environment variable key from [Environment](docroot://ui/state-management/arkts-environment.md)into [AppStorage](docroot://ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.
+Stores the built-in environment variable key from [Environment](../../../ui/state-management/arkts-environment.md)into [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the value of the environment variable key is not found in AppStorage, the default value is used and stored in AppStorage. If the value is successfully stored, **true** is returned. If the value of the environment variable key already exists in AppStorage, **false** is returned.
 
 You are advised to call this API when the application is started.
 
@@ -154,14 +140,13 @@ It is incorrect to use AppStorage to read environment variables without calling 
 | --- | --- |
 | boolean | Returns **false** if the property corresponding to the key exists in AppStorage; creates a property with the key and the default value and returns **true** otherwise. |
 
-<a id="envprops"></a>
 ## envProps
 
 ```TypeScript
 static envProps(props: EnvPropsOptions[]): void
 ```
 
-Works in a way similar to the [envProp](arkts-arkui-environment-c.md#envprop-1) API, with the difference that it allows for initialization of multiple attributes in batches. It is recommended that this API be called during application startup to store system environment variables to [AppStorage](docroot://ui/state-management/arkts-appstorage.md) in batches.
+Works in a way similar to the [envProp](arkts-arkui-environment-c.md#envprop) API, with the difference that it allows for initialization of multiple attributes in batches. It is recommended that this API be called during application startup to store system environment variables to [AppStorage](../../../ui/state-management/arkts-appstorage.md) in batches.
 
 **Since:** 10
 
@@ -177,7 +162,6 @@ Works in a way similar to the [envProp](arkts-arkui-environment-c.md#envprop-1) 
 | --- | --- | --- | --- |
 | props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | Yes | Array of key-value pairs consisting of system environment variables and default values. |
 
-<a id="keys"></a>
 ## keys
 
 ```TypeScript

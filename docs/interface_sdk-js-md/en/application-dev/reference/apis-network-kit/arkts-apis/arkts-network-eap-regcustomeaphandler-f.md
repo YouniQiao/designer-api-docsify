@@ -6,7 +6,6 @@
 import { eap } from '@kit.NetworkKit';
 ```
 
-<a id="regcustomeaphandler"></a>
 ## regCustomEapHandler
 
 ```TypeScript

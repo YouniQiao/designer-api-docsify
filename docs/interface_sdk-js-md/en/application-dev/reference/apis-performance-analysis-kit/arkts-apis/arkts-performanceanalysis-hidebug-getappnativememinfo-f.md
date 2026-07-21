@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="getappnativememinfo"></a>
 ## getAppNativeMemInfo
 
 ```TypeScript
@@ -14,13 +13,12 @@ function getAppNativeMemInfo(): NativeMemInfo
 ```
 
 Obtains the memory information of the application process. This API is implemented by reading data from the **\/proc/{pid}/smaps_rollup and /proc/{pid}/statm** node.
-
 > **NOTE**  
 >  
 > Reading the **\/proc/{pid}/smaps_rollup** node takes a long time. You are advised to use the asynchronous API  
-> [hidebug.getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md#getappnativememinfoasync-1) to avoid frame loss or frame freezing.  
+> [hidebug.getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md#getappnativememinfoasync) to avoid frame loss or frame freezing.  
 >  
-> You are advised to use the [hidebug.getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md#getrssinfo-1) API to obtain the RSS information of an  
+> You are advised to use the [hidebug.getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md#getrssinfo) API to obtain the RSS information of an  
 > application.
 
 **Since:** 12

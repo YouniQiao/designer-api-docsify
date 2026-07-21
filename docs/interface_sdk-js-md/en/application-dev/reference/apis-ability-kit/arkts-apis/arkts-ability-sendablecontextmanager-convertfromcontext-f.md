@@ -6,7 +6,6 @@
 import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
-<a id="convertfromcontext"></a>
 ## convertFromContext
 
 ```TypeScript
@@ -35,7 +34,7 @@ Converts a Context object to a SendableContext object.
 
 | Type | Description |
 | --- | --- |
-| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | [SendableContext](arkts-ability-sendablecontext-i.md) object. |
+| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) object. |
 
 **Error codes:**
 

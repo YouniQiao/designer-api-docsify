@@ -14,7 +14,6 @@ Manages the ble scanner.Before calling a ble scanner method, you must use {@link
 import { ble } from '@kit.ConnectivityKit';
 ```
 
-<a id="off"></a>
 ## off('BLEDeviceFind')
 
 ```TypeScript
@@ -69,7 +68,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on('BLEDeviceFind')
 
 ```TypeScript
@@ -125,7 +123,6 @@ try {
 
 ```
 
-<a id="startscan"></a>
 ## startScan
 
 ```TypeScript
@@ -205,7 +202,6 @@ startscan();
 
 ```
 
-<a id="stopscan"></a>
 ## stopScan
 
 ```TypeScript

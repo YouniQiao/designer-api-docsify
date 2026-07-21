@@ -6,7 +6,6 @@
 import { inputEventClient } from '@kit.InputKit';
 ```
 
-<a id="injectmouseevent"></a>
 ## injectMouseEvent
 
 ```TypeScript
@@ -30,7 +29,7 @@ Injects a mouse/touchpad event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mouseEvent | [MouseEventData](arkts-input-inputeventclient-mouseeventdata-i-sys.md) | Yes | Mouse/touchpad event to inject.[Action](arkts-input-multimodalinput-mouseevent-action-e.md) in this parameter cannot be set to **CANCEL**. |
+| mouseEvent | [MouseEventData](arkts-input-inputeventclient-mouseeventdata-i-sys.md) | Yes | Mouse/touchpad event to inject.[Action](arkts-input-multimodalinput-keyevent-action-e.md) in this parameter cannot be set to **CANCEL**. |
 
 **Error codes:**
 

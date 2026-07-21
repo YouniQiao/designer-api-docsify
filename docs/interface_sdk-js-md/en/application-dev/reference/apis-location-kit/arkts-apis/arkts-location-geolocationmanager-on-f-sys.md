@@ -6,7 +6,6 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
-<a id="on"></a>
 ## on('locatingRequiredDataChange')
 
 ```TypeScript
@@ -20,9 +19,7 @@ Subscribe to changes in WiFi/BT scanning information,and use the WiFi/BT scannin
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
-<!--Device-geoLocationManager-function on(type: 'locatingRequiredDataChange', config: LocatingRequiredDataConfig, 
-      callback: Callback<Array<LocatingRequiredData>>): void--><!--Device-geoLocationManager-function on(type: 'locatingRequiredDataChange', config: LocatingRequiredDataConfig, 
-      callback: Callback<Array<LocatingRequiredData>>): void-End-->
+<!--Device-geoLocationManager-function on(type: 'locatingRequiredDataChange', config: LocatingRequiredDataConfig,       callback: Callback<Array<LocatingRequiredData>>): void--><!--Device-geoLocationManager-function on(type: 'locatingRequiredDataChange', config: LocatingRequiredDataConfig,       callback: Callback<Array<LocatingRequiredData>>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -64,7 +61,6 @@ try {
 ```
 
 
-<a id="on-1"></a>
 ## on('locationIconStatusChange')
 
 ```TypeScript

@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface FunctionConstructor--><!--Device-unnamed-interface FunctionConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ Creates a new function.
 | --- | --- |
 | Function |  |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

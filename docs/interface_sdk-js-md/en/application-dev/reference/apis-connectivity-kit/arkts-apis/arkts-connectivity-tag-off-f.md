@@ -6,7 +6,6 @@
 import { tag } from '@kit.ConnectivityKit';
 ```
 
-<a id="off"></a>
 ## off('readerMode')
 
 ```TypeScript
@@ -44,7 +43,6 @@ Disable foreground reader mode settings explicitly.
 | [3100203](../errorcode-nfc.md#3100203-incorrect-api-call-sequence) | The off() API can be called only when the on() has been called. |
 
 
-<a id="off-1"></a>
 ## off('readerModeWithInterval')
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { formObserver } from '@kit.FormKit';
 ```
 
-<a id="off"></a>
 ## off('formAdd')
 
 ```TypeScript
@@ -41,7 +40,6 @@ Cancels listening to the event of add form.<p>You can use this method to cancel 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="off-1"></a>
 ## off('formRemove')
 
 ```TypeScript
@@ -76,7 +74,6 @@ Cancels listening to the event of remove form.<p>You can use this method to canc
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="off-2"></a>
 ## off('notifyVisible')
 
 ```TypeScript
@@ -93,15 +90,7 @@ Cancels listening to the event of notifyVisible type change.<p>You can use this 
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
-<!--Device-formObserver-function off(
-    type: 'notifyVisible',
-    hostBundleName?: string,
-    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>
-  ): void--><!--Device-formObserver-function off(
-    type: 'notifyVisible',
-    hostBundleName?: string,
-    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>
-  ): void-End-->
+<!--Device-formObserver-function off(    type: 'notifyVisible',    hostBundleName?: string,    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>  ): void--><!--Device-formObserver-function off(    type: 'notifyVisible',    hostBundleName?: string,    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -123,7 +112,6 @@ Cancels listening to the event of notifyVisible type change.<p>You can use this 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="off-3"></a>
 ## off('notifyInvisible')
 
 ```TypeScript
@@ -140,15 +128,7 @@ Cancels listening to the event of notifyInvisible type change.<p>You can use thi
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
-<!--Device-formObserver-function off(
-    type: 'notifyInvisible',
-    hostBundleName?: string,
-    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>
-  ): void--><!--Device-formObserver-function off(
-    type: 'notifyInvisible',
-    hostBundleName?: string,
-    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>
-  ): void-End-->
+<!--Device-formObserver-function off(    type: 'notifyInvisible',    hostBundleName?: string,    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>  ): void--><!--Device-formObserver-function off(    type: 'notifyInvisible',    hostBundleName?: string,    observerCallback?: Callback<Array<formInfo.RunningFormInfo>>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -170,7 +150,6 @@ Cancels listening to the event of notifyInvisible type change.<p>You can use thi
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="off-4"></a>
 ## off('router')
 
 ```TypeScript
@@ -205,7 +184,6 @@ Unregister form router event Listening.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="off-5"></a>
 ## off('message')
 
 ```TypeScript
@@ -240,7 +218,6 @@ Unregister form message event Listening.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="off-6"></a>
 ## off('call')
 
 ```TypeScript

@@ -14,7 +14,6 @@ Remote device operation methods.
 import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
-<a id="getacbstate"></a>
 ## getAcbState
 
 ```TypeScript
@@ -47,7 +46,6 @@ Gets the ACB connection state.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="getconnectionstate"></a>
 ## getConnectionState
 
 ```TypeScript
@@ -80,7 +78,6 @@ Gets the profile connection state.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="getdeviceclass"></a>
 ## getDeviceClass
 
 ```TypeScript
@@ -113,7 +110,6 @@ Gets the type of the NearLink device.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="getdeviceinformation"></a>
 ## getDeviceInformation
 
 ```TypeScript
@@ -146,7 +142,6 @@ Obtains the remote device information.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="getdevicename"></a>
 ## getDeviceName
 
 ```TypeScript
@@ -179,7 +174,6 @@ Gets the name of the NearLink device.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="getpairingstate"></a>
 ## getPairingState
 
 ```TypeScript
@@ -212,7 +206,6 @@ Gets the pairing state.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="startpairing"></a>
 ## startPairing
 
 ```TypeScript

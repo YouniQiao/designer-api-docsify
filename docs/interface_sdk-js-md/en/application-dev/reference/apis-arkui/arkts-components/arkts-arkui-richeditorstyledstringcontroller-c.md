@@ -10,7 +10,6 @@ Represents the controller of the **RichEditor** component constructed using the 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getselection"></a>
 ## getSelection
 
 ```TypeScript
@@ -35,7 +34,6 @@ Obtains the current selection range of the **RichEditor** component.
 | --- | --- |
 | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Selection range.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="getstyledstring"></a>
 ## getStyledString
 
 ```TypeScript
@@ -60,14 +58,13 @@ Obtains the styled string displayed in the **RichEditor** component.
 | --- | --- |
 | [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) | Styled string displayed in the rich text component.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="oncontentchanged"></a>
 ## onContentChanged
 
 ```TypeScript
 onContentChanged(listener: StyledStringChangedListener): void
 ```
 
-Registers the callback for the text content change. This callback is triggered only when the text content is changed by backend programs, and is not triggered when [setStyledString](arkts-arkui-richeditorstyledstringcontroller-c.md#setstyledstring-1) is called.
+Registers the callback for the text content change. This callback is triggered only when the text content is changed by backend programs, and is not triggered when [setStyledString](arkts-arkui-richeditorstyledstringcontroller-c.md#setstyledstring) is called.
 
 **Since:** 12
 
@@ -85,7 +82,6 @@ Registers the callback for the text content change. This callback is triggered o
 | --- | --- | --- | --- |
 | listener | [StyledStringChangedListener](../arkts-apis/arkts-arkui-styledstringchangedlistener-i.md) | Yes | Callback listener for text content changes. |
 
-<a id="setstyledstring"></a>
 ## setStyledString
 
 ```TypeScript
@@ -93,7 +89,6 @@ setStyledString(styledString: StyledString): void
 ```
 
 Sets the styled string displayed in the **RichEditor** component.
-
 > **NOTE**  
 >  
 > - When this interface is called, the StyledString of the rich text component is fully replaced and rendered  

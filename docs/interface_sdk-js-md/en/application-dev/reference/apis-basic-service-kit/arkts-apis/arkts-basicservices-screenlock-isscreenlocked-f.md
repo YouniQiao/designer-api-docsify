@@ -6,7 +6,6 @@
 import { screenLock } from '@kit.BasicServicesKit';
 ```
 
-<a id="isscreenlocked"></a>
 ## isScreenLocked
 
 ```TypeScript
@@ -45,7 +44,6 @@ screenLock.isScreenLocked((err: BusinessError, data: Boolean)=>{
 ```
 
 
-<a id="isscreenlocked-1"></a>
 ## isScreenLocked
 
 ```TypeScript

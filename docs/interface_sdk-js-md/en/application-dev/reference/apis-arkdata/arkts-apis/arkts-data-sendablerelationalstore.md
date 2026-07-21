@@ -31,7 +31,7 @@ import { sendableRelationalStore } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | Represent the asset (such as a document, image, or video). **Asset** inherits from [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) and is used to implement cross-thread transfer of asset data.The asset data does not support **Datashare** APIs. Use [sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset-1) to create an **Asset** instance. |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | Represent the asset (such as a document, image, or video). **Asset** inherits from [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md) and is used to implement cross-thread transfer of asset data.The asset data does not support **Datashare** APIs. Use [sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset) to create an **Asset** instance. |
 
 ### Types
 

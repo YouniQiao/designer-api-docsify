@@ -12,7 +12,6 @@ Calendar controller.
 
 **System API:** This is a system API.
 
-<a id="backtotoday"></a>
 ## backToToday
 
 ```TypeScript
@@ -33,7 +32,6 @@ Back to day.
 
 **System API:** This is a system API.
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -54,7 +52,6 @@ Constructor.
 
 **System API:** This is a system API.
 
-<a id="goto"></a>
 ## goTo
 
 ```TypeScript

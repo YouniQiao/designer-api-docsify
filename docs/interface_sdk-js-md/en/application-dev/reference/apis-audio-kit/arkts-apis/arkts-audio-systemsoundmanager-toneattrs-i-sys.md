@@ -16,7 +16,6 @@ Tone attributes.
 import { systemSoundManager } from '@kit.AudioKit';
 ```
 
-<a id="getcategory"></a>
 ## getCategory
 
 ```TypeScript
@@ -52,7 +51,6 @@ toneAttrs.getCategory();
 
 ```
 
-<a id="getcustomizedtype"></a>
 ## getCustomizedType
 
 ```TypeScript
@@ -88,7 +86,6 @@ toneAttrs.getCustomizedType();
 
 ```
 
-<a id="getfilename"></a>
 ## getFileName
 
 ```TypeScript
@@ -124,7 +121,6 @@ toneAttrs.getFileName();
 
 ```
 
-<a id="getmediatype"></a>
 ## getMediaType
 
 ```TypeScript
@@ -160,7 +156,6 @@ toneAttrs.getMediaType();
 
 ```
 
-<a id="gettitle"></a>
 ## getTitle
 
 ```TypeScript
@@ -196,7 +191,6 @@ toneAttrs.getTitle();
 
 ```
 
-<a id="geturi"></a>
 ## getUri
 
 ```TypeScript
@@ -232,7 +226,6 @@ toneAttrs.getUri();
 
 ```
 
-<a id="setcategory"></a>
 ## setCategory
 
 ```TypeScript
@@ -271,7 +264,6 @@ toneAttrs.setCategory(categoryValue);
 
 ```
 
-<a id="setfilename"></a>
 ## setFileName
 
 ```TypeScript
@@ -310,7 +302,6 @@ toneAttrs.setFileName(fileName);
 
 ```
 
-<a id="setmediatype"></a>
 ## setMediaType
 
 ```TypeScript
@@ -348,7 +339,6 @@ toneAttrs.setMediaType(type);
 
 ```
 
-<a id="settitle"></a>
 ## setTitle
 
 ```TypeScript

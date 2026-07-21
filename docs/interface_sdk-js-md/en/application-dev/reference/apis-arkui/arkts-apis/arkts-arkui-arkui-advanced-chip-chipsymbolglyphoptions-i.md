@@ -1,7 +1,6 @@
 # ChipSymbolGlyphOptions
 
 Defines the prefix and suffix icon options.
-
 > **NOTE**  
 >  
 > The animation type cannot be modified via  

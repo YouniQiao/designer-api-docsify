@@ -1,7 +1,6 @@
 # @ohos.multimodalInput.inputMonitor
 
 The **inputMonitor** module implements listening for events of input devices, including the touchscreen, mouse, and touchpad.
-
 > **NOTE**  
 >  
 > - In this document, **global** indicates the entire touchscreen or touchpad. For example, listening for global  

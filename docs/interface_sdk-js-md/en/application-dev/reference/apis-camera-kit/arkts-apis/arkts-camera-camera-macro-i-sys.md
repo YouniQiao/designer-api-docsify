@@ -18,7 +18,6 @@ Macro inherits from [MacroQuery](arkts-camera-camera-macroquery-i-sys.md).It pro
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="enablemacro"></a>
 ## enableMacro
 
 ```TypeScript
@@ -26,11 +25,10 @@ enableMacro(enabled: boolean): void
 ```
 
 Enables or disables macro photography.
-
 > **NOTE**  
 >  
 > Before calling this API, call  
-> [isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported-1) to check whether the  
+> [isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#ismacrosupported) to check whether the  
 > current device supports macro photography.
 
 **Since:** 19

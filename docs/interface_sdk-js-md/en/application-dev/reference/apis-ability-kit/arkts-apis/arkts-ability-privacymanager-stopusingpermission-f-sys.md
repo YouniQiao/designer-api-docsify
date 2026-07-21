@@ -6,7 +6,6 @@
 import { privacyManager } from '@kit.AbilityKit';
 ```
 
-<a id="stopusingpermission"></a>
 ## stopUsingPermission
 
 ```TypeScript
@@ -15,7 +14,7 @@ function stopUsingPermission(tokenID: number, permissionName: Permissions): Prom
 
 A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses a promise to return the result.
 
-This API must be used in conjunction with [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission-1).
+This API must be used in conjunction with [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission).
 
 **Since:** 9
 
@@ -31,7 +30,7 @@ This API must be used in conjunction with [startUsingPermission](arkts-ability-p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync-1). |
+| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to stop using. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
 
 **Return value:**
@@ -70,7 +69,6 @@ privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then((
 ```
 
 
-<a id="stopusingpermission-1"></a>
 ## stopUsingPermission
 
 ```TypeScript
@@ -79,7 +77,7 @@ function stopUsingPermission(tokenID: number, permissionName: Permissions, callb
 
 A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses an asynchronous callback to return the result.
 
-This API must be used in conjunction with [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission-1).
+This API must be used in conjunction with [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission).
 
 **Since:** 9
 
@@ -95,7 +93,7 @@ This API must be used in conjunction with [startUsingPermission](arkts-ability-p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync-1). |
+| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to stop using. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
@@ -131,7 +129,6 @@ privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', (err: 
 ```
 
 
-<a id="stopusingpermission-2"></a>
 ## stopUsingPermission
 
 ```TypeScript
@@ -145,7 +142,7 @@ function stopUsingPermission(
 
 A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses a promise to return the result.
 
-The PID must be the same as the PID passed in [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission-1).
+The PID must be the same as the PID passed in [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission).
 
 **Since:** 26.0.0
 
@@ -153,17 +150,7 @@ The PID must be the same as the PID passed in [startUsingPermission](arkts-abili
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-privacyManager-function stopUsingPermission(
-    tokenID: int,
-    permissionName: Permissions,
-    pid?: int,
-    options?: PermissionUsingOptions
-  ): Promise<void>--><!--Device-privacyManager-function stopUsingPermission(
-    tokenID: int,
-    permissionName: Permissions,
-    pid?: int,
-    options?: PermissionUsingOptions
-  ): Promise<void>-End-->
+<!--Device-privacyManager-function stopUsingPermission(    tokenID: int,    permissionName: Permissions,    pid?: int,    options?: PermissionUsingOptions  ): Promise<void>--><!--Device-privacyManager-function stopUsingPermission(    tokenID: int,    permissionName: Permissions,    pid?: int,    options?: PermissionUsingOptions  ): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -173,9 +160,9 @@ The PID must be the same as the PID passed in [startUsingPermission](arkts-abili
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync-1). |
+| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to stop using. Passing an invalid value returns error code 12100001. |
-| pid | number | No | Process ID of the caller, which must be the same as the pid passed in [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission-1). Failure to meet the matching relationship may cause the API call to fail (error code 12100004).<br>The value should be an integer. Default value: -1, indicating no response based on the process lifecycle. |
+| pid | number | No | Process ID of the caller, which must be the same as the pid passed in [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission). Failure to meet the matching relationship may cause the API call to fail (error code 12100004).<br>The value should be an integer. Default value: -1, indicating no response based on the process lifecycle. |
 | options | [PermissionUsingOptions](arkts-ability-privacymanager-permissionusingoptions-i-sys.md) | No | Optional parameter for permission usage, used to specify the extension identity. This parameter is passed in when the caller's extension identity information needs to be identified.<br>Default value: Please refer to [PermissionUsingOptions](arkts-ability-privacymanager-permissionusingoptions-i-sys.md) for the default values of each property in the structure. |
 
 **Return value:**
@@ -230,7 +217,6 @@ privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid, {
 ```
 
 
-<a id="stopusingpermission-3"></a>
 ## stopUsingPermission
 
 ```TypeScript
@@ -243,21 +229,13 @@ function stopUsingPermission(
 
 A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses a promise to return the result.
 
-The pid must be the same as the pid passed into [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission-1).
+The pid must be the same as the pid passed into [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission).
 
 **Since:** 18
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
-<!--Device-privacyManager-function stopUsingPermission(
-    tokenID: int,
-    permissionName: Permissions,
-    pid?: int
-  ): Promise<void>--><!--Device-privacyManager-function stopUsingPermission(
-    tokenID: int,
-    permissionName: Permissions,
-    pid?: int
-  ): Promise<void>-End-->
+<!--Device-privacyManager-function stopUsingPermission(    tokenID: int,    permissionName: Permissions,    pid?: int  ): Promise<void>--><!--Device-privacyManager-function stopUsingPermission(    tokenID: int,    permissionName: Permissions,    pid?: int  ): Promise<void>-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
 
@@ -267,9 +245,9 @@ The pid must be the same as the pid passed into [startUsingPermission](arkts-abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync-1). |
+| tokenID | number | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001.<br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0.<br>For BundleInfo acquisition, please refer to:[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to stop using. Passing an invalid value returns error code 12100001.<br>Value constraint: The permission name length cannot exceed 256 characters. |
-| pid | number | No | Process PID of the caller. Must be the same as the pid passed to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission-1). A mismatch may cause the API call to fail(error code 12100004).<br>The value should be an integer. Default value: -1, indicating no response based on process lifecycle. |
+| pid | number | No | Process PID of the caller. Must be the same as the pid passed to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission). A mismatch may cause the API call to fail(error code 12100004).<br>The value should be an integer. Default value: -1, indicating no response based on process lifecycle. |
 
 **Return value:**
 

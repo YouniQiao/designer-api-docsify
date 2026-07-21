@@ -6,7 +6,6 @@
 import { cloudData } from '@kit.ArkData';
 ```
 
-<a id="share"></a>
 ## share
 
 ```TypeScript
@@ -21,15 +20,7 @@ Shares data based on the specified shared resource ID and participants.This API 
 
 **Since:** 11
 
-<!--Device-sharing-function share(
-      sharingResource: string,
-      participants: Array<Participant>,
-      callback: AsyncCallback<Result<Array<Result<Participant>>>>
-    ): void--><!--Device-sharing-function share(
-      sharingResource: string,
-      participants: Array<Participant>,
-      callback: AsyncCallback<Result<Array<Result<Participant>>>>
-    ): void-End-->
+<!--Device-sharing-function share(      sharingResource: string,      participants: Array<Participant>,      callback: AsyncCallback<Result<Array<Result<Participant>>>>    ): void--><!--Device-sharing-function share(      sharingResource: string,      participants: Array<Participant>,      callback: AsyncCallback<Result<Array<Result<Participant>>>>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -81,7 +72,6 @@ cloudData.sharing.share('sharing_resource_test', participants, ((err: BusinessEr
 ```
 
 
-<a id="share-1"></a>
 ## share
 
 ```TypeScript
@@ -95,13 +85,7 @@ Shares data based on the specified shared resource ID and participants.This API 
 
 **Since:** 11
 
-<!--Device-sharing-function share(
-      sharingResource: string,
-      participants: Array<Participant>
-    ): Promise<Result<Array<Result<Participant>>>>--><!--Device-sharing-function share(
-      sharingResource: string,
-      participants: Array<Participant>
-    ): Promise<Result<Array<Result<Participant>>>>-End-->
+<!--Device-sharing-function share(      sharingResource: string,      participants: Array<Participant>    ): Promise<Result<Array<Result<Participant>>>>--><!--Device-sharing-function share(      sharingResource: string,      participants: Array<Participant>    ): Promise<Result<Array<Result<Participant>>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 

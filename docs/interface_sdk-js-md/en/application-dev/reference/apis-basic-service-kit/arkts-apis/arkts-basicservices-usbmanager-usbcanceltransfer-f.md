@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="usbcanceltransfer"></a>
 ## usbCancelTransfer
 
 ```TypeScript
@@ -14,13 +13,12 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 ```
 
 Cancels an asynchronous USB data transfer request.
-
 > **NOTE**  
 >  
 > This API is used to proactively cancel an unfinished USB data transfer request (for example, the one submitted by  
 > **usbSubmitTransfer**).  
 > Before calling this API, call the  
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface-1)  
+> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface)  
 > API to claim a communication interface.
 
 **Since:** 18

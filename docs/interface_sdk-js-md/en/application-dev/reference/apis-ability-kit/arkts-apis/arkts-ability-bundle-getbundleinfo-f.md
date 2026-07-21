@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="getbundleinfo"></a>
 ## getBundleInfo
 
 ```TypeScript
@@ -26,9 +25,7 @@ No permission is required for obtaining the caller's own information.
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
-<!--Device-bundle-function getBundleInfo(bundleName: string,
-    bundleFlags: number, options: BundleOptions, callback: AsyncCallback<BundleInfo>): void--><!--Device-bundle-function getBundleInfo(bundleName: string,
-    bundleFlags: number, options: BundleOptions, callback: AsyncCallback<BundleInfo>): void-End-->
+<!--Device-bundle-function getBundleInfo(bundleName: string,    bundleFlags: number, options: BundleOptions, callback: AsyncCallback<BundleInfo>): void--><!--Device-bundle-function getBundleInfo(bundleName: string,    bundleFlags: number, options: BundleOptions, callback: AsyncCallback<BundleInfo>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -42,7 +39,6 @@ No permission is required for obtaining the caller's own information.
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | Yes | Callback used to return the bundle information. |
 
 
-<a id="getbundleinfo-1"></a>
 ## getBundleInfo
 
 ```TypeScript
@@ -74,7 +70,6 @@ No permission is required for obtaining the caller's own information.
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | Yes | Callback used to return the bundle information. |
 
 
-<a id="getbundleinfo-2"></a>
 ## getBundleInfo
 
 ```TypeScript

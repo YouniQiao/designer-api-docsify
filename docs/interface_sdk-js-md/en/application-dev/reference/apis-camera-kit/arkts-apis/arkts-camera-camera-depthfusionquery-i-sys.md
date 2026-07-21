@@ -16,7 +16,6 @@ A class for querying depth fusion capabilities.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getdepthfusionthreshold"></a>
 ## getDepthFusionThreshold
 
 ```TypeScript
@@ -63,7 +62,6 @@ function getDepthFusionThreshold(DepthFusionQuery: camera.DepthFusionQuery): voi
 
 ```
 
-<a id="isdepthfusionsupported"></a>
 ## isDepthFusionSupported
 
 ```TypeScript

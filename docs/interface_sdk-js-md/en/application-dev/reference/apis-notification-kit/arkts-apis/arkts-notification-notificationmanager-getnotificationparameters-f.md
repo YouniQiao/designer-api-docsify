@@ -6,14 +6,13 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="getnotificationparameters"></a>
 ## getNotificationParameters
 
 ```TypeScript
 function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>
 ```
 
-Obtains some information about the **wantAgent** field in [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md). This API uses a promise to return the result.
+Obtains some information about the **wantAgent** field in [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md). This API uses a promise to return the result.
 
 **Since:** 24
 

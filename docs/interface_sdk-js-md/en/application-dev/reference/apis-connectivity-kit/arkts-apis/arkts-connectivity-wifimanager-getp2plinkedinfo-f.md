@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="getp2plinkedinfo"></a>
 ## getP2pLinkedInfo
 
 ```TypeScript
@@ -38,7 +37,6 @@ Obtain information about the P2P connection.
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
 
-<a id="getp2plinkedinfo-1"></a>
 ## getP2pLinkedInfo
 
 ```TypeScript

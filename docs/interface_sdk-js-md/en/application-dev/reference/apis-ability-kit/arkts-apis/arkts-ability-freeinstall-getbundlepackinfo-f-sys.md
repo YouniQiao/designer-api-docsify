@@ -6,7 +6,6 @@
 import { freeInstall } from '@kit.AbilityKit';
 ```
 
-<a id="getbundlepackinfo"></a>
 ## getBundlePackInfo
 
 ```TypeScript
@@ -20,9 +19,7 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
-<!--Device-freeInstall-function getBundlePackInfo(bundleName: string, 
-    bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void--><!--Device-freeInstall-function getBundlePackInfo(bundleName: string, 
-    bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void-End-->
+<!--Device-freeInstall-function getBundlePackInfo(bundleName: string,     bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void--><!--Device-freeInstall-function getBundlePackInfo(bundleName: string,     bundlePackFlag : BundlePackFlag, callback: AsyncCallback<BundlePackInfo>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -47,7 +44,6 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
 
-<a id="getbundlepackinfo-1"></a>
 ## getBundlePackInfo
 
 ```TypeScript

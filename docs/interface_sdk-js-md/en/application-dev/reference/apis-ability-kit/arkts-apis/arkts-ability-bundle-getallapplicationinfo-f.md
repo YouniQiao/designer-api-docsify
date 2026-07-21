@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="getallapplicationinfo"></a>
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -22,9 +21,7 @@ Obtains the information about all applications. This API uses an asynchronous ca
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
-<!--Device-bundle-function getAllApplicationInfo(bundleFlags: number,
-    userId: number, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundle-function getAllApplicationInfo(bundleFlags: number,
-    userId: number, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
+<!--Device-bundle-function getAllApplicationInfo(bundleFlags: number,    userId: number, callback: AsyncCallback<Array<ApplicationInfo>>): void--><!--Device-bundle-function getAllApplicationInfo(bundleFlags: number,    userId: number, callback: AsyncCallback<Array<ApplicationInfo>>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework
 
@@ -37,7 +34,6 @@ Obtains the information about all applications. This API uses an asynchronous ca
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | Callback used to return the application information. |
 
 
-<a id="getallapplicationinfo-1"></a>
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -64,7 +60,6 @@ Obtains the information about all applications of the current user. This API use
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ApplicationInfo&gt;&gt; | Yes | Callback used to return the application information. |
 
 
-<a id="getallapplicationinfo-2"></a>
 ## getAllApplicationInfo
 
 ```TypeScript

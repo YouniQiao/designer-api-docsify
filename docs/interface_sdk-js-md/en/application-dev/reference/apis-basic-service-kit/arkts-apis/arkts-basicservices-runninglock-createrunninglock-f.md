@@ -6,7 +6,6 @@
 import { runningLock } from '@kit.BasicServicesKit';
 ```
 
-<a id="createrunninglock"></a>
 ## createRunningLock
 
 ```TypeScript
@@ -19,7 +18,7 @@ Creates a {@link RunningLock} object. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [create](arkts-basicservices-runninglock-create-f.md#create-1)
+**Substitutes:** [create](arkts-basicservices-runninglock-create-f.md#create)
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -49,7 +48,6 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 ```
 
 
-<a id="createrunninglock-1"></a>
 ## createRunningLock
 
 ```TypeScript
@@ -62,7 +60,7 @@ Creates a {@link RunningLock} object. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [create](arkts-basicservices-runninglock-create-f.md#create-1)
+**Substitutes:** [create](arkts-basicservices-runninglock-create-f.md#create)
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 

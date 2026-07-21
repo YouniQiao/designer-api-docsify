@@ -6,14 +6,13 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="openaccessory"></a>
 ## openAccessory
 
 ```TypeScript
 function openAccessory(accessory: USBAccessory): USBAccessoryHandle
 ```
 
-Obtains the accessory handle and opens the accessory file descriptor. Then, the host can communicate with the accessory through the **read** and **write** APIs provided by Core File Kit.You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist-1) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter.
+Obtains the accessory handle and opens the accessory file descriptor. Then, the host can communicate with the accessory through the **read** and **write** APIs provided by Core File Kit.You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter.
 
 **Since:** 14
 
@@ -25,7 +24,7 @@ Obtains the accessory handle and opens the accessory file descriptor. Then, the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Yes | USB accessory, which is obtained through [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist-1). |
+| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Yes | USB accessory, which is obtained through [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist). |
 
 **Return value:**
 

@@ -1,6 +1,6 @@
 # DisplaySync
 
-An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback.Before calling any of the following APIs, you must use [displaySync.create()](arkts-arkgraphics2d-displaysync-create-f.md#create-1) to create a **DisplaySync** instance.
+An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback.Before calling any of the following APIs, you must use [displaySync.create()](arkts-arkgraphics2d-displaysync-create-f.md#create) to create a **DisplaySync** instance.
 
 **Since:** 11
 
@@ -14,7 +14,6 @@ An object that implements the setting of the frame rate and callback. It provide
 import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
-<a id="off"></a>
 ## off('frame')
 
 ```TypeScript
@@ -50,7 +49,6 @@ backDisplaySync?.off("frame", callback)
 
 ```
 
-<a id="on"></a>
 ## on('frame')
 
 ```TypeScript
@@ -84,7 +82,6 @@ backDisplaySync?.on("frame", callback)
 
 ```
 
-<a id="setexpectedframeraterange"></a>
 ## setExpectedFrameRateRange
 
 ```TypeScript
@@ -125,7 +122,6 @@ backDisplaySync?.setExpectedFrameRateRange(range)
 
 ```
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -190,7 +186,6 @@ struct Index {
 
 ```
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript

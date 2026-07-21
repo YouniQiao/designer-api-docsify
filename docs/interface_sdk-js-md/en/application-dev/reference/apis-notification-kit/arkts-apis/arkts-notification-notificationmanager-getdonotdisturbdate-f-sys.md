@@ -6,7 +6,6 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="getdonotdisturbdate"></a>
 ## getDoNotDisturbDate
 
 ```TypeScript
@@ -64,7 +63,6 @@ notificationManager.getDoNotDisturbDate(getDoNotDisturbDateCallback);
 ```
 
 
-<a id="getdonotdisturbdate-1"></a>
 ## getDoNotDisturbDate
 
 ```TypeScript
@@ -117,7 +115,6 @@ notificationManager.getDoNotDisturbDate().then((data: notificationManager.DoNotD
 ```
 
 
-<a id="getdonotdisturbdate-2"></a>
 ## getDoNotDisturbDate
 
 ```TypeScript
@@ -180,7 +177,6 @@ notificationManager.getDoNotDisturbDate(userId, getDoNotDisturbDateCallback);
 ```
 
 
-<a id="getdonotdisturbdate-3"></a>
 ## getDoNotDisturbDate
 
 ```TypeScript

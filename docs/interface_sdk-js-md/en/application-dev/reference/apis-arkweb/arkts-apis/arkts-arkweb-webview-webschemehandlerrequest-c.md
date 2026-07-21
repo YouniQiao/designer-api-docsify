@@ -14,7 +14,6 @@ Defines the Web resource request used for scheme handler.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="getframeurl"></a>
 ## getFrameUrl
 
 ```TypeScript
@@ -35,7 +34,6 @@ Gets the URL of frame which trigger this request.
 | --- | --- |
 | string | Return the URL of frame which trigger this request. |
 
-<a id="getheader"></a>
 ## getHeader
 
 ```TypeScript
@@ -58,7 +56,6 @@ Gets request headers.
 | --- | --- |
 | Array&lt;WebHeader&gt; | Return the request headers. |
 
-<a id="gethttpbodystream"></a>
 ## getHttpBodyStream
 
 ```TypeScript
@@ -81,7 +78,6 @@ Get http body stream.
 | --- | --- |
 | [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
 
-<a id="getreferrer"></a>
 ## getReferrer
 
 ```TypeScript
@@ -104,7 +100,6 @@ Get referrer of request.
 | --- | --- |
 | string | Return referrer of request. |
 
-<a id="getrequestmethod"></a>
 ## getRequestMethod
 
 ```TypeScript
@@ -127,7 +122,6 @@ Get request method.
 | --- | --- |
 | string | Return the request method. |
 
-<a id="getrequestresourcetype"></a>
 ## getRequestResourceType
 
 ```TypeScript
@@ -148,7 +142,6 @@ Get request's resource type.
 | --- | --- |
 | [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Return the request's resource type. |
 
-<a id="getrequesturl"></a>
 ## getRequestUrl
 
 ```TypeScript
@@ -171,7 +164,6 @@ Gets the request URL.
 | --- | --- |
 | string | Return the request URL. |
 
-<a id="hasgesture"></a>
 ## hasGesture
 
 ```TypeScript
@@ -194,7 +186,6 @@ Check whether the request is associated with gesture.
 | --- | --- |
 | boolean | Whether request has user gesture. |
 
-<a id="ismainframe"></a>
 ## isMainFrame
 
 ```TypeScript

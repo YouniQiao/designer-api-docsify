@@ -1,6 +1,5 @@
 # requestSuspendDelay
 
-<a id="requestsuspenddelay"></a>
 ## requestSuspendDelay
 
 ```TypeScript
@@ -15,7 +14,7 @@ The default duration of delayed suspension is 3 minutes when the battery level i
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestsuspenddelay-1)
+**Substitutes:** [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay)
 
 <!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo--><!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo-End-->
 

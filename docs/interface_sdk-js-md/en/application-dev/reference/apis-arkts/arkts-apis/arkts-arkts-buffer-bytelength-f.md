@@ -6,7 +6,6 @@
 import { buffer } from '@kit.ArkTS';
 ```
 
-<a id="bytelength"></a>
 ## byteLength
 
 ```TypeScript
@@ -22,13 +21,7 @@ Obtains the number of bytes of a string based on the encoding format.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-buffer-function byteLength(
-    string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer,
-    encoding?: BufferEncoding
-  ): number--><!--Device-buffer-function byteLength(
-    string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer,
-    encoding?: BufferEncoding
-  ): number-End-->
+<!--Device-buffer-function byteLength(    string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer,    encoding?: BufferEncoding  ): number--><!--Device-buffer-function byteLength(    string: string | Buffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer,    encoding?: BufferEncoding  ): number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

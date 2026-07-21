@@ -1,11 +1,10 @@
 # ButtonType
 
 Enumerates the button types.
-
 > **NOTE**  
 >  
 > - The corner radius of the rounded rectangle button is set using the universal attribute  
-> [borderRadius](arkts-arkui-commonmethod-c.md#borderradius-1).  
+> [borderRadius](arkts-arkui-commonmethod-c.md#borderradius).  
 >  
 > - For a button of the **Capsule** type, the **borderRadius** settings do not take effect, and the radius of its  
 > rounded corner is always half of the button height or width, whichever is smaller.  
@@ -21,16 +20,16 @@ Enumerates the button types.
 > [fontFamily](ButtonAttribute#fontFamily), and [fontWeight](ButtonAttribute#fontWeight).  
 >  
 > - Before setting the [gradient color](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), you need to set  
-> [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1) to transparent.  
+> [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor) to transparent.  
 >  
 > - When **borderRadius** is not set, the corner radius of the rounded rectangle button remains at the default value.  
 > In this case, the corner radius does not change with the button height and is subject to the **controlSize**  
 > property. When **controlSize** is **NORMAL**, the corner radius is 20 vp; when **controlSize** is **SMALL**, the  
 > corner radius is 14 vp.  
 >  
-> - When [border](arkts-arkui-commonmethod-c.md#border-1) is set for the  
+> - When [border](arkts-arkui-commonmethod-c.md#border) is set for the  
 > button, a default  
-> [borderRadius](arkts-arkui-commonmethod-c.md#borderradius-1) value is  
+> [borderRadius](arkts-arkui-commonmethod-c.md#borderradius) value is  
 > automatically applied. When both **border** and **borderRadius** attributes are used, **borderRadius** must be  
 > specified after **border** to prevent the border radius from being overridden by the default radius value in the  
 > border style.

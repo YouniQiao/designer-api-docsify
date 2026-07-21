@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface ReadonlyMap<K, V>--><!--Device-unnamed-interface ReadonlyMap<K, V>-End-->
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -19,7 +18,6 @@ Returns an iterable of entries in the map.
 | --- | --- |
 | [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |  |
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -36,7 +34,6 @@ Returns an iterable of key, value pairs for every entry in the map.
 | --- | --- |
 | [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |  |
 
-<a id="keys"></a>
 ## keys
 
 ```TypeScript
@@ -53,7 +50,6 @@ Returns an iterable of keys in the map
 | --- | --- |
 | [IterableIterator](arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |  |
 
-<a id="values"></a>
 ## values
 
 ```TypeScript

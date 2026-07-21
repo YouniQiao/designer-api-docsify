@@ -8,7 +8,6 @@ StyledString
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -31,10 +30,9 @@ A constructor used to create a styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| ImageAttachment \| CustomSpan | Yes | Text of the styled string.<br>**NOTE**<br>If this parameter is of the ImageAttachment or CustomSpan type, the **styles** parameter has no effect.<br>To set **styles**, use methods such as [setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle-1). |
+| value | string \| ImageAttachment \| CustomSpan | Yes | Text of the styled string.<br>**NOTE**<br>If this parameter is of the ImageAttachment or CustomSpan type, the **styles** parameter has no effect.<br>To set **styles**, use methods such as [setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle). |
 | styles | Array&lt;StyleOptions&gt; | No | Initialization options of the styled string.<br>**NOTE**<br>If **start** is set to an invalid value, it uses the default value **0**.<br>If the **length** value is invalid, **length** will default to the actual length of the styled string starting from the start position.<br>If **StyledStringKey** does not match **StyledStringValue**, **styles** has no effect. |
 
-<a id="equals"></a>
 ## equals
 
 ```TypeScript
@@ -65,7 +63,6 @@ Checks whether this styled string the same as another styled string.
 | --- | --- |
 | boolean | Whether two styled strings are equal.<br>**true** if the two styled strings are equal; **false** otherwise.<br>**NOTE**<br>The two styled strings are the same if they have the same text and style.<br>[GestureStyle](arkts-arkui-gesturestyle-c.md) in styled strings is not compared. This means that, if two styled strings are the same except for the event configured, they are treated as the same.<br>In comparing [CustomSpan](arkts-arkui-customspan-c.md) or [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md) objects, addresses are compared. The objects that have the same address are the same. |
 
-<a id="fromhtml"></a>
 ## fromHtml
 
 ```TypeScript
@@ -76,24 +73,24 @@ Converts an HTML string into a styled string. Currently, the following HTML tags
 
 , \<strong>, \<b>, \<a>, \<i>, \<em>, \<s>, \<u>, \<del>, \<sup>, \<sub>. The **style** attribute within tags can be converted to the corresponding style in the styled string.
 
-For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml](docroot://reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
+For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
 
 | Tag Name| Description |  
 | ------------- | ---------------------------- |  
-| \<p\> | Paragraph tag, which separates text into paragraphs. |  
-| \<span\> | Inline text supporting style configuration. |  
-| \<img\> | Image tag, used to insert an image. |  
-| \<strong\> | Bold text tag. |  
+| \&lt;p\&gt; | Paragraph tag, which separates text into paragraphs. |  
+| \&lt;span\&gt; | Inline text supporting style configuration. |  
+| \&lt;img\&gt; | Image tag, used to insert an image. |  
+| \&lt;strong\&gt; | Bold text tag. |  
 | &lt;br&gt;<sup>20+</sup> | Line break tag. |  
-| \<b\><sup>20+</sup> | Bold text tag. |  
-| \<a\><sup>20+</sup> | Hyperlink tag. |  
-| \<i\><sup>20+</sup> | Italic text tag. |  
-| \<em\><sup>20+</sup> | Italic text tag. |  
-| \<s\><sup>20+</sup> | Strikethrough tag, which adds a line through the text. |  
-| \<u\><sup>20+</sup> | Underline tag, which adds a decorative underline to the text. |  
-| \<del\><sup>20+</sup> | Strikethrough tag, which adds a line through the text. |  
-| \<sup\><sup>20+</sup> | Superscript tag. |  
-| \<sub\><sup>20+</sup> | Subscript tag. |
+| \&lt;b\&gt;<sup>20+</sup> | Bold text tag. |  
+| \&lt;a\&gt;<sup>20+</sup> | Hyperlink tag. |  
+| \&lt;i\&gt;<sup>20+</sup> | Italic text tag. |  
+| \&lt;em\&gt;<sup>20+</sup> | Italic text tag. |  
+| \&lt;s\&gt;<sup>20+</sup> | Strikethrough tag, which adds a line through the text. |  
+| \&lt;u\&gt;<sup>20+</sup> | Underline tag, which adds a decorative underline to the text. |  
+| \&lt;del\&gt;<sup>20+</sup> | Strikethrough tag, which adds a line through the text. |  
+| \&lt;sup\&gt;<sup>20+</sup> | Superscript tag. |  
+| \&lt;sub\&gt;<sup>20+</sup> | Subscript tag. |
 
 **Since:** 12
 
@@ -124,7 +121,6 @@ For details about how to use this API, see [Example 12: Implementing Conversion 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [170001](../errorcode-styled-string.md#170001-conversion-error) | Convert Error. |
 
-<a id="getstring"></a>
 ## getString
 
 ```TypeScript
@@ -149,7 +145,6 @@ Obtains the text of this styled string.
 | --- | --- |
 | string | Text of the styled string.<br>**NOTE**<br>If the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md) elements, they are represented as space characters in the returned result. |
 
-<a id="getstyles"></a>
 ## getStyles
 
 ```TypeScript
@@ -190,7 +185,6 @@ This API returns only styles explicitly set by the developer.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="substyledstring"></a>
 ## subStyledString
 
 ```TypeScript
@@ -228,7 +222,6 @@ Obtains a substring of this styled string. The specified range must not exceed t
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="tohtml"></a>
 ## toHtml
 
 ```TypeScript
@@ -237,7 +230,7 @@ static toHtml(styledString: StyledString): string
 
 Converts a styled string into an HTML-formatted string. The supported styled string keys for conversion, as detailed in [StyledStringKey](arkts-arkui-styledstringkey-e.md), include: **StyledStringKey.FONT**,**StyledStringKey.DECORATION**, **StyledStringKey.LETTER_SPACING**, **StyledStringKey.TEXT_SHADOW**,**StyledStringKey.LINE_HEIGHT**, and **StyledStringKey.IMAGE**.
 
-For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml](docroot://reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
+For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
 
 **Since:** 14
 

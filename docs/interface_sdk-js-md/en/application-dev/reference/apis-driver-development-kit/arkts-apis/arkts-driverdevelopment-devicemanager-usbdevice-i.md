@@ -1,6 +1,6 @@
 # USBDevice
 
-USB device information, which is inherited from [Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices-1).
+USB device information, which is inherited from [Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices).
 
 **Inheritance/Implementation:** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md)
 

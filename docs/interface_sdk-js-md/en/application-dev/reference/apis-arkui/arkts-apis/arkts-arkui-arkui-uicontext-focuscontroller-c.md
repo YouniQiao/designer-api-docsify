@@ -1,10 +1,9 @@
 # FocusController
 
 Provides capabilities to control focus, including features such as clearing, moving, and activating focus.
-
 > **NOTE**  
 >  
-> In the following API examples, you must first use [getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller-1) in  
+> In the following API examples, you must first use [getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller) in  
 > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
@@ -19,14 +18,13 @@ Provides capabilities to control focus, including features such as clearing, mov
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="activate"></a>
 ## activate
 
 ```TypeScript
 activate(isActive: boolean, autoInactive?: boolean): void
 ```
 
-Sets the [focus activation state](docroot://ui/arkts-common-events-focus-event.md) of this page.
+Sets the [focus activation state](../../../ui/arkts-common-events-focus-event.md) of this page.
 
 **Since:** 14
 
@@ -45,7 +43,6 @@ Sets the [focus activation state](docroot://ui/arkts-common-events-focus-event.m
 | isActive | boolean | Yes | Whether to enter or exit the focus activation state.<br>The value **true** means to enter the focus activation state, and **false** means to exit the focus activation state. |
 | autoInactive | boolean | No | Logic for exiting the focus activation state.<br>The value **true** means the focus activation state will be exited automatically when touch or mouse events are triggered, and **false** means the state is controlled solely by API calls.<br>Default value: **true** |
 
-<a id="clearfocus"></a>
 ## clearFocus
 
 ```TypeScript
@@ -64,7 +61,6 @@ Clears the focus and forcibly moves the focus to the root container node of the 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="isactive"></a>
 ## isActive
 
 ```TypeScript
@@ -73,7 +69,7 @@ isActive(): boolean
 
 Obtains the focus activation state of the UI instance.
 
-For details about the focus activation state, see [Basic Concepts](docroot://ui/arkts-common-events-focus-event.md#basic-concepts).
+For details about the focus activation state, see [Basic Concepts](../../../ui/arkts-common-events-focus-event.md#basic-concepts).
 
 **Since:** 20
 
@@ -91,7 +87,6 @@ For details about the focus activation state, see [Basic Concepts](docroot://ui/
 | --- | --- |
 | boolean | Focus activation state of the UI instance. The value **true** means that the instance has entered the focus activation state, and **false** means that the instance has exited the focus activation state. |
 
-<a id="requestfocus"></a>
 ## requestFocus
 
 ```TypeScript
@@ -124,7 +119,6 @@ Transfers focus to a component node by the component ID, which is effective imme
 | [150002](../errorcode-focus.md#150002-ancestor-component-not-focusable) | This component has an unfocusable ancestor. |
 | [150003](../errorcode-focus.md#150003-component-does-not-exist) | the component is not on tree or does not exist. |
 
-<a id="setautofocustransfer"></a>
 ## setAutoFocusTransfer
 
 ```TypeScript
@@ -149,7 +143,6 @@ Sets whether the new page automatically obtains focus during page switching.
 | --- | --- | --- | --- |
 | isAutoFocusTransfer | boolean | Yes | Whether the new page automatically obtains focus during page switching using navigation components or APIs, such as [Router](arkts-router.md),[Navigation](../arkts-components/arkts-arkui-navigation.md), [Menu](../arkts-components/arkts-arkui-menu.md), [Dialog](arkts-arkui-advanced-dialog.md), and [Popup](arkts-arkui-advanced-popup.md). The value **true** means the new page automatically obtains focus,and **false** means the opposite. Default value: **true**. |
 
-<a id="setkeyprocessingmode"></a>
 ## setKeyProcessingMode
 
 ```TypeScript

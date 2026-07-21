@@ -13,7 +13,6 @@ located to form various layouts.
 Child components are limited to [GridItem]{@link gridItem} and custom components. When using custom components inside **Grid**, it is recommended to wrap the custom component with a **GridItem** as the top-level container. Setting attributes or event methods directly on custom components is not recommended.
 
 Child components can be dynamically generated using rendering control types [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md),[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
-
 > **NOTE**  
 >  
 > Below are the rules for calculating the indexes of the child components of **Grid**:  

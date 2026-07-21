@@ -1,6 +1,6 @@
 # KVManager
 
-Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must use [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager-1)to create a **KVManager** object.
+Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must use [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager)to create a **KVManager** object.
 
 **Since:** 7
 
@@ -12,7 +12,6 @@ Creates a **KVManager** object to obtain KV store information. Before calling an
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
-<a id="closekvstore"></a>
 ## closeKVStore
 
 ```TypeScript
@@ -68,7 +67,6 @@ try {
 
 ```
 
-<a id="closekvstore-1"></a>
 ## closeKVStore
 
 ```TypeScript
@@ -133,7 +131,6 @@ try {
 
 ```
 
-<a id="deletekvstore"></a>
 ## deleteKVStore
 
 ```TypeScript
@@ -188,7 +185,6 @@ try {
 
 ```
 
-<a id="deletekvstore-1"></a>
 ## deleteKVStore
 
 ```TypeScript
@@ -252,14 +248,13 @@ try {
 
 ```
 
-<a id="getallkvstoreid"></a>
 ## getAllKVStoreId
 
 ```TypeScript
 getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
-Obtains the IDs of all KV stores that are created by [getKVStore()](distributedData.KVManager.getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>))and have not been deleted by [deleteKVStore()](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore-1). This API uses an asynchronous callback to return the result.
+Obtains the IDs of all KV stores that are created by [getKVStore()](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)and have not been deleted by [deleteKVStore()](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore). This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -293,14 +288,13 @@ try {
 
 ```
 
-<a id="getallkvstoreid-1"></a>
 ## getAllKVStoreId
 
 ```TypeScript
 getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
-Obtains the IDs of all KV stores that are created by [getKVStore()](distributedData.KVManager.getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>))and have not been deleted by [deleteKVStore()](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore-1). This API uses a promise to return the result.
+Obtains the IDs of all KV stores that are created by [getKVStore()](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)and have not been deleted by [deleteKVStore()](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore). This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -342,7 +336,6 @@ try {
 
 ```
 
-<a id="getkvstore"></a>
 ## getKVStore
 
 ```TypeScript
@@ -400,7 +393,6 @@ try {
 
 ```
 
-<a id="getkvstore-1"></a>
 ## getKVStore
 
 ```TypeScript
@@ -455,7 +447,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -498,7 +489,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript

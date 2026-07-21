@@ -10,7 +10,6 @@ Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="getsmscaddr"></a>
 ## getSmscAddr
 
 ```TypeScript
@@ -58,7 +57,6 @@ sms.getSmscAddr(slotId, (err: BusinessError, data: string) => {
 ```
 
 
-<a id="getsmscaddr-1"></a>
 ## getSmscAddr
 
 ```TypeScript

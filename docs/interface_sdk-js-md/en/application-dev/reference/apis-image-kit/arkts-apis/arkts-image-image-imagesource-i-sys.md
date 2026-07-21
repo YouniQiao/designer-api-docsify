@@ -2,11 +2,11 @@
 
 The **ImageSource** class provides APIs to obtain image information.
 
-Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) to create an ImageSource instance.
+Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) to create an ImageSource instance.
 
 All APIs in ImageSource cannot be called concurrently.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -20,7 +20,6 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="createwidegamutsdrpixelmap"></a>
 ## createWideGamutSdrPixelMap
 
 ```TypeScript
@@ -52,7 +51,6 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSour
 | [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
 
-<a id="isjpegprogressive"></a>
 ## isJpegProgressive
 
 ```TypeScript
@@ -100,7 +98,6 @@ async function IsJpegProgressive(imageSource : image.ImageSource) {
 
 ```
 
-<a id="modifyimageallproperties"></a>
 ## modifyImageAllProperties
 
 ```TypeScript

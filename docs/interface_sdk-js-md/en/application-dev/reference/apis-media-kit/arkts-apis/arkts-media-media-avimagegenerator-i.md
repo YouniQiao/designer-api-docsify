@@ -1,8 +1,8 @@
 # AVImageGenerator
 
-AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to obtain a thumbnail from a video.Before calling any API in AVImageGenerator, you must use [createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator-1)to create an AVImageGenerator instance.
+AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to obtain a thumbnail from a video.Before calling any API in AVImageGenerator, you must use [createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator)to create an AVImageGenerator instance.
 
-For details about the demo for obtaining video thumbnails, see [Obtaining Video Thumbnails](docroot://media/media/avimagegenerator.md).
+For details about the demo for obtaining video thumbnails, see [Obtaining Video Thumbnails](../../../media/media/avimagegenerator.md).
 
 **Since:** 12
 
@@ -16,7 +16,6 @@ For details about the demo for obtaining video thumbnails, see [Obtaining Video 
 import { media } from '@kit.MediaKit';
 ```
 
-<a id="fetchframebytime"></a>
 ## fetchFrameByTime
 
 ```TypeScript
@@ -28,9 +27,7 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 
 **Since:** 12
 
-<!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,
-      callback: AsyncCallback<image.PixelMap>): void--><!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,
-      callback: AsyncCallback<image.PixelMap>): void-End-->
+<!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,      callback: AsyncCallback<image.PixelMap>): void--><!--Device-AVImageGenerator-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,      callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -50,7 +47,6 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
-<a id="fetchframebytime-1"></a>
 ## fetchFrameByTime
 
 ```TypeScript
@@ -86,7 +82,6 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
-<a id="fetchscaledframebytime"></a>
 ## fetchScaledFrameByTime
 
 ```TypeScript
@@ -98,9 +93,7 @@ Fetches a scaled thumbnail from the video at a particular timestamp. This API us
 
 **Since:** 20
 
-<!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):
-      Promise<image.PixelMap>--><!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):
-      Promise<image.PixelMap>-End-->
+<!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):      Promise<image.PixelMap>--><!--Device-AVImageGenerator-fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSize?: OutputSize):      Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 
@@ -125,7 +118,6 @@ Fetches a scaled thumbnail from the video at a particular timestamp. This API us
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) |  |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) |  |
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -152,7 +144,6 @@ Releases this AVImageGenerator instance. This API uses an asynchronous callback 
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript

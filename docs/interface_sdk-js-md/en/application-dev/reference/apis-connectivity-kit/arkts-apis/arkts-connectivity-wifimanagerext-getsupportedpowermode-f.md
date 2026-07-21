@@ -6,7 +6,6 @@
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-<a id="getsupportedpowermode"></a>
 ## getSupportedPowerMode
 
 ```TypeScript
@@ -38,7 +37,6 @@ Obtains the supported power Mode.
 | [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
 
 
-<a id="getsupportedpowermode-1"></a>
 ## getSupportedPowerMode
 
 ```TypeScript

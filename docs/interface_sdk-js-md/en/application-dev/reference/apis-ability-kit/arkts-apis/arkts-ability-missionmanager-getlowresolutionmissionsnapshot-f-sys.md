@@ -6,7 +6,6 @@
 import { missionManager } from '@kit.AbilityKit';
 ```
 
-<a id="getlowresolutionmissionsnapshot"></a>
 ## getLowResolutionMissionSnapShot
 
 ```TypeScript
@@ -23,15 +22,7 @@ Obtains the low-resolution snapshot of a given mission. This API uses an asynchr
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
-<!--Device-missionManager-function getLowResolutionMissionSnapShot(
-    deviceId: string,
-    missionId: int,
-    callback: AsyncCallback<MissionSnapshot>
-  ): void--><!--Device-missionManager-function getLowResolutionMissionSnapShot(
-    deviceId: string,
-    missionId: int,
-    callback: AsyncCallback<MissionSnapshot>
-  ): void-End-->
+<!--Device-missionManager-function getLowResolutionMissionSnapShot(    deviceId: string,    missionId: int,    callback: AsyncCallback<MissionSnapshot>  ): void--><!--Device-missionManager-function getLowResolutionMissionSnapShot(    deviceId: string,    missionId: int,    callback: AsyncCallback<MissionSnapshot>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Mission
 
@@ -78,7 +69,6 @@ try {
 ```
 
 
-<a id="getlowresolutionmissionsnapshot-1"></a>
 ## getLowResolutionMissionSnapShot
 
 ```TypeScript

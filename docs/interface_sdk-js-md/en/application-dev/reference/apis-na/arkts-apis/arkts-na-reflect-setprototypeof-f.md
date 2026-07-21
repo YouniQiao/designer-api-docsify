@@ -1,6 +1,5 @@
 # setPrototypeOf
 
-<a id="setprototypeof"></a>
 ## setPrototypeOf
 
 ```TypeScript

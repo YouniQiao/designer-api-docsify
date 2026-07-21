@@ -14,7 +14,6 @@ The class of insight intent entry executor.
 import { InsightIntentEntryExecutor } from '@kit.AbilityKit';
 ```
 
-<a id="onexecute"></a>
 ## onExecute
 
 ```TypeScript

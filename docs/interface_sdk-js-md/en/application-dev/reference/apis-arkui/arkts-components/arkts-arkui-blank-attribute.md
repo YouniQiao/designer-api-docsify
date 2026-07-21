@@ -12,14 +12,13 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="color"></a>
 ## color
 
 ```TypeScript
 color(value: ResourceColor)
 ```
 
-Sets the fill color of the **Blank** component. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets the fill color of the **Blank** component. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 

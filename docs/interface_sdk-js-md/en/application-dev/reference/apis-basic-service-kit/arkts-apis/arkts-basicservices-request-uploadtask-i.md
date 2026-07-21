@@ -1,6 +1,6 @@
 # UploadTask
 
-Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-1) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-1).
+Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile).
 
 **Since:** 6
 
@@ -14,7 +14,6 @@ Implements file uploads. Before using any APIs of this class, you must obtain an
 import { request } from '@kit.BasicServicesKit';
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -22,7 +21,6 @@ delete(callback: AsyncCallback<boolean>): void
 ```
 
 Deletes the upload task. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -61,7 +59,6 @@ uploadTask.delete((err: BusinessError, result: boolean) => {
 
 ```
 
-<a id="delete-1"></a>
 ## delete
 
 ```TypeScript
@@ -69,7 +66,6 @@ delete(): Promise<boolean>
 ```
 
 Deletes the upload task. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -106,7 +102,6 @@ uploadTask.delete().then((result: boolean) => {
 
 ```
 
-<a id="off"></a>
 ## off('progress')
 
 ```TypeScript
@@ -152,7 +147,6 @@ uploadTask.off('progress');
 
 ```
 
-<a id="off-1"></a>
 ## off('headerReceive')
 
 ```TypeScript
@@ -198,7 +192,6 @@ uploadTask.off('headerReceive');
 
 ```
 
-<a id="off-2"></a>
 ## off('complete' | 'fail')
 
 ```TypeScript
@@ -269,7 +262,6 @@ uploadTask.off('fail');
 
 ```
 
-<a id="off-3"></a>
 ## off('complete' | 'fail')
 
 ```TypeScript
@@ -340,7 +332,6 @@ uploadTask.off('fail');
 
 ```
 
-<a id="on"></a>
 ## on('progress')
 
 ```TypeScript
@@ -348,7 +339,6 @@ on(type: 'progress', callback: (uploadedSize: number, totalSize: number) => void
 ```
 
 Subscribes to upload progress events. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > To maintain a balance between power consumption and performance, this API cannot be called when the application  
@@ -383,7 +373,6 @@ uploadTask.on('progress', upProgressCallback);
 
 ```
 
-<a id="on-1"></a>
 ## on('headerReceive')
 
 ```TypeScript
@@ -421,7 +410,6 @@ uploadTask.on('headerReceive', headerCallback);
 
 ```
 
-<a id="on-2"></a>
 ## on('complete' | 'fail')
 
 ```TypeScript
@@ -468,7 +456,6 @@ uploadTask.on('fail', upFailCallback);
 
 ```
 
-<a id="on-3"></a>
 ## on('complete' | 'fail')
 
 ```TypeScript
@@ -515,7 +502,6 @@ uploadTask.on('fail', upFailCallback);
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -528,7 +514,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete(callback:](arkts-basicservices-request-uploadtask-i.md#delete-1)
+**Substitutes:** [delete(callback:](arkts-basicservices-request-uploadtask-i.md#delete)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -563,7 +549,6 @@ uploadTask.remove((err: BusinessError, result: boolean) => {
 
 ```
 
-<a id="remove-1"></a>
 ## remove
 
 ```TypeScript
@@ -576,7 +561,7 @@ Deletes the upload task. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete()](arkts-basicservices-request-uploadtask-i.md#delete-1)
+**Substitutes:** [delete()](arkts-basicservices-request-uploadtask-i.md#delete)
 
 **Required permissions:** ohos.permission.INTERNET
 

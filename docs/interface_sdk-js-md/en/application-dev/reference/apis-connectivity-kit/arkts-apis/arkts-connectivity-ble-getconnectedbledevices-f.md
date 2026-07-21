@@ -6,7 +6,6 @@
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="getconnectedbledevices"></a>
 ## getConnectedBLEDevices
 
 ```TypeScript

@@ -2,7 +2,7 @@
 
 This interface implements audio volume and device management.
 
-Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager-1) to obtain an AudioManager instance.
+Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager) to obtain an AudioManager instance.
 
 **Since:** 7
 
@@ -16,7 +16,6 @@ Before calling any API in AudioManager, you must use [getAudioManager](arkts-aud
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="disablesafemediavolume"></a>
 ## disableSafeMediaVolume
 
 ```TypeScript
@@ -61,7 +60,6 @@ audioManager.disableSafeMediaVolume().then(() => {
 
 ```
 
-<a id="getcollaborativemanager"></a>
 ## getCollaborativeManager
 
 ```TypeScript
@@ -90,7 +88,6 @@ Obtains a collaborative playback management instance.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
-<a id="geteffectmanager"></a>
 ## getEffectManager
 
 ```TypeScript
@@ -128,7 +125,6 @@ let audioEffectManager: audio.AudioEffectManager = audioManager.getEffectManager
 
 ```
 
-<a id="getextraparameters"></a>
 ## getExtraParameters
 
 ```TypeScript
@@ -180,7 +176,6 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
 
 ```
 
-<a id="on"></a>
 ## on('volumeChange')
 
 ```TypeScript
@@ -219,7 +214,6 @@ audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('ringerModeChange')
 
 ```TypeScript
@@ -256,7 +250,6 @@ audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
 
 ```
 
-<a id="setaudioscene"></a>
 ## setAudioScene
 
 ```TypeScript
@@ -295,7 +288,6 @@ audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL, (err: Busine
 
 ```
 
-<a id="setaudioscene-1"></a>
 ## setAudioScene
 
 ```TypeScript
@@ -337,7 +329,6 @@ audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL).then(() => {
 
 ```
 
-<a id="setextraparameters"></a>
 ## setExtraParameters
 
 ```TypeScript

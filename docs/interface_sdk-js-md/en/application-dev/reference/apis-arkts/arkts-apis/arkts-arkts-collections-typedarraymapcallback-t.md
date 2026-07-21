@@ -11,9 +11,7 @@ Describes the conversion mapping function of the ArkTS typed array.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-collections-type TypedArrayMapCallback<ElementType, ArrayType> =
-    (value: ElementType, index: number, array: ArrayType) => ElementType--><!--Device-collections-type TypedArrayMapCallback<ElementType, ArrayType> =
-    (value: ElementType, index: number, array: ArrayType) => ElementType-End-->
+<!--Device-collections-type TypedArrayMapCallback<ElementType, ArrayType> =    (value: ElementType, index: number, array: ArrayType) => ElementType--><!--Device-collections-type TypedArrayMapCallback<ElementType, ArrayType> =    (value: ElementType, index: number, array: ArrayType) => ElementType-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

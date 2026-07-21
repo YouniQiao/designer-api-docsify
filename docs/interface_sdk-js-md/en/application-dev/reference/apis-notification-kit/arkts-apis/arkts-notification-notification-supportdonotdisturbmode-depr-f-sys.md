@@ -1,6 +1,5 @@
 # supportDoNotDisturbMode (System API)
 
-<a id="supportdonotdisturbmode"></a>
 ## supportDoNotDisturbMode
 
 ```TypeScript
@@ -30,7 +29,6 @@ Checks whether DND mode is supported. This API uses an asynchronous callback to 
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
-<a id="supportdonotdisturbmode-1"></a>
 ## supportDoNotDisturbMode
 
 ```TypeScript

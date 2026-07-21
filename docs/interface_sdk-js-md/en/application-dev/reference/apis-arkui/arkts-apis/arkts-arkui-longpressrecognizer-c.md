@@ -10,7 +10,6 @@ Implements a long press gesture recognizer. Inherits from [GestureRecognizer](ar
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getallowablemovement"></a>
 ## getAllowableMovement
 
 ```TypeScript
@@ -35,7 +34,6 @@ Obtains the maximum movement distance allowed for gesture recognition by the lon
 | --- | --- |
 | number | Maximum movement distance recognized by the long press gesture recognizer, in px.<br>Value range: (0, +∞) |
 
-<a id="getduration"></a>
 ## getDuration
 
 ```TypeScript
@@ -60,7 +58,6 @@ Obtains the minimum duration required for the long press gesture to be recognize
 | --- | --- |
 | number | Minimum duration, in ms.<br>Value range: [0, +∞) |
 
-<a id="isrepeat"></a>
 ## isRepeat
 
 ```TypeScript

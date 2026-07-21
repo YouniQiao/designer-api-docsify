@@ -7,7 +7,6 @@ export declare const ArcScrollBar: ArcScrollBarInterface
 ```
 
 The **ArcScrollBar** component is designed to be used together with scrollable components such as [ArcList](arkts-arkui-arclist.md), [List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md),[Grid](../arkts-components/arkts-arkui-grid.md), [Scroll](../arkts-components/arkts-arkui-scroll.md), and [WaterFlow](../arkts-components/arkts-arkui-waterflow.md).
-
 > **NOTE**  
 >  
 > - This component is supported since API version 18. Updates will be marked with a superscript to indicate their  

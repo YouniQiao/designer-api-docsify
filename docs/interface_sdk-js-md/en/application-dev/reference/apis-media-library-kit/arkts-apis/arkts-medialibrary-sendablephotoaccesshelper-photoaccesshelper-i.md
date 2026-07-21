@@ -16,7 +16,6 @@ Helper functions to access photos and albums.
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="createasset"></a>
 ## createAsset
 
 ```TypeScript
@@ -25,7 +24,7 @@ createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper
 
 Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result.
 
-If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component. For details, see [Saving Media Assets](docroot://media/medialibrary/photoAccessHelper-savebutton.md).
+If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 12
 
@@ -43,7 +42,7 @@ If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can 
 | --- | --- | --- | --- |
 | photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. The string length ranges from 1 to 255. |
-| options | photoAccessHelper.CreateOptions | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**.<br>The file name must not contain any invalid characters.<br>Starting from API version 18, the following characters are considered invalid: \ / : * ? " < > \|<br>For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` < > \| { } [ ] |
+| options | photoAccessHelper.CreateOptions | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**.<br>The file name must not contain any invalid characters.<br>Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; \|<br>For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Return value:**
 
@@ -84,7 +83,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getalbums"></a>
 ## getAlbums
 
 ```TypeScript
@@ -156,7 +154,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getalbums-1"></a>
 ## getAlbums
 
 ```TypeScript
@@ -175,15 +172,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-PhotoAccessHelper-getAlbums(
-      type: AlbumType,
-      subtype: AlbumSubtype,
-      options?: photoAccessHelper.FetchOptions
-    ): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getAlbums(
-      type: AlbumType,
-      subtype: AlbumSubtype,
-      options?: photoAccessHelper.FetchOptions
-    ): Promise<FetchResult<Album>>-End-->
+<!--Device-PhotoAccessHelper-getAlbums(      type: AlbumType,      subtype: AlbumSubtype,      options?: photoAccessHelper.FetchOptions    ): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getAlbums(      type: AlbumType,      subtype: AlbumSubtype,      options?: photoAccessHelper.FetchOptions    ): Promise<FetchResult<Album>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -242,7 +231,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getassets"></a>
 ## getAssets
 
 ```TypeScript
@@ -310,7 +298,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getburstassets"></a>
 ## getBurstAssets
 
 ```TypeScript
@@ -388,7 +375,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript

@@ -8,7 +8,6 @@ Defines the context information for the **NavDestination** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getconfiginroutemap"></a>
 ## getConfigInRouteMap
 
 ```TypeScript

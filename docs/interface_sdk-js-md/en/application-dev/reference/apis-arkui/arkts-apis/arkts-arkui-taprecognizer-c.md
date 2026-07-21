@@ -10,7 +10,6 @@ Implements a tap gesture recognizer object. Inherits from [GestureRecognizer](ar
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="gettapcount"></a>
 ## getTapCount
 
 ```TypeScript

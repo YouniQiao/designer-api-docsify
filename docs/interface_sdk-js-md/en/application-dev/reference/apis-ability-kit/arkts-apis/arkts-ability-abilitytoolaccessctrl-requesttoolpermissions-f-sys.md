@@ -1,6 +1,5 @@
 # requestToolPermissions (System API)
 
-<a id="requesttoolpermissions"></a>
 ## requestToolPermissions
 
 ```TypeScript

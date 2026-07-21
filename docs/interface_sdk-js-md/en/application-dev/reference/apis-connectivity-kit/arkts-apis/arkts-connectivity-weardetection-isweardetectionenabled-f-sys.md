@@ -6,7 +6,6 @@
 import { wearDetection } from '@kit.ConnectivityKit';
 ```
 
-<a id="isweardetectionenabled"></a>
 ## isWearDetectionEnabled
 
 ```TypeScript
@@ -58,7 +57,6 @@ try {
 ```
 
 
-<a id="isweardetectionenabled-1"></a>
 ## isWearDetectionEnabled
 
 ```TypeScript

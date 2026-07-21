@@ -4,7 +4,7 @@ Since API version 9, the UiTest framework provides a wide range of UI component 
 
 The APIs provided by the **On** class exhibit the following features:
 
-1. Allow one or more attributes as the match conditions.For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components.APIs such as [ON.isBefore](arkts-test-uitest-on-c.md#isbefore-1) and [ON.isAfter](arkts-test-uitest-on-c.md#isafter-1) can be used to specify the features of adjacent components to assist positioning.
+1. Allow one or more attributes as the match conditions.For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components.APIs such as [ON.isBefore](arkts-test-uitest-on-c.md#isbefore) and [ON.isAfter](arkts-test-uitest-on-c.md#isafter) can be used to specify the features of adjacent components to assist positioning.
 
 All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode.
 
@@ -20,7 +20,6 @@ All APIs provided in the **On** class are synchronous. You are advised to use th
 import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
-<a id="aftercomponent"></a>
 ## afterComponent
 
 ```TypeScript
@@ -55,7 +54,6 @@ Requires that the target Component which is after another Component that specifi
 | --- | --- |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-<a id="beforecomponent"></a>
 ## beforeComponent
 
 ```TypeScript
@@ -90,7 +88,6 @@ Requires that the target Component which is before another Component that specif
 | --- | --- |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
-<a id="belongingdisplay"></a>
 ## belongingDisplay
 
 ```TypeScript
@@ -111,7 +108,7 @@ Obtains the component object on the specified display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0.<br>**Note**: If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) to obtain all current **display** objects and use them to obtain the corresponding display IDs.<!--RP2--><!--RP2End--> |
+| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0.<br>**Note**: If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getalldisplays) to obtain all current **display** objects and use them to obtain the corresponding display IDs.<!--RP2--><!--RP2End--> |
 
 **Return value:**
 
@@ -135,7 +132,6 @@ let on: On = ON.belongingDisplay(0); // Use the static constructor ON to create 
 
 ```
 
-<a id="checkable"></a>
 ## checkable
 
 ```TypeScript
@@ -180,7 +176,6 @@ let on: On = ON.checkable(true); // Use the static constructor ON to create an O
 
 ```
 
-<a id="checked"></a>
 ## checked
 
 ```TypeScript
@@ -225,7 +220,6 @@ let on: On = ON.checked(true); // Use the static constructor ON to create an On 
 
 ```
 
-<a id="clickable"></a>
 ## clickable
 
 ```TypeScript
@@ -270,7 +264,6 @@ let on: On = ON.clickable(true); // Use the static constructor ON to create an O
 
 ```
 
-<a id="description"></a>
 ## description
 
 ```TypeScript
@@ -316,7 +309,6 @@ let on: On = ON.description('123'); // Use the static constructor ON to create a
 
 ```
 
-<a id="enabled"></a>
 ## enabled
 
 ```TypeScript
@@ -361,7 +353,6 @@ let on: On = ON.enabled(true); // Use the static constructor ON to create an On 
 
 ```
 
-<a id="focused"></a>
 ## focused
 
 ```TypeScript
@@ -406,7 +397,6 @@ let on: On = ON.focused(true); // Use the static constructor ON to create an On 
 
 ```
 
-<a id="hint"></a>
 ## hint
 
 ```TypeScript
@@ -452,7 +442,6 @@ let on: On = ON.hint('welcome', MatchPattern.EQUALS); // Use the static construc
 
 ```
 
-<a id="id"></a>
 ## id
 
 ```TypeScript
@@ -497,7 +486,6 @@ let on: On = ON.id('123'); // Use the static constructor ON to create an On obje
 
 ```
 
-<a id="id-1"></a>
 ## id
 
 ```TypeScript
@@ -543,7 +531,6 @@ let on: On = ON.id('id', MatchPattern.REG_EXP_ICASE); // Use case-insensitive re
 
 ```
 
-<a id="inwindow"></a>
 ## inWindow
 
 ```TypeScript
@@ -588,7 +575,6 @@ let on: On = ON.inWindow('com.uitestScene.acts'); // Use the static constructor 
 
 ```
 
-<a id="isafter"></a>
 ## isAfter
 
 ```TypeScript
@@ -634,7 +620,6 @@ let on: On = ON.type('Text').isAfter(ON.text('123')); // Search for the first Te
 
 ```
 
-<a id="isbefore"></a>
 ## isBefore
 
 ```TypeScript
@@ -680,7 +665,6 @@ let on: On = ON.type('Button').isBefore(ON.text('123')); // Search for the first
 
 ```
 
-<a id="longclickable"></a>
 ## longClickable
 
 ```TypeScript
@@ -725,7 +709,6 @@ let on: On = ON.longClickable(true); // Use the static constructor ON to create 
 
 ```
 
-<a id="originaltext"></a>
 ## originalText
 
 ```TypeScript
@@ -733,12 +716,11 @@ originalText(text: string, pattern?: MatchPattern): On
 ```
 
 Specifies the text content and text matching pattern of the component.
-
 > **NOTE**  
 >  
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md)  
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel)  
 > of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of  
-> the target component for searching for the component. In this case, the [On.text()](arkts-test-uitest-on-c.md#text-1) API does not  
+> the target component for searching for the component. In this case, the [On.text()](arkts-test-uitest-on-c.md#text) API does not  
 > take effect.
 
 **Since:** 20
@@ -778,7 +760,6 @@ let on: On = ON.originalText('123'); // Use the static constructor ON to create 
 
 ```
 
-<a id="scrollable"></a>
 ## scrollable
 
 ```TypeScript
@@ -823,7 +804,6 @@ let on: On = ON.scrollable(true); // Use the static constructor ON to create an 
 
 ```
 
-<a id="selected"></a>
 ## selected
 
 ```TypeScript
@@ -868,7 +848,6 @@ let on: On = ON.selected(true); // Use the static constructor ON to create an On
 
 ```
 
-<a id="text"></a>
 ## text
 
 ```TypeScript
@@ -876,13 +855,12 @@ text(txt: string, pattern?: MatchPattern): On
 ```
 
 Specifies the text attribute of the target component. Multiple match patterns are supported.
-
 > **NOTE**  
 >  
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md)  
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel)  
 > of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute  
 > of the target component for searching for the component. In this case, you can use the  
-> [On.originalText()](arkts-test-uitest-on-c.md#originaltext-1) API.
+> [On.originalText()](arkts-test-uitest-on-c.md#originaltext) API.
 
 **Since:** 9
 
@@ -921,7 +899,6 @@ let on: On = ON.text('123'); // Use the static constructor ON to create an On ob
 
 ```
 
-<a id="type"></a>
 ## type
 
 ```TypeScript
@@ -966,7 +943,6 @@ let on: On = ON.type('Button'); // Use the static constructor ON to create an On
 
 ```
 
-<a id="type-1"></a>
 ## type
 
 ```TypeScript
@@ -1012,7 +988,6 @@ let on: On = ON.type('Button', MatchPattern.EQUALS); // Use the static construct
 
 ```
 
-<a id="within"></a>
 ## within
 
 ```TypeScript
@@ -1058,7 +1033,6 @@ let on: On = ON.text('java').within(ON.type('Scroll')); // Search for the child 
 
 ```
 
-<a id="withincomponent"></a>
 ## withinComponent
 
 ```TypeScript

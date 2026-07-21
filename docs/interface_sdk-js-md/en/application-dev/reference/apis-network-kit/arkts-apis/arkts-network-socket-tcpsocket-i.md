@@ -14,7 +14,6 @@ Defines a TCPSocket connection.
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="bind"></a>
 ## bind
 
 ```TypeScript
@@ -66,7 +65,6 @@ tcp.bind(bindAddr, (err: BusinessError) => {
 
 ```
 
-<a id="bind-1"></a>
 ## bind
 
 ```TypeScript
@@ -121,7 +119,6 @@ tcp.bind(bindAddr).then(() => {
 
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -168,7 +165,6 @@ tcp.close((err: BusinessError) => {
 
 ```
 
-<a id="close-1"></a>
 ## close
 
 ```TypeScript
@@ -213,7 +209,6 @@ tcp.close().then(() => {
 
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -313,7 +308,6 @@ tcp.connect(tcpconnectoptions, (err: BusinessError) => {
 
 ```
 
-<a id="connect-1"></a>
 ## connect
 
 ```TypeScript
@@ -414,7 +408,6 @@ tcp.connect(tcpconnectoptions).then(() => {
 
 ```
 
-<a id="getlocaladdress"></a>
 ## getLocalAddress
 
 ```TypeScript
@@ -467,7 +460,6 @@ tcp.bind(bindAddr).then(() => {
 
 ```
 
-<a id="getremoteaddress"></a>
 ## getRemoteAddress
 
 ```TypeScript
@@ -524,7 +516,6 @@ tcp.connect(tcpconnectoptions, () => {
 
 ```
 
-<a id="getremoteaddress-1"></a>
 ## getRemoteAddress
 
 ```TypeScript
@@ -581,7 +572,6 @@ tcp.connect(tcpconnectoptions).then(() => {
 
 ```
 
-<a id="getsocketfd"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -630,7 +620,6 @@ tcp.getSocketFd((err: BusinessError, data: number) => {
 
 ```
 
-<a id="getsocketfd-1"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -678,7 +667,6 @@ tcp.getSocketFd().then((data: number) => {
 
 ```
 
-<a id="getstate"></a>
 ## getState
 
 ```TypeScript
@@ -735,7 +723,6 @@ tcp.connect(tcpconnectoptions, () => {
 
 ```
 
-<a id="getstate-1"></a>
 ## getState
 
 ```TypeScript
@@ -792,7 +779,6 @@ tcp.connect(tcpconnectoptions).then(() => {
 
 ```
 
-<a id="off"></a>
 ## off('message')
 
 ```TypeScript
@@ -839,7 +825,6 @@ tcp.off('message');
 
 ```
 
-<a id="off-1"></a>
 ## off('connect' | 'close')
 
 ```TypeScript
@@ -885,7 +870,6 @@ tcp.off('close');
 
 ```
 
-<a id="off-2"></a>
 ## off('connect' | 'close')
 
 ```TypeScript
@@ -931,7 +915,6 @@ tcp.off('close');
 
 ```
 
-<a id="off-3"></a>
 ## off('error')
 
 ```TypeScript
@@ -970,7 +953,6 @@ tcp.off('error');
 
 ```
 
-<a id="on"></a>
 ## on('message')
 
 ```TypeScript
@@ -1013,7 +995,6 @@ tcp.on('message', (value: socket.SocketMessageInfo) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('connect' | 'close')
 
 ```TypeScript
@@ -1051,7 +1032,6 @@ tcp.on('close', () => {
 
 ```
 
-<a id="on-2"></a>
 ## on('connect' | 'close')
 
 ```TypeScript
@@ -1089,7 +1069,6 @@ tcp.on('close', () => {
 
 ```
 
-<a id="on-3"></a>
 ## on('error')
 
 ```TypeScript
@@ -1124,7 +1103,6 @@ tcp.on('error', (err: BusinessError) => {
 
 ```
 
-<a id="send"></a>
 ## send
 
 ```TypeScript
@@ -1186,7 +1164,6 @@ tcp.connect(tcpconnectoptions, () => {
 
 ```
 
-<a id="send-1"></a>
 ## send
 
 ```TypeScript
@@ -1251,7 +1228,6 @@ tcp.connect(tcpconnectoptions, () => {
 
 ```
 
-<a id="setextraoptions"></a>
 ## setExtraOptions
 
 ```TypeScript
@@ -1327,7 +1303,6 @@ tcp.connect(tcpconnectoptions, () => {
 
 ```
 
-<a id="setextraoptions-1"></a>
 ## setExtraOptions
 
 ```TypeScript

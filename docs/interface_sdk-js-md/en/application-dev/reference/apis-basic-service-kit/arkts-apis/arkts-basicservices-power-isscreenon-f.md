@@ -6,7 +6,6 @@
 import { power } from '@kit.BasicServicesKit';
 ```
 
-<a id="isscreenon"></a>
 ## isScreenOn
 
 ```TypeScript
@@ -19,7 +18,7 @@ Checks the screen status of the current device. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isactive-1)
+**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isactive)
 
 <!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void--><!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void-End-->
 
@@ -45,7 +44,6 @@ power.isScreenOn((err: Error, data: boolean) => {
 ```
 
 
-<a id="isscreenon-1"></a>
 ## isScreenOn
 
 ```TypeScript
@@ -58,7 +56,7 @@ Checks the screen status of the current device. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isactive-1)
+**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isactive)
 
 <!--Device-power-function isScreenOn(): Promise<boolean>--><!--Device-power-function isScreenOn(): Promise<boolean>-End-->
 

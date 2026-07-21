@@ -40,7 +40,7 @@ Values less than 0.0 or greater than 1.0 are treated as the default value 0.0.
 path: string
 ```
 
-Motion path of the translation animation. The [svg path string](docroot://reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg-path-syntax) is used.In the value, **start** and **end** can be used in place of the start point and end point, for example,**'Mstart.x start.y L50 50 Lend.x end.y Z'**. For details, see [Path Drawing](docroot://ui/ui-js-components-svg-path.md).
+Motion path of the translation animation. The [svg path string](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg-path-syntax) is used.In the value, **start** and **end** can be used in place of the start point and end point, for example,**'Mstart.x start.y L50 50 Lend.x end.y Z'**. For details, see [Path Drawing](../../../ui/ui-js-components-svg-path.md).
 
 If this parameter is set to an empty string, the path animation is not set.
 

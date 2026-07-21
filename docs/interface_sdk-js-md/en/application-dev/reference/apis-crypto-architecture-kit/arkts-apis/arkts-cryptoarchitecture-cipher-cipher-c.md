@@ -18,7 +18,6 @@ Defines the cipher functions.
 import { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
-<a id="aes"></a>
 ## aes
 
 ```TypeScript
@@ -43,7 +42,6 @@ Encrypts or decrypts data using AES.
 | --- | --- | --- | --- |
 | options | [CipherAesOptions](arkts-cryptoarchitecture-cipher-cipheraesoptions-i.md) | Yes | AES options. |
 
-<a id="rsa"></a>
 ## rsa
 
 ```TypeScript

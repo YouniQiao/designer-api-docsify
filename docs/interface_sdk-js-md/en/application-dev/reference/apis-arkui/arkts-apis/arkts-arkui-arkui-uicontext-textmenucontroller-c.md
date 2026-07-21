@@ -1,11 +1,10 @@
 # TextMenuController
 
 Provides the capability to control text menus.
-
 > **NOTE**  
 >  
 > - In the following non-static API examples, you must first use  
-> [getTextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#gettextmenucontroller-1) in **UIContext** to obtain a  
+> [getTextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#gettextmenucontroller) in **UIContext** to obtain a  
 > **TextMenuController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 16
@@ -20,7 +19,6 @@ Provides the capability to control text menus.
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="disablemenuitems"></a>
 ## disableMenuItems
 
 ```TypeScript
@@ -28,7 +26,6 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 ```
 
 Disables specified system service menu items in the text selection menu.
-
 > **NOTE**  
 >  
 > - This API takes effect globally for the entire application process after being called.  
@@ -36,7 +33,7 @@ Disables specified system service menu items in the text selection menu.
 > - This API can be used in [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md).  
 >  
 > - After this API is called, the [editMenuOptions](TextAttribute#editMenuOptions) API of text components  
-> will be affected. The parameter list of its [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu-1) callback will not  
+> will be affected. The parameter list of its [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback will not  
 > include the disabled menu options.  
 >  
 > - Components involving text selection menus include the following: [Text](../../apis-arkui/arkts-components/arkts-arkui-text-i),  
@@ -84,7 +81,6 @@ Disables specified system service menu items in the text selection menu.
 | --- | --- | --- | --- |
 | items | Array&lt;TextMenuItemId&gt; | Yes | List of menu items to disable.<br>Default value: [].<br>By default, no menu item is disabled. |
 
-<a id="disablesystemservicemenuitems"></a>
 ## disableSystemServiceMenuItems
 
 ```TypeScript
@@ -92,7 +88,6 @@ static disableSystemServiceMenuItems(disable: boolean): void
 ```
 
 Disables all system service menu items in the text selection menu.
-
 > **NOTE**  
 >  
 > - This API takes effect globally for the entire application process after being called.  
@@ -100,7 +95,7 @@ Disables all system service menu items in the text selection menu.
 > - This API can be used in [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md).  
 >  
 > - After this API is called, the [editMenuOptions](TextAttribute#editMenuOptions) API of text components  
-> will be affected. The parameter list of its [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu-1) callback will not  
+> will be affected. The parameter list of its [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback will not  
 > include the disabled menu options.  
 >  
 > - Components involving text selection menus include the following: [Text](../../apis-arkui/arkts-components/arkts-arkui-text-i),  
@@ -141,7 +136,6 @@ Disables all system service menu items in the text selection menu.
 | --- | --- | --- | --- |
 | disable | boolean | Yes | Whether to disable system service menu items. The value **true** means to disable system service menu items, and **false** means the opposite.<br>Default value: false. |
 
-<a id="setmenuoptions"></a>
 ## setMenuOptions
 
 ```TypeScript

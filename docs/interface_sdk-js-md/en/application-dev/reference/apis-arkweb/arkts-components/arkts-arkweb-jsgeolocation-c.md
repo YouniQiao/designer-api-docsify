@@ -8,7 +8,6 @@ Defines the js geolocation request.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="invoke"></a>
 ## invoke
 
 ```TypeScript

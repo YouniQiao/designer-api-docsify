@@ -6,7 +6,6 @@
 import { WantAgent } from '@kit.AbilityKit';
 ```
 
-<a id="cancel"></a>
 ## cancel
 
 ```TypeScript
@@ -110,7 +109,6 @@ try {
 ```
 
 
-<a id="cancel-1"></a>
 ## cancel
 
 ```TypeScript

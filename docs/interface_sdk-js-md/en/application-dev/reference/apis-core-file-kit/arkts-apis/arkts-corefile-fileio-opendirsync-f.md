@@ -1,6 +1,5 @@
 # opendirSync
 
-<a id="opendirsync"></a>
 ## opendirSync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Opens a directory. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFileSync](arkts-corefile-file-fs-listfilesync-f.md#listfilesync-1)
+**Substitutes:** [fs:listFileSync](arkts-corefile-file-fs-listfilesync-f.md#listfilesync)
 
 <!--Device-unnamed-declare function opendirSync(path: string): Dir--><!--Device-unnamed-declare function opendirSync(path: string): Dir-End-->
 

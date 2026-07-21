@@ -16,7 +16,6 @@ Provides the API to obtain the color effects supported.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getsupportedcoloreffects"></a>
 ## getSupportedColorEffects
 
 ```TypeScript

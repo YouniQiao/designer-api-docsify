@@ -6,7 +6,6 @@
 import { tag } from '@kit.ConnectivityKit';
 ```
 
-<a id="getnfcbtag"></a>
 ## getNfcBTag
 
 ```TypeScript

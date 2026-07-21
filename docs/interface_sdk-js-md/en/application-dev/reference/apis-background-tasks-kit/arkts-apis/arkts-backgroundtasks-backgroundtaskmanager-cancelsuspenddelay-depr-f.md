@@ -1,6 +1,5 @@
 # cancelSuspendDelay
 
-<a id="cancelsuspenddelay"></a>
 ## cancelSuspendDelay
 
 ```TypeScript
@@ -13,7 +12,7 @@ Cancels the suspension delay.
 
 **Deprecated since:** 9
 
-**Substitutes:** [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-f.md#cancelsuspenddelay-1)
+**Substitutes:** [cancelSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-cancelsuspenddelay-depr-f.md#cancelsuspenddelay)
 
 <!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: number): void--><!--Device-backgroundTaskManager-function cancelSuspendDelay(requestId: number): void-End-->
 
@@ -23,7 +22,7 @@ Cancels the suspension delay.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay-1). |
+| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay). |
 
 **Example**
 

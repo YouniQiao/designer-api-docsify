@@ -6,7 +6,6 @@
 import { backup } from '@kit.CoreFileKit';
 ```
 
-<a id="updatesendrate"></a>
 ## updateSendRate
 
 ```TypeScript

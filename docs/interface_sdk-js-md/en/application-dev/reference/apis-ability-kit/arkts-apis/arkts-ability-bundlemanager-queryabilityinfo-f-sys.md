@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="queryabilityinfo"></a>
 ## queryAbilityInfo
 
 ```TypeScript
@@ -77,7 +76,6 @@ try {
 ```
 
 
-<a id="queryabilityinfo-1"></a>
 ## queryAbilityInfo
 
 ```TypeScript
@@ -104,7 +102,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want containing the bundle name to query. |
 | abilityFlags | number | Yes | Type of the ability information to obtain. |
-| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityInfo&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of ability information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -151,7 +149,6 @@ try {
 ```
 
 
-<a id="queryabilityinfo-2"></a>
 ## queryAbilityInfo
 
 ```TypeScript
@@ -178,7 +175,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want containing the bundle name to query. |
 | abilityFlags | number | Yes | Type of the ability information to obtain. |
-| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
@@ -253,7 +250,6 @@ try {
 ```
 
 
-<a id="queryabilityinfo-3"></a>
 ## queryAbilityInfo
 
 ```TypeScript
@@ -280,7 +276,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | wants | Array&lt;Want&gt; | Yes | List of want containing the bundle name to query. |
 | abilityFlags | number | Yes | Type of the ability information to obtain. |
-| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 

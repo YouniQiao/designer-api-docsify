@@ -6,7 +6,6 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-<a id="updateremindpolicy"></a>
 ## updateRemindPolicy
 
 ```TypeScript
@@ -63,7 +62,6 @@ policy.updateRemindPolicy(
 ```
 
 
-<a id="updateremindpolicy-1"></a>
 ## updateRemindPolicy
 
 ```TypeScript

@@ -14,7 +14,6 @@ LightWeightSet stores a set of values, each of which must be unique.
 import { LightWeightSet } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -81,7 +80,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="add"></a>
 ## add
 
 ```TypeScript
@@ -125,7 +123,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="addall"></a>
 ## addAll
 
 ```TypeScript
@@ -174,7 +171,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -209,7 +205,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -239,7 +234,6 @@ let lightWeightSet = new LightWeightSet<number | string>();
 
 ```
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -295,7 +289,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="equal"></a>
 ## equal
 
 ```TypeScript
@@ -303,7 +296,6 @@ equal(obj: Object): boolean
 ```
 
 Checks whether the elements of this LightWeightSet are the same as those of **obj**.
-
 > **NOTE**  
 >  
 > This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
@@ -346,7 +338,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -402,7 +393,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="getindexof"></a>
 ## getIndexOf
 
 ```TypeScript
@@ -448,7 +438,6 @@ console.info("result:", result);  // result: 0
 
 ```
 
-<a id="getvalueat"></a>
 ## getValueAt
 
 ```TypeScript
@@ -483,7 +472,6 @@ Obtains the value of the element at the specified position in this LightWeightSe
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -528,7 +516,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="hasall"></a>
 ## hasAll
 
 ```TypeScript
@@ -576,7 +563,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="increasecapacityto"></a>
 ## increaseCapacityTo
 
 ```TypeScript
@@ -614,7 +600,6 @@ lightWeightSet.increaseCapacityTo(10);
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -652,7 +637,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -698,7 +682,6 @@ console.info("result:", result);  // result: sparrow
 
 ```
 
-<a id="removeat"></a>
 ## removeAt
 
 ```TypeScript
@@ -744,7 +727,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="toarray"></a>
 ## toArray
 
 ```TypeScript
@@ -783,7 +765,6 @@ let result = lightWeightSet.toArray();
 
 ```
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -817,7 +798,6 @@ console.info("result:", result);  // result: sparrow,squirrel
 
 ```
 
-<a id="values"></a>
 ## values
 
 ```TypeScript

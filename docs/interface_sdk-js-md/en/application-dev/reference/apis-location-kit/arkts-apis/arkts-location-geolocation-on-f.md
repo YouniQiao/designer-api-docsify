@@ -6,7 +6,6 @@
 import { geolocation } from '@kit.LocationKit';
 ```
 
-<a id="on"></a>
 ## on('locationChange')
 
 ```TypeScript
@@ -48,7 +47,6 @@ geolocation.on('locationChange', requestInfo, locationChange);
 ```
 
 
-<a id="on-1"></a>
 ## on('locationServiceState')
 
 ```TypeScript
@@ -88,7 +86,6 @@ geolocation.on('locationServiceState', locationServiceState);
 ```
 
 
-<a id="on-2"></a>
 ## on('cachedGnssLocationsReporting')
 
 ```TypeScript
@@ -130,7 +127,6 @@ geolocation.on('cachedGnssLocationsReporting', requestInfo, cachedLocationsCb);
 ```
 
 
-<a id="on-3"></a>
 ## on('gnssStatusChange')
 
 ```TypeScript
@@ -170,7 +166,6 @@ geolocation.on('gnssStatusChange', gnssStatusCb);
 ```
 
 
-<a id="on-4"></a>
 ## on('nmeaMessageChange')
 
 ```TypeScript
@@ -210,7 +205,6 @@ geolocation.on('nmeaMessageChange', nmeaCb );
 ```
 
 
-<a id="on-5"></a>
 ## on('fenceStatusChange')
 
 ```TypeScript

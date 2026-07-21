@@ -6,14 +6,13 @@
 import { shortcutManager } from '@kit.AbilityKit';
 ```
 
-<a id="getallshortcutinfoforself"></a>
 ## getAllShortcutInfoForSelf
 
 ```TypeScript
 function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 ```
 
-Obtains all the shortcut information defined in the [configuration](docroot://quick-start/module-configuration-file.md#shortcuts) file of the current application. This API uses a promise to return the result.
+Obtains all the shortcut information defined in the [configuration](../../../quick-start/module-configuration-file.md#shortcuts) file of the current application. This API uses a promise to return the result.
 
 **Since:** 20
 

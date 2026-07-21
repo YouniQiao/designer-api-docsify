@@ -1,6 +1,6 @@
 # DownloadTask
 
-Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-1) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-1).
+Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile).
 
 **Since:** 6
 
@@ -14,7 +14,6 @@ Implements file downloads. Before using any APIs of this class, you must obtain 
 import { request } from '@kit.BasicServicesKit';
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -22,7 +21,6 @@ delete(callback: AsyncCallback<boolean>): void
 ```
 
 Deletes the download task. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -76,7 +74,6 @@ try {
 
 ```
 
-<a id="delete-1"></a>
 ## delete
 
 ```TypeScript
@@ -84,7 +81,6 @@ delete(): Promise<boolean>
 ```
 
 Deletes the download task. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -135,7 +131,6 @@ try {
 
 ```
 
-<a id="gettaskinfo"></a>
 ## getTaskInfo
 
 ```TypeScript
@@ -143,7 +138,6 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 ```
 
 Obtains the information about this download task. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -197,7 +191,6 @@ try {
 
 ```
 
-<a id="gettaskinfo-1"></a>
 ## getTaskInfo
 
 ```TypeScript
@@ -205,7 +198,6 @@ getTaskInfo(): Promise<DownloadInfo>
 ```
 
 Obtains the information about this download task. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -257,7 +249,6 @@ try {
 
 ```
 
-<a id="gettaskmimetype"></a>
 ## getTaskMimeType
 
 ```TypeScript
@@ -265,7 +256,6 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 ```
 
 Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -319,7 +309,6 @@ try {
 
 ```
 
-<a id="gettaskmimetype-1"></a>
 ## getTaskMimeType
 
 ```TypeScript
@@ -327,7 +316,6 @@ getTaskMimeType(): Promise<string>
 ```
 
 Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -379,7 +367,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off('progress')
 
 ```TypeScript
@@ -440,7 +427,6 @@ try {
 
 ```
 
-<a id="off-1"></a>
 ## off('complete' | 'pause' | 'remove')
 
 ```TypeScript
@@ -527,7 +513,6 @@ try {
 
 ```
 
-<a id="off-2"></a>
 ## off('complete' | 'pause' | 'remove')
 
 ```TypeScript
@@ -614,7 +599,6 @@ try {
 
 ```
 
-<a id="off-3"></a>
 ## off('complete' | 'pause' | 'remove')
 
 ```TypeScript
@@ -701,7 +685,6 @@ try {
 
 ```
 
-<a id="off-4"></a>
 ## off('fail')
 
 ```TypeScript
@@ -721,7 +704,7 @@ Unsubscribes from download failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Event type.<br>- **'fail'**: download task failure. |
-| callback | (err: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](docroot://reference/apis-basic-services-kit/js-apis-request.md#constants). |
+| callback | (err: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
 
 **Error codes:**
 
@@ -762,7 +745,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on('progress')
 
 ```TypeScript
@@ -770,7 +752,6 @@ on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void
 ```
 
 Subscribes to download progress events. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > To maintain a balance between power consumption and performance, this API cannot be called when the application  
@@ -820,7 +801,6 @@ try {
 
 ```
 
-<a id="on-1"></a>
 ## on('complete' | 'pause' | 'remove')
 
 ```TypeScript
@@ -883,7 +863,6 @@ try {
 
 ```
 
-<a id="on-2"></a>
 ## on('complete' | 'pause' | 'remove')
 
 ```TypeScript
@@ -946,7 +925,6 @@ try {
 
 ```
 
-<a id="on-3"></a>
 ## on('complete' | 'pause' | 'remove')
 
 ```TypeScript
@@ -1009,7 +987,6 @@ try {
 
 ```
 
-<a id="on-4"></a>
 ## on('fail')
 
 ```TypeScript
@@ -1029,7 +1006,7 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Event type.<br>- **'fail'**: download task failure. |
-| callback | (err: number) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes,see [Download Error Codes](docroot://reference/apis-basic-services-kit/js-apis-request.md#constants). |
+| callback | (err: number) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes,see [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
 
 **Error codes:**
 
@@ -1062,7 +1039,6 @@ try {
 
 ```
 
-<a id="pause"></a>
 ## pause
 
 ```TypeScript
@@ -1075,7 +1051,7 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [suspend(callback:](arkts-basicservices-request-downloadtask-i.md#suspend-1)
+**Substitutes:** [suspend(callback:](arkts-basicservices-request-downloadtask-i.md#suspend)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1108,7 +1084,6 @@ downloadTask.pause((err: BusinessError) => {
 
 ```
 
-<a id="pause-1"></a>
 ## pause
 
 ```TypeScript
@@ -1121,7 +1096,7 @@ Pauses this download task. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [suspend()](arkts-basicservices-request-downloadtask-i.md#suspend-1)
+**Substitutes:** [suspend()](arkts-basicservices-request-downloadtask-i.md#suspend)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1152,7 +1127,6 @@ downloadTask.pause().then(() => {
 
 ```
 
-<a id="query"></a>
 ## query
 
 ```TypeScript
@@ -1165,7 +1139,7 @@ Queries this download task. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTaskInfo(callback:](arkts-basicservices-request-downloadtask-i.md#gettaskinfo-1)
+**Substitutes:** [getTaskInfo(callback:](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1198,7 +1172,6 @@ downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
 
 ```
 
-<a id="query-1"></a>
 ## query
 
 ```TypeScript
@@ -1211,7 +1184,7 @@ Queries this download task. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTaskInfo()](arkts-basicservices-request-downloadtask-i.md#gettaskinfo-1)
+**Substitutes:** [getTaskInfo()](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1242,7 +1215,6 @@ downloadTask.query().then((downloadInfo) => {
 
 ```
 
-<a id="querymimetype"></a>
 ## queryMimeType
 
 ```TypeScript
@@ -1255,7 +1227,7 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTaskMimeType(callback:](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype-1)
+**Substitutes:** [getTaskMimeType(callback:](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1288,7 +1260,6 @@ downloadTask.queryMimeType((err: BusinessError, data: string)=>{
 
 ```
 
-<a id="querymimetype-1"></a>
 ## queryMimeType
 
 ```TypeScript
@@ -1301,7 +1272,7 @@ Queries the MIME type of this download task. This API uses a promise to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTaskMimeType()](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype-1)
+**Substitutes:** [getTaskMimeType()](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1332,7 +1303,6 @@ downloadTask.queryMimeType().then((data: string) => {
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -1345,7 +1315,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete(callback:](arkts-basicservices-request-uploadtask-i.md#delete-1)
+**Substitutes:** [delete(callback:](arkts-basicservices-request-uploadtask-i.md#delete)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1378,7 +1348,6 @@ downloadTask.remove((err, result)=>{
 
 ```
 
-<a id="remove-1"></a>
 ## remove
 
 ```TypeScript
@@ -1391,7 +1360,7 @@ Deletes the download task. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete()](arkts-basicservices-request-uploadtask-i.md#delete-1)
+**Substitutes:** [delete()](arkts-basicservices-request-uploadtask-i.md#delete)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1422,7 +1391,6 @@ downloadTask.remove().then((result) => {
 
 ```
 
-<a id="restore"></a>
 ## restore
 
 ```TypeScript
@@ -1430,7 +1398,6 @@ restore(callback: AsyncCallback<boolean>): void
 ```
 
 Restores the download task. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -1484,7 +1451,6 @@ try {
 
 ```
 
-<a id="restore-1"></a>
 ## restore
 
 ```TypeScript
@@ -1492,7 +1458,6 @@ restore(): Promise<boolean>
 ```
 
 Restores the download task. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -1544,7 +1509,6 @@ try {
 
 ```
 
-<a id="resume"></a>
 ## resume
 
 ```TypeScript
@@ -1557,7 +1521,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [restore(callback:](arkts-basicservices-request-downloadtask-i.md#restore-1)
+**Substitutes:** [restore(callback:](arkts-basicservices-request-downloadtask-i.md#restore)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1590,7 +1554,6 @@ downloadTask.resume((err: BusinessError) => {
 
 ```
 
-<a id="resume-1"></a>
 ## resume
 
 ```TypeScript
@@ -1603,7 +1566,7 @@ Restores the download task. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [restore()](arkts-basicservices-request-downloadtask-i.md#restore-1)
+**Substitutes:** [restore()](arkts-basicservices-request-downloadtask-i.md#restore)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1634,15 +1597,13 @@ downloadTask.resume().then(() => {
 
 ```
 
-<a id="suspend"></a>
 ## suspend
 
 ```TypeScript
 suspend(callback: AsyncCallback<boolean>): void
 ```
 
-Suspends this download task. You can use [restore](arkts-basicservices-request-downloadtask-i.md#restore-1) to restore the download.This API uses an asynchronous callback to return the result.
-
+Suspends this download task. You can use [restore](arkts-basicservices-request-downloadtask-i.md#restore) to restore the download.This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  
@@ -1696,15 +1657,13 @@ try {
 
 ```
 
-<a id="suspend-1"></a>
 ## suspend
 
 ```TypeScript
 suspend(): Promise<boolean>
 ```
 
-Suspends this download task. You can use [restore](arkts-basicservices-request-downloadtask-i.md#restore-1) to restore the download.This API uses a promise to return the result.
-
+Suspends this download task. You can use [restore](arkts-basicservices-request-downloadtask-i.md#restore) to restore the download.This API uses a promise to return the result.
 > **NOTE**  
 >  
 > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error  

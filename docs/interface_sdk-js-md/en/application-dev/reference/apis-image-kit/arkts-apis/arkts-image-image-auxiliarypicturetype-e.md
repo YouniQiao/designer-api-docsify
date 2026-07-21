@@ -4,7 +4,7 @@ Enumerates the auxiliary pictures types.
 
 Auxiliary pictures do not directly participate in image display, and not all images contain auxiliary pictures.
 
-Before obtaining and using a specific auxiliary picture, call [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture-1) in Picture to obtain the auxiliary picture.
+Before obtaining and using a specific auxiliary picture, call [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture) in Picture to obtain the auxiliary picture.
 
 **Since:** 13
 
@@ -22,7 +22,7 @@ Gain map.
 
 It is used to generate HDR images more accurately.
 
-HDR synthesis usually involves using the SDR main image, gain map, and [HDR metadata](arkts-image-image-pixelmap-i.md#getmetadata-1) to calculate the luminance mapping.
+HDR synthesis usually involves using the SDR main image, gain map, and [HDR metadata](arkts-image-image-pixelmap-i.md#getmetadata) to calculate the luminance mapping.
 
 **Since:** 13
 

@@ -6,7 +6,6 @@
 import { tag } from '@kit.ConnectivityKit';
 ```
 
-<a id="unregisterforegrounddispatch"></a>
 ## unregisterForegroundDispatch
 
 ```TypeScript

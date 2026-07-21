@@ -1,6 +1,6 @@
 # RunningMultiInstanceInfo (System API)
 
-The module defines the information of a multi-instance application in the running state. The information can be obtained through [getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md#getrunningmultiappinfo-1)of appManager.
+The module defines the information of a multi-instance application in the running state. The information can be obtained through [getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md#getrunningmultiappinfo)of appManager.
 
 **Since:** 14
 

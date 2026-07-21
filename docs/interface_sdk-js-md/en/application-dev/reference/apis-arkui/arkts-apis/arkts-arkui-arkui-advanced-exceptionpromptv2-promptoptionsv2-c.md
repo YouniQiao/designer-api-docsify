@@ -16,7 +16,6 @@ Configuration parameter of ExceptionPromptV2.Use @ObservedV2 and @Trace to suppo
 import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

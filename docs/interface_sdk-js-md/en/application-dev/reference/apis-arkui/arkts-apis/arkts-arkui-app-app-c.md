@@ -14,7 +14,6 @@ Defines static functions of App class
 import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@kit.ArkUI';
 ```
 
-<a id="getinfo"></a>
 ## getInfo
 
 ```TypeScript
@@ -23,7 +22,7 @@ static getInfo(): AppResponse
 
 Obtains the declared information in the **config.json** file of an application. In the stage model, this API returns **null**.
 
-This API is deprecated since API version 9. You are advised to use [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself-1)instead.
+This API is deprecated since API version 9. You are advised to use [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)instead.
 
 **Since:** 3
 
@@ -158,7 +157,6 @@ export default {
 
 ```
 
-<a id="requestfullwindow"></a>
 ## requestFullWindow
 
 ```TypeScript
@@ -197,7 +195,6 @@ export default class Req {
 
 ```
 
-<a id="screenonvisible"></a>
 ## screenOnVisible
 
 ```TypeScript
@@ -222,7 +219,6 @@ This API is deprecated since API version 8.
 | --- | --- | --- | --- |
 | options | [ScreenOnVisibleOptions](arkts-arkui-app-screenonvisibleoptions-i.md) | No | With keep-alive, the system is prevented from returning to the home screen when the screen is locked, so that the application is visible when the screen is woken up. |
 
-<a id="setimagecachecount"></a>
 ## setImageCacheCount
 
 ```TypeScript
@@ -275,7 +271,6 @@ struct Index {
 
 ```
 
-<a id="setimagefilecachesize"></a>
 ## setImageFileCacheSize
 
 ```TypeScript
@@ -317,7 +312,6 @@ export default class OnC {
 
 ```
 
-<a id="setimagerawdatacachesize"></a>
 ## setImageRawDataCacheSize
 
 ```TypeScript
@@ -370,7 +364,6 @@ struct Index {
 
 ```
 
-<a id="terminate"></a>
 ## terminate
 
 ```TypeScript

@@ -8,7 +8,6 @@ Defines the content modifier.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="applycontent"></a>
 ## applyContent
 
 ```TypeScript

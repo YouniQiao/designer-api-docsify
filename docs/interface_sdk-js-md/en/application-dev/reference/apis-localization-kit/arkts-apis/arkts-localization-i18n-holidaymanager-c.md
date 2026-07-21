@@ -14,7 +14,6 @@ Provides holiday data parsing capabilities, such as determining holidays and obt
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -60,7 +59,6 @@ try {
 
 ```
 
-<a id="getholidayinfoitemarray"></a>
 ## getHolidayInfoItemArray
 
 ```TypeScript
@@ -96,7 +94,6 @@ Obtains the holiday information list of the specified year.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-<a id="isholiday"></a>
 ## isHoliday
 
 ```TypeScript

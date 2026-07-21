@@ -6,7 +6,6 @@
 import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
-<a id="read"></a>
 ## read
 
 ```TypeScript
@@ -52,7 +51,6 @@ connectedTag.read().then((data) => {
 ```
 
 
-<a id="read-1"></a>
 ## read
 
 ```TypeScript

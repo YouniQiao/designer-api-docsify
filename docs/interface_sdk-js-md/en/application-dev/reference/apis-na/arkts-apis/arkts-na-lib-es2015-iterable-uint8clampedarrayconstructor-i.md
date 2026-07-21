@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface Uint8ClampedArrayConstructor--><!--Device-unnamed-interface Uint8ClampedArrayConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -23,7 +22,6 @@ new (elements: Iterable<number>): Uint8ClampedArray
 | --- | --- |
 | [Uint8ClampedArray](arkts-na-lib-es2015-iterable-uint8clampedarray-i.md) |  |
 
-<a id="from"></a>
 ## from
 
 ```TypeScript

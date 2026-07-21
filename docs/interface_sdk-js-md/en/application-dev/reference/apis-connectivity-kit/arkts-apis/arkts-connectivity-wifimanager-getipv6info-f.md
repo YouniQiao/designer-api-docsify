@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="getipv6info"></a>
 ## getIpv6Info
 
 ```TypeScript

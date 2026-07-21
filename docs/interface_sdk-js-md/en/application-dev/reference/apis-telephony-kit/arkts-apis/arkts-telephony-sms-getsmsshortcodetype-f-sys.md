@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="getsmsshortcodetype"></a>
 ## getSmsShortCodeType
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="readtextsync"></a>
 ## readTextSync
 
 ```TypeScript
@@ -22,13 +21,7 @@ Reads the text content of a file. This API returns the result synchronously.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare function readTextSync(
-  filePath: string,
-  options?: ReadTextOptions
-): string--><!--Device-unnamed-declare function readTextSync(
-  filePath: string,
-  options?: ReadTextOptions
-): string-End-->
+<!--Device-unnamed-declare function readTextSync(  filePath: string,  options?: ReadTextOptions): string--><!--Device-unnamed-declare function readTextSync(  filePath: string,  options?: ReadTextOptions): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

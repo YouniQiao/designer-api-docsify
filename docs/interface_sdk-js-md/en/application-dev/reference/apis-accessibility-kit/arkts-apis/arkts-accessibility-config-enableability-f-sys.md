@@ -6,7 +6,6 @@
 import { config } from '@kit.AccessibilityKit';
 ```
 
-<a id="enableability"></a>
 ## enableAbility
 
 ```TypeScript
@@ -49,7 +48,6 @@ Enables an accessibility extension ability. This API uses a promise to return th
 | [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) | Target ability already enabled. |
 
 
-<a id="enableability-1"></a>
 ## enableAbility
 
 ```TypeScript
@@ -66,15 +64,7 @@ Enables an accessibility extension ability. This API uses an asynchronous callba
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
-<!--Device-config-function enableAbility(
-    name: string,
-    capability: Array<accessibility.Capability>,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-config-function enableAbility(
-    name: string,
-    capability: Array<accessibility.Capability>,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-config-function enableAbility(    name: string,    capability: Array<accessibility.Capability>,    callback: AsyncCallback<void>  ): void--><!--Device-config-function enableAbility(    name: string,    capability: Array<accessibility.Capability>,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

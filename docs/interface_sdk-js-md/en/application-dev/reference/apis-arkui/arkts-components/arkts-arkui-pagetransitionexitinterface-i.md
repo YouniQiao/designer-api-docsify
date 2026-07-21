@@ -10,7 +10,6 @@ Provide an interface to set transition style when a page exits.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -39,7 +38,6 @@ Sets the page exit animation.
 | --- | --- |
 | [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="onexit"></a>
 ## onExit
 
 ```TypeScript

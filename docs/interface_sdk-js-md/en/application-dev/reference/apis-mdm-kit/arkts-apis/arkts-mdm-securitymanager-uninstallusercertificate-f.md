@@ -6,7 +6,6 @@
 import { securityManager } from '@kit.MDMKit';
 ```
 
-<a id="uninstallusercertificate"></a>
 ## uninstallUserCertificate
 
 ```TypeScript
@@ -30,7 +29,7 @@ Uninstalls a user certificate. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| certUri | string | Yes | Certificate URI, which is set and returned by the [installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md#installusercertificate-1) API for installing a user certificate. |
+| certUri | string | Yes | Certificate URI, which is set and returned by the [installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md#installusercertificate) API for installing a user certificate. |
 
 **Return value:**
 

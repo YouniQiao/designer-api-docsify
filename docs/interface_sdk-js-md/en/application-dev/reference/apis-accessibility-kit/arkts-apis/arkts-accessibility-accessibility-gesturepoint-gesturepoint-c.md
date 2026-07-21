@@ -14,7 +14,6 @@ The **GesturePoint** module provides APIs for creating gesture touch point infor
 import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

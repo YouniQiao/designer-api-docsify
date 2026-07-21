@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="setprimaryslotid"></a>
 ## setPrimarySlotId
 
 ```TypeScript
@@ -62,7 +61,6 @@ radio.setPrimarySlotId(slotId, (err: BusinessError) => {
 ```
 
 
-<a id="setprimaryslotid-1"></a>
 ## setPrimarySlotId
 
 ```TypeScript

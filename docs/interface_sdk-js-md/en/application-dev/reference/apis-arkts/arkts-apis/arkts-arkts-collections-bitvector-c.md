@@ -1,7 +1,6 @@
 # BitVector
 
 A linear data structure that is implemented on arrays. A bit vector stores bit values and provides bit-level storage and processing.
-
 > **NOTE**  
 >  
 > - This module can be imported only to ArkTS files (with the file name extension .ets).  
@@ -21,7 +20,6 @@ A linear data structure that is implemented on arrays. A bit vector stores bit v
 import { collections } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -50,7 +48,6 @@ Returns an iterator that iterates over bit vector.
 | --- | --- |
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -73,7 +70,6 @@ Constructor used to create a bit vector.
 | --- | --- | --- | --- |
 | length | number | Yes | Length of the bit vector. |
 
-<a id="flipbitbyindex"></a>
 ## flipBitByIndex
 
 ```TypeScript
@@ -104,7 +100,6 @@ Flips the bit value (from 0 to 1 or from 1 to 0) at a given index in this bit ve
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The flipBitByIndex method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="flipbitsbyrange"></a>
 ## flipBitsByRange
 
 ```TypeScript
@@ -136,7 +131,6 @@ Flips the bit values (from 0 to 1 or from 1 to 0) in a given range in this bit v
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The flipBitsByRange method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="getbitcountbyrange"></a>
 ## getBitCountByRange
 
 ```TypeScript
@@ -175,7 +169,6 @@ Counts the number of bit values in a given range of this bit vector.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getBitCountByRange method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="getbitsbyrange"></a>
 ## getBitsByRange
 
 ```TypeScript
@@ -213,7 +206,6 @@ Obtains bit values within a given range of this bit vector.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getBitsByRange method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="getindexof"></a>
 ## getIndexOf
 
 ```TypeScript
@@ -252,7 +244,6 @@ Returns the index of the first occurrence of a bit value in this bit vector. If 
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="getlastindexof"></a>
 ## getLastIndexOf
 
 ```TypeScript
@@ -291,7 +282,6 @@ Returns the index of the last occurrence of a bit value in this bit vector. If t
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -330,7 +320,6 @@ Checks whether a bit value is included in a given range of this bit vector.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="pop"></a>
 ## pop
 
 ```TypeScript
@@ -360,7 +349,6 @@ Removes the last element from this bit vector.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="push"></a>
 ## push
 
 ```TypeScript
@@ -396,7 +384,6 @@ Adds an element at the end of this bit vector.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The push method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="resize"></a>
 ## resize
 
 ```TypeScript
@@ -426,7 +413,6 @@ Resizes this bit vector.If **size** is greater than the length of the existing b
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The resize method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="setallbits"></a>
 ## setAllBits
 
 ```TypeScript
@@ -456,7 +442,6 @@ Sets all elements in this bit vector to a bit value.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAllBits method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="setbitsbyrange"></a>
 ## setBitsByRange
 
 ```TypeScript
@@ -489,7 +474,6 @@ Sets elements in a given range in this bit vector to a bit value.
 | [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setBitsByRange method cannot be bound. |
 | [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
-<a id="values"></a>
 ## values
 
 ```TypeScript

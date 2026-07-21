@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="getaddressesbyname"></a>
 ## getAddressesByName
 
 ```TypeScript
@@ -57,7 +56,6 @@ connection.getAddressesByName("xxxx", (error: BusinessError, data: connection.Ne
 ```
 
 
-<a id="getaddressesbyname-1"></a>
 ## getAddressesByName
 
 ```TypeScript

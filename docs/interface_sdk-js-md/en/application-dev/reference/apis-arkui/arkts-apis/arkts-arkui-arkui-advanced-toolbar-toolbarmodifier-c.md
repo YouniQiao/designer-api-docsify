@@ -14,7 +14,6 @@ Declare ToolBarModifier use in ToolBar
 import { ToolBarOption, ItemState, ToolBar, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
 ```
 
-<a id="backgroundcolor"></a>
 ## backgroundColor
 
 ```TypeScript
@@ -45,7 +44,6 @@ Sets the backgroundColor of the toolBar.
 | --- | --- |
 | [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | returns the instance of the ToolBarModifier. |
 
-<a id="height"></a>
 ## height
 
 ```TypeScript
@@ -76,7 +74,6 @@ Sets the height of the toolBar.
 | --- | --- |
 | [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | returns the instance of the ToolBarModifier. |
 
-<a id="padding"></a>
 ## padding
 
 ```TypeScript
@@ -107,7 +104,6 @@ Sets the left and right padding of the toolbar.
 | --- | --- |
 | [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md) | returns the instance of the ToolBarModifier. |
 
-<a id="stateeffect"></a>
 ## stateEffect
 
 ```TypeScript

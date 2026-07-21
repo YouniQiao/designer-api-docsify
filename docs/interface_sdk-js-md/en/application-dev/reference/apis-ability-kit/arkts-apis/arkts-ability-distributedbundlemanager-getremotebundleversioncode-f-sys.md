@@ -6,7 +6,6 @@
 import { distributedBundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="getremotebundleversioncode"></a>
 ## getRemoteBundleVersionCode
 
 ```TypeScript

@@ -6,14 +6,13 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="closeaccessory"></a>
 ## closeAccessory
 
 ```TypeScript
 function closeAccessory(accessoryHandle: USBAccessoryHandle): void
 ```
 
-Closes the accessory file descriptor.You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openaccessory-1) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) as a parameter.
+Closes the accessory file descriptor.You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openaccessory) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) as a parameter.
 
 **Since:** 14
 
@@ -25,7 +24,7 @@ Closes the accessory file descriptor.You need to call [usbManager.openAccessory]
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accessoryHandle | [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | Yes | USB accessory handle, which is obtained through [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openaccessory-1). |
+| accessoryHandle | [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) | Yes | USB accessory handle, which is obtained through [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openaccessory). |
 
 **Error codes:**
 

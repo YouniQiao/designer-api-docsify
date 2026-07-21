@@ -6,7 +6,6 @@
 import { userFileManager } from '@kit.CoreFileKit';
 ```
 
-<a id="getuserfilemgr"></a>
 ## getUserFileMgr
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains a **UserFileManager** instance. This instance can be used to access and 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getPhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper-1)
+**Substitutes:** [getPhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper)
 
 **Model restriction:** This API can be used only in the stage model.
 

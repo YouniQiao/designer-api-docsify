@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="controltransfer"></a>
 ## controlTransfer
 
 ```TypeScript
@@ -15,13 +14,13 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 
 Performs control transfer.
 
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices-1) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright-1) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice-1) to obtain **devicepipe** as an input parameter.
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md#controltransfer-1)
+**Substitutes:** [controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md#controltransfer)
 
 <!--Device-usb-function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>--><!--Device-usb-function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>-End-->
 

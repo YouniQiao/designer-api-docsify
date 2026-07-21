@@ -6,7 +6,6 @@
 import { formObserver } from '@kit.FormKit';
 ```
 
-<a id="getrunningforminfos"></a>
 ## getRunningFormInfos
 
 ```TypeScript
@@ -43,7 +42,6 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 
 
-<a id="getrunningforminfos-1"></a>
 ## getRunningFormInfos
 
 ```TypeScript
@@ -60,15 +58,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
-<!--Device-formObserver-function getRunningFormInfos(
-    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>,
-    isUnusedIncluded: boolean,
-    hostBundleName?: string
-  ): void--><!--Device-formObserver-function getRunningFormInfos(
-    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>,
-    isUnusedIncluded: boolean,
-    hostBundleName?: string
-  ): void-End-->
+<!--Device-formObserver-function getRunningFormInfos(    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>,    isUnusedIncluded: boolean,    hostBundleName?: string  ): void--><!--Device-formObserver-function getRunningFormInfos(    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>,    isUnusedIncluded: boolean,    hostBundleName?: string  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -93,7 +83,6 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 
 
-<a id="getrunningforminfos-2"></a>
 ## getRunningFormInfos
 
 ```TypeScript
@@ -135,7 +124,6 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 
 
-<a id="getrunningforminfos-3"></a>
 ## getRunningFormInfos
 
 ```TypeScript
@@ -151,13 +139,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
-<!--Device-formObserver-function getRunningFormInfos(
-    isUnusedIncluded: boolean,
-    hostBundleName?: string
-  ): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formObserver-function getRunningFormInfos(
-    isUnusedIncluded: boolean,
-    hostBundleName?: string
-  ): Promise<Array<formInfo.RunningFormInfo>>-End-->
+<!--Device-formObserver-function getRunningFormInfos(    isUnusedIncluded: boolean,    hostBundleName?: string  ): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formObserver-function getRunningFormInfos(    isUnusedIncluded: boolean,    hostBundleName?: string  ): Promise<Array<formInfo.RunningFormInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

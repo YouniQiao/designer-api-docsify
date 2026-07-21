@@ -6,7 +6,6 @@
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="constructmulticastsocketinstance"></a>
 ## constructMulticastSocketInstance
 
 ```TypeScript

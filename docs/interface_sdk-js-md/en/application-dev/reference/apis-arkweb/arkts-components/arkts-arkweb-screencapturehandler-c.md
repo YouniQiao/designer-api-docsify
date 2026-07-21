@@ -1,7 +1,6 @@
 # ScreenCaptureHandler
 
 Implements the **ScreenCaptureHandler** object for accepting or rejecting a screen capture request.For details about the sample code,see [onScreenCaptureRequest](./arkts-basic-components-web-events.md#onscreencapturerequest10).
-
 > **NOTE**  
 >  
 > - The initial APIs of this component are supported since API version 8.  
@@ -17,7 +16,6 @@ Implements the **ScreenCaptureHandler** object for accepting or rejecting a scre
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -34,7 +32,6 @@ Constructs a **ScreenCaptureHandler** object.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="deny"></a>
 ## deny
 
 ```TypeScript
@@ -51,7 +48,6 @@ Rejects this screen capture request.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="getorigin"></a>
 ## getOrigin
 
 ```TypeScript
@@ -74,7 +70,6 @@ Obtains the origin of this web page.
 | --- | --- |
 | string | Origin of the web page that requests the permission. |
 
-<a id="grant"></a>
 ## grant
 
 ```TypeScript

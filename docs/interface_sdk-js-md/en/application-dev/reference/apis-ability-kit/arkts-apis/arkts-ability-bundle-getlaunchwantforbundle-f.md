@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="getlaunchwantforbundle"></a>
 ## getLaunchWantForBundle
 
 ```TypeScript
@@ -33,7 +32,6 @@ Obtains the Want object that launches the specified application. This API uses a
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Want&gt; | Yes | Callback used to return the Want object. |
 
 
-<a id="getlaunchwantforbundle-1"></a>
 ## getLaunchWantForBundle
 
 ```TypeScript

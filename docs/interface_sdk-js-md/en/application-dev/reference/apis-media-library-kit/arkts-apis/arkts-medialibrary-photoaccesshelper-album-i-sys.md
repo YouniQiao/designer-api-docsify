@@ -16,7 +16,6 @@ Provides APIs to manage albums.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="deleteassets"></a>
 ## deleteAssets
 
 ```TypeScript
@@ -24,7 +23,6 @@ deleteAssets(assets: Array<PhotoAsset>, callback: AsyncCallback<void>): void
 ```
 
 Deletes image or video assets from the trash. Before the operation, ensure that the image or video assets exist in the trash. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this  
@@ -34,7 +32,7 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 **Deprecated since:** 11
 
-**Substitutes:** [deleteAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteassets-1)
+**Substitutes:** [deleteAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -94,7 +92,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="deleteassets-1"></a>
 ## deleteAssets
 
 ```TypeScript
@@ -102,7 +99,6 @@ deleteAssets(assets: Array<PhotoAsset>): Promise<void>
 ```
 
 Deletes image or video assets from the trash. Before the operation, ensure that the image or video assets exist in the trash. It is recommended that the number of images or videos to be deleted be less than or equal to 1000.This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this  
@@ -112,7 +108,7 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 **Deprecated since:** 11
 
-**Substitutes:** [deleteAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteassets-1)
+**Substitutes:** [deleteAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -176,7 +172,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="getattribute"></a>
 ## getAttribute
 
 ```TypeScript
@@ -259,7 +254,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="getfaceid"></a>
 ## getFaceId
 
 ```TypeScript
@@ -334,7 +328,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="getfusionassetsinfo"></a>
 ## getFusionAssetsInfo
 
 ```TypeScript
@@ -367,7 +360,6 @@ Obtains fusion assets information.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs.<br>Possible causes:<br>1. The database is corrupted.<br>2. The file system is abnormal.<br>3. The IPC request timed out. |
 
-<a id="getselectedassets"></a>
 ## getSelectedAssets
 
 ```TypeScript
@@ -467,7 +459,6 @@ async function example1(phAccessHelper: photoAccessHelper.PhotoAccessHelper) : P
 
 ```
 
-<a id="recoverassets"></a>
 ## recoverAssets
 
 ```TypeScript
@@ -480,7 +471,7 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 
 **Deprecated since:** 11
 
-**Substitutes:** [recoverAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#recoverassets-1)
+**Substitutes:** [recoverAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#recoverassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -540,7 +531,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="recoverassets-1"></a>
 ## recoverAssets
 
 ```TypeScript
@@ -553,7 +543,7 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 
 **Deprecated since:** 11
 
-**Substitutes:** [recoverAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#recoverassets-1)
+**Substitutes:** [recoverAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#recoverassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -617,7 +607,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="setcoveruri"></a>
 ## setCoverUri
 
 ```TypeScript
@@ -630,7 +619,7 @@ Sets the cover of the user album. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 11
 
-**Substitutes:** [setCoverUri](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#setcoveruri-1)
+**Substitutes:** [setCoverUri](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#setcoveruri)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -690,7 +679,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="setcoveruri-1"></a>
 ## setCoverUri
 
 ```TypeScript
@@ -703,7 +691,7 @@ Sets the cover of the user album. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [setCoverUri](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#setcoveruri-1)
+**Substitutes:** [setCoverUri](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#setcoveruri)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 

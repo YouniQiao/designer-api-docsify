@@ -14,7 +14,6 @@ Implements an asynchronous queue, for which you can specify the task execution c
 import { taskpool } from '@kit.ArkTS';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -45,7 +44,6 @@ let runner: taskpool.AsyncRunner = new taskpool.AsyncRunner(5);
 
 ```
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -53,7 +51,6 @@ constructor(name: string, runningCapacity: number, waitingCapacity?: number)
 ```
 
 A constructor used to create an **AsyncRunner** instance. It constructs a global asynchronous queue. If the queue name is the same as an existing name, the same asynchronous queue is returned.
-
 > **NOTE**  
 >  
 > - The bottom layer uses the singleton mode to ensure that the same instance is obtained when an asynchronous  
@@ -84,7 +81,6 @@ let runner:taskpool.AsyncRunner = new taskpool.AsyncRunner("runner1", 5, 5);
 
 ```
 
-<a id="execute"></a>
 ## execute
 
 ```TypeScript
@@ -92,7 +88,6 @@ execute(task: Task, priority?: Priority): Promise<Object>
 ```
 
 Adds a task to the asynchronous queue for execution. Before using this API, you must create an **AsyncRunner** instance. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - Tasks in a task group cannot be added to the asynchronous queue.  

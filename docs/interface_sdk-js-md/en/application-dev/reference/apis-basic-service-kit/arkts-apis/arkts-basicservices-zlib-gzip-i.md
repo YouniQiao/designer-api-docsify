@@ -14,7 +14,6 @@ Describes gzip-related APIs.
 import { zlib } from '@kit.BasicServicesKit';
 ```
 
-<a id="gzbuffer"></a>
 ## gzbuffer
 
 ```TypeScript
@@ -92,7 +91,6 @@ struct Index {
 
 ```
 
-<a id="gzclearerr"></a>
 ## gzclearerr
 
 ```TypeScript
@@ -167,7 +165,6 @@ struct Index {
 
 ```
 
-<a id="gzclose"></a>
 ## gzclose
 
 ```TypeScript
@@ -236,7 +233,6 @@ struct Index {
 
 ```
 
-<a id="gzcloser"></a>
 ## gzcloser
 
 ```TypeScript
@@ -306,7 +302,6 @@ struct Index {
 
 ```
 
-<a id="gzclosew"></a>
 ## gzclosew
 
 ```TypeScript
@@ -375,7 +370,6 @@ struct Index {
 
 ```
 
-<a id="gzdirect"></a>
 ## gzdirect
 
 ```TypeScript
@@ -438,7 +432,6 @@ struct Index {
 
 ```
 
-<a id="gzdopen"></a>
 ## gzdopen
 
 ```TypeScript
@@ -460,7 +453,7 @@ Associates gzip file with the file descriptor (fd) and opens the file for readin
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor. Generally, the value is obtained by calling the **open** method or other methods. |
-| mode | string | Yes | Specifies the access mode. For details, see the description of [gzopen](arkts-basicservices-zlib-gzip-i.md#gzopen-1). |
+| mode | string | Yes | Specifies the access mode. For details, see the description of [gzopen](arkts-basicservices-zlib-gzip-i.md#gzopen). |
 
 **Return value:**
 
@@ -515,7 +508,6 @@ struct Index {
 
 ```
 
-<a id="gzeof"></a>
 ## gzeof
 
 ```TypeScript
@@ -588,7 +580,6 @@ struct Index {
 
 ```
 
-<a id="gzerror"></a>
 ## gzerror
 
 ```TypeScript
@@ -669,7 +660,6 @@ struct Index {
 
 ```
 
-<a id="gzflush"></a>
 ## gzflush
 
 ```TypeScript
@@ -745,7 +735,6 @@ struct Index {
 
 ```
 
-<a id="gzfread"></a>
 ## gzfread
 
 ```TypeScript
@@ -832,7 +821,6 @@ struct Index {
 
 ```
 
-<a id="gzfwrite"></a>
 ## gzfwrite
 
 ```TypeScript
@@ -915,7 +903,6 @@ struct Index {
 
 ```
 
-<a id="gzgetc"></a>
 ## gzgetc
 
 ```TypeScript
@@ -987,7 +974,6 @@ struct Index {
 
 ```
 
-<a id="gzgets"></a>
 ## gzgets
 
 ```TypeScript
@@ -1067,7 +1053,6 @@ struct Index {
 
 ```
 
-<a id="gzoffset"></a>
 ## gzoffset
 
 ```TypeScript
@@ -1136,7 +1121,6 @@ struct Index {
 
 ```
 
-<a id="gzopen"></a>
 ## gzopen
 
 ```TypeScript
@@ -1212,7 +1196,6 @@ struct Index {
 
 ```
 
-<a id="gzprintf"></a>
 ## gzprintf
 
 ```TypeScript
@@ -1290,7 +1273,6 @@ struct Index {
 
 ```
 
-<a id="gzputc"></a>
 ## gzputc
 
 ```TypeScript
@@ -1366,7 +1348,6 @@ struct Index {
 
 ```
 
-<a id="gzputs"></a>
 ## gzputs
 
 ```TypeScript
@@ -1442,7 +1423,6 @@ struct Index {
 
 ```
 
-<a id="gzread"></a>
 ## gzread
 
 ```TypeScript
@@ -1527,7 +1507,6 @@ struct Index {
 
 ```
 
-<a id="gzrewind"></a>
 ## gzrewind
 
 ```TypeScript
@@ -1598,7 +1577,6 @@ struct Index {
 
 ```
 
-<a id="gzseek"></a>
 ## gzseek
 
 ```TypeScript
@@ -1675,7 +1653,6 @@ struct Index {
 
 ```
 
-<a id="gzsetparams"></a>
 ## gzsetparams
 
 ```TypeScript
@@ -1753,7 +1730,6 @@ struct Index {
 
 ```
 
-<a id="gztell"></a>
 ## gztell
 
 ```TypeScript
@@ -1822,7 +1798,6 @@ struct Index {
 
 ```
 
-<a id="gzungetc"></a>
 ## gzungetc
 
 ```TypeScript
@@ -1901,7 +1876,6 @@ struct Index {
 
 ```
 
-<a id="gzwrite"></a>
 ## gzwrite
 
 ```TypeScript

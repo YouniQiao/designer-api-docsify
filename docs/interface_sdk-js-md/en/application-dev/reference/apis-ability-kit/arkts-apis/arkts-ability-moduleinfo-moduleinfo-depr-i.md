@@ -1,17 +1,16 @@
 # ModuleInfo
 
 The ModuleInfo module provides module information of an application.
-
 > **NOTE**  
 >  
 > The APIs of this module have been deprecated since API version 9. You are advised to use  
-> [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md) instead.
+> [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-i.md) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [hapModuleInfo:HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)
+**Substitutes:** [hapModuleInfo:HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
 <!--Device-unnamed-export interface ModuleInfo--><!--Device-unnamed-export interface ModuleInfo-End-->
 

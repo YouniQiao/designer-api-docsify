@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="adddomainfilterrule"></a>
 ## addDomainFilterRule
 
 ```TypeScript
@@ -22,7 +21,6 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 After a rule with [Action](arkts-mdm-networkmanager-action-e.md) set to **ALLOW** is added, a rule with **Action** set to **DENY** is added by default to discard or intercept all packets for domain name resolution that do not meet the **ALLOW** rule.
 
 After the device is restarted, the domain name filtering rules are cleared.
-
 > **NOTE**  
 >  
 > To prevent interception rules from becoming ineffective due to DNS caching, it is recommended that you configure  

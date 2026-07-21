@@ -6,14 +6,13 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="getprofilebyextensionability"></a>
 ## getProfileByExtensionAbility
 
 ```TypeScript
 function getProfileByExtensionAbility(moduleName: string, extensionAbilityName: string, metadataName: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name,ExtensionAbility name, and metadata name (name configured in [metadata](docroot://quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API uses an asynchronous callback to return the result.
+Obtains the JSON string array of the current application's configuration file based on the given module name,ExtensionAbility name, and metadata name (name configured in [metadata](../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -29,7 +28,7 @@ Obtains the JSON string array of the current application's configuration file ba
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name. |
 | extensionAbilityName | string | Yes | Name of the ExtensionAbility component. |
-| metadataName | string | Yes | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under [extensionAbilities](docroot://quick-start/module-configuration-file.md#extensionabilities) in the **module.json5** file. |
+| metadataName | string | Yes | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) in the **module.json5** file. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is **Array<string>**.Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -68,14 +67,13 @@ try {
 ```
 
 
-<a id="getprofilebyextensionability-1"></a>
 ## getProfileByExtensionAbility
 
 ```TypeScript
 function getProfileByExtensionAbility(moduleName: string, extensionAbilityName: string, metadataName?: string): Promise<Array<string>>
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name,ExtensionAbility name, and metadata name (name configured in [metadata](docroot://quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API uses a promise to return the result.
+Obtains the JSON string array of the current application's configuration file based on the given module name,ExtensionAbility name, and metadata name (name configured in [metadata](../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -91,7 +89,7 @@ Obtains the JSON string array of the current application's configuration file ba
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name. |
 | extensionAbilityName | string | Yes | Name of the ExtensionAbility component. |
-| metadataName | string | No | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under [extensionAbilities](docroot://quick-start/module-configuration-file.md#extensionabilities) in the **module.json5** file. The default value is null. |
+| metadataName | string | No | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) in the **module.json5** file. The default value is null. |
 
 **Return value:**
 

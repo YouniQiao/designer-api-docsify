@@ -1,6 +1,5 @@
 # extendViewModel (System API)
 
-<a id="extendviewmodel"></a>
 ## extendViewModel
 
 ```TypeScript
@@ -13,11 +12,7 @@ export declare function extendViewModel<T extends ViewModel, Data>(
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-unnamed-export declare function extendViewModel<T extends ViewModel, Data>(
-  options: CombinedOptions<T, Data>
-): ViewModel & Data--><!--Device-unnamed-export declare function extendViewModel<T extends ViewModel, Data>(
-  options: CombinedOptions<T, Data>
-): ViewModel & Data-End-->
+<!--Device-unnamed-export declare function extendViewModel<T extends ViewModel, Data>(  options: CombinedOptions<T, Data>): ViewModel & Data--><!--Device-unnamed-export declare function extendViewModel<T extends ViewModel, Data>(  options: CombinedOptions<T, Data>): ViewModel & Data-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 

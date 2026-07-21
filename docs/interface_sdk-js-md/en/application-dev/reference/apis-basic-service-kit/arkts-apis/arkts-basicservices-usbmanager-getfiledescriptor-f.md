@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="getfiledescriptor"></a>
 ## getFileDescriptor
 
 ```TypeScript
@@ -25,13 +24,13 @@ Obtains a file descriptor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice-1) to obtain its value. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns a file descriptor of the USB device if the operation is successful; returns an error code otherwise. The error codes are as follows:* - 88080486: The service is being initialized. Try again later.* - 88080488: No device access permission. Call the [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright-1) API to request authorization.* - -1: The driver is abnormal. |
+| number | Returns a file descriptor of the USB device if the operation is successful; returns an error code otherwise. The error codes are as follows:* - 88080486: The service is being initialized. Try again later.* - 88080488: No device access permission. Call the [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright) API to request authorization.* - -1: The driver is abnormal. |
 
 **Error codes:**
 

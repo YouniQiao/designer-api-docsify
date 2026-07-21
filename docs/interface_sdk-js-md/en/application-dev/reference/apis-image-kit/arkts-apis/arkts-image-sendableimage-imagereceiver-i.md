@@ -16,7 +16,6 @@ Before calling any APIs in ImageReceiver, you must create an ImageReceiver insta
 import { sendableImage } from '@kit.ImageKit';
 ```
 
-<a id="getreceivingsurfaceid"></a>
 ## getReceivingSurfaceId
 
 ```TypeScript
@@ -59,7 +58,6 @@ async function Demo() {
 
 ```
 
-<a id="on"></a>
 ## on('imageArrival')
 
 ```TypeScript
@@ -100,7 +98,6 @@ async function Demo() {
 
 ```
 
-<a id="readlatestimage"></a>
 ## readLatestImage
 
 ```TypeScript
@@ -108,12 +105,11 @@ readLatestImage(): Promise<Image>
 ```
 
 Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is  
 > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,  
-> call [release](arkts-image-sendableimage-pixelmap-i.md#release-1) to release the object. New data can be received only after  
+> call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after  
 > the release.
 
 **Since:** 12
@@ -150,7 +146,6 @@ async function Demo() {
 
 ```
 
-<a id="readnextimage"></a>
 ## readNextImage
 
 ```TypeScript
@@ -158,12 +153,11 @@ readNextImage(): Promise<Image>
 ```
 
 Reads the next image from the ImageReceiver instance. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is  
 > triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,  
-> call [release](arkts-image-sendableimage-pixelmap-i.md#release-1) to release the object. New data can be received only after  
+> call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after  
 > the release.
 
 **Since:** 12
@@ -200,7 +194,6 @@ async function Demo() {
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript

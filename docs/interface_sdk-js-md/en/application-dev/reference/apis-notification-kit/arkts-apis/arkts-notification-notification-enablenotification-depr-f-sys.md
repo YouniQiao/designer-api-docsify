@@ -1,6 +1,5 @@
 # enableNotification (System API)
 
-<a id="enablenotification"></a>
 ## enableNotification
 
 ```TypeScript
@@ -32,7 +31,6 @@ Sets whether to enable notification for a specified application.This API uses an
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="enablenotification-1"></a>
 ## enableNotification
 
 ```TypeScript

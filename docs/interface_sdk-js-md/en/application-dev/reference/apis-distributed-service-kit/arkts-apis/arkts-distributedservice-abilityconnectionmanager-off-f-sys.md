@@ -6,7 +6,6 @@
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
-<a id="off"></a>
 ## off('receiveImage')
 
 ```TypeScript
@@ -20,9 +19,7 @@ Unregisters receiveImage event.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function off(type: 'receiveImage', sessionId: number,
-        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'receiveImage', sessionId: number,
-        callback?: Callback<EventCallbackInfo>): void-End-->
+<!--Device-abilityConnectionManager-function off(type: 'receiveImage', sessionId: number,        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'receiveImage', sessionId: number,        callback?: Callback<EventCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -54,7 +51,6 @@ abilityConnectionManager.off("receiveImage", sessionId);
 ```
 
 
-<a id="off-1"></a>
 ## off('collaborateEvent')
 
 ```TypeScript
@@ -68,9 +64,7 @@ Unregisters collaborateEvent event.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function off(type: 'collaborateEvent', sessionId: number,
-        callback?: Callback<CollaborateEventInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'collaborateEvent', sessionId: number,
-        callback?: Callback<CollaborateEventInfo>): void-End-->
+<!--Device-abilityConnectionManager-function off(type: 'collaborateEvent', sessionId: number,        callback?: Callback<CollaborateEventInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'collaborateEvent', sessionId: number,        callback?: Callback<CollaborateEventInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 

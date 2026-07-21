@@ -14,7 +14,6 @@ SEService realizes the communication to available SEs on the device.
 import { omapi } from '@kit.ConnectivityKit';
 ```
 
-<a id="getreaders"></a>
 ## getReaders
 
 ```TypeScript
@@ -68,7 +67,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="getversion"></a>
 ## getVersion
 
 ```TypeScript
@@ -115,7 +113,6 @@ try {
 
 ```
 
-<a id="isconnected"></a>
 ## isConnected
 
 ```TypeScript
@@ -166,7 +163,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="shutdown"></a>
 ## shutdown
 
 ```TypeScript

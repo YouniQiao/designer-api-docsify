@@ -14,7 +14,6 @@ Provide a DateTime formatting interface which could format DateTime to StyleStri
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -28,9 +27,7 @@ Creates an object for formatting the time and date that need to be displayed in 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
-        options?: StyledDateTimeFormatOptions)--><!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
-        options?: StyledDateTimeFormatOptions)-End-->
+<!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,        options?: StyledDateTimeFormatOptions)--><!--Device-StyledDateTimeFormat-constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,        options?: StyledDateTimeFormatOptions)-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -79,7 +76,6 @@ try {
 
 ```
 
-<a id="format"></a>
 ## format
 
 ```TypeScript

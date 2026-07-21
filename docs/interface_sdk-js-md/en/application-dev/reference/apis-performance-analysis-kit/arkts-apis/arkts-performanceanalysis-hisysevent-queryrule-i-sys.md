@@ -26,7 +26,7 @@ Additional event conditions. The value of this parameter is in the format of **{
 
 Parameter: key value of the specified event parameter.
 
-Supported operators: **=**, **!=**, **<**, **<=**, **>** and **>=**.
+Supported operators: **=**, **!=**, **&lt;**, **<=**, **>** and **&gt;&lt;=**, **&gt;** and **>=**.
 
 Multiple conditions can be configured in the **"and"** array, and the intersection of the query results is used.
 

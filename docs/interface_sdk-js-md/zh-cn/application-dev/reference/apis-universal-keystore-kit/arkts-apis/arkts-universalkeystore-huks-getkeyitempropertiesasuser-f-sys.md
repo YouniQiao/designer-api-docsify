@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="getkeyitempropertiesasuser"></a>
 ## getKeyItemPropertiesAsUser
 
 ```TypeScript
@@ -23,15 +22,7 @@ Get properties of the key as user.
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
-<!--Device-huks-function getKeyItemPropertiesAsUser(
-    userId: number,
-    keyAlias: string,
-    huksOptions: HuksOptions
-  ): Promise<HuksReturnResult>--><!--Device-huks-function getKeyItemPropertiesAsUser(
-    userId: number,
-    keyAlias: string,
-    huksOptions: HuksOptions
-  ): Promise<HuksReturnResult>-End-->
+<!--Device-huks-function getKeyItemPropertiesAsUser(    userId: number,    keyAlias: string,    huksOptions: HuksOptions  ): Promise<HuksReturnResult>--><!--Device-huks-function getKeyItemPropertiesAsUser(    userId: number,    keyAlias: string,    huksOptions: HuksOptions  ): Promise<HuksReturnResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

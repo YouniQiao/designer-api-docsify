@@ -8,7 +8,6 @@ Describes the shape mask.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -27,7 +26,6 @@ A constructor used to create a **ShapeMask** instance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="setcircleshape"></a>
 ## setCircleShape
 
 ```TypeScript
@@ -52,7 +50,6 @@ Sets a round mask.
 | --- | --- | --- | --- |
 | circle | [Circle](arkts-arkui-graphics-circle-i.md) | Yes | Round shape. |
 
-<a id="setcommandpath"></a>
 ## setCommandPath
 
 ```TypeScript
@@ -77,7 +74,6 @@ Sets the command for drawing a path.
 | --- | --- | --- | --- |
 | path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Yes | Command for drawing a path. |
 
-<a id="setovalshape"></a>
 ## setOvalShape
 
 ```TypeScript
@@ -102,7 +98,6 @@ Sets an oval mask.
 | --- | --- | --- | --- |
 | oval | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | Oval shape. |
 
-<a id="setrectshape"></a>
 ## setRectShape
 
 ```TypeScript
@@ -127,7 +122,6 @@ Sets a rectangle mask.
 | --- | --- | --- | --- |
 | rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | Shape of the rectangle. |
 
-<a id="setroundrectshape"></a>
 ## setRoundRectShape
 
 ```TypeScript

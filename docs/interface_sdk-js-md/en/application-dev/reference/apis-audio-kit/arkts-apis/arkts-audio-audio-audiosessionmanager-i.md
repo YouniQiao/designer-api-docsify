@@ -2,8 +2,7 @@
 
 This interface implements audio session management.
 
-Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager-1) to obtain an AudioSessionManager instance.
-
+Before calling any API in AudioSessionManager, you must use [getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager) to obtain an AudioSessionManager instance.
 > **NOTE**  
 >  
 > - The initial APIs of this interface are supported since API version 12.
@@ -20,7 +19,6 @@ Before calling any API in AudioSessionManager, you must use [getSessionManager](
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="activateaudiosession"></a>
 ## activateAudioSession
 
 ```TypeScript
@@ -57,14 +55,13 @@ Activates an audio session. This API uses a promise to return the result.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes:1.Focus preemption failure.2.Audio server process died. |
 
-<a id="clearselectedmediainputdevice"></a>
 ## clearSelectedMediaInputDevice
 
 ```TypeScript
 clearSelectedMediaInputDevice(): Promise<void>
 ```
 
-Clears the media input device set by calling [selectMediaInputDevice](arkts-audio-audio-audiosessionmanager-i.md#selectmediainputdevice-1). This API uses a promise to return the result.
+Clears the media input device set by calling [selectMediaInputDevice](arkts-audio-audio-audiosessionmanager-i.md#selectmediainputdevice). This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -84,7 +81,6 @@ Clears the media input device set by calling [selectMediaInputDevice](arkts-audi
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="deactivateaudiosession"></a>
 ## deactivateAudioSession
 
 ```TypeScript
@@ -113,7 +109,6 @@ Deactivates this audio session. This API uses a promise to return the result.
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | System error. Possible causes:1.The audio session is not existed or has been released.2.Audio server process died. |
 
-<a id="enablemutesuggestionwhenmixwithothers"></a>
 ## enableMuteSuggestionWhenMixWithOthers
 
 ```TypeScript
@@ -128,7 +123,7 @@ If this feature is enabled, mute and unmute suggestions will be sent through the
 
 This feature can be used only by audio sessions for which [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) has been set and the **CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session.
 
-For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](docroot://media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback).
+For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](../../../media/audio/audio-session-management.md#enabling-mute-suggestion-notifications-for-mixed-playback).
 
 **Since:** 23
 
@@ -151,7 +146,6 @@ For details, see [Enabling Mute Suggestion Notifications for Mixed Playback](doc
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Function is called without setting {@link #AudioSessionScene} or called after audio session activation. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, system internal error. |
 
-<a id="getavailabledevices"></a>
 ## getAvailableDevices
 
 ```TypeScript
@@ -185,14 +179,13 @@ Obtains the available audio devices.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="getbluetoothandnearlinkpreferredrecordcategory"></a>
 ## getBluetoothAndNearlinkPreferredRecordCategory
 
 ```TypeScript
 getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredRecordCategory
 ```
 
-Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling [setBluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audio-audiosessionmanager-i.md#setbluetoothandnearlinkpreferredrecordcategory-1).
+Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling [setBluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audio-audiosessionmanager-i.md#setbluetoothandnearlinkpreferredrecordcategory).
 
 **Since:** 21
 
@@ -212,14 +205,13 @@ Obtains the preferred device category for recording with Bluetooth or NearLink, 
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="getdefaultoutputdevice"></a>
 ## getDefaultOutputDevice
 
 ```TypeScript
 getDefaultOutputDevice(): DeviceType
 ```
 
-Obtains the default audio output device set by calling [setDefaultOutputDevice](arkts-audio-audio-audiosessionmanager-i.md#setdefaultoutputdevice-1).
+Obtains the default audio output device set by calling [setDefaultOutputDevice](arkts-audio-audio-audiosessionmanager-i.md#setdefaultoutputdevice).
 
 **Since:** 20
 
@@ -240,14 +232,13 @@ Obtains the default audio output device set by calling [setDefaultOutputDevice](
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. Return by promise. |
 
-<a id="getselectedmediainputdevice"></a>
 ## getSelectedMediaInputDevice
 
 ```TypeScript
 getSelectedMediaInputDevice(): AudioDeviceDescriptor
 ```
 
-Obtains the media input device set by calling [selectMediaInputDevice](arkts-audio-audio-audiosessionmanager-i.md#selectmediainputdevice-1). If no device has been specified, the device with **deviceType** set to **INVALID** is returned.
+Obtains the media input device set by calling [selectMediaInputDevice](arkts-audio-audio-audiosessionmanager-i.md#selectmediainputdevice). If no device has been specified, the device with **deviceType** set to **INVALID** is returned.
 
 **Since:** 21
 
@@ -267,7 +258,6 @@ Obtains the media input device set by calling [selectMediaInputDevice](arkts-aud
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="isaudiosessionactivated"></a>
 ## isAudioSessionActivated
 
 ```TypeScript
@@ -290,7 +280,6 @@ Checks whether this audio session is activated.
 | --- | --- |
 | boolean | Check result for whether the audio session is activated. **true** if activated, **false** otherwise. |
 
-<a id="isothermediaplaying"></a>
 ## isOtherMediaPlaying
 
 ```TypeScript
@@ -313,7 +302,6 @@ Check whether any other application is currently playing audio of the four media
 | --- | --- |
 | boolean | Whether another application is playing audio of certain media types. **true** means yes;**false** otherwise. |
 
-<a id="off"></a>
 ## off('audioSessionDeactivated')
 
 ```TypeScript
@@ -344,7 +332,6 @@ Unsubscribes from the audio session deactivation event. This API uses an asynchr
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="off-1"></a>
 ## off('audioSessionStateChanged')
 
 ```TypeScript
@@ -373,7 +360,6 @@ Unsubscribes from the audio session state change event. This API uses an asynchr
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="off-2"></a>
 ## off('currentOutputDeviceChanged')
 
 ```TypeScript
@@ -402,7 +388,6 @@ Unsubscribes from the current output device change event. This API uses an async
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="off-3"></a>
 ## off('availableDeviceChange')
 
 ```TypeScript
@@ -430,7 +415,6 @@ Unsubscribes from the event indicating that the connection status of an availabl
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="off-4"></a>
 ## off('currentInputDeviceChanged')
 
 ```TypeScript
@@ -458,7 +442,6 @@ Unsubscribes from the current input device change event.
 | --- | --- |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="on"></a>
 ## on('audioSessionDeactivated')
 
 ```TypeScript
@@ -489,7 +472,6 @@ Subscribes to the audio session deactivation event, which is triggered when an a
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters unspecified.2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on-1"></a>
 ## on('audioSessionStateChanged')
 
 ```TypeScript
@@ -519,7 +501,6 @@ Subscribes to the audio session state change event, which is triggered when the 
 | [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="on-2"></a>
 ## on('currentOutputDeviceChanged')
 
 ```TypeScript
@@ -549,7 +530,6 @@ Subscribes to the current output device change event, which is triggered when th
 | [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="on-3"></a>
 ## on('availableDeviceChange')
 
 ```TypeScript
@@ -579,7 +559,6 @@ Subscribes to the event indicating that the connection status of an available au
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="on-4"></a>
 ## on('currentInputDeviceChanged')
 
 ```TypeScript
@@ -608,7 +587,6 @@ Subscribes to the current input device change event, which is triggered when the
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="selectmediainputdevice"></a>
 ## selectMediaInputDevice
 
 ```TypeScript
@@ -616,13 +594,12 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
 Selects a media input device. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where  
 > [SourceType](arkts-audio-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.  
 >  
-> - Before calling this API, call [getAvailableDevices](arkts-audio-audio-audiosessionmanager-i.md#getavailabledevices-1) to  
+> - Before calling this API, call [getAvailableDevices](arkts-audio-audio-audiosessionmanager-i.md#getavailabledevices) to  
 > query the list of available input devices and select an input device from the list.  
 >  
 > - If there are recording streams of other applications with higher priorities in the system, the actual input  
@@ -657,7 +634,6 @@ Selects a media input device. This API uses a promise to return the result.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example,the selected device does not exist. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="setaudiosessionbehavior"></a>
 ## setAudioSessionBehavior
 
 ```TypeScript
@@ -665,11 +641,10 @@ setAudioSessionBehavior(behavior: number): void
 ```
 
 Sets audio session behavior parameters. (Multiple flags can be combined.)
-
 > **NOTE**  
 >  
 > If this API is called while an audio session is active, you must call the  
-> [activateAudioSession](arkts-audio-audio-audiosessionmanager-i.md#activateaudiosession-1) API again  
+> [activateAudioSession](arkts-audio-audio-audiosessionmanager-i.md#activateaudiosession) API again  
 > for the settings to take effect.
 
 **Since:** 24
@@ -693,7 +668,6 @@ Sets audio session behavior parameters. (Multiple flags can be combined.)
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted in the current state. |
 
-<a id="setaudiosessionscene"></a>
 ## setAudioSessionScene
 
 ```TypeScript
@@ -722,7 +696,6 @@ Sets an audio session scene.
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="setbluetoothandnearlinkpreferredrecordcategory"></a>
 ## setBluetoothAndNearlinkPreferredRecordCategory
 
 ```TypeScript
@@ -730,7 +703,6 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 ```
 
 Sets the preferred device category for recording with Bluetooth or NearLink. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - Applications can set this category before connecting to Bluetooth or NearLink devices, and the system  
@@ -768,7 +740,6 @@ Sets the preferred device category for recording with Bluetooth or NearLink. Thi
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="setcapturermutehint"></a>
 ## setCapturerMuteHint
 
 ```TypeScript
@@ -803,7 +774,6 @@ Set mute hint for all capturer streams in the current audio session. It dose not
 | --- | --- |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permit at current state, there is no audio capturer running. |
 
-<a id="setdefaultoutputdevice"></a>
 ## setDefaultOutputDevice
 
 ```TypeScript
@@ -811,7 +781,6 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 ```
 
 Sets the default audio output device. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - This API applies to the following scenario: When  
@@ -853,7 +822,6 @@ Sets the default audio output device. This API uses a promise to return the resu
 | [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Allocate memory failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="setmediaoutputdevice"></a>
 ## setMediaOutputDevice
 
 ```TypeScript

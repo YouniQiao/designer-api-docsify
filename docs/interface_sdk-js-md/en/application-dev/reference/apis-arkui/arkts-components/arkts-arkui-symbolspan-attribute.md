@@ -12,7 +12,6 @@ The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-commo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="attributemodifier"></a>
 ## attributeModifier
 
 ```TypeScript
@@ -37,7 +36,6 @@ Creates an attribute modifier.
 | --- | --- | --- | --- |
 | modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;SymbolSpanAttribute&gt; | Yes | Modifier for dynamically setting attributes on the current component. |
 
-<a id="effectstrategy"></a>
 ## effectStrategy
 
 ```TypeScript
@@ -45,10 +43,9 @@ effectStrategy(value: SymbolEffectStrategy)
 ```
 
 Sets the symbol effect of the symbol span.
-
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -68,7 +65,6 @@ Sets the symbol effect of the symbol span.
 | --- | --- | --- | --- |
 | value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | Yes | Symbol effect of the symbol span.<br>Default value:**SymbolEffectStrategy.NONE** |
 
-<a id="fontcolor"></a>
 ## fontColor
 
 ```TypeScript
@@ -76,10 +72,9 @@ fontColor(value: Array<ResourceColor>)
 ```
 
 Sets the color of the symbol span.
-
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -99,7 +94,6 @@ Sets the color of the symbol span.
 | --- | --- | --- | --- |
 | value | Array&lt;ResourceColor&gt; | Yes | Color of the symbol span.<br> Default value: depending on the rendering strategy |
 
-<a id="fontsize"></a>
 ## fontSize
 
 ```TypeScript
@@ -107,10 +101,9 @@ fontSize(value: number | string | Resource)
 ```
 
 Sets the size of the symbol span. When using the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
-
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -130,7 +123,6 @@ Sets the size of the symbol span. When using the string type, numeric string val
 | --- | --- | --- | --- |
 | value | number \| string \| Resource | Yes | Size of the symbol span.<br>Default value: **16fp**<br>Unit:[fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) |
 
-<a id="fontweight"></a>
 ## fontWeight
 
 ```TypeScript
@@ -140,10 +132,9 @@ fontWeight(value: number | FontWeight | string)
 Sets the weight of the symbol span. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.
 
 The **sys.symbol.ohos_lungs** icon does not support font weight setting.
-
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -163,7 +154,6 @@ The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 | --- | --- | --- | --- |
 | value | number \| FontWeight \| string | Yes | Weight of the symbol span.<br>Default value: **FontWeight.Normal** |
 
-<a id="fontweight-1"></a>
 ## fontWeight
 
 ```TypeScript
@@ -191,7 +181,6 @@ Used to set the font weight of SymbolSpan.
 | value | number \| FontWeight \| ResourceStr | Yes | the SymbolSpan font weight. |
 | fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | No | the configuration of font weight. |
 
-<a id="renderingstrategy"></a>
 ## renderingStrategy
 
 ```TypeScript
@@ -199,10 +188,9 @@ renderingStrategy(value: SymbolRenderingStrategy)
 ```
 
 Sets the rendering strategy of the symbol span.
-
 > **NOTE**  
 >  
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 

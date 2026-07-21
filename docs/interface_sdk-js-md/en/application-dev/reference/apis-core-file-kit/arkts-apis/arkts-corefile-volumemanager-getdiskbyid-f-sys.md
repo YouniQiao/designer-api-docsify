@@ -6,7 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="getdiskbyid"></a>
 ## getDiskById
 
 ```TypeScript

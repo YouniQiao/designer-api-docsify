@@ -6,7 +6,6 @@
 import { asset } from '@kit.AssetStoreKit';
 ```
 
-<a id="updateasuser"></a>
 ## updateAsUser
 
 ```TypeScript

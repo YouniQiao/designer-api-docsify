@@ -14,7 +14,6 @@ Base interface of profile.
 import { baseProfile } from '@kit.ConnectivityKit';
 ```
 
-<a id="getconnecteddevices"></a>
 ## getConnectedDevices
 
 ```TypeScript
@@ -67,7 +66,6 @@ try {
 
 ```
 
-<a id="getconnectionstate"></a>
 ## getConnectionState
 
 ```TypeScript
@@ -125,7 +123,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off('connectionStateChange')
 
 ```TypeScript
@@ -159,7 +156,6 @@ Unsubscribe the event reported when the profile connection state changes .
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
-<a id="on"></a>
 ## on('connectionStateChange')
 
 ```TypeScript

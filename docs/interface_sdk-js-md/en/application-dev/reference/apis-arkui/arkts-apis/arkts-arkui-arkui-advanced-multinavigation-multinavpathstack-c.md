@@ -16,7 +16,6 @@ Implements a navigation stack of the **MultiNavigation** component. Currently, t
 import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@kit.ArkUI';
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -24,10 +23,8 @@ clear(animated?: boolean): void
 ```
 
 Clears the navigation stack.
-
 > **NOTE**
-
-> If [keepBottomPage](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage-1) is called with **true**, the bottom page of the  
+> If [keepBottomPage](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage) is called with **true**, the bottom page of the  
 > navigation stack is retained.
 
 **Since:** 14
@@ -46,7 +43,6 @@ Clears the navigation stack.
 | --- | --- | --- | --- |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -65,7 +61,6 @@ Creates an instance of MultiNavPathStack.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="disableanimation"></a>
 ## disableAnimation
 
 ```TypeScript
@@ -90,7 +85,6 @@ Disables or enables the transition animation in the **MultiNavigation** componen
 | --- | --- | --- | --- |
 | disable | boolean | Yes | Whether to disable the transition animation.<br>Default value: **false**.<br>**true**:The transition animation is disabled.<br>**false**: The transition animation is not disabled. |
 
-<a id="getallpathname"></a>
 ## getAllPathName
 
 ```TypeScript
@@ -115,7 +109,6 @@ Obtains the names of all navigation destination pages in the navigation stack.
 | --- | --- |
 | Array&lt;string&gt; | Names of all navigation destination pages in the navigation stack. |
 
-<a id="getindexbyname"></a>
 ## getIndexByName
 
 ```TypeScript
@@ -146,7 +139,6 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 | --- | --- |
 | Array&lt;number&gt; | Indexes of all the matching navigation destination pages.<br>Value range of the number type: [0, +∞). |
 
-<a id="getparambyindex"></a>
 ## getParamByIndex
 
 ```TypeScript
@@ -177,7 +169,6 @@ Obtains the parameter information of the navigation destination page specified b
 | --- | --- |
 | Object | **Object**: parameter information of the matching navigation destination page.<br>**undefined**: returned when an invalid index is provided. |
 
-<a id="getparambyname"></a>
 ## getParamByName
 
 ```TypeScript
@@ -208,7 +199,6 @@ Obtains the parameter information of all the navigation destination pages that m
 | --- | --- |
 | Array&lt;Object&gt; | Parameter information of all the matching navigation destination pages. |
 
-<a id="keepbottompage"></a>
 ## keepBottomPage
 
 ```TypeScript
@@ -216,9 +206,7 @@ keepBottomPage(keepBottom: boolean): void
 ```
 
 Sets whether to retain the bottom page when the **pop** or **clear** APIs is called.
-
 > **NOTE**
-
 > **MultiNavigation** treats the home page as a navigation destination page in the stack. By default, calling  
 > **pop** or **clear** will also remove the bottom page.  
 > > If this API is called with **TRUE**, **MultiNavigation** will retain the bottom page when the **pop** or  
@@ -240,7 +228,6 @@ Sets whether to retain the bottom page when the **pop** or **clear** APIs is cal
 | --- | --- | --- | --- |
 | keepBottom | boolean | Yes | Whether to retain the bottom page.<br>Default value: **false**.<br>**true**: The bottom page is retained.<br>**false**: The bottom page is not retained. |
 
-<a id="moveindextotop"></a>
 ## moveIndexToTop
 
 ```TypeScript
@@ -248,9 +235,7 @@ moveIndexToTop(index: number, animated?: boolean): void
 ```
 
 Moves the navigation destination page specified by **index** to the top of the navigation stack.
-
 > **NOTE**
-
 > Depending on the type of page found, **MultiNavigation** performs different actions:
 
 **Since:** 14
@@ -270,7 +255,6 @@ Moves the navigation destination page specified by **index** to the top of the n
 | index | number | Yes | Index of the navigation destination page.<br>Value range: [0, +∞). |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
-<a id="movetotop"></a>
 ## moveToTop
 
 ```TypeScript
@@ -278,9 +262,7 @@ moveToTop(name: string, animated?: boolean): number
 ```
 
 Moves the first navigation destination page that matches **name** from the bottom of the navigation stack to the top of the stack.
-
 > **NOTE**
-
 > Depending on the type of page found, **MultiNavigation** performs different actions:
 
 **Since:** 14
@@ -306,7 +288,6 @@ Moves the first navigation destination page that matches **name** from the botto
 | --- | --- |
 | number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found. |
 
-<a id="pop"></a>
 ## pop
 
 ```TypeScript
@@ -314,10 +295,8 @@ pop(animated?: boolean): NavPathInfo | undefined
 ```
 
 Pops the top element out of the navigation stack.
-
 > **NOTE**
-
-> If [keepBottomPage](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage-1) is called with **true**, the bottom page of the  
+> If [keepBottomPage](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage) is called with **true**, the bottom page of the  
 > navigation stack is retained.
 
 **Since:** 14
@@ -342,7 +321,6 @@ Pops the top element out of the navigation stack.
 | --- | --- |
 | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Information about the navigation destination page at the top of the stack. |
 
-<a id="pop-1"></a>
 ## pop
 
 ```TypeScript
@@ -350,10 +328,8 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 ```
 
 Pops the top element out of the navigation stack and invokes the **onPop** callback to pass the page processing result.
-
 > **NOTE**
-
-> If [keepBottomPage](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage-1) is called with **true**, the bottom page of the  
+> If [keepBottomPage](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage) is called with **true**, the bottom page of the  
 > navigation stack is retained.
 
 **Since:** 14
@@ -379,7 +355,6 @@ Pops the top element out of the navigation stack and invokes the **onPop** callb
 | --- | --- |
 | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Information about the navigation destination page at the top of the stack. |
 
-<a id="poptoindex"></a>
 ## popToIndex
 
 ```TypeScript
@@ -405,7 +380,6 @@ Returns the navigation stack to the page specified by **index**.
 | index | number | Yes | Index of the navigation destination page.<br>Value range: [0, +∞). |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
-<a id="poptoindex-1"></a>
 ## popToIndex
 
 ```TypeScript
@@ -432,7 +406,6 @@ Returns the navigation stack to the page specified by **index** and invokes the 
 | result | Object | Yes | Custom processing result on the page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
-<a id="poptoname"></a>
 ## popToName
 
 ```TypeScript
@@ -464,7 +437,6 @@ Pops pages until the first navigation destination page that matches **name** fro
 | --- | --- |
 | number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
 
-<a id="poptoname-1"></a>
 ## popToName
 
 ```TypeScript
@@ -497,7 +469,6 @@ Pops pages until the first navigation destination page that matches **name** fro
 | --- | --- |
 | number | Returns the index of the first navigation destination page that matches **name** from the bottom of the navigation stack; returns **-1** if no such a page is found.<br>Value range: [-1, +∞). |
 
-<a id="pushpath"></a>
 ## pushPath
 
 ```TypeScript
@@ -524,7 +495,6 @@ Pushes the specified navigation destination page to the navigation stack.
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
-<a id="pushpath-1"></a>
 ## pushPath
 
 ```TypeScript
@@ -551,7 +521,6 @@ Pushes the specified navigation destination page to the navigation stack, with s
 | options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Stack operation settings. Only the **animated** field is supported. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
-<a id="pushpathbyname"></a>
 ## pushPathByName
 
 ```TypeScript
@@ -579,7 +548,6 @@ Pushes the navigation destination page specified by **name** to the navigation s
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
-<a id="pushpathbyname-1"></a>
 ## pushPathByName
 
 ```TypeScript
@@ -595,9 +563,7 @@ Pushes the navigation destination page specified by **name** to the navigation s
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-MultiNavPathStack-pushPathByName(
-    name: string, param: Object, onPop?: base.Callback<PopInfo>, animated?: boolean, policy?: SplitPolicy): void--><!--Device-MultiNavPathStack-pushPathByName(
-    name: string, param: Object, onPop?: base.Callback<PopInfo>, animated?: boolean, policy?: SplitPolicy): void-End-->
+<!--Device-MultiNavPathStack-pushPathByName(    name: string, param: Object, onPop?: base.Callback<PopInfo>, animated?: boolean, policy?: SplitPolicy): void--><!--Device-MultiNavPathStack-pushPathByName(    name: string, param: Object, onPop?: base.Callback<PopInfo>, animated?: boolean, policy?: SplitPolicy): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -611,7 +577,6 @@ Pushes the navigation destination page specified by **name** to the navigation s
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | Policy for the current page being pushed. Default value: **DETAIL_PAGE**. |
 
-<a id="removebyindexes"></a>
 ## removeByIndexes
 
 ```TypeScript
@@ -642,7 +607,6 @@ Removes the navigation destination pages specified by **indexes** from the navig
 | --- | --- |
 | number | Number of the navigation destination pages removed. |
 
-<a id="removebyname"></a>
 ## removeByName
 
 ```TypeScript
@@ -673,7 +637,6 @@ Removes the navigation destination page specified by **name** from the navigatio
 | --- | --- |
 | number | Number of the navigation destination pages removed. |
 
-<a id="replacepath"></a>
 ## replacePath
 
 ```TypeScript
@@ -699,7 +662,6 @@ Replaces the current top page on the stack with the specified navigation destina
 | info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
-<a id="replacepath-1"></a>
 ## replacePath
 
 ```TypeScript
@@ -725,7 +687,6 @@ Replaces the current top page on the stack with the specified navigation destina
 | info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
 | options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Stack operation settings. Only the **animated** field is supported. |
 
-<a id="replacepathbyname"></a>
 ## replacePathByName
 
 ```TypeScript
@@ -752,7 +713,6 @@ Replaces the current top page on the stack with the navigation destination page 
 | param | Object | Yes | Detailed parameters of the navigation destination page. |
 | animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
-<a id="sethomewidthrange"></a>
 ## setHomeWidthRange
 
 ```TypeScript
@@ -778,7 +738,6 @@ Sets the draggable range for the home page width. If not set, the width defaults
 | minPercent | number | Yes | Minimum width percentage of the home page.<br>Value range: [0, 100] |
 | maxPercent | number | Yes | Maximum width percentage of the home page.<br>Value range: [0, 100] |
 
-<a id="setplaceholderpage"></a>
 ## setPlaceholderPage
 
 ```TypeScript
@@ -786,13 +745,10 @@ setPlaceholderPage(info: NavPathInfo): void
 ```
 
 Sets a placeholder page.
-
 > **NOTE**
-
 > The placeholder page is a special page type. When set, it forms a default split-screen effect with the home page  
 > on some large-screen devices, that is, the left side is the home page, and the right side is the placeholder  
 > page.
-
 > In scenarios where the application's drawable area is less than 600 vp, or when a foldable screen switches from  
 > the expanded state to the folded state, or when a tablet switches from landscape to portrait mode, the  
 > placeholder page will be automatically removed, resulting in only the home page being shown.  
@@ -816,7 +772,6 @@ Sets a placeholder page.
 | --- | --- | --- | --- |
 | info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the placeholder page. |
 
-<a id="size"></a>
 ## size
 
 ```TypeScript
@@ -841,7 +796,6 @@ Obtains the stack size.
 | --- | --- |
 | number | Stack size.<br>Value range: [0, +∞). |
 
-<a id="switchfullscreenstate"></a>
 ## switchFullScreenState
 
 ```TypeScript

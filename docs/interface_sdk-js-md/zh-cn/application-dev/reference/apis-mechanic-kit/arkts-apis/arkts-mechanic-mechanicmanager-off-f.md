@@ -6,7 +6,6 @@
 import { mechanicManager } from '@kit.MechanicKit';
 ```
 
-<a id="off"></a>
 ## off('attachStateChange')
 
 ```TypeScript
@@ -50,7 +49,6 @@ console.info('Succeeded in unregistering callback.');
 ```
 
 
-<a id="off-1"></a>
 ## off('trackingStateChange')
 
 ```TypeScript

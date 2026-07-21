@@ -6,7 +6,6 @@
 import { eSIM } from '@kit.TelephonyKit';
 ```
 
-<a id="switchtoprofile"></a>
 ## switchToProfile
 
 ```TypeScript
@@ -20,9 +19,7 @@ Switch to (enable) the given profile on the eUICC.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
-<!--Device-eSIM-function switchToProfile(slotId: int, portIndex: int, iccid: string,
-                           forceDisableProfile: boolean): Promise<ResultCode>--><!--Device-eSIM-function switchToProfile(slotId: int, portIndex: int, iccid: string,
-                           forceDisableProfile: boolean): Promise<ResultCode>-End-->
+<!--Device-eSIM-function switchToProfile(slotId: int, portIndex: int, iccid: string,                           forceDisableProfile: boolean): Promise<ResultCode>--><!--Device-eSIM-function switchToProfile(slotId: int, portIndex: int, iccid: string,                           forceDisableProfile: boolean): Promise<ResultCode>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

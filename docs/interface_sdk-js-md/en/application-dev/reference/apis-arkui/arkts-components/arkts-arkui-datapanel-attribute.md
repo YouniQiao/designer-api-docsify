@@ -1,8 +1,8 @@
 # DataPanel properties/events
 
-In addition to the [universal attributes](docroot://reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
 
-The [universal events](docroot://reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** DataPanelAttribute extends [CommonMethod<DataPanelAttribute>](CommonMethod<DataPanelAttribute>)
 
@@ -12,7 +12,6 @@ The [universal events](docroot://reference/apis-arkui/arkui-ts/ts-component-gene
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="closeeffect"></a>
 ## closeEffect
 
 ```TypeScript
@@ -37,7 +36,6 @@ Sets whether to disable the rotation and shadow effects for the component. When 
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to disable the rotation and shadow effects for the component.<br>Default value:**false**. **true**: Disable the rotation and shadow effects. **false**: Enable the rotation and shadow effects. |
 
-<a id="contentmodifier"></a>
 ## contentModifier
 
 ```TypeScript
@@ -62,7 +60,6 @@ Creates a content modifier.
 | --- | --- | --- | --- |
 | modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;DataPanelConfiguration&gt; | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
-<a id="strokewidth"></a>
 ## strokeWidth
 
 ```TypeScript
@@ -87,7 +84,6 @@ Sets the stroke width of the border. This attribute does not take effect when th
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Stroke width of the border.<br>Default value: **24**<br>Unit: vp<br>When string values are provided without explicit units, the default unit px will be applied. For example, '10' is equivalent to '10px'.<br>**NOTE**<br>If a value less than 0 is set, the default value is used.<br>If the value exceeds the radius of the ring, the thickness will automatically be adjusted to 12% of the ring's radius to prevent visual issues. Excessively large values may cause the ring to become invisible. |
 
-<a id="trackbackgroundcolor"></a>
 ## trackBackgroundColor
 
 ```TypeScript
@@ -112,7 +108,6 @@ Sets the background color.
 | --- | --- | --- | --- |
 | value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color.<br>The value is in hexadecimal ARGB notation. The first two digits indicate transparency. Default value: **'#08182431'** |
 
-<a id="trackshadow"></a>
 ## trackShadow
 
 ```TypeScript
@@ -137,7 +132,6 @@ Sets the shadow style.
 | --- | --- | --- | --- |
 | value | [DataPanelShadowOptions](arkts-arkui-datapanelshadowoptions-i.md) | Yes | Shadow style.<br>**NOTE**<br>If this parameter is set to **null**, the shadow effect is disabled. |
 
-<a id="valuecolors"></a>
 ## valueColors
 
 ```TypeScript

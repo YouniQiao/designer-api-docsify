@@ -16,7 +16,6 @@ Provides APIs for setting device-cloud synergy, including enabling and disabling
 import { cloudData } from '@kit.ArkData';
 ```
 
-<a id="batchquerylastsyncinfo"></a>
 ## batchQueryLastSyncInfo
 
 ```TypeScript
@@ -34,13 +33,7 @@ Queries the last synchronization information in batch
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Config-static batchQueryLastSyncInfo(
-        accountId: string,
-        bundleInfos: Array<BundleInfo>
-    ): Promise<Record<string, Record<string, SyncInfo>>>--><!--Device-Config-static batchQueryLastSyncInfo(
-        accountId: string,
-        bundleInfos: Array<BundleInfo>
-    ): Promise<Record<string, Record<string, SyncInfo>>>-End-->
+<!--Device-Config-static batchQueryLastSyncInfo(        accountId: string,        bundleInfos: Array<BundleInfo>    ): Promise<Record<string, Record<string, SyncInfo>>>--><!--Device-Config-static batchQueryLastSyncInfo(        accountId: string,        bundleInfos: Array<BundleInfo>    ): Promise<Record<string, Record<string, SyncInfo>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -92,7 +85,6 @@ try {
 
 ```
 
-<a id="changeappcloudswitch"></a>
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -110,17 +102,7 @@ Changes the device-cloud synergy setting for an application. This API uses an as
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
-<!--Device-Config-static changeAppCloudSwitch(
-      accountId: string,
-      bundleName: string,
-      status: boolean,
-      callback: AsyncCallback<void>
-    ): void--><!--Device-Config-static changeAppCloudSwitch(
-      accountId: string,
-      bundleName: string,
-      status: boolean,
-      callback: AsyncCallback<void>
-    ): void-End-->
+<!--Device-Config-static changeAppCloudSwitch(      accountId: string,      bundleName: string,      status: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-Config-static changeAppCloudSwitch(      accountId: string,      bundleName: string,      status: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -166,7 +148,6 @@ try {
 
 ```
 
-<a id="changeappcloudswitch-1"></a>
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -228,7 +209,6 @@ try {
 
 ```
 
-<a id="changeappcloudswitch-2"></a>
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -248,17 +228,7 @@ Changes the device-cloud synergy setting for an application. This API uses a pro
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Config-static changeAppCloudSwitch(
-      accountId: string,
-      bundleName: string,
-      status: boolean,
-      config?: SwitchConfig
-    ): Promise<void>--><!--Device-Config-static changeAppCloudSwitch(
-      accountId: string,
-      bundleName: string,
-      status: boolean,
-      config?: SwitchConfig
-    ): Promise<void>-End-->
+<!--Device-Config-static changeAppCloudSwitch(      accountId: string,      bundleName: string,      status: boolean,      config?: SwitchConfig    ): Promise<void>--><!--Device-Config-static changeAppCloudSwitch(      accountId: string,      bundleName: string,      status: boolean,      config?: SwitchConfig    ): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -318,7 +288,6 @@ try {
 
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -335,15 +304,7 @@ Clears the cloud data locally. This API uses an asynchronous callback to return 
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
-<!--Device-Config-static clear(
-      accountId: string,
-      appActions: Record<string, ClearAction>,
-      callback: AsyncCallback<void>
-    ): void--><!--Device-Config-static clear(
-      accountId: string,
-      appActions: Record<string, ClearAction>,
-      callback: AsyncCallback<void>
-    ): void-End-->
+<!--Device-Config-static clear(      accountId: string,      appActions: Record<string, ClearAction>,      callback: AsyncCallback<void>    ): void--><!--Device-Config-static clear(      accountId: string,      appActions: Record<string, ClearAction>,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -392,7 +353,6 @@ try {
 
 ```
 
-<a id="clear-1"></a>
 ## clear
 
 ```TypeScript
@@ -457,7 +417,6 @@ try {
 
 ```
 
-<a id="clear-2"></a>
 ## clear
 
 ```TypeScript
@@ -476,15 +435,7 @@ Clears the cloud data locally. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Config-static clear(
-      accountId: string,
-      appActions: Record<string, ClearAction>,
-      config?: Record<string, ClearConfig>
-    ): Promise<void>--><!--Device-Config-static clear(
-      accountId: string,
-      appActions: Record<string, ClearAction>,
-      config?: Record<string, ClearConfig>
-    ): Promise<void>-End-->
+<!--Device-Config-static clear(      accountId: string,      appActions: Record<string, ClearAction>,      config?: Record<string, ClearConfig>    ): Promise<void>--><!--Device-Config-static clear(      accountId: string,      appActions: Record<string, ClearAction>,      config?: Record<string, ClearConfig>    ): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -549,7 +500,6 @@ try {
 
 ```
 
-<a id="cloudsync"></a>
 ## cloudSync
 
 ```TypeScript
@@ -567,17 +517,7 @@ Synchronizes data of a specified application on the device to the cloud. This AP
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
-<!--Device-Config-static cloudSync(
-      bundleName: string,
-      storeId: string,
-      mode: relationalStore.SyncMode,
-      progress: Callback<relationalStore.ProgressDetails>
-    ): Promise<void>--><!--Device-Config-static cloudSync(
-      bundleName: string,
-      storeId: string,
-      mode: relationalStore.SyncMode,
-      progress: Callback<relationalStore.ProgressDetails>
-    ): Promise<void>-End-->
+<!--Device-Config-static cloudSync(      bundleName: string,      storeId: string,      mode: relationalStore.SyncMode,      progress: Callback<relationalStore.ProgressDetails>    ): Promise<void>--><!--Device-Config-static cloudSync(      bundleName: string,      storeId: string,      mode: relationalStore.SyncMode,      progress: Callback<relationalStore.ProgressDetails>    ): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -628,7 +568,6 @@ try {
 
 ```
 
-<a id="cloudsyncex"></a>
 ## cloudSyncEx
 
 ```TypeScript
@@ -647,15 +586,7 @@ Sync data to cloud. This API uses a promise to return the result.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Config-static cloudSyncEx(
-        bundleInfo: BundleInfo,
-        config: relationalStore.CloudSyncConfig,
-        progress: Callback<relationalStore.ProgressDetails>
-    ): Promise<void>--><!--Device-Config-static cloudSyncEx(
-        bundleInfo: BundleInfo,
-        config: relationalStore.CloudSyncConfig,
-        progress: Callback<relationalStore.ProgressDetails>
-    ): Promise<void>-End-->
+<!--Device-Config-static cloudSyncEx(        bundleInfo: BundleInfo,        config: relationalStore.CloudSyncConfig,        progress: Callback<relationalStore.ProgressDetails>    ): Promise<void>--><!--Device-Config-static cloudSyncEx(        bundleInfo: BundleInfo,        config: relationalStore.CloudSyncConfig,        progress: Callback<relationalStore.ProgressDetails>    ): Promise<void>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -715,7 +646,6 @@ try {
 
 ```
 
-<a id="disablecloud"></a>
 ## disableCloud
 
 ```TypeScript
@@ -771,7 +701,6 @@ try {
 
 ```
 
-<a id="disablecloud-1"></a>
 ## disableCloud
 
 ```TypeScript
@@ -830,7 +759,6 @@ try {
 
 ```
 
-<a id="enablecloud"></a>
 ## enableCloud
 
 ```TypeScript
@@ -847,15 +775,7 @@ Enables device-cloud synergy. This API uses an asynchronous callback to return t
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
-<!--Device-Config-static enableCloud(
-      accountId: string,
-      switches: Record<string, boolean>,
-      callback: AsyncCallback<void>
-    ): void--><!--Device-Config-static enableCloud(
-      accountId: string,
-      switches: Record<string, boolean>,
-      callback: AsyncCallback<void>
-    ): void-End-->
+<!--Device-Config-static enableCloud(      accountId: string,      switches: Record<string, boolean>,      callback: AsyncCallback<void>    ): void--><!--Device-Config-static enableCloud(      accountId: string,      switches: Record<string, boolean>,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -900,7 +820,6 @@ try {
 
 ```
 
-<a id="enablecloud-1"></a>
 ## enableCloud
 
 ```TypeScript
@@ -961,7 +880,6 @@ try {
 
 ```
 
-<a id="notifydatachange"></a>
 ## notifyDataChange
 
 ```TypeScript
@@ -1025,7 +943,6 @@ try {
 
 ```
 
-<a id="notifydatachange-1"></a>
 ## notifyDataChange
 
 ```TypeScript
@@ -1084,7 +1001,6 @@ try {
 
 ```
 
-<a id="notifydatachange-2"></a>
 ## notifyDataChange
 
 ```TypeScript
@@ -1145,7 +1061,6 @@ try {
 
 ```
 
-<a id="notifydatachange-3"></a>
 ## notifyDataChange
 
 ```TypeScript
@@ -1206,7 +1121,6 @@ try {
 
 ```
 
-<a id="notifydatachange-4"></a>
 ## notifyDataChange
 
 ```TypeScript
@@ -1264,7 +1178,6 @@ try {
 
 ```
 
-<a id="offsyncinfochanged"></a>
 ## offSyncInfoChanged
 
 ```TypeScript
@@ -1282,13 +1195,7 @@ Remove specified observer of specified type from the database.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Config-static offSyncInfoChanged(
-        bundleInfos: Array<BundleInfo>,
-        progress?: Callback<Record<string, Record<string, SyncInfo>>>
-    ): void--><!--Device-Config-static offSyncInfoChanged(
-        bundleInfos: Array<BundleInfo>,
-        progress?: Callback<Record<string, Record<string, SyncInfo>>>
-    ): void-End-->
+<!--Device-Config-static offSyncInfoChanged(        bundleInfos: Array<BundleInfo>,        progress?: Callback<Record<string, Record<string, SyncInfo>>>    ): void--><!--Device-Config-static offSyncInfoChanged(        bundleInfos: Array<BundleInfo>,        progress?: Callback<Record<string, Record<string, SyncInfo>>>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -1350,7 +1257,6 @@ try {
 
 ```
 
-<a id="onsyncinfochanged"></a>
 ## onSyncInfoChanged
 
 ```TypeScript
@@ -1368,13 +1274,7 @@ Subscribes to changes in the sync information of a specified application.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Config-static onSyncInfoChanged(
-        bundleInfos: Array<BundleInfo>,
-        progress: Callback<Record<string, Record<string, SyncInfo>>>
-    ): void--><!--Device-Config-static onSyncInfoChanged(
-        bundleInfos: Array<BundleInfo>,
-        progress: Callback<Record<string, Record<string, SyncInfo>>>
-    ): void-End-->
+<!--Device-Config-static onSyncInfoChanged(        bundleInfos: Array<BundleInfo>,        progress: Callback<Record<string, Record<string, SyncInfo>>>    ): void--><!--Device-Config-static onSyncInfoChanged(        bundleInfos: Array<BundleInfo>,        progress: Callback<Record<string, Record<string, SyncInfo>>>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -1417,7 +1317,6 @@ try {
 
 ```
 
-<a id="querylastsyncinfo"></a>
 ## queryLastSyncInfo
 
 ```TypeScript
@@ -1434,15 +1333,7 @@ Queries information about the last device-cloud sync. This API uses a promise to
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
-<!--Device-Config-static queryLastSyncInfo(
-        accountId: string,
-        bundleName: string,
-        storeId?: string
-    ): Promise<Record<string, SyncInfo>>--><!--Device-Config-static queryLastSyncInfo(
-        accountId: string,
-        bundleName: string,
-        storeId?: string
-    ): Promise<Record<string, SyncInfo>>-End-->
+<!--Device-Config-static queryLastSyncInfo(        accountId: string,        bundleName: string,        storeId?: string    ): Promise<Record<string, SyncInfo>>--><!--Device-Config-static queryLastSyncInfo(        accountId: string,        bundleName: string,        storeId?: string    ): Promise<Record<string, SyncInfo>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -1492,7 +1383,6 @@ try {
 
 ```
 
-<a id="querystatistics"></a>
 ## queryStatistics
 
 ```TypeScript
@@ -1509,15 +1399,7 @@ Queries device-cloud data statistics, which include the data not synced, data sy
 
 **Required permissions:** ohos.permission.CLOUDDATA_CONFIG
 
-<!--Device-Config-static queryStatistics(
-        accountId: string,
-        bundleName: string,
-        storeId?: string
-    ): Promise<Record<string, Array<StatisticInfo>>>--><!--Device-Config-static queryStatistics(
-        accountId: string,
-        bundleName: string,
-        storeId?: string
-    ): Promise<Record<string, Array<StatisticInfo>>>-End-->
+<!--Device-Config-static queryStatistics(        accountId: string,        bundleName: string,        storeId?: string    ): Promise<Record<string, Array<StatisticInfo>>>--><!--Device-Config-static queryStatistics(        accountId: string,        bundleName: string,        storeId?: string    ): Promise<Record<string, Array<StatisticInfo>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
 
@@ -1563,7 +1445,6 @@ cloudData.Config.queryStatistics(accountId, bundleName, storeId).then((result) =
 
 ```
 
-<a id="setglobalcloudstrategy"></a>
 ## setGlobalCloudStrategy
 
 ```TypeScript
@@ -1617,7 +1498,6 @@ cloudData.Config.setGlobalCloudStrategy(cloudData.StrategyType.NETWORK, [cloudDa
 
 ```
 
-<a id="stopcloudsync"></a>
 ## stopCloudSync
 
 ```TypeScript

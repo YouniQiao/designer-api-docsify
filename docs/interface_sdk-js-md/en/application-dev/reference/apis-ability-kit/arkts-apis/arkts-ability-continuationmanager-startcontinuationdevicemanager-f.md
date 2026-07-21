@@ -6,7 +6,6 @@
 import { continuationManager } from '@kit.AbilityKit';
 ```
 
-<a id="startcontinuationdevicemanager"></a>
 ## startContinuationDeviceManager
 
 ```TypeScript
@@ -66,7 +65,6 @@ try {
 ```
 
 
-<a id="startcontinuationdevicemanager-1"></a>
 ## startContinuationDeviceManager
 
 ```TypeScript
@@ -89,15 +87,7 @@ Starts the device selection module to show the list of available devices on the 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-continuationManager-function startContinuationDeviceManager(
-    token: number,
-    options: ContinuationExtraParams,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-continuationManager-function startContinuationDeviceManager(
-    token: number,
-    options: ContinuationExtraParams,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-continuationManager-function startContinuationDeviceManager(    token: number,    options: ContinuationExtraParams,    callback: AsyncCallback<void>  ): void--><!--Device-continuationManager-function startContinuationDeviceManager(    token: number,    options: ContinuationExtraParams,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -144,7 +134,6 @@ try {
 ```
 
 
-<a id="startcontinuationdevicemanager-2"></a>
 ## startContinuationDeviceManager
 
 ```TypeScript

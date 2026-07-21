@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="getvonrstate"></a>
 ## getVoNRState
 
 ```TypeScript
@@ -61,7 +60,6 @@ call.getVoNRState(slotId, (err: BusinessError, data: call.VoNRState) => {
 ```
 
 
-<a id="getvonrstate-1"></a>
 ## getVoNRState
 
 ```TypeScript

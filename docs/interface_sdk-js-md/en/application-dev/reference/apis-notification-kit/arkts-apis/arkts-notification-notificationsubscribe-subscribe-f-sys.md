@@ -6,7 +6,6 @@
 import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
-<a id="subscribe"></a>
 ## subscribe
 
 ```TypeScript
@@ -19,7 +18,7 @@ Subscribes to notifications of all applications under this user. This API uses a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification-1)
+**Substitutes:** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -71,7 +70,6 @@ notificationSubscribe.subscribe(subscriber, subscribeCallback);
 ```
 
 
-<a id="subscribe-1"></a>
 ## subscribe
 
 ```TypeScript
@@ -88,19 +86,11 @@ Subscribes to a notification with the subscription information specified. This A
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification-1)
+**Substitutes:** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
-<!--Device-notificationSubscribe-function subscribe(
-    subscriber: NotificationSubscriber,
-    info: NotificationSubscribeInfo,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-notificationSubscribe-function subscribe(
-    subscriber: NotificationSubscriber,
-    info: NotificationSubscribeInfo,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-notificationSubscribe-function subscribe(    subscriber: NotificationSubscriber,    info: NotificationSubscribeInfo,    callback: AsyncCallback<void>  ): void--><!--Device-notificationSubscribe-function subscribe(    subscriber: NotificationSubscriber,    info: NotificationSubscribeInfo,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -154,7 +144,6 @@ notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
 ```
 
 
-<a id="subscribe-2"></a>
 ## subscribe
 
 ```TypeScript
@@ -167,7 +156,7 @@ Subscribes to a notification with the subscription information specified. This A
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification-1)
+**Substitutes:** [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

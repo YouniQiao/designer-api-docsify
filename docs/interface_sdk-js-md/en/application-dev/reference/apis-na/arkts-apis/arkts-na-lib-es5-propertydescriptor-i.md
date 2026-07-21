@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface PropertyDescriptor--><!--Device-unnamed-interface PropertyDescriptor-End-->
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -17,7 +16,6 @@ get?(): any
 | --- | --- |
 | any |  |
 
-<a id="set"></a>
 ## set
 
 ```TypeScript

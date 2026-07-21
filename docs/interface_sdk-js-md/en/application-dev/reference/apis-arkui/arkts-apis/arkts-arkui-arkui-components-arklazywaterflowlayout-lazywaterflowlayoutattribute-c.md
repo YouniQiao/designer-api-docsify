@@ -16,7 +16,6 @@ Defines the lazy waterflow layout attribute.
 import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
-<a id="columnsgap"></a>
 ## columnsGap
 
 ```TypeScript
@@ -47,7 +46,6 @@ The spacing between columns.
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="footer"></a>
 ## footer
 
 ```TypeScript
@@ -78,7 +76,6 @@ Sets the footer of the lazy waterflow layout.
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="header"></a>
 ## header
 
 ```TypeScript
@@ -109,7 +106,6 @@ Sets the header of the lazy waterflow layout.
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onvisibleindexeschange"></a>
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -140,7 +136,6 @@ Called when the first or last item displayed in the component changes.It is trig
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="rowsgap"></a>
 ## rowsGap
 
 ```TypeScript
@@ -171,7 +166,6 @@ The spacing between rows.
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="sticky"></a>
 ## sticky
 
 ```TypeScript

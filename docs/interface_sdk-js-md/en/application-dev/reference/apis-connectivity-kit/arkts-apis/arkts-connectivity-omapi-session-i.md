@@ -14,7 +14,6 @@ Session represent a connection session to one of the SEs available on the device
 import { omapi } from '@kit.ConnectivityKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -54,7 +53,6 @@ try {
 
 ```
 
-<a id="closechannels"></a>
 ## closeChannels
 
 ```TypeScript
@@ -94,7 +92,6 @@ try {
 
 ```
 
-<a id="getatr"></a>
 ## getATR
 
 ```TypeScript
@@ -141,7 +138,6 @@ try {
 
 ```
 
-<a id="getreader"></a>
 ## getReader
 
 ```TypeScript
@@ -199,7 +195,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="isclosed"></a>
 ## isClosed
 
 ```TypeScript
@@ -245,7 +240,6 @@ try {
 
 ```
 
-<a id="openbasicchannel"></a>
 ## openBasicChannel
 
 ```TypeScript
@@ -313,7 +307,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="openbasicchannel-1"></a>
 ## openBasicChannel
 
 ```TypeScript
@@ -378,7 +371,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="openbasicchannel-2"></a>
 ## openBasicChannel
 
 ```TypeScript
@@ -448,7 +440,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="openbasicchannel-3"></a>
 ## openBasicChannel
 
 ```TypeScript
@@ -515,7 +506,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="openlogicalchannel"></a>
 ## openLogicalChannel
 
 ```TypeScript
@@ -583,7 +573,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="openlogicalchannel-1"></a>
 ## openLogicalChannel
 
 ```TypeScript
@@ -648,7 +637,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="openlogicalchannel-2"></a>
 ## openLogicalChannel
 
 ```TypeScript
@@ -718,7 +706,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="openlogicalchannel-3"></a>
 ## openLogicalChannel
 
 ```TypeScript

@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface WeakMapConstructor--><!--Device-unnamed-interface WeakMapConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

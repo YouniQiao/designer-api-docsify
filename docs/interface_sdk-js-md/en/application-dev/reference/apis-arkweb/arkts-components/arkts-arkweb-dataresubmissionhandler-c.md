@@ -8,7 +8,6 @@ Defines the onDataResubmission callback, related to {@link onDataResubmission} m
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="cancel"></a>
 ## cancel
 
 ```TypeScript
@@ -25,7 +24,6 @@ Do not resend related form data.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -42,7 +40,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="resend"></a>
 ## resend
 
 ```TypeScript

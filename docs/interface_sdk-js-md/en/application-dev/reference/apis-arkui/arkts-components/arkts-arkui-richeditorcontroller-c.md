@@ -1,14 +1,13 @@
 # RichEditorController
 
 Implements the **RichEditor** component controller. Inherits from [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
-
 > **NOTE**  
 >  
 > When the length of the content exceeds the height of the display area of the component, the insertion interface (  
-> such as [addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan-1),  
-> [addImageSpan](arkts-arkui-richeditorcontroller-c.md#addimagespan-1),  
-> [addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan-1) and  
-> [addSymbolSpan](arkts-arkui-richeditorcontroller-c.md#addsymbolspan-1)) is called. The component automatically scrolls the  
+> such as [addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan),  
+> [addImageSpan](arkts-arkui-richeditorcontroller-c.md#addimagespan),  
+> [addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan) and  
+> [addSymbolSpan](arkts-arkui-richeditorcontroller-c.md#addsymbolspan)) is called. The component automatically scrolls the  
 > content to make the end of the inserted content visible.
 
 **Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)
@@ -19,7 +18,6 @@ Implements the **RichEditor** component controller. Inherits from [RichEditorBas
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="addbuilderspan"></a>
 ## addBuilderSpan
 
 ```TypeScript
@@ -27,7 +25,6 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 ```
 
 Adds a custom layout (BuilderSpan) to **RichEditor**.
-
 > **NOTE**  
 >  
 > - This API adds a builder span to take up space in the layout. It calls the system **measure** method to  
@@ -43,11 +40,11 @@ Adds a custom layout (BuilderSpan) to **RichEditor**.
 > - Custom menus can be set using [bindSelectionMenu](RichEditorAttribute.bindSelectionMenu).  
 >  
 > - The information about the builder span cannot be obtained through  
-> [getSpans](arkts-arkui-richeditorcontroller-c.md#getspans-1), [getSelection](arkts-arkui-richeditorcontroller-c.md#getselection-1),  
+> [getSpans](arkts-arkui-richeditorcontroller-c.md#getspans), [getSelection](arkts-arkui-richeditorcontroller-c.md#getselection),  
 > [onSelect](RichEditorAttribute.onSelect), or [aboutToDelete](RichEditorAttribute.aboutToDelete).  
 >  
-> - The builder span cannot be updated using [updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle-1) or  
-> [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle-1).  
+> - The builder span cannot be updated using [updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle) or  
+> [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle).  
 >  
 > - Copying or pasting the builder span does not take effect.  
 >  
@@ -60,9 +57,9 @@ Adds a custom layout (BuilderSpan) to **RichEditor**.
 >  
 > - If the caret in the component is blinking, the caret position is updated to be after the inserted image span.
 
-Only the following universal attributes are supported:[size](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#size),[padding](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#padding),[margin](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#margin),[aspectRatio](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-layout-constraints.md#aspectratio),[borderStyle](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderstyle),[borderWidth](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderwidth),[borderColor](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#bordercolor),[borderRadius](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderradius),[backgroundColor](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor),[backgroundBlurStyle](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9), [opacity](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md),[blur](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#blur),[backdropBlur](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backdropblur),[shadow](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#shadow),[grayscale](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#grayscale),[brightness](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#brightness),[saturate](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#saturate),[contrast](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#contrast),[invert](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#invert),[sepia](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#sepia),[hueRotate](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#huerotate),[colorBlend](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#colorblend),[linearGradientBlur](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#lineargradientblur12), [clip](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12),[mask](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#mask12),[foregroundBlurStyle](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-foreground-blur-style.md#foregroundblurstyle),[accessibilityGroup](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitygroup),[accessibilityText](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitytext),[accessibilityDescription](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitydescription),[accessibilityLevel](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel),[sphericalEffect](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#sphericaleffect12), [lightUpEffect](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#lightupeffect12),
+Only the following universal attributes are supported:[size](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#size),[padding](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#padding),[margin](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#margin),[aspectRatio](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-layout-constraints.md#aspectratio),[borderStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderstyle),[borderWidth](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderwidth),[borderColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#bordercolor),[borderRadius](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderradius),[backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor),[backgroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9), [opacity](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md),[blur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#blur),[backdropBlur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backdropblur),[shadow](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#shadow),[grayscale](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#grayscale),[brightness](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#brightness),[saturate](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#saturate),[contrast](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#contrast),[invert](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#invert),[sepia](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#sepia),[hueRotate](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#huerotate),[colorBlend](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#colorblend),[linearGradientBlur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#lineargradientblur12), [clip](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12),[mask](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#mask12),[foregroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-foreground-blur-style.md#foregroundblurstyle),[accessibilityGroup](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitygroup),[accessibilityText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitytext),[accessibilityDescription](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitydescription),[accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel),[sphericalEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#sphericaleffect12), [lightUpEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#lightupeffect12),
 
-[pixelStretchEffect](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#pixelstretcheffect12).
+[pixelStretchEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#pixelstretcheffect12).
 
 **Since:** 11
 
@@ -87,7 +84,6 @@ Only the following universal attributes are supported:[size](docroot://reference
 | --- | --- |
 | number | Index of the added builder span in all spans. |
 
-<a id="addimagespan"></a>
 ## addImageSpan
 
 ```TypeScript
@@ -121,7 +117,6 @@ This API is a synchronous API. In a weak network environment, directly adding ne
 | --- | --- |
 | number | Index of the added image span in all spans. |
 
-<a id="addsymbolspan"></a>
 ## addSymbolSpan
 
 ```TypeScript
@@ -155,7 +150,6 @@ Currently, gestures, copying, and dragging are not supported.
 | --- | --- |
 | number | Index of the added symbol span in all spans. |
 
-<a id="addtextspan"></a>
 ## addTextSpan
 
 ```TypeScript
@@ -187,7 +181,6 @@ Adds a text span. If the caret in the component is blinking, the caret position 
 | --- | --- |
 | number | Index of the added text span in all spans. |
 
-<a id="deletespans"></a>
 ## deleteSpans
 
 ```TypeScript
@@ -212,7 +205,6 @@ Deletes the text and image spans in a specified range.
 | --- | --- | --- | --- |
 | value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | No | Range of the target spans. If this parameter is left empty, all text and image spans will be deleted. |
 
-<a id="fromstyledstring"></a>
 ## fromStyledString
 
 ```TypeScript
@@ -249,7 +241,6 @@ Converts a styled string into a span.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
 
-<a id="getparagraphs"></a>
 ## getParagraphs
 
 ```TypeScript
@@ -280,7 +271,6 @@ Obtains the paragraph information within a specified range.
 | --- | --- |
 | Array&lt;RichEditorParagraphResult&gt; | Information about the selected paragraphs.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="getselection"></a>
 ## getSelection
 
 ```TypeScript
@@ -305,7 +295,6 @@ Obtains the range and span information of the selected content. If no text is se
 | --- | --- |
 | [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | Provides information about the selected content.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="getspans"></a>
 ## getSpans
 
 ```TypeScript
@@ -336,7 +325,6 @@ Obtains span information.
 | --- | --- |
 | Array&lt;RichEditorImageSpanResult \| RichEditorTextSpanResult&gt; | Text and image span information.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="tostyledstring"></a>
 ## toStyledString
 
 ```TypeScript
@@ -373,7 +361,6 @@ Convert the component content within the given range into a styled string. Symbo
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
 
-<a id="updateparagraphstyle"></a>
 ## updateParagraphStyle
 
 ```TypeScript
@@ -398,7 +385,6 @@ Updates the paragraph style.
 | --- | --- | --- | --- |
 | value | [RichEditorParagraphStyleOptions](arkts-arkui-richeditorparagraphstyleoptions-i.md) | Yes | Information about the paragraph style. |
 
-<a id="updatespanstyle"></a>
 ## updateSpanStyle
 
 ```TypeScript

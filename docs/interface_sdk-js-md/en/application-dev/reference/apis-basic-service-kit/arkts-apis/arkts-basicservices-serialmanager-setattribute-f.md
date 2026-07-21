@@ -6,7 +6,6 @@
 import { serialManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="setattribute"></a>
 ## setAttribute
 
 ```TypeScript
@@ -25,7 +24,7 @@ Sets the parameters of the serial port. If this method is not called, the defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist-1). |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 | attribute | [SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md) | Yes | Configuration parameters of the serial port. |
 
 **Error codes:**

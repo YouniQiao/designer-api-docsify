@@ -1,6 +1,5 @@
 # grantToolPermissionsByUser (System API)
 
-<a id="granttoolpermissionsbyuser"></a>
 ## grantToolPermissionsByUser
 
 ```TypeScript

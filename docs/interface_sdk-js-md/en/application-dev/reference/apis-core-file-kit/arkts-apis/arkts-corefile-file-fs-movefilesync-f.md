@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="movefilesync"></a>
 ## moveFileSync
 
 ```TypeScript
@@ -14,7 +13,6 @@ declare function moveFileSync(src: string, dest: string, mode?: number): void
 ```
 
 Moves a file. This API returns the result synchronously.
-
 > **NOTE**  
 >  
 > This API is not supported in a distributed directory.

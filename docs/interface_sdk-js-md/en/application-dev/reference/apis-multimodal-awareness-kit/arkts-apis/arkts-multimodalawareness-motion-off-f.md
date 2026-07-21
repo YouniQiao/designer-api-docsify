@@ -6,7 +6,6 @@
 import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="off"></a>
 ## off('operatingHandChanged')
 
 ```TypeScript
@@ -58,7 +57,6 @@ try {
 ```
 
 
-<a id="off-1"></a>
 ## off('holdingHandChanged')
 
 ```TypeScript

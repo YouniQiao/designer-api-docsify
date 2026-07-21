@@ -6,7 +6,6 @@
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="cancelsuspenddelay"></a>
 ## cancelSuspendDelay
 
 ```TypeScript
@@ -25,7 +24,7 @@ Cancels a transient task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestsuspenddelay-1) API. |
+| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestsuspenddelay) API. |
 
 **Error codes:**
 

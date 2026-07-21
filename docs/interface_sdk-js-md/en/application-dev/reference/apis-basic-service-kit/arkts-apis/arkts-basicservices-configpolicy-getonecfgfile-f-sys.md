@@ -6,7 +6,6 @@
 import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
-<a id="getonecfgfile"></a>
 ## getOneCfgFile
 
 ```TypeScript
@@ -37,7 +36,6 @@ Obtains the path of the configuration file with the highest priority. This API u
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 
-<a id="getonecfgfile-1"></a>
 ## getOneCfgFile
 
 ```TypeScript
@@ -73,7 +71,6 @@ Obtains the path of the configuration file with the highest priority. This API u
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 
-<a id="getonecfgfile-2"></a>
 ## getOneCfgFile
 
 ```TypeScript
@@ -105,7 +102,6 @@ Obtains the path of the configuration file with the highest priority based on th
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 
-<a id="getonecfgfile-3"></a>
 ## getOneCfgFile
 
 ```TypeScript
@@ -138,7 +134,6 @@ Obtains the path of the configuration file with the highest priority based on th
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 
-<a id="getonecfgfile-4"></a>
 ## getOneCfgFile
 
 ```TypeScript

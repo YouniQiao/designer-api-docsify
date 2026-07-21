@@ -1,7 +1,6 @@
 # Particles
 
 Defines the particle array.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
@@ -40,27 +39,7 @@ An array of particle options, each of which covers the emitter, color, opacity, 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Particles-particles: Array<
-    ParticleOptions<
-      PARTICLE,
-      COLOR_UPDATER,
-      OPACITY_UPDATER,
-      SCALE_UPDATER,
-      ACC_SPEED_UPDATER,
-      ACC_ANGLE_UPDATER,
-      SPIN_UPDATER
-    >
-  >--><!--Device-Particles-particles: Array<
-    ParticleOptions<
-      PARTICLE,
-      COLOR_UPDATER,
-      OPACITY_UPDATER,
-      SCALE_UPDATER,
-      ACC_SPEED_UPDATER,
-      ACC_ANGLE_UPDATER,
-      SPIN_UPDATER
-    >
-  >-End-->
+<!--Device-Particles-particles: Array<    ParticleOptions<      PARTICLE,      COLOR_UPDATER,      OPACITY_UPDATER,      SCALE_UPDATER,      ACC_SPEED_UPDATER,      ACC_ANGLE_UPDATER,      SPIN_UPDATER    >  >--><!--Device-Particles-particles: Array<    ParticleOptions<      PARTICLE,      COLOR_UPDATER,      OPACITY_UPDATER,      SCALE_UPDATER,      ACC_SPEED_UPDATER,      ACC_ANGLE_UPDATER,      SPIN_UPDATER    >  >-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

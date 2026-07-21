@@ -6,7 +6,6 @@
 import { process } from '@kit.ArkTS';
 ```
 
-<a id="kill"></a>
 ## kill
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sends a signal to a specified process to terminate it.
 
 **Deprecated since:** 9
 
-**Substitutes:** [kill](arkts-arkts-process-processmanager-c.md#kill-1)
+**Substitutes:** [kill](arkts-arkts-process-processmanager-c.md#kill)
 
 <!--Device-process-function kill(signal: number, pid: number): boolean--><!--Device-process-function kill(signal: number, pid: number): boolean-End-->
 

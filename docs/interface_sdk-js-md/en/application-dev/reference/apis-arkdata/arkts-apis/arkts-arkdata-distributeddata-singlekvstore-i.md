@@ -2,7 +2,7 @@
 
 Provides APIs to query and synchronize data in a single KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md).
 
-Data is not distinguished by device in a single KV store. The data written to different devices using the same key will be overwritten. For example, a single KV store can be used to synchronize a user's calendar and contact data between different devices.Before calling any method in **SingleKVStore**, you must use [getKVStore](distributedData.KVManager.getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>))to obtain a **SingleKVStore** instance.
+Data is not distinguished by device in a single KV store. The data written to different devices using the same key will be overwritten. For example, a single KV store can be used to synchronize a user's calendar and contact data between different devices.Before calling any method in **SingleKVStore**, you must use [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)to obtain a **SingleKVStore** instance.
 
 **Inheritance/Implementation:** SingleKVStore extends [KVStore](arkts-arkdata-distributeddata-kvstore-i.md)
 
@@ -16,14 +16,13 @@ Data is not distinguished by device in a single KV store. The data written to di
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
-<a id="closeresultset"></a>
 ## closeResultSet
 
 ```TypeScript
 closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-Closes the **KvStoreResultSet** object obtained by [SingleKVStore.getResultSet](arkts-arkdata-distributeddata-singlekvstore-i.md#getresultset-1). This API uses an asynchronous callback to return the result.
+Closes the **KvStoreResultSet** object obtained by [SingleKVStore.getResultSet](arkts-arkdata-distributeddata-singlekvstore-i.md#getresultset). This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -61,14 +60,13 @@ try {
 
 ```
 
-<a id="closeresultset-1"></a>
 ## closeResultSet
 
 ```TypeScript
 closeResultSet(resultSet: KvStoreResultSet): Promise<void>
 ```
 
-Closes the **KvStoreResultSet** object obtained by [SingleKVStore.getResultSet](arkts-arkdata-distributeddata-singlekvstore-i.md#getresultset-1). This API uses a promise to return the result.
+Closes the **KvStoreResultSet** object obtained by [SingleKVStore.getResultSet](arkts-arkdata-distributeddata-singlekvstore-i.md#getresultset). This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -109,7 +107,6 @@ try {
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -158,7 +155,6 @@ try {
 
 ```
 
-<a id="get-1"></a>
 ## get
 
 ```TypeScript
@@ -212,7 +208,6 @@ try {
 
 ```
 
-<a id="getentries"></a>
 ## getEntries
 
 ```TypeScript
@@ -269,7 +264,6 @@ try {
 
 ```
 
-<a id="getentries-1"></a>
 ## getEntries
 
 ```TypeScript
@@ -338,7 +332,6 @@ try {
 
 ```
 
-<a id="getentries-2"></a>
 ## getEntries
 
 ```TypeScript
@@ -400,7 +393,6 @@ try {
 
 ```
 
-<a id="getentries-3"></a>
 ## getEntries
 
 ```TypeScript
@@ -469,7 +461,6 @@ try {
 
 ```
 
-<a id="getresultset"></a>
 ## getResultSet
 
 ```TypeScript
@@ -529,7 +520,6 @@ try {
 
 ```
 
-<a id="getresultset-1"></a>
 ## getResultSet
 
 ```TypeScript
@@ -600,7 +590,6 @@ try {
 
 ```
 
-<a id="getresultset-2"></a>
 ## getResultSet
 
 ```TypeScript
@@ -659,7 +648,6 @@ try {
 
 ```
 
-<a id="getresultset-3"></a>
 ## getResultSet
 
 ```TypeScript
@@ -727,7 +715,6 @@ try {
 
 ```
 
-<a id="getresultsize"></a>
 ## getResultSize
 
 ```TypeScript
@@ -784,7 +771,6 @@ try {
 
 ```
 
-<a id="getresultsize-1"></a>
 ## getResultSize
 
 ```TypeScript
@@ -850,7 +836,6 @@ try {
 
 ```
 
-<a id="getsecuritylevel"></a>
 ## getSecurityLevel
 
 ```TypeScript
@@ -889,7 +874,6 @@ try {
 
 ```
 
-<a id="getsecuritylevel-1"></a>
 ## getSecurityLevel
 
 ```TypeScript
@@ -930,7 +914,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -978,7 +961,6 @@ class KvstoreModel {
 
 ```
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -1026,7 +1008,6 @@ class KvstoreModel {
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -1063,7 +1044,6 @@ kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, fun
 
 ```
 
-<a id="on-1"></a>
 ## on
 
 ```TypeScript
@@ -1110,7 +1090,6 @@ try {
 
 ```
 
-<a id="removedevicedata"></a>
 ## removeDeviceData
 
 ```TypeScript
@@ -1118,14 +1097,13 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
 Deletes data of a device. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > The value of **deviceId** can be obtained by <!--RP1-->  
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync-1).  
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).  
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system  
 > applications.  
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync-1).
+> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
@@ -1171,7 +1149,6 @@ try {
 
 ```
 
-<a id="removedevicedata-1"></a>
 ## removeDeviceData
 
 ```TypeScript
@@ -1179,14 +1156,13 @@ removeDeviceData(deviceId: string): Promise<void>
 ```
 
 Deletes data of a device. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The value of **deviceId** can be obtained by <!--RP1-->  
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync-1).  
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).  
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system  
 > applications.  
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync-1).
+> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
@@ -1239,7 +1215,6 @@ try {
 
 ```
 
-<a id="setsyncparam"></a>
 ## setSyncParam
 
 ```TypeScript
@@ -1280,7 +1255,6 @@ try {
 
 ```
 
-<a id="setsyncparam-1"></a>
 ## setSyncParam
 
 ```TypeScript
@@ -1328,7 +1302,6 @@ try {
 
 ```
 
-<a id="sync"></a>
 ## sync
 
 ```TypeScript
@@ -1336,12 +1309,11 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
 Synchronizes the KV store manually.
-
 > **NOTE**  
 >  
 > **deviceIds** is **networkId** in <!--RP2-->  
 > [DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md), which can be obtained by  
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync-1).  
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).  
 > <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system  
 > applications.
 

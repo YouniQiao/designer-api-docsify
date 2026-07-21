@@ -8,7 +8,6 @@ Path object, which provides basic methods for drawing paths. For details about t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="arc"></a>
 ## arc
 
 ```TypeScript
@@ -38,7 +37,6 @@ Draws an arc on the canvas.
 | endAngle | number | Yes | End radian of the arc.<br>In versions earlier than API version 18, **NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Unit: radian |
 | counterclockwise | boolean | No | Whether to draw the arc counterclockwise.<br>**true**: Draw the arc counterclockwise.<br>**false**: Draw the arc clockwise.<br>The default value is **false**. If this parameter is set to **null** or **undefined**, the default value is used. |
 
-<a id="arcto"></a>
 ## arcTo
 
 ```TypeScript
@@ -67,7 +65,6 @@ Creates a circular arc using the given control points and radius.
 | y2 | number | Yes | Y-coordinate of the second control point.<br>In versions earlier than API version18, **NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**,or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 | radius | number | Yes | Radius of the arc.<br>In versions earlier than API version 18, **NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 
-<a id="beziercurveto"></a>
 ## bezierCurveTo
 
 ```TypeScript
@@ -97,7 +94,6 @@ Draws a cubic Bezier curve on the canvas.
 | x | number | Yes | X-coordinate of the end point on the Bezier curve.<br>In versions earlier than API version 18, **NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**,**Infinity**, **null**, or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 | y | number | Yes | Y-coordinate of the end point on the Bezier curve.<br>In versions earlier than API version 18, **NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**,**Infinity**, **null**, or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 
-<a id="closepath"></a>
 ## closePath
 
 ```TypeScript
@@ -116,7 +112,6 @@ Moves the current point of the path back to the start point of the path, and dra
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="ellipse"></a>
 ## ellipse
 
 ```TypeScript
@@ -140,25 +135,7 @@ Draws an ellipse in the specified rectangular region on the canvas.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-CanvasPath-ellipse(
-    x: number,
-    y: number,
-    radiusX: number,
-    radiusY: number,
-    rotation: number,
-    startAngle: number,
-    endAngle: number,
-    counterclockwise?: boolean,
-  ): void--><!--Device-CanvasPath-ellipse(
-    x: number,
-    y: number,
-    radiusX: number,
-    radiusY: number,
-    rotation: number,
-    startAngle: number,
-    endAngle: number,
-    counterclockwise?: boolean,
-  ): void-End-->
+<!--Device-CanvasPath-ellipse(    x: number,    y: number,    radiusX: number,    radiusY: number,    rotation: number,    startAngle: number,    endAngle: number,    counterclockwise?: boolean,  ): void--><!--Device-CanvasPath-ellipse(    x: number,    y: number,    radiusX: number,    radiusY: number,    rotation: number,    startAngle: number,    endAngle: number,    counterclockwise?: boolean,  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -175,7 +152,6 @@ Draws an ellipse in the specified rectangular region on the canvas.
 | endAngle | number | Yes | Angle of the end point for drawing the ellipse.<br>In versions earlier than API version 18, **NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**,**Infinity**, **null**, or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Unit: radian |
 | counterclockwise | boolean | No | Whether to draw the ellipse counterclockwise.<br>**true**: Draw the ellipse counterclockwise.<br>**false**: Draw the ellipse clockwise.<br>The default value is **false**. If this parameter is set to **null** or **undefined**, the default value is used. |
 
-<a id="lineto"></a>
 ## lineTo
 
 ```TypeScript
@@ -201,7 +177,6 @@ Connects the current point to a target position using a line.
 | x | number | Yes | X-coordinate of the target position.<br>In versions earlier than API version 18,**NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**,or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 | y | number | Yes | Y-coordinate of the target position.<br>In versions earlier than API version 18,**NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**,or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 
-<a id="moveto"></a>
 ## moveTo
 
 ```TypeScript
@@ -235,7 +210,6 @@ Moves a drawing path from the current position to a target position on the canva
 | x | number | Yes | X-coordinate of the target position.<br>In versions earlier than API version 18,**NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**,or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 | y | number | Yes | Y-coordinate of the target position.<br>In versions earlier than API version 18,**NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**,or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 
-<a id="quadraticcurveto"></a>
 ## quadraticCurveTo
 
 ```TypeScript
@@ -263,7 +237,6 @@ Creates a path for a quadratic Bezier curve.
 | x | number | Yes | X-coordinate of the end point on the Bezier curve.<br>In versions earlier than API version 18, **NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**,**Infinity**, **null**, or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 | y | number | Yes | Y-coordinate of the end point on the Bezier curve.<br>In versions earlier than API version 18, **NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**,**Infinity**, **null**, or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 
-<a id="rect"></a>
 ## rect
 
 ```TypeScript
@@ -291,7 +264,6 @@ Creates a rectangle on the canvas.
 | w | number | Yes | Width of the rectangle.<br>In versions earlier than API version 18, **NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 | h | number | Yes | Height of the rectangle.<br>In versions earlier than API version 18, **NaN** or **Infinity** value prevents the entire path from rendering, and **null** or **undefined** value causes the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other path APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 
-<a id="roundrect"></a>
 ## roundRect
 
 ```TypeScript

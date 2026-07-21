@@ -6,15 +6,13 @@
 import { childProcessManager } from '@kit.AbilityKit';
 ```
 
-<a id="startnativechildprocess"></a>
 ## startNativeChildProcess
 
 ```TypeScript
 function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<number>
 ```
 
-Starts a [native child process](docroot://application-models/ability-terminology.md#native-child-process). This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801is returned.
-
+Starts a [native child process](../../../application-models/ability-terminology.md#native-child-process). This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801is returned.
 > **NOTE**  
 >  
 > The child process started by calling this API does not inherit the resources of the parent process. After the  

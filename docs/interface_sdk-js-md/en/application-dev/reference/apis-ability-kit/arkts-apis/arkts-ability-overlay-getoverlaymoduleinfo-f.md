@@ -6,7 +6,6 @@
 import { overlay } from '@kit.AbilityKit';
 ```
 
-<a id="getoverlaymoduleinfo"></a>
 ## getOverlayModuleInfo
 
 ```TypeScript
@@ -26,7 +25,7 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Name of the module with the overlay feature. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object.If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md) object.If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -62,7 +61,6 @@ try {
 ```
 
 
-<a id="getoverlaymoduleinfo-1"></a>
 ## getOverlayModuleInfo
 
 ```TypeScript
@@ -87,7 +85,7 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OverlayModuleInfo&gt; | Promise used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) object. |
+| Promise&lt;OverlayModuleInfo&gt; | Promise used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md) object. |
 
 **Error codes:**
 

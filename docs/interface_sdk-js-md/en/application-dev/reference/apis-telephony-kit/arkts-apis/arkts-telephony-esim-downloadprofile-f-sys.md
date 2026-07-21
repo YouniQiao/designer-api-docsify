@@ -6,7 +6,6 @@
 import { eSIM } from '@kit.TelephonyKit';
 ```
 
-<a id="downloadprofile"></a>
 ## downloadProfile
 
 ```TypeScript
@@ -20,9 +19,7 @@ Attempt to download the given downloadable Profile.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
-<!--Device-eSIM-function downloadProfile(slotId: int, portIndex: int, profile: DownloadableProfile,
-                           configuration: DownloadConfiguration): Promise<DownloadProfileResult>--><!--Device-eSIM-function downloadProfile(slotId: int, portIndex: int, profile: DownloadableProfile,
-                           configuration: DownloadConfiguration): Promise<DownloadProfileResult>-End-->
+<!--Device-eSIM-function downloadProfile(slotId: int, portIndex: int, profile: DownloadableProfile,                           configuration: DownloadConfiguration): Promise<DownloadProfileResult>--><!--Device-eSIM-function downloadProfile(slotId: int, portIndex: int, profile: DownloadableProfile,                           configuration: DownloadConfiguration): Promise<DownloadProfileResult>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

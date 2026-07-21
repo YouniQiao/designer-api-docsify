@@ -8,7 +8,6 @@ Implements the swipe action menu manager for list items.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="collapse"></a>
 ## collapse
 
 ```TypeScript
@@ -40,7 +39,6 @@ Collapses the swipe action menu for the specified list item.
 | [100023](../errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
 | [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
 
-<a id="expand"></a>
 ## expand
 
 ```TypeScript

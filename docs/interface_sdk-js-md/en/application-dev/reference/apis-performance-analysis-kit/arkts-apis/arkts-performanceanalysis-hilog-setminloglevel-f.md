@@ -6,7 +6,6 @@
 import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="setminloglevel"></a>
 ## setMinLogLevel
 
 ```TypeScript
@@ -14,11 +13,10 @@ function setMinLogLevel(level: LogLevel): void
 ```
 
 Sets the minimum log level.
-
 > **NOTE**  
 >  
 > If the set log level is lower than the  
-> [global log level](docroot://dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect.  
+> [global log level](../../../dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect.  
 >  
 > This function does not take effect for debug applications.
 

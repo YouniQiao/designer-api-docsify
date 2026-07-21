@@ -6,7 +6,6 @@
 import { deviceSettings } from '@kit.MDMKit';
 ```
 
-<a id="getpowerpolicy"></a>
 ## getPowerPolicy
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the power policy.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue-1)
+**Substitutes:** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SETTINGS
 

@@ -6,7 +6,6 @@
 import { window } from '@kit.ArkUI';
 ```
 
-<a id="shiftappwindowpointerevent"></a>
 ## shiftAppWindowPointerEvent
 
 ```TypeScript
@@ -29,8 +28,8 @@ To transfer mouse input events, the source window must call this API within the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceWindowId | number | Yes | ID of the source window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties-1) to obtain the window ID. |
-| targetWindowId | number | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties-1) to obtain the window ID. |
+| sourceWindowId | number | Yes | ID of the source window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID. |
+| targetWindowId | number | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID. |
 
 **Return value:**
 

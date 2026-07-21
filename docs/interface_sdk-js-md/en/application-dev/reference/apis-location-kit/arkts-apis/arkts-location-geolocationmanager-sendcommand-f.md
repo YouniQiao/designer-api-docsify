@@ -6,7 +6,6 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
-<a id="sendcommand"></a>
 ## sendCommand
 
 ```TypeScript
@@ -55,7 +54,6 @@ try {
 ```
 
 
-<a id="sendcommand-1"></a>
 ## sendCommand
 
 ```TypeScript

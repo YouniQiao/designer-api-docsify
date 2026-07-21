@@ -6,7 +6,6 @@
 import { conversation } from '@kit.DistributedServiceKit';
 ```
 
-<a id="postconversationdata"></a>
 ## postConversationData
 
 ```TypeScript
@@ -26,17 +25,7 @@ Sends session data to the target device. The target device must be a trusted dev
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-conversation-function postConversationData(
-    deviceId: string,
-    bundleName: string,
-    abilityName: string,
-    msg: ArrayBuffer
-): Promise<void>--><!--Device-conversation-function postConversationData(
-    deviceId: string,
-    bundleName: string,
-    abilityName: string,
-    msg: ArrayBuffer
-): Promise<void>-End-->
+<!--Device-conversation-function postConversationData(    deviceId: string,    bundleName: string,    abilityName: string,    msg: ArrayBuffer): Promise<void>--><!--Device-conversation-function postConversationData(    deviceId: string,    bundleName: string,    abilityName: string,    msg: ArrayBuffer): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.SoftBus.Core
 
@@ -46,8 +35,8 @@ Sends session data to the target device. The target device must be a trusted dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Network ID or UDID of the target device, which can be obtained by calling [getTrustedDevices()](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md#gettrusteddevices-1). The length of both the network ID and UDID must be64 bytes. If an invalid value is passed, error code 401 is returned. |
-| bundleName | string | Yes | Name of the target bundle to which data is sent. The value contains 1 to 127 bytes and must be the same as the bundle name of the app registered with a listener on the target device by calling [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener-1). If this requirement is not met, data cannot be sent to the target app. If an invalid or empty value is passed, error code 401 is returned. |
+| deviceId | string | Yes | Network ID or UDID of the target device, which can be obtained by calling [getTrustedDevices()](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md#gettrusteddevices). The length of both the network ID and UDID must be64 bytes. If an invalid value is passed, error code 401 is returned. |
+| bundleName | string | Yes | Name of the target bundle to which data is sent. The value contains 1 to 127 bytes and must be the same as the bundle name of the app registered with a listener on the target device by calling [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener). If this requirement is not met, data cannot be sent to the target app. If an invalid or empty value is passed, error code 401 is returned. |
 | abilityName | string | Yes | Name of the target ability to which data is sent. The value contains 1 to 127 bytes and must be the same as the ability name of the app registered with a session listener on the target device. If this requirement is not met, data cannot be sent to the target app. If an invalid or empty value is passed,error code 401 is returned. |
 | msg | ArrayBuffer | Yes | Message to be sent. A maximum of 10,240 bytes can be sent at a time. The data structure is defined by the application layer protocol. If empty or invalid data is passed, error code 401 is returned. |
 

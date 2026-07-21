@@ -1,7 +1,6 @@
 # Typeface
 
 Describes the style of a typeface, such as SimSun or KaiTi.
-
 > **NOTE**  
 >  
 > - This module uses the physical pixel unit, px.  
@@ -21,7 +20,6 @@ Describes the style of a typeface, such as SimSun or KaiTi.
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="getfamilyname"></a>
 ## getFamilyName
 
 ```TypeScript
@@ -42,7 +40,6 @@ Obtains the name of the typeface family, which is the name given to a collection
 | --- | --- |
 | string | Family name. |
 
-<a id="isbold"></a>
 ## isBold
 
 ```TypeScript
@@ -63,7 +60,6 @@ Checks whether the font is bold.
 | --- | --- |
 | boolean | Check result. **true** if the font is bold; **false** otherwise. |
 
-<a id="isitalic"></a>
 ## isItalic
 
 ```TypeScript
@@ -84,7 +80,6 @@ Checks whether the font is italic.
 | --- | --- |
 | boolean | Check result. **true** if the font is italic; **false** otherwise. |
 
-<a id="makefromcurrent"></a>
 ## makeFromCurrent
 
 ```TypeScript
@@ -111,7 +106,6 @@ Constructs a typeface object from the current typeface and its arguments.
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 
-<a id="makefromfile"></a>
 ## makeFromFile
 
 ```TypeScript
@@ -132,7 +126,7 @@ Constructs a typeface from a file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | Path of the file. For details, see [Mappings Between Application Sandbox Paths and Physical Paths](docroot://file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
+| filePath | string | Yes | Path of the file. For details, see [Mappings Between Application Sandbox Paths and Physical Paths](../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
 
 **Return value:**
 
@@ -146,7 +140,6 @@ Constructs a typeface from a file.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="makefromfilewitharguments"></a>
 ## makeFromFileWithArguments
 
 ```TypeScript
@@ -167,7 +160,7 @@ Constructs a typeface from the typeface file path and arguments.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | Path of the file. For details, see [Mappings Between Application Sandbox Paths and Physical Paths](docroot://file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
+| filePath | string | Yes | Path of the file. For details, see [Mappings Between Application Sandbox Paths and Physical Paths](../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
 | typefaceArguments | [TypefaceArguments](arkts-arkgraphics2d-drawing-typefacearguments-c.md) | Yes | Typeface arguments. |
 
 **Return value:**
@@ -176,7 +169,6 @@ Constructs a typeface from the typeface file path and arguments.
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 
-<a id="makefromrawfile"></a>
 ## makeFromRawFile
 
 ```TypeScript
@@ -205,7 +197,6 @@ Constructs a typeface from a file, which must be stored in the **resources/rawfi
 | --- | --- |
 | [Typeface](arkts-arkgraphics2d-drawing-typeface-c.md) | Typeface object. In abnormal cases, a null pointer is returned. |
 
-<a id="makefromrawfilewitharguments"></a>
 ## makeFromRawFileWithArguments
 
 ```TypeScript

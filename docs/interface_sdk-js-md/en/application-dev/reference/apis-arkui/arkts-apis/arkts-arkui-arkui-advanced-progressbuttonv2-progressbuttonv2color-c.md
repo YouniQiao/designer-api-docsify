@@ -16,7 +16,6 @@ Declare ProgressButtonV2 Color.
 import { ProgressButtonV2, ProgressButtonV2ColorOptions, ProgressButtonV2Color } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

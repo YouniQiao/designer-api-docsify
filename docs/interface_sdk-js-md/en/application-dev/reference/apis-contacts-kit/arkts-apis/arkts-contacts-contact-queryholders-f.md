@@ -6,7 +6,6 @@
 import { contact } from '@kit.ContactsKit';
 ```
 
-<a id="queryholders"></a>
 ## queryHolders
 
 ```TypeScript
@@ -19,7 +18,7 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryHolders(context:](arkts-contacts-contact-queryholders-f.md#queryholders-1)
+**Substitutes:** [queryHolders(context:](arkts-contacts-contact-queryholders-f.md#queryholders)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -50,7 +49,6 @@ contact.queryHolders((err: BusinessError, data) => {
 ```
 
 
-<a id="queryholders-1"></a>
 ## queryHolders
 
 ```TypeScript
@@ -103,7 +101,6 @@ contact.queryHolders(context, (err: BusinessError, data) => {
 ```
 
 
-<a id="queryholders-2"></a>
 ## queryHolders
 
 ```TypeScript
@@ -116,7 +113,7 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryHolders(context:](arkts-contacts-contact-queryholders-f.md#queryholders-1)
+**Substitutes:** [queryHolders(context:](arkts-contacts-contact-queryholders-f.md#queryholders)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -143,7 +140,6 @@ promise.then((data) => {
 ```
 
 
-<a id="queryholders-3"></a>
 ## queryHolders
 
 ```TypeScript

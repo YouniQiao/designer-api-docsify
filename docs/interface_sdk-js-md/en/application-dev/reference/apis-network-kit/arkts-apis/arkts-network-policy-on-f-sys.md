@@ -6,7 +6,6 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-<a id="on"></a>
 ## on('netUidPolicyChange')
 
 ```TypeScript
@@ -44,7 +43,6 @@ Register uid policy change listener.
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
 
-<a id="on-1"></a>
 ## on('netUidRuleChange')
 
 ```TypeScript
@@ -82,7 +80,6 @@ Register uid rule change listener.
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
 
-<a id="on-2"></a>
 ## on('netMeteredIfacesChange')
 
 ```TypeScript
@@ -120,7 +117,6 @@ Register metered ifaces change listener.
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
 
-<a id="on-3"></a>
 ## on('netQuotaPolicyChange')
 
 ```TypeScript
@@ -158,7 +154,6 @@ Register quota policies change listener.
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
 
-<a id="on-4"></a>
 ## on('netBackgroundPolicyChange')
 
 ```TypeScript

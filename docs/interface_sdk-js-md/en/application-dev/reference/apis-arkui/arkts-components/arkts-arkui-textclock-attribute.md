@@ -1,8 +1,8 @@
 # TextClock properties/events
 
-In addition to the [universal attributes](docroot://reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
 
-In addition to the [universal events](docroot://reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
+In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
 
 **Inheritance/Implementation:** TextClockAttribute extends [CommonMethod<TextClockAttribute>](CommonMethod<TextClockAttribute>)
 
@@ -12,7 +12,6 @@ In addition to the [universal events](docroot://reference/apis-arkui/arkui-ts/ts
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="contentmodifier"></a>
 ## contentModifier
 
 ```TypeScript
@@ -37,7 +36,6 @@ Creates a content modifier.
 | --- | --- | --- | --- |
 | modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;TextClockConfiguration&gt; | Yes | Content modifier to apply to the text clock.<br>**modifier**: content modifier. You need to customize a class to implement the **ContentModifier** API. |
 
-<a id="datetimeoptions"></a>
 ## dateTimeOptions
 
 ```TypeScript
@@ -64,7 +62,6 @@ Sets whether to display a leading zero for the hour.
 | --- | --- | --- | --- |
 | dateTimeOptions | [Optional](arkts-arkui-optional-t.md)&lt;DateTimeOptions&gt; | Yes | Whether to display leading zeros in the hour. It only supports setting the **hour** parameter. When the parameter value is **{hour: "2-digit"}**, a leading zero is displayed. When the parameter value is **{hour: "numeric"}**, no leading zero is displayed.<br>Default value:**undefined**. By default, leading zeros are displayed in 24-hour format, but not displayed in 12-hour format. |
 
-<a id="fontcolor"></a>
 ## fontColor
 
 ```TypeScript
@@ -89,7 +86,6 @@ Sets the font color.
 | --- | --- | --- | --- |
 | value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color.<br>Default value for wearables: '#c5ffffff'; default value for other devices: '#e6182431' |
 
-<a id="fontfamily"></a>
 ## fontFamily
 
 ```TypeScript
@@ -114,7 +110,6 @@ Sets the font family.
 | --- | --- | --- | --- |
 | value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Font family. Default font: **'HarmonyOS Sans'**<br>The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md) are supported for applications.<br>Only the 'HarmonyOS Sans'font is supported for widgets. |
 
-<a id="fontfeature"></a>
 ## fontFeature
 
 ```TypeScript
@@ -123,11 +118,11 @@ fontFeature(value: string)
 
 Sets the font feature, for example, monospaced digits.
 
-Format: normal \| \<feature-tag-value\>
+Format: normal \| \&lt;feature-tag-value\&gt;
 
-Format of **\<feature-tag-value\>**: \<string\> \[ \<integer\> \| on \| off ]
+Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]
 
-There can be multiple **\<feature-tag-value\>** values, which are separated by commas (,).
+There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,).
 
 For example, the input format for monospaced clock fonts is "ss01" on.
 
@@ -149,7 +144,6 @@ For example, the input format for monospaced clock fonts is "ss01" on.
 | --- | --- | --- | --- |
 | value | string | Yes | Font feature. |
 
-<a id="fontsize"></a>
 ## fontSize
 
 ```TypeScript
@@ -174,7 +168,6 @@ Sets the font size.
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. The default font size is 16 fp. The value cannot be a percentage. |
 
-<a id="fontstyle"></a>
 ## fontStyle
 
 ```TypeScript
@@ -199,7 +192,6 @@ Sets the font style.
 | --- | --- | --- | --- |
 | value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes | Font style.<br>Default value: **FontStyle.Normal**, indicating the standard font style(non-italic) |
 
-<a id="fontweight"></a>
 ## fontWeight
 
 ```TypeScript
@@ -224,7 +216,6 @@ Sets the font weight of the text. If the value is too large, the text in differe
 | --- | --- | --- | --- |
 | value | number \| FontWeight \| string | Yes | Font width of the text. The value range of the number type is [100, 900]. The value interval is 100. A larger value indicates a wider font. If the value of the number type is not within the value range, the default value is **400**. For the string type, only strings that represent a number, for example, **"400"**, and the following enumerated values of **FontWeight** are supported:**"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**.<br>Default value:**FontWeight.Normal** |
 
-<a id="format"></a>
 ## format
 
 ```TypeScript
@@ -317,7 +308,6 @@ The following table shows how different settings of **format** work out.
 | --- | --- | --- | --- |
 | value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Time format to set.<br>**Since:** 20 |
 
-<a id="ondatechange"></a>
 ## onDateChange
 
 ```TypeScript
@@ -348,7 +338,6 @@ If the event is used in a widget, it is triggered when the change occurs in minu
 | --- | --- | --- | --- |
 | event | (value: number) =&gt; void | Yes | Unix time stamp, which is the number of seconds that have elapsed since the Unix epoch. |
 
-<a id="textshadow"></a>
 ## textShadow
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="adddeviceconfig"></a>
 ## addDeviceConfig
 
 ```TypeScript
@@ -68,7 +67,6 @@ Add Wi-Fi connection configuration to the device. The configuration will be upda
 ```
 
 
-<a id="adddeviceconfig-1"></a>
 ## addDeviceConfig
 
 ```TypeScript

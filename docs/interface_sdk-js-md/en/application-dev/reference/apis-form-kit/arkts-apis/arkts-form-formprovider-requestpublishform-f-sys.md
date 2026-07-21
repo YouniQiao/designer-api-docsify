@@ -6,7 +6,6 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
-<a id="requestpublishform"></a>
 ## requestPublishForm
 
 ```TypeScript
@@ -21,15 +20,7 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 
 **Since:** 9
 
-<!--Device-formProvider-function requestPublishForm(
-    want: Want,
-    formBindingData: formBindingData.FormBindingData,
-    callback: AsyncCallback<string>
-  ): void--><!--Device-formProvider-function requestPublishForm(
-    want: Want,
-    formBindingData: formBindingData.FormBindingData,
-    callback: AsyncCallback<string>
-  ): void-End-->
+<!--Device-formProvider-function requestPublishForm(    want: Want,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<string>  ): void--><!--Device-formProvider-function requestPublishForm(    want: Want,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<string>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -54,7 +45,6 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="requestpublishform-1"></a>
 ## requestPublishForm
 
 ```TypeScript
@@ -89,7 +79,6 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="requestpublishform-2"></a>
 ## requestPublishForm
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # rmdirSync
 
-<a id="rmdirsync"></a>
 ## rmdirSync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Removes a directory. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:rmdirSync](arkts-corefile-file-fs-rmdirsync-f.md#rmdirsync-1)
+**Substitutes:** [fs:rmdirSync](arkts-corefile-fileio-rmdirsync-f.md#rmdirsync)
 
 <!--Device-unnamed-declare function rmdirSync(path: string): void--><!--Device-unnamed-declare function rmdirSync(path: string): void-End-->
 

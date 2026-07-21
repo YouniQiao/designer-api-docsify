@@ -8,7 +8,6 @@ Defines the user submission event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="keepeditablestate"></a>
 ## keepEditableState
 
 ```TypeScript

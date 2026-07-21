@@ -6,14 +6,13 @@
 import { asset } from '@kit.AssetStoreKit';
 ```
 
-<a id="postqueryasuser"></a>
 ## postQueryAsUser
 
 ```TypeScript
 function postQueryAsUser(userId:number, handle: AssetMap): Promise<void>
 ```
 
-Performs postprocessing for the asset query in the specified user space. This API is used when user authentication is required for the access to an asset. This API must be used with [asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md#prequeryasuser-1) together.This API uses a promise to return the result.
+Performs postprocessing for the asset query in the specified user space. This API is used when user authentication is required for the access to an asset. This API must be used with [asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md#prequeryasuser) together.This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -30,7 +29,7 @@ Performs postprocessing for the asset query in the specified user space. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | the user identifier to post-query one or more assets. The value must be greater than or equal to 100. |
-| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md#prequeryasuser-1). |
+| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md#prequeryasuser). |
 
 **Return value:**
 

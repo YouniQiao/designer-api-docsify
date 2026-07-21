@@ -1,11 +1,10 @@
 # @ohos.arkui.dragController
 
 This module provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
-
 > **NOTE**  
 >  
 > - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used  
-> where [the UI context is ambiguous](docroot://ui/arkts-global-interface.md#ambiguous-ui-context). For details, see  
+> where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see  
 > [UIContext](arkts-arkui-uicontext.md).  
 >  
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
@@ -49,7 +48,7 @@ import { dragController } from '@kit.ArkUI';
 | [DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md) | Provides the data reported when the state changes during dragging. |
 | [DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md) | Callback used to return the result. |
 | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Defines the attributes required for initiating a drag action and information carried in the dragging process. |
-| [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) | Defines the configuration parameters for drag hover detection. The default settings typically suffice. These settings can be customized through [onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#ondragspringloading-1) binding or dynamically updated during BEGIN state using [updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateconfiguration-1). |
+| [DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) | Defines the configuration parameters for drag hover detection. The default settings typically suffice. These settings can be customized through [onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#ondragspringloading) binding or dynamically updated during BEGIN state using [updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateconfiguration). |
 | [SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md) | Defines the drag event information when hover detection is triggered. This API provides drag data summaries and additional drag event information, allowing applications to decide whether to respond to hover detection callbacks. |
 
 ### Enums
@@ -57,6 +56,6 @@ import { dragController } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md) | Enumerates hover detection states during drag operations.Under default system configuration, if no CANCEL occurs, the state reporting is as follows:Hover still-->500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END |
-| [DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md) | Enumerates the states defining whether an application can initiate a drag operation. This API is effective only when [onDragStart](../arkts-components/arkts-arkui-commonmethod-c.md#ondragstart-1) is called. |
+| [DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md) | Enumerates the states defining whether an application can initiate a drag operation. This API is effective only when [onDragStart](../arkts-components/arkts-arkui-commonmethod-c.md#ondragstart) is called. |
 | [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md) | Describes the dragging start and end states. |
 

@@ -6,7 +6,6 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="getrunningprocessinformation"></a>
 ## getRunningProcessInformation
 
 ```TypeScript
@@ -14,7 +13,6 @@ function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 ```
 
 Obtains information about the running processes of the current application. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,  
@@ -61,7 +59,6 @@ appManager.getRunningProcessInformation().then((data) => {
 ```
 
 
-<a id="getrunningprocessinformation-1"></a>
 ## getRunningProcessInformation
 
 ```TypeScript
@@ -69,7 +66,6 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 ```
 
 Obtains information about the running processes of the current application. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - In versions earlier than API version 11, this API requires the ohos.permission.GET_RUNNING_INFO permission,  

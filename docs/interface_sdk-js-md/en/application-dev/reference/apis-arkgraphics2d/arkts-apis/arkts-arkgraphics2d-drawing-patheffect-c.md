@@ -1,7 +1,6 @@
 # PathEffect
 
 Implements a path effect.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 12.  
@@ -23,7 +22,6 @@ Implements a path effect.
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="createcomposepatheffect"></a>
 ## createComposePathEffect
 
 ```TypeScript
@@ -51,7 +49,6 @@ Creates a path effect by sequentially applying the inner effect and then the out
 | --- | --- |
 | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | **PathEffect** object created. |
 
-<a id="createcornerpatheffect"></a>
 ## createCornerPathEffect
 
 ```TypeScript
@@ -84,7 +81,6 @@ Creates a path effect that transforms the sharp angle between line segments into
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="createdashpatheffect"></a>
 ## createDashPathEffect
 
 ```TypeScript
@@ -118,7 +114,6 @@ Creates a **PathEffect** object that converts a path into a dotted line.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="creatediscretepatheffect"></a>
 ## createDiscretePathEffect
 
 ```TypeScript
@@ -147,7 +142,6 @@ Creates an effect that segments the path and scatters the segments in an irregul
 | --- | --- |
 | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | **PathEffect** object created. |
 
-<a id="createpathdasheffect"></a>
 ## createPathDashEffect
 
 ```TypeScript
@@ -183,7 +177,6 @@ Creates a dashed path effect based on the shape described by a path.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="createsumpatheffect"></a>
 ## createSumPathEffect
 
 ```TypeScript

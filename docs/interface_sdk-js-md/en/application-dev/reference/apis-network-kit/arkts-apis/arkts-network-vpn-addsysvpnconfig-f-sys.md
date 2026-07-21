@@ -6,7 +6,6 @@
 import { vpn } from '@kit.NetworkKit';
 ```
 
-<a id="addsysvpnconfig"></a>
 ## addSysVpnConfig
 
 ```TypeScript

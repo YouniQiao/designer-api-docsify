@@ -6,7 +6,6 @@
 import { contact } from '@kit.ContactsKit';
 ```
 
-<a id="updatecontact"></a>
 ## updateContact
 
 ```TypeScript
@@ -19,7 +18,7 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [updateContact(context:](arkts-contacts-contact-updatecontact-f.md#updatecontact-1)
+**Substitutes:** [updateContact(context:](arkts-contacts-contact-updatecontact-f.md#updatecontact)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -31,7 +30,7 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-1). |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
 **Example**
@@ -64,7 +63,6 @@ contact.selectContacts().then((data) => {
 ```
 
 
-<a id="updatecontact-1"></a>
 ## updateContact
 
 ```TypeScript
@@ -86,7 +84,7 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-1). |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
@@ -130,7 +128,6 @@ contact.selectContacts().then((data) => {
 ```
 
 
-<a id="updatecontact-2"></a>
 ## updateContact
 
 ```TypeScript
@@ -143,7 +140,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Deprecated since:** 10
 
-**Substitutes:** [updateContact(context:](arkts-contacts-contact-updatecontact-f.md#updatecontact-1)
+**Substitutes:** [updateContact(context:](arkts-contacts-contact-updatecontact-f.md#updatecontact)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -155,7 +152,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-1). |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts). |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
@@ -190,7 +187,6 @@ contact.selectContacts().then((data) => {
 ```
 
 
-<a id="updatecontact-3"></a>
 ## updateContact
 
 ```TypeScript
@@ -212,7 +208,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-1). |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts). |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the updated contact is returned. If the operation fails, an error code is returned. |
 
@@ -258,7 +254,6 @@ contact.selectContacts().then((data) => {
 ```
 
 
-<a id="updatecontact-4"></a>
 ## updateContact
 
 ```TypeScript
@@ -271,7 +266,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Deprecated since:** 10
 
-**Substitutes:** [updateContact(context:](arkts-contacts-contact-updatecontact-f.md#updatecontact-1)
+**Substitutes:** [updateContact(context:](arkts-contacts-contact-updatecontact-f.md#updatecontact)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -283,7 +278,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-1). |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts). |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
 
 **Return value:**
@@ -318,7 +313,6 @@ contact.selectContacts().then((data) => {
 ```
 
 
-<a id="updatecontact-5"></a>
 ## updateContact
 
 ```TypeScript
@@ -340,7 +334,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-1). |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. The ID is mandatory and can be obtained through [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts). |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
 
 **Return value:**

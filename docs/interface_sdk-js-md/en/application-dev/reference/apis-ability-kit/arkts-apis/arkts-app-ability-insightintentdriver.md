@@ -1,11 +1,10 @@
 # @ohos.app.ability.insightIntentDriver
 
 The module provides APIs for executing intent calls. The system executes intent calls based on user interaction and more.
-
 > **NOTE**  
 >  
 > Starting from API version 20, this module supports application navigation using intents defined by the  
-> [@InsightIntentLink](docroot://reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)  
+> [@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)  
 > decorator.
 
 **Since:** 11
@@ -42,26 +41,26 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) | Defines the parameter type of the [@InsightIntentFunctionMethod](docroot://reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)decorator. All parameters inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md). |
+| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) | Defines the parameter type of the [@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)decorator. All parameters inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md). |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md) | EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md) and is used to describe the information about the intent entity defined by the [@InsightIntentEntity](docroot://reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity)decorator. |
-| [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentForm](docroot://reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)decorator, such as the widget name. It also describes the widget information bound to the [intent developed using a configuration file](docroot://application-models/insight-intent-config-development.md). |
+| [EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md) | EntityInfo inherits from [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md) and is used to describe the information about the intent entity defined by the [@InsightIntentEntity](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity)decorator. |
+| [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)decorator, such as the widget name. It also describes the widget information bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). |
 | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | Defines the parameter used to execute an intent call. |
-| [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentForm](docroot://reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)decorator, such as the widget name. It also describes the widget information bound to the [intent developed using a configuration file](docroot://application-models/insight-intent-config-development.md). |
+| [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)decorator, such as the widget name. It also describes the widget information bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). |
 | [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md) | Defines the intent information, which is the specific parameter configuration of the intent in the device. |
 | [InsightIntentInfoFilter](arkts-ability-insightintentdriver-insightintentinfofilter-i-sys.md) | Defines an intent filter, which specifies the criteria for selecting target intents. It is used to filter intents on the device that meet these criteria. |
-| [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentLink](docroot://reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)decorator, such as the URI required for application redirection. |
-| [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentPage](docroot://reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)decorator, such as the [NavDestination](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10) name of the target page. |
+| [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)decorator, such as the URI required for application redirection. |
+| [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)decorator, such as the [NavDestination](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navdestination10) name of the target page. |
 | [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | Param when query insight intent entity. |
-| [ServiceExtensionIntentInfo](arkts-ability-insightintentdriver-serviceextensionintentinfo-i-sys.md) | Describes the information of the ServiceExtensionAbility bound to the [intent developed using a configuration file](docroot://application-models/insight-intent-config-development.md). |
-| [SubIntentInfoForConfiguration](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | Describes the unique information of the [intent developed using a configuration file](docroot://application-models/insight-intent-config-development.md). |
-| [UIAbilityIntentInfo](arkts-ability-insightintentdriver-uiabilityintentinfo-i-sys.md) | Describes the information of the UIAbility bound to the [intent developed using a configuration file](docroot://application-models/insight-intent-config-development.md). |
-| [UIExtensionIntentInfo](arkts-ability-insightintentdriver-uiextensionintentinfo-i-sys.md) | Describes the information of the UIExtensionAbility bound to the [intent developed using a configuration file](docroot://application-models/insight-intent-config-development.md). |
+| [ServiceExtensionIntentInfo](arkts-ability-insightintentdriver-serviceextensionintentinfo-i-sys.md) | Describes the information of the ServiceExtensionAbility bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). |
+| [SubIntentInfoForConfiguration](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | Describes the unique information of the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). |
+| [UIAbilityIntentInfo](arkts-ability-insightintentdriver-uiabilityintentinfo-i-sys.md) | Describes the information of the UIAbility bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). |
+| [UIExtensionIntentInfo](arkts-ability-insightintentdriver-uiextensionintentinfo-i-sys.md) | Describes the information of the UIExtensionAbility bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). |
 <!--DelEnd-->
 
 <!--Del-->
@@ -70,8 +69,8 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [DevelopType](arkts-ability-insightintentdriver-developtype-e-sys.md) | Enumerates the modes that define how an intent is developed. |
-| [ExecuteModeForConfiguration](arkts-ability-insightintentdriver-executemodeforconfiguration-e-sys.md) | Enumerates the execution modes supported by an [intent developed using a configuration file](docroot://application-models/insight-intent-config-development.md).For example, if **executeMode** in the [insight_intent.json configuration file](docroot://application-models/insight-intent-config-development.md#description-of-the-insight_intentjson-file)is set to **foreground**, the intent bound to the UIAbility can run in the foreground. |
-| [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md) | Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename-1),[getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename-1), and [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md#getinsightintentinfobyintentname-1). |
-| [InsightIntentType](arkts-ability-insightintentdriver-insightintenttype-e-sys.md) | Enumerates the intent types defined by the intent decorator. You can obtain the intent type from [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) returned by calling APIs such as [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getallinsightintentinfo-1). |
+| [ExecuteModeForConfiguration](arkts-ability-insightintentdriver-executemodeforconfiguration-e-sys.md) | Enumerates the execution modes supported by an [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).For example, if **executeMode** in the [insight_intent.json configuration file](../../../application-models/insight-intent-config-development.md#description-of-the-insight_intentjson-file)is set to **foreground**, the intent bound to the UIAbility can run in the foreground. |
+| [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md) | Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename),[getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename), and [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md#getinsightintentinfobyintentname). |
+| [InsightIntentType](arkts-ability-insightintentdriver-insightintenttype-e-sys.md) | Enumerates the intent types defined by the intent decorator. You can obtain the intent type from [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) returned by calling APIs such as [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getallinsightintentinfo). |
 <!--DelEnd-->
 

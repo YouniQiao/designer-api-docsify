@@ -6,7 +6,6 @@
 import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="querycapabilities"></a>
 ## queryCapabilities
 
 ```TypeScript

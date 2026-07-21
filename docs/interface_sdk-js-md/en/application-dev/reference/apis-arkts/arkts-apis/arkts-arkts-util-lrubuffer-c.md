@@ -18,7 +18,6 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 import { util } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -52,7 +51,6 @@ let result = pro[Symbol.iterator]();
 
 ```
 
-<a id="afterremoval"></a>
 ## afterRemoval
 
 ```TypeScript
@@ -65,7 +63,7 @@ Performs subsequent operations after a value is removed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [afterRemoval](arkts-arkts-util-lrucache-c.md#afterremoval-1)
+**Substitutes:** [afterRemoval](arkts-arkts-util-lrucache-c.md#afterremoval)
 
 <!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void--><!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void-End-->
 
@@ -106,7 +104,6 @@ lru.put(33, 3);
 
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -119,7 +116,7 @@ Clears key-value pairs from this cache. The **afterRemoval()** API will be calle
 
 **Deprecated since:** 9
 
-**Substitutes:** [clear](arkts-arkts-util-lrucache-c.md#clear-1)
+**Substitutes:** [clear](arkts-arkts-util-lrucache-c.md#clear)
 
 <!--Device-LruBuffer-clear(): void--><!--Device-LruBuffer-clear(): void-End-->
 
@@ -135,7 +132,6 @@ pro.clear();
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -167,7 +163,6 @@ let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 
 ```
 
-<a id="contains"></a>
 ## contains
 
 ```TypeScript
@@ -180,7 +175,7 @@ Checks whether this cache contains the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains-1)
+**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 <!--Device-LruBuffer-contains(key: K): boolean--><!--Device-LruBuffer-contains(key: K): boolean-End-->
 
@@ -209,7 +204,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="createdefault"></a>
 ## createDefault
 
 ```TypeScript
@@ -222,7 +216,7 @@ Creates a value if the value of the specified key is not available.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createDefault](arkts-arkts-util-lrucache-c.md#createdefault-1)
+**Substitutes:** [createDefault](arkts-arkts-util-lrucache-c.md#createdefault)
 
 <!--Device-LruBuffer-createDefault(key: K): V--><!--Device-LruBuffer-createDefault(key: K): V-End-->
 
@@ -248,7 +242,6 @@ let result = pro.createDefault(50);
 
 ```
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -261,7 +254,7 @@ Obtains a new iterator object that contains all key-value pairs in this object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [entries](arkts-arkts-util-lrucache-c.md#entries-1)
+**Substitutes:** [entries](arkts-arkts-util-lrucache-c.md#entries)
 
 <!--Device-LruBuffer-entries(): IterableIterator<[K, V]>--><!--Device-LruBuffer-entries(): IterableIterator<[K, V]>-End-->
 
@@ -282,7 +275,6 @@ let result = pro.entries();
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -295,7 +287,7 @@ Obtains the value of the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** [get](arkts-arkts-util-lrucache-c.md#get-1)
+**Substitutes:** [get](arkts-arkts-util-lrucache-c.md#get)
 
 <!--Device-LruBuffer-get(key: K): V | undefined--><!--Device-LruBuffer-get(key: K): V | undefined-End-->
 
@@ -324,7 +316,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="getcapacity"></a>
 ## getCapacity
 
 ```TypeScript
@@ -337,7 +328,7 @@ Obtains the capacity of this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCapacity](arkts-arkts-util-lrucache-c.md#getcapacity-1)
+**Substitutes:** [getCapacity](arkts-arkts-util-lrucache-c.md#getcapacity)
 
 <!--Device-LruBuffer-getCapacity(): number--><!--Device-LruBuffer-getCapacity(): number-End-->
 
@@ -359,7 +350,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="getcreatecount"></a>
 ## getCreateCount
 
 ```TypeScript
@@ -372,7 +362,7 @@ Obtains the number of return values for **createDefault()**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCreateCount](arkts-arkts-util-lrucache-c.md#getcreatecount-1)
+**Substitutes:** [getCreateCount](arkts-arkts-util-lrucache-c.md#getcreatecount)
 
 <!--Device-LruBuffer-getCreateCount(): number--><!--Device-LruBuffer-getCreateCount(): number-End-->
 
@@ -395,7 +385,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="getmatchcount"></a>
 ## getMatchCount
 
 ```TypeScript
@@ -408,7 +397,7 @@ Obtains the number of times that the queried values are matched.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMatchCount](arkts-arkts-util-lrucache-c.md#getmatchcount-1)
+**Substitutes:** [getMatchCount](arkts-arkts-util-lrucache-c.md#getmatchcount)
 
 <!--Device-LruBuffer-getMatchCount(): number--><!--Device-LruBuffer-getMatchCount(): number-End-->
 
@@ -432,7 +421,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="getmisscount"></a>
 ## getMissCount
 
 ```TypeScript
@@ -445,7 +433,7 @@ Obtains the number of times that the queried values are mismatched.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMissCount](arkts-arkts-util-lrucache-c.md#getmisscount-1)
+**Substitutes:** [getMissCount](arkts-arkts-util-lrucache-c.md#getmisscount)
 
 <!--Device-LruBuffer-getMissCount(): number--><!--Device-LruBuffer-getMissCount(): number-End-->
 
@@ -469,7 +457,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="getputcount"></a>
 ## getPutCount
 
 ```TypeScript
@@ -482,7 +469,7 @@ Obtains the number of additions to this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPutCount](arkts-arkts-util-lrucache-c.md#getputcount-1)
+**Substitutes:** [getPutCount](arkts-arkts-util-lrucache-c.md#getputcount)
 
 <!--Device-LruBuffer-getPutCount(): number--><!--Device-LruBuffer-getPutCount(): number-End-->
 
@@ -505,7 +492,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="getremovalcount"></a>
 ## getRemovalCount
 
 ```TypeScript
@@ -518,7 +504,7 @@ Obtains the number of removals from this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRemovalCount](arkts-arkts-util-lrucache-c.md#getremovalcount-1)
+**Substitutes:** [getRemovalCount](arkts-arkts-util-lrucache-c.md#getremovalcount)
 
 <!--Device-LruBuffer-getRemovalCount(): number--><!--Device-LruBuffer-getRemovalCount(): number-End-->
 
@@ -543,7 +529,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -556,7 +541,7 @@ Checks whether this cache is empty.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isEmpty](arkts-arkts-util-lrucache-c.md#isempty-1)
+**Substitutes:** [isEmpty](arkts-arkts-util-lrucache-c.md#isempty)
 
 <!--Device-LruBuffer-isEmpty(): boolean--><!--Device-LruBuffer-isEmpty(): boolean-End-->
 
@@ -579,7 +564,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="keys"></a>
 ## keys
 
 ```TypeScript
@@ -592,7 +576,7 @@ Obtains all keys in this cache, listed from the most to the least recently acces
 
 **Deprecated since:** 9
 
-**Substitutes:** [keys](arkts-arkts-util-lrucache-c.md#keys-1)
+**Substitutes:** [keys](arkts-arkts-util-lrucache-c.md#keys)
 
 <!--Device-LruBuffer-keys(): K[]--><!--Device-LruBuffer-keys(): K[]-End-->
 
@@ -615,7 +599,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="put"></a>
 ## put
 
 ```TypeScript
@@ -628,7 +611,7 @@ Adds a key-value pair to this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [put](arkts-arkts-util-lrucache-c.md#put-1)
+**Substitutes:** [put](arkts-arkts-util-lrucache-c.md#put)
 
 <!--Device-LruBuffer-put(key: K, value: V): V--><!--Device-LruBuffer-put(key: K, value: V): V-End-->
 
@@ -657,7 +640,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -670,7 +652,7 @@ Removes the specified key and its value from this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [remove](arkts-arkts-util-lrucache-c.md#remove-1)
+**Substitutes:** [remove](arkts-arkts-util-lrucache-c.md#remove)
 
 <!--Device-LruBuffer-remove(key: K): V | undefined--><!--Device-LruBuffer-remove(key: K): V | undefined-End-->
 
@@ -699,7 +681,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -712,7 +693,7 @@ Obtains the string representation of this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#tostring-1)
+**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#tostring)
 
 <!--Device-LruBuffer-toString(): string--><!--Device-LruBuffer-toString(): string-End-->
 
@@ -737,7 +718,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="updatecapacity"></a>
 ## updateCapacity
 
 ```TypeScript
@@ -750,7 +730,7 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 
 **Deprecated since:** 9
 
-**Substitutes:** [updateCapacity](arkts-arkts-util-lrucache-c.md#updatecapacity-1)
+**Substitutes:** [updateCapacity](arkts-arkts-util-lrucache-c.md#updatecapacity)
 
 <!--Device-LruBuffer-updateCapacity(newCapacity: number): void--><!--Device-LruBuffer-updateCapacity(newCapacity: number): void-End-->
 
@@ -770,7 +750,6 @@ pro.updateCapacity(100);
 
 ```
 
-<a id="values"></a>
 ## values
 
 ```TypeScript
@@ -783,7 +762,7 @@ Obtains all values in this cache, listed from the most to the least recently acc
 
 **Deprecated since:** 9
 
-**Substitutes:** [values](arkts-arkts-util-lrucache-c.md#values-1)
+**Substitutes:** [values](arkts-arkts-util-lrucache-c.md#values)
 
 <!--Device-LruBuffer-values(): V[]--><!--Device-LruBuffer-values(): V[]-End-->
 

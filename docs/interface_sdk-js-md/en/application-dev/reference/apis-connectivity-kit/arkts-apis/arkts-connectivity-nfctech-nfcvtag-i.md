@@ -10,7 +10,6 @@ Provides methods for creating an NFC-V tag, obtaining tag information, and contr
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-<a id="getdsfid"></a>
 ## getDsfId
 
 ```TypeScript
@@ -33,7 +32,6 @@ Obtains the response flags from this {@code NfcVTag} instance.
 | --- | --- |
 | number | Returns the response flags. |
 
-<a id="getresponseflags"></a>
 ## getResponseFlags
 
 ```TypeScript

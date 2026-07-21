@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="usbfunctionsfromstring"></a>
 ## usbFunctionsFromString
 
 ```TypeScript
@@ -19,7 +18,7 @@ Converts the USB function list in the string format to a numeric mask in Device 
 
 **Deprecated since:** 12
 
-**Substitutes:** [getFunctionsFromString(funcs:](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md#getfunctionsfromstring-1)
+**Substitutes:** [getFunctionsFromString(funcs:](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md#getfunctionsfromstring)
 
 <!--Device-usbManager-function usbFunctionsFromString(funcs: string): number--><!--Device-usbManager-function usbFunctionsFromString(funcs: string): number-End-->
 

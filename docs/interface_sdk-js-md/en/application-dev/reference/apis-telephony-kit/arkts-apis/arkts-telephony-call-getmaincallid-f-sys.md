@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="getmaincallid"></a>
 ## getMainCallId
 
 ```TypeScript
@@ -57,7 +56,6 @@ call.getMainCallId(1, (err: BusinessError, data: number) => {
 ```
 
 
-<a id="getmaincallid-1"></a>
 ## getMainCallId
 
 ```TypeScript

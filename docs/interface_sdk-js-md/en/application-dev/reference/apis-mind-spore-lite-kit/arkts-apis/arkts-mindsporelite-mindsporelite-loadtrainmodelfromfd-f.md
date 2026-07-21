@@ -6,7 +6,6 @@
 import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
-<a id="loadtrainmodelfromfd"></a>
 ## loadTrainModelFromFd
 
 ```TypeScript
@@ -22,13 +21,7 @@ Load train model from file description
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-mindSporeLite-function loadTrainModelFromFd(
-    model: int,
-    trainCfg?: TrainCfg,
-    context?: Context): Promise<Model>--><!--Device-mindSporeLite-function loadTrainModelFromFd(
-    model: int,
-    trainCfg?: TrainCfg,
-    context?: Context): Promise<Model>-End-->
+<!--Device-mindSporeLite-function loadTrainModelFromFd(    model: int,    trainCfg?: TrainCfg,    context?: Context): Promise<Model>--><!--Device-mindSporeLite-function loadTrainModelFromFd(    model: int,    trainCfg?: TrainCfg,    context?: Context): Promise<Model>-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 

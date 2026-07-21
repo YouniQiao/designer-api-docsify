@@ -6,7 +6,6 @@
 import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
-<a id="fromsendablevalues"></a>
 ## fromSendableValues
 
 ```TypeScript

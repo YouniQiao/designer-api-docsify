@@ -6,7 +6,6 @@
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
-<a id="on"></a>
 ## on('connect')
 
 ```TypeScript
@@ -20,9 +19,7 @@ Enables listening for **connect** events. This API uses an asynchronous callback
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function on(type: 'connect', sessionId: number,
-        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'connect', sessionId: number,
-        callback: Callback<EventCallbackInfo>): void-End-->
+<!--Device-abilityConnectionManager-function on(type: 'connect', sessionId: number,        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'connect', sessionId: number,        callback: Callback<EventCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -30,7 +27,7 @@ Enables listening for **connect** events. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | Event type. This field has a fixed value of **connect**. This event is triggered when [abilityConnectionManager.connect()](arkts-distributedservice-abilityconnectionmanager-connect-f.md#connect-1) is called. |
+| type | 'connect' | Yes | Event type. This field has a fixed value of **connect**. This event is triggered when [abilityConnectionManager.connect()](arkts-distributedservice-abilityconnectionmanager-connect-f.md#connect) is called. |
 | sessionId | number | Yes | ID of the collaboration session. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | Registered callback function. |
 
@@ -55,7 +52,6 @@ abilityConnectionManager.on("connect", sessionId,(callbackInfo) => {
 ```
 
 
-<a id="on-1"></a>
 ## on('disconnect')
 
 ```TypeScript
@@ -69,9 +65,7 @@ Enables listening for **disconnect** events.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function on(type: 'disconnect', sessionId: number,
-        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'disconnect', sessionId: number,
-        callback: Callback<EventCallbackInfo>): void-End-->
+<!--Device-abilityConnectionManager-function on(type: 'disconnect', sessionId: number,        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'disconnect', sessionId: number,        callback: Callback<EventCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -79,7 +73,7 @@ Enables listening for **disconnect** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'disconnect' | Yes | Event type. This field has a fixed value of **disconnect**. This event is triggered when [abilityConnectionManager.disconnect()](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect-1) is called. |
+| type | 'disconnect' | Yes | Event type. This field has a fixed value of **disconnect**. This event is triggered when [abilityConnectionManager.disconnect()](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect) is called. |
 | sessionId | number | Yes | ID of the collaboration session. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | Registered callback function. |
 
@@ -104,7 +98,6 @@ abilityConnectionManager.on("disconnect", sessionId,(callbackInfo) => {
 ```
 
 
-<a id="on-2"></a>
 ## on('receiveMessage')
 
 ```TypeScript
@@ -118,9 +111,7 @@ Enables listening for **receiveMessage** events.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function on(type: 'receiveMessage', sessionId: number,
-        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'receiveMessage', sessionId: number,
-        callback: Callback<EventCallbackInfo>): void-End-->
+<!--Device-abilityConnectionManager-function on(type: 'receiveMessage', sessionId: number,        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'receiveMessage', sessionId: number,        callback: Callback<EventCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -128,7 +119,7 @@ Enables listening for **receiveMessage** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'receiveMessage' | Yes | Event type. This field has a fixed value of **receiveMessage**. This event is triggered when [abilityConnectionManager.sendMessage()](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage-1) is called. |
+| type | 'receiveMessage' | Yes | Event type. This field has a fixed value of **receiveMessage**. This event is triggered when [abilityConnectionManager.sendMessage()](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage) is called. |
 | sessionId | number | Yes | ID of the collaboration session. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | Registered callback function. |
 
@@ -153,7 +144,6 @@ abilityConnectionManager.on("receiveMessage", sessionId,(callbackInfo) => {
 ```
 
 
-<a id="on-3"></a>
 ## on('receiveData')
 
 ```TypeScript
@@ -167,9 +157,7 @@ Enables listening for **receiveData** events.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function on(type: 'receiveData', sessionId: number,
-        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'receiveData', sessionId: number,
-        callback: Callback<EventCallbackInfo>): void-End-->
+<!--Device-abilityConnectionManager-function on(type: 'receiveData', sessionId: number,        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'receiveData', sessionId: number,        callback: Callback<EventCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -177,7 +165,7 @@ Enables listening for **receiveData** events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'receiveData' | Yes | Event type. This field has a fixed value of **receiveData**. This event is triggered when [abilityConnectionManager.sendData()](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata-1) is called. |
+| type | 'receiveData' | Yes | Event type. This field has a fixed value of **receiveData**. This event is triggered when [abilityConnectionManager.sendData()](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) is called. |
 | sessionId | number | Yes | ID of the collaboration session. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | Registered callback function. |
 

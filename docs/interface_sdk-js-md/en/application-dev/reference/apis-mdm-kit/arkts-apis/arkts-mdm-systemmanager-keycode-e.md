@@ -1,6 +1,6 @@
 # KeyCode
 
-Key code. Key codes are used to map to the actual physical keys on a device in the following scenarios:[adding a key event policy](arkts-mdm-systemmanager-addkeyeventpolicies-f.md#addkeyeventpolicies-1),[removing a key event policy](arkts-mdm-systemmanager-removekeyeventpolicies-f.md#removekeyeventpolicies-1),[querying a key event policy](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getkeyeventpolicies-1), and [invoking the key event callback API](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent-1).
+Key code. Key codes are used to map to the actual physical keys on a device in the following scenarios:[adding a key event policy](arkts-mdm-systemmanager-addkeyeventpolicies-f.md#addkeyeventpolicies),[removing a key event policy](arkts-mdm-systemmanager-removekeyeventpolicies-f.md#removekeyeventpolicies),[querying a key event policy](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getkeyeventpolicies), and [invoking the key event callback API](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent).
 
 **Since:** 23
 

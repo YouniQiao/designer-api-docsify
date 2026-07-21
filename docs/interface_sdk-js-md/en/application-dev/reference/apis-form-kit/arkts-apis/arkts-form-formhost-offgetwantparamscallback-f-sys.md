@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="offgetwantparamscallback"></a>
 ## offGetWantParamsCallback
 
 ```TypeScript

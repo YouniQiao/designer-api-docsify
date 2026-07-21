@@ -1,7 +1,6 @@
 # DistortionParam (System API)
 
 Defines the spatial distortion parameters.
-
 > **NOTE**  
 >  
 > - The coordinates of the four corners of the component can be set as follows: top-left corner: [0, 0], top-right  

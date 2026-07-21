@@ -1,7 +1,6 @@
 # MaskFilter
 
 Implements a mask filter.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 12.  
@@ -23,7 +22,6 @@ Implements a mask filter.
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="createblurmaskfilter"></a>
 ## createBlurMaskFilter
 
 ```TypeScript

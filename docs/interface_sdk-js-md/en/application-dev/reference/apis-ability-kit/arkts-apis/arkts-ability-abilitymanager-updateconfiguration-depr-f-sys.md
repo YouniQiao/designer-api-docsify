@@ -1,6 +1,5 @@
 # updateConfiguration (System API)
 
-<a id="updateconfiguration"></a>
 ## updateConfiguration
 
 ```TypeScript
@@ -31,7 +30,6 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is updated, **err** is undefined; otherwise, **err** is an error object. |
 
 
-<a id="updateconfiguration-1"></a>
 ## updateConfiguration
 
 ```TypeScript

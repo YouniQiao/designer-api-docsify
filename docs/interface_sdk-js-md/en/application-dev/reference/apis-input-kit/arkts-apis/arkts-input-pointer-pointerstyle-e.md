@@ -752,7 +752,7 @@ In air mouse mode, you can rotate the stylus in the air to control the movement 
 DEVELOPER_DEFINED_ICON = -100
 ```
 
-Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md#setcustomcursor-1) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setpointerstyle-1).
+Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md#setcustomcursor) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setpointerstyle).
 
 **Since:** 22
 

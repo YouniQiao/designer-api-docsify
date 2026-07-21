@@ -1,7 +1,6 @@
 # ScryptSpec
 
 Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is a parameter for scrypt key derivation function (KDF).
-
 > **NOTE**  
 >  
 > **passphrase** specifies the original password. If **passphrase** is of the string type, pass in the data used for  

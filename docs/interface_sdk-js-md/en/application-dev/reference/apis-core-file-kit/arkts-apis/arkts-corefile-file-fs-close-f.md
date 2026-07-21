@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -47,7 +46,6 @@ Closes a file or directory. This API uses a promise to return the result.
 | 13900042 | Unknown error |
 
 
-<a id="close-1"></a>
 ## close
 
 ```TypeScript

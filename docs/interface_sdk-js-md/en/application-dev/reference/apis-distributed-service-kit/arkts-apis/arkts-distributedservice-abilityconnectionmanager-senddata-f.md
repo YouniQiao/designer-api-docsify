@@ -6,14 +6,13 @@
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
-<a id="senddata"></a>
 ## sendData
 
 ```TypeScript
 function sendData(sessionId: number, data: ArrayBuffer): Promise<void>
 ```
 
-Sends [ArrayBuffer](docroot://arkts-utils/arraybuffer-object.md) byte streams from one device to another after a connection is successfully established.
+Sends [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md) byte streams from one device to another after a connection is successfully established.
 
 **Since:** 18
 

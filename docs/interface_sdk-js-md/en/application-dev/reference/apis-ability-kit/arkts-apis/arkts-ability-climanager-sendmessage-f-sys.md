@@ -6,7 +6,6 @@
 import { cliManager } from '@kit.AbilityKit';
 ```
 
-<a id="sendmessage"></a>
 ## sendMessage
 
 ```TypeScript

@@ -10,7 +10,6 @@ Defines camera.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="getprojectionmatrix"></a>
 ## getProjectionMatrix
 
 ```TypeScript
@@ -31,7 +30,6 @@ Get the projection matrix of this camera.
 | --- | --- |
 | [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | -- the projection matrix of this camera |
 
-<a id="getviewmatrix"></a>
 ## getViewMatrix
 
 ```TypeScript
@@ -52,7 +50,6 @@ Get the view matrix of this camera.
 | --- | --- |
 | [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | -- the view matrix of this camera |
 
-<a id="raycast"></a>
 ## raycast
 
 ```TypeScript

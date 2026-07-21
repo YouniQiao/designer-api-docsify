@@ -10,7 +10,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -39,7 +38,6 @@ Sets the parameters for the rotation gesture. Inherits from [GestureInterface<T>
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -70,7 +68,6 @@ Sets the parameters for the rotation gesture. Compared with [RotationGesture](ar
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onactioncancel"></a>
 ## onActionCancel
 
 ```TypeScript
@@ -99,14 +96,13 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="onactioncancel-1"></a>
 ## onActionCancel
 
 ```TypeScript
 onActionCancel(event: Callback<GestureEvent>): RotationGestureInterface
 ```
 
-Triggered when a tap cancellation event is received after the rotation gesture is recognized. Compared with [onActionCancel](arkts-arkui-rotationgestureinterface-i.md#onactioncancel-1), this callback returns gesture event information.
+Triggered when a tap cancellation event is received after the rotation gesture is recognized. Compared with [onActionCancel](arkts-arkui-rotationgestureinterface-i.md#onactioncancel), this callback returns gesture event information.
 
 **Since:** 18
 
@@ -130,7 +126,6 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onactionend"></a>
 ## onActionEnd
 
 ```TypeScript
@@ -159,7 +154,6 @@ Triggered when the last finger used for the rotation gesture is lifted.
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="onactionstart"></a>
 ## onActionStart
 
 ```TypeScript
@@ -188,7 +182,6 @@ Triggered when the rotation gesture is recognized successfully.
 | --- | --- |
 | [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="onactionupdate"></a>
 ## onActionUpdate
 
 ```TypeScript

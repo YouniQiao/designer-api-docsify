@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface DateConstructor--><!--Device-unnamed-interface DateConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

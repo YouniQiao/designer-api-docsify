@@ -1,21 +1,20 @@
 # RefreshOptions
 
 Defines the options of the **Refresh** component.
-
 > **Supplementary Notes**  
 >  
 > - If neither **builder** nor **refreshingContent** is set, the pull-down displacement effect is implemented by  
-> adjusting the [translate](arkts-arkui-commonmethod-c.md#translate-1) attribute of the child component.  
+> adjusting the [translate](arkts-arkui-commonmethod-c.md#translate) attribute of the child component.  
 > During the pull-down process, the  
-> [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange-1) event of the child  
+> [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event of the child  
 > component is not triggered, and any changes made to the  
-> [translate](arkts-arkui-commonmethod-c.md#translate-1) attribute of the child component do not take  
+> [translate](arkts-arkui-commonmethod-c.md#translate) attribute of the child component do not take  
 > effect.  
 >  
 > - When **builder** or **refreshingContent** is set, the pull-down displacement effect is implemented by adjusting  
 > the position of the child component relative to the **Refresh** component. During the pull-down process, the  
-> [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange-1) event of the child  
-> component can be triggered. However, if the [position](arkts-arkui-commonmethod-c.md#position-1) attribute is set for the child  
+> [onAreaChange](arkts-arkui-commonmethod-c.md#onareachange) event of the child  
+> component can be triggered. However, if the [position](arkts-arkui-commonmethod-c.md#position) attribute is set for the child  
 > component, the position of the child component relative to the **Refresh** component is fixed, preventing the child  
 > component from moving down with the pull gesture.  
 >  
@@ -39,7 +38,7 @@ Defines the options of the **Refresh** component.
 builder?: CustomBuilder
 ```
 
-Custom content in the refreshing area.NOTE In API version 10 and earlier versions, there is a height limit of 64 vp on custom components. This restriction is removed since API version 11.When a custom component is set with a fixed height, it will be displayed below the refreshing area at that fixed height; when the custom component does not have a height set, its height will adapt to the height of the refreshing area, which may result in the height of the custom component changing to 0 along with the refreshing area. To maintain the intended layout, configure a minimum height constraint for a custom component, which ensures that the component's height does not fall below a certain threshold. For details about how to apply this constraint, see [Example 3](docroot://reference/apis-arkui/arkui-ts/ts-container-refresh.md#example-3-customizing-the-refreshing-area-content-with-builder).Since API version 12, use **refreshingContent** instead of **builder** for customizing the content of the refreshing area, to avoid animation interruptions caused by the destruction and re-creation of the custom component during the refreshing process.
+Custom content in the refreshing area.NOTE In API version 10 and earlier versions, there is a height limit of 64 vp on custom components. This restriction is removed since API version 11.When a custom component is set with a fixed height, it will be displayed below the refreshing area at that fixed height; when the custom component does not have a height set, its height will adapt to the height of the refreshing area, which may result in the height of the custom component changing to 0 along with the refreshing area. To maintain the intended layout, configure a minimum height constraint for a custom component, which ensures that the component's height does not fall below a certain threshold. For details about how to apply this constraint, see [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#example-3-customizing-the-refreshing-area-content-with-builder).Since API version 12, use **refreshingContent** instead of **builder** for customizing the content of the refreshing area, to avoid animation interruptions caused by the destruction and re-creation of the custom component during the refreshing process.
 
 **Type:** CustomBuilder
 
@@ -139,7 +138,7 @@ Whether the component is being refreshed. The value **true** means that the comp
 refreshingContent?: ComponentContent
 ```
 
-Custom content in the refreshing area.NOTE If this parameter and the **builder** parameter are set at the same time, the **builder** parameter does not take effect.When a custom component is set with a fixed height, it will be displayed below the refreshing area at that fixed height; when the custom component does not have a height set, its height will adapt to the height of the refreshing area, which may result in the height of the custom component changing to 0 along with the refreshing area. To maintain the intended layout, configure a minimum height constraint for a custom component, which ensures that the component's height does not fall below a certain threshold. For details about how to apply this constraint, see [Example 4](docroot://reference/apis-arkui/arkui-ts/ts-container-refresh.md#example-4-customizing-the-refreshing-area-content-with-refreshingcontent).
+Custom content in the refreshing area.NOTE If this parameter and the **builder** parameter are set at the same time, the **builder** parameter does not take effect.When a custom component is set with a fixed height, it will be displayed below the refreshing area at that fixed height; when the custom component does not have a height set, its height will adapt to the height of the refreshing area, which may result in the height of the custom component changing to 0 along with the refreshing area. To maintain the intended layout, configure a minimum height constraint for a custom component, which ensures that the component's height does not fall below a certain threshold. For details about how to apply this constraint, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#example-4-customizing-the-refreshing-area-content-with-refreshingcontent).
 
 **Type:** ComponentContent
 

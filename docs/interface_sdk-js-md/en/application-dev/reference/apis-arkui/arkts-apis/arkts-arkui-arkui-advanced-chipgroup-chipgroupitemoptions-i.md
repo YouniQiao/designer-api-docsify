@@ -1,7 +1,6 @@
 # ChipGroupItemOptions
 
 Defines the specific attributes of individual chips.
-
 > **NOTE**  
 >  
 > If **suffixIcon** is specified, **allowClose** has no effect.

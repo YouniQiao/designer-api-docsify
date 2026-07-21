@@ -6,19 +6,17 @@
 import { request } from '@kit.BasicServicesKit';
 ```
 
-<a id="uploadfile"></a>
 ## uploadFile
 
 ```TypeScript
 function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 ```
 
-Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'|'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>))to obtain the upload success or error information.
-
+Uploads a file. This API uses an asynchronous callback to return the result. HTTP is supported. You can use [on('complete'|'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;))to obtain the upload success or error information.
 > **NOTE**  
 >  
 > For details about how to obtain the context in the example, see  
-> [Obtaining the Context of UIAbility](docroot://application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 9
@@ -76,19 +74,17 @@ try {
 ```
 
 
-<a id="uploadfile-1"></a>
 ## uploadFile
 
 ```TypeScript
 function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>
 ```
 
-Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'|'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>))to obtain the upload success or error information.
-
+Uploads a file. This API uses a promise to return the result. HTTP is supported. You can use [on('complete'|'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;))to obtain the upload success or error information.
 > **NOTE**  
 >  
 > For details about how to obtain the context in the example, see  
-> [Obtaining the Context of UIAbility](docroot://application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 9

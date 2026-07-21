@@ -6,7 +6,6 @@
 import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="offreadingscreenpermissionlistener"></a>
 ## offReadingScreenPermissionListener
 
 ```TypeScript

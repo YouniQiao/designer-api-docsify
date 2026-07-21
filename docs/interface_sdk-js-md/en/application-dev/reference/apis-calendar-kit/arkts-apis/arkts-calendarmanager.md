@@ -26,17 +26,17 @@ import { calendarManager } from '@kit.CalendarKit';
 
 | Name | Description |
 | --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | Implements an event filter.  You can use [filterById()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbyid-1),[filterByTime()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbytime-1),[filterByTitle()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbytitle-1) to obtain an event filter, and then pass the filter in getEvents() for filtering. |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | Implements an event filter.  You can use [filterById()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbyid),[filterByTime()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbytime),[filterByTitle()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbytitle) to obtain an event filter, and then pass the filter in getEvents() for filtering. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
 | [Attendee](arkts-calendar-calendarmanager-attendee-i.md) | Describes the attendees in a meeting. |
-| [Calendar](arkts-calendar-calendarmanager-calendar-i.md) | In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar-1) or [getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getcalendar-1) to obtain  a **Calendar** object before calling related APIs. |
+| [Calendar](arkts-calendar-calendarmanager-calendar-i.md) | In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or [getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getcalendar) to obtain  a **Calendar** object before calling related APIs. |
 | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Describes the calendar account information. |
 | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Describes the calendar configuration information. |
-| [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) | Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager-1) to obtain a **CalendarManager** object first. |
+| [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) | Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager) to obtain a **CalendarManager** object first. |
 | [Event](arkts-calendar-calendarmanager-event-i.md) | Describes an **Event** object, including the event title, start time, and end time. |
 | [EventService](arkts-calendar-calendarmanager-eventservice-i.md) | Describes the event service. |
 | [Location](arkts-calendar-calendarmanager-location-i.md) | Describes the event location. |

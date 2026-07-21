@@ -6,7 +6,6 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
-<a id="getremoteprofileuuids"></a>
 ## getRemoteProfileUuids
 
 ```TypeScript
@@ -62,7 +61,6 @@ try {
 ```
 
 
-<a id="getremoteprofileuuids-1"></a>
 ## getRemoteProfileUuids
 
 ```TypeScript

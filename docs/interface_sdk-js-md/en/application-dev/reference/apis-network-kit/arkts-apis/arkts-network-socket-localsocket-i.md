@@ -14,7 +14,6 @@ Defines a LocalSocket connection.
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="bind"></a>
 ## bind
 
 ```TypeScript
@@ -72,7 +71,6 @@ client.bind(address).then(() => {
 
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -114,7 +112,6 @@ client.close().then(() => {
 
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -177,7 +174,6 @@ client.connect(connectOpt).then(() => {
 
 ```
 
-<a id="getextraoptions"></a>
 ## getExtraOptions
 
 ```TypeScript
@@ -235,7 +231,6 @@ client.connect(connectOpt).then(() => {
 
 ```
 
-<a id="getlocaladdress"></a>
 ## getLocalAddress
 
 ```TypeScript
@@ -292,7 +287,6 @@ client.bind(address).then(() => {
 
 ```
 
-<a id="getsocketfd"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -344,7 +338,6 @@ client.getSocketFd().then((data: number) => {
 
 ```
 
-<a id="getstate"></a>
 ## getState
 
 ```TypeScript
@@ -396,7 +389,6 @@ client.connect(connectOpt).then(() => {
 
 ```
 
-<a id="off"></a>
 ## off('message')
 
 ```TypeScript
@@ -445,7 +437,6 @@ client.off('message');
 
 ```
 
-<a id="off-1"></a>
 ## off('connect')
 
 ```TypeScript
@@ -489,7 +480,6 @@ client.off('connect');
 
 ```
 
-<a id="off-2"></a>
 ## off('close')
 
 ```TypeScript
@@ -533,7 +523,6 @@ client.off('close');
 
 ```
 
-<a id="off-3"></a>
 ## off('error')
 
 ```TypeScript
@@ -577,7 +566,6 @@ client.off('error');
 
 ```
 
-<a id="on"></a>
 ## on('message')
 
 ```TypeScript
@@ -623,7 +611,6 @@ client.on('message', (value: socket.LocalSocketMessageInfo) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('connect')
 
 ```TypeScript
@@ -663,7 +650,6 @@ client.on('connect', () => {
 
 ```
 
-<a id="on-2"></a>
 ## on('close')
 
 ```TypeScript
@@ -704,7 +690,6 @@ client.on('close', callback);
 
 ```
 
-<a id="on-3"></a>
 ## on('error')
 
 ```TypeScript
@@ -744,7 +729,6 @@ client.on('error', (err: Object) => {
 
 ```
 
-<a id="send"></a>
 ## send
 
 ```TypeScript
@@ -812,7 +796,6 @@ client.send(sendOpt).then(() => {
 
 ```
 
-<a id="setextraoptions"></a>
 ## setExtraOptions
 
 ```TypeScript

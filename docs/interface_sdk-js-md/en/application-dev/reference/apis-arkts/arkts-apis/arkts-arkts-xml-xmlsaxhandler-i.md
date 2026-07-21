@@ -14,7 +14,6 @@ A simple API for XML handling
 import { xml } from '@kit.ArkTS';
 ```
 
-<a id="characters"></a>
 ## characters
 
 ```TypeScript
@@ -39,7 +38,6 @@ CallBack function triggered by the text content
 | --- | --- | --- | --- |
 | content | string | Yes | literal content |
 
-<a id="enddocument"></a>
 ## endDocument
 
 ```TypeScript
@@ -58,7 +56,6 @@ CallBack function triggered at the end of the document
 
 **System capability:** SystemCapability.Utils.Lang
 
-<a id="endelement"></a>
 ## endElement
 
 ```TypeScript
@@ -85,7 +82,6 @@ CallBack function triggered at the end of the element
 | namespaceURI | string \| undefined | Yes | URI of the namespace |
 | qName | string \| undefined | Yes | Fully qualified name with namespace |
 
-<a id="startdocument"></a>
 ## startDocument
 
 ```TypeScript
@@ -104,7 +100,6 @@ CallBack function triggered at the beginning of the document
 
 **System capability:** SystemCapability.Utils.Lang
 
-<a id="startelement"></a>
 ## startElement
 
 ```TypeScript

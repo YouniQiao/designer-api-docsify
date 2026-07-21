@@ -6,7 +6,6 @@
 import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="offpickupchange"></a>
 ## offPickupChange
 
 ```TypeScript

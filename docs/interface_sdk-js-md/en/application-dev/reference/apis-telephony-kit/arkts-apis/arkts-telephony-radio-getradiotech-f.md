@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="getradiotech"></a>
 ## getRadioTech
 
 ```TypeScript
@@ -42,7 +41,6 @@ Obtains radio access technology (RAT) of the registered network. The system retu
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
 
-<a id="getradiotech-1"></a>
 ## getRadioTech
 
 ```TypeScript

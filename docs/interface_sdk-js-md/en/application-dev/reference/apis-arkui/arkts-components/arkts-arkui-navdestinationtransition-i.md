@@ -80,7 +80,7 @@ Default value: **1000** (in milliseconds)
 event: Callback<void>
 ```
 
-Closure function specifying the transition animation. The system generates the corresponding transition animation based on the modifications to the component's UI state within the closure. For details, see **event** in [animateTo](docroot://reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto).
+Closure function specifying the transition animation. The system generates the corresponding transition animation based on the modifications to the component's UI state within the closure. For details, see **event** in [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto).
 
 **Type:** Callback&lt;void&gt;
 

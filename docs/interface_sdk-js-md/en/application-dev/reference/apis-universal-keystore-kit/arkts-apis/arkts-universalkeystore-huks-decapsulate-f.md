@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="decapsulate"></a>
 ## decapsulate
 
 ```TypeScript
@@ -18,9 +17,7 @@ Decapsulates a post-quantum cryptography key. This operation can be managed by H
 
 **Since:** 26.0.0
 
-<!--Device-huks-function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Array,
-      sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Array,
-      sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>-End-->
+<!--Device-huks-function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Array,      sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function decapsulate(keyAlias: string, params: HuksParam[], encapData: Uint8Array,      sharedKeyAlias?: string, sharedKeyParams?:  HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 

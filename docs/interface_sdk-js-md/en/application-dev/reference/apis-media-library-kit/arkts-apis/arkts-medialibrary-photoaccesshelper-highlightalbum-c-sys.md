@@ -16,7 +16,6 @@ Provides APIs for managing the **Highlights** album, which is an automatically g
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -68,7 +67,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="deletehighlightalbums"></a>
 ## deleteHighlightAlbums
 
 ```TypeScript
@@ -139,7 +137,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="gethighlightalbuminfo"></a>
 ## getHighlightAlbumInfo
 
 ```TypeScript
@@ -209,7 +206,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="gethighlightresource"></a>
 ## getHighlightResource
 
 ```TypeScript
@@ -277,7 +273,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="sethighlightuseractiondata"></a>
 ## setHighlightUserActionData
 
 ```TypeScript
@@ -345,7 +340,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ```
 
-<a id="setsubtitle"></a>
 ## setSubTitle
 
 ```TypeScript
@@ -359,7 +353,7 @@ The subtitle must meet the following requirements:
 - The total length of the subtitle must be between 0 and 255 characters.  
 - It must not contain any invalid characters, which are:
 
-. \ / : * ? " ' ` < > | { } [ ]
+. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 - The characters are case insensitive.
 

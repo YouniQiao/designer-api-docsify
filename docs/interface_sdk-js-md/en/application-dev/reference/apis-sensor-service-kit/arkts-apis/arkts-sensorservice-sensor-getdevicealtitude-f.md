@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="getdevicealtitude"></a>
 ## getDeviceAltitude
 
 ```TypeScript
@@ -61,7 +60,6 @@ try {
 ```
 
 
-<a id="getdevicealtitude-1"></a>
 ## getDeviceAltitude
 
 ```TypeScript

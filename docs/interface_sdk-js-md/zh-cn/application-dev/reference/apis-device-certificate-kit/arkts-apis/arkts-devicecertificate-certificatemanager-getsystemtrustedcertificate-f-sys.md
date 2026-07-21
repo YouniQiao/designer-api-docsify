@@ -6,7 +6,6 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
-<a id="getsystemtrustedcertificate"></a>
 ## getSystemTrustedCertificate
 
 ```TypeScript
@@ -31,7 +30,7 @@ function getSystemTrustedCertificate(certUri: string): Promise<CMResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| certUri | string | 是 | 表示证书的唯一标识符。可通过[getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist-1)接口获取。 |
+| certUri | string | 是 | 表示证书的唯一标识符。可通过[getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist)接口获取。 |
 
 **返回值：**
 

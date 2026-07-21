@@ -14,7 +14,6 @@ Provides APIs to compare rational numbers and obtain numerators and denominators
 import { util } from '@kit.ArkTS';
 ```
 
-<a id="compare"></a>
 ## compare
 
 ```TypeScript
@@ -43,7 +42,6 @@ Compares the current RationalNumber object to the given object.
 | --- | --- |
 | number | Returns 0 or 1, or -1, depending on the comparison. |
 
-<a id="compareto"></a>
 ## compareTo
 
 ```TypeScript
@@ -74,7 +72,6 @@ Compares the current RationalNumber object to the given object.
 | --- | --- |
 | number | Returns 0 or 1, or -1, depending on the comparison. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -87,7 +84,7 @@ A constructor used to create a **RationalNumber** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [parseRationalNumber](arkts-arkts-util-rationalnumber-c.md#parserationalnumber-1)
+**Substitutes:** [parseRationalNumber](arkts-arkts-util-rationalnumber-c.md#parserationalnumber)
 
 <!--Device-RationalNumber-constructor(numerator: number, denominator: number)--><!--Device-RationalNumber-constructor(numerator: number, denominator: number)-End-->
 
@@ -107,7 +104,6 @@ let rationalNumber = new util.RationalNumber(1,2);
 
 ```
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -131,7 +127,6 @@ let rationalNumber = new util.RationalNumber();
 
 ```
 
-<a id="createrationalfromstring"></a>
 ## createRationalFromString
 
 ```TypeScript
@@ -139,7 +134,6 @@ static createRationalFromString(rationalString: string): RationalNumber
 ```
 
 Creates a **RationalNumber** object based on the given string.
-
 > **NOTE**  
 >  
 > The **rationalString** parameter must be a string. If a decimal string is passed in, the function is not  
@@ -173,7 +167,6 @@ let rational = util.RationalNumber.createRationalFromString("3/4");
 
 ```
 
-<a id="equals"></a>
 ## equals
 
 ```TypeScript
@@ -224,7 +217,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="getcommondivisor"></a>
 ## getCommonDivisor
 
 ```TypeScript
@@ -237,7 +229,7 @@ Obtains the greatest common divisor of two specified integers.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCommonFactor](arkts-arkts-util-rationalnumber-c.md#getcommonfactor-1)
+**Substitutes:** [getCommonFactor](arkts-arkts-util-rationalnumber-c.md#getcommonfactor)
 
 <!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number-End-->
 
@@ -256,7 +248,6 @@ Obtains the greatest common divisor of two specified integers.
 | --- | --- |
 | number | Greatest common divisor obtained. |
 
-<a id="getcommonfactor"></a>
 ## getCommonFactor
 
 ```TypeScript
@@ -264,7 +255,6 @@ static getCommonFactor(number1: number, number2: number): number
 ```
 
 Obtains the greatest common divisor of two specified integers.
-
 > **NOTE**  
 >  
 > The **number1** and **number2** parameters must be integers. If a decimal number is passed in, the function is  
@@ -300,7 +290,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="getdenominator"></a>
 ## getDenominator
 
 ```TypeScript
@@ -343,7 +332,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="getnumerator"></a>
 ## getNumerator
 
 ```TypeScript
@@ -386,7 +374,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="isfinite"></a>
 ## isFinite
 
 ```TypeScript
@@ -429,7 +416,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="isnan"></a>
 ## isNaN
 
 ```TypeScript
@@ -472,7 +458,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="iszero"></a>
 ## isZero
 
 ```TypeScript
@@ -515,7 +500,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="parserationalnumber"></a>
 ## parseRationalNumber
 
 ```TypeScript
@@ -523,7 +507,6 @@ static parseRationalNumber(numerator: number, denominator: number): RationalNumb
 ```
 
 Creates a **RationalNumber** instance with a given numerator and denominator.
-
 > **NOTE**  
 >  
 > The **numerator** and **denominator** parameters must be integers. If a decimal number is passed in, the  
@@ -558,7 +541,6 @@ let rationalNumber = util.RationalNumber.parseRationalNumber(1,2);
 
 ```
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -601,7 +583,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="valueof"></a>
 ## valueOf
 
 ```TypeScript

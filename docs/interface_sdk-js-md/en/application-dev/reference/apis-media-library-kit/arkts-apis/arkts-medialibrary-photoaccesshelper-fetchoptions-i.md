@@ -22,7 +22,7 @@ fetchColumns: Array<string>
 
 Names of the columns specified for query.
 
-If this parameter is left blank for photos, photos are fetched by **'uri'**, **'media_type'**, **'subtype'**, and **'display_name'** by default. An error will be thrown if [get](arkts-medialibrary-photoaccesshelper-photoasset-i.md#get-1) is used to obtain other attributes of this object.
+If this parameter is left blank for photos, photos are fetched by **'uri'**, **'media_type'**, **'subtype'**, and **'display_name'** by default. An error will be thrown if [get](arkts-medialibrary-photoaccesshelper-photoasset-i.md#get) is used to obtain other attributes of this object.
 
 Example: **fetchColumns: ['uri', 'title']**.
 

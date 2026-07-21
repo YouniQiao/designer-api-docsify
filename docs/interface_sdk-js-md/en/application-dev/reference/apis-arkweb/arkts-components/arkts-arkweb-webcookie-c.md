@@ -12,7 +12,6 @@ Defines the Web cookie.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -33,7 +32,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="savecookie"></a>
 ## saveCookie
 
 ```TypeScript
@@ -52,7 +50,6 @@ Saves the cookies.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="setcookie"></a>
 ## setCookie
 
 ```TypeScript

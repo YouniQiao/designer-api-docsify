@@ -20,7 +20,6 @@ Defines the UserFileManager class and provides functions to access the data in u
 import { userFileManager } from '@kit.CoreFileKit';
 ```
 
-<a id="createalbum"></a>
 ## createAlbum
 
 ```TypeScript
@@ -34,7 +33,7 @@ The album name must meet the following requirements:
 - The album name is a string of 1 to 255 characters.  
 - The album name cannot contain any of the following characters:
 
-. .. \ / : * ? " ' ` < > | { } [ ]
+. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 - The album name is case-insensitive.  
 - Duplicate album names are not allowed.
@@ -43,7 +42,7 @@ The album name must meet the following requirements:
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAlbumRequest](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#createalbumrequest-1)
+**Substitutes:** [createAlbumRequest](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#createalbumrequest)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -79,7 +78,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="createalbum-1"></a>
 ## createAlbum
 
 ```TypeScript
@@ -93,7 +91,7 @@ The album name must meet the following requirements:
 - The album name is a string of 1 to 255 characters.  
 - The album name cannot contain any of the following characters:
 
-. .. \ / : * ? " ' ` < > | { } [ ]
+. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 - The album name is case-insensitive.  
 - Duplicate album names are not allowed.
@@ -102,7 +100,7 @@ The album name must meet the following requirements:
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAlbumRequest](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#createalbumrequest-1)
+**Substitutes:** [createAlbumRequest](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#createalbumrequest)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -143,7 +141,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="createaudioasset"></a>
 ## createAudioAsset
 
 ```TypeScript
@@ -198,7 +195,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="createaudioasset-1"></a>
 ## createAudioAsset
 
 ```TypeScript
@@ -256,7 +252,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="createphotoasset"></a>
 ## createPhotoAsset
 
 ```TypeScript
@@ -269,7 +264,7 @@ Creates an image or video asset with the specified file name and URI. This API u
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset-5)
+**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -322,7 +317,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="createphotoasset-1"></a>
 ## createPhotoAsset
 
 ```TypeScript
@@ -335,7 +329,7 @@ Creates an image or video asset with the specified file name. This API uses an a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset-5)
+**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -379,7 +373,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="createphotoasset-2"></a>
 ## createPhotoAsset
 
 ```TypeScript
@@ -392,7 +385,7 @@ Creates an image or video asset with the specified file name and album URI. This
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset-5)
+**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -440,7 +433,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="createphotoasset-3"></a>
 ## createPhotoAsset
 
 ```TypeScript
@@ -453,7 +445,7 @@ Creates an image or video asset with the specified file name and options. This A
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset-5)
+**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -504,7 +496,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="createphotoasset-4"></a>
 ## createPhotoAsset
 
 ```TypeScript
@@ -517,7 +508,7 @@ Creates an image or video asset with the specified file name and options. This A
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset-5)
+**Substitutes:** [createAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#createasset)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -565,7 +556,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -578,7 +568,7 @@ Deletes a media file. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets-1)
+**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
 
@@ -638,7 +628,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="delete-1"></a>
 ## delete
 
 ```TypeScript
@@ -651,7 +640,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets-1)
+**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#deleteassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.READ_AUDIO and ohos.permission.WRITE_AUDIO
 
@@ -709,7 +698,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="deletealbums"></a>
 ## deleteAlbums
 
 ```TypeScript
@@ -722,7 +710,7 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [deleteAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deletealbums-1)
+**Substitutes:** [deleteAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deletealbums)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -769,7 +757,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="deletealbums-1"></a>
 ## deleteAlbums
 
 ```TypeScript
@@ -782,7 +769,7 @@ Deletes user albums. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [deleteAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deletealbums-1)
+**Substitutes:** [deleteAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deletealbums)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -834,7 +821,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getactivepeers"></a>
 ## getActivePeers
 
 ```TypeScript
@@ -880,7 +866,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getactivepeers-1"></a>
 ## getActivePeers
 
 ```TypeScript
@@ -929,7 +914,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getalbums"></a>
 ## getAlbums
 
 ```TypeScript
@@ -943,7 +927,7 @@ getAlbums(
 
 Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result.
 
-This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums-1)to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums)to obtain hidden albums.
 
 Before the operation, ensure that the albums to obtain exist.
 
@@ -951,21 +935,11 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** getAlbums
+**Substitutes:** [getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-UserFileManager-getAlbums(
-      type: AlbumType,
-      subType: AlbumSubType,
-      options: FetchOptions,
-      callback: AsyncCallback<FetchResult<Album>>
-    ): void--><!--Device-UserFileManager-getAlbums(
-      type: AlbumType,
-      subType: AlbumSubType,
-      options: FetchOptions,
-      callback: AsyncCallback<FetchResult<Album>>
-    ): void-End-->
+<!--Device-UserFileManager-getAlbums(      type: AlbumType,      subType: AlbumSubType,      options: FetchOptions,      callback: AsyncCallback<FetchResult<Album>>    ): void--><!--Device-UserFileManager-getAlbums(      type: AlbumType,      subType: AlbumSubType,      options: FetchOptions,      callback: AsyncCallback<FetchResult<Album>>    ): void-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -1019,7 +993,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getalbums-1"></a>
 ## getAlbums
 
 ```TypeScript
@@ -1028,7 +1001,7 @@ getAlbums(type: AlbumType, subType: AlbumSubType, callback: AsyncCallback<FetchR
 
 Obtains albums by type. This API uses an asynchronous callback to return the result.
 
-This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums-1)to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums)to obtain hidden albums.
 
 Before the operation, ensure that the albums to obtain exist.
 
@@ -1036,7 +1009,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** getAlbums
+**Substitutes:** [getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1085,7 +1058,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getalbums-2"></a>
 ## getAlbums
 
 ```TypeScript
@@ -1094,7 +1066,7 @@ getAlbums(type: AlbumType, subType: AlbumSubType, options?: FetchOptions): Promi
 
 Obtains albums based on the specified options and album type. This API uses a promise to return the result.
 
-This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums-1)to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums)to obtain hidden albums.
 
 Before the operation, ensure that the albums to obtain exist.
 
@@ -1102,7 +1074,7 @@ Before the operation, ensure that the albums to obtain exist.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** getAlbums
+**Substitutes:** [getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1164,7 +1136,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getallpeers"></a>
 ## getAllPeers
 
 ```TypeScript
@@ -1210,7 +1181,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getallpeers-1"></a>
 ## getAllPeers
 
 ```TypeScript
@@ -1260,7 +1230,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getaudioassets"></a>
 ## getAudioAssets
 
 ```TypeScript
@@ -1324,7 +1293,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getaudioassets-1"></a>
 ## getAudioAssets
 
 ```TypeScript
@@ -1393,7 +1361,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getphotoalbums"></a>
 ## getPhotoAlbums
 
 ```TypeScript
@@ -1402,15 +1369,15 @@ getPhotoAlbums(options: AlbumFetchOptions, callback: AsyncCallback<FetchResult<A
 
 Obtains image and video albums. This API uses an asynchronous callback to return the result.
 
-This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums-1)to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums)to obtain hidden albums.
 
-This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums-1)instead.
+This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums)instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums-1)
+**Substitutes:** [getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1465,7 +1432,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getphotoalbums-1"></a>
 ## getPhotoAlbums
 
 ```TypeScript
@@ -1474,15 +1440,15 @@ getPhotoAlbums(options: AlbumFetchOptions): Promise<FetchResult<Album>>
 
 Obtains albums. This API uses a promise to return the result.
 
-This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums-1)to obtain hidden albums.
+This API cannot be used to obtain hidden albums. Use [getHiddenAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#gethiddenalbums)to obtain hidden albums.
 
-This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums-1)instead.
+This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums)instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums-1)
+**Substitutes:** [getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1535,7 +1501,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getphotoassets"></a>
 ## getPhotoAssets
 
 ```TypeScript
@@ -1548,7 +1513,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)
+**Substitutes:** [getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1601,7 +1566,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getphotoassets-1"></a>
 ## getPhotoAssets
 
 ```TypeScript
@@ -1614,7 +1578,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)
+**Substitutes:** [getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1672,7 +1636,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getphotoindex"></a>
 ## getPhotoIndex
 
 ```TypeScript
@@ -1685,7 +1648,7 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getPhotoIndex](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getphotoindex-1)
+**Substitutes:** [getPhotoIndex](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getphotoindex)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1752,7 +1715,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getphotoindex-1"></a>
 ## getPhotoIndex
 
 ```TypeScript
@@ -1765,7 +1727,7 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getPhotoIndex](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getphotoindex-1)
+**Substitutes:** [getPhotoIndex](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#getphotoindex)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1840,7 +1802,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getprivatealbum"></a>
 ## getPrivateAlbum
 
 ```TypeScript
@@ -1849,13 +1810,13 @@ getPrivateAlbum(type: PrivateAlbumType, callback: AsyncCallback<FetchResult<Priv
 
 Obtains the system album. This API uses an asynchronous callback to return the result.
 
-This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums-1)instead.
+This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums)instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** getAlbums
+**Substitutes:** [getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1897,7 +1858,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="getprivatealbum-1"></a>
 ## getPrivateAlbum
 
 ```TypeScript
@@ -1906,13 +1866,13 @@ getPrivateAlbum(type: PrivateAlbumType): Promise<FetchResult<PrivateAlbum>>
 
 Obtains the private album. This API uses a promise to return the result.
 
-This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums-1)instead.
+This API will be deprecated. Use [getAlbums](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getalbums)instead.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** getAlbums
+**Substitutes:** [getAlbums](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getalbums)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1958,7 +1918,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -2023,7 +1982,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -2036,7 +1994,7 @@ Unregisters the listener for the specified URI. Multiple callbacks can be regist
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** unregisterChange
+**Substitutes:** [unregisterChange](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#unregisterchange)
 
 <!--Device-UserFileManager-off(uri: string, callback?: Callback<ChangeData>): void--><!--Device-UserFileManager-off(uri: string, callback?: Callback<ChangeData>): void-End-->
 
@@ -2101,7 +2059,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -2164,7 +2121,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="on-1"></a>
 ## on
 
 ```TypeScript
@@ -2177,7 +2133,7 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [registerChange](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#registerchange-1)
+**Substitutes:** [registerChange](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#registerchange)
 
 <!--Device-UserFileManager-on(uri: string, forSubUri: boolean, callback: Callback<ChangeData>): void--><!--Device-UserFileManager-on(uri: string, forSubUri: boolean, callback: Callback<ChangeData>): void-End-->
 
@@ -2242,7 +2198,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -2257,7 +2212,7 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [release](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#release-1)
+**Substitutes:** [release](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#release)
 
 <!--Device-UserFileManager-release(callback: AsyncCallback<void>): void--><!--Device-UserFileManager-release(callback: AsyncCallback<void>): void-End-->
 
@@ -2289,7 +2244,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript
@@ -2304,7 +2258,7 @@ Call this API when the APIs in the **UserFileManager** instance are no longer us
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [release](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#release-1)
+**Substitutes:** [release](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#release)
 
 <!--Device-UserFileManager-release(): Promise<void>--><!--Device-UserFileManager-release(): Promise<void>-End-->
 

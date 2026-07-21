@@ -6,7 +6,6 @@
 import { contact } from '@kit.ContactsKit';
 ```
 
-<a id="querymycard"></a>
 ## queryMyCard
 
 ```TypeScript
@@ -19,7 +18,7 @@ Queries my card. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryMyCard(context:](arkts-contacts-contact-querymycard-f.md#querymycard-1)
+**Substitutes:** [queryMyCard(context:](arkts-contacts-contact-querymycard-f.md#querymycard)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -51,7 +50,6 @@ contact.queryMyCard((err: BusinessError, data) => {
 ```
 
 
-<a id="querymycard-1"></a>
 ## queryMyCard
 
 ```TypeScript
@@ -104,7 +102,6 @@ In the sample code provided in this topic, this.context is used to obtain UIAbil
 ```
 
 
-<a id="querymycard-2"></a>
 ## queryMyCard
 
 ```TypeScript
@@ -117,7 +114,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryMyCard(context:](arkts-contacts-contact-querymycard-f.md#querymycard-1)
+**Substitutes:** [queryMyCard(context:](arkts-contacts-contact-querymycard-f.md#querymycard)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -152,7 +149,6 @@ contact.queryMyCard({
 ```
 
 
-<a id="querymycard-3"></a>
 ## queryMyCard
 
 ```TypeScript
@@ -208,7 +204,6 @@ In the sample code provided in this topic, this.context is used to obtain UIAbil
 ```
 
 
-<a id="querymycard-4"></a>
 ## queryMyCard
 
 ```TypeScript
@@ -221,7 +216,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryMyCard(context:](arkts-contacts-contact-querymycard-f.md#querymycard-1)
+**Substitutes:** [queryMyCard(context:](arkts-contacts-contact-querymycard-f.md#querymycard)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -257,7 +252,6 @@ promise.then((data) => {
 ```
 
 
-<a id="querymycard-5"></a>
 ## queryMyCard
 
 ```TypeScript

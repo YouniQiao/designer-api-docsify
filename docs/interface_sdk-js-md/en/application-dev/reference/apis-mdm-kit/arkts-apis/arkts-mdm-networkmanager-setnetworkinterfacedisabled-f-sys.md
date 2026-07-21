@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="setnetworkinterfacedisabled"></a>
 ## setNetworkInterfaceDisabled
 
 ```TypeScript
@@ -19,7 +18,7 @@ Disables a network interface. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-setnetworkinterfacedisabledsync-f.md#setnetworkinterfacedisabledsync-1)
+**Substitutes:** [setNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-setnetworkinterfacedisabledsync-f.md#setnetworkinterfacedisabledsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_NETWORK
 
@@ -74,7 +73,6 @@ networkManager.setNetworkInterfaceDisabled(wantTemp, 'eth0', true, (err) => {
 ```
 
 
-<a id="setnetworkinterfacedisabled-1"></a>
 ## setNetworkInterfaceDisabled
 
 ```TypeScript
@@ -87,7 +85,7 @@ Disables a network interface. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-setnetworkinterfacedisabledsync-f.md#setnetworkinterfacedisabledsync-1)
+**Substitutes:** [setNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-setnetworkinterfacedisabledsync-f.md#setnetworkinterfacedisabledsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_NETWORK
 

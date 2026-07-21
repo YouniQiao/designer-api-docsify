@@ -6,7 +6,6 @@
 import { deviceSettings } from '@kit.MDMKit';
 ```
 
-<a id="getscreenofftime"></a>
 ## getScreenOffTime
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the device screen-off time. This API uses an asynchronous callback to re
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue-1)
+**Substitutes:** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_SETTINGS
 
@@ -71,7 +70,6 @@ deviceSettings.getScreenOffTime(wantTemp, (err, result) => {
 ```
 
 
-<a id="getscreenofftime-1"></a>
 ## getScreenOffTime
 
 ```TypeScript
@@ -84,7 +82,7 @@ Obtains the device screen-off time. This API uses an asynchronous promise to ret
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue-1)
+**Substitutes:** [getValue](arkts-mdm-devicesettings-getvalue-f.md#getvalue)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_SETTINGS
 

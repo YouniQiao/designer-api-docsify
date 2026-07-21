@@ -16,7 +16,6 @@ Provides utilities for ECC key parameter generation and point conversion based o
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
-<a id="convertpoint"></a>
 ## convertPoint
 
 ```TypeScript
@@ -24,7 +23,6 @@ static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 ```
 
 Converts the specified point data into a **Point** object based on the curve name (NID). Currently, compressed and uncompressed point data is supported.
-
 > **NOTE**  
 >  
 > According to section 2.2 in RFC 5480:  
@@ -77,14 +75,13 @@ console.info('returnPoint: ' + returnPoint.x.toString(16));
 
 ```
 
-<a id="genecccommonparamsspec"></a>
 ## genECCCommonParamsSpec
 
 ```TypeScript
 static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec
 ```
 
-Generates common parameters for an asymmetric key pair based on the specified name identifier (NID) of an elliptic curve. For details, see [ECC](docroot://security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#ecc) and [SM2](docroot://security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#sm2).
+Generates common parameters for an asymmetric key pair based on the specified name identifier (NID) of an elliptic curve. For details, see [ECC](../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#ecc) and [SM2](../../../security/CryptoArchitectureKit/crypto-asym-key-generation-conversion-spec.md#sm2).
 
 **Since:** 11
 
@@ -131,7 +128,6 @@ try {
 
 ```
 
-<a id="getencodedpoint"></a>
 ## getEncodedPoint
 
 ```TypeScript

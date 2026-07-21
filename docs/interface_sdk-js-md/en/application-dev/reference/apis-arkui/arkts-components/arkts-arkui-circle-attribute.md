@@ -10,7 +10,6 @@ In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the fo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="fill"></a>
 ## fill
 
 ```TypeScript
@@ -35,7 +34,6 @@ Sets the color of the fill area.An invalid value is handled as the default value
 | --- | --- | --- | --- |
 | value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics | Yes | Color of the fill area<br>Default value : Color.Black. |
 
-<a id="stroke"></a>
 ## stroke
 
 ```TypeScript

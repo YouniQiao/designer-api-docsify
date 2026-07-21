@@ -10,7 +10,6 @@
 
 **System capability:** SystemCapability.Ability.Form
 
-<a id="connectserviceextensionability"></a>
 ## connectServiceExtensionAbility
 
 ```TypeScript
@@ -51,7 +50,6 @@ Connect a service extension ability.The destination of the connection must be a 
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501011](../errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
 
-<a id="disconnectserviceextensionability"></a>
 ## disconnectServiceExtensionAbility
 
 ```TypeScript

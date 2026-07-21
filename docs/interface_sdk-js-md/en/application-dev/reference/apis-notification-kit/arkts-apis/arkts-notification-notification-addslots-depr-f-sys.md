@@ -1,6 +1,5 @@
 # addSlots (System API)
 
-<a id="addslots"></a>
 ## addSlots
 
 ```TypeScript
@@ -31,7 +30,6 @@ Adds an array of notification slots. This API uses an asynchronous callback to r
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="addslots-1"></a>
 ## addSlots
 
 ```TypeScript

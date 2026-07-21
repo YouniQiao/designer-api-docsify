@@ -1,7 +1,6 @@
 # NotificationSorting (System API)
 
 The **NotificationSorting** module provides APIs for defining the sorting information of active notifications.
-
 > **NOTE**  
 >  
 > The APIs provided by this module are system APIs.

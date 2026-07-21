@@ -12,7 +12,6 @@ Spring animation model. You can build a spring animation based on the start poin
 
 **System API:** This is a system API.
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

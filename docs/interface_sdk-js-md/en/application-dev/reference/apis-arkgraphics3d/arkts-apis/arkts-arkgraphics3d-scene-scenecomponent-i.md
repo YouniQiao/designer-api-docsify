@@ -37,9 +37,7 @@ Component properties
 
 **Since:** 20
 
-<!--Device-SceneComponent-readonly property: Record<string, string | double | Vec2 | Vec3 | Vec4 | SceneResource | boolean | double[] |
-  string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>--><!--Device-SceneComponent-readonly property: Record<string, string | double | Vec2 | Vec3 | Vec4 | SceneResource | boolean | double[] |
-  string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>-End-->
+<!--Device-SceneComponent-readonly property: Record<string, string | double | Vec2 | Vec3 | Vec4 | SceneResource | boolean | double[] |  string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>--><!--Device-SceneComponent-readonly property: Record<string, string | double | Vec2 | Vec3 | Vec4 | SceneResource | boolean | double[] |  string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

@@ -6,7 +6,6 @@
 import { childProcessManager } from '@kit.AbilityKit';
 ```
 
-<a id="isnativechildprocesssupported"></a>
 ## isNativeChildProcessSupported
 
 ```TypeScript

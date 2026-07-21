@@ -1,6 +1,6 @@
 # InputMethodController
 
-A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller-1).
+A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller).
 
 **Since:** 6
 
@@ -14,7 +14,6 @@ A control class that encapsulates APIs for input method management, which can on
 import { inputMethod } from '@kit.IMEKit';
 ```
 
-<a id="hidesoftkeyboard"></a>
 ## hideSoftKeyboard
 
 ```TypeScript
@@ -22,7 +21,6 @@ hideSoftKeyboard(displayId: number): Promise<void>
 ```
 
 Hides the soft keyboard on a specified screen. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to  
@@ -75,7 +73,6 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 
 ```
 
-<a id="showsoftkeyboard"></a>
 ## showSoftKeyboard
 
 ```TypeScript
@@ -83,7 +80,6 @@ showSoftKeyboard(displayId: number): Promise<void>
 ```
 
 Shows the soft keyboard on a specified screen. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API can be called only when the edit box is attached to the input method. That is, it can be called to  

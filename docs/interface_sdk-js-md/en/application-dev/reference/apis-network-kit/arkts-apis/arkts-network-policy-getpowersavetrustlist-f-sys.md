@@ -6,7 +6,6 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-<a id="getpowersavetrustlist"></a>
 ## getPowerSaveTrustlist
 
 ```TypeScript
@@ -55,7 +54,6 @@ policy.getPowerSaveTrustlist((error: BusinessError, data: number[]) => {
 ```
 
 
-<a id="getpowersavetrustlist-1"></a>
 ## getPowerSaveTrustlist
 
 ```TypeScript

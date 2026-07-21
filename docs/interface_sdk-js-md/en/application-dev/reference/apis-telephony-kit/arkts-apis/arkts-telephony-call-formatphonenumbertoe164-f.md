@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="formatphonenumbertoe164"></a>
 ## formatPhoneNumberToE164
 
 ```TypeScript
@@ -55,7 +54,6 @@ call.formatPhoneNumberToE164("138xxxxxxxx", "CN", (err: BusinessError, data: str
 ```
 
 
-<a id="formatphonenumbertoe164-1"></a>
 ## formatPhoneNumberToE164
 
 ```TypeScript

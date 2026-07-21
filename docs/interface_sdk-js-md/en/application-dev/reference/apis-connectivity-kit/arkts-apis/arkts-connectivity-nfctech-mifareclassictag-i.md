@@ -10,7 +10,6 @@ Provides methods for accessing MifareClassic tag.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-<a id="authenticatesector"></a>
 ## authenticateSector
 
 ```TypeScript
@@ -52,7 +51,6 @@ Authenticates a sector with the key. Only successful authentication sector can b
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="authenticatesector-1"></a>
 ## authenticateSector
 
 ```TypeScript
@@ -89,7 +87,6 @@ Authenticates a sector with the key. Only successful authentication sector can b
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
 
-<a id="decrementblock"></a>
 ## decrementBlock
 
 ```TypeScript
@@ -130,7 +127,6 @@ Decreases the contents of a block, and stores the result in the internal transfe
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="decrementblock-1"></a>
 ## decrementBlock
 
 ```TypeScript
@@ -166,7 +162,6 @@ Decreases the contents of a block, and stores the result in the internal transfe
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
 
-<a id="getblockcountinsector"></a>
 ## getBlockCountInSector
 
 ```TypeScript
@@ -201,7 +196,6 @@ Gets the number of blocks in the sector.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="getblockindex"></a>
 ## getBlockIndex
 
 ```TypeScript
@@ -236,7 +230,6 @@ Gets the first block of the specific sector.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="getsectorcount"></a>
 ## getSectorCount
 
 ```TypeScript
@@ -259,7 +252,6 @@ Gets the number of sectors in MifareClassic tag.
 | --- | --- |
 | number | Returns the number of sectors. |
 
-<a id="getsectorindex"></a>
 ## getSectorIndex
 
 ```TypeScript
@@ -294,7 +286,6 @@ Gets the sector index, that the sector contains the specific block.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="gettagsize"></a>
 ## getTagSize
 
 ```TypeScript
@@ -317,7 +308,6 @@ Gets size of the tag in bytes.
 | --- | --- |
 | number | Returns the size of the tag. |
 
-<a id="gettype"></a>
 ## getType
 
 ```TypeScript
@@ -340,7 +330,6 @@ Gets the type of the MifareClassic tag.
 | --- | --- |
 | tag.MifareClassicType | Returns type of MifareClassic tag. |
 
-<a id="incrementblock"></a>
 ## incrementBlock
 
 ```TypeScript
@@ -381,7 +370,6 @@ Increments the contents of a block, and stores the result in the internal transf
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="incrementblock-1"></a>
 ## incrementBlock
 
 ```TypeScript
@@ -417,7 +405,6 @@ Increments the contents of a block, and stores the result in the internal transf
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
 
-<a id="isemulatedtag"></a>
 ## isEmulatedTag
 
 ```TypeScript
@@ -440,7 +427,6 @@ Checks if the tag is emulated or not.
 | --- | --- |
 | boolean | Returns true if tag is emulated, otherwise false. |
 
-<a id="readsingleblock"></a>
 ## readSingleBlock
 
 ```TypeScript
@@ -480,7 +466,6 @@ Reads a block, one block size is 16 bytes.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="readsingleblock-1"></a>
 ## readSingleBlock
 
 ```TypeScript
@@ -515,7 +500,6 @@ Reads a block, one block size is 16 bytes.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
 
-<a id="restorefromblock"></a>
 ## restoreFromBlock
 
 ```TypeScript
@@ -555,7 +539,6 @@ Moves the contents of a block into the internal transfer buffer.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="restorefromblock-1"></a>
 ## restoreFromBlock
 
 ```TypeScript
@@ -590,7 +573,6 @@ Moves the contents of a block into the internal transfer buffer.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
 
-<a id="transfertoblock"></a>
 ## transferToBlock
 
 ```TypeScript
@@ -630,7 +612,6 @@ Writes the contents of the internal transfer buffer to a value block.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="transfertoblock-1"></a>
 ## transferToBlock
 
 ```TypeScript
@@ -665,7 +646,6 @@ Writes the contents of the internal transfer buffer to a value block.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
 
-<a id="writesingleblock"></a>
 ## writeSingleBlock
 
 ```TypeScript
@@ -706,7 +686,6 @@ Writes a block, one block size is 16 bytes.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="writesingleblock-1"></a>
 ## writeSingleBlock
 
 ```TypeScript

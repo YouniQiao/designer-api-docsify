@@ -1,7 +1,6 @@
 # MemoryLevel
 
-Enumerates the memory levels of the entire device. You can use it in [onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onmemorylevel-1) of the UIAbility to complete different operations.
-
+Enumerates the memory levels of the entire device. You can use it in [onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onmemorylevel) of the UIAbility to complete different operations.
 > **NOTE**  
 >  
 > - The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of  

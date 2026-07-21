@@ -14,7 +14,6 @@ Defines the moving photo view interface.
 import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from '@kit.MediaLibraryKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

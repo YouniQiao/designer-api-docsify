@@ -14,7 +14,6 @@ Represents the general entry of the white-box performance test framework.It prov
 import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@kit.TestKit';
 ```
 
-<a id="create"></a>
 ## create
 
 ```TypeScript
@@ -82,7 +81,6 @@ async function demo() {
 
 ```
 
-<a id="destroy"></a>
 ## destroy
 
 ```TypeScript
@@ -131,7 +129,6 @@ async function demo() {
 
 ```
 
-<a id="getmeasureresult"></a>
 ## getMeasureResult
 
 ```TypeScript
@@ -194,7 +191,6 @@ async function demo() {
 
 ```
 
-<a id="run"></a>
 ## run
 
 ```TypeScript

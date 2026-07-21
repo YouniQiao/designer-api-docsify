@@ -6,7 +6,6 @@
 import { vpnExtension } from '@kit.NetworkKit';
 ```
 
-<a id="createvpnobserver"></a>
 ## createVpnObserver
 
 ```TypeScript

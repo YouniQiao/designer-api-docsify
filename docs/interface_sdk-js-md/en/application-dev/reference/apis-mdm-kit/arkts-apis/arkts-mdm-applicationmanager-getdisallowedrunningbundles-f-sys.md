@@ -6,7 +6,6 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
-<a id="getdisallowedrunningbundles"></a>
 ## getDisallowedRunningBundles
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains applications that are not allowed to run by the current user. This API u
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync-1)
+**Substitutes:** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 
@@ -71,7 +70,6 @@ applicationManager.getDisallowedRunningBundles(wantTemp, (err, result) => {
 ```
 
 
-<a id="getdisallowedrunningbundles-1"></a>
 ## getDisallowedRunningBundles
 
 ```TypeScript
@@ -84,7 +82,7 @@ Obtains an application from the applications that are not allowed to run by the 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync-1)
+**Substitutes:** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 
@@ -137,7 +135,6 @@ applicationManager.getDisallowedRunningBundles(wantTemp, 100, (err, result) => {
 ```
 
 
-<a id="getdisallowedrunningbundles-2"></a>
 ## getDisallowedRunningBundles
 
 ```TypeScript
@@ -150,7 +147,7 @@ Obtains applications that are not allowed to run by the current user or a specif
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync-1)
+**Substitutes:** [getDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-getdisallowedrunningbundlessync-f.md#getdisallowedrunningbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 

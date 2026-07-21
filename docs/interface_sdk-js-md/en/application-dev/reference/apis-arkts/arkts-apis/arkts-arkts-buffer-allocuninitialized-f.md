@@ -6,14 +6,13 @@
 import { buffer } from '@kit.ArkTS';
 ```
 
-<a id="allocuninitialized"></a>
 ## allocUninitialized
 
 ```TypeScript
 function allocUninitialized(size: number): Buffer
 ```
 
-Creates a **Buffer** object of the specified size, without initializing it. This API does not allocate memory from the buffer pool.You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill-1) to initialize the **Buffer** object created.
+Creates a **Buffer** object of the specified size, without initializing it. This API does not allocate memory from the buffer pool.You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created.
 
 **Since:** 9
 

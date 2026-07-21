@@ -8,7 +8,6 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="addtext"></a>
 ## addText
 
 ```TypeScript
@@ -44,7 +43,6 @@ This API does not work when the text is being dragged.
 | --- | --- |
 | number | New cursor position after insertion. |
 
-<a id="clearpreviewtext"></a>
 ## clearPreviewText
 
 ```TypeScript
@@ -63,7 +61,6 @@ Notifies the input method to clear the current preview text.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="deletebackward"></a>
 ## deleteBackward
 
 ```TypeScript
@@ -84,7 +81,6 @@ This API is not supported in preview display scenarios.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="deletetext"></a>
 ## deleteText
 
 ```TypeScript
@@ -92,7 +88,6 @@ deleteText(range?: TextRange): void
 ```
 
 Deletes text within a specified range in the editable content.
-
 > **NOTE**  
 >  
 > - This API does not work when the text is being dragged.  
@@ -116,7 +111,6 @@ Deletes text within a specified range in the editable content.
 | --- | --- | --- | --- |
 | range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Range of the text to be deleted, including the start and end positions.<br>If the range is not specified, the entire text is deleted. If the start position is not specified, deletion starts from index 0. If the end position is not specified, deletion ends at the end of the text. |
 
-<a id="getcaretoffset"></a>
 ## getCaretOffset
 
 ```TypeScript
@@ -124,7 +118,6 @@ getCaretOffset() : CaretOffset
 ```
 
 Obtains the position information of the caret.
-
 > **NOTE**  
 >  
 > - If this API is called when the caret position is updated in the current frame, it will not take effect.  
@@ -138,7 +131,7 @@ Obtains the position information of the caret.
 > - The location information in the return value is the location of the caret relative to the editable component.  
 >  
 > - If the caret position cannot be obtained (for example, when the  
-> [TextInputController](arkts-arkui-textinputcontroller-c.md) is not bound to the [TextInput](./text_input) component),  
+> [TextInputController](arkts-arkui-textinputcontroller-c.md) is not bound to the [TextInput](arkts-arkui-textinput.md) component),  
 > **null** is returned.
 
 **Since:** 11
@@ -157,7 +150,6 @@ Obtains the position information of the caret.
 | --- | --- |
 | [CaretOffset](arkts-arkui-caretoffset-i.md) | Position of the caret relative to the text box.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="getselection"></a>
 ## getSelection
 
 ```TypeScript
@@ -182,7 +174,6 @@ Obtains the current text selection range.
 | --- | --- |
 | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | Current text selection range, or cursor position if no text is selected.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="gettextcontentlinecount"></a>
 ## getTextContentLineCount
 
 ```TypeScript
@@ -207,7 +198,6 @@ Obtains the number of lines of the edited text.
 | --- | --- |
 | number | Number of lines of the edited text.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="gettextcontentrect"></a>
 ## getTextContentRect
 
 ```TypeScript
@@ -232,7 +222,6 @@ Obtains the position of the edited text area relative to the component and its s
 | --- | --- |
 | [RectResult](arkts-arkui-rectresult-i.md) | Position of the edited text area relative to the component and its size.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="scrolltovisible"></a>
 ## scrollToVisible
 
 ```TypeScript
@@ -257,7 +246,6 @@ Passes the start and end indexes to the bound text box components (**TextInput**
 | --- | --- | --- | --- |
 | range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Text range to be scrolled to the visible area, including the start and end positions.of the text.<br>The start position must be less than or equal to the end position. Otherwise, the API call is invalid. If the start position is less than 0, it is treated as the value **0**. If the end position is greater than the length of the entire text, it is treated as the length of the entire text.<br>If no range is specified,the entire text is used by default. If the start position is not specified, the default start position is 0. If the end position is not specified, the default end position is the length of the entire text. |
 
-<a id="setstyledplaceholder"></a>
 ## setStyledPlaceholder
 
 ```TypeScript

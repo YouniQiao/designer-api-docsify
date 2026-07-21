@@ -8,7 +8,6 @@ Defines the controller of the **Text** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="closeselectionmenu"></a>
 ## closeSelectionMenu
 
 ```TypeScript
@@ -27,7 +26,6 @@ Closes the custom or default text selection menu.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getlayoutmanager"></a>
 ## getLayoutManager
 
 ```TypeScript
@@ -52,7 +50,6 @@ Obtains the **LayoutManager** object.
 | --- | --- |
 | [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | **LayoutManager** object. |
 
-<a id="setstyledstring"></a>
 ## setStyledString
 
 ```TypeScript
@@ -77,7 +74,6 @@ Binds to or updates the specified styled string.
 | --- | --- | --- | --- |
 | value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string.<br>**NOTE**<br>The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
 
-<a id="settextselection"></a>
 ## setTextSelection
 
 ```TypeScript
@@ -86,7 +82,6 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 ```
 
 Sets the text selection area, which will be highlighted.
-
 > **NOTE**  
 >  
 > If [copyOption](TextAttribute#copyOption) is set to **CopyOptions.None**, the setting of  
@@ -115,9 +110,7 @@ Sets the text selection area, which will be highlighted.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-TextController-setTextSelection(selectionStart: number | undefined, selectionEnd: number | undefined,
-                   options?: SelectionOptions): void--><!--Device-TextController-setTextSelection(selectionStart: number | undefined, selectionEnd: number | undefined,
-                   options?: SelectionOptions): void-End-->
+<!--Device-TextController-setTextSelection(selectionStart: number | undefined, selectionEnd: number | undefined,                   options?: SelectionOptions): void--><!--Device-TextController-setTextSelection(selectionStart: number | undefined, selectionEnd: number | undefined,                   options?: SelectionOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

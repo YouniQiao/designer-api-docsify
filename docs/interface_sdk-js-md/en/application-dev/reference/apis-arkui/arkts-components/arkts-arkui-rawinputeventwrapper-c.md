@@ -7,15 +7,14 @@ Provides a unified interface to access different types of input events, ensuring
 This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe methods for access.
 
 This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered.
-
 > **NOTE**  
 >  
 > Since the listener is executed before events are dispatched to specific components, some fields in the event will  
 > not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md), coordinates relative to the component  
-> [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition-1)  
+> [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition)  
 > and [stopPropagation](arkts-arkui-touchevent-i.md#stoppropagation) methods, [preventDefault](arkts-arkui-touchevent-i.md#preventdefault) and  
-> [getHistoricalPoints](arkts-arkui-touchevent-i.md#gethistoricalpoints-1) methods of **TouchEvent**, as well as the [metaKey](arkts-arkui-keyevent-i.md#metakey)  
-> attribute and [getModifierKeyState](arkts-arkui-keyevent-i.md#getmodifierkeystate-1) method of **KeyEvent**.
+> [getHistoricalPoints](arkts-arkui-touchevent-i.md#gethistoricalpoints) methods of **TouchEvent**, as well as the [metaKey](arkts-arkui-keyevent-i.md#metakey)  
+> attribute and [getModifierKeyState](arkts-arkui-keyevent-i.md#getmodifierkeystate) method of **KeyEvent**.
 
 **Since:** 26.0.0
 
@@ -23,7 +22,6 @@ This class is an abstract class. Developers cannot create instances on their own
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="askeyevent"></a>
 ## asKeyEvent
 
 ```TypeScript
@@ -48,7 +46,6 @@ Obtains the key event.
 | --- | --- |
 | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Key event object if it is a key event, or **null** otherwise. |
 
-<a id="asmouseevent"></a>
 ## asMouseEvent
 
 ```TypeScript
@@ -73,7 +70,6 @@ Obtains the mouse event.
 | --- | --- |
 | [MouseEvent](arkts-arkui-mouseevent-i.md) | Mouse event object if it is a mouse event, or **null** otherwise. |
 
-<a id="astouchevent"></a>
 ## asTouchEvent
 
 ```TypeScript
@@ -98,7 +94,6 @@ Obtains the touch event.
 | --- | --- |
 | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | Touch event object if it is a touch event, or **null** otherwise. |
 
-<a id="iskeyevent"></a>
 ## isKeyEvent
 
 ```TypeScript
@@ -123,7 +118,6 @@ Checks whether the event is a key event.
 | --- | --- |
 | boolean | Whether it is a key event. Returns **true** if it is a key event, and **false** otherwise. |
 
-<a id="ismouseevent"></a>
 ## isMouseEvent
 
 ```TypeScript
@@ -148,7 +142,6 @@ Checks whether the event is a mouse event.
 | --- | --- |
 | boolean | Whether it is a mouse event. Returns **true** if it is a mouse event, and **false** otherwise. |
 
-<a id="istouchevent"></a>
 ## isTouchEvent
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # isDistributedEnabledByBundle (System API)
 
-<a id="isdistributedenabledbybundle"></a>
 ## isDistributedEnabledByBundle
 
 ```TypeScript
@@ -31,7 +30,6 @@ Obtains whether an application supports distributed notifications based on the b
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
-<a id="isdistributedenabledbybundle-1"></a>
 ## isDistributedEnabledByBundle
 
 ```TypeScript

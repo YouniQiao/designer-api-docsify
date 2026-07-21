@@ -16,7 +16,6 @@ Provides APIs for querying data in a device KV store and performing cross-device
 import { distributedKVStore } from '@kit.ArkData';
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -49,7 +48,6 @@ Obtains the value of the specified key for this device. This API uses an asynchr
 | [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
-<a id="get-1"></a>
 ## get
 
 ```TypeScript
@@ -87,7 +85,6 @@ Obtains the value of the specified key for this device. This API uses a promise 
 | [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
-<a id="get-2"></a>
 ## get
 
 ```TypeScript
@@ -95,11 +92,10 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 ```
 
 Obtains a string value that matches the specified device ID and key. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -128,7 +124,6 @@ Obtains a string value that matches the specified device ID and key. This API us
 | [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
-<a id="get-3"></a>
 ## get
 
 ```TypeScript
@@ -136,11 +131,10 @@ get(deviceId: string, key: string): Promise<boolean | string | number | number |
 ```
 
 Obtains a string value that matches the specified device ID and key. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -174,7 +168,6 @@ Obtains a string value that matches the specified device ID and key. This API us
 | [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
-<a id="getentries"></a>
 ## getEntries
 
 ```TypeScript
@@ -250,7 +243,6 @@ try {
 
 ```
 
-<a id="getentries-1"></a>
 ## getEntries
 
 ```TypeScript
@@ -326,7 +318,6 @@ try {
 
 ```
 
-<a id="getentries-2"></a>
 ## getEntries
 
 ```TypeScript
@@ -334,11 +325,10 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 ```
 
 Obtains all KV pairs that match the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -410,7 +400,6 @@ try {
 
 ```
 
-<a id="getentries-3"></a>
 ## getEntries
 
 ```TypeScript
@@ -418,11 +407,10 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 ```
 
 Obtains all KV pairs that match the specified device ID and key prefix. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -497,7 +485,6 @@ try {
 
 ```
 
-<a id="getentries-4"></a>
 ## getEntries
 
 ```TypeScript
@@ -576,7 +563,6 @@ try {
 
 ```
 
-<a id="getentries-5"></a>
 ## getEntries
 
 ```TypeScript
@@ -655,7 +641,6 @@ try {
 
 ```
 
-<a id="getentries-6"></a>
 ## getEntries
 
 ```TypeScript
@@ -663,11 +648,10 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 ```
 
 Obtains the KV pairs that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -744,7 +728,6 @@ try {
 
 ```
 
-<a id="getentries-7"></a>
 ## getEntries
 
 ```TypeScript
@@ -752,11 +735,10 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 ```
 
 Obtains the KV pairs that match the specified device ID and **Query** object. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -832,7 +814,6 @@ try {
 
 ```
 
-<a id="getresultset"></a>
 ## getResultSet
 
 ```TypeScript
@@ -917,7 +898,6 @@ try {
 
 ```
 
-<a id="getresultset-1"></a>
 ## getResultSet
 
 ```TypeScript
@@ -999,7 +979,6 @@ try {
 
 ```
 
-<a id="getresultset-2"></a>
 ## getResultSet
 
 ```TypeScript
@@ -1007,11 +986,10 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 ```
 
 Obtains a **KVStoreResultSet** object that matches the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -1071,7 +1049,6 @@ try {
 
 ```
 
-<a id="getresultset-3"></a>
 ## getResultSet
 
 ```TypeScript
@@ -1079,11 +1056,10 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
 Obtains a **KVStoreResultSet** object that matches the specified device ID and key prefix. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -1144,7 +1120,6 @@ try {
 
 ```
 
-<a id="getresultset-4"></a>
 ## getResultSet
 
 ```TypeScript
@@ -1152,11 +1127,10 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
 Obtains a **KVStoreResultSet** object that matches the specified **Query** object for this device. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -1238,7 +1212,6 @@ try {
 
 ```
 
-<a id="getresultset-5"></a>
 ## getResultSet
 
 ```TypeScript
@@ -1315,7 +1288,6 @@ try {
 
 ```
 
-<a id="getresultset-6"></a>
 ## getResultSet
 
 ```TypeScript
@@ -1323,11 +1295,10 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 ```
 
 Obtains a **KVStoreResultSet** object that matches the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -1410,7 +1381,6 @@ try {
 
 ```
 
-<a id="getresultset-7"></a>
 ## getResultSet
 
 ```TypeScript
@@ -1418,11 +1388,10 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 ```
 
 Obtains a **KVStoreResultSet** object that matches the specified device ID and **Query** object. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -1507,7 +1476,6 @@ try {
 
 ```
 
-<a id="getresultsize"></a>
 ## getResultSize
 
 ```TypeScript
@@ -1583,7 +1551,6 @@ try {
 
 ```
 
-<a id="getresultsize-1"></a>
 ## getResultSize
 
 ```TypeScript
@@ -1658,7 +1625,6 @@ try {
 
 ```
 
-<a id="getresultsize-2"></a>
 ## getResultSize
 
 ```TypeScript
@@ -1666,11 +1632,10 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 ```
 
 Obtains the number of results that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -1742,7 +1707,6 @@ try {
 
 ```
 
-<a id="getresultsize-3"></a>
 ## getResultSize
 
 ```TypeScript
@@ -1750,11 +1714,10 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 ```
 
 Obtains the number of results that match the specified device ID and **Query** object. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 

@@ -6,7 +6,6 @@
 import { accountManager } from '@kit.MDMKit';
 ```
 
-<a id="disallowaddlocalaccount"></a>
 ## disallowAddLocalAccount
 
 ```TypeScript
@@ -19,7 +18,7 @@ Disallows a device to create local user accounts. This API uses an asynchronous 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowosaccountaddition-1)
+**Substitutes:** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowosaccountaddition)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 
@@ -72,7 +71,6 @@ accountManager.disallowAddLocalAccount(wantTemp, true, (err) => {
 ```
 
 
-<a id="disallowaddlocalaccount-1"></a>
 ## disallowAddLocalAccount
 
 ```TypeScript
@@ -85,7 +83,7 @@ Disallows a device to create local user accounts. This API uses a promise to ret
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowosaccountaddition-1)
+**Substitutes:** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowosaccountaddition)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 

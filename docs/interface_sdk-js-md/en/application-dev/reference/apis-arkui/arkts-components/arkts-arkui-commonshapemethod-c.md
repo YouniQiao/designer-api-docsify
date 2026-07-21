@@ -10,7 +10,6 @@ CommonShapeMethod
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="antialias"></a>
 ## antiAlias
 
 ```TypeScript
@@ -41,7 +40,6 @@ Specifies whether anti-aliasing is enabled.
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@form@atomicservice |
 
-<a id="fill"></a>
 ## fill
 
 ```TypeScript
@@ -72,7 +70,6 @@ Sets the color of the fill area.An invalid value is handled as the default value
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@form@atomicservice |
 
-<a id="fillopacity"></a>
 ## fillOpacity
 
 ```TypeScript
@@ -103,7 +100,6 @@ Sets the opacity of the fill area.The value range is [0.0, 1.0].A value less tha
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@form@atomicservice |
 
-<a id="stroke"></a>
 ## stroke
 
 ```TypeScript
@@ -134,7 +130,6 @@ Sets the stroke color.If this attribute is not set, the component does not have 
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@form@atomicservice |
 
-<a id="strokedasharray"></a>
 ## strokeDashArray
 
 ```TypeScript
@@ -165,7 +160,6 @@ Sets stroke dashes.The value must be greater than or equal to 0. Invalid values 
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@form@atomicservice |
 
-<a id="strokedashoffset"></a>
 ## strokeDashOffset
 
 ```TypeScript
@@ -196,7 +190,6 @@ Sets the offset of the start point for drawing the stroke.An invalid value is ha
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@form@atomicservice |
 
-<a id="strokelinecap"></a>
 ## strokeLineCap
 
 ```TypeScript
@@ -227,7 +220,6 @@ Sets the cap style of the stroke.
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@form@atomicservice |
 
-<a id="strokelinejoin"></a>
 ## strokeLineJoin
 
 ```TypeScript
@@ -258,7 +250,6 @@ Sets the join style of the stroke.This attribute does not work for the Circle co
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@form@atomicservice |
 
-<a id="strokemiterlimit"></a>
 ## strokeMiterLimit
 
 ```TypeScript
@@ -289,7 +280,6 @@ Limits for drawing acute angles as bevels
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@form@atomicservice |
 
-<a id="strokeopacity"></a>
 ## strokeOpacity
 
 ```TypeScript
@@ -320,7 +310,6 @@ Sets the stroke opacity.The value range is [0.0, 1.0].A value less than 0.0 eval
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform@form@atomicservice |
 
-<a id="strokewidth"></a>
 ## strokeWidth
 
 ```TypeScript

@@ -14,7 +14,6 @@ Provides APIs for SM2 cryptographic operations.
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
-<a id="genciphertextbyspec"></a>
 ## genCipherTextBySpec
 
 ```TypeScript
@@ -52,7 +51,6 @@ Generates SM2 ciphertext in ASN.1 format.
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-crypto-operation-error) | Crypto operation error. |
 
-<a id="getciphertextspec"></a>
 ## getCipherTextSpec
 
 ```TypeScript

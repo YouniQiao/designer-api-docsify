@@ -6,7 +6,6 @@
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="querynotificationeventstats"></a>
 ## queryNotificationEventStats
 
 ```TypeScript
@@ -23,15 +22,7 @@ Queries app notification number within a specified period identified by the star
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
-<!--Device-usageStatistics-function queryNotificationEventStats(
-    begin: long,
-    end: long,
-    callback: AsyncCallback<Array<DeviceEventStats>>
-  ): void--><!--Device-usageStatistics-function queryNotificationEventStats(
-    begin: long,
-    end: long,
-    callback: AsyncCallback<Array<DeviceEventStats>>
-  ): void-End-->
+<!--Device-usageStatistics-function queryNotificationEventStats(    begin: long,    end: long,    callback: AsyncCallback<Array<DeviceEventStats>>  ): void--><!--Device-usageStatistics-function queryNotificationEventStats(    begin: long,    end: long,    callback: AsyncCallback<Array<DeviceEventStats>>  ): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -78,7 +69,6 @@ usageStatistics.queryNotificationEventStats(0, 20000000000000, (err: BusinessErr
 ```
 
 
-<a id="querynotificationeventstats-1"></a>
 ## queryNotificationEventStats
 
 ```TypeScript

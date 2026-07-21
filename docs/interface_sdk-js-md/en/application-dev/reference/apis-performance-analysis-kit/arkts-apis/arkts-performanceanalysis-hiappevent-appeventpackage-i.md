@@ -1,6 +1,6 @@
 # AppEventPackage
 
-Defines parameters of an **AppEventPackage** object. This API is used to obtain detail information about an event package, which is obtained using the [takeNext](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md#takenext-1) API.
+Defines parameters of an **AppEventPackage** object. This API is used to obtain detail information about an event package, which is obtained using the [takeNext](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md#takenext) API.
 
 **Since:** 9
 

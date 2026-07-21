@@ -14,7 +14,6 @@ Manages GATT client. Before calling an Gatt client method, you must use {@link c
 import { ble } from '@kit.ConnectivityKit';
 ```
 
-<a id="writecharacteristicvaluewithcontext"></a>
 ## writeCharacteristicValueWithContext
 
 ```TypeScript
@@ -30,9 +29,7 @@ Writes the characteristic of a BLE peripheral device with context.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-GattClientDevice-writeCharacteristicValueWithContext(
-      characteristic: BLECharacteristic, writeType: GattWriteType): Promise<GattRspContext>--><!--Device-GattClientDevice-writeCharacteristicValueWithContext(
-      characteristic: BLECharacteristic, writeType: GattWriteType): Promise<GattRspContext>-End-->
+<!--Device-GattClientDevice-writeCharacteristicValueWithContext(      characteristic: BLECharacteristic, writeType: GattWriteType): Promise<GattRspContext>--><!--Device-GattClientDevice-writeCharacteristicValueWithContext(      characteristic: BLECharacteristic, writeType: GattWriteType): Promise<GattRspContext>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

@@ -22,13 +22,13 @@ Navigates to the specified page in the application.
 
 **NOTE**
 
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use [pushPath](arkts-arkui-navpathstack-c.md#pushpath-1) instead.
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use [pushPath](arkts-arkui-navpathstack-c.md#pushpath) instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** [pushPath](arkts-arkui-navpathstack-c.md#pushpath-1)
+**Substitutes:** [pushPath](arkts-arkui-navpathstack-c.md#pushpath)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,13 +46,13 @@ Returns to the specified page. If the specified page does not exist in the stack
 
 **NOTE**
 
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use [pop](arkts-arkui-navpathstack-c.md#pop-1) instead.
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use [pop](arkts-arkui-navpathstack-c.md#pop) instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** [pop](arkts-arkui-navpathstack-c.md#pop-1)
+**Substitutes:** [pop](arkts-arkui-navpathstack-c.md#pop)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,13 +70,13 @@ Replaces the current page with another one in the application and destroys the c
 
 **NOTE**
 
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use [replacePath](arkts-arkui-navpathstack-c.md#replacepath-1) instead.
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use [replacePath](arkts-arkui-navpathstack-c.md#replacepath) instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** [replacePath](arkts-arkui-navpathstack-c.md#replacepath-1)
+**Substitutes:** [replacePath](arkts-arkui-navpathstack-c.md#replacepath)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

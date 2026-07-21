@@ -14,7 +14,6 @@ Defines the stepper attribute functions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="onchange"></a>
 ## onChange
 
 ```TypeScript
@@ -22,7 +21,6 @@ onChange(callback: (prevIndex: number, index: number) => void)
 ```
 
 Triggered when the step navigation switches by clicking [prevLabel](StepperItemAttribute#prevLabel) of the **StepperItem** component; or when clicking [nextLabel](StepperItemAttribute#nextLabel) of the current **StepperItem** component, provided that the current page is not the last **StepperItem** in the stepper and the [ItemState](../arkts-apis/arkts-arkui-arkui-advanced-toolbar-itemstate-e.md) attribute is **Normal**.
-
 > **NOTE**
 
 **Since:** 8
@@ -43,7 +41,6 @@ Triggered when the step navigation switches by clicking [prevLabel](StepperItemA
 | --- | --- | --- | --- |
 | callback | (prevIndex: number, index: number) =&gt; void | Yes | Callback triggered when the page is switched.<br/>prevIndex: Index of the step page before the switching.<br>Value range:[0, +∞).<br/>index: Index of the step page after the switching, that is, index of the previous or next page.<br>Value range: [0, +∞). |
 
-<a id="onfinish"></a>
 ## onFinish
 
 ```TypeScript
@@ -51,7 +48,6 @@ onFinish(callback: () => void)
 ```
 
 Triggered when [nextLabel](StepperItemAttribute#nextLabel) of the last [StepperItem](arkts-arkui-stepperitem.md) in the stepper is clicked and the [ItemState](../arkts-apis/arkts-arkui-arkui-advanced-toolbar-itemstate-e.md) attribute is **Normal**.
-
 > **NOTE**
 
 **Since:** 8
@@ -72,7 +68,6 @@ Triggered when [nextLabel](StepperItemAttribute#nextLabel) of the last [StepperI
 | --- | --- | --- | --- |
 | callback | () =&gt; void | Yes | Invoked when the **nextLabel** of the last **StepperItem** in the **Stepper** is clicked and the **ItemState** attribute is set to **Normal**. |
 
-<a id="onnext"></a>
 ## onNext
 
 ```TypeScript
@@ -80,7 +75,6 @@ onNext(callback: (index: number, pendingIndex: number) => void)
 ```
 
 Triggered when switching to the next step by clicking [nextLabel](StepperItemAttribute#nextLabel) of a **StepperItem**, provided that the current page is not the last **StepperItem** in the stepper and the [ItemState](../arkts-apis/arkts-arkui-arkui-advanced-toolbar-itemstate-e.md) attribute is **Normal**.
-
 > **NOTE**
 
 **Since:** 8
@@ -101,7 +95,6 @@ Triggered when switching to the next step by clicking [nextLabel](StepperItemAtt
 | --- | --- | --- | --- |
 | callback | (index: number, pendingIndex: number) =&gt; void | Yes | Callback triggered when the page is switched.<br/>index: Index of the current step page.<br/>pendingIndex: Index of the next step page. |
 
-<a id="onprevious"></a>
 ## onPrevious
 
 ```TypeScript
@@ -109,7 +102,6 @@ onPrevious(callback: (index: number, pendingIndex: number) => void)
 ```
 
 Triggered when switching to the previous step by clicking [prevLabel](StepperItemAttribute#prevLabel) of a **StepperItem**.
-
 > **NOTE**
 
 **Since:** 8
@@ -130,7 +122,6 @@ Triggered when switching to the previous step by clicking [prevLabel](StepperIte
 | --- | --- | --- | --- |
 | callback | (index: number, pendingIndex: number) =&gt; void | Yes | Callback triggered when the page is switched.<br/>index: Index of the current step page.<br/>pendingIndex: Index of the next step page. |
 
-<a id="onskip"></a>
 ## onSkip
 
 ```TypeScript
@@ -138,7 +129,6 @@ onSkip(callback: () => void)
 ```
 
 Triggered when [nextLabel](StepperItemAttribute#nextLabel) is clicked and the [StepperItem](arkts-arkui-stepperitem.md) status is **ItemState.Skip**.
-
 > **NOTE**
 
 **Since:** 8

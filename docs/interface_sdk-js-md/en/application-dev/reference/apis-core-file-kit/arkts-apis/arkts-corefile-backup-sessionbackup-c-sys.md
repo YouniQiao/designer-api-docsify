@@ -16,7 +16,6 @@ Control class for backup procedure.
 import { backup } from '@kit.CoreFileKit';
 ```
 
-<a id="appendbundles"></a>
 ## appendBundles
 
 ```TypeScript
@@ -166,7 +165,6 @@ async function appendBundles() {
 
 ```
 
-<a id="appendbundles-1"></a>
 ## appendBundles
 
 ```TypeScript
@@ -269,7 +267,6 @@ try {
 
 ```
 
-<a id="cancel"></a>
 ## cancel
 
 ```TypeScript
@@ -363,7 +360,6 @@ sessionBackup.appendBundles(backupBundles);
 
 ```
 
-<a id="cleanbundletempdir"></a>
 ## cleanBundleTempDir
 
 ```TypeScript
@@ -468,7 +464,6 @@ let sessionBackup = new backup.SessionBackup(generalCallbacks); // Create a back
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -543,7 +538,6 @@ let sessionBackup = new backup.SessionBackup(generalCallbacks); // Create a back
 
 ```
 
-<a id="getbackupdatasize"></a>
 ## getBackupDataSize
 
 ```TypeScript
@@ -694,7 +688,6 @@ Example of a JSON string returned asynchronously:
 
 ```
 
-<a id="getcompatibilityinfo"></a>
 ## getCompatibilityInfo
 
 ```TypeScript
@@ -799,7 +792,6 @@ async function getBackupCompatibilityInfo() {
 
 ```
 
-<a id="getlocalcapabilities"></a>
 ## getLocalCapabilities
 
 ```TypeScript
@@ -964,7 +956,6 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript

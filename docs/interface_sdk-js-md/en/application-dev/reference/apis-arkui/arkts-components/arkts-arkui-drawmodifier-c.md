@@ -8,7 +8,6 @@ Defined the draw modifier of node. Provides draw callbacks for the associated No
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="drawbehind"></a>
 ## drawBehind
 
 ```TypeScript
@@ -33,7 +32,6 @@ drawBehind Method. Executed before drawing associated Node.
 | --- | --- | --- | --- |
 | drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | The drawContext used to draw. |
 
-<a id="drawcontent"></a>
 ## drawContent
 
 ```TypeScript
@@ -58,7 +56,6 @@ drawContent Method. Executed when associated Node is drawing, the default drawCo
 | --- | --- | --- | --- |
 | drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | The drawContext used to draw. |
 
-<a id="drawforeground"></a>
 ## drawForeground
 
 ```TypeScript
@@ -83,7 +80,6 @@ drawforeground Method. This method is executed after drawing the associated Node
 | --- | --- | --- | --- |
 | drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | The drawContext used to draw. |
 
-<a id="drawfront"></a>
 ## drawFront
 
 ```TypeScript
@@ -108,7 +104,6 @@ drawFront Method. Executed after drawing associated Node.
 | --- | --- | --- | --- |
 | drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | The drawContext used to draw. |
 
-<a id="drawoverlay"></a>
 ## drawOverlay
 
 ```TypeScript
@@ -138,7 +133,6 @@ Custom drawing consists of five layers: Behind, Content, Front, Foreground, and 
 | --- | --- | --- | --- |
 | drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | The drawContext used to draw |
 
-<a id="invalidate"></a>
 ## invalidate
 
 ```TypeScript

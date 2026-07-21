@@ -1,6 +1,5 @@
 # read
 
-<a id="read"></a>
 ## read
 
 ```TypeScript
@@ -21,25 +20,9 @@ Reads data from a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:read](arkts-corefile-file-fs-read-f.md#read-1)
+**Substitutes:** [fs:read](arkts-corefile-fileio-read-f.md#read)
 
-<!--Device-unnamed-declare function read(
-  fd: number,
-  buffer: ArrayBuffer,
-  options?: {
-    offset?: number;
-    length?: number;
-    position?: number;
-  }
-): Promise<ReadOut>--><!--Device-unnamed-declare function read(
-  fd: number,
-  buffer: ArrayBuffer,
-  options?: {
-    offset?: number;
-    length?: number;
-    position?: number;
-  }
-): Promise<ReadOut>-End-->
+<!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): Promise<ReadOut>--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): Promise<ReadOut>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -58,7 +41,6 @@ Reads data from a file. This API uses a promise to return the result.
 | Promise&lt;ReadOut&gt; | Promise that returns the data read. |
 
 
-<a id="read-1"></a>
 ## read
 
 ```TypeScript
@@ -71,7 +53,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:read](arkts-corefile-file-fs-read-f.md#read-1)
+**Substitutes:** [fs:read](arkts-corefile-fileio-read-f.md#read)
 
 <!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void--><!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void-End-->
 
@@ -86,7 +68,6 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReadOut&gt; | Yes | Callback invoked when the data is read asynchronously. |
 
 
-<a id="read-2"></a>
 ## read
 
 ```TypeScript
@@ -108,27 +89,9 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:read](arkts-corefile-file-fs-read-f.md#read-1)
+**Substitutes:** [fs:read](arkts-corefile-fileio-read-f.md#read)
 
-<!--Device-unnamed-declare function read(
-  fd: number,
-  buffer: ArrayBuffer,
-  options: {
-    offset?: number;
-    length?: number;
-    position?: number;
-  },
-  callback: AsyncCallback<ReadOut>
-): void--><!--Device-unnamed-declare function read(
-  fd: number,
-  buffer: ArrayBuffer,
-  options: {
-    offset?: number;
-    length?: number;
-    position?: number;
-  },
-  callback: AsyncCallback<ReadOut>
-): void-End-->
+<!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: {    offset?: number;    length?: number;    position?: number;  },  callback: AsyncCallback<ReadOut>): void--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: {    offset?: number;    length?: number;    position?: number;  },  callback: AsyncCallback<ReadOut>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

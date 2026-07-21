@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="isimsswitchenabledsync"></a>
 ## isImsSwitchEnabledSync
 
 ```TypeScript

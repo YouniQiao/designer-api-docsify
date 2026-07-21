@@ -1,7 +1,6 @@
 # GridRowDirection
 
 Grid element arrangement direction.
-
 > **NOTE**  
 >  
 > - Grid elements can be arranged only in the **Row** or **RowReverse** direction, but not in the **Column** or  
@@ -19,7 +18,7 @@ Grid element arrangement direction.
 >  
 > - Example: Item1: GridCol({ span: 6 }), Item2: GridCol({ span: 8, offset:11 })  
 > >  
-> > ![figures/gridRowOffsetToNextLine.png](docroot://reference/apis-arkui/arkui-ts/figures/gridRowOffsetToNextLine.png)
+> > ![figures/gridRowOffsetToNextLine.png](../../../reference/apis-arkui/arkui-ts/figures/gridRowOffsetToNextLine.png)
 
 **Since:** 9
 

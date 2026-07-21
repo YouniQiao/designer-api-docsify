@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.MDMKit';
 ```
 
-<a id="setwifiprofile"></a>
 ## setWifiProfile
 
 ```TypeScript
@@ -19,7 +18,7 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setwifiprofilesync-1)
+**Substitutes:** [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setwifiprofilesync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_WIFI
 
@@ -78,7 +77,6 @@ wifiManager.setWifiProfile(wantTemp, profile, (err) => {
 ```
 
 
-<a id="setwifiprofile-1"></a>
 ## setWifiProfile
 
 ```TypeScript
@@ -91,7 +89,7 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setwifiprofilesync-1)
+**Substitutes:** [setWifiProfileSync](arkts-mdm-wifimanager-setwifiprofilesync-f.md#setwifiprofilesync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_WIFI
 

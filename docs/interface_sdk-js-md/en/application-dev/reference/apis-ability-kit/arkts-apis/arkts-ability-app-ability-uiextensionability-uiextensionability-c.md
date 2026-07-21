@@ -1,6 +1,6 @@
 # UIExtensionAbility
 
-UIExtensionAbility is an ExtensionAbility component with a User Interface (UI). It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md) and provides basic lifecycle capabilities such as component creation, destruction, and foreground/background switching. Unlike the UIAbility, the UIExtensionAbility does not appear as a separate mission in the mission view. The foreground/background state and visibility of the UIExtensionAbility follow those of its host window.You cannot directly inherit from the UIExtensionAbility. However, you can choose other components that inherit from UIExtensionAbility based on specific service scenarios. For example, when handling data shared from other applications, you can use the [ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md); when providing widget editing functionality, you can use the [FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md).For details about the inheritance relationship of each ability, see [Inheritance Relationship](docroot://reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship).
+UIExtensionAbility is an ExtensionAbility component with a User Interface (UI). It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md) and provides basic lifecycle capabilities such as component creation, destruction, and foreground/background switching. Unlike the UIAbility, the UIExtensionAbility does not appear as a separate mission in the mission view. The foreground/background state and visibility of the UIExtensionAbility follow those of its host window.You cannot directly inherit from the UIExtensionAbility. However, you can choose other components that inherit from UIExtensionAbility based on specific service scenarios. For example, when handling data shared from other applications, you can use the [ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md); when providing widget editing functionality, you can use the [FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md).For details about the inheritance relationship of each ability, see [Inheritance Relationship](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship).
 
 **Inheritance/Implementation:** UIExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
 
@@ -16,7 +16,6 @@ UIExtensionAbility is an ExtensionAbility component with a User Interface (UI). 
 import { UIExtensionAbility } from '@kit.AbilityKit';
 ```
 
-<a id="onbackground"></a>
 ## onBackground
 
 ```TypeScript
@@ -49,7 +48,6 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 
 ```
 
-<a id="oncreate"></a>
 ## onCreate
 
 ```TypeScript
@@ -88,7 +86,6 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 
 ```
 
-<a id="ondestroy"></a>
 ## onDestroy
 
 ```TypeScript
@@ -151,7 +148,6 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 
 ```
 
-<a id="onforeground"></a>
 ## onForeground
 
 ```TypeScript
@@ -184,7 +180,6 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 
 ```
 
-<a id="onsessioncreate"></a>
 ## onSessionCreate
 
 ```TypeScript
@@ -232,7 +227,6 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 
 ```
 
-<a id="onsessiondestroy"></a>
 ## onSessionDestroy
 
 ```TypeScript

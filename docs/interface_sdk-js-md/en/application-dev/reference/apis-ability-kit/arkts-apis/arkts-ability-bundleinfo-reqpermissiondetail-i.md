@@ -1,7 +1,6 @@
 # ReqPermissionDetail
 
 Provides the detailed information of the permissions to request from the system.
-
 > **NOTE**  
 >  
 > - If multiple packages of an application have requested the same permission but with different reasons, the system  
@@ -37,7 +36,7 @@ Name of the module that requests the permission.
 name: string
 ```
 
-[Name of the permission](docroot://security/AccessToken/app-permissions.md) to request.
+[Name of the permission](../../../security/AccessToken/app-permissions.md) to request.
 
 **Type:** string
 

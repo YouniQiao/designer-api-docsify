@@ -6,7 +6,6 @@
 import { intelligentScene } from '@kit.BasicServicesKit';
 ```
 
-<a id="isnotifyallowedindonotdisturb"></a>
 ## isNotifyAllowedInDoNotDisturb
 
 ```TypeScript

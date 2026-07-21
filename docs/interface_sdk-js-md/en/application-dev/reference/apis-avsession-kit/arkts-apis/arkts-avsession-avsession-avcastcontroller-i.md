@@ -14,7 +14,6 @@ AVCastController definition used to implement a remote control when a cast is co
 import { avSession } from '@kit.AVSessionKit';
 ```
 
-<a id="getavplaybackstate"></a>
 ## getAVPlaybackState
 
 ```TypeScript
@@ -41,7 +40,6 @@ Get the playback status of the current player
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="getavplaybackstate-1"></a>
 ## getAVPlaybackState
 
 ```TypeScript
@@ -70,7 +68,6 @@ Get the playback status of the current player
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="getcurrentitem"></a>
 ## getCurrentItem
 
 ```TypeScript
@@ -97,7 +94,6 @@ Get the current playing item
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="getcurrentitem-1"></a>
 ## getCurrentItem
 
 ```TypeScript
@@ -126,7 +122,6 @@ Get the current playing item
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="getrecommendedresolutionlevel"></a>
 ## getRecommendedResolutionLevel
 
 ```TypeScript
@@ -161,7 +156,6 @@ Get recommended resolution of remote player based on each decoder.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="getsupporteddecoders"></a>
 ## getSupportedDecoders
 
 ```TypeScript
@@ -190,7 +184,6 @@ Get supported decoders of remote player.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="getsupportedhdrcapabilities"></a>
 ## getSupportedHdrCapabilities
 
 ```TypeScript
@@ -219,7 +212,6 @@ Get supported hdr capabilities of remote player.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="getsupportedplayspeeds"></a>
 ## getSupportedPlaySpeeds
 
 ```TypeScript
@@ -248,7 +240,6 @@ Get supported speed of remote player.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="getvalidcommands"></a>
 ## getValidCommands
 
 ```TypeScript
@@ -275,7 +266,6 @@ Get commands supported by the current cast controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-<a id="getvalidcommands-1"></a>
 ## getValidCommands
 
 ```TypeScript
@@ -302,7 +292,6 @@ Get commands supported by the current cast controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-<a id="off"></a>
 ## off('playbackStateChange')
 
 ```TypeScript
@@ -333,7 +322,6 @@ Unregister playback state changed callback
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -363,7 +351,6 @@ Unregister listener for current media item playback events.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="off-2"></a>
 ## off
 
 ```TypeScript
@@ -393,7 +380,6 @@ Unregister playback command callback sent by remote side or media center.When ca
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="off-3"></a>
 ## off
 
 ```TypeScript
@@ -423,7 +409,6 @@ Unregister playback command callback sent by remote side or media center.When ca
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="off-4"></a>
 ## off('requestPlay')
 
 ```TypeScript
@@ -452,7 +437,6 @@ Unregister requested playback command callback sent by remote side or media cent
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="off-5"></a>
 ## off('endOfStream')
 
 ```TypeScript
@@ -481,7 +465,6 @@ Unregister endOfStream state callback.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="off-6"></a>
 ## off
 
 ```TypeScript
@@ -511,7 +494,6 @@ Unregister listens for playback events.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="off-7"></a>
 ## off('validCommandChange')
 
 ```TypeScript
@@ -541,7 +523,6 @@ Unregister the valid commands of the casted session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-8"></a>
 ## off
 
 ```TypeScript
@@ -576,7 +557,6 @@ avCastController.off('videoSizeChange');
 
 ```
 
-<a id="off-9"></a>
 ## off
 
 ```TypeScript
@@ -612,7 +592,6 @@ Unregister listens for playback error events.
 | [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="off-10"></a>
 ## off('castControlGenericError')
 
 ```TypeScript
@@ -642,7 +621,6 @@ Unregister listeners for cast control generic error events.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
 
-<a id="off-11"></a>
 ## off('castControlIoError')
 
 ```TypeScript
@@ -672,7 +650,6 @@ Unregister listeners for cast control input/output error events.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
 
-<a id="off-12"></a>
 ## off('castControlParsingError')
 
 ```TypeScript
@@ -702,7 +679,6 @@ Unregister listeners for cast control parsing error events.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
 
-<a id="off-13"></a>
 ## off('castControlDecodingError')
 
 ```TypeScript
@@ -732,7 +708,6 @@ Unregister listeners for cast control decoding error events.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
 
-<a id="off-14"></a>
 ## off('castControlAudioRendererError')
 
 ```TypeScript
@@ -762,7 +737,6 @@ Unregister listeners for cast control audio renderer error events.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
 
-<a id="off-15"></a>
 ## off('castControlDrmError')
 
 ```TypeScript
@@ -792,7 +766,6 @@ Unregister listeners for cast control drm error events.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
 
-<a id="off-16"></a>
 ## off('keyRequest')
 
 ```TypeScript
@@ -823,7 +796,6 @@ Unregister listener for drm key request.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="off-17"></a>
 ## off('customDataChange')
 
 ```TypeScript
@@ -853,7 +825,6 @@ Unregister listener for custom data sent from remote device.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="on"></a>
 ## on('playbackStateChange')
 
 ```TypeScript
@@ -885,7 +856,6 @@ Register playback state changed callback
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="on-1"></a>
 ## on('mediaItemChange')
 
 ```TypeScript
@@ -916,7 +886,6 @@ Register listener for current media item playback events.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="on-2"></a>
 ## on('playNext')
 
 ```TypeScript
@@ -947,7 +916,6 @@ Register playback command callback sent by remote side or media center.Applicati
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="on-3"></a>
 ## on('playPrevious')
 
 ```TypeScript
@@ -978,7 +946,6 @@ Register playback command callback sent by remote side or media center.Applicati
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="on-4"></a>
 ## on('requestPlay')
 
 ```TypeScript
@@ -1007,7 +974,6 @@ Register requested playback command callback sent by remote side or media center
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="on-5"></a>
 ## on('endOfStream')
 
 ```TypeScript
@@ -1036,7 +1002,6 @@ Register endOfStream state callback.Application needs update the new media resou
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="on-6"></a>
 ## on('seekDone')
 
 ```TypeScript
@@ -1067,7 +1032,6 @@ Register listens for playback events.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="on-7"></a>
 ## on('validCommandChange')
 
 ```TypeScript
@@ -1097,7 +1061,6 @@ Register the valid commands of the casted session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-8"></a>
 ## on('videoSizeChange')
 
 ```TypeScript
@@ -1136,7 +1099,6 @@ avCastController.on('videoSizeChange', (width: number, height: number) => {
 
 ```
 
-<a id="on-9"></a>
 ## on('error')
 
 ```TypeScript
@@ -1173,7 +1135,6 @@ Register listeners for playback error events.
 | [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="on-10"></a>
 ## on('castControlGenericError')
 
 ```TypeScript
@@ -1217,7 +1178,6 @@ Register listeners for cast control generic error events.
 | [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
 | [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
 
-<a id="on-11"></a>
 ## on('castControlIoError')
 
 ```TypeScript
@@ -1264,7 +1224,6 @@ Register listeners for cast control input/output error events.
 | [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
 | [6612107](../errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) | An error occurs when sending packet from source device to sink device. |
 
-<a id="on-12"></a>
 ## on('castControlParsingError')
 
 ```TypeScript
@@ -1299,7 +1258,6 @@ Register listeners for cast control parsing error events.
 | [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
 | [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
 
-<a id="on-13"></a>
 ## on('castControlDecodingError')
 
 ```TypeScript
@@ -1335,7 +1293,6 @@ Register listeners for cast control decoding error events.
 | [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
 | [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
 
-<a id="on-14"></a>
 ## on('castControlAudioRendererError')
 
 ```TypeScript
@@ -1368,7 +1325,6 @@ Register listeners for cast control audio renderer error error events.
 | [6615001](../errorcode-avsession.md#6615001-audio-renderer-initialization-failure) | Initializing the audio renderer failed. |
 | [6615002](../errorcode-avsession.md#6615002-audio-renderer-failure-in-writing-data) | The audio renderer fails to write data. |
 
-<a id="on-15"></a>
 ## on('castControlDrmError')
 
 ```TypeScript
@@ -1408,7 +1364,6 @@ Register listeners for cast control drm error events.
 | [6616008](../errorcode-avsession.md#6616008-expired-drm-license-loaded) | The DRM license being loaded into the open DRM session has expired. |
 | [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
 
-<a id="on-16"></a>
 ## on('keyRequest')
 
 ```TypeScript
@@ -1439,7 +1394,6 @@ Register listener for drm key request.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="on-17"></a>
 ## on('customDataChange')
 
 ```TypeScript
@@ -1469,7 +1423,6 @@ Register listener for custom data sent from remote device.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="prepare"></a>
 ## prepare
 
 ```TypeScript
@@ -1499,7 +1452,6 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
-<a id="prepare-1"></a>
 ## prepare
 
 ```TypeScript
@@ -1536,7 +1488,6 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
-<a id="processmediakeyresponse"></a>
 ## processMediaKeyResponse
 
 ```TypeScript
@@ -1573,7 +1524,6 @@ Process the response corresponding to the media key request obtained by the appl
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified.2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -1600,7 +1550,6 @@ Destroy the controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript
@@ -1629,7 +1578,6 @@ Destroy the controller
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
-<a id="sendcontrolcommand"></a>
 ## sendControlCommand
 
 ```TypeScript
@@ -1660,7 +1608,6 @@ Send control commands to remote player
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
-<a id="sendcontrolcommand-1"></a>
 ## sendControlCommand
 
 ```TypeScript
@@ -1698,7 +1645,6 @@ Send control commands to remote player
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
-<a id="sendcustomdata"></a>
 ## sendCustomData
 
 ```TypeScript
@@ -1733,7 +1679,6 @@ Sends custom data to a remote device.
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception.You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -1763,7 +1708,6 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
-<a id="start-1"></a>
 ## start
 
 ```TypeScript

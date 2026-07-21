@@ -1,6 +1,5 @@
 # readText
 
-<a id="readtext"></a>
 ## readText
 
 ```TypeScript
@@ -20,23 +19,9 @@ Reads the text content of a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:readText](arkts-corefile-file-fs-readtext-f.md#readtext-1)
+**Substitutes:** [fs:readText](arkts-corefile-fileio-readtext-f.md#readtext)
 
-<!--Device-unnamed-declare function readText(
-  filePath: string,
-  options?: {
-    position?: number;
-    length?: number;
-    encoding?: string;
-  }
-): Promise<string>--><!--Device-unnamed-declare function readText(
-  filePath: string,
-  options?: {
-    position?: number;
-    length?: number;
-    encoding?: string;
-  }
-): Promise<string>-End-->
+<!--Device-unnamed-declare function readText(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): Promise<string>--><!--Device-unnamed-declare function readText(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -54,7 +39,6 @@ Reads the text content of a file. This API uses a promise to return the result.
 | Promise&lt;string&gt; | Promise that returns the file content read. |
 
 
-<a id="readtext-1"></a>
 ## readText
 
 ```TypeScript
@@ -75,25 +59,9 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:readText](arkts-corefile-file-fs-readtext-f.md#readtext-1)
+**Substitutes:** [fs:readText](arkts-corefile-fileio-readtext-f.md#readtext)
 
-<!--Device-unnamed-declare function readText(
-  filePath: string,
-  options: {
-    position?: number;
-    length?: number;
-    encoding?: string;
-  },
-  callback: AsyncCallback<string>
-): void--><!--Device-unnamed-declare function readText(
-  filePath: string,
-  options: {
-    position?: number;
-    length?: number;
-    encoding?: string;
-  },
-  callback: AsyncCallback<string>
-): void-End-->
+<!--Device-unnamed-declare function readText(  filePath: string,  options: {    position?: number;    length?: number;    encoding?: string;  },  callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function readText(  filePath: string,  options: {    position?: number;    length?: number;    encoding?: string;  },  callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

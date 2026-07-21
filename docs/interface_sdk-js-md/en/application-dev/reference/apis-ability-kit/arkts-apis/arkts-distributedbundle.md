@@ -1,7 +1,6 @@
 # @ohos.distributedBundle
 
 The distributedBundle module manages distributed bundles.
-
 > **NOTE**  
 >  
 > The APIs of this module have been deprecated since API version 9. You are advised to use  

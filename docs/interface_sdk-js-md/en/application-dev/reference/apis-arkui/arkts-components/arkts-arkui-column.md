@@ -18,7 +18,6 @@ Column(options?: ColumnOptions)
 ```
 
 Creates a vertical linear layout container. You can set the spacing between child components.
-
 > **NOTE**  
 >  
 > Excessive component nesting (either too deep a hierarchy or too many nested components) incurs significant  

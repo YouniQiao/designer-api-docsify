@@ -6,7 +6,6 @@
 import { browser } from '@kit.MDMKit';
 ```
 
-<a id="setpolicies"></a>
 ## setPolicies
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sets the browsing policy for a specified browser. This API uses an asynchronous 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setPolicySync](arkts-mdm-browser-setpolicysync-f.md#setpolicysync-1)
+**Substitutes:** [setPolicySync](arkts-mdm-browser-setpolicysync-f.md#setpolicysync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BROWSER_POLICY
 
@@ -75,7 +74,6 @@ browser.setPolicies(wantTemp, appId, policies, (err) => {
 ```
 
 
-<a id="setpolicies-1"></a>
 ## setPolicies
 
 ```TypeScript
@@ -88,7 +86,7 @@ Sets the browsing policy for a specified browser. This API uses a promise to ret
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setPolicySync](arkts-mdm-browser-setpolicysync-f.md#setpolicysync-1)
+**Substitutes:** [setPolicySync](arkts-mdm-browser-setpolicysync-f.md#setpolicysync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BROWSER_POLICY
 

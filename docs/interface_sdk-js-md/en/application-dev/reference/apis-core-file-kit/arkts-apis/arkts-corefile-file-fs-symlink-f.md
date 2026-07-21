@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="symlink"></a>
 ## symlink
 
 ```TypeScript
@@ -14,7 +13,6 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 ```
 
 Creates a symbolic link based on a file path. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Since API version 11, this API cannot be used by third-party applications.
@@ -58,7 +56,6 @@ Creates a symbolic link based on a file path. This API uses a promise to return 
 | 13900042 | Unknown error |
 
 
-<a id="symlink-1"></a>
 ## symlink
 
 ```TypeScript
@@ -66,7 +63,6 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 ```
 
 Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Since API version 11, this API cannot be used by third-party applications.

@@ -6,14 +6,13 @@
 import { JSON } from '@kit.ArkTS';
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
 function remove(obj: object, property: string): void
 ```
 
-Removes a key from an ArkTS object. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md#parse-1) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets).
+Removes a key from an ArkTS object. This API can be used for related operations after [JSON.parse](arkts-arkts-json-parse-f.md#parse) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets).
 
 **Since:** 12
 

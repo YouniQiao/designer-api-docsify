@@ -6,7 +6,6 @@
 import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
-<a id="revokeuripermission"></a>
 ## revokeUriPermission
 
 ```TypeScript
@@ -14,14 +13,13 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 ```
 
 Revokes the URI permission from an application. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI  
 > permission granted by this application.  
 >  
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) API. For URIs combined by the application, the  
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the  
 > system cannot guarantee their functions.
 
 **Since:** 10
@@ -39,7 +37,7 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor-1). |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
 | targetBundleName | string | Yes | Bundle name of the application, from which the permission is revoked. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
@@ -73,7 +71,6 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
 ```
 
 
-<a id="revokeuripermission-1"></a>
 ## revokeUriPermission
 
 ```TypeScript
@@ -81,14 +78,13 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 ```
 
 Revokes the URI permission from an application. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI  
 > permission granted by this application.  
 >  
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) API. For URIs combined by the application, the  
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the  
 > system cannot guarantee their functions.
 
 **Since:** 10
@@ -106,7 +102,7 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor-1). |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
 | targetBundleName | string | Yes | Bundle name of the target application. |
 
 **Return value:**
@@ -145,7 +141,6 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName)
 ```
 
 
-<a id="revokeuripermission-2"></a>
 ## revokeUriPermission
 
 ```TypeScript
@@ -153,7 +148,6 @@ function revokeUriPermission(uri: string, targetBundleName: string, appCloneInde
 ```
 
 Revokes the URI permission from an application. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - This API can be used to revoke the URI permission of another application obtained by this application or URI  
@@ -163,7 +157,7 @@ Revokes the URI permission from an application. This API uses a promise to retur
 > application bundle name and index of the cloned application.  
 >  
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) API. For URIs combined by the application, the  
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the  
 > system cannot guarantee their functions.
 
 **Since:** 14
@@ -178,7 +172,7 @@ Revokes the URI permission from an application. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor-1). |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
 | targetBundleName | string | Yes | Bundle name of the target application. |
 | appCloneIndex | number | Yes | Index of the cloned application. The value range is [0, 1000]. The value **0** indicates the application itself. |
 

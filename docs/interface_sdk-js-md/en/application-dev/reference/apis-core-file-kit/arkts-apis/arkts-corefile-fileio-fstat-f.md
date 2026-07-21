@@ -1,6 +1,5 @@
 # fstat
 
-<a id="fstat"></a>
 ## fstat
 
 ```TypeScript
@@ -13,7 +12,7 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:stat](arkts-corefile-file-fs-stat-f.md#stat-1)
+**Substitutes:** [fs:stat](arkts-corefile-fileio-stat-f.md#stat)
 
 <!--Device-unnamed-declare function fstat(fd: number): Promise<Stat>--><!--Device-unnamed-declare function fstat(fd: number): Promise<Stat>-End-->
 
@@ -32,7 +31,6 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 | Promise&lt;Stat&gt; | Promise that returns the detailed file status obtained. |
 
 
-<a id="fstat-1"></a>
 ## fstat
 
 ```TypeScript
@@ -45,7 +43,7 @@ Obtains file status based on the file descriptor. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:stat](arkts-corefile-file-fs-stat-f.md#stat-1)
+**Substitutes:** [fs:stat](arkts-corefile-fileio-stat-f.md#stat)
 
 <!--Device-unnamed-declare function fstat(fd: number, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function fstat(fd: number, callback: AsyncCallback<Stat>): void-End-->
 

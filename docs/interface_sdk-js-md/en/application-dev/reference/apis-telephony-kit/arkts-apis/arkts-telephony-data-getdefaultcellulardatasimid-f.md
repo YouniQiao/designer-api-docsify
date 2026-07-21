@@ -6,7 +6,6 @@
 import { data } from '@kit.TelephonyKit';
 ```
 
-<a id="getdefaultcellulardatasimid"></a>
 ## getDefaultCellularDataSimId
 
 ```TypeScript

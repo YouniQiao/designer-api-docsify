@@ -6,7 +6,6 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
-<a id="connectallowedprofiles"></a>
 ## connectAllowedProfiles
 
 ```TypeScript
@@ -67,7 +66,6 @@ try {
 ```
 
 
-<a id="connectallowedprofiles-1"></a>
 ## connectAllowedProfiles
 
 ```TypeScript

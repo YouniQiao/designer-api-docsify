@@ -6,7 +6,6 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
-<a id="ismodifyautostartappsdisallowed"></a>
 ## isModifyAutoStartAppsDisallowed
 
 ```TypeScript
@@ -31,7 +30,7 @@ Checks whether a specified user is prohibited from canceling application auto-st
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | autoStartApp | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Auto-start applications to add. **Want** must contain **bundleName** and **abilityName**. |
-| accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1) of @ohos.account.osAccount to obtain the ID. |
+| accountId | number | Yes | Account ID, which must be greater than or equal to 0.<br> You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ohos.account.osAccount to obtain the ID. |
 
 **Return value:**
 

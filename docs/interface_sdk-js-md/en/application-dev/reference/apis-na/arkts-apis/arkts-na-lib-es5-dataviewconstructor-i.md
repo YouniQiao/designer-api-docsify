@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface DataViewConstructor--><!--Device-unnamed-interface DataViewConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

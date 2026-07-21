@@ -6,7 +6,6 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
-<a id="getformsinfo"></a>
 ## getFormsInfo
 
 ```TypeScript
@@ -64,7 +63,6 @@ try {
 ```
 
 
-<a id="getformsinfo-1"></a>
 ## getFormsInfo
 
 ```TypeScript
@@ -117,7 +115,6 @@ try {
 ```
 
 
-<a id="getformsinfo-2"></a>
 ## getFormsInfo
 
 ```TypeScript

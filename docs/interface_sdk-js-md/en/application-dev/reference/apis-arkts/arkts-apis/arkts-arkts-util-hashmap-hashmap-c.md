@@ -14,7 +14,6 @@ HashMap is a map implemented based on the array, linked list, and red-black tree
 import { HashMap } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -88,7 +87,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -123,7 +121,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -153,7 +150,6 @@ let hashMap = new HashMap<string, number>();
 
 ```
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -211,7 +207,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -268,7 +263,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -314,7 +308,6 @@ console.info("result:", result);  // result: 356
 
 ```
 
-<a id="haskey"></a>
 ## hasKey
 
 ```TypeScript
@@ -359,7 +352,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="hasvalue"></a>
 ## hasValue
 
 ```TypeScript
@@ -404,7 +396,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -442,7 +433,6 @@ console.info("result = ", result) // result = true
 
 ```
 
-<a id="keys"></a>
 ## keys
 
 ```TypeScript
@@ -486,7 +476,6 @@ for (let key of keys) {
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -532,7 +521,6 @@ console.info("result:", result);  // result: 356
 
 ```
 
-<a id="replace"></a>
 ## replace
 
 ```TypeScript
@@ -578,7 +566,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
@@ -623,7 +610,6 @@ console.info("result:", hashMap.get("squirrel"));  // result: 123
 
 ```
 
-<a id="setall"></a>
 ## setAll
 
 ```TypeScript
@@ -666,7 +652,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="values"></a>
 ## values
 
 ```TypeScript

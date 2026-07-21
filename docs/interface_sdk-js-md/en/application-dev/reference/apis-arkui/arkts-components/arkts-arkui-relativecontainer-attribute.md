@@ -12,14 +12,13 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="barrier"></a>
 ## barrier
 
 ```TypeScript
 barrier(value: Array<BarrierStyle>)
 ```
 
-Sets the [barriers](docroot://ui/arkts-layout-development-relative-layout.md#setting-barriers-for-multiple-components) in the **RelativeContainer** component. The value is an array, each element of which is a barrier.
+Sets the [barriers](../../../ui/arkts-layout-development-relative-layout.md#setting-barriers-for-multiple-components) in the **RelativeContainer** component. The value is an array, each element of which is a barrier.
 
 **Since:** 12
 
@@ -37,7 +36,6 @@ Sets the [barriers](docroot://ui/arkts-layout-development-relative-layout.md#set
 | --- | --- | --- | --- |
 | value | Array&lt;BarrierStyle&gt; | Yes | Barriers in the **RelativeContainer** component. |
 
-<a id="barrier-1"></a>
 ## barrier
 
 ```TypeScript
@@ -62,14 +60,13 @@ Sets barriers in the **RelativeContainer** component. Each array element defines
 | --- | --- | --- | --- |
 | barrierStyle | Array&lt;LocalizedBarrierStyle&gt; | Yes | Barriers in the **RelativeContainer** component. |
 
-<a id="guideline"></a>
 ## guideLine
 
 ```TypeScript
 guideLine(value: Array<GuideLineStyle>)
 ```
 
-Sets the [guidelines](docroot://ui/arkts-layout-development-relative-layout.md#positioning-child-components-using-guidelines)in the **RelativeContainer** component. The value is an array, each element of which is a guideline.
+Sets the [guidelines](../../../ui/arkts-layout-development-relative-layout.md#positioning-child-components-using-guidelines)in the **RelativeContainer** component. The value is an array, each element of which is a guideline.
 
 **Since:** 12
 

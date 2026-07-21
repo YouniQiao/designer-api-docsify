@@ -6,7 +6,6 @@
 import { cliManager } from '@kit.AbilityKit';
 ```
 
-<a id="gettoolinfobyname"></a>
 ## getToolInfoByName
 
 ```TypeScript

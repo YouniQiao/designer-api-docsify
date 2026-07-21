@@ -1,7 +1,6 @@
 # PathOptions
 
 Describes the options of the path.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
@@ -24,11 +23,11 @@ Command string for drawing the path.If the value is invalid or the default value
 
 **Type:** ResourceStr
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PathOptions-commands?: ResourceStr--><!--Device-PathOptions-commands?: ResourceStr-End-->
 
@@ -44,11 +43,11 @@ Height of the rectangle where the path is located.If the value is invalid or the
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PathOptions-height?: Length--><!--Device-PathOptions-height?: Length-End-->
 
@@ -64,11 +63,11 @@ Width of the rectangle where the path is located.If the value is invalid or the 
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PathOptions-width?: Length--><!--Device-PathOptions-width?: Length-End-->
 

@@ -1,6 +1,5 @@
 # copyFile
 
-<a id="copyfile"></a>
 ## copyFile
 
 ```TypeScript
@@ -13,7 +12,7 @@ Copies a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile-1)
+**Substitutes:** [fs:copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile)
 
 <!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>--><!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>-End-->
 
@@ -34,7 +33,6 @@ Copies a file. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 
-<a id="copyfile-1"></a>
 ## copyFile
 
 ```TypeScript
@@ -47,7 +45,7 @@ Copies a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile-1)
+**Substitutes:** [fs:copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile)
 
 <!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void-End-->
 
@@ -62,7 +60,6 @@ Copies a file. This API uses an asynchronous callback to return the result.
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is copied asynchronously. |
 
 
-<a id="copyfile-2"></a>
 ## copyFile
 
 ```TypeScript
@@ -80,19 +77,9 @@ Copies a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile-1)
+**Substitutes:** [fs:copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile)
 
-<!--Device-unnamed-declare function copyFile(
-  src: string | number,
-  dest: string | number,
-  mode: number,
-  callback: AsyncCallback<void>
-): void--><!--Device-unnamed-declare function copyFile(
-  src: string | number,
-  dest: string | number,
-  mode: number,
-  callback: AsyncCallback<void>
-): void-End-->
+<!--Device-unnamed-declare function copyFile(  src: string | number,  dest: string | number,  mode: number,  callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyFile(  src: string | number,  dest: string | number,  mode: number,  callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

@@ -6,7 +6,6 @@
 import { fileShare } from '@kit.CoreFileKit';
 ```
 
-<a id="activatepermission"></a>
 ## activatePermission
 
 ```TypeScript

@@ -28,11 +28,7 @@ Use new function to create Rect.Anonymous Object Rectification.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-RectInterface-new (
-    options?: RectOptions | RoundedRectOptions,
-  ): RectAttribute--><!--Device-RectInterface-new (
-    options?: RectOptions | RoundedRectOptions,
-  ): RectAttribute-End-->
+<!--Device-RectInterface-new (    options?: RectOptions | RoundedRectOptions,  ): RectAttribute--><!--Device-RectInterface-new (    options?: RectOptions | RoundedRectOptions,  ): RectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -58,11 +54,7 @@ Defines the constructor of Rect component.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-RectInterface-(
-    options?: RectOptions | RoundedRectOptions,
-  ): RectAttribute--><!--Device-RectInterface-(
-    options?: RectOptions | RoundedRectOptions,
-  ): RectAttribute-End-->
+<!--Device-RectInterface-(    options?: RectOptions | RoundedRectOptions,  ): RectAttribute--><!--Device-RectInterface-(    options?: RectOptions | RoundedRectOptions,  ): RectAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

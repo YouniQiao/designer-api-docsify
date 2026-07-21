@@ -6,7 +6,6 @@
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
-<a id="getpowermode"></a>
 ## getPowerMode
 
 ```TypeScript
@@ -52,7 +51,6 @@ Obtains the current Wi-Fi power mode.
 ```
 
 
-<a id="getpowermode-1"></a>
 ## getPowerMode
 
 ```TypeScript

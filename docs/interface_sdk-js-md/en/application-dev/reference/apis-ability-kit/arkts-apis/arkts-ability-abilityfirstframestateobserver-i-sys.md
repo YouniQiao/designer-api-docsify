@@ -10,7 +10,6 @@ The module defines the observer used to listen for the first frame rendering com
 
 **System API:** This is a system API.
 
-<a id="onabilityfirstframedrawn"></a>
 ## onAbilityFirstFrameDrawn
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { eSIM } from '@kit.TelephonyKit';
 ```
 
-<a id="getdownloadableprofilemetadata"></a>
 ## getDownloadableProfileMetadata
 
 ```TypeScript
@@ -20,9 +19,7 @@ Fills in and gets the metadata for a downloadable profile.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE
 
-<!--Device-eSIM-function getDownloadableProfileMetadata(slotId: int, portIndex: int,
-                                          profile: DownloadableProfile, forceDisableProfile: boolean): Promise<GetDownloadableProfileMetadataResult>--><!--Device-eSIM-function getDownloadableProfileMetadata(slotId: int, portIndex: int,
-                                          profile: DownloadableProfile, forceDisableProfile: boolean): Promise<GetDownloadableProfileMetadataResult>-End-->
+<!--Device-eSIM-function getDownloadableProfileMetadata(slotId: int, portIndex: int,                                          profile: DownloadableProfile, forceDisableProfile: boolean): Promise<GetDownloadableProfileMetadataResult>--><!--Device-eSIM-function getDownloadableProfileMetadata(slotId: int, portIndex: int,                                          profile: DownloadableProfile, forceDisableProfile: boolean): Promise<GetDownloadableProfileMetadataResult>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

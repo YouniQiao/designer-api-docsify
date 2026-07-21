@@ -10,11 +10,7 @@ export type UidNetStatsInfo = {
 
 **Since:** 12
 
-<!--Device-statistics-export type UidNetStatsInfo = {
-    [uid: int]: NetStatsInfo;
-  }--><!--Device-statistics-export type UidNetStatsInfo = {
-    [uid: int]: NetStatsInfo;
-  }-End-->
+<!--Device-statistics-export type UidNetStatsInfo = {    [uid: int]: NetStatsInfo;  }--><!--Device-statistics-export type UidNetStatsInfo = {    [uid: int]: NetStatsInfo;  }-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

@@ -18,7 +18,6 @@ Provides APIs for managing a distributed data object. Before using any API of th
 import { distributedDataObject } from '@kit.ArkData';
 ```
 
-<a id="off"></a>
 ## off('change')
 
 ```TypeScript
@@ -75,7 +74,6 @@ g_object.off('change');
 
 ```
 
-<a id="off-1"></a>
 ## off('status')
 
 ```TypeScript
@@ -93,13 +91,7 @@ Unsubscribes from the status change of this distributed data object.
 
 **Substitutes:** off(
 
-<!--Device-DistributedObject-off(
-      type: 'status',
-      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void--><!--Device-DistributedObject-off(
-      type: 'status',
-      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void-End-->
+<!--Device-DistributedObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DistributedObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -136,7 +128,6 @@ g_object.off('status');
 
 ```
 
-<a id="on"></a>
 ## on('change')
 
 ```TypeScript
@@ -190,7 +181,6 @@ g_object.on('change', (sessionId: string, fields: Array<string>) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('status')
 
 ```TypeScript
@@ -208,13 +198,7 @@ Subscribes to status changes of this distributed data object.
 
 **Substitutes:** on(
 
-<!--Device-DistributedObject-on(
-      type: 'status',
-      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void--><!--Device-DistributedObject-on(
-      type: 'status',
-      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void-End-->
+<!--Device-DistributedObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DistributedObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -249,7 +233,6 @@ g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 
 
 ```
 
-<a id="setsessionid"></a>
 ## setSessionId
 
 ```TypeScript
@@ -262,7 +245,7 @@ Sets a session ID. For the devices in the collaboration state in a trusted netwo
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSessionId(sessionId:](arkts-arkdata-distributeddataobject-dataobject-i.md#setsessionid-1)
+**Substitutes:** [setSessionId(sessionId:](arkts-arkdata-distributeddataobject-dataobject-i.md#setsessionid)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 

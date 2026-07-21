@@ -16,7 +16,6 @@ Before using the following APIs, you must create a ThreadWorker instance. The Th
 import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
-<a id="addeventlistener"></a>
 ## addEventListener
 
 ```TypeScript
@@ -64,7 +63,6 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -108,7 +106,6 @@ const workerInstance = new worker.ThreadWorker('entry/ets/workers/worker.ets', {
 
 ```
 
-<a id="dispatchevent"></a>
 ## dispatchEvent
 
 ```TypeScript
@@ -161,7 +158,6 @@ console.info("dispatchEvent result is: ", result);
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -221,7 +217,6 @@ workerInstance.off("alert");
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -270,7 +265,6 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 
 ```
 
-<a id="once"></a>
 ## once
 
 ```TypeScript
@@ -320,7 +314,6 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 
 ```
 
-<a id="postmessage"></a>
 ## postMessage
 
 ```TypeScript
@@ -428,7 +421,6 @@ struct Index {
 
 ```
 
-<a id="postmessage-1"></a>
 ## postMessage
 
 ```TypeScript
@@ -478,7 +470,6 @@ workerInstance.postMessage(buffer);
 
 ```
 
-<a id="postmessagewithsharedsendable"></a>
 ## postMessageWithSharedSendable
 
 ```TypeScript
@@ -555,7 +546,6 @@ workerPort.onmessage = (e: MessageEvents) => {
 
 ```
 
-<a id="registerglobalcallobject"></a>
 ## registerGlobalCallObject
 
 ```TypeScript
@@ -634,7 +624,6 @@ workerPort.onmessage = (e: MessageEvents): void => {
 
 ```
 
-<a id="removealllistener"></a>
 ## removeAllListener
 
 ```TypeScript
@@ -671,7 +660,6 @@ workerInstance.removeAllListener();
 
 ```
 
-<a id="removeeventlistener"></a>
 ## removeEventListener
 
 ```TypeScript
@@ -719,7 +707,6 @@ workerInstance.removeEventListener("alert");
 
 ```
 
-<a id="terminate"></a>
 ## terminate
 
 ```TypeScript
@@ -753,7 +740,6 @@ workerInstance.terminate();
 
 ```
 
-<a id="unregisterglobalcallobject"></a>
 ## unregisterGlobalCallObject
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="isapprunning"></a>
 ## isAppRunning
 
 ```TypeScript
@@ -14,7 +13,6 @@ function isAppRunning(bundleName: string, appCloneIndex?: number): Promise<boole
 ```
 
 Checks whether the application with the specified bundle name and application clone index is running across all users. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > If the application is not installed for the current user, error code 16000073 is returned. If the application is  

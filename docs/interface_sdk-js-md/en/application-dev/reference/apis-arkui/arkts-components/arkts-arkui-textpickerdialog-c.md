@@ -8,7 +8,6 @@ A text picker dialog box is a dialog box that allows users to select text from t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="show"></a>
 ## show
 
 ```TypeScript

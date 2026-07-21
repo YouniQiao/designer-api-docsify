@@ -1,7 +1,6 @@
 # FoldSplitContainer
 
 **FoldSplitContainer** is a layout container designed to manage regions for two-panel and three-panel arrangements on a foldable device across various states, including the expanded state, the semi-folded state,and the folded state.
-
 > **NOTE**  
 >  
 > By default, a two-panel layout is used when the window width is less than or equal to 600 vp.  

@@ -1,6 +1,6 @@
 # KvStoreResultSet
 
-Provides APIs to obtain the KV store result sets, and query and move the data read position.Before calling any method in **KvStoreResultSet**, you must use [getKVStore](distributedData.KVManager.getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>))to obtain a **KVStore** object.
+Provides APIs to obtain the KV store result sets, and query and move the data read position.Before calling any method in **KvStoreResultSet**, you must use [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)to obtain a **KVStore** object.
 
 **Since:** 7
 
@@ -12,7 +12,6 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
-<a id="getcount"></a>
 ## getCount
 
 ```TypeScript
@@ -57,7 +56,6 @@ try {
 
 ```
 
-<a id="getentry"></a>
 ## getEntry
 
 ```TypeScript
@@ -102,7 +100,6 @@ try {
 
 ```
 
-<a id="getposition"></a>
 ## getPosition
 
 ```TypeScript
@@ -147,7 +144,6 @@ try {
 
 ```
 
-<a id="isafterlast"></a>
 ## isAfterLast
 
 ```TypeScript
@@ -192,7 +188,6 @@ try {
 
 ```
 
-<a id="isbeforefirst"></a>
 ## isBeforeFirst
 
 ```TypeScript
@@ -237,7 +232,6 @@ try {
 
 ```
 
-<a id="isfirst"></a>
 ## isFirst
 
 ```TypeScript
@@ -282,7 +276,6 @@ try {
 
 ```
 
-<a id="islast"></a>
 ## isLast
 
 ```TypeScript
@@ -327,7 +320,6 @@ try {
 
 ```
 
-<a id="move"></a>
 ## move
 
 ```TypeScript
@@ -378,7 +370,6 @@ try {
 
 ```
 
-<a id="movetofirst"></a>
 ## moveToFirst
 
 ```TypeScript
@@ -423,7 +414,6 @@ try {
 
 ```
 
-<a id="movetolast"></a>
 ## moveToLast
 
 ```TypeScript
@@ -468,7 +458,6 @@ try {
 
 ```
 
-<a id="movetonext"></a>
 ## moveToNext
 
 ```TypeScript
@@ -513,7 +502,6 @@ try {
 
 ```
 
-<a id="movetoposition"></a>
 ## moveToPosition
 
 ```TypeScript
@@ -564,7 +552,6 @@ try {
 
 ```
 
-<a id="movetoprevious"></a>
 ## moveToPrevious
 
 ```TypeScript

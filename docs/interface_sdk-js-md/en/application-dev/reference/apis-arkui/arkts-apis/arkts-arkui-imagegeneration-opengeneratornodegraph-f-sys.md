@@ -6,7 +6,6 @@
 import { imageGeneration } from '@kit.ArkUI';
 ```
 
-<a id="opengeneratornodegraph"></a>
 ## openGeneratorNodeGraph
 
 ```TypeScript

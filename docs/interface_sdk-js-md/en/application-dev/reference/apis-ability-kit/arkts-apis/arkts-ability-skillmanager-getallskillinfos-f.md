@@ -6,7 +6,6 @@
 import { skillManager } from '@kit.AbilityKit';
 ```
 
-<a id="getallskillinfos"></a>
 ## getAllSkillInfos
 
 ```TypeScript

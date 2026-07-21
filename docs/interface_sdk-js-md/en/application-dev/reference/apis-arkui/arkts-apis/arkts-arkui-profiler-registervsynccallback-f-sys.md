@@ -1,6 +1,5 @@
 # registerVsyncCallback (System API)
 
-<a id="registervsynccallback"></a>
 ## registerVsyncCallback
 
 ```TypeScript

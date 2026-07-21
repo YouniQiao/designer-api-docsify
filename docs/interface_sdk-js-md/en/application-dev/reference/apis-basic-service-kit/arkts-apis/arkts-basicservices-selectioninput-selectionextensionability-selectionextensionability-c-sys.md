@@ -1,7 +1,6 @@
 # SelectionExtensionAbility (System API)
 
 This module provides ExtensionAbility for word selection, allowing users to search or translate text selected using a mouse or touchpad.
-
 > **NOTE**  
 > - This module is supported only on PCs/2-in-1 devices.
 
@@ -19,7 +18,6 @@ This module provides ExtensionAbility for word selection, allowing users to sear
 import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
-<a id="onconnect"></a>
 ## onConnect
 
 ```TypeScript
@@ -77,7 +75,6 @@ class ServiceExtAbility extends SelectionExtensionAbility {
 
 ```
 
-<a id="ondisconnect"></a>
 ## onDisconnect
 
 ```TypeScript

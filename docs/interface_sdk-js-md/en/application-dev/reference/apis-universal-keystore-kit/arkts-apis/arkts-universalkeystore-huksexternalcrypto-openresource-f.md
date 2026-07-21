@@ -6,7 +6,6 @@
 import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="openresource"></a>
 ## openResource
 
 ```TypeScript

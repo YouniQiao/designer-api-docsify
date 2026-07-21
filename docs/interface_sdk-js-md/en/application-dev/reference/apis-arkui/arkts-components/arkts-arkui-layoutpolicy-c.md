@@ -1,7 +1,6 @@
 # LayoutPolicy
 
 Enumerates the layout policies for component width and height.
-
 > **NOTE**  
 >  
 > - **LayoutPolicy** supports three layout policies: **matchParent** (adapts to the parent component's layout),  

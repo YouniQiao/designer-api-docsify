@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="getkeyitemproperties"></a>
 ## getKeyItemProperties
 
 ```TypeScript
@@ -18,7 +17,6 @@ function getKeyItemProperties(
 ```
 
 Obtains key properties. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)  
@@ -28,15 +26,7 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-huks-function getKeyItemProperties(
-    keyAlias: string,
-    options: HuksOptions,
-    callback: AsyncCallback<HuksReturnResult>
-  ): void--><!--Device-huks-function getKeyItemProperties(
-    keyAlias: string,
-    options: HuksOptions,
-    callback: AsyncCallback<HuksReturnResult>
-  ): void-End-->
+<!--Device-huks-function getKeyItemProperties(    keyAlias: string,    options: HuksOptions,    callback: AsyncCallback<HuksReturnResult>  ): void--><!--Device-huks-function getKeyItemProperties(    keyAlias: string,    options: HuksOptions,    callback: AsyncCallback<HuksReturnResult>  ): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -91,7 +81,6 @@ huks.getKeyItemProperties(keyAlias, emptyOptions, (error, data) => {
 ```
 
 
-<a id="getkeyitemproperties-1"></a>
 ## getKeyItemProperties
 
 ```TypeScript
@@ -99,7 +88,6 @@ function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<H
 ```
 
 Obtains key properties. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Getting properties of SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)  

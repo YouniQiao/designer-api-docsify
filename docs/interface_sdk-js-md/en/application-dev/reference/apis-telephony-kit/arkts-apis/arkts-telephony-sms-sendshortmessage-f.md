@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="sendshortmessage"></a>
 ## sendShortMessage
 
 ```TypeScript
@@ -71,7 +70,6 @@ sms.sendShortMessage(options, (err: BusinessError) => {
 ```
 
 
-<a id="sendshortmessage-1"></a>
 ## sendShortMessage
 
 ```TypeScript

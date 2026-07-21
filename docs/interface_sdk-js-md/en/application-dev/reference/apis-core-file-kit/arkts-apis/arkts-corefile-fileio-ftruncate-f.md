@@ -1,6 +1,5 @@
 # ftruncate
 
-<a id="ftruncate"></a>
 ## ftruncate
 
 ```TypeScript
@@ -13,7 +12,7 @@ Truncates a file based on the file descriptor. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:truncate](arkts-corefile-file-fs-truncate-f.md#truncate-1)
+**Substitutes:** [fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function ftruncate(fd: number, len?: number): Promise<void>--><!--Device-unnamed-declare function ftruncate(fd: number, len?: number): Promise<void>-End-->
 
@@ -33,7 +32,6 @@ Truncates a file based on the file descriptor. This API uses a promise to return
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 
-<a id="ftruncate-1"></a>
 ## ftruncate
 
 ```TypeScript
@@ -46,7 +44,7 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:truncate](arkts-corefile-file-fs-truncate-f.md#truncate-1)
+**Substitutes:** [fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function ftruncate(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function ftruncate(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -60,7 +58,6 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 
-<a id="ftruncate-2"></a>
 ## ftruncate
 
 ```TypeScript
@@ -73,7 +70,7 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:truncate](arkts-corefile-file-fs-truncate-f.md#truncate-1)
+**Substitutes:** [fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void>): void-End-->
 

@@ -1,18 +1,17 @@
 # Dirent
 
-Provides information about files and directories. Before calling an API of the **Dirent** class, use [dir.read()](arkts-corefile-fileio-read-f.md#read-1) synchronously or asynchronously to create a **Dirent** instance.
+Provides information about files and directories. Before calling an API of the **Dirent** class, use [dir.read()](arkts-corefile-fileio-read-f.md#read) synchronously or asynchronously to create a **Dirent** instance.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-unnamed-declare interface Dirent--><!--Device-unnamed-declare interface Dirent-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
-<a id="isblockdevice"></a>
 ## isBlockDevice
 
 ```TypeScript
@@ -25,7 +24,7 @@ Checks whether this directory entry is a block special file. A block special fil
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isBlockDevice(): boolean--><!--Device-Dirent-isBlockDevice(): boolean-End-->
 
@@ -45,7 +44,6 @@ let isBLockDevice = dir.readSync().isBlockDevice();
 
 ```
 
-<a id="ischaracterdevice"></a>
 ## isCharacterDevice
 
 ```TypeScript
@@ -58,7 +56,7 @@ Checks whether this directory entry is a character special file. A character spe
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isCharacterDevice(): boolean--><!--Device-Dirent-isCharacterDevice(): boolean-End-->
 
@@ -78,7 +76,6 @@ let isCharacterDevice = dir.readSync().isCharacterDevice();
 
 ```
 
-<a id="isdirectory"></a>
 ## isDirectory
 
 ```TypeScript
@@ -91,7 +88,7 @@ Checks whether this directory entry is a directory.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isDirectory(): boolean--><!--Device-Dirent-isDirectory(): boolean-End-->
 
@@ -111,7 +108,6 @@ let isDirectory = dir.readSync().isDirectory();
 
 ```
 
-<a id="isfifo"></a>
 ## isFIFO
 
 ```TypeScript
@@ -124,7 +120,7 @@ Checks whether this directory entry is a named pipe (also called FIFO). Named pi
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isFIFO(): boolean--><!--Device-Dirent-isFIFO(): boolean-End-->
 
@@ -144,7 +140,6 @@ let isFIFO = dir.readSync().isFIFO();
 
 ```
 
-<a id="isfile"></a>
 ## isFile
 
 ```TypeScript
@@ -157,7 +152,7 @@ Checks whether this directory entry is a regular file.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isFile(): boolean--><!--Device-Dirent-isFile(): boolean-End-->
 
@@ -177,7 +172,6 @@ let isFile = dir.readSync().isFile();
 
 ```
 
-<a id="issocket"></a>
 ## isSocket
 
 ```TypeScript
@@ -190,7 +184,7 @@ Checks whether this directory entry is a socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isSocket(): boolean--><!--Device-Dirent-isSocket(): boolean-End-->
 
@@ -210,7 +204,6 @@ let isSocket = dir.readSync().isSocket();
 
 ```
 
-<a id="issymboliclink"></a>
 ## isSymbolicLink
 
 ```TypeScript
@@ -223,7 +216,7 @@ Checks whether this directory entry is a symbolic link.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-isSymbolicLink(): boolean--><!--Device-Dirent-isSymbolicLink(): boolean-End-->
 
@@ -257,7 +250,7 @@ Directory entry name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dirent-readonly name: string--><!--Device-Dirent-readonly name: string-End-->
 

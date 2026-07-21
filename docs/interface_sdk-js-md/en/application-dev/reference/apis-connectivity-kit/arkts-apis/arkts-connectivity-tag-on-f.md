@@ -6,7 +6,6 @@
 import { tag } from '@kit.ConnectivityKit';
 ```
 
-<a id="on"></a>
 ## on('readerMode')
 
 ```TypeScript
@@ -45,7 +44,6 @@ Set reader mode enabled when the specific application is foreground. Dispatches 
 | [3100202](../errorcode-nfc.md#3100202-application-status-error) | The element state is invalid. |
 
 
-<a id="on-1"></a>
 ## on('readerModeWithInterval')
 
 ```TypeScript
@@ -66,19 +64,7 @@ Set reader mode enabled when the specific application is on foreground and set c
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-tag-function on(
-    type: 'readerModeWithInterval',
-    elementName: ElementName,
-    discTech: int[],
-    callback: Callback<TagInfo>,
-    interval: int
-  ): void--><!--Device-tag-function on(
-    type: 'readerModeWithInterval',
-    elementName: ElementName,
-    discTech: int[],
-    callback: Callback<TagInfo>,
-    interval: int
-  ): void-End-->
+<!--Device-tag-function on(    type: 'readerModeWithInterval',    elementName: ElementName,    discTech: int[],    callback: Callback<TagInfo>,    interval: int  ): void--><!--Device-tag-function on(    type: 'readerModeWithInterval',    elementName: ElementName,    discTech: int[],    callback: Callback<TagInfo>,    interval: int  ): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 

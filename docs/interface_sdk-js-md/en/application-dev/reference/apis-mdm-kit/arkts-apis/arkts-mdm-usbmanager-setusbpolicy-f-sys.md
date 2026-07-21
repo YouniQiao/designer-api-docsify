@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.MDMKit';
 ```
 
-<a id="setusbpolicy"></a>
 ## setUsbPolicy
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sets the USB read/write policy. This API uses an asynchronous callback to return
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setusbstoragedeviceaccesspolicy-1)
+**Substitutes:** [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setusbstoragedeviceaccesspolicy)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB
 
@@ -73,7 +72,6 @@ usbManager.setUsbPolicy(wantTemp, policy, (err) => {
 ```
 
 
-<a id="setusbpolicy-1"></a>
 ## setUsbPolicy
 
 ```TypeScript
@@ -86,7 +84,7 @@ Sets the USB read/write policy. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setusbstoragedeviceaccesspolicy-1)
+**Substitutes:** [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setusbstoragedeviceaccesspolicy)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_USB
 

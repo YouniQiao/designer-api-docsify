@@ -14,7 +14,6 @@ The XmlSerializer interface is used to generate an xml file.
 import { xml } from '@kit.ArkTS';
 ```
 
-<a id="addemptyelement"></a>
 ## addEmptyElement
 
 ```TypeScript
@@ -51,7 +50,6 @@ console.info(result); // <d/>
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -83,7 +81,6 @@ let thatSer = new xml.XmlSerializer(arrayBuffer, "utf-8");
 
 ```
 
-<a id="endelement"></a>
 ## endElement
 
 ```TypeScript
@@ -117,7 +114,6 @@ console.info(result);
 
 ```
 
-<a id="setattributes"></a>
 ## setAttributes
 
 ```TypeScript
@@ -157,14 +153,13 @@ console.info(result); // <note importance="high"/>
 
 ```
 
-<a id="setcdata"></a>
 ## setCDATA
 
 ```TypeScript
 setCDATA(text: string): void
 ```
 
-Adds data to the CDATA tag. The structure of the generated CDATA tag is "<! <![CDATA["+ Data added + "]]>".
+Adds data to the CDATA tag. The structure of the generated CDATA tag is "<! &lt;![CDATA["+ Data added + "]]&gt;".
 
 **Since:** 8
 
@@ -194,7 +189,6 @@ console.info(result); // <![CDATA[root SYSTEM]]>
 
 ```
 
-<a id="setcomment"></a>
 ## setComment
 
 ```TypeScript
@@ -231,7 +225,6 @@ console.info(result); // <!--Hello, World!-->
 
 ```
 
-<a id="setdeclaration"></a>
 ## setDeclaration
 
 ```TypeScript
@@ -263,7 +256,6 @@ console.info(result);
 
 ```
 
-<a id="setdoctype"></a>
 ## setDocType
 
 ```TypeScript
@@ -300,7 +292,6 @@ console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
 
 ```
 
-<a id="setnamespace"></a>
 ## setNamespace
 
 ```TypeScript
@@ -341,7 +332,6 @@ console.info(result);
 
 ```
 
-<a id="settext"></a>
 ## setText
 
 ```TypeScript
@@ -381,7 +371,6 @@ console.info(result); // <note importance="high">Happy</note>
 
 ```
 
-<a id="startelement"></a>
 ## startElement
 
 ```TypeScript

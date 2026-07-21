@@ -14,7 +14,6 @@ The **ArcList** component is a circular layout container that displays a series 
 import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

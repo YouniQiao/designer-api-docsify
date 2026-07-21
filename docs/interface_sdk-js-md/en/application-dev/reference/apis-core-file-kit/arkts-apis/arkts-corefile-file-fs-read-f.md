@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="read"></a>
 ## read
 
 ```TypeScript
@@ -23,15 +22,7 @@ Reads file data. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare function read(
-  fd: number,
-  buffer: ArrayBuffer,
-  options?: ReadOptions
-): Promise<number>--><!--Device-unnamed-declare function read(
-  fd: number,
-  buffer: ArrayBuffer,
-  options?: ReadOptions
-): Promise<number>-End-->
+<!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: ReadOptions): Promise<number>--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: ReadOptions): Promise<number>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -65,7 +56,6 @@ Reads file data. This API uses a promise to return the result.
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
-<a id="read-1"></a>
 ## read
 
 ```TypeScript
@@ -105,7 +95,6 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | 13900042 | Unknown error |
 
 
-<a id="read-2"></a>
 ## read
 
 ```TypeScript
@@ -123,17 +112,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare function read(
-  fd: number,
-  buffer: ArrayBuffer,
-  options: ReadOptions,
-  callback: AsyncCallback<number>
-): void--><!--Device-unnamed-declare function read(
-  fd: number,
-  buffer: ArrayBuffer,
-  options: ReadOptions,
-  callback: AsyncCallback<number>
-): void-End-->
+<!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: ReadOptions,  callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: ReadOptions,  callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="rename"></a>
 ## rename
 
 ```TypeScript
@@ -14,7 +13,6 @@ declare function rename(oldPath: string, newPath: string): Promise<void>
 ```
 
 Renames a file or directory. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API is not supported in a distributed directory.
@@ -65,7 +63,6 @@ Renames a file or directory. This API uses a promise to return the result.
 | 13900042 | Unknown error |
 
 
-<a id="rename-1"></a>
 ## rename
 
 ```TypeScript
@@ -73,7 +70,6 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 ```
 
 Renames a file or directory. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This API is not supported in a distributed directory.

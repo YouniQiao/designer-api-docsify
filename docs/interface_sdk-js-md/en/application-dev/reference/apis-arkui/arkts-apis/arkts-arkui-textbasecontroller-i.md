@@ -8,7 +8,6 @@ Defines a text selection controller.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="closeselectionmenu"></a>
 ## closeSelectionMenu
 
 ```TypeScript
@@ -27,7 +26,6 @@ Closes the custom or default text selection menu.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getlayoutmanager"></a>
 ## getLayoutManager
 
 ```TypeScript
@@ -52,7 +50,6 @@ Obtains a **LayoutManager** object.
 | --- | --- |
 | [LayoutManager](arkts-arkui-layoutmanager-i.md) | Layout manager object. |
 
-<a id="setselection"></a>
 ## setSelection
 
 ```TypeScript

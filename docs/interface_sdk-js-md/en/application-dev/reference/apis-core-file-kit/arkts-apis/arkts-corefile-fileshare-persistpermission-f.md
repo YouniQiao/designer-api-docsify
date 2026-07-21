@@ -6,7 +6,6 @@
 import { fileShare } from '@kit.CoreFileKit';
 ```
 
-<a id="persistpermission"></a>
 ## persistPermission
 
 ```TypeScript

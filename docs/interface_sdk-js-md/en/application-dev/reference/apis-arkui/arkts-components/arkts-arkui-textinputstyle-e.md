@@ -36,7 +36,7 @@ This style is used in scenarios where editing and non-editing states are obvious
 
 The **showError** attribute is not supported for this style.
 
-In the [inline style](docroot://ui/arkts-common-components-text-input.md#inline-style), text cannot be dragged into the text box.
+In the [inline style](../../../ui/arkts-common-components-text-input.md#inline-style), text cannot be dragged into the text box.
 
 **Since:** 9
 

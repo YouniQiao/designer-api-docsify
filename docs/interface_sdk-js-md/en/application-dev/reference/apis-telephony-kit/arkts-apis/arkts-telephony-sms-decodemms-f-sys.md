@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="decodemms"></a>
 ## decodeMms
 
 ```TypeScript
@@ -60,7 +59,6 @@ sms.decodeMms(mmsPdu, (err: BusinessError, data: sms.MmsInformation) => {
 ```
 
 
-<a id="decodemms-1"></a>
 ## decodeMms
 
 ```TypeScript

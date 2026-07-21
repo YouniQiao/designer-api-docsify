@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="setpreviewsurface"></a>
 ## setPreviewSurface
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="requestright"></a>
 ## requestRight
 
 ```TypeScript
@@ -19,7 +18,7 @@ Requests the temporary permission for the application to access a USB device. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright-1)
+**Substitutes:** [requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)
 
 <!--Device-usb-function requestRight(deviceName: string): Promise<boolean>--><!--Device-usb-function requestRight(deviceName: string): Promise<boolean>-End-->
 

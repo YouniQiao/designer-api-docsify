@@ -6,7 +6,6 @@
 import { pbap } from '@kit.ConnectivityKit';
 ```
 
-<a id="createpbapserverprofile"></a>
 ## createPbapServerProfile
 
 ```TypeScript

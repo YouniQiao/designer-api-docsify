@@ -6,7 +6,6 @@
 import { router } from '@kit.ArkUI';
 ```
 
-<a id="disablealertbeforebackpage"></a>
 ## disableAlertBeforeBackPage
 
 ```TypeScript
@@ -19,7 +18,7 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Deprecated since:** 9
 
-**Substitutes:** [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage-1)
+**Substitutes:** [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)
 
 <!--Device-router-function disableAlertBeforeBackPage(): void--><!--Device-router-function disableAlertBeforeBackPage(): void-End-->
 

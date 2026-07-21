@@ -7,7 +7,6 @@ Defines the controller of the custom dialog box.
 ```ts
 dialogController : CustomDialogController | null = new CustomDialogController(CustomDialogControllerOptions)
 ```
-
 > **NOTE**  
 >  
 > - **CustomDialogController** is effective only when it is a member variable of the @CustomDialog and @Component  
@@ -16,7 +15,7 @@ dialogController : CustomDialogController | null = new CustomDialogController(Cu
 > - You can pass in multiple other controllers in the CustomDialog to open one or more other CustomDialogs in the  
 > CustomDialog. In this case, you must place the controller pointing to the self behind all controllers. For details,  
 > see  
-> [Example 1: Opening Nested Dialog Boxes](docroot://reference/apis-arkui/arkui-ts/ts-methods-custom-dialog-box.md#example-1-opening-nested-dialog-boxes).  
+> [Example 1: Opening Nested Dialog Boxes](../../../reference/apis-arkui/arkui-ts/ts-methods-custom-dialog-box.md#example-1-opening-nested-dialog-boxes).  
 >
 
 **Since:** 7
@@ -25,7 +24,6 @@ dialogController : CustomDialogController | null = new CustomDialogController(Cu
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -40,7 +38,6 @@ close()
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -48,12 +45,11 @@ constructor(value: CustomDialogControllerOptions)
 ```
 
 Constructor for a custom dialog box.
-
 > **NOTE**  
 >  
 > Custom dialog box parameters do not support dynamic updates. However, by setting **customStyle** to **true** and  
-> configuring attributes such as [background color](../arkts-components/arkts-arkui-commonmethod-c.md#backgroundcolor-1),  
-> [background blur](../arkts-components/arkts-arkui-commonmethod-c.md#backgroundblurstyle-1),  
+> configuring attributes such as [background color](../arkts-components/arkts-arkui-commonmethod-c.md#backgroundcolor),  
+> [background blur](../arkts-components/arkts-arkui-commonmethod-c.md#backgroundblurstyle),  
 > and [width/height](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) on the custom component, dynamic updates can be achieved through state variables  
 > bound to these attributes.  
 >  
@@ -78,7 +74,6 @@ Constructor for a custom dialog box.
 | --- | --- | --- | --- |
 | value | [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md) | Yes | Parameters of the custom dialog box. |
 
-<a id="getstate"></a>
 ## getState
 
 ```TypeScript
@@ -103,7 +98,6 @@ Obtains the state of the custom dialog box.
 | --- | --- |
 | [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md) | State of the custom dialog box. |
 
-<a id="open"></a>
 ## open
 
 ```TypeScript
@@ -111,12 +105,11 @@ open()
 ```
 
 Opens the content of the custom dialog box. This API can be called multiple times. If the dialog box is displayed in a subwindow, no new subwindow is allowed.
-
 > **NOTE**  
 >  
 > **CustomDialog** with subwindow display (**showInSubwindow** set to **true**) is not supported in input method  
 > windows. For details, see the constraints in  
-> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel-1)  
+> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)  
 > of the input method framework documentation.
 
 **Since:** 7

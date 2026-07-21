@@ -1,6 +1,6 @@
 # AccessibilityElement
 
-Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement-1)or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement-1)to obtain an **AccessibilityElement** instance.
+Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement)or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement)to obtain an **AccessibilityElement** instance.
 
 **Since:** 9
 
@@ -8,7 +8,6 @@ Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElem
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-<a id="actionnames"></a>
 ## actionNames
 
 ```TypeScript
@@ -31,7 +30,6 @@ Obtains the names of all actions supported by this element. This API uses an asy
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the names of all actions supported by the element. |
 
-<a id="actionnames-1"></a>
 ## actionNames
 
 ```TypeScript
@@ -54,7 +52,6 @@ Obtains the names of all actions supported by this element. This API uses a prom
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the names of all actions supported by the element. |
 
-<a id="attributenames"></a>
 ## attributeNames
 
 ```TypeScript
@@ -77,7 +74,6 @@ Obtains all attribute names of this element. This API uses an asynchronous callb
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return all attribute names of the element. |
 
-<a id="attributenames-1"></a>
 ## attributeNames
 
 ```TypeScript
@@ -100,7 +96,6 @@ Obtains all attribute names of this element. This API uses a promise to return t
 | --- | --- |
 | Promise&lt;Array&lt;T&gt;&gt; | Promise used to return all attribute names of the element. |
 
-<a id="attributevalue"></a>
 ## attributeValue
 
 ```TypeScript
@@ -116,13 +111,7 @@ Obtains the attribute value based on an attribute name. This API uses an asynchr
 
 **Deprecated since:** 12
 
-<!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(
-    attributeName: T,
-    callback: AsyncCallback<ElementAttributeValues[T]>
-  ): void--><!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(
-    attributeName: T,
-    callback: AsyncCallback<ElementAttributeValues[T]>
-  ): void-End-->
+<!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(    attributeName: T,    callback: AsyncCallback<ElementAttributeValues[T]>  ): void--><!--Device-AccessibilityElement-attributeValue<T extends keyof ElementAttributeValues>(    attributeName: T,    callback: AsyncCallback<ElementAttributeValues[T]>  ): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -140,7 +129,6 @@ Obtains the attribute value based on an attribute name. This API uses an asynchr
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300004](../errorcode-accessibility.md#9300004-property-not-found) | This property does not exist. |
 
-<a id="attributevalue-1"></a>
 ## attributeValue
 
 ```TypeScript
@@ -176,7 +164,6 @@ Obtains the attribute value based on an attribute name. This API uses a promise 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300004](../errorcode-accessibility.md#9300004-property-not-found) | This property does not exist. |
 
-<a id="findelement"></a>
 ## findElement
 
 ```TypeScript
@@ -207,7 +194,6 @@ Finds an element based on the content type. This API uses an asynchronous callba
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 
-<a id="findelement-1"></a>
 ## findElement
 
 ```TypeScript
@@ -243,7 +229,6 @@ Finds an element based on the content type. This API uses a promise to return th
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 
-<a id="findelement-2"></a>
 ## findElement
 
 ```TypeScript
@@ -274,7 +259,6 @@ Finds an element based on the focus type. This API uses an asynchronous callback
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 
-<a id="findelement-3"></a>
 ## findElement
 
 ```TypeScript
@@ -310,7 +294,6 @@ Finds an element based on the focus type. This API uses a promise to return the 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 
-<a id="findelement-4"></a>
 ## findElement
 
 ```TypeScript
@@ -341,7 +324,6 @@ Finds an element based on the focus direction. This API uses an asynchronous cal
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 
-<a id="findelement-5"></a>
 ## findElement
 
 ```TypeScript
@@ -377,7 +359,6 @@ Finds an element based on the focus direction. This API uses a promise to return
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 
-<a id="performaction"></a>
 ## performAction
 
 ```TypeScript
@@ -409,7 +390,6 @@ Performs an action based on the specified action name. This API uses an asynchro
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300005](../errorcode-accessibility.md#9300005-action-not-supported) | This action is not supported. |
 
-<a id="performaction-1"></a>
 ## performAction
 
 ```TypeScript
@@ -446,7 +426,6 @@ Performs an action based on the specified action name. This API uses a promise t
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300005](../errorcode-accessibility.md#9300005-action-not-supported) | This action is not supported. |
 
-<a id="performaction-2"></a>
 ## performAction
 
 ```TypeScript

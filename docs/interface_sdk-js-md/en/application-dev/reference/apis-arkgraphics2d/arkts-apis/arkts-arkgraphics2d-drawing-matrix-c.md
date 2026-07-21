@@ -1,7 +1,6 @@
 # Matrix
 
-Implements a matrix.A 3 x 3 matrix is shown as below.![matrix_3x3](docroot://reference/apis-arkgraphics2d/figures/matrix3X3.PNG)Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient.If (x<sub>1</sub>, y<sub>1</sub>) is the source coordinate point, (x<sub>2</sub>, y<sub>2</sub>) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows:![matrix_xy](docroot://reference/apis-arkgraphics2d/figures/matrix_xy.PNG)
-
+Implements a matrix.A 3 x 3 matrix is shown as below.![matrix_3x3](../../../reference/apis-arkgraphics2d/figures/matrix3X3.PNG)Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient.If (x<sub>1</sub>, y<sub>1</sub>) is the source coordinate point, (x<sub>2</sub>, y<sub>2</sub>) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows:![matrix_xy](../../../reference/apis-arkgraphics2d/figures/matrix_xy.PNG)
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 12.  
@@ -23,7 +22,6 @@ Implements a matrix.A 3 x 3 matrix is shown as below.![matrix_3x3](docroot://ref
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -38,7 +36,6 @@ Creates a **Matrix** object.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -59,7 +56,6 @@ Copies a matrix.
 | --- | --- | --- | --- |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix to be copied. |
 
-<a id="getall"></a>
 ## getAll
 
 ```TypeScript
@@ -80,7 +76,6 @@ Obtains all element values of this matrix.
 | --- | --- |
 | Array&lt;number&gt; | Array of matrix values obtained. The length is 9. Each value is a floating point number. |
 
-<a id="getvalue"></a>
 ## getValue
 
 ```TypeScript
@@ -113,7 +108,6 @@ Obtains a matrix value of a given index, which ranges from 0 to 8.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="invert"></a>
 ## invert
 
 ```TypeScript
@@ -146,7 +140,6 @@ Inverts this matrix and returns the result.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="isaffine"></a>
 ## isAffine
 
 ```TypeScript
@@ -167,7 +160,6 @@ Checks whether the existing matrix is an affine matrix, which includes transform
 | --- | --- |
 | boolean | Whether the existing matrix is an affine matrix. **true** means yes; **false** otherwise. |
 
-<a id="isequal"></a>
 ## isEqual
 
 ```TypeScript
@@ -200,7 +192,6 @@ Checks whether two **OH_Drawing_Matrix** objects are equal.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="isidentity"></a>
 ## isIdentity
 
 ```TypeScript
@@ -221,7 +212,6 @@ Checks whether an **OH_Drawing_Matrix** object is an identity matrix:
 | --- | --- |
 | boolean | Check result. The value **true** means that the matrix is an identity matrix, and **false** means the opposite. |
 
-<a id="mappoints"></a>
 ## mapPoints
 
 ```TypeScript
@@ -254,7 +244,6 @@ Maps a source point array to a destination point array by means of matrix transf
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="mapradius"></a>
 ## mapRadius
 
 ```TypeScript
@@ -281,14 +270,13 @@ Returns the average radius of the ellipse formed after a circle with the specifi
 | --- | --- |
 | number | Average radius after transformation. |
 
-<a id="maprect"></a>
 ## mapRect
 
 ```TypeScript
 mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 ```
 
-Sets the destination rectangle to the bounding rectangle of the shape obtained after transforming the source rectangle with a matrix transformation. As shown in the figure below, the blue rectangle represents the source rectangle, and the yellow rectangle is the shape obtained after a matrix transformation is applied to the source rectangle. Since the edges of the yellow rectangle are not aligned with the coordinate axes, it cannot be represented by a rectangle object. To address this issue, a destination rectangle (black rectangle) is defined as the bounding rectangle.![mapRect](docroot://reference/apis-arkgraphics2d/figures/zh-ch_matrix_mapRect.png)
+Sets the destination rectangle to the bounding rectangle of the shape obtained after transforming the source rectangle with a matrix transformation. As shown in the figure below, the blue rectangle represents the source rectangle, and the yellow rectangle is the shape obtained after a matrix transformation is applied to the source rectangle. Since the edges of the yellow rectangle are not aligned with the coordinate axes, it cannot be represented by a rectangle object. To address this issue, a destination rectangle (black rectangle) is defined as the bounding rectangle.![mapRect](../../../reference/apis-arkgraphics2d/figures/zh-ch_matrix_mapRect.png)
 
 **Since:** 12
 
@@ -315,7 +303,6 @@ Sets the destination rectangle to the bounding rectangle of the shape obtained a
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="postconcat"></a>
 ## postConcat
 
 ```TypeScript
@@ -336,7 +323,6 @@ Right-multiply the existing matrix by another matrix.
 | --- | --- | --- | --- |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix used for calculation. |
 
-<a id="postrotate"></a>
 ## postRotate
 
 ```TypeScript
@@ -365,7 +351,6 @@ Post multiplies this matrix by a matrix that is derived from an identity matrix 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="postscale"></a>
 ## postScale
 
 ```TypeScript
@@ -395,7 +380,6 @@ Post multiplies this matrix by a matrix that is derived from an identity matrix 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="postskew"></a>
 ## postSkew
 
 ```TypeScript
@@ -419,7 +403,6 @@ Right-multiply the existing matrix by a skew transformation matrix.
 | px | number | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
 | py | number | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
-<a id="posttranslate"></a>
 ## postTranslate
 
 ```TypeScript
@@ -447,7 +430,6 @@ Post multiplies this matrix by a matrix that is derived from an identity matrix 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="preconcat"></a>
 ## preConcat
 
 ```TypeScript
@@ -474,7 +456,6 @@ Preconcats the existing matrix with the passed-in matrix.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="prerotate"></a>
 ## preRotate
 
 ```TypeScript
@@ -503,7 +484,6 @@ Premultiplies this matrix by a matrix that is derived from an identity matrix af
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="prescale"></a>
 ## preScale
 
 ```TypeScript
@@ -533,7 +513,6 @@ Premultiplies this matrix by a matrix that is derived from an identity matrix af
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="preskew"></a>
 ## preSkew
 
 ```TypeScript
@@ -557,7 +536,6 @@ Left-multiply the existing matrix by a skew transformation matrix.
 | px | number | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
 | py | number | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
-<a id="pretranslate"></a>
 ## preTranslate
 
 ```TypeScript
@@ -585,7 +563,6 @@ Premultiplies this matrix by a matrix that is derived from an identity matrix af
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="rectstaysrect"></a>
 ## rectStaysRect
 
 ```TypeScript
@@ -606,7 +583,6 @@ Checks whether a rectangle stays a rectangle after being mapped by a matrix.
 | --- | --- |
 | boolean | Whether a rectangle stays a rectangle after being mapped by a matrix. **true** means yes;false otherwise. |
 
-<a id="reset"></a>
 ## reset
 
 ```TypeScript
@@ -621,7 +597,6 @@ Resets this matrix to an identity matrix.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-<a id="setconcat"></a>
 ## setConcat
 
 ```TypeScript
@@ -643,7 +618,6 @@ Updates the existing matrix with the product of two matrices.
 | matrixA | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix A used for calculation. |
 | matrixB | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix B used for calculation. |
 
-<a id="setmatrix"></a>
 ## setMatrix
 
 ```TypeScript
@@ -670,7 +644,6 @@ Sets parameters for this matrix.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="setmatrix-1"></a>
 ## setMatrix
 
 ```TypeScript
@@ -691,7 +664,6 @@ Updates the existing matrix with another matrix.
 | --- | --- | --- | --- |
 | matrix | Array&lt;number&gt; \| Matrix | Yes | Array or matrix for the update. |
 
-<a id="setpolytopoly"></a>
 ## setPolyToPoly
 
 ```TypeScript
@@ -726,7 +698,6 @@ Sets this matrix to a transformation matrix that maps the source point array to 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="setrecttorect"></a>
 ## setRectToRect
 
 ```TypeScript
@@ -761,7 +732,6 @@ Sets this matrix to a transformation matrix that maps a source rectangle to a de
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="setrotation"></a>
 ## setRotation
 
 ```TypeScript
@@ -790,7 +760,6 @@ Sets this matrix as an identity matrix and rotates it by a given degree around t
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="setscale"></a>
 ## setScale
 
 ```TypeScript
@@ -820,7 +789,6 @@ Sets this matrix as an identity matrix and scales it with the coefficients (sx, 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="setsincos"></a>
 ## setSinCos
 
 ```TypeScript
@@ -844,7 +812,6 @@ Sets the matrix to rotate around the rotation center (px, py) with the specified
 | px | number | Yes | X coordinate of the rotation center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
 | py | number | Yes | Y coordinate of the rotation center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
-<a id="setskew"></a>
 ## setSkew
 
 ```TypeScript
@@ -868,7 +835,6 @@ Sets the skew coefficients of a matrix.
 | px | number | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
 | py | number | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
-<a id="settranslation"></a>
 ## setTranslation
 
 ```TypeScript

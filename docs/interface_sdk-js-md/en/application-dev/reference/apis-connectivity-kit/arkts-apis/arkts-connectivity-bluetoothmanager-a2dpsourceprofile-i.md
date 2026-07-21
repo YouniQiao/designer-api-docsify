@@ -20,7 +20,6 @@ Manager a2dp source profile.
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -61,7 +60,6 @@ Connect to device with a2dp.On API 10 and above, the permission required by this
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -102,7 +100,6 @@ Disconnect to device with a2dp.On API 10 and above, the permission required by t
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="getplayingstate"></a>
 ## getPlayingState
 
 ```TypeScript
@@ -147,7 +144,6 @@ Obtains the playing state of device.On API 10 and above, the permission required
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="off"></a>
 ## off('connectionStateChange')
 
 ```TypeScript
@@ -183,7 +179,6 @@ Unsubscribe the event reported when the profile connection state changes.On API 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
-<a id="on"></a>
 ## on('connectionStateChange')
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="uninstalllocalplugin"></a>
 ## uninstallLocalPlugin
 
 ```TypeScript

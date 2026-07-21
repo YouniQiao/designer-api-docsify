@@ -14,7 +14,6 @@ The module provides the context for intent execution. It is used as a property i
 import { InsightIntentContext } from '@kit.AbilityKit';
 ```
 
-<a id="setreturnmodeforuiabilityforeground"></a>
 ## setReturnModeForUIAbilityForeground
 
 ```TypeScript
@@ -89,7 +88,6 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 
 ```
 
-<a id="setreturnmodeforuiextensionability"></a>
 ## setReturnModeForUIExtensionAbility
 
 ```TypeScript
@@ -163,7 +161,6 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 
 ```
 
-<a id="startability"></a>
 ## startAbility
 
 ```TypeScript
@@ -249,7 +246,6 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 
 ```
 
-<a id="startability-1"></a>
 ## startAbility
 
 ```TypeScript
@@ -341,7 +337,7 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: number
 ```
 
-Unique ID of an intent instance. Its execution result can be returned through [insightIntentProvider.sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult-1) and [insightIntentProvider.sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult-1).
+Unique ID of an intent instance. Its execution result can be returned through [insightIntentProvider.sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) and [insightIntentProvider.sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult).
 
 **Type:** number
 

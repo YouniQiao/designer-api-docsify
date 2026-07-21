@@ -6,7 +6,6 @@
 import { restrictions } from '@kit.MDMKit';
 ```
 
-<a id="setdisallowedpolicy"></a>
 ## setDisallowedPolicy
 
 ```TypeScript
@@ -19,7 +18,7 @@ Disallows a feature.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1)
+**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)
 
 **Required permissions:** 
 - API version 20+: ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS or ohos.permission.ENTERPRISE_MANAGE_NETWORK
@@ -37,7 +36,7 @@ Disallows a feature.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| feature | string | Yes | For features that can be set, see Table 1.<br> **Note**: Since API version 15,applications granted with the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and [activated as device administrator applications](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision-1)can use this API to set the following features: **bluetooth**, **hdc**, **microphone**, **usb**, **wifi**,**tethering**, and **camera**<!--RP3--><!--RP3End-->. Since API version 26.0.0, this API can be used to set the **mtpServer** feature. |
+| feature | string | Yes | For features that can be set, see Table 1.<br> **Note**: Since API version 15,applications granted with the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and [activated as device administrator applications](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision)can use this API to set the following features: **bluetooth**, **hdc**, **microphone**, **usb**, **wifi**,**tethering**, and **camera**<!--RP3--><!--RP3End-->. Since API version 26.0.0, this API can be used to set the **mtpServer** feature. |
 | disallow | boolean | Yes | Whether to disallow the feature. The value **true** means to disallow the feature;the value **false** means the opposite. |
 
 **Error codes:**
@@ -72,7 +71,6 @@ try {
 ```
 
 
-<a id="setdisallowedpolicy-1"></a>
 ## setDisallowedPolicy
 
 ```TypeScript
@@ -96,7 +94,7 @@ Enables or disables a specified device feature. Once disabled, the feature canno
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| feature | [FeatureForDevice](arkts-mdm-restrictions-featurefordevice-e.md) | Yes | Device feature to be enabled or disabled.<br> **Note**: An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been [activated as the built-in device administrator application](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision-1)can use this API to set the [FeatureForDevice.WIFI_P2P](arkts-mdm-restrictions-featurefordevice-e.md) feature. |
+| feature | [FeatureForDevice](arkts-mdm-restrictions-featurefordevice-e.md) | Yes | Device feature to be enabled or disabled.<br> **Note**: An application that has obtained the ohos.permission.PERSONAL_MANAGE_RESTRICTIONS permission and has been [activated as the built-in device administrator application](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision)can use this API to set the [FeatureForDevice.WIFI_P2P](arkts-mdm-restrictions-featurefordevice-e.md) feature. |
 | disallow | boolean | Yes | Whether to disallow the feature. The value **true** means to disallow the feature;the value **false** means the opposite. |
 
 **Error codes:**

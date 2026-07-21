@@ -22,7 +22,6 @@ Provides APIs to manage albums.
 import { userFileManager } from '@kit.CoreFileKit';
 ```
 
-<a id="addphotoassets"></a>
 ## addPhotoAssets
 
 ```TypeScript
@@ -35,7 +34,7 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [addAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets-1)
+**Substitutes:** [addAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -91,7 +90,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="addphotoassets-1"></a>
 ## addPhotoAssets
 
 ```TypeScript
@@ -104,7 +102,7 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [addAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets-1)
+**Substitutes:** [addAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -164,7 +162,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="commitmodify"></a>
 ## commitModify
 
 ```TypeScript
@@ -177,7 +174,7 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#commitmodify-1)
+**Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#commitmodify)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -220,7 +217,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="commitmodify-1"></a>
 ## commitModify
 
 ```TypeScript
@@ -233,7 +229,7 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#commitmodify-1)
+**Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#commitmodify)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -279,7 +275,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="deletephotoassets"></a>
 ## deletePhotoAssets
 
 ```TypeScript
@@ -287,7 +282,6 @@ deletePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
 Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this  
@@ -297,7 +291,7 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteassets-1)
+**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -353,7 +347,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="deletephotoassets-1"></a>
 ## deletePhotoAssets
 
 ```TypeScript
@@ -361,7 +354,6 @@ deletePhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
 Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this  
@@ -371,7 +363,7 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteassets-1)
+**Substitutes:** [deleteAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c-sys.md#deleteassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -431,7 +423,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="recoverphotoassets"></a>
 ## recoverPhotoAssets
 
 ```TypeScript
@@ -444,7 +435,7 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [recoverAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i-sys.md#recoverassets-1)
+**Substitutes:** [recoverAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i-sys.md#recoverassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -500,7 +491,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="recoverphotoassets-1"></a>
 ## recoverPhotoAssets
 
 ```TypeScript
@@ -513,7 +503,7 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [recoverAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i-sys.md#recoverassets-1)
+**Substitutes:** [recoverAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i-sys.md#recoverassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -573,7 +563,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="removephotoassets"></a>
 ## removePhotoAssets
 
 ```TypeScript
@@ -586,7 +575,7 @@ Removes image and video assets from an album. The album and file resources must 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets-1)
+**Substitutes:** [removeAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -642,7 +631,6 @@ async function example(mgr: userFileManager.UserFileManager) {
 
 ```
 
-<a id="removephotoassets-1"></a>
 ## removePhotoAssets
 
 ```TypeScript
@@ -655,7 +643,7 @@ Removes image and video assets from an album. The album and file resources must 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets-1)
+**Substitutes:** [removeAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 

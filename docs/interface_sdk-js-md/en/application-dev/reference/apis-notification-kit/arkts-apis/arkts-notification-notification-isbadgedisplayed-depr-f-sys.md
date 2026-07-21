@@ -1,6 +1,5 @@
 # isBadgeDisplayed (System API)
 
-<a id="isbadgedisplayed"></a>
 ## isBadgeDisplayed
 
 ```TypeScript
@@ -31,7 +30,6 @@ Checks whether the notification badge is enabled for a specified application.Thi
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
-<a id="isbadgedisplayed-1"></a>
 ## isBadgeDisplayed
 
 ```TypeScript

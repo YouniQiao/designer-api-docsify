@@ -10,7 +10,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="show"></a>
 ## show
 
 ```TypeScript
@@ -18,11 +17,10 @@ static show(value: ActionSheetOptions)
 ```
 
 Shows an action sheet in the given settings.
-
 > **NOTE**  
 >  
 > Since API version 10, you can use  
-> [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet-1) in  
+> [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet) in  
 > [UIContext](arkts-arkui-uicontext.md) to specify the UI execution context.
 
 **Since:** 8

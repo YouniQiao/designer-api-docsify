@@ -1,6 +1,5 @@
 # getAbilityRunningInfos (System API)
 
-<a id="getabilityrunninginfos"></a>
 ## getAbilityRunningInfos
 
 ```TypeScript
@@ -30,7 +29,6 @@ Obtains the ability running information. This API uses a promise to return the r
 | Promise&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Promise used to return the ability running information. |
 
 
-<a id="getabilityrunninginfos-1"></a>
 ## getAbilityRunningInfos
 
 ```TypeScript

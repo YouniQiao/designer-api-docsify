@@ -14,7 +14,6 @@ Defines a common callback. You can set **data** to customize the data type of th
 import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.BasicServicesKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

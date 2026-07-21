@@ -6,7 +6,6 @@
 import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
-<a id="loadmodelfromfile"></a>
 ## loadModelFromFile
 
 ```TypeScript
@@ -21,11 +20,7 @@ Create a Model instance from file path
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-mindSporeLite-function loadModelFromFile(
-    model: string,
-    context?: Context): Promise<Model>--><!--Device-mindSporeLite-function loadModelFromFile(
-    model: string,
-    context?: Context): Promise<Model>-End-->
+<!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context?: Context): Promise<Model>--><!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context?: Context): Promise<Model>-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -71,7 +66,6 @@ mindSporeLite.loadModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLi
 ```
 
 
-<a id="loadmodelfromfile-1"></a>
 ## loadModelFromFile
 
 ```TypeScript
@@ -85,9 +79,7 @@ Create a Model instance from file path.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-mindSporeLite-function loadModelFromFile(
-    model: string, callback: Callback<Model>): void--><!--Device-mindSporeLite-function loadModelFromFile(
-    model: string, callback: Callback<Model>): void-End-->
+<!--Device-mindSporeLite-function loadModelFromFile(    model: string, callback: Callback<Model>): void--><!--Device-mindSporeLite-function loadModelFromFile(    model: string, callback: Callback<Model>): void-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -125,7 +117,6 @@ mindSporeLite.loadModelFromFile(modelFile, (mindSporeLiteModel: mindSporeLite.Mo
 ```
 
 
-<a id="loadmodelfromfile-2"></a>
 ## loadModelFromFile
 
 ```TypeScript
@@ -140,11 +131,7 @@ Create a Model instance from file path.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-mindSporeLite-function loadModelFromFile(
-    model: string,
-    context: Context, callback: Callback<Model>): void--><!--Device-mindSporeLite-function loadModelFromFile(
-    model: string,
-    context: Context, callback: Callback<Model>): void-End-->
+<!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context: Context, callback: Callback<Model>): void--><!--Device-mindSporeLite-function loadModelFromFile(    model: string,    context: Context, callback: Callback<Model>): void-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 

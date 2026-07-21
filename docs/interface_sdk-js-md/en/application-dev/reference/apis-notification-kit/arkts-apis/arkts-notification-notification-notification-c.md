@@ -18,7 +18,6 @@ Manages notifications.
 import { ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
 ```
 
-<a id="show"></a>
 ## show
 
 ```TypeScript

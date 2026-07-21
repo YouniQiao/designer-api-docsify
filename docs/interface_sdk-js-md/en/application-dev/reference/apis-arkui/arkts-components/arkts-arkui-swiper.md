@@ -14,7 +14,6 @@ The **Swiper** component is able to display child components in a carousel-like 
 ## Child Components
 
 Supported
-
 > **NOTE**  
 >  
 > - Allowed child component types: built-in and custom components, including rendering control types (  

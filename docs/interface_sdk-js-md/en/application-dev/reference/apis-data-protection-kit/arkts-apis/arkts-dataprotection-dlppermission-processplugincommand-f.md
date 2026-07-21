@@ -6,7 +6,6 @@
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
-<a id="processplugincommand"></a>
 ## processPluginCommand
 
 ```TypeScript

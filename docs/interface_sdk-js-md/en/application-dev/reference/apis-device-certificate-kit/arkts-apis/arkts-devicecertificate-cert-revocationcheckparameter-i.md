@@ -21,7 +21,6 @@ crlDownloadURI?: string
 ```
 
 Address used to download the CRLs.
-
 > **NOTE**  
 >  
 > The URI takes effect only for the leaf certificate.
@@ -99,7 +98,6 @@ ocspResponderURI?: string
 ```
 
 URI of the alternative server used to send OCSP requests. HTTP and HTTPS are supported. The specific configuration is determined via the negotiation with the server.
-
 > **NOTE**  
 >  
 > The URI takes effect only for the leaf certificate.

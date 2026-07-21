@@ -10,7 +10,6 @@ pixelmap object with release function.
 
 **System API:** This is a system API.
 
-<a id="release"></a>
 ## release
 
 ```TypeScript

@@ -16,7 +16,6 @@ Implements communication between the Worker thread and the host thread. The post
 import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
-<a id="callglobalcallobjectmethod"></a>
 ## callGlobalCallObjectMethod
 
 ```TypeScript
@@ -109,7 +108,6 @@ workerPort.onmessage = (e: MessageEvents): void => {
 
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -154,7 +152,6 @@ workerPort.onmessage = (e: MessageEvents): void => {
 
 ```
 
-<a id="postmessage"></a>
 ## postMessage
 
 ```TypeScript
@@ -211,7 +208,6 @@ workerPort.onmessage = (e: MessageEvents): void => {
 
 ```
 
-<a id="postmessage-1"></a>
 ## postMessage
 
 ```TypeScript
@@ -267,7 +263,6 @@ workerPort.onmessage = (e: MessageEvents): void => {
 
 ```
 
-<a id="postmessageatfront"></a>
 ## postMessageAtFront
 
 ```TypeScript
@@ -301,7 +296,6 @@ Sends a message from the Worker thread to the main thread by transferring object
 | [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 | [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
-<a id="postmessagewithsharedsendable"></a>
 ## postMessageWithSharedSendable
 
 ```TypeScript

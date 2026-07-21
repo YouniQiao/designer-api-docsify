@@ -14,7 +14,6 @@ Implements a common controller for managing components related to **promptAction
 import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -33,7 +32,6 @@ Closes the custom dialog box. If the dialog box is already closed, this API has 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -52,7 +50,6 @@ A constructor used to create a controller instance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getstate"></a>
 ## getState
 
 ```TypeScript

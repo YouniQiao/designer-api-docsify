@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="getabilityicon"></a>
 ## getAbilityIcon
 
 ```TypeScript
@@ -52,7 +51,6 @@ Obtains the PixelMap of an icon based on the bundle name, module name, and abili
 | [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
 
 
-<a id="getabilityicon-1"></a>
 ## getAbilityIcon
 
 ```TypeScript

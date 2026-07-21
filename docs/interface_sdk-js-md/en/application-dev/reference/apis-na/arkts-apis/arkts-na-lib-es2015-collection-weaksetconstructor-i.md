@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface WeakSetConstructor--><!--Device-unnamed-interface WeakSetConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

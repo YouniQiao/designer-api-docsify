@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="anonattestkeyitemofflineasuser"></a>
 ## anonAttestKeyItemOfflineAsUser
 
 ```TypeScript
@@ -15,7 +14,6 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 ```
 
 Obtains an anonymous key certificate in offline mode for a specified user. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - Offline key attestation depends on the network. You need to periodically connect to the network to use this API  
@@ -30,9 +28,7 @@ Obtains an anonymous key certificate in offline mode for a specified user. This 
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
-      params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
-      params: HuksParam[]): Promise<HuksReturnResult>-End-->
+<!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,      params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,      params: HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

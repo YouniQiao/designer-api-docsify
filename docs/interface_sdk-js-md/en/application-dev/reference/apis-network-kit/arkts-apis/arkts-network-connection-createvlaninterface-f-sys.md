@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="createvlaninterface"></a>
 ## createVlanInterface
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="finishsynctrace"></a>
 ## finishSyncTrace
 
 ```TypeScript
@@ -15,7 +14,7 @@ function finishSyncTrace(level: HiTraceOutputLevel): void
 
 Stops a synchronous trace with the trace output level specified.
 
-The **level** used in **finishSyncTrace** must be the same as that of [startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startsynctrace-1).
+The **level** used in **finishSyncTrace** must be the same as that of [startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startsynctrace).
 
 **Since:** 19
 

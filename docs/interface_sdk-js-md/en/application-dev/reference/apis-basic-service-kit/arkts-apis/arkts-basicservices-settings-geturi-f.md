@@ -6,7 +6,6 @@
 import { settings } from '@kit.BasicServicesKit';
 ```
 
-<a id="geturi"></a>
 ## getURI
 
 ```TypeScript
@@ -40,7 +39,6 @@ settings.getURI(settings.display.SCREEN_BRIGHTNESS_STATUS, (uri:string) => {
 ```
 
 
-<a id="geturi-1"></a>
 ## getURI
 
 ```TypeScript

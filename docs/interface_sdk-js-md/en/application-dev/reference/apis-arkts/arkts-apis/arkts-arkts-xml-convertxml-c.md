@@ -14,7 +14,6 @@ ConvertXML representation refers to extensible markup language.
 import { convertxml } from '@kit.ArkTS';
 ```
 
-<a id="convert"></a>
 ## convert
 
 ```TypeScript
@@ -27,7 +26,7 @@ Converts an XML text to a JavaScript object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fastConvertToJSObject](arkts-arkts-xml-convertxml-c.md#fastconverttojsobject-1)
+**Substitutes:** [fastConvertToJSObject](arkts-arkts-xml-convertxml-c.md#fastconverttojsobject)
 
 <!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object-End-->
 
@@ -78,7 +77,6 @@ console.info(result);
 
 ```
 
-<a id="converttojsobject"></a>
 ## convertToJSObject
 
 ```TypeScript
@@ -91,7 +89,7 @@ Converts an XML text to an object of the object type.
 
 **Deprecated since:** 14
 
-**Substitutes:** [fastConvertToJSObject](arkts-arkts-xml-convertxml-c.md#fastconverttojsobject-1)
+**Substitutes:** [fastConvertToJSObject](arkts-arkts-xml-convertxml-c.md#fastconverttojsobject)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -154,7 +152,6 @@ try {
 
 ```
 
-<a id="fastconverttojsobject"></a>
 ## fastConvertToJSObject
 
 ```TypeScript
@@ -162,7 +159,6 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 ```
 
 Converts an XML text to an object of the object type.
-
 > **NOTE**  
 >  
 > - This API cannot parse XML files with a large amount of data. If the text content of a single element exceeds  
@@ -233,7 +229,6 @@ try {
 
 ```
 
-<a id="largeconverttojsobject"></a>
 ## largeConvertToJSObject
 
 ```TypeScript

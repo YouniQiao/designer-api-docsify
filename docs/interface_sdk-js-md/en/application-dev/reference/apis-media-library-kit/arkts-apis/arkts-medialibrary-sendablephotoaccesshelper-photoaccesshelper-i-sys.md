@@ -16,7 +16,6 @@ Helper functions to access photos and albums.
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="createasset"></a>
 ## createAsset
 
 ```TypeScript
@@ -31,9 +30,9 @@ The file name must meet the following requirements:
 - The total length of the file name must be between 1 and 255 characters.  
 - The base name must not contain any invalid characters.
 
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " < > |
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
 
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` < > | { } [ ]
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 12
 
@@ -87,7 +86,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="createasset-1"></a>
 ## createAsset
 
 ```TypeScript
@@ -102,9 +100,9 @@ The file name must meet the following requirements:
 - The total length of the file name must be between 1 and 255 characters.  
 - The base name must not contain any invalid characters.
 
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " < > |
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
 
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` < > | { } [ ]
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 12
 
@@ -162,7 +160,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="gethiddenalbums"></a>
 ## getHiddenAlbums
 
 ```TypeScript
@@ -178,13 +175,7 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
-<!--Device-PhotoAccessHelper-getHiddenAlbums(
-      mode: photoAccessHelper.HiddenPhotosDisplayMode,
-      options?: photoAccessHelper.FetchOptions
-    ): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(
-      mode: photoAccessHelper.HiddenPhotosDisplayMode,
-      options?: photoAccessHelper.FetchOptions
-    ): Promise<FetchResult<Album>>-End-->
+<!--Device-PhotoAccessHelper-getHiddenAlbums(      mode: photoAccessHelper.HiddenPhotosDisplayMode,      options?: photoAccessHelper.FetchOptions    ): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(      mode: photoAccessHelper.HiddenPhotosDisplayMode,      options?: photoAccessHelper.FetchOptions    ): Promise<FetchResult<Album>>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -212,7 +203,6 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
-<a id="getphotoassets"></a>
 ## getPhotoAssets
 
 ```TypeScript
@@ -279,7 +269,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getsharedphotoassets"></a>
 ## getSharedPhotoAssets
 
 ```TypeScript

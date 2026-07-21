@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="generatekey"></a>
 ## generateKey
 
 ```TypeScript
@@ -19,7 +18,7 @@ Generates a key. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [generateKeyItem(keyAlias:](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem-1)
+**Substitutes:** [generateKeyItem(keyAlias:](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem)
 
 <!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -72,7 +71,6 @@ huks.generateKey(keyAlias, options, (err, data) => {
 ```
 
 
-<a id="generatekey-1"></a>
 ## generateKey
 
 ```TypeScript
@@ -85,7 +83,7 @@ Generates a key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [generateKeyItem(keyAlias:](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem-1)
+**Substitutes:** [generateKeyItem(keyAlias:](arkts-universalkeystore-huks-generatekeyitem-f.md#generatekeyitem)
 
 <!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function generateKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
 

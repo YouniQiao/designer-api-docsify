@@ -1,7 +1,6 @@
 # ClipOp
 
 Enumerates the canvas clipping modes.
-
 > **NOTE**  
 >  
 > The diagrams show the result of cropping a circle based on different enumerated values after a rectangle is  

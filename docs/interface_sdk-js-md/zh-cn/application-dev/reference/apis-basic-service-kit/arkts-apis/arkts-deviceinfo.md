@@ -1,7 +1,6 @@
 # @ohos.deviceInfo
 
 本模块提供终端设备信息查询，开发者不可配置。
-
 > **说明：**  
 >  
 > 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。  
@@ -52,7 +51,7 @@ import { deviceInfo } from '@kit.BasicServicesKit';
 | [buildVersion](arkts-basicservices-deviceinfo-con.md#buildversion) | Build版本号，标识编译构建的版本号，值为osFullName中的第四位数值，建议直接使用deviceInfo.buildVersion获取，可提升效率，不建议开发者自主解析osFullName获取。  示例：1 |
 | [chipType](arkts-basicservices-deviceinfo-con.md#chiptype) | 当前设备CPU芯片型号  示例：xxxxx |
 | [deviceColor](arkts-basicservices-deviceinfo-con.md#devicecolor) | 当前设备颜色。如果无法获取，则返回空字符串  示例：gold |
-| [deviceType](arkts-basicservices-deviceinfo-con.md#devicetype) | 设备类型。详细请参考[deviceTypes标签](docroot://quick-start/module-configuration-file.md#devicetypes标签)。  示例：<!--RP1-->wearable<!--RP1End--> |
+| [deviceType](arkts-basicservices-deviceinfo-con.md#devicetype) | 设备类型。详细请参考[deviceTypes标签](../../../quick-start/module-configuration-file.md#devicetypes标签)。  示例：<!--RP1-->wearable<!--RP1End--> |
 | [diskSN](arkts-basicservices-deviceinfo-con.md#disksn) | 硬盘序列号。  **说明** ：该字段只能在2in1设备进行查询，其他设备查询结果为空。  ohos.permission.ACCESS_DISK_PHY_INFO  示例：2502EM400567 |
 | [displayVersion](arkts-basicservices-deviceinfo-con.md#displayversion) | 产品版本。  示例：<!--RP8-->XXX X.X.X.X<!--RP8End--> |
 | [distributionOSApiName](arkts-basicservices-deviceinfo-con.md#distributionosapiname) | 发行版系统api版本名称<!--Del-->，由发行方定义<!--DelEnd-->。 |

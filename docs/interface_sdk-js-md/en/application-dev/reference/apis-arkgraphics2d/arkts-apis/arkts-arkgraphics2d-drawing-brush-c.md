@@ -1,7 +1,6 @@
 # Brush
 
 Defines a brush, which is used to describe the style and color to fill in a shape.
-
 > **NOTE**  
 >  
 > - This module uses the physical pixel unit, px.  
@@ -21,7 +20,6 @@ Defines a brush, which is used to describe the style and color to fill in a shap
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -36,7 +34,6 @@ A constructor used to create a **Brush** object.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -63,7 +60,6 @@ Copies a **Brush** object to create a new one.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="getalpha"></a>
 ## getAlpha
 
 ```TypeScript
@@ -84,7 +80,6 @@ Obtains the alpha value of this brush.
 | --- | --- |
 | number | Alpha value of the brush. The return value is an integer ranging from 0 to 255. |
 
-<a id="getcolor"></a>
 ## getColor
 
 ```TypeScript
@@ -105,14 +100,13 @@ Obtains the color of this brush.
 | --- | --- |
 | common2D.Color | Color of the brush. |
 
-<a id="getcolor4f"></a>
 ## getColor4f
 
 ```TypeScript
 getColor4f(): common2D.Color4f
 ```
 
-Obtains the brush color. The difference between this method and [getColor](arkts-arkgraphics2d-drawing-brush-c.md#getcolor-1) is that this method returns a floating point number.
+Obtains the brush color. The difference between this method and [getColor](arkts-arkgraphics2d-drawing-brush-c.md#getcolor) is that this method returns a floating point number.
 
 **Since:** 20
 
@@ -126,7 +120,6 @@ Obtains the brush color. The difference between this method and [getColor](arkts
 | --- | --- |
 | common2D.Color4f | Color of the brush. |
 
-<a id="getcolorfilter"></a>
 ## getColorFilter
 
 ```TypeScript
@@ -147,7 +140,6 @@ Obtains the color filter of this brush.
 | --- | --- |
 | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
-<a id="gethexcolor"></a>
 ## getHexColor
 
 ```TypeScript
@@ -168,7 +160,6 @@ Obtains the color of this brush.
 | --- | --- |
 | number | Color, represented as a 32-bit unsigned integer in hexadecimal ARGB format. |
 
-<a id="isantialias"></a>
 ## isAntiAlias
 
 ```TypeScript
@@ -189,7 +180,6 @@ Checks whether anti-aliasing is enabled for this brush.
 | --- | --- |
 | boolean | Check result. The value **true** means that anti-aliasing is enabled, and **false** means the opposite. |
 
-<a id="reset"></a>
 ## reset
 
 ```TypeScript
@@ -204,7 +194,6 @@ Resets this brush to the initial state.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-<a id="setalpha"></a>
 ## setAlpha
 
 ```TypeScript
@@ -231,7 +220,6 @@ Sets an alpha value for this brush.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="setantialias"></a>
 ## setAntiAlias
 
 ```TypeScript
@@ -258,7 +246,6 @@ Enables anti-aliasing for this brush. Anti-aliasing makes the edges of the conte
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="setblendmode"></a>
 ## setBlendMode
 
 ```TypeScript
@@ -285,7 +272,6 @@ Sets a blend mode for this brush. If this API is not called, the default blend m
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="setcolor"></a>
 ## setColor
 
 ```TypeScript
@@ -312,14 +298,13 @@ Sets a color for this brush.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="setcolor-1"></a>
 ## setColor
 
 ```TypeScript
 setColor(alpha: number, red: number, green: number, blue: number): void
 ```
 
-Sets a color for this brush. This API provides better performance than [setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor-1) and is recommended.
+Sets a color for this brush. This API provides better performance than [setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor) and is recommended.
 
 **Since:** 12
 
@@ -342,7 +327,6 @@ Sets a color for this brush. This API provides better performance than [setColor
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="setcolor-2"></a>
 ## setColor
 
 ```TypeScript
@@ -369,14 +353,13 @@ Sets a color for this brush.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="setcolor4f"></a>
 ## setColor4f
 
 ```TypeScript
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-Sets the color and standard color gamut for this brush. The difference between this method and [setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor-1) is that the color gamut can be set separately.
+Sets the color and standard color gamut for this brush. The difference between this method and [setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor) is that the color gamut can be set separately.
 
 **Since:** 20
 
@@ -391,7 +374,6 @@ Sets the color and standard color gamut for this brush. The difference between t
 | color4f | common2D.Color4f | Yes | Color in the ARGB format. The value of each color channel is a floating point number ranging from 0.0 to 1.0. Values above 1.0 default to **1.0**, and values below 0.0 default to **0.0**. |
 | colorSpace | colorSpaceManager.ColorSpaceManager \| null | Yes | Standard color gamut object. **null** indicates SRGB. |
 
-<a id="setcolorfilter"></a>
 ## setColorFilter
 
 ```TypeScript
@@ -418,7 +400,6 @@ Sets a color filter for this brush.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="setimagefilter"></a>
 ## setImageFilter
 
 ```TypeScript
@@ -445,7 +426,6 @@ Sets an image filter for this brush.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="setmaskfilter"></a>
 ## setMaskFilter
 
 ```TypeScript
@@ -472,7 +452,6 @@ Adds a mask filter for this brush.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="setshadereffect"></a>
 ## setShaderEffect
 
 ```TypeScript
@@ -499,7 +478,6 @@ Sets the shader effect for this brush.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="setshadowlayer"></a>
 ## setShadowLayer
 
 ```TypeScript

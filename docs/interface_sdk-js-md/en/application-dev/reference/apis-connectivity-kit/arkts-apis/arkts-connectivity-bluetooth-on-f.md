@@ -6,7 +6,6 @@
 import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
-<a id="on"></a>
 ## on('bluetoothDeviceFind')
 
 ```TypeScript
@@ -45,7 +44,6 @@ bluetooth.on('bluetoothDeviceFind', onReceiveEvent);
 ```
 
 
-<a id="on-1"></a>
 ## on('bondStateChange')
 
 ```TypeScript
@@ -84,7 +82,6 @@ bluetooth.on('bondStateChange', onReceiveEvent);
 ```
 
 
-<a id="on-2"></a>
 ## on('pinRequired')
 
 ```TypeScript
@@ -123,7 +120,6 @@ bluetooth.on('pinRequired', onReceiveEvent);
 ```
 
 
-<a id="on-3"></a>
 ## on('stateChange')
 
 ```TypeScript
@@ -162,7 +158,6 @@ bluetooth.on('stateChange', onReceiveEvent);
 ```
 
 
-<a id="on-4"></a>
 ## on('sppRead')
 
 ```TypeScript

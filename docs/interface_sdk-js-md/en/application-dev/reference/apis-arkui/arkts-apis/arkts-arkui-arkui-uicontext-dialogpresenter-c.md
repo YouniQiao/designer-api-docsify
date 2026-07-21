@@ -14,7 +14,6 @@ Provides unified dialog APIs.
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="dismiss"></a>
 ## dismiss
 
 ```TypeScript
@@ -52,7 +51,6 @@ Dismisses a dialog box.Accepts either the dialog ID (returned by present) or the
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
 
-<a id="present"></a>
 ## present
 
 ```TypeScript
@@ -90,7 +88,6 @@ Presents a fixed-style dialog box.
 | 103306 | The dialog cannot be opened due to node mount failure. |
 | 103308 | The dialog cannot be opened due to subwindow create failure. |
 
-<a id="present-1"></a>
 ## present
 
 ```TypeScript
@@ -137,7 +134,6 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 | 103306 | The dialog cannot be opened due to node mount failure. |
 | 103308 | The dialog cannot be opened due to subwindow create failure. |
 
-<a id="update"></a>
 ## update
 
 ```TypeScript

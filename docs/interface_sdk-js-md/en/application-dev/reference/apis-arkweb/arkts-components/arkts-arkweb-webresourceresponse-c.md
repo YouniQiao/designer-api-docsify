@@ -8,7 +8,6 @@ Defines the Web resource response.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="getreasonmessage"></a>
 ## getReasonMessage
 
 ```TypeScript
@@ -48,7 +46,6 @@ Gets the reason message.
 | --- | --- |
 | string | Return the reason message. |
 
-<a id="getresponsecode"></a>
 ## getResponseCode
 
 ```TypeScript
@@ -71,7 +68,6 @@ Gets the response code.
 | --- | --- |
 | number | Return the response code. |
 
-<a id="getresponsedata"></a>
 ## getResponseData
 
 ```TypeScript
@@ -94,7 +90,6 @@ Gets the response data.
 | --- | --- |
 | string | Return the response data. |
 
-<a id="getresponsedataex"></a>
 ## getResponseDataEx
 
 ```TypeScript
@@ -115,7 +110,6 @@ Gets the response data.
 | --- | --- |
 | string | Return the response data.string type indicate string in HTML format.number type indicate file handle.Resource type indicate $rawfile resource.ArrayBuffer type indicate binary data. |
 
-<a id="getresponseencoding"></a>
 ## getResponseEncoding
 
 ```TypeScript
@@ -138,7 +132,6 @@ Gets the response encoding.
 | --- | --- |
 | string | Return the response encoding. |
 
-<a id="getresponseheader"></a>
 ## getResponseHeader
 
 ```TypeScript
@@ -161,7 +154,6 @@ Gets the response headers.
 | --- | --- |
 | Array&lt;Header&gt; | Return the response headers. |
 
-<a id="getresponseisready"></a>
 ## getResponseIsReady
 
 ```TypeScript
@@ -182,7 +174,6 @@ Gets whether the response is ready.
 | --- | --- |
 | boolean | True indicates the response data is ready and false is not ready. |
 
-<a id="getresponsemimetype"></a>
 ## getResponseMimeType
 
 ```TypeScript
@@ -205,7 +196,6 @@ Gets the response MIME type.
 | --- | --- |
 | string | Return the response MIME type. |
 
-<a id="setreasonmessage"></a>
 ## setReasonMessage
 
 ```TypeScript
@@ -228,7 +218,6 @@ Sets the reason message.
 | --- | --- | --- | --- |
 | reason | string | Yes | the reason message. |
 
-<a id="setresponsecode"></a>
 ## setResponseCode
 
 ```TypeScript
@@ -251,7 +240,6 @@ Sets the response code.
 | --- | --- | --- | --- |
 | code | number | Yes | the response code. |
 
-<a id="setresponsedata"></a>
 ## setResponseData
 
 ```TypeScript
@@ -274,7 +262,6 @@ Sets the response data.
 | --- | --- | --- | --- |
 | data | string \| number \| Resource \| ArrayBuffer | Yes | the response data.string type indicate strings in HTML format.number type indicate file handle.Resource type indicate $rawfile resource.ArrayBuffer type indicate binary data.<br>**Since:** 11 |
 
-<a id="setresponseencoding"></a>
 ## setResponseEncoding
 
 ```TypeScript
@@ -297,7 +284,6 @@ Sets the response encoding.
 | --- | --- | --- | --- |
 | encoding | string | Yes | the response encoding. |
 
-<a id="setresponseheader"></a>
 ## setResponseHeader
 
 ```TypeScript
@@ -320,7 +306,6 @@ Sets the response headers.
 | --- | --- | --- | --- |
 | header | Array&lt;Header&gt; | Yes | the response headers. |
 
-<a id="setresponseisready"></a>
 ## setResponseIsReady
 
 ```TypeScript
@@ -343,7 +328,6 @@ Sets the response is ready or not.
 | --- | --- | --- | --- |
 | IsReady | boolean | Yes | whether the response is ready. |
 
-<a id="setresponsemimetype"></a>
 ## setResponseMimeType
 
 ```TypeScript

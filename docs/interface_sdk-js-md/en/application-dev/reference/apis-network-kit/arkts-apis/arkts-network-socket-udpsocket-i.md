@@ -14,7 +14,6 @@ Defines a UDPSocket connection.
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="bind"></a>
 ## bind
 
 ```TypeScript
@@ -66,7 +65,6 @@ udp.bind(bindAddr, (err: BusinessError) => {
 
 ```
 
-<a id="bind-1"></a>
 ## bind
 
 ```TypeScript
@@ -121,7 +119,6 @@ udp.bind(bindAddr).then(() => {
 
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -167,7 +164,6 @@ udp.close((err: BusinessError) => {
 
 ```
 
-<a id="close-1"></a>
 ## close
 
 ```TypeScript
@@ -211,7 +207,6 @@ udp.close().then(() => {
 
 ```
 
-<a id="getlocaladdress"></a>
 ## getLocalAddress
 
 ```TypeScript
@@ -265,7 +260,6 @@ udp.bind(bindAddr).then(() => {
 
 ```
 
-<a id="getsocketfd"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -319,7 +313,6 @@ udp.bind(bindAddr)
 
 ```
 
-<a id="getstate"></a>
 ## getState
 
 ```TypeScript
@@ -376,7 +369,6 @@ udp.bind(bindAddr, (err: BusinessError) => {
 
 ```
 
-<a id="getstate-1"></a>
 ## getState
 
 ```TypeScript
@@ -431,7 +423,6 @@ udp.bind(bindAddr, (err: BusinessError) => {
 
 ```
 
-<a id="off"></a>
 ## off('message')
 
 ```TypeScript
@@ -478,7 +469,6 @@ udp.off('message');
 
 ```
 
-<a id="off-1"></a>
 ## off('listening' | 'close')
 
 ```TypeScript
@@ -524,7 +514,6 @@ udp.off('close');
 
 ```
 
-<a id="off-2"></a>
 ## off('listening' | 'close')
 
 ```TypeScript
@@ -570,7 +559,6 @@ udp.off('close');
 
 ```
 
-<a id="off-3"></a>
 ## off('error')
 
 ```TypeScript
@@ -609,7 +597,6 @@ udp.off('error');
 
 ```
 
-<a id="on"></a>
 ## on('message')
 
 ```TypeScript
@@ -653,7 +640,6 @@ udp.on('message', (value: socket.SocketMessageInfo) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('listening' | 'close')
 
 ```TypeScript
@@ -691,7 +677,6 @@ udp.on('close', () => {
 
 ```
 
-<a id="on-2"></a>
 ## on('listening' | 'close')
 
 ```TypeScript
@@ -729,7 +714,6 @@ udp.on('close', () => {
 
 ```
 
-<a id="on-3"></a>
 ## on('error')
 
 ```TypeScript
@@ -764,7 +748,6 @@ udp.on('error', (err: BusinessError) => {
 
 ```
 
-<a id="send"></a>
 ## send
 
 ```TypeScript
@@ -886,7 +869,6 @@ udp.send(sendOptions, (err: BusinessError) => {
 
 ```
 
-<a id="send-1"></a>
 ## send
 
 ```TypeScript
@@ -1007,7 +989,6 @@ udp.send(sendOptions).then(() => {
 
 ```
 
-<a id="setextraoptions"></a>
 ## setExtraOptions
 
 ```TypeScript
@@ -1074,7 +1055,6 @@ udp.bind(bindAddr, (err: BusinessError) => {
 
 ```
 
-<a id="setextraoptions-1"></a>
 ## setExtraOptions
 
 ```TypeScript

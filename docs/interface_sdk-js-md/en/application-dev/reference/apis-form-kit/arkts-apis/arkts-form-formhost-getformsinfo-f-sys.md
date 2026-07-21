@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="getformsinfo"></a>
 ## getFormsInfo
 
 ```TypeScript
@@ -45,7 +44,6 @@ Obtains the widget information provided by a specified application on the device
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getformsinfo-1"></a>
 ## getFormsInfo
 
 ```TypeScript
@@ -62,15 +60,7 @@ Obtains the widget information provided by a specified application on the device
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
-<!--Device-formHost-function getFormsInfo(
-    bundleName: string,
-    moduleName: string,
-    callback: AsyncCallback<Array<formInfo.FormInfo>>
-  ): void--><!--Device-formHost-function getFormsInfo(
-    bundleName: string,
-    moduleName: string,
-    callback: AsyncCallback<Array<formInfo.FormInfo>>
-  ): void-End-->
+<!--Device-formHost-function getFormsInfo(    bundleName: string,    moduleName: string,    callback: AsyncCallback<Array<formInfo.FormInfo>>  ): void--><!--Device-formHost-function getFormsInfo(    bundleName: string,    moduleName: string,    callback: AsyncCallback<Array<formInfo.FormInfo>>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -97,7 +87,6 @@ Obtains the widget information provided by a specified application on the device
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getformsinfo-2"></a>
 ## getFormsInfo
 
 ```TypeScript
@@ -142,7 +131,6 @@ Obtains the widget information provided by a specified application on the device
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getformsinfo-3"></a>
 ## getFormsInfo
 
 ```TypeScript

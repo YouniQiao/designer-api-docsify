@@ -5,7 +5,6 @@ declare type ItemRestriction<T> = [T, T, T?, T?, T?]
 ```
 
 Tuple type that stores button information.
-
 > **NOTE**  
 >  
 > A **SegmentButton** component supports two to five buttons.

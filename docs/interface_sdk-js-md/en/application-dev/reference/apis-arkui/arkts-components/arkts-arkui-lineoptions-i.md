@@ -1,7 +1,6 @@
 # LineOptions
 
 Describes the options of the line.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
@@ -24,11 +23,11 @@ Height.If the value is invalid or the default value is used, the height required
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LineOptions-height?: Length--><!--Device-LineOptions-height?: Length-End-->
 
@@ -44,11 +43,11 @@ Width.If the value is invalid or the default value is used, the width required f
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LineOptions-width?: Length--><!--Device-LineOptions-width?: Length-End-->
 

@@ -14,7 +14,6 @@ Provides APIs for the file manager application to download files from the Drive 
 import { cloudSync } from '@kit.CoreFileKit';
 ```
 
-<a id="cleancache"></a>
 ## cleanCache
 
 ```TypeScript
@@ -70,7 +69,6 @@ try {
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -101,7 +99,6 @@ A constructor used to create a CloudFileCache object.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
-<a id="getdownloadlist"></a>
 ## getDownloadList
 
 ```TypeScript

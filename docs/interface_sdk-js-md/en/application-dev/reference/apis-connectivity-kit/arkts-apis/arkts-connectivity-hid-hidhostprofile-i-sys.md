@@ -16,7 +16,6 @@ Manager hid host profile.
 import { hid } from '@kit.ConnectivityKit';
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -67,7 +66,6 @@ try {
 
 ```
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="importwrappedkeyitem"></a>
 ## importWrappedKeyItem
 
 ```TypeScript
@@ -19,7 +18,6 @@ function importWrappedKeyItem(
 ```
 
 Imports keys in secure mode. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Importing SE security level wrapped keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)  
@@ -29,17 +27,7 @@ Imports keys in secure mode. This API uses an asynchronous callback to return th
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-huks-function importWrappedKeyItem(
-    keyAlias: string,
-    wrappingKeyAlias: string,
-    options: HuksOptions,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-huks-function importWrappedKeyItem(
-    keyAlias: string,
-    wrappingKeyAlias: string,
-    options: HuksOptions,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-huks-function importWrappedKeyItem(    keyAlias: string,    wrappingKeyAlias: string,    options: HuksOptions,    callback: AsyncCallback<void>  ): void--><!--Device-huks-function importWrappedKeyItem(    keyAlias: string,    wrappingKeyAlias: string,    options: HuksOptions,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
@@ -249,7 +237,6 @@ function huksImportWrappedKey() {
 ```
 
 
-<a id="importwrappedkeyitem-1"></a>
 ## importWrappedKeyItem
 
 ```TypeScript
@@ -257,7 +244,6 @@ function importWrappedKeyItem(keyAlias: string, wrappingKeyAlias: string, option
 ```
 
 Imports keys in secure mode. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Importing SE security level wrapped keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)  

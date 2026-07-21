@@ -8,7 +8,6 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="gettext"></a>
 ## getText
 
 ```TypeScript

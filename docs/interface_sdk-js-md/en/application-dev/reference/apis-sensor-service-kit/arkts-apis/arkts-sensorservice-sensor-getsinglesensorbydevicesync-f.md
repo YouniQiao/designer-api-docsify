@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="getsinglesensorbydevicesync"></a>
 ## getSingleSensorByDeviceSync
 
 ```TypeScript
@@ -26,7 +25,7 @@ Obtains information about the sensor of a specific type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | Sensor type. |
-| deviceId | number | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist-1) or [sensorStatusChange](sensor.on(type: 'sensorStatusChange', callback: Callback<SensorStatusEvent>)) to obtain the device ID. |
+| deviceId | number | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist) or [sensorStatusChange](sensor.on(type: 'sensorStatusChange', callback: Callback<SensorStatusEvent>)) to obtain the device ID. |
 
 **Return value:**
 

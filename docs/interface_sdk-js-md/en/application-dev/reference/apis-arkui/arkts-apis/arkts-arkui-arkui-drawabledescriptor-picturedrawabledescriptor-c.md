@@ -16,7 +16,6 @@ Creates a **PictureDrawableDescriptor** object by passing a **Picture** object. 
 import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -41,7 +40,6 @@ A constructor used to create a **PictureDrawableDescriptor** object.
 | --- | --- | --- | --- |
 | src | image.Picture | Yes | **Picture** object for creating **PictureDrawableDescriptor**. |
 
-<a id="sethdrcomposition"></a>
 ## setHdrComposition
 
 ```TypeScript

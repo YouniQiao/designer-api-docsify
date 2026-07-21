@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface Boolean--><!--Device-unnamed-interface Boolean-End-->
 
-<a id="valueof"></a>
 ## valueOf
 
 ```TypeScript

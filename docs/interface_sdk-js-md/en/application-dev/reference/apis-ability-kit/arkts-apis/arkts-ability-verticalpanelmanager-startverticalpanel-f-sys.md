@@ -6,7 +6,6 @@
 import { verticalPanelManager } from '@kit.AbilityKit';
 ```
 
-<a id="startverticalpanel"></a>
 ## startVerticalPanel
 
 ```TypeScript
@@ -24,17 +23,7 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-verticalPanelManager-function startVerticalPanel(
-      context: common.UIAbilityContext,
-      wantParam: Record<string, Object>,
-      panelConfig: PanelConfig,
-      panelStartCallback: PanelStartCallback
-  ): Promise<void>--><!--Device-verticalPanelManager-function startVerticalPanel(
-      context: common.UIAbilityContext,
-      wantParam: Record<string, Object>,
-      panelConfig: PanelConfig,
-      panelStartCallback: PanelStartCallback
-  ): Promise<void>-End-->
+<!--Device-verticalPanelManager-function startVerticalPanel(      context: common.UIAbilityContext,      wantParam: Record<string, Object>,      panelConfig: PanelConfig,      panelStartCallback: PanelStartCallback  ): Promise<void>--><!--Device-verticalPanelManager-function startVerticalPanel(      context: common.UIAbilityContext,      wantParam: Record<string, Object>,      panelConfig: PanelConfig,      panelStartCallback: PanelStartCallback  ): Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
 

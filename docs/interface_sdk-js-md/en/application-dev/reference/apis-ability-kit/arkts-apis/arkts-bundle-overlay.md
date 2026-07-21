@@ -2,12 +2,11 @@
 
 The module provides APIs for querying the [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) of an application with the overlay feature, and disabling and enabling the feature.
 
-An application with the overlay feature contains an overlay resource package. For details about this package, see [Overlay Mechanism](docroot://quick-start/resource-categories-and-access.md#overlay-mechanism).
-
+An application with the overlay feature contains an overlay resource package. For details about this package, see [Overlay Mechanism](../../../quick-start/resource-categories-and-access.md#overlay-mechanism).
 > **NOTE**  
 >  
 > The APIs provided by this module apply only to the stage model and  
-> [static overlay](docroot://quick-start/resource-categories-and-access.md#using-overlay-in-static-mode) mode.
+> [static overlay](../../../quick-start/resource-categories-and-access.md#using-overlay-in-static-mode) mode.
 
 **Since:** 10
 

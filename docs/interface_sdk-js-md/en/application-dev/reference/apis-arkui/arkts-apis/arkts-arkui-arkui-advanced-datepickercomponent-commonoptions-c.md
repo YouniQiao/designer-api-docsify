@@ -1,11 +1,10 @@
 # CommonOptions
 
 CommonOptions defines common options for the date time picker.
-
 > **Description:**  
 >  
 > - For Date usage, refer to  
-> [TimePickerOptions](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。  
+> [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions)。  
 >  
 > - The text size of DatePickerComponent changes based on the total number of columns displayed. When the number of  
 > columns is 6 or more, the text size is 14vp; in other cases, it is 16vp. When the component width is too narrow,  
@@ -44,7 +43,7 @@ Default value: true
 
 **Description**:
 
-1. When set to true, its effectiveness depends on whether the system's hardware supports it.2. To enable haptic feedback, you need to configure the requestPermissions field in the project's [module.json5](docroot://quick-start/module-configuration-file.md) to enable vibration permission, as follows:
+1. When set to true, its effectiveness depends on whether the system's hardware supports it.2. To enable haptic feedback, you need to configure the requestPermissions field in the project's [module.json5](../../../quick-start/module-configuration-file.md) to enable vibration permission, as follows:
 
 "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 

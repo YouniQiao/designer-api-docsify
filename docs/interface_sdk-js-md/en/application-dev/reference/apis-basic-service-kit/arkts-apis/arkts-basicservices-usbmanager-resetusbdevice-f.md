@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="resetusbdevice"></a>
 ## resetUsbDevice
 
 ```TypeScript
@@ -14,7 +13,6 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 ```
 
 Resets a USB peripheral.
-
 > **NOTE**  
 >  
 > Previous configurations and APIs will be reset. Ensure that the related services have been completed before  
@@ -30,7 +28,7 @@ Resets a USB peripheral.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice-1) to obtain its value. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
 
 **Return value:**
 

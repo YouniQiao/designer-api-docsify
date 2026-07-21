@@ -1,7 +1,6 @@
 # LayoutManager
 
 Implements a layout manager object.
-
 > **NOTE**  
 >  
 > After the text content is changed, you must wait for the layout to be completed before you can obtain the most up-  
@@ -13,7 +12,6 @@ Implements a layout manager object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getcharacterpositionatcoordinate"></a>
 ## getCharacterPositionAtCoordinate
 
 ```TypeScript
@@ -45,7 +43,6 @@ Obtains the position of the character nearest to the specified coordinate.
 | --- | --- |
 | [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | Character position. Returns **undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
-<a id="getcharacterrangeforglyphrange"></a>
 ## getCharacterRangeForGlyphRange
 
 ```TypeScript
@@ -76,7 +73,6 @@ Obtains the character range and the actual glyph range based on the specified gl
 | --- | --- |
 | Array&lt;TextRange&gt; | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
-<a id="getglyphpositionatcoordinate"></a>
 ## getGlyphPositionAtCoordinate
 
 ```TypeScript
@@ -108,7 +104,6 @@ Obtains the position of a glyph close to a given coordinate.
 | --- | --- |
 | [PositionWithAffinity](arkts-arkui-positionwithaffinity-i.md) | Glyph position. |
 
-<a id="getglyphrangeforcharacterrange"></a>
 ## getGlyphRangeForCharacterRange
 
 ```TypeScript
@@ -139,7 +134,6 @@ Obtains the glyph range and the actual character range based on the specified ch
 | --- | --- |
 | Array&lt;TextRange&gt; | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager](arkts-arkui-layoutmanager-i.md) is not bound to a component. |
 
-<a id="getlinecount"></a>
 ## getLineCount
 
 ```TypeScript
@@ -164,7 +158,6 @@ Obtains the total number of lines in the component.
 | --- | --- |
 | number | Total number of lines in the component. |
 
-<a id="getlinemetrics"></a>
 ## getLineMetrics
 
 ```TypeScript
@@ -195,7 +188,6 @@ Obtains the information about the specified line, including line metrics, text s
 | --- | --- |
 | [LineMetrics](arkts-arkui-linemetrics-t.md) | Information about the specified line, including line metrics, text style information, and font properties.<br>Returns an invalid value if the line number is less than 0 or exceeds the actual number of lines. |
 
-<a id="getrectsforrange"></a>
 ## getRectsForRange
 
 ```TypeScript

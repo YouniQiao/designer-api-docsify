@@ -46,9 +46,9 @@ Value range: [0, stars]
 
 Values less than 0 are treated as **0**, and values greater than the value of [stars](RatingAttribute#stars(value: number)) are treated as the value of **stars**.
 
-This parameter supports two-way binding through [$$](docroot://ui/state-management/arkts-two-way-sync.md).
+This parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
-This parameter supports two-way binding through [!!](docroot://ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Type:** number
 

@@ -1,7 +1,6 @@
 # RatingOptions
 
 Provides configuration options for the **Rating** component.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
@@ -56,7 +55,7 @@ Value range: [0, stars]
 
 Values less than 0 are treated as **0**, and values greater than the value of [stars](RatingAttribute#stars(value: number)) are treated as the value of **stars**.
 
-This parameter supports two-way binding through [$$](docroot://ui/state-management/arkts-two-way-sync.md).
+This parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number
 

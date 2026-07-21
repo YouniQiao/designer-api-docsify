@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="importwrappedkeyitemasuser"></a>
 ## importWrappedKeyItemAsUser
 
 ```TypeScript
@@ -23,15 +22,7 @@ Import Wrapped Key As User.
 
 **需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
-<!--Device-huks-function importWrappedKeyItemAsUser(
-    userId: number, keyAlias: string,
-    wrappingKeyAlias: string,
-    huksOptions: HuksOptions
-  ): Promise<void>--><!--Device-huks-function importWrappedKeyItemAsUser(
-    userId: number, keyAlias: string,
-    wrappingKeyAlias: string,
-    huksOptions: HuksOptions
-  ): Promise<void>-End-->
+<!--Device-huks-function importWrappedKeyItemAsUser(    userId: number, keyAlias: string,    wrappingKeyAlias: string,    huksOptions: HuksOptions  ): Promise<void>--><!--Device-huks-function importWrappedKeyItemAsUser(    userId: number, keyAlias: string,    wrappingKeyAlias: string,    huksOptions: HuksOptions  ): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

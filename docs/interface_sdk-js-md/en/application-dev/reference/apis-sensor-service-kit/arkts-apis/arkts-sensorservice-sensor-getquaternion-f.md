@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="getquaternion"></a>
 ## getQuaternion
 
 ```TypeScript
@@ -61,7 +60,6 @@ try {
 ```
 
 
-<a id="getquaternion-1"></a>
 ## getQuaternion
 
 ```TypeScript

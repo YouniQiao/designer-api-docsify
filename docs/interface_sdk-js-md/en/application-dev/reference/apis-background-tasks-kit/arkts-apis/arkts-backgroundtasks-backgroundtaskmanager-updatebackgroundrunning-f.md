@@ -6,7 +6,6 @@
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="updatebackgroundrunning"></a>
 ## updateBackgroundRunning
 
 ```TypeScript
@@ -15,13 +14,13 @@ function updateBackgroundRunning(context: Context, bgModes: string[]): Promise<C
 
 Updates continuous tasks of multiple types. This API uses a promise to return the result. After a continuous task is successfully updated, there will be a notification message without prompt tone.
 
-Before updating a continuous task, you can call [getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getallcontinuoustasks-1) to retrieve information about all existing continuous tasks. If there are no continuous tasks, the update will fail.
+Before updating a continuous task, you can call [getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getallcontinuoustasks) to retrieve information about all existing continuous tasks. If there are no continuous tasks, the update will fail.
 
 This API can only be used to update continuous tasks that were requested via the following APIs:
 
-[startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: AsyncCallback&lt;void&gt;): void](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning-1)
+[startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: AsyncCallback&lt;void&gt;): void](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)
 
-[startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise&lt;void&gt;](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning-1)
+[startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise&lt;void&gt;](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)
 
 [startBackgroundRunning(context: Context, bgModes: string[], wantAgent: WantAgent): Promise&lt;ContinuousTaskNotification&gt;]{@link backgroundTaskManager.startBackgroundRunning(context: Context, bgModes: string[], wantAgent: WantAgent)}
 
@@ -39,8 +38,8 @@ This API can only be used to update continuous tasks that were requested via the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
-| bgModes | string[] | Yes | Types of continuous tasks after the update.<br>For details about the available options,see [Item](docroot://task-management/continuous-task.md#use-cases).<br> Note: One or more types can be passed. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| bgModes | string[] | Yes | Types of continuous tasks after the update.<br>For details about the available options,see [Item](../../../task-management/continuous-task.md#use-cases).<br> Note: One or more types can be passed. |
 
 **Return value:**
 
@@ -88,7 +87,6 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="updatebackgroundrunning-1"></a>
 ## updateBackgroundRunning
 
 ```TypeScript
@@ -99,7 +97,7 @@ Updates a continuous task. This API uses a promise to return the result. After a
 
 The following restrictions apply when updating a continuous task:
 
-1. This API can only update continuous tasks requested via [startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise&lt;ContinuousTaskNotification&gt;](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning-1).2. If the main type and subtype of the background tasks are the same,only the wants information (such as **abilityName**) in **ContinuousTaskRequest.wantAgent** can be updated.If the types are different, the update fails.3. If the continuous task to be updated or the specified update type contains the data transmission type,a failure message is returned.
+1. This API can only update continuous tasks requested via [startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise&lt;ContinuousTaskNotification&gt;](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning).2. If the main type and subtype of the background tasks are the same,only the wants information (such as **abilityName**) in **ContinuousTaskRequest.wantAgent** can be updated.If the types are different, the update fails.3. If the continuous task to be updated or the specified update type contains the data transmission type,a failure message is returned.
 
 **Since:** 21
 
@@ -115,7 +113,7 @@ The following restrictions apply when updating a continuous task:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-context-depr-i.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.<br>For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md).<br>For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md).<br> Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
 | request | [ContinuousTaskRequest](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md) | Yes | Continuous task request information, including the ID of the continuous task to be updated. |
 
 **Return value:**

@@ -6,7 +6,6 @@
 import { installer } from '@kit.AbilityKit';
 ```
 
-<a id="getbundleinstaller"></a>
 ## getBundleInstaller
 
 ```TypeScript
@@ -37,7 +36,6 @@ Obtains a BundleInstaller object. This API uses an asynchronous callback to retu
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 
-<a id="getbundleinstaller-1"></a>
 ## getBundleInstaller
 
 ```TypeScript

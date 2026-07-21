@@ -14,7 +14,6 @@ Remote device operation methods.
 import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
-<a id="canceldevicepairing"></a>
 ## cancelDevicePairing
 
 ```TypeScript
@@ -50,7 +49,6 @@ Cancel an in-progress pairing request.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -86,7 +84,6 @@ Connect all allowed profiles.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -122,7 +119,6 @@ Disconnect all connected profiles.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="getdevicealias"></a>
 ## getDeviceAlias
 
 ```TypeScript
@@ -158,7 +154,6 @@ Gets the alias of a remote device.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="getdevicemodel"></a>
 ## getDeviceModel
 
 ```TypeScript
@@ -191,7 +186,6 @@ Obtains the model information of a remote device.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="getrssivalue"></a>
 ## getRssiValue
 
 ```TypeScript
@@ -227,7 +221,6 @@ Gets the RSSI value of a remote device.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="removepaireddevice"></a>
 ## removePairedDevice
 
 ```TypeScript
@@ -263,7 +256,6 @@ Remove a paired remote device.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="setconnectioninterval"></a>
 ## setConnectionInterval
 
 ```TypeScript
@@ -299,7 +291,6 @@ Sets the connection interval with a remote device.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="setdevicealias"></a>
 ## setDeviceAlias
 
 ```TypeScript
@@ -336,7 +327,6 @@ Sets the alias of a remote device.
 | 36100046 | String exceeds maximum length. |
 | 36100099 | Operation failed. |
 
-<a id="setpairingconfirmation"></a>
 ## setPairingConfirmation
 
 ```TypeScript
@@ -372,7 +362,6 @@ Set the confirmation to a pairing request.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="setpairingpasscode"></a>
 ## setPairingPasscode
 
 ```TypeScript
@@ -415,7 +404,6 @@ Set the passcode during pairing if the pairing type is passcode
 | 36100045 | Passcode must be a 6-digit number. |
 | 36100099 | Operation failed. |
 
-<a id="startcrediblepairing"></a>
 ## startCrediblePairing
 
 ```TypeScript

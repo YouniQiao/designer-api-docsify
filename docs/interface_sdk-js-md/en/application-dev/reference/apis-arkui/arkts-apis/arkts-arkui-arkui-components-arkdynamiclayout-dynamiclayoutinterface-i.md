@@ -14,7 +14,6 @@ Defines the dynamic layout container.
 import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -39,7 +38,7 @@ Defines the dynamic layout container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes | Layout algorithm of the dynamic layout component. If an invalid value is used, the child components are stacked and arranged according to [StackLayoutAlgorithm](docroot://reference/apis-arkui/js-apis-arkui-layoutAlgorithm.md#stacklayoutalgorithm). |
+| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes | Layout algorithm of the dynamic layout component. If an invalid value is used, the child components are stacked and arranged according to [StackLayoutAlgorithm](../../../reference/apis-arkui/js-apis-arkui-layoutAlgorithm.md#stacklayoutalgorithm). |
 
 **Return value:**
 

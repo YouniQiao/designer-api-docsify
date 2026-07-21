@@ -6,7 +6,6 @@
 import { formAgent } from '@kit.FormKit';
 ```
 
-<a id="requestpublishform"></a>
 ## requestPublishForm
 
 ```TypeScript
@@ -44,7 +43,6 @@ Requests to publish a widget to the widget host. This API uses an asynchronous c
 | [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) | Waiting for the form addition to the desktop timed out.<br>**Applicable version:** 12 and later |
 
 
-<a id="requestpublishform-1"></a>
 ## requestPublishForm
 
 ```TypeScript

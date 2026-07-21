@@ -16,7 +16,6 @@ Defines the lazy column layout attribute.
 import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
 ```
 
-<a id="alignitems"></a>
 ## alignItems
 
 ```TypeScript
@@ -47,7 +46,6 @@ Sets the horizontal alignment of the row content.
 | --- | --- |
 | [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="footer"></a>
 ## footer
 
 ```TypeScript
@@ -78,7 +76,6 @@ Sets the footer of the lazy column layout.
 | --- | --- |
 | [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="header"></a>
 ## header
 
 ```TypeScript
@@ -109,7 +106,6 @@ Sets the header of the lazy column layout.
 | --- | --- |
 | [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onvisibleindexeschange"></a>
 ## onVisibleIndexesChange
 
 ```TypeScript
@@ -140,7 +136,6 @@ Triggered when the index of child components in the visible area changes.
 | --- | --- |
 | [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="space"></a>
 ## space
 
 ```TypeScript
@@ -171,7 +166,6 @@ The spacing between rows.
 | --- | --- |
 | [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="sticky"></a>
 ## sticky
 
 ```TypeScript

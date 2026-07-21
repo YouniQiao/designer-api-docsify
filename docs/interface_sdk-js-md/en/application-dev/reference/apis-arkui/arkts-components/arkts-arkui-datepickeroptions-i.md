@@ -1,14 +1,12 @@
 # DatePickerOptions
 
 Describes the parameters of the date picker.
-
 > **NOTE**  
 >  
 > - For details about how to use **Date**, see [TimePickerOptions](arkts-arkui-timepickeroptions-i.md).  
 >  
 > - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take  
 > effect.
-
 > **NOTE**  
 >  
 > Handle exceptions for the start and end dates first, followed by exceptions for the selected date.
@@ -53,7 +51,7 @@ Date display mode.
 
 Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day.
 
-In [DatePickerDialog](./date_picker), when **showTime** in [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) is **true**, this parameter is ignored and the year,month, day columns are always shown.
+In [DatePickerDialog](arkts-arkui-datepicker.md), when **showTime** in [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) is **true**, this parameter is ignored and the year,month, day columns are always shown.
 
 **Type:** DatePickerMode
 
@@ -82,7 +80,7 @@ Default value: current system date.
 
 Value range: [Date('1900-01-31'), Date('2100-12-31')].
 
-Since API version 10, this parameter supports two-way binding through [$$](docroot://ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** Date
 

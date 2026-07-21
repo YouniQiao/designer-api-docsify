@@ -14,7 +14,6 @@
 import { webSocket } from '@kit.NetworkKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -63,7 +62,6 @@ ws.close((err: BusinessError) => {
 
 ```
 
-<a id="close-1"></a>
 ## close
 
 ```TypeScript
@@ -119,7 +117,6 @@ ws.close(options, (err: BusinessError) => {
 
 ```
 
-<a id="close-2"></a>
 ## close
 
 ```TypeScript
@@ -177,7 +174,6 @@ promise.then((value: boolean) => {
 
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -233,7 +229,6 @@ ws.connect(url, (err: BusinessError, value: boolean) => {
 
 ```
 
-<a id="connect-1"></a>
 ## connect
 
 ```TypeScript
@@ -315,7 +310,6 @@ ws.connect(url, options, (err: BusinessError, value: Object) => {
 
 ```
 
-<a id="connect-2"></a>
 ## connect
 
 ```TypeScript
@@ -375,7 +369,6 @@ promise.then((value: boolean) => {
 
 ```
 
-<a id="off"></a>
 ## off('open')
 
 ```TypeScript
@@ -419,7 +412,6 @@ ws.off('open', callback1);
 
 ```
 
-<a id="off-1"></a>
 ## off('openInfo')
 
 ```TypeScript
@@ -463,7 +455,6 @@ ws.off('openInfo', callback1);
 
 ```
 
-<a id="off-2"></a>
 ## off('message')
 
 ```TypeScript
@@ -497,7 +488,6 @@ ws.off('message');
 
 ```
 
-<a id="off-3"></a>
 ## off('close')
 
 ```TypeScript
@@ -531,7 +521,6 @@ ws.off('close');
 
 ```
 
-<a id="off-4"></a>
 ## off('error')
 
 ```TypeScript
@@ -565,7 +554,6 @@ ws.off('error');
 
 ```
 
-<a id="off-5"></a>
 ## off('dataEnd')
 
 ```TypeScript
@@ -597,7 +585,6 @@ ws.off('dataEnd');
 
 ```
 
-<a id="off-6"></a>
 ## off('headerReceive')
 
 ```TypeScript
@@ -629,7 +616,6 @@ ws.off('headerReceive');
 
 ```
 
-<a id="on"></a>
 ## on('open')
 
 ```TypeScript
@@ -670,7 +656,6 @@ ws.on('open', (err: BusinessError, value: Object) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('openInfo')
 
 ```TypeScript
@@ -711,7 +696,6 @@ ws.on('openInfo', (err: BusinessError, value: webSocket.WebSocketOpenInfo) => {
 
 ```
 
-<a id="on-2"></a>
 ## on('message')
 
 ```TypeScript
@@ -748,7 +732,6 @@ ws.on('message', (err: BusinessError<void>, value: string | ArrayBuffer) => {
 
 ```
 
-<a id="on-3"></a>
 ## on('close')
 
 ```TypeScript
@@ -785,7 +768,6 @@ ws.on('close', (err: BusinessError, value: webSocket.CloseResult) => {
 
 ```
 
-<a id="on-4"></a>
 ## on('error')
 
 ```TypeScript
@@ -822,7 +804,6 @@ ws.on('error', (err: BusinessError) => {
 
 ```
 
-<a id="on-5"></a>
 ## on('dataEnd')
 
 ```TypeScript
@@ -856,7 +837,6 @@ ws.on('dataEnd', () => {
 
 ```
 
-<a id="on-6"></a>
 ## on('headerReceive')
 
 ```TypeScript
@@ -890,7 +870,6 @@ ws.on('headerReceive', (data) => {
 
 ```
 
-<a id="send"></a>
 ## send
 
 ```TypeScript
@@ -955,7 +934,6 @@ ws.on('open', (err: BusinessError, value: Object) => {
 
 ```
 
-<a id="send-1"></a>
 ## send
 
 ```TypeScript

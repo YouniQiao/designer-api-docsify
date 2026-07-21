@@ -14,7 +14,6 @@ Reader represents the SE readers supported by this device.
 import { omapi } from '@kit.ConnectivityKit';
 ```
 
-<a id="closesessions"></a>
 ## closeSessions
 
 ```TypeScript
@@ -69,7 +68,6 @@ function secureElementDemo() {
 
 ```
 
-<a id="getname"></a>
 ## getName
 
 ```TypeScript
@@ -116,7 +114,6 @@ try {
 
 ```
 
-<a id="issecureelementpresent"></a>
 ## isSecureElementPresent
 
 ```TypeScript
@@ -164,7 +161,6 @@ try {
 
 ```
 
-<a id="opensession"></a>
 ## openSession
 
 ```TypeScript

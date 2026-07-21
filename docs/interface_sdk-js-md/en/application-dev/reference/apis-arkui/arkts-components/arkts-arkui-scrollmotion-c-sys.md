@@ -12,7 +12,6 @@ Rolling animation model: You can build rolling animation based on the initial po
 
 **System API:** This is a system API.
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

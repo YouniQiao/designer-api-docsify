@@ -6,7 +6,6 @@
 import { mdns } from '@kit.NetworkKit';
 ```
 
-<a id="resolvelocalservice"></a>
 ## resolveLocalService
 
 ```TypeScript
@@ -20,9 +19,7 @@ Resolves an mDNS service.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,
-    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,
-    callback: AsyncCallback<LocalServiceInfo>): void-End-->
+<!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function resolveLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
@@ -75,7 +72,6 @@ mdns.resolveLocalService(context, localServiceInfo, (error: BusinessError, data:
 ```
 
 
-<a id="resolvelocalservice-1"></a>
 ## resolveLocalService
 
 ```TypeScript

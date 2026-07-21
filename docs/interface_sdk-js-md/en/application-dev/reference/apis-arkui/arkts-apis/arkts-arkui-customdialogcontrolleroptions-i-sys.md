@@ -1,7 +1,6 @@
 # CustomDialogControllerOptions
 
 Defines the style of the custom dialog box.
-
 > **NOTE**  
 >  
 > - Pressing the Back or ESC key closes the dialog box.  
@@ -22,8 +21,8 @@ Defines the style of the custom dialog box.
 >  
 > - In ArkUI, dialog boxes do not close automatically when you switch pages unless you manually call **close**. To  
 > enable a dialog box to be dismissed during page navigation, consider using the  
-> [navigation subpage displayed in dialog mode](docroot://ui/arkts-navigation-navdestination.md#page-display-mode) or  
-> [page-level dialog box](docroot://ui/arkts-embedded-dialog.md).
+> [navigation subpage displayed in dialog mode](../../../ui/arkts-navigation-navdestination.md#page-display-mode) or  
+> [page-level dialog box](../../../ui/arkts-embedded-dialog.md).
 
 **Since:** 7
 

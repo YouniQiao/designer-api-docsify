@@ -16,7 +16,6 @@ Defines the LazyDynamicLayout attribute functions.
 import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from '@kit.ArkUI';
 ```
 
-<a id="onvisibleindexeschange"></a>
 ## onVisibleIndexesChange
 
 ```TypeScript

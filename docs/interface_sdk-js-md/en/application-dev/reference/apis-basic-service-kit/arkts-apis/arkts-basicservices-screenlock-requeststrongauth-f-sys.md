@@ -6,7 +6,6 @@
 import { screenLock } from '@kit.BasicServicesKit';
 ```
 
-<a id="requeststrongauth"></a>
 ## requestStrongAuth
 
 ```TypeScript

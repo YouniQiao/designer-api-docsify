@@ -8,7 +8,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="columnend"></a>
 ## columnEnd
 
 ```TypeScript
@@ -29,9 +28,8 @@ Sets the end column number of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | End column number of the component.<br>In scenarios where you need to specify the start row and column numbers and the number of rows and columns of a **GridItem**, you are advised to use the [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) parameter of the **Grid** component. For details, see [Example 1: Creating a Fixed Row and Column Grid Layout](docroot://reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout)and [Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns](docroot://reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns).<br>Value range: [0, Total number of columns – 1]. |
+| value | number | Yes | End column number of the component.<br>In scenarios where you need to specify the start row and column numbers and the number of rows and columns of a **GridItem**, you are advised to use the [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) parameter of the **Grid** component. For details, see [Example 1: Creating a Fixed Row and Column Grid Layout](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout)and [Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns).<br>Value range: [0, Total number of columns – 1]. |
 
-<a id="columnstart"></a>
 ## columnStart
 
 ```TypeScript
@@ -52,9 +50,8 @@ Sets the start column number of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Start column number of the component.<br>In scenarios where you need to specify the start row and column numbers and the number of rows and columns of a **GridItem**, you are advised to use the [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) parameter of the **Grid** component. For details, see [Example 1: Creating a Fixed Row and Column Grid Layout](docroot://reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout)and [Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns](docroot://reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns).<br>Value range: [0, Total number of columns – 1]. |
+| value | number | Yes | Start column number of the component.<br>In scenarios where you need to specify the start row and column numbers and the number of rows and columns of a **GridItem**, you are advised to use the [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) parameter of the **Grid** component. For details, see [Example 1: Creating a Fixed Row and Column Grid Layout](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout)and [Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns).<br>Value range: [0, Total number of columns – 1]. |
 
-<a id="forcerebuild"></a>
 ## forceRebuild
 
 ```TypeScript
@@ -62,7 +59,6 @@ forceRebuild(value: boolean)
 ```
 
 Whether to re-create the component when it is being built.
-
 > **NOTE**  
 >  
 > This API is supported since API version 7 and deprecated since API version 9. Whether to re-create the component  
@@ -83,7 +79,6 @@ Whether to re-create the component when it is being built.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Sets whether to re-create the component when it is being built.<br>Default value:**false**. |
 
-<a id="onselect"></a>
 ## onSelect
 
 ```TypeScript
@@ -106,7 +101,6 @@ Triggered when the selected state of the grid item changes.
 | --- | --- | --- | --- |
 | event | (isSelected: boolean) =&gt; void | Yes | Callback invoked when the selected state changes. The input parameter **isSelected** returns **true** if the grid item is selected in the mouse selection box area; returns **false** otherwise. |
 
-<a id="rowend"></a>
 ## rowEnd
 
 ```TypeScript
@@ -127,9 +121,8 @@ Sets the end row number of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | End row number of the component.<br>In scenarios where you need to specify the start row and column numbers and the number of rows and columns of a **GridItem**, you are advised to use the [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) parameter of the **Grid** component. For details, see [Example 1: Creating a Fixed Row and Column Grid Layout](docroot://reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout)and [Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns](docroot://reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns).<br>Value range: [0, Total number of rows – 1]. |
+| value | number | Yes | End row number of the component.<br>In scenarios where you need to specify the start row and column numbers and the number of rows and columns of a **GridItem**, you are advised to use the [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) parameter of the **Grid** component. For details, see [Example 1: Creating a Fixed Row and Column Grid Layout](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout)and [Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns).<br>Value range: [0, Total number of rows – 1]. |
 
-<a id="rowstart"></a>
 ## rowStart
 
 ```TypeScript
@@ -150,9 +143,8 @@ Sets the start row number of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Start row number of the component.<br>In scenarios where you need to specify the start row and column numbers and the number of rows and columns of a **GridItem**, you are advised to use the [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) parameter of the **Grid** component. For details, see [Example 1: Creating a Fixed Row and Column Grid Layout](docroot://reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout)and [Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns](docroot://reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns).<br>Value range: [0, Total number of rows – 1]. |
+| value | number | Yes | Start row number of the component.<br>In scenarios where you need to specify the start row and column numbers and the number of rows and columns of a **GridItem**, you are advised to use the [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) parameter of the **Grid** component. For details, see [Example 1: Creating a Fixed Row and Column Grid Layout](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout)and [Example 3: Implementing a Scrollable Grid with Grid Items Spanning Rows and Columns](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns).<br>Value range: [0, Total number of rows – 1]. |
 
-<a id="selectable"></a>
 ## selectable
 
 ```TypeScript
@@ -177,14 +169,13 @@ This attribute must be used before the [polymorphic style](../../apis-ability-ki
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the grid item is selectable in the mouse selection box area. The **value** means that the grid item is selectable in the mouse selection box area, and **false** means the opposite.<br>Default value: **true**. |
 
-<a id="selected"></a>
 ## selected
 
 ```TypeScript
 selected(value: boolean)
 ```
 
-Sets whether the grid item is selected. This attribute supports two-way binding through [$$](docroot://ui/state-management/arkts-two-way-sync.md).
+Sets whether the grid item is selected. This attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 This attribute must be used before the [polymorphic style](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) is set. Otherwise, the style settings will not take effect.
 

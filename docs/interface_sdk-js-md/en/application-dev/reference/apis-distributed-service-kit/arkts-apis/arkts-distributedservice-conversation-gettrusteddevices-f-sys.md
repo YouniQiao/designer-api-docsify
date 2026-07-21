@@ -6,7 +6,6 @@
 import { conversation } from '@kit.DistributedServiceKit';
 ```
 
-<a id="gettrusteddevices"></a>
 ## getTrustedDevices
 
 ```TypeScript

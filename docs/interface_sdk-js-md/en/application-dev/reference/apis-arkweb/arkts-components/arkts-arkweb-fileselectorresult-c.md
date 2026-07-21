@@ -8,7 +8,6 @@ Defines the file selector result, related to {@link onFileSelectorShow} method.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="handlefilelist"></a>
 ## handleFileList
 
 ```TypeScript

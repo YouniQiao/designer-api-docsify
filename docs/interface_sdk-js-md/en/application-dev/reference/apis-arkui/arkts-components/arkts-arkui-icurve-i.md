@@ -8,7 +8,6 @@ Interface for curve object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="interpolate"></a>
 ## interpolate
 
 ```TypeScript

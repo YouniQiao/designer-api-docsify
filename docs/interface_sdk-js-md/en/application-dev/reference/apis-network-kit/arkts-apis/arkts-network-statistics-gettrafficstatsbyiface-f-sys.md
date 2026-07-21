@@ -6,7 +6,6 @@
 import { statistics } from '@kit.NetworkKit';
 ```
 
-<a id="gettrafficstatsbyiface"></a>
 ## getTrafficStatsByIface
 
 ```TypeScript
@@ -76,7 +75,6 @@ if (iFaceInfo) {
 ```
 
 
-<a id="gettrafficstatsbyiface-1"></a>
 ## getTrafficStatsByIface
 
 ```TypeScript

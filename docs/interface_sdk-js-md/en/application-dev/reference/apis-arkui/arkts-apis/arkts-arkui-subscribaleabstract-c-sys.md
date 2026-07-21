@@ -10,7 +10,6 @@ Defines the Subscribale base class.
 
 **System API:** This is a system API.
 
-<a id="addowningproperty"></a>
 ## addOwningProperty
 
 ```TypeScript
@@ -33,7 +32,6 @@ Adds a subscriber to the list of owned properties.
 | --- | --- | --- | --- |
 | subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Yes | Subscriber. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -50,7 +48,6 @@ Constructor.
 
 **System API:** This is a system API.
 
-<a id="notifypropertyhaschanged"></a>
 ## notifyPropertyHasChanged
 
 ```TypeScript
@@ -74,7 +71,6 @@ Notify subscribers that a property value has changed.
 | propName | string | Yes | Property name. |
 | newValue | any | Yes | New value after the change. |
 
-<a id="removeowningproperty"></a>
 ## removeOwningProperty
 
 ```TypeScript
@@ -97,7 +93,6 @@ Removes a subscriber from the list of owned properties.
 | --- | --- | --- | --- |
 | property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Yes | Subscriber to remove. |
 
-<a id="removeowningpropertybyid"></a>
 ## removeOwningPropertyById
 
 ```TypeScript

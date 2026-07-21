@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface Uint32ArrayConstructor--><!--Device-unnamed-interface Uint32ArrayConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -23,7 +22,6 @@ new(length: number): Uint32Array
 | --- | --- |
 | Uint32Array |  |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -44,7 +42,6 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint32Array
 | --- | --- |
 | Uint32Array |  |
 
-<a id="constructor-2"></a>
 ## constructor
 
 ```TypeScript
@@ -67,7 +64,6 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint32Array
 | --- | --- |
 | Uint32Array |  |
 
-<a id="from"></a>
 ## from
 
 ```TypeScript
@@ -90,7 +86,6 @@ Creates an array from an array-like or iterable object.
 | --- | --- |
 | Uint32Array |  |
 
-<a id="from-1"></a>
 ## from
 
 ```TypeScript
@@ -115,7 +110,6 @@ Creates an array from an array-like or iterable object.
 | --- | --- |
 | Uint32Array |  |
 
-<a id="of"></a>
 ## of
 
 ```TypeScript

@@ -16,7 +16,6 @@ Provide a Number formatting interface that supports custom symbols.This interfac
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -42,7 +41,6 @@ A constructor used to create a SymbolNumberFormat object.
 | locale | Intl.Locale | No | Locale object used for formatting the date time value.The default value is the current system locale.<br>Default value:The default is the current system locale.<br>Default Value: System Locale.<br>Region object. |
 | options | [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace.Such as zero, nan, positiveInfinity, etc.<br>Symbol Number Formatting Options. |
 
-<a id="format"></a>
 ## format
 
 ```TypeScript
@@ -73,7 +71,6 @@ Formats a number with give locale and SymbolNumberFormatOptions.
 | --- | --- |
 | string | Formatted number. |
 
-<a id="formatrange"></a>
 ## formatRange
 
 ```TypeScript
@@ -105,7 +102,6 @@ Formats a number range.
 | --- | --- |
 | string | Formatted number range. |
 
-<a id="formatrangetoparts"></a>
 ## formatRangeToParts
 
 ```TypeScript
@@ -137,7 +133,6 @@ Formats a number range into parts.
 | --- | --- |
 | Intl.NumberFormatPart[] | Locale formatted NumberFormatPart array. |
 
-<a id="formattoparts"></a>
 ## formatToParts
 
 ```TypeScript
@@ -168,7 +163,6 @@ Formats a number into parts.
 | --- | --- |
 | Intl.NumberFormatPart[] | Locale formatted NumberFormatPart array. |
 
-<a id="parse"></a>
 ## parse
 
 ```TypeScript
@@ -206,7 +200,6 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 | --- | --- |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-<a id="resolvedoptions"></a>
 ## resolvedOptions
 
 ```TypeScript

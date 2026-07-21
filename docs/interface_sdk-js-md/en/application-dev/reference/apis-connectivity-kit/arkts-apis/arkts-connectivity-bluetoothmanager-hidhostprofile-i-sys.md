@@ -20,7 +20,6 @@ Manager hid host profile.
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -64,7 +63,6 @@ Connect to device with hid host.On API 10 and above, the permission required by 
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript

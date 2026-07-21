@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface ArrayConstructor--><!--Device-unnamed-interface ArrayConstructor-End-->
 
-<a id="from"></a>
 ## from
 
 ```TypeScript
@@ -25,7 +24,6 @@ Creates an array from an array-like object.
 | --- | --- |
 | T[] |  |
 
-<a id="from-1"></a>
 ## from
 
 ```TypeScript
@@ -50,7 +48,6 @@ Creates an array from an iterable object.
 | --- | --- |
 | U[] |  |
 
-<a id="of"></a>
 ## of
 
 ```TypeScript

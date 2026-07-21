@@ -10,7 +10,6 @@ Provides methods for accessing NDEF tag.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-<a id="cansetreadonly"></a>
 ## canSetReadOnly
 
 ```TypeScript
@@ -42,7 +41,6 @@ Checks NDEF tag can be set read-only.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 
-<a id="getndefmessage"></a>
 ## getNdefMessage
 
 ```TypeScript
@@ -65,7 +63,6 @@ Gets the NDEF message that was read from NDEF tag when tag discovery.
 | --- | --- |
 | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | The instance of NdefMessage. |
 
-<a id="getndeftagtype"></a>
 ## getNdefTagType
 
 ```TypeScript
@@ -88,7 +85,6 @@ Gets the type of NDEF tag.
 | --- | --- |
 | tag.NfcForumType | The type of NDEF tag. |
 
-<a id="getndeftagtypestring"></a>
 ## getNdefTagTypeString
 
 ```TypeScript
@@ -123,7 +119,6 @@ Converts the NFC forum type into string defined in NFC forum.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="isndefwritable"></a>
 ## isNdefWritable
 
 ```TypeScript
@@ -146,7 +141,6 @@ Checks if NDEF tag is writable.
 | --- | --- |
 | boolean | Returns true if the tag is writable, otherwise returns false. |
 
-<a id="readndef"></a>
 ## readNdef
 
 ```TypeScript
@@ -180,7 +174,6 @@ Reads NDEF message on this tag.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="readndef-1"></a>
 ## readNdef
 
 ```TypeScript
@@ -214,7 +207,6 @@ Reads NDEF message on this tag.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
 
-<a id="setreadonly"></a>
 ## setReadOnly
 
 ```TypeScript
@@ -248,7 +240,6 @@ Sets the NDEF tag read-only.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="setreadonly-1"></a>
 ## setReadOnly
 
 ```TypeScript
@@ -282,7 +273,6 @@ Sets the NDEF tag read-only.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
 
-<a id="writendef"></a>
 ## writeNdef
 
 ```TypeScript
@@ -322,7 +312,6 @@ Writes NDEF message into this tag.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="writendef-1"></a>
 ## writeNdef
 
 ```TypeScript

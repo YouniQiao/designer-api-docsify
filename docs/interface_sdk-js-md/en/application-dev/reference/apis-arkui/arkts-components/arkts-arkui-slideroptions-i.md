@@ -176,15 +176,15 @@ Current progress.
 
 Default value: same as the value of **min**.
 
-Since API version 10, this property supports two-way binding through [$$](docroot://ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this property supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
-This property supports two-way binding through [!!](docroot://ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+This property supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 Value range: [min, max]
 
 Values less than the value of **min** are adjusted to the value of **min**, and values greater than the value of **max** are capped at the value of **max**.
 
-The $$ operator enables two-way synchronization between the TS variable and the **Slider** component's **value**.For details, see [Example 7: Setting Two-Way Binding for the Slider](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-slider.md#example-7-setting-two-way-binding-for-the-slider).
+The $$ operator enables two-way synchronization between the TS variable and the **Slider** component's **value**.For details, see [Example 7: Setting Two-Way Binding for the Slider](../../../reference/apis-arkui/arkui-ts/ts-basic-components-slider.md#example-7-setting-two-way-binding-for-the-slider).
 
 **Type:** number
 

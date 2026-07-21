@@ -6,7 +6,6 @@
 import { systemTime } from '@kit.BasicServicesKit';
 ```
 
-<a id="gettimezone"></a>
 ## getTimezone
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTimezone(callback:](arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone-1)
+**Substitutes:** [getTimezone(callback:](arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)
 
 <!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
 
@@ -29,7 +28,7 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see [Supported System Time Zones](docroot://reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones). |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones). |
 
 **Error codes:**
 
@@ -58,7 +57,6 @@ try {
 ```
 
 
-<a id="gettimezone-1"></a>
 ## getTimezone
 
 ```TypeScript
@@ -71,7 +69,7 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTimezone()](arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone-1)
+**Substitutes:** [getTimezone()](arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)
 
 <!--Device-systemTime-function getTimezone(): Promise<string>--><!--Device-systemTime-function getTimezone(): Promise<string>-End-->
 
@@ -81,7 +79,7 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the system time zone. For details, see [Supported System Time Zones](docroot://reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones). |
+| Promise&lt;string&gt; | Promise used to return the system time zone. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones). |
 
 **Error codes:**
 

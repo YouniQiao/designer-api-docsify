@@ -8,7 +8,6 @@ Implements the subtab style. A transition animation is played when the user swit
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="board"></a>
 ## board
 
 ```TypeScript
@@ -39,7 +38,6 @@ Sets the background style (board style) of the selected subtab. It takes effect 
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -62,7 +60,6 @@ Constructor used to create a **SubTabBarStyle** instance.
 | --- | --- | --- | --- |
 | content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -87,14 +84,13 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 | --- | --- | --- | --- |
 | content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | Content on the tab.<br>**NOTE**<br>1. Custom content does not support the **labelStyle** attribute.<br>2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.<br>3. If the custom content is within the content box of the tab page, it is aligned in the center.<br>4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
-<a id="id"></a>
 ## id
 
 ```TypeScript
 id(value: string): SubTabBarStyle
 ```
 
-Sets the [ID](arkts-arkui-commonmethod-c.md#id-1) of the subtab.
+Sets the [ID](arkts-arkui-commonmethod-c.md#id) of the subtab.
 
 **Since:** 11
 
@@ -110,7 +106,7 @@ Sets the [ID](arkts-arkui-commonmethod-c.md#id-1) of the subtab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | [ID](arkts-arkui-commonmethod-c.md#id-1) of the subtab. |
+| value | string | Yes | [ID](arkts-arkui-commonmethod-c.md#id) of the subtab. |
 
 **Return value:**
 
@@ -118,7 +114,6 @@ Sets the [ID](arkts-arkui-commonmethod-c.md#id-1) of the subtab.
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object. |
 
-<a id="indicator"></a>
 ## indicator
 
 ```TypeScript
@@ -149,14 +144,13 @@ Sets the indicator style of the selected subtab. It takes effect only in the hor
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object. |
 
-<a id="indicator-1"></a>
 ## indicator
 
 ```TypeScript
 indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
-Sets the indicator style of the selected subtab. Compared with [indicator](arkts-arkui-subtabbarstyle-c.md#indicator-1), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md). It takes effect only in the horizontal layout.
+Sets the indicator style of the selected subtab. Compared with [indicator](arkts-arkui-subtabbarstyle-c.md#indicator), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md). It takes effect only in the horizontal layout.
 
 **Since:** 22
 
@@ -180,7 +174,6 @@ Sets the indicator style of the selected subtab. Compared with [indicator](arkts
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object. |
 
-<a id="labelstyle"></a>
 ## labelStyle
 
 ```TypeScript
@@ -211,7 +204,6 @@ Sets the style of the label text and font for the subtab.
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object. |
 
-<a id="of"></a>
 ## of
 
 ```TypeScript
@@ -242,7 +234,6 @@ Static constructor used to create a **SubTabBarStyle** instance.
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object created. |
 
-<a id="of-1"></a>
 ## of
 
 ```TypeScript
@@ -273,7 +264,6 @@ Static constructor used to create a **SubTabBarStyle** instance. You can set cus
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object created. |
 
-<a id="padding"></a>
 ## padding
 
 ```TypeScript
@@ -304,7 +294,6 @@ Sets the padding of the subtab. It cannot be set in percentage. When the paramet
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object. |
 
-<a id="padding-1"></a>
 ## padding
 
 ```TypeScript
@@ -335,7 +324,6 @@ Sets the padding of the subtab. This API supports mirroring but does not support
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | **SubTabBarStyle** object. |
 
-<a id="selectedmode"></a>
 ## selectedMode
 
 ```TypeScript

@@ -10,7 +10,6 @@ Animation resource.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="finish"></a>
 ## finish
 
 ```TypeScript
@@ -25,7 +24,6 @@ Finish the animation and seek the position to the end.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="onfinished"></a>
 ## onFinished
 
 ```TypeScript
@@ -46,7 +44,6 @@ Register a callback when animation finished.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | the callback invoked when animation finished |
 
-<a id="onstarted"></a>
 ## onStarted
 
 ```TypeScript
@@ -67,7 +64,6 @@ Register a callback when animation started.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | the callback invoked when animation started |
 
-<a id="pause"></a>
 ## pause
 
 ```TypeScript
@@ -82,7 +78,6 @@ Pause the animation.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="restart"></a>
 ## restart
 
 ```TypeScript
@@ -97,7 +92,6 @@ Restart the animation.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="seek"></a>
 ## seek
 
 ```TypeScript
@@ -118,7 +112,6 @@ Seek the animation to the position.
 | --- | --- | --- | --- |
 | position | number | Yes | the position seek between 0~1 |
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -133,7 +126,6 @@ Start the animation.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript

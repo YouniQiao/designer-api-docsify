@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="setappresourcelimit"></a>
 ## setAppResourceLimit
 
 ```TypeScript
@@ -14,7 +13,6 @@ function setAppResourceLimit(type: string, value: number, enableDebugLog: boolea
 ```
 
 Sets the number of FDs, number of threads, JS memory, or native memory limit of the application.
-
 > **NOTE**  
 >  
 > Enable **System resource leak log** in **Developer options** and restart the device for the API to take effect.

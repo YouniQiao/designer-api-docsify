@@ -12,7 +12,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md) | Provides button style configuration for the dialog box.  @since version number is higher than inner elements'. This does not affect interface usability. |
+| [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md) | Provides button style configuration for the dialog box. @since version number is higher than inner elements'. This does not affect interface usability. |
 | [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md) | Alignment mode of the dialog box. |
 | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | Provides **ActionSheet** configuration options. |
 | [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | Provides information about the action to dismiss the dialog box. |

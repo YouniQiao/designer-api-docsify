@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="setaudiodevice"></a>
 ## setAudioDevice
 
 ```TypeScript
@@ -63,7 +62,6 @@ call.setAudioDevice(audioDevice, (err: BusinessError) => {
 ```
 
 
-<a id="setaudiodevice-1"></a>
 ## setAudioDevice
 
 ```TypeScript

@@ -62,7 +62,7 @@ Short name of the account (used as the name of the personal folder).
 
 **The short name cannot**:
 
-1. Contain any of the following characters: < >| : " * ? / \2. Contain any of the following: . or ..3. Exceed 255 characters.
+1. Contain any of the following characters: &lt; &gt;| : " * ? / \2. Contain any of the following: . or ..3. Exceed 255 characters.
 
 **Type:** string
 

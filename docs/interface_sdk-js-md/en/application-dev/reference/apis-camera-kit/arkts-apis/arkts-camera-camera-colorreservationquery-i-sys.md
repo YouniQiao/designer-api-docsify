@@ -16,7 +16,6 @@ Provides APIs for querying the color retention type supported by the device.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getsupportedcolorreservationtypes"></a>
 ## getSupportedColorReservationTypes
 
 ```TypeScript

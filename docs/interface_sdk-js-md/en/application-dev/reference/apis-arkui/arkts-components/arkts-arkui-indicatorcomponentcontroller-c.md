@@ -8,7 +8,6 @@ Provides methods for switching components.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="changeindex"></a>
 ## changeIndex
 
 ```TypeScript
@@ -36,7 +35,6 @@ Controlling IndicatorComponent to change to the specified subcomponent.
 | index | number | Yes | The index of item to be redirected. |
 | useAnimation | boolean | No | If true, swipe to index item with animation. If false, swipe to index item without animation.The default value is false. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -57,7 +55,6 @@ constructor.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="shownext"></a>
 ## showNext
 
 ```TypeScript
@@ -78,7 +75,6 @@ Called when the next child component is displayed.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="showprevious"></a>
 ## showPrevious
 
 ```TypeScript

@@ -14,7 +14,6 @@ Manages SSAP client. Before calling a SSAP client method,you must use {@link cre
 import { ssap } from '@kit.ConnectivityKit';
 ```
 
-<a id="callmethod"></a>
 ## callMethod
 
 ```TypeScript
@@ -58,7 +57,6 @@ Calls the method of a server.
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
 
-<a id="offeventnotify"></a>
 ## offEventNotify
 
 ```TypeScript
@@ -83,7 +81,6 @@ Unsubscribes from event notifications.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | No | Callback used to listen for the event notified event. |
 
-<a id="oneventnotify"></a>
 ## onEventNotify
 
 ```TypeScript
@@ -110,7 +107,6 @@ This event is accessible only to system applications that granted the ohos.permi
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | Yes | Callback used to listen for the event notified event. |
 
-<a id="readdescriptor"></a>
 ## readDescriptor
 
 ```TypeScript
@@ -154,7 +150,6 @@ Reads the descriptor of a server.
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
 
-<a id="setpropertyindication"></a>
 ## setPropertyIndication
 
 ```TypeScript
@@ -200,7 +195,6 @@ Enables or disables indication of a property when value changed.
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
 
-<a id="writedescriptor"></a>
 ## writeDescriptor
 
 ```TypeScript
@@ -209,7 +203,7 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 Writes the descriptor of a server.
 
-This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification-1) or [setPropertyIndication](arkts-connectivity-ssap-client-i-sys.md#setpropertyindication-1) instead.
+This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or [setPropertyIndication](arkts-connectivity-ssap-client-i-sys.md#setpropertyindication) instead.
 
 **Since:** 26.0.0
 

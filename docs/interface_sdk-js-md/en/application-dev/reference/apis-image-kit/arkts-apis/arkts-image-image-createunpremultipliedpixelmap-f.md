@@ -6,7 +6,6 @@
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="createunpremultipliedpixelmap"></a>
 ## createUnpremultipliedPixelMap
 
 ```TypeScript
@@ -69,7 +68,6 @@ async function CreateUnpremultipliedPixelMap() {
 ```
 
 
-<a id="createunpremultipliedpixelmap-1"></a>
 ## createUnpremultipliedPixelMap
 
 ```TypeScript

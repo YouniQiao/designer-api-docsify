@@ -1,8 +1,8 @@
 # AVMetadataExtractor
 
-AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor-1)to create an AVMetadataExtractor instance.
+AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor)to create an AVMetadataExtractor instance.
 
-For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](docroot://media/media/avmetadataextractor.md).
+For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
 
 **Since:** 11
 
@@ -16,7 +16,6 @@ For details about the demo of obtaining audio or video metadata and video thumbn
 import { media } from '@kit.MediaKit';
 ```
 
-<a id="cancelallfetchframes"></a>
 ## cancelAllFetchFrames
 
 ```TypeScript
@@ -33,7 +32,6 @@ Cancels the ongoing task of obtaining thumbnails in batches. (The thumbnails tha
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
-<a id="fetchalbumcover"></a>
 ## fetchAlbumCover
 
 ```TypeScript
@@ -61,7 +59,6 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
-<a id="fetchalbumcover-1"></a>
 ## fetchAlbumCover
 
 ```TypeScript
@@ -89,7 +86,6 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
-<a id="fetchframebytime"></a>
 ## fetchFrameByTime
 
 ```TypeScript
@@ -127,7 +123,6 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 | [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 
-<a id="fetchframebytimewithtimeout"></a>
 ## fetchFrameByTimeWithTimeout
 
 ```TypeScript
@@ -141,9 +136,7 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVMetadataExtractor-fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,
-      timeoutMs: long): Promise<image.PixelMap | undefined>--><!--Device-AVMetadataExtractor-fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,
-      timeoutMs: long): Promise<image.PixelMap | undefined>-End-->
+<!--Device-AVMetadataExtractor-fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,      timeoutMs: long): Promise<image.PixelMap | undefined>--><!--Device-AVMetadataExtractor-fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,      timeoutMs: long): Promise<image.PixelMap | undefined>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -172,7 +165,6 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 | [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
 
-<a id="fetchframesbytimes"></a>
 ## fetchFramesByTimes
 
 ```TypeScript
@@ -181,7 +173,6 @@ fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: P
 ```
 
 Obtains video thumbnails in batches. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - The given video resource is decoded first, and then image frames are extracted from each time point in the  
@@ -195,9 +186,7 @@ Obtains video thumbnails in batches. This API uses an asynchronous callback to r
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVMetadataExtractor-fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
-        callback: OnFrameFetched): void--><!--Device-AVMetadataExtractor-fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
-        callback: OnFrameFetched): void-End-->
+<!--Device-AVMetadataExtractor-fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,        callback: OnFrameFetched): void--><!--Device-AVMetadataExtractor-fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,        callback: OnFrameFetched): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -221,7 +210,6 @@ Obtains video thumbnails in batches. This API uses an asynchronous callback to r
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 | [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
 
-<a id="fetchframesbytimeswithtimeout"></a>
 ## fetchFramesByTimesWithTimeout
 
 ```TypeScript
@@ -230,7 +218,6 @@ fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOption
 ```
 
 Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each thumbnail. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - The given video resource is decoded first, and then image frames are extracted from each time point in the  
@@ -247,9 +234,7 @@ Obtains video thumbnails in batches. You can set the maximum timeout interval (*
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVMetadataExtractor-fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
-      timeoutMs: long, callback: OnFrameFetched): void--><!--Device-AVMetadataExtractor-fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
-      timeoutMs: long, callback: OnFrameFetched): void-End-->
+<!--Device-AVMetadataExtractor-fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,      timeoutMs: long, callback: OnFrameFetched): void--><!--Device-AVMetadataExtractor-fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,      timeoutMs: long, callback: OnFrameFetched): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
@@ -274,7 +259,6 @@ Obtains video thumbnails in batches. You can set the maximum timeout interval (*
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 | [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
 
-<a id="fetchmetadata"></a>
 ## fetchMetadata
 
 ```TypeScript
@@ -303,7 +287,6 @@ Obtains the media metadata. This API uses an asynchronous callback to return the
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 | [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 
-<a id="fetchmetadata-1"></a>
 ## fetchMetadata
 
 ```TypeScript
@@ -332,7 +315,6 @@ Obtains the media metadata. This API uses a promise to return the result.
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 | [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
 
-<a id="fetchmetadatawithtimeout"></a>
 ## fetchMetadataWithTimeout
 
 ```TypeScript
@@ -371,7 +353,6 @@ Obtains the media metadata. You can set the maximum timeout interval (**timeoutM
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 | [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -398,7 +379,6 @@ Releases this AVMetadataExtractor instance. This API uses an asynchronous callba
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript
@@ -425,14 +405,13 @@ Releases this AVMetadataExtractor instance. This API uses a promise to return th
 | --- | --- |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 
-<a id="seturlsource"></a>
 ## setUrlSource
 
 ```TypeScript
 setUrlSource(url: string, headers?: Record<string, string>): void
 ```
 
-Sets the data source for a network on-demand resource. Only network metadata ([fetchMetadata](arkts-media-media-avmetadataextractor-i.md#fetchmetadata-1)) and thumbnails ([fetchFrameByTime](arkts-media-media-avmetadataextractor-i.md#fetchframebytime-1)) can be obtained. The media resource URL must be set before the retrieval.
+Sets the data source for a network on-demand resource. Only network metadata ([fetchMetadata](arkts-media-media-avmetadataextractor-i.md#fetchmetadata)) and thumbnails ([fetchFrameByTime](arkts-media-media-avmetadataextractor-i.md#fetchframebytime)) can be obtained. The media resource URL must be set before the retrieval.
 
 **Since:** 20
 

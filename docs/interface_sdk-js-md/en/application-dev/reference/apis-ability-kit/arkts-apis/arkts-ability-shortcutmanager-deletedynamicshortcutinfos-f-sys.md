@@ -6,7 +6,6 @@
 import { shortcutManager } from '@kit.AbilityKit';
 ```
 
-<a id="deletedynamicshortcutinfos"></a>
 ## deleteDynamicShortcutInfos
 
 ```TypeScript
@@ -31,7 +30,7 @@ Deletes dynamic shortcuts.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application to which the dynamic shortcuts belong. |
 | appIndex | number | Yes | Clone index of the application to which the dynamic shortcuts belong. The value can be 1,2, 3, 4, or 5. |
-| userId | number | Yes | ID of the user to which the dynamic shortcuts belong. The user ID can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
+| userId | number | Yes | ID of the user to which the dynamic shortcuts belong. The user ID can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 | ids | Array&lt;string&gt; | No | Array of IDs of the dynamic shortcuts to be deleted. If the default value is used or an empty array is passed, all dynamic shortcuts that meet the conditions are deleted. |
 
 **Return value:**

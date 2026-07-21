@@ -1,6 +1,5 @@
 # cancel
 
-<a id="cancel"></a>
 ## cancel
 
 ```TypeScript
@@ -27,7 +26,6 @@ Cancels a notification with the specified ID. This API uses an asynchronous call
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="cancel-1"></a>
 ## cancel
 
 ```TypeScript
@@ -55,7 +53,6 @@ Cancels a notification with the specified ID and label. This API uses an asynchr
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="cancel-2"></a>
 ## cancel
 
 ```TypeScript

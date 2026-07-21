@@ -14,7 +14,6 @@ Implements the common shape methods.
 import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
-<a id="fill"></a>
 ## fill
 
 ```TypeScript
@@ -47,7 +46,6 @@ Sets the fill color of this shape, which determines its opacity, with black repr
 | --- | --- |
 | T | Current object. |
 
-<a id="offset"></a>
 ## offset
 
 ```TypeScript
@@ -80,7 +78,6 @@ Sets the coordinate offset relative to the component's layout position.
 | --- | --- |
 | T | Current object. |
 
-<a id="position"></a>
 ## position
 
 ```TypeScript

@@ -1,7 +1,6 @@
 # ParticleAnnulusRegion
 
 Configures the annular emitter area.
-
 > **NOTE**  
 >  
 > - If the value of outerRadius or innerRadius is less than 0 or uses the percentage unit, the value is considered as  
@@ -13,7 +12,7 @@ Configures the annular emitter area.
 > - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and  
 > the larger value is used as the new end angle.  
 >  
-> ![](docroot://reference/apis-arkui/arkui-ts/figures/annulus.png)
+> ![](../../../reference/apis-arkui/arkui-ts/figures/annulus.png)
 
 **Since:** 20
 

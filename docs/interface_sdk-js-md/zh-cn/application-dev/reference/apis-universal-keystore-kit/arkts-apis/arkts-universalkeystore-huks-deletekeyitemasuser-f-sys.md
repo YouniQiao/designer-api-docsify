@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="deletekeyitemasuser"></a>
 ## deleteKeyItemAsUser
 
 ```TypeScript

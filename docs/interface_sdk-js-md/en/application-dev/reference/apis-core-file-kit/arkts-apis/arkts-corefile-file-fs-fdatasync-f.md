@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="fdatasync"></a>
 ## fdatasync
 
 ```TypeScript
@@ -46,7 +45,6 @@ Synchronizes the data of a file. This API uses a promise to return the result.
 | 13900042 | Unknown error |
 
 
-<a id="fdatasync-1"></a>
 ## fdatasync
 
 ```TypeScript

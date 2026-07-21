@@ -10,7 +10,6 @@ Defines a gesture group handler object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -35,7 +34,6 @@ Constructor used to create a gesture group handler instance.
 | --- | --- | --- | --- |
 | options | [GestureGroupGestureHandlerOptions](arkts-arkui-gesturegroupgesturehandleroptions-i.md) | No | Parameters of the gesture group handler. |
 
-<a id="oncancel"></a>
 ## onCancel
 
 ```TypeScript

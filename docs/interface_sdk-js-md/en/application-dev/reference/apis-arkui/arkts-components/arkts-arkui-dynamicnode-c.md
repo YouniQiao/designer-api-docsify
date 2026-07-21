@@ -8,7 +8,6 @@ Define DynamicNode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="onmove"></a>
 ## onMove
 
 ```TypeScript
@@ -39,7 +38,6 @@ Invoked when data is moved during drag and drop sorting.This callback is only ap
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onmove-1"></a>
 ## onMove
 
 ```TypeScript

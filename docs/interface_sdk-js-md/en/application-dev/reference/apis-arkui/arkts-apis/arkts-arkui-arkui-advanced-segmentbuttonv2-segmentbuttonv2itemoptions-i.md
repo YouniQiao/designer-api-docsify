@@ -1,7 +1,6 @@
 # SegmentButtonV2ItemOptions
 
 Defines segmented button item options.
-
 > **Description**  
 >  
 > 1. If both **symbol** and **icon** are configured, **symbol** takes precedence.  
@@ -27,7 +26,7 @@ import { OnSelectedIndexesChange, TabSegmentButtonV2, SegmentButtonV2Items, Mult
 accessibilityDescription?: ResourceStr
 ```
 
-[Accessibility description](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitydescription-1) of the segmented button item.
+[Accessibility description](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitydescription) of the segmented button item.
 
 Default value: **""**
 
@@ -53,7 +52,7 @@ Decorator type: @Trace
 accessibilityLevel?: string
 ```
 
-[Accessibility level](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel-1) of the segmented button item.
+[Accessibility level](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel) of the segmented button item.
 
 Default value: **"auto"**
 
@@ -79,7 +78,7 @@ Decorator type: @Trace
 accessibilityText?: ResourceStr
 ```
 
-[Accessibility text](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitytext-1) of the segmented button item.
+[Accessibility text](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitytext) of the segmented button item.
 
 Default value: **""**
 

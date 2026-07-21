@@ -6,7 +6,6 @@ purposes.
 ## Child Components
 
 This component supports only one child component.
-
 > **NOTE**  
 >  
 > - Allowed child component types: built-in and custom components, including rendering control types (  

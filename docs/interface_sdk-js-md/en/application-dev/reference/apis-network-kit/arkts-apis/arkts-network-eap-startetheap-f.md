@@ -6,7 +6,6 @@
 import { eap } from '@kit.NetworkKit';
 ```
 
-<a id="startetheap"></a>
 ## startEthEap
 
 ```TypeScript

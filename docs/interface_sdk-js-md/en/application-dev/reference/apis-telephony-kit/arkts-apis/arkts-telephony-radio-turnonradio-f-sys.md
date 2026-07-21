@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="turnonradio"></a>
 ## turnOnRadio
 
 ```TypeScript
@@ -61,7 +60,6 @@ radio.turnOnRadio(slotId, (err: BusinessError) => {
 ```
 
 
-<a id="turnonradio-1"></a>
 ## turnOnRadio
 
 ```TypeScript
@@ -119,7 +117,6 @@ radio.turnOnRadio(slotId).then(() => {
 ```
 
 
-<a id="turnonradio-2"></a>
 ## turnOnRadio
 
 ```TypeScript

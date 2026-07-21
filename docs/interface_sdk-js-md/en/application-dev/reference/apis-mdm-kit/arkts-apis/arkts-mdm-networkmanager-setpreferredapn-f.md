@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="setpreferredapn"></a>
 ## setPreferredApn
 
 ```TypeScript
@@ -30,7 +29,7 @@ Sets the preferred APN.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnId | string | Yes | Preferred APN ID to be set. You can obtain device information using [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn-1). |
+| apnId | string | Yes | Preferred APN ID to be set. You can obtain device information using [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn). |
 
 **Error codes:**
 

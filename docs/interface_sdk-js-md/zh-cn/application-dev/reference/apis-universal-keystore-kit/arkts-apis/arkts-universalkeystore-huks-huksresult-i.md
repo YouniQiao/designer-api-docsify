@@ -1,12 +1,11 @@
 # HuksResult
 
 调用接口返回的result。
-
 > **说明：**  
 >  
 > - 从API version 8开始，从API version 9开始废弃，建议使用[HuksReturnResult<sup>9+</sup>](arkts-universalkeystore-huks-huksreturnresult-i.md)替代。  
 >  
-> - errorCode的具体信息，请参考[HUKS错误码](docroot://reference/apis-universal-keystore-kit/errorcode-huks.md)。
+> - errorCode的具体信息，请参考[HUKS错误码](../../../reference/apis-universal-keystore-kit/errorcode-huks.md)。
 
 **起始版本：** 8
 

@@ -4,7 +4,6 @@ Represents the completion of an asynchronous operation
 
 <!--Device-unnamed-interface Promise<T>--><!--Device-unnamed-interface Promise<T>-End-->
 
-<a id="catch"></a>
 ## catch
 
 ```TypeScript
@@ -27,7 +26,6 @@ Attaches a callback for only the rejection of the Promise.
 | --- | --- |
 | Promise&lt;T \| TResult&gt; |  |
 
-<a id="then"></a>
 ## then
 
 ```TypeScript

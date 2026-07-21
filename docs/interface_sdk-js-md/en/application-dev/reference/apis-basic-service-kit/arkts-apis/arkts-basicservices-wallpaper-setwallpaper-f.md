@@ -6,7 +6,6 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
-<a id="setwallpaper"></a>
 ## setWallpaper
 
 ```TypeScript
@@ -25,15 +24,7 @@ Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG 
 
 **Required permissions:** ohos.permission.SET_WALLPAPER
 
-<!--Device-wallpaper-function setWallpaper(
-    source: string | image.PixelMap,
-    wallpaperType: WallpaperType,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-wallpaper-function setWallpaper(
-    source: string | image.PixelMap,
-    wallpaperType: WallpaperType,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-wallpaper-function setWallpaper(    source: string | image.PixelMap,    wallpaperType: WallpaperType,    callback: AsyncCallback<void>  ): void--><!--Device-wallpaper-function setWallpaper(    source: string | image.PixelMap,    wallpaperType: WallpaperType,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 
@@ -84,7 +75,6 @@ imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
 ```
 
 
-<a id="setwallpaper-1"></a>
 ## setWallpaper
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
-<a id="init"></a>
 ## init
 
 ```TypeScript
@@ -39,7 +38,7 @@ Indicates the initialization of signature and signature verification using crede
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
-| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user.Please call [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog-1)method to request user authorization for the certificate or credential.<br>**Applicable version:** 12 and later |
+| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user.Please call [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog)method to request user authorization for the certificate or credential.<br>**Applicable version:** 12 and later |
 
 **Example**
 
@@ -67,7 +66,6 @@ try {
 ```
 
 
-<a id="init-1"></a>
 ## init
 
 ```TypeScript

@@ -14,7 +14,6 @@ Provides enhanced audio device management capabilities.
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="isenhancedroutingsupported"></a>
 ## isEnhancedRoutingSupported
 
 ```TypeScript
@@ -37,7 +36,6 @@ Queries whether the system supports the enhanced routing functions provided by t
 | --- | --- |
 | boolean | The value true indicates that the system supports enhanced routing functions. |
 
-<a id="selectinputdevice"></a>
 ## selectInputDevice
 
 ```TypeScript
@@ -73,7 +71,6 @@ Selects the input device for your application. This setting applies to all recor
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example,the selected device does not exist. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs, such as the service died. |
 
-<a id="selectinputdeviceforaudiocapturer"></a>
 ## selectInputDeviceForAudioCapturer
 
 ```TypeScript
@@ -110,7 +107,6 @@ Selects the input device for the target AudioCapturer. Your application must ens
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example,the selected device does not exist. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs, such as the service died. |
 
-<a id="selectoutputdevice"></a>
 ## selectOutputDevice
 
 ```TypeScript
@@ -146,7 +142,6 @@ Selects the output device for your application. This setting applies to all play
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, for example,the selected device does not exist. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs, such as the service died. |
 
-<a id="selectoutputdeviceforaudiorenderer"></a>
 ## selectOutputDeviceForAudioRenderer
 
 ```TypeScript

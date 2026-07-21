@@ -1,10 +1,9 @@
 # DragController
 
 Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
-
 > **NOTE**  
 >  
-> In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller-1) in  
+> In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) in  
 > **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 11
@@ -19,14 +18,13 @@ Provides APIs for initiating drag actions. When receiving a gesture event, such 
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="canceldataloading"></a>
 ## cancelDataLoading
 
 ```TypeScript
 cancelDataLoading(key: string): void
 ```
 
-Cancels the data loading initiated by the [startDataLoading](../arkts-components/arkts-arkui-dragevent-i.md#startdataloading-1)API. This API can be called only after the drag is released.
+Cancels the data loading initiated by the [startDataLoading](../arkts-components/arkts-arkui-dragevent-i.md#startdataloading)API. This API can be called only after the drag is released.
 
 **Since:** 15
 
@@ -51,7 +49,6 @@ Cancels the data loading initiated by the [startDataLoading](../arkts-components
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | [190004](../errorcode-drag-event.md#190004-operation-failed) | Operation failed. |
 
-<a id="createdragaction"></a>
 ## createDragAction
 
 ```TypeScript
@@ -59,7 +56,6 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 ```
 
 Creates a drag action object for initiating drag and drop operations. You need to explicitly specify one or more drag previews, the drag data, and the drag handle point. If a drag operation initiated by an existing drag action object is not completed, no new object can be created, and calling the API will throw an exception. After the lifecycle of the drag action object ends, the callback functions registered on this object become invalid.Therefore, it is necessary to hold this object within a longer scope and replace the old value with a new object returned by **createDragAction** before each drag initiation.
-
 > **NOTE**  
 >  
 > For optimal drag and drop performance, limit the number of drag previews.
@@ -94,14 +90,13 @@ Creates a drag action object for initiating drag and drop operations. You need t
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
-<a id="enabledropdisallowedbadge"></a>
 ## enableDropDisallowedBadge
 
 ```TypeScript
 enableDropDisallowedBadge(enabled: boolean): void
 ```
 
-Specifies whether to enable the display of a disallowed badge when dragged content is incompatible with a component's configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop-1) types. When a component can accept or process dragged data or returns **DragBehavior.COPY** to indicate copy mode processing, the drag preview shows a plus icon with data count badge. When the component returns **DragBehavior.MOVE** to indicate cut mode processing, only the data count badge appears. When this feature is enabled, the system automatically displays a disallowed badge during drag operations if the dragged data types are incompatible with the target component's allowed drop types. This API currently does not support [UIExtension](arkts-arkui-uiextension.md).
+Specifies whether to enable the display of a disallowed badge when dragged content is incompatible with a component's configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop) types. When a component can accept or process dragged data or returns **DragBehavior.COPY** to indicate copy mode processing, the drag preview shows a plus icon with data count badge. When the component returns **DragBehavior.MOVE** to indicate cut mode processing, only the data count badge appears. When this feature is enabled, the system automatically displays a disallowed badge during drag operations if the dragged data types are incompatible with the target component's allowed drop types. This API currently does not support [UIExtension](arkts-arkui-uiextension.md).
 
 **Since:** 20
 
@@ -117,9 +112,8 @@ Specifies whether to enable the display of a disallowed badge when dragged conte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the display of a disallowed badge when dragged content is incompatible with a component's configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop-1) types. The value **true** means to enable the display of a disallowed badge, and **false** means the opposite. The default value is **false**. |
+| enabled | boolean | Yes | Whether to enable the display of a disallowed badge when dragged content is incompatible with a component's configured [allowDrop](../arkts-components/arkts-arkui-commonmethod-c.md#allowdrop) types. The value **true** means to enable the display of a disallowed badge, and **false** means the opposite. The default value is **false**. |
 
-<a id="executedrag"></a>
 ## executeDrag
 
 ```TypeScript
@@ -135,9 +129,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,
-    callback: AsyncCallback<dragController.DragEventParam>): void--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,
-    callback: AsyncCallback<dragController.DragEventParam>): void-End-->
+<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,    callback: AsyncCallback<dragController.DragEventParam>): void--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo,    callback: AsyncCallback<dragController.DragEventParam>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -156,7 +148,6 @@ Initiates a drag action, with the object to be dragged and the drag information 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
-<a id="executedrag-1"></a>
 ## executeDrag
 
 ```TypeScript
@@ -172,9 +163,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)
-    : Promise<dragController.DragEventParam>--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)
-    : Promise<dragController.DragEventParam>-End-->
+<!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)    : Promise<dragController.DragEventParam>--><!--Device-DragController-executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragInfo)    : Promise<dragController.DragEventParam>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -198,7 +187,6 @@ Initiates a drag action, with the object to be dragged and the drag information 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 
-<a id="getdragpreview"></a>
 ## getDragPreview
 
 ```TypeScript
@@ -223,7 +211,6 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 | --- | --- |
 | dragController.DragPreview | **DragPreview** object. It provides the API for setting the preview style.It does not work in the **OnDrop** and **OnDragEnd** callbacks. |
 
-<a id="notifydragstartrequest"></a>
 ## notifyDragStartRequest
 
 ```TypeScript
@@ -248,7 +235,6 @@ Controls whether the application can initiate a drag operation.
 | --- | --- | --- | --- |
 | requestStatus | dragController.DragStartRequestStatus | Yes | Whether the application can initiate a drag operation. |
 
-<a id="setdrageventstrictreportingenabled"></a>
 ## setDragEventStrictReportingEnabled
 
 ```TypeScript

@@ -18,7 +18,6 @@ HEIF image sequence metadata.
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="clone"></a>
 ## clone
 
 ```TypeScript
@@ -41,7 +40,6 @@ Clones the HEIFS metadata. This API returns the result asynchronously through a 
 | --- | --- |
 | Promise&lt;HeifsMetadata&gt; | Promise used to return the HEIFS metadata instance. |
 
-<a id="createinstance"></a>
 ## createInstance
 
 ```TypeScript
@@ -64,7 +62,6 @@ Creates an empty [HeifsMetadata](arkts-image-image-heifsmetadata-c.md) instance.
 | --- | --- |
 | [HeifsMetadata](arkts-image-image-heifsmetadata-c.md) | Empty **HeifsMetadata** instance. |
 
-<a id="getallproperties"></a>
 ## getAllProperties
 
 ```TypeScript
@@ -89,7 +86,6 @@ For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifs
 | --- | --- |
 | Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
 
-<a id="getblob"></a>
 ## getBlob
 
 ```TypeScript
@@ -112,7 +108,6 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise that returns the binary data of the metadata. |
 
-<a id="getproperties"></a>
 ## getProperties
 
 ```TypeScript
@@ -147,7 +142,6 @@ Obtains the property values of image metadata. This API returns the result async
 | --- | --- |
 | [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type |
 
-<a id="setblob"></a>
 ## setBlob
 
 ```TypeScript
@@ -182,7 +176,6 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 | --- | --- |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
-<a id="setproperties"></a>
 ## setProperties
 
 ```TypeScript

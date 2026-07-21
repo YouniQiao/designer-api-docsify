@@ -14,7 +14,6 @@ The EnvironmentCallback module provides capabilities to listen for system enviro
 import { EnvironmentCallback } from '@kit.AbilityKit';
 ```
 
-<a id="onconfigurationupdated"></a>
 ## onConfigurationUpdated
 
 ```TypeScript
@@ -43,7 +42,6 @@ Called when the system configuration changes, after [a listener has been registe
 
 See [Usage of EnvironmentCallback](#usage-of-environmentcallback).
 
-<a id="onmemorylevel"></a>
 ## onMemoryLevel
 
 ```TypeScript

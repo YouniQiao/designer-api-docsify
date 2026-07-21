@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="queryproberesult"></a>
 ## queryProbeResult
 
 ```TypeScript

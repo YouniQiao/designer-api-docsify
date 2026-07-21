@@ -14,7 +14,6 @@ Provide methods for adding long or short vibration events and generate VibratorP
 import { vibrator } from '@kit.SensorServiceKit';
 ```
 
-<a id="addcontinuousevent"></a>
 ## addContinuousEvent
 
 ```TypeScript
@@ -86,7 +85,6 @@ try {
 
 ```
 
-<a id="addtransientevent"></a>
 ## addTransientEvent
 
 ```TypeScript
@@ -143,7 +141,6 @@ try {
 
 ```
 
-<a id="build"></a>
 ## build
 
 ```TypeScript

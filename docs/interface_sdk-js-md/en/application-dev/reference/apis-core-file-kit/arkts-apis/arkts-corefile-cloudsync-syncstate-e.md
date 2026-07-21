@@ -1,7 +1,6 @@
 # SyncState
 
 Enumerates the device-cloud sync states.
-
 > **NOTE**  
 >  
 > If a sync progress event listener is registered for an application, a callback will be invoked to notify the  

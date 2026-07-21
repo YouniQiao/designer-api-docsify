@@ -1,7 +1,6 @@
 # SlideRange
 
 Defines the callback type used in **SlideRange**.
-
 > **NOTE**  
 >  
 > - Currently, this API takes effect only when **min** ≤ **from** ≤ **to** ≤ **max** (the values of **min** and  

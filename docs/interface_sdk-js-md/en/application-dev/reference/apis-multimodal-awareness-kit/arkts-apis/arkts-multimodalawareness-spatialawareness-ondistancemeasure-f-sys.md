@@ -6,7 +6,6 @@
 import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="ondistancemeasure"></a>
 ## onDistanceMeasure
 
 ```TypeScript
@@ -22,9 +21,7 @@ Subscribe to distance measurement result data.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-spatialAwareness-function onDistanceMeasure(configParams: DistanceMeasurementConfigParams,
-    callback: Callback<DistanceMeasurementResponse>): void--><!--Device-spatialAwareness-function onDistanceMeasure(configParams: DistanceMeasurementConfigParams,
-    callback: Callback<DistanceMeasurementResponse>): void-End-->
+<!--Device-spatialAwareness-function onDistanceMeasure(configParams: DistanceMeasurementConfigParams,    callback: Callback<DistanceMeasurementResponse>): void--><!--Device-spatialAwareness-function onDistanceMeasure(configParams: DistanceMeasurementConfigParams,    callback: Callback<DistanceMeasurementResponse>): void-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 

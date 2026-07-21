@@ -16,7 +16,6 @@ Provides APIs to manage albums.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="addassets"></a>
 ## addAssets
 
 ```TypeScript
@@ -29,7 +28,7 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 
 **Deprecated since:** 11
 
-**Substitutes:** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets-1)
+**Substitutes:** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -53,7 +52,6 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
-<a id="addassets-1"></a>
 ## addAssets
 
 ```TypeScript
@@ -66,7 +64,7 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 
 **Deprecated since:** 11
 
-**Substitutes:** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets-1)
+**Substitutes:** [addAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#addassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -95,7 +93,6 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
-<a id="commitmodify"></a>
 ## commitModify
 
 ```TypeScript
@@ -127,7 +124,6 @@ Commits the modification on the album attributes to the database. This API uses 
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
-<a id="commitmodify-1"></a>
 ## commitModify
 
 ```TypeScript
@@ -159,7 +155,6 @@ Commits the modification on the album attributes to the database. This API uses 
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
-<a id="removeassets"></a>
 ## removeAssets
 
 ```TypeScript
@@ -172,7 +167,7 @@ Removes image and video assets from a user album. The album and file resources m
 
 **Deprecated since:** 11
 
-**Substitutes:** [removeAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets-1)
+**Substitutes:** [removeAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -196,7 +191,6 @@ Removes image and video assets from a user album. The album and file resources m
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
-<a id="removeassets-1"></a>
 ## removeAssets
 
 ```TypeScript
@@ -209,7 +203,7 @@ Removes image and video assets from a user album. The album and file resources m
 
 **Deprecated since:** 11
 
-**Substitutes:** [removeAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets-1)
+**Substitutes:** [removeAssets](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#removeassets)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 

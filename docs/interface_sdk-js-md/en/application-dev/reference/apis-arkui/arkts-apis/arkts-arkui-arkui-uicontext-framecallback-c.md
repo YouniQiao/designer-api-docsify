@@ -1,13 +1,12 @@
 # FrameCallback
 
 Implements the API for setting the task that needs to be executed during the next frame rendering.
-
 > **NOTE**  
 >  
-> - The following APIs must be used in conjunction with [postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback-1) and  
-> [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback-1) from [UIContext](arkts-arkui-uicontext.md).  
-> Extend this class and override either the [onFrame](arkts-arkui-arkui-uicontext-framecallback-c.md#onframe-1) or  
-> [onIdle](arkts-arkui-arkui-uicontext-framecallback-c.md#onidle-1) method to implement specific service logic.
+> - The following APIs must be used in conjunction with [postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) and  
+> [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback) from [UIContext](arkts-arkui-uicontext.md).  
+> Extend this class and override either the [onFrame](arkts-arkui-arkui-uicontext-framecallback-c.md#onframe) or  
+> [onIdle](arkts-arkui-arkui-uicontext-framecallback-c.md#onidle) method to implement specific service logic.
 
 **Since:** 12
 
@@ -21,7 +20,6 @@ Implements the API for setting the task that needs to be executed during the nex
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="onframe"></a>
 ## onFrame
 
 ```TypeScript
@@ -46,7 +44,6 @@ Called when the next frame is rendered.
 | --- | --- | --- | --- |
 | frameTimeInNano | number | Yes | Time when the rendering of the next frame starts, in nanoseconds.<br>Value range: [0, +∞) |
 
-<a id="onidle"></a>
 ## onIdle
 
 ```TypeScript

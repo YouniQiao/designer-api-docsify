@@ -16,7 +16,6 @@ A class used for cloud media asset management. It is used to manage download tas
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="canceldownloadcloudmedia"></a>
 ## cancelDownloadCloudMedia
 
 ```TypeScript
@@ -65,7 +64,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="canceldownloadspecificcloudmedia"></a>
 ## cancelDownloadSpecificCloudMedia
 
 ```TypeScript
@@ -123,7 +121,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="getcloudmediaassetmanagerinstance"></a>
 ## getCloudMediaAssetManagerInstance
 
 ```TypeScript
@@ -176,7 +173,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="getcloudmediaassetstatus"></a>
 ## getCloudMediaAssetStatus
 
 ```TypeScript
@@ -230,7 +226,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="offdownloadprogresschange"></a>
 ## offDownloadProgressChange
 
 ```TypeScript
@@ -279,7 +274,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="ondownloadprogresschange"></a>
 ## onDownloadProgressChange
 
 ```TypeScript
@@ -332,7 +326,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="pausedownloadcloudmedia"></a>
 ## pauseDownloadCloudMedia
 
 ```TypeScript
@@ -381,7 +374,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="pausedownloadspecificcloudmedia"></a>
 ## pauseDownloadSpecificCloudMedia
 
 ```TypeScript
@@ -439,7 +431,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="querydownloadspecificcloudmediadetails"></a>
 ## queryDownloadSpecificCloudMediaDetails
 
 ```TypeScript
@@ -499,7 +490,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="querydownloadspecificcloudmediataskcount"></a>
 ## queryDownloadSpecificCloudMediaTaskCount
 
 ```TypeScript
@@ -559,7 +549,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="resumedownloadspecificcloudmedia"></a>
 ## resumeDownloadSpecificCloudMedia
 
 ```TypeScript
@@ -617,7 +606,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="retaincloudmediaasset"></a>
 ## retainCloudMediaAsset
 
 ```TypeScript
@@ -673,7 +661,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="startdownloadcloudmedia"></a>
 ## startDownloadCloudMedia
 
 ```TypeScript
@@ -729,7 +716,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="startdownloadspecificcloudmedia"></a>
 ## startDownloadSpecificCloudMedia
 
 ```TypeScript

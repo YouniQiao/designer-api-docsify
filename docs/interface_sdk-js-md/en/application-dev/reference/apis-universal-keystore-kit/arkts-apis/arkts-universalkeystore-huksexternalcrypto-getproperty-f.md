@@ -6,7 +6,6 @@
 import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="getproperty"></a>
 ## getProperty
 
 ```TypeScript
@@ -34,7 +33,7 @@ The **propertyId** indicates the ID of the property to be queried. Currently, on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog-1). The result contains **resourceId**. |
+| resourceId | string | Yes | Resource ID, which can be obtained using [certificateManagerDialog.openAuthorizeDialog22+](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog). The result contains **resourceId**. |
 | propertyId | string | Yes | Property name for the search operation, which is the SKF API name defined in GMT 0016-2023. You need to make adaptation based on the API name. |
 | params | Array&lt;HuksExternalCryptoParam&gt; | No | Parameters to be passed to [Extension Ability](arkts-security-cryptoextensionability.md). If a non-system application passes [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md), the parameter is invalid. |
 

@@ -8,7 +8,6 @@ The module defines an observer to listen for event processing timeout. It can be
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-<a id="onlooptimeout"></a>
 ## onLoopTimeOut
 
 ```TypeScript

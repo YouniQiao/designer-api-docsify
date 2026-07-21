@@ -38,7 +38,7 @@ The background color used when the image pixels are in RGBA format but the targe
 bufferSize?: number
 ```
 
-Size of the buffer for receiving the encoded data, in bytes. If this parameter is not set, the default value 25MB is used. If the size of an image exceeds 25 MB, you must specify the size. The value of **bufferSize** must be greater than the size of the encoded image. The use of [packToFile](arkts-image-image-imagepacker-i.md#packtofile-1)is not restricted by this parameter.
+Size of the buffer for receiving the encoded data, in bytes. If this parameter is not set, the default value 25MB is used. If the size of an image exceeds 25 MB, you must specify the size. The value of **bufferSize** must be greater than the size of the encoded image. The use of [packToFile](arkts-image-image-imagepacker-i.md#packtofile)is not restricted by this parameter.
 
 **Type:** number
 

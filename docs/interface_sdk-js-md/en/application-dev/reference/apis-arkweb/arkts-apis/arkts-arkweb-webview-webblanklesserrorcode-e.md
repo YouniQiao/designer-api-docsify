@@ -70,7 +70,7 @@ ERR_CONTROLLER_NOT_INITED = -3
 ERR_KEY_NOT_MATCH = -4
 ```
 
-No key value is matched.[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey-1) must be used with [getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getblanklessinfowithkey-1)and their key values must be the same. Otherwise, this error code is returned.
+No key value is matched.[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey) must be used with [getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getblanklessinfowithkey)and their key values must be the same. Otherwise, this error code is returned.
 
 **Since:** 20
 
@@ -84,7 +84,7 @@ No key value is matched.[setBlanklessLoadingWithKey](arkts-arkweb-webview-webvie
 ERR_SIGNIFICANT_CHANGE = -5
 ```
 
-The similarity is low, and the system determines that the scene change is too large. As a result, the [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey-1) API does not enable frame interpolation.
+The similarity is low, and the system determines that the scene change is too large. As a result, the [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey) API does not enable frame interpolation.
 
 **Since:** 20
 

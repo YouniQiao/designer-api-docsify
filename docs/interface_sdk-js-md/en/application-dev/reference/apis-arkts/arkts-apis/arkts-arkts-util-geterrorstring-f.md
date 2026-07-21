@@ -6,7 +6,6 @@
 import { util } from '@kit.ArkTS';
 ```
 
-<a id="geterrorstring"></a>
 ## getErrorString
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains detailed information about a system error code.
 
 **Deprecated since:** 9
 
-**Substitutes:** [errnoToString](arkts-arkts-util-errnotostring-f.md#errnotostring-1)
+**Substitutes:** [errnoToString](arkts-arkts-util-errnotostring-f.md#errnotostring)
 
 <!--Device-util-function getErrorString(errno: number): string--><!--Device-util-function getErrorString(errno: number): string-End-->
 

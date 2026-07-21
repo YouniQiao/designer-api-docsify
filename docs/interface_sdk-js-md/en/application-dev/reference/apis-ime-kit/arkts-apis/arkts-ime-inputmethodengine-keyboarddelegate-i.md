@@ -1,6 +1,6 @@
 # KeyboardDelegate
 
-In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate-1) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -14,7 +14,6 @@ In the following API examples, you must first use [getKeyboardDelegate](arkts-im
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-<a id="off"></a>
 ## off('keyDown' | 'keyUp')
 
 ```TypeScript
@@ -50,7 +49,6 @@ inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEng
 
 ```
 
-<a id="off-1"></a>
 ## off('keyDown' | 'keyUp')
 
 ```TypeScript
@@ -86,7 +84,6 @@ inputMethodEngine.getKeyboardDelegate().off('keyDown', (keyEvent: inputMethodEng
 
 ```
 
-<a id="off-2"></a>
 ## off('keyEvent')
 
 ```TypeScript
@@ -121,7 +118,6 @@ inputMethodEngine.getKeyboardDelegate().off('keyEvent');
 
 ```
 
-<a id="off-3"></a>
 ## off('cursorContextChange')
 
 ```TypeScript
@@ -152,7 +148,6 @@ inputMethodEngine.getKeyboardDelegate().off('cursorContextChange', (x: number, y
 
 ```
 
-<a id="off-4"></a>
 ## off('selectionChange')
 
 ```TypeScript
@@ -166,13 +161,7 @@ Disables listening for the text selection change event. This API uses an asynchr
 
 **Since:** 8
 
-<!--Device-KeyboardDelegate-off(
-      type: 'selectionChange',
-      callback?: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void
-    ): void--><!--Device-KeyboardDelegate-off(
-      type: 'selectionChange',
-      callback?: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void
-    ): void-End-->
+<!--Device-KeyboardDelegate-off(      type: 'selectionChange',      callback?: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void--><!--Device-KeyboardDelegate-off(      type: 'selectionChange',      callback?: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -193,7 +182,6 @@ inputMethodEngine.getKeyboardDelegate()
 
 ```
 
-<a id="off-5"></a>
 ## off('textChange')
 
 ```TypeScript
@@ -224,7 +212,6 @@ inputMethodEngine.getKeyboardDelegate().off('textChange', (text: string) => {
 
 ```
 
-<a id="off-6"></a>
 ## off('editorAttributeChanged')
 
 ```TypeScript
@@ -253,7 +240,6 @@ inputMethodEngine.getKeyboardDelegate().off('editorAttributeChanged');
 
 ```
 
-<a id="on"></a>
 ## on('keyDown' | 'keyUp')
 
 ```TypeScript
@@ -291,7 +277,6 @@ inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngi
 
 ```
 
-<a id="on-1"></a>
 ## on('keyDown' | 'keyUp')
 
 ```TypeScript
@@ -329,7 +314,6 @@ inputMethodEngine.getKeyboardDelegate().on('keyDown', (keyEvent: inputMethodEngi
 
 ```
 
-<a id="on-2"></a>
 ## on('keyEvent')
 
 ```TypeScript
@@ -349,7 +333,7 @@ Enables listening for a keyboard event. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type.<br>- Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md).<br>- If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type.<br>- Input parameter: [InputKeyEvent](arkts-ime-inputmethodengine-keyevent-i.md).<br>- If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
 
 **Example**
 
@@ -366,7 +350,6 @@ inputMethodEngine.getKeyboardDelegate().on('keyEvent', (keyEvent: KeyEvent) => {
 
 ```
 
-<a id="on-3"></a>
 ## on('cursorContextChange')
 
 ```TypeScript
@@ -399,7 +382,6 @@ inputMethodEngine.getKeyboardDelegate().on('cursorContextChange', (x: number, y:
 
 ```
 
-<a id="on-4"></a>
 ## on('selectionChange')
 
 ```TypeScript
@@ -413,13 +395,7 @@ Enables listening for the text selection change event. This API uses an asynchro
 
 **Since:** 8
 
-<!--Device-KeyboardDelegate-on(
-      type: 'selectionChange',
-      callback: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void
-    ): void--><!--Device-KeyboardDelegate-on(
-      type: 'selectionChange',
-      callback: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void
-    ): void-End-->
+<!--Device-KeyboardDelegate-on(      type: 'selectionChange',      callback: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void--><!--Device-KeyboardDelegate-on(      type: 'selectionChange',      callback: (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) => void    ): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -443,7 +419,6 @@ inputMethodEngine.getKeyboardDelegate()
 
 ```
 
-<a id="on-5"></a>
 ## on('textChange')
 
 ```TypeScript
@@ -474,7 +449,6 @@ inputMethodEngine.getKeyboardDelegate().on('textChange', (text: string) => {
 
 ```
 
-<a id="on-6"></a>
 ## on('editorAttributeChanged')
 
 ```TypeScript

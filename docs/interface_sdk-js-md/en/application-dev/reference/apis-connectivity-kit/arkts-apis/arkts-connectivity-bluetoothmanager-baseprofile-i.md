@@ -18,7 +18,6 @@ Base interface of profile.
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="getconnectiondevices"></a>
 ## getConnectionDevices
 
 ```TypeScript
@@ -71,7 +70,6 @@ try {
 
 ```
 
-<a id="getdevicestate"></a>
 ## getDeviceState
 
 ```TypeScript

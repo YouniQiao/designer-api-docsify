@@ -16,7 +16,6 @@ Queries portrait parameters.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getsupportedportraiteffects"></a>
 ## getSupportedPortraitEffects
 
 ```TypeScript

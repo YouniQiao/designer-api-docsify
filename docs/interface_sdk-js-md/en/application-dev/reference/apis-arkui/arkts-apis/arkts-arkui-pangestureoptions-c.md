@@ -8,7 +8,6 @@ Defines the PanGesture options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -29,9 +28,8 @@ Creates a pan gesture configuration object. The **PanGestureOptions** API enable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration.<br>**fingers**: minimum number of fingers required. The value ranges from 1 to 10.<br>Default value: **1**<br>**direction**: pan direction. The value supports the AND (&) and OR (\|) operations.<br>Default value:**PanDirection.All**<br>**distance**: minimum pan distance to trigger the gesture, in vp.<br>Default value: **8** for the stylus and **5** for other input sources.<br>**NOTE**<br>If a pan gesture and a [tab](../arkts-components/arkts-arkui-tabs.md) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.<br>If the value specified is less than **0**, the default value is used.<br>To avoid slow response and lagging during scrolling, set a reasonable pan distance.<br>When the [scale](../arkts-components/arkts-arkui-commonmethod-c.md#scale-1) attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration.<br>**fingers**: minimum number of fingers required. The value ranges from 1 to 10.<br>Default value: **1**<br>**direction**: pan direction. The value supports the AND (&) and OR (\|) operations.<br>Default value:**PanDirection.All**<br>**distance**: minimum pan distance to trigger the gesture, in vp.<br>Default value: **8** for the stylus and **5** for other input sources.<br>**NOTE**<br>If a pan gesture and a [tab](../arkts-components/arkts-arkui-tabs.md) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.<br>If the value specified is less than **0**, the default value is used.<br>To avoid slow response and lagging during scrolling, set a reasonable pan distance.<br>When the [scale](../arkts-components/arkts-arkui-commonmethod-c.md#scale) attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
-<a id="getdirection"></a>
 ## getDirection
 
 ```TypeScript
@@ -56,7 +54,6 @@ Obtains the pan direction.
 | --- | --- |
 | [PanDirection](arkts-arkui-pandirection-e.md) | Pan direction. |
 
-<a id="getdistance"></a>
 ## getDistance
 
 ```TypeScript
@@ -81,7 +78,6 @@ Obtains the minimum pan distance to trigger the gesture. The unit is vp.
 | --- | --- |
 | number | Minimum pan distance to trigger the gesture. |
 
-<a id="setdirection"></a>
 ## setDirection
 
 ```TypeScript
@@ -104,7 +100,6 @@ Sets the pan direction.
 | --- | --- | --- | --- |
 | value | [PanDirection](arkts-arkui-pandirection-e.md) | Yes | Pan direction. The value supports the AND (&) and OR (\|) operations.<br>Default value: **PanDirection.All** |
 
-<a id="setdistance"></a>
 ## setDistance
 
 ```TypeScript
@@ -125,9 +120,8 @@ Sets the minimum pan distance to trigger the gesture, in vp. To avoid performanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum pan distance to trigger the gesture, in vp.<br>Default value: **8** for the stylus and **5** for other input sources.<br>**NOTE**<br>If a pan gesture and a [tab](../arkts-components/arkts-arkui-tabs.md) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.<br>If the value specified is less than **0**, the default value is used.<br>To avoid slow response and lagging during scrolling, set a reasonable pan distance.<br>When the [scale](../arkts-components/arkts-arkui-commonmethod-c.md#scale-1)attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
+| value | number | Yes | Minimum pan distance to trigger the gesture, in vp.<br>Default value: **8** for the stylus and **5** for other input sources.<br>**NOTE**<br>If a pan gesture and a [tab](../arkts-components/arkts-arkui-tabs.md) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.<br>If the value specified is less than **0**, the default value is used.<br>To avoid slow response and lagging during scrolling, set a reasonable pan distance.<br>When the [scale](../arkts-components/arkts-arkui-commonmethod-c.md#scale)attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
-<a id="setfingers"></a>
 ## setFingers
 
 ```TypeScript

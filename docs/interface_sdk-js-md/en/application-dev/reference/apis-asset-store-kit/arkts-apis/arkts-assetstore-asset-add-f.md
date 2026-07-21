@@ -6,7 +6,6 @@
 import { asset } from '@kit.AssetStoreKit';
 ```
 
-<a id="add"></a>
 ## add
 
 ```TypeScript

@@ -16,7 +16,6 @@ ASR processing controller.
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="getasraecmode"></a>
 ## getAsrAecMode
 
 ```TypeScript
@@ -53,7 +52,6 @@ let mode = asrProcessingController.getAsrAecMode();
 
 ```
 
-<a id="getasrnoisesuppressionmode"></a>
 ## getAsrNoiseSuppressionMode
 
 ```TypeScript
@@ -90,7 +88,6 @@ let mode = asrProcessingController.getAsrNoiseSuppressionMode();
 
 ```
 
-<a id="getasrwhisperdetectionmode"></a>
 ## getAsrWhisperDetectionMode
 
 ```TypeScript
@@ -127,7 +124,6 @@ let mode = asrProcessingController.getAsrWhisperDetectionMode();
 
 ```
 
-<a id="iswhispering"></a>
 ## isWhispering
 
 ```TypeScript
@@ -164,7 +160,6 @@ let flag = asrProcessingController.isWhispering();
 
 ```
 
-<a id="setasraecmode"></a>
 ## setAsrAecMode
 
 ```TypeScript
@@ -209,7 +204,6 @@ let flag = asrProcessingController.setAsrAecMode(audio.AsrAecMode.BYPASS);
 
 ```
 
-<a id="setasrnoisesuppressionmode"></a>
 ## setAsrNoiseSuppressionMode
 
 ```TypeScript
@@ -254,7 +248,6 @@ let flag = asrProcessingController.setAsrNoiseSuppressionMode(audio.AsrNoiseSupp
 
 ```
 
-<a id="setasrvoicecontrolmode"></a>
 ## setAsrVoiceControlMode
 
 ```TypeScript
@@ -300,7 +293,6 @@ let flag = asrProcessingController.setAsrVoiceControlMode(audio.AsrVoiceControlM
 
 ```
 
-<a id="setasrvoicemutemode"></a>
 ## setAsrVoiceMuteMode
 
 ```TypeScript
@@ -346,7 +338,6 @@ let flag = asrProcessingController.setAsrVoiceMuteMode(audio.AsrVoiceMuteMode.OU
 
 ```
 
-<a id="setasrwhisperdetectionmode"></a>
 ## setAsrWhisperDetectionMode
 
 ```TypeScript

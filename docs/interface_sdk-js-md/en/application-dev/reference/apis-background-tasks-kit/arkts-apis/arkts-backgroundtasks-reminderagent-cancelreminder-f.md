@@ -6,7 +6,6 @@
 import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="cancelreminder"></a>
 ## cancelReminder
 
 ```TypeScript
@@ -19,7 +18,7 @@ Cancels the reminder with the specified ID. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder-1)
+**Substitutes:** [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder)
 
 <!--Device-reminderAgent-function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -45,7 +44,6 @@ reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
 ```
 
 
-<a id="cancelreminder-1"></a>
 ## cancelReminder
 
 ```TypeScript
@@ -58,7 +56,7 @@ Cancels the reminder with the specified ID. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder-1)
+**Substitutes:** [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder)
 
 <!--Device-reminderAgent-function cancelReminder(reminderId: number): Promise<void>--><!--Device-reminderAgent-function cancelReminder(reminderId: number): Promise<void>-End-->
 

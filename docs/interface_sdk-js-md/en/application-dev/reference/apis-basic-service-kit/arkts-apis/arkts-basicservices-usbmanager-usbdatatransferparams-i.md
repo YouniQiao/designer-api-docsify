@@ -52,7 +52,7 @@ Information returned by the callback.
 devPipe: USBDevicePipe
 ```
 
-USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice-1)to obtain its value.
+USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)to obtain its value.
 
 **Type:** USBDevicePipe
 

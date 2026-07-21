@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="on"></a>
 ## on('callDetailsChange')
 
 ```TypeScript
@@ -54,7 +53,6 @@ call.on('callDetailsChange', (data: call.CallAttributeOptions) => {
 ```
 
 
-<a id="on-1"></a>
 ## on('callEventChange')
 
 ```TypeScript
@@ -102,7 +100,6 @@ call.on('callEventChange', (data: call.CallEventOptions) => {
 ```
 
 
-<a id="on-2"></a>
 ## on('callDisconnectedCause')
 
 ```TypeScript
@@ -150,7 +147,6 @@ call.on('callDisconnectedCause', (data: call.DisconnectedDetails) => {
 ```
 
 
-<a id="on-3"></a>
 ## on('mmiCodeResult')
 
 ```TypeScript
@@ -198,7 +194,6 @@ call.on('mmiCodeResult', (data: call.MmiCodeResults) => {
 ```
 
 
-<a id="on-4"></a>
 ## on('audioDeviceChange')
 
 ```TypeScript
@@ -246,7 +241,6 @@ call.on('audioDeviceChange', (data: call.AudioDeviceCallbackInfo) => {
 ```
 
 
-<a id="on-5"></a>
 ## on('postDialDelay')
 
 ```TypeScript
@@ -294,7 +288,6 @@ call.on('postDialDelay', (data: string) => {
 ```
 
 
-<a id="on-6"></a>
 ## on('imsCallModeChange')
 
 ```TypeScript
@@ -344,7 +337,6 @@ call.on('imsCallModeChange', (data: call.ImsCallModeInfo) => {
 ```
 
 
-<a id="on-7"></a>
 ## on('callSessionEvent')
 
 ```TypeScript
@@ -394,7 +386,6 @@ call.on('callSessionEvent', (data: call.CallSessionEvent) => {
 ```
 
 
-<a id="on-8"></a>
 ## on('peerDimensionsChange')
 
 ```TypeScript
@@ -444,7 +435,6 @@ call.on('peerDimensionsChange', (data: call.PeerDimensionsDetail) => {
 ```
 
 
-<a id="on-9"></a>
 ## on('cameraCapabilitiesChange')
 
 ```TypeScript

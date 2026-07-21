@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="getmac"></a>
 ## getMac
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the MAC address of a device based on the network interface. This API use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md#getmacsync-1)
+**Substitutes:** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md#getmacsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -73,7 +72,6 @@ networkManager.getMac(wantTemp, 'eth0', (err, result) => {
 ```
 
 
-<a id="getmac-1"></a>
 ## getMac
 
 ```TypeScript
@@ -86,7 +84,7 @@ Obtains the MAC address of a device based on the network interface. This API use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md#getmacsync-1)
+**Substitutes:** [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md#getmacsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 

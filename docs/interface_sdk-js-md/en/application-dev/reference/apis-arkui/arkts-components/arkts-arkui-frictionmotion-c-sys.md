@@ -12,7 +12,6 @@ Friction animation model. You can build friction animation by friction force, in
 
 **System API:** This is a system API.
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

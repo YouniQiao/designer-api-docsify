@@ -1,6 +1,5 @@
 # deleteForm (System API)
 
-<a id="deleteform"></a>
 ## deleteForm
 
 ```TypeScript
@@ -13,7 +12,7 @@ Deletes a widget. After this API is called, the application can no longer use th
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteform-1)
+**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-depr-f-sys.md#deleteform)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -31,7 +30,6 @@ Deletes a widget. After this API is called, the application can no longer use th
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is deleted, **error** is undefined; otherwise, **error** is an error object. |
 
 
-<a id="deleteform-1"></a>
 ## deleteForm
 
 ```TypeScript
@@ -44,7 +42,7 @@ Deletes a widget. After this API is called, the application can no longer use th
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteform-1)
+**Substitutes:** [deleteForm](arkts-form-formhost-deleteform-depr-f-sys.md#deleteform)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

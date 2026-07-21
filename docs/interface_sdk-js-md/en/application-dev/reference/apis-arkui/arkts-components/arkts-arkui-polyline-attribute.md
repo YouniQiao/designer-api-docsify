@@ -10,14 +10,13 @@ In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the fo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="points"></a>
 ## points
 
 ```TypeScript
 points(value: Array<any>)
 ```
 
-Sets the list of coordinates through which the polyline passes. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1).
+Sets the list of coordinates through which the polyline passes. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 

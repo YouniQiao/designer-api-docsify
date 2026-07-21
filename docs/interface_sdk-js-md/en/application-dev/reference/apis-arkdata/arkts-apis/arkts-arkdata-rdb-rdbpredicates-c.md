@@ -12,7 +12,6 @@ Defines predicates for an RDB store. This class determines whether the condition
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-<a id="and"></a>
 ## and
 
 ```TypeScript
@@ -25,7 +24,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 **Deprecated since:** 9
 
-**Substitutes:** [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and-1)
+**Substitutes:** [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)
 
 <!--Device-RdbPredicates-and(): RdbPredicates--><!--Device-RdbPredicates-and(): RdbPredicates-End-->
 
@@ -47,7 +46,6 @@ predicates.equalTo("NAME", "Lisa")
 
 ```
 
-<a id="beginwrap"></a>
 ## beginWrap
 
 ```TypeScript
@@ -60,7 +58,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 **Deprecated since:** 9
 
-**Substitutes:** [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap-1)
+**Substitutes:** [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
 
 <!--Device-RdbPredicates-beginWrap(): RdbPredicates--><!--Device-RdbPredicates-beginWrap(): RdbPredicates-End-->
 
@@ -85,7 +83,6 @@ predicates.equalTo("NAME", "lisi")
 
 ```
 
-<a id="beginswith"></a>
 ## beginsWith
 
 ```TypeScript
@@ -98,7 +95,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [beginsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginswith-1)
+**Substitutes:** [beginsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginswith)
 
 <!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates-End-->
 
@@ -125,7 +122,6 @@ predicates.beginsWith("NAME", "os")
 
 ```
 
-<a id="between"></a>
 ## between
 
 ```TypeScript
@@ -138,7 +134,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [between](arkts-arkdata-relationalstore-rdbpredicates-c.md#between-1)
+**Substitutes:** [between](arkts-arkdata-relationalstore-rdbpredicates-c.md#between)
 
 <!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
@@ -166,7 +162,6 @@ predicates.between("AGE", 10, 50)
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -198,7 +193,6 @@ let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
 
 ```
 
-<a id="contains"></a>
 ## contains
 
 ```TypeScript
@@ -211,7 +205,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [contains](arkts-arkdata-relationalstore-rdbpredicates-c.md#contains-1)
+**Substitutes:** [contains](arkts-arkdata-relationalstore-rdbpredicates-c.md#contains)
 
 <!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates-End-->
 
@@ -238,7 +232,6 @@ predicates.contains("NAME", "os")
 
 ```
 
-<a id="distinct"></a>
 ## distinct
 
 ```TypeScript
@@ -251,7 +244,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 **Deprecated since:** 9
 
-**Substitutes:** [distinct](arkts-arkdata-relationalstore-rdbpredicates-c.md#distinct-1)
+**Substitutes:** [distinct](arkts-arkdata-relationalstore-rdbpredicates-c.md#distinct)
 
 <!--Device-RdbPredicates-distinct(): RdbPredicates--><!--Device-RdbPredicates-distinct(): RdbPredicates-End-->
 
@@ -271,7 +264,6 @@ predicates.equalTo("NAME", "Rose").distinct()
 
 ```
 
-<a id="endwrap"></a>
 ## endWrap
 
 ```TypeScript
@@ -284,7 +276,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 **Deprecated since:** 9
 
-**Substitutes:** [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap-1)
+**Substitutes:** [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
 
 <!--Device-RdbPredicates-endWrap(): RdbPredicates--><!--Device-RdbPredicates-endWrap(): RdbPredicates-End-->
 
@@ -309,7 +301,6 @@ predicates.equalTo("NAME", "lisi")
 
 ```
 
-<a id="endswith"></a>
 ## endsWith
 
 ```TypeScript
@@ -322,7 +313,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [endsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#endswith-1)
+**Substitutes:** [endsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#endswith)
 
 <!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates-End-->
 
@@ -349,7 +340,6 @@ predicates.endsWith("NAME", "se")
 
 ```
 
-<a id="equalto"></a>
 ## equalTo
 
 ```TypeScript
@@ -362,7 +352,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto-1)
+**Substitutes:** [equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)
 
 <!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -389,7 +379,6 @@ predicates.equalTo("NAME", "lisi")
 
 ```
 
-<a id="glob"></a>
 ## glob
 
 ```TypeScript
@@ -402,7 +391,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [glob](arkts-arkdata-relationalstore-rdbpredicates-c.md#glob-1)
+**Substitutes:** [glob](arkts-arkdata-relationalstore-rdbpredicates-c.md#glob)
 
 <!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates-End-->
 
@@ -429,7 +418,6 @@ predicates.glob("NAME", "?h*g")
 
 ```
 
-<a id="greaterthan"></a>
 ## greaterThan
 
 ```TypeScript
@@ -442,7 +430,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthan-1)
+**Substitutes:** [greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthan)
 
 <!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -469,7 +457,6 @@ predicates.greaterThan("AGE", 18)
 
 ```
 
-<a id="greaterthanorequalto"></a>
 ## greaterThanOrEqualTo
 
 ```TypeScript
@@ -482,7 +469,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthanorequalto-1)
+**Substitutes:** [greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthanorequalto)
 
 <!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -509,7 +496,6 @@ predicates.greaterThanOrEqualTo("AGE", 18)
 
 ```
 
-<a id="groupby"></a>
 ## groupBy
 
 ```TypeScript
@@ -522,7 +508,7 @@ Creates an **RdbPredicates** object to group the query results based on the spec
 
 **Deprecated since:** 9
 
-**Substitutes:** [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby-1)
+**Substitutes:** [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby)
 
 <!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates--><!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates-End-->
 
@@ -548,7 +534,6 @@ predicates.groupBy(["AGE", "NAME"])
 
 ```
 
-<a id="in"></a>
 ## in
 
 ```TypeScript
@@ -561,7 +546,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in-1)
+**Substitutes:** [in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in)
 
 <!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
@@ -588,7 +573,6 @@ predicates.in("AGE", [18, 20])
 
 ```
 
-<a id="inalldevices"></a>
 ## inAllDevices
 
 ```TypeScript
@@ -601,7 +585,7 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 **Deprecated since:** 9
 
-**Substitutes:** [inAllDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#inalldevices-1)
+**Substitutes:** [inAllDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#inalldevices)
 
 <!--Device-RdbPredicates-inAllDevices(): RdbPredicates--><!--Device-RdbPredicates-inAllDevices(): RdbPredicates-End-->
 
@@ -621,7 +605,6 @@ predicates.inAllDevices()
 
 ```
 
-<a id="indevices"></a>
 ## inDevices
 
 ```TypeScript
@@ -629,11 +612,9 @@ inDevices(devices: Array<string>): RdbPredicates
 ```
 
 Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
-
 > **NOTE**
-
 > The value of **devices** can be obtained by using <!--RP2-->  
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync-1)  
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)  
 > . <!--RP2End-->The APIs of the **deviceManager** module are system interfaces and available only to system  
 > applications.
 
@@ -641,7 +622,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 **Deprecated since:** 9
 
-**Substitutes:** [inDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#indevices-1)
+**Substitutes:** [inDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#indevices)
 
 <!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates--><!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates-End-->
 
@@ -688,7 +669,6 @@ predicates.inDevices(deviceIds);
 
 ```
 
-<a id="indexedby"></a>
 ## indexedBy
 
 ```TypeScript
@@ -701,7 +681,7 @@ Creates an **RdbPredicates** object to specify the index column.
 
 **Deprecated since:** 9
 
-**Substitutes:** [indexedBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#indexedby-1)
+**Substitutes:** [indexedBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#indexedby)
 
 <!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates--><!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates-End-->
 
@@ -727,7 +707,6 @@ predicates.indexedBy("SALARY_INDEX")
 
 ```
 
-<a id="isnotnull"></a>
 ## isNotNull
 
 ```TypeScript
@@ -740,7 +719,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [isNotNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isnotnull-1)
+**Substitutes:** [isNotNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isnotnull)
 
 <!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates-End-->
 
@@ -772,7 +751,6 @@ predicates.isNotNull("NAME")
 
 ```
 
-<a id="isnull"></a>
 ## isNull
 
 ```TypeScript
@@ -785,7 +763,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [isNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isnull-1)
+**Substitutes:** [isNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isnull)
 
 <!--Device-RdbPredicates-isNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNull(field: string): RdbPredicates-End-->
 
@@ -811,7 +789,6 @@ predicates.isNull("NAME")
 
 ```
 
-<a id="lessthan"></a>
 ## lessThan
 
 ```TypeScript
@@ -824,7 +801,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthan-1)
+**Substitutes:** [lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthan)
 
 <!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -851,7 +828,6 @@ predicates.lessThan("AGE", 20)
 
 ```
 
-<a id="lessthanorequalto"></a>
 ## lessThanOrEqualTo
 
 ```TypeScript
@@ -864,7 +840,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthanorequalto-1)
+**Substitutes:** [lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthanorequalto)
 
 <!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -891,7 +867,6 @@ predicates.lessThanOrEqualTo("AGE", 20)
 
 ```
 
-<a id="like"></a>
 ## like
 
 ```TypeScript
@@ -904,7 +879,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [like](arkts-arkdata-relationalstore-rdbpredicates-c.md#like-1)
+**Substitutes:** [like](arkts-arkdata-relationalstore-rdbpredicates-c.md#like)
 
 <!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates-End-->
 
@@ -931,7 +906,6 @@ predicates.like("NAME", "%os%")
 
 ```
 
-<a id="limitas"></a>
 ## limitAs
 
 ```TypeScript
@@ -944,7 +918,7 @@ Creates an **RdbPredicates** object to limit the number of records.
 
 **Deprecated since:** 9
 
-**Substitutes:** [limitAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#limitas-1)
+**Substitutes:** [limitAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#limitas)
 
 <!--Device-RdbPredicates-limitAs(value: number): RdbPredicates--><!--Device-RdbPredicates-limitAs(value: number): RdbPredicates-End-->
 
@@ -970,7 +944,6 @@ predicates.equalTo("NAME", "Rose").limitAs(3)
 
 ```
 
-<a id="notbetween"></a>
 ## notBetween
 
 ```TypeScript
@@ -983,7 +956,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [notBetween](arkts-arkdata-relationalstore-rdbpredicates-c.md#notbetween-1)
+**Substitutes:** [notBetween](arkts-arkdata-relationalstore-rdbpredicates-c.md#notbetween)
 
 <!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
@@ -1011,7 +984,6 @@ predicates.notBetween("AGE", 10, 50)
 
 ```
 
-<a id="notequalto"></a>
 ## notEqualTo
 
 ```TypeScript
@@ -1024,7 +996,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notequalto-1)
+**Substitutes:** [notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notequalto)
 
 <!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -1051,7 +1023,6 @@ predicates.notEqualTo("NAME", "lisi")
 
 ```
 
-<a id="notin"></a>
 ## notIn
 
 ```TypeScript
@@ -1064,7 +1035,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notin-1)
+**Substitutes:** [notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notin)
 
 <!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
@@ -1091,7 +1062,6 @@ predicates.notIn("NAME", ["Lisa", "Rose"])
 
 ```
 
-<a id="offsetas"></a>
 ## offsetAs
 
 ```TypeScript
@@ -1104,7 +1074,7 @@ Creates an **RdbPredicates** object to specify the start position of the returne
 
 **Deprecated since:** 9
 
-**Substitutes:** [offsetAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetas-1)
+**Substitutes:** [offsetAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetas)
 
 <!--Device-RdbPredicates-offsetAs(rowOffset: number): RdbPredicates--><!--Device-RdbPredicates-offsetAs(rowOffset: number): RdbPredicates-End-->
 
@@ -1130,7 +1100,6 @@ predicates.equalTo("NAME", "Rose").limitAs(-1).offsetAs(3)
 
 ```
 
-<a id="or"></a>
 ## or
 
 ```TypeScript
@@ -1143,7 +1112,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 **Deprecated since:** 9
 
-**Substitutes:** [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or-1)
+**Substitutes:** [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)
 
 <!--Device-RdbPredicates-or(): RdbPredicates--><!--Device-RdbPredicates-or(): RdbPredicates-End-->
 
@@ -1165,7 +1134,6 @@ predicates.equalTo("NAME", "Lisa")
 
 ```
 
-<a id="orderbyasc"></a>
 ## orderByAsc
 
 ```TypeScript
@@ -1178,7 +1146,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Deprecated since:** 9
 
-**Substitutes:** [orderByAsc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderbyasc-1)
+**Substitutes:** [orderByAsc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderbyasc)
 
 <!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates-End-->
 
@@ -1204,7 +1172,6 @@ predicates.orderByAsc("NAME")
 
 ```
 
-<a id="orderbydesc"></a>
 ## orderByDesc
 
 ```TypeScript
@@ -1217,7 +1184,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Deprecated since:** 9
 
-**Substitutes:** [orderByDesc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderbydesc-1)
+**Substitutes:** [orderByDesc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderbydesc)
 
 <!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates-End-->
 

@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="getpss"></a>
 ## getPss
 
 ```TypeScript
@@ -14,7 +13,6 @@ function getPss() : bigint
 ```
 
 Obtains the size of the physical memory actually used by the application process. This API is implemented by summing up the values of **Pss** and **SwapPss** in the **\/proc/{pid}/smaps_rollup** node.
-
 > **NOTE**  
 >  
 > Reading the **\/proc/{pid}/smaps_rollup** node is time-consuming. Therefore, you are advised not to use this API  

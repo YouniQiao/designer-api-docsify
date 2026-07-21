@@ -1,7 +1,6 @@
 # GridObjectSortComponent
 
 **GridObjectSortComponent** is a grid object organizer that you can use to edit, drag to sort, add, and delete grid objects.
-
 > **NOTE**  
 >  
 > - This component can be used only in the stage model.  
@@ -27,7 +26,6 @@
 import { GridObjectSortComponentType, GridObjectSortComponentOptions, GridObjectSortComponent, GridObjectSortComponentItem } from '@kit.ArkUI';
 ```
 
-<a id="build"></a>
 ## build
 
 ```TypeScript

@@ -14,7 +14,6 @@ Writes an object to a **MessageSequence** and reads it from the **MessageSequenc
 import { rpc } from '@kit.IPCKit';
 ```
 
-<a id="marshalling"></a>
 ## marshalling
 
 ```TypeScript
@@ -79,7 +78,6 @@ try {
 
 ```
 
-<a id="unmarshalling"></a>
 ## unmarshalling
 
 ```TypeScript

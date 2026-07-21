@@ -6,13 +6,12 @@ Listens for file change. You can call the **Watcher.stop()** method synchronousl
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:Watcher](arkts-corefile-file-fs-watcher-i.md)
+**Substitutes:** [fs:Watcher](arkts-corefile-fileio-watcher-depr-i.md)
 
 <!--Device-unnamed-declare interface Watcher--><!--Device-unnamed-declare interface Watcher-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -25,7 +24,7 @@ Stops the **watcher** instance. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [stop](arkts-corefile-file-fs-watcher-i.md#stop-1)
+**Substitutes:** [stop](arkts-corefile-fileio-watcher-depr-i.md#stop)
 
 <!--Device-Watcher-stop(): Promise<void>--><!--Device-Watcher-stop(): Promise<void>-End-->
 
@@ -50,7 +49,6 @@ watcher.stop().then(() => {
 
 ```
 
-<a id="stop-1"></a>
 ## stop
 
 ```TypeScript
@@ -63,7 +61,7 @@ Stops the **watcher** instance. This API uses an asynchronous callback to return
 
 **Deprecated since:** 10
 
-**Substitutes:** [stop](arkts-corefile-file-fs-watcher-i.md#stop-1)
+**Substitutes:** [stop](arkts-corefile-fileio-watcher-depr-i.md#stop)
 
 <!--Device-Watcher-stop(callback: AsyncCallback<void>): void--><!--Device-Watcher-stop(callback: AsyncCallback<void>): void-End-->
 

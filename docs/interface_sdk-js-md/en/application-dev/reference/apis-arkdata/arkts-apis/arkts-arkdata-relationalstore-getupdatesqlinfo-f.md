@@ -6,7 +6,6 @@
 import { relationalStore } from '@kit.ArkData';
 ```
 
-<a id="getupdatesqlinfo"></a>
 ## getUpdateSqlInfo
 
 ```TypeScript

@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface Uint32ArrayConstructor--><!--Device-unnamed-interface Uint32ArrayConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -23,7 +22,6 @@ new (elements: Iterable<number>): Uint32Array
 | --- | --- |
 | Uint32Array |  |
 
-<a id="from"></a>
 ## from
 
 ```TypeScript

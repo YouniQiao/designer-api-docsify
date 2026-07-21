@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="iskeyitemexist"></a>
 ## isKeyItemExist
 
 ```TypeScript
@@ -155,7 +154,6 @@ export default {
 ```
 
 
-<a id="iskeyitemexist-1"></a>
 ## isKeyItemExist
 
 ```TypeScript

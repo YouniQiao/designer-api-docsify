@@ -6,7 +6,6 @@
 import { display } from '@kit.ArkUI';
 ```
 
-<a id="destroyvirtualscreen"></a>
 ## destroyVirtualScreen
 
 ```TypeScript
@@ -27,7 +26,7 @@ Destroys a virtual screen. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | number | Yes | Screen ID, which must match the ID of the virtual screen created by calling the [createVirtualScreen()](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen-1) API. This parameter only accepts integer values. |
+| screenId | number | Yes | Screen ID, which must match the ID of the virtual screen created by calling the [createVirtualScreen()](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen) API. This parameter only accepts integer values. |
 
 **Return value:**
 

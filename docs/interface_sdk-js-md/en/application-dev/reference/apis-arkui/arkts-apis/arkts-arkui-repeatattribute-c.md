@@ -10,15 +10,13 @@ In addition to the [drag-and-drop sorting](../../apis-ability-kit/arkts-apis/ark
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="each"></a>
 ## each
 
 ```TypeScript
 each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>
 ```
 
-Component generator. When the return value of [.templateId()](arkts-arkui-repeatattribute-c.md#templateid-1) does not match any [.template()](arkts-arkui-repeatattribute-c.md#template-1) type (that is, the current item does not match any defined template style), the data item is processed using **.each()**.
-
+Component generator. When the return value of [.templateId()](arkts-arkui-repeatattribute-c.md#templateid) does not match any [.template()](arkts-arkui-repeatattribute-c.md#template) type (that is, the current item does not match any defined template style), the data item is processed using **.each()**.
 > **NOTE**  
 >  
 > - The **each** property is mandatory. If it is omitted, runtime errors will occur.  
@@ -26,7 +24,7 @@ Component generator. When the return value of [.templateId()](arkts-arkui-repeat
 > - The **itemGenerator** parameter is of the **RepeatItem** type, which combines **item** and **index**. Do not  
 > destructure **RepeatItem**.  
 >  
-> - This API cannot be called within [attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> - This API cannot be called within [attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -52,7 +50,6 @@ Component generator. When the return value of [.templateId()](arkts-arkui-repeat
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
 
-<a id="key"></a>
 ## key
 
 ```TypeScript
@@ -60,10 +57,9 @@ key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>
 ```
 
 Key generator.
-
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -89,7 +85,6 @@ Key generator.
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
 
-<a id="template"></a>
 ## template
 
 ```TypeScript
@@ -97,10 +92,9 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 ```
 
 Renders the corresponding template child component based on the template type.
-
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -126,7 +120,6 @@ Renders the corresponding template child component based on the template type.
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="templateid"></a>
 ## templateId
 
 ```TypeScript
@@ -134,10 +127,9 @@ templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>
 ```
 
 Assigns a template type for this data item.
-
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -161,7 +153,6 @@ Assigns a template type for this data item.
 | --- | --- |
 | [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="virtualscroll"></a>
 ## virtualScroll
 
 ```TypeScript
@@ -169,10 +160,9 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>
 ```
 
 Enables virtual scrolling for **Repeat**.
-
 > **NOTE**  
 >  
-> This API cannot be called within [attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md#attributemodifier-1).
+> This API cannot be called within [attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 

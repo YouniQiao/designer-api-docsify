@@ -6,7 +6,6 @@
 import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
-<a id="loadtrainmodelfrombuffer"></a>
 ## loadTrainModelFromBuffer
 
 ```TypeScript
@@ -22,13 +21,7 @@ Load train model from buffer
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-mindSporeLite-function loadTrainModelFromBuffer(
-    model: ArrayBuffer,
-    trainCfg?: TrainCfg,
-    context?: Context): Promise<Model>--><!--Device-mindSporeLite-function loadTrainModelFromBuffer(
-    model: ArrayBuffer,
-    trainCfg?: TrainCfg,
-    context?: Context): Promise<Model>-End-->
+<!--Device-mindSporeLite-function loadTrainModelFromBuffer(    model: ArrayBuffer,    trainCfg?: TrainCfg,    context?: Context): Promise<Model>--><!--Device-mindSporeLite-function loadTrainModelFromBuffer(    model: ArrayBuffer,    trainCfg?: TrainCfg,    context?: Context): Promise<Model>-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 

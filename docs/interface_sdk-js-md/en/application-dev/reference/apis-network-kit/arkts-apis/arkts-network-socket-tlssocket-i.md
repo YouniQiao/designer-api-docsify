@@ -14,7 +14,6 @@ Defines a TLSSocket connection.
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="bind"></a>
 ## bind
 
 ```TypeScript
@@ -68,7 +67,6 @@ tls.bind(bindAddr, (err: BusinessError) => {
 
 ```
 
-<a id="bind-1"></a>
 ## bind
 
 ```TypeScript
@@ -125,7 +123,6 @@ tls.bind(bindAddr).then(() => {
 
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -173,7 +170,6 @@ tls.close((err: BusinessError) => {
 
 ```
 
-<a id="close-1"></a>
 ## close
 
 ```TypeScript
@@ -219,7 +215,6 @@ tls.close().then(() => {
 
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -423,7 +418,6 @@ tlsOneWay.connect(tlsOneWayConnectOptions, (err: BusinessError) => {
 
 ```
 
-<a id="connect-1"></a>
 ## connect
 
 ```TypeScript
@@ -640,7 +634,6 @@ tlsOneWay.connect(tlsOneWayConnectOptions).then(() => {
 
 ```
 
-<a id="getcertificate"></a>
 ## getCertificate
 
 ```TypeScript
@@ -669,7 +662,6 @@ Returns an object representing a local certificate.
 | [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
-<a id="getcertificate-1"></a>
 ## getCertificate
 
 ```TypeScript
@@ -698,7 +690,6 @@ Returns an object representing a local certificate.
 | [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
-<a id="getciphersuite"></a>
 ## getCipherSuite
 
 ```TypeScript
@@ -745,7 +736,6 @@ tls.getCipherSuite((err: BusinessError, data: Array<string>) => {
 
 ```
 
-<a id="getciphersuite-1"></a>
 ## getCipherSuite
 
 ```TypeScript
@@ -790,7 +780,6 @@ tls.getCipherSuite().then((data: Array<string>) => {
 
 ```
 
-<a id="getlocaladdress"></a>
 ## getLocalAddress
 
 ```TypeScript
@@ -834,7 +823,6 @@ tls.getLocalAddress().then((localAddress: socket.NetAddress) => {
 
 ```
 
-<a id="getprotocol"></a>
 ## getProtocol
 
 ```TypeScript
@@ -880,7 +868,6 @@ tls.getProtocol((err: BusinessError, data: string) => {
 
 ```
 
-<a id="getprotocol-1"></a>
 ## getProtocol
 
 ```TypeScript
@@ -924,7 +911,6 @@ tls.getProtocol().then((data: string) => {
 
 ```
 
-<a id="getremoteaddress"></a>
 ## getRemoteAddress
 
 ```TypeScript
@@ -969,7 +955,6 @@ tls.getRemoteAddress((err: BusinessError, data: socket.NetAddress) => {
 
 ```
 
-<a id="getremoteaddress-1"></a>
 ## getRemoteAddress
 
 ```TypeScript
@@ -1012,7 +997,6 @@ tls.getRemoteAddress().then(() => {
 
 ```
 
-<a id="getremotecertificate"></a>
 ## getRemoteCertificate
 
 ```TypeScript
@@ -1040,7 +1024,6 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
-<a id="getremotecertificate-1"></a>
 ## getRemoteCertificate
 
 ```TypeScript
@@ -1068,7 +1051,6 @@ getRemoteCertificate(): Promise<X509CertRawData>
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
-<a id="getsignaturealgorithms"></a>
 ## getSignatureAlgorithms
 
 ```TypeScript
@@ -1113,7 +1095,6 @@ tls.getSignatureAlgorithms((err: BusinessError, data: Array<string>) => {
 
 ```
 
-<a id="getsignaturealgorithms-1"></a>
 ## getSignatureAlgorithms
 
 ```TypeScript
@@ -1156,7 +1137,6 @@ tls.getSignatureAlgorithms().then((data: Array<string>) => {
 
 ```
 
-<a id="getsocketfd"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -1200,7 +1180,6 @@ tls.getSocketFd().then((data: number) => {
 
 ```
 
-<a id="getstate"></a>
 ## getState
 
 ```TypeScript
@@ -1256,7 +1235,6 @@ tls.getState((err: BusinessError, data: socket.SocketStateBase) => {
 
 ```
 
-<a id="getstate-1"></a>
 ## getState
 
 ```TypeScript
@@ -1310,7 +1288,6 @@ tls.getState().then(() => {
 
 ```
 
-<a id="off"></a>
 ## off('message')
 
 ```TypeScript
@@ -1362,7 +1339,6 @@ tls.off('message', callback);
 
 ```
 
-<a id="off-1"></a>
 ## off('connect' | 'close')
 
 ```TypeScript
@@ -1413,7 +1389,6 @@ tls.off('close', callback2);
 
 ```
 
-<a id="off-2"></a>
 ## off('connect' | 'close')
 
 ```TypeScript
@@ -1464,7 +1439,6 @@ tls.off('close', callback2);
 
 ```
 
-<a id="off-3"></a>
 ## off('error')
 
 ```TypeScript
@@ -1508,7 +1482,6 @@ tls.off('error', callback);
 
 ```
 
-<a id="on"></a>
 ## on('message')
 
 ```TypeScript
@@ -1568,7 +1541,6 @@ tls.bind(bindAddr, (err: BusinessError) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('connect' | 'close')
 
 ```TypeScript
@@ -1623,7 +1595,6 @@ tls.bind(bindAddr, (err: BusinessError) => {
 
 ```
 
-<a id="on-2"></a>
 ## on('connect' | 'close')
 
 ```TypeScript
@@ -1678,7 +1649,6 @@ tls.bind(bindAddr, (err: BusinessError) => {
 
 ```
 
-<a id="on-3"></a>
 ## on('error')
 
 ```TypeScript
@@ -1730,7 +1700,6 @@ tls.bind(bindAddr, (err: BusinessError) => {
 
 ```
 
-<a id="send"></a>
 ## send
 
 ```TypeScript
@@ -1780,7 +1749,6 @@ tls.send("xxxx", (err: BusinessError) => {
 
 ```
 
-<a id="send-1"></a>
 ## send
 
 ```TypeScript
@@ -1833,7 +1801,6 @@ tls.send("xxxx").then(() => {
 
 ```
 
-<a id="setextraoptions"></a>
 ## setExtraOptions
 
 ```TypeScript
@@ -1908,7 +1875,6 @@ tls.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
 
 ```
 
-<a id="setextraoptions-1"></a>
 ## setExtraOptions
 
 ```TypeScript

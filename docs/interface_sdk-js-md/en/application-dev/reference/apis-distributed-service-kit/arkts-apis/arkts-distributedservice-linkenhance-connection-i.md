@@ -14,7 +14,6 @@ Represents a **Connection** object, which provides methods for connecting to and
 import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -66,7 +65,6 @@ try {
 
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -121,7 +119,6 @@ try {
 
 ```
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -173,7 +170,6 @@ try {
 
 ```
 
-<a id="getpeerdeviceid"></a>
 ## getPeerDeviceId
 
 ```TypeScript
@@ -226,7 +222,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off('connectResult')
 
 ```TypeScript
@@ -286,7 +281,6 @@ try {
 
 ```
 
-<a id="off-1"></a>
 ## off('disconnected')
 
 ```TypeScript
@@ -346,7 +340,6 @@ try {
 
 ```
 
-<a id="off-2"></a>
 ## off('dataReceived')
 
 ```TypeScript
@@ -407,7 +400,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on('connectResult')
 
 ```TypeScript
@@ -467,7 +459,6 @@ try {
 
 ```
 
-<a id="on-1"></a>
 ## on('disconnected')
 
 ```TypeScript
@@ -524,7 +515,6 @@ try {
 
 ```
 
-<a id="on-2"></a>
 ## on('dataReceived')
 
 ```TypeScript
@@ -583,7 +573,6 @@ try {
 
 ```
 
-<a id="senddata"></a>
 ## sendData
 
 ```TypeScript

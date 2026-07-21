@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="getnetworkstate"></a>
 ## getNetworkState
 
 ```TypeScript
@@ -58,7 +57,6 @@ radio.getNetworkState(slotId, (err: BusinessError, data: radio.NetworkState) => 
 ```
 
 
-<a id="getnetworkstate-1"></a>
 ## getNetworkState
 
 ```TypeScript
@@ -113,7 +111,6 @@ radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
 ```
 
 
-<a id="getnetworkstate-2"></a>
 ## getNetworkState
 
 ```TypeScript

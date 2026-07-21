@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="startprofiling"></a>
 ## startProfiling
 
 ```TypeScript
@@ -19,7 +18,7 @@ Starts the VM profiling method. **startProfiling(filename: string)** and **stopP
 
 **Deprecated since:** 9
 
-**Substitutes:** [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md#startjscpuprofiling-1)
+**Substitutes:** [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md#startjscpuprofiling)
 
 <!--Device-hidebug-function startProfiling(filename: string): void--><!--Device-hidebug-function startProfiling(filename: string): void-End-->
 

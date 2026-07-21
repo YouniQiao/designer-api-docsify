@@ -16,7 +16,6 @@ Window animation finished callback.
 import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
-<a id="onanimationfinish"></a>
 ## onAnimationFinish
 
 ```TypeScript

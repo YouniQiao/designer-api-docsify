@@ -16,7 +16,6 @@ Provides the capability of simulating touch operations. The simulated touch oper
 import { inputEventClient } from '@kit.InputKit';
 ```
 
-<a id="touchdown"></a>
 ## touchDown
 
 ```TypeScript
@@ -110,7 +109,6 @@ struct Index {
 
 ```
 
-<a id="touchmove"></a>
 ## touchMove
 
 ```TypeScript
@@ -153,7 +151,6 @@ Moves a touch point. This API uses a promise to return the result.
 
 For details, see [touchDown](#touchdown).
 
-<a id="touchup"></a>
 ## touchUp
 
 ```TypeScript

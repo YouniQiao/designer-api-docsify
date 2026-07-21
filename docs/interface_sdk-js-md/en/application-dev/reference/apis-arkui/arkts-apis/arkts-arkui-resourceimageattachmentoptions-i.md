@@ -116,7 +116,7 @@ Image size.
 supportSvg2?: boolean
 ```
 
-Whether to enable [enhanced SVG tag parsing capabilities](docroot://reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md).
+Whether to enable [enhanced SVG tag parsing capabilities](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md).
 
 **true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing.
 

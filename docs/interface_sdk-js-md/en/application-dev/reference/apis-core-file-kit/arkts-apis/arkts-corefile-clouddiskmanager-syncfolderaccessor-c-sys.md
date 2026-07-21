@@ -16,7 +16,6 @@ A sync root management class that enables the File Manager to access the sync ro
 import { cloudDiskManager } from '@kit.CoreFileKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -68,7 +67,6 @@ struct Index {
 
 ```
 
-<a id="getallsyncfolders"></a>
 ## getAllSyncFolders
 
 ```TypeScript

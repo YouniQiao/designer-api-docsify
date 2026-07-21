@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="on"></a>
 ## on('wifiStateChange')
 
 ```TypeScript
@@ -35,7 +34,6 @@ Subscribe Wi-Fi status change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
 
 
-<a id="on-1"></a>
 ## on('wifiConnectionChange')
 
 ```TypeScript
@@ -64,7 +62,6 @@ Subscribe Wi-Fi connection change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | the callback of on, 0: disconnected, 1: connected |
 
 
-<a id="on-2"></a>
 ## on('wifiScanStateChange')
 
 ```TypeScript
@@ -93,7 +90,6 @@ Subscribe Wi-Fi scan status change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | the callback of on, 0: scan fail, 1: scan success |
 
 
-<a id="on-3"></a>
 ## on('wifiRssiChange')
 
 ```TypeScript
@@ -122,7 +118,6 @@ Subscribe Wi-Fi rssi change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | the callback of on |
 
 
-<a id="on-4"></a>
 ## on('hotspotStateChange')
 
 ```TypeScript
@@ -168,7 +163,6 @@ wifi.off("hotspotStateChange", recvHotspotStateChangeFunc);
 ```
 
 
-<a id="on-5"></a>
 ## on('p2pStateChange')
 
 ```TypeScript
@@ -197,7 +191,6 @@ Subscribe P2P status change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | the callback of on, 1: idle, 2: starting, 3:started, 4: closing, 5: closed |
 
 
-<a id="on-6"></a>
 ## on('p2pConnectionChange')
 
 ```TypeScript
@@ -226,7 +219,6 @@ Subscribe P2P connection change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | Yes | the callback of on |
 
 
-<a id="on-7"></a>
 ## on('p2pDeviceChange')
 
 ```TypeScript
@@ -255,7 +247,6 @@ Subscribe P2P local device change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;WifiP2pDevice&gt; | Yes | the callback of on |
 
 
-<a id="on-8"></a>
 ## on('p2pPeerDeviceChange')
 
 ```TypeScript
@@ -284,7 +275,6 @@ Subscribe P2P peer device change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;WifiP2pDevice[]&gt; | Yes | the callback of on |
 
 
-<a id="on-9"></a>
 ## on('p2pPersistentGroupChange')
 
 ```TypeScript
@@ -313,7 +303,6 @@ Subscribe P2P persistent group change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | the callback of on |
 
 
-<a id="on-10"></a>
 ## on('p2pDiscoveryChange')
 
 ```TypeScript

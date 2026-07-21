@@ -16,14 +16,13 @@ The AppServiceExtensionAbility module provides extended capabilities for backgro
 import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
-<a id="onconnect"></a>
 ## onConnect
 
 ```TypeScript
 onConnect(want: Want): rpc.RemoteObject
 ```
 
-Called when an AppServiceExtensionAbility instance is connected by calling [connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability-1).
+Called when an AppServiceExtensionAbility instance is connected by calling [connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability).
 
 **Since:** 20
 
@@ -72,7 +71,6 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 
 ```
 
-<a id="oncreate"></a>
 ## onCreate
 
 ```TypeScript
@@ -80,7 +78,6 @@ onCreate(want: Want): void
 ```
 
 Called when an AppServiceExtensionAbility instance is created.Applications can perform initialization operations, such as registering common event listeners, in this callback.
-
 > **NOTE**  
 >  
 > If an AppServiceExtensionAbility instance has already been created, the **onCreate()** callback is not invoked  
@@ -116,7 +113,6 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 
 ```
 
-<a id="ondestroy"></a>
 ## onDestroy
 
 ```TypeScript
@@ -149,7 +145,6 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 
 ```
 
-<a id="ondisconnect"></a>
 ## onDisconnect
 
 ```TypeScript
@@ -188,14 +183,13 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 
 ```
 
-<a id="onrequest"></a>
 ## onRequest
 
 ```TypeScript
 onRequest(want: Want, startId: number): void
 ```
 
-Called each time an AppServiceExtensionAbility instance is started by calling [startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability-1).
+Called each time an AppServiceExtensionAbility instance is started by calling [startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability).
 
 **Since:** 20
 

@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="exportkeyitem"></a>
 ## exportKeyItem
 
 ```TypeScript
@@ -14,7 +13,6 @@ function exportKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 ```
 
 Exports a key. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)  
@@ -81,7 +79,6 @@ huks.exportKeyItem(keyAlias, emptyOptions, (error, data) => {
 ```
 
 
-<a id="exportkeyitem-1"></a>
 ## exportKeyItem
 
 ```TypeScript
@@ -89,7 +86,6 @@ function exportKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 ```
 
 Exports a key. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)  

@@ -1,6 +1,5 @@
 # cancelAll
 
-<a id="cancelall"></a>
 ## cancelAll
 
 ```TypeScript
@@ -26,7 +25,6 @@ Cancels all notifications. This API uses an asynchronous callback to return the 
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="cancelall-1"></a>
 ## cancelAll
 
 ```TypeScript

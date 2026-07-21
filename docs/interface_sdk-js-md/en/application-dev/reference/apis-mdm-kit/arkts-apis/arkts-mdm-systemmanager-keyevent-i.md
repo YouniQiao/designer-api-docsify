@@ -1,6 +1,6 @@
 # KeyEvent
 
-Enumerates key events. When the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent-1)key event callback is triggered, the current key event information is transferred.
+Enumerates key events. When the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)key event callback is triggered, the current key event information is transferred.
 
 **Since:** 23
 

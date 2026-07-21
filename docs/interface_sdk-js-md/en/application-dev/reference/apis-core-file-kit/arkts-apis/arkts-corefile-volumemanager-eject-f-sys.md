@@ -6,7 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="eject"></a>
 ## eject
 
 ```TypeScript

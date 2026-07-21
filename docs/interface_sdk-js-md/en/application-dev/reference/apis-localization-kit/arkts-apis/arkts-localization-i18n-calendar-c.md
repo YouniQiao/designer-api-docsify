@@ -14,7 +14,6 @@ Provides calendar management capabilities, such as calendar name retrieval and d
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="add"></a>
 ## add
 
 ```TypeScript
@@ -35,7 +34,7 @@ Performs addition or subtraction on the calendar attributes of this **Calendar**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Calendar attribute. The value can be any of the following: **year**, **month**,**week_of_year**, **week_of_month**, **date**, **day_of_year**, **day_of_week**, **day_of_week_in_month**,**hour**, **hour_of_day**, **minute**, **second**, **millisecond**.For details about the values, see [get](arkts-localization-i18n-calendar-c.md#get-1). |
+| field | string | Yes | Calendar attribute. The value can be any of the following: **year**, **month**,**week_of_year**, **week_of_month**, **date**, **day_of_year**, **day_of_week**, **day_of_week_in_month**,**hour**, **hour_of_day**, **minute**, **second**, **millisecond**.For details about the values, see [get](arkts-localization-i18n-calendar-c.md#get). |
 | amount | number | Yes | Addition or subtraction amount. |
 
 **Error codes:**
@@ -63,7 +62,6 @@ try {
 
 ```
 
-<a id="comparedays"></a>
 ## compareDays
 
 ```TypeScript
@@ -116,7 +114,6 @@ try {
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -156,7 +153,6 @@ let hourOfDay: number = calendar.get('hour_of_day'); // hourOfDay = 8
 
 ```
 
-<a id="getdisplayname"></a>
 ## getDisplayName
 
 ```TypeScript
@@ -177,7 +173,7 @@ Obtains calendar display name in the specified language.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | [System locale](docroot://internationalization/i18n-locale-culture.md#how-it-works),which consists of the language, script, and country/region. |
+| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works),which consists of the language, script, and country/region. |
 
 **Return value:**
 
@@ -195,7 +191,6 @@ let calendarName: string = calendar.getDisplayName('zh'); // calendarName = 'Bud
 
 ```
 
-<a id="getfirstdayofweek"></a>
 ## getFirstDayOfWeek
 
 ```TypeScript
@@ -228,7 +223,6 @@ let firstDayOfWeek: number = calendar.getFirstDayOfWeek(); // firstDayOfWeek = 1
 
 ```
 
-<a id="getminimaldaysinfirstweek"></a>
 ## getMinimalDaysInFirstWeek
 
 ```TypeScript
@@ -261,7 +255,6 @@ let minimalDaysInFirstWeek: number = calendar.getMinimalDaysInFirstWeek(); // mi
 
 ```
 
-<a id="gettimeinmillis"></a>
 ## getTimeInMillis
 
 ```TypeScript
@@ -295,7 +288,6 @@ let millisecond: number = calendar.getTimeInMillis(); // millisecond = 5000
 
 ```
 
-<a id="gettimezone"></a>
 ## getTimeZone
 
 ```TypeScript
@@ -329,7 +321,6 @@ let timezone: string = calendar.getTimeZone(); // timezone = 'Asia/Shanghai'
 
 ```
 
-<a id="isweekend"></a>
 ## isWeekend
 
 ```TypeScript
@@ -371,7 +362,6 @@ isWeekend = calendar.isWeekend(date); // isWeekend = false
 
 ```
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
@@ -409,7 +399,6 @@ calendar.set(2021, 10, 1, 8, 0, 0); // Set the date and time to 2021.11.1 08:00:
 
 ```
 
-<a id="setfirstdayofweek"></a>
 ## setFirstDayOfWeek
 
 ```TypeScript
@@ -443,7 +432,6 @@ let firstDayOfWeek: number = calendar.getFirstDayOfWeek(); // firstDayOfWeek = 3
 
 ```
 
-<a id="setminimaldaysinfirstweek"></a>
 ## setMinimalDaysInFirstWeek
 
 ```TypeScript
@@ -477,7 +465,6 @@ let minimalDaysInFirstWeek: number = calendar.getMinimalDaysInFirstWeek(); // mi
 
 ```
 
-<a id="settime"></a>
 ## setTime
 
 ```TypeScript
@@ -511,7 +498,6 @@ calendar.setTime(date);
 
 ```
 
-<a id="settime-1"></a>
 ## setTime
 
 ```TypeScript
@@ -544,7 +530,6 @@ calendar.setTime(10540800000);
 
 ```
 
-<a id="settimezone"></a>
 ## setTimeZone
 
 ```TypeScript

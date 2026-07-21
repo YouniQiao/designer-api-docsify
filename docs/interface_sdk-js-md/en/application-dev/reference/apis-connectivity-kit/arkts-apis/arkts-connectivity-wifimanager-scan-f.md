@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="scan"></a>
 ## scan
 
 ```TypeScript
@@ -19,7 +18,7 @@ Scan Wi-Fi hotspot.
 
 **Deprecated since:** 10
 
-**Substitutes:** [startScan](arkts-connectivity-wifimanager-startscan-f.md#startscan-1)
+**Substitutes:** [startScan](arkts-connectivity-wifimanager-startscan-f.md#startscan)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 

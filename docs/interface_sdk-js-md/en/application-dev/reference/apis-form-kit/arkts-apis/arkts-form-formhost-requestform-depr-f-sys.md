@@ -1,6 +1,5 @@
 # requestForm (System API)
 
-<a id="requestform"></a>
 ## requestForm
 
 ```TypeScript
@@ -13,7 +12,7 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestForm](arkts-form-formhost-requestform-f-sys.md#requestform-1)
+**Substitutes:** [requestForm](arkts-form-formhost-requestform-depr-f-sys.md#requestform)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -31,7 +30,6 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is updated,**error** is undefined; otherwise, **error** is an error object. |
 
 
-<a id="requestform-1"></a>
 ## requestForm
 
 ```TypeScript
@@ -44,7 +42,7 @@ Requests a widget update. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [requestForm](arkts-form-formhost-requestform-f-sys.md#requestform-1)
+**Substitutes:** [requestForm](arkts-form-formhost-requestform-depr-f-sys.md#requestform)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

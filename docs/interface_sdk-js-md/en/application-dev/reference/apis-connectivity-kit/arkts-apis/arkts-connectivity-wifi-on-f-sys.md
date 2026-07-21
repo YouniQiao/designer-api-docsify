@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="on"></a>
 ## on('streamChange')
 
 ```TypeScript
@@ -37,7 +36,6 @@ Subscribe Wi-Fi stream change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
 
 
-<a id="on-1"></a>
 ## on('hotspotStaJoin')
 
 ```TypeScript
@@ -68,7 +66,6 @@ Subscribe Wi-Fi hotspot sta join events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
 
 
-<a id="on-2"></a>
 ## on('hotspotStaLeave')
 
 ```TypeScript

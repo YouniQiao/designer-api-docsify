@@ -14,7 +14,6 @@ Stream to which data can be written. A writable stream allows data to be written
 import { stream } from '@kit.ArkTS';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -38,14 +37,13 @@ let writableStream = new stream.Writable();
 
 ```
 
-<a id="cork"></a>
 ## cork
 
 ```TypeScript
 cork(): boolean
 ```
 
-Forces subsequent writes to be buffered. This API is called to optimize the performance of continuous write operations. After this API is called, the value of **writableCorked** is incremented by one. It is recommended that this API be used in pair with [uncork()](arkts-arkts-stream-writable-c.md#uncork-1).
+Forces subsequent writes to be buffered. This API is called to optimize the performance of continuous write operations. After this API is called, the value of **writableCorked** is incremented by one. It is recommended that this API be used in pair with [uncork()](arkts-arkts-stream-writable-c.md#uncork).
 
 **Since:** 12
 
@@ -80,7 +78,6 @@ console.info("Writable cork result", result); // Writable cork result true
 
 ```
 
-<a id="doinitialize"></a>
 ## doInitialize
 
 ```TypeScript
@@ -121,7 +118,6 @@ new MyWritable();
 
 ```
 
-<a id="dowrite"></a>
 ## doWrite
 
 ```TypeScript
@@ -165,7 +161,6 @@ writableStream.write('data', 'utf8');
 
 ```
 
-<a id="dowritev"></a>
 ## doWritev
 
 ```TypeScript
@@ -213,7 +208,6 @@ writableStream.end();
 
 ```
 
-<a id="end"></a>
 ## end
 
 ```TypeScript
@@ -274,7 +268,6 @@ writableStream.end('finish', 'utf8', () => {
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -326,7 +319,6 @@ setTimeout(() => {
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -373,7 +365,6 @@ writable.write('hello', 'utf8', () => {
 
 ```
 
-<a id="setdefaultencoding"></a>
 ## setDefaultEncoding
 
 ```TypeScript
@@ -421,14 +412,13 @@ console.info("Writable is result", result); // Writable is result true
 
 ```
 
-<a id="uncork"></a>
 ## uncork
 
 ```TypeScript
 uncork(): boolean
 ```
 
-Releases the cork state, flushing the buffered data and writing it to the target location. After this API is called, the value of **writableCorked** is decremented by one. If the value reaches **0**, the stream is no longer in the cork state. Otherwise, the stream is still in the cork state. It is recommended that this API be used in pair with [cork()](arkts-arkts-stream-writable-c.md#cork-1).
+Releases the cork state, flushing the buffered data and writing it to the target location. After this API is called, the value of **writableCorked** is decremented by one. If the value reaches **0**, the stream is no longer in the cork state. Otherwise, the stream is still in the cork state. It is recommended that this API be used in pair with [cork()](arkts-arkts-stream-writable-c.md#cork).
 
 **Since:** 12
 
@@ -469,7 +459,6 @@ writableStream.on('finish', () => {
 
 ```
 
-<a id="write"></a>
 ## write
 
 ```TypeScript

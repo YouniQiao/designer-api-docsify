@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface ErrorConstructor--><!--Device-unnamed-interface ErrorConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -24,7 +23,6 @@ new (message?: string, options?: ErrorOptions): Error
 | --- | --- |
 | Error |  |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
-<a id="init"></a>
 ## init
 
 ```TypeScript
@@ -39,7 +38,7 @@ function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CM
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500002](../errorcode-certManager.md#17500002-证书不存在) | The certificate does not exist. |
-| [17500005](../errorcode-certManager.md#17500005-应用未经用户授权) | The application is not authorized by the user.Please call [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog-1)method to request user authorization for the certificate or credential.<br>**适用版本：** 12+ |
+| [17500005](../errorcode-certManager.md#17500005-应用未经用户授权) | The application is not authorized by the user.Please call [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog)method to request user authorization for the certificate or credential.<br>**适用版本：** 12+ |
 
 **示例：**
 
@@ -67,7 +66,6 @@ try {
 ```
 
 
-<a id="init-1"></a>
 ## init
 
 ```TypeScript

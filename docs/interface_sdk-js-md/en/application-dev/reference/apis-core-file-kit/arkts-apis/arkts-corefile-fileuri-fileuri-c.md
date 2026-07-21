@@ -16,7 +16,6 @@ FileUri represents the uri of the file.
 import { fileUri } from '@kit.CoreFileKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -58,7 +57,6 @@ console.info("The name of FileUri is " + fileUriObject.name);
 
 ```
 
-<a id="getfulldirectoryuri"></a>
 ## getFullDirectoryUri
 
 ```TypeScript
@@ -104,7 +102,6 @@ try {
 
 ```
 
-<a id="isremoteuri"></a>
 ## isRemoteUri
 
 ```TypeScript

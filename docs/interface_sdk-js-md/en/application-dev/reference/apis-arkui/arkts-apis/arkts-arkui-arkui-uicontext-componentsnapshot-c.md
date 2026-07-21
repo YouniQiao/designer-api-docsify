@@ -1,12 +1,11 @@
 # ComponentSnapshot
 
 Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 12.  
 >  
-> - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot-1)  
+> - In the following API examples, you must first use [getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)  
 > in **UIContext** to obtain a **ComponentSnapshot** instance, and then call the APIs using the obtained instance.  
 >  
 > - Transformation properties such as scaling, translation, and rotation only apply to the child components of the  
@@ -25,7 +24,6 @@ Provides APIs for obtaining component snapshots, including snapshots of componen
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="createfrombuilder"></a>
 ## createFromBuilder
 
 ```TypeScript
@@ -34,7 +32,6 @@ createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap
 ```
 
 Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md).This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in  
@@ -51,9 +48,7 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,
-    delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void--><!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,
-    delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void-End-->
+<!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,    delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void--><!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap>,    delay?: number, checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -77,7 +72,6 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 | [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 | [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
 
-<a id="createfrombuilder-1"></a>
 ## createFromBuilder
 
 ```TypeScript
@@ -86,7 +80,6 @@ createFromBuilder(builder: CustomBuilder, delay?: number,
 ```
 
 Captures a snapshot of an offscreen-rendered component created from a [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md).This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - Due to the need to wait for the component to be built and rendered, there is a delay of not more than 500 ms in  
@@ -103,9 +96,7 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, delay?: number,
-    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, delay?: number,
-    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
+<!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-createFromBuilder(builder: CustomBuilder, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -134,7 +125,6 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 | [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 | [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
 
-<a id="createfromcomponent"></a>
 ## createFromComponent
 
 ```TypeScript
@@ -150,9 +140,7 @@ Captures a snapshot of the provided component content. This API uses a promise t
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ComponentSnapshot-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: number,
-    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: number,
-    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
+<!--Device-ComponentSnapshot-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>--><!--Device-ComponentSnapshot-createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: number,    checkImageStatus?: boolean, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -181,7 +169,6 @@ Captures a snapshot of the provided component content. This API uses a promise t
 | [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 | [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -189,7 +176,6 @@ get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnap
 ```
 
 Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an  
@@ -221,7 +207,6 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
 | [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
-<a id="get-1"></a>
 ## get
 
 ```TypeScript
@@ -229,7 +214,6 @@ get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.Pixe
 ```
 
 Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an  
@@ -266,7 +250,6 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
 | [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
-<a id="getsizelimitation"></a>
 ## getSizeLimitation
 
 ```TypeScript
@@ -291,7 +274,6 @@ Obtains the size limit of a component screenshot.
 | --- | --- |
 | componentSnapshot.SnapshotSizeLimitation | Size limit of a component screenshot. |
 
-<a id="getsync"></a>
 ## getSync
 
 ```TypeScript
@@ -299,7 +281,6 @@ getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 ```
 
 Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API synchronously returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) after completing the capture.Note that this API blocks the main thread and has a 3-second timeout. If the operation exceeds this limit, it throws an exception. Use with caution in performance-critical scenarios.
-
 > **NOTE**  
 >  
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an  
@@ -337,7 +318,6 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 | [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
 | [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
-<a id="getsyncwithuniqueid"></a>
 ## getSyncWithUniqueId
 
 ```TypeScript
@@ -345,7 +325,6 @@ getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOption
 ```
 
 Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) object.
-
 > **NOTE**  
 >  
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an  
@@ -365,7 +344,7 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid-1) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**
@@ -383,7 +362,6 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 | [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
 | [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
-<a id="getwithuniqueid"></a>
 ## getWithUniqueId
 
 ```TypeScript
@@ -391,7 +369,6 @@ getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): 
 ```
 
 Obtains the snapshot of a component that has been loaded based on the provided **uniqueId**. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an  
@@ -411,7 +388,7 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid-1) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| uniqueId | number | Yes | Unique ID of the target component. The unique ID of the **FrameNode** can be obtained via the [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid) API.<br>Note: Off-screen or cached components not mounted in the component tree are not supported. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**

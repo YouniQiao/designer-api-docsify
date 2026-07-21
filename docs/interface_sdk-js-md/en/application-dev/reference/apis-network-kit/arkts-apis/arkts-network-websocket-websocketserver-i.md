@@ -14,7 +14,6 @@
 import { webSocket } from '@kit.NetworkKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -88,7 +87,6 @@ localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
 
 ```
 
-<a id="listallconnections"></a>
 ## listAllConnections
 
 ```TypeScript
@@ -158,7 +156,6 @@ localServer.on('connect', async (connection: webSocket.WebSocketConnection) => {
 
 ```
 
-<a id="off"></a>
 ## off('error')
 
 ```TypeScript
@@ -191,7 +188,6 @@ localServer.off('error');
 
 ```
 
-<a id="off-1"></a>
 ## off('connect')
 
 ```TypeScript
@@ -224,7 +220,6 @@ localServer.off('connect');
 
 ```
 
-<a id="off-2"></a>
 ## off('close')
 
 ```TypeScript
@@ -257,7 +252,6 @@ localServer.off('close');
 
 ```
 
-<a id="off-3"></a>
 ## off('messageReceive')
 
 ```TypeScript
@@ -290,7 +284,6 @@ localServer.off('messageReceive');
 
 ```
 
-<a id="on"></a>
 ## on('error')
 
 ```TypeScript
@@ -325,7 +318,6 @@ wsServer.on('error', (err: BusinessError) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('connect')
 
 ```TypeScript
@@ -360,7 +352,6 @@ localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
 
 ```
 
-<a id="on-2"></a>
 ## on('messageReceive')
 
 ```TypeScript
@@ -395,7 +386,6 @@ localServer.on('messageReceive', (message: webSocket.WebSocketMessage) => {
 
 ```
 
-<a id="on-3"></a>
 ## on('close')
 
 ```TypeScript
@@ -430,7 +420,6 @@ localServer.on('close', (clientConnection: webSocket.WebSocketConnection, closeR
 
 ```
 
-<a id="send"></a>
 ## send
 
 ```TypeScript
@@ -507,7 +496,6 @@ localServer.on('connect', async (connection: webSocket.WebSocketConnection) => {
 
 ```
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -573,7 +561,6 @@ localServer.start(config).then((success: boolean) => {
 
 ```
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript

@@ -16,7 +16,6 @@ The childprocess object can be used to create a new process.
 import { process } from '@kit.ArkTS';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -33,7 +32,6 @@ Close the target process
 
 **System API:** This is a system API.
 
-<a id="geterroroutput"></a>
 ## getErrorOutput
 
 ```TypeScript
@@ -56,7 +54,6 @@ Return it as 'Uint8Array of the stderr until EOF
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | Return subprocess standard error output. |
 
-<a id="getoutput"></a>
 ## getOutput
 
 ```TypeScript
@@ -79,7 +76,6 @@ Return it as 'Uint8Array' of the stdout until EOF
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | Return subprocess standard output. |
 
-<a id="kill"></a>
 ## kill
 
 ```TypeScript
@@ -102,7 +98,6 @@ Send a signal to process
 | --- | --- | --- | --- |
 | signal | number \| string | Yes | Number or string represents the signal sent. |
 
-<a id="wait"></a>
 ## wait
 
 ```TypeScript

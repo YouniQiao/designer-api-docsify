@@ -6,7 +6,6 @@
 import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="removerule"></a>
 ## removeRule
 
 ```TypeScript
@@ -19,7 +18,7 @@ Removes one or more rules. The removed rules will become ineffective.
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removecheckrule-1)
+**Substitutes:** [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removecheckrule)
 
 <!--Device-hichecker-function removeRule(rule: bigint): void--><!--Device-hichecker-function removeRule(rule: bigint): void-End-->
 

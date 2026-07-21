@@ -10,7 +10,6 @@ Provides playback control and component management for boids simulation.
 
 **System API:** This is a system API.
 
-<a id="addboidssimcomponent"></a>
 ## addBoidsSimComponent
 
 ```TypeScript
@@ -36,7 +35,6 @@ Add a boids simulation component to the given node.
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | the node to add the component to |
 | param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | Yes | boids simulation parameters |
 
-<a id="addboidssimgravitycomponent"></a>
 ## addBoidsSimGravityComponent
 
 ```TypeScript
@@ -62,7 +60,6 @@ Add a gravity field component to the given node.
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | the node to add the component to |
 | param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | Yes | gravity field parameters |
 
-<a id="addboidssimrepulsioncomponent"></a>
 ## addBoidsSimRepulsionComponent
 
 ```TypeScript
@@ -88,7 +85,6 @@ Add a repulsion field component to the given node.
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | the node to add the component to |
 | param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | Yes | repulsion field parameters |
 
-<a id="getboidssimcomponent"></a>
 ## getBoidsSimComponent
 
 ```TypeScript
@@ -119,7 +115,6 @@ Get the boids simulation component parameters from the given node.
 | --- | --- |
 | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | boids simulation parameters, or null if not found |
 
-<a id="getboidssimgravitycomponent"></a>
 ## getBoidsSimGravityComponent
 
 ```TypeScript
@@ -150,7 +145,6 @@ Get the gravity field component parameters from the given node.
 | --- | --- |
 | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | gravity field parameters, or null if not found |
 
-<a id="getboidssimrepulsioncomponent"></a>
 ## getBoidsSimRepulsionComponent
 
 ```TypeScript
@@ -181,7 +175,6 @@ Get the repulsion field component parameters from the given node.
 | --- | --- |
 | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | repulsion field parameters, or null if not found |
 
-<a id="pause"></a>
 ## pause
 
 ```TypeScript
@@ -200,7 +193,6 @@ Pause the simulation.
 
 **System API:** This is a system API.
 
-<a id="play"></a>
 ## play
 
 ```TypeScript
@@ -219,7 +211,6 @@ Start or resume the simulation.
 
 **System API:** This is a system API.
 
-<a id="removeboidssimcomponent"></a>
 ## removeBoidsSimComponent
 
 ```TypeScript
@@ -244,7 +235,6 @@ Remove the boids simulation component from the given node.
 | --- | --- | --- | --- |
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | the node to remove the component from |
 
-<a id="removeboidssimgravitycomponent"></a>
 ## removeBoidsSimGravityComponent
 
 ```TypeScript
@@ -269,7 +259,6 @@ Remove the gravity field component from the given node.
 | --- | --- | --- | --- |
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | the node to remove the component from |
 
-<a id="removeboidssimrepulsioncomponent"></a>
 ## removeBoidsSimRepulsionComponent
 
 ```TypeScript
@@ -294,7 +283,6 @@ Remove the repulsion field component from the given node.
 | --- | --- | --- | --- |
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | the node to remove the component from |
 
-<a id="setboidssimcomponent"></a>
 ## setBoidsSimComponent
 
 ```TypeScript
@@ -320,7 +308,6 @@ Update the boids simulation component parameters on the given node.
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | the node to update |
 | param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | Yes | boids simulation parameters |
 
-<a id="setboidssimgravitycomponent"></a>
 ## setBoidsSimGravityComponent
 
 ```TypeScript
@@ -346,7 +333,6 @@ Update the gravity field component parameters on the given node.
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | the node to update |
 | param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | Yes | gravity field parameters |
 
-<a id="setboidssimrepulsioncomponent"></a>
 ## setBoidsSimRepulsionComponent
 
 ```TypeScript
@@ -372,7 +358,6 @@ Update the repulsion field component parameters on the given node.
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | the node to update |
 | param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | Yes | repulsion field parameters |
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript

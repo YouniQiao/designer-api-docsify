@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="importkey"></a>
 ## importKey
 
 ```TypeScript
@@ -19,7 +18,7 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [importKeyItem(keyAlias:](arkts-universalkeystore-huks-importkeyitem-f.md#importkeyitem-1)
+**Substitutes:** [importKeyItem(keyAlias:](arkts-universalkeystore-huks-importkeyitem-f.md#importkeyitem)
 
 <!--Device-huks-function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -83,7 +82,6 @@ huks.importKey(keyAlias, options, (err, data) => {
 ```
 
 
-<a id="importkey-1"></a>
 ## importKey
 
 ```TypeScript
@@ -96,7 +94,7 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [importKeyItem(keyAlias:](arkts-universalkeystore-huks-importkeyitem-f.md#importkeyitem-1)
+**Substitutes:** [importKeyItem(keyAlias:](arkts-universalkeystore-huks-importkeyitem-f.md#importkeyitem)
 
 <!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function importKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
 

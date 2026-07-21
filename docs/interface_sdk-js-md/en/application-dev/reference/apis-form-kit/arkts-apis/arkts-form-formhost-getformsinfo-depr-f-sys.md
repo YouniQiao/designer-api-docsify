@@ -1,6 +1,5 @@
 # getFormsInfo (System API)
 
-<a id="getformsinfo"></a>
 ## getFormsInfo
 
 ```TypeScript
@@ -13,7 +12,7 @@ Obtains the widget information provided by a given application on the device. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo-1)
+**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getformsinfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -31,7 +30,6 @@ Obtains the widget information provided by a given application on the device. Th
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 
-<a id="getformsinfo-1"></a>
 ## getFormsInfo
 
 ```TypeScript
@@ -48,19 +46,11 @@ Obtains the widget information provided by a given application on the device. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo-1)
+**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getformsinfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
-<!--Device-formHost-function getFormsInfo(
-    bundleName: string,
-    moduleName: string,
-    callback: AsyncCallback<Array<formInfo.FormInfo>>
-  ): void--><!--Device-formHost-function getFormsInfo(
-    bundleName: string,
-    moduleName: string,
-    callback: AsyncCallback<Array<formInfo.FormInfo>>
-  ): void-End-->
+<!--Device-formHost-function getFormsInfo(    bundleName: string,    moduleName: string,    callback: AsyncCallback<Array<formInfo.FormInfo>>  ): void--><!--Device-formHost-function getFormsInfo(    bundleName: string,    moduleName: string,    callback: AsyncCallback<Array<formInfo.FormInfo>>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -75,7 +65,6 @@ Obtains the widget information provided by a given application on the device. Th
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
 
-<a id="getformsinfo-2"></a>
 ## getFormsInfo
 
 ```TypeScript
@@ -88,7 +77,7 @@ Obtains the widget information provided by a given application on the device. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo-1)
+**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getformsinfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

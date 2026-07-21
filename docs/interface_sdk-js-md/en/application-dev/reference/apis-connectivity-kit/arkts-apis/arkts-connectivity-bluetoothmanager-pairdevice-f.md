@@ -6,7 +6,6 @@
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="pairdevice"></a>
 ## pairDevice
 
 ```TypeScript

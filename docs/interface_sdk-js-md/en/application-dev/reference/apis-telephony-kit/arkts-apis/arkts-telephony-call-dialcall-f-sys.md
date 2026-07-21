@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="dialcall"></a>
 ## dialCall
 
 ```TypeScript
@@ -69,7 +68,6 @@ call.dialCall("138xxxxxxxx", dialCallOptions, (err: BusinessError) => {
 ```
 
 
-<a id="dialcall-1"></a>
 ## dialCall
 
 ```TypeScript
@@ -135,7 +133,6 @@ call.dialCall("138xxxxxxxx", dialCallOptions).then(() => {
 ```
 
 
-<a id="dialcall-2"></a>
 ## dialCall
 
 ```TypeScript

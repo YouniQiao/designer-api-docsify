@@ -6,7 +6,6 @@
 import { browser } from '@kit.MDMKit';
 ```
 
-<a id="getpolicies"></a>
 ## getPolicies
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the policy of the specified browser. This API uses an asynchronous callb
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync-1)
+**Substitutes:** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,7 +68,6 @@ browser.getPolicies(wantTemp, appId, (err, result) => {
 ```
 
 
-<a id="getpolicies-1"></a>
 ## getPolicies
 
 ```TypeScript
@@ -82,7 +80,7 @@ Obtains the policy of the specified browser. This API uses a promise to return t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync-1)
+**Substitutes:** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync)
 
 **Model restriction:** This API can be used only in the stage model.
 

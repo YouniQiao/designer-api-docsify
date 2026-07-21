@@ -14,7 +14,6 @@ As an input parameter when connecting a web native messaging extension, it is us
 import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 ```
 
-<a id="onconnect"></a>
 ## onConnect
 
 ```TypeScript
@@ -83,7 +82,6 @@ export default class EntryAbility extends UIAbility {
 
 ```
 
-<a id="ondisconnect"></a>
 ## onDisconnect
 
 ```TypeScript
@@ -152,7 +150,6 @@ export default class EntryAbility extends UIAbility {
 
 ```
 
-<a id="onfailed"></a>
 ## onFailed
 
 ```TypeScript

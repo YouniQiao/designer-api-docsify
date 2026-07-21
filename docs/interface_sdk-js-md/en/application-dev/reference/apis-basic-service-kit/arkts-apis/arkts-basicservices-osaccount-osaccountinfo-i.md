@@ -20,7 +20,7 @@ import { osAccount } from '@kit.BasicServicesKit';
 constraints: Array<string>
 ```
 
-[Constraints](docroot://reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) of the system account. By default, no value is passed in.
+[Constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) of the system account. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 

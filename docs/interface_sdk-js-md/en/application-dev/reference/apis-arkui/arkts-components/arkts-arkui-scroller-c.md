@@ -10,7 +10,6 @@ Defines a controller for scrollable container components.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -27,7 +26,6 @@ A constructor used to create a <em>Scroller</em> object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="contentsize"></a>
 ## contentSize
 
 ```TypeScript
@@ -58,7 +56,6 @@ Obtains the content size.
 | --- | --- |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
-<a id="currentoffset"></a>
 ## currentOffset
 
 ```TypeScript
@@ -83,7 +80,6 @@ Obtains the current scrolling offset.
 | --- | --- |
 | [OffsetResult](arkts-arkui-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is void. |
 
-<a id="fling"></a>
 ## fling
 
 ```TypeScript
@@ -115,7 +111,6 @@ Performs inertial scrolling based on the initial velocity passed in.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
-<a id="getframenode"></a>
 ## getFrameNode
 
 ```TypeScript
@@ -140,7 +135,6 @@ Obtains the FrameNode corresponding to this scroller.
 | --- | --- |
 | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | Returns the FrameNode bound to this scroller.If the scroller is not bound to a component, the return value is undefined. |
 
-<a id="getitemindex"></a>
 ## getItemIndex
 
 ```TypeScript
@@ -181,7 +175,6 @@ Obtains the index of a child component based on coordinates.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
-<a id="getitemrect"></a>
 ## getItemRect
 
 ```TypeScript
@@ -221,7 +214,6 @@ Obtains the size and position of a child component relative to its container.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
-<a id="isatend"></a>
 ## isAtEnd
 
 ```TypeScript
@@ -248,7 +240,6 @@ Checks whether the component has scrolled to the bottom.
 | --- | --- |
 | boolean | Returns whether the component scrolls to the end position. |
 
-<a id="offset"></a>
 ## offset
 
 ```TypeScript
@@ -273,7 +264,6 @@ Obtains the current scrolling offset.
 | --- | --- |
 | [OffsetResult](arkts-arkui-offsetresult-i.md) | Returns the current scrolling offset.If the scroller not bound to a component, the return value is undefined. |
 
-<a id="scrollby"></a>
 ## scrollBy
 
 ```TypeScript
@@ -299,7 +289,6 @@ Scrolls by the specified amount.
 | dx | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Amount to scroll by in the horizontal direction. The percentage format is not supported. |
 | dy | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Amount to scroll by in the vertical direction. The percentage format is not supported. |
 
-<a id="scrolledge"></a>
 ## scrollEdge
 
 ```TypeScript
@@ -323,7 +312,6 @@ Scrolls to the edge of the container, regardless of the scroll axis direction.By
 | value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | Edge position to scroll to.<br><em>Atomic service API</em>: This API can be used in atomic services since API version 11. |
 | options | [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | No | Mode of scrolling to the edge position.<br><em>Atomic service API</em>: This API can be used in atomic services since API version 12.<br>**Since:** 12 |
 
-<a id="scrollpage"></a>
 ## scrollPage
 
 ```TypeScript
@@ -346,7 +334,6 @@ Scrolls to the next or previous page.
 | --- | --- | --- | --- |
 | value | [ScrollPageOptions](arkts-arkui-scrollpageoptions-i.md) | Yes | Page turning mode.<br>**Since:** 14 |
 
-<a id="scrollpage-1"></a>
 ## scrollPage
 
 ```TypeScript
@@ -359,7 +346,7 @@ Scrolls to the next or previous page.
 
 **Deprecated since:** 9
 
-**Substitutes:** [scrollPage](arkts-arkui-scroller-c.md#scrollpage-1)
+**Substitutes:** [scrollPage](arkts-arkui-scroller-c.md#scrollpage)
 
 <!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })--><!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })-End-->
 
@@ -371,7 +358,6 @@ Scrolls to the next or previous page.
 | --- | --- | --- | --- |
 | value | { next: boolean; direction?: Axis } | Yes | next: Whether to turn to the next page.The value <em>true</em> means to scroll to the next page, and <em>false</em> means to scroll to the previous page.direction: Scrolling direction: horizontal or vertical. |
 
-<a id="scrollto"></a>
 ## scrollTo
 
 ```TypeScript
@@ -396,7 +382,6 @@ Scrolls to the specified position.Anonymous Object Rectification.
 | --- | --- | --- | --- |
 | options | [ScrollOptions](arkts-arkui-scrolloptions-i.md) | Yes | Parameters for scrolling to the specified position.<br>**Since:** 18 |
 
-<a id="scrolltoindex"></a>
 ## scrollToIndex
 
 ```TypeScript

@@ -10,7 +10,6 @@ Provides methods for accessing IsoDep tag.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-<a id="gethilayerresponse"></a>
 ## getHiLayerResponse
 
 ```TypeScript
@@ -33,7 +32,6 @@ Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technol
 | --- | --- |
 | number[] | Returns HiLayer Response bytes, the length could be 0. |
 
-<a id="gethistoricalbytes"></a>
 ## getHistoricalBytes
 
 ```TypeScript
@@ -56,7 +54,6 @@ Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology.It
 | --- | --- |
 | number[] | Returns the Historical bytes, the length could be 0. |
 
-<a id="isextendedapdusupported"></a>
 ## isExtendedApduSupported
 
 ```TypeScript
@@ -90,7 +87,6 @@ Checks if extended apdu length supported or not.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="isextendedapdusupported-1"></a>
 ## isExtendedApduSupported
 
 ```TypeScript

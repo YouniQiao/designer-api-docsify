@@ -6,7 +6,6 @@
 import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
-<a id="on"></a>
 ## on('notify')
 
 ```TypeScript

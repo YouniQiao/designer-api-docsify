@@ -8,7 +8,6 @@ Defines a common transition animation for page transitions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ A constructor used to create a common transition animation.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="opacity"></a>
 ## opacity
 
 ```TypeScript
@@ -54,7 +52,6 @@ Sets the starting opacity value for entrance or the ending opacity value for exi
 | --- | --- |
 | T | Current component. |
 
-<a id="scale"></a>
 ## scale
 
 ```TypeScript
@@ -83,7 +80,6 @@ Sets the scaling effect for page transitions.
 | --- | --- |
 | T | Current component. |
 
-<a id="slide"></a>
 ## slide
 
 ```TypeScript
@@ -112,7 +108,6 @@ Sets the slide-in and slide-out effects for page transitions.
 | --- | --- |
 | T | Current component. |
 
-<a id="translate"></a>
 ## translate
 
 ```TypeScript

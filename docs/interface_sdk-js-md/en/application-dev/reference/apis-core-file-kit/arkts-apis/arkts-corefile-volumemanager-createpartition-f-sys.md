@@ -6,7 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="createpartition"></a>
 ## createPartition
 
 ```TypeScript

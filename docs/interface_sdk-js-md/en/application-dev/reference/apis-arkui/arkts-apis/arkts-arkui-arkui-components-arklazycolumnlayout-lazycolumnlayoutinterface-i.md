@@ -14,7 +14,6 @@ Defines the lazy column layout component.
 import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

@@ -8,7 +8,6 @@ Provides the information about the component corresponding to the gesture recogn
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getid"></a>
 ## getId
 
 ```TypeScript
@@ -31,9 +30,8 @@ Obtains the ID of this component.
 
 | Type | Description |
 | --- | --- |
-| string | [ID](../arkts-components/arkts-arkui-commonmethod-c.md#id-1) of the current component. |
+| string | [ID](../arkts-components/arkts-arkui-commonmethod-c.md#id) of the current component. |
 
-<a id="getuniqueid"></a>
 ## getUniqueId
 
 ```TypeScript

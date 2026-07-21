@@ -12,7 +12,6 @@ Inherits [TextBaseController](arkts-arkui-textbasecontroller-i.md).
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getcaretoffset"></a>
 ## getCaretOffset
 
 ```TypeScript
@@ -37,7 +36,6 @@ Obtains the current position of the caret.
 | --- | --- |
 | number | Position of the caret. |
 
-<a id="getpreviewtext"></a>
 ## getPreviewText
 
 ```TypeScript
@@ -62,7 +60,6 @@ Obtains the preview text.
 | --- | --- |
 | [PreviewText](arkts-arkui-previewtext-i.md) | Preview text. |
 
-<a id="isediting"></a>
 ## isEditing
 
 ```TypeScript
@@ -87,7 +84,6 @@ Obtains the editing status of the rich text.
 | --- | --- |
 | boolean | Editing status of the rich text. **true** means that the text is in editable state, and **false** means the opposite. |
 
-<a id="setcaretoffset"></a>
 ## setCaretOffset
 
 ```TypeScript
@@ -118,7 +114,6 @@ Sets the offset of the caret.
 | --- | --- |
 | boolean | Whether the caret offset is set successfully.<br>Returns **true** if it is set successfully; returns **false** otherwise. |
 
-<a id="stopediting"></a>
 ## stopEditing
 
 ```TypeScript

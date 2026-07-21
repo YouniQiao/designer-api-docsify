@@ -6,7 +6,6 @@
 import { restrictions } from '@kit.MDMKit';
 ```
 
-<a id="ismicrophonedisabled"></a>
 ## isMicrophoneDisabled
 
 ```TypeScript
@@ -19,7 +18,7 @@ Queries whether the microphone is disabled.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedPolicy(admin:](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy-1)
+**Substitutes:** [getDisallowedPolicy(admin:](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 

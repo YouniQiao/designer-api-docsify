@@ -2,11 +2,11 @@
 
 The **ImageSource** class provides APIs to obtain image information.
 
-Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) to create an ImageSource instance.
+Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) to create an ImageSource instance.
 
 All APIs in ImageSource cannot be called concurrently.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -20,7 +20,6 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="createimagerawdata"></a>
 ## createImageRawData
 
 ```TypeScript
@@ -50,7 +49,6 @@ Obtains raw data from an image.
 | [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
 
-<a id="createpicture"></a>
 ## createPicture
 
 ```TypeScript
@@ -59,7 +57,7 @@ createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 
 Creates a Picture object based on decoding options. This API uses a promise to return the result.
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release-1) to free the memory promptly.
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly.
 
 Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
@@ -89,7 +87,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Decode failed. |
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**Applicable version:** 24 and later |
 
-<a id="createpictureatindex"></a>
 ## createPictureAtIndex
 
 ```TypeScript
@@ -98,7 +95,7 @@ createPictureAtIndex(index: number): Promise<Picture>
 
 Creates a **Picture** object using a specified image (only GIF and HEIF<sup>23+</sup> images currently). This API uses a promise to return the result.
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release-1) to free the memory promptly.
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly.
 
 Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
@@ -130,7 +127,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | [7700203](../errorcode-image.md#7700203-unsupported-options) | Unsupported options. For example, index is invalid. |
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
 
-<a id="createpixelmap"></a>
 ## createPixelMap
 
 ```TypeScript
@@ -139,14 +135,13 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 
 Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result.
 
-Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](arkts-image-image-imagesource-i.md#createpixelmapusingallocator-1). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](docroot://media/image/image-allocator-type.md).
-
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](arkts-image-image-imagesource-i.md#createpixelmapusingallocator). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 > **NOTE**  
 >  
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
 >  
 > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-> [release](arkts-image-image-pixelmap-i.md#release-1) to free the memory promptly.  
+> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.  
 >  
 > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
 > finished and the instance is no longer needed.
@@ -173,7 +168,6 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 | --- | --- |
 | Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
-<a id="createpixelmap-1"></a>
 ## createPixelMap
 
 ```TypeScript
@@ -182,14 +176,13 @@ createPixelMap(callback: AsyncCallback<PixelMap>): void
 
 Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result.
 
-Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](arkts-image-image-imagesource-i.md#createpixelmapusingallocator-1). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](docroot://media/image/image-allocator-type.md).
-
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](arkts-image-image-imagesource-i.md#createpixelmapusingallocator). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 > **NOTE**  
 >  
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
 >  
 > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-> [release](arkts-image-image-pixelmap-i.md#release-1) to free the memory promptly.  
+> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.  
 >  
 > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
 > finished and the instance is no longer needed.
@@ -210,7 +203,6 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
 
-<a id="createpixelmap-2"></a>
 ## createPixelMap
 
 ```TypeScript
@@ -219,14 +211,13 @@ createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): voi
 
 Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.
 
-Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](arkts-image-image-imagesource-i.md#createpixelmapusingallocator-1). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](docroot://media/image/image-allocator-type.md).
-
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](arkts-image-image-imagesource-i.md#createpixelmapusingallocator). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 > **NOTE**  
 >  
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
 >  
 > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-> [release](arkts-image-image-pixelmap-i.md#release-1) to free the memory promptly.  
+> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.  
 >  
 > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
 > finished and the instance is no longer needed.
@@ -248,7 +239,6 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 | options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | Yes | Decoding options. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
 
-<a id="createpixelmaplist"></a>
 ## createPixelMapList
 
 ```TypeScript
@@ -258,13 +248,12 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 Creates an array of PixelMap objects based on decoding options. This API uses a promise to return the result.
 
 For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
-
 > **NOTE**  
 >  
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
 >  
 > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-> [release](arkts-image-image-pixelmap-i.md#release-1) to free the memory promptly.  
+> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.  
 >  
 > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
 > finished and the instance is no longer needed.  
@@ -310,7 +299,6 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
 
-<a id="createpixelmaplist-1"></a>
 ## createPixelMapList
 
 ```TypeScript
@@ -320,13 +308,12 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 Creates an array of PixelMap objects based on the default parameters. This API uses an asynchronous callback to return the result.
 
 For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
-
 > **NOTE**  
 >  
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
 >  
 > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-> [release](arkts-image-image-pixelmap-i.md#release-1) to free the memory promptly.  
+> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.  
 >  
 > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
 > finished and the instance is no longer needed.  
@@ -366,7 +353,6 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
 
-<a id="createpixelmaplist-2"></a>
 ## createPixelMapList
 
 ```TypeScript
@@ -376,13 +362,12 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 Creates an array of PixelMap objects based on decoding options. This API uses an asynchronous callback to return the result.
 
 For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
-
 > **NOTE**  
 >  
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
 >  
 > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-> [release](arkts-image-image-pixelmap-i.md#release-1) to free the memory promptly.  
+> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.  
 >  
 > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
 > finished and the instance is no longer needed.  
@@ -423,7 +408,6 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) | The DMA memory data is abnormal. |
 
-<a id="createpixelmapsync"></a>
 ## createPixelMapSync
 
 ```TypeScript
@@ -432,18 +416,17 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 
 Creates a PixelMap object based on decoding options. This API returns the result synchronously.
 
-Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release-1) to free the memory promptly.
+Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
 
 Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Starting from API version 15, you are advised to use [createPixelMapUsingAllocatorSync](arkts-image-image-imagesource-i.md#createpixelmapusingallocatorsync-1). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](docroot://media/image/image-allocator-type.md).
-
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocatorSync](arkts-image-image-imagesource-i.md#createpixelmapusingallocatorsync). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 > **NOTE**  
 >  
 > This API operates synchronously and will block the current thread during execution. It should not be invoked  
 > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For  
 > details, see  
-> [Overview of Concurrency in Time-Consuming Tasks](docroot://arkts-utils/time-consuming-task-overview.md).
+> [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 12
 
@@ -463,21 +446,19 @@ Starting from API version 15, you are advised to use [createPixelMapUsingAllocat
 | --- | --- |
 | [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. |
 
-<a id="createpixelmapusingallocator"></a>
 ## createPixelMapUsingAllocator
 
 ```TypeScript
 createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>
 ```
 
-Creates a PixelMap object based on decoding options and memory type. This API uses a promise to return the result. For details, see [Optimizing Memory for Image Decoding (ArkTS)](docroot://media/image/image-allocator-type.md).
-
+Creates a PixelMap object based on decoding options and memory type. This API uses a promise to return the result. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 > **NOTE**  
 >  
 > - This method is not thread-safe and does not support concurrent calls on the same ImageSource instance.  
 >  
 > - Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-> [release](arkts-image-image-pixelmap-i.md#release-1) to free the memory promptly.  
+> [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.  
 >  
 > - Before releasing the instance, ensure that all asynchronous operations associated with the instance have  
 > finished and the instance is no longer needed.
@@ -514,25 +495,23 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
 | [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
 
-<a id="createpixelmapusingallocatorsync"></a>
 ## createPixelMapUsingAllocatorSync
 
 ```TypeScript
 createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap
 ```
 
-Creates a PixelMap object based on decoding options and memory type. This API returns the result synchronously.For details, see [Optimizing Memory for Image Decoding (ArkTS)](docroot://media/image/image-allocator-type.md).
+Creates a PixelMap object based on decoding options and memory type. This API returns the result synchronously.For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 
-Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release-1) to free the memory promptly.
+Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
 
 Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
 > **NOTE**  
 >  
 > This API operates synchronously and will block the current thread during execution. It should not be invoked  
 > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For  
 > details, see  
-> [Overview of Concurrency in Time-Consuming Tasks](docroot://arkts-utils/time-consuming-task-overview.md).
+> [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 15
 
@@ -566,7 +545,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | [7700301](../errorcode-image.md#7700301-decoding-failure) | Failed to decode image. |
 | [7700302](../errorcode-image.md#7700302-memory-allocation-failed) | Failed to allocate memory. |
 
-<a id="createthumbnail"></a>
 ## createThumbnail
 
 ```TypeScript
@@ -606,7 +584,6 @@ Creates a thumbnail image based on image decoding parameters.This method uses a 
 | [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
 | [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
 
-<a id="createthumbnailsync"></a>
 ## createThumbnailSync
 
 ```TypeScript
@@ -646,7 +623,6 @@ Synchronously creates a thumbnail image based on image decoding parameters.This 
 | [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) | Image does not carry thumbnail data. |
 | [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) | Thumbnail generation failed. |
 
-<a id="getdelaytimelist"></a>
 ## getDelayTimeList
 
 ```TypeScript
@@ -680,7 +656,6 @@ Obtains an array of delay times. This API uses a promise to return the result. T
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 
-<a id="getdelaytimelist-1"></a>
 ## getDelayTimeList
 
 ```TypeScript
@@ -714,7 +689,6 @@ Obtains an array of delay times. This API uses an asynchronous callback to retur
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 
-<a id="getdisposaltypelist"></a>
 ## getDisposalTypeList
 
 ```TypeScript
@@ -744,7 +718,6 @@ Obtains the list of disposal types. This API uses a promise to return the result
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
 
-<a id="getframecount"></a>
 ## getFrameCount
 
 ```TypeScript
@@ -779,7 +752,6 @@ Obtains the number of frames. This API uses a promise to return the result.
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 
-<a id="getframecount-1"></a>
 ## getFrameCount
 
 ```TypeScript
@@ -814,7 +786,6 @@ Obtains the number of frames. This API uses an asynchronous callback to return t
 | [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) | Failed to decode the image header. |
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 
-<a id="getimageinfo"></a>
 ## getImageInfo
 
 ```TypeScript
@@ -840,7 +811,6 @@ Obtains the image information with the specified index. This API uses an asynchr
 | index | number | Yes | Index of the image source. The default value is **0**, indicating the first image. If this parameter is set to N, the (N+1)th image is used. For single-frame images, the value is always **0**. For multi-frame images such as animations, the value ranges from 0 to (Number of frames – 1). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
 
-<a id="getimageinfo-1"></a>
 ## getImageInfo
 
 ```TypeScript
@@ -865,7 +835,6 @@ Obtains the image information. This API uses an asynchronous callback to return 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
 
-<a id="getimageinfo-2"></a>
 ## getImageInfo
 
 ```TypeScript
@@ -896,7 +865,6 @@ Obtains the image information. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;ImageInfo&gt; | Promise used to return the image information. |
 
-<a id="getimageinfosync"></a>
 ## getImageInfoSync
 
 ```TypeScript
@@ -904,13 +872,12 @@ getImageInfoSync(index?: number): ImageInfo
 ```
 
 Obtains the image information with the specified index. This API returns the result synchronously.
-
 > **NOTE**  
 >  
 > This API operates synchronously and will block the current thread during execution. It should not be invoked  
 > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For  
 > details, see  
-> [Overview of Concurrency in Time-Consuming Tasks](docroot://arkts-utils/time-consuming-task-overview.md).
+> [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 12
 
@@ -930,7 +897,6 @@ Obtains the image information with the specified index. This API returns the res
 | --- | --- |
 | [ImageInfo](arkts-image-image-imageinfo-i.md) | Image information. |
 
-<a id="getimageproperties"></a>
 ## getImageProperties
 
 ```TypeScript
@@ -969,7 +935,6 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP<sup>23+</sup>,
 | [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format.The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
 
-<a id="getimageproperty"></a>
 ## getImageProperty
 
 ```TypeScript
@@ -1016,7 +981,6 @@ This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, WEBP<
 | [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) | The image does not support EXIF decoding. |
 | [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
 
-<a id="getimageproperty-1"></a>
 ## getImageProperty
 
 ```TypeScript
@@ -1031,7 +995,7 @@ This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WE
 
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty(key:](arkts-image-image-imagesource-i.md#getimageproperty-1)
+**Substitutes:** [getImageProperty(key:](arkts-image-image-imagesource-i.md#getimageproperty)
 
 <!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>-End-->
 
@@ -1050,7 +1014,6 @@ This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WE
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
 
-<a id="getimageproperty-2"></a>
 ## getImageProperty
 
 ```TypeScript
@@ -1065,7 +1028,7 @@ This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WE
 
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty(key:](arkts-image-image-imagesource-i.md#getimageproperty-1)
+**Substitutes:** [getImageProperty(key:](arkts-image-image-imagesource-i.md#getimageproperty)
 
 <!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -1078,7 +1041,6 @@ This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WE
 | key | string | Yes | Name of the property. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
 
-<a id="getimageproperty-3"></a>
 ## getImageProperty
 
 ```TypeScript
@@ -1091,7 +1053,7 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty(key:](arkts-image-image-imagesource-i.md#getimageproperty-1)
+**Substitutes:** [getImageProperty(key:](arkts-image-image-imagesource-i.md#getimageproperty)
 
 <!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void-End-->
 
@@ -1105,7 +1067,6 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 | options | [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | Yes | Image properties, including the image index and default property value. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the property value obtained; otherwise, **err** is an error object. |
 
-<a id="getimagepropertysync"></a>
 ## getImagePropertySync
 
 ```TypeScript
@@ -1113,7 +1074,6 @@ getImagePropertySync(key: PropertyKey): string
 ```
 
 Obtains the value of a specified Exif property. This API returns the result synchronously.
-
 > **NOTE**  
 >  
 > - This API applies only to images that are in JPEG, PNG, HEIF, WEBP<sup>23+</sup>, or DNG<sup>23+</sup>format  
@@ -1125,7 +1085,7 @@ Obtains the value of a specified Exif property. This API returns the result sync
 > - This API operates synchronously and will block the current thread during execution. It should not be invoked  
 > from the main thread, as doing so can lead to application lag, frame drops, or delayed responsiveness. For  
 > details, see  
-> [Overview of Concurrency in Time-Consuming Tasks](docroot://arkts-utils/time-consuming-task-overview.md).
+> [Overview of Concurrency in Time-Consuming Tasks](../../../arkts-utils/time-consuming-task-overview.md).
 
 **Since:** 20
 
@@ -1153,7 +1113,6 @@ Obtains the value of a specified Exif property. This API returns the result sync
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, key is not supported. |
 
-<a id="modifyimageproperties"></a>
 ## modifyImageProperties
 
 ```TypeScript
@@ -1163,7 +1122,6 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 Modifies the values of properties in this image. This API uses a promise to return the result.
 
 This API applies only to images that are in JPEG, PNG, HEIF, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-
 > **NOTE**  
 >  
 > The property byte length is changed when the **modifyImageProperties** API is called to modify the values of  
@@ -1197,7 +1155,6 @@ This API applies only to images that are in JPEG, PNG, HEIF, or WEBP<sup>23+</su
 | [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
 | [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
 
-<a id="modifyimagepropertiesenhanced"></a>
 ## modifyImagePropertiesEnhanced
 
 ```TypeScript
@@ -1205,18 +1162,17 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 ```
 
 Modifies image properties in batches. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - Calling this API to modify properties alters the property byte length. You are advised to create an  
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) instance by passing a  
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by passing a  
 > file descriptor or an  
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) instance by  
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by  
 > passing a URI.  
 >  
 > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more  
 > efficient than  
-> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties-1)  
+> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)  
 > .  
 >  
 > - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
@@ -1247,7 +1203,6 @@ Modifies image properties in batches. This API uses a promise to return the resu
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported,or the property value is invalid. |
 | [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
 
-<a id="modifyimageproperty"></a>
 ## modifyImageProperty
 
 ```TypeScript
@@ -1257,7 +1212,6 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 Modifies the value of a property in this image. This API uses a promise to return the result.
 
 This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-
 > **NOTE**  
 >  
 > The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a  
@@ -1293,7 +1247,6 @@ This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WE
 | [62980135](../errorcode-image.md#62980135-invalid-image-property-value) | The EXIF value is invalid. |
 | [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) | The EXIF data failed to be written to the file. |
 
-<a id="modifyimageproperty-1"></a>
 ## modifyImageProperty
 
 ```TypeScript
@@ -1303,7 +1256,6 @@ modifyImageProperty(key: string, value: string): Promise<void>
 Modifies the value of a property in this image. This API uses a promise to return the result.
 
 This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-
 > **NOTE**  
 >  
 > - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a  
@@ -1314,7 +1266,7 @@ This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WE
 
 **Deprecated since:** 11
 
-**Substitutes:** [modifyImageProperty(key:](arkts-image-image-imagesource-i.md#modifyimageproperty-1)
+**Substitutes:** [modifyImageProperty(key:](arkts-image-image-imagesource-i.md#modifyimageproperty)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>-End-->
 
@@ -1333,7 +1285,6 @@ This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WE
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-<a id="modifyimageproperty-2"></a>
 ## modifyImageProperty
 
 ```TypeScript
@@ -1343,7 +1294,6 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 Modifies the value of a property in this image. This API uses an asynchronous callback to return the result.
 
 This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
-
 > **NOTE**  
 >  
 > - The property byte length is changed when the **modifyImageProperty** API is called to modify the value of a  
@@ -1354,7 +1304,7 @@ This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WE
 
 **Deprecated since:** 11
 
-**Substitutes:** [modifyImageProperty(key:](arkts-image-image-imagesource-i.md#modifyimageproperty-1)
+**Substitutes:** [modifyImageProperty(key:](arkts-image-image-imagesource-i.md#modifyimageproperty)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1368,7 +1318,6 @@ This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WE
 | value | string | Yes | New value of the property. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
-<a id="readimagemetadata"></a>
 ## readImageMetadata
 
 ```TypeScript
@@ -1378,7 +1327,6 @@ readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadat
 Reads image metadata. You can use **propertyKeys** to specify the keys of metadata. This API uses a promise to return the result.
 
 This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format and contain Exif information. (The supported formats may vary depending on the hardware.)
-
 > **NOTE**  
 >  
 > When reading a DNG image, this API applies special handling to some **propertyKeys**. For details about the  
@@ -1435,7 +1383,6 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
 | [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1. The index is negative.2. The index is greater than or equal to the number of frames in the image. |
 
-<a id="readimagemetadatabytype"></a>
 ## readImageMetadataByType
 
 ```TypeScript
@@ -1445,7 +1392,6 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise
 Reads the metadata of an image source. You can use **metadataTypes** to specify the metadata types. If **metadataTypes** is not specified, all supported metadata is returned. This API uses a promise to return the result.
 
 This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS format. (The supported formats may vary depending on the hardware.)
-
 > **NOTE**  
 >  
 > - **EXIF_METADATA** applies to JPEG, PNG, HEIF, WEBP, and DNG images.  
@@ -1483,7 +1429,6 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
 | [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1.The index is negative.2. The index is greater than or equal to the number of frames in the image. |
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -1508,7 +1453,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript
@@ -1533,7 +1477,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-<a id="updatedata"></a>
 ## updateData
 
 ```TypeScript
@@ -1563,7 +1506,6 @@ Updates incremental data. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-<a id="updatedata-1"></a>
 ## updateData
 
 ```TypeScript
@@ -1580,19 +1522,7 @@ Updates incremental data. This API uses an asynchronous callback to return the r
 
 **Since:** 9
 
-<!--Device-ImageSource-updateData(
-      buf: ArrayBuffer,
-      isFinished: boolean,
-      offset: int,
-      length: int,
-      callback: AsyncCallback<void>
-    ): void--><!--Device-ImageSource-updateData(
-      buf: ArrayBuffer,
-      isFinished: boolean,
-      offset: int,
-      length: int,
-      callback: AsyncCallback<void>
-    ): void-End-->
+<!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void--><!--Device-ImageSource-updateData(      buf: ArrayBuffer,      isFinished: boolean,      offset: int,      length: int,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImageSource
 
@@ -1606,7 +1536,6 @@ Updates incremental data. This API uses an asynchronous callback to return the r
 | length | number | Yes | Length of the buffer, in bytes. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
-<a id="writeimagemetadata"></a>
 ## writeImageMetadata
 
 ```TypeScript
@@ -1614,18 +1543,17 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 ```
 
 Modifies image properties in batches. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - Calling this API to modify properties alters the property byte length. You are advised to create an  
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) instance by passing a  
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by passing a  
 > file descriptor or an  
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) instance by  
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by  
 > passing a URI.  
 >  
 > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more  
 > efficient than  
-> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties-1)  
+> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)  
 > .  
 >  
 > - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information.  

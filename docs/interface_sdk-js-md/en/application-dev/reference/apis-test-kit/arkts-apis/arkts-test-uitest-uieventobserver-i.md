@@ -14,7 +14,6 @@ Observer to monitor UI events.
 import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
-<a id="once"></a>
 ## once('toastShow')
 
 ```TypeScript
@@ -63,7 +62,6 @@ async function demo() {
 
 ```
 
-<a id="once-1"></a>
 ## once('dialogShow')
 
 ```TypeScript
@@ -112,14 +110,13 @@ async function demo() {
 
 ```
 
-<a id="once-2"></a>
 ## once('windowChange')
 
 ```TypeScript
 once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void
 ```
 
-Starts listening for window change events of the specified type with extended configuration supported. This API triggers a callback when a specified window change event is detected.This API can be used only in [free windows](docroot://windowmanager/window-terminology.md#free-windows) mode.
+Starts listening for window change events of the specified type with extended configuration supported. This API triggers a callback when a specified window change event is detected.This API can be used only in [free windows](../../../windowmanager/window-terminology.md#free-windows) mode.
 
 **Since:** 22
 
@@ -170,7 +167,6 @@ async function demo() {
 
 ```
 
-<a id="once-3"></a>
 ## once('componentEventOccur')
 
 ```TypeScript

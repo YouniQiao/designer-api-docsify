@@ -1,9 +1,7 @@
 # AlphabetIndexerOptions
 
 Defines the options of the **AlphabetIndexer** component.
-
 > **NOTE**
-
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
 > While historical version information is preserved for anonymous objects, there may be cases where the outer element  
 > 's @since version number is higher than inner elements'. This does not affect interface usability.
@@ -42,7 +40,7 @@ Index of the initial selected item. If the value is out of range, the default va
 
 Value range: [0, arrayValue.length-1]
 
-This parameter supports two-way binding through [$$](docroot://ui/state-management/arkts-two-way-sync.md).
+This parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number
 

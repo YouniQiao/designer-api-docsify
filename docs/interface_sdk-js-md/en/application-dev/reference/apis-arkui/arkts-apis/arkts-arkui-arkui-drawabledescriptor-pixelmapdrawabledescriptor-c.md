@@ -16,7 +16,6 @@ Implements a **PixelMapDrawableDescriptor** object, which can be created by pass
 import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -41,7 +40,6 @@ A constructor used to create a **PixelMapDrawableDescriptor** object.
 | --- | --- | --- | --- |
 | src | image.PixelMap | No | **PixelMap** image data. |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

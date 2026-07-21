@@ -14,7 +14,6 @@ Defines XComponent Node.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="changerendertype"></a>
 ## changeRenderType
 
 ```TypeScript
@@ -47,7 +46,6 @@ Set the render type of the builderNode.
 | --- | --- |
 | boolean | - Returns if change the render type successfully. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -65,9 +63,7 @@ constructor.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-XComponentNode-constructor(uiContext: UIContext, options: RenderOptions,
-    id: string, type: XComponentType, libraryName?: string)--><!--Device-XComponentNode-constructor(uiContext: UIContext, options: RenderOptions,
-    id: string, type: XComponentType, libraryName?: string)-End-->
+<!--Device-XComponentNode-constructor(uiContext: UIContext, options: RenderOptions,    id: string, type: XComponentType, libraryName?: string)--><!--Device-XComponentNode-constructor(uiContext: UIContext, options: RenderOptions,    id: string, type: XComponentType, libraryName?: string)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -81,7 +77,6 @@ constructor.
 | type | [XComponentType](arkts-arkui-xcomponenttype-e.md) | Yes | XComponent type |
 | libraryName | string | No | The name of the library to be loaded by XComponent |
 
-<a id="oncreate"></a>
 ## onCreate
 
 ```TypeScript
@@ -108,7 +103,6 @@ Called when the XComponent surface has been created.
 | --- | --- | --- | --- |
 | event | Object | No | event from native when the library loaded |
 
-<a id="ondestroy"></a>
 ## onDestroy
 
 ```TypeScript

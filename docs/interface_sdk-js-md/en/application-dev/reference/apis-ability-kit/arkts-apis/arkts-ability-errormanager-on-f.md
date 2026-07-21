@@ -6,7 +6,6 @@
 import { errorManager } from '@kit.AbilityKit';
 ```
 
-<a id="on"></a>
 ## on('error')
 
 ```TypeScript
@@ -76,7 +75,6 @@ try {
 ```
 
 
-<a id="on-1"></a>
 ## on('loopObserver')
 
 ```TypeScript
@@ -125,7 +123,6 @@ errorManager.on("loopObserver", 1, observer);
 ```
 
 
-<a id="on-2"></a>
 ## on('unhandledRejection')
 
 ```TypeScript
@@ -183,7 +180,6 @@ let promise1 = new Promise<void>(() => {}).then(() => {
 ```
 
 
-<a id="on-3"></a>
 ## on('globalUnhandledRejectionDetected')
 
 ```TypeScript
@@ -240,7 +236,6 @@ let promise1 = new Promise<void>(() => {}).then(() => {
 ```
 
 
-<a id="on-4"></a>
 ## on('freeze')
 
 ```TypeScript
@@ -250,7 +245,6 @@ function on(type: 'freeze', observer: FreezeObserver): void
 Registers an observer for the main thread freeze event of the application. If the observer is registered multiple times, only the last one takes effect.
 
 This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
-
 > **NOTE**  
 >  
 > If the callback function runs for more than 1 second, the  
@@ -294,7 +288,6 @@ errorManager.on("freeze", freezeCallback);
 ```
 
 
-<a id="on-5"></a>
 ## on('globalErrorOccurred')
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
-<a id="on"></a>
 ## on('colorChange')
 
 ```TypeScript

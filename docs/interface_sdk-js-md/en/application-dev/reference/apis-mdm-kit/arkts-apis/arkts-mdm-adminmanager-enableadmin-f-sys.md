@@ -6,14 +6,13 @@
 import { adminManager } from '@kit.MDMKit';
 ```
 
-<a id="enableadmin"></a>
 ## enableAdmin
 
 ```TypeScript
 function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, callback: AsyncCallback<void>): void
 ```
 
-Enables a device administrator application. The super device administrator application can be activated only by the administrator. After the application is enabled, it cannot be uninstalled. The [EnterpriseAdminExtensionAbility](docroot://mdm/mdm-kit-term.md#enterpriseadminextensionability) component of the application will automatically start upon device startup and user switching. This API uses an asynchronous callback to return the result.
+Enables a device administrator application. The super device administrator application can be activated only by the administrator. After the application is enabled, it cannot be uninstalled. The [EnterpriseAdminExtensionAbility](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability) component of the application will automatically start upon device startup and user switching. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -75,7 +74,6 @@ adminManager.enableAdmin(wantTemp, enterpriseInfo, adminManager.AdminType.ADMIN_
 ```
 
 
-<a id="enableadmin-1"></a>
 ## enableAdmin
 
 ```TypeScript
@@ -145,7 +143,6 @@ adminManager.enableAdmin(wantTemp, enterpriseInfo, adminManager.AdminType.ADMIN_
 ```
 
 
-<a id="enableadmin-2"></a>
 ## enableAdmin
 
 ```TypeScript

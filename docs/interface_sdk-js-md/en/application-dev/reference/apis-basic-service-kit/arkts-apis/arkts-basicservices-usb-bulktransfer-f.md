@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="bulktransfer"></a>
 ## bulkTransfer
 
 ```TypeScript
@@ -20,25 +19,15 @@ function bulkTransfer(
 
 Performs bulk transfer.
 
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices-1) to obtain the USB device list and endpoints, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright-1) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice-1) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface-1) to claim the USB interface.
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list and endpoints, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface) to claim the USB interface.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md#bulktransfer-1)
+**Substitutes:** [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md#bulktransfer)
 
-<!--Device-usb-function bulkTransfer(
-    pipe: USBDevicePipe,
-    endpoint: USBEndpoint,
-    buffer: Uint8Array,
-    timeout?: number
-  ): Promise<number>--><!--Device-usb-function bulkTransfer(
-    pipe: USBDevicePipe,
-    endpoint: USBEndpoint,
-    buffer: Uint8Array,
-    timeout?: number
-  ): Promise<number>-End-->
+<!--Device-usb-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: number  ): Promise<number>--><!--Device-usb-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: number  ): Promise<number>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 

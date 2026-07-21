@@ -8,7 +8,6 @@ Defines the Web resource request.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="getrequestheader"></a>
 ## getRequestHeader
 
 ```TypeScript
@@ -48,7 +46,6 @@ Gets request headers.
 | --- | --- |
 | Array&lt;Header&gt; | Return the request headers |
 
-<a id="getrequestmethod"></a>
 ## getRequestMethod
 
 ```TypeScript
@@ -71,7 +68,6 @@ Get request method.
 | --- | --- |
 | string | Return the request method. |
 
-<a id="getrequesturl"></a>
 ## getRequestUrl
 
 ```TypeScript
@@ -94,7 +90,6 @@ Gets the request URL.
 | --- | --- |
 | string | Return the request URL. |
 
-<a id="ismainframe"></a>
 ## isMainFrame
 
 ```TypeScript
@@ -117,7 +112,6 @@ Check whether the request is for getting the main frame.
 | --- | --- |
 | boolean | Return {@code true} if the request is associated with gesture for getting the main frame;return {@code false} otherwise. |
 
-<a id="isredirect"></a>
 ## isRedirect
 
 ```TypeScript
@@ -140,7 +134,6 @@ Check whether the request redirects.
 | --- | --- |
 | boolean | Return {@code true} if the request redirects; return {@code false} otherwise. |
 
-<a id="isrequestgesture"></a>
 ## isRequestGesture
 
 ```TypeScript

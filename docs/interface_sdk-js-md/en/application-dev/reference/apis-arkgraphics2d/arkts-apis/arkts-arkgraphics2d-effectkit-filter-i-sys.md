@@ -14,7 +14,6 @@ A class used to add a specified effect to an image. Before calling any method of
 import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
-<a id="ellipticalgradientblur"></a>
 ## ellipticalGradientBlur
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { startupManager } from '@kit.AbilityKit';
 ```
 
-<a id="run"></a>
 ## run
 
 ```TypeScript
@@ -14,11 +13,10 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 ```
 
 Runs startup tasks or loads .so files.
-
 > **NOTE**  
 >  
 > This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use  
-> [startupManager.run](arkts-ability-startupmanager-run-f.md#run-1)  
+> [startupManager.run](arkts-ability-startupmanager-run-f.md#run)  
 > .
 
 **Since:** 12
@@ -84,7 +82,6 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="run-1"></a>
 ## run
 
 ```TypeScript
@@ -106,7 +103,7 @@ Runs startup tasks or loads .so files. You can specify [AbilityStageContext](ark
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | startupTasks | Array&lt;string&gt; | Yes | Array of [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)names or names of .so files to be preloaded. |
-| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md). It is passed as an input parameter to [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init-1) of the task. |
+| context | common.AbilityStageContext | Yes | AbilityStage context that executes the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md). It is passed as an input parameter to [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init) of the task. |
 | config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | Yes | Configuration for the timeout duration and listener of startup tasks in AppStartup. |
 
 **Return value:**

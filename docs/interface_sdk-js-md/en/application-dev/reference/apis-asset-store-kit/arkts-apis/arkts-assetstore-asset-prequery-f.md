@@ -6,14 +6,13 @@
 import { asset } from '@kit.AssetStoreKit';
 ```
 
-<a id="prequery"></a>
 ## preQuery
 
 ```TypeScript
 function preQuery(query: AssetMap): Promise<Uint8Array>
 ```
 
-Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.query](arkts-assetstore-asset-query-f.md#query-1) and [asset.postQuery](arkts-assetstore-asset-postquery-f.md#postquery-1). This API uses a promise to return the result.
+Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.query](arkts-assetstore-asset-query-f.md#query) and [asset.postQuery](arkts-assetstore-asset-postquery-f.md#postquery). This API uses a promise to return the result.
 
 **Since:** 11
 

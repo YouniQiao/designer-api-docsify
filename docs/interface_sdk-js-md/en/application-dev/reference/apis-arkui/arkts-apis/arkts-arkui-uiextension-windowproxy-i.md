@@ -14,7 +14,6 @@ The proxy of the UIExtension window.
 import { uiExtension } from '@kit.ArkUI';
 ```
 
-<a id="createsubwindowwithoptions"></a>
 ## createSubWindowWithOptions
 
 ```TypeScript
@@ -103,7 +102,6 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 
 ```
 
-<a id="createsubwindowwithoptions-1"></a>
 ## createSubWindowWithOptions
 
 ```TypeScript
@@ -117,9 +115,7 @@ Create subwindow.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
-        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-WindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,
-        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
+<!--Device-WindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>--><!--Device-WindowProxy-createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOptions,        followCreatorLifecycle: boolean): Promise<window.Window>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -193,7 +189,6 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 
 ```
 
-<a id="getwindowavoidarea"></a>
 ## getWindowAvoidArea
 
 ```TypeScript
@@ -248,7 +243,6 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 
 ```
 
-<a id="occupyevents"></a>
 ## occupyEvents
 
 ```TypeScript
@@ -317,7 +311,6 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 
 ```
 
-<a id="off"></a>
 ## off('avoidAreaChange')
 
 ```TypeScript
@@ -366,7 +359,6 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 
 ```
 
-<a id="off-1"></a>
 ## off('windowSizeChange')
 
 ```TypeScript
@@ -415,7 +407,6 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 
 ```
 
-<a id="off-2"></a>
 ## off('rectChange')
 
 ```TypeScript
@@ -465,7 +456,6 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 
 ```
 
-<a id="on"></a>
 ## on('avoidAreaChange')
 
 ```TypeScript
@@ -517,7 +507,6 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 
 ```
 
-<a id="on-1"></a>
 ## on('windowSizeChange')
 
 ```TypeScript
@@ -569,7 +558,6 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 
 ```
 
-<a id="on-2"></a>
 ## on('rectChange')
 
 ```TypeScript
@@ -631,7 +619,7 @@ properties: WindowProxyProperties
 
 Information about the component (**EmbeddedComponent** or **UIExtensionComponent**).
 
-Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate-1). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](@ohos.arkui.uiExtension:uiExtension.WindowProxy.on(type: 'windowSizeChange', callback: Callback<window.Size>))callback.
+Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](@ohos.arkui.uiExtension:uiExtension.WindowProxy.on(type: 'windowSizeChange', callback: Callback&lt;window.Size&gt;))callback.
 
 **Type:** WindowProxyProperties
 

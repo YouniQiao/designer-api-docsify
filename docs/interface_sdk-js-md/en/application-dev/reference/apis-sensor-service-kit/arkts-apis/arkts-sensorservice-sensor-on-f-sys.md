@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -40,7 +39,6 @@ Subscribes to data of the color sensor.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API.<br>**Applicable version:** 11 and later |
 
 
-<a id="on-1"></a>
 ## on
 
 ```TypeScript

@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface PromiseConstructor--><!--Device-unnamed-interface PromiseConstructor-End-->
 
-<a id="all"></a>
 ## all
 
 ```TypeScript
@@ -25,7 +24,6 @@ Creates a Promise that is resolved with an array of results when all of the prov
 | --- | --- |
 | Promise&lt;Awaited&lt;T&gt;[]&gt; |  |
 
-<a id="race"></a>
 ## race
 
 ```TypeScript

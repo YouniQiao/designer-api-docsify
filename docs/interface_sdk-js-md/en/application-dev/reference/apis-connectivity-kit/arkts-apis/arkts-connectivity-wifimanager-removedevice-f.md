@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="removedevice"></a>
 ## removeDevice
 
 ```TypeScript

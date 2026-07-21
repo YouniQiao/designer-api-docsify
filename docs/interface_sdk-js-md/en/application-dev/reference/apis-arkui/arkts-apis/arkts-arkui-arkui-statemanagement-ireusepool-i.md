@@ -14,7 +14,6 @@ The **IReusePool** API provides the features related to the global reuse pool of
 import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
-<a id="getreusableinfo"></a>
 ## getReusableInfo
 
 ```TypeScript
@@ -30,9 +29,7 @@ Obtains the information about the recycling instance of a given reusable compone
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-IReusePool-getReusableInfo(constructor: ReusableComponentConstructor,
-    reuseId?: string): IReusableInfo[] | IReusableInfo | undefined--><!--Device-IReusePool-getReusableInfo(constructor: ReusableComponentConstructor,
-    reuseId?: string): IReusableInfo[] | IReusableInfo | undefined-End-->
+<!--Device-IReusePool-getReusableInfo(constructor: ReusableComponentConstructor,    reuseId?: string): IReusableInfo[] | IReusableInfo | undefined--><!--Device-IReusePool-getReusableInfo(constructor: ReusableComponentConstructor,    reuseId?: string): IReusableInfo[] | IReusableInfo | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,7 +114,6 @@ struct PoolOwner {
 
 ```
 
-<a id="prerender"></a>
 ## preRender
 
 ```TypeScript

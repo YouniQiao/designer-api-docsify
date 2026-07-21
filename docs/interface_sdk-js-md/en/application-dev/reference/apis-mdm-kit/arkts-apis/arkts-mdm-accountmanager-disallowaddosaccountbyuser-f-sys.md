@@ -6,7 +6,6 @@
 import { accountManager } from '@kit.MDMKit';
 ```
 
-<a id="disallowaddosaccountbyuser"></a>
 ## disallowAddOsAccountByUser
 
 ```TypeScript
@@ -19,7 +18,7 @@ Disallows a user to add accounts.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowosaccountaddition-1)
+**Substitutes:** [disallowOsAccountAddition](arkts-mdm-accountmanager-disallowosaccountaddition-f.md#disallowosaccountaddition)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 

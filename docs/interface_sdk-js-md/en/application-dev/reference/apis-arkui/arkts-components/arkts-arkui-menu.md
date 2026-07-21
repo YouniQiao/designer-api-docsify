@@ -23,7 +23,6 @@ Menu()
 ```
 
 Creates a fixed container for a menu. This API does not have any parameters.
-
 > **NOTE**  
 >  
 > - Rules for calculating the width of menus and menu items:  

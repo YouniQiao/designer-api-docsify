@@ -12,7 +12,6 @@ Customize spring properties.
 
 **System API:** This is a system API.
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

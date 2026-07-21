@@ -16,7 +16,6 @@ Represents the edited media asset data.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

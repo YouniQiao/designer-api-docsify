@@ -18,7 +18,6 @@ Provides APIs for managing the analysis album change request.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -74,7 +73,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="createanalysisalbumrequest"></a>
 ## createAnalysisAlbumRequest
 
 ```TypeScript
@@ -86,28 +84,19 @@ static createAnalysisAlbumRequest(
 ```
 
 Creates a change request for the **Analysis** album.
-
 > **NOTE**  
 >  
 > The album name must meet the following requirements:  
 >  
 > - The album name string length ranges from 1 to 255.  
 >  
-> - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` < > | { } [ ]
+> - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(
-      context:Context,
-      name: string,
-      subtype: AlbumSubtype
-    ): MediaAnalysisAlbumChangeRequest--><!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(
-      context:Context,
-      name: string,
-      subtype: AlbumSubtype
-    ): MediaAnalysisAlbumChangeRequest-End-->
+<!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(      context:Context,      name: string,      subtype: AlbumSubtype    ): MediaAnalysisAlbumChangeRequest--><!--Device-MediaAnalysisAlbumChangeRequest-static createAnalysisAlbumRequest(      context:Context,      name: string,      subtype: AlbumSubtype    ): MediaAnalysisAlbumChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -154,7 +143,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 
 ```
 
-<a id="setdefaultcoveruri"></a>
 ## setDefaultCoverUri
 
 ```TypeScript
@@ -236,7 +224,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="setorderposition"></a>
 ## setOrderPosition
 
 ```TypeScript
@@ -316,7 +303,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="setrelationship"></a>
 ## setRelationship
 
 ```TypeScript

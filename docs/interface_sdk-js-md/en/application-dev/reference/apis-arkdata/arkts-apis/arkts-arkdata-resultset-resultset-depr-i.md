@@ -12,7 +12,6 @@ A result set is a set of results returned after the relational database (RDB) qu
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -31,7 +30,6 @@ Closes this result set.
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-<a id="getblob"></a>
 ## getBlob
 
 ```TypeScript
@@ -62,7 +60,6 @@ Obtains the value from the specified column in the current row as a byte array.
 | --- | --- |
 | Uint8Array | Value in the specified column as a byte array. |
 
-<a id="getcolumnindex"></a>
 ## getColumnIndex
 
 ```TypeScript
@@ -93,7 +90,6 @@ Obtains the column index based on the column name.
 | --- | --- |
 | number | Index of the column obtained. |
 
-<a id="getcolumnname"></a>
 ## getColumnName
 
 ```TypeScript
@@ -124,7 +120,6 @@ Obtains the column name based on the column index.
 | --- | --- |
 | string | Column name obtained. |
 
-<a id="getdouble"></a>
 ## getDouble
 
 ```TypeScript
@@ -155,7 +150,6 @@ Obtains the value from the specified column in the current row as a Double.
 | --- | --- |
 | number | Value in the specified column as a Double. |
 
-<a id="getlong"></a>
 ## getLong
 
 ```TypeScript
@@ -184,9 +178,8 @@ Obtains the value from the specified column in the current row as a Long.
 
 | Type | Description |
 | --- | --- |
-| number | Value in the specified column as a Long.<br>The value range supported by this API is **Number.MIN_SAFE_INTEGER** to **Number.MAX_SAFE_INTEGER**. If the value is out of this range, use [getDouble](arkts-arkdata-resultset-resultset-depr-i.md#getdouble-1). |
+| number | Value in the specified column as a Long.<br>The value range supported by this API is **Number.MIN_SAFE_INTEGER** to **Number.MAX_SAFE_INTEGER**. If the value is out of this range, use [getDouble](arkts-arkdata-resultset-resultset-depr-i.md#getdouble). |
 
-<a id="getstring"></a>
 ## getString
 
 ```TypeScript
@@ -217,7 +210,6 @@ Obtains the value from the specified column in the current row as a string.
 | --- | --- |
 | string | Value in the specified column as a string. |
 
-<a id="goto"></a>
 ## goTo
 
 ```TypeScript
@@ -248,7 +240,6 @@ Moves the result set forward or backward to the specified row with an offset rel
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-<a id="gotofirstrow"></a>
 ## goToFirstRow
 
 ```TypeScript
@@ -273,7 +264,6 @@ Moves the cursor to the first row of the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-<a id="gotolastrow"></a>
 ## goToLastRow
 
 ```TypeScript
@@ -298,7 +288,6 @@ Moves the cursor to the last row of the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-<a id="gotonextrow"></a>
 ## goToNextRow
 
 ```TypeScript
@@ -323,7 +312,6 @@ Moves the cursor to the next row in the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-<a id="gotopreviousrow"></a>
 ## goToPreviousRow
 
 ```TypeScript
@@ -348,7 +336,6 @@ Moves the cursor to the previous row in the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-<a id="gotorow"></a>
 ## goToRow
 
 ```TypeScript
@@ -379,7 +366,6 @@ Moves the cursor to the specified row in the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
-<a id="iscolumnnull"></a>
 ## isColumnNull
 
 ```TypeScript

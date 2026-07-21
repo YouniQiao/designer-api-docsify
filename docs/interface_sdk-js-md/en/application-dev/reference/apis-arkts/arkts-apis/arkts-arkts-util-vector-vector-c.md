@@ -3,7 +3,6 @@
 Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the current memory area is reclaimed. Vector can be used to efficiently access elements.Both Vector and [ArrayList](arkts-util-arraylist.md) are implemented based on arrays, but Vector provides more interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity each time, whereas ArrayList increases the capacity by 50%.**Recommended use case**: Use Vector when the data volume is large.This topic uses the following to identify the use of generics:
 
 - T: Type
-
 > **NOTE**  
 >  
 > - The APIs provided by this module are deprecated since API version 9. You are advised to use  
@@ -25,7 +24,6 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 import { Vector } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -72,7 +70,6 @@ while(temp != undefined) {
 
 ```
 
-<a id="add"></a>
 ## add
 
 ```TypeScript
@@ -118,7 +115,6 @@ let result3 = vector.add(c);
 
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -147,7 +143,6 @@ vector.clear();
 
 ```
 
-<a id="clone"></a>
 ## clone
 
 ```TypeScript
@@ -182,7 +177,6 @@ let result = vector.clone();
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -206,7 +200,6 @@ let vector : Vector<string | number | Array<number>> = new Vector();
 
 ```
 
-<a id="converttoarray"></a>
 ## convertToArray
 
 ```TypeScript
@@ -241,7 +234,6 @@ let result = vector.convertToArray();
 
 ```
 
-<a id="copytoarray"></a>
 ## copyToArray
 
 ```TypeScript
@@ -264,7 +256,6 @@ Copies elements in this Vector into an array to overwrite elements of the same p
 | --- | --- | --- | --- |
 | array | Array&lt;T&gt; | Yes | Array to which the elements in the Vector will be copied. |
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -302,7 +293,6 @@ vector.forEach((value : number, index ?: number) : void => {
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -343,7 +333,6 @@ let result = vector.get(2);
 
 ```
 
-<a id="getcapacity"></a>
 ## getCapacity
 
 ```TypeScript
@@ -378,7 +367,6 @@ let result = vector.getCapacity();
 
 ```
 
-<a id="getfirstelement"></a>
 ## getFirstElement
 
 ```TypeScript
@@ -413,7 +401,6 @@ let result = vector.getFirstElement();
 
 ```
 
-<a id="getindexfrom"></a>
 ## getIndexFrom
 
 ```TypeScript
@@ -455,7 +442,6 @@ let result = vector.getIndexFrom(4, 3);
 
 ```
 
-<a id="getindexof"></a>
 ## getIndexOf
 
 ```TypeScript
@@ -499,7 +485,6 @@ let result = vector.getIndexOf(2);
 
 ```
 
-<a id="getlastelement"></a>
 ## getLastElement
 
 ```TypeScript
@@ -534,7 +519,6 @@ let result = vector.getLastElement();
 
 ```
 
-<a id="getlastindexfrom"></a>
 ## getLastIndexFrom
 
 ```TypeScript
@@ -576,7 +560,6 @@ let result = vector.getLastIndexFrom(4,3);
 
 ```
 
-<a id="getlastindexof"></a>
 ## getLastIndexOf
 
 ```TypeScript
@@ -620,7 +603,6 @@ let result = vector.getLastIndexOf(2);
 
 ```
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -659,7 +641,6 @@ let result1 = vector.has("squirrel");
 
 ```
 
-<a id="increasecapacityto"></a>
 ## increaseCapacityTo
 
 ```TypeScript
@@ -695,7 +676,6 @@ vector.increaseCapacityTo(12);
 
 ```
 
-<a id="insert"></a>
 ## insert
 
 ```TypeScript
@@ -729,7 +709,6 @@ vector.insert(true, 2);
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -764,7 +743,6 @@ let result = vector.isEmpty();
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -805,7 +783,6 @@ let result = vector.remove(2);
 
 ```
 
-<a id="removebyindex"></a>
 ## removeByIndex
 
 ```TypeScript
@@ -847,7 +824,6 @@ let result = vector.removeByIndex(2);
 
 ```
 
-<a id="removebyrange"></a>
 ## removeByRange
 
 ```TypeScript
@@ -883,7 +859,6 @@ vector.removeByRange(2,4);
 
 ```
 
-<a id="replaceallelements"></a>
 ## replaceAllElements
 
 ```TypeScript
@@ -922,7 +897,6 @@ vector.replaceAllElements((value : number) : number => {
 
 ```
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
@@ -952,7 +926,6 @@ Replaces an element at the specified position in this Vector with a given elemen
 | --- | --- |
 | T | New element. |
 
-<a id="setlength"></a>
 ## setLength
 
 ```TypeScript
@@ -988,7 +961,6 @@ vector.setLength(2);
 
 ```
 
-<a id="sort"></a>
 ## sort
 
 ```TypeScript
@@ -1025,7 +997,6 @@ vector.sort();
 
 ```
 
-<a id="subvector"></a>
 ## subVector
 
 ```TypeScript
@@ -1071,7 +1042,6 @@ let result1 = vector.subVector(2,4);
 
 ```
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -1106,7 +1076,6 @@ let result = vector.toString();
 
 ```
 
-<a id="trimtocurrentlength"></a>
 ## trimToCurrentLength
 
 ```TypeScript

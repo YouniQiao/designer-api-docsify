@@ -1,7 +1,6 @@
 # SamplingOptions
 
 Implements sampling options.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 12.  
@@ -23,7 +22,6 @@ Implements sampling options.
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -38,7 +36,6 @@ Creates a **SamplingOptions** object, where the default value of [FilterMode](ar
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

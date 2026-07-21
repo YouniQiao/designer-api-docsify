@@ -6,7 +6,6 @@
 import { freeInstall } from '@kit.AbilityKit';
 ```
 
-<a id="sethapmoduleupgradeflag"></a>
 ## setHapModuleUpgradeFlag
 
 ```TypeScript
@@ -20,9 +19,7 @@ Sets an upgrade flag for a module. This API uses an asynchronous callback to ret
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
-<!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string, 
-    moduleName: string, upgradeFlag: UpgradeFlag, callback: AsyncCallback<void>): void--><!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string, 
-    moduleName: string, upgradeFlag: UpgradeFlag, callback: AsyncCallback<void>): void-End-->
+<!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string,     moduleName: string, upgradeFlag: UpgradeFlag, callback: AsyncCallback<void>): void--><!--Device-freeInstall-function setHapModuleUpgradeFlag(bundleName: string,     moduleName: string, upgradeFlag: UpgradeFlag, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
@@ -49,7 +46,6 @@ Sets an upgrade flag for a module. This API uses an asynchronous callback to ret
 | [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
 
 
-<a id="sethapmoduleupgradeflag-1"></a>
 ## setHapModuleUpgradeFlag
 
 ```TypeScript

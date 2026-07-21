@@ -8,7 +8,6 @@ Defines the ssl error request result, related to {@link onSslErrorEventReceive} 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="handlecancel"></a>
 ## handleCancel
 
 ```TypeScript
@@ -42,7 +40,6 @@ Cancel this request.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="handlecancel-1"></a>
 ## handleCancel
 
 ```TypeScript
@@ -63,7 +60,6 @@ ArkWeb has encountered an SSL certificate error, and this interface indicates wh
 | --- | --- | --- | --- |
 | abortLoading | boolean | Yes | If abortLoading is true, the current request will be canceled and the |
 
-<a id="handleconfirm"></a>
 ## handleConfirm
 
 ```TypeScript

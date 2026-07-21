@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="generatekeyitem"></a>
 ## generateKeyItem
 
 ```TypeScript
@@ -15,8 +14,7 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 
 Generates a key. This API uses an asynchronous callback to return the result.
 
-Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](docroot://security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful.
-
+Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful.
 > **NOTE**  
 >  
 > Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)  
@@ -191,7 +189,6 @@ export default {
 ```
 
 
-<a id="generatekeyitem-1"></a>
 ## generateKeyItem
 
 ```TypeScript
@@ -199,13 +196,12 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 ```
 
 Generates a key. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Generating SE security level keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)  
 > requires the ohos.permission.ACCESS_SE_KEY permission.
 
-Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](docroot://security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful.
+Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through this API and is only used to indicate whether the call is successful.
 
 **Since:** 9
 

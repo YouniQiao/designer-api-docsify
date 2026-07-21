@@ -10,7 +10,6 @@ Defines the Particle component attribute functions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="disturbancefields"></a>
 ## disturbanceFields
 
 ```TypeScript
@@ -35,7 +34,6 @@ Sets the disturbance fields.
 | --- | --- | --- | --- |
 | fields | Array&lt;DisturbanceFieldOptions&gt; | Yes | Array of disturbance fields. |
 
-<a id="emitter"></a>
 ## emitter
 
 ```TypeScript
@@ -60,7 +58,6 @@ Sets the emitter parameters.
 | --- | --- | --- | --- |
 | value | Array&lt;EmitterProperty&gt; | Yes | Array of emitter parameters to set. |
 
-<a id="ripplefields"></a>
 ## rippleFields
 
 ```TypeScript
@@ -85,7 +82,6 @@ Sets the particle wave field. The wave field applies a force that changes accord
 | --- | --- | --- | --- |
 | fields | Array&lt;RippleFieldOptions&gt; \| undefined | Yes | Particle wave field array. You can set multiple particle wave fields in array form. If this parameter is set to undefined, no wave field is available. |
 
-<a id="velocityfields"></a>
 ## velocityFields
 
 ```TypeScript

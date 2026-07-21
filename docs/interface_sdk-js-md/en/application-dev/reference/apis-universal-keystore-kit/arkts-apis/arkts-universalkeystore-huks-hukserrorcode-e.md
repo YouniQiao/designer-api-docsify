@@ -1,7 +1,6 @@
 # HuksErrorCode
 
 Enumerates the error codes.
-
 > **NOTE**  
 >  
 > This API is deprecated since API version 9. You are advised to use  

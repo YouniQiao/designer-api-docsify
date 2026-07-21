@@ -1,6 +1,5 @@
 # hash
 
-<a id="hash"></a>
 ## hash
 
 ```TypeScript
@@ -13,7 +12,7 @@ Calculates the hash value of a file. This API uses a promise to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [hash:hash](arkts-file-hash.md)
+**Substitutes:** [hash:hash](arkts-corefile-fileio-hash-f.md#hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>--><!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>-End-->
 
@@ -33,7 +32,6 @@ Calculates the hash value of a file. This API uses a promise to return the resul
 | Promise&lt;string&gt; | Promise that returns the hash value. The hash value is a hexadecimal string consisting of digits and uppercase letters. |
 
 
-<a id="hash-1"></a>
 ## hash
 
 ```TypeScript
@@ -46,7 +44,7 @@ Calculates the hash value of a file. This API uses an asynchronous callback to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [hash:hash](arkts-file-hash.md)
+**Substitutes:** [hash:hash](arkts-corefile-fileio-hash-f.md#hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void-End-->
 

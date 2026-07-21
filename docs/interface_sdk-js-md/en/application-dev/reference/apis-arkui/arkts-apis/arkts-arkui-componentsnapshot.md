@@ -4,20 +4,19 @@ The **componentSnapshot** module provides APIs for obtaining component snapshots
 
 Transformation attributes such as scaling, translation, and rotation only apply to the child components of the target component. Applying these transformation attributes directly to the target component itself has no effect; the snapshot will still display the component as it appears before any transformations are applied.
 
-For typical use cases (for example, long screenshots) and best practices of component snapshots, see [Using Component Snapshot (ComponentSnapshot)](docroot://ui/arkts-uicontext-component-snapshot.md).
-
+For typical use cases (for example, long screenshots) and best practices of component snapshots, see [Using Component Snapshot (ComponentSnapshot)](../../../ui/arkts-uicontext-component-snapshot.md).
 > **NOTE**  
 >  
 > - In scenarios where [XComponent](../arkts-components/arkts-arkui-xcomponent.md) is used to, for example, display video or camera streams,  
 > obtain images through  
-> [createPixelMapFromSurface](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface-1),  
+> [createPixelMapFromSurface](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface),  
 > instead of through an API in this module.  
 >  
 > - If the content of a component does not fill the entire area allocated for it, any remaining space in the snapshot  
 > will be rendered as transparent pixels. In addition, if the component uses [image effects](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) or other  
 > effect-related attributes, the resulting snapshot may not be as expected. To address these potential issues, check  
 > whether the component's transparent content area needs to be filled, or use the window screenshot API  
-> [snapshot](arkts-arkui-window-window-i.md#snapshot-1) instead.  
+> [snapshot](arkts-arkui-window-window-i.md#snapshot) instead.  
 >  
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 

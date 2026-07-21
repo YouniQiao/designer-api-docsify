@@ -14,7 +14,6 @@ Defines the Web resource response used for scheme handler.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -31,7 +30,28 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="getencoding"></a>
+## getCustomErrorCode
+
+```TypeScript
+getCustomErrorCode(): number
+```
+
+Get the custom error code of the Web response.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebSchemeHandlerResponse-getCustomErrorCode(): number--><!--Device-WebSchemeHandlerResponse-getCustomErrorCode(): number-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Return the custom error code that was set for this response. |
+
 ## getEncoding
 
 ```TypeScript
@@ -54,7 +74,6 @@ Get the response encoding.
 | --- | --- |
 | string | Return encoding of response. |
 
-<a id="getheaderbyname"></a>
 ## getHeaderByName
 
 ```TypeScript
@@ -83,7 +102,6 @@ Get the header value by name from the response.
 | --- | --- |
 | string | Return header value by name. |
 
-<a id="getmimetype"></a>
 ## getMimeType
 
 ```TypeScript
@@ -106,7 +124,6 @@ Get mime type.
 | --- | --- |
 | string | Return mime type of response. |
 
-<a id="getneterrorcode"></a>
 ## getNetErrorCode
 
 ```TypeScript
@@ -129,7 +146,6 @@ Get net error code.
 | --- | --- |
 | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Return response error code. |
 
-<a id="getstatus"></a>
 ## getStatus
 
 ```TypeScript
@@ -152,7 +168,6 @@ Get http status code.
 | --- | --- |
 | number | Return http status code. |
 
-<a id="getstatustext"></a>
 ## getStatusText
 
 ```TypeScript
@@ -175,7 +190,6 @@ Get status text.
 | --- | --- |
 | string | Return http status text. |
 
-<a id="geturl"></a>
 ## getUrl
 
 ```TypeScript
@@ -198,7 +212,28 @@ Get the resolved URL after redirects or changed as a result of HSTS.
 | --- | --- |
 | string | Return response url for redirects. |
 
-<a id="setencoding"></a>
+## setCustomErrorCode
+
+```TypeScript
+setCustomErrorCode(customErrorCode: number): void
+```
+
+Set the custom error code for the Web response.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebSchemeHandlerResponse-setCustomErrorCode(customErrorCode: number): void--><!--Device-WebSchemeHandlerResponse-setCustomErrorCode(customErrorCode: number): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| customErrorCode | number | Yes | The custom error code for this response, Web engine will pass the custom error code directly to the application through onErrorReceive. |
+
 ## setEncoding
 
 ```TypeScript
@@ -227,7 +262,6 @@ Set the response encoding.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
-<a id="setheaderbyname"></a>
 ## setHeaderByName
 
 ```TypeScript
@@ -258,7 +292,6 @@ Set response hander value by name.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
-<a id="setmimetype"></a>
 ## setMimeType
 
 ```TypeScript
@@ -287,7 +320,6 @@ Set mime type.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
-<a id="setneterrorcode"></a>
 ## setNetErrorCode
 
 ```TypeScript
@@ -316,7 +348,6 @@ Set net error code.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
-<a id="setstatus"></a>
 ## setStatus
 
 ```TypeScript
@@ -345,7 +376,6 @@ Set http status code.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
-<a id="setstatustext"></a>
 ## setStatusText
 
 ```TypeScript
@@ -374,7 +404,6 @@ Set status text.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
-<a id="seturl"></a>
 ## setUrl
 
 ```TypeScript

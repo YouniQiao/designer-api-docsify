@@ -16,7 +16,6 @@ Defines the abstract interface of albums.
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="getassets"></a>
 ## getAssets
 
 ```TypeScript

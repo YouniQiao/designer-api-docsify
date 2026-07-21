@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="getdefaulthttpproxy"></a>
 ## getDefaultHttpProxy
 
 ```TypeScript
@@ -53,7 +52,6 @@ connection.getDefaultHttpProxy((error: BusinessError, data: connection.HttpProxy
 ```
 
 
-<a id="getdefaulthttpproxy-1"></a>
 ## getDefaultHttpProxy
 
 ```TypeScript

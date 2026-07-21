@@ -1,6 +1,5 @@
 # writeSync
 
-<a id="writesync"></a>
 ## writeSync
 
 ```TypeScript
@@ -22,27 +21,9 @@ Writes data to a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:writeSync](arkts-corefile-file-fs-writesync-f.md#writesync-1)
+**Substitutes:** [fs:writeSync](arkts-corefile-fileio-writesync-f.md#writesync)
 
-<!--Device-unnamed-declare function writeSync(
-  fd: number,
-  buffer: ArrayBuffer | string,
-  options?: {
-    offset?: number;
-    length?: number;
-    position?: number;
-    encoding?: string;
-  }
-): number--><!--Device-unnamed-declare function writeSync(
-  fd: number,
-  buffer: ArrayBuffer | string,
-  options?: {
-    offset?: number;
-    length?: number;
-    position?: number;
-    encoding?: string;
-  }
-): number-End-->
+<!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): number--><!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

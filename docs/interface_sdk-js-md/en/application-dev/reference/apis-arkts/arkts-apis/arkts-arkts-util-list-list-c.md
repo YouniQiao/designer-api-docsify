@@ -14,7 +14,6 @@ List is implemented based on the singly linked list. Each node has a reference p
 import { List } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -75,7 +74,6 @@ while(!temp.done) {
 
 ```
 
-<a id="add"></a>
 ## add
 
 ```TypeScript
@@ -129,7 +127,6 @@ console.info("result = ", result5) // result =  true
 
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -166,7 +163,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -196,7 +192,6 @@ let list = new List<string | number | boolean | object>();
 
 ```
 
-<a id="converttoarray"></a>
 ## convertToArray
 
 ```TypeScript
@@ -238,7 +233,6 @@ console.info("result:", result);  // result: 2,4,5,4
 
 ```
 
-<a id="equal"></a>
 ## equal
 
 ```TypeScript
@@ -289,7 +283,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -337,7 +330,6 @@ list.forEach((value: number, index: number) => {
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -389,7 +381,6 @@ console.info("result:", result);  // result: 5
 
 ```
 
-<a id="getfirst"></a>
 ## getFirst
 
 ```TypeScript
@@ -432,7 +423,6 @@ console.info("result:", result);  // result: 2
 
 ```
 
-<a id="getindexof"></a>
 ## getIndexOf
 
 ```TypeScript
@@ -483,7 +473,6 @@ console.info("result:", result); // result: 0
 
 ```
 
-<a id="getlast"></a>
 ## getLast
 
 ```TypeScript
@@ -526,7 +515,6 @@ console.info("result:", result);  // result: 4
 
 ```
 
-<a id="getlastindexof"></a>
 ## getLastIndexOf
 
 ```TypeScript
@@ -577,7 +565,6 @@ console.info("result:", result); // result: 5
 
 ```
 
-<a id="getsublist"></a>
 ## getSubList
 
 ```TypeScript
@@ -627,7 +614,6 @@ console.info("result:", result.convertToArray());  // result: 4,6
 
 ```
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -672,7 +658,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="insert"></a>
 ## insert
 
 ```TypeScript
@@ -714,7 +699,6 @@ console.info("result:", list.get(1));  // result: 0
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -756,7 +740,6 @@ console.info("result:", result);  // result: false
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -804,7 +787,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="removebyindex"></a>
 ## removeByIndex
 
 ```TypeScript
@@ -854,7 +836,6 @@ console.info("result:", result);  // result: 5
 
 ```
 
-<a id="replaceallelements"></a>
 ## replaceAllElements
 
 ```TypeScript
@@ -904,7 +885,6 @@ console.info("result:", list.get(2));  // result: 10
 
 ```
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
@@ -954,7 +934,6 @@ console.info("result:", JSON.stringify(list));  // result: {"0":2,"1":4,"2":"b",
 
 ```
 
-<a id="sort"></a>
 ## sort
 
 ```TypeScript

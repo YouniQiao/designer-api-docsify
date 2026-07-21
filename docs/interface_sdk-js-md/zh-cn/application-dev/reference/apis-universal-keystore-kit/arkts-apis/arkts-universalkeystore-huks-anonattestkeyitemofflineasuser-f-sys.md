@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="anonattestkeyitemofflineasuser"></a>
 ## anonAttestKeyItemOfflineAsUser
 
 ```TypeScript
@@ -15,7 +14,6 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 ```
 
 离线获取匿名证明证书。该接口使用promise返回结果。此操作不需要每次都需要网络连接，比anonAttestKeyItemAsUser函数性能高。
-
 > **说明**  
 > >  
 > -离线密钥证明依赖于网络。您需要定期连接网络才能使用此API更新离线证书。  
@@ -28,9 +26,7 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
-      params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
-      params: HuksParam[]): Promise<HuksReturnResult>-End-->
+<!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,      params: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,      params: HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 

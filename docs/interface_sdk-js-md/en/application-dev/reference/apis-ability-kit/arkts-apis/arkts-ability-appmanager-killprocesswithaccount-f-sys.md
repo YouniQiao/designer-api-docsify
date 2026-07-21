@@ -6,7 +6,6 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="killprocesswithaccount"></a>
 ## killProcessWithAccount
 
 ```TypeScript
@@ -14,7 +13,6 @@ function killProcessWithAccount(bundleName: string, accountId: number): Promise<
 ```
 
 Kills a process by bundle name and account ID. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the  
@@ -37,7 +35,7 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| accountId | number | Yes | ID of a system account. For details, see [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). |
+| accountId | number | Yes | ID of a system account. For details, see [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 
 **Return value:**
 
@@ -78,7 +76,6 @@ try {
 ```
 
 
-<a id="killprocesswithaccount-1"></a>
 ## killProcessWithAccount
 
 ```TypeScript
@@ -87,7 +84,6 @@ function killProcessWithAccount(bundleName: string, accountId: number, clearPage
 ```
 
 Kills a process by bundle name and account ID. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the  
@@ -97,9 +93,7 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.KILL_APP_PROCESSES or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
-<!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: int, clearPageStack: boolean, appIndex?: int):
-    Promise<void>--><!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: int, clearPageStack: boolean, appIndex?: int):
-    Promise<void>-End-->
+<!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: int, clearPageStack: boolean, appIndex?: int):    Promise<void>--><!--Device-appManager-function killProcessWithAccount(bundleName: string, accountId: int, clearPageStack: boolean, appIndex?: int):    Promise<void>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -110,7 +104,7 @@ Kills a process by bundle name and account ID. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| accountId | number | Yes | ID of a system account. For details, see [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). |
+| accountId | number | Yes | ID of a system account. For details, see [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | clearPageStack | boolean | Yes | Whether to clear the page stack. **true** to clear, **false** otherwise. |
 | appIndex | number | No | Index of an application clone. |
 
@@ -155,7 +149,6 @@ try {
 ```
 
 
-<a id="killprocesswithaccount-2"></a>
 ## killProcessWithAccount
 
 ```TypeScript
@@ -163,7 +156,6 @@ function killProcessWithAccount(bundleName: string, accountId: number, callback:
 ```
 
 Kills a process by bundle name and account ID. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > The ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission is not required when **accountId** specifies the  
@@ -186,7 +178,7 @@ Kills a process by bundle name and account ID. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| accountId | number | Yes | ID of a system account. For details, see [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). |
+| accountId | number | Yes | ID of a system account. For details, see [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the API call result. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**

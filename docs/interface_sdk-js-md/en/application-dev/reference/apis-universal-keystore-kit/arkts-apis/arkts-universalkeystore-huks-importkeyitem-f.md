@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="importkeyitem"></a>
 ## importKeyItem
 
 ```TypeScript
@@ -107,7 +106,6 @@ huks.importKeyItem(keyAlias, options, (error) => {
 ```
 
 
-<a id="importkeyitem-1"></a>
 ## importKeyItem
 
 ```TypeScript

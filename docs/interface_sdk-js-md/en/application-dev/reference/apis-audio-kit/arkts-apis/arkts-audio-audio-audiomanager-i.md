@@ -2,7 +2,7 @@
 
 This interface implements audio volume and device management.
 
-Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager-1) to obtain an AudioManager instance.
+Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager) to obtain an AudioManager instance.
 
 **Since:** 7
 
@@ -16,7 +16,6 @@ Before calling any API in AudioManager, you must use [getAudioManager](arkts-aud
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="getaudioparameter"></a>
 ## getAudioParameter
 
 ```TypeScript
@@ -40,7 +39,6 @@ Obtains the value of an audio parameter. This method uses an asynchronous callba
 | key | string | Yes | Key of the audio parameter whose value is to be obtained. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the value of the audio parameter. |
 
-<a id="getaudioparameter-1"></a>
 ## getAudioParameter
 
 ```TypeScript
@@ -69,7 +67,6 @@ Obtains the value of an audio parameter. This method uses a promise to return th
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the value of the audio parameter. |
 
-<a id="getaudioscene"></a>
 ## getAudioScene
 
 ```TypeScript
@@ -90,7 +87,6 @@ Obtains the audio scene. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioScene&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio scene obtained; otherwise, **err** is an error object. |
 
-<a id="getaudioscene-1"></a>
 ## getAudioScene
 
 ```TypeScript
@@ -111,7 +107,6 @@ Obtains the audio scene. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;AudioScene&gt; | Promise used to return the audio scene. |
 
-<a id="getaudioscenesync"></a>
 ## getAudioSceneSync
 
 ```TypeScript
@@ -132,7 +127,6 @@ Obtains the audio scene. This API returns the result synchronously.
 | --- | --- |
 | [AudioScene](arkts-audio-audio-audioscene-e.md) | Audio scene. |
 
-<a id="getdebuggingmanager"></a>
 ## getDebuggingManager
 
 ```TypeScript
@@ -155,7 +149,6 @@ Obtains an AudioDebuggingManager instance.<p><strong>NOTE</strong>:The {@link #A
 | --- | --- |
 | [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md) | this {@link #AudioDebuggingManager} object. |
 
-<a id="getdeviceenhancemanager"></a>
 ## getDeviceEnhanceManager
 
 ```TypeScript
@@ -178,7 +171,6 @@ Obtains a device enhancement manager instance.
 | --- | --- |
 | [AudioDeviceEnhanceManager](arkts-audio-audio-audiodeviceenhancemanager-i.md) | Returns an instance of audio device enhancement manager. |
 
-<a id="getdevices"></a>
 ## getDevices
 
 ```TypeScript
@@ -204,7 +196,6 @@ Obtains the audio devices with a specific flag. This API uses an asynchronous ca
 | deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | Audio device flag. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio devices obtained; otherwise, **err** is an error object. |
 
-<a id="getdevices-1"></a>
 ## getDevices
 
 ```TypeScript
@@ -235,7 +226,6 @@ Obtains the audio devices with a specific flag. This API uses a promise to retur
 | --- | --- |
 | Promise&lt;AudioDeviceDescriptors&gt; | Promise used to return the device list. |
 
-<a id="getmaxvolume"></a>
 ## getMaxVolume
 
 ```TypeScript
@@ -261,7 +251,6 @@ Obtains the maximum volume allowed for a stream. This API uses an asynchronous c
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the maximum stream volume obtained; otherwise, **err** is an error object. |
 
-<a id="getmaxvolume-1"></a>
 ## getMaxVolume
 
 ```TypeScript
@@ -292,7 +281,6 @@ Obtains the maximum volume allowed for a stream. This API uses a promise to retu
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the maximum volume. |
 
-<a id="getminvolume"></a>
 ## getMinVolume
 
 ```TypeScript
@@ -318,7 +306,6 @@ Obtains the minimum volume allowed for a stream. This API uses an asynchronous c
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the minimum stream volume obtained; otherwise, **err** is an error object. |
 
-<a id="getminvolume-1"></a>
 ## getMinVolume
 
 ```TypeScript
@@ -349,7 +336,6 @@ Obtains the minimum volume allowed for a stream. This API uses a promise to retu
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the minimum volume. |
 
-<a id="getrecordingmanager"></a>
 ## getRecordingManager
 
 ```TypeScript
@@ -372,7 +358,6 @@ Obtains a recording manager instance. Provides recording strategy management, in
 | --- | --- |
 | [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i.md) | Returns an instance of audio record manager. |
 
-<a id="getringermode"></a>
 ## getRingerMode
 
 ```TypeScript
@@ -397,7 +382,6 @@ Obtains the ringer mode. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRingMode&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the ringer mode obtained; otherwise, **err** is an error object. |
 
-<a id="getringermode-1"></a>
 ## getRingerMode
 
 ```TypeScript
@@ -422,7 +406,6 @@ Obtains the ringer mode. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;AudioRingMode&gt; | Promise used to return the ringer mode. |
 
-<a id="getroutingmanager"></a>
 ## getRoutingManager
 
 ```TypeScript
@@ -443,7 +426,6 @@ Obtains an AudioRoutingManager instance.
 | --- | --- |
 | [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i.md) | AudioRoutingManager instance. |
 
-<a id="getsessionmanager"></a>
 ## getSessionManager
 
 ```TypeScript
@@ -466,7 +448,6 @@ Obtains an AudioSessionManager instance.
 | --- | --- |
 | [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md) | AudioSessionManager instance. |
 
-<a id="getspatializationmanager"></a>
 ## getSpatializationManager
 
 ```TypeScript
@@ -487,7 +468,6 @@ Obtains an AudioSpatializationManager instance.
 | --- | --- |
 | [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i.md) | AudioSpatializationManager instance. |
 
-<a id="getstreammanager"></a>
 ## getStreamManager
 
 ```TypeScript
@@ -508,7 +488,6 @@ Obtains an AudioStreamManager instance.
 | --- | --- |
 | [AudioStreamManager](arkts-audio-audio-audiostreammanager-i.md) | AudioStreamManager instance. |
 
-<a id="getvolume"></a>
 ## getVolume
 
 ```TypeScript
@@ -532,9 +511,8 @@ Obtains the volume of a stream. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the stream volume obtained; otherwise, **err** is an error object.The volume range of a specified stream can be obtained by calling [getMinVolume](arkts-audio-audio-audiomanager-i.md#getminvolume-1)and [getMaxVolume](arkts-audio-audio-audiomanager-i.md#getmaxvolume-1). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the stream volume obtained; otherwise, **err** is an error object.The volume range of a specified stream can be obtained by calling [getMinVolume](arkts-audio-audio-audiomanager-i.md#getminvolume)and [getMaxVolume](arkts-audio-audio-audiomanager-i.md#getmaxvolume). |
 
-<a id="getvolume-1"></a>
 ## getVolume
 
 ```TypeScript
@@ -563,9 +541,8 @@ Obtains the volume of a stream. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the volume of the stream. The volume range of a specified stream can be obtained by calling [getMinVolume](arkts-audio-audio-audiomanager-i.md#getminvolume-1)and [getMaxVolume](arkts-audio-audio-audiomanager-i.md#getmaxvolume-1). |
+| Promise&lt;number&gt; | Promise used to return the volume of the stream. The volume range of a specified stream can be obtained by calling [getMinVolume](arkts-audio-audio-audiomanager-i.md#getminvolume)and [getMaxVolume](arkts-audio-audio-audiomanager-i.md#getmaxvolume). |
 
-<a id="getvolumemanager"></a>
 ## getVolumeManager
 
 ```TypeScript
@@ -588,7 +565,6 @@ Obtains an AudioVolumeManager instance.
 | --- | --- |
 | [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md) | AudioVolumeManager instance. |
 
-<a id="isactive"></a>
 ## isActive
 
 ```TypeScript
@@ -614,7 +590,6 @@ Checks whether a stream is active. This API uses an asynchronous callback to ret
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is **true** if the stream is active or **false** if not active;otherwise, **err** is an error object. |
 
-<a id="isactive-1"></a>
 ## isActive
 
 ```TypeScript
@@ -645,7 +620,6 @@ Checks whether a stream is active. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is active.**true** if active, **false** otherwise. |
 
-<a id="isdeviceactive"></a>
 ## isDeviceActive
 
 ```TypeScript
@@ -671,7 +645,6 @@ Checks whether a device is active. This API uses an asynchronous callback to ret
 | deviceType | [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | Yes | Active audio device type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is **true** if the device is active or **false** if not active;otherwise, **err** is an error object. |
 
-<a id="isdeviceactive-1"></a>
 ## isDeviceActive
 
 ```TypeScript
@@ -702,7 +675,6 @@ Checks whether a device is active. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the device is active.**true** if active, **false** otherwise. |
 
-<a id="ismicrophonemute"></a>
 ## isMicrophoneMute
 
 ```TypeScript
@@ -729,7 +701,6 @@ Checks whether the microphone is muted. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is **true** if the microphone is muted or **false** if not muted;otherwise, **err** is an error object. |
 
-<a id="ismicrophonemute-1"></a>
 ## isMicrophoneMute
 
 ```TypeScript
@@ -756,7 +727,6 @@ Checks whether the microphone is muted. This API uses a promise to return the re
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the microphone is muted.**true** if muted, **false** otherwise. |
 
-<a id="ismute"></a>
 ## isMute
 
 ```TypeScript
@@ -782,7 +752,6 @@ Checks whether a stream is muted. This API uses an asynchronous callback to retu
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is **true** if the stream is muted or **false** if not muted; otherwise, **err** is an error object. |
 
-<a id="ismute-1"></a>
 ## isMute
 
 ```TypeScript
@@ -813,7 +782,6 @@ Checks whether a stream is muted. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is muted. **true** if muted, **false** otherwise. |
 
-<a id="mute"></a>
 ## mute
 
 ```TypeScript
@@ -840,7 +808,6 @@ Mutes a volume type. This method uses an asynchronous callback to return the res
 | mute | boolean | Yes | Mute status to set. The value true means to mute the volume type, and false means the opposite. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-<a id="mute-1"></a>
 ## mute
 
 ```TypeScript
@@ -872,7 +839,6 @@ Mutes a volume type. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-<a id="off"></a>
 ## off('audioSceneChange')
 
 ```TypeScript
@@ -894,7 +860,6 @@ Unsubscribes from the audio scene change event. This API uses an asynchronous ca
 | type | 'audioSceneChange' | Yes | Event type. The event **'audioSceneChange'** is triggered when the audio scene is changed. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;AudioScene&gt; | No | Callback used to return the current audio scene. |
 
-<a id="off-1"></a>
 ## off('deviceChange')
 
 ```TypeScript
@@ -920,7 +885,6 @@ Unsubscribes from the audio device change event. This API uses an asynchronous c
 | type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;DeviceChangeAction&gt; | No | Callback used to return the device change details. |
 
-<a id="off-2"></a>
 ## off('interrupt')
 
 ```TypeScript
@@ -947,7 +911,6 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | Yes | Audio interruption event type. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;InterruptAction&gt; | No | Callback used to return the event information. |
 
-<a id="on"></a>
 ## on('audioSceneChange')
 
 ```TypeScript
@@ -969,7 +932,6 @@ Subscribes to the audio scene change event. This API uses an asynchronous callba
 | type | 'audioSceneChange' | Yes | Event type. The event **'audioSceneChange'** is triggered when the audio scene is changed. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;AudioScene&gt; | Yes | Callback used to return the current audio scene. |
 
-<a id="on-1"></a>
 ## on('deviceChange')
 
 ```TypeScript
@@ -995,7 +957,6 @@ Subscribes to the event indicating that the connection status of an audio device
 | type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;DeviceChangeAction&gt; | Yes | Callback used to return the device change details. |
 
-<a id="on-2"></a>
 ## on('interrupt')
 
 ```TypeScript
@@ -1024,7 +985,6 @@ Same as [on('audioInterrupt')](@ohos.multimedia.audio:audio.AudioRenderer.on(typ
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | Yes | Audio interruption event type. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;InterruptAction&gt; | Yes | Callback used to return the event information. |
 
-<a id="setaudioparameter"></a>
 ## setAudioParameter
 
 ```TypeScript
@@ -1051,7 +1011,6 @@ Sets an audio parameter. This method uses an asynchronous callback to return the
 | value | string | Yes | Value of the audio parameter to set. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-<a id="setaudioparameter-1"></a>
 ## setAudioParameter
 
 ```TypeScript
@@ -1083,7 +1042,6 @@ Sets an audio parameter. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-<a id="setdeviceactive"></a>
 ## setDeviceActive
 
 ```TypeScript
@@ -1110,7 +1068,6 @@ Sets a device to the active state. This API uses an asynchronous callback to ret
 | active | boolean | Yes | Active state to set. **true** to set the device to the active state, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
-<a id="setdeviceactive-1"></a>
 ## setDeviceActive
 
 ```TypeScript
@@ -1142,7 +1099,6 @@ Sets a device to the active state. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-<a id="setmicrophonemute"></a>
 ## setMicrophoneMute
 
 ```TypeScript
@@ -1168,7 +1124,6 @@ Mutes or unmutes the microphone. This method uses an asynchronous callback to re
 | mute | boolean | Yes | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-<a id="setmicrophonemute-1"></a>
 ## setMicrophoneMute
 
 ```TypeScript
@@ -1199,7 +1154,6 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-<a id="setringermode"></a>
 ## setRingerMode
 
 ```TypeScript
@@ -1225,7 +1179,6 @@ Sets the ringer mode. This method uses an asynchronous callback to return the re
 | mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | Yes | Ringer mode. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-<a id="setringermode-1"></a>
 ## setRingerMode
 
 ```TypeScript
@@ -1256,7 +1209,6 @@ Sets the ringer mode. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-<a id="setvolume"></a>
 ## setVolume
 
 ```TypeScript
@@ -1285,7 +1237,6 @@ Sets the volume for a volume type. This method uses an asynchronous callback to 
 | volume | number | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-<a id="setvolume-1"></a>
 ## setVolume
 
 ```TypeScript

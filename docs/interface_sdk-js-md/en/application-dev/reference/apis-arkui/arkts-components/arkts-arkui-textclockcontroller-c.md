@@ -14,7 +14,6 @@ controller: TextClockController = new TextClockController()
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -33,14 +32,13 @@ A constructor used to create a **TextClockController** instance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
 start()
 ```
 
-Starts the **<TextClock\>** component.
+Starts the **&lt;TextClock\&gt;** component.
 
 **Since:** 8
 
@@ -52,14 +50,13 @@ Starts the **<TextClock\>** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
 stop()
 ```
 
-Stops the **<TextClock\>** component.
+Stops the **&lt;TextClock\&gt;** component.
 
 **Since:** 8
 

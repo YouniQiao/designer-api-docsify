@@ -10,7 +10,6 @@ Defines a type of gesture handler object for pinch gestures.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -35,7 +34,6 @@ Constructor used to create a pinch gesture handler instance.
 | --- | --- | --- | --- |
 | options | [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | No | Parameters of the pinch gesture handler. |
 
-<a id="onactioncancel"></a>
 ## onActionCancel
 
 ```TypeScript
@@ -66,14 +64,13 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 | --- | --- |
 | [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
-<a id="onactioncancel-1"></a>
 ## onActionCancel
 
 ```TypeScript
 onActionCancel(event: Callback<GestureEvent>): PinchGestureHandler
 ```
 
-Sets the callback for pinch gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](arkts-arkui-pinchgesturehandler-c.md#onactioncancel-1), this API returns gesture event information.
+Sets the callback for pinch gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](arkts-arkui-pinchgesturehandler-c.md#onactioncancel), this API returns gesture event information.
 
 **Since:** 18
 
@@ -97,7 +94,6 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 | --- | --- |
 | [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
-<a id="onactionend"></a>
 ## onActionEnd
 
 ```TypeScript
@@ -128,7 +124,6 @@ Sets the callback for pinch gesture recognition completion. This callback is tri
 | --- | --- |
 | [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
-<a id="onactionstart"></a>
 ## onActionStart
 
 ```TypeScript
@@ -159,7 +154,6 @@ Sets the callback for successful pinch gesture recognition.
 | --- | --- |
 | [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
-<a id="onactionupdate"></a>
 ## onActionUpdate
 
 ```TypeScript

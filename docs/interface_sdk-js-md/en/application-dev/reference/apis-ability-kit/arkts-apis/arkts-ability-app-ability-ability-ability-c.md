@@ -1,6 +1,6 @@
 # Ability
 
-The Ability class is the fundamental unit for application lifecycle scheduling. It is the base class of [UIAbility](arkts-app-ability-uiability.md) and [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md), and provides callbacks for system configuration updates and memory level updates. However, you cannot inherit directly from this base class. You should opt for either [UIAbility](arkts-app-ability-uiability.md) or [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md) based on your service needs. For details, see [Introduction to Ability Kit](docroot://application-models/abilitykit-overview.md).
+The Ability class is the fundamental unit for application lifecycle scheduling. It is the base class of [UIAbility](arkts-app-ability-uiability.md) and [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md), and provides callbacks for system configuration updates and memory level updates. However, you cannot inherit directly from this base class. You should opt for either [UIAbility](arkts-app-ability-uiability.md) or [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md) based on your service needs. For details, see [Introduction to Ability Kit](../../../application-models/abilitykit-overview.md).
 
 **Since:** 9
 
@@ -14,7 +14,6 @@ The Ability class is the fundamental unit for application lifecycle scheduling. 
 import { Ability } from '@kit.AbilityKit';
 ```
 
-<a id="onconfigurationupdate"></a>
 ## onConfigurationUpdate
 
 ```TypeScript
@@ -22,13 +21,12 @@ onConfigurationUpdate(newConfig: Configuration): void
 ```
 
 Called when a system environment variable changes. You can override this callback to respond to changes in the system environment variables. For example, when the system language changes, the application can perform customized processing in the callback.
-
 > **NOTE**  
 >  
 > There are certain restrictions when this callback is actually triggered. For example, if you set the application  
-> language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage-1), the  
+> language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the  
 > system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details,  
-> see [When to Use](docroot://application-models/subscribe-system-environment-variable-changes.md#when-to-use).
+> see [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 9
 
@@ -60,7 +58,6 @@ class MyUIAbility extends UIAbility {
 
 ```
 
-<a id="onmemorylevel"></a>
 ## onMemoryLevel
 
 ```TypeScript
@@ -68,7 +65,6 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
 Called when the available memory of the entire device changes to a specified level. You can override this callback to respond to changes in the memory level, for example, releasing cached data.
-
 > **NOTE**  
 >  
 > Releasing UI components in the **onMemoryLevel** callback may block the main thread tasks of the current process.  

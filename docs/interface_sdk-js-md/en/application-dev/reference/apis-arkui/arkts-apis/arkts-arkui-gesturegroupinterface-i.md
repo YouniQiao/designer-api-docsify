@@ -8,7 +8,6 @@ Combined gestures integrate two or more gestures into a compound gesture, suppor
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -38,7 +37,6 @@ Return to Obtain GestureGroup.
 | --- | --- |
 | [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="oncancel"></a>
 ## onCancel
 
 ```TypeScript

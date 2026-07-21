@@ -6,7 +6,6 @@
 import { vibrator } from '@kit.SensorServiceKit';
 ```
 
-<a id="getvibratorinfosync"></a>
 ## getVibratorInfoSync
 
 ```TypeScript

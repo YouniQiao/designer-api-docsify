@@ -14,7 +14,6 @@ Defines the handle of the data network.
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="bindsocket"></a>
 ## bindSocket
 
 ```TypeScript
@@ -108,7 +107,6 @@ interface Data {
 
 ```
 
-<a id="bindsocket-1"></a>
 ## bindSocket
 
 ```TypeScript
@@ -202,7 +200,6 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 
 ```
 
-<a id="getaddressbyname"></a>
 ## getAddressByName
 
 ```TypeScript
@@ -259,7 +256,6 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 
 ```
 
-<a id="getaddressbyname-1"></a>
 ## getAddressByName
 
 ```TypeScript
@@ -316,7 +312,6 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 
 ```
 
-<a id="getaddressesbyname"></a>
 ## getAddressesByName
 
 ```TypeScript
@@ -375,7 +370,6 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 
 ```
 
-<a id="getaddressesbyname-1"></a>
 ## getAddressesByName
 
 ```TypeScript
@@ -434,7 +428,6 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 
 ```
 
-<a id="getaddressesbynamewithoptions"></a>
 ## getAddressesByNameWithOptions
 
 ```TypeScript

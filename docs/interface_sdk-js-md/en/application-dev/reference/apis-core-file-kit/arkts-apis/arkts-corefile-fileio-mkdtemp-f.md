@@ -1,6 +1,5 @@
 # mkdtemp
 
-<a id="mkdtemp"></a>
 ## mkdtemp
 
 ```TypeScript
@@ -13,7 +12,7 @@ Creates a temporary directory. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:mkdtemp](arkts-corefile-file-fs-mkdtemp-f.md#mkdtemp-1)
+**Substitutes:** [fs:mkdtemp](arkts-corefile-fileio-mkdtemp-f.md#mkdtemp)
 
 <!--Device-unnamed-declare function mkdtemp(prefix: string): Promise<string>--><!--Device-unnamed-declare function mkdtemp(prefix: string): Promise<string>-End-->
 
@@ -32,7 +31,6 @@ Creates a temporary directory. This API uses a promise to return the result.
 | Promise&lt;string&gt; | Promise that returns the directory created. |
 
 
-<a id="mkdtemp-1"></a>
 ## mkdtemp
 
 ```TypeScript
@@ -45,7 +43,7 @@ Creates a temporary directory. This API uses an asynchronous callback to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:mkdtemp](arkts-corefile-file-fs-mkdtemp-f.md#mkdtemp-1)
+**Substitutes:** [fs:mkdtemp](arkts-corefile-fileio-mkdtemp-f.md#mkdtemp)
 
 <!--Device-unnamed-declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void-End-->
 

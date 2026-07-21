@@ -8,7 +8,6 @@ EditMenuOptions
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="oncreatemenu"></a>
 ## onCreateMenu
 
 ```TypeScript
@@ -39,7 +38,6 @@ Triggered when the menu is being created. Menu data can be configured within thi
 | --- | --- |
 | Array&lt;TextMenuItem&gt; | Menu items after the processing. |
 
-<a id="onmenuitemclick"></a>
 ## onMenuItemClick
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { appDomainVerify } from '@kit.AbilityKit';
 ```
 
-<a id="queryassociateddomains"></a>
 ## queryAssociatedDomains
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # ftruncateSync
 
-<a id="ftruncatesync"></a>
 ## ftruncateSync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Truncates a file based on the file descriptor. This API returns the result synch
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:truncateSync](arkts-corefile-file-fs-truncatesync-f.md#truncatesync-1)
+**Substitutes:** [fs:truncateSync](arkts-corefile-fileio-truncatesync-f.md#truncatesync)
 
 <!--Device-unnamed-declare function ftruncateSync(fd: number, len?: number): void--><!--Device-unnamed-declare function ftruncateSync(fd: number, len?: number): void-End-->
 

@@ -6,7 +6,6 @@
 import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
-<a id="connectsystemchannel"></a>
 ## connectSystemChannel
 
 ```TypeScript

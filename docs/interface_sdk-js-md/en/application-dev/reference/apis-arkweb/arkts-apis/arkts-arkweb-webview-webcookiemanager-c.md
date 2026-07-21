@@ -14,7 +14,6 @@ Provides methods for managing the web cookies.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="clearallcookies"></a>
 ## clearAllCookies
 
 ```TypeScript
@@ -43,7 +42,6 @@ Remove all cookies Asynchronously.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 
-<a id="clearallcookies-1"></a>
 ## clearAllCookies
 
 ```TypeScript
@@ -72,7 +70,6 @@ Remove all cookies Asynchronously.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
-<a id="clearallcookiessync"></a>
 ## clearAllCookiesSync
 
 ```TypeScript
@@ -95,7 +92,6 @@ Remove all cookies.
 | --- | --- | --- | --- |
 | incognito | boolean | No | {@code true} remove all cookies in incognito mode;{@code false} otherwise. |
 
-<a id="clearsessioncookie"></a>
 ## clearSessionCookie
 
 ```TypeScript
@@ -124,7 +120,6 @@ Delete the session cookies Asynchronously.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 
-<a id="clearsessioncookie-1"></a>
 ## clearSessionCookie
 
 ```TypeScript
@@ -153,7 +148,6 @@ Delete the session cookies Asynchronously.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
-<a id="clearsessioncookiesync"></a>
 ## clearSessionCookieSync
 
 ```TypeScript
@@ -170,7 +164,6 @@ Delete the session cookies.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="configcookie"></a>
 ## configCookie
 
 ```TypeScript
@@ -208,7 +201,6 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
-<a id="configcookie-1"></a>
 ## configCookie
 
 ```TypeScript
@@ -246,7 +238,6 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
-<a id="configcookie-2"></a>
 ## configCookie
 
 ```TypeScript
@@ -279,7 +270,6 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
-<a id="configcookiesync"></a>
 ## configCookieSync
 
 ```TypeScript
@@ -287,7 +277,6 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 ```
 
 Set a single cookie (key-value pair) for the given URL.
-
 > **NOTE**  
 >  
 > You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on  
@@ -334,7 +323,6 @@ Set a single cookie (key-value pair) for the given URL.
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
-<a id="configcookiesync-1"></a>
 ## configCookieSync
 
 ```TypeScript
@@ -342,7 +330,6 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 ```
 
 Set a single cookie (key-value pair) for the given URL.
-
 > **NOTE**  
 >  
 > You can set **url** in **configCookieSync** to a domain name so that the cookie is attached to the requests on  
@@ -388,7 +375,6 @@ Set a single cookie (key-value pair) for the given URL.
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
-<a id="deleteentirecookie"></a>
 ## deleteEntireCookie
 
 ```TypeScript
@@ -407,7 +393,6 @@ Remove all cookies.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="deletesessioncookie"></a>
 ## deleteSessionCookie
 
 ```TypeScript
@@ -426,7 +411,6 @@ Delete the session cookies.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="existcookie"></a>
 ## existCookie
 
 ```TypeScript
@@ -455,7 +439,6 @@ Check whether exists any cookies.
 | --- | --- |
 | boolean | True if exists more than one cookie else false; |
 
-<a id="fetchallcookies"></a>
 ## fetchAllCookies
 
 ```TypeScript
@@ -482,7 +465,6 @@ Fetches all stored cookies asynchronously.
 | --- | --- |
 | Promise&lt;Array&lt;WebHttpCookie&gt;&gt; | - A promise resolved after the cookies gotten. |
 
-<a id="fetchcookie"></a>
 ## fetchCookie
 
 ```TypeScript
@@ -518,7 +500,6 @@ Gets all cookies for the given URL Asynchronously.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 
-<a id="fetchcookie-1"></a>
 ## fetchCookie
 
 ```TypeScript
@@ -553,7 +534,6 @@ Gets all cookies for the given URL Asynchronously.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 
-<a id="fetchcookie-2"></a>
 ## fetchCookie
 
 ```TypeScript
@@ -584,7 +564,6 @@ Gets all cookies for the given URL Asynchronously.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 
-<a id="fetchcookie-3"></a>
 ## fetchCookie
 
 ```TypeScript
@@ -621,7 +600,6 @@ Gets all cookies for the given URL Asynchronously.
 | --- | --- |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 
-<a id="fetchcookiesync"></a>
 ## fetchCookieSync
 
 ```TypeScript
@@ -662,7 +640,6 @@ Gets all cookies for the given URL.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 
-<a id="fetchcookiesync-1"></a>
 ## fetchCookieSync
 
 ```TypeScript
@@ -703,7 +680,6 @@ Gets all cookies for the given URL.
 | --- | --- |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 
-<a id="getcookie"></a>
 ## getCookie
 
 ```TypeScript
@@ -741,7 +717,6 @@ Gets all cookies for the given URL.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 
-<a id="iscookieallowed"></a>
 ## isCookieAllowed
 
 ```TypeScript
@@ -764,7 +739,6 @@ Get whether the instance can send and accept cookies.
 | --- | --- |
 | boolean | True if the instance can send and accept cookies else false. |
 
-<a id="isthirdpartycookieallowed"></a>
 ## isThirdPartyCookieAllowed
 
 ```TypeScript
@@ -787,7 +761,6 @@ Get whether the instance can send and accept thirdparty cookies.
 | --- | --- |
 | boolean | True if the instance can send and accept thirdparty cookies else false. |
 
-<a id="putacceptcookieenabled"></a>
 ## putAcceptCookieEnabled
 
 ```TypeScript
@@ -816,7 +789,6 @@ Set whether the instance should send and accept cookies.By default this is set t
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
-<a id="putacceptthirdpartycookieenabled"></a>
 ## putAcceptThirdPartyCookieEnabled
 
 ```TypeScript
@@ -845,7 +817,6 @@ Set whether the instance should send and accept thirdparty cookies.By default th
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
-<a id="savecookieasync"></a>
 ## saveCookieAsync
 
 ```TypeScript
@@ -874,7 +845,6 @@ Save the cookies Asynchronously.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
-<a id="savecookieasync-1"></a>
 ## saveCookieAsync
 
 ```TypeScript
@@ -903,7 +873,6 @@ Save the cookies Asynchronously.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
-<a id="savecookiesync"></a>
 ## saveCookieSync
 
 ```TypeScript
@@ -922,7 +891,6 @@ Save the cookies synchronously.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="setcookie"></a>
 ## setCookie
 
 ```TypeScript
@@ -956,7 +924,6 @@ Set a single cookie (key-value pair) for the given URL.
 | [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. No valid cookie found for the specified URL. |
 | [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) | The provided cookie value is invalid. It must follow the format specified<br>in RFC 6265. |
 
-<a id="setlazyinitializewebengine"></a>
 ## setLazyInitializeWebEngine
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="readtext"></a>
 ## readText
 
 ```TypeScript
@@ -22,13 +21,7 @@ Reads the text content of a file. This API uses a promise to return the result.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare function readText(
-  filePath: string,
-  options?: ReadTextOptions
-): Promise<string>--><!--Device-unnamed-declare function readText(
-  filePath: string,
-  options?: ReadTextOptions
-): Promise<string>-End-->
+<!--Device-unnamed-declare function readText(  filePath: string,  options?: ReadTextOptions): Promise<string>--><!--Device-unnamed-declare function readText(  filePath: string,  options?: ReadTextOptions): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -65,7 +58,6 @@ Reads the text content of a file. This API uses a promise to return the result.
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
-<a id="readtext-1"></a>
 ## readText
 
 ```TypeScript
@@ -108,7 +100,6 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 | 13900042 | Unknown error |
 
 
-<a id="readtext-2"></a>
 ## readText
 
 ```TypeScript
@@ -125,15 +116,7 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare function readText(
-  filePath: string,
-  options: ReadTextOptions,
-  callback: AsyncCallback<string>
-): void--><!--Device-unnamed-declare function readText(
-  filePath: string,
-  options: ReadTextOptions,
-  callback: AsyncCallback<string>
-): void-End-->
+<!--Device-unnamed-declare function readText(  filePath: string,  options: ReadTextOptions,  callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function readText(  filePath: string,  options: ReadTextOptions,  callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

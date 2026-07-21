@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="off"></a>
 ## off('imsRegStateChange')
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
-<a id="removedisallowedrunningbundles"></a>
 ## removeDisallowedRunningBundles
 
 ```TypeScript
@@ -19,7 +18,7 @@ Removes an application from the applications that are not allowed to run under t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-removedisallowedrunningbundlessync-f.md#removedisallowedrunningbundlessync-1)
+**Substitutes:** [removeDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-removedisallowedrunningbundlessync-f.md#removedisallowedrunningbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 
@@ -74,7 +73,6 @@ applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, (err) => {
 ```
 
 
-<a id="removedisallowedrunningbundles-1"></a>
 ## removeDisallowedRunningBundles
 
 ```TypeScript
@@ -87,7 +85,7 @@ Removes an application from the applications that are not allowed to run under t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-removedisallowedrunningbundlessync-f.md#removedisallowedrunningbundlessync-1)
+**Substitutes:** [removeDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-removedisallowedrunningbundlessync-f.md#removedisallowedrunningbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 
@@ -143,7 +141,6 @@ applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, 100, (err) =
 ```
 
 
-<a id="removedisallowedrunningbundles-2"></a>
 ## removeDisallowedRunningBundles
 
 ```TypeScript
@@ -156,7 +153,7 @@ Removes an application from the applications that are not allowed to run under t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-removedisallowedrunningbundlessync-f.md#removedisallowedrunningbundlessync-1)
+**Substitutes:** [removeDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-removedisallowedrunningbundlessync-f.md#removedisallowedrunningbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SET_APP_RUNNING_POLICY
 

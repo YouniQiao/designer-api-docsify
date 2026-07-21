@@ -6,7 +6,6 @@
 import { floatView } from '@kit.ArkUI';
 ```
 
-<a id="unbind"></a>
 ## unbind
 
 ```TypeScript
@@ -20,9 +19,7 @@ Unbinds the float view and floating ball. The unbinding can be performed only af
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-floatView-function unbind(floatViewController: FloatViewController,
-    floatingBallController: floatingBall.FloatingBallController): Promise<void>--><!--Device-floatView-function unbind(floatViewController: FloatViewController,
-    floatingBallController: floatingBall.FloatingBallController): Promise<void>-End-->
+<!--Device-floatView-function unbind(floatViewController: FloatViewController,    floatingBallController: floatingBall.FloatingBallController): Promise<void>--><!--Device-floatView-function unbind(floatViewController: FloatViewController,    floatingBallController: floatingBall.FloatingBallController): Promise<void>-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 

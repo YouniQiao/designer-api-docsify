@@ -8,7 +8,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -29,7 +28,6 @@ Constructs a two-dimensional transformation matrix object.The default value is a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -56,7 +54,6 @@ Constructs a two-dimensional transformation matrix object.The default value is a
 | --- | --- | --- | --- |
 | unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.<br>For abnormal values NaN and Infinity, the default values are used.<br>Default value: DEFAULT. |
 
-<a id="identity"></a>
 ## identity
 
 ```TypeScript
@@ -81,7 +78,6 @@ Transforms the current 2D matrix back to the identity matrix (i.e., without any 
 | --- | --- |
 | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | - Identity matrix. |
 
-<a id="invert"></a>
 ## invert
 
 ```TypeScript
@@ -106,7 +102,6 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 | --- | --- |
 | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | - Inverse of the current matrix. |
 
-<a id="multiply"></a>
 ## multiply
 
 ```TypeScript
@@ -137,7 +132,6 @@ The matrix is superimposed in right multiplication mode. When the input paramete
 | --- | --- |
 | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | - Matrix of the multiplication result. |
 
-<a id="rotate"></a>
 ## rotate
 
 ```TypeScript
@@ -150,7 +144,7 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Deprecated since:** 10
 
-**Substitutes:** [rotate](arkts-arkui-matrix2d-c.md#rotate-1)
+**Substitutes:** [rotate](arkts-arkui-matrix2d-c.md#rotate)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -171,7 +165,6 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 | --- | --- |
 | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@form |
 
-<a id="rotate-1"></a>
 ## rotate
 
 ```TypeScript
@@ -206,7 +199,6 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 | --- | --- |
 | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
 
-<a id="scale"></a>
 ## scale
 
 ```TypeScript
@@ -238,7 +230,6 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 | --- | --- |
 | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@FaAndStageModel@crossplatform |
 
-<a id="translate"></a>
 ## translate
 
 ```TypeScript

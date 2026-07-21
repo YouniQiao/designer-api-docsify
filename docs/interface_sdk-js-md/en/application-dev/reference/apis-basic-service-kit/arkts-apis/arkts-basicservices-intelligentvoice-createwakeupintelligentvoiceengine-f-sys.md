@@ -6,7 +6,6 @@
 import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
-<a id="createwakeupintelligentvoiceengine"></a>
 ## createWakeupIntelligentVoiceEngine
 
 ```TypeScript
@@ -64,7 +63,6 @@ intelligentVoice.createWakeupIntelligentVoiceEngine(wakeupEngineDescriptor, (err
 ```
 
 
-<a id="createwakeupintelligentvoiceengine-1"></a>
 ## createWakeupIntelligentVoiceEngine
 
 ```TypeScript

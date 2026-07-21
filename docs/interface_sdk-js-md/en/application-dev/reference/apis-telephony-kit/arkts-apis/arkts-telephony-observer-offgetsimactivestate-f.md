@@ -6,7 +6,6 @@
 import { observer } from '@kit.TelephonyKit';
 ```
 
-<a id="offgetsimactivestate"></a>
 ## offGetSimActiveState
 
 ```TypeScript

@@ -14,7 +14,6 @@ Describes the image embedding functions of the multi-modal embedding model.
 import { intelligence } from '@kit.ArkData';
 ```
 
-<a id="getembedding"></a>
 ## getEmbedding
 
 ```TypeScript
@@ -66,7 +65,6 @@ imageEmbedding.getEmbedding(image)
 
 ```
 
-<a id="loadmodel"></a>
 ## loadModel
 
 ```TypeScript
@@ -109,7 +107,6 @@ imageEmbedding.loadModel()
 
 ```
 
-<a id="releasemodel"></a>
 ## releaseModel
 
 ```TypeScript

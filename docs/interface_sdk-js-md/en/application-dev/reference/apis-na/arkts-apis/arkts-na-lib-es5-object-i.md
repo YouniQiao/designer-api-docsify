@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface Object--><!--Device-unnamed-interface Object-End-->
 
-<a id="hasownproperty"></a>
 ## hasOwnProperty
 
 ```TypeScript
@@ -25,7 +24,6 @@ Determines whether an object has a property with the specified name.
 | --- | --- |
 | boolean |  |
 
-<a id="isprototypeof"></a>
 ## isPrototypeOf
 
 ```TypeScript
@@ -48,7 +46,6 @@ Determines whether an object exists in another object's prototype chain.
 | --- | --- |
 | boolean |  |
 
-<a id="propertyisenumerable"></a>
 ## propertyIsEnumerable
 
 ```TypeScript
@@ -71,7 +68,6 @@ Determines whether a specified property is enumerable.
 | --- | --- |
 | boolean |  |
 
-<a id="tolocalestring"></a>
 ## toLocaleString
 
 ```TypeScript
@@ -88,7 +84,6 @@ Returns a date converted to a string using the current locale.
 | --- | --- |
 | string |  |
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -105,7 +100,6 @@ Returns a string representation of an object.
 | --- | --- |
 | string |  |
 
-<a id="valueof"></a>
 ## valueOf
 
 ```TypeScript

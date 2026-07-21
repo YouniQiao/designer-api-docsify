@@ -2,8 +2,7 @@
 
 This interface implements audio routing management.
 
-Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager-1) to obtain an AudioRoutingManager instance.
-
+Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
 > **NOTE**  
 >  
 > - The initial APIs of this interface are supported since API version 9.
@@ -20,7 +19,6 @@ Before calling any API in AudioRoutingManager, you must use [getRoutingManager](
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="excludeoutputdevices"></a>
 ## excludeOutputDevices
 
 ```TypeScript
@@ -94,7 +92,6 @@ async function excludeOutputDevices(){
 
 ```
 
-<a id="getactiveoutputdevicedescriptors"></a>
 ## getActiveOutputDeviceDescriptors
 
 ```TypeScript
@@ -125,7 +122,6 @@ Gets the active output device descriptors for the current audio device.The activ
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not a system application. |
 
-<a id="getexcludeddevices"></a>
 ## getExcludedDevices
 
 ```TypeScript
@@ -175,7 +171,6 @@ async function getExcludedDevices(){
 
 ```
 
-<a id="getpreferredinputdevicebyfilter"></a>
 ## getPreferredInputDeviceByFilter
 
 ```TypeScript
@@ -234,7 +229,6 @@ async function getPreferredInputDeviceByFilter(){
 
 ```
 
-<a id="getpreferredoutputdevicebyfilter"></a>
 ## getPreferredOutputDeviceByFilter
 
 ```TypeScript
@@ -294,7 +288,6 @@ async function selectOutputDeviceByFilter(){
 
 ```
 
-<a id="off"></a>
 ## off('preferredOutputDeviceChangeByFilter')
 
 ```TypeScript
@@ -350,7 +343,6 @@ audioRoutingManager.off('preferredOutputDeviceChangeByFilter', preferredOutputDe
 
 ```
 
-<a id="offpreferredinputdevicechangebyfilter"></a>
 ## offPreferredInputDeviceChangeByFilter
 
 ```TypeScript
@@ -382,7 +374,6 @@ Unsubscribes to preferred input device change events.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="on"></a>
 ## on('preferredOutputDeviceChangeByFilter')
 
 ```TypeScript
@@ -432,7 +423,6 @@ audioRoutingManager.on('preferredOutputDeviceChangeByFilter', outputAudioRendere
 
 ```
 
-<a id="onpreferredinputdevicechangebyfilter"></a>
 ## onPreferredInputDeviceChangeByFilter
 
 ```TypeScript
@@ -466,7 +456,6 @@ Subscribes to preferred input device change events. When the preferred device fo
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio client call audio service error, System error. |
 
-<a id="restoreoutputdevicebyfilter"></a>
 ## restoreOutputDeviceByFilter
 
 ```TypeScript
@@ -504,7 +493,6 @@ Restores the output device for the specified audio renderer filter to the defaul
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="selectinputdevice"></a>
 ## selectInputDevice
 
 ```TypeScript
@@ -561,7 +549,6 @@ async function selectInputDevice(){
 
 ```
 
-<a id="selectinputdevice-1"></a>
 ## selectInputDevice
 
 ```TypeScript
@@ -621,7 +608,6 @@ async function getRoutingManager(){
 
 ```
 
-<a id="selectinputdevicebyfilter"></a>
 ## selectInputDeviceByFilter
 
 ```TypeScript
@@ -699,7 +685,6 @@ async function selectInputDeviceByFilter(){
 
 ```
 
-<a id="selectoutputdevice"></a>
 ## selectOutputDevice
 
 ```TypeScript
@@ -755,7 +740,6 @@ async function selectOutputDevice(){
 
 ```
 
-<a id="selectoutputdevice-1"></a>
 ## selectOutputDevice
 
 ```TypeScript
@@ -815,7 +799,6 @@ async function selectOutputDevice(){
 
 ```
 
-<a id="selectoutputdevicebyfilter"></a>
 ## selectOutputDeviceByFilter
 
 ```TypeScript
@@ -881,7 +864,6 @@ async function selectOutputDeviceByFilter(){
 
 ```
 
-<a id="selectoutputdevicebyfilter-1"></a>
 ## selectOutputDeviceByFilter
 
 ```TypeScript
@@ -951,7 +933,6 @@ async function selectOutputDeviceByFilter(){
 
 ```
 
-<a id="selectoutputdevicebyfilter-2"></a>
 ## selectOutputDeviceByFilter
 
 ```TypeScript
@@ -1027,7 +1008,6 @@ audioRoutingManager.selectOutputDeviceByFilter(outputAudioRendererFilter, output
 
 ```
 
-<a id="unexcludeoutputdevices"></a>
 ## unexcludeOutputDevices
 
 ```TypeScript
@@ -1101,7 +1081,6 @@ async function unexcludeOutputDevices(){
 
 ```
 
-<a id="unexcludeoutputdevices-1"></a>
 ## unexcludeOutputDevices
 
 ```TypeScript

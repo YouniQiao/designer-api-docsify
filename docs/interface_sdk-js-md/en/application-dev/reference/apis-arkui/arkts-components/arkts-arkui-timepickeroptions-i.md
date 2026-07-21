@@ -80,7 +80,7 @@ Time of the selected item.
 
 Default value: current system time
 
-Since API version 10, this parameter supports two-way binding through [$$](docroot://ui/state-management/arkts-two-way-sync.md).
+Since API version 10, this parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** Date
 

@@ -20,7 +20,6 @@ Checks whether a bundle has been installed.
 import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } from '@kit.AbilityKit';
 ```
 
-<a id="hasinstalled"></a>
 ## hasInstalled
 
 ```TypeScript

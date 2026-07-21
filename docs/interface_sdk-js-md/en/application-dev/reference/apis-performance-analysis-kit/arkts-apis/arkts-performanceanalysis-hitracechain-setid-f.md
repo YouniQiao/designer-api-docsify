@@ -6,7 +6,6 @@
 import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="setid"></a>
 ## setId
 
 ```TypeScript

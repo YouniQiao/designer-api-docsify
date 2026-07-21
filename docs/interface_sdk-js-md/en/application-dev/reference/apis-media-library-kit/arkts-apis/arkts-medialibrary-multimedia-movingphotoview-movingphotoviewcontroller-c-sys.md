@@ -14,7 +14,6 @@ Defines the MovingPhotoView controller.
 import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from '@kit.MediaLibraryKit';
 ```
 
-<a id="enableautoplay"></a>
 ## enableAutoPlay
 
 ```TypeScript
@@ -45,7 +44,6 @@ Dynamically refresh the autoplay property, which will force to play after moving
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
-<a id="enabletransition"></a>
 ## enableTransition
 
 ```TypeScript
@@ -76,7 +74,6 @@ Enable or disable the zoom transition effect and can be set during initializatio
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
-<a id="notifymovingphototransition"></a>
 ## notifyMovingPhotoTransition
 
 ```TypeScript
@@ -99,7 +96,6 @@ Notify the component to execute the picture transition animation.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
-<a id="pauseplayback"></a>
 ## pausePlayback
 
 ```TypeScript
@@ -124,7 +120,6 @@ Pause moving photo and show current frame, start playing from the current frame 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
-<a id="reset"></a>
 ## reset
 
 ```TypeScript
@@ -149,7 +144,6 @@ Reset moving photo playback options as default.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
-<a id="restart"></a>
 ## restart
 
 ```TypeScript
@@ -174,7 +168,6 @@ Restart to play the video with current options.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
-<a id="setplaybackperiod"></a>
 ## setPlaybackPeriod
 
 ```TypeScript

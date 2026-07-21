@@ -1,6 +1,5 @@
 # symlinkSync
 
-<a id="symlinksync"></a>
 ## symlinkSync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Creates a symbolic link based on the file path. This API returns the result sync
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:symlinkSync](arkts-corefile-file-fs-symlinksync-f.md#symlinksync-1)
+**Substitutes:** [fs:symlinkSync](arkts-corefile-fileio-symlinksync-f.md#symlinksync)
 
 <!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void--><!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void-End-->
 

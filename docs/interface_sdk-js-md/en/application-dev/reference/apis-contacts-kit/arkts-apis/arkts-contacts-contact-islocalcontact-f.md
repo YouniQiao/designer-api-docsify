@@ -6,7 +6,6 @@
 import { contact } from '@kit.ContactsKit';
 ```
 
-<a id="islocalcontact"></a>
 ## isLocalContact
 
 ```TypeScript
@@ -19,7 +18,7 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 **Deprecated since:** 10
 
-**Substitutes:** [isLocalContact(context:](arkts-contacts-contact-islocalcontact-f.md#islocalcontact-1)
+**Substitutes:** [isLocalContact(context:](arkts-contacts-contact-islocalcontact-f.md#islocalcontact)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -52,7 +51,6 @@ contact.isLocalContact(1, (err: BusinessError, data) => {
 ```
 
 
-<a id="islocalcontact-1"></a>
 ## isLocalContact
 
 ```TypeScript
@@ -106,7 +104,6 @@ contact.isLocalContact(context, 1, (err: BusinessError, data) => {
 ```
 
 
-<a id="islocalcontact-2"></a>
 ## isLocalContact
 
 ```TypeScript
@@ -119,7 +116,7 @@ Checks whether the ID of this contact is in the local address book. This API use
 
 **Deprecated since:** 10
 
-**Substitutes:** [isLocalContact(context:](arkts-contacts-contact-islocalcontact-f.md#islocalcontact-1)
+**Substitutes:** [isLocalContact(context:](arkts-contacts-contact-islocalcontact-f.md#islocalcontact)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -153,7 +150,6 @@ promise.then((data) => {
 ```
 
 
-<a id="islocalcontact-3"></a>
 ## isLocalContact
 
 ```TypeScript

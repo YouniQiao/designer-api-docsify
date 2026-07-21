@@ -6,7 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="deletepartition"></a>
 ## deletePartition
 
 ```TypeScript

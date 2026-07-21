@@ -6,7 +6,7 @@ The **AbilityDelegatorRegistry** module provides APIs for storing global registe
 
 **Deprecated since:** 9
 
-**Substitutes:** [abilityDelegatorRegistry:abilityDelegatorRegistry](arkts-app-ability-abilitydelegatorregistry.md)
+**Substitutes:** [abilityDelegatorRegistry:abilityDelegatorRegistry](arkts-application-abilitydelegatorregistry.md)
 
 <!--Device-unnamed-declare namespace abilityDelegatorRegistry--><!--Device-unnamed-declare namespace abilityDelegatorRegistry-End-->
 

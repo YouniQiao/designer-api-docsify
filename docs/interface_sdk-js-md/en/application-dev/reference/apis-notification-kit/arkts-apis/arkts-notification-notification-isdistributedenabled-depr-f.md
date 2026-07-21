@@ -1,6 +1,5 @@
 # isDistributedEnabled
 
-<a id="isdistributedenabled"></a>
 ## isDistributedEnabled
 
 ```TypeScript
@@ -26,7 +25,6 @@ Checks whether this device supports distributed notifications. This API uses an 
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
-<a id="isdistributedenabled-1"></a>
 ## isDistributedEnabled
 
 ```TypeScript

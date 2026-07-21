@@ -6,7 +6,6 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-<a id="off"></a>
 ## off('navDestinationUpdate')
 
 ```TypeScript
@@ -34,7 +33,6 @@ Unsubscribes from status changes of the **NavDestination** component. Compared w
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;NavDestinationInfo&gt; | No | Callback used to return the result. It provides the current state of the **NavDestination** component. |
 
 
-<a id="off-1"></a>
 ## off('navDestinationUpdate')
 
 ```TypeScript
@@ -61,7 +59,6 @@ Unsubscribes from status changes of the **NavDestination** component.
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;NavDestinationInfo&gt; | No | Callback used to return the result. It provides the current state of the **NavDestination** component. |
 
 
-<a id="off-2"></a>
 ## off('scrollEvent')
 
 ```TypeScript
@@ -159,7 +156,6 @@ struct Index {
 ```
 
 
-<a id="off-3"></a>
 ## off('scrollEvent')
 
 ```TypeScript
@@ -186,7 +182,6 @@ Removes a callback function that was previously registered with `on()`.
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;ScrollEventInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 
-<a id="off-4"></a>
 ## off('routerPageUpdate')
 
 ```TypeScript
@@ -242,7 +237,6 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="off-5"></a>
 ## off('densityUpdate')
 
 ```TypeScript
@@ -270,7 +264,6 @@ Unregisters the listener for screen pixel density changes.
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;DensityInfo&gt; | No | Target listener to unregister. If no parameter is provided, all listeners for the **densityUpdate** event under the current UI context are unregistered. |
 
 
-<a id="off-6"></a>
 ## off('willDraw')
 
 ```TypeScript
@@ -298,7 +291,6 @@ Unregisters the listener for drawing instruction dispatch in each frame.
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | No | Target listener to unregister. |
 
 
-<a id="off-7"></a>
 ## off('didLayout')
 
 ```TypeScript
@@ -326,7 +318,6 @@ Unregisters the listener for layout completion status in each frame.
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | No | Target listener to unregister. |
 
 
-<a id="off-8"></a>
 ## off('tabContentUpdate')
 
 ```TypeScript
@@ -354,7 +345,6 @@ Unsubscribes from **TabContent** page switching events for the specified **Tabs*
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TabContentInfo&gt; | No | Target listener to unregister. |
 
 
-<a id="off-9"></a>
 ## off('tabContentUpdate')
 
 ```TypeScript
@@ -381,7 +371,6 @@ Unsubscribes from the **TabContent** switching event.
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TabContentInfo&gt; | No | Target listener to unregister. |
 
 
-<a id="off-10"></a>
 ## off('navDestinationSwitch')
 
 ```TypeScript
@@ -400,15 +389,7 @@ Unsubscribes from **Navigation** component page switching events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-uiObserver-export function off(
-    type: 'navDestinationSwitch',
-    context: UIAbilityContext | UIContext,
-    callback?: Callback<NavDestinationSwitchInfo>
-  ): void--><!--Device-uiObserver-export function off(
-    type: 'navDestinationSwitch',
-    context: UIAbilityContext | UIContext,
-    callback?: Callback<NavDestinationSwitchInfo>
-  ): void-End-->
+<!--Device-uiObserver-export function off(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    callback?: Callback<NavDestinationSwitchInfo>  ): void--><!--Device-uiObserver-export function off(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    callback?: Callback<NavDestinationSwitchInfo>  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -421,7 +402,6 @@ Unsubscribes from **Navigation** component page switching events.
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | No | Target listener to unregister. |
 
 
-<a id="off-11"></a>
 ## off('navDestinationSwitch')
 
 ```TypeScript
@@ -441,17 +421,7 @@ Unsubscribes from **Navigation** component page switching events. Compared with 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-uiObserver-export function off(
-    type: 'navDestinationSwitch',
-    context: UIAbilityContext | UIContext,
-    observerOptions: NavDestinationSwitchObserverOptions,
-    callback?: Callback<NavDestinationSwitchInfo>
-  ): void--><!--Device-uiObserver-export function off(
-    type: 'navDestinationSwitch',
-    context: UIAbilityContext | UIContext,
-    observerOptions: NavDestinationSwitchObserverOptions,
-    callback?: Callback<NavDestinationSwitchInfo>
-  ): void-End-->
+<!--Device-uiObserver-export function off(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    observerOptions: NavDestinationSwitchObserverOptions,    callback?: Callback<NavDestinationSwitchInfo>  ): void--><!--Device-uiObserver-export function off(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    observerOptions: NavDestinationSwitchObserverOptions,    callback?: Callback<NavDestinationSwitchInfo>  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

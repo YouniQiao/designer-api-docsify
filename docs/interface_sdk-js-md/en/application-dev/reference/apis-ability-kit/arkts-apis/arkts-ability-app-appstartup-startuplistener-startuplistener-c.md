@@ -1,6 +1,6 @@
 # StartupListener
 
-The module defines the task listener used in [App Startup](docroot://application-models/app-startup.md).
+The module defines the task listener used in [App Startup](../../../application-models/app-startup.md).
 
 **Since:** 12
 
@@ -14,7 +14,6 @@ The module defines the task listener used in [App Startup](docroot://application
 import { StartupListener } from '@kit.AbilityKit';
 ```
 
-<a id="oncompleted"></a>
 ## onCompleted
 
 ```TypeScript

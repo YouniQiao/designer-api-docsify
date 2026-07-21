@@ -6,7 +6,6 @@
 import { statistics } from '@kit.NetworkKit';
 ```
 
-<a id="getcellulartxbytes"></a>
 ## getCellularTxBytes
 
 ```TypeScript
@@ -54,7 +53,6 @@ statistics.getCellularTxBytes((error: BusinessError, stats: number) => {
 ```
 
 
-<a id="getcellulartxbytes-1"></a>
 ## getCellularTxBytes
 
 ```TypeScript

@@ -10,7 +10,6 @@ In addition to the [universal events](arkts-arkui-commonmethod-c.md), the follow
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="alignitems"></a>
 ## alignItems
 
 ```TypeScript
@@ -37,7 +36,6 @@ Sets the alignment mode of the **GridCol** components along the vertical main ax
 | --- | --- | --- | --- |
 | value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes | Alignment mode of the **GridCol** components along the vertical main axis of the **GridRow** component.<br>Default value: **ItemAlign.Start**<br>Invalid values are treated as the default value.<br><br>**NOTE**<br>**ItemAlign** supports the following enums: **ItemAlign.Start**, **ItemAlign.Center**,**ItemAlign.End**, and **ItemAlign.Stretch**. |
 
-<a id="onbreakpointchange"></a>
 ## onBreakpointChange
 
 ```TypeScript
@@ -45,11 +43,10 @@ onBreakpointChange(callback: (breakpoints: string) => void)
 ```
 
 Triggered when the breakpoint changes.
-
 > **NOTE**  
 > >  
 > When [breakpointsreference](#breakpointsreference) is set to **BreakpointsReference.ComponentSize**, you are not  
-> advised to dynamically change the [padding](arkts-arkui-commonmethod-c.md#padding-1) or [margin](arkts-arkui-commonmethod-c.md#margin-1)  
+> advised to dynamically change the [padding](arkts-arkui-commonmethod-c.md#padding) or [margin](arkts-arkui-commonmethod-c.md#margin)  
 > attribute value of the **GridRow** component in the **onBreakpointChange** callback.
 
 **Since:** 9

@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="disablenetwork"></a>
 ## disableNetwork
 
 ```TypeScript
@@ -57,7 +56,6 @@ try {
 ```
 
 
-<a id="disablenetwork-1"></a>
 ## disableNetwork
 
 ```TypeScript

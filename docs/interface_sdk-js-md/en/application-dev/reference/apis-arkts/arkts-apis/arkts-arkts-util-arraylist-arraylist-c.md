@@ -14,7 +14,6 @@ ArrayList is a linear data structure that is implemented based on arrays.ArrayLi
 import { ArrayList } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -75,7 +74,6 @@ while(!temp.done) {
 
 ```
 
-<a id="add"></a>
 ## add
 
 ```TypeScript
@@ -131,7 +129,6 @@ console.info("length:", arrayList.length);  // length: 5
 
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -166,7 +163,6 @@ arrayList.clear();
 
 ```
 
-<a id="clone"></a>
 ## clone
 
 ```TypeScript
@@ -208,7 +204,6 @@ console.info("result = ", result.length); // result = 4
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -238,7 +233,6 @@ let arrayList = new ArrayList<string | number>();
 
 ```
 
-<a id="converttoarray"></a>
 ## convertToArray
 
 ```TypeScript
@@ -280,7 +274,6 @@ console.info("result = ", result); // result =  2,4,5,4
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -328,7 +321,6 @@ arrayList.forEach((value: number, index?: number) => {
 
 ```
 
-<a id="getcapacity"></a>
 ## getCapacity
 
 ```TypeScript
@@ -370,7 +362,6 @@ console.info("result = ", result); // result = 10
 
 ```
 
-<a id="getindexof"></a>
 ## getIndexOf
 
 ```TypeScript
@@ -421,7 +412,6 @@ console.info("result = ", result); // result = 0
 
 ```
 
-<a id="getlastindexof"></a>
 ## getLastIndexOf
 
 ```TypeScript
@@ -472,7 +462,6 @@ console.info("result = ", result); // result = 5
 
 ```
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -517,7 +506,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="increasecapacityto"></a>
 ## increaseCapacityTo
 
 ```TypeScript
@@ -560,7 +548,6 @@ console.info("result = ", arrayList.length); // result = 4
 
 ```
 
-<a id="insert"></a>
 ## insert
 
 ```TypeScript
@@ -602,7 +589,6 @@ console.info("length:", arrayList.length);  // length: 3
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -644,7 +630,6 @@ console.info("result = ", result); // result =  false
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -692,7 +677,6 @@ console.info("result = ", result); // result =  true
 
 ```
 
-<a id="removebyindex"></a>
 ## removeByIndex
 
 ```TypeScript
@@ -742,7 +726,6 @@ console.info("result = ", result); // result = 5
 
 ```
 
-<a id="removebyrange"></a>
 ## removeByRange
 
 ```TypeScript
@@ -785,7 +768,6 @@ arrayList.removeByRange(2, 4);
 
 ```
 
-<a id="replaceallelements"></a>
 ## replaceAllElements
 
 ```TypeScript
@@ -830,7 +812,6 @@ arrayList.replaceAllElements((value: number): number => {
 
 ```
 
-<a id="sort"></a>
 ## sort
 
 ```TypeScript
@@ -873,7 +854,6 @@ arrayList.sort();
 
 ```
 
-<a id="subarraylist"></a>
 ## subArrayList
 
 ```TypeScript
@@ -923,7 +903,6 @@ console.info("result = ", result.length); // result = 2
 
 ```
 
-<a id="trimtocurrentlength"></a>
 ## trimToCurrentLength
 
 ```TypeScript

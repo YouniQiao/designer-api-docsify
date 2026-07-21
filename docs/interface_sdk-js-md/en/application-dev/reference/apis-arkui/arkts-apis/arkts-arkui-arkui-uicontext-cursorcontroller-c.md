@@ -1,12 +1,11 @@
 # CursorController
 
 Provides the capability to set cursor styles.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 12.  
 >  
-> - In the following API examples, you must first use [getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcursorcontroller-1) in  
+> - In the following API examples, you must first use [getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcursorcontroller) in  
 > **UIContext** to obtain a **CursorController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 12
@@ -21,7 +20,6 @@ Provides the capability to set cursor styles.
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="restoredefault"></a>
 ## restoreDefault
 
 ```TypeScript
@@ -40,7 +38,6 @@ Restores the default cursor style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="setcursor"></a>
 ## setCursor
 
 ```TypeScript
@@ -48,7 +45,6 @@ setCursor(value: PointerStyle): void
 ```
 
 Sets the cursor style.
-
 > **NOTE**  
 >  
 > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.
@@ -69,7 +65,6 @@ Sets the cursor style.
 | --- | --- | --- | --- |
 | value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. |
 
-<a id="setcustomcursor"></a>
 ## setCustomCursor
 
 ```TypeScript
@@ -77,7 +72,6 @@ setCustomCursor(value: image.PixelMap, focusX?: number, focusY?: number): void
 ```
 
 Sets the custom cursor style.
-
 > **NOTE**  
 >  
 > This API does not take effect immediately. The cursor style will be updated in the next rendering frame.

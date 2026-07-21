@@ -14,7 +14,6 @@ Provides APIs to operate the authenticator.
 import { appAccount } from '@kit.BasicServicesKit';
 ```
 
-<a id="addaccountimplicitly"></a>
 ## addAccountImplicitly
 
 ```TypeScript
@@ -27,30 +26,19 @@ addAccountImplicitly(
 ```
 
 Adds an application account implicitly based on the specified authentication type and options. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
-> [createAccountImplicitly](docroot://reference/apis-basic-services-kit/js-apis-appAccount.md#createaccountimplicitly9-2)  
+> [createAccountImplicitly](../../../reference/apis-basic-services-kit/js-apis-appAccount.md#createaccountimplicitly9-2)  
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccountImplicitly(options:](arkts-basicservices-appaccount-authenticator-c.md#createaccountimplicitly-1)
+**Substitutes:** [createAccountImplicitly(options:](arkts-basicservices-appaccount-authenticator-c.md#createaccountimplicitly)
 
-<!--Device-Authenticator-addAccountImplicitly(
-      authType: string,
-      callerBundleName: string,
-      options: { [key: string]: any },
-      callback: AuthenticatorCallback
-    ): void--><!--Device-Authenticator-addAccountImplicitly(
-      authType: string,
-      callerBundleName: string,
-      options: { [key: string]: any },
-      callback: AuthenticatorCallback
-    ): void-End-->
+<!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -63,7 +51,6 @@ Adds an application account implicitly based on the specified authentication typ
 | options | { [key: string]: any } | Yes | Options for the authentication. |
 | callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-<a id="auth"></a>
 ## auth
 
 ```TypeScript
@@ -87,7 +74,6 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | options | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes | Options for the authentication. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-<a id="authenticate"></a>
 ## authenticate
 
 ```TypeScript
@@ -101,31 +87,18 @@ authenticate(
 ```
 
 Authenticates an application account to obtain the OAuth token. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
-> [auth](docroot://reference/apis-basic-services-kit/js-apis-appAccount.md#auth9-2) instead.
+> [auth](../../../reference/apis-basic-services-kit/js-apis-appAccount.md#auth9-2) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [auth(name:](arkts-basicservices-appaccount-authenticator-c.md#auth-1)
+**Substitutes:** [auth(name:](arkts-basicservices-appaccount-authenticator-c.md#auth)
 
-<!--Device-Authenticator-authenticate(
-      name: string,
-      authType: string,
-      callerBundleName: string,
-      options: { [key: string]: any },
-      callback: AuthenticatorCallback
-    ): void--><!--Device-Authenticator-authenticate(
-      name: string,
-      authType: string,
-      callerBundleName: string,
-      options: { [key: string]: any },
-      callback: AuthenticatorCallback
-    ): void-End-->
+<!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -139,7 +112,6 @@ Authenticates an application account to obtain the OAuth token. This API uses an
 | options | { [key: string]: any } | Yes | Options for the authentication. |
 | callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-<a id="checkaccountlabels"></a>
 ## checkAccountLabels
 
 ```TypeScript
@@ -166,7 +138,6 @@ Checks the account labels. This API uses an asynchronous callback to return the 
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject9) API.
 
-<a id="checkaccountremovable"></a>
 ## checkAccountRemovable
 
 ```TypeScript
@@ -192,7 +163,6 @@ Checks whether an application account can be deleted. This API uses an asynchron
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject9) API.
 
-<a id="createaccountimplicitly"></a>
 ## createAccountImplicitly
 
 ```TypeScript
@@ -214,7 +184,6 @@ Creates an application account implicitly based on the specified account owner. 
 | options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes | Options for implicitly creating the account. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
-<a id="getremoteobject"></a>
 ## getRemoteObject
 
 ```TypeScript
@@ -283,7 +252,6 @@ export default {
 
 ```
 
-<a id="setproperties"></a>
 ## setProperties
 
 ```TypeScript
@@ -309,7 +277,6 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 
 This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject9) API.
 
-<a id="verifycredential"></a>
 ## verifyCredential
 
 ```TypeScript

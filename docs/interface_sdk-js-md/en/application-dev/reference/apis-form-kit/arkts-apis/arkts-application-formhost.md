@@ -6,7 +6,7 @@ The **formHost** module provides APIs related to the widget host, which is an ap
 
 **Deprecated since:** 9
 
-**Substitutes:** [formHost:formHost](arkts-app-form-formhost.md)
+**Substitutes:** [formHost:formHost](arkts-application-formhost.md)
 
 <!--Device-unnamed-declare namespace formHost--><!--Device-unnamed-declare namespace formHost-End-->
 

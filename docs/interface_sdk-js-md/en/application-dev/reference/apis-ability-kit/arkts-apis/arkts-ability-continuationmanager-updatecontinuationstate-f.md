@@ -6,7 +6,6 @@
 import { continuationManager } from '@kit.AbilityKit';
 ```
 
-<a id="updatecontinuationstate"></a>
 ## updateContinuationState
 
 ```TypeScript
@@ -30,17 +29,7 @@ Instructs the device selection module to update the device connection state. Thi
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-continuationManager-function updateContinuationState(
-    token: number,
-    deviceId: string,
-    status: DeviceConnectState,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-continuationManager-function updateContinuationState(
-    token: number,
-    deviceId: string,
-    status: DeviceConnectState,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-continuationManager-function updateContinuationState(    token: number,    deviceId: string,    status: DeviceConnectState,    callback: AsyncCallback<void>  ): void--><!--Device-continuationManager-function updateContinuationState(    token: number,    deviceId: string,    status: DeviceConnectState,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -84,7 +73,6 @@ try {
 ```
 
 
-<a id="updatecontinuationstate-1"></a>
 ## updateContinuationState
 
 ```TypeScript

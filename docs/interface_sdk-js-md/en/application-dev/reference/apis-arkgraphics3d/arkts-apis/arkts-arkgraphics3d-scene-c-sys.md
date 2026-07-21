@@ -8,7 +8,6 @@ Defines the 3d scene.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="load"></a>
 ## load
 
 ```TypeScript

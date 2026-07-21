@@ -6,7 +6,6 @@
 import { continuationManager } from '@kit.AbilityKit';
 ```
 
-<a id="startdevicemanager"></a>
 ## startDeviceManager
 
 ```TypeScript
@@ -19,7 +18,7 @@ Starts the device selection module to show the list of available devices on the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [startDiscovering(discoverParam:](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering-1)
+**Substitutes:** [startDiscovering(discoverParam:](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,7 +50,6 @@ continuationManager.startDeviceManager(token, (err) => {
 ```
 
 
-<a id="startdevicemanager-1"></a>
 ## startDeviceManager
 
 ```TypeScript
@@ -64,7 +62,7 @@ Starts the device selection module to show the list of available devices on the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [startDiscovering(discoverParam:](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering-1)
+**Substitutes:** [startDiscovering(discoverParam:](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,7 +100,6 @@ continuationManager.startDeviceManager(
 ```
 
 
-<a id="startdevicemanager-2"></a>
 ## startDeviceManager
 
 ```TypeScript
@@ -115,7 +112,7 @@ Starts the device selection module to show the list of available devices on the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [startDiscovering(discoverParam:](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering-1)
+**Substitutes:** [startDiscovering(discoverParam:](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)
 
 **Model restriction:** This API can be used only in the stage model.
 

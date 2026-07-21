@@ -4,7 +4,6 @@
 
 <!--Device-unnamed-interface IterableIterator<T> extends Iterator<T>--><!--Device-unnamed-interface IterableIterator<T> extends Iterator<T>-End-->
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript

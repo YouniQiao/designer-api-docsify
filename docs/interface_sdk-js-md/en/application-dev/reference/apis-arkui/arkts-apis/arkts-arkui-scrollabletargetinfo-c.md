@@ -10,7 +10,6 @@ Provides the information about the scrollable container component corresponding 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="isbegin"></a>
 ## isBegin
 
 ```TypeScript
@@ -35,7 +34,6 @@ Checks whether this scrollable container component is scrolled to the top. If it
 | --- | --- |
 | boolean | Whether the current scrollable container component is scrolled to the top. The value **true** means that the component is scrolled to the top, and **false** means the opposite. |
 
-<a id="isend"></a>
 ## isEnd
 
 ```TypeScript

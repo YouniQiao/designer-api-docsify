@@ -6,7 +6,6 @@
 import { power } from '@kit.BasicServicesKit';
 ```
 
-<a id="rebootdevice"></a>
 ## rebootDevice
 
 ```TypeScript
@@ -19,7 +18,7 @@ Restarts the system.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reboot](arkts-basicservices-power-reboot-f-sys.md#reboot-1)
+**Substitutes:** [reboot](arkts-basicservices-power-reboot-f-sys.md#reboot)
 
 **Required permissions:** ohos.permission.REBOOT
 

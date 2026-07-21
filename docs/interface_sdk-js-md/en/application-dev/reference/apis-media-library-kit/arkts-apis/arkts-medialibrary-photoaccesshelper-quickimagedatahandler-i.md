@@ -14,7 +14,6 @@ QuickImageDataHandler is a media asset handler used to customize the media asset
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="ondataprepared"></a>
 ## onDataPrepared
 
 ```TypeScript

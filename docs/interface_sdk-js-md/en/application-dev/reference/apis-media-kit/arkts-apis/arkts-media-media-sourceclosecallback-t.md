@@ -5,7 +5,6 @@ type SourceCloseCallback = (uuid: number) => void
 ```
 
 This callback function is implemented by applications to release related resources.
-
 > **NOTE**  
 >  
 > The client must return the handle immediately after processing the request.

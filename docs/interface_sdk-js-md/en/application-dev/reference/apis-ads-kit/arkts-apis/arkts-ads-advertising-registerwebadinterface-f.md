@@ -6,7 +6,6 @@
 import { advertising } from '@kit.AdsKit';
 ```
 
-<a id="registerwebadinterface"></a>
 ## registerWebAdInterface
 
 ```TypeScript
@@ -68,7 +67,6 @@ struct Index {
 ```
 
 
-<a id="registerwebadinterface-1"></a>
 ## registerWebAdInterface
 
 ```TypeScript
@@ -82,9 +80,7 @@ Injects an ad JavaScript object to the **Web** component(this API is only open t
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
 
-<!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext, 
-    needRefresh: boolean): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext, 
-    needRefresh: boolean): void-End-->
+<!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 

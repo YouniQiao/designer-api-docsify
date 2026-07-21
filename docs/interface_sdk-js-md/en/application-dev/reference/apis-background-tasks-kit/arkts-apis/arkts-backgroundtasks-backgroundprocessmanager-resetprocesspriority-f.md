@@ -6,7 +6,6 @@
 import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="resetprocesspriority"></a>
 ## resetProcessPriority
 
 ```TypeScript
@@ -25,7 +24,7 @@ Unsuppresses the child process. In this case, the child process follows the sche
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | number | Yes | ID of the child process, which is the **pid** parameter of the [OH_Ability_StartNativeChildProcess](docroot://reference/apis-ability-kit/capi-native-child-process-h.md#oh_ability_startnativechildprocess)API. |
+| pid | number | Yes | ID of the child process, which is the **pid** parameter of the [OH_Ability_StartNativeChildProcess](../../../reference/apis-ability-kit/capi-native-child-process-h.md#oh_ability_startnativechildprocess)API. |
 
 **Return value:**
 

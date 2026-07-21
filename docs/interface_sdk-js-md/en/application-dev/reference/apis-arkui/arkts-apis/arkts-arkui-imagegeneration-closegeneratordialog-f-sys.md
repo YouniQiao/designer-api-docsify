@@ -6,7 +6,6 @@
 import { imageGeneration } from '@kit.ArkUI';
 ```
 
-<a id="closegeneratordialog"></a>
 ## closeGeneratorDialog
 
 ```TypeScript

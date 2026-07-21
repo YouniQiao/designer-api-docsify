@@ -6,7 +6,6 @@
 import { componentUtils } from '@kit.ArkUI';
 ```
 
-<a id="getrectanglebyid"></a>
 ## getRectangleById
 
 ```TypeScript
@@ -14,11 +13,10 @@ function getRectangleById(id: string): ComponentInfo
 ```
 
 Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component.
-
 > **NOTE**  
 >  
 > - Since API version 10, you can use the  
-> [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils-1) API in  
+> [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils) API in  
 > [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentUtils](arkts-arkui-uicontext.md) object  
 > associated with the current UI context. This API provides access to component coordinates and size information  
 > after the target component completes layout. It is recommended that you invoke this API within  

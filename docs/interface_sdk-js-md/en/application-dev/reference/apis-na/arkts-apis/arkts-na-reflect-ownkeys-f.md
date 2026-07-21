@@ -1,6 +1,5 @@
 # ownKeys
 
-<a id="ownkeys"></a>
 ## ownKeys
 
 ```TypeScript

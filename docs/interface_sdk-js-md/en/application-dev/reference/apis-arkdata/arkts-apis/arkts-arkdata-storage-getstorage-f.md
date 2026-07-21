@@ -1,6 +1,5 @@
 # getStorage
 
-<a id="getstorage"></a>
 ## getStorage
 
 ```TypeScript
@@ -25,7 +24,6 @@ Reads the specified file and loads its data to the **Storage** instance for data
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Storage&gt; | Yes | Callback used to return the result. |
 
 
-<a id="getstorage-1"></a>
 ## getStorage
 
 ```TypeScript

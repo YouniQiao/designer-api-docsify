@@ -1,7 +1,6 @@
 # MutableStyledString
 
 Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.
-
 > **An exception is thrown in the following cases:**  
 >  
 > If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed  
@@ -17,7 +16,6 @@ Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="appendstyledstring"></a>
 ## appendStyledString
 
 ```TypeScript
@@ -42,7 +40,6 @@ Appends a styled string.
 | --- | --- | --- | --- |
 | other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | New styled string. |
 
-<a id="clearstyles"></a>
 ## clearStyles
 
 ```TypeScript
@@ -63,7 +60,6 @@ After a style is removed, the value set for the corresponding style attribute in
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="insertstring"></a>
 ## insertString
 
 ```TypeScript
@@ -95,7 +91,6 @@ Inserts a string.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="insertstyledstring"></a>
 ## insertStyledString
 
 ```TypeScript
@@ -127,7 +122,6 @@ Inserts a new styled string at the specified position.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="removestring"></a>
 ## removeString
 
 ```TypeScript
@@ -161,7 +155,6 @@ This API equally works when the styled string contains an image or [CustomSpan](
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="removestyle"></a>
 ## removeStyle
 
 ```TypeScript
@@ -198,7 +191,6 @@ This API equally works when the styled string contains an image.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="removestyles"></a>
 ## removeStyles
 
 ```TypeScript
@@ -234,7 +226,6 @@ This API equally works when the styled string contains an image.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="replacestring"></a>
 ## replaceString
 
 ```TypeScript
@@ -267,7 +258,6 @@ Replaces the string in the specified range of this styled string.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="replacestyle"></a>
 ## replaceStyle
 
 ```TypeScript
@@ -298,7 +288,6 @@ Replaces the style in the specified range of this styled string.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="replacestyledstring"></a>
 ## replaceStyledString
 
 ```TypeScript
@@ -331,7 +320,6 @@ Replaces the styled string in the specified range.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 
-<a id="setstyle"></a>
 ## setStyle
 
 ```TypeScript

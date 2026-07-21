@@ -14,7 +14,6 @@ The proxy of the UIExtension window.
 import { uiExtension } from '@kit.ArkUI';
 ```
 
-<a id="hidenonsecurewindows"></a>
 ## hideNonSecureWindows
 
 ```TypeScript
@@ -22,7 +21,6 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 ```
 
 Sets whether to hide non-secure windows. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - A non-secure window refers to any window that may obstruct the  
@@ -103,7 +101,6 @@ export default class EntryAbility extends UIExtensionAbility {
 
 ```
 
-<a id="setwatermarkflag"></a>
 ## setWaterMarkFlag
 
 ```TypeScript
@@ -111,7 +108,6 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 ```
 
 Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground  

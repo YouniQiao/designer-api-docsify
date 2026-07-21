@@ -1,7 +1,6 @@
 # ParticleUpdaterOptions
 
 Defines the particle updater options.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  

@@ -70,7 +70,7 @@ Callback invoked when the API call is successful.
 uri: string
 ```
 
-URI of the file to delete, which cannot be an application resource path. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;<=>?[]|\x7F.2. The value can contain a maximum of 128 characters.
+URI of the file to delete, which cannot be an application resource path. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;&lt;=&gt;?[]|\x7F.2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 

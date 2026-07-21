@@ -16,14 +16,13 @@ Provides the context for the transition animation.
 import { window } from '@kit.ArkUI';
 ```
 
-<a id="completetransition"></a>
 ## completeTransition
 
 ```TypeScript
 completeTransition(isCompleted: boolean): void
 ```
 
-Completes the transition. This API can be called only after [animateTo()](../arkts-components/arkts-arkui-common-animateto-f.md#animateto-1)is executed.
+Completes the transition. This API can be called only after [animateTo()](../arkts-components/arkts-arkui-common-animateto-f.md#animateto)is executed.
 
 **Since:** 9
 

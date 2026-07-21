@@ -1,6 +1,6 @@
 # InputMethodEngine
 
-In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine-1) to obtain an **InputMethodEngine** instance,and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine) to obtain an **InputMethodEngine** instance,and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -18,7 +18,6 @@ In the following API examples, you must first use [getInputMethodEngine](arkts-i
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-<a id="off"></a>
 ## off('inputStart')
 
 ```TypeScript
@@ -36,13 +35,7 @@ Disables listening for the input method binding event.
 
 **Substitutes:** off(type:
 
-<!--Device-InputMethodEngine-off(
-      type: 'inputStart',
-      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void
-    ): void--><!--Device-InputMethodEngine-off(
-      type: 'inputStart',
-      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void
-    ): void-End-->
+<!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -64,7 +57,6 @@ inputMethodEngine.getInputMethodEngine()
 
 ```
 
-<a id="off-1"></a>
 ## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -98,7 +90,6 @@ inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 
 ```
 
-<a id="off-2"></a>
 ## off('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -132,7 +123,6 @@ inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 
 ```
 
-<a id="on"></a>
 ## on('inputStart')
 
 ```TypeScript
@@ -150,13 +140,7 @@ Enables listening for the input method binding event. This API uses an asynchron
 
 **Substitutes:** on(type:
 
-<!--Device-InputMethodEngine-on(
-      type: 'inputStart',
-      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void
-    ): void--><!--Device-InputMethodEngine-on(
-      type: 'inputStart',
-      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void
-    ): void-End-->
+<!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -179,7 +163,6 @@ inputMethodEngine.getInputMethodEngine()
 
 ```
 
-<a id="on-1"></a>
 ## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript
@@ -217,7 +200,6 @@ inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
 
 ```
 
-<a id="on-2"></a>
 ## on('keyboardShow' | 'keyboardHide')
 
 ```TypeScript

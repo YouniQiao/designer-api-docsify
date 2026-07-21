@@ -1,7 +1,6 @@
 # ViewportRect
 
 Describes the options of the viewport.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
@@ -29,11 +28,11 @@ Invalid values are treated as the default value.
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ViewportRect-height?: Length--><!--Device-ViewportRect-height?: Length-End-->
 
@@ -55,11 +54,11 @@ Invalid values are treated as the default value.
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ViewportRect-width?: Length--><!--Device-ViewportRect-width?: Length-End-->
 
@@ -81,11 +80,11 @@ Invalid values are treated as the default value.
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ViewportRect-x?: Length--><!--Device-ViewportRect-x?: Length-End-->
 
@@ -107,11 +106,11 @@ Invalid values are treated as the default value.
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ViewportRect-y?: Length--><!--Device-ViewportRect-y?: Length-End-->
 

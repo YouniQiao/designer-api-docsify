@@ -6,7 +6,6 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
-<a id="removedockapp"></a>
 ## removeDockApp
 
 ```TypeScript
@@ -14,7 +13,6 @@ function removeDockApp(admin: Want, bundleName: string, abilityName: string): vo
 ```
 
 Removes an application from the shortcut bar.
-
 > **NOTE**  
 >  
 > The following applications cannot be removed from the shortcut bar using this API: Application Center, Task  

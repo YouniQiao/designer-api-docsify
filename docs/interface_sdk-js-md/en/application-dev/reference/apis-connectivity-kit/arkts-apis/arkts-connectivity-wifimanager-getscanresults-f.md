@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="getscanresults"></a>
 ## getScanResults
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtain the scanned sta list.
 
 **Deprecated since:** 10
 
-**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist-1)
+**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or (ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION))
 
@@ -42,7 +41,6 @@ Obtain the scanned sta list.
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
 
-<a id="getscanresults-1"></a>
 ## getScanResults
 
 ```TypeScript
@@ -55,7 +53,7 @@ Obtain the scanned sta list.
 
 **Deprecated since:** 10
 
-**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist-1)
+**Substitutes:** [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and (ohos.permission.GET_WIFI_PEERS_MAC or (ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION))
 

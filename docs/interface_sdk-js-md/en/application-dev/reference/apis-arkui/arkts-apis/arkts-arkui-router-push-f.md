@@ -6,7 +6,6 @@
 import { router } from '@kit.ArkUI';
 ```
 
-<a id="push"></a>
 ## push
 
 ```TypeScript
@@ -19,7 +18,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pushUrl(options:](arkts-arkui-arkui-uicontext-router-c.md#pushurl-1)
+**Substitutes:** [pushUrl(options:](arkts-arkui-arkui-uicontext-router-c.md#pushurl)
 
 <!--Device-router-function push(options: RouterOptions): void--><!--Device-router-function push(options: RouterOptions): void-End-->
 

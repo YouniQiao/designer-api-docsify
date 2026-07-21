@@ -6,7 +6,6 @@
 import { accessibility } from '@kit.AccessibilityKit';
 ```
 
-<a id="onseniormodestatechange"></a>
 ## onSeniorModeStateChange
 
 ```TypeScript
@@ -14,7 +13,6 @@ function onSeniorModeStateChange(callback: Callback<boolean>): void
 ```
 
 Listens for enabling status changes of the senior mode. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.  

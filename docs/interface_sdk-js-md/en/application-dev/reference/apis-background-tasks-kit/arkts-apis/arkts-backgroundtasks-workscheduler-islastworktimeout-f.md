@@ -6,7 +6,6 @@
 import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="islastworktimeout"></a>
 ## isLastWorkTimeOut
 
 ```TypeScript
@@ -19,7 +18,7 @@ Checks whether the last execution of a task timed out. This API uses an asynchro
 
 **Deprecated since:** 10
 
-**Substitutes:** [isLastWorkTimeOut(workId:](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md#islastworktimeout-1)
+**Substitutes:** [isLastWorkTimeOut(workId:](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md#islastworktimeout)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,7 +50,6 @@ Checks whether the last execution of a task timed out. This API uses an asynchro
 | [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on workInfo failed. |
 
 
-<a id="islastworktimeout-1"></a>
 ## isLastWorkTimeOut
 
 ```TypeScript
@@ -102,7 +100,6 @@ Checks whether the last execution of a task timed out. This API uses an asynchro
 ```
 
 
-<a id="islastworktimeout-2"></a>
 ## isLastWorkTimeOut
 
 ```TypeScript

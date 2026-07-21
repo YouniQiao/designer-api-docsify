@@ -6,7 +6,6 @@
 import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
-<a id="getalllauncherabilityresourceinfo"></a>
 ## getAllLauncherAbilityResourceInfo
 
 ```TypeScript
@@ -41,7 +40,6 @@ Obtains the resource information of the entry abilities of the current applicati
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 
-<a id="getalllauncherabilityresourceinfo-1"></a>
 ## getAllLauncherAbilityResourceInfo
 
 ```TypeScript

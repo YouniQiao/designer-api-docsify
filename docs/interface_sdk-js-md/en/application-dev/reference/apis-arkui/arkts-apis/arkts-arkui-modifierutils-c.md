@@ -8,7 +8,6 @@ ModifierUtils provides utility methods for modifier and attribute operations.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="isinstanceof"></a>
 ## isInstanceOf
 
 ```TypeScript

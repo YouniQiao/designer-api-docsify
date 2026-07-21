@@ -18,7 +18,6 @@ It supports the full download of cloud application files.
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -67,7 +66,6 @@ try {
 
 ```
 
-<a id="getcloudfileinfo"></a>
 ## getCloudFileInfo
 
 ```TypeScript
@@ -117,7 +115,6 @@ downgradeMgr.getCloudFileInfo().then((fileInfo: cloudSyncManager.CloudFileInfo) 
 
 ```
 
-<a id="startdownload"></a>
 ## startDownload
 
 ```TypeScript
@@ -185,7 +182,6 @@ downgradeMgr.startDownload(callback).then(() => {
 
 ```
 
-<a id="starttransfer"></a>
 ## startTransfer
 
 ```TypeScript
@@ -225,14 +221,13 @@ Start to migrate the downloaded full data to the specified public directory of f
 | 13900020 | Invalid argument. Possible causes:<br>1.Mandatory parameters are left unspecified.<br>2.The length of the input uri does not meet the value range requirement.<br>3.The input uri does not belong to a File Manager public directory. |
 | 22400006 | The same task is already in progress. |
 
-<a id="stopdownload"></a>
 ## stopDownload
 
 ```TypeScript
 stopDownload(): Promise<void>
 ```
 
-Stops the full download task triggered by [startDownload](arkts-corefile-cloudsyncmanager-downgradedownload-c-sys.md#startdownload-1). This API uses a promise to return the result.
+Stops the full download task triggered by [startDownload](arkts-corefile-cloudsyncmanager-downgradedownload-c-sys.md#startdownload). This API uses a promise to return the result.
 
 **Since:** 20
 

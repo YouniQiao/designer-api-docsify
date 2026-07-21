@@ -18,7 +18,6 @@ Manages GATT client. Before calling an Gatt client method, you must use {@link c
 import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -55,7 +54,6 @@ let ret : boolean = device.close();
 
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -92,7 +90,6 @@ let ret : boolean = device.connect();
 
 ```
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -127,7 +124,6 @@ let ret : boolean = device.disconnect();
 
 ```
 
-<a id="getdevicename"></a>
 ## getDeviceName
 
 ```TypeScript
@@ -167,7 +163,6 @@ let deviceName : void = gattClient.getDeviceName((err : BusinessError, data : st
 
 ```
 
-<a id="getdevicename-1"></a>
 ## getDeviceName
 
 ```TypeScript
@@ -205,7 +200,6 @@ gattClient.getDeviceName().then((data) => {
 
 ```
 
-<a id="getrssivalue"></a>
 ## getRssiValue
 
 ```TypeScript
@@ -246,7 +240,6 @@ gattClient.getRssiValue((err : BusinessError, data : number)=> {
 
 ```
 
-<a id="getrssivalue-1"></a>
 ## getRssiValue
 
 ```TypeScript
@@ -284,7 +277,6 @@ gattClient.getRssiValue().then((data : number) => {
 
 ```
 
-<a id="getservices"></a>
 ## getServices
 
 ```TypeScript
@@ -333,7 +325,6 @@ device.getServices(getServices);
 
 ```
 
-<a id="getservices-1"></a>
 ## getServices
 
 ```TypeScript
@@ -372,7 +363,6 @@ device.getServices().then((result : Array<bluetooth.GattService>) => {
 
 ```
 
-<a id="off"></a>
 ## off('BLECharacteristicChange')
 
 ```TypeScript
@@ -408,7 +398,6 @@ device.off('BLECharacteristicChange');
 
 ```
 
-<a id="off-1"></a>
 ## off('BLEConnectionStateChange')
 
 ```TypeScript
@@ -444,7 +433,6 @@ device.off('BLEConnectionStateChange');
 
 ```
 
-<a id="on"></a>
 ## on('BLECharacteristicChange')
 
 ```TypeScript
@@ -485,7 +473,6 @@ device.on('BLECharacteristicChange', CharacteristicChange);
 
 ```
 
-<a id="on-1"></a>
 ## on('BLEConnectionStateChange')
 
 ```TypeScript
@@ -525,7 +512,6 @@ device.on('BLEConnectionStateChange', ConnectStateChanged);
 
 ```
 
-<a id="readcharacteristicvalue"></a>
 ## readCharacteristicValue
 
 ```TypeScript
@@ -586,7 +572,6 @@ device.readCharacteristicValue(characteristic, readCcc);
 
 ```
 
-<a id="readcharacteristicvalue-1"></a>
 ## readCharacteristicValue
 
 ```TypeScript
@@ -643,7 +628,6 @@ device.readCharacteristicValue(characteristic);
 
 ```
 
-<a id="readdescriptorvalue"></a>
 ## readDescriptorValue
 
 ```TypeScript
@@ -694,7 +678,6 @@ device.readDescriptorValue(descriptor, readDesc);
 
 ```
 
-<a id="readdescriptorvalue-1"></a>
 ## readDescriptorValue
 
 ```TypeScript
@@ -741,7 +724,6 @@ device.readDescriptorValue(descriptor);
 
 ```
 
-<a id="setblemtusize"></a>
 ## setBLEMtuSize
 
 ```TypeScript
@@ -782,7 +764,6 @@ device.setBLEMtuSize(128);
 
 ```
 
-<a id="setnotifycharacteristicchanged"></a>
 ## setNotifyCharacteristicChanged
 
 ```TypeScript
@@ -836,7 +817,6 @@ device.setNotifyCharacteristicChanged(characteristic, false);
 
 ```
 
-<a id="writecharacteristicvalue"></a>
 ## writeCharacteristicValue
 
 ```TypeScript
@@ -897,7 +877,6 @@ if (retWriteCcc) {
 
 ```
 
-<a id="writedescriptorvalue"></a>
 ## writeDescriptorValue
 
 ```TypeScript

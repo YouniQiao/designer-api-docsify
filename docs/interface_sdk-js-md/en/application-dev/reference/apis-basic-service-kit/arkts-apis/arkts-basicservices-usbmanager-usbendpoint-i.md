@@ -1,7 +1,6 @@
 # USBEndpoint
 
 Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md).
-
 > **NOTE**  
 >  
 > The host controller schedules the endpoint based on the endpoint type.  

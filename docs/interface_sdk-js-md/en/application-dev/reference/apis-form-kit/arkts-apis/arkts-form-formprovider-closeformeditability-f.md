@@ -6,7 +6,6 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
-<a id="closeformeditability"></a>
 ## closeFormEditAbility
 
 ```TypeScript

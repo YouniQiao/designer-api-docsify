@@ -6,7 +6,6 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
-<a id="isrequestpublishformsupported"></a>
 ## isRequestPublishFormSupported
 
 ```TypeScript
@@ -39,7 +38,6 @@ Checks whether a widget can be added to the widget host. This API uses an asynch
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="isrequestpublishformsupported-1"></a>
 ## isRequestPublishFormSupported
 
 ```TypeScript

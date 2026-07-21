@@ -1,7 +1,6 @@
 # sharedTransitionOptions
 
 Parameters of the shared element transition animation.
-
 > **NOTE**  
 >  
 > **motionPath** is effective only when **type** is set to **SharedTransitionEffectType.Exchange**.  

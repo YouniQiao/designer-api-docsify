@@ -6,7 +6,6 @@
 import { ranging } from '@kit.ConnectivityKit';
 ```
 
-<a id="getrangingcapability"></a>
 ## getRangingCapability
 
 ```TypeScript

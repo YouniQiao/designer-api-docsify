@@ -35,21 +35,7 @@ Array of menu item buttons.The array structure is **{text:'button', color: '\#66
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ActionMenuOptions-buttons: [
-            Button,
-            Button?,
-            Button?,
-            Button?,
-            Button?,
-            Button?
-        ]--><!--Device-ActionMenuOptions-buttons: [
-            Button,
-            Button?,
-            Button?,
-            Button?,
-            Button?,
-            Button?
-        ]-End-->
+<!--Device-ActionMenuOptions-buttons: [            Button,            Button?,            Button?,            Button?,            Button?,            Button?        ]--><!--Device-ActionMenuOptions-buttons: [            Button,            Button?,            Button?,            Button?,            Button?,            Button?        ]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

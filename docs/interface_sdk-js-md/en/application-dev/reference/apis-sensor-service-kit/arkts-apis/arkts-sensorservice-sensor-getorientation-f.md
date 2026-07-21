@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="getorientation"></a>
 ## getOrientation
 
 ```TypeScript
@@ -68,7 +67,6 @@ try {
 ```
 
 
-<a id="getorientation-1"></a>
 ## getOrientation
 
 ```TypeScript

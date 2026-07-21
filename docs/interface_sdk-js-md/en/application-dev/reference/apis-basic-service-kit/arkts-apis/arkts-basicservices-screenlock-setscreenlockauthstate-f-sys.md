@@ -6,7 +6,6 @@
 import { screenLock } from '@kit.BasicServicesKit';
 ```
 
-<a id="setscreenlockauthstate"></a>
 ## setScreenLockAuthState
 
 ```TypeScript

@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface TypeErrorConstructor--><!--Device-unnamed-interface TypeErrorConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -24,7 +23,6 @@ new (message?: string, options?: ErrorOptions): TypeError
 | --- | --- |
 | TypeError |  |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

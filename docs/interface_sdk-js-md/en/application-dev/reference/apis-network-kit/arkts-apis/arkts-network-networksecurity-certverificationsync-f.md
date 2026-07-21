@@ -6,7 +6,6 @@
 import { networkSecurity } from '@kit.NetworkKit';
 ```
 
-<a id="certverificationsync"></a>
 ## certVerificationSync
 
 ```TypeScript

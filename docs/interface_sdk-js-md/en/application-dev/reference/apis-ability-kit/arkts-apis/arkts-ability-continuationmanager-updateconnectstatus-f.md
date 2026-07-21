@@ -6,7 +6,6 @@
 import { continuationManager } from '@kit.AbilityKit';
 ```
 
-<a id="updateconnectstatus"></a>
 ## updateConnectStatus
 
 ```TypeScript
@@ -24,21 +23,11 @@ Instructs the device selection module to update the device connection state. Thi
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)
+**Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-continuationManager-function updateConnectStatus(
-    token: number,
-    deviceId: string,
-    status: DeviceConnectState,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-continuationManager-function updateConnectStatus(
-    token: number,
-    deviceId: string,
-    status: DeviceConnectState,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-continuationManager-function updateConnectStatus(    token: number,    deviceId: string,    status: DeviceConnectState,    callback: AsyncCallback<void>  ): void--><!--Device-continuationManager-function updateConnectStatus(    token: number,    deviceId: string,    status: DeviceConnectState,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager
 
@@ -69,7 +58,6 @@ continuationManager.updateConnectStatus(token, deviceId, continuationManager.Dev
 ```
 
 
-<a id="updateconnectstatus-1"></a>
 ## updateConnectStatus
 
 ```TypeScript
@@ -82,7 +70,7 @@ Instructs the device selection module to update the device connection state. Thi
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)
+**Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
 
 **Model restriction:** This API can be used only in the stage model.
 

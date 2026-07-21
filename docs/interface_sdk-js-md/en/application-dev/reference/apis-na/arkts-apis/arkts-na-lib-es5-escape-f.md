@@ -1,6 +1,5 @@
 # escape
 
-<a id="escape"></a>
 ## escape
 
 ```TypeScript

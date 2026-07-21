@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="getaltitude"></a>
 ## getAltitude
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceAltitude(seaPressure:](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude-1)
+**Substitutes:** [getDeviceAltitude(seaPressure:](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude)
 
 <!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void-End-->
 
@@ -50,7 +49,6 @@ sensor.getAltitude(0, 200, (err: BusinessError, data: number) => {
 ```
 
 
-<a id="getaltitude-1"></a>
 ## getAltitude
 
 ```TypeScript
@@ -63,7 +61,7 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceAltitude(seaPressure:](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude-1)
+**Substitutes:** [getDeviceAltitude(seaPressure:](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude)
 
 <!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>-End-->
 

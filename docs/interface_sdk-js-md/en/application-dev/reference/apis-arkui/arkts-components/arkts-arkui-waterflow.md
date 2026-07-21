@@ -16,7 +16,6 @@ items of different sizes from top to bottom according to the preset rules.
 Only the [FlowItem]{@link flow_item} child component and custom components are supported. When a custom component is used in **WaterFlow**, you are advised to use **FlowItem** as the top-level component of the custom component. You are not advised to set attributes and event methods for the custom component.
 
 Child components can be dynamically generated using rendering control types [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md),[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
-
 > **NOTE**  
 >  
 > When the **visibility** attribute of a child component of **WaterFlow** is set to **None**, this child component is  

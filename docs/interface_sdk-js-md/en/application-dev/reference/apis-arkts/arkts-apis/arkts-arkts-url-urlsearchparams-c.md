@@ -18,7 +18,6 @@ The URLSearchParams interface defines some practical methods to process URL quer
 import { url } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -56,7 +55,6 @@ for (let pair of pairs) {
 
 ```
 
-<a id="append"></a>
 ## append
 
 ```TypeScript
@@ -91,7 +89,6 @@ paramsObject.append('fod', '3');
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -127,7 +124,6 @@ let params = new url.URLSearchParams(urlObject.search);
 
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -161,7 +157,6 @@ paramsObject.delete('fod');
 
 ```
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -199,7 +194,6 @@ for (let pair of iter) {
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -235,7 +229,6 @@ myURLObject.searchParams.forEach((value, name, searchParams) => {
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -276,7 +269,6 @@ let getObj = paramsObject.get("abc"); // undefined
 
 ```
 
-<a id="getall"></a>
 ## getAll
 
 ```TypeScript
@@ -317,7 +309,6 @@ console.info(params.getAll('fod').toString()) // Output ["1","3"].
 
 ```
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -357,7 +348,6 @@ paramsObject.has('bard') === true;
 
 ```
 
-<a id="keys"></a>
 ## keys
 
 ```TypeScript
@@ -395,7 +385,6 @@ for (let key of keys) {
 
 ```
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
@@ -430,7 +419,6 @@ paramsObject.set('baz', '3'); // Add a third parameter.
 
 ```
 
-<a id="sort"></a>
 ## sort
 
 ```TypeScript
@@ -458,7 +446,6 @@ console.info(searchParamsObject.toString()); // Display the sorted query string 
 
 ```
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -493,7 +480,6 @@ console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
 
 ```
 
-<a id="values"></a>
 ## values
 
 ```TypeScript

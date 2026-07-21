@@ -12,7 +12,6 @@ In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-ap
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="contentmodifier"></a>
 ## contentModifier
 
 ```TypeScript
@@ -37,7 +36,6 @@ Creates a content modifier.
 | --- | --- | --- | --- |
 | modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;ToggleConfiguration&gt; | Yes | Content modifier to apply to the current component.<br>**modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
-<a id="onchange"></a>
 ## onChange
 
 ```TypeScript
@@ -62,7 +60,6 @@ Triggered when the toggle status changes.
 | --- | --- | --- | --- |
 | callback | (isOn: boolean) =&gt; void | Yes |  |
 
-<a id="selectedcolor"></a>
 ## selectedColor
 
 ```TypeScript
@@ -87,7 +84,6 @@ Sets the background color of the component when it is turned on.
 | --- | --- | --- | --- |
 | value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the component when it is turned on.<br>Default value:<br>When **ToggleType** is set to **Switch**, the default value is **$r('sys.color.ohos_id_color_emphasize')**.<br>When **ToggleType** is set to **Checkbox**, the default value is **$r('sys.color.ohos_id_color_emphasize')**.<br>When **ToggleType** is set to **Button**, the default value is **$r('sys.color.ohos_id_color_emphasize')** with the opacity of **$r('sys.float.ohos_id_alpha_highlight_bg')**. |
 
-<a id="switchpointcolor"></a>
 ## switchPointColor
 
 ```TypeScript
@@ -112,7 +108,6 @@ Sets the color of the circular slider when the component is of the **Switch** ty
 | --- | --- | --- | --- |
 | color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the circular slider when the component is of the **Switch** type.<br>Default value: **$r('sys.color.ohos_id_color_foreground_contrary')** |
 
-<a id="switchstyle"></a>
 ## switchStyle
 
 ```TypeScript

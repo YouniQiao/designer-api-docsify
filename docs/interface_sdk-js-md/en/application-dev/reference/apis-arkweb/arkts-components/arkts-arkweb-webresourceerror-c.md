@@ -8,7 +8,6 @@ Defines the Web resource error.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,26 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="geterrorcode"></a>
+## getCustomErrorCode
+
+```TypeScript
+getCustomErrorCode(): number
+```
+
+Gets the custom error code of the Web resource.
+
+**Since:** 26.1.0
+
+<!--Device-WebResourceError-getCustomErrorCode(): number--><!--Device-WebResourceError-getCustomErrorCode(): number-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Return the custom error code of the Web resource. |
+
 ## getErrorCode
 
 ```TypeScript
@@ -48,7 +66,6 @@ Gets the code of the Web resource error.
 | --- | --- |
 | number | Return the code of the Web resource error. |
 
-<a id="geterrorinfo"></a>
 ## getErrorInfo
 
 ```TypeScript

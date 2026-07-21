@@ -6,7 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="getvolumebyid"></a>
 ## getVolumeById
 
 ```TypeScript
@@ -44,7 +43,6 @@ Obtains information about a volume based on the volume ID. This API uses an asyn
 | 13900042 | Unknown error. |
 
 
-<a id="getvolumebyid-1"></a>
 ## getVolumeById
 
 ```TypeScript

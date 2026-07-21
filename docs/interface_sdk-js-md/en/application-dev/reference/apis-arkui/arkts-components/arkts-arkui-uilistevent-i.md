@@ -1,6 +1,6 @@
 # UIListEvent
 
-Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-1) method in **frameNode**,which can be used to set scroll events for a **List** node.
+Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent) method in **frameNode**,which can be used to set scroll events for a **List** node.
 
 **Inheritance/Implementation:** UIListEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 
@@ -10,14 +10,13 @@ Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="setondidscroll"></a>
 ## setOnDidScroll
 
 ```TypeScript
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-Sets the callback for the [onDidScroll](docroot://reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.
+Sets the callback for the [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.
 
 If the input parameter is **undefined**, the event callback is reset.
 
@@ -37,14 +36,13 @@ If the input parameter is **undefined**, the event callback is reset.
 | --- | --- | --- | --- |
 | callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | Callback for the **onDidScroll** event. |
 
-<a id="setonscrollindex"></a>
 ## setOnScrollIndex
 
 ```TypeScript
 setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void
 ```
 
-Sets the callback of the [onScrollIndex](docroot://reference/apis-arkui/arkui-ts/ts-container-list.md#onscrollindex) event.
+Sets the callback of the [onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#onscrollindex) event.
 
 If the input parameter is **undefined**, the event callback is reset.
 
@@ -64,7 +62,6 @@ If the input parameter is **undefined**, the event callback is reset.
 | --- | --- | --- | --- |
 | callback | [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) \| undefined | Yes | Callback for the **onScrollIndex** event. |
 
-<a id="setonscrollvisiblecontentchange"></a>
 ## setOnScrollVisibleContentChange
 
 ```TypeScript
@@ -91,14 +88,13 @@ If the input parameter is **undefined**, the event callback is reset.
 | --- | --- | --- | --- |
 | callback | [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) \| undefined | Yes | Callback for the **onScrollVisibleContentChange** event. |
 
-<a id="setonwillscroll"></a>
 ## setOnWillScroll
 
 ```TypeScript
 setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 ```
 
-Sets the callback for the [onWillScroll](docroot://reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.
+Sets the callback for the [onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.
 
 If the input parameter is **undefined**, the event callback is reset.
 

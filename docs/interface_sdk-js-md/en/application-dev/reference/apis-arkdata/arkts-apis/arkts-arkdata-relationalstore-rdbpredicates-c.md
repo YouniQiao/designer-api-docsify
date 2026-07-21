@@ -14,7 +14,6 @@ Defines the predicates for an RDB store. This class determines whether the condi
 import { relationalStore } from '@kit.ArkData';
 ```
 
-<a id="and"></a>
 ## and
 
 ```TypeScript
@@ -35,7 +34,6 @@ Creates an **RdbPredicates** object to add the AND condition.
 | --- | --- |
 | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
-<a id="beginwrap"></a>
 ## beginWrap
 
 ```TypeScript
@@ -56,7 +54,6 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 | --- | --- |
 | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
-<a id="beginswith"></a>
 ## beginsWith
 
 ```TypeScript
@@ -90,7 +87,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="between"></a>
 ## between
 
 ```TypeScript
@@ -125,7 +121,6 @@ Creates an **RdbPredicates** object to search for the records that are within th
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -152,7 +147,6 @@ Defines a constructor used to create an **RdbPredicates** object.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="contains"></a>
 ## contains
 
 ```TypeScript
@@ -186,7 +180,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="distinct"></a>
 ## distinct
 
 ```TypeScript
@@ -207,7 +200,6 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 | --- | --- |
 | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object that can filter out duplicate records. |
 
-<a id="endwrap"></a>
 ## endWrap
 
 ```TypeScript
@@ -228,7 +220,6 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 | --- | --- |
 | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
-<a id="endswith"></a>
 ## endsWith
 
 ```TypeScript
@@ -262,7 +253,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="equalto"></a>
 ## equalTo
 
 ```TypeScript
@@ -296,7 +286,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="glob"></a>
 ## glob
 
 ```TypeScript
@@ -330,7 +319,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="greaterthan"></a>
 ## greaterThan
 
 ```TypeScript
@@ -364,7 +352,6 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="greaterthanorequalto"></a>
 ## greaterThanOrEqualTo
 
 ```TypeScript
@@ -398,7 +385,6 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="groupby"></a>
 ## groupBy
 
 ```TypeScript
@@ -431,7 +417,6 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="having"></a>
 ## having
 
 ```TypeScript
@@ -450,7 +435,7 @@ Filters for group data that meets the conditions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| conditions | string | Yes | Condition used to filter the data obtained using [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby-1). This parameter cannot be empty and must be used with [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby-1). |
+| conditions | string | Yes | Condition used to filter the data obtained using [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby). This parameter cannot be empty and must be used with [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby). |
 | args | Array&lt;ValueType&gt; | No | Parameters used in **conditions**, which replace the placeholder in the conditional statement. If this parameter is not specified, the default value is an empty array. |
 
 **Return value:**
@@ -465,7 +450,6 @@ Filters for group data that meets the conditions.
 | --- | --- |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range;<br>2. Missing GROUP BY clause. |
 
-<a id="in"></a>
 ## in
 
 ```TypeScript
@@ -473,7 +457,6 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
 Creates an **RdbPredicates** object to search for the records that are in the given range in the specified column.
-
 > **NOTE**  
 >  
 > The **value** array cannot be empty; otherwise, this condition becomes invalid. As a result, the operation (  
@@ -505,7 +488,6 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="inalldevices"></a>
 ## inAllDevices
 
 ```TypeScript
@@ -526,7 +508,6 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 | --- | --- |
 | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
-<a id="indevices"></a>
 ## inDevices
 
 ```TypeScript
@@ -534,7 +515,6 @@ inDevices(devices: Array<string>): RdbPredicates
 ```
 
 Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
-
 > **NOTE**  
 >  
 > **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]  
@@ -566,7 +546,6 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="indexedby"></a>
 ## indexedBy
 
 ```TypeScript
@@ -599,7 +578,6 @@ Creates a **RdbPredicates** object to specify the index column.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="isnotnull"></a>
 ## isNotNull
 
 ```TypeScript
@@ -632,7 +610,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="isnull"></a>
 ## isNull
 
 ```TypeScript
@@ -665,7 +642,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="lessthan"></a>
 ## lessThan
 
 ```TypeScript
@@ -699,7 +675,6 @@ Creates an **RdbPredicates** object to search for the records that are less than
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="lessthanorequalto"></a>
 ## lessThanOrEqualTo
 
 ```TypeScript
@@ -733,7 +708,6 @@ Creates an **RdbPredicates** object to search for the records that are less than
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="like"></a>
 ## like
 
 ```TypeScript
@@ -767,7 +741,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="limitas"></a>
 ## limitAs
 
 ```TypeScript
@@ -800,7 +773,6 @@ Creates a **RdbPredicates** object to limit the number of records.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="notbetween"></a>
 ## notBetween
 
 ```TypeScript
@@ -835,7 +807,6 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="notcontains"></a>
 ## notContains
 
 ```TypeScript
@@ -869,7 +840,6 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="notequalto"></a>
 ## notEqualTo
 
 ```TypeScript
@@ -903,7 +873,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="notin"></a>
 ## notIn
 
 ```TypeScript
@@ -937,7 +906,6 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="notlike"></a>
 ## notLike
 
 ```TypeScript
@@ -971,7 +939,6 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="offsetas"></a>
 ## offsetAs
 
 ```TypeScript
@@ -1004,7 +971,6 @@ Creates an **RdbPredicates** object to set the start position of the query resul
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="or"></a>
 ## or
 
 ```TypeScript
@@ -1025,7 +991,6 @@ Creates an **RdbPredicates** object to add the OR condition.
 | --- | --- |
 | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | **RdbPredicates** object created. |
 
-<a id="orderbyasc"></a>
 ## orderByAsc
 
 ```TypeScript
@@ -1058,7 +1023,6 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="orderbydesc"></a>
 ## orderByDesc
 
 ```TypeScript

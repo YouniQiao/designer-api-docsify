@@ -6,14 +6,13 @@
 import { abilityDelegatorRegistry } from '@kit.TestKit';
 ```
 
-<a id="getabilitydelegator"></a>
 ## getAbilityDelegator
 
 ```TypeScript
 function getAbilityDelegator(): AbilityDelegator
 ```
 
-Obtains an [AbilityDelegator](application/AbilityDelegator:AbilityDelegator) object.
+Obtains an [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) object.
 
 **Since:** 9
 
@@ -27,7 +26,7 @@ Obtains an [AbilityDelegator](application/AbilityDelegator:AbilityDelegator) obj
 
 | Type | Description |
 | --- | --- |
-| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) | [AbilityDelegator](application/AbilityDelegator:AbilityDelegator) object, which can be used to schedule the functionalities of the test framework. |
+| [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) | [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) object, which can be used to schedule the functionalities of the test framework. |
 
 **Example**
 

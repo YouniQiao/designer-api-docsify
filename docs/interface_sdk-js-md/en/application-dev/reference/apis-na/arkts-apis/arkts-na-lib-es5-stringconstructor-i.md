@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface StringConstructor--><!--Device-unnamed-interface StringConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -23,7 +22,6 @@ new(value?: any): String
 | --- | --- |
 | String |  |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -44,7 +42,6 @@ new(value?: any): String
 | --- | --- |
 | string |  |
 
-<a id="fromcharcode"></a>
 ## fromCharCode
 
 ```TypeScript

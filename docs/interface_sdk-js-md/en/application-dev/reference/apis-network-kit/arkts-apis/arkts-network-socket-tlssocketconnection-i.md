@@ -14,7 +14,6 @@ Defines the connection of the TLSSocket client and server.
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -89,7 +88,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="close-1"></a>
 ## close
 
 ```TypeScript
@@ -160,7 +158,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="getciphersuite"></a>
 ## getCipherSuite
 
 ```TypeScript
@@ -234,7 +231,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="getciphersuite-1"></a>
 ## getCipherSuite
 
 ```TypeScript
@@ -305,7 +301,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="getlocaladdress"></a>
 ## getLocalAddress
 
 ```TypeScript
@@ -376,7 +371,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="getremoteaddress"></a>
 ## getRemoteAddress
 
 ```TypeScript
@@ -448,7 +442,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="getremoteaddress-1"></a>
 ## getRemoteAddress
 
 ```TypeScript
@@ -517,7 +510,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="getremotecertificate"></a>
 ## getRemoteCertificate
 
 ```TypeScript
@@ -546,7 +538,6 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
-<a id="getremotecertificate-1"></a>
 ## getRemoteCertificate
 
 ```TypeScript
@@ -574,7 +565,6 @@ getRemoteCertificate(): Promise<X509CertRawData>
 | [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
-<a id="getsignaturealgorithms"></a>
 ## getSignatureAlgorithms
 
 ```TypeScript
@@ -646,7 +636,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="getsignaturealgorithms-1"></a>
 ## getSignatureAlgorithms
 
 ```TypeScript
@@ -715,7 +704,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="getsocketfd"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -785,7 +773,6 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 
 ```
 
-<a id="off"></a>
 ## off('message')
 
 ```TypeScript
@@ -865,7 +852,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="off-1"></a>
 ## off('close')
 
 ```TypeScript
@@ -937,7 +923,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="off-2"></a>
 ## off('error')
 
 ```TypeScript
@@ -1009,7 +994,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="on"></a>
 ## on('message')
 
 ```TypeScript
@@ -1085,7 +1069,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('close')
 
 ```TypeScript
@@ -1152,7 +1135,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="on-2"></a>
 ## on('error')
 
 ```TypeScript
@@ -1220,7 +1202,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="send"></a>
 ## send
 
 ```TypeScript
@@ -1297,7 +1278,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 
 ```
 
-<a id="send-1"></a>
 ## send
 
 ```TypeScript

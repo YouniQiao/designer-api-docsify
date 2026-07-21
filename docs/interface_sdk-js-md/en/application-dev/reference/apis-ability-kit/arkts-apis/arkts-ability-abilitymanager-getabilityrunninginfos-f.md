@@ -6,7 +6,6 @@
 import { abilityManager } from '@kit.AbilityKit';
 ```
 
-<a id="getabilityrunninginfos"></a>
 ## getAbilityRunningInfos
 
 ```TypeScript
@@ -14,7 +13,6 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 ```
 
 Obtains the UIAbility running information. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility  

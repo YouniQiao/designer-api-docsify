@@ -1,7 +1,6 @@
 # OverlayOffset
 
 Offset of the overlay from the upper left corner. By default, the overlay is in the upper left corner of the component.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 12.  

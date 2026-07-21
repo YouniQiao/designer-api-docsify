@@ -1,6 +1,5 @@
 # createSubscriber
 
-<a id="createsubscriber"></a>
 ## createSubscriber
 
 ```TypeScript
@@ -16,15 +15,9 @@ Creates a subscriber. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [createSubscriber(](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber-1)
+**Substitutes:** [createSubscriber(](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber)
 
-<!--Device-commonEvent-function createSubscriber(
-    subscribeInfo: CommonEventSubscribeInfo,
-    callback: AsyncCallback<CommonEventSubscriber>
-  ): void--><!--Device-commonEvent-function createSubscriber(
-    subscribeInfo: CommonEventSubscribeInfo,
-    callback: AsyncCallback<CommonEventSubscriber>
-  ): void-End-->
+<!--Device-commonEvent-function createSubscriber(    subscribeInfo: CommonEventSubscribeInfo,    callback: AsyncCallback<CommonEventSubscriber>  ): void--><!--Device-commonEvent-function createSubscriber(    subscribeInfo: CommonEventSubscribeInfo,    callback: AsyncCallback<CommonEventSubscriber>  ): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
@@ -64,7 +57,6 @@ commonEvent.createSubscriber(subscribeInfo, createCallBack);
 ```
 
 
-<a id="createsubscriber-1"></a>
 ## createSubscriber
 
 ```TypeScript
@@ -77,7 +69,7 @@ Creates a subscriber. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createSubscriber(subscribeInfo:](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber-1)
+**Substitutes:** [createSubscriber(subscribeInfo:](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber)
 
 <!--Device-commonEvent-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>--><!--Device-commonEvent-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>-End-->
 

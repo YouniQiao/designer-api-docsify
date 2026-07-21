@@ -6,14 +6,13 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="hasaccessoryright"></a>
 ## hasAccessoryRight
 
 ```TypeScript
 function hasAccessoryRight(accessory: USBAccessory): boolean
 ```
 
-Checks whether the application has the permission to access the USB accessory.You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist-1) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter.
+Checks whether the application has the permission to access the USB accessory.You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter.
 
 **Since:** 14
 
@@ -25,7 +24,7 @@ Checks whether the application has the permission to access the USB accessory.Yo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Yes | USB accessory, which is obtained through [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist-1). |
+| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Yes | USB accessory, which is obtained through [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist). |
 
 **Return value:**
 

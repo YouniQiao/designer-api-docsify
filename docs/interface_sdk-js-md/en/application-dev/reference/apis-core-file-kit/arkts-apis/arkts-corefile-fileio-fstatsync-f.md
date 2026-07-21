@@ -1,6 +1,5 @@
 # fstatSync
 
-<a id="fstatsync"></a>
 ## fstatSync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Obtains file status based on the file descriptor. This API returns the result sy
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:statSync](arkts-corefile-file-fs-statsync-f.md#statsync-1)
+**Substitutes:** [fs:statSync](arkts-corefile-fileio-statsync-f.md#statsync)
 
 <!--Device-unnamed-declare function fstatSync(fd: number): Stat--><!--Device-unnamed-declare function fstatSync(fd: number): Stat-End-->
 

@@ -6,7 +6,6 @@
 import { router } from '@kit.ArkUI';
 ```
 
-<a id="pushurl"></a>
 ## pushUrl
 
 ```TypeScript
@@ -14,11 +13,10 @@ function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 ```
 
 Navigates to a specified page in the application.
-
 > **NOTE**  
 >  
 > - Since API version 10, you can use the  
-> [getRouter](docroot://reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
 > [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
@@ -26,7 +24,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl(options:](arkts-arkui-arkui-uicontext-router-c.md#pushurl-1)
+**Substitutes:** [pushUrl(options:](arkts-arkui-arkui-uicontext-router-c.md#pushurl)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -87,7 +85,6 @@ router.pushUrl({
 ```
 
 
-<a id="pushurl-1"></a>
 ## pushUrl
 
 ```TypeScript
@@ -95,11 +92,10 @@ function pushUrl(options: RouterOptions): Promise<void>
 ```
 
 Navigates to a specified page in the application.
-
 > **NOTE**  
 >  
 > - Since API version 10, you can use the  
-> [getRouter](docroot://reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
 > [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
@@ -107,7 +103,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl(options:](arkts-arkui-arkui-uicontext-router-c.md#pushurl-1)
+**Substitutes:** [pushUrl(options:](arkts-arkui-arkui-uicontext-router-c.md#pushurl)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -175,7 +171,6 @@ router.pushUrl({
 ```
 
 
-<a id="pushurl-2"></a>
 ## pushUrl
 
 ```TypeScript
@@ -183,11 +178,10 @@ function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallba
 ```
 
 Navigates to a specified page in the application.
-
 > **NOTE**  
 >  
 > - Since API version 10, you can use the  
-> [getRouter](docroot://reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
 > [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
@@ -195,7 +189,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl(options:](arkts-arkui-arkui-uicontext-router-c.md#pushurl-1)
+**Substitutes:** [pushUrl(options:](arkts-arkui-arkui-uicontext-router-c.md#pushurl)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -257,7 +251,6 @@ router.pushUrl({
 ```
 
 
-<a id="pushurl-3"></a>
 ## pushUrl
 
 ```TypeScript
@@ -265,11 +258,10 @@ function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 ```
 
 Navigates to a specified page in the application.
-
 > **NOTE**  
 >  
 > - Since API version 10, you can use the  
-> [getRouter](docroot://reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
 > [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
@@ -277,7 +269,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl(options:](arkts-arkui-arkui-uicontext-router-c.md#pushurl-1)
+**Substitutes:** [pushUrl(options:](arkts-arkui-arkui-uicontext-router-c.md#pushurl)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

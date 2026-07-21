@@ -8,7 +8,6 @@ Represents a touch gesture recognizer.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="canceltouch"></a>
 ## cancelTouch
 
 ```TypeScript
@@ -27,7 +26,6 @@ Sends a touch cancellation event to this touch gesture recognizer.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="geteventtargetinfo"></a>
 ## getEventTargetInfo
 
 ```TypeScript
@@ -52,7 +50,6 @@ Obtains the information about the component corresponding to this touch gesture 
 | --- | --- |
 | [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | Information about the component corresponding to the current touch gesture recognizer. |
 
-<a id="ishostbelongsto"></a>
 ## isHostBelongsTo
 
 ```TypeScript
@@ -75,7 +72,7 @@ Returns whether the node bound to the current touch gesture recognizer is a desc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | number | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid-1) API. |
+| uniqueId | number | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid) API. |
 
 **Return value:**
 

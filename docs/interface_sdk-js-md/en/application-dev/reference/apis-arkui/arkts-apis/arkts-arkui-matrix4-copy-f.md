@@ -6,7 +6,6 @@
 import { matrix4 } from '@kit.ArkUI';
 ```
 
-<a id="copy"></a>
 ## copy
 
 ```TypeScript
@@ -19,7 +18,7 @@ Copies this matrix object.
 
 **Deprecated since:** 10
 
-**Substitutes:** [copy](arkts-arkui-matrix4-matrix4transit-i.md#copy-1)
+**Substitutes:** [copy](arkts-arkui-matrix4-matrix4transit-i.md#copy)
 
 <!--Device-matrix4-function copy(): Matrix4Transit--><!--Device-matrix4-function copy(): Matrix4Transit-End-->
 

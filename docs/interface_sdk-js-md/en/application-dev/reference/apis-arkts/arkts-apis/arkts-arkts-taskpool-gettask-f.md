@@ -6,7 +6,6 @@
 import { taskpool } from '@kit.ArkTS';
 ```
 
-<a id="gettask"></a>
 ## getTask
 
 ```TypeScript
@@ -14,7 +13,6 @@ function getTask(taskId: number, taskName?: string): Task | undefined
 ```
 
 Obtains the corresponding task instance by task ID, or by task ID and task name.
-
 > **NOTE**  
 >  
 > - If no task instance is found based on the input task ID, **undefined** is returned.  

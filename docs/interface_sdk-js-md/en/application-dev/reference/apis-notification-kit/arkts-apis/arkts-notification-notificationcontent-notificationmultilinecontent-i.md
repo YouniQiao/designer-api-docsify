@@ -1,7 +1,6 @@
 # NotificationMultiLineContent
 
 Describes the multi-line text notification. This API is inherited from NotificationBasicContent.
-
 > **NOTE**  
 >  
 > - When this notification type forms a group notification with other notifications, its display effect defaults  

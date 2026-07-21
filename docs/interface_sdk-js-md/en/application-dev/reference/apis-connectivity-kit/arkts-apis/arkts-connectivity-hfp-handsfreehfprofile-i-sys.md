@@ -16,7 +16,6 @@ Manage hfp sink profile.
 import { hfp } from '@kit.ConnectivityKit';
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -55,7 +54,6 @@ Initiate the HFP connection to a remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Internal system error. For example, IPC error. |
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript

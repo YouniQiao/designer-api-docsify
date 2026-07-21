@@ -10,7 +10,6 @@ The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-commo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="attributemodifier"></a>
 ## attributeModifier
 
 ```TypeScript
@@ -35,7 +34,6 @@ Creates an attribute modifier.
 | --- | --- | --- | --- |
 | modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;ContainerSpanAttribute&gt; | Yes | Modifier for dynamically setting attributes on the current component. |
 
-<a id="textbackgroundstyle"></a>
 ## textBackgroundStyle
 
 ```TypeScript

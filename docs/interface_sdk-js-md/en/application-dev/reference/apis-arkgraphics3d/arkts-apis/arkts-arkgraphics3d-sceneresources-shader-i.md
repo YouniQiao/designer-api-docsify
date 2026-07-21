@@ -10,7 +10,6 @@ Shader resource.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="setshaderinputs"></a>
 ## setShaderInputs
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # setMonitorForCrownEvents
 
-<a id="setmonitorforcrownevents"></a>
 ## setMonitorForCrownEvents
 
 ```TypeScript

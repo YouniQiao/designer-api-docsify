@@ -8,7 +8,6 @@ Defines custom indentation for text paragraphs. Only a base class is provided; t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getleadingmargin"></a>
 ## getLeadingMargin
 
 ```TypeScript
@@ -33,7 +32,6 @@ Returns the indentation distance for a text paragraph.
 | --- | --- |
 | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Paragraph indentation distance. The value cannot be in percentage.<br>Default value: **0**.<br> |
 
-<a id="ondraw"></a>
 ## onDraw
 
 ```TypeScript

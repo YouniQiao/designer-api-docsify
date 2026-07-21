@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface Float64ArrayConstructor--><!--Device-unnamed-interface Float64ArrayConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -23,7 +22,6 @@ new (elements: Iterable<number>): Float64Array
 | --- | --- |
 | Float64Array |  |
 
-<a id="from"></a>
 ## from
 
 ```TypeScript

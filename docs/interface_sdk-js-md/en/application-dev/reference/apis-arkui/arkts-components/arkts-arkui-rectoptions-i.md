@@ -1,7 +1,6 @@
 # RectOptions
 
 Describes the options of the rectangle.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
@@ -24,11 +23,11 @@ Height.Unit: vp, The value must be greater than or equal to 0, The **undefined**
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RectOptions-height?: Length--><!--Device-RectOptions-height?: Length-End-->
 
@@ -44,11 +43,11 @@ Radius of the rounded corner. You can set separate radii for the four rounded co
 
 **Type:** Length \| Array&lt;any&gt;
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RectOptions-radius?: Length | Array<any>--><!--Device-RectOptions-radius?: Length | Array<any>-End-->
 
@@ -64,11 +63,11 @@ Width.Unit: vp, The value must be greater than or equal to 0, The **undefined**,
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RectOptions-width?: Length--><!--Device-RectOptions-width?: Length-End-->
 

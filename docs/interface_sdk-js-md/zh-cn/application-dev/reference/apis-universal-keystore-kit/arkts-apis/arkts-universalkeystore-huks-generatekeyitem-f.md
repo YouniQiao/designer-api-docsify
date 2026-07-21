@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="generatekeyitem"></a>
 ## generateKeyItem
 
 ```TypeScript
@@ -15,8 +14,7 @@ function generateKeyItem(keyAlias: string, options: HuksOptions, callback: Async
 
 生成密钥。使用callback异步回调。
 
-基于密钥不出[TEE](docroot://security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。
-
+基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。
 > **说明：**  
 >  
 > 生成[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
@@ -191,7 +189,6 @@ export default {
 ```
 
 
-<a id="generatekeyitem-1"></a>
 ## generateKeyItem
 
 ```TypeScript
@@ -200,8 +197,7 @@ function generateKeyItem(keyAlias: string, options: HuksOptions): Promise<void>
 
 生成密钥。使用Promise异步回调。
 
-基于密钥不出[TEE](docroot://security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。
-
+基于密钥不出[TEE](../../../security/UniversalKeystoreKit/huks-concepts.md#可信执行环境tee)原则，此接口不会返回密钥材料内容，只用于表示此次调用是否成功。
 > **说明：**  
 >  
 > 生成[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。

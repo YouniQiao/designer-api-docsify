@@ -16,7 +16,6 @@ Quick thumbnail object
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript

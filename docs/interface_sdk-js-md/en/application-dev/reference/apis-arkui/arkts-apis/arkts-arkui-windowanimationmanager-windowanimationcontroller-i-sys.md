@@ -16,7 +16,6 @@ Window animation controller.
 import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
-<a id="onapptransition"></a>
 ## onAppTransition
 
 ```TypeScript
@@ -30,9 +29,7 @@ Called on application transition.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowAnimationController-onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowAnimationTarget,
-      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowAnimationTarget,
-      finishCallback: WindowAnimationFinishedCallback): void-End-->
+<!--Device-WindowAnimationController-onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onAppTransition(fromWindowTarget: WindowAnimationTarget, toWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -50,7 +47,6 @@ Called on application transition.
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
-<a id="onclosewindow"></a>
 ## onCloseWindow
 
 ```TypeScript
@@ -80,7 +76,6 @@ Called on closing a window.
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
-<a id="onminimizewindow"></a>
 ## onMinimizeWindow
 
 ```TypeScript
@@ -94,9 +89,7 @@ Called on minimizing a window.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowAnimationController-onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
-      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,
-      finishCallback: WindowAnimationFinishedCallback): void-End-->
+<!--Device-WindowAnimationController-onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onMinimizeWindow(minimizingWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -113,7 +106,6 @@ Called on minimizing a window.
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
-<a id="onscreenunlock"></a>
 ## onScreenUnlock
 
 ```TypeScript
@@ -138,7 +130,6 @@ Called on unlocking the screen.
 | --- | --- | --- | --- |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
-<a id="onstartappfromlauncher"></a>
 ## onStartAppFromLauncher
 
 ```TypeScript
@@ -152,9 +143,7 @@ Called on starting an application form launcher.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowAnimationController-onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,
-      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,
-      finishCallback: WindowAnimationFinishedCallback): void-End-->
+<!--Device-WindowAnimationController-onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromLauncher(startingWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -171,7 +160,6 @@ Called on starting an application form launcher.
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
-<a id="onstartappfromother"></a>
 ## onStartAppFromOther
 
 ```TypeScript
@@ -185,9 +173,7 @@ Called on starting an application form other.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowAnimationController-onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
-      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,
-      finishCallback: WindowAnimationFinishedCallback): void-End-->
+<!--Device-WindowAnimationController-onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromOther(startingWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -204,7 +190,6 @@ Called on starting an application form other.
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
-<a id="onstartappfromrecent"></a>
 ## onStartAppFromRecent
 
 ```TypeScript
@@ -218,9 +203,7 @@ Called on starting an application form recent.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowAnimationController-onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
-      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,
-      finishCallback: WindowAnimationFinishedCallback): void-End-->
+<!--Device-WindowAnimationController-onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void--><!--Device-WindowAnimationController-onStartAppFromRecent(startingWindowTarget: WindowAnimationTarget,      finishCallback: WindowAnimationFinishedCallback): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -237,7 +220,6 @@ Called on starting an application form recent.
 
 For details, see the sample code under [windowAnimationManager.setController](#windowanimationmanagersetcontroller).
 
-<a id="onwindowanimationtargetsupdate"></a>
 ## onWindowAnimationTargetsUpdate
 
 ```TypeScript
@@ -251,9 +233,7 @@ Called on window animation targets update.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowAnimationController-onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
-      floatingWindowTargets: Array<WindowAnimationTarget>): void--><!--Device-WindowAnimationController-onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,
-      floatingWindowTargets: Array<WindowAnimationTarget>): void-End-->
+<!--Device-WindowAnimationController-onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,      floatingWindowTargets: Array<WindowAnimationTarget>): void--><!--Device-WindowAnimationController-onWindowAnimationTargetsUpdate(fullScreenWindowTarget: WindowAnimationTarget,      floatingWindowTargets: Array<WindowAnimationTarget>): void-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 

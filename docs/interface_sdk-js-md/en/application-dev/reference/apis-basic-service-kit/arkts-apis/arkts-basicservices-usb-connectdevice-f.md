@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="connectdevice"></a>
 ## connectDevice
 
 ```TypeScript
@@ -15,13 +14,13 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 Connects to a USB device.
 
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices-1) to obtain the USB device list, and then call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright-1) to request the device access permission.
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list, and then call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice-1)
+**Substitutes:** [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)
 
 <!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>--><!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>-End-->
 

@@ -6,7 +6,6 @@
 import { nfcController } from '@kit.ConnectivityKit';
 ```
 
-<a id="getnfcstate"></a>
 ## getNfcState
 
 ```TypeScript

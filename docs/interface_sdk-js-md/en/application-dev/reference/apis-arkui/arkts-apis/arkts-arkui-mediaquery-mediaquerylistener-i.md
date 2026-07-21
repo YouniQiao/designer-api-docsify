@@ -18,7 +18,6 @@ Inherits from [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md).
 import { mediaquery } from '@kit.ArkUI';
 ```
 
-<a id="off"></a>
 ## off('change')
 
 ```TypeScript
@@ -62,7 +61,6 @@ listener.off('change', onPortrait) // Unregister the callback.
 
 ```
 
-<a id="on"></a>
 ## on('change')
 
 ```TypeScript
@@ -70,7 +68,6 @@ on(type: 'change', callback: Callback<MediaQueryResult>): void
 ```
 
 Registers a media query listener. The callback is triggered when the media attributes change.
-
 > **NOTE**  
 >  
 > The **on** or **off** function cannot be called in the registered callback.

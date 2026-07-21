@@ -6,7 +6,6 @@
 import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
-<a id="getallnnrtdevicedescriptions"></a>
 ## getAllNNRTDeviceDescriptions
 
 ```TypeScript

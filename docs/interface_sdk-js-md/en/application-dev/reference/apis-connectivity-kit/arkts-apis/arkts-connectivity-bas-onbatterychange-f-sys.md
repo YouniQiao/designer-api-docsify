@@ -6,7 +6,6 @@
 import { bas } from '@kit.ConnectivityKit';
 ```
 
-<a id="onbatterychange"></a>
 ## onBatteryChange
 
 ```TypeScript

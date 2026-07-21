@@ -6,7 +6,6 @@
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
-<a id="on"></a>
 ## on('receiveImage')
 
 ```TypeScript
@@ -20,9 +19,7 @@ Registers receiveImage event.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function on(type: 'receiveImage', sessionId: number,
-        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'receiveImage', sessionId: number,
-        callback: Callback<EventCallbackInfo>): void-End-->
+<!--Device-abilityConnectionManager-function on(type: 'receiveImage', sessionId: number,        callback: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'receiveImage', sessionId: number,        callback: Callback<EventCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -56,7 +53,6 @@ abilityConnectionManager.on("receiveImage", sessionId, (callbackInfo) => {
 ```
 
 
-<a id="on-1"></a>
 ## on('collaborateEvent')
 
 ```TypeScript
@@ -70,9 +66,7 @@ Registers collaborateEvent event.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function on(type: 'collaborateEvent', sessionId: number,
-        callback: Callback<CollaborateEventInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'collaborateEvent', sessionId: number,
-        callback: Callback<CollaborateEventInfo>): void-End-->
+<!--Device-abilityConnectionManager-function on(type: 'collaborateEvent', sessionId: number,        callback: Callback<CollaborateEventInfo>): void--><!--Device-abilityConnectionManager-function on(type: 'collaborateEvent', sessionId: number,        callback: Callback<CollaborateEventInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 

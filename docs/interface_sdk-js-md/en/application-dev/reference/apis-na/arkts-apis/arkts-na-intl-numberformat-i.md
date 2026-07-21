@@ -2,7 +2,6 @@
 
 <!--Device-Intl-interface NumberFormat--><!--Device-Intl-interface NumberFormat-End-->
 
-<a id="format"></a>
 ## format
 
 ```TypeScript
@@ -23,7 +22,6 @@ format(value: number): string
 | --- | --- |
 | string |  |
 
-<a id="resolvedoptions"></a>
 ## resolvedOptions
 
 ```TypeScript

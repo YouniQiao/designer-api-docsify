@@ -6,7 +6,6 @@
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="constructtlssocketserverinstance"></a>
 ## constructTLSSocketServerInstance
 
 ```TypeScript

@@ -14,7 +14,6 @@ Define the WithEnv attribute functions.
 import { WithEnvAttribute, WithEnv } from '@kit.ArkUI';
 ```
 
-<a id="customenv"></a>
 ## customEnv
 
 ```TypeScript
@@ -46,7 +45,6 @@ Defining Custom Environment Variables
 | --- | --- |
 | [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute object. |
 
-<a id="env"></a>
 ## env
 
 ```TypeScript

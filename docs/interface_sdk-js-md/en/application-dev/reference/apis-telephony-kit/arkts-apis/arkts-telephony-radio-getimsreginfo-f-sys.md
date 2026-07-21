@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="getimsreginfo"></a>
 ## getImsRegInfo
 
 ```TypeScript
@@ -63,7 +62,6 @@ radio.getImsRegInfo(slotId, mode, (err: BusinessError, data: radio.ImsRegInfo) =
 ```
 
 
-<a id="getimsreginfo-1"></a>
 ## getImsRegInfo
 
 ```TypeScript

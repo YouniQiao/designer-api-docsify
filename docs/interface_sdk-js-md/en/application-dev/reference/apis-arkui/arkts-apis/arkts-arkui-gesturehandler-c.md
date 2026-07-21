@@ -10,7 +10,6 @@ Represents the base type for gesture handlers.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="allowedtypes"></a>
 ## allowedTypes
 
 ```TypeScript
@@ -41,7 +40,6 @@ Sets the event input sources supported by the gesture handler.
 | --- | --- |
 | T | Current component. |
 
-<a id="tag"></a>
 ## tag
 
 ```TypeScript

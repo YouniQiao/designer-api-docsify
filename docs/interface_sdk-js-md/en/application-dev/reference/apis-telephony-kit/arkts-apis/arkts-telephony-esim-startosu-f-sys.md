@@ -6,7 +6,6 @@
 import { eSIM } from '@kit.TelephonyKit';
 ```
 
-<a id="startosu"></a>
 ## startOsu
 
 ```TypeScript

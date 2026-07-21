@@ -6,7 +6,6 @@
 import { mechanicManager } from '@kit.MechanicKit';
 ```
 
-<a id="turnbyspeed"></a>
 ## turnBySpeed
 
 ```TypeScript

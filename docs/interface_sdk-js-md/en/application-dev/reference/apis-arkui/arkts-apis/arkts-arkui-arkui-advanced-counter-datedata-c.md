@@ -14,7 +14,6 @@ Defines the date data.
 import { CounterType, DateData, CounterComponent, CounterOptions } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -41,7 +40,6 @@ Constructor of the DateData.
 | month | number | Yes | set the month of the DateData. |
 | day | number | Yes | set the day of the DateData. |
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript

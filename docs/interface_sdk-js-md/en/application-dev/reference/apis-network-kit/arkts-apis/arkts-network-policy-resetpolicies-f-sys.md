@@ -6,7 +6,6 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-<a id="resetpolicies"></a>
 ## resetPolicies
 
 ```TypeScript
@@ -55,7 +54,6 @@ policy.resetPolicies('1', (error: BusinessError) => {
 ```
 
 
-<a id="resetpolicies-1"></a>
 ## resetPolicies
 
 ```TypeScript

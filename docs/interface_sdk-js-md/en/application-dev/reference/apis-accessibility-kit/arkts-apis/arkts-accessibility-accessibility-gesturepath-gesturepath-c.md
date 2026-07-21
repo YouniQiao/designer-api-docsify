@@ -14,7 +14,6 @@ The **GesturePath** module provides APIs for creating gesture path information r
 import { GesturePath } from '@kit.AccessibilityKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

@@ -16,7 +16,6 @@ Provides APIs for encapsulating file asset attributes.
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="commitmodify"></a>
 ## commitModify
 
 ```TypeScript
@@ -81,7 +80,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="converttophotoasset"></a>
 ## convertToPhotoAsset
 
 ```TypeScript
@@ -136,7 +134,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -201,7 +198,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="getthumbnail"></a>
 ## getThumbnail
 
 ```TypeScript
@@ -272,7 +268,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
@@ -292,7 +287,7 @@ Sets a **PhotoAsset** member parameter.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | member | string | Yes | Name of the parameter to set, for example,[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE. The string length ranges from 1 to 255. |
-| value | string | Yes | Value to set. Only the value of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE can be changed. The title must meet the following requirements:<br>- It must not contain a file name extension.<br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file name extension.)<br>- It must not contain any invalid characters, which are:\ / : * ? " ' ` < > \| { } [ ] |
+| value | string | Yes | Value to set. Only the value of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE can be changed. The title must meet the following requirements:<br>- It must not contain a file name extension.<br>- The string length ranges from 1 to 255. (The asset file name is in the format of title + file name extension.)<br>- It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Error codes:**
 

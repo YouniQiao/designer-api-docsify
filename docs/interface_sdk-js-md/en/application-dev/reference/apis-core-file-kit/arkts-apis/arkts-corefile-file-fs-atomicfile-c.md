@@ -18,7 +18,6 @@ You can call **finishWrite()** or **failWrite()** to write or roll back file con
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -45,7 +44,6 @@ Creates an **AtomicFile** class for a file in a specified path.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |  |
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -99,7 +97,6 @@ try {
 
 ```
 
-<a id="failwrite"></a>
 ## failWrite
 
 ```TypeScript
@@ -142,7 +139,6 @@ try {
 
 ```
 
-<a id="finishwrite"></a>
 ## finishWrite
 
 ```TypeScript
@@ -184,7 +180,6 @@ try {
 
 ```
 
-<a id="getbasefile"></a>
 ## getBaseFile
 
 ```TypeScript
@@ -239,7 +234,6 @@ try {
 
 ```
 
-<a id="openread"></a>
 ## openRead
 
 ```TypeScript
@@ -301,7 +295,6 @@ try {
 
 ```
 
-<a id="readfully"></a>
 ## readFully
 
 ```TypeScript
@@ -357,7 +350,6 @@ try {
 
 ```
 
-<a id="startwrite"></a>
 ## startWrite
 
 ```TypeScript

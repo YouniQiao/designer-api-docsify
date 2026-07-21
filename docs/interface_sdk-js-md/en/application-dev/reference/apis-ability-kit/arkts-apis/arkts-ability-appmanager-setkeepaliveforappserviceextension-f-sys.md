@@ -6,7 +6,6 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="setkeepaliveforappserviceextension"></a>
 ## setKeepAliveForAppServiceExtension
 
 ```TypeScript
@@ -14,7 +13,6 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 ```
 
 Sets or cancels the keep-alive status for an AppServiceExtensionAbility. This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned.
-
 > **NOTE**  
 >  
 > - This API takes effect only when the application is installed under the user with **userId** of 1 and the  

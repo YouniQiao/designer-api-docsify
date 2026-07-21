@@ -4,7 +4,6 @@
 
 <!--Device-unnamed-interface NewableFunction extends Function--><!--Device-unnamed-interface NewableFunction extends Function-End-->
 
-<a id="apply"></a>
 ## apply
 
 ```TypeScript
@@ -22,7 +21,6 @@ Calls the function with the specified object as the this value and the elements 
 | this | new () =&gt; T | Yes |  |
 | thisArg | T | Yes |  |
 
-<a id="apply-1"></a>
 ## apply
 
 ```TypeScript
@@ -39,7 +37,6 @@ apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): voi
 | thisArg | T | Yes |  |
 | args | A | Yes |  |
 
-<a id="bind"></a>
 ## bind
 
 ```TypeScript
@@ -63,7 +60,6 @@ For a given function, creates a bound function that has the same body as the ori
 | --- | --- |
 | T |  |
 
-<a id="bind-1"></a>
 ## bind
 
 ```TypeScript
@@ -86,7 +82,6 @@ bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any
 | --- | --- |
 | new (...args: A) =&gt; R |  |
 
-<a id="bind-2"></a>
 ## bind
 
 ```TypeScript
@@ -110,7 +105,6 @@ bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R
 | --- | --- |
 | new (...args: A) =&gt; R |  |
 
-<a id="bind-3"></a>
 ## bind
 
 ```TypeScript
@@ -135,7 +129,6 @@ bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ..
 | --- | --- |
 | new (...args: A) =&gt; R |  |
 
-<a id="bind-4"></a>
 ## bind
 
 ```TypeScript
@@ -161,7 +154,6 @@ bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2
 | --- | --- |
 | new (...args: A) =&gt; R |  |
 
-<a id="bind-5"></a>
 ## bind
 
 ```TypeScript
@@ -184,7 +176,6 @@ bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (.
 | --- | --- |
 | new (...args: AX[]) =&gt; R |  |
 
-<a id="call"></a>
 ## call
 
 ```TypeScript

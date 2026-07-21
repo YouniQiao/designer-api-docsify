@@ -56,7 +56,7 @@ Unit: vp
 position: Position
 ```
 
-Position of the top-left corner of the target element in the [component coordinate system](docroot://ui/arkui-glossary.md#component-coordinate-system) of the parent element.
+Position of the top-left corner of the target element in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) of the parent element.
 
 **Type:** Position
 

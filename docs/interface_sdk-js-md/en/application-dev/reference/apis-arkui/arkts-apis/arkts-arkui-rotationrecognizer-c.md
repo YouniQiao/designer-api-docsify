@@ -10,7 +10,6 @@ Implements a rotation gesture recognizer. Inherits from [GestureRecognizer](arkt
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getangle"></a>
 ## getAngle
 
 ```TypeScript

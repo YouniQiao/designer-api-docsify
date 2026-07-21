@@ -58,7 +58,7 @@ Subtype of the image or video.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** subType
+**Substitutes:** [subType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#subtype)
 
 <!--Device-PhotoCreateOptions-subType?: PhotoSubType--><!--Device-PhotoCreateOptions-subType?: PhotoSubType-End-->
 

@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="getgraphicsmemorysync"></a>
 ## getGraphicsMemorySync
 
 ```TypeScript
@@ -14,7 +13,6 @@ function getGraphicsMemorySync(): number
 ```
 
 Obtains the total GPU memory size (GL + graph) of an application in synchronous mode.
-
 > **NOTE**  
 >  
 > This API involves multiple cross-process communications, which may take seconds. To avoid performance problems,  

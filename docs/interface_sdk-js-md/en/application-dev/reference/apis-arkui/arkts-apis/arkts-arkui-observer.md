@@ -1,7 +1,6 @@
 # @ohos.arkui.observer
 
 Provides APIs for listening for UI component behavior changes.
-
 > **NOTE**  
 >  
 > - UIObserver can only listen for relevant information within the current process and does not support obtaining  
@@ -46,8 +45,8 @@ import { uiObserver } from '@kit.ArkUI';
 | [on](arkts-arkui-uiobserver-on-f.md#on-5) | Listens for screen pixel density changes. |
 | [on](arkts-arkui-uiobserver-on-f.md#on-6) | Listens for drawing instruction dispatch in each frame. |
 | [on](arkts-arkui-uiobserver-on-f.md#on-7) | Listens for layout completion status in each frame. |
-| [on](arkts-arkui-uiobserver-on-f.md#on-8) | Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID.Unlike [on('tabChange')](@ohos.arkui.UIContext:UIObserver#on(type: 'tabChange', callback: Callback<observer.TabContentInfo>)),this API does not support listening for the initial tab display event when the **Tabs** component is initialized. |
-| [on](arkts-arkui-uiobserver-on-f.md#on-9) | Subscribes to **TabContent** switch events. Unlike [on('tabChange')](@ohos.arkui.UIContext:UIObserver#on(type: 'tabChange', callback: Callback<observer.TabContentInfo>)),this API does not support listening for the initial tab display event when the **Tabs** component is initialized. |
+| [on](arkts-arkui-uiobserver-on-f.md#on-8) | Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID.Unlike [on('tabChange')](@ohos.arkui.UIContext:UIObserver#on(type: 'tabChange', callback: Callback&lt;observer.TabContentInfo&gt;)),this API does not support listening for the initial tab display event when the **Tabs** component is initialized. |
+| [on](arkts-arkui-uiobserver-on-f.md#on-9) | Subscribes to **TabContent** switch events. Unlike [on('tabChange')](@ohos.arkui.UIContext:UIObserver#on(type: 'tabChange', callback: Callback&lt;observer.TabContentInfo&gt;)),this API does not support listening for the initial tab display event when the **Tabs** component is initialized. |
 | [on](arkts-arkui-uiobserver-on-f.md#on-10) | Subscribes to **Navigation** component page switching events. |
 | [on](arkts-arkui-uiobserver-on-f.md#on-11) | Subscribes to **Navigation** component page switching events. Compared with [uiObserver.on](uiObserver.on( type: 'navDestinationSwitch', context: UIAbilityContext \| UIContext, callback: Callback<NavDestinationSwitchInfo> )),this API supports the **observerOptions** parameter, which enables you to configure observation options. |
 

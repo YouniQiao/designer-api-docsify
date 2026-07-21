@@ -6,7 +6,6 @@
 import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
@@ -32,7 +31,7 @@ function set(key: string, value: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 待设置的系统参数key。 |
-| value | string | 是 | 待设置的系统参数值。长度限制请参考[系统参数](docroot://../device-dev/subsystems/subsys-boot-init-sysparam.md)。 |
+| value | string | 是 | 待设置的系统参数值。长度限制请参考[系统参数](../../../../device-dev/subsystems/subsys-boot-init-sysparam.md)。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于异步返回设置结果。当设置成功时，err为undefined；当设置失败时，err为错误对象。 |
 
 **错误码：**
@@ -64,7 +63,6 @@ try {
 ```
 
 
-<a id="set-1"></a>
 ## set
 
 ```TypeScript
@@ -90,7 +88,7 @@ function set(key: string, value: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 待设置的系统参数key。 |
-| value | string | 是 | 待设置的系统参数值。长度限制请参考[系统参数](docroot://../device-dev/subsystems/subsys-boot-init-sysparam.md)。 |
+| value | string | 是 | 待设置的系统参数值。长度限制请参考[系统参数](../../../../device-dev/subsystems/subsys-boot-init-sysparam.md)。 |
 
 **返回值：**
 

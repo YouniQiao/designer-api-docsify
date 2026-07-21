@@ -14,7 +14,6 @@ TreeMap stores key-value (KV) pairs. Each key must be unique and have only one v
 import { TreeMap } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -86,7 +85,6 @@ while(!temp.done) {
 
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -121,7 +119,6 @@ console.info("result:", result); // result: true
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -199,7 +196,6 @@ console.info("length:", ts1.length); // length: 2
 
 ```
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -258,7 +254,6 @@ while(!t.done) {
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -315,7 +310,6 @@ treeMap.forEach((value: number, key: string): void => {
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -361,7 +355,6 @@ console.info("result:", result); // result: 356
 
 ```
 
-<a id="getfirstkey"></a>
 ## getFirstKey
 
 ```TypeScript
@@ -402,7 +395,6 @@ console.info("result:", result); // result: sparrow
 
 ```
 
-<a id="gethigherkey"></a>
 ## getHigherKey
 
 ```TypeScript
@@ -450,7 +442,6 @@ console.info("result:", result); // result: 4
 
 ```
 
-<a id="getlastkey"></a>
 ## getLastKey
 
 ```TypeScript
@@ -491,7 +482,6 @@ console.info("result:", result); // result: squirrel
 
 ```
 
-<a id="getlowerkey"></a>
 ## getLowerKey
 
 ```TypeScript
@@ -539,7 +529,6 @@ console.info("result:", result); // result: 2
 
 ```
 
-<a id="haskey"></a>
 ## hasKey
 
 ```TypeScript
@@ -584,7 +573,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="hasvalue"></a>
 ## hasValue
 
 ```TypeScript
@@ -629,7 +617,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -667,7 +654,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="keys"></a>
 ## keys
 
 ```TypeScript
@@ -712,7 +698,6 @@ for (let key of keys) {
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -758,7 +743,6 @@ console.info("result = " + result); // result = 356
 
 ```
 
-<a id="replace"></a>
 ## replace
 
 ```TypeScript
@@ -804,7 +788,6 @@ console.info("sparrow:", treeMap.get("sparrow")); // sparrow: 357
 
 ```
 
-<a id="set"></a>
 ## set
 
 ```TypeScript
@@ -849,7 +832,6 @@ console.info("squirrel:", treeMap.get("squirrel")); // squirrel: 123
 
 ```
 
-<a id="setall"></a>
 ## setAll
 
 ```TypeScript
@@ -897,7 +879,6 @@ map.forEach((value ?: number, key ?: string) : void => {
 
 ```
 
-<a id="values"></a>
 ## values
 
 ```TypeScript

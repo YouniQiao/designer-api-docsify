@@ -14,7 +14,6 @@ Defines a VPN observer.
 import { vpnExtension } from '@kit.NetworkKit';
 ```
 
-<a id="offauthorizationresult"></a>
 ## offAuthorizationResult
 
 ```TypeScript
@@ -58,7 +57,6 @@ vpnObserver.offAuthorizationResult();
 
 ```
 
-<a id="onauthorizationresult"></a>
 ## onAuthorizationResult
 
 ```TypeScript

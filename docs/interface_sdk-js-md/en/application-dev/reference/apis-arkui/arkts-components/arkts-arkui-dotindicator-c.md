@@ -10,7 +10,6 @@ A constructor used to create a **DotIndicator** object. It inherits from [Indica
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="color"></a>
 ## color
 
 ```TypeScript
@@ -43,7 +42,6 @@ Sets the color of the dot-style navigation indicator.
 | --- | --- |
 | [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -51,7 +49,6 @@ constructor()
 ```
 
 A constructor used to create a **DotIndicator** object.
-
 > **NOTE**  
 >  
 > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain  
@@ -74,7 +71,6 @@ A constructor used to create a **DotIndicator** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="indicatoricon"></a>
 ## indicatorIcon
 
 ```TypeScript
@@ -107,7 +103,6 @@ Set indicator icon.
 | --- | --- |
 | [DotIndicator](arkts-arkui-dotindicator-c.md) | return the DotIndicator. |
 
-<a id="itemheight"></a>
 ## itemHeight
 
 ```TypeScript
@@ -140,7 +135,6 @@ Sets the height of a dot-style navigation indicator of the **Swiper** component.
 | --- | --- |
 | [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
-<a id="itemwidth"></a>
 ## itemWidth
 
 ```TypeScript
@@ -173,7 +167,6 @@ Sets the width of a dot-style navigation indicator of the **Swiper** component.
 | --- | --- |
 | [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
-<a id="mask"></a>
 ## mask
 
 ```TypeScript
@@ -206,7 +199,6 @@ Sets whether to enable the mask for the dot-style navigation indicator.
 | --- | --- |
 | [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
-<a id="maxdisplaycount"></a>
 ## maxDisplayCount
 
 ```TypeScript
@@ -229,7 +221,7 @@ Sets the maximum number of navigation dots in the dot-style navigation indicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxDisplayCount | number | Yes | Maximum number of navigation dots in the dot-style navigation point indicator.If the actual number of navigation dots exceeds this limit, the overflow effect is activated, as shown in [Example 5](docroot://reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-5-configuring-overflow-for-the-dot-style-indicator).<br>This parameter has no default value. If an invalid value is set, no overflow effect is applied.<br>Value range: [6, 9].<br>**NOTE**<br>In scenarios involving overflow display:<br>1. Interactive features, such as gestures and mouse operations, are not supported.<br>2. The position of the selected navigation dot corresponding to the middle page is not strictly fixed; it depends on the sequence of previous page-turning operations.<br>3. Currently, only scenarios with **displayCount** set to **1** are supported. |
+| maxDisplayCount | number | Yes | Maximum number of navigation dots in the dot-style navigation point indicator.If the actual number of navigation dots exceeds this limit, the overflow effect is activated, as shown in [Example 5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-5-configuring-overflow-for-the-dot-style-indicator).<br>This parameter has no default value. If an invalid value is set, no overflow effect is applied.<br>Value range: [6, 9].<br>**NOTE**<br>In scenarios involving overflow display:<br>1. Interactive features, such as gestures and mouse operations, are not supported.<br>2. The position of the selected navigation dot corresponding to the middle page is not strictly fixed; it depends on the sequence of previous page-turning operations.<br>3. Currently, only scenarios with **displayCount** set to **1** are supported. |
 
 **Return value:**
 
@@ -237,7 +229,6 @@ Sets the maximum number of navigation dots in the dot-style navigation indicator
 | --- | --- |
 | [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
-<a id="selectedcolor"></a>
 ## selectedColor
 
 ```TypeScript
@@ -270,7 +261,6 @@ Sets the color of the selected dot-style navigation indicator.
 | --- | --- |
 | [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
-<a id="selecteditemheight"></a>
 ## selectedItemHeight
 
 ```TypeScript
@@ -303,7 +293,6 @@ Sets the height of the selected dot-style navigation indicator.
 | --- | --- |
 | [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
-<a id="selecteditemwidth"></a>
 ## selectedItemWidth
 
 ```TypeScript
@@ -336,7 +325,6 @@ Sets the width of the selected dot-style navigation indicator.
 | --- | --- |
 | [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
-<a id="space"></a>
 ## space
 
 ```TypeScript

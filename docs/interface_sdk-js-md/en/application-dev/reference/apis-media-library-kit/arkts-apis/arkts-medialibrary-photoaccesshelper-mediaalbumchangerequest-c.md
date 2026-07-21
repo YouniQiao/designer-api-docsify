@@ -16,7 +16,6 @@ Provides APIs for managing the media album change request.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="addassets"></a>
 ## addAssets
 
 ```TypeScript
@@ -45,7 +44,6 @@ Add assets to the album.
 | 14000011 | System inner fail |
 | 14000016 | Operation Not Support |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -73,7 +71,6 @@ Constructor used to initialize a new object.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
-<a id="getalbum"></a>
 ## getAlbum
 
 ```TypeScript
@@ -81,11 +78,10 @@ getAlbum(): Album
 ```
 
 Obtains the album in the current album change request.
-
 > **NOTE**  
 >  
 > For the change request for creating an album, this API returns **null** before  
-> [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges-1) is called  
+> [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applychanges) is called  
 > to apply the changes.
 
 **Since:** 11
@@ -107,7 +103,6 @@ Obtains the album in the current album change request.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 | 14000011 | System inner fail |
 
-<a id="removeassets"></a>
 ## removeAssets
 
 ```TypeScript
@@ -136,7 +131,6 @@ Removes assets from the album.
 | 14000011 | System inner fail |
 | 14000016 | Operation Not Support |
 
-<a id="setalbumname"></a>
 ## setAlbumName
 
 ```TypeScript
@@ -150,7 +144,7 @@ The album name must meet the following requirements:
 - The total length of the album name must be between 1 and 255 characters.  
 - It must not contain any invalid characters, which are:
 
-. \ / : * ? " ' ` < > | { } [ ]
+. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 - It is case-insensitive.  
 - Duplicate album names are not allowed.

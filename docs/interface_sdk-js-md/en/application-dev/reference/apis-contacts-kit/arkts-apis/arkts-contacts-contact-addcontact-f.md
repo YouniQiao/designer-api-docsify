@@ -6,7 +6,6 @@
 import { contact } from '@kit.ContactsKit';
 ```
 
-<a id="addcontact"></a>
 ## addContact
 
 ```TypeScript
@@ -19,7 +18,7 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [addContact(context:](arkts-contacts-contact-addcontact-f.md#addcontact-1)
+**Substitutes:** [addContact(context:](arkts-contacts-contact-addcontact-f.md#addcontact)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -61,7 +60,6 @@ contact.addContact(context, {
 ```
 
 
-<a id="addcontact-1"></a>
 ## addContact
 
 ```TypeScript
@@ -124,7 +122,6 @@ In the sample code provided in this topic, this.context is used to obtain UIAbil
 ```
 
 
-<a id="addcontact-2"></a>
 ## addContact
 
 ```TypeScript
@@ -137,7 +134,7 @@ Adds a contact. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [addContact(context:](arkts-contacts-contact-addcontact-f.md#addcontact-1)
+**Substitutes:** [addContact(context:](arkts-contacts-contact-addcontact-f.md#addcontact)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -179,7 +176,6 @@ promise.then((data) => {
 ```
 
 
-<a id="addcontact-3"></a>
 ## addContact
 
 ```TypeScript

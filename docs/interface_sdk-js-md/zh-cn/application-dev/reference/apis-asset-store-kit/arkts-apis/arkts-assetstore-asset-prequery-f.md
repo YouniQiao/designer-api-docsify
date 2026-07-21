@@ -6,14 +6,13 @@
 import { asset } from '@kit.AssetStoreKit';
 ```
 
-<a id="prequery"></a>
 ## preQuery
 
 ```TypeScript
 function preQuery(query: AssetMap): Promise<Uint8Array>
 ```
 
-查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.query](arkts-assetstore-asset-query-f.md#query-1)和[asset.postQuery](arkts-assetstore-asset-postquery-f.md#postquery-1)接口。使用Promise异步回调。
+查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.query](arkts-assetstore-asset-query-f.md#query)和[asset.postQuery](arkts-assetstore-asset-postquery-f.md#postquery)接口。使用Promise异步回调。
 
 **起始版本：** 11
 

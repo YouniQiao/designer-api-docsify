@@ -2,9 +2,9 @@
 
 The ImageCreator class provides APIs for applications to request an image data area and compile image data.
 
-Before calling any APIs in ImageCreator, you must use [image.createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator-1)to create an ImageCreator instance. ImageCreator does not support multiple threads.
+Before calling any APIs in ImageCreator, you must use [image.createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator)to create an ImageCreator instance. ImageCreator does not support multiple threads.
 
-Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](arkts-image-image-imagecreator-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -18,7 +18,6 @@ Images occupy a large amount of memory. When you finish using an ImageCreator in
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="dequeueimage"></a>
 ## dequeueImage
 
 ```TypeScript
@@ -39,7 +38,6 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
 
-<a id="dequeueimage-1"></a>
 ## dequeueImage
 
 ```TypeScript
@@ -60,7 +58,6 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 | --- | --- |
 | Promise&lt;Image&gt; | Promise used to return the latest image. |
 
-<a id="off"></a>
 ## off('imageRelease')
 
 ```TypeScript
@@ -82,7 +79,6 @@ Unregisters the callback function that is triggered when the buffer is released.
 | type | 'imageRelease' | Yes | Type of event, which is **'imageRelease'**. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the operation is successful,**err** is null; otherwise, **err** is an error object. |
 
-<a id="on"></a>
 ## on('imageRelease')
 
 ```TypeScript
@@ -104,7 +100,6 @@ Listens for image release events. This API uses an asynchronous callback to retu
 | type | 'imageRelease' | Yes | Type of event, which is **'imageRelease'**. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
-<a id="queueimage"></a>
 ## queueImage
 
 ```TypeScript
@@ -126,7 +121,6 @@ Places the drawn image in the queue. This API uses an asynchronous callback to r
 | image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | Drawn image. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
-<a id="queueimage-1"></a>
 ## queueImage
 
 ```TypeScript
@@ -153,7 +147,6 @@ Places the drawn image in the queue. This API uses a promise to return the resul
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -178,7 +171,6 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript

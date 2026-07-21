@@ -18,7 +18,6 @@ Provides the API for accessing unicode character properties. For example, determ
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="gettype"></a>
 ## getType
 
 ```TypeScript
@@ -31,7 +30,7 @@ Obtains the type of the input character.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getType](arkts-localization-i18n-unicode-c.md#gettype-1)
+**Substitutes:** [getType](arkts-localization-i18n-unicode-c.md#gettype)
 
 <!--Device-Character-getType(ch: string): string--><!--Device-Character-getType(ch: string): string-End-->
 
@@ -49,7 +48,6 @@ Obtains the type of the input character.
 | --- | --- |
 | string | Type of the input character. |
 
-<a id="isdigit"></a>
 ## isDigit
 
 ```TypeScript
@@ -62,7 +60,7 @@ Checks whether the input character is a digit.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isDigit](arkts-localization-i18n-unicode-c.md#isdigit-1)
+**Substitutes:** [isDigit](arkts-localization-i18n-unicode-c.md#isdigit)
 
 <!--Device-Character-isDigit(ch: string): boolean--><!--Device-Character-isDigit(ch: string): boolean-End-->
 
@@ -80,7 +78,6 @@ Checks whether the input character is a digit.
 | --- | --- |
 | boolean | **true** if the input character is a digit, and **false** otherwise. |
 
-<a id="isideograph"></a>
 ## isIdeograph
 
 ```TypeScript
@@ -93,7 +90,7 @@ Checks whether the input character is an ideographic character.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isIdeograph](arkts-localization-i18n-unicode-c.md#isideograph-1)
+**Substitutes:** [isIdeograph](arkts-localization-i18n-unicode-c.md#isideograph)
 
 <!--Device-Character-isIdeograph(ch: string): boolean--><!--Device-Character-isIdeograph(ch: string): boolean-End-->
 
@@ -111,7 +108,6 @@ Checks whether the input character is an ideographic character.
 | --- | --- |
 | boolean | **true** if the input character an ideographic character, and **false** otherwise. |
 
-<a id="isletter"></a>
 ## isLetter
 
 ```TypeScript
@@ -124,7 +120,7 @@ Checks whether the input character is a letter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isLetter](arkts-localization-i18n-unicode-c.md#isletter-1)
+**Substitutes:** [isLetter](arkts-localization-i18n-unicode-c.md#isletter)
 
 <!--Device-Character-isLetter(ch: string): boolean--><!--Device-Character-isLetter(ch: string): boolean-End-->
 
@@ -142,7 +138,6 @@ Checks whether the input character is a letter.
 | --- | --- |
 | boolean | **true** if the input character a letter, and **false** otherwise. |
 
-<a id="islowercase"></a>
 ## isLowerCase
 
 ```TypeScript
@@ -155,7 +150,7 @@ Checks whether the input character is a lowercase letter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isLowerCase](arkts-localization-i18n-unicode-c.md#islowercase-1)
+**Substitutes:** [isLowerCase](arkts-localization-i18n-unicode-c.md#islowercase)
 
 <!--Device-Character-isLowerCase(ch: string): boolean--><!--Device-Character-isLowerCase(ch: string): boolean-End-->
 
@@ -173,7 +168,6 @@ Checks whether the input character is a lowercase letter.
 | --- | --- |
 | boolean | **true** if the input character a lowercase letter, and **false** otherwise. |
 
-<a id="isrtl"></a>
 ## isRTL
 
 ```TypeScript
@@ -186,7 +180,7 @@ Checks whether the input character is of the right to left (RTL) language.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isRTL](arkts-localization-i18n-unicode-c.md#isrtl-1)
+**Substitutes:** [isRTL](arkts-localization-i18n-unicode-c.md#isrtl)
 
 <!--Device-Character-isRTL(ch: string): boolean--><!--Device-Character-isRTL(ch: string): boolean-End-->
 
@@ -204,7 +198,6 @@ Checks whether the input character is of the right to left (RTL) language.
 | --- | --- |
 | boolean | **true** if the input character is of the RTL language, and **false** otherwise. |
 
-<a id="isspacechar"></a>
 ## isSpaceChar
 
 ```TypeScript
@@ -217,7 +210,7 @@ Checks whether the input character is a space.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isSpaceChar](arkts-localization-i18n-unicode-c.md#isspacechar-1)
+**Substitutes:** [isSpaceChar](arkts-localization-i18n-unicode-c.md#isspacechar)
 
 <!--Device-Character-isSpaceChar(ch: string): boolean--><!--Device-Character-isSpaceChar(ch: string): boolean-End-->
 
@@ -235,7 +228,6 @@ Checks whether the input character is a space.
 | --- | --- |
 | boolean | **true** if the input character is a space, and **false** otherwise. |
 
-<a id="isuppercase"></a>
 ## isUpperCase
 
 ```TypeScript
@@ -248,7 +240,7 @@ Checks whether the input character is an uppercase letter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isUpperCase](arkts-localization-i18n-unicode-c.md#isuppercase-1)
+**Substitutes:** [isUpperCase](arkts-localization-i18n-unicode-c.md#isuppercase)
 
 <!--Device-Character-isUpperCase(ch: string): boolean--><!--Device-Character-isUpperCase(ch: string): boolean-End-->
 
@@ -266,7 +258,6 @@ Checks whether the input character is an uppercase letter.
 | --- | --- |
 | boolean | **true** if the input character an uppercase letter, and **false** otherwise. |
 
-<a id="iswhitespace"></a>
 ## isWhitespace
 
 ```TypeScript
@@ -279,7 +270,7 @@ Checks whether the input character is a whitespace.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isWhitespace](arkts-localization-i18n-unicode-c.md#iswhitespace-1)
+**Substitutes:** [isWhitespace](arkts-localization-i18n-unicode-c.md#iswhitespace)
 
 <!--Device-Character-isWhitespace(ch: string): boolean--><!--Device-Character-isWhitespace(ch: string): boolean-End-->
 

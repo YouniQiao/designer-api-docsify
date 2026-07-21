@@ -6,14 +6,13 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="startapptracecapture"></a>
 ## startAppTraceCapture
 
 ```TypeScript
 function startAppTraceCapture(tags: number[], flag: TraceFlag, limitSize: number): string
 ```
 
-Starts automatic trace collection in a specified scope. This API is a supplement to the HiTrace module. The performance consumption during trace collection increases with the collection scope. Therefore, before using this API, you are advised to run the **hitrace** command to capture trace logs and select the key scope of trace collection to improve the API performance.**startAppTraceCapture()** and [stopAppTraceCapture()](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md#stopapptracecapture-1) must be called in pairs.Repeat calling of **startAppTraceCapture()** will cause exceptions. Trace collection consumes a lot of performance resources. Therefore, call **stopAppTraceCapture()** immediately after trace collection is complete.
+Starts automatic trace collection in a specified scope. This API is a supplement to the HiTrace module. The performance consumption during trace collection increases with the collection scope. Therefore, before using this API, you are advised to run the **hitrace** command to capture trace logs and select the key scope of trace collection to improve the API performance.**startAppTraceCapture()** and [stopAppTraceCapture()](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md#stopapptracecapture) must be called in pairs.Repeat calling of **startAppTraceCapture()** will cause exceptions. Trace collection consumes a lot of performance resources. Therefore, call **stopAppTraceCapture()** immediately after trace collection is complete.
 
 When an application calls **startAppTraceCapture()** to collect trace data and the size of the data exceeds the value of **limitSize**, the system automatically calls **stopAppTraceCapture()** to stop trace collection.Therefore, if **limitSize** is set improperly, the generated trace data is insufficient for fault analysis.Therefore, you need to evaluate the value of **limitSize** as required.
 

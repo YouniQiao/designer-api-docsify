@@ -6,7 +6,6 @@
 import { defaultAppManager } from '@kit.AbilityKit';
 ```
 
-<a id="resetdefaultapplicationsync"></a>
 ## resetDefaultApplicationSync
 
 ```TypeScript
@@ -30,7 +29,7 @@ Resets the default application based on a system-defined application type, a fil
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the target application. It must be set to a value defined by [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md), a file type that complies with the media type format, or a value defined by [UniformDataType](../../apis-arkdata/arkts-apis/arkts-data-uniformtypedescriptor.md). |
-| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. |
 
 **Error codes:**
 

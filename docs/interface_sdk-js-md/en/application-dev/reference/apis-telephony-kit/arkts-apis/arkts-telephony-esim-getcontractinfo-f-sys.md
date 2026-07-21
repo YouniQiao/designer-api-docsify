@@ -6,7 +6,6 @@
 import { eSIM } from '@kit.TelephonyKit';
 ```
 
-<a id="getcontractinfo"></a>
 ## getContractInfo
 
 ```TypeScript

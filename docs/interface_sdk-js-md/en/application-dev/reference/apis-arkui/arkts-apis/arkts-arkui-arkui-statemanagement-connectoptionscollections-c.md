@@ -1,6 +1,6 @@
 # ConnectOptionsCollections
 
-Defines the parameter type for the [globalConnect](PersistenceV2.globalConnect<T extends CollectionType<S>, S extends object>( type: ConnectOptionsCollections<T, S> | ConnectOptions<T> ))API. **ConnectOptionsCollections** is inherited from [ConnectOptions\<T\>](arkts-arkui-arkui-statemanagement-connectoptions-c.md). You can use the **ConnectOptionsCollections** input parameter to persist container data (such as **Array\<S>**).
+Defines the parameter type for the [globalConnect](PersistenceV2.globalConnect&lt;T extends CollectionType<S>, S extends object&gt;( type: ConnectOptionsCollections&lt;T, S&gt; | ConnectOptions<T> ))API. **ConnectOptionsCollections** is inherited from [ConnectOptions\&lt;T\&gt;](arkts-arkui-arkui-statemanagement-connectoptions-c.md). You can use the **ConnectOptionsCollections** input parameter to persist container data (such as **Array\<S>**).
 
 The following shows the examples of **StorageDefaultCreator\<T>** and **StorageDefaultCreator\<S>**:
 

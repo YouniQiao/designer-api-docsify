@@ -6,7 +6,6 @@
 import { matrix4 } from '@kit.ArkUI';
 ```
 
-<a id="translate"></a>
 ## translate
 
 ```TypeScript
@@ -19,7 +18,7 @@ Translates this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [translate](arkts-arkui-matrix4-matrix4transit-i.md#translate-1)
+**Substitutes:** [translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
 
 <!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit--><!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit-End-->
 

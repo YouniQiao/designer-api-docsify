@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface Date--><!--Device-unnamed-interface Date-End-->
 
-<a id="getdate"></a>
 ## getDate
 
 ```TypeScript
@@ -19,7 +18,6 @@ Gets the day-of-the-month, using local time.
 | --- | --- |
 | number |  |
 
-<a id="getday"></a>
 ## getDay
 
 ```TypeScript
@@ -36,7 +34,6 @@ Gets the day of the week, using local time.
 | --- | --- |
 | number |  |
 
-<a id="getfullyear"></a>
 ## getFullYear
 
 ```TypeScript
@@ -53,7 +50,6 @@ Gets the year, using local time.
 | --- | --- |
 | number |  |
 
-<a id="gethours"></a>
 ## getHours
 
 ```TypeScript
@@ -70,7 +66,6 @@ Gets the hours in a date, using local time.
 | --- | --- |
 | number |  |
 
-<a id="getmilliseconds"></a>
 ## getMilliseconds
 
 ```TypeScript
@@ -87,7 +82,6 @@ Gets the milliseconds of a Date, using local time.
 | --- | --- |
 | number |  |
 
-<a id="getminutes"></a>
 ## getMinutes
 
 ```TypeScript
@@ -104,7 +98,6 @@ Gets the minutes of a Date object, using local time.
 | --- | --- |
 | number |  |
 
-<a id="getmonth"></a>
 ## getMonth
 
 ```TypeScript
@@ -121,7 +114,6 @@ Gets the month, using local time.
 | --- | --- |
 | number |  |
 
-<a id="getseconds"></a>
 ## getSeconds
 
 ```TypeScript
@@ -138,7 +130,6 @@ Gets the seconds of a Date object, using local time.
 | --- | --- |
 | number |  |
 
-<a id="gettime"></a>
 ## getTime
 
 ```TypeScript
@@ -155,7 +146,6 @@ Gets the time value in milliseconds.
 | --- | --- |
 | number |  |
 
-<a id="gettimezoneoffset"></a>
 ## getTimezoneOffset
 
 ```TypeScript
@@ -172,7 +162,6 @@ Gets the difference in minutes between the time on the local computer and Univer
 | --- | --- |
 | number |  |
 
-<a id="getutcdate"></a>
 ## getUTCDate
 
 ```TypeScript
@@ -189,7 +178,6 @@ Gets the day-of-the-month, using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="getutcday"></a>
 ## getUTCDay
 
 ```TypeScript
@@ -206,7 +194,6 @@ Gets the day of the week using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="getutcfullyear"></a>
 ## getUTCFullYear
 
 ```TypeScript
@@ -223,7 +210,6 @@ Gets the year using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="getutchours"></a>
 ## getUTCHours
 
 ```TypeScript
@@ -240,7 +226,6 @@ Gets the hours value in a Date object using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="getutcmilliseconds"></a>
 ## getUTCMilliseconds
 
 ```TypeScript
@@ -257,7 +242,6 @@ Gets the milliseconds of a Date object using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="getutcminutes"></a>
 ## getUTCMinutes
 
 ```TypeScript
@@ -274,7 +258,6 @@ Gets the minutes of a Date object using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="getutcmonth"></a>
 ## getUTCMonth
 
 ```TypeScript
@@ -291,7 +274,6 @@ Gets the month of a Date object using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="getutcseconds"></a>
 ## getUTCSeconds
 
 ```TypeScript
@@ -308,7 +290,6 @@ Gets the seconds of a Date object using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="setdate"></a>
 ## setDate
 
 ```TypeScript
@@ -331,7 +312,6 @@ Sets the numeric day-of-the-month value of the Date object using local time.
 | --- | --- |
 | number |  |
 
-<a id="setfullyear"></a>
 ## setFullYear
 
 ```TypeScript
@@ -356,7 +336,6 @@ Sets the year of the Date object using local time.
 | --- | --- |
 | number |  |
 
-<a id="sethours"></a>
 ## setHours
 
 ```TypeScript
@@ -382,7 +361,6 @@ Sets the hour value in the Date object using local time.
 | --- | --- |
 | number |  |
 
-<a id="setmilliseconds"></a>
 ## setMilliseconds
 
 ```TypeScript
@@ -405,7 +383,6 @@ Sets the milliseconds value in the Date object using local time.
 | --- | --- |
 | number |  |
 
-<a id="setminutes"></a>
 ## setMinutes
 
 ```TypeScript
@@ -430,7 +407,6 @@ Sets the minutes value in the Date object using local time.
 | --- | --- |
 | number |  |
 
-<a id="setmonth"></a>
 ## setMonth
 
 ```TypeScript
@@ -454,7 +430,6 @@ Sets the month value in the Date object using local time.
 | --- | --- |
 | number |  |
 
-<a id="setseconds"></a>
 ## setSeconds
 
 ```TypeScript
@@ -478,7 +453,6 @@ Sets the seconds value in the Date object using local time.
 | --- | --- |
 | number |  |
 
-<a id="settime"></a>
 ## setTime
 
 ```TypeScript
@@ -501,7 +475,6 @@ Sets the date and time value in the Date object.
 | --- | --- |
 | number |  |
 
-<a id="setutcdate"></a>
 ## setUTCDate
 
 ```TypeScript
@@ -524,7 +497,6 @@ Sets the numeric day of the month in the Date object using Universal Coordinated
 | --- | --- |
 | number |  |
 
-<a id="setutcfullyear"></a>
 ## setUTCFullYear
 
 ```TypeScript
@@ -549,7 +521,6 @@ Sets the year value in the Date object using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="setutchours"></a>
 ## setUTCHours
 
 ```TypeScript
@@ -575,7 +546,6 @@ Sets the hours value in the Date object using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="setutcmilliseconds"></a>
 ## setUTCMilliseconds
 
 ```TypeScript
@@ -598,7 +568,6 @@ Sets the milliseconds value in the Date object using Universal Coordinated Time 
 | --- | --- |
 | number |  |
 
-<a id="setutcminutes"></a>
 ## setUTCMinutes
 
 ```TypeScript
@@ -623,7 +592,6 @@ Sets the minutes value in the Date object using Universal Coordinated Time (UTC)
 | --- | --- |
 | number |  |
 
-<a id="setutcmonth"></a>
 ## setUTCMonth
 
 ```TypeScript
@@ -647,7 +615,6 @@ Sets the month value in the Date object using Universal Coordinated Time (UTC).
 | --- | --- |
 | number |  |
 
-<a id="setutcseconds"></a>
 ## setUTCSeconds
 
 ```TypeScript
@@ -671,7 +638,6 @@ Sets the seconds value in the Date object using Universal Coordinated Time (UTC)
 | --- | --- |
 | number |  |
 
-<a id="todatestring"></a>
 ## toDateString
 
 ```TypeScript
@@ -688,7 +654,6 @@ Returns a date as a string value.
 | --- | --- |
 | string |  |
 
-<a id="toisostring"></a>
 ## toISOString
 
 ```TypeScript
@@ -705,7 +670,6 @@ Returns a date as a string value in ISO format.
 | --- | --- |
 | string |  |
 
-<a id="tojson"></a>
 ## toJSON
 
 ```TypeScript
@@ -728,7 +692,6 @@ Used by the JSON.stringify method to enable the transformation of an object's da
 | --- | --- |
 | string |  |
 
-<a id="tolocaledatestring"></a>
 ## toLocaleDateString
 
 ```TypeScript
@@ -752,7 +715,6 @@ Converts a date to a string by using the current or specified locale.
 | --- | --- |
 | string |  |
 
-<a id="tolocalestring"></a>
 ## toLocaleString
 
 ```TypeScript
@@ -776,7 +738,6 @@ Converts a date and time to a string by using the current or specified locale.
 | --- | --- |
 | string |  |
 
-<a id="tolocaletimestring"></a>
 ## toLocaleTimeString
 
 ```TypeScript
@@ -800,7 +761,6 @@ Converts a time to a string by using the current or specified locale.
 | --- | --- |
 | string |  |
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -817,7 +777,6 @@ Returns a string representation of a date. The format of the string depends on t
 | --- | --- |
 | string |  |
 
-<a id="totimestring"></a>
 ## toTimeString
 
 ```TypeScript
@@ -834,7 +793,6 @@ Returns a time as a string value.
 | --- | --- |
 | string |  |
 
-<a id="toutcstring"></a>
 ## toUTCString
 
 ```TypeScript
@@ -851,7 +809,6 @@ Returns a date converted to a string using Universal Coordinated Time (UTC).
 | --- | --- |
 | string |  |
 
-<a id="valueof"></a>
 ## valueOf
 
 ```TypeScript

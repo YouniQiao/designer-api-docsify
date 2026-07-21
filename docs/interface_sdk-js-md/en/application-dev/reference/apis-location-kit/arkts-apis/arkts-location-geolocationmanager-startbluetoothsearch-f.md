@@ -6,7 +6,6 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
-<a id="startbluetoothsearch"></a>
 ## startBluetoothSearch
 
 ```TypeScript
@@ -24,9 +23,7 @@ Starts Bluetooth scanning and matches the device ID list in the input parameter 
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-geoLocationManager-function startBluetoothSearch(
-      request: BluetoothSearchRequestParams, callback: Callback<BluetoothScanResult>): void--><!--Device-geoLocationManager-function startBluetoothSearch(
-      request: BluetoothSearchRequestParams, callback: Callback<BluetoothScanResult>): void-End-->
+<!--Device-geoLocationManager-function startBluetoothSearch(      request: BluetoothSearchRequestParams, callback: Callback<BluetoothScanResult>): void--><!--Device-geoLocationManager-function startBluetoothSearch(      request: BluetoothSearchRequestParams, callback: Callback<BluetoothScanResult>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

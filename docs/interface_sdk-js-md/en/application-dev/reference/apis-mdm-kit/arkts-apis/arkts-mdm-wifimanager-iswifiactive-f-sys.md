@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.MDMKit';
 ```
 
-<a id="iswifiactive"></a>
 ## isWifiActive
 
 ```TypeScript
@@ -19,7 +18,7 @@ Queries the Wi-Fi status of the current device. This API uses an asynchronous ca
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isWifiActiveSync](arkts-mdm-wifimanager-iswifiactivesync-f.md#iswifiactivesync-1)
+**Substitutes:** [isWifiActiveSync](arkts-mdm-wifimanager-iswifiactivesync-f.md#iswifiactivesync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_WIFI
 
@@ -71,7 +70,6 @@ wifiManager.isWifiActive(wantTemp, (err, result) => {
 ```
 
 
-<a id="iswifiactive-1"></a>
 ## isWifiActive
 
 ```TypeScript
@@ -84,7 +82,7 @@ Queries the Wi-Fi status of the current device. This API uses a promise to retur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isWifiActiveSync](arkts-mdm-wifimanager-iswifiactivesync-f.md#iswifiactivesync-1)
+**Substitutes:** [isWifiActiveSync](arkts-mdm-wifimanager-iswifiactivesync-f.md#iswifiactivesync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_WIFI
 

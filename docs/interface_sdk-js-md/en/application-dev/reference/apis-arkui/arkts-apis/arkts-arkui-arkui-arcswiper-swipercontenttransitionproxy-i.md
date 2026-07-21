@@ -1,9 +1,7 @@
 # SwiperContentTransitionProxy
 
 Implements the proxy object returned during the execution of the custom page transition animation of the **ArcSwiper** component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **ArcSwiper** component that the custom animation has finished playing.
-
 > **NOTE**
-
 > - For example, when the index of the currently selected child component is 0, during a transition animation from  
 > page 0 to page 1, the callback is triggered for all pages within the viewport on every frame. When pages 0 and 1  
 > are both in the viewport, the callback is triggered twice per frame. The first callback has **selectedIndex** as  
@@ -30,7 +28,6 @@ Implements the proxy object returned during the execution of the custom page tra
 import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
-<a id="finishtransition"></a>
 ## finishTransition
 
 ```TypeScript

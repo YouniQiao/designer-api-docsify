@@ -42,19 +42,19 @@ Drag preview style modifier. It applies image component attributes and styles to
 
 1. Opacity
 
-Use [opacity](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-opacity.md#opacity). The value ranges from 0 to 1. If this parameter is set to **0** or left empty, the default opacity 0.95 is used. If this parameter is set to **1** or an abnormal value, the opacity is 1.
+Use [opacity](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-opacity.md#opacity). The value ranges from 0 to 1. If this parameter is set to **0** or left empty, the default opacity 0.95 is used. If this parameter is set to **1** or an abnormal value, the opacity is 1.
 
 2. Shadow
 
-Use [shadow](arkts-arkui-commonmethod-c.md#shadow-1).
+Use [shadow](arkts-arkui-commonmethod-c.md#shadow).
 
 3. Background blur
 
-Use [backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect-1) or [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle-1).If both are set, the latter setting takes precedence.
+Use [backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect) or [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle).If both are set, the latter setting takes precedence.
 
 4. Rounded corners
 
-Use [border](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border) or [borderRadius](arkts-arkui-commonmethod-c.md#borderradius-1). Modifier settings override mode settings.
+Use [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border) or [borderRadius](arkts-arkui-commonmethod-c.md#borderradius). Modifier settings override mode settings.
 
 Default value: empty (unmodifiable).
 

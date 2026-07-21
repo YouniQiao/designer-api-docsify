@@ -6,7 +6,6 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="getrunningprocessinformationbybundletype"></a>
 ## getRunningProcessInformationByBundleType
 
 ```TypeScript
@@ -20,9 +19,7 @@ Obtains the information about the running process based on the bundle type. This
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
-<!--Device-appManager-function getRunningProcessInformationByBundleType(
-    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInformationByBundleType(
-    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>-End-->
+<!--Device-appManager-function getRunningProcessInformationByBundleType(    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInformationByBundleType(    bundleType: bundleManager.BundleType): Promise<Array<ProcessInformation>>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

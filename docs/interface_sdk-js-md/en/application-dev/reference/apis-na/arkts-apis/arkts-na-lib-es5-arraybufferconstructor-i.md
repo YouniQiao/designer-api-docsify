@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface ArrayBufferConstructor--><!--Device-unnamed-interface ArrayBufferConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -23,7 +22,6 @@ new(byteLength: number): ArrayBuffer
 | --- | --- |
 | ArrayBuffer |  |
 
-<a id="isview"></a>
 ## isView
 
 ```TypeScript

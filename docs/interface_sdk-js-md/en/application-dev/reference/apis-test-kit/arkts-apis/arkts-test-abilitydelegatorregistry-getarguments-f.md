@@ -6,14 +6,13 @@
 import { abilityDelegatorRegistry } from '@kit.TestKit';
 ```
 
-<a id="getarguments"></a>
 ## getArguments
 
 ```TypeScript
 function getArguments(): AbilityDelegatorArgs
 ```
 
-Obtains an [AbilityDelegatorArgs](application/abilityDelegatorArgs:AbilityDelegatorArgs) object.
+Obtains an [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) object.
 
 **Since:** 9
 
@@ -27,7 +26,7 @@ Obtains an [AbilityDelegatorArgs](application/abilityDelegatorArgs:AbilityDelega
 
 | Type | Description |
 | --- | --- |
-| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) | [AbilityDelegatorArgs](application/abilityDelegatorArgs:AbilityDelegatorArgs)object, which can be used to obtain test parameters. |
+| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) | [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md)object, which can be used to obtain test parameters. |
 
 **Example**
 

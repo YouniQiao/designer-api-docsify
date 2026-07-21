@@ -8,7 +8,6 @@ The render resource factory. RenderResourceFactory is used to create resources t
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="createimage"></a>
 ## createImage
 
 ```TypeScript
@@ -35,7 +34,6 @@ Create an image.
 | --- | --- |
 | Promise&lt;Image&gt; | promise an image |
 
-<a id="createimagestream"></a>
 ## createImageStream
 
 ```TypeScript
@@ -64,7 +62,6 @@ Create an image stream.
 | --- | --- |
 | Promise&lt;ImageStream&gt; | promise an image stream |
 
-<a id="createmesh"></a>
 ## createMesh
 
 ```TypeScript
@@ -92,7 +89,6 @@ Create a Mesh from an array of vertices.
 | --- | --- |
 | Promise&lt;MeshResource&gt; | promise a Mesh |
 
-<a id="createsampler"></a>
 ## createSampler
 
 ```TypeScript
@@ -119,7 +115,6 @@ Create a Sampler.
 | --- | --- |
 | Promise&lt;Sampler&gt; | - promise a sampler |
 
-<a id="createscene"></a>
 ## createScene
 
 ```TypeScript
@@ -146,7 +141,6 @@ Create a new scene from a Resource.If uri is not provided, will return an empty 
 | --- | --- |
 | Promise&lt;Scene&gt; | promise a scene |
 
-<a id="createshader"></a>
 ## createShader
 
 ```TypeScript

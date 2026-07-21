@@ -6,7 +6,6 @@
 import { ethernet } from '@kit.NetworkKit';
 ```
 
-<a id="getifaceconfig"></a>
 ## getIfaceConfig
 
 ```TypeScript
@@ -66,7 +65,6 @@ ethernet.getIfaceConfig("eth0", (error: BusinessError, value: ethernet.Interface
 ```
 
 
-<a id="getifaceconfig-1"></a>
 ## getIfaceConfig
 
 ```TypeScript

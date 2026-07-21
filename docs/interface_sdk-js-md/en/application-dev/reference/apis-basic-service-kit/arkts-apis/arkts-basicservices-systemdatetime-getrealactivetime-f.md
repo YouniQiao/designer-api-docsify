@@ -6,7 +6,6 @@
 import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
-<a id="getrealactivetime"></a>
 ## getRealActiveTime
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 **Deprecated since:** 12
 
-**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime-1)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemDateTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -59,7 +58,6 @@ try {
 ```
 
 
-<a id="getrealactivetime-1"></a>
 ## getRealActiveTime
 
 ```TypeScript
@@ -72,7 +70,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 **Deprecated since:** 12
 
-**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime-1)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemDateTime-function getRealActiveTime(callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getRealActiveTime(callback: AsyncCallback<number>): void-End-->
 
@@ -111,7 +109,6 @@ try {
 ```
 
 
-<a id="getrealactivetime-2"></a>
 ## getRealActiveTime
 
 ```TypeScript
@@ -124,7 +121,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 **Deprecated since:** 12
 
-**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime-1)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
 
 <!--Device-systemDateTime-function getRealActiveTime(isNano?: boolean): Promise<number>--><!--Device-systemDateTime-function getRealActiveTime(isNano?: boolean): Promise<number>-End-->
 

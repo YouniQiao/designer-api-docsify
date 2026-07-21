@@ -35,7 +35,7 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 | [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#on-2) | Enables listening for **receiveMessage** events. |
 | [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#on-3) | Enables listening for **receiveData** events. |
 | [reject](arkts-distributedservice-abilityconnectionmanager-reject-f.md#reject) | Rejects a connection request in a cross-device collaboration session. After a connection request sent from the peer application is rejected, a rejection reason is returned. |
-| [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) | Sends [ArrayBuffer](docroot://arkts-utils/arraybuffer-object.md) byte streams from one device to another after a connection is successfully established. |
+| [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) | Sends [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md) byte streams from one device to another after a connection is successfully established. |
 | [sendMessage](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage) | Sends text messages after a collaboration session is set up. |
 
 <!--Del-->

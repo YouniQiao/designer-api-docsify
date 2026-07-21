@@ -20,7 +20,6 @@ Defines the AbsAlbum.
 import { userFileManager } from '@kit.CoreFileKit';
 ```
 
-<a id="getphotoassets"></a>
 ## getPhotoAssets
 
 ```TypeScript
@@ -33,7 +32,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#getassets-1)
+**Substitutes:** [getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#getassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -56,7 +55,6 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | --- | --- |
 | 13900020 | if type options is not FetchOptions |
 
-<a id="getphotoassets-1"></a>
 ## getPhotoAssets
 
 ```TypeScript
@@ -69,7 +67,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#getassets-1)
+**Substitutes:** [getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#getassets)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -104,7 +102,6 @@ albumName: string
 ```
 
 Name of the album.
-
 > **NOTE**  
 >  
 > The user album is writable, but the system album is not writable.
@@ -137,7 +134,7 @@ Subtype of the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** albumSubType
+**Substitutes:** [albumSubType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-absalbum-i.md#albumsubtype)
 
 <!--Device-AbsAlbum-readonly albumSubType: AlbumSubType--><!--Device-AbsAlbum-readonly albumSubType: AlbumSubType-End-->
 
@@ -218,7 +215,6 @@ coverUri: string
 ```
 
 URI of the cover file of the album.
-
 > **NOTE**  
 >  
 > The user album is writable, but the system album is not writable.

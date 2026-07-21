@@ -14,7 +14,6 @@ Implements audio spatialization management.
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="isspatializationenabledforcurrentdevice"></a>
 ## isSpatializationEnabledForCurrentDevice
 
 ```TypeScript
@@ -35,7 +34,6 @@ Checks whether spatial audio rendering is enabled for the current device. This A
 | --- | --- |
 | boolean | Check result for whether spatial audio rendering is enabled. **true** if enabled, **false** otherwise. |
 
-<a id="off"></a>
 ## off('spatializationEnabledChangeForCurrentDevice')
 
 ```TypeScript
@@ -63,7 +61,6 @@ Unsubscribes from the spatial audio rendering status change event of the current
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on"></a>
 ## on('spatializationEnabledChangeForCurrentDevice')
 
 ```TypeScript

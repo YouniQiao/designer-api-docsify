@@ -16,7 +16,6 @@ The module allows you to query the charging status and remaining power of a devi
 import { GetStatusOptions, BatteryResponse } from '@kit.BasicServicesKit';
 ```
 
-<a id="getstatus"></a>
 ## getStatus
 
 ```TypeScript

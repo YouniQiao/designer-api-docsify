@@ -1,6 +1,6 @@
 # HistoryVersion
 
-Represents the historical version information of the device-cloud file when the [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist-1) method of the [FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called.
+Represents the historical version information of the device-cloud file when the [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist) method of the [FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called.
 
 **Since:** 20
 

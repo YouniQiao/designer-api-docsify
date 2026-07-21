@@ -6,7 +6,6 @@
 import { statistics } from '@kit.NetworkKit';
 ```
 
-<a id="off"></a>
 ## off('netStatsChange')
 
 ```TypeScript

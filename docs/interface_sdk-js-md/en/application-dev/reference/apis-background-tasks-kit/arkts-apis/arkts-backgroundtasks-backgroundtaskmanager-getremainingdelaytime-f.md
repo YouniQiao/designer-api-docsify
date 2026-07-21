@@ -6,7 +6,6 @@
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="getremainingdelaytime"></a>
 ## getRemainingDelayTime
 
 ```TypeScript
@@ -25,7 +24,7 @@ Obtains the remaining time of a transient task. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestsuspenddelay-1) API. |
+| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestsuspenddelay) API. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the remaining time of the transient task, in milliseconds. |
 
 **Error codes:**
@@ -58,7 +57,6 @@ backgroundTaskManager.getRemainingDelayTime(id, (error: BusinessError, res: numb
 ```
 
 
-<a id="getremainingdelaytime-1"></a>
 ## getRemainingDelayTime
 
 ```TypeScript
@@ -77,7 +75,7 @@ Obtains the remaining time of a transient task. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestsuspenddelay-1) API. |
+| requestId | number | Yes | Request ID of the transient task. It is obtained by calling the [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestsuspenddelay) API. |
 
 **Return value:**
 

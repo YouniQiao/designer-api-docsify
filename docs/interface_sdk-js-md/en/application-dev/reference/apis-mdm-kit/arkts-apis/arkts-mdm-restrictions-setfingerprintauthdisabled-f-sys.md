@@ -6,7 +6,6 @@
 import { restrictions } from '@kit.MDMKit';
 ```
 
-<a id="setfingerprintauthdisabled"></a>
 ## setFingerprintAuthDisabled
 
 ```TypeScript
@@ -19,7 +18,7 @@ Enables or disables fingerprint authentication.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1)
+**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 

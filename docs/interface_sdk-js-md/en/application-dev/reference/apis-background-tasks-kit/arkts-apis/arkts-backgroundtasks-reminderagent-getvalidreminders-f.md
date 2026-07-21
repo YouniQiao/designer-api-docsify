@@ -6,7 +6,6 @@
 import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="getvalidreminders"></a>
 ## getValidReminders
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders-1)
+**Substitutes:** [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders)
 
 <!--Device-reminderAgent-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void--><!--Device-reminderAgent-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void-End-->
 
@@ -64,7 +63,6 @@ reminderAgent.getValidReminders((err: BusinessError, reminders: Array<reminderAg
 ```
 
 
-<a id="getvalidreminders-1"></a>
 ## getValidReminders
 
 ```TypeScript
@@ -77,7 +75,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders-1)
+**Substitutes:** [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders)
 
 <!--Device-reminderAgent-function getValidReminders(): Promise<Array<ReminderRequest>>--><!--Device-reminderAgent-function getValidReminders(): Promise<Array<ReminderRequest>>-End-->
 

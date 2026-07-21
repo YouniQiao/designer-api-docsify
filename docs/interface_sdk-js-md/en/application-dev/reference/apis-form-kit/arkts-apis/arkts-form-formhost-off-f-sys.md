@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="off"></a>
 ## off("formUninstall")
 
 ```TypeScript
@@ -14,7 +13,6 @@ function off(type: "formUninstall", callback?: Callback<string>): void
 ```
 
 Unsubscribes from widget uninstall events. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Widget uninstall is different from widget removal. When an application is uninstalled, the corresponding widget  
@@ -43,7 +41,6 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 
-<a id="off-1"></a>
 ## off('formOverflow')
 
 ```TypeScript
@@ -90,7 +87,6 @@ try {
 ```
 
 
-<a id="off-2"></a>
 ## off('changeSceneAnimationState')
 
 ```TypeScript
@@ -102,9 +98,7 @@ Unsubscribes from the event of switching the interactive widget state. An intera
 
 **Since:** 20
 
-<!--Device-formHost-function off(type: 'changeSceneAnimationState', 
-    callback?: Callback<formInfo.ChangeSceneAnimationStateRequest>): void--><!--Device-formHost-function off(type: 'changeSceneAnimationState', 
-    callback?: Callback<formInfo.ChangeSceneAnimationStateRequest>): void-End-->
+<!--Device-formHost-function off(type: 'changeSceneAnimationState',     callback?: Callback<formInfo.ChangeSceneAnimationStateRequest>): void--><!--Device-formHost-function off(type: 'changeSceneAnimationState',     callback?: Callback<formInfo.ChangeSceneAnimationStateRequest>): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -140,7 +134,6 @@ try {
 ```
 
 
-<a id="off-3"></a>
 ## off('getFormRect')
 
 ```TypeScript
@@ -185,7 +178,6 @@ try {
 ```
 
 
-<a id="off-4"></a>
 ## off('getLiveFormStatus')
 
 ```TypeScript
@@ -197,9 +189,7 @@ Cancels Listening to the event of get live form status.
 
 **Since:** 20
 
-<!--Device-formHost-function off(type: 'getLiveFormStatus', 
-    callback?: formInfo.GetLiveFormStatusCallback): void--><!--Device-formHost-function off(type: 'getLiveFormStatus', 
-    callback?: formInfo.GetLiveFormStatusCallback): void-End-->
+<!--Device-formHost-function off(type: 'getLiveFormStatus',     callback?: formInfo.GetLiveFormStatusCallback): void--><!--Device-formHost-function off(type: 'getLiveFormStatus',     callback?: formInfo.GetLiveFormStatusCallback): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

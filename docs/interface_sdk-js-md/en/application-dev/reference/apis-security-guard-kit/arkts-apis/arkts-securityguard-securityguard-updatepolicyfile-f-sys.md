@@ -6,7 +6,6 @@
 import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
-<a id="updatepolicyfile"></a>
 ## updatePolicyFile
 
 ```TypeScript

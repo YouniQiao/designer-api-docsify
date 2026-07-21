@@ -6,7 +6,6 @@
 import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
-<a id="setbluetoothscanmode"></a>
 ## setBluetoothScanMode
 
 ```TypeScript

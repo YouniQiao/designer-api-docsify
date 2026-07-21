@@ -2,7 +2,7 @@
 
 Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
 
-Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create-1) to create a PiPController instance.
+Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create) to create a PiPController instance.
 
 **Since:** 11
 
@@ -16,7 +16,6 @@ Before calling any of the following APIs, you must use [PiPWindow.create()](arkt
 import { PiPWindow } from '@kit.ArkUI';
 ```
 
-<a id="getpipsettingswitch"></a>
 ## getPiPSettingSwitch
 
 ```TypeScript
@@ -66,7 +65,6 @@ try {
 
 ```
 
-<a id="getpipwindowinfo"></a>
 ## getPiPWindowInfo
 
 ```TypeScript
@@ -116,7 +114,6 @@ try {
 
 ```
 
-<a id="ispipactive"></a>
 ## isPiPActive
 
 ```TypeScript
@@ -165,7 +162,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -196,14 +192,13 @@ this.pipController.off('stateChange');
 
 ```
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
 off(type: 'controlPanelActionEvent'): void
 ```
 
-Unsubscribes from PiP action events. The **[off('controlEvent')](arkts-arkui-pipwindow-pipcontroller-i.md#off-1)** API is preferred.
+Unsubscribes from PiP action events. The **[off('controlEvent')](arkts-arkui-pipwindow-pipcontroller-i.md#off)** API is preferred.
 
 **Since:** 11
 
@@ -227,7 +222,6 @@ this.pipController.off('controlPanelActionEvent');
 
 ```
 
-<a id="off-2"></a>
 ## off('controlEvent')
 
 ```TypeScript
@@ -262,7 +256,6 @@ this.pipController.off('controlEvent', callbackFunc);
 
 ```
 
-<a id="off-3"></a>
 ## off('pipWindowSizeChange')
 
 ```TypeScript
@@ -317,7 +310,6 @@ try {
 
 ```
 
-<a id="off-4"></a>
 ## off('activeStatusChange')
 
 ```TypeScript
@@ -352,7 +344,6 @@ this.pipController.off('activeStatusChange', callback);
 
 ```
 
-<a id="on"></a>
 ## on('stateChange')
 
 ```TypeScript
@@ -409,7 +400,6 @@ this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string)
 
 ```
 
-<a id="on-1"></a>
 ## on('controlPanelActionEvent')
 
 ```TypeScript
@@ -466,7 +456,6 @@ this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEven
 
 ```
 
-<a id="on-2"></a>
 ## on('controlEvent')
 
 ```TypeScript
@@ -523,7 +512,6 @@ this.pipController.on('controlEvent', (control) => {
 
 ```
 
-<a id="on-3"></a>
 ## on('pipWindowSizeChange')
 
 ```TypeScript
@@ -569,7 +557,6 @@ try {
 
 ```
 
-<a id="on-4"></a>
 ## on('activeStatusChange')
 
 ```TypeScript
@@ -604,7 +591,6 @@ this.pipController.on('activeStatusChange', callback);
 
 ```
 
-<a id="setautostartenabled"></a>
 ## setAutoStartEnabled
 
 ```TypeScript
@@ -637,7 +623,6 @@ this.pipController.setAutoStartEnabled(enable); // Set whether to automatically 
 
 ```
 
-<a id="setpipcontrolenabled"></a>
 ## setPiPControlEnabled
 
 ```TypeScript
@@ -676,7 +661,6 @@ this.pipController.setPiPControlEnabled(controlType, enabled); // Set the enable
 
 ```
 
-<a id="startpip"></a>
 ## startPiP
 
 ```TypeScript
@@ -722,7 +706,6 @@ promise.then(() => {
 
 ```
 
-<a id="stoppip"></a>
 ## stopPiP
 
 ```TypeScript
@@ -765,7 +748,6 @@ promise.then(() => {
 
 ```
 
-<a id="updatecontentnode"></a>
 ## updateContentNode
 
 ```TypeScript
@@ -818,7 +800,6 @@ try {
 
 ```
 
-<a id="updatecontentsize"></a>
 ## updateContentSize
 
 ```TypeScript
@@ -857,7 +838,6 @@ this.pipController.updateContentSize(width, height); // Update the size of the P
 
 ```
 
-<a id="updatepipcontrolstatus"></a>
 ## updatePiPControlStatus
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # decodeURI
 
-<a id="decodeuri"></a>
 ## decodeURI
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="setappnet"></a>
 ## setAppNet
 
 ```TypeScript
@@ -93,7 +92,6 @@ netCon.register((error: BusinessError) => {
 ```
 
 
-<a id="setappnet-1"></a>
 ## setAppNet
 
 ```TypeScript

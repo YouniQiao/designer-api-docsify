@@ -8,7 +8,6 @@ The render resource factory. RenderResourceFactory is used to create resources t
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="createscene"></a>
 ## createScene
 
 ```TypeScript

@@ -1,7 +1,6 @@
 # StabilizationQuery
 
 StabilizationQuery provides APIs to check the support for video stabilization.
-
 > **NOTE**  
 >  
 > - This interface was first introduced in API version 12. In this version, a compatibility change was made that  
@@ -21,7 +20,6 @@ StabilizationQuery provides APIs to check the support for video stabilization.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="isvideostabilizationmodesupported"></a>
 ## isVideoStabilizationModeSupported
 
 ```TypeScript

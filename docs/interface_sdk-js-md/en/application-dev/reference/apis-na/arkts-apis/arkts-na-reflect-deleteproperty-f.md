@@ -1,6 +1,5 @@
 # deleteProperty
 
-<a id="deleteproperty"></a>
 ## deleteProperty
 
 ```TypeScript

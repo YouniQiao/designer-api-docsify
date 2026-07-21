@@ -16,7 +16,6 @@ AI Image Model Abstract Interface.
 import { imageGeneration } from '@kit.ArkUI';
 ```
 
-<a id="cancelimagegeneration"></a>
 ## cancelImageGeneration
 
 ```TypeScript
@@ -41,7 +40,6 @@ Cancel AI image generation task.
 | --- | --- | --- | --- |
 | sessionId | number | Yes | The session id for cancel an AI image generation task.<br>Value: range: [0, +∞] |
 
-<a id="getmodelsupportstyles"></a>
 ## getModelSupportStyles
 
 ```TypeScript
@@ -66,7 +64,6 @@ Get the types of image styles supported by the AI model.
 | --- | --- |
 | Array&lt;ImageStyle&gt; | image style information. |
 
-<a id="oncomplain"></a>
 ## onComplain
 
 ```TypeScript
@@ -93,7 +90,6 @@ User use complaint menu to complain the result of an AI-generated image task.
 | request | [GenerateImageTaskParams](arkts-arkui-imagegeneration-generateimagetaskparams-i-sys.md) | Yes | The origin request for AI-generated image task. |
 | result | [GenerateImageTaskResult](arkts-arkui-imagegeneration-generateimagetaskresult-i-sys.md) | Yes | The result for AI-generated image task. |
 
-<a id="requestimagegeneration"></a>
 ## requestImageGeneration
 
 ```TypeScript
@@ -107,9 +103,7 @@ Request AI image generation task to get the generated image.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ImageGenerationModel-requestImageGeneration(sessionId: int, params: GenerateImageTaskParams,
-      callback: Callback<GenerateImageTaskPartialResult>): void--><!--Device-ImageGenerationModel-requestImageGeneration(sessionId: int, params: GenerateImageTaskParams,
-      callback: Callback<GenerateImageTaskPartialResult>): void-End-->
+<!--Device-ImageGenerationModel-requestImageGeneration(sessionId: int, params: GenerateImageTaskParams,      callback: Callback<GenerateImageTaskPartialResult>): void--><!--Device-ImageGenerationModel-requestImageGeneration(sessionId: int, params: GenerateImageTaskParams,      callback: Callback<GenerateImageTaskPartialResult>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

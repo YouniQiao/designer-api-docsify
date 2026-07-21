@@ -6,7 +6,6 @@
 import { config } from '@kit.AccessibilityKit';
 ```
 
-<a id="off"></a>
 ## off('enabledAccessibilityExtensionListChange')
 
 ```TypeScript
@@ -41,7 +40,6 @@ Cancels a listener for changes in the list of enabled accessibility extension ab
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 
 
-<a id="off-1"></a>
 ## off('installedAccessibilityListChange')
 
 ```TypeScript

@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface String--><!--Device-unnamed-interface String-End-->
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript

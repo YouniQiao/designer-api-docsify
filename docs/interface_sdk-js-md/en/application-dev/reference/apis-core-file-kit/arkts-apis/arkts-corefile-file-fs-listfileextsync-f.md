@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="listfileextsync"></a>
 ## listFileExtSync
 
 ```TypeScript
@@ -22,13 +21,7 @@ Lists all file names in a directory. This API returns the result synchronously.T
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-declare function listFileExtSync(
-  path: string,
-  options?: ListFileExtOptions
-): string[]--><!--Device-unnamed-declare function listFileExtSync(
-  path: string,
-  options?: ListFileExtOptions
-): string[]-End-->
+<!--Device-unnamed-declare function listFileExtSync(  path: string,  options?: ListFileExtOptions): string[]--><!--Device-unnamed-declare function listFileExtSync(  path: string,  options?: ListFileExtOptions): string[]-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

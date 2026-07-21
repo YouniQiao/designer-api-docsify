@@ -50,7 +50,7 @@ Menu title.
 
 **NOTE**
 
-This parameter is effective only when **content** is set to Array<[MenuElement](arkts-arkui-menuelement-i.md)>.
+This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt;.
 
 **Type:** ResourceStr
 

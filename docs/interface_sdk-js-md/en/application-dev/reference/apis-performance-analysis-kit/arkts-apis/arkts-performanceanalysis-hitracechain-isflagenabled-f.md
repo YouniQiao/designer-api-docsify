@@ -6,7 +6,6 @@
 import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="isflagenabled"></a>
 ## isFlagEnabled
 
 ```TypeScript

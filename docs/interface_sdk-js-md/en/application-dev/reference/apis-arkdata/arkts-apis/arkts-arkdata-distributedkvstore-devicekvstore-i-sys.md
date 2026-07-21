@@ -16,7 +16,6 @@ Provides APIs for querying data in a device KV store and performing cross-device
 import { distributedKVStore } from '@kit.ArkData';
 ```
 
-<a id="getresultset"></a>
 ## getResultSet
 
 ```TypeScript
@@ -52,7 +51,6 @@ Obtains the KVStoreResultSet object matching the local device ID and specified p
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
-<a id="getresultset-1"></a>
 ## getResultSet
 
 ```TypeScript
@@ -93,7 +91,6 @@ Obtains the KVStoreResultSet object matching the local device ID and specified p
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
-<a id="getresultset-2"></a>
 ## getResultSet
 
 ```TypeScript
@@ -130,7 +127,6 @@ Obtains the KVStoreResultSet object matching a specified Device ID and Predicate
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
-<a id="getresultset-3"></a>
 ## getResultSet
 
 ```TypeScript

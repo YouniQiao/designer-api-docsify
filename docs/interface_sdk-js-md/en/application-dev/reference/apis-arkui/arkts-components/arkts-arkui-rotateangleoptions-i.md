@@ -190,7 +190,7 @@ perspective?: number
 
 Z-axis coordinate of the camera. The value indicates the viewing distance, that is, the distance between the camera and the z=0 plane. The positive and negative values of the parameter determine the camera observation direction.When perspective is set to 0, the system automatically calculates a proper camera Z-axis position. The value is negative.
 
-The rotation axis and center point are defined based on the [component coordinate system](docroot://ui/arkui-glossary.md#component-coordinate-system). When the component moves, the coordinate system does not follow it.
+The rotation axis and center point are defined based on the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system). When the component moves, the coordinate system does not follow it.
 
 Default value: **0**.
 

@@ -2,7 +2,7 @@
 
 Defines the resizable image options.
 
-**Figure 1** Effect of Setting EdgeWidths![edgewidths](docroot://reference/apis-arkui/arkui-ts/figures/edgewidths.png)
+**Figure 1** Effect of Setting EdgeWidths![edgewidths](../../../reference/apis-arkui/arkui-ts/figures/edgewidths.png)
 
 **Since:** 11
 
@@ -20,9 +20,9 @@ Lattice object, which is used to divide the image by lattice.
 
 **NOTE**
 
-Use the [createImageLattice](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-lattice-c.md#createimagelattice-1)API of **@ohos.graphics.drawing** to create a **Lattice** type as the input parameter. Lattices located at both even columns and even rows are fixed; those at other positions are stretched according to **slice**.
+Use the [createImageLattice](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-lattice-c.md#createimagelattice)API of **@ohos.graphics.drawing** to create a **Lattice** type as the input parameter. Lattices located at both even columns and even rows are fixed; those at other positions are stretched according to **slice**.
 
-This parameter does not take effect for the [backgroundImageResizable](arkts-arkui-commonmethod-c.md#backgroundimageresizable-1)API.
+This parameter does not take effect for the [backgroundImageResizable](arkts-arkui-commonmethod-c.md#backgroundimageresizable)API.
 
 When a number is passed, the default unit is px.
 

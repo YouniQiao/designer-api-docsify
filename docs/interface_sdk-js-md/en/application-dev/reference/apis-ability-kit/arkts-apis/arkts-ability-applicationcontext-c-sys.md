@@ -1,7 +1,6 @@
 # ApplicationContext
 
-ApplicationContext inherits from [Context](arkts-ability-context-context-depr-i.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
-
+ApplicationContext inherits from [Context](arkts-ability-context-t.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 > **NOTE**  
 >  
 > The APIs of this module can be used only in the stage model.
@@ -14,7 +13,6 @@ ApplicationContext inherits from [Context](arkts-ability-context-context-depr-i.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-<a id="getprocessrunninginformation"></a>
 ## getProcessRunningInformation
 
 ```TypeScript
@@ -27,7 +25,7 @@ Obtains information about the running processes.This API uses a promise to retur
 
 **Deprecated since:** 10
 
-**Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation-1)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +48,6 @@ Obtains information about the running processes.This API uses a promise to retur
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-<a id="getprocessrunninginformation-1"></a>
 ## getProcessRunningInformation
 
 ```TypeScript
@@ -63,7 +60,7 @@ Obtains information about the running processes.This API uses an asynchronous ca
 
 **Deprecated since:** 10
 
-**Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation-1)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +83,6 @@ Obtains information about the running processes.This API uses an asynchronous ca
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-<a id="preloaduiextensionability"></a>
 ## preloadUIExtensionAbility
 
 ```TypeScript
@@ -140,7 +136,6 @@ A UIExtensionAbility instance can be preloaded for multiple times. Each time a p
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-<a id="registerabilitylifecyclecallback"></a>
 ## registerAbilityLifecycleCallback
 
 ```TypeScript
@@ -177,7 +172,6 @@ Registers a listener to monitor the ability lifecycle of the application.This AP
 | --- | --- |
 | number | Returns the number code of the callbackId. |
 
-<a id="registerenvironmentcallback"></a>
 ## registerEnvironmentCallback
 
 ```TypeScript
@@ -212,7 +206,6 @@ Register environment callback.
 | --- | --- |
 | number | Returns the number code of the callbackId. |
 
-<a id="unregisterabilitylifecyclecallback"></a>
 ## unregisterAbilityLifecycleCallback
 
 ```TypeScript
@@ -244,7 +237,6 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 | callbackId | number | Yes | Event type. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
-<a id="unregisterabilitylifecyclecallback-1"></a>
 ## unregisterAbilityLifecycleCallback
 
 ```TypeScript
@@ -287,7 +279,6 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 
-<a id="unregisterenvironmentcallback"></a>
 ## unregisterEnvironmentCallback
 
 ```TypeScript
@@ -317,7 +308,6 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | callbackId | number | Yes | Event type. |
 | envcallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
-<a id="unregisterenvironmentcallback-1"></a>
 ## unregisterEnvironmentCallback
 
 ```TypeScript

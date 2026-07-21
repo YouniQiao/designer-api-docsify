@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="setnetworkcapability"></a>
 ## setNetworkCapability
 
 ```TypeScript
@@ -20,9 +19,7 @@ Set the type and state for the specified network capability.
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
-<!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState,
-    callback: AsyncCallback<void>): void--><!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState,
-    callback: AsyncCallback<void>): void-End-->
+<!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState,    callback: AsyncCallback<void>): void--><!--Device-radio-function setNetworkCapability(slotId: int, type: NetworkCapabilityType, state: NetworkCapabilityState,    callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -68,7 +65,6 @@ radio.setNetworkCapability(slotId, type, state, (err: BusinessError) => {
 ```
 
 
-<a id="setnetworkcapability-1"></a>
 ## setNetworkCapability
 
 ```TypeScript

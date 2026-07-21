@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="sendmessage"></a>
 ## sendMessage
 
 ```TypeScript

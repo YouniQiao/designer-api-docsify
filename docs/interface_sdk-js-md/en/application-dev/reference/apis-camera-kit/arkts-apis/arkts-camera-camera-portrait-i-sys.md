@@ -18,7 +18,6 @@ Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getportraiteffect"></a>
 ## getPortraitEffect
 
 ```TypeScript
@@ -58,14 +57,13 @@ function getPortraitEffect(portraitPhotoSession: camera.PortraitPhotoSession): c
 
 ```
 
-<a id="setportraiteffect"></a>
 ## setPortraitEffect
 
 ```TypeScript
 setPortraitEffect(effect: PortraitEffect): void
 ```
 
-Sets a portrait effect. Before the setting, use [getSupportedPortraitEffects](arkts-camera-camera-portraitquery-i-sys.md#getsupportedportraiteffects-1) to obtain the supported portrait effects and check whether the target portrait effect is supported.
+Sets a portrait effect. Before the setting, use [getSupportedPortraitEffects](arkts-camera-camera-portraitquery-i-sys.md#getsupportedportraiteffects) to obtain the supported portrait effects and check whether the target portrait effect is supported.
 
 **Since:** 10
 

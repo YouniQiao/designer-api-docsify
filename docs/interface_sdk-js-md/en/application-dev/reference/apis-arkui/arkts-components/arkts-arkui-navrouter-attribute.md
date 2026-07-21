@@ -14,7 +14,6 @@ In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkt
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="mode"></a>
 ## mode
 
 ```TypeScript
@@ -22,7 +21,6 @@ mode(mode: NavRouteMode)
 ```
 
 Sets the route mode used for redirecting the user from the **NavRouter** component to the specified navigation destination page.
-
 > **NOTE**
 
 **Since:** 10
@@ -45,7 +43,6 @@ Sets the route mode used for redirecting the user from the **NavRouter** compone
 | --- | --- | --- | --- |
 | mode | [NavRouteMode](arkts-arkui-navroutemode-e.md) | Yes | Route mode used for redirection.<br>Default value:**NavRouteMode.PUSH_WITH_RECREATE** |
 
-<a id="onstatechange"></a>
 ## onStateChange
 
 ```TypeScript
@@ -53,7 +50,6 @@ onStateChange(callback: (isActivated: boolean) => void)
 ```
 
 Called when the component activation status changes. **onStateChange(true)** is called when the **NavRouter** component is activated and its **NavDestination** child component is loaded. **onStateChange(false)** is called when the **NavDestination** child component is not displayed.
-
 > **NOTE**
 
 **Since:** 9

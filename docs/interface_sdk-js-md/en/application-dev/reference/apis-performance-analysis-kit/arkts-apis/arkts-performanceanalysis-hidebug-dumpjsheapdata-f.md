@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="dumpjsheapdata"></a>
 ## dumpJsHeapData
 
 ```TypeScript
@@ -14,7 +13,6 @@ function dumpJsHeapData(filename : string) : void
 ```
 
 Dumps VM heap data.
-
 > **NOTE**  
 >  
 > Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to  
@@ -53,7 +51,6 @@ try {
 ```
 
 
-<a id="dumpjsheapdata-1"></a>
 ## dumpJsHeapData
 
 ```TypeScript

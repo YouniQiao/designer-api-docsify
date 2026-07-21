@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="getimsshortmessageformat"></a>
 ## getImsShortMessageFormat
 
 ```TypeScript
@@ -53,7 +52,6 @@ sms.getImsShortMessageFormat((err: BusinessError, data: string) => {
 ```
 
 
-<a id="getimsshortmessageformat-1"></a>
 ## getImsShortMessageFormat
 
 ```TypeScript

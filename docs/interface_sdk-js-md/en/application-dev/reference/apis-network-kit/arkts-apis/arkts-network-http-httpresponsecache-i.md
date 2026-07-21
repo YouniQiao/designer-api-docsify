@@ -14,7 +14,6 @@ Defines an object that stores the response to an HTTP request.
 import { http } from '@kit.NetworkKit';
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -89,7 +88,6 @@ httpRequest.request("EXAMPLE_URL").then(data => {
 
 ```
 
-<a id="delete-1"></a>
 ## delete
 
 ```TypeScript
@@ -152,7 +150,6 @@ httpRequest.request("EXAMPLE_URL").then(data => {
 
 ```
 
-<a id="flush"></a>
 ## flush
 
 ```TypeScript
@@ -225,7 +222,6 @@ httpRequest.request("EXAMPLE_URL", (err: BusinessError, data: http.HttpResponse)
 
 ```
 
-<a id="flush-1"></a>
 ## flush
 
 ```TypeScript

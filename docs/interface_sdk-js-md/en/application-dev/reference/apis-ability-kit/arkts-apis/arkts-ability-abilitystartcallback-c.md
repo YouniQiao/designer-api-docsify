@@ -8,7 +8,6 @@ The module describes the callback invoked to return the UIExtensionAbility start
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-<a id="onerror"></a>
 ## onError
 
 ```TypeScript
@@ -35,7 +34,6 @@ Called when the UIExtensionAbility fails to start.
 | name | string | Yes | Name returned when the UIExtensionAbility fails to start. |
 | message | string | Yes | Error information returned when the UIExtensionAbility fails to start. |
 
-<a id="onresult"></a>
 ## onResult
 
 ```TypeScript
@@ -58,7 +56,7 @@ Called when the UIExtensionAbility is terminated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Result returned when [terminateSelfWithResult](arkts-ability-uiextensioncontext-c.md#terminateselfwithresult-1)is called to terminate the UIExtensionAbility. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Result returned when [terminateSelfWithResult](arkts-ability-uiextensioncontext-c.md#terminateselfwithresult)is called to terminate the UIExtensionAbility. |
 
 ## completionHandler
 

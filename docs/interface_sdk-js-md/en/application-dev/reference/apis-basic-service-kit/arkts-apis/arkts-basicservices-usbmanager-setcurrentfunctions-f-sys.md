@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="setcurrentfunctions"></a>
 ## setCurrentFunctions
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sets the current USB function list in Device mode. This API uses a promise to re
 
 **Deprecated since:** 12
 
-**Substitutes:** [setDeviceFunctions(funcs:](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md#setdevicefunctions-1)
+**Substitutes:** [setDeviceFunctions(funcs:](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md#setdevicefunctions)
 
 <!--Device-usbManager-function setCurrentFunctions(funcs: FunctionType): Promise<void>--><!--Device-usbManager-function setCurrentFunctions(funcs: FunctionType): Promise<void>-End-->
 

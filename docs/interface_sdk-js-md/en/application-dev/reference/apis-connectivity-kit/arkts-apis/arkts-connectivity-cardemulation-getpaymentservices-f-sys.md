@@ -6,7 +6,6 @@
 import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
-<a id="getpaymentservices"></a>
 ## getPaymentServices
 
 ```TypeScript

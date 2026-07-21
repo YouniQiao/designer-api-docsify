@@ -14,7 +14,6 @@ Provides recording strategy management, including collaborative recording and re
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="enablesystemrecordcontroller"></a>
 ## enableSystemRecordController
 
 ```TypeScript

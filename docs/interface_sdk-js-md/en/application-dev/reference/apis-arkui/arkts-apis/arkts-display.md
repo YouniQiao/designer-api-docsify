@@ -84,7 +84,7 @@ import { display } from '@kit.ArkUI';
 | --- | --- |
 | [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) | Describes the screen brightness information. The information comes from the underlying screen data. |
 | [CutoutInfo](arkts-arkui-display-cutoutinfo-i.md) | Describes the unusable area of a display, including punch hole, notch, and curved area of a waterfall display. |
-| [Display](arkts-arkui-display-display-i.md) | Implements a Display instance, with attributes and APIs defined.  Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1) to obtain a Display instance. |
+| [Display](arkts-arkui-display-display-i.md) | Implements a Display instance, with attributes and APIs defined.  Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync) to obtain a Display instance. |
 | [DisplayPhysicalResolution](arkts-arkui-display-displayphysicalresolution-i.md) | Describes the display mode of a device and the corresponding physical screen resolution information. |
 | [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | Describes the crease region of a foldable device. |
 | [Position](arkts-arkui-display-position-i.md) | Describes a coordinate position. In the global coordinate system, the origin is the top-left corner of the primary screen. In the relative coordinate system, the origin is the top-left corner of the specified screen. |
@@ -99,7 +99,7 @@ import { display } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [Display](arkts-arkui-display-display-i-sys.md) | Implements a Display instance, with attributes and APIs defined.  Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync-1) to obtain a Display instance. |
+| [Display](arkts-arkui-display-display-i-sys.md) | Implements a Display instance, with attributes and APIs defined.  Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync) to obtain a Display instance. |
 <!--DelEnd-->
 
 ### Enums

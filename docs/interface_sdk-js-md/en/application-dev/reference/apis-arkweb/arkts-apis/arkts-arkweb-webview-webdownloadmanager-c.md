@@ -14,7 +14,6 @@ You can trigger download manually through this interface, or resume failed or ca
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="resumedownload"></a>
 ## resumeDownload
 
 ```TypeScript
@@ -43,7 +42,6 @@ Resume the canceled or failed download.
 | --- | --- |
 | [17100018](../errorcode-webview.md#17100018-no-webdownloaddelegate-available) | No WebDownloadDelegate has been set yet. |
 
-<a id="setdownloaddelegate"></a>
 ## setDownloadDelegate
 
 ```TypeScript

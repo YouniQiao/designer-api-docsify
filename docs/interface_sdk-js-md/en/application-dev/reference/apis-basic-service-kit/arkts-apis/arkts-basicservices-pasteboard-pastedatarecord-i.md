@@ -14,14 +14,13 @@ Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definiti
 import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
-<a id="addentry"></a>
 ## addEntry
 
 ```TypeScript
 addEntry(type: string, value: ValueType): void
 ```
 
-Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the [getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata-1) API to read the corresponding data.
+Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the [getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata) API to read the corresponding data.
 
 **Since:** 14
 
@@ -33,7 +32,7 @@ Adds PasteData of an extra type to **PasteDataRecord**. The type added using thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in [Constants](docroot://reference/apis-basic-services-kit/js-apis-pasteboard.md#constants),including HTML, WANT, plain text, URI, and pixel map, or a custom type.The value of **mimeType** cannot exceed 1024 bytes. |
+| type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants),including HTML, WANT, plain text, URI, and pixel map, or a custom type.The value of **mimeType** cannot exceed 1024 bytes. |
 | value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Content of extra data. |
 
 **Error codes:**
@@ -56,7 +55,6 @@ record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
 
 ```
 
-<a id="converttotext"></a>
 ## convertToText
 
 ```TypeScript
@@ -69,7 +67,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** [toPlainText()](arkts-basicservices-pasteboard-pastedatarecord-i.md#toplaintext-1)
+**Substitutes:** [toPlainText()](arkts-basicservices-pasteboard-pastedatarecord-i.md#toplaintext)
 
 <!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void--><!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void-End-->
 
@@ -103,7 +101,6 @@ record.convertToText((err: BusinessError, data: string) => {
 
 ```
 
-<a id="converttotext-1"></a>
 ## convertToText
 
 ```TypeScript
@@ -116,7 +113,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** [toPlainText()](arkts-basicservices-pasteboard-pastedatarecord-i.md#toplaintext-1)
+**Substitutes:** [toPlainText()](arkts-basicservices-pasteboard-pastedatarecord-i.md#toplaintext)
 
 <!--Device-PasteDataRecord-convertToText(): Promise<string>--><!--Device-PasteDataRecord-convertToText(): Promise<string>-End-->
 
@@ -142,7 +139,6 @@ record.convertToText().then((data: string) => {
 
 ```
 
-<a id="getdata"></a>
 ## getData
 
 ```TypeScript
@@ -199,7 +195,6 @@ record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) 
 
 ```
 
-<a id="getvalidtypes"></a>
 ## getValidTypes
 
 ```TypeScript
@@ -249,7 +244,6 @@ let types: string[] = record.getValidTypes([
 
 ```
 
-<a id="toplaintext"></a>
 ## toPlainText
 
 ```TypeScript
@@ -287,7 +281,7 @@ console.info(`Succeeded in converting to text. Text: ${text}`);
 data: Record<string, ArrayBuffer>
 ```
 
-Content of custom data.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry-1)**
+Content of custom data.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry)**
 
 **Type:** Record&lt;string, ArrayBuffer&gt;
 
@@ -305,7 +299,7 @@ Content of custom data.This parameter is read-only and does not support assignme
 htmlText: string
 ```
 
-HTML content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry-1)**
+HTML content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry)**
 
 **Type:** string
 
@@ -323,7 +317,7 @@ HTML content.This parameter is read-only and does not support assignment operati
 mimeType: string
 ```
 
-Default type of PasteDataRecord.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry-1)**
+Default type of PasteDataRecord.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry)**
 
 **Type:** string
 
@@ -341,7 +335,7 @@ Default type of PasteDataRecord.This parameter is read-only and does not support
 pixelMap: image.PixelMap
 ```
 
-PixelMap content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry-1)**
+PixelMap content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry)**
 
 **Type:** image.PixelMap
 
@@ -359,7 +353,7 @@ PixelMap content.This parameter is read-only and does not support assignment ope
 plainText: string
 ```
 
-Plain text.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry-1)**
+Plain text.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry)**
 
 **Type:** string
 
@@ -377,7 +371,7 @@ Plain text.This parameter is read-only and does not support assignment operation
 uri: string
 ```
 
-URI content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry-1)**
+URI content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry)**
 
 **Type:** string
 
@@ -395,7 +389,7 @@ URI content.This parameter is read-only and does not support assignment operatio
 want: Want
 ```
 
-Want content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry-1)**
+Want content.This parameter is read-only and does not support assignment operations.To assign a value, please use [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)** or ** [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry)**
 
 **Type:** Want
 

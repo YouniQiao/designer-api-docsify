@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="getsmssegmentsinfo"></a>
 ## getSmsSegmentsInfo
 
 ```TypeScript
@@ -57,7 +56,6 @@ sms.getSmsSegmentsInfo(slotId, "message", false, (err: BusinessError, data: sms.
 ```
 
 
-<a id="getsmssegmentsinfo-1"></a>
 ## getSmsSegmentsInfo
 
 ```TypeScript

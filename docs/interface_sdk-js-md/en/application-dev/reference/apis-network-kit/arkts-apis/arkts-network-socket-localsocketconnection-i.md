@@ -14,7 +14,6 @@ Defines the connection of the LocalSocket client and server.
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -57,7 +56,6 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 
 ```
 
-<a id="getlocaladdress"></a>
 ## getLocalAddress
 
 ```TypeScript
@@ -121,7 +119,6 @@ server.listen(localAddr).then(() => {
 
 ```
 
-<a id="getsocketfd"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -171,7 +168,6 @@ server.listen(listenAddr).then(() => {
 
 ```
 
-<a id="off"></a>
 ## off('message')
 
 ```TypeScript
@@ -223,7 +219,6 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 
 ```
 
-<a id="off-1"></a>
 ## off('close')
 
 ```TypeScript
@@ -269,7 +264,6 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 
 ```
 
-<a id="off-2"></a>
 ## off('error')
 
 ```TypeScript
@@ -315,7 +309,6 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 
 ```
 
-<a id="on"></a>
 ## on('message')
 
 ```TypeScript
@@ -376,7 +369,6 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('close')
 
 ```TypeScript
@@ -418,7 +410,6 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 
 ```
 
-<a id="on-2"></a>
 ## on('error')
 
 ```TypeScript
@@ -460,7 +451,6 @@ server.on('connect', (connection: socket.LocalSocketConnection) => {
 
 ```
 
-<a id="send"></a>
 ## send
 
 ```TypeScript

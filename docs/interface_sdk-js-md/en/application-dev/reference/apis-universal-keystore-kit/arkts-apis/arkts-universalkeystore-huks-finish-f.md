@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="finish"></a>
 ## finish
 
 ```TypeScript
@@ -21,7 +20,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Deprecated since:** 9
 
-**Substitutes:** [finishSession(handle:](arkts-universalkeystore-huks-finishsession-f.md#finishsession-1)
+**Substitutes:** [finishSession(handle:](arkts-universalkeystore-huks-finishsession-f.md#finishsession)
 
 <!--Device-huks-function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -36,7 +35,6 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 
-<a id="finish-1"></a>
 ## finish
 
 ```TypeScript
@@ -51,7 +49,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Deprecated since:** 9
 
-**Substitutes:** [finishSession(](arkts-universalkeystore-huks-finishsession-f.md#finishsession-1)
+**Substitutes:** [finishSession(](arkts-universalkeystore-huks-finishsession-f.md#finishsession)
 
 <!--Device-huks-function finish(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function finish(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
 

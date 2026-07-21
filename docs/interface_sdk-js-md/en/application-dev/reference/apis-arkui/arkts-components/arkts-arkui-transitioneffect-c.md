@@ -8,7 +8,6 @@ Defines the transition effect by using the provided APIs, as listed below.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="animation"></a>
 ## animation
 
 ```TypeScript
@@ -41,7 +40,6 @@ Animation settings.
 | --- | --- |
 | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Current animation effect. |
 
-<a id="asymmetric"></a>
 ## asymmetric
 
 ```TypeScript
@@ -61,13 +59,7 @@ Sets the asymmetric transition effect.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-TransitionEffect-static asymmetric(
-    appear: TransitionEffect,
-    disappear: TransitionEffect
-  ): TransitionEffect<"asymmetric">--><!--Device-TransitionEffect-static asymmetric(
-    appear: TransitionEffect,
-    disappear: TransitionEffect
-  ): TransitionEffect<"asymmetric">-End-->
+<!--Device-TransitionEffect-static asymmetric(    appear: TransitionEffect,    disappear: TransitionEffect  ): TransitionEffect<"asymmetric">--><!--Device-TransitionEffect-static asymmetric(    appear: TransitionEffect,    disappear: TransitionEffect  ): TransitionEffect<"asymmetric">-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,7 +76,6 @@ Sets the asymmetric transition effect.
 | --- | --- |
 | [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"asymmetric"&gt; | Asymmetric transition effect for the current animation. |
 
-<a id="combine"></a>
 ## combine
 
 ```TypeScript
@@ -117,7 +108,6 @@ Combination of transition effects.
 | --- | --- |
 | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Combined transition effect. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -145,7 +135,6 @@ Constructs a **TransitionEffect** object.
 | type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Yes | Transition type. |
 | effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | Yes | Transition parameter. |
 
-<a id="move"></a>
 ## move
 
 ```TypeScript
@@ -178,7 +167,6 @@ Sets the slide-in and slide-out effects for component transitions from the scree
 | --- | --- |
 | [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"move"&gt; | Current animation's slide-in and slide-out effects from the screen edges. |
 
-<a id="opacity"></a>
 ## opacity
 
 ```TypeScript
@@ -211,7 +199,6 @@ Sets the opacity for component transition.
 | --- | --- |
 | [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"opacity"&gt; | Opacity of component transition. |
 
-<a id="rotate"></a>
 ## rotate
 
 ```TypeScript
@@ -244,7 +231,6 @@ Sets the rotation effect for component transitions.
 | --- | --- |
 | [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"rotate"&gt; | Rotation effect for the current animation. |
 
-<a id="scale"></a>
 ## scale
 
 ```TypeScript
@@ -277,7 +263,6 @@ Sets the scaling effect for component transitions.
 | --- | --- |
 | [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"scale"&gt; | Scaling effect for component transitions. |
 
-<a id="translate"></a>
 ## translate
 
 ```TypeScript
@@ -378,19 +363,7 @@ Applies a transition effect of sliding in from the start edge when the component
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
-<!--Device-TransitionEffect-static readonly SLIDE: TransitionEffect<
-    "asymmetric",
-    {
-      appear: TransitionEffect<"move", TransitionEdge>;
-      disappear: TransitionEffect<"move", TransitionEdge>;
-    }
-  >--><!--Device-TransitionEffect-static readonly SLIDE: TransitionEffect<
-    "asymmetric",
-    {
-      appear: TransitionEffect<"move", TransitionEdge>;
-      disappear: TransitionEffect<"move", TransitionEdge>;
-    }
-  >-End-->
+<!--Device-TransitionEffect-static readonly SLIDE: TransitionEffect<    "asymmetric",    {      appear: TransitionEffect<"move", TransitionEdge>;      disappear: TransitionEffect<"move", TransitionEdge>;    }  >--><!--Device-TransitionEffect-static readonly SLIDE: TransitionEffect<    "asymmetric",    {      appear: TransitionEffect<"move", TransitionEdge>;      disappear: TransitionEffect<"move", TransitionEdge>;    }  >-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

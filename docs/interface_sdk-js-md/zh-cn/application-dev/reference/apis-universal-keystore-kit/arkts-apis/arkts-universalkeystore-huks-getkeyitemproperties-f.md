@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="getkeyitemproperties"></a>
 ## getKeyItemProperties
 
 ```TypeScript
@@ -18,7 +17,6 @@ function getKeyItemProperties(
 ```
 
 Obtains key properties. This API uses an asynchronous callback to return the result.
-
 > **说明：**  
 >  
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥属性需要ohos.permission.ACCESS_SE_KEY权限。
@@ -27,15 +25,7 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-huks-function getKeyItemProperties(
-    keyAlias: string,
-    options: HuksOptions,
-    callback: AsyncCallback<HuksReturnResult>
-  ): void--><!--Device-huks-function getKeyItemProperties(
-    keyAlias: string,
-    options: HuksOptions,
-    callback: AsyncCallback<HuksReturnResult>
-  ): void-End-->
+<!--Device-huks-function getKeyItemProperties(    keyAlias: string,    options: HuksOptions,    callback: AsyncCallback<HuksReturnResult>  ): void--><!--Device-huks-function getKeyItemProperties(    keyAlias: string,    options: HuksOptions,    callback: AsyncCallback<HuksReturnResult>  ): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -91,7 +81,6 @@ huks.getKeyItemProperties(keyAlias, emptyOptions, (error, data) => {
 ```
 
 
-<a id="getkeyitemproperties-1"></a>
 ## getKeyItemProperties
 
 ```TypeScript
@@ -99,7 +88,6 @@ function getKeyItemProperties(keyAlias: string, options: HuksOptions): Promise<H
 ```
 
 获取密钥属性。使用Promise异步回调。
-
 > **说明：**  
 >  
 > 获取[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥属性需要ohos.permission.ACCESS_SE_KEY权限。

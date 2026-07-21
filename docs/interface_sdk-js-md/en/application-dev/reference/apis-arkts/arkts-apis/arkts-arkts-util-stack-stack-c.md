@@ -14,7 +14,6 @@ Stack is implemented based on the array data structure.It follows the principle 
 import { Stack } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -75,7 +74,6 @@ while(temp != undefined) {
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -105,7 +103,6 @@ let stack = new Stack<number | string | Object>();
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -153,7 +150,6 @@ stack.forEach((value : number, index: number) :void => {
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -195,7 +191,6 @@ console.info("result:", result);  // result: false
 
 ```
 
-<a id="locate"></a>
 ## locate
 
 ```TypeScript
@@ -243,7 +238,6 @@ console.info("result:", result);  // result: 2
 
 ```
 
-<a id="peek"></a>
 ## peek
 
 ```TypeScript
@@ -286,7 +280,6 @@ console.info("result:", result);  // result: 2
 
 ```
 
-<a id="pop"></a>
 ## pop
 
 ```TypeScript
@@ -330,7 +323,6 @@ console.info("result = " + result); // result = 4
 
 ```
 
-<a id="push"></a>
 ## push
 
 ```TypeScript

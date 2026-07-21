@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="notifyformsenableupdate"></a>
 ## notifyFormsEnableUpdate
 
 ```TypeScript
@@ -23,15 +22,7 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
-<!--Device-formHost-function notifyFormsEnableUpdate(
-    formIds: Array<string>,
-    isEnableUpdate: boolean,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-formHost-function notifyFormsEnableUpdate(
-    formIds: Array<string>,
-    isEnableUpdate: boolean,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-formHost-function notifyFormsEnableUpdate(    formIds: Array<string>,    isEnableUpdate: boolean,    callback: AsyncCallback<void>  ): void--><!--Device-formHost-function notifyFormsEnableUpdate(    formIds: Array<string>,    isEnableUpdate: boolean,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -58,7 +49,6 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
-<a id="notifyformsenableupdate-1"></a>
 ## notifyFormsEnableUpdate
 
 ```TypeScript

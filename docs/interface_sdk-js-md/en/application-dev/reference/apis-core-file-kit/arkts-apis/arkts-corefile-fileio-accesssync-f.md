@@ -1,6 +1,5 @@
 # accessSync
 
-<a id="accesssync"></a>
 ## accessSync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Checks whether this process can access a file. This API returns the result synch
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:accessSync](arkts-corefile-file-fs-accesssync-f.md#accesssync-1)
+**Substitutes:** [fs:accessSync](arkts-corefile-fileio-accesssync-f.md#accesssync)
 
 <!--Device-unnamed-declare function accessSync(path: string, mode?: number): void--><!--Device-unnamed-declare function accessSync(path: string, mode?: number): void-End-->
 

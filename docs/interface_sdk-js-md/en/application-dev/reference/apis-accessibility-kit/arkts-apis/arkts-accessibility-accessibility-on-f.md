@@ -6,15 +6,13 @@
 import { accessibility } from '@kit.AccessibilityKit';
 ```
 
-<a id="on"></a>
 ## on('accessibilityStateChange')
 
 ```TypeScript
 function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync-1).
-
+Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).
 > **NOTE**  
 >  
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
@@ -62,15 +60,13 @@ accessibility.on('accessibilityStateChange', (data: boolean) => {
 ```
 
 
-<a id="on-1"></a>
 ## on('touchGuideStateChange')
 
 ```TypeScript
 function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes in touch guide mode. This API uses an asynchronous callback to return the result.To obtain information about accessibility applications in the system, use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync-1).
-
+Subscribes to the state changes in touch guide mode. This API uses an asynchronous callback to return the result.To obtain information about accessibility applications in the system, use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).
 > **NOTE**  
 >  
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
@@ -118,7 +114,6 @@ accessibility.on('touchGuideStateChange', (data: boolean) => {
 ```
 
 
-<a id="on-2"></a>
 ## on('screenReaderStateChange')
 
 ```TypeScript
@@ -126,7 +121,6 @@ function on(type: 'screenReaderStateChange', callback: Callback<boolean>): void
 ```
 
 Subscribes to the state changes of the screen reader. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
@@ -171,7 +165,6 @@ accessibility.on('screenReaderStateChange', (data: boolean) => {
 ```
 
 
-<a id="on-3"></a>
 ## on('touchModeChange')
 
 ```TypeScript
@@ -179,7 +172,6 @@ function on(type: 'touchModeChange', callback: Callback<string>): void
 ```
 
 Subscribes to the single- or double-touch event changes in touch guide mode. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.  

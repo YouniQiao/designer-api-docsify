@@ -16,7 +16,6 @@ Class inherited for the distributed extension function.
 import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
 ```
 
-<a id="connectserviceextensionability"></a>
 ## connectServiceExtensionAbility
 
 ```TypeScript
@@ -66,7 +65,6 @@ This method connects to a Service extension ability on a remote device.You must 
 | [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
 
-<a id="disconnectserviceextensionability"></a>
 ## disconnectServiceExtensionAbility
 
 ```TypeScript

@@ -10,7 +10,6 @@ Provides methods for accessing Barcode tag.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-<a id="getbarcode"></a>
 ## getBarcode
 
 ```TypeScript

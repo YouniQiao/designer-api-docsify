@@ -1,6 +1,5 @@
 # createFormBindingData
 
-<a id="createformbindingdata"></a>
 ## createFormBindingData
 
 ```TypeScript
@@ -13,7 +12,7 @@ Creates a **FormBindingData** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md#createformbindingdata-1)
+**Substitutes:** [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata)
 
 <!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData--><!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData-End-->
 

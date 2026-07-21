@@ -14,7 +14,6 @@ Provides APIs for data management in a single KV store, such as adding data, del
 import { distributedKVStore } from '@kit.ArkData';
 ```
 
-<a id="backup"></a>
 ## backup
 
 ```TypeScript
@@ -66,7 +65,6 @@ try {
 
 ```
 
-<a id="backup-1"></a>
 ## backup
 
 ```TypeScript
@@ -121,7 +119,6 @@ try {
 
 ```
 
-<a id="backupex"></a>
 ## backupEx
 
 ```TypeScript
@@ -179,14 +176,13 @@ try {
 
 ```
 
-<a id="closeresultset"></a>
 ## closeResultSet
 
 ```TypeScript
 closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#getresultset-1). This API uses an asynchronous callback to return the result.
+Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#getresultset). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -241,14 +237,13 @@ try {
 
 ```
 
-<a id="closeresultset-1"></a>
 ## closeResultSet
 
 ```TypeScript
 closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 ```
 
-Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#getresultset-1). This API uses a promise to return the result.
+Closes the **KVStoreResultSet** object returned by [SingleKvStore.getResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#getresultset). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -304,7 +299,6 @@ try {
 
 ```
 
-<a id="commit"></a>
 ## commit
 
 ```TypeScript
@@ -353,7 +347,6 @@ try {
 
 ```
 
-<a id="commit-1"></a>
 ## commit
 
 ```TypeScript
@@ -400,7 +393,6 @@ try {
 
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -464,7 +456,6 @@ try {
 
 ```
 
-<a id="delete-1"></a>
 ## delete
 
 ```TypeScript
@@ -529,7 +520,6 @@ try {
 
 ```
 
-<a id="deletebackup"></a>
 ## deleteBackup
 
 ```TypeScript
@@ -580,7 +570,6 @@ try {
 
 ```
 
-<a id="deletebackup-1"></a>
 ## deleteBackup
 
 ```TypeScript
@@ -634,7 +623,6 @@ try {
 
 ```
 
-<a id="deletebackupex"></a>
 ## deleteBackupEx
 
 ```TypeScript
@@ -691,7 +679,6 @@ try {
 
 ```
 
-<a id="deletebatch"></a>
 ## deleteBatch
 
 ```TypeScript
@@ -768,7 +755,6 @@ try {
 
 ```
 
-<a id="deletebatch-1"></a>
 ## deleteBatch
 
 ```TypeScript
@@ -846,7 +832,6 @@ try {
 
 ```
 
-<a id="enablesync"></a>
 ## enableSync
 
 ```TypeScript
@@ -896,7 +881,6 @@ try {
 
 ```
 
-<a id="enablesync-1"></a>
 ## enableSync
 
 ```TypeScript
@@ -949,7 +933,6 @@ try {
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -982,7 +965,6 @@ Obtains the value of the specified key. This API uses an asynchronous callback t
 | [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
-<a id="get-1"></a>
 ## get
 
 ```TypeScript
@@ -1020,7 +1002,6 @@ Obtains the value of the specified key. This API uses a promise to return the re
 | [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 
-<a id="getentries"></a>
 ## getEntries
 
 ```TypeScript
@@ -1096,7 +1077,6 @@ try {
 
 ```
 
-<a id="getentries-1"></a>
 ## getEntries
 
 ```TypeScript
@@ -1173,7 +1153,6 @@ try {
 
 ```
 
-<a id="getentries-2"></a>
 ## getEntries
 
 ```TypeScript
@@ -1252,7 +1231,6 @@ try {
 
 ```
 
-<a id="getentries-3"></a>
 ## getEntries
 
 ```TypeScript
@@ -1331,7 +1309,6 @@ try {
 
 ```
 
-<a id="getresultset"></a>
 ## getResultSet
 
 ```TypeScript
@@ -1416,7 +1393,6 @@ try {
 
 ```
 
-<a id="getresultset-1"></a>
 ## getResultSet
 
 ```TypeScript
@@ -1498,7 +1474,6 @@ try {
 
 ```
 
-<a id="getresultset-2"></a>
 ## getResultSet
 
 ```TypeScript
@@ -1575,7 +1550,6 @@ try {
 
 ```
 
-<a id="getresultset-3"></a>
 ## getResultSet
 
 ```TypeScript
@@ -1650,7 +1624,6 @@ try {
 
 ```
 
-<a id="getresultsize"></a>
 ## getResultSize
 
 ```TypeScript
@@ -1726,7 +1699,6 @@ try {
 
 ```
 
-<a id="getresultsize-1"></a>
 ## getResultSize
 
 ```TypeScript
@@ -1801,7 +1773,6 @@ try {
 
 ```
 
-<a id="getsecuritylevel"></a>
 ## getSecurityLevel
 
 ```TypeScript
@@ -1850,7 +1821,6 @@ try {
 
 ```
 
-<a id="getsecuritylevel-1"></a>
 ## getSecurityLevel
 
 ```TypeScript
@@ -1897,7 +1867,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -1961,7 +1930,6 @@ class KvstoreModel {
 
 ```
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -2024,7 +1992,6 @@ class KvstoreModel {
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -2071,7 +2038,6 @@ try {
 
 ```
 
-<a id="on-1"></a>
 ## on
 
 ```TypeScript
@@ -2123,7 +2089,6 @@ try {
 
 ```
 
-<a id="put"></a>
 ## put
 
 ```TypeScript
@@ -2157,7 +2122,6 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
-<a id="put-1"></a>
 ## put
 
 ```TypeScript
@@ -2196,7 +2160,6 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
-<a id="putbatch"></a>
 ## putBatch
 
 ```TypeScript
@@ -2275,7 +2238,6 @@ try {
 
 ```
 
-<a id="putbatch-1"></a>
 ## putBatch
 
 ```TypeScript
@@ -2352,7 +2314,6 @@ try {
 
 ```
 
-<a id="rekey"></a>
 ## rekey
 
 ```TypeScript
@@ -2399,7 +2360,6 @@ try {
 
 ```
 
-<a id="removedevicedata"></a>
 ## removeDeviceData
 
 ```TypeScript
@@ -2407,13 +2367,12 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
 Deletes data of a device. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** is **networkId** in  
 > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be  
 > obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -2480,7 +2439,6 @@ try {
 
 ```
 
-<a id="removedevicedata-1"></a>
 ## removeDeviceData
 
 ```TypeScript
@@ -2488,13 +2446,12 @@ removeDeviceData(deviceId: string): Promise<void>
 ```
 
 Deletes data of a device. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > **deviceId** is **networkId** in  
 > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be  
 > obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -2556,7 +2513,6 @@ try {
 
 ```
 
-<a id="restore"></a>
 ## restore
 
 ```TypeScript
@@ -2608,7 +2564,6 @@ try {
 
 ```
 
-<a id="restore-1"></a>
 ## restore
 
 ```TypeScript
@@ -2663,7 +2618,6 @@ try {
 
 ```
 
-<a id="restoreex"></a>
 ## restoreEx
 
 ```TypeScript
@@ -2721,7 +2675,6 @@ try {
 
 ```
 
-<a id="rollback"></a>
 ## rollback
 
 ```TypeScript
@@ -2770,7 +2723,6 @@ try {
 
 ```
 
-<a id="rollback-1"></a>
 ## rollback
 
 ```TypeScript
@@ -2817,7 +2769,6 @@ try {
 
 ```
 
-<a id="setsyncparam"></a>
 ## setSyncParam
 
 ```TypeScript
@@ -2825,7 +2776,6 @@ setSyncParam(defaultAllowedDelayMs: number, callback: AsyncCallback<void>): void
 ```
 
 Sets the default delay for cross-device data sync. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md) will not trigger the cross-  
@@ -2873,7 +2823,6 @@ try {
 
 ```
 
-<a id="setsyncparam-1"></a>
 ## setSyncParam
 
 ```TypeScript
@@ -2881,7 +2830,6 @@ setSyncParam(defaultAllowedDelayMs: number): Promise<void>
 ```
 
 Sets the default delay for cross-device data sync. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > After the default delay is set, calling [sync](arkts-arkdata-distributedkvstore-syncmode-e.md) will not trigger the cross-  
@@ -2932,7 +2880,6 @@ try {
 
 ```
 
-<a id="setsyncrange"></a>
 ## setSyncRange
 
 ```TypeScript
@@ -2985,7 +2932,6 @@ try {
 
 ```
 
-<a id="setsyncrange-1"></a>
 ## setSyncRange
 
 ```TypeScript
@@ -3041,7 +2987,6 @@ try {
 
 ```
 
-<a id="starttransaction"></a>
 ## startTransaction
 
 ```TypeScript
@@ -3122,7 +3067,6 @@ try {
 
 ```
 
-<a id="starttransaction-1"></a>
 ## startTransaction
 
 ```TypeScript
@@ -3173,21 +3117,19 @@ try {
 
 ```
 
-<a id="sync"></a>
 ## sync
 
 ```TypeScript
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-Starts cross-device data sync manually. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](docroot://database/data-sync-of-kv-store.md).
-
+Starts cross-device data sync manually. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md).
 > **NOTE**  
 >  
 > **deviceIds** is **networkId** in  
 > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be  
 > obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .
 
 **Since:** 9
@@ -3206,7 +3148,7 @@ Starts cross-device data sync manually. For details about the sync modes of KV s
 | --- | --- | --- | --- |
 | deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
 | mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Sync mode. |
-| delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam](arkts-arkdata-distributedkvstore-singlekvstore-i.md#setsyncparam-1)is used. |
+| delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam](arkts-arkdata-distributedkvstore-singlekvstore-i.md#setsyncparam)is used. |
 
 **Error codes:**
 
@@ -3272,21 +3214,19 @@ export default class EntryAbility extends UIAbility {
 
 ```
 
-<a id="sync-1"></a>
 ## sync
 
 ```TypeScript
 sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 ```
 
-Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](docroot://database/data-sync-of-kv-store.md).
-
+Starts cross-device data sync manually. This API returns the result synchronously. For details about the sync modes of KV stores, see [Cross-Device Synchronization of KV Stores](../../../database/data-sync-of-kv-store.md).
 > **NOTE**  
 >  
 > **deviceIds** is **networkId** in  
 > [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md), which can be  
 > obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .
 
 **Since:** 9
@@ -3306,7 +3246,7 @@ Starts cross-device data sync manually. This API returns the result synchronousl
 | deviceIds | string[] | Yes | List of **networkId**s of the devices in the same networking environment to be synchronized. |
 | query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | **Query** object to match. |
 | mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Sync mode. |
-| delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam](arkts-arkdata-distributedkvstore-singlekvstore-i.md#setsyncparam-1)is used. |
+| delayMs | number | No | Delay time allowed, in ms. The default value is **0**. If **delayMs** is set, data sync will be executed **delayMs** after **sync()** is called. If **delayMs** is not set, the delay set in [setSyncParam](arkts-arkdata-distributedkvstore-singlekvstore-i.md#setsyncparam)is used. |
 
 **Error codes:**
 

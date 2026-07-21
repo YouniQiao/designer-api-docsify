@@ -6,7 +6,6 @@
 import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
-<a id="off"></a>
 ## off('cooperate')
 
 ```TypeScript
@@ -42,7 +41,6 @@ Disables listening for screen hopping status change events.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types.<br>3. Parameter verification failed. |
 
 
-<a id="off-1"></a>
 ## off('cooperateMessage')
 
 ```TypeScript
@@ -77,7 +75,6 @@ Disables listening for screen hopping status change events.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types.<br>3. Parameter verification failed. |
 
 
-<a id="off-2"></a>
 ## off('cooperateMouse')
 
 ```TypeScript

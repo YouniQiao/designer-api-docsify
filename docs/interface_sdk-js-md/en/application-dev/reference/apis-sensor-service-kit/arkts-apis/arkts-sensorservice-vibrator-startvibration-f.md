@@ -6,7 +6,6 @@
 import { vibrator } from '@kit.SensorServiceKit';
 ```
 
-<a id="startvibration"></a>
 ## startVibration
 
 ```TypeScript
@@ -169,7 +168,6 @@ try {
 ```
 
 
-<a id="startvibration-1"></a>
 ## startVibration
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { eap } from '@kit.NetworkKit';
 ```
 
-<a id="replycustomeapdata"></a>
 ## replyCustomEapData
 
 ```TypeScript

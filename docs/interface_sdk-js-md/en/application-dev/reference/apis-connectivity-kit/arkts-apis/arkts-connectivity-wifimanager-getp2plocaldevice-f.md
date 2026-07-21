@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="getp2plocaldevice"></a>
 ## getP2pLocalDevice
 
 ```TypeScript
@@ -38,7 +37,6 @@ Obtain the information about own device information.DeviceAddress in the returne
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
 
-<a id="getp2plocaldevice-1"></a>
 ## getP2pLocalDevice
 
 ```TypeScript

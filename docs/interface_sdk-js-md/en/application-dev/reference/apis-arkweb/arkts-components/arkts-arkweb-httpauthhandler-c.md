@@ -8,7 +8,6 @@ Defines the http auth request result, related to {@link onHttpAuthRequest} metho
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="cancel"></a>
 ## cancel
 
 ```TypeScript
@@ -25,7 +24,6 @@ Cancels HTTP authentication as requested by the user.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="confirm"></a>
 ## confirm
 
 ```TypeScript
@@ -55,7 +53,6 @@ Performs HTTP authentication with the user name and password provided by the use
 | --- | --- |
 | boolean | **true** is returned if the authentication is successful; otherwise, **false** is returned. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -72,7 +69,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="ishttpauthinfosaved"></a>
 ## isHttpAuthInfoSaved
 
 ```TypeScript

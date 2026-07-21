@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="hassmscapability"></a>
 ## hasSmsCapability
 
 ```TypeScript

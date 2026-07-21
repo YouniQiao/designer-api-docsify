@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="getallnetworkinterfaces"></a>
 ## getAllNetworkInterfaces
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains all activated wired network interfaces. This API uses an asynchronous ca
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAllNetworkInterfacesSync](arkts-mdm-networkmanager-getallnetworkinterfacessync-f.md#getallnetworkinterfacessync-1)
+**Substitutes:** [getAllNetworkInterfacesSync](arkts-mdm-networkmanager-getallnetworkinterfacessync-f.md#getallnetworkinterfacessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -71,7 +70,6 @@ networkManager.getAllNetworkInterfaces(wantTemp, (err, result) => {
 ```
 
 
-<a id="getallnetworkinterfaces-1"></a>
 ## getAllNetworkInterfaces
 
 ```TypeScript
@@ -84,7 +82,7 @@ Obtains all activated wired network interfaces. This API uses a promise to retur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getAllNetworkInterfacesSync](arkts-mdm-networkmanager-getallnetworkinterfacessync-f.md#getallnetworkinterfacessync-1)
+**Substitutes:** [getAllNetworkInterfacesSync](arkts-mdm-networkmanager-getallnetworkinterfacessync-f.md#getallnetworkinterfacessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 

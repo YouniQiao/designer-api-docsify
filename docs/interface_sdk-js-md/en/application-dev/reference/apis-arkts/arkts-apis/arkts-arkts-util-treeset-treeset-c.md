@@ -14,7 +14,6 @@ TreeSet is implemented based on TreeMap. In TreeSet, only value objects are proc
 import { TreeSet } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -80,7 +79,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="add"></a>
 ## add
 
 ```TypeScript
@@ -124,7 +122,6 @@ console.info("result:", result); // result: true
 
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -159,7 +156,6 @@ console.info("result:", result); // result: true
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -233,7 +229,6 @@ console.info("treeSet: ", ts1.length);
 
 ```
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -291,7 +286,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -347,7 +341,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="getfirstvalue"></a>
 ## getFirstValue
 
 ```TypeScript
@@ -388,7 +381,6 @@ console.info("result:", result); // result: sparrow
 
 ```
 
-<a id="gethighervalue"></a>
 ## getHigherValue
 
 ```TypeScript
@@ -435,7 +427,6 @@ console.info("result:", result); // result: squirrel
 
 ```
 
-<a id="getlastvalue"></a>
 ## getLastValue
 
 ```TypeScript
@@ -476,7 +467,6 @@ console.info("result:", result); // result: squirrel
 
 ```
 
-<a id="getlowervalue"></a>
 ## getLowerValue
 
 ```TypeScript
@@ -523,7 +513,6 @@ console.info("result:", result); // result: gander
 
 ```
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -568,7 +557,6 @@ console.info("result:", result); // result: true
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -606,7 +594,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="popfirst"></a>
 ## popFirst
 
 ```TypeScript
@@ -647,7 +634,6 @@ console.info("result:", result); // result: sparrow
 
 ```
 
-<a id="poplast"></a>
 ## popLast
 
 ```TypeScript
@@ -688,7 +674,6 @@ console.info("result:", result); // result: squirrel
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -734,7 +719,6 @@ console.info("result:", result); // result: true
 
 ```
 
-<a id="values"></a>
 ## values
 
 ```TypeScript

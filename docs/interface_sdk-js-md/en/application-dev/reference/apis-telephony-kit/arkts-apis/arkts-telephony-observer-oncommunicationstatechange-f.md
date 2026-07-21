@@ -6,7 +6,6 @@
 import { observer } from '@kit.TelephonyKit';
 ```
 
-<a id="oncommunicationstatechange"></a>
 ## onCommunicationStateChange
 
 ```TypeScript

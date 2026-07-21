@@ -56,7 +56,7 @@ Particle image size.
 src: ResourceStr
 ```
 
-Path to the image. Local and online sources are supported. For details about how to reference an image, see [Loading Image Resources](docroot://ui/arkts-graphics-display.md#loading-image-resources).
+Path to the image. Local and online sources are supported. For details about how to reference an image, see [Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources).
 
 SVG images are not supported.
 

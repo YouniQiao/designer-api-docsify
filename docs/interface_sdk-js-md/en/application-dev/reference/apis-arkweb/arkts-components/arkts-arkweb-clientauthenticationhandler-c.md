@@ -8,7 +8,6 @@ Defines the client certificate request result, related to {@link onClientAuthent
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="cancel"></a>
 ## cancel
 
 ```TypeScript
@@ -25,7 +24,6 @@ Cancel this certificate request.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="confirm"></a>
 ## confirm
 
 ```TypeScript
@@ -49,7 +47,6 @@ Confirm to use the specified private key and client certificate chain.
 | priKeyFile | string | Yes | The file that store private key. |
 | certChainFile | string | Yes | The file that store client certificate chain. |
 
-<a id="confirm-1"></a>
 ## confirm
 
 ```TypeScript
@@ -72,7 +69,6 @@ Confirm to use the authUri.The authUri can be obtained from certificate manageme
 | --- | --- | --- | --- |
 | authUri | string | Yes | is the key of credentials.The credentials contain sign info and client certificates info. |
 
-<a id="confirm-2"></a>
 ## confirm
 
 ```TypeScript
@@ -100,7 +96,6 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 | --- | --- |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -117,7 +112,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="ignore"></a>
 ## ignore
 
 ```TypeScript

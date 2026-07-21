@@ -1,6 +1,5 @@
 # getActiveNotifications
 
-<a id="getactivenotifications"></a>
 ## getActiveNotifications
 
 ```TypeScript
@@ -26,7 +25,6 @@ Obtains active notifications of this application. This API uses an asynchronous 
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationRequest&gt;&gt; | Yes | Callback used to return the result. |
 
 
-<a id="getactivenotifications-1"></a>
 ## getActiveNotifications
 
 ```TypeScript

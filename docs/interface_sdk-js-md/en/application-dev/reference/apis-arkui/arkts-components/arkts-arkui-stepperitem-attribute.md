@@ -14,7 +14,6 @@ Defines StepperItem Component instance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="nextlabel"></a>
 ## nextLabel
 
 ```TypeScript
@@ -22,7 +21,6 @@ nextLabel(value: string)
 ```
 
 Sets the text label of the button on the right. The default value is **Start** for the last page and **Next** for the other pages.
-
 > **NOTE**
 
 **Since:** 8
@@ -43,7 +41,6 @@ Sets the text label of the button on the right. The default value is **Start** f
 | --- | --- | --- | --- |
 | value | string | Yes | Text label of the button on the right. When the string is too long, it is scaled down,wrapped in two lines, and then clipped. |
 
-<a id="prevlabel"></a>
 ## prevLabel
 
 ```TypeScript
@@ -51,7 +48,6 @@ prevLabel(value: string)
 ```
 
 Sets the text label of the button on the left, which is not displayed on the first page. When the **Stepper** contains more than one page, the default value for all pages except the first page is **Back**.
-
 > **NOTE**
 
 **Since:** 8
@@ -72,7 +68,6 @@ Sets the text label of the button on the left, which is not displayed on the fir
 | --- | --- | --- | --- |
 | value | string | Yes | Text label of the button on the left. When the string is too long, it is scaled down,wrapped in two lines, and then clipped. |
 
-<a id="status"></a>
 ## status
 
 ```TypeScript
@@ -80,7 +75,6 @@ status(value?: ItemState)
 ```
 
 Sets the display status of **nextLabel** in the stepper.
-
 > **NOTE**
 
 **Since:** 8

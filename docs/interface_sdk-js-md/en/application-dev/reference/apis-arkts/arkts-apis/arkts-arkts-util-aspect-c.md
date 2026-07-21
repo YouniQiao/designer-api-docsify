@@ -14,7 +14,6 @@ Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be 
 import { util } from '@kit.ArkTS';
 ```
 
-<a id="addafter"></a>
 ## addAfter
 
 ```TypeScript
@@ -97,7 +96,6 @@ util.Aspect.addAfter(AroundTest, 'foo', false, () => {
 
 ```
 
-<a id="addbefore"></a>
 ## addBefore
 
 ```TypeScript
@@ -189,7 +187,6 @@ console.info('MyClass.data is ' + MyClass.data);
 
 ```
 
-<a id="replace"></a>
 ## replace
 
 ```TypeScript

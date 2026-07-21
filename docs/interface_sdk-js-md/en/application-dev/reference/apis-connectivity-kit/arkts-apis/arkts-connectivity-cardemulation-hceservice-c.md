@@ -14,7 +14,6 @@ A class for NFC host application.<p>The NFC host application use this class, the
 import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
-<a id="off"></a>
 ## off('hceCmd')
 
 ```TypeScript
@@ -83,7 +82,6 @@ export default class EntryAbility extends UIAbility {
 
 ```
 
-<a id="on"></a>
 ## on('hceCmd')
 
 ```TypeScript
@@ -117,7 +115,6 @@ register HCE event to receive the APDU data.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
-<a id="sendresponse"></a>
 ## sendResponse
 
 ```TypeScript
@@ -146,7 +143,6 @@ Sends a response APDU to the remote device.<p>This method is used by a host appl
 | --- | --- | --- | --- |
 | responseApdu | number[] | Yes | Indicates the response, which is a byte array. |
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -181,7 +177,6 @@ Starts the HCE, register more aids and allows this application to be preferred w
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
 
-<a id="starthce"></a>
 ## startHCE
 
 ```TypeScript
@@ -216,7 +211,6 @@ start HCE
 | --- | --- |
 | boolean | Returns true if HCE is enabled or has been enabled; returns false otherwise. |
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -250,7 +244,6 @@ Stops the HCE, and unset the preferred service while in foreground.
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
 
-<a id="stophce"></a>
 ## stopHCE
 
 ```TypeScript
@@ -279,7 +272,6 @@ stop HCE
 | --- | --- |
 | boolean | Returns true if HCE is disabled or has been disabled; returns false otherwise. |
 
-<a id="transmit"></a>
 ## transmit
 
 ```TypeScript
@@ -355,7 +347,6 @@ console.info("transmit Promise end.");
 
 ```
 
-<a id="transmit-1"></a>
 ## transmit
 
 ```TypeScript

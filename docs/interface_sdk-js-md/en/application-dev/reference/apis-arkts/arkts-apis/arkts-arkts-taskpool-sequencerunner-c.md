@@ -14,7 +14,6 @@ Implements a serial queue, in which all tasks are executed in sequence.
 import { taskpool } from '@kit.ArkTS';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -44,7 +43,6 @@ let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
 
 ```
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -52,7 +50,6 @@ constructor(name: string, priority?: Priority)
 ```
 
 A constructor used to create a **SequenceRunner** instance. This instance represents a global serial queue. If the passed-in name is the same as an existing name, the same serial queue is returned.
-
 > **NOTE**  
 >  
 > - The bottom layer uses the singleton mode to ensure that the same instance is obtained when a serial queue  
@@ -82,7 +79,6 @@ let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", task
 
 ```
 
-<a id="execute"></a>
 ## execute
 
 ```TypeScript
@@ -90,7 +86,6 @@ execute(task: Task): Promise<Object>
 ```
 
 Adds a task to the serial queue for execution. Before using this API, you must create a **SequenceRunner** instance. Tasks in another task group, serial queue, or asynchronous queue, dependent tasks, and tasks that have been executed cannot be added to the serial queue. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - Tasks that depend others cannot be added to the serial queue.  

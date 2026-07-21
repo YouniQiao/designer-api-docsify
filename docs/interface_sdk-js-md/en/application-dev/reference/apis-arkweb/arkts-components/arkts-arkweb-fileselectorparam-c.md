@@ -8,7 +8,6 @@ Encompassed message information as parameters to {@link onFileSelectorShow} meth
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="getaccepttype"></a>
 ## getAcceptType
 
 ```TypeScript
@@ -48,7 +46,6 @@ Gets an array of acceptable MIME type.
 | --- | --- |
 | Array&lt;string&gt; | Return an array of acceptable MIME type. |
 
-<a id="getacceptablefiletypes"></a>
 ## getAcceptableFileTypes
 
 ```TypeScript
@@ -69,7 +66,6 @@ Gets an array of selected types for web page files.
 | --- | --- |
 | Array&lt;Array&lt;AcceptableFileType&gt;&gt; | Return an array of selected types for web page files. |
 
-<a id="getdefaultpath"></a>
 ## getDefaultPath
 
 ```TypeScript
@@ -90,7 +86,6 @@ Get the default path opened when pulling up the selector.
 | --- | --- |
 | string | Return to the default path opened when pulling up the selector. |
 
-<a id="getdescriptions"></a>
 ## getDescriptions
 
 ```TypeScript
@@ -111,7 +106,6 @@ Gets a description array of file types.
 | --- | --- |
 | Array&lt;string&gt; | Return an array of description of the file type. |
 
-<a id="getmimetypes"></a>
 ## getMimeTypes
 
 ```TypeScript
@@ -132,7 +126,6 @@ Gets an array of raw acceptable MIME type.
 | --- | --- |
 | Array&lt;string&gt; | Return an array of raw acceptable MIME type. |
 
-<a id="getmode"></a>
 ## getMode
 
 ```TypeScript
@@ -155,7 +148,6 @@ Gets the FileSelectorMode of this file selector.
 | --- | --- |
 | [FileSelectorMode](arkts-arkweb-fileselectormode-e.md) | Return the FileSelectorMode of this file selector. |
 
-<a id="getsuggestedname"></a>
 ## getSuggestedName
 
 ```TypeScript
@@ -176,7 +168,6 @@ Gets suggested file names.
 | --- | --- |
 | string | Return the suggested file names. |
 
-<a id="gettitle"></a>
 ## getTitle
 
 ```TypeScript
@@ -199,7 +190,6 @@ Gets the title of this file selector.
 | --- | --- |
 | string | Return the title of this file selector. |
 
-<a id="isacceptalloptionexcluded"></a>
 ## isAcceptAllOptionExcluded
 
 ```TypeScript
@@ -220,7 +210,6 @@ Gets whether to filter fully matching file types.
 | --- | --- |
 | boolean | Return whether to filter all matching file types. |
 
-<a id="iscapture"></a>
 ## isCapture
 
 ```TypeScript

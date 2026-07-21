@@ -6,7 +6,6 @@
 import { accountManager } from '@kit.MDMKit';
 ```
 
-<a id="isaddosaccountbyuserdisallowed"></a>
 ## isAddOsAccountByUserDisallowed
 
 ```TypeScript
@@ -19,7 +18,7 @@ Queries whether to disallow a user to add accounts.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md#isosaccountadditiondisallowed-1)
+**Substitutes:** [isOsAccountAdditionDisallowed](arkts-mdm-accountmanager-isosaccountadditiondisallowed-f.md#isosaccountadditiondisallowed)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_ACCOUNT_POLICY
 

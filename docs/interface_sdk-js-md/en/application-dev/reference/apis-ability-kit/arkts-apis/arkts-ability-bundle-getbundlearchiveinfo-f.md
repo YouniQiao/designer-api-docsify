@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="getbundlearchiveinfo"></a>
 ## getBundleArchiveInfo
 
 ```TypeScript
@@ -32,7 +31,6 @@ Obtains information about the bundles contained in a HAP file. This API uses an 
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | Yes | Callback used to return the information about the bundles. |
 
 
-<a id="getbundlearchiveinfo-1"></a>
 ## getBundleArchiveInfo
 
 ```TypeScript

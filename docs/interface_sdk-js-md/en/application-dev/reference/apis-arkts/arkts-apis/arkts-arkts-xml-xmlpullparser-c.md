@@ -14,7 +14,6 @@ The XmlPullParser interface is used to parse the existing xml file.
 import { xml } from '@kit.ArkTS';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -50,7 +49,6 @@ let that = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UT
 
 ```
 
-<a id="parse"></a>
 ## parse
 
 ```TypeScript
@@ -110,7 +108,6 @@ that.parse(options);
 
 ```
 
-<a id="parsexml"></a>
 ## parseXml
 
 ```TypeScript

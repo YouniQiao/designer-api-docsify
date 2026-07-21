@@ -1,6 +1,5 @@
 # registerApplicationStateObserver (System API)
 
-<a id="registerapplicationstateobserver"></a>
 ## registerApplicationStateObserver
 
 ```TypeScript

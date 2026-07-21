@@ -16,7 +16,6 @@ Interactive widget extension class. It provides APIs for the widget provider to 
 import { LiveFormInfo } from '@kit.FormKit';
 ```
 
-<a id="onliveformcreate"></a>
 ## onLiveFormCreate
 
 ```TypeScript
@@ -58,7 +57,6 @@ export default class LiveFormExtAbility extends LiveFormExtensionAbility {
 
 ```
 
-<a id="onliveformdestroy"></a>
 ## onLiveFormDestroy
 
 ```TypeScript

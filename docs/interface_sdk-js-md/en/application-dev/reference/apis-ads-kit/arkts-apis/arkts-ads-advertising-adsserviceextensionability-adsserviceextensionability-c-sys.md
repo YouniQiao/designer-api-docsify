@@ -16,7 +16,6 @@ Provides the capability of integrating advertising services with vendors.
 import { RespCallback } from '@kit.AdsKit';
 ```
 
-<a id="onloadad"></a>
 ## onLoadAd
 
 ```TypeScript
@@ -57,7 +56,6 @@ export default class AdsExtensionAbility extends AdsServiceExtensionAbility {
 
 ```
 
-<a id="onloadadwithmultislots"></a>
 ## onLoadAdWithMultiSlots
 
 ```TypeScript
@@ -69,9 +67,7 @@ Called when the media application starts to load multiple ads.The device vendor 
 
 **Since:** 11
 
-<!--Device-AdsServiceExtensionAbility-onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions, 
-    respCallback: RespCallback)--><!--Device-AdsServiceExtensionAbility-onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions, 
-    respCallback: RespCallback)-End-->
+<!--Device-AdsServiceExtensionAbility-onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions,     respCallback: RespCallback)--><!--Device-AdsServiceExtensionAbility-onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: advertising.AdOptions,     respCallback: RespCallback)-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 

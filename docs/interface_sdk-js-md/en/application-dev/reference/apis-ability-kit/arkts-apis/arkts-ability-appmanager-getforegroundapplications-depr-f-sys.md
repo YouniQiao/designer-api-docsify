@@ -1,6 +1,5 @@
 # getForegroundApplications (System API)
 
-<a id="getforegroundapplications"></a>
 ## getForegroundApplications
 
 ```TypeScript
@@ -45,7 +44,6 @@ appManager.getForegroundApplications((err, data) => {
 ```
 
 
-<a id="getforegroundapplications-1"></a>
 ## getForegroundApplications
 
 ```TypeScript

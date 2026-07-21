@@ -6,7 +6,6 @@
 import { particleAbility } from '@kit.AbilityKit';
 ```
 
-<a id="startbackgroundrunning"></a>
 ## startBackgroundRunning
 
 ```TypeScript
@@ -19,7 +18,7 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [startBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning-1)
+**Substitutes:** [startBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -83,7 +82,6 @@ wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
 ```
 
 
-<a id="startbackgroundrunning-1"></a>
 ## startBackgroundRunning
 
 ```TypeScript
@@ -96,7 +94,7 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [startBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning-1)
+**Substitutes:** [startBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 

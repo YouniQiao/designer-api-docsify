@@ -6,7 +6,6 @@
 import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
-<a id="reportsecurityevent"></a>
 ## reportSecurityEvent
 
 ```TypeScript

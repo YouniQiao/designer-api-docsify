@@ -36,7 +36,7 @@ Axis value table of the focus axis event.
 stopPropagation: Callback<void>
 ```
 
-Blocks [event bubbling](docroot://ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
+Blocks [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
 
 **Type:** Callback&lt;void&gt;
 

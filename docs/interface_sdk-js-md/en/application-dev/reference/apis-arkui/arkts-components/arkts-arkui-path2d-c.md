@@ -1,7 +1,6 @@
 # Path2D
 
 **Path2D** allows you to describe a path through an existing path. This path can be drawn through the **stroke** or **fill** API of **Canvas**.
-
 > **NOTE**  
 >  
 > The Path2D object does not support the resetting of an existing path. If a new path  
@@ -21,7 +20,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="addpath"></a>
 ## addPath
 
 ```TypeScript
@@ -47,7 +45,6 @@ Adds a path to this path.
 | path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path to be added to this path. Unit: px.<br>The **undefined** and **null** values are treated as invalid. |
 | transform | [Matrix2D](../arkts-apis/arkts-arkui-canvaspattern-matrix2d-c.md) | No | Transformation matrix of the new path.<br>The **undefined** and **null** values are treated as invalid.<br>Default value: **null**. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -66,7 +63,6 @@ Constructs an empty **Path2D** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -93,7 +89,6 @@ Constructs an empty Path2D object. The unit mode of the Path2D object can be con
 | --- | --- | --- | --- |
 | unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the Path2D object.The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT** |
 
-<a id="constructor-2"></a>
 ## constructor
 
 ```TypeScript
@@ -118,7 +113,6 @@ Constructs a Path2D object using a path object.
 | --- | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | Yes | **Path** object. |
 
-<a id="constructor-3"></a>
 ## constructor
 
 ```TypeScript
@@ -146,7 +140,6 @@ When a path object is used to construct a Path2D object, the unit mode of the Pa
 | path | [Path2D](arkts-arkui-path2d-c.md) | Yes | **Path** object. |
 | unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the Path2D object.The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT** |
 
-<a id="constructor-4"></a>
 ## constructor
 
 ```TypeScript
@@ -171,7 +164,6 @@ Constructs a Path2D object using a path string that complies with the SVG path d
 | --- | --- | --- | --- |
 | d | string | Yes | Path that complies with the [SVG path syntax](arkts-arkui-path2d-c.md).Invalid values are treated as invalid inputs. |
 
-<a id="constructor-5"></a>
 ## constructor
 
 ```TypeScript

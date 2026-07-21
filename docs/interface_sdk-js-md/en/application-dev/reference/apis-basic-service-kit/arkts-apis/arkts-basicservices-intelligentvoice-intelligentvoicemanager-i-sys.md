@@ -16,7 +16,6 @@ Implements intelligent voice management.
 import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
-<a id="getcapabilityinfo"></a>
 ## getCapabilityInfo
 
 ```TypeScript
@@ -57,7 +56,6 @@ if (intelligentVoiceManager != null) {
 
 ```
 
-<a id="off"></a>
 ## off('serviceChange')
 
 ```TypeScript
@@ -99,7 +97,6 @@ if (intelligentVoiceManager != null) {
 
 ```
 
-<a id="on"></a>
 ## on('serviceChange')
 
 ```TypeScript

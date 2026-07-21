@@ -14,7 +14,6 @@ Implements a **DragAction** object to subscribe to drag state changes and start 
 import { dragController } from '@kit.ArkUI';
 ```
 
-<a id="off"></a>
 ## off('statusChange')
 
 ```TypeScript
@@ -40,7 +39,6 @@ Unsubscribes from drag state changes.
 | type | 'statusChange' | Yes | for status changing |
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;DragAndDropInfo&gt; | No | with drag event and status information |
 
-<a id="on"></a>
 ## on('statusChange')
 
 ```TypeScript
@@ -66,7 +64,6 @@ Subscribes to drag state changes.
 | type | 'statusChange' | Yes | for status changing |
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;DragAndDropInfo&gt; | Yes | with drag event and status information |
 
-<a id="startdrag"></a>
 ## startDrag
 
 ```TypeScript

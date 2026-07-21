@@ -6,7 +6,6 @@
 import { contact } from '@kit.ContactsKit';
 ```
 
-<a id="selectcontact"></a>
 ## selectContact
 
 ```TypeScript
@@ -19,7 +18,7 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [selectContacts(callback:](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-1)
+**Substitutes:** [selectContacts(callback:](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)
 
 <!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void-End-->
 
@@ -49,7 +48,6 @@ contact.selectContact((err: BusinessError, data) => {
 ```
 
 
-<a id="selectcontact-1"></a>
 ## selectContact
 
 ```TypeScript
@@ -62,7 +60,7 @@ Selects a contact. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [selectContacts()](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-1)
+**Substitutes:** [selectContacts()](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)
 
 <!--Device-contact-function selectContact(): Promise<Array<Contact>>--><!--Device-contact-function selectContact(): Promise<Array<Contact>>-End-->
 

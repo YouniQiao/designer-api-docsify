@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface ReadonlySet<T>--><!--Device-unnamed-interface ReadonlySet<T>-End-->
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -18,7 +17,6 @@ forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?
 | callbackfn | (value: T, value2: T, set: ReadonlySet&lt;T&gt;) =&gt; void | Yes |  |
 | thisArg | any | No |  |
 
-<a id="has"></a>
 ## has
 
 ```TypeScript

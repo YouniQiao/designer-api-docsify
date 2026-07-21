@@ -6,7 +6,6 @@
 import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
-<a id="getcurrenttime"></a>
 ## getCurrentTime
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Deprecated since:** 12
 
-**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime-1)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
 
 <!--Device-systemDateTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -59,7 +58,6 @@ try {
 ```
 
 
-<a id="getcurrenttime-1"></a>
 ## getCurrentTime
 
 ```TypeScript
@@ -72,7 +70,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Deprecated since:** 12
 
-**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime-1)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
 
 <!--Device-systemDateTime-function getCurrentTime(callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getCurrentTime(callback: AsyncCallback<number>): void-End-->
 
@@ -111,7 +109,6 @@ try {
 ```
 
 
-<a id="getcurrenttime-2"></a>
 ## getCurrentTime
 
 ```TypeScript
@@ -124,7 +121,7 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 **Deprecated since:** 12
 
-**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime-1)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
 
 <!--Device-systemDateTime-function getCurrentTime(isNano?: boolean): Promise<number>--><!--Device-systemDateTime-function getCurrentTime(isNano?: boolean): Promise<number>-End-->
 

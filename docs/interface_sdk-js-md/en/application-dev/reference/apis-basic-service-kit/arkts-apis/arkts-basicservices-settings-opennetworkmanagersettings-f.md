@@ -6,7 +6,6 @@
 import { settings } from '@kit.BasicServicesKit';
 ```
 
-<a id="opennetworkmanagersettings"></a>
 ## openNetworkManagerSettings
 
 ```TypeScript

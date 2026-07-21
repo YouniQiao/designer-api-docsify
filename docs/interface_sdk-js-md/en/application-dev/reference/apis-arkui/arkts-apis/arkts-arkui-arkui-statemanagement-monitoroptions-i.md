@@ -1,6 +1,6 @@
 # MonitorOptions
 
-Defines the optional parameters for [addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor-1), which are used to configure the callback type and whether to enable the wildcard capability.
+Defines the optional parameters for [addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor), which are used to configure the callback type and whether to enable the wildcard capability.
 
 **Since:** 20
 

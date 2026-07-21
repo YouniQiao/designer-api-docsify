@@ -14,7 +14,6 @@ Represents the device-cloud file version management class. It allows you to mana
 import { cloudSync } from '@kit.CoreFileKit';
 ```
 
-<a id="clearfileconflict"></a>
 ## clearFileConflict
 
 ```TypeScript
@@ -79,7 +78,6 @@ fileVersion.clearFileConflict(uri).then(() => {
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -107,7 +105,6 @@ let fileVersion = new cloudSync.FileVersion();
 
 ```
 
-<a id="downloadhistoryversion"></a>
 ## downloadHistoryVersion
 
 ```TypeScript
@@ -127,7 +124,7 @@ Obtains the content of a file of a specified version based on the version number
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | File URI. |
-| versionId | string | Yes | Version ID of a file. The format is returned by the [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist-1) API. |
+| versionId | string | Yes | Version ID of a file. The format is returned by the [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist) API. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;VersionDownloadProgress&gt; | Yes | Callback used to return the download progress. |
 
 **Return value:**
@@ -149,7 +146,6 @@ Obtains the content of a file of a specified version based on the version number
 | 22400002 | Network unavailable. |
 | 22400005 | Inner error. Possible causes:<br>1.Failed to access the database or execute the SQL statement.<br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
-<a id="gethistoryversionlist"></a>
 ## getHistoryVersionList
 
 ```TypeScript
@@ -216,7 +212,6 @@ fileVersion.getHistoryVersionList(uri, limit).then((versionList: Array<cloudSync
 
 ```
 
-<a id="isfileconflict"></a>
 ## isFileConflict
 
 ```TypeScript
@@ -225,7 +220,7 @@ isFileConflict(uri: string): Promise<boolean>
 
 Obtains the version conflict flag of a local file. This API uses a promise to return the result. This API takes effect only when the application is configured for manual conflict resolution. Otherwise, conflicts are automatically resolved during synchronization, and the return value will be **false**.
 
-Once the application is configured for manual conflict resolution, calling this API returns whether the current local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the conflict is resolved, you need to call the [clearFileConflict](arkts-corefile-cloudsync-fileversion-c.md#clearfileconflict-1)method to clear the conflict flag and synchronize the file to the cloud.
+Once the application is configured for manual conflict resolution, calling this API returns whether the current local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the conflict is resolved, you need to call the [clearFileConflict](arkts-corefile-cloudsync-fileversion-c.md#clearfileconflict)method to clear the conflict flag and synchronize the file to the cloud.
 
 **Since:** 20
 
@@ -276,14 +271,13 @@ fileVersion.isFileConflict(uri).then((isConflict: boolean) => {
 
 ```
 
-<a id="replacefilewithhistoryversion"></a>
 ## replaceFileWithHistoryVersion
 
 ```TypeScript
 replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>
 ```
 
-Replaces the local file with the file of a historical version. Before replacement, call the [downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion-1) method to download the selected historical version and obtain its version URI. If this API is called directly without prior download or the version URI is invalid, an exception will be thrown. Once replacement is complete, the temporary file will be automatically deleted. This API uses a promise to return the result.
+Replaces the local file with the file of a historical version. Before replacement, call the [downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion) method to download the selected historical version and obtain its version URI. If this API is called directly without prior download or the version URI is invalid, an exception will be thrown. Once replacement is complete, the temporary file will be automatically deleted. This API uses a promise to return the result.
 
 **Since:** 20
 

@@ -14,7 +14,6 @@ Class of fence extension ability.
 import { FenceExtensionAbility } from '@kit.LocationKit';
 ```
 
-<a id="ondestroy"></a>
 ## onDestroy
 
 ```TypeScript
@@ -46,7 +45,6 @@ class MyFenceExtensionAbility extends FenceExtensionAbility {
 
 ```
 
-<a id="onfencestatuschange"></a>
 ## onFenceStatusChange
 
 ```TypeScript

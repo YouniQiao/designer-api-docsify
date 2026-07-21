@@ -10,7 +10,6 @@ Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

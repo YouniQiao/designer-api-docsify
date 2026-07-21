@@ -16,7 +16,6 @@ Provides APIs to obtain and set the beauty effect.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getsupportedbeautyrange"></a>
 ## getSupportedBeautyRange
 
 ```TypeScript
@@ -72,7 +71,6 @@ function getSupportedBeautyRange(portraitPhotoSession: camera.PortraitPhotoSessi
 
 ```
 
-<a id="getsupportedbeautytypes"></a>
 ## getSupportedBeautyTypes
 
 ```TypeScript
@@ -112,7 +110,6 @@ function getSupportedBeautyTypes(portraitPhotoSession: camera.PortraitPhotoSessi
 
 ```
 
-<a id="getsupportedportraitthemetypes"></a>
 ## getSupportedPortraitThemeTypes
 
 ```TypeScript
@@ -142,7 +139,6 @@ Gets supported portrait theme type.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
-<a id="isportraitthemesupported"></a>
 ## isPortraitThemeSupported
 
 ```TypeScript

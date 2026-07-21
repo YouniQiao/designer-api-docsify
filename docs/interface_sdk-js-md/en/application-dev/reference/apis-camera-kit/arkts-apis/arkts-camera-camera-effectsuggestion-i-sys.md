@@ -16,7 +16,6 @@ EffectSuggestion object.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="enableeffectsuggestion"></a>
 ## enableEffectSuggestion
 
 ```TypeScript
@@ -47,7 +46,6 @@ Enable effect suggestion for session.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-<a id="getsupportedeffectsuggestiontypes"></a>
 ## getSupportedEffectSuggestionTypes
 
 ```TypeScript
@@ -77,7 +75,6 @@ Gets supported effect suggestion types.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-<a id="iseffectsuggestionsupported"></a>
 ## isEffectSuggestionSupported
 
 ```TypeScript
@@ -107,7 +104,6 @@ Checks whether effect suggestion is supported.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-<a id="seteffectsuggestionstatus"></a>
 ## setEffectSuggestionStatus
 
 ```TypeScript
@@ -138,7 +134,6 @@ Set the range of effect suggestion type and enable status.The application should
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-<a id="updateeffectsuggestion"></a>
 ## updateEffectSuggestion
 
 ```TypeScript

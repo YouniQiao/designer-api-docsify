@@ -6,7 +6,6 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
-<a id="getstatstotalbytes"></a>
 ## getStatsTotalBytes
 
 ```TypeScript
@@ -55,7 +54,6 @@ sharing.getStatsTotalBytes((error: BusinessError, data: number) => {
 ```
 
 
-<a id="getstatstotalbytes-1"></a>
 ## getStatsTotalBytes
 
 ```TypeScript

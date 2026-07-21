@@ -14,7 +14,6 @@ Provides APIs for managing a distributed data object. Before using any API of th
 import { distributedDataObject } from '@kit.ArkData';
 ```
 
-<a id="bindassetstore"></a>
 ## bindAssetStore
 
 ```TypeScript
@@ -100,7 +99,6 @@ class EntryAbility extends UIAbility {
 
 ```
 
-<a id="bindassetstore-1"></a>
 ## bindAssetStore
 
 ```TypeScript
@@ -190,7 +188,6 @@ class EntryAbility extends UIAbility {
 
 ```
 
-<a id="off"></a>
 ## off('change')
 
 ```TypeScript
@@ -235,7 +232,6 @@ g_object.off('change');
 
 ```
 
-<a id="off-1"></a>
 ## off('status')
 
 ```TypeScript
@@ -249,13 +245,7 @@ Unsubscribes from the status change of this distributed data object.
 
 **Since:** 9
 
-<!--Device-DataObject-off(
-      type: 'status',
-      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void--><!--Device-DataObject-off(
-      type: 'status',
-      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void-End-->
+<!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -284,7 +274,6 @@ g_object.off('status');
 
 ```
 
-<a id="off-2"></a>
 ## off('change')
 
 ```TypeScript
@@ -342,7 +331,6 @@ try {
 
 ```
 
-<a id="off-3"></a>
 ## off('status')
 
 ```TypeScript
@@ -389,7 +377,6 @@ try {
 
 ```
 
-<a id="off-4"></a>
 ## off('progressChanged')
 
 ```TypeScript
@@ -438,7 +425,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on('change')
 
 ```TypeScript
@@ -480,7 +466,6 @@ g_object.on('change', (sessionId: string, fields: Array<string>) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('status')
 
 ```TypeScript
@@ -494,13 +479,7 @@ Subscribes to status changes of this distributed data object.
 
 **Since:** 9
 
-<!--Device-DataObject-on(
-      type: 'status',
-      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void--><!--Device-DataObject-on(
-      type: 'status',
-      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void-End-->
+<!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -526,7 +505,6 @@ g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 
 
 ```
 
-<a id="on-2"></a>
 ## on('change')
 
 ```TypeScript
@@ -567,7 +545,6 @@ try {
 
 ```
 
-<a id="on-3"></a>
 ## on('status')
 
 ```TypeScript
@@ -603,7 +580,6 @@ try {
 
 ```
 
-<a id="on-4"></a>
 ## on('progressChanged')
 
 ```TypeScript
@@ -640,7 +616,6 @@ try {
 
 ```
 
-<a id="revokesave"></a>
 ## revokeSave
 
 ```TypeScript
@@ -694,7 +669,6 @@ g_object.revokeSave((err: BusinessError, result: distributedDataObject.RevokeSav
 
 ```
 
-<a id="revokesave-1"></a>
 ## revokeSave
 
 ```TypeScript
@@ -744,7 +718,6 @@ g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessRespo
 
 ```
 
-<a id="save"></a>
 ## save
 
 ```TypeScript
@@ -790,7 +763,6 @@ g_object.save('local', (err: BusinessError, result:distributedDataObject.SaveSuc
 
 ```
 
-<a id="save-1"></a>
 ## save
 
 ```TypeScript
@@ -839,7 +811,6 @@ g_object.save('local').then((callbackInfo: distributedDataObject.SaveSuccessResp
 
 ```
 
-<a id="setasset"></a>
 ## setAsset
 
 ```TypeScript
@@ -919,7 +890,6 @@ class EntryAbility extends UIAbility {
 
 ```
 
-<a id="setassets"></a>
 ## setAssets
 
 ```TypeScript
@@ -999,7 +969,6 @@ class EntryAbility extends UIAbility {
 
 ```
 
-<a id="setsessionid"></a>
 ## setSessionId
 
 ```TypeScript
@@ -1045,7 +1014,6 @@ g_object.setSessionId('', () => {
 
 ```
 
-<a id="setsessionid-1"></a>
 ## setSessionId
 
 ```TypeScript
@@ -1091,7 +1059,6 @@ g_object.setSessionId(() => {
 
 ```
 
-<a id="setsessionid-2"></a>
 ## setSessionId
 
 ```TypeScript

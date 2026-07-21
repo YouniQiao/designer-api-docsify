@@ -2,8 +2,7 @@
 
 This interface provides APIs for audio capture.
 
-Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer-1)to create an AudioCapturer instance.
-
+Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer)to create an AudioCapturer instance.
 > **NOTE**  
 >  
 > - The initial APIs of this interface are supported since API version 8.
@@ -20,7 +19,6 @@ Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkt
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="offreadmicindata"></a>
 ## offReadMicInData
 
 ```TypeScript
@@ -53,7 +51,6 @@ Unsubscribes from micIn audio data callback.
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at running state. |
 
-<a id="onreadmicindata"></a>
 ## onReadMicInData
 
 ```TypeScript
@@ -85,7 +82,6 @@ Subscribes to micIn audio data callback. This callback has higher priority than 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800103](../errorcode-audio.md#6800103-unsupported-state) | Operation not permitted at running state. |
 
-<a id="setinputdevicetoaccessory"></a>
 ## setInputDeviceToAccessory
 
 ```TypeScript

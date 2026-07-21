@@ -10,7 +10,6 @@ File
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
-<a id="access"></a>
 ## access
 
 ```TypeScript
@@ -23,7 +22,7 @@ Checks whether a file or directory exists.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:access](arkts-corefile-file-fs-access-f.md#access-1)
+**Substitutes:** [fs:access](arkts-corefile-file-file-depr-c.md#access)
 
 <!--Device-File-static access(options: FileAccessOption): void--><!--Device-File-static access(options: FileAccessOption): void-End-->
 
@@ -120,7 +119,6 @@ export default {
 
 ```
 
-<a id="copy"></a>
 ## copy
 
 ```TypeScript
@@ -133,7 +131,7 @@ Copies a file to the given URI.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile-1)
+**Substitutes:** [fs:copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile)
 
 <!--Device-File-static copy(options: FileCopyOption): void--><!--Device-File-static copy(options: FileCopyOption): void-End-->
 
@@ -232,7 +230,6 @@ export default {
 
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -245,7 +242,7 @@ Deletes a local file.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:unlink](arkts-corefile-file-fs-unlink-f.md#unlink-1)
+**Substitutes:** [fs:unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
 
 <!--Device-File-static delete(options: FileDeleteOption): void--><!--Device-File-static delete(options: FileDeleteOption): void-End-->
 
@@ -342,7 +339,6 @@ export default {
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -355,7 +351,7 @@ Obtains information about a local file.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:stat](arkts-corefile-file-fs-stat-f.md#stat-1)
+**Substitutes:** [fs:stat](arkts-corefile-file-fs-stat-f.md#stat)
 
 <!--Device-File-static get(options: FileGetOption): void--><!--Device-File-static get(options: FileGetOption): void-End-->
 
@@ -452,7 +448,6 @@ export default {
 
 ```
 
-<a id="list"></a>
 ## list
 
 ```TypeScript
@@ -465,7 +460,7 @@ Obtains all files in the specified directory.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-File-static list(options: FileListOption): void--><!--Device-File-static list(options: FileListOption): void-End-->
 
@@ -562,7 +557,6 @@ export default {
 
 ```
 
-<a id="mkdir"></a>
 ## mkdir
 
 ```TypeScript
@@ -575,7 +569,7 @@ Creates a directory.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir-1)
+**Substitutes:** [fs:mkdir](arkts-corefile-file-file-depr-c.md#mkdir)
 
 <!--Device-File-static mkdir(options: FileMkdirOption): void--><!--Device-File-static mkdir(options: FileMkdirOption): void-End-->
 
@@ -672,7 +666,6 @@ export default {
 
 ```
 
-<a id="move"></a>
 ## move
 
 ```TypeScript
@@ -685,7 +678,7 @@ Moves a specified file to a given location.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:moveFile](arkts-corefile-file-fs-movefile-f.md#movefile-1)
+**Substitutes:** [fs:moveFile](arkts-corefile-file-fs-movefile-f.md#movefile)
 
 <!--Device-File-static move(options: FileMoveOption): void--><!--Device-File-static move(options: FileMoveOption): void-End-->
 
@@ -784,7 +777,6 @@ export default {
 
 ```
 
-<a id="readarraybuffer"></a>
 ## readArrayBuffer
 
 ```TypeScript
@@ -797,7 +789,7 @@ Reads buffer data from a file. Only text files can be read and written.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:read](arkts-corefile-file-fs-read-f.md#read-1)
+**Substitutes:** [fs:read](arkts-corefile-file-fs-read-f.md#read)
 
 <!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void--><!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void-End-->
 
@@ -898,7 +890,6 @@ export default {
 
 ```
 
-<a id="readtext"></a>
 ## readText
 
 ```TypeScript
@@ -911,7 +902,7 @@ Reads text from a file. Only text files can be read and written.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:readText](arkts-corefile-file-fs-readtext-f.md#readtext-1)
+**Substitutes:** [fs:readText](arkts-corefile-file-file-depr-c.md#readtext)
 
 <!--Device-File-static readText(options: FileReadTextOption): void--><!--Device-File-static readText(options: FileReadTextOption): void-End-->
 
@@ -1008,7 +999,6 @@ export default {
 
 ```
 
-<a id="rmdir"></a>
 ## rmdir
 
 ```TypeScript
@@ -1021,7 +1011,7 @@ Deletes a directory.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir-1)
+**Substitutes:** [fs:rmdir](arkts-corefile-file-file-depr-c.md#rmdir)
 
 <!--Device-File-static rmdir(options: FileRmdirOption): void--><!--Device-File-static rmdir(options: FileRmdirOption): void-End-->
 
@@ -1118,7 +1108,6 @@ export default {
 
 ```
 
-<a id="writearraybuffer"></a>
 ## writeArrayBuffer
 
 ```TypeScript
@@ -1131,7 +1120,7 @@ Writes buffer data into a file. Only text files can be read and written.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:write](arkts-corefile-file-fs-write-f.md#write-1)
+**Substitutes:** [fs:write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void--><!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void-End-->
 
@@ -1230,7 +1219,6 @@ export default {
 
 ```
 
-<a id="writetext"></a>
 ## writeText
 
 ```TypeScript
@@ -1243,7 +1231,7 @@ Writes text into a file. Only text files can be read and written.
 
 **Deprecated since:** 10
 
-**Substitutes:** [fs:write](arkts-corefile-file-fs-write-f.md#write-1)
+**Substitutes:** [fs:write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-File-static writeText(options: FileWriteTextOption): void--><!--Device-File-static writeText(options: FileWriteTextOption): void-End-->
 

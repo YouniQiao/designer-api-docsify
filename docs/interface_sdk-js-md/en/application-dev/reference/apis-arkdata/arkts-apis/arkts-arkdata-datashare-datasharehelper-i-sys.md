@@ -1,6 +1,6 @@
 # DataShareHelper (System API)
 
-Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper-1).
+Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper).
 
 **Since:** 9
 
@@ -16,7 +16,6 @@ Provides a **DataShareHelper** instance to access or manage data on the server. 
 import { dataShare } from '@kit.ArkData';
 ```
 
-<a id="addtemplate"></a>
 ## addTemplate
 
 ```TypeScript
@@ -77,7 +76,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="batchinsert"></a>
 ## batchInsert
 
 ```TypeScript
@@ -143,7 +141,6 @@ try {
 
 ```
 
-<a id="batchinsert-1"></a>
 ## batchInsert
 
 ```TypeScript
@@ -212,7 +209,6 @@ try {
 
 ```
 
-<a id="batchupdate"></a>
 ## batchUpdate
 
 ```TypeScript
@@ -313,7 +309,6 @@ try {
 
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -354,7 +349,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="deltemplate"></a>
 ## delTemplate
 
 ```TypeScript
@@ -414,7 +408,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -480,7 +473,6 @@ try {
 
 ```
 
-<a id="delete-1"></a>
 ## delete
 
 ```TypeScript
@@ -549,7 +541,6 @@ try {
 
 ```
 
-<a id="denormalizeuri"></a>
 ## denormalizeUri
 
 ```TypeScript
@@ -601,7 +592,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="denormalizeuri-1"></a>
 ## denormalizeUri
 
 ```TypeScript
@@ -656,7 +646,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="getpublisheddata"></a>
 ## getPublishedData
 
 ```TypeScript
@@ -707,7 +696,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="getpublisheddata-1"></a>
 ## getPublishedData
 
 ```TypeScript
@@ -758,7 +746,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="insert"></a>
 ## insert
 
 ```TypeScript
@@ -833,7 +820,6 @@ try {
 
 ```
 
-<a id="insert-1"></a>
 ## insert
 
 ```TypeScript
@@ -911,7 +897,6 @@ try {
 
 ```
 
-<a id="normalizeuri"></a>
 ## normalizeUri
 
 ```TypeScript
@@ -963,7 +948,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="normalizeuri-1"></a>
 ## normalizeUri
 
 ```TypeScript
@@ -1018,7 +1002,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="notifychange"></a>
 ## notifyChange
 
 ```TypeScript
@@ -1066,7 +1049,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="notifychange-1"></a>
 ## notifyChange
 
 ```TypeScript
@@ -1117,7 +1099,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="notifychange-2"></a>
 ## notifyChange
 
 ```TypeScript
@@ -1177,7 +1158,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="off"></a>
 ## off('dataChange')
 
 ```TypeScript
@@ -1226,7 +1206,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -1278,7 +1257,6 @@ if (dataShareHelper !== undefined) {
 
 ```
 
-<a id="off-2"></a>
 ## off('rdbDataChange')
 
 ```TypeScript
@@ -1296,17 +1274,7 @@ Unsubscribes from the changes of the data corresponding to the specified URI and
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-off(
-       type: 'rdbDataChange',
-       uris: Array<string>,
-       templateId: TemplateId,
-       callback?: AsyncCallback<RdbDataChangeNode>
-     ): Array<OperationResult>--><!--Device-DataShareHelper-off(
-       type: 'rdbDataChange',
-       uris: Array<string>,
-       templateId: TemplateId,
-       callback?: AsyncCallback<RdbDataChangeNode>
-     ): Array<OperationResult>-End-->
+<!--Device-DataShareHelper-off(       type: 'rdbDataChange',       uris: Array<string>,       templateId: TemplateId,       callback?: AsyncCallback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-off(       type: 'rdbDataChange',       uris: Array<string>,       templateId: TemplateId,       callback?: AsyncCallback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1346,7 +1314,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="off-3"></a>
 ## off('publishedDataChange')
 
 ```TypeScript
@@ -1364,17 +1331,7 @@ Unsubscribes from the change of the published data. Only silent access is suppor
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-off(
-       type: 'publishedDataChange',
-       uris: Array<string>,
-       subscriberId: string,
-       callback?: AsyncCallback<PublishedDataChangeNode>
-     ): Array<OperationResult>--><!--Device-DataShareHelper-off(
-       type: 'publishedDataChange',
-       uris: Array<string>,
-       subscriberId: string,
-       callback?: AsyncCallback<PublishedDataChangeNode>
-     ): Array<OperationResult>-End-->
+<!--Device-DataShareHelper-off(       type: 'publishedDataChange',       uris: Array<string>,       subscriberId: string,       callback?: AsyncCallback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-off(       type: 'publishedDataChange',       uris: Array<string>,       subscriberId: string,       callback?: AsyncCallback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1419,7 +1376,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="on"></a>
 ## on('dataChange')
 
 ```TypeScript
@@ -1428,7 +1384,7 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 
 Subscribes to the data change of the specified URI. After an observer is registered, the subscriber will receive a notification when the **notifyChange** API is called. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
 
-Notification triggering: In non-silent scenarios, a notification is published if the [notifyChange](arkts-arkdata-datashare-datasharehelper-i-sys.md#notifychange-1) method is called. In silent scenarios,a notification is automatically published if data is modified via silent access.
+Notification triggering: In non-silent scenarios, a notification is published if the [notifyChange](arkts-arkdata-datashare-datasharehelper-i-sys.md#notifychange) method is called. In silent scenarios,a notification is automatically published if data is modified via silent access.
 
 **Since:** 9
 
@@ -1469,7 +1425,6 @@ if (dataShareHelper !== undefined) {
 
 ```
 
-<a id="on-1"></a>
 ## on
 
 ```TypeScript
@@ -1478,7 +1433,7 @@ on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallb
 
 Subscribes to the data change of the specified URI. After a change notification is registered, the subscriber will receive a notification when the **notifyChange** API is called. The change notification contains the data change type, URI of the data changed, and the changed data. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
 
-Notification triggering: In non-silent scenarios, a notification is published if the [notifyChange](arkts-arkdata-datashare-datasharehelper-i-sys.md#notifychange-1) method is called. In silent scenarios, a notification is automatically published if data is modified via silent access, but **changeInfo** in the callback is invalid.
+Notification triggering: In non-silent scenarios, a notification is published if the [notifyChange](arkts-arkdata-datashare-datasharehelper-i-sys.md#notifychange) method is called. In silent scenarios, a notification is automatically published if data is modified via silent access, but **changeInfo** in the callback is invalid.
 
 **Since:** 12
 
@@ -1522,7 +1477,6 @@ if (dataShareHelper !== undefined) {
 
 ```
 
-<a id="on-2"></a>
 ## on('rdbDataChange')
 
 ```TypeScript
@@ -1540,17 +1494,7 @@ Subscribes to the changes of the data corresponding to the specified URI and tem
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-on(
-       type: 'rdbDataChange',
-       uris: Array<string>,
-       templateId: TemplateId,
-       callback: AsyncCallback<RdbDataChangeNode>
-     ): Array<OperationResult>--><!--Device-DataShareHelper-on(
-       type: 'rdbDataChange',
-       uris: Array<string>,
-       templateId: TemplateId,
-       callback: AsyncCallback<RdbDataChangeNode>
-     ): Array<OperationResult>-End-->
+<!--Device-DataShareHelper-on(       type: 'rdbDataChange',       uris: Array<string>,       templateId: TemplateId,       callback: AsyncCallback<RdbDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-on(       type: 'rdbDataChange',       uris: Array<string>,       templateId: TemplateId,       callback: AsyncCallback<RdbDataChangeNode>     ): Array<OperationResult>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1605,7 +1549,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="on-3"></a>
 ## on('publishedDataChange')
 
 ```TypeScript
@@ -1623,17 +1566,7 @@ Subscribes to the change of the published data. Only silent access is supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-on(
-       type: 'publishedDataChange',
-       uris: Array<string>,
-       subscriberId: string,
-       callback: AsyncCallback<PublishedDataChangeNode>
-     ): Array<OperationResult>--><!--Device-DataShareHelper-on(
-       type: 'publishedDataChange',
-       uris: Array<string>,
-       subscriberId: string,
-       callback: AsyncCallback<PublishedDataChangeNode>
-     ): Array<OperationResult>-End-->
+<!--Device-DataShareHelper-on(       type: 'publishedDataChange',       uris: Array<string>,       subscriberId: string,       callback: AsyncCallback<PublishedDataChangeNode>     ): Array<OperationResult>--><!--Device-DataShareHelper-on(       type: 'publishedDataChange',       uris: Array<string>,       subscriberId: string,       callback: AsyncCallback<PublishedDataChangeNode>     ): Array<OperationResult>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1688,7 +1621,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="publish"></a>
 ## publish
 
 ```TypeScript
@@ -1708,17 +1640,7 @@ In silent scenarios, the total size of the **data** and **bundleName** parameter
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-publish(
-       data: Array<PublishedItem>,
-       bundleName: string,
-       version: int,
-       callback: AsyncCallback<Array<OperationResult>>
-     ): void--><!--Device-DataShareHelper-publish(
-       data: Array<PublishedItem>,
-       bundleName: string,
-       version: int,
-       callback: AsyncCallback<Array<OperationResult>>
-     ): void-End-->
+<!--Device-DataShareHelper-publish(       data: Array<PublishedItem>,       bundleName: string,       version: int,       callback: AsyncCallback<Array<OperationResult>>     ): void--><!--Device-DataShareHelper-publish(       data: Array<PublishedItem>,       bundleName: string,       version: int,       callback: AsyncCallback<Array<OperationResult>>     ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1764,7 +1686,6 @@ try {
 
 ```
 
-<a id="publish-1"></a>
 ## publish
 
 ```TypeScript
@@ -1783,15 +1704,7 @@ In silent scenarios, the total size of the **data** and **bundleName** parameter
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-publish(
-       data: Array<PublishedItem>,
-       bundleName: string,
-       callback: AsyncCallback<Array<OperationResult>>
-     ): void--><!--Device-DataShareHelper-publish(
-       data: Array<PublishedItem>,
-       bundleName: string,
-       callback: AsyncCallback<Array<OperationResult>>
-     ): void-End-->
+<!--Device-DataShareHelper-publish(       data: Array<PublishedItem>,       bundleName: string,       callback: AsyncCallback<Array<OperationResult>>     ): void--><!--Device-DataShareHelper-publish(       data: Array<PublishedItem>,       bundleName: string,       callback: AsyncCallback<Array<OperationResult>>     ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1832,7 +1745,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="publish-2"></a>
 ## publish
 
 ```TypeScript
@@ -1889,7 +1801,6 @@ if (dataShareHelper != undefined) {
 
 ```
 
-<a id="query"></a>
 ## query
 
 ```TypeScript
@@ -1907,23 +1818,13 @@ In non-silent scenarios, the size of the **predicates** parameter and the total 
 
 In silent scenarios, the total size of the **uri**, **predicates**, and **columns** parameters passed in this API cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
 
-When this API is used to query database data, if the query content exceeds the resource limit, the operation fails and an error is returned. You can retry the operation based on the scenario. For details about the resource limit, see [Silent Access via DatamgrService](docroot://database/share-data-by-silent-access-sys.md#constraints)and [Sharing Data Using DataShareExtensionAbility](docroot://database/share-data-by-datashareextensionability-sys.md#constraints).
+When this API is used to query database data, if the query content exceeds the resource limit, the operation fails and an error is returned. You can retry the operation based on the scenario. For details about the resource limit, see [Silent Access via DatamgrService](../../../database/share-data-by-silent-access-sys.md#constraints)and [Sharing Data Using DataShareExtensionAbility](../../../database/share-data-by-datashareextensionability-sys.md#constraints).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-query(
-       uri: string,
-       predicates: dataSharePredicates.DataSharePredicates,
-       columns: Array<string>,
-       callback: AsyncCallback<DataShareResultSet>
-     ): void--><!--Device-DataShareHelper-query(
-       uri: string,
-       predicates: dataSharePredicates.DataSharePredicates,
-       columns: Array<string>,
-       callback: AsyncCallback<DataShareResultSet>
-     ): void-End-->
+<!--Device-DataShareHelper-query(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       columns: Array<string>,       callback: AsyncCallback<DataShareResultSet>     ): void--><!--Device-DataShareHelper-query(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       columns: Array<string>,       callback: AsyncCallback<DataShareResultSet>     ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -1974,7 +1875,6 @@ try {
 
 ```
 
-<a id="query-1"></a>
 ## query
 
 ```TypeScript
@@ -1991,21 +1891,13 @@ In non-silent scenarios, the size of the **predicates** parameter and the total 
 
 In silent scenarios, the total size of the **uri**, **predicates**, and **columns** parameters passed in this API cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
 
-When this API is used to query database data, if the query content exceeds the resource limit, the operation fails and an error is returned. You can retry the operation based on the scenario. For details about the resource limit, see [Silent Access via DatamgrService (ArkTS) (for System Applications Only)](docroot://database/share-data-by-silent-access-sys.md#constraints)and [Sharing Data Using DataShareExtensionAbility (ArkTS) (for System Applications Only)](docroot://database/share-data-by-datashareextensionability-sys.md#constraints).
+When this API is used to query database data, if the query content exceeds the resource limit, the operation fails and an error is returned. You can retry the operation based on the scenario. For details about the resource limit, see [Silent Access via DatamgrService (ArkTS) (for System Applications Only)](../../../database/share-data-by-silent-access-sys.md#constraints)and [Sharing Data Using DataShareExtensionAbility (ArkTS) (for System Applications Only)](../../../database/share-data-by-datashareextensionability-sys.md#constraints).
 
 **Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-query(
-       uri: string,
-       predicates: dataSharePredicates.DataSharePredicates,
-       columns: Array<string>
-     ): Promise<DataShareResultSet>--><!--Device-DataShareHelper-query(
-       uri: string,
-       predicates: dataSharePredicates.DataSharePredicates,
-       columns: Array<string>
-     ): Promise<DataShareResultSet>-End-->
+<!--Device-DataShareHelper-query(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       columns: Array<string>     ): Promise<DataShareResultSet>--><!--Device-DataShareHelper-query(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       columns: Array<string>     ): Promise<DataShareResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -2059,7 +1951,6 @@ try {
 
 ```
 
-<a id="update"></a>
 ## update
 
 ```TypeScript
@@ -2081,17 +1972,7 @@ In silent scenarios, the total size of the **uri**, **predicates**, and **value*
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataShareHelper-update(
-       uri: string,
-       predicates: dataSharePredicates.DataSharePredicates,
-       value: ValuesBucket,
-       callback: AsyncCallback<int>
-     ): void--><!--Device-DataShareHelper-update(
-       uri: string,
-       predicates: dataSharePredicates.DataSharePredicates,
-       value: ValuesBucket,
-       callback: AsyncCallback<int>
-     ): void-End-->
+<!--Device-DataShareHelper-update(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       value: ValuesBucket,       callback: AsyncCallback<int>     ): void--><!--Device-DataShareHelper-update(       uri: string,       predicates: dataSharePredicates.DataSharePredicates,       value: ValuesBucket,       callback: AsyncCallback<int>     ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -2152,7 +2033,6 @@ try {
 
 ```
 
-<a id="update-1"></a>
 ## update
 
 ```TypeScript

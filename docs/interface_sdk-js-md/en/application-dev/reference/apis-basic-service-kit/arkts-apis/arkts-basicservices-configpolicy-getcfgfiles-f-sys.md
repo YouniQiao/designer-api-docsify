@@ -6,7 +6,6 @@
 import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
-<a id="getcfgfiles"></a>
 ## getCfgFiles
 
 ```TypeScript
@@ -37,7 +36,6 @@ Obtains a list of all files with the specified names, in ascending order of prio
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 
-<a id="getcfgfiles-1"></a>
 ## getCfgFiles
 
 ```TypeScript
@@ -69,7 +67,6 @@ Obtains a list of all files of a specified file name based on the provided follo
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 
-<a id="getcfgfiles-2"></a>
 ## getCfgFiles
 
 ```TypeScript
@@ -102,7 +99,6 @@ Obtains a list of all files of a specified file name based on the provided follo
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 
-<a id="getcfgfiles-3"></a>
 ## getCfgFiles
 
 ```TypeScript
@@ -138,7 +134,6 @@ Obtains a list of all files with the specified names, in ascending order of prio
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 
-<a id="getcfgfiles-4"></a>
 ## getCfgFiles
 
 ```TypeScript

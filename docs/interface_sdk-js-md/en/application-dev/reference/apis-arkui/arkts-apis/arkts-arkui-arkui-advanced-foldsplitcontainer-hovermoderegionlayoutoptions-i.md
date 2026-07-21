@@ -1,7 +1,6 @@
 # HoverModeRegionLayoutOptions
 
 Layout information for the semi-folded state.
-
 > **NOTE**  
 >  
 > 1. In semi-folded state, the device contains an avoidance area, and layout calculations must account for  

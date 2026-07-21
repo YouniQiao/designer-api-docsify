@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="requestformwithparams"></a>
 ## requestFormWithParams
 
 ```TypeScript

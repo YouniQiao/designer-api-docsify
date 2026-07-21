@@ -14,7 +14,6 @@ Describes the text embedding functions of the multi-modal embedding model.Chines
 import { intelligence } from '@kit.ArkData';
 ```
 
-<a id="getembedding"></a>
 ## getEmbedding
 
 ```TypeScript
@@ -66,7 +65,6 @@ textEmbedding.getEmbedding(text)
 
 ```
 
-<a id="getembedding-1"></a>
 ## getEmbedding
 
 ```TypeScript
@@ -118,7 +116,6 @@ textEmbedding.getEmbedding(batchTexts)
 
 ```
 
-<a id="loadmodel"></a>
 ## loadModel
 
 ```TypeScript
@@ -161,7 +158,6 @@ textEmbedding.loadModel()
 
 ```
 
-<a id="releasemodel"></a>
 ## releaseModel
 
 ```TypeScript

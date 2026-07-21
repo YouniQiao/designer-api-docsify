@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="getkeyproperties"></a>
 ## getKeyProperties
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains key properties. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [getKeyItemProperties(](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties-1)
+**Substitutes:** [getKeyItemProperties(](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties)
 
 <!--Device-huks-function getKeyProperties(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function getKeyProperties(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -49,7 +48,6 @@ huks.getKeyProperties(keyAlias, emptyOptions, (err, data) => {
 ```
 
 
-<a id="getkeyproperties-1"></a>
 ## getKeyProperties
 
 ```TypeScript
@@ -62,7 +60,7 @@ Obtains key properties. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getKeyItemProperties(keyAlias:](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties-1)
+**Substitutes:** [getKeyItemProperties(keyAlias:](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties)
 
 <!--Device-huks-function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
 

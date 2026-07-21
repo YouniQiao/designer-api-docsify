@@ -6,13 +6,12 @@ Manages directories. Before calling a method of the **Dir** class, use the **ope
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-unnamed-declare interface Dir--><!--Device-unnamed-declare interface Dir-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -25,7 +24,7 @@ Closes a directory. This API uses a promise to return the result. After a direct
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-close(): Promise<void>--><!--Device-Dir-close(): Promise<void>-End-->
 
@@ -47,7 +46,6 @@ dir.close().then(() => {
 
 ```
 
-<a id="close-1"></a>
 ## close
 
 ```TypeScript
@@ -60,7 +58,7 @@ Closes a directory. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-close(callback: AsyncCallback<void>): void--><!--Device-Dir-close(callback: AsyncCallback<void>): void-End-->
 
@@ -82,7 +80,6 @@ dir.close((err: BusinessError) => {
 
 ```
 
-<a id="closesync"></a>
 ## closeSync
 
 ```TypeScript
@@ -95,7 +92,7 @@ Closes a directory. After a directory is closed, the file descriptor in **Dir** 
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-closeSync(): void--><!--Device-Dir-closeSync(): void-End-->
 
@@ -108,7 +105,6 @@ dir.closeSync();
 
 ```
 
-<a id="read"></a>
 ## read
 
 ```TypeScript
@@ -121,7 +117,7 @@ Reads the next directory entry. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-read(): Promise<Dirent>--><!--Device-Dir-read(): Promise<Dirent>-End-->
 
@@ -145,7 +141,6 @@ dir.read().then((dirent: fileio.Dirent) => {
 
 ```
 
-<a id="read-1"></a>
 ## read
 
 ```TypeScript
@@ -158,7 +153,7 @@ Reads the next directory entry. This API uses an asynchronous callback to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-read(callback: AsyncCallback<Dirent>): void--><!--Device-Dir-read(callback: AsyncCallback<Dirent>): void-End-->
 
@@ -183,7 +178,6 @@ dir.read((err: BusinessError, dirent: fileio.Dirent) => {
 
 ```
 
-<a id="readsync"></a>
 ## readSync
 
 ```TypeScript
@@ -196,7 +190,7 @@ Reads the next directory entry. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-Dir-readSync(): Dirent--><!--Device-Dir-readSync(): Dirent-End-->
 

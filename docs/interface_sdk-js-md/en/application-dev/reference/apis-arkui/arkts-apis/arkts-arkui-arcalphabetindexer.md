@@ -25,7 +25,7 @@ import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Defines the callback used in [onSelect](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#onselect-1). |
+| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Defines the callback used in [onSelect](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#onselect). |
 
 ### Constants
 

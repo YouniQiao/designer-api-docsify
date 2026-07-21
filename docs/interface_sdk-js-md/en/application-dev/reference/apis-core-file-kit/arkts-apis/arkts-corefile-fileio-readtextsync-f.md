@@ -1,6 +1,5 @@
 # readTextSync
 
-<a id="readtextsync"></a>
 ## readTextSync
 
 ```TypeScript
@@ -20,23 +19,9 @@ Reads the text content of a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:readTextSync](arkts-corefile-file-fs-readtextsync-f.md#readtextsync-1)
+**Substitutes:** [fs:readTextSync](arkts-corefile-fileio-readtextsync-f.md#readtextsync)
 
-<!--Device-unnamed-declare function readTextSync(
-  filePath: string,
-  options?: {
-    position?: number;
-    length?: number;
-    encoding?: string;
-  }
-): string--><!--Device-unnamed-declare function readTextSync(
-  filePath: string,
-  options?: {
-    position?: number;
-    length?: number;
-    encoding?: string;
-  }
-): string-End-->
+<!--Device-unnamed-declare function readTextSync(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): string--><!--Device-unnamed-declare function readTextSync(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

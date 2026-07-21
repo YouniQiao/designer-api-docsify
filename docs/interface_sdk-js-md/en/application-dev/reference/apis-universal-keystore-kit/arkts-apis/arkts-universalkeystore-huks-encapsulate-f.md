@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="encapsulate"></a>
 ## encapsulate
 
 ```TypeScript
@@ -20,9 +19,7 @@ Post-Quantum Cryptography key encapsulation operation, supporting key management
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-huks-function encapsulate(keyAlias: string, params: HuksParam[],
-      sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function encapsulate(keyAlias: string, params: HuksParam[],
-      sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>-End-->
+<!--Device-huks-function encapsulate(keyAlias: string, params: HuksParam[],      sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>--><!--Device-huks-function encapsulate(keyAlias: string, params: HuksParam[],      sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
 

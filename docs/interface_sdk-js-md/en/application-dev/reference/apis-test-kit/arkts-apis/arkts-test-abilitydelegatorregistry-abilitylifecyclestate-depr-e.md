@@ -6,7 +6,7 @@ Enumerates the ability lifecycle states.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md)
+**Substitutes:** [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md)
 
 <!--Device-abilityDelegatorRegistry-export enum AbilityLifecycleState--><!--Device-abilityDelegatorRegistry-export enum AbilityLifecycleState-End-->
 
@@ -24,7 +24,7 @@ The ability is in an invalid state.
 
 **Deprecated since:** 9
 
-**Substitutes:** [UNINITIALIZED](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#uninitialized)
+**Substitutes:** [UNINITIALIZED](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md#uninitialized)
 
 <!--Device-AbilityLifecycleState-UNINITIALIZED = 0--><!--Device-AbilityLifecycleState-UNINITIALIZED = 0-End-->
 
@@ -42,7 +42,7 @@ The ability is created.
 
 **Deprecated since:** 9
 
-**Substitutes:** [CREATE](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#create)
+**Substitutes:** [CREATE](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md#create)
 
 <!--Device-AbilityLifecycleState-CREATE = 1--><!--Device-AbilityLifecycleState-CREATE = 1-End-->
 
@@ -60,7 +60,7 @@ The ability is running in the foreground.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FOREGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#foreground)
+**Substitutes:** [FOREGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md#foreground)
 
 <!--Device-AbilityLifecycleState-FOREGROUND = 2--><!--Device-AbilityLifecycleState-FOREGROUND = 2-End-->
 
@@ -78,7 +78,7 @@ The ability is running in the background.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BACKGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#background)
+**Substitutes:** [BACKGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md#background)
 
 <!--Device-AbilityLifecycleState-BACKGROUND = 3--><!--Device-AbilityLifecycleState-BACKGROUND = 3-End-->
 
@@ -96,7 +96,7 @@ The ability is destroyed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DESTROY](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#destroy)
+**Substitutes:** [DESTROY](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md#destroy)
 
 <!--Device-AbilityLifecycleState-DESTROY = 4--><!--Device-AbilityLifecycleState-DESTROY = 4-End-->
 

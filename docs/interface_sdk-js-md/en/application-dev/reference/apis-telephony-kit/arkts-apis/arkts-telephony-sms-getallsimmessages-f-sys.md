@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="getallsimmessages"></a>
 ## getAllSimMessages
 
 ```TypeScript
@@ -58,7 +57,6 @@ sms.getAllSimMessages(slotId, (err: BusinessError, data: sms.SimShortMessage[]) 
 ```
 
 
-<a id="getallsimmessages-1"></a>
 ## getAllSimMessages
 
 ```TypeScript

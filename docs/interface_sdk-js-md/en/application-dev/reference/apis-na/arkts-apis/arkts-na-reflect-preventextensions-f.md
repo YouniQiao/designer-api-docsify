@@ -1,6 +1,5 @@
 # preventExtensions
 
-<a id="preventextensions"></a>
 ## preventExtensions
 
 ```TypeScript

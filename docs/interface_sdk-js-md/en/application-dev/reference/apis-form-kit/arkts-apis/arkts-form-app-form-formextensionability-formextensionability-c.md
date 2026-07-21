@@ -14,7 +14,6 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
-<a id="onacquireformstate"></a>
 ## onAcquireFormState
 
 ```TypeScript
@@ -60,7 +59,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ```
 
-<a id="onaddform"></a>
 ## onAddForm
 
 ```TypeScript
@@ -112,7 +110,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ```
 
-<a id="oncasttonormalform"></a>
 ## onCastToNormalForm
 
 ```TypeScript
@@ -151,7 +148,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ```
 
-<a id="onchangeformvisibility"></a>
 ## onChangeFormVisibility
 
 ```TypeScript
@@ -211,7 +207,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ```
 
-<a id="onconfigurationupdate"></a>
 ## onConfigurationUpdate
 
 ```TypeScript
@@ -252,7 +247,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ```
 
-<a id="onformevent"></a>
 ## onFormEvent
 
 ```TypeScript
@@ -291,7 +285,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ```
 
-<a id="onformlocationchanged"></a>
 ## onFormLocationChanged
 
 ```TypeScript
@@ -337,7 +330,6 @@ export default class EntryFormAbility extends FormExtensionAbility {
 
 ```
 
-<a id="onremoveform"></a>
 ## onRemoveForm
 
 ```TypeScript
@@ -375,7 +367,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ```
 
-<a id="onsizechanged"></a>
 ## onSizeChanged
 
 ```TypeScript
@@ -415,7 +406,6 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ```
 
-<a id="onstop"></a>
 ## onStop
 
 ```TypeScript
@@ -447,14 +437,13 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 
 ```
 
-<a id="onupdateform"></a>
 ## onUpdateForm
 
 ```TypeScript
 onUpdateForm(formId: string, wantParams?: Record<string, Object>): void
 ```
 
-Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call [updateForm](arkts-form-formprovider-updateform-f.md#updateform-1)of **formProvider** to update the widget data.
+Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call [updateForm](arkts-form-formprovider-updateform-f.md#updateform)of **formProvider** to update the widget data.
 
 **Since:** 9
 

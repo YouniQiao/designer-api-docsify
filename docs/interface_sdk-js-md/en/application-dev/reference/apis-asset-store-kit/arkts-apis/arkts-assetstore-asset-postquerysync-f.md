@@ -6,14 +6,13 @@
 import { asset } from '@kit.AssetStoreKit';
 ```
 
-<a id="postquerysync"></a>
 ## postQuerySync
 
 ```TypeScript
 function postQuerySync(handle: AssetMap): void
 ```
 
-Performs postprocessing for the asset query. This API is used when user authentication is required for the access to the asset. This API must be used with [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync-1) together.This API returns the result synchronously.
+Performs postprocessing for the asset query. This API is used when user authentication is required for the access to the asset. This API must be used with [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync) together.This API returns the result synchronously.
 
 **Since:** 12
 
@@ -27,7 +26,7 @@ Performs postprocessing for the asset query. This API is used when user authenti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync-1). |
+| handle | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Handle of the query operation, including the challenge value returned by [asset.preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync). |
 
 **Error codes:**
 

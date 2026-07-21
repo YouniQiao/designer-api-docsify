@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="getprivatedirty"></a>
 ## getPrivateDirty
 
 ```TypeScript
@@ -14,7 +13,6 @@ function getPrivateDirty() : bigint
 ```
 
 Obtains the size of the private dirty memory of a process. This API is implemented by reading the value of **Private_Dirty** in the **\/proc/{pid}/smaps_rollup** node.
-
 > **NOTE**  
 >  
 > Reading the **\/proc/{pid}/smaps_rollup** node is time-consuming. Therefore, you are advised not to use this API  

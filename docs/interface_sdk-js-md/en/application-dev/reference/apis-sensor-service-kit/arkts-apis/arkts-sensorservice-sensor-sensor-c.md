@@ -16,7 +16,6 @@
 import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
-<a id="getonbodystate"></a>
 ## getOnBodyState
 
 ```TypeScript
@@ -43,7 +42,6 @@ Obtains the wearing state of a wearable device.
 | --- | --- | --- | --- |
 | options | [GetOnBodyStateOptions](arkts-sensorservice-sensor-getonbodystateoptions-i.md) | Yes | Callback invoked when obtaining the wearing state of the device that houses the sensor. |
 
-<a id="subscribeaccelerometer"></a>
 ## subscribeAccelerometer
 
 ```TypeScript
@@ -51,7 +49,6 @@ static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 ```
 
 Subscribes to data changes of the acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -78,7 +75,6 @@ Subscribes to data changes of the acceleration sensor. If this API is called mul
 | --- | --- | --- | --- |
 | options | [subscribeAccelerometerOptions](arkts-sensorservice-sensor-subscribeaccelerometeroptions-i.md) | Yes | Type of data to return. |
 
-<a id="subscribebarometer"></a>
 ## subscribeBarometer
 
 ```TypeScript
@@ -86,7 +82,6 @@ static subscribeBarometer(options: SubscribeBarometerOptions): void
 ```
 
 Subscribes to data changes of the barometer sensor. If this API is called multiple times for the same application,the last call takes effect.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -111,7 +106,6 @@ Subscribes to data changes of the barometer sensor. If this API is called multip
 | --- | --- | --- | --- |
 | options | [SubscribeBarometerOptions](arkts-sensorservice-sensor-subscribebarometeroptions-i.md) | Yes | Type of data to return. |
 
-<a id="subscribecompass"></a>
 ## subscribeCompass
 
 ```TypeScript
@@ -119,7 +113,6 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 ```
 
 Subscribes to data changes of the compass sensor. If this API is called multiple times for the same application,the last call takes effect.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -144,7 +137,6 @@ Subscribes to data changes of the compass sensor. If this API is called multiple
 | --- | --- | --- | --- |
 | options | [SubscribeCompassOptions](arkts-sensorservice-sensor-subscribecompassoptions-i.md) | Yes | Type of data to return. |
 
-<a id="subscribedeviceorientation"></a>
 ## subscribeDeviceOrientation
 
 ```TypeScript
@@ -154,7 +146,6 @@ static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): v
 Subscribes to data changes of the device orientation sensor.
 
 If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -179,7 +170,6 @@ If this API is called multiple times for the same application, the last call tak
 | --- | --- | --- | --- |
 | options | [SubscribeDeviceOrientationOptions](arkts-sensorservice-sensor-subscribedeviceorientationoptions-i.md) | Yes | Type of data to return. |
 
-<a id="subscribegyroscope"></a>
 ## subscribeGyroscope
 
 ```TypeScript
@@ -189,7 +179,6 @@ static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 Subscribes to data changes of the gyroscope sensor.
 
 If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -216,7 +205,6 @@ If this API is called multiple times for the same application, the last call tak
 | --- | --- | --- | --- |
 | options | [SubscribeGyroscopeOptions](arkts-sensorservice-sensor-subscribegyroscopeoptions-i.md) | Yes | Type of data to return. |
 
-<a id="subscribeheartrate"></a>
 ## subscribeHeartRate
 
 ```TypeScript
@@ -224,7 +212,6 @@ static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 ```
 
 Subscribes to data changes of the heart rate sensor. If this API is called multiple times for the same application,the last call takes effect.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -251,7 +238,6 @@ Subscribes to data changes of the heart rate sensor. If this API is called multi
 | --- | --- | --- | --- |
 | options | [SubscribeHeartRateOptions](arkts-sensorservice-sensor-subscribeheartrateoptions-i.md) | Yes | Type of data to return. |
 
-<a id="subscribelight"></a>
 ## subscribeLight
 
 ```TypeScript
@@ -259,7 +245,6 @@ static subscribeLight(options: SubscribeLightOptions): void
 ```
 
 Subscribes to data changes of the ambient light sensor. If this API is called multiple times, the last call takes effect.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -284,7 +269,6 @@ Subscribes to data changes of the ambient light sensor. If this API is called mu
 | --- | --- | --- | --- |
 | options | [SubscribeLightOptions](arkts-sensorservice-sensor-subscribelightoptions-i.md) | Yes | Type of data to return. |
 
-<a id="subscribeonbodystate"></a>
 ## subscribeOnBodyState
 
 ```TypeScript
@@ -292,7 +276,6 @@ static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 ```
 
 Subscribes to wearing status changes of a wearable device. If this API is called multiple times for the same application, the last call takes effect.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -317,7 +300,6 @@ Subscribes to wearing status changes of a wearable device. If this API is called
 | --- | --- | --- | --- |
 | options | [SubscribeOnBodyStateOptions](arkts-sensorservice-sensor-subscribeonbodystateoptions-i.md) | Yes | Type of data to return. |
 
-<a id="subscribeproximity"></a>
 ## subscribeProximity
 
 ```TypeScript
@@ -325,7 +307,6 @@ static subscribeProximity(options: SubscribeProximityOptions): void
 ```
 
 Subscribes to data changes of the proximity sensor. If this API is called multiple times for the same application,the last call takes effect.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -350,7 +331,6 @@ Subscribes to data changes of the proximity sensor. If this API is called multip
 | --- | --- | --- | --- |
 | options | [SubscribeProximityOptions](arkts-sensorservice-sensor-subscribeproximityoptions-i.md) | Yes | Type of data to return. |
 
-<a id="subscribestepcounter"></a>
 ## subscribeStepCounter
 
 ```TypeScript
@@ -358,7 +338,6 @@ static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 ```
 
 Subscribes to data changes of the step counter sensor. If this API is called multiple times for the same application, the last call takes effect.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -385,7 +364,6 @@ Subscribes to data changes of the step counter sensor. If this API is called mul
 | --- | --- | --- | --- |
 | options | [SubscribeStepCounterOptions](arkts-sensorservice-sensor-subscribestepcounteroptions-i.md) | Yes | Type of data to return. |
 
-<a id="unsubscribeaccelerometer"></a>
 ## unsubscribeAccelerometer
 
 ```TypeScript
@@ -393,7 +371,6 @@ static unsubscribeAccelerometer(): void
 ```
 
 Unsubscribes from data changes of the acceleration sensor.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -414,7 +391,6 @@ Unsubscribes from data changes of the acceleration sensor.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-<a id="unsubscribebarometer"></a>
 ## unsubscribeBarometer
 
 ```TypeScript
@@ -422,7 +398,6 @@ static unsubscribeBarometer(): void
 ```
 
 Unsubscribes from data changes of the barometer sensor.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -441,7 +416,6 @@ Unsubscribes from data changes of the barometer sensor.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-<a id="unsubscribecompass"></a>
 ## unsubscribeCompass
 
 ```TypeScript
@@ -449,7 +423,6 @@ static unsubscribeCompass(): void
 ```
 
 Unsubscribes from data changes of the compass sensor.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -468,7 +441,6 @@ Unsubscribes from data changes of the compass sensor.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-<a id="unsubscribedeviceorientation"></a>
 ## unsubscribeDeviceOrientation
 
 ```TypeScript
@@ -476,7 +448,6 @@ static unsubscribeDeviceOrientation(): void
 ```
 
 Unsubscribes from data changes of the device orientation sensor.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -495,7 +466,6 @@ Unsubscribes from data changes of the device orientation sensor.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-<a id="unsubscribegyroscope"></a>
 ## unsubscribeGyroscope
 
 ```TypeScript
@@ -503,7 +473,6 @@ static unsubscribeGyroscope(): void
 ```
 
 Unsubscribes from data changes of the gyroscope sensor.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -524,7 +493,6 @@ Unsubscribes from data changes of the gyroscope sensor.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-<a id="unsubscribeheartrate"></a>
 ## unsubscribeHeartRate
 
 ```TypeScript
@@ -532,7 +500,6 @@ static unsubscribeHeartRate(): void
 ```
 
 Unsubscribes from data changes of the heart rate sensor.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -553,7 +520,6 @@ Unsubscribes from data changes of the heart rate sensor.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-<a id="unsubscribelight"></a>
 ## unsubscribeLight
 
 ```TypeScript
@@ -561,7 +527,6 @@ static unsubscribeLight(): void
 ```
 
 Unsubscribes from data changes of the ambient light sensor.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -580,7 +545,6 @@ Unsubscribes from data changes of the ambient light sensor.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-<a id="unsubscribeonbodystate"></a>
 ## unsubscribeOnBodyState
 
 ```TypeScript
@@ -588,7 +552,6 @@ static unsubscribeOnBodyState(): void
 ```
 
 Unsubscribes from wearing status changes of a wearable device.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -607,7 +570,6 @@ Unsubscribes from wearing status changes of a wearable device.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-<a id="unsubscribeproximity"></a>
 ## unsubscribeProximity
 
 ```TypeScript
@@ -615,7 +577,6 @@ static unsubscribeProximity(): void
 ```
 
 Unsubscribes from data changes of the proximity sensor.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  
@@ -634,7 +595,6 @@ Unsubscribes from data changes of the proximity sensor.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-<a id="unsubscribestepcounter"></a>
 ## unsubscribeStepCounter
 
 ```TypeScript
@@ -642,7 +602,6 @@ static unsubscribeStepCounter(): void
 ```
 
 Unsubscribes from data changes of the step counter sensor.
-
 > **NOTE**  
 >  
 > Except for lite wearables, You are advised to use  

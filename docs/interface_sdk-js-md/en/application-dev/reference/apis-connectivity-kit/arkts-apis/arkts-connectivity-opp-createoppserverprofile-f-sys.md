@@ -6,7 +6,6 @@
 import { opp } from '@kit.ConnectivityKit';
 ```
 
-<a id="createoppserverprofile"></a>
 ## createOppServerProfile
 
 ```TypeScript

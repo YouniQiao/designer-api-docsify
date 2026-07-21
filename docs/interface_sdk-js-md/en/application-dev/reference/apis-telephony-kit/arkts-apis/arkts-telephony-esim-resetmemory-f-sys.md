@@ -6,7 +6,6 @@
 import { eSIM } from '@kit.TelephonyKit';
 ```
 
-<a id="resetmemory"></a>
 ## resetMemory
 
 ```TypeScript

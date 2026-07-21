@@ -6,7 +6,6 @@
 import { media } from '@kit.MediaKit';
 ```
 
-<a id="createvideoplayer"></a>
 ## createVideoPlayer
 
 ```TypeScript
@@ -19,7 +18,7 @@ Creates a **VideoPlayer** instance. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAVPlayer(callback:](arkts-media-media-createavplayer-f.md#createavplayer-1)
+**Substitutes:** [createAVPlayer(callback:](arkts-media-media-createavplayer-f.md#createavplayer)
 
 <!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void--><!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void-End-->
 
@@ -49,7 +48,6 @@ media.createVideoPlayer((error: BusinessError, video: media.VideoPlayer) => {
 ```
 
 
-<a id="createvideoplayer-1"></a>
 ## createVideoPlayer
 
 ```TypeScript
@@ -62,7 +60,7 @@ Creates a VideoPlayer instance. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer-1)
+**Substitutes:** [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer)
 
 <!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>--><!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>-End-->
 

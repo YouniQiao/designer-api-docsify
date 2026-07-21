@@ -1,7 +1,6 @@
 # UIServiceExtensionAbility (System API)
 
 UIServiceExtensionAbility provides extended capabilities related to the floating window component. It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md). It is mainly used to provide services with UIs for third-party applications.
-
 > **NOTE**  
 >  
 > The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
@@ -22,14 +21,13 @@ UIServiceExtensionAbility provides extended capabilities related to the floating
 import { UIServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
-<a id="onconnect"></a>
 ## onConnect
 
 ```TypeScript
 onConnect(want: Want, proxy: UIServiceHostProxy): void
 ```
 
-Called when the connection to a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) is established. If the UIServiceExtensionAbility is started by calling [connectUIServiceExtensionAbility()](arkts-ability-uiextensioncontext-c.md#connectuiserviceextensionability-1), this callback will be invoked after [onCreate()](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#oncreate-1). This callback receives a [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) object for communication between the client and server.
+Called when the connection to a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) is established. If the UIServiceExtensionAbility is started by calling [connectUIServiceExtensionAbility()](arkts-ability-uiextensioncontext-c.md#connectuiserviceextensionability), this callback will be invoked after [onCreate()](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#oncreate). This callback receives a [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) object for communication between the client and server.
 
 **Since:** 14
 
@@ -61,7 +59,6 @@ class UIServiceExt extends UIServiceExtensionAbility {
 
 ```
 
-<a id="oncreate"></a>
 ## onCreate
 
 ```TypeScript
@@ -100,7 +97,6 @@ class UIServiceExt extends UIServiceExtensionAbility {
 
 ```
 
-<a id="ondata"></a>
 ## onData
 
 ```TypeScript
@@ -139,7 +135,6 @@ class ServiceExt extends UIServiceExtensionAbility {
 
 ```
 
-<a id="ondestroy"></a>
 ## onDestroy
 
 ```TypeScript
@@ -171,7 +166,6 @@ class ServiceExt extends UIServiceExtensionAbility {
 
 ```
 
-<a id="ondisconnect"></a>
 ## onDisconnect
 
 ```TypeScript
@@ -210,14 +204,13 @@ class UIServiceExt extends UIServiceExtensionAbility {
 
 ```
 
-<a id="onrequest"></a>
 ## onRequest
 
 ```TypeScript
 onRequest(want: Want, startId: number): void
 ```
 
-Called to request to start a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). If the UIServiceExtensionAbility is started by calling [startAbility](arkts-ability-uiabilitycontext-c.md#startability-1)or [startUIServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#startuiserviceextensionability-1), this callback will be invoked after [onCreate](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#oncreate-1). The value of **startId** is incremented for each UIServiceExtensionAbility that is started.
+Called to request to start a [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). If the UIServiceExtensionAbility is started by calling [startAbility](arkts-ability-uiabilitycontext-c.md#startability)or [startUIServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#startuiserviceextensionability), this callback will be invoked after [onCreate](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#oncreate). The value of **startId** is incremented for each UIServiceExtensionAbility that is started.
 
 **Since:** 14
 
@@ -249,7 +242,6 @@ class UIServiceExt extends UIServiceExtensionAbility {
 
 ```
 
-<a id="onwindowdidcreate"></a>
 ## onWindowDidCreate
 
 ```TypeScript
@@ -288,7 +280,6 @@ class ServiceExt extends UIServiceExtensionAbility {
 
 ```
 
-<a id="onwindowwillcreate"></a>
 ## onWindowWillCreate
 
 ```TypeScript

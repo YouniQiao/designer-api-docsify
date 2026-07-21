@@ -62,7 +62,7 @@ Unit: vp
 globalDisplayX: number
 ```
 
-X coordinate of the mouse position in the [global coordinate system](docroot://windowmanager/window-terminology.md#global-coordinate-system).
+X coordinate of the mouse position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp
 
@@ -84,7 +84,7 @@ Unit: vp
 globalDisplayY: number
 ```
 
-Y coordinate of the mouse position in the [global coordinate system](docroot://windowmanager/window-terminology.md#global-coordinate-system).
+Y coordinate of the mouse position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp
 

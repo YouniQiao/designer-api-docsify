@@ -6,7 +6,6 @@
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="sppwrite"></a>
 ## sppWrite
 
 ```TypeScript

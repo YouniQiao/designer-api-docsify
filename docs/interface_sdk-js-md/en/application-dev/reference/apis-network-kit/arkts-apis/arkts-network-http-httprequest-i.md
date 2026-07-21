@@ -14,7 +14,6 @@
 import { http } from '@kit.NetworkKit';
 ```
 
-<a id="destroy"></a>
 ## destroy
 
 ```TypeScript
@@ -49,7 +48,6 @@ httpRequest.destroy();
 
 ```
 
-<a id="enableautocookie"></a>
 ## enableAutoCookie
 
 ```TypeScript
@@ -124,7 +122,6 @@ httpRequest.request(url, {
 
 ```
 
-<a id="off"></a>
 ## off("headerReceive")
 
 ```TypeScript
@@ -137,7 +134,7 @@ Unregisters the observer for HTTP Response Header events.
 
 **Deprecated since:** 8
 
-**Substitutes:** [off_headersReceive](arkts-network-http-httprequest-i.md#off-2)
+**Substitutes:** [off_headersReceive](arkts-network-http-httprequest-i.md#off)
 
 <!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
 
@@ -168,7 +165,6 @@ httpRequest.off("headerReceive");
 
 ```
 
-<a id="off-1"></a>
 ## off("headersReceive")
 
 ```TypeScript
@@ -216,7 +212,6 @@ httpRequest.off("headersReceive");
 
 ```
 
-<a id="off-2"></a>
 ## off("dataReceive")
 
 ```TypeScript
@@ -264,7 +259,6 @@ httpRequest.off("dataReceive");
 
 ```
 
-<a id="off-3"></a>
 ## off("dataEnd")
 
 ```TypeScript
@@ -312,7 +306,6 @@ httpRequest.off("dataEnd");
 
 ```
 
-<a id="off-4"></a>
 ## off('dataReceiveProgress')
 
 ```TypeScript
@@ -360,7 +353,6 @@ httpRequest.off("dataReceiveProgress");
 
 ```
 
-<a id="off-5"></a>
 ## off('dataSendProgress')
 
 ```TypeScript
@@ -408,7 +400,6 @@ httpRequest.off("dataSendProgress");
 
 ```
 
-<a id="on"></a>
 ## on("headerReceive")
 
 ```TypeScript
@@ -421,7 +412,7 @@ Registers an observer for HTTP Response Header events.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on_headersReceive](arkts-network-http-httprequest-i.md#on-2)
+**Substitutes:** [on_headersReceive](arkts-network-http-httprequest-i.md#on)
 
 <!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
 
@@ -458,7 +449,6 @@ httpRequest.on("headerReceive", (data: BusinessError) => {
 
 ```
 
-<a id="on-1"></a>
 ## on("headersReceive")
 
 ```TypeScript
@@ -506,7 +496,6 @@ httpRequest.off("headersReceive");
 
 ```
 
-<a id="on-2"></a>
 ## on("dataReceive")
 
 ```TypeScript
@@ -554,7 +543,6 @@ httpRequest.off("dataReceive");
 
 ```
 
-<a id="on-3"></a>
 ## on("dataEnd")
 
 ```TypeScript
@@ -602,7 +590,6 @@ httpRequest.off("dataEnd");
 
 ```
 
-<a id="on-4"></a>
 ## on('dataReceiveProgress')
 
 ```TypeScript
@@ -650,7 +637,6 @@ httpRequest.off("dataReceiveProgress");
 
 ```
 
-<a id="on-5"></a>
 ## on('dataSendProgress')
 
 ```TypeScript
@@ -698,7 +684,6 @@ httpRequest.off("dataSendProgress");
 
 ```
 
-<a id="once"></a>
 ## once("headersReceive")
 
 ```TypeScript
@@ -744,7 +729,6 @@ httpRequest.once("headersReceive", (header: Object) => {
 
 ```
 
-<a id="request"></a>
 ## request
 
 ```TypeScript
@@ -752,18 +736,15 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 ```
 
 Initiates an HTTP request to a given URL. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set  
 > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call  
-> [requestInStream](arkts-network-http-httprequest-i.md#requestinstream-1) to  
+> [requestInStream](arkts-network-http-httprequest-i.md#requestinstream) to  
 > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions  
 > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold  
 > will fail to be received.
-
 > (2) If you need to pass in cookies, add them to the **options** parameter.
-
 > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an  
 > HTTP request.
 
@@ -861,7 +842,6 @@ httpRequest.request("EXAMPLE_URL", (err: Error, data: http.HttpResponse) => {
 
 ```
 
-<a id="request-1"></a>
 ## request
 
 ```TypeScript
@@ -869,18 +849,15 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 ```
 
 Initiates an HTTP request containing specified options to a given URL. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set  
 > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call  
-> [requestInStream](arkts-network-http-httprequest-i.md#requestinstream-1) to  
+> [requestInStream](arkts-network-http-httprequest-i.md#requestinstream) to  
 > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions  
 > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold  
 > will fail to be received.
-
 > (2) If you need to pass in cookies, add them to the **options** parameter.
-
 > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an  
 > HTTP request.
 
@@ -1029,7 +1006,6 @@ httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse
 
 ```
 
-<a id="request-2"></a>
 ## request
 
 ```TypeScript
@@ -1037,18 +1013,15 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 ```
 
 Initiates an HTTP request containing specified options to a given URL. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set  
 > **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call  
-> [requestInStream](arkts-network-http-httprequest-i.md#requestinstream-1) to  
+> [requestInStream](arkts-network-http-httprequest-i.md#requestinstream) to  
 > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions  
 > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold  
 > will fail to be received.
-
 > (2) If you need to pass in cookies, add them to the **options** parameter.
-
 > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an  
 > HTTP request.
 
@@ -1180,7 +1153,6 @@ promise.then((data:http.HttpResponse) => {
 
 ```
 
-<a id="requestinstream"></a>
 ## requestInStream
 
 ```TypeScript
@@ -1277,7 +1249,6 @@ httpRequest.requestInStream("EXAMPLE_URL", (err: BusinessError, data: number) =>
 
 ```
 
-<a id="requestinstream-1"></a>
 ## requestInStream
 
 ```TypeScript
@@ -1419,7 +1390,6 @@ httpRequest.requestInStream("EXAMPLE_URL", options, (err: BusinessError<void> , 
 
 ```
 
-<a id="requestinstream-2"></a>
 ## requestInStream
 
 ```TypeScript
@@ -1544,7 +1514,6 @@ promise.then((data: number) => {
 
 ```
 
-<a id="requestsync"></a>
 ## requestSync
 
 ```TypeScript
@@ -1552,17 +1521,13 @@ requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 ```
 
 Initiates an HTTP network request based on the URL and related configuration options (optional). This API returns the response synchronously.
-
 > **NOTE**  
 >  
 > (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit**  
 > parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md).
-
 > (2) If you need to pass in cookies, add them to the **options** parameter.
-
 > (3) If the URL contains non-English characters, call **encodeURL(url)** to encode the URL before initiating an  
 > HTTP request.
-
 > (4) This API is synchronous and blocks the current thread until an HTTP response or error code is returned.
 
 **Required permission**: ohos.permission.INTERNET

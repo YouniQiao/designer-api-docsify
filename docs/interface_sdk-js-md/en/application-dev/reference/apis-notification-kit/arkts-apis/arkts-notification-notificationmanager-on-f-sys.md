@@ -6,7 +6,6 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="on"></a>
 ## on('checkNotification')
 
 ```TypeScript
@@ -68,7 +67,6 @@ try{
 ```
 
 
-<a id="on-1"></a>
 ## on('checkNotification')
 
 ```TypeScript
@@ -86,9 +84,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 
-<!--Device-notificationManager-function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
-    callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void--><!--Device-notificationManager-function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,
-    callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void-End-->
+<!--Device-notificationManager-function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,    callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void--><!--Device-notificationManager-function on(type: 'checkNotification', checkRequest: NotificationCheckRequest,    callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

@@ -6,7 +6,6 @@
 import { settings } from '@kit.BasicServicesKit';
 ```
 
-<a id="getvaluesync"></a>
 ## getValueSync
 
 ```TypeScript
@@ -54,7 +53,6 @@ let value:string = settings.getValueSync(helper, settings.display.SCREEN_BRIGHTN
 ```
 
 
-<a id="getvaluesync-1"></a>
 ## getValueSync
 
 ```TypeScript
@@ -99,7 +97,6 @@ let value = settings.getValueSync(context, settings.display.SCREEN_BRIGHTNESS_ST
 ```
 
 
-<a id="getvaluesync-2"></a>
 ## getValueSync
 
 ```TypeScript

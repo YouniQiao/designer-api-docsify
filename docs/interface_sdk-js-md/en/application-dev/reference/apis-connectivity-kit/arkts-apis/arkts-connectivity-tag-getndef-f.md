@@ -6,7 +6,6 @@
 import { tag } from '@kit.ConnectivityKit';
 ```
 
-<a id="getndef"></a>
 ## getNdef
 
 ```TypeScript

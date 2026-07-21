@@ -6,7 +6,6 @@
 import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
-<a id="isdevicebound"></a>
 ## isDeviceBound
 
 ```TypeScript

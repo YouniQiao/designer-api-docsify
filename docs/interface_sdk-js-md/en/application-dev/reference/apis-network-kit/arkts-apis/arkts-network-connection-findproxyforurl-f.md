@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="findproxyforurl"></a>
 ## findProxyForUrl
 
 ```TypeScript

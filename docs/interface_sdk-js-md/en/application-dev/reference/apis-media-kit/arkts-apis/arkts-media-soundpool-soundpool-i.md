@@ -1,7 +1,6 @@
 # SoundPool
 
-Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds,setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](docroot://reference/apis-media-kit/arkts-apis-media-f.md)to create a SoundPool instance.
-
+Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds,setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md)to create a SoundPool instance.
 > **NOTE**  
 >  
 > - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain  
@@ -22,7 +21,7 @@ Implements a sound pool that provides APIs for loading, unloading, playing, and 
 > - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or  
 > skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using  
 > SoundPool, see  
-> [Using SoundPool to Play Short Sounds (ArkTS)](docroot://media/media/using-soundpool-for-playback.md).
+> [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
 
 **Since:** 10
 
@@ -30,7 +29,6 @@ Implements a sound pool that provides APIs for loading, unloading, playing, and 
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
-<a id="load"></a>
 ## load
 
 ```TypeScript
@@ -41,8 +39,7 @@ Loads a sound. This API uses an asynchronous callback to return the result.
 
 This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.
 
-This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](arkts-media-soundpool-soundpool-i.md#load-1)or [load(fd: number, offset: number, length: number): Promise\<number>](arkts-media-soundpool-soundpool-i.md#load-1).
-
+This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](arkts-media-soundpool-soundpool-i.md#load)or [load(fd: number, offset: number, length: number): Promise\<number>](arkts-media-soundpool-soundpool-i.md#load).
 > **NOTE**  
 >  
 > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to  
@@ -73,7 +70,6 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="load-1"></a>
 ## load
 
 ```TypeScript
@@ -84,8 +80,7 @@ Loads a sound. This API uses a promise to return the result.
 
 This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**,which is generated based on the file descriptor (FD) obtained.
 
-This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](arkts-media-soundpool-soundpool-i.md#load-1)or [load(fd: number, offset: number, length: number): Promise\<number>](arkts-media-soundpool-soundpool-i.md#load-1).
-
+This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](arkts-media-soundpool-soundpool-i.md#load)or [load(fd: number, offset: number, length: number): Promise\<number>](arkts-media-soundpool-soundpool-i.md#load).
 > **NOTE**  
 >  
 > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to  
@@ -121,7 +116,6 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-<a id="load-2"></a>
 ## load
 
 ```TypeScript
@@ -131,7 +125,6 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 Loads a sound. This API uses an asynchronous callback to return the result.
 
 This API uses an asynchronous callback to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
-
 > **NOTE**  
 >  
 > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to  
@@ -151,7 +144,7 @@ This API uses an asynchronous callback to obtain the resource ID. For the input 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | Resource handle, which is obtained by calling [resourceManager.getRawFd](docroot://reference/apis-localization-kit/js-apis-resource-manager.md). |
+| fd | number | Yes | Resource handle, which is obtained by calling [resourceManager.getRawFd](../../../reference/apis-localization-kit/js-apis-resource-manager.md). |
 | offset | number | Yes | Resource offset, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
 | length | number | Yes | Resource length, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
@@ -164,7 +157,6 @@ This API uses an asynchronous callback to obtain the resource ID. For the input 
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="load-3"></a>
 ## load
 
 ```TypeScript
@@ -174,7 +166,6 @@ load(fd: number, offset: number, length: number): Promise<number>
 Loads a sound. This API uses a promise to return the result.
 
 This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
-
 > **NOTE**  
 >  
 > - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to  
@@ -194,7 +185,7 @@ This API uses a promise to obtain the resource ID. For the input parameter, reso
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | Resource handle, which is obtained by calling [resourceManager.getRawFd](docroot://reference/apis-localization-kit/js-apis-resource-manager.md) |
+| fd | number | Yes | Resource handle, which is obtained by calling [resourceManager.getRawFd](../../../reference/apis-localization-kit/js-apis-resource-manager.md) |
 | offset | number | Yes | Resource offset, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
 | length | number | Yes | Resource length, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
 
@@ -212,7 +203,6 @@ This API uses a promise to obtain the resource ID. For the input parameter, reso
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -233,7 +223,6 @@ Unsubscribes from events indicating that a sound finishes loading.
 | --- | --- | --- | --- |
 | type | 'loadComplete' | Yes | Event type. The value is fixed at **'loadComplete'**. |
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -254,7 +243,6 @@ Unsubscribes from events indicating that a sound finishes playing.
 | --- | --- | --- | --- |
 | type | 'playFinishedWithStreamId' | Yes | Event type. The value is fixed at **'playFinishedWithStreamId'**. |
 
-<a id="off-2"></a>
 ## off
 
 ```TypeScript
@@ -275,7 +263,6 @@ Unsubscribes from events indicating that a sound finishes playing.
 | --- | --- | --- | --- |
 | type | 'playFinished' | Yes | Event type. The value is fixed at **'playFinished'**. |
 
-<a id="off-3"></a>
 ## off
 
 ```TypeScript
@@ -296,7 +283,6 @@ Unsubscribes from error events of a SoundPool instance.
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case. |
 
-<a id="off-4"></a>
 ## off('errorOccurred')
 
 ```TypeScript
@@ -318,7 +304,6 @@ Unsubscribes from error events of a SoundPool instance.
 | type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;ErrorInfo&gt; | No | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) if an error occurs during the use of the player. If the callback is not set, no related information is provided. |
 
-<a id="on"></a>
 ## on('loadComplete')
 
 ```TypeScript
@@ -340,7 +325,6 @@ Subscribes to events indicating that a sound finishes loading. This API uses an 
 | type | 'loadComplete' | Yes | Event type, which is **'loadComplete'** in this case. This event is triggered when a sound is loaded. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | Callback used to return the ID of the resource that has been loaded. |
 
-<a id="on-1"></a>
 ## on('playFinishedWithStreamId')
 
 ```TypeScript
@@ -366,7 +350,6 @@ When both [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', ca
 | type | 'playFinishedWithStreamId' | Yes | Event type, which is **'playFinishedWithStreamId'** in this case. This event is triggered when an audio stream finishes playing, and the stream ID is returned. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | Callback used to return the stream ID of the audio that has finished playing. |
 
-<a id="on-2"></a>
 ## on('playFinished')
 
 ```TypeScript
@@ -388,14 +371,13 @@ Subscribes to events indicating that a sound finishes playing. This API uses an 
 | type | 'playFinished' | Yes | Event type, which is **'playFinished'** in this case. This event is triggered when a sound finishes playing. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-<a id="on-3"></a>
 ## on('error')
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to error events of a [SoundPool](docroot://reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance. This event is used only for error prompt. This API uses an asynchronous callback to return the result.
+Subscribes to error events of a [SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance. This event is used only for error prompt. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -410,14 +392,13 @@ Subscribes to error events of a [SoundPool](docroot://reference/apis-media-kit/j
 | type | 'error' | Yes | Event type, which is **'error'** in this case. This event can be triggered by both user operations and the system. |
 | callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return the error code ID and error message. |
 
-<a id="on-4"></a>
 ## on('errorOccurred')
 
 ```TypeScript
 on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 ```
 
-Subscribes to error events of a [SoundPool](docroot://reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) that contains the error code, error stage, resource ID, and audio stream ID.This API uses an asynchronous callback to return the result.
+Subscribes to error events of a [SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) that contains the error code, error stage, resource ID, and audio stream ID.This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -432,7 +413,6 @@ Subscribes to error events of a [SoundPool](docroot://reference/apis-media-kit/j
 | type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. This event can be triggered by both user operations and the system. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;ErrorInfo&gt; | Yes | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md). |
 
-<a id="play"></a>
 ## play
 
 ```TypeScript
@@ -463,7 +443,6 @@ Plays a sound and obtains the stream ID. This API uses an asynchronous callback 
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="play-1"></a>
 ## play
 
 ```TypeScript
@@ -493,7 +472,6 @@ Plays a sound using default parameters and obtains the stream ID. This API uses 
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="play-2"></a>
 ## play
 
 ```TypeScript
@@ -529,7 +507,6 @@ Plays a sound and obtains the stream ID. This API uses a promise to return the r
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -556,7 +533,6 @@ Releases a **SoundPool** instance. This API uses an asynchronous callback to ret
 | --- | --- |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript
@@ -583,14 +559,13 @@ Releases a **SoundPool** instance. This API uses a promise to return the result.
 | --- | --- |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-<a id="setinterruptmode"></a>
 ## setInterruptMode
 
 ```TypeScript
 setInterruptMode(interruptMode: media.SoundInterruptMode): void
 ```
 
-Sets the interruption mode of the audio files with the same ID during playback. After the **SoundPool** is created,this API is valid only when the **Play** function of the **SoundPool** is called for the first time. You can set the interruption mode for multiple times. If the interruption mode is not set, the [SAME_SOUND_INTERRUPT](docroot://reference/apis-media-kit/arkts-apis-media-e.md) mode is used by default. That is, if the former audio file is not completely played, the latter audio file with the same ID interrupts the former audio file.
+Sets the interruption mode of the audio files with the same ID during playback. After the **SoundPool** is created,this API is valid only when the **Play** function of the **SoundPool** is called for the first time. You can set the interruption mode for multiple times. If the interruption mode is not set, the [SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-apis-media-e.md) mode is used by default. That is, if the former audio file is not completely played, the latter audio file with the same ID interrupts the former audio file.
 
 **Since:** 23
 
@@ -606,7 +581,6 @@ Sets the interruption mode of the audio files with the same ID during playback. 
 | --- | --- | --- | --- |
 | interruptMode | media.SoundInterruptMode | Yes | Interruption mode of the audio files with the same ID during playback, which is obtained through the **media.SoundInterruptMode** enum. |
 
-<a id="setloop"></a>
 ## setLoop
 
 ```TypeScript
@@ -637,7 +611,6 @@ Sets the loop mode. This API uses an asynchronous callback to return the result.
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="setloop-1"></a>
 ## setLoop
 
 ```TypeScript
@@ -673,7 +646,6 @@ Sets the loop mode. This API uses a promise to return the result.
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-<a id="setpriority"></a>
 ## setPriority
 
 ```TypeScript
@@ -704,7 +676,6 @@ Sets the priority for an audio stream. This API uses an asynchronous callback to
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="setpriority-1"></a>
 ## setPriority
 
 ```TypeScript
@@ -740,7 +711,6 @@ Sets the priority for an audio stream. This API uses a promise to return the res
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-<a id="setrate"></a>
 ## setRate
 
 ```TypeScript
@@ -771,7 +741,6 @@ Sets the playback rate for an audio stream. This API uses an asynchronous callba
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="setrate-1"></a>
 ## setRate
 
 ```TypeScript
@@ -807,7 +776,6 @@ Sets the playback rate for an audio stream. This API uses a promise to return th
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-<a id="setvolume"></a>
 ## setVolume
 
 ```TypeScript
@@ -839,7 +807,6 @@ Sets the volume for an audio stream. This API uses an asynchronous callback to r
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="setvolume-1"></a>
 ## setVolume
 
 ```TypeScript
@@ -876,7 +843,6 @@ Sets the volume for an audio stream. This API uses a promise to return the resul
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -906,7 +872,6 @@ Stops audio playback. This API uses an asynchronous callback to return the resul
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="stop-1"></a>
 ## stop
 
 ```TypeScript
@@ -941,7 +906,6 @@ Stops audio playback. This API uses a promise to return the result.
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
-<a id="unload"></a>
 ## unload
 
 ```TypeScript
@@ -971,7 +935,6 @@ Unloads a sound. This API uses an asynchronous callback to return the result.
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
-<a id="unload-1"></a>
 ## unload
 
 ```TypeScript

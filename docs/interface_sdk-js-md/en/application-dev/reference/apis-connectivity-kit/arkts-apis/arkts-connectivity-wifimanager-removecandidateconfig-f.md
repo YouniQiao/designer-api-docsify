@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="removecandidateconfig"></a>
 ## removeCandidateConfig
 
 ```TypeScript
@@ -66,7 +65,6 @@ Remove a specified candidate hotspot configuration, only the configuration which
 ```
 
 
-<a id="removecandidateconfig-1"></a>
 ## removeCandidateConfig
 
 ```TypeScript

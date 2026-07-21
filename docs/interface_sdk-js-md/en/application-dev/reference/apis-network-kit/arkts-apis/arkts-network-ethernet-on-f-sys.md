@@ -6,7 +6,6 @@
 import { ethernet } from '@kit.NetworkKit';
 ```
 
-<a id="on"></a>
 ## on('interfaceStateChange')
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # getSlotNumByBundle (System API)
 
-<a id="getslotnumbybundle"></a>
 ## getSlotNumByBundle
 
 ```TypeScript
@@ -31,7 +30,6 @@ Obtains the number of notification slots of a specified application.This API use
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
 
 
-<a id="getslotnumbybundle-1"></a>
 ## getSlotNumByBundle
 
 ```TypeScript

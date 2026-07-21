@@ -3,12 +3,11 @@
 The **OffscreenCanvas** component is used to draw custom graphics.
 
 When the [Canvas](Canvas)component or **CanvasRenderingContext2D** object is used, rendering, animation,and user interaction usually occur on the main thread of the application.Calculations related to canvas animation and rendering may affect application performance. **OffscreenCanvas** allows for rendering off the screen. This means that some tasks can be run in a separate thread to reduce the load on the main thread.
-
 > **NOTE**  
 >  
 > **OffscreenCanvas** cannot be used in ServiceExtensionAbility. It is recommended  
 > that you use the  
-> [drawing module](docroot://reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)  
+> [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)  
 > for offscreen drawing in ServiceExtensionAbility.
 
 **Since:** 8
@@ -17,7 +16,6 @@ When the [Canvas](Canvas)component or **CanvasRenderingContext2D** object is use
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -43,7 +41,6 @@ Constructs an OffscreenCanvas for creating an offscreen canvas object.
 | width | number | Yes | Width of the offscreen canvas.<br>**NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
 | height | number | Yes | Height of the offscreen canvas.<br>**NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -72,7 +69,6 @@ Constructs an **OffscreenCanvas** object for creating an offscreen canvas object
 | height | number | Yes | Height of the offscreen canvas.<br>**NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
 | unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the OffscreenCanvas object.The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).<br>Invalid values **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT**. |
 
-<a id="getcontext"></a>
 ## getContext
 
 ```TypeScript
@@ -104,7 +100,6 @@ Obtains the drawing context of the offscreen canvas.
 | --- | --- |
 | [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) | Drawing context of the offscreen canvas.If the input parameter contextType of the **getContext** method is not **"2d"**(including null or undefined), **undefined** will be returned. Before using the method,check whether the return value is **undefined**. |
 
-<a id="transfertoimagebitmap"></a>
 ## transferToImageBitmap
 
 ```TypeScript

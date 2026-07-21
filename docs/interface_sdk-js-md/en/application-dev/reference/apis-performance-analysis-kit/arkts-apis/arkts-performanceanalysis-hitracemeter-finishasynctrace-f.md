@@ -6,7 +6,6 @@
 import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="finishasynctrace"></a>
 ## finishAsyncTrace
 
 ```TypeScript
@@ -15,7 +14,7 @@ function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: numbe
 
 Stops an asynchronous trace with the trace output level specified.
 
-The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace-1).
+The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace).
 
 **Since:** 19
 

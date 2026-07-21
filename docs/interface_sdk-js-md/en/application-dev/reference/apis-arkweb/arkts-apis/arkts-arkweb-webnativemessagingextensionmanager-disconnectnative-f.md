@@ -6,7 +6,6 @@
 import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 ```
 
-<a id="disconnectnative"></a>
 ## disconnectNative
 
 ```TypeScript

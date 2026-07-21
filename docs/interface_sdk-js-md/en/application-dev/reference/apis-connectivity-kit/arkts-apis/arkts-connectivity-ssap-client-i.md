@@ -14,7 +14,6 @@ Manages SSAP client. Before calling a SSAP client method,you must use {@link cre
 import { ssap } from '@kit.ConnectivityKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -41,7 +40,6 @@ Closes the client.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -74,7 +72,6 @@ Connects to the server.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -107,7 +104,6 @@ Disconnects from or stops an ongoing connection to a server.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="getservices"></a>
 ## getServices
 
 ```TypeScript
@@ -140,7 +136,6 @@ Starts discovering all services on server.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="offconnectionstatechange"></a>
 ## offConnectionStateChange
 
 ```TypeScript
@@ -163,7 +158,6 @@ Unsubscribes from client connection state changed events.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionChangeState&gt; | No | Callback used to listen for the SSAP connection state changed event. |
 
-<a id="offmtuchange"></a>
 ## offMtuChange
 
 ```TypeScript
@@ -186,7 +180,6 @@ Unsubscribes from MTU changed events.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback used to listen for the MTU changed event. |
 
-<a id="offpropertychange"></a>
 ## offPropertyChange
 
 ```TypeScript
@@ -209,7 +202,6 @@ Unsubscribe property value changed event.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Property&gt; | No | Callback used to listen for the property value changed event. |
 
-<a id="onconnectionstatechange"></a>
 ## onConnectionStateChange
 
 ```TypeScript
@@ -234,7 +226,6 @@ This event is accessible only to applications that granted the ohos.permission.N
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionChangeState&gt; | Yes | Callback used to listen for the SSAP connection state changed event. |
 
-<a id="onmtuchange"></a>
 ## onMtuChange
 
 ```TypeScript
@@ -259,7 +250,6 @@ This event is accessible only to applications that granted the ohos.permission.N
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to listen for the MTU changed event. |
 
-<a id="onpropertychange"></a>
 ## onPropertyChange
 
 ```TypeScript
@@ -284,7 +274,6 @@ This event is accessible only to applications that granted the ohos.permission.N
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Property&gt; | Yes | Callback used to listen for the property value changed event. |
 
-<a id="readproperty"></a>
 ## readProperty
 
 ```TypeScript
@@ -325,7 +314,6 @@ Reads the property of a server.
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
 
-<a id="requestmtusize"></a>
 ## requestMtuSize
 
 ```TypeScript
@@ -364,7 +352,6 @@ Negotiate the MTU size with server.The negotiation result needs to be obtained b
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 
-<a id="setpropertynotification"></a>
 ## setPropertyNotification
 
 ```TypeScript
@@ -406,7 +393,6 @@ Enables or disables notification of a property when value changed.
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100099 | Operation failed. |
 
-<a id="writeproperty"></a>
 ## writeProperty
 
 ```TypeScript

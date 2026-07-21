@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="isnetworkinterfacedisabled"></a>
 ## isNetworkInterfaceDisabled
 
 ```TypeScript
@@ -19,7 +18,7 @@ Queries whether a specified network interface is disabled. This API uses an asyn
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-isnetworkinterfacedisabledsync-f.md#isnetworkinterfacedisabledsync-1)
+**Substitutes:** [isNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-isnetworkinterfacedisabledsync-f.md#isnetworkinterfacedisabledsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -73,7 +72,6 @@ networkManager.isNetworkInterfaceDisabled(wantTemp, 'eth0', (err, result) => {
 ```
 
 
-<a id="isnetworkinterfacedisabled-1"></a>
 ## isNetworkInterfaceDisabled
 
 ```TypeScript
@@ -86,7 +84,7 @@ Queries whether a specified network interface is disabled. This API uses a promi
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [isNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-isnetworkinterfacedisabledsync-f.md#isnetworkinterfacedisabledsync-1)
+**Substitutes:** [isNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-isnetworkinterfacedisabledsync-f.md#isnetworkinterfacedisabledsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 

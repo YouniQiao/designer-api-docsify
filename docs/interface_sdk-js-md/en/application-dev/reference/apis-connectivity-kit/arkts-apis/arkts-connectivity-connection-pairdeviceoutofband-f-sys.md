@@ -6,7 +6,6 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
-<a id="pairdeviceoutofband"></a>
 ## pairDeviceOutOfBand
 
 ```TypeScript
@@ -22,9 +21,7 @@ Starts pairing with a remote Bluetooth device using the Out Of Band mechanism.Th
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-connection-function pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | null,
-    p256Data: OobData | null): Promise<void>--><!--Device-connection-function pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | null,
-    p256Data: OobData | null): Promise<void>-End-->
+<!--Device-connection-function pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | null,    p256Data: OobData | null): Promise<void>--><!--Device-connection-function pairDeviceOutOfBand(transport: BluetoothTransport, p192Data: OobData | null,    p256Data: OobData | null): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

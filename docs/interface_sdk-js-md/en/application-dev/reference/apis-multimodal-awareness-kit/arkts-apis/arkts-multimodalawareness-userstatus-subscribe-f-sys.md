@@ -6,7 +6,6 @@
 import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="subscribe"></a>
 ## subscribe
 
 ```TypeScript
@@ -20,9 +19,7 @@ Subscribes to user status monitoring.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-userStatus-function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusData>,
-    deviceInfo?: DeviceInfo[]): int--><!--Device-userStatus-function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusData>,
-    deviceInfo?: DeviceInfo[]): int-End-->
+<!--Device-userStatus-function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusData>,    deviceInfo?: DeviceInfo[]): int--><!--Device-userStatus-function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusData>,    deviceInfo?: DeviceInfo[]): int-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 

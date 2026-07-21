@@ -14,7 +14,6 @@ CameraOutput implements output information used in [Session](arkts-camera-camera
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -43,7 +42,6 @@ Releases output resources. This API uses an asynchronous callback to return the 
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript

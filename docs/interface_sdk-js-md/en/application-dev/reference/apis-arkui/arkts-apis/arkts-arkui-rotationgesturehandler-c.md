@@ -10,7 +10,6 @@ Defines a rotation gesture handler object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -35,7 +34,6 @@ Constructor used to create a rotation gesture handler instance.
 | --- | --- | --- | --- |
 | options | [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | No | Parameters of the rotation gesture handler. |
 
-<a id="onactioncancel"></a>
 ## onActionCancel
 
 ```TypeScript
@@ -66,14 +64,13 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 | --- | --- |
 | [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | Rotation gesture handler object. |
 
-<a id="onactioncancel-1"></a>
 ## onActionCancel
 
 ```TypeScript
 onActionCancel(event: Callback<GestureEvent>): RotationGestureHandler
 ```
 
-Sets the callback for rotation gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](arkts-arkui-rotationgesturehandler-c.md#onactioncancel-1), this API returns gesture event information.
+Sets the callback for rotation gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](arkts-arkui-rotationgesturehandler-c.md#onactioncancel), this API returns gesture event information.
 
 **Since:** 18
 
@@ -97,7 +94,6 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 | --- | --- |
 | [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | Rotation gesture handler object. |
 
-<a id="onactionend"></a>
 ## onActionEnd
 
 ```TypeScript
@@ -128,7 +124,6 @@ Sets the callback for rotation gesture recognition completion. This callback is 
 | --- | --- |
 | [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | Rotation gesture handler object. |
 
-<a id="onactionstart"></a>
 ## onActionStart
 
 ```TypeScript
@@ -159,7 +154,6 @@ Sets the callback for successful rotation gesture recognition.
 | --- | --- |
 | [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | Rotation gesture handler object. |
 
-<a id="onactionupdate"></a>
 ## onActionUpdate
 
 ```TypeScript

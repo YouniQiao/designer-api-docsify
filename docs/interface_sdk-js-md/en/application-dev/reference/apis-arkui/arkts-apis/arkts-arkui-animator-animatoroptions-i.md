@@ -22,7 +22,7 @@ begin: number
 
 Start point of the animation interpolation.
 
-Note: This setting affects the input parameter value of the [onFrame](docroot://reference/apis-arkui/js-apis-animator.md#properties) callback.
+Note: This setting affects the input parameter value of the [onFrame](../../../reference/apis-arkui/js-apis-animator.md#properties) callback.
 
 Default value: **0**
 
@@ -134,7 +134,7 @@ end: number
 
 End point of animation interpolation.
 
-Note: This setting affects the input parameter value of the [onFrame](docroot://reference/apis-arkui/js-apis-animator.md#properties) callback.
+Note: This setting affects the input parameter value of the [onFrame](../../../reference/apis-arkui/js-apis-animator.md#properties) callback.
 
 Default value: **1**
 

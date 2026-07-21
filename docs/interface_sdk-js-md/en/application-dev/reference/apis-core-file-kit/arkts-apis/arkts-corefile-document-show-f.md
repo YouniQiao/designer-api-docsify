@@ -1,6 +1,5 @@
 # show
 
-<a id="show"></a>
 ## show
 
 ```TypeScript
@@ -31,7 +30,6 @@ Opens a file. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise used to return the result. An error code is returned. |
 
 
-<a id="show-1"></a>
 ## show
 
 ```TypeScript

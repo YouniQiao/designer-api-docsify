@@ -6,19 +6,17 @@
 import { childProcessManager } from '@kit.AbilityKit';
 ```
 
-<a id="startchildprocess"></a>
 ## startChildProcess
 
 ```TypeScript
 function startChildProcess(srcEntry: string, startMode: StartMode): Promise<number>
 ```
 
-Starts an [ArkTS child process](docroot://application-models/ability-terminology.md#arkts-child-process). This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 16000061 is returned.
-
+Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 16000061 is returned.
 > **NOTE**  
 >  
 > If the child process is created successfully, its PID is returned, and its  
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart-1) function is executed. Once the  
+> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. Once the  
 > function is done, the child process is automatically destroyed.  
 >  
 > The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only  
@@ -91,19 +89,17 @@ try {
 ```
 
 
-<a id="startchildprocess-1"></a>
 ## startChildProcess
 
 ```TypeScript
 function startChildProcess(srcEntry: string, startMode: StartMode, callback: AsyncCallback<number>): void
 ```
 
-Starts an [ArkTS child process](docroot://application-models/ability-terminology.md#arkts-child-process). This API uses an asynchronous callback to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 16000061 is returned.
-
+Starts an [ArkTS child process](../../../application-models/ability-terminology.md#arkts-child-process). This API uses an asynchronous callback to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 16000061 is returned.
 > **NOTE**  
 >  
 > If the child process is created successfully, its PID is returned, and its  
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart-1) function is executed. Once the  
+> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. Once the  
 > function is done, the child process is automatically destroyed.  
 >  
 > The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only  

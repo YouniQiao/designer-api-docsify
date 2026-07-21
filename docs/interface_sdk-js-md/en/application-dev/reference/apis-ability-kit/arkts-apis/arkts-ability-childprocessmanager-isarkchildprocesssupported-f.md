@@ -6,7 +6,6 @@
 import { childProcessManager } from '@kit.AbilityKit';
 ```
 
-<a id="isarkchildprocesssupported"></a>
 ## isArkChildProcessSupported
 
 ```TypeScript

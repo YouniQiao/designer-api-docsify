@@ -14,7 +14,6 @@ HashSet is implemented based on HashMap. In HashSet, only the value object is pr
 import { HashSet } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -81,7 +80,6 @@ for(let i = 0;i < 10;i++) {
 
 ```
 
-<a id="add"></a>
 ## add
 
 ```TypeScript
@@ -125,7 +123,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -160,7 +157,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -190,7 +186,6 @@ let hashSet = new HashSet<number>();
 
 ```
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -251,7 +246,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -307,7 +301,6 @@ for(let i = 0; i < 10; i++) {
 
 ```
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -352,7 +345,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -390,7 +382,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -436,7 +427,6 @@ console.info("result:", result);  // result: true
 
 ```
 
-<a id="values"></a>
 ## values
 
 ```TypeScript

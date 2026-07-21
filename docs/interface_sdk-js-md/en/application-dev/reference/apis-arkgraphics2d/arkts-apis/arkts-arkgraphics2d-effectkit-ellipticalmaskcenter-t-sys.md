@@ -13,13 +13,7 @@ The center of the elliptical mask,specifying where the ellipse mask is anchored 
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-effectKit-type EllipticalMaskCenter = [
-  double,
-  double
-]--><!--Device-effectKit-type EllipticalMaskCenter = [
-  double,
-  double
-]-End-->
+<!--Device-effectKit-type EllipticalMaskCenter = [  double,  double]--><!--Device-effectKit-type EllipticalMaskCenter = [  double,  double]-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

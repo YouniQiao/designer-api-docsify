@@ -1,7 +1,6 @@
 # NotificationButton
 
 Describes the notification button, which is used to display an interactive button in the live view.
-
 > **NOTE**  
 >  
 > The actual display effect depends on the device capabilities and the notification center UI style.

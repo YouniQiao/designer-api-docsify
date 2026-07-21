@@ -6,14 +6,13 @@
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="updatereminder"></a>
 ## updateReminder
 
 ```TypeScript
 function updateReminder(reminderId: number, reminderReq: ReminderRequest): Promise<void>
 ```
 
-Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only [valid (not yet expired) reminders](docroot://task-management/agent-powered-reminder.md#constraints) that are not displayed in the notification panel can be updated.
+Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) that are not displayed in the notification panel can be updated.
 
 **Since:** 20
 
@@ -27,7 +26,7 @@ Updates the agent-powered reminder with the specified ID. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | ID of the agent-powered reminder to be updated.The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder-1)API is called. |
+| reminderId | number | Yes | ID of the agent-powered reminder to be updated.The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder)API is called. |
 | reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | Yes | Request instance used to set detailed information such as the reminder type and ringing duration. |
 
 **Return value:**

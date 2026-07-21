@@ -6,7 +6,6 @@
 import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="getlogfile"></a>
 ## getLogFile
 
 ```TypeScript

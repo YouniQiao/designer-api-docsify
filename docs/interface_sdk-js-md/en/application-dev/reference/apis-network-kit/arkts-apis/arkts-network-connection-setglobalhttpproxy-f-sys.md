@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="setglobalhttpproxy"></a>
 ## setGlobalHttpProxy
 
 ```TypeScript
@@ -67,7 +66,6 @@ connection.setGlobalHttpProxy(httpProxy, (err: BusinessError) => {
 ```
 
 
-<a id="setglobalhttpproxy-1"></a>
 ## setGlobalHttpProxy
 
 ```TypeScript

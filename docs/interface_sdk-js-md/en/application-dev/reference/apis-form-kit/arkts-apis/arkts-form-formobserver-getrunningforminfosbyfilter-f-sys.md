@@ -6,7 +6,6 @@
 import { formObserver } from '@kit.FormKit';
 ```
 
-<a id="getrunningforminfosbyfilter"></a>
 ## getRunningFormInfosByFilter
 
 ```TypeScript
@@ -23,11 +22,7 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-formObserver-function getRunningFormInfosByFilter(
-    formProviderFilter: formInfo.FormProviderFilter
-  ): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formObserver-function getRunningFormInfosByFilter(
-    formProviderFilter: formInfo.FormProviderFilter
-  ): Promise<Array<formInfo.RunningFormInfo>>-End-->
+<!--Device-formObserver-function getRunningFormInfosByFilter(    formProviderFilter: formInfo.FormProviderFilter  ): Promise<Array<formInfo.RunningFormInfo>>--><!--Device-formObserver-function getRunningFormInfosByFilter(    formProviderFilter: formInfo.FormProviderFilter  ): Promise<Array<formInfo.RunningFormInfo>>-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -57,7 +52,6 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getrunningforminfosbyfilter-1"></a>
 ## getRunningFormInfosByFilter
 
 ```TypeScript
@@ -75,13 +69,7 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-formObserver-function getRunningFormInfosByFilter(
-    formProviderFilter: formInfo.FormProviderFilter,
-    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>
-  ): void--><!--Device-formObserver-function getRunningFormInfosByFilter(
-    formProviderFilter: formInfo.FormProviderFilter,
-    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>
-  ): void-End-->
+<!--Device-formObserver-function getRunningFormInfosByFilter(    formProviderFilter: formInfo.FormProviderFilter,    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>  ): void--><!--Device-formObserver-function getRunningFormInfosByFilter(    formProviderFilter: formInfo.FormProviderFilter,    callback: AsyncCallback<Array<formInfo.RunningFormInfo>>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

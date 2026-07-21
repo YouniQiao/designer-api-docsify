@@ -14,7 +14,6 @@ Provides information about the document to print. This API must be implemented b
 import { print } from '@kit.BasicServicesKit';
 ```
 
-<a id="onjobstatechanged"></a>
 ## onJobStateChanged
 
 ```TypeScript
@@ -73,7 +72,6 @@ class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
 
 ```
 
-<a id="onstartlayoutwrite"></a>
 ## onStartLayoutWrite
 
 ```TypeScript
@@ -87,9 +85,7 @@ Sends an empty PDF file descriptor to a third-party application. The third-party
 
 **Required permissions:** ohos.permission.PRINT
 
-<!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,
-      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void--><!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,
-      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void-End-->
+<!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void--><!--Device-PrintDocumentAdapter-onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttributes, fd: int,      writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

@@ -16,7 +16,6 @@ Provide a DateTime formatting interface that supports custom symbols.This interf
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -48,7 +47,6 @@ A constructor used to create a SymbolDateTimeFormat object.
 | --- | --- |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-<a id="format"></a>
 ## format
 
 ```TypeScript
@@ -79,7 +77,6 @@ Formats the date and time.
 | --- | --- |
 | string | The formatted date and time string. |
 
-<a id="formatrange"></a>
 ## formatRange
 
 ```TypeScript
@@ -111,7 +108,6 @@ Formats date and time ranges.
 | --- | --- |
 | string | A date string formatted based on the specified locale. |
 
-<a id="formatrangetoparts"></a>
 ## formatRangeToParts
 
 ```TypeScript
@@ -127,9 +123,7 @@ Formats a date time range to Parts.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-SymbolDateTimeFormat-public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | number | bigint):
-      Intl.DateTimeRangeFormatPart[]--><!--Device-SymbolDateTimeFormat-public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | number | bigint):
-      Intl.DateTimeRangeFormatPart[]-End-->
+<!--Device-SymbolDateTimeFormat-public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | number | bigint):      Intl.DateTimeRangeFormatPart[]--><!--Device-SymbolDateTimeFormat-public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | number | bigint):      Intl.DateTimeRangeFormatPart[]-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -146,7 +140,6 @@ Formats a date time range to Parts.
 | --- | --- |
 | Intl.DateTimeRangeFormatPart[] | Locale formatted DateTimeRangeFormatPart array. |
 
-<a id="formattoparts"></a>
 ## formatToParts
 
 ```TypeScript
@@ -177,7 +170,6 @@ Formats a date to parts.
 | --- | --- |
 | Intl.DateTimeFormatPart[] | Locale formatted DateTimeFormatPart array. |
 
-<a id="parse"></a>
 ## parse
 
 ```TypeScript
@@ -215,7 +207,6 @@ Parse a date time localized string to Unix timestamp.Unix timestamp, indicating 
 | --- | --- |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
-<a id="resolvedoptions"></a>
 ## resolvedOptions
 
 ```TypeScript

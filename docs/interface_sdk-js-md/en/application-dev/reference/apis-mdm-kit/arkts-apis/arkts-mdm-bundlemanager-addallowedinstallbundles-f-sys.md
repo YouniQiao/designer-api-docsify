@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="addallowedinstallbundles"></a>
 ## addAllowedInstallBundles
 
 ```TypeScript
@@ -19,7 +18,7 @@ Adds the applications that can be installed by the current user. This API uses a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md#addallowedinstallbundlessync-1)
+**Substitutes:** [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md#addallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -74,7 +73,6 @@ bundleManager.addAllowedInstallBundles(wantTemp, appIds, (err) => {
 ```
 
 
-<a id="addallowedinstallbundles-1"></a>
 ## addAllowedInstallBundles
 
 ```TypeScript
@@ -87,7 +85,7 @@ Adds the applications that can be installed by the user specified by **userId**.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md#addallowedinstallbundlessync-1)
+**Substitutes:** [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md#addallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -143,7 +141,6 @@ bundleManager.addAllowedInstallBundles(wantTemp, appIds, 100, (err) => {
 ```
 
 
-<a id="addallowedinstallbundles-2"></a>
 ## addAllowedInstallBundles
 
 ```TypeScript
@@ -156,7 +153,7 @@ Adds the applications that can be installed by the current or specified user. Th
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md#addallowedinstallbundlessync-1)
+**Substitutes:** [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md#addallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 

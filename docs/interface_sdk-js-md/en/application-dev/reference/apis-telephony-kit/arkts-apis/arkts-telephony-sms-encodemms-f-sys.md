@@ -6,7 +6,6 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
-<a id="encodemms"></a>
 ## encodeMms
 
 ```TypeScript
@@ -63,7 +62,6 @@ sms.encodeMms(mmsInformation, (err: BusinessError, data: number[]) => {
 ```
 
 
-<a id="encodemms-1"></a>
 ## encodeMms
 
 ```TypeScript

@@ -8,7 +8,6 @@ The ErrorObserver module defines an observer to listen for application errors. I
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-<a id="onexception"></a>
 ## onException
 
 ```TypeScript
@@ -31,7 +30,6 @@ Called when the application encounters an exception and reports it to the JavaSc
 | --- | --- | --- | --- |
 | errObject | Error | Yes | Event name, message, and error stack of the exception. |
 
-<a id="onunhandledexception"></a>
 ## onUnhandledException
 
 ```TypeScript

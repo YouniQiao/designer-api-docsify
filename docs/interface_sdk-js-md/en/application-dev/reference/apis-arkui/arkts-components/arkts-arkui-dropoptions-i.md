@@ -18,7 +18,7 @@ Whether to disable data prefetching for the drag-and-drop operation. The value *
 
 **NOTE**
 
-Set this parameter to **true** when using [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading-1) to enable data prefetching.
+Set this parameter to **true** when using [startDataLoading](arkts-arkui-dragevent-i.md#startdataloading) to enable data prefetching.
 
 **Type:** boolean
 

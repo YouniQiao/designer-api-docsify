@@ -14,7 +14,6 @@ Channel represents an [ISO 7816-4] channel opened to a SE. It can be either a lo
 import { omapi } from '@kit.ConnectivityKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -52,7 +51,6 @@ try {
 
 ```
 
-<a id="getselectresponse"></a>
 ## getSelectResponse
 
 ```TypeScript
@@ -97,7 +95,6 @@ try {
 
 ```
 
-<a id="getsession"></a>
 ## getSession
 
 ```TypeScript
@@ -143,7 +140,6 @@ try {
 
 ```
 
-<a id="isbasicchannel"></a>
 ## isBasicChannel
 
 ```TypeScript
@@ -188,7 +184,6 @@ try {
 
 ```
 
-<a id="isclosed"></a>
 ## isClosed
 
 ```TypeScript
@@ -233,7 +228,6 @@ try {
 
 ```
 
-<a id="transmit"></a>
 ## transmit
 
 ```TypeScript
@@ -293,7 +287,6 @@ try {
 
 ```
 
-<a id="transmit-1"></a>
 ## transmit
 
 ```TypeScript

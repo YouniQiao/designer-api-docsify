@@ -210,7 +210,7 @@ XMLHttpRequest.
 PING = 14
 ```
 
-Ping request for <a ping>/sendBeacon.
+Ping request for &lt;a ping&gt;/sendBeacon.
 
 **Since:** 12
 

@@ -14,7 +14,6 @@ Formats a number based on the specified skeleton string.
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="format"></a>
 ## format
 
 ```TypeScript

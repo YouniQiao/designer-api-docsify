@@ -6,7 +6,6 @@
 import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
-<a id="readndeftag"></a>
 ## readNdefTag
 
 ```TypeScript
@@ -48,7 +47,6 @@ connectedTag.readNdefTag().then((data) => {
 ```
 
 
-<a id="readndeftag-1"></a>
 ## readNdefTag
 
 ```TypeScript

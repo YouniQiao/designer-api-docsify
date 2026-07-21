@@ -16,7 +16,6 @@ Defines a UDP MulticastSocket connection.
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="addmembership"></a>
 ## addMembership
 
 ```TypeScript
@@ -70,7 +69,6 @@ multicast.addMembership(addr, (err: Object) => {
 
 ```
 
-<a id="addmembership-1"></a>
 ## addMembership
 
 ```TypeScript
@@ -126,7 +124,6 @@ multicast.addMembership(addr).then(() => {
 
 ```
 
-<a id="dropmembership"></a>
 ## dropMembership
 
 ```TypeScript
@@ -179,7 +176,6 @@ multicast.dropMembership(addr, (err: Object) => {
 
 ```
 
-<a id="dropmembership-1"></a>
 ## dropMembership
 
 ```TypeScript
@@ -235,7 +231,6 @@ multicast.dropMembership(addr).then(() => {
 
 ```
 
-<a id="getloopbackmode"></a>
 ## getLoopbackMode
 
 ```TypeScript
@@ -279,7 +274,6 @@ multicast.getLoopbackMode((err: Object, value: Boolean) => {
 
 ```
 
-<a id="getloopbackmode-1"></a>
 ## getLoopbackMode
 
 ```TypeScript
@@ -321,7 +315,6 @@ multicast.getLoopbackMode().then((value: Boolean) => {
 
 ```
 
-<a id="getmulticastttl"></a>
 ## getMulticastTTL
 
 ```TypeScript
@@ -365,7 +358,6 @@ multicast.getMulticastTTL((err: Object, value: Number) => {
 
 ```
 
-<a id="getmulticastttl-1"></a>
 ## getMulticastTTL
 
 ```TypeScript
@@ -407,7 +399,6 @@ multicast.getMulticastTTL().then((value: Number) => {
 
 ```
 
-<a id="getsocketfd"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -463,7 +454,6 @@ multicast.bind(bindAddr)
 
 ```
 
-<a id="setloopbackmode"></a>
 ## setLoopbackMode
 
 ```TypeScript
@@ -508,7 +498,6 @@ multicast.setLoopbackMode(false, (err: Object) => {
 
 ```
 
-<a id="setloopbackmode-1"></a>
 ## setLoopbackMode
 
 ```TypeScript
@@ -556,7 +545,6 @@ multicast.setLoopbackMode(false).then(() => {
 
 ```
 
-<a id="setmulticastttl"></a>
 ## setMulticastTTL
 
 ```TypeScript
@@ -603,7 +591,6 @@ multicast.setMulticastTTL(ttl, (err: Object) => {
 
 ```
 
-<a id="setmulticastttl-1"></a>
 ## setMulticastTTL
 
 ```TypeScript
@@ -652,7 +639,6 @@ multicast.setMulticastTTL(8).then(() => {
 
 ```
 
-<a id="setreuseaddress"></a>
 ## setReuseAddress
 
 ```TypeScript

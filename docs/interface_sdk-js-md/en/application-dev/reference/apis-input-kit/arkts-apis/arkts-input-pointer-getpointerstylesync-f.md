@@ -6,7 +6,6 @@
 import { pointer } from '@kit.InputKit';
 ```
 
-<a id="getpointerstylesync"></a>
 ## getPointerStyleSync
 
 ```TypeScript
@@ -25,7 +24,7 @@ Queries the mouse pointer style type of a specified window, such as east arrow, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | number | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window.<br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned.<br>If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default.<br>If the mouse pointer style is set for a non-existent window through [setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md#setpointerstylesync-1), this API can obtain the mouse pointer style properly. |
+| windowId | number | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window.<br>If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned.<br>If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default.<br>If the mouse pointer style is set for a non-existent window through [setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md#setpointerstylesync), this API can obtain the mouse pointer style properly. |
 
 **Return value:**
 

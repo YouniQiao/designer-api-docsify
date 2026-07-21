@@ -6,7 +6,6 @@
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
-<a id="opencertificatemanagerdialog"></a>
 ## openCertificateManagerDialog
 
 ```TypeScript

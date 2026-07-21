@@ -6,7 +6,6 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="setnotificationenableslot"></a>
 ## setNotificationEnableSlot
 
 ```TypeScript
@@ -26,17 +25,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
-<!--Device-notificationManager-function setNotificationEnableSlot(
-    bundle: BundleOption,
-    type: SlotType,
-    enable: boolean,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-notificationManager-function setNotificationEnableSlot(
-    bundle: BundleOption,
-    type: SlotType,
-    enable: boolean,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-notificationManager-function setNotificationEnableSlot(    bundle: BundleOption,    type: SlotType,    enable: boolean,    callback: AsyncCallback<void>  ): void--><!--Device-notificationManager-function setNotificationEnableSlot(    bundle: BundleOption,    type: SlotType,    enable: boolean,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -87,7 +76,6 @@ notificationManager.setNotificationEnableSlot(
 ```
 
 
-<a id="setnotificationenableslot-1"></a>
 ## setNotificationEnableSlot
 
 ```TypeScript
@@ -108,19 +96,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
-<!--Device-notificationManager-function setNotificationEnableSlot(
-    bundle: BundleOption,
-    type: SlotType,
-    enable: boolean,
-    isForceControl: boolean,
-    callback: AsyncCallback<void>,
-  ): void--><!--Device-notificationManager-function setNotificationEnableSlot(
-    bundle: BundleOption,
-    type: SlotType,
-    enable: boolean,
-    isForceControl: boolean,
-    callback: AsyncCallback<void>,
-  ): void-End-->
+<!--Device-notificationManager-function setNotificationEnableSlot(    bundle: BundleOption,    type: SlotType,    enable: boolean,    isForceControl: boolean,    callback: AsyncCallback<void>,  ): void--><!--Device-notificationManager-function setNotificationEnableSlot(    bundle: BundleOption,    type: SlotType,    enable: boolean,    isForceControl: boolean,    callback: AsyncCallback<void>,  ): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -151,7 +127,6 @@ This API can be properly called on devices other than wearables. If it is called
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
 
-<a id="setnotificationenableslot-2"></a>
 ## setNotificationEnableSlot
 
 ```TypeScript

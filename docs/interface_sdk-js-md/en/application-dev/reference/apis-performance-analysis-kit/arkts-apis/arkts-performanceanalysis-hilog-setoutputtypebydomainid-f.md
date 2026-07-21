@@ -6,7 +6,6 @@
 import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="setoutputtypebydomainid"></a>
 ## setOutputTypeByDomainID
 
 ```TypeScript

@@ -78,7 +78,7 @@ Preloads the process up to the point of [WindowStage](../../apis-arkui/arkts-api
 TYPE_CREATE_BACKGROUND_ABILITY = 4
 ```
 
-Preloads the process up to the point of [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground-1)execution completion.
+Preloads the process up to the point of [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)execution completion.
 
 **Since:** 23
 

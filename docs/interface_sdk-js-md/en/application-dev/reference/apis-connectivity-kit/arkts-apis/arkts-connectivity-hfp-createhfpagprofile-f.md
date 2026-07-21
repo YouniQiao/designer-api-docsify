@@ -6,7 +6,6 @@
 import { hfp } from '@kit.ConnectivityKit';
 ```
 
-<a id="createhfpagprofile"></a>
 ## createHfpAgProfile
 
 ```TypeScript

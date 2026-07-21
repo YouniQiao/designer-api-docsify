@@ -6,7 +6,6 @@
 import { statistics } from '@kit.NetworkKit';
 ```
 
-<a id="updateifacesstats"></a>
 ## updateIfacesStats
 
 ```TypeScript

@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface JSON--><!--Device-unnamed-interface JSON-End-->
 
-<a id="parse"></a>
 ## parse
 
 ```TypeScript
@@ -26,7 +25,6 @@ Converts a JavaScript Object Notation (JSON) string into an object.
 | --- | --- |
 | any |  |
 
-<a id="stringify"></a>
 ## stringify
 
 ```TypeScript
@@ -51,7 +49,6 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 | --- | --- |
 | string |  |
 
-<a id="stringify-1"></a>
 ## stringify
 
 ```TypeScript

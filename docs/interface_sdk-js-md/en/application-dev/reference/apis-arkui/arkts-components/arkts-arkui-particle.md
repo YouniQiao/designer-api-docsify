@@ -27,39 +27,7 @@ Anonymous Object Rectification.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ParticleInterface-<
-    PARTICLE extends ParticleType,
-    COLOR_UPDATER extends ParticleUpdater,
-    OPACITY_UPDATER extends ParticleUpdater,
-    SCALE_UPDATER extends ParticleUpdater,
-    ACC_SPEED_UPDATER extends ParticleUpdater,
-    ACC_ANGLE_UPDATER extends ParticleUpdater,
-    SPIN_UPDATER extends ParticleUpdater
-  >(particles: Particles<
-      PARTICLE,
-      COLOR_UPDATER,
-      OPACITY_UPDATER,
-      SCALE_UPDATER,
-      ACC_SPEED_UPDATER,
-      ACC_ANGLE_UPDATER,
-      SPIN_UPDATER
-    >): ParticleAttribute--><!--Device-ParticleInterface-<
-    PARTICLE extends ParticleType,
-    COLOR_UPDATER extends ParticleUpdater,
-    OPACITY_UPDATER extends ParticleUpdater,
-    SCALE_UPDATER extends ParticleUpdater,
-    ACC_SPEED_UPDATER extends ParticleUpdater,
-    ACC_ANGLE_UPDATER extends ParticleUpdater,
-    SPIN_UPDATER extends ParticleUpdater
-  >(particles: Particles<
-      PARTICLE,
-      COLOR_UPDATER,
-      OPACITY_UPDATER,
-      SCALE_UPDATER,
-      ACC_SPEED_UPDATER,
-      ACC_ANGLE_UPDATER,
-      SPIN_UPDATER
-    >): ParticleAttribute-End-->
+<!--Device-ParticleInterface-<    PARTICLE extends ParticleType,    COLOR_UPDATER extends ParticleUpdater,    OPACITY_UPDATER extends ParticleUpdater,    SCALE_UPDATER extends ParticleUpdater,    ACC_SPEED_UPDATER extends ParticleUpdater,    ACC_ANGLE_UPDATER extends ParticleUpdater,    SPIN_UPDATER extends ParticleUpdater  >(particles: Particles<      PARTICLE,      COLOR_UPDATER,      OPACITY_UPDATER,      SCALE_UPDATER,      ACC_SPEED_UPDATER,      ACC_ANGLE_UPDATER,      SPIN_UPDATER    >): ParticleAttribute--><!--Device-ParticleInterface-<    PARTICLE extends ParticleType,    COLOR_UPDATER extends ParticleUpdater,    OPACITY_UPDATER extends ParticleUpdater,    SCALE_UPDATER extends ParticleUpdater,    ACC_SPEED_UPDATER extends ParticleUpdater,    ACC_ANGLE_UPDATER extends ParticleUpdater,    SPIN_UPDATER extends ParticleUpdater  >(particles: Particles<      PARTICLE,      COLOR_UPDATER,      OPACITY_UPDATER,      SCALE_UPDATER,      ACC_SPEED_UPDATER,      ACC_ANGLE_UPDATER,      SPIN_UPDATER    >): ParticleAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

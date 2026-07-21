@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="deleteform"></a>
 ## deleteForm
 
 ```TypeScript
@@ -46,7 +45,6 @@ Deletes a widget. After this API is called, the application can no longer use th
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
-<a id="deleteform-1"></a>
 ## deleteForm
 
 ```TypeScript

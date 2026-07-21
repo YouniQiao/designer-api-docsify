@@ -6,14 +6,13 @@
 import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="getlauncherabilityinfosync"></a>
 ## getLauncherAbilityInfoSync
 
 ```TypeScript
 function getLauncherAbilityInfoSync(bundleName: string, userId: number): Array<LauncherAbilityInfo>
 ```
 
-Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on the given bundle name and user ID.
+Obtains the [launcher ability information](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) based on the given bundle name and user ID.
 
 **Since:** 18
 
@@ -28,13 +27,13 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). |
+| userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;LauncherAbilityInfo&gt; | Array of the [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md) objects obtained. |
+| Array&lt;LauncherAbilityInfo&gt; | Array of the [LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) objects obtained. |
 
 **Error codes:**
 

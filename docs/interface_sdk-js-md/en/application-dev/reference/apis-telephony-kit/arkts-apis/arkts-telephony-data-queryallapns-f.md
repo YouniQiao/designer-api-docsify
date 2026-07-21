@@ -6,7 +6,6 @@
 import { data } from '@kit.TelephonyKit';
 ```
 
-<a id="queryallapns"></a>
 ## queryAllApns
 
 ```TypeScript

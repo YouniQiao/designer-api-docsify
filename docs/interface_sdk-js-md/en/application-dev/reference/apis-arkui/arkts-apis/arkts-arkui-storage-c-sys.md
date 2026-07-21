@@ -10,7 +10,6 @@ Defines the base class of storage.
 
 **System API:** This is a system API.
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -27,7 +26,6 @@ Called when data is cleared.
 
 **System API:** This is a system API.
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -51,7 +49,6 @@ Constructor parameters.
 | needCrossThread | boolean | No |  |
 | file | string | No |  |
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -74,7 +71,6 @@ Called when data is deleted.
 | --- | --- | --- | --- |
 | key | string | Yes |  |
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -103,7 +99,6 @@ Called when data is obtained.
 | --- | --- |
 | string | @syscap SystemCapability.ArkUI.ArkUI.Full@systemapi@FaAndStageModel |
 
-<a id="set"></a>
 ## set
 
 ```TypeScript

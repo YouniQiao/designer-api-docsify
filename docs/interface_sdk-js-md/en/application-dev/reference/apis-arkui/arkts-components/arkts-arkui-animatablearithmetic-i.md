@@ -1,6 +1,6 @@
 # AnimatableArithmetic
 
-The **AnimatableArithmetic** API defines animation calculation rules for non-number data types. To animate non-number data (such as arrays, structs, and colors), you need to implement the addition, subtraction, multiplication, and equality checking functions in the **AnimatableArithmetic\<T\>** API. This enables the data to participate in animation interpolation calculations and to detect whether the data has changed. In other words, the non-number data is defined as types that implement the **AnimatableArithmetic\<T\>** API.
+The **AnimatableArithmetic** API defines animation calculation rules for non-number data types. To animate non-number data (such as arrays, structs, and colors), you need to implement the addition, subtraction, multiplication, and equality checking functions in the **AnimatableArithmetic\&lt;T\&gt;** API. This enables the data to participate in animation interpolation calculations and to detect whether the data has changed. In other words, the non-number data is defined as types that implement the **AnimatableArithmetic\&lt;T\&gt;** API.
 
 **Since:** 10
 
@@ -8,7 +8,6 @@ The **AnimatableArithmetic** API defines animation calculation rules for non-num
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="equals"></a>
 ## equals
 
 ```TypeScript
@@ -39,7 +38,6 @@ Defines the equality check rule for the data type.
 | --- | --- |
 | boolean | Whether the objects are equal. Returns **true** if they are equal; returns **false** otherwise. |
 
-<a id="multiply"></a>
 ## multiply
 
 ```TypeScript
@@ -70,7 +68,6 @@ Defines the multiplication rule for the data type.
 | --- | --- |
 | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Result of the multiplication operation. |
 
-<a id="plus"></a>
 ## plus
 
 ```TypeScript
@@ -101,7 +98,6 @@ Defines the addition rule for the data type.
 | --- | --- |
 | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Result of the addition operation. |
 
-<a id="subtract"></a>
 ## subtract
 
 ```TypeScript

@@ -8,7 +8,6 @@ Sets the distance between the navigation indicator and the **Swiper** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="bottom"></a>
 ## bottom
 
 ```TypeScript
@@ -41,7 +40,6 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 | --- | --- |
 | T | Current navigation indicator. |
 
-<a id="bottom-1"></a>
 ## bottom
 
 ```TypeScript
@@ -67,7 +65,7 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bottom | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| Length | Yes | Position of the navigation indicator relative to the bottom edge of the **Swiper** component.<br>If neither **top** nor **bottom** is set, the navigation indicator is aligned at the bottom along the cross axis based on its own size and the size of the **Swiper** component, which is the same effect as setting **bottom=0**.<br>If the value specified is **0**, the navigation indicator is placed at the position 0.<br>Priority: lower than the **top** property<br>Value range:[0, Swiper height - Navigation indicator area height]. Values outside this range are adjusted to the nearest boundary. |
-| ignoreSize | boolean | Yes | Whether to ignore the size of the navigation indicator.<br>Default value:**false**.<br>Setting **true** positions the indicator closer to the **Swiper** component's bottom. For the usage, see [Example 9: Using the space and bottom APIs on the Navigation Indicator](docroot://reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-9-using-the-space-and-bottom-apis-on-the-navigation-indicator).<br> **NOTE**<br>The **ignoreSize** property does not apply to the digit-style navigation indicator in the following scenarios:<br> ? [vertical](SwiperAttribute#vertical) is set to **false** and the value of **bottom** is greater than 0.<br> ? When [vertical](SwiperAttribute#vertical) is set to **true**:<br>1.The value of **bottom** is greater than 0.<br> 2. The value of **bottom** is **undefined**.<br> 3.**isSidebarMiddle** is set to **false**. |
+| ignoreSize | boolean | Yes | Whether to ignore the size of the navigation indicator.<br>Default value:**false**.<br>Setting **true** positions the indicator closer to the **Swiper** component's bottom. For the usage, see [Example 9: Using the space and bottom APIs on the Navigation Indicator](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-9-using-the-space-and-bottom-apis-on-the-navigation-indicator).<br> **NOTE**<br>The **ignoreSize** property does not apply to the digit-style navigation indicator in the following scenarios:<br> ? [vertical](SwiperAttribute#vertical) is set to **false** and the value of **bottom** is greater than 0.<br> ? When [vertical](SwiperAttribute#vertical) is set to **true**:<br>1.The value of **bottom** is greater than 0.<br> 2. The value of **bottom** is **undefined**.<br> 3.**isSidebarMiddle** is set to **false**. |
 
 **Return value:**
 
@@ -75,7 +73,6 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 | --- | --- |
 | T | Current navigation indicator. |
 
-<a id="digit"></a>
 ## digit
 
 ```TypeScript
@@ -102,7 +99,6 @@ Returns a **DigitIndicator** object.
 | --- | --- |
 | [DigitIndicator](arkts-arkui-digitindicator-c.md) | Digit-style indicator. |
 
-<a id="dot"></a>
 ## dot
 
 ```TypeScript
@@ -129,7 +125,6 @@ Returns a **DotIndicator** object.
 | --- | --- |
 | [DotIndicator](arkts-arkui-dotindicator-c.md) | Dot-style indicator. |
 
-<a id="end"></a>
 ## end
 
 ```TypeScript
@@ -162,7 +157,6 @@ Sets the distance between the navigation point indicator and the left edge (in r
 | --- | --- |
 | T | Current navigation indicator. |
 
-<a id="left"></a>
 ## left
 
 ```TypeScript
@@ -195,7 +189,6 @@ Sets the position of the navigation indicator relative to the left edge of the *
 | --- | --- |
 | T | Current navigation indicator. |
 
-<a id="right"></a>
 ## right
 
 ```TypeScript
@@ -228,7 +221,6 @@ Sets the position of the navigation indicator relative to the right edge of the 
 | --- | --- |
 | T | Current navigation indicator. |
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -261,7 +253,6 @@ Sets the distance between the navigation indicator and the right edge (in [RTL](
 | --- | --- |
 | T | Current navigation indicator. |
 
-<a id="top"></a>
 ## top
 
 ```TypeScript

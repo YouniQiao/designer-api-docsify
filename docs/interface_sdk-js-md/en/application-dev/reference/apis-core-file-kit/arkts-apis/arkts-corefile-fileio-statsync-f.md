@@ -1,6 +1,5 @@
 # statSync
 
-<a id="statsync"></a>
 ## statSync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Obtains file information. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:statSync](arkts-corefile-file-fs-statsync-f.md#statsync-1)
+**Substitutes:** [fs:statSync](arkts-corefile-fileio-statsync-f.md#statsync)
 
 <!--Device-unnamed-declare function statSync(path: string): Stat--><!--Device-unnamed-declare function statSync(path: string): Stat-End-->
 

@@ -1,6 +1,6 @@
 # Curve
 
-Enumerates the interpolation curves. For details about the animation, see <!--RP1-->[Bezier Curve](docroot://../design/ux-design/animation-attributes.md)<!--RP1End-->.
+Enumerates the interpolation curves. For details about the animation, see <!--RP1-->[Bezier Curve](../../../../design/ux-design/animation-attributes.md)<!--RP1End-->.
 
 **Since:** 7
 

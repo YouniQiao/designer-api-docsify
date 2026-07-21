@@ -1,7 +1,6 @@
 # BlendMode
 
 Blend mode.
-
 > **NOTE**  
 >  
 > In the **blendMode** enums, **s** indicates the source pixel, **d** indicates the target pixel, **sa** indicates  

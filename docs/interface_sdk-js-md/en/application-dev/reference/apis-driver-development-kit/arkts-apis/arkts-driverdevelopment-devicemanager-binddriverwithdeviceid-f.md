@@ -6,14 +6,13 @@
 import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
-<a id="binddriverwithdeviceid"></a>
 ## bindDriverWithDeviceId
 
 ```TypeScript
 function bindDriverWithDeviceId(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<RemoteDeviceDriver>
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices-1) to obtain the peripheral device list.
+Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices) to obtain the peripheral device list.
 
 **Since:** 19
 

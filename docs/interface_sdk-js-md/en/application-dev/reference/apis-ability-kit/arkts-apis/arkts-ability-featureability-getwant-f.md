@@ -6,7 +6,6 @@
 import { featureAbility } from '@kit.AbilityKit';
 ```
 
-<a id="getwant"></a>
 ## getWant
 
 ```TypeScript
@@ -45,7 +44,6 @@ featureAbility.getWant((error, data) => {
 ```
 
 
-<a id="getwant-1"></a>
 ## getWant
 
 ```TypeScript

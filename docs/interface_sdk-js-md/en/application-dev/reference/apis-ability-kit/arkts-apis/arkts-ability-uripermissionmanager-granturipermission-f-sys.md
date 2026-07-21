@@ -6,7 +6,6 @@
 import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
-<a id="granturipermission"></a>
 ## grantUriPermission
 
 ```TypeScript
@@ -18,8 +17,7 @@ function grantUriPermission(
   ): void
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](docroot://file-management/share-app-file.md). This API uses an asynchronous callback to return the result.
-
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
 > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs  
@@ -27,24 +25,14 @@ Grants the URI permission to an application. If the call is successful, the appl
 > permissions.  
 >  
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) API. For URIs combined by the application, the  
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the  
 > system cannot guarantee their functions.
 
 **Since:** 10
 
 **Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
 
-<!--Device-uriPermissionManager-function grantUriPermission(
-    uri: string,
-    flag: wantConstant.Flags,
-    targetBundleName: string,
-    callback: AsyncCallback<number>
-  ): void--><!--Device-uriPermissionManager-function grantUriPermission(
-    uri: string,
-    flag: wantConstant.Flags,
-    targetBundleName: string,
-    callback: AsyncCallback<number>
-  ): void-End-->
+<!--Device-uriPermissionManager-function grantUriPermission(    uri: string,    flag: wantConstant.Flags,    targetBundleName: string,    callback: AsyncCallback<number>  ): void--><!--Device-uriPermissionManager-function grantUriPermission(    uri: string,    flag: wantConstant.Flags,    targetBundleName: string,    callback: AsyncCallback<number>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -54,7 +42,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor-1). |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
 | flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
 | targetBundleName | string | Yes | Bundle name of the target application. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
@@ -100,15 +88,13 @@ uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_U
 ```
 
 
-<a id="granturipermission-1"></a>
 ## grantUriPermission
 
 ```TypeScript
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](docroot://file-management/share-app-file.md). This API uses a promise to return the result.
-
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result.
 > **NOTE**  
 >  
 > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs  
@@ -116,7 +102,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 > permissions.  
 >  
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) API. For URIs combined by the application, the  
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the  
 > system cannot guarantee their functions.
 
 **Since:** 10
@@ -133,7 +119,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor-1). |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
 | flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
 | targetBundleName | string | Yes | Bundle name of the target application. |
 
@@ -184,15 +170,13 @@ uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_U
 ```
 
 
-<a id="granturipermission-2"></a>
 ## grantUriPermission
 
 ```TypeScript
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: number): Promise<void>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](docroot://file-management/share-app-file.md). This API uses a promise to return the result.
-
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result.
 > **NOTE**  
 >  
 > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs  
@@ -203,7 +187,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 > application bundle name and index of the cloned application.  
 >  
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the  
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) API. For URIs combined by the application, the  
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the  
 > system cannot guarantee their functions.
 
 **Since:** 14
@@ -220,7 +204,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor-1). |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). |
 | flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
 | targetBundleName | string | Yes | Bundle name of the target application. |
 | appCloneIndex | number | Yes | Index of the cloned application. The value range is [0, 1000]. The value **0** indicates the application itself. |

@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="getallbundleinfo"></a>
 ## getAllBundleInfo
 
 ```TypeScript
@@ -34,7 +33,6 @@ Obtains the information of all bundles of the specified user. This API uses an a
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleInfo&gt;&gt; | Yes | Callback used to return the information of all bundles. |
 
 
-<a id="getallbundleinfo-1"></a>
 ## getAllBundleInfo
 
 ```TypeScript
@@ -61,7 +59,6 @@ Obtains the information of all bundles of the current user. This API uses an asy
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleInfo&gt;&gt; | Yes | Callback used to return the information of all bundles. |
 
 
-<a id="getallbundleinfo-2"></a>
 ## getAllBundleInfo
 
 ```TypeScript

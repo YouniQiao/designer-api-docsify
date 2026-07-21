@@ -6,7 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="burn"></a>
 ## burn
 
 ```TypeScript

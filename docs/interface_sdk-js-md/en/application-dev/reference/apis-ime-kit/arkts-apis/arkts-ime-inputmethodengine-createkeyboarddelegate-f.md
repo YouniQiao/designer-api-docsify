@@ -6,7 +6,6 @@
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-<a id="createkeyboarddelegate"></a>
 ## createKeyboardDelegate
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getKeyboardDelegate()](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate-1)
+**Substitutes:** [getKeyboardDelegate()](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)
 
 <!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate--><!--Device-inputMethodEngine-function createKeyboardDelegate(): KeyboardDelegate-End-->
 

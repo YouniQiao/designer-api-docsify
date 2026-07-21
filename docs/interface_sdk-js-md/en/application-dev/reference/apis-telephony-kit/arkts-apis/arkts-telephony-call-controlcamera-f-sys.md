@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="controlcamera"></a>
 ## controlCamera
 
 ```TypeScript

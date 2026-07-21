@@ -36,7 +36,7 @@ Area information of the target element.
 id?: string
 ```
 
-Custom node [ID](arkts-arkui-commonmethod-c.md#id-1). Default value: **undefined**.
+Custom node [ID](arkts-arkui-commonmethod-c.md#id). Default value: **undefined**.
 
 **Type:** string
 

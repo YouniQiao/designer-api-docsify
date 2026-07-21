@@ -16,7 +16,6 @@ Implements wakeup intelligent voice engine.
 import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
-<a id="getparameter"></a>
 ## getParameter
 
 ```TypeScript
@@ -69,7 +68,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="getparameter-1"></a>
 ## getParameter
 
 ```TypeScript
@@ -125,7 +123,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="getpcm"></a>
 ## getPcm
 
 ```TypeScript
@@ -175,7 +172,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="getsupportedregions"></a>
 ## getSupportedRegions
 
 ```TypeScript
@@ -225,7 +221,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="getsupportedregions-1"></a>
 ## getSupportedRegions
 
 ```TypeScript
@@ -273,7 +268,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="off"></a>
 ## off('wakeupIntelligentVoiceEvent')
 
 ```TypeScript
@@ -315,7 +309,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="on"></a>
 ## on('wakeupIntelligentVoiceEvent')
 
 ```TypeScript
@@ -361,7 +354,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="read"></a>
 ## read
 
 ```TypeScript
@@ -412,7 +404,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -461,7 +452,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="release-1"></a>
 ## release
 
 ```TypeScript
@@ -508,7 +498,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="setparameter"></a>
 ## setParameter
 
 ```TypeScript
@@ -561,7 +550,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="setparameter-1"></a>
 ## setParameter
 
 ```TypeScript
@@ -617,7 +605,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="setsensibility"></a>
 ## setSensibility
 
 ```TypeScript
@@ -669,7 +656,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="setsensibility-1"></a>
 ## setSensibility
 
 ```TypeScript
@@ -724,7 +710,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="setwakeuphapinfo"></a>
 ## setWakeupHapInfo
 
 ```TypeScript
@@ -781,7 +766,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="setwakeuphapinfo-1"></a>
 ## setWakeupHapInfo
 
 ```TypeScript
@@ -840,7 +824,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="startcapturer"></a>
 ## startCapturer
 
 ```TypeScript
@@ -897,7 +880,6 @@ if (wakeupIntelligentVoiceEngine != null) {
 
 ```
 
-<a id="stopcapturer"></a>
 ## stopCapturer
 
 ```TypeScript

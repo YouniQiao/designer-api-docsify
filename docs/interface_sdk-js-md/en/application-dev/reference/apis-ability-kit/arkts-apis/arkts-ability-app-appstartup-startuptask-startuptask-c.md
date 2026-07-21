@@ -1,6 +1,6 @@
 # StartupTask
 
-The module provides capabilities related to startup tasks in [AppStartup](docroot://application-models/app-startup.md).
+The module provides capabilities related to startup tasks in [AppStartup](../../../application-models/app-startup.md).
 
 **Since:** 12
 
@@ -16,7 +16,6 @@ The module provides capabilities related to startup tasks in [AppStartup](docroo
 import { StartupTask } from '@kit.AbilityKit';
 ```
 
-<a id="init"></a>
 ## init
 
 ```TypeScript
@@ -70,7 +69,6 @@ export default class StartupTask_001 extends StartupTask {
 
 ```
 
-<a id="ondependencycompleted"></a>
 ## onDependencyCompleted
 
 ```TypeScript
@@ -92,7 +90,7 @@ Called when the dependent startup task is complete.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dependency | string | Yes | Name of the dependent startup task. |
-| result | Object | Yes | Execution result of [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init-1) of the dependent startup task. |
+| result | Object | Yes | Execution result of [init](arkts-ability-app-appstartup-startuptask-startuptask-c.md#init) of the dependent startup task. |
 
 **Example**
 

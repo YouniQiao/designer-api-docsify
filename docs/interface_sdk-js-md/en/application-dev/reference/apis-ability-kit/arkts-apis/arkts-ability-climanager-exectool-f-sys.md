@@ -6,7 +6,6 @@
 import { cliManager } from '@kit.AbilityKit';
 ```
 
-<a id="exectool"></a>
 ## execTool
 
 ```TypeScript
@@ -22,9 +21,7 @@ Execute a CLI command
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-cliManager-function execTool(toolName: string, subCommand: string, args: Record<string, Object>, challenge: string,
-    execOptions?: ExecOptions): Promise<CliSessionInfo>--><!--Device-cliManager-function execTool(toolName: string, subCommand: string, args: Record<string, Object>, challenge: string,
-    execOptions?: ExecOptions): Promise<CliSessionInfo>-End-->
+<!--Device-cliManager-function execTool(toolName: string, subCommand: string, args: Record<string, Object>, challenge: string,    execOptions?: ExecOptions): Promise<CliSessionInfo>--><!--Device-cliManager-function execTool(toolName: string, subCommand: string, args: Record<string, Object>, challenge: string,    execOptions?: ExecOptions): Promise<CliSessionInfo>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 

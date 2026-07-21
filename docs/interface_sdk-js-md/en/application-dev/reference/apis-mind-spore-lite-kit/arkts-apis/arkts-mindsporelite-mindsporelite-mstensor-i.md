@@ -14,7 +14,6 @@ Provides MSTensor definition
 import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
-<a id="getdata"></a>
 ## getData
 
 ```TypeScript
@@ -87,7 +86,6 @@ globalContext.getApplicationContext()
 
 ```
 
-<a id="setdata"></a>
 ## setData
 
 ```TypeScript

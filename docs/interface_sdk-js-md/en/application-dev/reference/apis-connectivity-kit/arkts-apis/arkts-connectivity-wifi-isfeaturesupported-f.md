@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="isfeaturesupported"></a>
 ## isFeatureSupported
 
 ```TypeScript

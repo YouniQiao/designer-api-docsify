@@ -6,7 +6,6 @@
 import { util } from '@kit.ArkTS';
 ```
 
-<a id="promisewrapper"></a>
 ## promiseWrapper
 
 ```TypeScript
@@ -19,7 +18,7 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 **Deprecated since:** 9
 
-**Substitutes:** [promisify](arkts-arkts-util-promisify-f.md#promisify-1)
+**Substitutes:** [promisify](arkts-arkts-util-promisify-f.md#promisify)
 
 <!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object--><!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object-End-->
 

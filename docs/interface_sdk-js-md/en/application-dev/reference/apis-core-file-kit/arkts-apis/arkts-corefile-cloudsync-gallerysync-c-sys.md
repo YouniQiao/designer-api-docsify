@@ -16,7 +16,6 @@ Provides APIs to implement device-cloud sync of media assets in **Gallery**. Bef
 import { cloudSync } from '@kit.CoreFileKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -40,7 +39,6 @@ let gallerySync = new cloudSync.GallerySync()
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -90,7 +88,6 @@ gallerySync.off('progress', callback);
 
 ```
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -137,7 +134,6 @@ gallerySync.off('progress');
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -183,7 +179,6 @@ gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
 
 ```
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -238,7 +233,6 @@ gallerySync.start().then(() => {
 
 ```
 
-<a id="start-1"></a>
 ## start
 
 ```TypeScript
@@ -291,7 +285,6 @@ gallerySync.start((err: BusinessError) => {
 
 ```
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -299,11 +292,10 @@ stop(): Promise<void>
 ```
 
 Stops device-cloud sync. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Calling **stop** will stop the sync process. To resume the sync, call  
-> [start](arkts-corefile-cloudsync-gallerysync-c-sys.md#start-1).
+> [start](arkts-corefile-cloudsync-gallerysync-c-sys.md#start).
 
 **Since:** 10
 
@@ -344,7 +336,6 @@ gallerySync.stop().then(() => {
 
 ```
 
-<a id="stop-1"></a>
 ## stop
 
 ```TypeScript
@@ -352,11 +343,10 @@ stop(callback: AsyncCallback<void>): void
 ```
 
 Stops device-cloud sync. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Calling **stop** will stop the sync process. To resume the sync, call  
-> [start](arkts-corefile-cloudsync-gallerysync-c-sys.md#start-1).
+> [start](arkts-corefile-cloudsync-gallerysync-c-sys.md#start).
 
 **Since:** 10
 

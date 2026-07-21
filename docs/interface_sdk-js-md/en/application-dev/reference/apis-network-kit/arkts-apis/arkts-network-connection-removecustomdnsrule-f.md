@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="removecustomdnsrule"></a>
 ## removeCustomDnsRule
 
 ```TypeScript
@@ -59,7 +58,6 @@ connection.removeCustomDnsRule("xxxx", (error: BusinessError, data: void) => {
 ```
 
 
-<a id="removecustomdnsrule-1"></a>
 ## removeCustomDnsRule
 
 ```TypeScript

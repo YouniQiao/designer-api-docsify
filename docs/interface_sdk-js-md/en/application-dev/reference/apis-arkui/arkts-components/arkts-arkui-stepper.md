@@ -16,7 +16,6 @@ Stepper(value?: { index?: number })
 ```
 
 Creates a **Stepper** component.
-
 > **NOTE**
 
 **Since:** 8

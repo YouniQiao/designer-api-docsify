@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="getallappprovisioninfo"></a>
 ## getAllAppProvisionInfo
 
 ```TypeScript
@@ -29,7 +28,7 @@ Obtains the [provision](bundleManager/AppProvisionInfo) configuration file infor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1).<br>The default value is the user ID of the caller.<br>The value must be greater than or equal to 0. |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid).<br>The default value is the user ID of the caller.<br>The value must be greater than or equal to 0. |
 
 **Return value:**
 

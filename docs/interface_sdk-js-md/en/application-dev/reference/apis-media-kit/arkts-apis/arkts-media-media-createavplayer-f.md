@@ -6,7 +6,6 @@
 import { media } from '@kit.MediaKit';
 ```
 
-<a id="createavplayer"></a>
 ## createAVPlayer
 
 ```TypeScript
@@ -14,7 +13,6 @@ function createAVPlayer(callback: AsyncCallback<AVPlayer>): void
 ```
 
 Creates an AVPlayer instance. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - You are advised to create a maximum of 16 AVPlayer instances for an application in both audio and video  
@@ -66,7 +64,6 @@ media.createAVPlayer((error: BusinessError, video: media.AVPlayer) => {
 ```
 
 
-<a id="createavplayer-1"></a>
 ## createAVPlayer
 
 ```TypeScript
@@ -74,7 +71,6 @@ function createAVPlayer(): Promise<AVPlayer>
 ```
 
 Creates an AVPlayer instance. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - You are advised to create a maximum of 16 AVPlayer instances for an application in both audio and video  

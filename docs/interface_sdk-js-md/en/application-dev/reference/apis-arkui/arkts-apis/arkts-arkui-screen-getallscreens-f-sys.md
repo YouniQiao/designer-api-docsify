@@ -6,7 +6,6 @@
 import { screen } from '@kit.ArkUI';
 ```
 
-<a id="getallscreens"></a>
 ## getAllScreens
 
 ```TypeScript
@@ -58,7 +57,6 @@ screen.getAllScreens((err: BusinessError, data: Array<screen.Screen>) => {
 ```
 
 
-<a id="getallscreens-1"></a>
 ## getAllScreens
 
 ```TypeScript
@@ -113,7 +111,6 @@ screen.getAllScreens((err: BusinessError, data: Array<screen.Screen>) => {
 ```
 
 
-<a id="getallscreens-2"></a>
 ## getAllScreens
 
 ```TypeScript
@@ -163,7 +160,6 @@ promise.then((data: Array<screen.Screen>) => {
 ```
 
 
-<a id="getallscreens-3"></a>
 ## getAllScreens
 
 ```TypeScript

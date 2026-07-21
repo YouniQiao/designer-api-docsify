@@ -6,7 +6,6 @@
 import { data } from '@kit.TelephonyKit';
 ```
 
-<a id="getactiveapnname"></a>
 ## getActiveApnName
 
 ```TypeScript

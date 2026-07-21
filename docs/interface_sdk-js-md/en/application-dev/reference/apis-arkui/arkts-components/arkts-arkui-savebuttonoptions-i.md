@@ -1,7 +1,6 @@
 # SaveButtonOptions
 
 Defines options for the save button, including icon, text, and button type.
-
 > **NOTE**  
 >  
 > - You are advised to specify at least one of **icon** or **text**.  

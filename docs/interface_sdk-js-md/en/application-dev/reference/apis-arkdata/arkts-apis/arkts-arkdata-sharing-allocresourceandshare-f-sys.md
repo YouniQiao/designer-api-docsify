@@ -6,7 +6,6 @@
 import { cloudData } from '@kit.ArkData';
 ```
 
-<a id="allocresourceandshare"></a>
 ## allocResourceAndShare
 
 ```TypeScript
@@ -22,17 +21,7 @@ Allocates a shared resource ID based on the data that matches the specified pred
 
 **Since:** 11
 
-<!--Device-sharing-function allocResourceAndShare(
-      storeId: string,
-      predicates: relationalStore.RdbPredicates,
-      participants: Array<Participant>,
-      columns?: Array<string>
-    ): Promise<relationalStore.ResultSet>--><!--Device-sharing-function allocResourceAndShare(
-      storeId: string,
-      predicates: relationalStore.RdbPredicates,
-      participants: Array<Participant>,
-      columns?: Array<string>
-    ): Promise<relationalStore.ResultSet>-End-->
+<!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns?: Array<string>    ): Promise<relationalStore.ResultSet>--><!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns?: Array<string>    ): Promise<relationalStore.ResultSet>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -99,7 +88,6 @@ cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, [
 ```
 
 
-<a id="allocresourceandshare-1"></a>
 ## allocResourceAndShare
 
 ```TypeScript
@@ -115,17 +103,7 @@ Allocates a shared resource ID based on the data that matches the specified pred
 
 **Since:** 11
 
-<!--Device-sharing-function allocResourceAndShare(
-      storeId: string,
-      predicates: relationalStore.RdbPredicates,
-      participants: Array<Participant>,
-      callback: AsyncCallback<relationalStore.ResultSet>
-    ): void--><!--Device-sharing-function allocResourceAndShare(
-      storeId: string,
-      predicates: relationalStore.RdbPredicates,
-      participants: Array<Participant>,
-      callback: AsyncCallback<relationalStore.ResultSet>
-    ): void-End-->
+<!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void--><!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -188,7 +166,6 @@ cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, (
 ```
 
 
-<a id="allocresourceandshare-2"></a>
 ## allocResourceAndShare
 
 ```TypeScript
@@ -205,19 +182,7 @@ Allocates a shared resource ID based on the data that matches the specified pred
 
 **Since:** 11
 
-<!--Device-sharing-function allocResourceAndShare(
-      storeId: string,
-      predicates: relationalStore.RdbPredicates,
-      participants: Array<Participant>,
-      columns: Array<string>,
-      callback: AsyncCallback<relationalStore.ResultSet>
-    ): void--><!--Device-sharing-function allocResourceAndShare(
-      storeId: string,
-      predicates: relationalStore.RdbPredicates,
-      participants: Array<Participant>,
-      columns: Array<string>,
-      callback: AsyncCallback<relationalStore.ResultSet>
-    ): void-End-->
+<!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns: Array<string>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void--><!--Device-sharing-function allocResourceAndShare(      storeId: string,      predicates: relationalStore.RdbPredicates,      participants: Array<Participant>,      columns: Array<string>,      callback: AsyncCallback<relationalStore.ResultSet>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 

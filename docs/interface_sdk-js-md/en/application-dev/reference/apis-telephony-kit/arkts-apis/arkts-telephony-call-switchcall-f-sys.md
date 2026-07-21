@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="switchcall"></a>
 ## switchCall
 
 ```TypeScript
@@ -60,7 +59,6 @@ call.switchCall(1, (err: BusinessError) => {
 ```
 
 
-<a id="switchcall-1"></a>
 ## switchCall
 
 ```TypeScript

@@ -8,7 +8,6 @@ Defines the unique identifier for a custom menu item. It is used to identify men
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="equals"></a>
 ## equals
 
 ```TypeScript
@@ -39,7 +38,6 @@ Checks whether this **TextMenuItemId** object is the same as another **TextMenuI
 | --- | --- |
 | boolean | Whether the two **TextMenuItemId** objects are the same.<br>**true** if the objects are equal; **false** otherwise. |
 
-<a id="of"></a>
 ## of
 
 ```TypeScript

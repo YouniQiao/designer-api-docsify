@@ -59,7 +59,6 @@ If the **Image** component fails to obtain the image or the obtained image size 
 By default, the **Image** component crops images to keep their center. For example, if the component has the same width and height, it crops any image whose width and height are different, so as to keep its center.
 
 If the **Image** component does not have its width and height set, its size adapts to that of its parent component once the image is successfully loaded.
-
 > **NOTE**  
 >  
 > - Passing a URL directly to an **Image** component may lead to potential performance issues, such as: (1) Large  
@@ -210,9 +209,7 @@ Set src and ai options to obtain images
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor,
-      imageAIOptions?: ImageAIOptions, reloadKey?: string): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor,
-      imageAIOptions?: ImageAIOptions, reloadKey?: string): ImageAttribute-End-->
+<!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor,      imageAIOptions?: ImageAIOptions, reloadKey?: string): ImageAttribute--><!--Device-ImageInterface-(src: PixelMap | ResourceStr | DrawableDescriptor,      imageAIOptions?: ImageAIOptions, reloadKey?: string): ImageAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

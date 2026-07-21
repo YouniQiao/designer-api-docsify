@@ -6,7 +6,6 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
-<a id="grantpubliccertificate"></a>
 ## grantPublicCertificate
 
 ```TypeScript

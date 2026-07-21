@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="updateimscallmode"></a>
 ## updateImsCallMode
 
 ```TypeScript
@@ -61,7 +60,6 @@ call.updateImsCallMode(1, 1, (err: BusinessError) => {
 ```
 
 
-<a id="updateimscallmode-1"></a>
 ## updateImsCallMode
 
 ```TypeScript

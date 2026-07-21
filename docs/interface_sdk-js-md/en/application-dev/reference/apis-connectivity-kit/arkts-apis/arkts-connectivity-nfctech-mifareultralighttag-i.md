@@ -10,7 +10,6 @@ Provides methods for accessing MifareUltralight tag.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-<a id="gettype"></a>
 ## getType
 
 ```TypeScript
@@ -33,7 +32,6 @@ Gets the type of the MifareUltralight tag.
 | --- | --- |
 | tag.MifareUltralightType | Returns the type of MifareUltralight tag. |
 
-<a id="readmultiplepages"></a>
 ## readMultiplePages
 
 ```TypeScript
@@ -73,7 +71,6 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="readmultiplepages-1"></a>
 ## readMultiplePages
 
 ```TypeScript
@@ -108,7 +105,6 @@ Reads 4 pages, total is 16 bytes. Page size is 4 bytes.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
 
-<a id="writesinglepage"></a>
 ## writeSinglePage
 
 ```TypeScript
@@ -149,7 +145,6 @@ Writes a page, total 4 bytes.
 | [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 | [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
 
-<a id="writesinglepage-1"></a>
 ## writeSinglePage
 
 ```TypeScript

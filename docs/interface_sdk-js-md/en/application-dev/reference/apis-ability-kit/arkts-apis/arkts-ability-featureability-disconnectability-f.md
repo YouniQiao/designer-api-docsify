@@ -6,7 +6,6 @@
 import { featureAbility } from '@kit.AbilityKit';
 ```
 
-<a id="disconnectability"></a>
 ## disconnectAbility
 
 ```TypeScript
@@ -65,7 +64,6 @@ featureAbility.disconnectAbility(connectId, (error) => {
 ```
 
 
-<a id="disconnectability-1"></a>
 ## disconnectAbility
 
 ```TypeScript

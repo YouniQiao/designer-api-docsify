@@ -14,7 +14,6 @@ The MediaAssetManager class is used for manipulating the read and write operatio
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="cancelrequest"></a>
 ## cancelRequest
 
 ```TypeScript
@@ -52,7 +51,6 @@ Cancels a request for the asset, the callback of which has not been triggered ye
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
-<a id="loadmovingphoto"></a>
 ## loadMovingPhoto
 
 ```TypeScript
@@ -69,15 +67,7 @@ Loads a moving photo in the application sandbox. This API uses a promise to retu
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-MediaAssetManager-static loadMovingPhoto(
-      context: Context,
-      imageFileUri: string,
-      videoFileUri: string
-    ): Promise<MovingPhoto>--><!--Device-MediaAssetManager-static loadMovingPhoto(
-      context: Context,
-      imageFileUri: string,
-      videoFileUri: string
-    ): Promise<MovingPhoto>-End-->
+<!--Device-MediaAssetManager-static loadMovingPhoto(      context: Context,      imageFileUri: string,      videoFileUri: string    ): Promise<MovingPhoto>--><!--Device-MediaAssetManager-static loadMovingPhoto(      context: Context,      imageFileUri: string,      videoFileUri: string    ): Promise<MovingPhoto>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -102,7 +92,6 @@ Loads a moving photo in the application sandbox. This API uses a promise to retu
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
-<a id="quickrequestimage"></a>
 ## quickRequestImage
 
 ```TypeScript
@@ -120,17 +109,7 @@ Requests an image quickly. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-MediaAssetManager-static quickRequestImage(
-      context: Context,
-      asset: PhotoAsset,
-      requestOptions: RequestOptions,
-      dataHandler: QuickImageDataHandler<image.Picture>
-    ): Promise<string>--><!--Device-MediaAssetManager-static quickRequestImage(
-      context: Context,
-      asset: PhotoAsset,
-      requestOptions: RequestOptions,
-      dataHandler: QuickImageDataHandler<image.Picture>
-    ): Promise<string>-End-->
+<!--Device-MediaAssetManager-static quickRequestImage(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: QuickImageDataHandler<image.Picture>    ): Promise<string>--><!--Device-MediaAssetManager-static quickRequestImage(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: QuickImageDataHandler<image.Picture>    ): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -147,7 +126,7 @@ Requests an image quickly. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest-1) to cancel a request. |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest) to cancel a request. |
 
 **Error codes:**
 
@@ -157,7 +136,6 @@ Requests an image quickly. This API uses a promise to return the result.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
-<a id="requestimage"></a>
 ## requestImage
 
 ```TypeScript
@@ -175,17 +153,7 @@ Requests an image. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-MediaAssetManager-static requestImage(
-      context: Context,
-      asset: PhotoAsset,
-      requestOptions: RequestOptions,
-      dataHandler: MediaAssetDataHandler<image.ImageSource>
-    ): Promise<string>--><!--Device-MediaAssetManager-static requestImage(
-      context: Context,
-      asset: PhotoAsset,
-      requestOptions: RequestOptions,
-      dataHandler: MediaAssetDataHandler<image.ImageSource>
-    ): Promise<string>-End-->
+<!--Device-MediaAssetManager-static requestImage(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: MediaAssetDataHandler<image.ImageSource>    ): Promise<string>--><!--Device-MediaAssetManager-static requestImage(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: MediaAssetDataHandler<image.ImageSource>    ): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -202,7 +170,7 @@ Requests an image. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest-1) to cancel a request. |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest) to cancel a request. |
 
 **Error codes:**
 
@@ -212,7 +180,6 @@ Requests an image. This API uses a promise to return the result.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | System inner fail. Possible causes:<br>1. The database is corrupted;<br>2. The file system is abnormal;<br>3. The IPC request timed out. |
 
-<a id="requestimagedata"></a>
 ## requestImageData
 
 ```TypeScript
@@ -230,17 +197,7 @@ Requests image data. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-MediaAssetManager-static requestImageData(
-      context: Context,
-      asset: PhotoAsset,
-      requestOptions: RequestOptions,
-      dataHandler: MediaAssetDataHandler<ArrayBuffer>
-    ): Promise<string>--><!--Device-MediaAssetManager-static requestImageData(
-      context: Context,
-      asset: PhotoAsset,
-      requestOptions: RequestOptions,
-      dataHandler: MediaAssetDataHandler<ArrayBuffer>
-    ): Promise<string>-End-->
+<!--Device-MediaAssetManager-static requestImageData(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: MediaAssetDataHandler<ArrayBuffer>    ): Promise<string>--><!--Device-MediaAssetManager-static requestImageData(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: MediaAssetDataHandler<ArrayBuffer>    ): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -257,7 +214,7 @@ Requests image data. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest-1) to cancel a request. |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest) to cancel a request. |
 
 **Error codes:**
 
@@ -267,7 +224,6 @@ Requests image data. This API uses a promise to return the result.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | System inner fail. Possible causes:<br>1. The database is corrupted;<br>2. The file system is abnormal;<br>3. The IPC request timed out. |
 
-<a id="requestmovingphoto"></a>
 ## requestMovingPhoto
 
 ```TypeScript
@@ -285,17 +241,7 @@ Requests a moving photo object, which can be used to request the asset data of t
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-MediaAssetManager-static requestMovingPhoto(
-      context: Context,
-      asset: PhotoAsset,
-      requestOptions: RequestOptions,
-      dataHandler: MediaAssetDataHandler<MovingPhoto>
-    ): Promise<string>--><!--Device-MediaAssetManager-static requestMovingPhoto(
-      context: Context,
-      asset: PhotoAsset,
-      requestOptions: RequestOptions,
-      dataHandler: MediaAssetDataHandler<MovingPhoto>
-    ): Promise<string>-End-->
+<!--Device-MediaAssetManager-static requestMovingPhoto(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: MediaAssetDataHandler<MovingPhoto>    ): Promise<string>--><!--Device-MediaAssetManager-static requestMovingPhoto(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      dataHandler: MediaAssetDataHandler<MovingPhoto>    ): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -312,7 +258,7 @@ Requests a moving photo object, which can be used to request the asset data of t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest-1) to cancel a request. |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest) to cancel a request. |
 
 **Error codes:**
 
@@ -323,7 +269,6 @@ Requests a moving photo object, which can be used to request the asset data of t
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 | 14000011 | System inner fail |
 
-<a id="requestvideofile"></a>
 ## requestVideoFile
 
 ```TypeScript
@@ -342,19 +287,7 @@ Requests a video and saves it to the specified sandbox directory. This API uses 
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-MediaAssetManager-static requestVideoFile(
-      context: Context,
-      asset: PhotoAsset,
-      requestOptions: RequestOptions,
-      fileUri: string,
-      dataHandler: MediaAssetDataHandler<boolean>
-    ): Promise<string>--><!--Device-MediaAssetManager-static requestVideoFile(
-      context: Context,
-      asset: PhotoAsset,
-      requestOptions: RequestOptions,
-      fileUri: string,
-      dataHandler: MediaAssetDataHandler<boolean>
-    ): Promise<string>-End-->
+<!--Device-MediaAssetManager-static requestVideoFile(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      fileUri: string,      dataHandler: MediaAssetDataHandler<boolean>    ): Promise<string>--><!--Device-MediaAssetManager-static requestVideoFile(      context: Context,      asset: PhotoAsset,      requestOptions: RequestOptions,      fileUri: string,      dataHandler: MediaAssetDataHandler<boolean>    ): Promise<string>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -372,7 +305,7 @@ Requests a video and saves it to the specified sandbox directory. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest-1) to cancel a request. |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md#cancelrequest) to cancel a request. |
 
 **Error codes:**
 

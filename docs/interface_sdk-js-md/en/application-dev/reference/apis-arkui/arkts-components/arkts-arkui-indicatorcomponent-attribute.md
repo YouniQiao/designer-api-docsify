@@ -10,7 +10,6 @@ Defines the IndicatorComponent attribute functions.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="count"></a>
 ## count
 
 ```TypeScript
@@ -37,7 +36,6 @@ Sets the total number of indicator.
 | --- | --- | --- | --- |
 | totalCount | number | Yes |  |
 
-<a id="initialindex"></a>
 ## initialIndex
 
 ```TypeScript
@@ -64,7 +62,6 @@ Called when the index value of the displayed subcomponent is set in the containe
 | --- | --- | --- | --- |
 | index | number | Yes |  |
 
-<a id="loop"></a>
 ## loop
 
 ```TypeScript
@@ -91,7 +88,6 @@ Called when setting whether to turn on cyclic sliding.
 | --- | --- | --- | --- |
 | isLoop | boolean | Yes |  |
 
-<a id="onchange"></a>
 ## onChange
 
 ```TypeScript
@@ -118,7 +114,6 @@ Called when the index value changes.
 | --- | --- | --- | --- |
 | event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |  |
 
-<a id="style"></a>
 ## style
 
 ```TypeScript
@@ -145,7 +140,6 @@ Sets the indicator style.
 | --- | --- | --- | --- |
 | indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| DigitIndicator | Yes | the style value |
 
-<a id="vertical"></a>
 ## vertical
 
 ```TypeScript

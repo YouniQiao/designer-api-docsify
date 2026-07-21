@@ -1,7 +1,6 @@
 # DecorationStyleInterface
 
 Describes the API object for text decoration line styles.
-
 > **NOTE**  
 >  
 > When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly  

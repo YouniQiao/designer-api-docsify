@@ -4,7 +4,6 @@
 
 <!--Device-unnamed-interface RangeErrorConstructor extends ErrorConstructor--><!--Device-unnamed-interface RangeErrorConstructor extends ErrorConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ new(message?: string): RangeError
 | --- | --- |
 | RangeError |  |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

@@ -16,7 +16,6 @@ General callbacks for both backup and restore procedure.The backup service will 
 import { backup } from '@kit.CoreFileKit';
 ```
 
-<a id="onprocess"></a>
 ## onProcess
 
 ```TypeScript
@@ -57,7 +56,6 @@ Callback called when the backup_sa service return result information.The first r
 | 13900020 | Invalid argument |
 | 13900025 | No space left on device |
 
-<a id="onresultreport"></a>
 ## onResultReport
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # notifyVisibleForms (System API)
 
-<a id="notifyvisibleforms"></a>
 ## notifyVisibleForms
 
 ```TypeScript
@@ -13,7 +12,7 @@ Instructs the widget framework to make a widget visible. After this API is calle
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyvisibleforms-1)
+**Substitutes:** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md#notifyvisibleforms)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -31,7 +30,6 @@ Instructs the widget framework to make a widget visible. After this API is calle
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget visible, **error** is undefined; otherwise, **error** is an error object. |
 
 
-<a id="notifyvisibleforms-1"></a>
 ## notifyVisibleForms
 
 ```TypeScript
@@ -44,7 +42,7 @@ Instructs the widget framework to make a widget visible. After this API is calle
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyvisibleforms-1)
+**Substitutes:** [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-depr-f-sys.md#notifyvisibleforms)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

@@ -12,7 +12,6 @@
 
 **System API:** This is a system API.
 
-<a id="sendmsg"></a>
 ## sendMsg
 
 ```TypeScript
@@ -37,7 +36,6 @@ Sends messages to the destination device.
 | --- | --- | --- | --- |
 | options | [SendMessageOptions](arkts-arkui-featureability-sendmessageoptions-i.md) | Yes | Options. |
 
-<a id="subscribemsg"></a>
 ## subscribeMsg
 
 ```TypeScript
@@ -62,7 +60,6 @@ Listens for messages sent from other devices.
 | --- | --- | --- | --- |
 | options | [SubscribeMessageOptions](arkts-arkui-featureability-subscribemessageoptions-i.md) | Yes | Options. |
 
-<a id="unsubscribemsg"></a>
 ## unsubscribeMsg
 
 ```TypeScript

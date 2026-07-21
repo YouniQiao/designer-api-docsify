@@ -14,7 +14,6 @@ Provides manages model function. Including get inputs, predict ,resize.
 import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
-<a id="exportmodel"></a>
 ## exportModel
 
 ```TypeScript
@@ -31,15 +30,7 @@ Export train model to file
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Model-exportModel(
-      modelFile: string,
-      quantizationType?: QuantizationType,
-      exportInferenceOnly?: boolean,
-      outputTensorName?: string[]): boolean--><!--Device-Model-exportModel(
-      modelFile: string,
-      quantizationType?: QuantizationType,
-      exportInferenceOnly?: boolean,
-      outputTensorName?: string[]): boolean-End-->
+<!--Device-Model-exportModel(      modelFile: string,      quantizationType?: QuantizationType,      exportInferenceOnly?: boolean,      outputTensorName?: string[]): boolean--><!--Device-Model-exportModel(      modelFile: string,      quantizationType?: QuantizationType,      exportInferenceOnly?: boolean,      outputTensorName?: string[]): boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -80,7 +71,6 @@ mindSporeLite.loadTrainModelFromFile(modelFile).then((mindSporeLiteModel: mindSp
 
 ```
 
-<a id="exportweightscollaboratewithmicro"></a>
 ## exportWeightsCollaborateWithMicro
 
 ```TypeScript
@@ -97,15 +87,7 @@ Export model's weights, which can be used in micro only. Only valid for Lite Tra
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Model-exportWeightsCollaborateWithMicro(
-      weightFile: string,
-      isInference?: boolean,
-      enableFp16?: boolean,
-      changeableWeightsName?: string[]): boolean--><!--Device-Model-exportWeightsCollaborateWithMicro(
-      weightFile: string,
-      isInference?: boolean,
-      enableFp16?: boolean,
-      changeableWeightsName?: string[]): boolean-End-->
+<!--Device-Model-exportWeightsCollaborateWithMicro(      weightFile: string,      isInference?: boolean,      enableFp16?: boolean,      changeableWeightsName?: string[]): boolean--><!--Device-Model-exportWeightsCollaborateWithMicro(      weightFile: string,      isInference?: boolean,      enableFp16?: boolean,      changeableWeightsName?: string[]): boolean-End-->
 
 **System capability:** SystemCapability.AI.MindSporeLite
 
@@ -142,7 +124,6 @@ mindSporeLite.loadTrainModelFromFile(modelFile).then((mindSporeLiteModel: mindSp
 
 ```
 
-<a id="getinputs"></a>
 ## getInputs
 
 ```TypeScript
@@ -184,7 +165,6 @@ mindSporeLite.loadModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLi
 
 ```
 
-<a id="getweights"></a>
 ## getWeights
 
 ```TypeScript
@@ -245,7 +225,6 @@ globalContext.getApplicationContext()
 
 ```
 
-<a id="predict"></a>
 ## predict
 
 ```TypeScript
@@ -317,7 +296,6 @@ globalContext.getApplicationContext()
 
 ```
 
-<a id="predict-1"></a>
 ## predict
 
 ```TypeScript
@@ -396,7 +374,6 @@ globalContext.getApplicationContext()
 
 ```
 
-<a id="resize"></a>
 ## resize
 
 ```TypeScript
@@ -449,7 +426,6 @@ mindSporeLite.loadModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLi
 
 ```
 
-<a id="runstep"></a>
 ## runStep
 
 ```TypeScript
@@ -504,7 +480,6 @@ mindSporeLite.loadTrainModelFromFile(modelFile).then((mindSporeLiteModel: mindSp
 
 ```
 
-<a id="setupvirtualbatch"></a>
 ## setupVirtualBatch
 
 ```TypeScript
@@ -574,7 +549,6 @@ globalContext.getApplicationContext()
 
 ```
 
-<a id="updateweights"></a>
 ## updateWeights
 
 ```TypeScript

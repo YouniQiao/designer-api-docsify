@@ -1,7 +1,6 @@
 # ListDividerOptions
 
 Defines the divider style of the list or list item group.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  

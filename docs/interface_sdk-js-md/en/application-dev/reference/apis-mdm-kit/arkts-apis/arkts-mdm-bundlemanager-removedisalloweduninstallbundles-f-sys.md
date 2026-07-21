@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="removedisalloweduninstallbundles"></a>
 ## removeDisallowedUninstallBundles
 
 ```TypeScript
@@ -19,7 +18,7 @@ Removes the applications that cannot be uninstalled by the current user. This AP
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md#removedisalloweduninstallbundlessync-1)
+**Substitutes:** [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md#removedisalloweduninstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -74,7 +73,6 @@ bundleManager.removeDisallowedUninstallBundles(wantTemp, appIds, (err) => {
 ```
 
 
-<a id="removedisalloweduninstallbundles-1"></a>
 ## removeDisallowedUninstallBundles
 
 ```TypeScript
@@ -87,7 +85,7 @@ Removes the applications that cannot be uninstalled by the user specified by **u
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md#removedisalloweduninstallbundlessync-1)
+**Substitutes:** [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md#removedisalloweduninstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -143,7 +141,6 @@ bundleManager.removeDisallowedUninstallBundles(wantTemp, appIds, 100, (err) => {
 ```
 
 
-<a id="removedisalloweduninstallbundles-2"></a>
 ## removeDisallowedUninstallBundles
 
 ```TypeScript
@@ -156,7 +153,7 @@ Removes the applications that cannot be uninstalled by the current or specified 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md#removedisalloweduninstallbundlessync-1)
+**Substitutes:** [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md#removedisalloweduninstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 

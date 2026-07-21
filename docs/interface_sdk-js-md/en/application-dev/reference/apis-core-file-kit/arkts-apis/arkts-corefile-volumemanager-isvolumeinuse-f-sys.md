@@ -6,7 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="isvolumeinuse"></a>
 ## isVolumeInUse
 
 ```TypeScript

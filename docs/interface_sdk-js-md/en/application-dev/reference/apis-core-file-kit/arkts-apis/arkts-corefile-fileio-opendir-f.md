@@ -1,6 +1,5 @@
 # opendir
 
-<a id="opendir"></a>
 ## opendir
 
 ```TypeScript
@@ -13,7 +12,7 @@ Opens a directory. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-unnamed-declare function opendir(path: string): Promise<Dir>--><!--Device-unnamed-declare function opendir(path: string): Promise<Dir>-End-->
 
@@ -32,7 +31,6 @@ Opens a directory. This API uses a promise to return the result.
 | Promise&lt;Dir&gt; | Promise that returns the **Dir** object opened. |
 
 
-<a id="opendir-1"></a>
 ## opendir
 
 ```TypeScript
@@ -45,7 +43,7 @@ Opens a file directory. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile-1)
+**Substitutes:** [fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
 
 <!--Device-unnamed-declare function opendir(path: string, callback: AsyncCallback<Dir>): void--><!--Device-unnamed-declare function opendir(path: string, callback: AsyncCallback<Dir>): void-End-->
 

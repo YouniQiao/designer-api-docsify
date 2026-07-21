@@ -1,7 +1,6 @@
 # RoundedRectOptions
 
 Describes the options of the rounded rectangle.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
@@ -24,11 +23,11 @@ Height. The value must be greater than or equal to 0.Unit: vp, The value must be
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RoundedRectOptions-height?: Length--><!--Device-RoundedRectOptions-height?: Length-End-->
 
@@ -44,11 +43,11 @@ Height of the rounded corner. The value must be greater than or equal to 0.Unit:
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RoundedRectOptions-radiusHeight?: Length--><!--Device-RoundedRectOptions-radiusHeight?: Length-End-->
 
@@ -64,11 +63,11 @@ Width of the rounded corner. The value must be greater than or equal to 0.Unit: 
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RoundedRectOptions-radiusWidth?: Length--><!--Device-RoundedRectOptions-radiusWidth?: Length-End-->
 
@@ -84,11 +83,11 @@ Width. The value must be greater than or equal to 0Unit: vp, The **undefined**, 
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RoundedRectOptions-width?: Length--><!--Device-RoundedRectOptions-width?: Length-End-->
 

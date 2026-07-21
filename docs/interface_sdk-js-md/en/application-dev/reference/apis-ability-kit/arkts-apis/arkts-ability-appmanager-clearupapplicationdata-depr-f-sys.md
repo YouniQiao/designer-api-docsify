@@ -1,6 +1,5 @@
 # clearUpApplicationData (System API)
 
-<a id="clearupapplicationdata"></a>
 ## clearUpApplicationData
 
 ```TypeScript
@@ -53,7 +52,6 @@ appManager.clearUpApplicationData(bundleName)
 ```
 
 
-<a id="clearupapplicationdata-1"></a>
 ## clearUpApplicationData
 
 ```TypeScript

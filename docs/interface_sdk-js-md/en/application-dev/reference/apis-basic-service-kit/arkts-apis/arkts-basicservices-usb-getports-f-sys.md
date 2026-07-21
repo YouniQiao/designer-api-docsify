@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="getports"></a>
 ## getPorts
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the list of all physical USB ports.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getports-1)
+**Substitutes:** [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getports)
 
 <!--Device-usb-function getPorts(): Array<USBPort>--><!--Device-usb-function getPorts(): Array<USBPort>-End-->
 

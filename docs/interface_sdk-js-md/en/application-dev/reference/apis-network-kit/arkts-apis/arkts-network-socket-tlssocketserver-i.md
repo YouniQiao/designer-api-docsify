@@ -14,7 +14,6 @@ Defines a TLSSocketServer server connection.
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -84,7 +83,6 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 
 ```
 
-<a id="getcertificate"></a>
 ## getCertificate
 
 ```TypeScript
@@ -114,7 +112,6 @@ Returns an object representing a local certificate.
 | [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
-<a id="getcertificate-1"></a>
 ## getCertificate
 
 ```TypeScript
@@ -143,7 +140,6 @@ Returns an object representing a local certificate.
 | [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
 | [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 
-<a id="getlocaladdress"></a>
 ## getLocalAddress
 
 ```TypeScript
@@ -187,7 +183,6 @@ tlsServer.getLocalAddress().then((localAddress: socket.NetAddress) => {
 
 ```
 
-<a id="getprotocol"></a>
 ## getProtocol
 
 ```TypeScript
@@ -258,7 +253,6 @@ tlsServer.getProtocol((err: BusinessError, data: string) => {
 
 ```
 
-<a id="getprotocol-1"></a>
 ## getProtocol
 
 ```TypeScript
@@ -326,7 +320,6 @@ tlsServer.getProtocol().then((data: string) => {
 
 ```
 
-<a id="getsocketfd"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -394,7 +387,6 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 
 ```
 
-<a id="getstate"></a>
 ## getState
 
 ```TypeScript
@@ -464,7 +456,6 @@ tlsServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
 
 ```
 
-<a id="getstate-1"></a>
 ## getState
 
 ```TypeScript
@@ -531,7 +522,6 @@ tlsServer.getState().then(() => {
 
 ```
 
-<a id="listen"></a>
 ## listen
 
 ```TypeScript
@@ -605,7 +595,6 @@ tlsServer.listen(tlsConnectOptions, (err: BusinessError) => {
 
 ```
 
-<a id="listen-1"></a>
 ## listen
 
 ```TypeScript
@@ -686,7 +675,6 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 
 ```
 
-<a id="off"></a>
 ## off('connect')
 
 ```TypeScript
@@ -756,7 +744,6 @@ tlsServer.off('connect');
 
 ```
 
-<a id="off-1"></a>
 ## off('error')
 
 ```TypeScript
@@ -826,7 +813,6 @@ tlsServer.off('error');
 
 ```
 
-<a id="on"></a>
 ## on('connect')
 
 ```TypeScript
@@ -891,7 +877,6 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 
 ```
 
-<a id="on-1"></a>
 ## on('error')
 
 ```TypeScript
@@ -956,7 +941,6 @@ tlsServer.on('error', (err: BusinessError) => {
 
 ```
 
-<a id="setextraoptions"></a>
 ## setExtraOptions
 
 ```TypeScript
@@ -1043,7 +1027,6 @@ tlsServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
 
 ```
 
-<a id="setextraoptions-1"></a>
 ## setExtraOptions
 
 ```TypeScript

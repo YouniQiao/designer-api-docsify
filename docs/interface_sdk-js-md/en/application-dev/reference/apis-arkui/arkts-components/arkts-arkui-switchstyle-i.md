@@ -94,7 +94,7 @@ unselectedColor?: ResourceColor
 
 Background color of the component when it is of the **Switch** type and is disabled.
 
-Default value: **0x337F7F7F** (applies to both dark and light modes). Since API version 20, when [optimizing color mode switching overhead](docroot://ui/ui-dark-light-color-adaptation.md#optimizing-color-mode-switching-overhead)is enabled, the default value is **0x19000000** (black with 10% opacity) in light mode and **0x19FFFFFF** (white with 10% opacity) in dark mode.
+Default value: **0x337F7F7F** (applies to both dark and light modes). Since API version 20, when [optimizing color mode switching overhead](../../../ui/ui-dark-light-color-adaptation.md#optimizing-color-mode-switching-overhead)is enabled, the default value is **0x19000000** (black with 10% opacity) in light mode and **0x19FFFFFF** (white with 10% opacity) in dark mode.
 
 **Type:** ResourceColor
 

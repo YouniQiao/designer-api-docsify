@@ -6,7 +6,6 @@
 import { wifiext } from '@kit.ConnectivityKit';
 ```
 
-<a id="getpowermodel"></a>
 ## getPowerModel
 
 ```TypeScript
@@ -34,7 +33,6 @@ Obtains the current Wi-Fi power mode.
 | Promise&lt;PowerModel&gt; | Returns the current Wi-Fi power mode. If a value less than zero is returned, it indicates a failure. |
 
 
-<a id="getpowermodel-1"></a>
 ## getPowerModel
 
 ```TypeScript

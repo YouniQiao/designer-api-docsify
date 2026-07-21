@@ -32,7 +32,7 @@ import { webview } from '@kit.ArkWeb';
 | [GeolocationPermissions](arkts-arkweb-webview-geolocationpermissions-c.md) | Implements a **GeolocationPermissions** object. |
 | [JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md) | The message for indicating the of result of JavaScript code execution. |
 | [MediaSourceInfo](arkts-arkweb-webview-mediasourceinfo-c.md) | Implements a **MediaSourceInfo** object to provide the information about the media source. |
-| [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md) | Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface information used for same-layer rendering [when the application takes over the media playback of the web page](docroot://reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12). |
+| [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md) | Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface information used for same-layer rendering [when the application takes over the media playback of the web page](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12). |
 | [PdfData](arkts-arkweb-webview-pdfdata-c.md) | Implements the output data stream class of **createPdf()**. |
 | [PrefetchOptions](arkts-arkweb-webview-prefetchoptions-c.md) | Defines the PrefetchOptions class. |
 | [ProxyConfig](arkts-arkweb-webview-proxyconfig-c.md) | The ProxyConfig used by applyProxyOverride. |
@@ -64,11 +64,11 @@ import { webview } from '@kit.ArkWeb';
 | [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) | Defines the blankless loading parameter.  Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. |
 | [CacheOptions](arkts-arkweb-webview-cacheoptions-i.md) | Represents a configuration object for precompiling JavaScript in the **Web** component to generate bytecode cache,which is designed to control the updating of the bytecode cache. |
 | [HistoryItem](arkts-arkweb-webview-historyitem-i.md) | Provides information for history item in BackForwardList. |
-| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | Provides the element information of the area being clicked. For the sample code, see [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest-1). |
+| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | Provides the element information of the area being clicked. For the sample code, see [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest). |
 | [MediaInfo](arkts-arkweb-webview-mediainfo-i.md) | Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page. |
 | [NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md) | Instance of the API class between the web media player and the ArkWeb kernel.  The ArkWeb kernel uses an object of this interface class to control the player created by the application to take over web page media. |
 | [NativeMediaPlayerHandler](arkts-arkweb-webview-nativemediaplayerhandler-i.md) | Implements a **NativeMediaPlayerHandler** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) callback. The application uses this object to report the player status to the ArkWeb engine. |
-| [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md) | Implements an **OfflineResourceMap** object, which is used to set information related to local offline resources that will be injected into memory cache through the [injectOfflineResources](arkts-arkweb-webview-webviewcontroller-c.md#injectofflineresources-1) API. The ArkWeb engine will generate resource caches based on this information and control the validity period of the cache accordingly. |
+| [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md) | Implements an **OfflineResourceMap** object, which is used to set information related to local offline resources that will be injected into memory cache through the [injectOfflineResources](arkts-arkweb-webview-webviewcontroller-c.md#injectofflineresources) API. The ArkWeb engine will generate resource caches based on this information and control the validity period of the cache accordingly. |
 | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | Specifies the input parameters of **createPdf()**. |
 | [RectEvent](arkts-arkweb-webview-rectevent-i.md) | Defines a rectangle. |
 | [RequestInfo](arkts-arkweb-webview-requestinfo-i.md) | Describes the information about the resource request sent by the **Web** component. |
@@ -95,7 +95,7 @@ import { webview } from '@kit.ArkWeb';
 | [MediaType](arkts-arkweb-webview-mediatype-e.md) | Enumerates the media types. |
 | [NetworkState](arkts-arkweb-webview-networkstate-e.md) | Enumerates the network statuses of the player. |
 | [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md) | Enumerates the offline resource types corresponding to the [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md) object. |
-| [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | Enumerates the playback statuses of the player, which is an input parameter of the [handleStatusChanged](arkts-arkweb-webview-nativemediaplayerhandler-i.md#handlestatuschanged-1) API. |
+| [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | Enumerates the playback statuses of the player, which is an input parameter of the [handleStatusChanged](arkts-arkweb-webview-nativemediaplayerhandler-i.md#handlestatuschanged) API. |
 | [Preload](arkts-arkweb-webview-preload-e.md) | Enumerates how the player preloads media data. |
 | [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | Enumerates the memory pressure levels. When an application clears the cache occupied by the **Web** component, the **Web** kernel releases the cache based on the memory pressure level.  \| Name\| Value\| Description\|  \| ------------------------------- \| - \| ---------- \|  \| MEMORY_PRESSURE_LEVEL_MODERATE \| 1 \| Moderate memory pressure level. At this level, the **Web** kernel attempts to release the cache that has low reallocation overhead and does not need to be used immediately.\|  \| MEMORY_PRESSURE_LEVEL_CRITICAL \| 2 \| Critical memory pressure level. At this level, the **Web** kernel attempts to release all possible memory caches.\| |
 | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | Enum type supplied to {@link insertProxyRule} for indicating the scheme filter for proxy. |
@@ -113,7 +113,7 @@ import { webview } from '@kit.ArkWeb';
 | [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | Enumerates the destroy modes of the **Web** component. When the Web component is destroyed, the destroy mode affects the resource release time of the Web kernel, such as the JavaScript running context and rendering context. |
 | [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | Defines the error code for download. |
 | [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | Defines the state for download. |
-| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) | Enumerates the cursor node types for the [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest-1) API. |
+| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) | Enumerates the cursor node types for the [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest) API. |
 | [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md) | Indicates whether to restrict cookies so that only requests sent back to the same site that created them can carry them. |
 | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Enum type supplied to {@link onMessageEventExt} for indicating the type of web message. |
 | [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Defines the resource type of request. |
@@ -123,7 +123,7 @@ import { webview } from '@kit.ArkWeb';
 
 | Name | Description |
 | --- | --- |
-| [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | Defines a **CreateNativeMediaPlayerCallback** object used as a parameter of the [onCreateNativeMediaPlayer](arkts-arkweb-webview-webviewcontroller-c.md#oncreatenativemediaplayer-1)callback. This object is used to create a player to take over media playback of the web page. |
+| [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | Defines a **CreateNativeMediaPlayerCallback** object used as a parameter of the [onCreateNativeMediaPlayer](arkts-arkweb-webview-webviewcontroller-c.md#oncreatenativemediaplayer)callback. This object is used to create a player to take over media playback of the web page. |
 | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | The callback for proxy changed. |
 | [WebMessage](arkts-arkweb-webview-webmessage-t.md) | Defines the data types supported by {@link onMessageEventExt}. |
 

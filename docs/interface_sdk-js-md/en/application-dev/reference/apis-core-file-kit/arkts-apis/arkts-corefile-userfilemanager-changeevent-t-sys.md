@@ -18,19 +18,7 @@ Enumerates the type of changes to observe.
 
 **Substitutes:** [ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md)
 
-<!--Device-userFileManager-type ChangeEvent =
-    'deviceChange'
-    | 'albumChange'
-    | 'imageChange'
-    | 'audioChange'
-    | 'videoChange'
-    | 'remoteFileChange'--><!--Device-userFileManager-type ChangeEvent =
-    'deviceChange'
-    | 'albumChange'
-    | 'imageChange'
-    | 'audioChange'
-    | 'videoChange'
-    | 'remoteFileChange'-End-->
+<!--Device-userFileManager-type ChangeEvent =    'deviceChange'    | 'albumChange'    | 'imageChange'    | 'audioChange'    | 'videoChange'    | 'remoteFileChange'--><!--Device-userFileManager-type ChangeEvent =    'deviceChange'    | 'albumChange'    | 'imageChange'    | 'audioChange'    | 'videoChange'    | 'remoteFileChange'-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 

@@ -10,7 +10,6 @@ Provides an interface for attribute subscribers.
 
 **System API:** This is a system API.
 
-<a id="abouttobedeleted"></a>
 ## aboutToBeDeleted
 
 ```TypeScript
@@ -33,7 +32,6 @@ Called when the object is about to be destroyed.
 | --- | --- | --- | --- |
 | owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Component that owns the current property. |
 
-<a id="id"></a>
 ## id
 
 ```TypeScript

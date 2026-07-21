@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="getcurrentfunctions"></a>
 ## getCurrentFunctions
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the numeric mask combination for the USB function list in Device mode. W
 
 **Deprecated since:** 12
 
-**Substitutes:** [getDeviceFunctions()](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md#getdevicefunctions-1)
+**Substitutes:** [getDeviceFunctions()](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md#getdevicefunctions)
 
 <!--Device-usbManager-function getCurrentFunctions(): FunctionType--><!--Device-usbManager-function getCurrentFunctions(): FunctionType-End-->
 

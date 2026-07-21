@@ -1,6 +1,6 @@
 # PersistenceV2
 
-Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md). For details, see [PersistenceV2: Persisting Application State](docroot://ui/state-management/arkts-new-persistencev2.md).
+Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md). For details, see [PersistenceV2: Persisting Application State](../../../ui/state-management/arkts-new-persistencev2.md).
 
 **Inheritance/Implementation:** PersistenceV2 extends [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md)
 
@@ -16,7 +16,6 @@ Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md
 import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
-<a id="globalconnect"></a>
 ## globalConnect
 
 ```TypeScript
@@ -25,7 +24,7 @@ static globalConnect<T extends object>(
   ): T | undefined
 ```
 
-Stores key-value pair data on the application disk. If the given key already exists in [PersistenceV2](docroot://ui/state-management/arkts-new-persistencev2.md), the corresponding value is returned.Otherwise, a default value is constructed using the default value constructor and returned. If **globalConnect** is used for an [\@ObservedV2](docroot://ui/state-management/arkts-new-observedV2-and-trace.md) decorated object,changes to the object's [\@Trace](docroot://ui/state-management/arkts-new-observedV2-and-trace.md) properties will trigger automatic refresh of the associated object, while changes to non-@Trace properties will not. If necessary,the [PersistenceV2.save](arkts-arkui-arkui-statemanagement-persistencev2-c.md#save-1) API can be called to store the data manually.
+Stores key-value pair data on the application disk. If the given key already exists in [PersistenceV2](../../../ui/state-management/arkts-new-persistencev2.md), the corresponding value is returned.Otherwise, a default value is constructed using the default value constructor and returned. If **globalConnect** is used for an [\@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) decorated object,changes to the object's [\@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md) properties will trigger automatic refresh of the associated object, while changes to non-@Trace properties will not. If necessary,the [PersistenceV2.save](arkts-arkui-arkui-statemanagement-persistencev2-c.md#save) API can be called to store the data manually.
 
 **Since:** 18
 
@@ -33,11 +32,7 @@ Stores key-value pair data on the application disk. If the given key already exi
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-PersistenceV2-static globalConnect<T extends object>(
-    type: ConnectOptions<T>
-  ): T | undefined--><!--Device-PersistenceV2-static globalConnect<T extends object>(
-    type: ConnectOptions<T>
-  ): T | undefined-End-->
+<!--Device-PersistenceV2-static globalConnect<T extends object>(    type: ConnectOptions<T>  ): T | undefined--><!--Device-PersistenceV2-static globalConnect<T extends object>(    type: ConnectOptions<T>  ): T | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -53,7 +48,6 @@ Stores key-value pair data on the application disk. If the given key already exi
 | --- | --- |
 | T | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
 
-<a id="globalconnect-1"></a>
 ## globalConnect
 
 ```TypeScript
@@ -62,7 +56,7 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
   ): T | undefined
 ```
 
-Stores key-value pair data on the application disk. Supports the persistence of the following collection types:[Array, Map, Set, Date, collections.Array, collections.Map, and collections.Set](docroot://ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect).Note that when persisting data of the **Array\<ClassA>** type, you need to call [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved-1) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array<Array\<ClassA>>** persistence is not supported.
+Stores key-value pair data on the application disk. Supports the persistence of the following collection types:[Array, Map, Set, Date, collections.Array, collections.Map, and collections.Set](../../../ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect).Note that when persisting data of the **Array\<ClassA>** type, you need to call [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array&lt;Array\<ClassA>&gt;** persistence is not supported.
 
 **Since:** 23
 
@@ -70,11 +64,7 @@ Stores key-value pair data on the application disk. Supports the persistence of 
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-PersistenceV2-static globalConnect<T extends CollectionType<S>, S extends object>(
-    type: ConnectOptionsCollections<T, S> | ConnectOptions<T>
-  ): T | undefined--><!--Device-PersistenceV2-static globalConnect<T extends CollectionType<S>, S extends object>(
-    type: ConnectOptionsCollections<T, S> | ConnectOptions<T>
-  ): T | undefined-End-->
+<!--Device-PersistenceV2-static globalConnect<T extends CollectionType<S>, S extends object>(    type: ConnectOptionsCollections<T, S> | ConnectOptions<T>  ): T | undefined--><!--Device-PersistenceV2-static globalConnect<T extends CollectionType<S>, S extends object>(    type: ConnectOptionsCollections<T, S> | ConnectOptions<T>  ): T | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -90,7 +80,6 @@ Stores key-value pair data on the application disk. Supports the persistence of 
 | --- | --- |
 | T | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
 
-<a id="notifyonerror"></a>
 ## notifyOnError
 
 ```TypeScript
@@ -115,7 +104,6 @@ Called when persistence fails.
 | --- | --- | --- | --- |
 | callback | [PersistenceErrorCallback](arkts-arkui-persistenceerrorcallback-t.md) \| undefined | Yes | Callback called when persistence fails. |
 
-<a id="save"></a>
 ## save
 
 ```TypeScript

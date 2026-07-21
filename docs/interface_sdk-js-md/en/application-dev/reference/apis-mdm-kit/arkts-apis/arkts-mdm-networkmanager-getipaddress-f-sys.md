@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="getipaddress"></a>
 ## getIpAddress
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the device IP address based on the network interface. This API uses an a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md#getipaddresssync-1)
+**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md#getipaddresssync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
@@ -73,7 +72,6 @@ networkManager.getIpAddress(wantTemp, 'eth0', (err, result) => {
 ```
 
 
-<a id="getipaddress-1"></a>
 ## getIpAddress
 
 ```TypeScript
@@ -86,7 +84,7 @@ Obtains the device IP address based on the network interface. This API uses a pr
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md#getipaddresssync-1)
+**Substitutes:** [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md#getipaddresssync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 

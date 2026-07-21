@@ -13,9 +13,7 @@ Enumerates the font families of captions.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-accessibility-type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' |
-     'monospacedSansSerif' | 'sansSerif' | 'casual' | 'cursive' | 'smallCapitals'--><!--Device-accessibility-type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' |
-     'monospacedSansSerif' | 'sansSerif' | 'casual' | 'cursive' | 'smallCapitals'-End-->
+<!--Device-accessibility-type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' |     'monospacedSansSerif' | 'sansSerif' | 'casual' | 'cursive' | 'smallCapitals'--><!--Device-accessibility-type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' |     'monospacedSansSerif' | 'sansSerif' | 'casual' | 'cursive' | 'smallCapitals'-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 

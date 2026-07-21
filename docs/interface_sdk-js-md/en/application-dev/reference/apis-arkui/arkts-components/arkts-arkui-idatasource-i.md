@@ -8,7 +8,6 @@ Data source of **LazyForEach**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getdata"></a>
 ## getData
 
 ```TypeScript
@@ -37,7 +36,6 @@ Obtains the data item that matches the specified index.
 | --- | --- |
 | any | Data item that matches the specified index. The actual type is determined by the data source implementation. |
 
-<a id="registerdatachangelistener"></a>
 ## registerDataChangeListener
 
 ```TypeScript
@@ -60,7 +58,6 @@ Registers a listener for data changes.
 | --- | --- | --- | --- |
 | listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes | Listener for data changes. |
 
-<a id="totalcount"></a>
 ## totalCount
 
 ```TypeScript
@@ -83,7 +80,6 @@ Obtains the total number of data items.
 | --- | --- |
 | number | Total number of data items, which is subject to the data source. |
 
-<a id="unregisterdatachangelistener"></a>
 ## unregisterDataChangeListener
 
 ```TypeScript

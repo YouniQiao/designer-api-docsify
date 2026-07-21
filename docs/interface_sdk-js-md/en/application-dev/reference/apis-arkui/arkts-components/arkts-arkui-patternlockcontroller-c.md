@@ -14,7 +14,6 @@ patternLockController: PatternLockController = new PatternLockController()
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -31,7 +30,6 @@ A constructor used to create a **PatternLockController** instance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="reset"></a>
 ## reset
 
 ```TypeScript
@@ -48,7 +46,6 @@ Resets the component status.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="setchallengeresult"></a>
 ## setChallengeResult
 
 ```TypeScript

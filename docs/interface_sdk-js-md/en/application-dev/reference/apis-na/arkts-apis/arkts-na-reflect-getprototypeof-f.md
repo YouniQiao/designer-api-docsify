@@ -1,6 +1,5 @@
 # getPrototypeOf
 
-<a id="getprototypeof"></a>
 ## getPrototypeOf
 
 ```TypeScript

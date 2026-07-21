@@ -7,7 +7,6 @@ declare type InputEventListener = (
 ```
 
 Input event listener callback type.
-
 > **NOTE**  
 >  
 > - **RawInputEventWrapper** is an abstract class. Developers cannot create instances using the `new` operator.  
@@ -17,8 +16,8 @@ Input event listener callback type.
 >  
 > - The current callback parameter **event** only encapsulates the following raw input event types:  
 > [MouseEvent](arkts-arkui-mouseevent-i.md), [TouchEvent](arkts-arkui-touchevent-i.md), [KeyEvent](arkts-arkui-keyevent-i.md). Developers can obtain  
-> the corresponding event objects using [asMouseEvent](arkts-arkui-rawinputeventwrapper-c.md#asmouseevent-1),  
-> [asTouchEvent](arkts-arkui-rawinputeventwrapper-c.md#astouchevent-1), and [asKeyEvent](arkts-arkui-rawinputeventwrapper-c.md#askeyevent-1).  
+> the corresponding event objects using [asMouseEvent](arkts-arkui-rawinputeventwrapper-c.md#asmouseevent),  
+> [asTouchEvent](arkts-arkui-rawinputeventwrapper-c.md#astouchevent), and [asKeyEvent](arkts-arkui-rawinputeventwrapper-c.md#askeyevent).  
 >  
 > - Do not perform time-consuming operations (such as complex calculations or network requests) in the callback, as  
 > this may cause application lag.  
@@ -32,11 +31,7 @@ Input event listener callback type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-unnamed-declare type InputEventListener = (
-  event: RawInputEventWrapper
-) => InputEventInterceptResult--><!--Device-unnamed-declare type InputEventListener = (
-  event: RawInputEventWrapper
-) => InputEventInterceptResult-End-->
+<!--Device-unnamed-declare type InputEventListener = (  event: RawInputEventWrapper) => InputEventInterceptResult--><!--Device-unnamed-declare type InputEventListener = (  event: RawInputEventWrapper) => InputEventInterceptResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

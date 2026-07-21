@@ -1,7 +1,6 @@
 # PathIterator
 
 Implements a path operation iterator. You can read path operation instructions by traversing the iterator.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 18.  
@@ -23,7 +22,6 @@ Implements a path operation iterator. You can read path operation instructions b
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -44,7 +42,6 @@ Creates an iterator and binds it with a path.
 | --- | --- | --- | --- |
 | path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | **Path** object bound to the iterator. |
 
-<a id="hasnext"></a>
 ## hasNext
 
 ```TypeScript
@@ -65,7 +62,6 @@ Checks whether there is any next operation in the path operation iterator.
 | --- | --- |
 | boolean | Check result. **true** means yes; **false** otherwise. |
 
-<a id="next"></a>
 ## next
 
 ```TypeScript
@@ -99,7 +95,6 @@ Retrieves the next operation in this path and moves the iterator to that operati
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="peek"></a>
 ## peek
 
 ```TypeScript

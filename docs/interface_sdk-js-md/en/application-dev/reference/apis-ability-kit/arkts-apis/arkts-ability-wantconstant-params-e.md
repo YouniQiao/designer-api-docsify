@@ -50,7 +50,7 @@ CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 
 Title for sharing in an atomic service.
 
-You can set the sharing title using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare-1) callback.
+You can set the sharing title using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 10
 
@@ -68,7 +68,7 @@ SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 
 Content abstract for sharing in an atomic service.
 
-You can set the sharing abstract using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare-1) callback.
+You can set the sharing abstract using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 10
 
@@ -86,7 +86,7 @@ SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 
 URL link for sharing in an atomic service.
 
-You can set the URL link using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare-1) callback.
+You can set the URL link using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 10
 
@@ -150,7 +150,7 @@ Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableui
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1). This field must be used in conjunction with file URI [read/write flag](arkts-ability-wantconstant-flags-e.md).
+List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath). This field must be used in conjunction with file URI [read/write flag](arkts-ability-wantconstant-flags-e.md).
 
 **Since:** 12
 
@@ -184,7 +184,7 @@ CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
 
 Request code
 
-that uniquely identifies the caller of [startAbilityForResult](./application/UIAbilityContext:UIAbilityContext.startabilityforresult) or [openLink](arkts-ability-uiabilitycontext-c.md#openlink-1). When either of the APIs is called to start an ability, the target ability returns the result to the caller based on the request code.
+that uniquely identifies the caller of [startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult) or [openLink](arkts-ability-uiabilitycontext-c.md#openlink). When either of the APIs is called to start an ability, the target ability returns the result to the caller based on the request code.
 
 **Since:** 12
 
@@ -202,7 +202,7 @@ PAGE_PATH = 'ohos.param.atomicservice.pagePath'
 
 Page path for an atomic service.
 
-If page redirection in an atomic service is implemented using [router](docroot://ui/arkts-routing.md), you can use this parameter to specify the target page, for example, **library/ets/pages/menu**.
+If page redirection in an atomic service is implemented using [router](../../../ui/arkts-routing.md), you can use this parameter to specify the target page, for example, **library/ets/pages/menu**.
 
 **Since:** 12
 
@@ -220,7 +220,7 @@ ROUTER_NAME = 'ohos.param.atomicservice.routerName'
 
 Router name for page redirection in an atomic service.
 
-If page redirection in an atomic service is implemented using [Navigation](docroot://ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
+If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 12
 
@@ -238,7 +238,7 @@ PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'
 
 Source file for the page in an atomic service.
 
-If page redirection in an atomic service is implemented using [Navigation](docroot://ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
+If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 12
 
@@ -256,7 +256,7 @@ BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'
 
 Build function for the page in an atomic service.
 
-If page redirection in an atomic service is implemented using [Navigation](docroot://ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
+If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 12
 
@@ -292,7 +292,7 @@ APP_INSTANCE_KEY = 'ohos.extra.param.key.appInstance'
 
 Specific application instance.
 
-When you create [multiple instances](docroot://quick-start/multiInstance.md) of an application, the system assigns a unique ID to each instance. During application transitions, you can use this parameter to specify which created application instance you want to transition to.
+When you create [multiple instances](../../../quick-start/multiInstance.md) of an application, the system assigns a unique ID to each instance. During application transitions, you can use this parameter to specify which created application instance you want to transition to.
 
 **Since:** 14
 
@@ -308,7 +308,7 @@ CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'
 
 Whether to create an application instance. The default value is **false**, indicating that no new application instance is created.
 
-You can set this parameter to **true** to launch a new application instance. Note that the application to be launched must support multiple instances. For details, see [Creating an Application Multi-Instance](docroot://quick-start/multiInstance.md).
+You can set this parameter to **true** to launch a new application instance. Note that the application to be launched must support multiple instances. For details, see [Creating an Application Multi-Instance](../../../quick-start/multiInstance.md).
 
 **Since:** 14
 

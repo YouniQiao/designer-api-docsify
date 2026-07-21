@@ -11,7 +11,6 @@ first child component and can be shown or hidden as needed. The content area is 
 ## Child Components
 
 Supported
-
 > **NOTE**  
 >  
 > - Allowed child component types: built-in and custom components, excluding rendering control types (  

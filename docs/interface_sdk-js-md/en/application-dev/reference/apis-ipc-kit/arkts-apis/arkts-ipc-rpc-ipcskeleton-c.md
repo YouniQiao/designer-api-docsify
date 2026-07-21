@@ -14,7 +14,6 @@ Obtains IPC context, including the UID and PID, local and remote device IDs, and
 import { rpc } from '@kit.IPCKit';
 ```
 
-<a id="flushcmdbuffer"></a>
 ## flushCmdBuffer
 
 ```TypeScript
@@ -69,7 +68,6 @@ try {
 
 ```
 
-<a id="flushcommands"></a>
 ## flushCommands
 
 ```TypeScript
@@ -128,7 +126,6 @@ try {
 
 ```
 
-<a id="getcallingdeviceid"></a>
 ## getCallingDeviceID
 
 ```TypeScript
@@ -170,7 +167,6 @@ class Stub extends rpc.RemoteObject {
 
 ```
 
-<a id="getcallingpid"></a>
 ## getCallingPid
 
 ```TypeScript
@@ -212,7 +208,6 @@ class Stub extends rpc.RemoteObject {
 
 ```
 
-<a id="getcallingtokenid"></a>
 ## getCallingTokenId
 
 ```TypeScript
@@ -254,7 +249,6 @@ class Stub extends rpc.RemoteObject {
 
 ```
 
-<a id="getcallinguid"></a>
 ## getCallingUid
 
 ```TypeScript
@@ -296,7 +290,6 @@ class Stub extends rpc.RemoteObject {
 
 ```
 
-<a id="getcontextobject"></a>
 ## getContextObject
 
 ```TypeScript
@@ -332,7 +325,6 @@ try {
 
 ```
 
-<a id="getlocaldeviceid"></a>
 ## getLocalDeviceID
 
 ```TypeScript
@@ -374,7 +366,6 @@ class Stub extends rpc.RemoteObject {
 
 ```
 
-<a id="islocalcalling"></a>
 ## isLocalCalling
 
 ```TypeScript
@@ -416,7 +407,6 @@ class Stub extends rpc.RemoteObject {
 
 ```
 
-<a id="resetcallingidentity"></a>
 ## resetCallingIdentity
 
 ```TypeScript
@@ -458,7 +448,6 @@ class Stub extends rpc.RemoteObject {
 
 ```
 
-<a id="restorecallingidentity"></a>
 ## restoreCallingIdentity
 
 ```TypeScript
@@ -507,7 +496,6 @@ class Stub extends rpc.RemoteObject {
 
 ```
 
-<a id="setcallingidentity"></a>
 ## setCallingIdentity
 
 ```TypeScript

@@ -14,7 +14,6 @@ Ad request callback.
 import { RespCallback } from '@kit.AdsKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

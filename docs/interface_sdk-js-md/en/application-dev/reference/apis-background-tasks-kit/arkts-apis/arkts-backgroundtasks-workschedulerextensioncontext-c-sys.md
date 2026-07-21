@@ -12,7 +12,6 @@ This module provides APIs for accessing the resources of a **WorkSchedulerExtens
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
 
-<a id="startserviceextensionability"></a>
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -62,7 +61,6 @@ Starts a **ServiceExtensionAbility**. This API uses a promise to return the resu
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
-<a id="stopserviceextensionability"></a>
 ## stopServiceExtensionAbility
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="off"></a>
 ## off('streamChange')
 
 ```TypeScript
@@ -61,7 +60,6 @@ wifiManager.off("streamChange", recvStreamChangeFunc);
 ```
 
 
-<a id="off-1"></a>
 ## off('deviceConfigChange')
 
 ```TypeScript
@@ -116,7 +114,6 @@ wifiManager.off("deviceConfigChange", recvDeviceConfigChangeFunc);
 ```
 
 
-<a id="off-2"></a>
 ## off('hotspotStaJoin')
 
 ```TypeScript
@@ -171,7 +168,6 @@ wifiManager.off("hotspotStaJoin", recvHotspotStaJoinFunc);
 ```
 
 
-<a id="off-3"></a>
 ## off('hotspotStaLeave')
 
 ```TypeScript

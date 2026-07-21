@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="cancelcallupgrade"></a>
 ## cancelCallUpgrade
 
 ```TypeScript

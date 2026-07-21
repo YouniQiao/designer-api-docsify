@@ -1,6 +1,6 @@
 # DataProxyHandle
 
-Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle-1).
+Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle).
 
 **Since:** 20
 
@@ -14,7 +14,6 @@ Defines the data proxy handle, which can be used to access or manage shared conf
 import { dataShare } from '@kit.ArkData';
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -69,7 +68,6 @@ dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyR
 
 ```
 
-<a id="deletemypublisheddata"></a>
 ## deleteMyPublishedData
 
 ```TypeScript
@@ -121,7 +119,6 @@ dataProxyHandle.deleteMyPublishedData(config).then((results: dataShare.DataProxy
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -176,7 +173,6 @@ dataProxyHandle.get(urisToGet, config).then((results: dataShare.DataProxyGetResu
 
 ```
 
-<a id="getvalues"></a>
 ## getValues
 
 ```TypeScript
@@ -247,7 +243,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -265,17 +260,7 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataProxyHandle-off(
-      event: 'dataChange',
-      uris: string[],
-      config: DataProxyConfig,
-      callback?: AsyncCallback<DataProxyChangeInfo[]>
-    ): DataProxyResult[]--><!--Device-DataProxyHandle-off(
-      event: 'dataChange',
-      uris: string[],
-      config: DataProxyConfig,
-      callback?: AsyncCallback<DataProxyChangeInfo[]>
-    ): DataProxyResult[]-End-->
+<!--Device-DataProxyHandle-off(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback?: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-off(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback?: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -325,7 +310,6 @@ results.forEach((result) => {
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -339,23 +323,13 @@ on(
 
 Subscribes to the change event of the shared configuration corresponding to a specified URI. If the change event is subscribed, the subscriber will receive a callback notification that carries the data change type, changed URI, and changed content when the publisher modifies the configuration. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription or subscription to unpublished configurations. If the permission is revoked after the subscription is successful, the subscriber will not be notified consequently.
 
-When the publisher calls the [publish](arkts-arkdata-datashare-dataproxyhandle-i.md#publish-1) or [delete](arkts-arkdata-datashare-dataproxyhandle-i.md#delete-1) API to publish or delete a configuration, a notification is automatically triggered.
+When the publisher calls the [publish](arkts-arkdata-datashare-dataproxyhandle-i.md#publish) or [delete](arkts-arkdata-datashare-dataproxyhandle-i.md#delete) API to publish or delete a configuration, a notification is automatically triggered.
 
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataProxyHandle-on(
-      event: 'dataChange',
-      uris: string[],
-      config: DataProxyConfig,
-      callback: AsyncCallback<DataProxyChangeInfo[]>
-    ): DataProxyResult[]--><!--Device-DataProxyHandle-on(
-      event: 'dataChange',
-      uris: string[],
-      config: DataProxyConfig,
-      callback: AsyncCallback<DataProxyChangeInfo[]>
-    ): DataProxyResult[]-End-->
+<!--Device-DataProxyHandle-on(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-on(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -405,7 +379,6 @@ results.forEach((result) => {
 
 ```
 
-<a id="publish"></a>
 ## publish
 
 ```TypeScript
@@ -467,7 +440,6 @@ dataProxyHandle.publish(newConfigData, config).then((results: dataShare.DataProx
 
 ```
 
-<a id="putvalue"></a>
 ## putValue
 
 ```TypeScript
@@ -540,7 +512,6 @@ try {
 
 ```
 
-<a id="removevalue"></a>
 ## removeValue
 
 ```TypeScript

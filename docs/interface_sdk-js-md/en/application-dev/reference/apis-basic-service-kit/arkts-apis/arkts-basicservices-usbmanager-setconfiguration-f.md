@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="setconfiguration"></a>
 ## setConfiguration
 
 ```TypeScript
@@ -25,14 +24,14 @@ Sets the device configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice-1) to obtain its value. |
-| config | [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) | Yes | USB configuration. You can use [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices-1)to obtain device information and identify the USB configuration based on the ID. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
+| config | [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) | Yes | USB configuration. You can use [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)to obtain device information and identify the USB configuration based on the ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns **0** if the USB configuration is successfully set; returns an error code otherwise. The error codes are as follows:* - 88080389: The service is not started. Possible causes: 1. No device is inserted. 2. The service exits abnormally.* - 88080486: The service is being initialized. Try again later.* - 88080488: No device access permission. Call the [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright-1) API to request authorization.* - -1: The driver is abnormal.* - -17: I/O failure. |
+| number | Returns **0** if the USB configuration is successfully set; returns an error code otherwise. The error codes are as follows:* - 88080389: The service is not started. Possible causes: 1. No device is inserted. 2. The service exits abnormally.* - 88080486: The service is being initialized. Try again later.* - 88080488: No device access permission. Call the [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright) API to request authorization.* - -1: The driver is abnormal.* - -17: I/O failure. |
 
 **Error codes:**
 

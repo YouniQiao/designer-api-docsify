@@ -16,7 +16,6 @@ Control class for incremental backup procedure.
 import { backup } from '@kit.CoreFileKit';
 ```
 
-<a id="appendbundles"></a>
 ## appendBundles
 
 ```TypeScript
@@ -122,7 +121,6 @@ incrementalBackupSession.appendBundles(incrementalBackupDataArray).then(() => {
 
 ```
 
-<a id="appendbundles-1"></a>
 ## appendBundles
 
 ```TypeScript
@@ -270,7 +268,6 @@ incrementalBackupSession.appendBundles(incrementalBackupDataArray, infos).then((
 
 ```
 
-<a id="cancel"></a>
 ## cancel
 
 ```TypeScript
@@ -371,7 +368,6 @@ incrementalBackupSession.appendBundles(backupBundles);
 
 ```
 
-<a id="cleanbundletempdir"></a>
 ## cleanBundleTempDir
 
 ```TypeScript
@@ -476,7 +472,6 @@ let incrementalBackupSession = new backup.IncrementalBackupSession(generalCallba
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -559,7 +554,6 @@ let incrementalBackupSession = new backup.IncrementalBackupSession(generalCallba
 
 ```
 
-<a id="getbackupdatasize"></a>
 ## getBackupDataSize
 
 ```TypeScript
@@ -711,7 +705,6 @@ Example of a JSON string returned asynchronously:
 
 ```
 
-<a id="getcompatibilityinfo"></a>
 ## getCompatibilityInfo
 
 ```TypeScript
@@ -816,7 +809,6 @@ async function getIncBackupCompatibilityInfo() {
 
 ```
 
-<a id="getlocalcapabilities"></a>
 ## getLocalCapabilities
 
 ```TypeScript
@@ -981,7 +973,6 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript

@@ -14,7 +14,6 @@ Provides APIs for domain account management.
 import { osAccount } from '@kit.BasicServicesKit';
 ```
 
-<a id="updateaccountinfo"></a>
 ## updateAccountInfo
 
 ```TypeScript

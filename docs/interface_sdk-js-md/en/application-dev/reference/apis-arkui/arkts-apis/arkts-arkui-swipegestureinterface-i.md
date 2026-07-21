@@ -10,7 +10,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -39,7 +38,6 @@ Sets the parameters for the swipe gesture. Inherits from [GestureInterface<T>](a
 | --- | --- |
 | [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -70,7 +68,6 @@ Sets the parameters for the swipe gesture. Compared with [SwipeGesture](arkts-ar
 | --- | --- |
 | [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onaction"></a>
 ## onAction
 
 ```TypeScript

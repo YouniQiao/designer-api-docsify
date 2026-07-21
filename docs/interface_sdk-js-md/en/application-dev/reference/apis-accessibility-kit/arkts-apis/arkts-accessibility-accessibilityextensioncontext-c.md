@@ -10,7 +10,6 @@ The accessibility extension context. Used to configure, query information, and i
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-<a id="getfocuselement"></a>
 ## getFocusElement
 
 ```TypeScript
@@ -41,7 +40,6 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getfocuselement-1"></a>
 ## getFocusElement
 
 ```TypeScript
@@ -77,7 +75,6 @@ Obtains the focus element. This API uses a promise to return the result.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getfocuselement-2"></a>
 ## getFocusElement
 
 ```TypeScript
@@ -107,7 +104,6 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getwindowrootelement"></a>
 ## getWindowRootElement
 
 ```TypeScript
@@ -138,7 +134,6 @@ Obtains the root element of a window. This API uses an asynchronous callback to 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getwindowrootelement-1"></a>
 ## getWindowRootElement
 
 ```TypeScript
@@ -174,7 +169,6 @@ Obtains the root element of a window. This API uses a promise to return the resu
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getwindowrootelement-2"></a>
 ## getWindowRootElement
 
 ```TypeScript
@@ -204,7 +198,6 @@ Obtains the root element of a window. This API uses an asynchronous callback to 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getwindows"></a>
 ## getWindows
 
 ```TypeScript
@@ -235,7 +228,6 @@ Obtains the list of windows on a display. This API uses an asynchronous callback
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getwindows-1"></a>
 ## getWindows
 
 ```TypeScript
@@ -271,7 +263,6 @@ Obtains the list of windows on a display. This API uses a promise to return the 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getwindows-2"></a>
 ## getWindows
 
 ```TypeScript
@@ -301,7 +292,6 @@ Obtains the list of windows on a display. This API uses an asynchronous callback
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="injectgesture"></a>
 ## injectGesture
 
 ```TypeScript
@@ -314,7 +304,7 @@ Injects a gesture. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [injectGestureSync](arkts-accessibility-accessibilityextensioncontext-c.md#injectgesturesync-1)
+**Substitutes:** [injectGestureSync](arkts-accessibility-accessibilityextensioncontext-c.md#injectgesturesync)
 
 <!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void--><!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void-End-->
 
@@ -334,7 +324,6 @@ Injects a gesture. This API uses an asynchronous callback to return the result.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="injectgesture-1"></a>
 ## injectGesture
 
 ```TypeScript
@@ -347,7 +336,7 @@ Injects a gesture. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [injectGestureSync](arkts-accessibility-accessibilityextensioncontext-c.md#injectgesturesync-1)
+**Substitutes:** [injectGestureSync](arkts-accessibility-accessibilityextensioncontext-c.md#injectgesturesync)
 
 <!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath): Promise<void>--><!--Device-AccessibilityExtensionContext-injectGesture(gesturePath: GesturePath): Promise<void>-End-->
 
@@ -372,7 +361,6 @@ Injects a gesture. This API uses a promise to return the result.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="injectgesturesync"></a>
 ## injectGestureSync
 
 ```TypeScript
@@ -402,7 +390,6 @@ Injects a gesture.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="settargetbundlename"></a>
 ## setTargetBundleName
 
 ```TypeScript
@@ -432,7 +419,6 @@ Sets the concerned target bundle. This API uses an asynchronous callback to retu
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 
-<a id="settargetbundlename-1"></a>
 ## setTargetBundleName
 
 ```TypeScript

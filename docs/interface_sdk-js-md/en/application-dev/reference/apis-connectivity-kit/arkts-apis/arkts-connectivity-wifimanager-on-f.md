@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="on"></a>
 ## on('wifiStateChange')
 
 ```TypeScript
@@ -42,7 +41,6 @@ Subscribe Wi-Fi status change events.
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
 
-<a id="on-1"></a>
 ## on('wifiConnectionChange')
 
 ```TypeScript
@@ -78,7 +76,6 @@ Subscribe Wi-Fi connection change events.
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
 
-<a id="on-2"></a>
 ## on('wifiScanStateChange')
 
 ```TypeScript
@@ -114,7 +111,6 @@ Subscribe Wi-Fi scan status change events.
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
 
-<a id="on-3"></a>
 ## on('wifiRssiChange')
 
 ```TypeScript
@@ -148,7 +144,6 @@ Subscribe Wi-Fi rssi change events.
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
 
-<a id="on-4"></a>
 ## on('hotspotStateChange')
 
 ```TypeScript
@@ -182,7 +177,6 @@ Subscribe Wi-Fi hotspot state change events.
 | [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
 
 
-<a id="on-5"></a>
 ## on('p2pStateChange')
 
 ```TypeScript
@@ -216,7 +210,6 @@ Subscribe P2P status change events.
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
 
-<a id="on-6"></a>
 ## on('p2pConnectionChange')
 
 ```TypeScript
@@ -250,7 +243,6 @@ Subscribe P2P connection change events.
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
 
-<a id="on-7"></a>
 ## on('p2pDeviceChange')
 
 ```TypeScript
@@ -284,7 +276,6 @@ Subscribe P2P local device change events.
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
 
-<a id="on-8"></a>
 ## on('p2pPeerDeviceChange')
 
 ```TypeScript
@@ -318,7 +309,6 @@ Subscribe P2P peer device change events.
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
 
-<a id="on-9"></a>
 ## on('p2pPersistentGroupChange')
 
 ```TypeScript
@@ -352,7 +342,6 @@ Subscribe P2P persistent group change events.
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
 
-<a id="on-10"></a>
 ## on('p2pDiscoveryChange')
 
 ```TypeScript

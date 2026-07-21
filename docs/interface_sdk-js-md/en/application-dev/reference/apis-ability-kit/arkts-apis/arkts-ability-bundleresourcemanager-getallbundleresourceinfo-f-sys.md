@@ -6,7 +6,6 @@
 import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
-<a id="getallbundleresourceinfo"></a>
 ## getAllBundleResourceInfo
 
 ```TypeScript
@@ -41,7 +40,6 @@ Obtains the bundle resource information of all applications based on the given r
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 
-<a id="getallbundleresourceinfo-1"></a>
 ## getAllBundleResourceInfo
 
 ```TypeScript

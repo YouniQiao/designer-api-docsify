@@ -8,7 +8,6 @@ Describes the text decorative line style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -33,7 +32,6 @@ A constructor used to create a text decorative line style.
 | --- | --- | --- | --- |
 | value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | Text decorative line options.<br>Default value:<br>{<br> type:TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>} |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

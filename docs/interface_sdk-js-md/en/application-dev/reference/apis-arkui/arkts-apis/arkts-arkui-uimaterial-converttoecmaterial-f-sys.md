@@ -6,7 +6,6 @@
 import { uiMaterial } from '@kit.ArkUI';
 ```
 
-<a id="converttoecmaterial"></a>
 ## convertToECMaterial
 
 ```TypeScript

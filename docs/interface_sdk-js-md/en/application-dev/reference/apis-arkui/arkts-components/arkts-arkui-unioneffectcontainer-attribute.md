@@ -1,16 +1,15 @@
 # UnionEffectContainer properties/events
 
 Universal attributes are supported. The width and height can be set.
-
 > **NOTE**  
 >  
 > - During the union, the container exhibits a sticky non-linear deformation effect, and its border will show a sticky  
 > effect after union. Therefore, border-related capabilities will be affected. Currently, the following border-  
 > related attributes support the union deformation effect:  
-> [border](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border),  
-> [outline](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-outline.md#outline),  
-> [shadow](arkts-arkui-commonmethod-c.md#shadow-1),  
-> [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1), and  
+> [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border),  
+> [outline](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-outline.md#outline),  
+> [shadow](arkts-arkui-commonmethod-c.md#shadow),  
+> [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor), and  
 > [pointLight](UnionEffectContainerAttribute#pointLight). The above effects are drawn on the shape after union,  
 > which is the drawing part of **UnionEffectContainer**.  
 >  

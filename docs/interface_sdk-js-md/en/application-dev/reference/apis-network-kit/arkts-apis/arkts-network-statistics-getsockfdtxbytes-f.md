@@ -6,7 +6,6 @@
 import { statistics } from '@kit.NetworkKit';
 ```
 
-<a id="getsockfdtxbytes"></a>
 ## getSockfdTxBytes
 
 ```TypeScript
@@ -55,7 +54,6 @@ statistics.getSockfdTxBytes(sockfd, (error: BusinessError, stats: number) => {
 ```
 
 
-<a id="getsockfdtxbytes-1"></a>
 ## getSockfdTxBytes
 
 ```TypeScript

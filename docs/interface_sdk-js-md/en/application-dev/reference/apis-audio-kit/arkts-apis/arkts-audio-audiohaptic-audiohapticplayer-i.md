@@ -1,6 +1,6 @@
 # AudioHapticPlayer
 
-Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer-1)to create an AudioHapticPlayer instance.
+Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)to create an AudioHapticPlayer instance.
 
 **Since:** 11
 
@@ -14,7 +14,6 @@ Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, y
 import { audioHaptic } from '@kit.AudioKit';
 ```
 
-<a id="ismuted"></a>
 ## isMuted
 
 ```TypeScript
@@ -56,7 +55,6 @@ let result: boolean = audioHapticPlayerInstance.isMuted(audioHapticType);
 
 ```
 
-<a id="off"></a>
 ## off('endOfStream')
 
 ```TypeScript
@@ -95,7 +93,6 @@ audioHapticPlayerInstance.off('endOfStream', endOfStreamCallback);
 
 ```
 
-<a id="off-1"></a>
 ## off('audioInterrupt')
 
 ```TypeScript
@@ -180,7 +177,6 @@ audioHapticPlayerInstance.off('audioInterrupt', audioInterruptCallback);
 
 ```
 
-<a id="on"></a>
 ## on('endOfStream')
 
 ```TypeScript
@@ -211,7 +207,6 @@ audioHapticPlayerInstance.on('endOfStream', () => {
 
 ```
 
-<a id="on-1"></a>
 ## on('audioInterrupt')
 
 ```TypeScript
@@ -289,7 +284,6 @@ audioHapticPlayerInstance.on('audioInterrupt', (interruptEvent: audio.InterruptE
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -329,7 +323,6 @@ audioHapticPlayerInstance.release().then(() => {
 
 ```
 
-<a id="setloop"></a>
 ## setLoop
 
 ```TypeScript
@@ -337,7 +330,6 @@ setLoop(loop: boolean): Promise<void>
 ```
 
 Sets this audio-haptic player to play in a loop. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API must be called before the audio-haptic player is released.
@@ -379,7 +371,6 @@ audioHapticPlayerInstance.setLoop(true).then(() => {
 
 ```
 
-<a id="setvolume"></a>
 ## setVolume
 
 ```TypeScript
@@ -387,7 +378,6 @@ setVolume(volume: number): Promise<void>
 ```
 
 Sets the volume for this audio-haptic player. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API must be called before the audio-haptic player is released.
@@ -431,7 +421,6 @@ audioHapticPlayerInstance.setVolume(0.5).then(() => {
 
 ```
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -473,7 +462,6 @@ audioHapticPlayerInstance.start().then(() => {
 
 ```
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript

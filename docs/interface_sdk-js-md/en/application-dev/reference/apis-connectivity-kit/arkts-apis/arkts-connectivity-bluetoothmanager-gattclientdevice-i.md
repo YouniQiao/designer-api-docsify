@@ -18,7 +18,6 @@ Manages GATT client. Before calling an Gatt client method, you must use {@link c
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -66,7 +65,6 @@ try {
 
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -114,7 +112,6 @@ try {
 
 ```
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -160,7 +157,6 @@ try {
 
 ```
 
-<a id="getdevicename"></a>
 ## getDeviceName
 
 ```TypeScript
@@ -217,7 +213,6 @@ try {
 
 ```
 
-<a id="getdevicename-1"></a>
 ## getDeviceName
 
 ```TypeScript
@@ -273,7 +268,6 @@ try {
 
 ```
 
-<a id="getrssivalue"></a>
 ## getRssiValue
 
 ```TypeScript
@@ -329,7 +323,6 @@ try {
 
 ```
 
-<a id="getrssivalue-1"></a>
 ## getRssiValue
 
 ```TypeScript
@@ -383,7 +376,6 @@ try {
 
 ```
 
-<a id="getservices"></a>
 ## getServices
 
 ```TypeScript
@@ -449,7 +441,6 @@ try {
 
 ```
 
-<a id="getservices-1"></a>
 ## getServices
 
 ```TypeScript
@@ -505,7 +496,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off('BLECharacteristicChange')
 
 ```TypeScript
@@ -555,7 +545,6 @@ try {
 
 ```
 
-<a id="off-1"></a>
 ## off('BLEConnectionStateChange')
 
 ```TypeScript
@@ -605,7 +594,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on('BLECharacteristicChange')
 
 ```TypeScript
@@ -660,7 +648,6 @@ try {
 
 ```
 
-<a id="on-1"></a>
 ## on('BLEConnectionStateChange')
 
 ```TypeScript
@@ -714,7 +701,6 @@ try {
 
 ```
 
-<a id="readcharacteristicvalue"></a>
 ## readCharacteristicValue
 
 ```TypeScript
@@ -793,7 +779,6 @@ try {
 
 ```
 
-<a id="readcharacteristicvalue-1"></a>
 ## readCharacteristicValue
 
 ```TypeScript
@@ -868,7 +853,6 @@ try {
 
 ```
 
-<a id="readdescriptorvalue"></a>
 ## readDescriptorValue
 
 ```TypeScript
@@ -939,7 +923,6 @@ try {
 
 ```
 
-<a id="readdescriptorvalue-1"></a>
 ## readDescriptorValue
 
 ```TypeScript
@@ -1007,7 +990,6 @@ try {
 
 ```
 
-<a id="setblemtusize"></a>
 ## setBLEMtuSize
 
 ```TypeScript
@@ -1059,7 +1041,6 @@ try {
 
 ```
 
-<a id="setnotifycharacteristicchanged"></a>
 ## setNotifyCharacteristicChanged
 
 ```TypeScript
@@ -1129,7 +1110,6 @@ try {
 
 ```
 
-<a id="writecharacteristicvalue"></a>
 ## writeCharacteristicValue
 
 ```TypeScript
@@ -1197,7 +1177,6 @@ try {
 
 ```
 
-<a id="writedescriptorvalue"></a>
 ## writeDescriptorValue
 
 ```TypeScript

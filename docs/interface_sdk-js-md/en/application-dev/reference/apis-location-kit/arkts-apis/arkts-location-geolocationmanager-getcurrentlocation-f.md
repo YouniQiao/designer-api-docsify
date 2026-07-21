@@ -6,7 +6,6 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
-<a id="getcurrentlocation"></a>
 ## getCurrentLocation
 
 ```TypeScript
@@ -22,9 +21,7 @@ Obtain current location.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-geoLocationManager-function getCurrentLocation(request: CurrentLocationRequest | SingleLocationRequest,
-  callback: AsyncCallback<Location>): void--><!--Device-geoLocationManager-function getCurrentLocation(request: CurrentLocationRequest | SingleLocationRequest,
-  callback: AsyncCallback<Location>): void-End-->
+<!--Device-geoLocationManager-function getCurrentLocation(request: CurrentLocationRequest | SingleLocationRequest,  callback: AsyncCallback<Location>): void--><!--Device-geoLocationManager-function getCurrentLocation(request: CurrentLocationRequest | SingleLocationRequest,  callback: AsyncCallback<Location>): void-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -95,7 +92,6 @@ try {
 ```
 
 
-<a id="getcurrentlocation-1"></a>
 ## getCurrentLocation
 
 ```TypeScript
@@ -155,7 +151,6 @@ try {
 ```
 
 
-<a id="getcurrentlocation-2"></a>
 ## getCurrentLocation
 
 ```TypeScript
@@ -171,9 +166,7 @@ Obtain current location.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-geoLocationManager-function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationRequest):
-  Promise<Location>--><!--Device-geoLocationManager-function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationRequest):
-  Promise<Location>-End-->
+<!--Device-geoLocationManager-function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationRequest):  Promise<Location>--><!--Device-geoLocationManager-function getCurrentLocation(request?: CurrentLocationRequest | SingleLocationRequest):  Promise<Location>-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

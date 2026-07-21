@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="deleteapn"></a>
 ## deleteApn
 
 ```TypeScript
@@ -30,7 +29,7 @@ Deletes the APN.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnId | string | Yes | APN ID to be deleted. You can obtain device information using [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn-1). |
+| apnId | string | Yes | APN ID to be deleted. You can obtain device information using [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn). |
 
 **Error codes:**
 

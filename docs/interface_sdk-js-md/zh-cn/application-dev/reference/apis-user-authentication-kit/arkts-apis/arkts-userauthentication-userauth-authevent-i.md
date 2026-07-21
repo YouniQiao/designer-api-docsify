@@ -18,7 +18,6 @@
 import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
-<a id="callback"></a>
 ## callback
 
 ```TypeScript
@@ -31,7 +30,7 @@ callback(result: EventInfo): void
 
 **废弃版本：** 11
 
-**替代接口：** [onResult(result:](arkts-userauthentication-userauth-iauthcallback-i.md#onresult-1)
+**替代接口：** [onResult(result:](arkts-userauthentication-userauth-iauthcallback-i.md#onresult)
 
 <!--Device-AuthEvent-callback(result: EventInfo): void--><!--Device-AuthEvent-callback(result: EventInfo): void-End-->
 

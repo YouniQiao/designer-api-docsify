@@ -6,7 +6,6 @@
 import { display } from '@kit.ArkUI';
 ```
 
-<a id="setvirtualscreensurface"></a>
 ## setVirtualScreenSurface
 
 ```TypeScript
@@ -27,7 +26,7 @@ Sets a surface for a virtual screen. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | number | Yes | Screen ID, which must match the ID of the virtual screen created by calling the [createVirtualScreen()](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen-1) API. This parameter only accepts integer values. |
+| screenId | number | Yes | Screen ID, which must match the ID of the virtual screen created by calling the [createVirtualScreen()](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen) API. This parameter only accepts integer values. |
 | surfaceId | string | Yes | ID of the surface bound to the virtual screen. You can specify the ID of an existing surface. The maximum length for this parameter is 4096 bytes. If it goes beyond that, only the first 4096 bytes are used. |
 
 **Return value:**

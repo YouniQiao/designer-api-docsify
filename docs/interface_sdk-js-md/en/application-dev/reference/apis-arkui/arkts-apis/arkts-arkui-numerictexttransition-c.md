@@ -12,7 +12,6 @@ Implements a flip animation for numeric text. It applies only to positive intege
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # killProcessWithAccount (System API)
 
-<a id="killprocesswithaccount"></a>
 ## killProcessWithAccount
 
 ```TypeScript
@@ -55,7 +54,6 @@ appManager.killProcessWithAccount(bundleName, accountId)
 ```
 
 
-<a id="killprocesswithaccount-1"></a>
 ## killProcessWithAccount
 
 ```TypeScript

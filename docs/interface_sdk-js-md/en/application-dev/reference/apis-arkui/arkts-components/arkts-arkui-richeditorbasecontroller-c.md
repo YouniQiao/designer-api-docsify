@@ -10,7 +10,6 @@ Represents the base class of the **RichEditor** component controller.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="closeselectionmenu"></a>
 ## closeSelectionMenu
 
 ```TypeScript
@@ -29,7 +28,6 @@ Closes the custom or default context menu on selection.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="deletebackward"></a>
 ## deleteBackward
 
 ```TypeScript
@@ -50,7 +48,6 @@ This API cannot be used in the pre-screen display scenario.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getcaretoffset"></a>
 ## getCaretOffset
 
 ```TypeScript
@@ -77,7 +74,6 @@ If the caret position cannot be obtained (for example, the controller is not bou
 | --- | --- |
 | number | Position of the caret. |
 
-<a id="getcaretrect"></a>
 ## getCaretRect
 
 ```TypeScript
@@ -102,7 +98,6 @@ Obtains the relative position of the caret in the **RichEditor** component. If t
 | --- | --- |
 | [RectResult](arkts-arkui-rectresult-i.md) | Relative position of the caret in the **RichEditor** component. |
 
-<a id="getlayoutmanager"></a>
 ## getLayoutManager
 
 ```TypeScript
@@ -127,7 +122,6 @@ Obtains a **LayoutManager** object.
 | --- | --- |
 | [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | **LayoutManager** object.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="getpreviewtext"></a>
 ## getPreviewText
 
 ```TypeScript
@@ -152,7 +146,6 @@ Obtains the preview text.
 | --- | --- |
 | [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) | Preview text.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="gettypingstyle"></a>
 ## getTypingStyle
 
 ```TypeScript
@@ -177,7 +170,6 @@ Obtains the preset text style of a user.
 | --- | --- |
 | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Preset typing style.<br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
-<a id="isediting"></a>
 ## isEditing
 
 ```TypeScript
@@ -202,7 +194,6 @@ Obtains the editing state of this **RichEditor** component.
 | --- | --- |
 | boolean | Editing state. The value **true** indicates the editing state, and **false** indicates the non   -editing state. |
 
-<a id="scrolltovisible"></a>
 ## scrollToVisible
 
 ```TypeScript
@@ -225,7 +216,6 @@ Scroll the input field component to make the specified content visible.
 | --- | --- | --- | --- |
 | range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | The visible range.If the parameter is invalid, this method will have no effect. |
 
-<a id="setcaretoffset"></a>
 ## setCaretOffset
 
 ```TypeScript
@@ -256,7 +246,6 @@ Sets the cursor offset.
 | --- | --- |
 | boolean | Whether the caret offset is set successfully.<br>**true** if the caret offset is set successfully; **false** otherwise. |
 
-<a id="setselection"></a>
 ## setSelection
 
 ```TypeScript
@@ -293,7 +282,6 @@ On non-2-in-1 devices, when **options** is set to **MenuPolicy.DEFAULT**, the fo
 | selectionEnd | number | Yes | End position of the selection. |
 | options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration of options.<br>**Since:** 12 |
 
-<a id="setstyledplaceholder"></a>
 ## setStyledPlaceholder
 
 ```TypeScript
@@ -318,7 +306,6 @@ Set the styledString placeholder.
 | --- | --- | --- | --- |
 | styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | The styledString for placeholder.If the parameter is invalid, this method will have no effect. |
 
-<a id="settypingparagraphstyle"></a>
 ## setTypingParagraphStyle
 
 ```TypeScript
@@ -343,7 +330,6 @@ Sets the preset paragraph style. The input text takes effect only when the compo
 | --- | --- | --- | --- |
 | style | [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | Yes | Preset paragraph style. |
 
-<a id="settypingstyle"></a>
 ## setTypingStyle
 
 ```TypeScript
@@ -368,7 +354,6 @@ Sets the preset typing style.
 | --- | --- | --- | --- |
 | value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Yes | Preset typing style. |
 
-<a id="stopediting"></a>
 ## stopEditing
 
 ```TypeScript

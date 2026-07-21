@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="getnameforuid"></a>
 ## getNameForUid
 
 ```TypeScript
@@ -33,7 +32,6 @@ Obtains bundle name by the given uid.
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
 
 
-<a id="getnameforuid-1"></a>
 ## getNameForUid
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
-<a id="off"></a>
 ## off('locationChange')
 
 ```TypeScript
@@ -68,7 +67,6 @@ try {
 ```
 
 
-<a id="off-1"></a>
 ## off('locationError')
 
 ```TypeScript
@@ -121,7 +119,6 @@ try {
 ```
 
 
-<a id="off-2"></a>
 ## off('locationEnabledChange')
 
 ```TypeScript
@@ -169,7 +166,6 @@ try {
 ```
 
 
-<a id="off-3"></a>
 ## off('cachedGnssLocationsChange')
 
 ```TypeScript
@@ -226,7 +222,6 @@ try {
 ```
 
 
-<a id="off-4"></a>
 ## off('satelliteStatusChange')
 
 ```TypeScript
@@ -278,7 +273,6 @@ try {
 ```
 
 
-<a id="off-5"></a>
 ## off('nmeaMessage')
 
 ```TypeScript
@@ -331,7 +325,6 @@ try {
 ```
 
 
-<a id="off-6"></a>
 ## off('gnssFenceStatusChange')
 
 ```TypeScript
@@ -404,7 +397,6 @@ wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
 ```
 
 
-<a id="off-7"></a>
 ## off('countryCodeChange')
 
 ```TypeScript
@@ -454,7 +446,6 @@ try {
 ```
 
 
-<a id="off-8"></a>
 ## off('bluetoothScanResultChange')
 
 ```TypeScript

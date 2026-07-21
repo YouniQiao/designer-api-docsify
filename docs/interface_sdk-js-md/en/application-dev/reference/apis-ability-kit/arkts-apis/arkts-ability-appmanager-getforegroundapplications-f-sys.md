@@ -6,14 +6,13 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="getforegroundapplications"></a>
 ## getForegroundApplications
 
 ```TypeScript
 function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void
 ```
 
-Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appstatedata-c.md). This API uses an asynchronous callback to return the result.
+Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appmanager-appstatedata-t.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -65,14 +64,13 @@ try {
 ```
 
 
-<a id="getforegroundapplications-1"></a>
 ## getForegroundApplications
 
 ```TypeScript
 function getForegroundApplications(): Promise<Array<AppStateData>>
 ```
 
-Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appstatedata-c.md). This API uses a promise to return the result.
+Obtains applications that are running in the foreground. The application information is defined by [AppStateData](arkts-ability-appmanager-appstatedata-t.md). This API uses a promise to return the result.
 
 **Since:** 9
 

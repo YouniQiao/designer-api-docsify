@@ -6,7 +6,6 @@
 import { geolocation } from '@kit.LocationKit';
 ```
 
-<a id="sendcommand"></a>
 ## sendCommand
 
 ```TypeScript
@@ -51,7 +50,6 @@ geolocation.sendCommand(requestInfo, (err, result) => {
 ```
 
 
-<a id="sendcommand-1"></a>
 ## sendCommand
 
 ```TypeScript

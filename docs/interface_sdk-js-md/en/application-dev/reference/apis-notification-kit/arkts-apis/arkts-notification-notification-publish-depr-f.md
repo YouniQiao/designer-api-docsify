@@ -1,6 +1,5 @@
 # publish
 
-<a id="publish"></a>
 ## publish
 
 ```TypeScript
@@ -27,7 +26,6 @@ Publishes a notification. This API uses an asynchronous callback to return the r
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="publish-1"></a>
 ## publish
 
 ```TypeScript

@@ -16,7 +16,6 @@ Class to execute an asynchronous operation under lock.
 import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -33,7 +32,6 @@ Default constructor.
 
 **System capability:** SystemCapability.Utils.Lang
 
-<a id="lockasync"></a>
 ## lockAsync
 
 ```TypeScript
@@ -68,7 +66,6 @@ Perform an operation with the acquired lock exclusively.The method acquires the 
 | --- | --- |
 | [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
 
-<a id="lockasync-1"></a>
 ## lockAsync
 
 ```TypeScript
@@ -104,7 +101,6 @@ Perform an operation with the acquired lock.The method acquires the lock first, 
 | --- | --- |
 | [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
 
-<a id="lockasync-2"></a>
 ## lockAsync
 
 ```TypeScript
@@ -118,9 +114,7 @@ Perform an operation with the acquired lock.The method acquires the lock first, 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AsyncLock-lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
-        options: AsyncLockOptions<U>): Promise<T | U>--><!--Device-AsyncLock-lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
-        options: AsyncLockOptions<U>): Promise<T | U>-End-->
+<!--Device-AsyncLock-lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,        options: AsyncLockOptions<U>): Promise<T | U>--><!--Device-AsyncLock-lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,        options: AsyncLockOptions<U>): Promise<T | U>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -145,7 +139,6 @@ Perform an operation with the acquired lock.The method acquires the lock first, 
 | [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
 | [10200031](../errorcode-utils.md#10200031-calling-lockasync-timed-out) | Timeout exceeded. |
 
-<a id="query"></a>
 ## query
 
 ```TypeScript
@@ -180,7 +173,6 @@ Query information about the specified lock.
 | --- | --- |
 | [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) | The lock does not exist. |
 
-<a id="queryall"></a>
 ## queryAll
 
 ```TypeScript
@@ -203,7 +195,6 @@ Query information about all locks.
 | --- | --- |
 | [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md)[] | Returns an array of AsyncLockState. |
 
-<a id="request"></a>
 ## request
 
 ```TypeScript

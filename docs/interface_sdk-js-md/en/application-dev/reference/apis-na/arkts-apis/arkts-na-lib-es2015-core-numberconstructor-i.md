@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface NumberConstructor--><!--Device-unnamed-interface NumberConstructor-End-->
 
-<a id="isfinite"></a>
 ## isFinite
 
 ```TypeScript
@@ -25,7 +24,6 @@ Returns true if passed value is finite.Unlike the global isFinite, Number.isFini
 | --- | --- |
 | boolean |  |
 
-<a id="isinteger"></a>
 ## isInteger
 
 ```TypeScript
@@ -48,7 +46,6 @@ Returns true if the value passed is an integer, false otherwise.
 | --- | --- |
 | boolean |  |
 
-<a id="isnan"></a>
 ## isNaN
 
 ```TypeScript
@@ -71,7 +68,6 @@ Returns a Boolean value that indicates whether a value is the reserved value NaN
 | --- | --- |
 | boolean |  |
 
-<a id="issafeinteger"></a>
 ## isSafeInteger
 
 ```TypeScript
@@ -94,7 +90,6 @@ Returns true if the value passed is a safe integer.
 | --- | --- |
 | boolean |  |
 
-<a id="parsefloat"></a>
 ## parseFloat
 
 ```TypeScript
@@ -117,7 +112,6 @@ Converts a string to a floating-point number.
 | --- | --- |
 | number |  |
 
-<a id="parseint"></a>
 ## parseInt
 
 ```TypeScript

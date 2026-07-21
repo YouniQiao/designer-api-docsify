@@ -8,7 +8,6 @@ Defines Close contextMenu.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="close"></a>
 ## close
 
 ```TypeScript

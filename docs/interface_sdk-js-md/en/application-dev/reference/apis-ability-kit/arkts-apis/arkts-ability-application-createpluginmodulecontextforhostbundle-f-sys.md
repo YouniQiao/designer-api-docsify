@@ -6,7 +6,6 @@
 import { application } from '@kit.AbilityKit';
 ```
 
-<a id="createpluginmodulecontextforhostbundle"></a>
 ## createPluginModuleContextForHostBundle
 
 ```TypeScript
@@ -22,9 +21,7 @@ Creates the context for a plugin based on a given context, plugin bundle name, p
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-application-export function createPluginModuleContextForHostBundle(context: Context, pluginBundleName: string, pluginModuleName: string,
-    hostBundleName: string): Promise<Context>--><!--Device-application-export function createPluginModuleContextForHostBundle(context: Context, pluginBundleName: string, pluginModuleName: string,
-    hostBundleName: string): Promise<Context>-End-->
+<!--Device-application-export function createPluginModuleContextForHostBundle(context: Context, pluginBundleName: string, pluginModuleName: string,    hostBundleName: string): Promise<Context>--><!--Device-application-export function createPluginModuleContextForHostBundle(context: Context, pluginBundleName: string, pluginModuleName: string,    hostBundleName: string): Promise<Context>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

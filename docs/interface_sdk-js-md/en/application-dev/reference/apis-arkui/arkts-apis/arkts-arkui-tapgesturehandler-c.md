@@ -10,7 +10,6 @@ Defines a type of gesture handler object for tap gestures.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -35,7 +34,6 @@ Constructor used to create a tap gesture handler instance.
 | --- | --- | --- | --- |
 | options | [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | No | Parameters of the tap gesture handler. |
 
-<a id="onaction"></a>
 ## onAction
 
 ```TypeScript

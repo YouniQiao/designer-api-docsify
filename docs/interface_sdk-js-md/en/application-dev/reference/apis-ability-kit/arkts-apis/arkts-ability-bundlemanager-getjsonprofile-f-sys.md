@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="getjsonprofile"></a>
 ## getJsonProfile
 
 ```TypeScript
@@ -34,7 +33,7 @@ No permission is required for obtaining the caller's own profile.
 | profileType | [ProfileType](arkts-ability-bundlemanager-profiletype-e-sys.md) | Yes | Type of the profile. |
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | No | Module name of the application. If this parameter is not passed in, the entry module is used. |
-| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. The value must be greater than or equal to 0.<br>**Since:** 12 |
+| userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0.<br>**Since:** 12 |
 
 **Return value:**
 

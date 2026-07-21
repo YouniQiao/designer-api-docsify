@@ -6,7 +6,6 @@
 import { inputDevice } from '@kit.InputKit';
 ```
 
-<a id="supportkeys"></a>
 ## supportKeys
 
 ```TypeScript
@@ -65,7 +64,6 @@ struct Index {
 ```
 
 
-<a id="supportkeys-1"></a>
 ## supportKeys
 
 ```TypeScript

@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface ReadonlyArray<T>--><!--Device-unnamed-interface ReadonlyArray<T>-End-->
 
-<a id="find"></a>
 ## find
 
 ```TypeScript
@@ -26,7 +25,6 @@ Returns the value of the first element in the array where predicate is true, and
 | --- | --- |
 | S |  |
 
-<a id="find-1"></a>
 ## find
 
 ```TypeScript
@@ -48,7 +46,6 @@ find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg
 | --- | --- |
 | T |  |
 
-<a id="findindex"></a>
 ## findIndex
 
 ```TypeScript

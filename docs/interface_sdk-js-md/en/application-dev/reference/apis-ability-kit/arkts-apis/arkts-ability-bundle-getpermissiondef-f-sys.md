@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="getpermissiondef"></a>
 ## getPermissionDef
 
 ```TypeScript
@@ -37,7 +36,6 @@ Obtains the permission details by permission name. This API uses an asynchronous
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionDef&gt; | Yes | Callback used to return the permission details. |
 
 
-<a id="getpermissiondef-1"></a>
 ## getPermissionDef
 
 ```TypeScript

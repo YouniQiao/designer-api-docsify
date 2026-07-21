@@ -6,7 +6,6 @@
 import { WantAgent } from '@kit.AbilityKit';
 ```
 
-<a id="createlocalwantagent"></a>
 ## createLocalWantAgent
 
 ```TypeScript

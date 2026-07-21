@@ -6,7 +6,6 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-<a id="isuidnetallowed"></a>
 ## isUidNetAllowed
 
 ```TypeScript
@@ -57,7 +56,6 @@ policy.isUidNetAllowed(11111, true, (error: BusinessError, data: boolean) => {
 ```
 
 
-<a id="isuidnetallowed-1"></a>
 ## isUidNetAllowed
 
 ```TypeScript
@@ -117,7 +115,6 @@ policy
 ```
 
 
-<a id="isuidnetallowed-2"></a>
 ## isUidNetAllowed
 
 ```TypeScript
@@ -168,7 +165,6 @@ policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => 
 ```
 
 
-<a id="isuidnetallowed-3"></a>
 ## isUidNetAllowed
 
 ```TypeScript

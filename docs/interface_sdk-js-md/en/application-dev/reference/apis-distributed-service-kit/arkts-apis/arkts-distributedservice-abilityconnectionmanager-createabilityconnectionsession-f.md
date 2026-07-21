@@ -6,7 +6,6 @@
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
-<a id="createabilityconnectionsession"></a>
 ## createAbilityConnectionSession
 
 ```TypeScript
@@ -22,9 +21,7 @@ Creates a collaboration session between applications.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function createAbilityConnectionSession(serviceName: string, context: Context, peerInfo: PeerInfo,
-        connectOptions: ConnectOptions): int--><!--Device-abilityConnectionManager-function createAbilityConnectionSession(serviceName: string, context: Context, peerInfo: PeerInfo,
-        connectOptions: ConnectOptions): int-End-->
+<!--Device-abilityConnectionManager-function createAbilityConnectionSession(serviceName: string, context: Context, peerInfo: PeerInfo,        connectOptions: ConnectOptions): int--><!--Device-abilityConnectionManager-function createAbilityConnectionSession(serviceName: string, context: Context, peerInfo: PeerInfo,        connectOptions: ConnectOptions): int-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 

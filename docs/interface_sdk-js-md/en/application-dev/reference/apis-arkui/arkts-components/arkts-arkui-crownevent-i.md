@@ -80,7 +80,7 @@ Value range: [-360, 360]
 stopPropagation: Callback<void>
 ```
 
-Disables [event bubbling](docroot://ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
+Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
 
 **Type:** Callback&lt;void&gt;
 

@@ -14,7 +14,6 @@ The ProxyConfig used by applyProxyOverride.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="bypasshostnameswithoutperiod"></a>
 ## bypassHostnamesWithoutPeriod
 
 ```TypeScript
@@ -31,7 +30,6 @@ Hostnames without a period in them (and that are not IP literals) will skip the 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="clearimplicitrules"></a>
 ## clearImplicitRules
 
 ```TypeScript
@@ -48,7 +46,6 @@ By default, certain hostnames implicitly bypass the proxy if they are link-local
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="enablereversebypass"></a>
 ## enableReverseBypass
 
 ```TypeScript
@@ -79,7 +76,6 @@ If false all URLs will use proxy settings except URLs match the bypass rules.If 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
-<a id="getbypassrules"></a>
 ## getBypassRules
 
 ```TypeScript
@@ -102,7 +98,6 @@ Returns the bypass rules.
 | --- | --- |
 | Array&lt;string&gt; | The bypass rules. |
 
-<a id="getproxyrules"></a>
 ## getProxyRules
 
 ```TypeScript
@@ -125,7 +120,6 @@ Returns the proxy rules.
 | --- | --- |
 | Array&lt;ProxyRule&gt; | The proxy rules. |
 
-<a id="insertbypassrule"></a>
 ## insertBypassRule
 
 ```TypeScript
@@ -154,7 +148,6 @@ Insert a bypass rule that indicates URLs that should skip the override proxy and
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
-<a id="insertdirectrule"></a>
 ## insertDirectRule
 
 ```TypeScript
@@ -183,7 +176,6 @@ Insert a proxy rule that indicates URLs that match the schemeFilter will connect
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
-<a id="insertproxyrule"></a>
 ## insertProxyRule
 
 ```TypeScript
@@ -217,7 +209,6 @@ e.g. example.com host: example.com https://example.com scheme: https host: examp
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
-<a id="isreversebypassenabled"></a>
 ## isReverseBypassEnabled
 
 ```TypeScript

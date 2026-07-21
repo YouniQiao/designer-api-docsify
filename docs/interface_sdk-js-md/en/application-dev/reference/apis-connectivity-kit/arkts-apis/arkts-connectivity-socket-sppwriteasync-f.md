@@ -6,7 +6,6 @@
 import { socket } from '@kit.ConnectivityKit';
 ```
 
-<a id="sppwriteasync"></a>
 ## sppWriteAsync
 
 ```TypeScript

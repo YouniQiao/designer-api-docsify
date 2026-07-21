@@ -14,7 +14,6 @@ Implements callbacks triggered when auto-save is complete.
 import { autoFillManager } from '@kit.AbilityKit';
 ```
 
-<a id="onfailure"></a>
 ## onFailure
 
 ```TypeScript
@@ -33,7 +32,6 @@ Called when auto save request is failed to be handled.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-<a id="onsuccess"></a>
 ## onSuccess
 
 ```TypeScript

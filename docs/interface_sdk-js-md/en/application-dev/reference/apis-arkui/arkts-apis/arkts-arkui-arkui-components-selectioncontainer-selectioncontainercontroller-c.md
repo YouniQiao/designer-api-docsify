@@ -14,7 +14,6 @@ Defines the controller of the SelectionContainer component.
 import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from '@kit.ArkUI';
 ```
 
-<a id="cleartextselection"></a>
 ## clearTextSelection
 
 ```TypeScript
@@ -33,7 +32,6 @@ Clears the current text selection of the SelectionContainer,and closes the selec
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="closeselectionmenu"></a>
 ## closeSelectionMenu
 
 ```TypeScript

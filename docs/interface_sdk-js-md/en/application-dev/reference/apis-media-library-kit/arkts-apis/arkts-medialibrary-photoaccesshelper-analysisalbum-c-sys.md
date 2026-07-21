@@ -16,7 +16,6 @@ Implements an **Analysis** album.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -71,7 +70,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="getorderposition"></a>
 ## getOrderPosition
 
 ```TypeScript
@@ -150,7 +148,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="getrelationship"></a>
 ## getRelationship
 
 ```TypeScript

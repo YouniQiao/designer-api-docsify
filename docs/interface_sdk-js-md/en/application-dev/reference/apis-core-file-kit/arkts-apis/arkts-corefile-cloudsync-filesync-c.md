@@ -14,7 +14,6 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 import { cloudSync } from '@kit.CoreFileKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -42,7 +41,6 @@ let fileSync = new cloudSync.FileSync()
 
 ```
 
-<a id="getlastsynctime"></a>
 ## getLastSyncTime
 
 ```TypeScript
@@ -87,7 +85,6 @@ fileSync.getLastSyncTime().then((timeStamp: number) => {
 
 ```
 
-<a id="getlastsynctime-1"></a>
 ## getLastSyncTime
 
 ```TypeScript
@@ -133,7 +130,6 @@ fileSync.getLastSyncTime((err: BusinessError, timeStamp: number) => {
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -177,7 +173,6 @@ fileSync.off('progress', callback);
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -218,7 +213,6 @@ fileSync.on('progress', callback);
 
 ```
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -270,7 +264,6 @@ fileSync.start().then(() => {
 
 ```
 
-<a id="start-1"></a>
 ## start
 
 ```TypeScript
@@ -318,7 +311,6 @@ fileSync.start((err: BusinessError) => {
 
 ```
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -327,7 +319,7 @@ stop(): Promise<void>
 
 Stops device-cloud sync of a file. This API uses a promise to return the result.
 
-Calling **stop** will stop the sync process. To resume the sync, call [start](arkts-corefile-cloudsync-filesync-c.md#start-1).
+Calling **stop** will stop the sync process. To resume the sync, call [start](arkts-corefile-cloudsync-filesync-c.md#start).
 
 **Since:** 12
 
@@ -363,7 +355,6 @@ fileSync.stop().then(() => {
 
 ```
 
-<a id="stop-1"></a>
 ## stop
 
 ```TypeScript
@@ -372,7 +363,7 @@ stop(callback: AsyncCallback<void>): void
 
 Stops device-cloud sync of a file. This API uses an asynchronous callback to return the result.
 
-Calling **stop** will stop the sync process. To resume the sync, call [start](arkts-corefile-cloudsync-filesync-c.md#start-1).
+Calling **stop** will stop the sync process. To resume the sync, call [start](arkts-corefile-cloudsync-filesync-c.md#start).
 
 **Since:** 12
 

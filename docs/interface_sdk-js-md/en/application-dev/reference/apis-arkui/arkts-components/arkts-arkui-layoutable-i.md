@@ -8,7 +8,6 @@ Provides the child component layout information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getborderwidth"></a>
 ## getBorderWidth
 
 ```TypeScript
@@ -33,7 +32,6 @@ Obtains the border widths of the child component.
 | --- | --- |
 | [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Border widths of the child component. |
 
-<a id="getmargin"></a>
 ## getMargin
 
 ```TypeScript
@@ -58,7 +56,6 @@ Obtains the margin values of the child component.
 | --- | --- |
 | [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Margin values of the child component. |
 
-<a id="getpadding"></a>
 ## getPadding
 
 ```TypeScript
@@ -83,7 +80,6 @@ Obtains the padding values of the child component.
 | --- | --- |
 | [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Padding values of the child component. |
 
-<a id="layout"></a>
 ## layout
 
 ```TypeScript

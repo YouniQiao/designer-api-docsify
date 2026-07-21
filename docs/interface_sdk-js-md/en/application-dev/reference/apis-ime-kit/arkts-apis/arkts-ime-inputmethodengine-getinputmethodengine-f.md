@@ -6,7 +6,6 @@
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-<a id="getinputmethodengine"></a>
 ## getInputMethodEngine
 
 ```TypeScript
@@ -21,7 +20,7 @@ The input method can use the obtained instance to subscribe to a soft keyboard d
 
 **Deprecated since:** 9
 
-**Substitutes:** [getInputMethodAbility()](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability-1)
+**Substitutes:** [getInputMethodAbility()](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)
 
 <!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine--><!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine-End-->
 

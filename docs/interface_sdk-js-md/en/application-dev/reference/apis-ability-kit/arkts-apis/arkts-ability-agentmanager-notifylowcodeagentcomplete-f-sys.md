@@ -6,7 +6,6 @@
 import { agentManager } from '@kit.AbilityKit';
 ```
 
-<a id="notifylowcodeagentcomplete"></a>
 ## notifyLowCodeAgentComplete
 
 ```TypeScript

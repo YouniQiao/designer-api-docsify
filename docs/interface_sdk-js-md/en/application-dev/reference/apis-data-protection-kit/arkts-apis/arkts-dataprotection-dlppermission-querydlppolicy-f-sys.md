@@ -6,7 +6,6 @@
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
-<a id="querydlppolicy"></a>
 ## queryDlpPolicy
 
 ```TypeScript
@@ -16,7 +15,6 @@ function queryDlpPolicy(dlpFd: number): Promise<string>
 Parses the file header in a DLP file to obtain the DLP plaintext policy. The returned JSON string of the DLP policy contains the [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i-sys.md) and [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i-sys.md) information. This API uses a promise to return the result.
 
 This API obtains the policy information of a DLP file for analysis in scenarios such as viewing the DLP file permission configuration.
-
 > **NOTE**  
 >  
 > This API can be called only by enterprise accounts.

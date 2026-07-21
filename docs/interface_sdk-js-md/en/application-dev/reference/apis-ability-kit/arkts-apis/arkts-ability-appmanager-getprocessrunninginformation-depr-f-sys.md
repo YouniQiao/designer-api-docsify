@@ -1,6 +1,5 @@
 # getProcessRunningInformation (System API)
 
-<a id="getprocessrunninginformation"></a>
 ## getProcessRunningInformation
 
 ```TypeScript
@@ -8,16 +7,15 @@ function getProcessRunningInformation(): Promise<Array<ProcessRunningInfo>>
 ```
 
 Obtains information about the running processes. This API uses a promise to return the result.
-
 > This API is deprecated since API version 9. You are advised to use  
-> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation-1)  
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)  
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** getRunningProcessInformation
+**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
 
 **Required permissions:** 
 - API version 8 - 10: ohos.permission.GET_RUNNING_INFO
@@ -41,7 +39,6 @@ Obtains information about the running processes. This API uses a promise to retu
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; |
 
 
-<a id="getprocessrunninginformation-1"></a>
 ## getProcessRunningInformation
 
 ```TypeScript
@@ -49,7 +46,6 @@ function getProcessRunningInformation(callback: AsyncCallback<Array<ProcessRunni
 ```
 
 Obtains information about the running processes. This API uses an asynchronous callback to return the result.
-
 > This API is deprecated since API version 9. You are advised to use  
 > [appManager.getRunningProcessInformation]{  
 > @link @ohos.app.ability.appManager:appManager.getRunningProcessInformation()} instead.
@@ -58,7 +54,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** getRunningProcessInformation
+**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
 
 **Required permissions:** 
 - API version 8 - 10: ohos.permission.GET_RUNNING_INFO

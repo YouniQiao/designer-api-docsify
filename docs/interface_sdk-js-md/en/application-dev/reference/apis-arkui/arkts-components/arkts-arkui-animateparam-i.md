@@ -50,13 +50,13 @@ When the type is string, it represents an animation interpolation curve, support
 
 **"steps(number, step-position)"**: Step curve. **number** is required and must be a positive integer.**step-position** is optional and the values **start** and **end** are supported; defaults to end, as in **"steps(3, start)"**.
 
-**"interpolating-spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see [curves.interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring-1).
+**"interpolating-spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see [curves.interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring).
 
-**"responsive-spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see [curves.responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion-1).
+**"responsive-spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see [curves.responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion).
 
-**"spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see [curves.springCurve](../arkts-apis/arkts-arkui-curves-springcurve-f.md#springcurve-1).
+**"spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see [curves.springCurve](../arkts-apis/arkts-arkui-curves-springcurve-f.md#springcurve).
 
-**"spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see [curves.springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springmotion-1).
+**"spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see [curves.springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springmotion).
 
 Default value: **Curve.EaseInOut**
 
@@ -114,7 +114,7 @@ Default value: **1000**
 
 Note: 1. Before API 26.0.0, the maximum animation duration for an ArkTS widget is 1,000 ms; values exceeding this limit are clamped to 1,000 ms. Starting from API version 26.0.0, the maximum animation duration for an ArkTS widget is adjusted to 2,000 ms.
 
-2. To stop the animation of a property, change the property value in an animation closure with a duration of 0.3. Values less than 0 are clamped to **0**.4. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used.5. The **duration** parameter does not take effect when [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springmotion-1), [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion-1), and [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring-1) are configured for **curve**.
+2. To stop the animation of a property, change the property value in an animation closure with a duration of 0.3. Values less than 0 are clamped to **0**.4. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used.5. The **duration** parameter does not take effect when [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springmotion), [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion), and [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring) are configured for **curve**.
 
 **Type:** number
 
@@ -231,7 +231,6 @@ playMode?: PlayMode
 Playback mode. By default, the animation is played from the beginning after the playback is complete.
 
 Default value: **PlayMode.Normal**
-
 > **Notes about PlayMode**:  
 >  
 > - **PlayMode.Normal** and **PlayMode.Alternate** are recommended. Under these settings, the first round of the  

@@ -6,7 +6,6 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-<a id="restoreallpolicies"></a>
 ## restoreAllPolicies
 
 ```TypeScript

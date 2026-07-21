@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="once"></a>
 ## once
 
 ```TypeScript
@@ -59,7 +58,6 @@ try {
 ```
 
 
-<a id="once-1"></a>
 ## once
 
 ```TypeScript
@@ -115,7 +113,6 @@ try {
 ```
 
 
-<a id="once-2"></a>
 ## once
 
 ```TypeScript
@@ -163,7 +160,6 @@ try {
 ```
 
 
-<a id="once-3"></a>
 ## once
 
 ```TypeScript
@@ -211,7 +207,6 @@ try {
 ```
 
 
-<a id="once-4"></a>
 ## once
 
 ```TypeScript
@@ -259,7 +254,6 @@ try {
 ```
 
 
-<a id="once-5"></a>
 ## once
 
 ```TypeScript
@@ -309,7 +303,6 @@ try {
 ```
 
 
-<a id="once-6"></a>
 ## once
 
 ```TypeScript
@@ -362,7 +355,6 @@ try {
 ```
 
 
-<a id="once-7"></a>
 ## once
 
 ```TypeScript
@@ -418,7 +410,6 @@ try {
 ```
 
 
-<a id="once-8"></a>
 ## once
 
 ```TypeScript
@@ -466,7 +457,6 @@ try {
 ```
 
 
-<a id="once-9"></a>
 ## once
 
 ```TypeScript
@@ -517,7 +507,6 @@ try {
 ```
 
 
-<a id="once-10"></a>
 ## once
 
 ```TypeScript
@@ -565,7 +554,6 @@ try {
 ```
 
 
-<a id="once-11"></a>
 ## once
 
 ```TypeScript
@@ -618,7 +606,6 @@ try {
 ```
 
 
-<a id="once-12"></a>
 ## once
 
 ```TypeScript
@@ -668,7 +655,6 @@ try {
 ```
 
 
-<a id="once-13"></a>
 ## once
 
 ```TypeScript
@@ -721,7 +707,6 @@ try {
 ```
 
 
-<a id="once-14"></a>
 ## once
 
 ```TypeScript
@@ -771,7 +756,6 @@ try {
 ```
 
 
-<a id="once-15"></a>
 ## once
 
 ```TypeScript
@@ -822,7 +806,6 @@ try {
 ```
 
 
-<a id="once-16"></a>
 ## once
 
 ```TypeScript
@@ -873,7 +856,6 @@ try {
 ```
 
 
-<a id="once-17"></a>
 ## once
 
 ```TypeScript
@@ -921,7 +903,6 @@ try {
 ```
 
 
-<a id="once-18"></a>
 ## once
 
 ```TypeScript
@@ -972,7 +953,6 @@ try {
 ```
 
 
-<a id="once-19"></a>
 ## once
 
 ```TypeScript
@@ -1020,7 +1000,6 @@ try {
 ```
 
 
-<a id="once-20"></a>
 ## once
 
 ```TypeScript
@@ -1068,7 +1047,6 @@ try {
 ```
 
 
-<a id="once-21"></a>
 ## once
 
 ```TypeScript
@@ -1110,7 +1088,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, (data: sensor.Accele
 ```
 
 
-<a id="once-22"></a>
 ## once
 
 ```TypeScript
@@ -1155,7 +1132,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, (data: 
 ```
 
 
-<a id="once-23"></a>
 ## once
 
 ```TypeScript
@@ -1193,7 +1169,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, (data: sensor.LightR
 ```
 
 
-<a id="once-24"></a>
 ## once
 
 ```TypeScript
@@ -1231,7 +1206,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, (data: sensor.
 ```
 
 
-<a id="once-25"></a>
 ## once
 
 ```TypeScript
@@ -1269,7 +1243,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, (data: sensor.BarometerR
 ```
 
 
-<a id="once-26"></a>
 ## once
 
 ```TypeScript
@@ -1309,7 +1282,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, (data: sensor.GravityRespo
 ```
 
 
-<a id="once-27"></a>
 ## once
 
 ```TypeScript
@@ -1351,7 +1323,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, (data: sensor.GyroscopeR
 ```
 
 
-<a id="once-28"></a>
 ## once
 
 ```TypeScript
@@ -1396,7 +1367,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, (data: sens
 ```
 
 
-<a id="once-29"></a>
 ## once
 
 ```TypeScript
@@ -1434,7 +1404,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HALL, (data: sensor.HallResponse) =
 ```
 
 
-<a id="once-30"></a>
 ## once
 
 ```TypeScript
@@ -1474,7 +1443,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, (data: sensor.HeartRate
 ```
 
 
-<a id="once-31"></a>
 ## once
 
 ```TypeScript
@@ -1512,7 +1480,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, (data: sensor.HumidityRes
 ```
 
 
-<a id="once-32"></a>
 ## once
 
 ```TypeScript
@@ -1541,7 +1508,6 @@ Subscribes to only one data change of the linear acceleration sensor.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;LinearAccelerometerResponse&gt; | Yes | One-shot callback used to return the linear acceleration sensor data. The reported data type in the callback is **LinearAccelerometerResponse**. |
 
 
-<a id="once-33"></a>
 ## once
 
 ```TypeScript
@@ -1581,7 +1547,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, (data: sensor.Magne
 ```
 
 
-<a id="once-34"></a>
 ## once
 
 ```TypeScript
@@ -1624,7 +1589,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, (data:
 ```
 
 
-<a id="once-35"></a>
 ## once
 
 ```TypeScript
@@ -1664,7 +1628,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, (data: sensor.Orientat
 ```
 
 
-<a id="once-36"></a>
 ## once
 
 ```TypeScript
@@ -1704,7 +1667,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, (data: sensor.PedometerR
 ```
 
 
-<a id="once-37"></a>
 ## once
 
 ```TypeScript
@@ -1744,7 +1706,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, (data: sensor.
 ```
 
 
-<a id="once-38"></a>
 ## once
 
 ```TypeScript
@@ -1783,7 +1744,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, (data: sensor.ProximityR
 ```
 
 
-<a id="once-39"></a>
 ## once
 
 ```TypeScript
@@ -1824,7 +1784,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, (data: sensor.Rota
 ```
 
 
-<a id="once-40"></a>
 ## once
 
 ```TypeScript
@@ -1862,7 +1821,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, (data: sensor.S
 ```
 
 
-<a id="once-41"></a>
 ## once
 
 ```TypeScript

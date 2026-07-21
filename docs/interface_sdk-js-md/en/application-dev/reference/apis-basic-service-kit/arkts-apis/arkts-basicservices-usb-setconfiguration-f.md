@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="setconfiguration"></a>
 ## setConfiguration
 
 ```TypeScript
@@ -15,13 +14,13 @@ function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number
 
 Sets the device configuration.
 
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices-1) to obtain the USB device list and device configuration, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright-1) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice-1) to obtain **devicepipe** as an input parameter.
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list and device configuration, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setConfiguration](arkts-basicservices-usbmanager-setconfiguration-f.md#setconfiguration-1)
+**Substitutes:** [setConfiguration](arkts-basicservices-usbmanager-setconfiguration-f.md#setconfiguration)
 
 <!--Device-usb-function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number--><!--Device-usb-function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number-End-->
 

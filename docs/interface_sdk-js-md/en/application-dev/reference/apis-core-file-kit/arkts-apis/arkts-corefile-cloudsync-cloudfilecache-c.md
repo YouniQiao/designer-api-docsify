@@ -14,7 +14,6 @@ Provides APIs for the file manager application to download files from the Drive 
 import { cloudSync } from '@kit.CoreFileKit';
 ```
 
-<a id="cleanallfilecache"></a>
 ## cleanAllFileCache
 
 ```TypeScript
@@ -43,7 +42,6 @@ Clean all downloaded files except those not yet migrated to the cloud or those t
 | --- | --- |
 | 13900010 | Try again. |
 
-<a id="cleanfilecache"></a>
 ## cleanFileCache
 
 ```TypeScript
@@ -96,7 +94,6 @@ try {
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -124,7 +121,6 @@ let fileCache = new cloudSync.CloudFileCache();
 
 ```
 
-<a id="getcachedtotalsize"></a>
 ## getCachedTotalSize
 
 ```TypeScript
@@ -153,7 +149,6 @@ Query the total size of cached files.
 | --- | --- |
 | 13900010 | Try again. |
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -203,7 +198,6 @@ try {
 
 ```
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -252,7 +246,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -300,7 +293,6 @@ try {
 
 ```
 
-<a id="on-1"></a>
 ## on
 
 ```TypeScript
@@ -353,7 +345,6 @@ try {
 
 ```
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -417,7 +408,6 @@ fileCache.start(uri).then(() => {
 
 ```
 
-<a id="start-1"></a>
 ## start
 
 ```TypeScript
@@ -469,7 +459,6 @@ fileCache.start(uri, (err: BusinessError) => {
 
 ```
 
-<a id="startbatch"></a>
 ## startBatch
 
 ```TypeScript
@@ -533,7 +522,6 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 
 ```
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -590,7 +578,6 @@ fileCache.stop(uri, true).then(() => {
 
 ```
 
-<a id="stop-1"></a>
 ## stop
 
 ```TypeScript
@@ -643,14 +630,13 @@ fileCache.stop(uri, (err: BusinessError) => {
 
 ```
 
-<a id="stopbatch"></a>
 ## stopBatch
 
 ```TypeScript
 stopBatch(downloadId: number, needClean?: boolean): Promise<void>
 ```
 
-Stops the batch download task enabled by [startBatch](arkts-corefile-cloudsync-cloudfilecache-c.md#startbatch-1) of a file from the Drive Kit. This API uses a promise to return the result.
+Stops the batch download task enabled by [startBatch](arkts-corefile-cloudsync-cloudfilecache-c.md#startbatch) of a file from the Drive Kit. This API uses a promise to return the result.
 
 When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
 

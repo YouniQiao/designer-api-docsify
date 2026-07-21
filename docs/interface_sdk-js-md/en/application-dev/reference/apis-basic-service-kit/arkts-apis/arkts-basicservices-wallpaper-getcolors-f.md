@@ -6,7 +6,6 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
-<a id="getcolors"></a>
 ## getColors
 
 ```TypeScript
@@ -46,7 +45,6 @@ wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessEr
 ```
 
 
-<a id="getcolors-1"></a>
 ## getColors
 
 ```TypeScript

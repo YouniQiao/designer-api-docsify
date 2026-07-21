@@ -6,7 +6,6 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
-<a id="getprofileconnectionstate"></a>
 ## getProfileConnectionState
 
 ```TypeScript

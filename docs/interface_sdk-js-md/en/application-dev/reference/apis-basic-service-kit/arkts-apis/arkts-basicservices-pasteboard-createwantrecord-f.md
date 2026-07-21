@@ -6,7 +6,6 @@
 import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
-<a id="createwantrecord"></a>
 ## createWantRecord
 
 ```TypeScript
@@ -19,7 +18,7 @@ Creates a **PasteDataRecord** object of the Want type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createRecord(mimeType:](arkts-basicservices-pasteboard-createrecord-f.md#createrecord-1)
+**Substitutes:** [createRecord(mimeType:](arkts-basicservices-pasteboard-createrecord-f.md#createrecord)
 
 <!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord--><!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord-End-->
 

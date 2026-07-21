@@ -1,7 +1,6 @@
 # MarqueeOptions
 
 Describes the initialization options of the **Marquee** component.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  

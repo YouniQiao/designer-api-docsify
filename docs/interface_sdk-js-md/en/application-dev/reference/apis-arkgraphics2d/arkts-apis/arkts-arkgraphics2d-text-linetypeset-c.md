@@ -2,7 +2,7 @@
 
 Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text.
 
-Before calling any of the following APIs, you must use [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset-1) in the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **LineTypeset** object.
+Before calling any of the following APIs, you must use [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) in the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **LineTypeset** object.
 
 **Since:** 18
 
@@ -16,7 +16,6 @@ Before calling any of the following APIs, you must use [buildLineTypeset()](arkt
 import { text } from '@kit.ArkGraphics2D';
 ```
 
-<a id="createline"></a>
 ## createLine
 
 ```TypeScript
@@ -38,7 +37,7 @@ Generates a text line object based on the specified layout range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | startIndex | number | Yes | Start position for layout calculation. The value is an integer in the range [0, total number of text characters). |
-| count | number | Yes | Number of characters from the specified start position. The value is an integer in the range [0, total number of text characters). The sum of **startIndex** and **count** cannot be greater than the total number of text characters. If **count** is **0**, the layout range is [startIndex, position of the last character in the text]. You can use [getLineBreak](arkts-arkgraphics2d-text-linetypeset-c.md#getlinebreak-1) to obtain the number of characters that can fit in the layout. |
+| count | number | Yes | Number of characters from the specified start position. The value is an integer in the range [0, total number of text characters). The sum of **startIndex** and **count** cannot be greater than the total number of text characters. If **count** is **0**, the layout range is [startIndex, position of the last character in the text]. You can use [getLineBreak](arkts-arkgraphics2d-text-linetypeset-c.md#getlinebreak) to obtain the number of characters that can fit in the layout. |
 
 **Return value:**
 
@@ -62,7 +61,6 @@ let line : text.TextLine = lineTypeset.createLine(startIndex, count);
 
 ```
 
-<a id="getlinebreak"></a>
 ## getLineBreak
 
 ```TypeScript

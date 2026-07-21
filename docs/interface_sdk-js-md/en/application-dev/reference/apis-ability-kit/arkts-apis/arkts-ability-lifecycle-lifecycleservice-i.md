@@ -8,7 +8,6 @@ interface of service lifecycle.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
-<a id="oncommand"></a>
 ## onCommand
 
 ```TypeScript
@@ -32,7 +31,6 @@ Called back when Service is started.
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the want of Service to start. |
 | startId | number | Yes | Indicates the number of times the Service ability has been started. {@code startId} is incremented by 1 every time the ability is started. For example, if the ability has been started for six times. |
 
-<a id="onconnect"></a>
 ## onConnect
 
 ```TypeScript
@@ -61,7 +59,6 @@ Called back when a Service ability is first connected to an ability.
 | --- | --- |
 | rpc.RemoteObject | Returns the proxy of the Service ability. |
 
-<a id="ondisconnect"></a>
 ## onDisconnect
 
 ```TypeScript
@@ -84,7 +81,6 @@ Called back when all abilities connected to a Service ability are disconnected.
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates disconnection information about the Service ability. |
 
-<a id="onreconnect"></a>
 ## onReconnect
 
 ```TypeScript
@@ -107,7 +103,6 @@ Called when a new client attempts to connect to a Service ability after all prev
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Indicates the want of the Service ability being connected. |
 
-<a id="onstart"></a>
 ## onStart
 
 ```TypeScript
@@ -124,7 +119,6 @@ Called back when an ability is started for initialization (it can be called only
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
 
-<a id="onstop"></a>
 ## onStop
 
 ```TypeScript

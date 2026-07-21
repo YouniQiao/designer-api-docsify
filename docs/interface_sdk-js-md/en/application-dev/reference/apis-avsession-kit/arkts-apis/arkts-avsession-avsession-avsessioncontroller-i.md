@@ -14,7 +14,6 @@ Session controller,used to control media playback and get media information
 import { avSession } from '@kit.AVSessionKit';
 ```
 
-<a id="destroy"></a>
 ## destroy
 
 ```TypeScript
@@ -42,7 +41,6 @@ Destroy the server controller
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="destroy-1"></a>
 ## destroy
 
 ```TypeScript
@@ -72,7 +70,6 @@ Destroy the server controller
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavcallstate"></a>
 ## getAVCallState
 
 ```TypeScript
@@ -101,7 +98,6 @@ Get the call status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavcallstate-1"></a>
 ## getAVCallState
 
 ```TypeScript
@@ -130,7 +126,6 @@ Get the call status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavmetadata"></a>
 ## getAVMetadata
 
 ```TypeScript
@@ -159,7 +154,6 @@ Get the metadata of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavmetadata-1"></a>
 ## getAVMetadata
 
 ```TypeScript
@@ -190,7 +184,6 @@ Get the metadata of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavmetadatasync"></a>
 ## getAVMetadataSync
 
 ```TypeScript
@@ -221,7 +214,6 @@ Get the metadata of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavplaybackstate"></a>
 ## getAVPlaybackState
 
 ```TypeScript
@@ -250,7 +242,6 @@ Get the playback status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavplaybackstate-1"></a>
 ## getAVPlaybackState
 
 ```TypeScript
@@ -281,7 +272,6 @@ Get the playback status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavplaybackstatesync"></a>
 ## getAVPlaybackStateSync
 
 ```TypeScript
@@ -312,7 +302,6 @@ Get the playback status of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavqueueitems"></a>
 ## getAVQueueItems
 
 ```TypeScript
@@ -341,7 +330,6 @@ Get the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavqueueitems-1"></a>
 ## getAVQueueItems
 
 ```TypeScript
@@ -372,7 +360,6 @@ Get the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavqueueitemssync"></a>
 ## getAVQueueItemsSync
 
 ```TypeScript
@@ -403,7 +390,6 @@ Get the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavqueuetitle"></a>
 ## getAVQueueTitle
 
 ```TypeScript
@@ -432,7 +418,6 @@ Get the name of the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavqueuetitle-1"></a>
 ## getAVQueueTitle
 
 ```TypeScript
@@ -463,7 +448,6 @@ Get the name of the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getavqueuetitlesync"></a>
 ## getAVQueueTitleSync
 
 ```TypeScript
@@ -494,7 +478,6 @@ Get the name of the playlist of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getcallmetadata"></a>
 ## getCallMetadata
 
 ```TypeScript
@@ -523,7 +506,6 @@ Get the call metadata of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getcallmetadata-1"></a>
 ## getCallMetadata
 
 ```TypeScript
@@ -552,7 +534,6 @@ Get the call metadata of the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getdesktoplyricstate"></a>
 ## getDesktopLyricState
 
 ```TypeScript
@@ -585,7 +566,6 @@ Get desktop lyric state such as lock state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-<a id="getextras"></a>
 ## getExtras
 
 ```TypeScript
@@ -617,7 +597,6 @@ Get custom media packets provided by the corresponding session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
-<a id="getextras-1"></a>
 ## getExtras
 
 ```TypeScript
@@ -651,7 +630,6 @@ Get custom media packets provided by the corresponding session
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
-<a id="getextraswithevent"></a>
 ## getExtrasWithEvent
 
 ```TypeScript
@@ -687,7 +665,6 @@ Get extra information for remote device, such as volume level, connected devices
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 
-<a id="getlaunchability"></a>
 ## getLaunchAbility
 
 ```TypeScript
@@ -716,7 +693,6 @@ Get the {@link WantAgent} of this session that can launch the session ability
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getlaunchability-1"></a>
 ## getLaunchAbility
 
 ```TypeScript
@@ -747,7 +723,6 @@ Get the {@link WantAgent} of this session that can launch the session ability
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getmediacentercontroltype"></a>
 ## getMediaCenterControlType
 
 ```TypeScript
@@ -777,7 +752,6 @@ Get media control type that the can be displayed on the media center.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getoutputdevice"></a>
 ## getOutputDevice
 
 ```TypeScript
@@ -805,7 +779,6 @@ Get output device information
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
 
-<a id="getoutputdevice-1"></a>
 ## getOutputDevice
 
 ```TypeScript
@@ -835,7 +808,6 @@ Get output device information
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
 
-<a id="getoutputdevicesync"></a>
 ## getOutputDeviceSync
 
 ```TypeScript
@@ -865,7 +837,6 @@ Get output device information
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getrealplaybackpositionsync"></a>
 ## getRealPlaybackPositionSync
 
 ```TypeScript
@@ -895,7 +866,6 @@ Get the adjusted playback position. The time automatically calculated by the sys
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getsupportedloopmodes"></a>
 ## getSupportedLoopModes
 
 ```TypeScript
@@ -927,7 +897,6 @@ Get supported loop modes supplied by application.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getsupportedplayspeeds"></a>
 ## getSupportedPlaySpeeds
 
 ```TypeScript
@@ -959,7 +928,6 @@ Get supported speeds supplied by application.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getvalidcommands"></a>
 ## getValidCommands
 
 ```TypeScript
@@ -988,7 +956,6 @@ Get commands supported by the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getvalidcommands-1"></a>
 ## getValidCommands
 
 ```TypeScript
@@ -1019,7 +986,6 @@ Get commands supported by the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="getvalidcommandssync"></a>
 ## getValidCommandsSync
 
 ```TypeScript
@@ -1050,7 +1016,6 @@ Get commands supported by the current session
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="isactive"></a>
 ## isActive
 
 ```TypeScript
@@ -1079,7 +1044,6 @@ Check if the current session is active
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="isactive-1"></a>
 ## isActive
 
 ```TypeScript
@@ -1110,7 +1074,6 @@ Check if the current session is active
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="isactivesync"></a>
 ## isActiveSync
 
 ```TypeScript
@@ -1141,7 +1104,6 @@ Check if the current session is active
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="isdesktoplyricenabled"></a>
 ## isDesktopLyricEnabled
 
 ```TypeScript
@@ -1173,7 +1135,6 @@ Query desktop lyric enabled state for this session.
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-<a id="isdesktoplyricvisible"></a>
 ## isDesktopLyricVisible
 
 ```TypeScript
@@ -1206,7 +1167,6 @@ Query desktop lyric visible state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-<a id="off"></a>
 ## off('metadataChange')
 
 ```TypeScript
@@ -1238,7 +1198,6 @@ Unregister metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-1"></a>
 ## off('playbackStateChange')
 
 ```TypeScript
@@ -1270,7 +1229,6 @@ Unregister playback state changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-2"></a>
 ## off('callMetadataChange')
 
 ```TypeScript
@@ -1302,7 +1260,6 @@ Unregister call metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-3"></a>
 ## off('callStateChange')
 
 ```TypeScript
@@ -1334,7 +1291,6 @@ Unregister playback state changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-4"></a>
 ## off('sessionDestroy')
 
 ```TypeScript
@@ -1366,7 +1322,6 @@ Unregister current session destroyed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-5"></a>
 ## off('activeStateChange')
 
 ```TypeScript
@@ -1398,7 +1353,6 @@ Unregister the active state of this session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-6"></a>
 ## off('validCommandChange')
 
 ```TypeScript
@@ -1430,7 +1384,6 @@ Unregister the valid commands of the session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-7"></a>
 ## off('outputDeviceChange')
 
 ```TypeScript
@@ -1462,7 +1415,6 @@ Unregister session output device change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
 
-<a id="off-8"></a>
 ## off('sessionEvent')
 
 ```TypeScript
@@ -1494,7 +1446,6 @@ Unregister session event callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-9"></a>
 ## off('queueItemsChange')
 
 ```TypeScript
@@ -1526,7 +1477,6 @@ Unregister session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-10"></a>
 ## off('queueTitleChange')
 
 ```TypeScript
@@ -1558,7 +1508,6 @@ Unregister the name of session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-11"></a>
 ## off('extrasChange')
 
 ```TypeScript
@@ -1590,7 +1539,6 @@ Unregister the custom media packets change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="off-12"></a>
 ## off('customDataChange')
 
 ```TypeScript
@@ -1621,7 +1569,6 @@ Unregister listener for custom data.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="offdesktoplyricenabled"></a>
 ## offDesktopLyricEnabled
 
 ```TypeScript
@@ -1651,7 +1598,6 @@ Unregister desktop lyric enable state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="offdesktoplyricstatechanged"></a>
 ## offDesktopLyricStateChanged
 
 ```TypeScript
@@ -1681,7 +1627,6 @@ Unregister desktop lyric state changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="offdesktoplyricvisibilitychanged"></a>
 ## offDesktopLyricVisibilityChanged
 
 ```TypeScript
@@ -1711,7 +1656,6 @@ Unregister desktop lyric visible state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="offmediacentercontroltypechanged"></a>
 ## offMediaCenterControlTypeChanged
 
 ```TypeScript
@@ -1741,7 +1685,6 @@ Unregister media center control type changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="offsupportedloopmodeschange"></a>
 ## offSupportedLoopModesChange
 
 ```TypeScript
@@ -1773,7 +1716,6 @@ Unregister listener for supported loop modes.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="offsupportedplayspeedschange"></a>
 ## offSupportedPlaySpeedsChange
 
 ```TypeScript
@@ -1805,7 +1747,6 @@ Unregister listener for supported play speeds.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on"></a>
 ## on('metadataChange')
 
 ```TypeScript
@@ -1838,7 +1779,6 @@ Register metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-1"></a>
 ## on('playbackStateChange')
 
 ```TypeScript
@@ -1871,7 +1811,6 @@ Register playback state changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-2"></a>
 ## on('callMetadataChange')
 
 ```TypeScript
@@ -1904,7 +1843,6 @@ Register call metadata changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-3"></a>
 ## on('callStateChange')
 
 ```TypeScript
@@ -1937,7 +1875,6 @@ Register call state changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-4"></a>
 ## on('sessionDestroy')
 
 ```TypeScript
@@ -1969,7 +1906,6 @@ Register current session destroyed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-5"></a>
 ## on('activeStateChange')
 
 ```TypeScript
@@ -2001,7 +1937,6 @@ Register the active state of this session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-6"></a>
 ## on('validCommandChange')
 
 ```TypeScript
@@ -2033,7 +1968,6 @@ Register the valid commands of the session changed callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-7"></a>
 ## on('outputDeviceChange')
 
 ```TypeScript
@@ -2065,7 +1999,6 @@ Register session output device change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
 
-<a id="on-8"></a>
 ## on('sessionEvent')
 
 ```TypeScript
@@ -2097,7 +2030,6 @@ Register session event callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-9"></a>
 ## on('queueItemsChange')
 
 ```TypeScript
@@ -2129,7 +2061,6 @@ Register session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-10"></a>
 ## on('queueTitleChange')
 
 ```TypeScript
@@ -2161,7 +2092,6 @@ Register the name of session playlist change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-11"></a>
 ## on('extrasChange')
 
 ```TypeScript
@@ -2193,7 +2123,6 @@ Register the custom media packets change callback
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="on-12"></a>
 ## on('customDataChange')
 
 ```TypeScript
@@ -2224,7 +2153,6 @@ Register listener for custom data.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="ondesktoplyricenabled"></a>
 ## onDesktopLyricEnabled
 
 ```TypeScript
@@ -2254,7 +2182,6 @@ Register desktop lyric enable state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="ondesktoplyricstatechanged"></a>
 ## onDesktopLyricStateChanged
 
 ```TypeScript
@@ -2284,7 +2211,6 @@ Register desktop lyric state changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="ondesktoplyricvisibilitychanged"></a>
 ## onDesktopLyricVisibilityChanged
 
 ```TypeScript
@@ -2314,7 +2240,6 @@ Register desktop lyric visible state change callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="onmediacentercontroltypechanged"></a>
 ## onMediaCenterControlTypeChanged
 
 ```TypeScript
@@ -2344,7 +2269,6 @@ Register media center control type changed callback.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="onsupportedloopmodeschange"></a>
 ## onSupportedLoopModesChange
 
 ```TypeScript
@@ -2376,7 +2300,6 @@ Register listener for supported loop modes.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="onsupportedplayspeedschange"></a>
 ## onSupportedPlaySpeedsChange
 
 ```TypeScript
@@ -2408,7 +2331,6 @@ Register listener for supported play speeds.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="sendavkeyevent"></a>
 ## sendAVKeyEvent
 
 ```TypeScript
@@ -2441,7 +2363,6 @@ Send media key event to this session
 | 600105 | Invalid session command. |
 | 600106 | The session is not activated. |
 
-<a id="sendavkeyevent-1"></a>
 ## sendAVKeyEvent
 
 ```TypeScript
@@ -2481,7 +2402,6 @@ Send media key event to this session
 | 600105 | Invalid session command. |
 | 600106 | The session is not activated. |
 
-<a id="sendcommoncommand"></a>
 ## sendCommonCommand
 
 ```TypeScript
@@ -2516,7 +2436,6 @@ Send common commands to this session
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
-<a id="sendcommoncommand-1"></a>
 ## sendCommonCommand
 
 ```TypeScript
@@ -2558,7 +2477,6 @@ Send common commands to this session
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
-<a id="sendcontrolcommand"></a>
 ## sendControlCommand
 
 ```TypeScript
@@ -2592,7 +2510,6 @@ Send control commands to this session
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
-<a id="sendcontrolcommand-1"></a>
 ## sendControlCommand
 
 ```TypeScript
@@ -2633,7 +2550,6 @@ Send control commands to this session
 | [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
-<a id="sendcustomdata"></a>
 ## sendCustomData
 
 ```TypeScript
@@ -2670,7 +2586,6 @@ Send custom data to this avsession.
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="setdesktoplyricstate"></a>
 ## setDesktopLyricState
 
 ```TypeScript
@@ -2709,7 +2624,6 @@ Set desktop lyric state such as lock state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-<a id="setdesktoplyricvisible"></a>
 ## setDesktopLyricVisible
 
 ```TypeScript
@@ -2748,7 +2662,6 @@ Set desktop lyric visible state for this session.
 | [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
 | [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
-<a id="skiptoqueueitem"></a>
 ## skipToQueueItem
 
 ```TypeScript
@@ -2779,7 +2692,6 @@ Set the item in the playlist to be played
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 | [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
-<a id="skiptoqueueitem-1"></a>
 ## skipToQueueItem
 
 ```TypeScript

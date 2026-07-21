@@ -14,7 +14,6 @@ Define html web message port.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -31,7 +30,6 @@ Close port.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="onmessageevent"></a>
 ## onMessageEvent
 
 ```TypeScript
@@ -61,7 +59,6 @@ Receive message from other port.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100006](../errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) | Failed to register a message event for the port. |
 
-<a id="onmessageeventext"></a>
 ## onMessageEventExt
 
 ```TypeScript
@@ -91,7 +88,6 @@ Receive message from other port.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100006](../errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) | Failed to register a message event for the port. |
 
-<a id="postmessageevent"></a>
 ## postMessageEvent
 
 ```TypeScript
@@ -121,7 +117,6 @@ Post a message to other port.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100010](../errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) | Failed to post messages through the port. |
 
-<a id="postmessageeventext"></a>
 ## postMessageEventExt
 
 ```TypeScript

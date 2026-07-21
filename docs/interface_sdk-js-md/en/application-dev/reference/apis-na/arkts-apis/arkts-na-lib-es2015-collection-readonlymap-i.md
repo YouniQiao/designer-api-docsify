@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface ReadonlyMap<K, V>--><!--Device-unnamed-interface ReadonlyMap<K, V>-End-->
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -18,7 +17,6 @@ forEach(callbackfn: (value: V, key: K, map: ReadonlyMap<K, V>) => void, thisArg?
 | callbackfn | (value: V, key: K, map: ReadonlyMap&lt;K, V&gt;) =&gt; void | Yes |  |
 | thisArg | any | No |  |
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -39,7 +37,6 @@ get(key: K): V | undefined
 | --- | --- |
 | V |  |
 
-<a id="has"></a>
 ## has
 
 ```TypeScript

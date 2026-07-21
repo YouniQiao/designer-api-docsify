@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="wrapkeyitem"></a>
 ## wrapKeyItem
 
 ```TypeScript
@@ -14,7 +13,6 @@ function wrapKeyItem(keyAlias: string, params: HuksOptions): Promise<HuksReturnR
 ```
 
 Wraps a key. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Wrapping SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)  

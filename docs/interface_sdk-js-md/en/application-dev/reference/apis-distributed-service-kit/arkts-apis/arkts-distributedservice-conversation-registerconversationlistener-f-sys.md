@@ -6,7 +6,6 @@
 import { conversation } from '@kit.DistributedServiceKit';
 ```
 
-<a id="registerconversationlistener"></a>
 ## registerConversationListener
 
 ```TypeScript
@@ -17,9 +16,9 @@ function registerConversationListener(
   ): void
 ```
 
-Registers a listener to receive data from trusted devices under the same account. When the remote device sends data to the local device by calling [postConversationData](arkts-distributedservice-conversation-postconversationdata-f-sys.md#postconversationdata-1), the data is distributed to the registered callback based on the specified bundle name and ability name. Only one listener can be registered for the same bundle name and ability name. Duplicate registration will overwrite the previously registered listener.
+Registers a listener to receive data from trusted devices under the same account. When the remote device sends data to the local device by calling [postConversationData](arkts-distributedservice-conversation-postconversationdata-f-sys.md#postconversationdata), the data is distributed to the registered callback based on the specified bundle name and ability name. Only one listener can be registered for the same bundle name and ability name. Duplicate registration will overwrite the previously registered listener.
 
-**API called in pairs:** This API must be used in pairs with [unregisterConversationListener](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md#unregisterconversationlistener-1), which is called to unregister the listener to release resources.
+**API called in pairs:** This API must be used in pairs with [unregisterConversationListener](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md#unregisterconversationlistener), which is called to unregister the listener to release resources.
 
 **Since:** 26.1.0
 
@@ -27,15 +26,7 @@ Registers a listener to receive data from trusted devices under the same account
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-conversation-function registerConversationListener(
-    bundleName: string,
-    abilityName: string,
-    dataCallback: DataCallback,
-  ): void--><!--Device-conversation-function registerConversationListener(
-    bundleName: string,
-    abilityName: string,
-    dataCallback: DataCallback,
-  ): void-End-->
+<!--Device-conversation-function registerConversationListener(    bundleName: string,    abilityName: string,    dataCallback: DataCallback,  ): void--><!--Device-conversation-function registerConversationListener(    bundleName: string,    abilityName: string,    dataCallback: DataCallback,  ): void-End-->
 
 **System capability:** SystemCapability.Communication.SoftBus.Core
 

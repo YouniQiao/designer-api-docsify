@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="queryapn"></a>
 ## queryApn
 
 ```TypeScript
@@ -74,7 +73,6 @@ try {
 ```
 
 
-<a id="queryapn-1"></a>
 ## queryApn
 
 ```TypeScript
@@ -98,7 +96,7 @@ Queries the APN parameter information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnId | string | Yes | Specified APN ID. You can obtain device information using [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn-1). |
+| apnId | string | Yes | Specified APN ID. You can obtain device information using [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn). |
 
 **Return value:**
 

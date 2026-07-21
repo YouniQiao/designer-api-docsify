@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="joinconference"></a>
 ## joinConference
 
 ```TypeScript
@@ -61,7 +60,6 @@ call.joinConference(1, callNumberList, (err: BusinessError) => {
 ```
 
 
-<a id="joinconference-1"></a>
 ## joinConference
 
 ```TypeScript

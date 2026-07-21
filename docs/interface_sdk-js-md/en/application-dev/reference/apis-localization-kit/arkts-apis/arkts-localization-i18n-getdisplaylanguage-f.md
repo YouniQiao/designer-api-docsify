@@ -6,7 +6,6 @@
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="getdisplaylanguage"></a>
 ## getDisplayLanguage
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the localized script for the specified language.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDisplayLanguage](arkts-localization-i18n-system-c.md#getdisplaylanguage-1)
+**Substitutes:** [getDisplayLanguage](arkts-localization-i18n-system-c.md#getdisplaylanguage)
 
 <!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string-End-->
 
@@ -30,7 +29,7 @@ Obtains the localized script for the specified language.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | language | string | Yes | Specified language. |
-| locale | string | Yes | [System locale](docroot://internationalization/i18n-locale-culture.md#how-it-works),which consists of the language, script, and country/region. |
+| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works),which consists of the language, script, and country/region. |
 | sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means to display the text in title case format, and the value **false** means to display the text in the default case format of the locale. The default value is **true**. |
 
 **Return value:**

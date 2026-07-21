@@ -1,6 +1,6 @@
 # EventHub
 
-EventHub is an event communication mechanism based on the publish-subscribe pattern. It decouples senders and subscribers through event names, supporting efficient data transfer and state synchronization between different service modules.It is primarily used for [data communication between UIAbility components and UI pages](docroot://application-models/uiability-data-sync-with-ui.md).Different Context objects have different EventHub objects, and different EventHub objects cannot communicate directly with each other. Event subscription, unsubscription, and triggering all take place on a specific EventHub object.Since Worker and TaskPool implement [multithreaded concurrency](docroot://arkts-utils/multi-thread-concurrency-overview.md#multithreaded-concurrency-models)through the actor model, where different virtual machine instances have exclusive memory, EventHub objects cannot be used for inter-thread data communication.
+EventHub is an event communication mechanism based on the publish-subscribe pattern. It decouples senders and subscribers through event names, supporting efficient data transfer and state synchronization between different service modules.It is primarily used for [data communication between UIAbility components and UI pages](../../../application-models/uiability-data-sync-with-ui.md).Different Context objects have different EventHub objects, and different EventHub objects cannot communicate directly with each other. Event subscription, unsubscription, and triggering all take place on a specific EventHub object.Since Worker and TaskPool implement [multithreaded concurrency](../../../arkts-utils/multi-thread-concurrency-overview.md#multithreaded-concurrency-models)through the actor model, where different virtual machine instances have exclusive memory, EventHub objects cannot be used for inter-thread data communication.
 
 **Since:** 9
 
@@ -8,7 +8,6 @@ EventHub is an event communication mechanism based on the publish-subscribe patt
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-<a id="emit"></a>
 ## emit
 
 ```TypeScript
@@ -40,7 +39,6 @@ Trigger the event callbacks.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -75,7 +73,6 @@ Unsubscribes from an event.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -83,7 +80,6 @@ on(event: string, callback: Function): void
 ```
 
 Subscribes to an event.
-
 > **NOTE**  
 >  
 > When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of  

@@ -1,6 +1,5 @@
 # apply
 
-<a id="apply"></a>
 ## apply
 
 ```TypeScript
@@ -13,15 +12,7 @@ function apply<T, A extends readonly any[], R>(
 
 Calls the function with the specified object as the this value and the elements of specified array as the arguments.
 
-<!--Device-Reflect-function apply<T, A extends readonly any[], R>(
-        target: (this: T, ...args: A) => R,
-        thisArgument: T,
-        argumentsList: Readonly<A>,
-    ): R--><!--Device-Reflect-function apply<T, A extends readonly any[], R>(
-        target: (this: T, ...args: A) => R,
-        thisArgument: T,
-        argumentsList: Readonly<A>,
-    ): R-End-->
+<!--Device-Reflect-function apply<T, A extends readonly any[], R>(        target: (this: T, ...args: A) => R,        thisArgument: T,        argumentsList: Readonly<A>,    ): R--><!--Device-Reflect-function apply<T, A extends readonly any[], R>(        target: (this: T, ...args: A) => R,        thisArgument: T,        argumentsList: Readonly<A>,    ): R-End-->
 
 **Parameters:**
 
@@ -38,7 +29,6 @@ Calls the function with the specified object as the this value and the elements 
 | R |  |
 
 
-<a id="apply-1"></a>
 ## apply
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { prompt } from '@kit.ArkUI';
 ```
 
-<a id="showtoast"></a>
 ## showToast
 
 ```TypeScript

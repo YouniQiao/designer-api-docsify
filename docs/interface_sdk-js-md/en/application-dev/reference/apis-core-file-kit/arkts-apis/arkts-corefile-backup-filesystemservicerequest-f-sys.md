@@ -6,7 +6,6 @@
 import { backup } from '@kit.CoreFileKit';
 ```
 
-<a id="filesystemservicerequest"></a>
 ## fileSystemServiceRequest
 
 ```TypeScript

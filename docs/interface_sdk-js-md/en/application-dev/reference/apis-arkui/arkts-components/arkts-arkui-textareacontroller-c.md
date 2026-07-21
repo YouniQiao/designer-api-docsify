@@ -1,6 +1,6 @@
 # TextAreaController
 
-The controller for the **TextArea** component inherits from [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md). The APIs involved are as follows:<!--Del--> system API [getText](arkts-arkui-textcontentcontrollerbase-c-sys.md#gettext-1) and other APIs like<!--DelEnd-->[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentrect-1),[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentlinecount-1),[getCaretOffset](arkts-arkui-textcontentcontrollerbase-c.md#getcaretoffset-1), [addText](arkts-arkui-textcontentcontrollerbase-c.md#addtext-1),[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deletetext-1),[getSelection](arkts-arkui-textcontentcontrollerbase-c.md#getselection-1),[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearpreviewtext-1),[setStyledPlaceholder](arkts-arkui-textcontentcontrollerbase-c.md#setstyledplaceholder-1), and [deleteBackward](arkts-arkui-textcontentcontrollerbase-c.md#deletebackward-1).
+The controller for the **TextArea** component inherits from [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md). The APIs involved are as follows:<!--Del--> system API [getText](arkts-arkui-textcontentcontrollerbase-c-sys.md#gettext) and other APIs like<!--DelEnd-->[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentrect),[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentlinecount),[getCaretOffset](arkts-arkui-textcontentcontrollerbase-c.md#getcaretoffset), [addText](arkts-arkui-textcontentcontrollerbase-c.md#addtext),[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deletetext),[getSelection](arkts-arkui-textcontentcontrollerbase-c.md#getselection),[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearpreviewtext),[setStyledPlaceholder](arkts-arkui-textcontentcontrollerbase-c.md#setstyledplaceholder), and [deleteBackward](arkts-arkui-textcontentcontrollerbase-c.md#deletebackward).
 
 **Inheritance/Implementation:** TextAreaController extends [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)
 
@@ -11,7 +11,6 @@ The controller for the **TextArea** component inherits from [TextContentControll
 **System capability:** 
 - API version 10 and later: SystemCapability.ArkUI.ArkUI.Full
 
-<a id="caretposition"></a>
 ## caretPosition
 
 ```TypeScript
@@ -34,7 +33,6 @@ Sets the position of the caret.
 | --- | --- | --- | --- |
 | value | number | Yes | Length from the start of the string to the position where the caret is located.<br>Values less than 0 are treated as **0**. Values greater than the string length are treated as the string length. |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -51,7 +49,6 @@ A constructor used to create a **TextAreaController** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="settextselection"></a>
 ## setTextSelection
 
 ```TypeScript
@@ -78,7 +75,6 @@ Sets the text selection range and highlights the selected text when the componen
 | selectionEnd | number | Yes | End position of the text selection range.<br>Values less than 0 are treated as **0**. Values greater than the maximum text length are treated as the maximum text length.<br> |
 | options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.<br>Default value:**MenuPolicy.DEFAULT**<br><br>**Since:** 12 |
 
-<a id="stopediting"></a>
 ## stopEditing
 
 ```TypeScript

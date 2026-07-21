@@ -1,9 +1,8 @@
 # AppServiceExtensionContext
 
-The AppServiceExtensionContext module provides the context environment for the [AppServiceExtensionAbility](docroot://reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md).It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
+The AppServiceExtensionContext module provides the context environment for the [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md).It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
 
 AppServiceExtensionContext provides APIs to connect to and disconnect from a ServiceExtensionAbility (an ExtensionAbility for system application background services), as well as to terminate an AppServiceExtensionAbility.Note that a ServiceExtensionAbility can only be developed by system applications and supports connections from third-party applications.
-
 > **NOTE**  
 >  
 > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
@@ -16,7 +15,6 @@ AppServiceExtensionContext provides APIs to connect to and disconnect from a Ser
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-<a id="connectserviceextensionability"></a>
 ## connectServiceExtensionAbility
 
 ```TypeScript
@@ -44,7 +42,7 @@ Connects this AppServiceExtensionAbility to a ServiceExtensionAbility. It enable
 
 | Type | Description |
 | --- | --- |
-| number | Connection ID. The client can call [disconnectServiceExtensionAbility](arkts-ability-appserviceextensioncontext-c.md#disconnectserviceextensionability-1) with this ID for disconnection. |
+| number | Connection ID. The client can call [disconnectServiceExtensionAbility](arkts-ability-appserviceextensioncontext-c.md#disconnectserviceextensionability) with this ID for disconnection. |
 
 **Error codes:**
 
@@ -59,7 +57,6 @@ Connects this AppServiceExtensionAbility to a ServiceExtensionAbility. It enable
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-<a id="disconnectserviceextensionability"></a>
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -80,7 +77,7 @@ Disconnects this AppServiceExtensionAbility from a ServiceExtensionAbility. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | number | Yes | Connection ID returned by [connectServiceExtensionAbility](arkts-ability-appserviceextensioncontext-c.md#connectserviceextensionability-1). |
+| connection | number | Yes | Connection ID returned by [connectServiceExtensionAbility](arkts-ability-appserviceextensioncontext-c.md#connectserviceextensionability). |
 
 **Return value:**
 
@@ -95,7 +92,6 @@ Disconnects this AppServiceExtensionAbility from a ServiceExtensionAbility. This
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
-<a id="startability"></a>
 ## startAbility
 
 ```TypeScript
@@ -152,7 +148,6 @@ Starts the UIAbility. This API can be called only by the main thread. It uses a 
 | [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified. |
 | [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) | Creating a new instance is not supported. |
 
-<a id="terminateself"></a>
 ## terminateSelf
 
 ```TypeScript

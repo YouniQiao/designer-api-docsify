@@ -1,6 +1,5 @@
 # subscribe (System API)
 
-<a id="subscribe"></a>
 ## subscribe
 
 ```TypeScript
@@ -31,7 +30,6 @@ Subscribes to notifications of all applications under this user.This API uses an
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="subscribe-1"></a>
 ## subscribe
 
 ```TypeScript
@@ -52,15 +50,7 @@ Subscribes to a notification with the subscription information specified.This AP
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
-<!--Device-notification-function subscribe(
-    subscriber: NotificationSubscriber,
-    info: NotificationSubscribeInfo,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-notification-function subscribe(
-    subscriber: NotificationSubscriber,
-    info: NotificationSubscribeInfo,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-notification-function subscribe(    subscriber: NotificationSubscriber,    info: NotificationSubscribeInfo,    callback: AsyncCallback<void>  ): void--><!--Device-notification-function subscribe(    subscriber: NotificationSubscriber,    info: NotificationSubscribeInfo,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -75,7 +65,6 @@ Subscribes to a notification with the subscription information specified.This AP
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="subscribe-2"></a>
 ## subscribe
 
 ```TypeScript

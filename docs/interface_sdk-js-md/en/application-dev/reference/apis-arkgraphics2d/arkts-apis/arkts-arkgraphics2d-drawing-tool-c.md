@@ -1,7 +1,6 @@
 # Tool
 
 A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md).
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 15.  
@@ -23,7 +22,6 @@ A utility class that provides only static methods to convert data structs define
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="makecolorfromresourcecolor"></a>
 ## makeColorFromResourceColor
 
 ```TypeScript

@@ -132,7 +132,7 @@ When the chip size is **ChipSize.SMALL**, the suffix is at {width: 16, height: 1
 
 When the chip size is **ChipSize.NORMAL**, the suffix is at {width: 24, height: 24} by default.
 
-To dynamically change the size, you must use the [SymbolGlyphModifier](./arkui/SymbolGlyphModifier:SymbolGlyphModifier) type when importing the [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) API.
+To dynamically change the size, you must use the [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md) type when importing the [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) API.
 
 If the value is **undefined**, the default value is used.
 

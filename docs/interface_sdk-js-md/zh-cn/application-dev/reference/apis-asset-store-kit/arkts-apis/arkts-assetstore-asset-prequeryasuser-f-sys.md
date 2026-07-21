@@ -6,14 +6,13 @@
 import { asset } from '@kit.AssetStoreKit';
 ```
 
-<a id="prequeryasuser"></a>
 ## preQueryAsUser
 
 ```TypeScript
 function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>
 ```
 
-在指定用户空间中查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.queryAsUser](arkts-assetstore-asset-queryasuser-f-sys.md#queryasuser-1)和[asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md#postqueryasuser-1)接口。使用Promise异步回调。
+在指定用户空间中查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.queryAsUser](arkts-assetstore-asset-queryasuser-f-sys.md#queryasuser)和[asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md#postqueryasuser)接口。使用Promise异步回调。
 
 **起始版本：** 12
 

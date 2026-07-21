@@ -18,7 +18,6 @@ Provides util functions.
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="unitconvert"></a>
 ## unitConvert
 
 ```TypeScript
@@ -31,7 +30,7 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 **Deprecated since:** 9
 
-**Substitutes:** [unitConvert](arkts-localization-i18n-i18nutil-c.md#unitconvert-1)
+**Substitutes:** [unitConvert](arkts-localization-i18n-i18nutil-c.md#unitconvert)
 
 <!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
 

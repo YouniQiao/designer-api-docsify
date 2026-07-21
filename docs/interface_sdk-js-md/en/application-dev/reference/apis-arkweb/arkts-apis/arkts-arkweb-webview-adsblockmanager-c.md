@@ -14,7 +14,6 @@ This class is used to set adblock config.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="addadsblockallowedlist"></a>
 ## addAdsBlockAllowedList
 
 ```TypeScript
@@ -44,7 +43,6 @@ Add items to Ads Block Allow list.By default, ads block is allowed for all pages
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
-<a id="addadsblockdisallowedlist"></a>
 ## addAdsBlockDisallowedList
 
 ```TypeScript
@@ -78,7 +76,6 @@ The ad blocking feature matches website URLs based on the suffix. For example, i
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
-<a id="clearadsblockallowedlist"></a>
 ## clearAdsBlockAllowedList
 
 ```TypeScript
@@ -101,7 +98,6 @@ clear Ads Block Allowed list.
 | --- | --- |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
-<a id="clearadsblockdisallowedlist"></a>
 ## clearAdsBlockDisallowedList
 
 ```TypeScript
@@ -124,7 +120,6 @@ clear Ads Block Disallowed list.
 | --- | --- |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
-<a id="removeadsblockallowedlist"></a>
 ## removeAdsBlockAllowedList
 
 ```TypeScript
@@ -154,7 +149,6 @@ remove items from Ads Block Allowed list.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
-<a id="removeadsblockdisallowedlist"></a>
 ## removeAdsBlockDisallowedList
 
 ```TypeScript
@@ -184,7 +178,6 @@ remove items from Ads Block Disallowed list.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
-<a id="setadsblockrules"></a>
 ## setAdsBlockRules
 
 ```TypeScript

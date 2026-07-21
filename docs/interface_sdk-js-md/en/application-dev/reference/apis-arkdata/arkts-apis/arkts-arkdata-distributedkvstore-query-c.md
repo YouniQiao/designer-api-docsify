@@ -14,7 +14,6 @@ Provides methods to create a **Query** object, which defines different data quer
 import { distributedKVStore } from '@kit.ArkData';
 ```
 
-<a id="and"></a>
 ## and
 
 ```TypeScript
@@ -58,7 +57,6 @@ try {
 
 ```
 
-<a id="begingroup"></a>
 ## beginGroup
 
 ```TypeScript
@@ -102,7 +100,6 @@ try {
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -119,7 +116,6 @@ Defines a constructor used to create a **Query** instance.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
-<a id="deviceid"></a>
 ## deviceId
 
 ```TypeScript
@@ -127,11 +123,10 @@ deviceId(deviceId: string): Query
 ```
 
 Creates a **Query** object with the device ID as the key prefix.
-
 > **NOTE**  
 >  
 > **deviceId** can be obtained by  
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync-1)  
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)  
 > .  
 > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
@@ -179,7 +174,6 @@ try {
 
 ```
 
-<a id="endgroup"></a>
 ## endGroup
 
 ```TypeScript
@@ -223,7 +217,6 @@ try {
 
 ```
 
-<a id="equalto"></a>
 ## equalTo
 
 ```TypeScript
@@ -231,14 +224,13 @@ equalTo(field: string, value: number | number | string | boolean): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is equal to the given value.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -267,7 +259,6 @@ Creates a **Query** object to match the specified field whose value is equal to 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 
-<a id="getsqllike"></a>
 ## getSqlLike
 
 ```TypeScript
@@ -308,7 +299,6 @@ try {
 
 ```
 
-<a id="greaterthan"></a>
 ## greaterThan
 
 ```TypeScript
@@ -316,14 +306,13 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is greater than the specified value.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -352,7 +341,6 @@ Creates a **Query** object to match the specified field whose value is greater t
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 
-<a id="greaterthanorequalto"></a>
 ## greaterThanOrEqualTo
 
 ```TypeScript
@@ -360,14 +348,13 @@ greaterThanOrEqualTo(field: string, value: number | number | string): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -396,7 +383,6 @@ Creates a **Query** object to match the specified field whose value is greater t
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 
-<a id="innumber"></a>
 ## inNumber
 
 ```TypeScript
@@ -404,14 +390,13 @@ inNumber(field: string, valueList: number[] | number[]): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -440,7 +425,6 @@ Creates a **Query** object to match the specified field whose value is within th
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 
-<a id="instring"></a>
 ## inString
 
 ```TypeScript
@@ -448,14 +432,13 @@ inString(field: string, valueList: string[]): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is within the specified list of strings.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -503,7 +486,6 @@ try {
 
 ```
 
-<a id="isnotnull"></a>
 ## isNotNull
 
 ```TypeScript
@@ -511,14 +493,13 @@ isNotNull(field: string): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is not **null**.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -565,7 +546,6 @@ try {
 
 ```
 
-<a id="isnull"></a>
 ## isNull
 
 ```TypeScript
@@ -573,14 +553,13 @@ isNull(field: string): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is **null**.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -627,7 +606,6 @@ try {
 
 ```
 
-<a id="lessthan"></a>
 ## lessThan
 
 ```TypeScript
@@ -635,14 +613,13 @@ lessThan(field: string, value: number | number | string): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is less than the specified value.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -671,7 +648,6 @@ Creates a **Query** object to match the specified field whose value is less than
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 
-<a id="lessthanorequalto"></a>
 ## lessThanOrEqualTo
 
 ```TypeScript
@@ -679,14 +655,13 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -715,7 +690,6 @@ Creates a **Query** object to match the specified field whose value is less than
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 
-<a id="like"></a>
 ## like
 
 ```TypeScript
@@ -723,14 +697,13 @@ like(field: string, value: string): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is similar to the specified string.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -778,7 +751,6 @@ try {
 
 ```
 
-<a id="limit"></a>
 ## limit
 
 ```TypeScript
@@ -836,7 +808,6 @@ try {
 
 ```
 
-<a id="notequalto"></a>
 ## notEqualTo
 
 ```TypeScript
@@ -844,14 +815,13 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is not equal to the specified value.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -880,7 +850,6 @@ Creates a **Query** object to match the specified field whose value is not equal
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 
-<a id="notinnumber"></a>
 ## notInNumber
 
 ```TypeScript
@@ -888,14 +857,13 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -924,7 +892,6 @@ Creates a **Query** object to match the specified field whose value is not withi
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameters types;<br>3.Parameter verification failed. |
 
-<a id="notinstring"></a>
 ## notInString
 
 ```TypeScript
@@ -932,14 +899,13 @@ notInString(field: string, valueList: string[]): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is not within the specified list of strings.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -987,7 +953,6 @@ try {
 
 ```
 
-<a id="or"></a>
 ## or
 
 ```TypeScript
@@ -1031,7 +996,6 @@ try {
 
 ```
 
-<a id="orderbyasc"></a>
 ## orderByAsc
 
 ```TypeScript
@@ -1039,14 +1003,13 @@ orderByAsc(field: string): Query
 ```
 
 Creates a **Query** object to sort the query results in ascending order.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -1094,7 +1057,6 @@ try {
 
 ```
 
-<a id="orderbydesc"></a>
 ## orderByDesc
 
 ```TypeScript
@@ -1102,14 +1064,13 @@ orderByDesc(field: string): Query
 ```
 
 Creates a **Query** object to sort the query results in descending order.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -1157,7 +1118,6 @@ try {
 
 ```
 
-<a id="prefixkey"></a>
 ## prefixKey
 
 ```TypeScript
@@ -1212,7 +1172,6 @@ try {
 
 ```
 
-<a id="reset"></a>
 ## reset
 
 ```TypeScript
@@ -1256,7 +1215,6 @@ try {
 
 ```
 
-<a id="setsuggestindex"></a>
 ## setSuggestIndex
 
 ```TypeScript
@@ -1311,7 +1269,6 @@ try {
 
 ```
 
-<a id="unlike"></a>
 ## unlike
 
 ```TypeScript
@@ -1319,14 +1276,13 @@ unlike(field: string, value: string): Query
 ```
 
 Creates a **Query** object to match the specified field whose value is not similar to the specified string.
-
 > **NOTE**  
 >  
 > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).  
 >  
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV  
 > store using the **getKVStore()** method in  
-> [Persisting KV Store Data](docroot://database/data-persistence-by-kv-store.md#how-to-develop).
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 

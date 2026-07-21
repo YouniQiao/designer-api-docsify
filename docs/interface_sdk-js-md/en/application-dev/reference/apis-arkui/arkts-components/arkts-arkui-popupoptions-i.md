@@ -554,27 +554,7 @@ Callback for popup visibility state changes. The parameter **isVisible** indicat
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PopupOptions-onStateChange?: (event: {
-    /**
-     * is Visible.
-     *
-     ******/
-    /**
-     * is Visible.
-     *
-     *******/
-    isVisible: boolean
-  }) => void--><!--Device-PopupOptions-onStateChange?: (event: {
-    /**
-     * is Visible.
-     *
-     ******/
-    /**
-     * is Visible.
-     *
-     *******/
-    isVisible: boolean
-  }) => void-End-->
+<!--Device-PopupOptions-onStateChange?: (event: {    /**     * is Visible.     *     ******/    /**     * is Visible.     *     *******/    isVisible: boolean  }) => void--><!--Device-PopupOptions-onStateChange?: (event: {    /**     * is Visible.     *     ******/    /**     * is Visible.     *     *******/    isVisible: boolean  }) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -772,63 +752,7 @@ Primary button.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PopupOptions-primaryButton?: {
-    /**
-     * Button text value
-     *
-     ****/
-    /**
-     * Button text value
-     *
-     *****/
-    /**
-     * Button text value
-     *
-     ******/
-    value: string;
-
-    /**
-     * action
-     *
-     ****/
-    /**
-     * action
-     *
-     *****/
-    /**
-     * action
-     *
-     ******/
-    action: () => void;
-  }--><!--Device-PopupOptions-primaryButton?: {
-    /**
-     * Button text value
-     *
-     ****/
-    /**
-     * Button text value
-     *
-     *****/
-    /**
-     * Button text value
-     *
-     ******/
-    value: string;
-
-    /**
-     * action
-     *
-     ****/
-    /**
-     * action
-     *
-     *****/
-    /**
-     * action
-     *
-     ******/
-    action: () => void;
-  }-End-->
+<!--Device-PopupOptions-primaryButton?: {    /**     * Button text value     *     ****/    /**     * Button text value     *     *****/    /**     * Button text value     *     ******/    value: string;    /**     * action     *     ****/    /**     * action     *     *****/    /**     * action     *     ******/    action: () => void;  }--><!--Device-PopupOptions-primaryButton?: {    /**     * Button text value     *     ****/    /**     * Button text value     *     *****/    /**     * Button text value     *     ******/    value: string;    /**     * action     *     ****/    /**     * action     *     *****/    /**     * action     *     ******/    action: () => void;  }-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -904,63 +828,7 @@ Secondary button.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-PopupOptions-secondaryButton?: {
-    /**
-     * Button text value
-     *
-     ****/
-    /**
-     * Button text value
-     *
-     *****/
-    /**
-     * Button text value
-     *
-     ******/
-    value: string;
-
-    /**
-     * action
-     *
-     ****/
-    /**
-     * action
-     *
-     *****/
-    /**
-     * action
-     *
-     ******/
-    action: () => void;
-  }--><!--Device-PopupOptions-secondaryButton?: {
-    /**
-     * Button text value
-     *
-     ****/
-    /**
-     * Button text value
-     *
-     *****/
-    /**
-     * Button text value
-     *
-     ******/
-    value: string;
-
-    /**
-     * action
-     *
-     ****/
-    /**
-     * action
-     *
-     *****/
-    /**
-     * action
-     *
-     ******/
-    action: () => void;
-  }-End-->
+<!--Device-PopupOptions-secondaryButton?: {    /**     * Button text value     *     ****/    /**     * Button text value     *     *****/    /**     * Button text value     *     ******/    value: string;    /**     * action     *     ****/    /**     * action     *     *****/    /**     * action     *     ******/    action: () => void;  }--><!--Device-PopupOptions-secondaryButton?: {    /**     * Button text value     *     ****/    /**     * Button text value     *     *****/    /**     * Button text value     *     ******/    value: string;    /**     * action     *     ****/    /**     * action     *     *****/    /**     * action     *     ******/    action: () => void;  }-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

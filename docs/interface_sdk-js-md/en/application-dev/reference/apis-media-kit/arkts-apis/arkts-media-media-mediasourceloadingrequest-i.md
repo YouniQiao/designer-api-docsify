@@ -14,7 +14,6 @@ The MediaSourceLoadingRequest class defines a loading request object. Applicatio
 import { media } from '@kit.MediaKit';
 ```
 
-<a id="finishloading"></a>
 ## finishLoading
 
 ```TypeScript
@@ -38,7 +37,6 @@ Notifies the player of the current request status. After pushing all the data fo
 | uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
 | state | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | Yes | Request status. |
 
-<a id="responddata"></a>
 ## respondData
 
 ```TypeScript
@@ -69,14 +67,13 @@ Sends data to the player.
 | --- | --- |
 | number | Number of bytes received by the server.<br>- A return value less than 0 indicates failure.<br>- A return value of -2 indicates that the player no longer needs the current data, and the client should stop the current read process.<br>- A return value of -3 indicates that the player's buffer is full, and the client should wait for the next read. |
 
-<a id="respondheader"></a>
 ## respondHeader
 
 ```TypeScript
 respondHeader(uuid: number, header?: Record<string, string>, redirectUrl?: string): void
 ```
 
-Sends response header information to the player. This API must be called before the first call to [respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata-1).
+Sends response header information to the player. This API must be called before the first call to [respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata).
 
 **Since:** 18
 

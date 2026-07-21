@@ -16,7 +16,6 @@ Defines a VPN connection.
 import { vpn } from '@kit.NetworkKit';
 ```
 
-<a id="destroy"></a>
 ## destroy
 
 ```TypeScript
@@ -75,7 +74,6 @@ struct Index {
 
 ```
 
-<a id="destroy-1"></a>
 ## destroy
 
 ```TypeScript
@@ -136,7 +134,6 @@ struct Index {
 
 ```
 
-<a id="protect"></a>
 ## protect
 
 ```TypeScript
@@ -216,7 +213,6 @@ struct Index {
 
 ```
 
-<a id="protect-1"></a>
 ## protect
 
 ```TypeScript
@@ -303,7 +299,6 @@ struct Index {
 
 ```
 
-<a id="setup"></a>
 ## setUp
 
 ```TypeScript
@@ -378,7 +373,6 @@ struct Index {
 
 ```
 
-<a id="setup-1"></a>
 ## setUp
 
 ```TypeScript

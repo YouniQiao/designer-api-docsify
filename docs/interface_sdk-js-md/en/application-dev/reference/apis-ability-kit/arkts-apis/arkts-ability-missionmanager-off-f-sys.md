@@ -6,7 +6,6 @@
 import { missionManager } from '@kit.AbilityKit';
 ```
 
-<a id="off"></a>
 ## off('mission')
 
 ```TypeScript
@@ -128,7 +127,6 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="off-1"></a>
 ## off('mission')
 
 ```TypeScript
@@ -251,7 +249,6 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="off-2"></a>
 ## off('missionEvent')
 
 ```TypeScript
@@ -292,7 +289,6 @@ Deregisters a mission status listener. This API uses an asynchronous callback to
 | [16300002](../errorcode-ability.md#16300002-nonexistent-mission-listener) | The specified mission listener does not exist. |
 
 
-<a id="off-3"></a>
 ## off('missionEvent')
 
 ```TypeScript

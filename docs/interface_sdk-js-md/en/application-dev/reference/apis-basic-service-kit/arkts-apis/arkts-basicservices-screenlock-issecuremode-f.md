@@ -6,7 +6,6 @@
 import { screenLock } from '@kit.BasicServicesKit';
 ```
 
-<a id="issecuremode"></a>
 ## isSecureMode
 
 ```TypeScript
@@ -45,7 +44,6 @@ screenLock.isSecureMode((err: BusinessError, data: Boolean)=>{
 ```
 
 
-<a id="issecuremode-1"></a>
 ## isSecureMode
 
 ```TypeScript

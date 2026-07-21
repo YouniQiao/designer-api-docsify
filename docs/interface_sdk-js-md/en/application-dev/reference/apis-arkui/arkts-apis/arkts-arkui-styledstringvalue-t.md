@@ -14,11 +14,7 @@ Defines the style for a styled string.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-unnamed-declare type StyledStringValue = TextStyle | DecorationStyle | BaselineOffsetStyle | LetterSpacingStyle |
-TextShadowStyle | GestureStyle | ImageAttachment | ParagraphStyle | LineHeightStyle | UrlStyle | CustomSpan |
-UserDataSpan | BackgroundColorStyle | LineSpacingStyle--><!--Device-unnamed-declare type StyledStringValue = TextStyle | DecorationStyle | BaselineOffsetStyle | LetterSpacingStyle |
-TextShadowStyle | GestureStyle | ImageAttachment | ParagraphStyle | LineHeightStyle | UrlStyle | CustomSpan |
-UserDataSpan | BackgroundColorStyle | LineSpacingStyle-End-->
+<!--Device-unnamed-declare type StyledStringValue = TextStyle | DecorationStyle | BaselineOffsetStyle | LetterSpacingStyle |TextShadowStyle | GestureStyle | ImageAttachment | ParagraphStyle | LineHeightStyle | UrlStyle | CustomSpan |UserDataSpan | BackgroundColorStyle | LineSpacingStyle--><!--Device-unnamed-declare type StyledStringValue = TextStyle | DecorationStyle | BaselineOffsetStyle | LetterSpacingStyle |TextShadowStyle | GestureStyle | ImageAttachment | ParagraphStyle | LineHeightStyle | UrlStyle | CustomSpan |UserDataSpan | BackgroundColorStyle | LineSpacingStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

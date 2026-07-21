@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface Int8ArrayConstructor--><!--Device-unnamed-interface Int8ArrayConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -23,7 +22,6 @@ new (elements: Iterable<number>): Int8Array
 | --- | --- |
 | Int8Array |  |
 
-<a id="from"></a>
 ## from
 
 ```TypeScript

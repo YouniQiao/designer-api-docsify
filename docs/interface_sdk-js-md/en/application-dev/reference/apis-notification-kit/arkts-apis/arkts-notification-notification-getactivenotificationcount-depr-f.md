@@ -1,6 +1,5 @@
 # getActiveNotificationCount
 
-<a id="getactivenotificationcount"></a>
 ## getActiveNotificationCount
 
 ```TypeScript
@@ -26,7 +25,6 @@ Obtains the number of active notifications of this application. This API uses an
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
 
 
-<a id="getactivenotificationcount-1"></a>
 ## getActiveNotificationCount
 
 ```TypeScript

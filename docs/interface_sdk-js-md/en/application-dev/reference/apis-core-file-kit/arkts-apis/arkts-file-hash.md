@@ -28,5 +28,5 @@ import { hash } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [HashStream](arkts-corefile-hash-hashstream-c.md) | The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](docroot://reference/apis-core-file-kit/js-apis-file-hash.md#hashcreatehash12) to create a **HashStream** instance. |
+| [HashStream](arkts-corefile-hash-hashstream-c.md) | The **HashStream** class is a utility for creating a message digest of data. You can use [createHash](../../../reference/apis-core-file-kit/js-apis-file-hash.md#hashcreatehash12) to create a **HashStream** instance. |
 

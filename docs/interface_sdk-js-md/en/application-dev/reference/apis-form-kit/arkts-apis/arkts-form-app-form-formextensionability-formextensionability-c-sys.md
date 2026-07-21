@@ -14,7 +14,6 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
-<a id="onacquireformdata"></a>
 ## onAcquireFormData
 
 ```TypeScript
@@ -46,7 +45,6 @@ Called when the system acquire the form data.
 | object | Returns the wantParams object.<br>**Applicable version:** 10 and later |
 | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
 
-<a id="onshareform"></a>
 ## onShareForm
 
 ```TypeScript

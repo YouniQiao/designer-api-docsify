@@ -1,6 +1,5 @@
 # readSync
 
-<a id="readsync"></a>
 ## readSync
 
 ```TypeScript
@@ -21,25 +20,9 @@ Reads data from a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:readSync](arkts-corefile-file-fs-readsync-f.md#readsync-1)
+**Substitutes:** [fs:readSync](arkts-corefile-fileio-readsync-f.md#readsync)
 
-<!--Device-unnamed-declare function readSync(
-  fd: number,
-  buffer: ArrayBuffer,
-  options?: {
-    offset?: number;
-    length?: number;
-    position?: number;
-  }
-): number--><!--Device-unnamed-declare function readSync(
-  fd: number,
-  buffer: ArrayBuffer,
-  options?: {
-    offset?: number;
-    length?: number;
-    position?: number;
-  }
-): number-End-->
+<!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number--><!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

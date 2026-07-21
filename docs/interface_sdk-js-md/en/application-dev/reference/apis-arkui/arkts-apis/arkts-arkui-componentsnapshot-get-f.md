@@ -6,7 +6,6 @@
 import { componentSnapshot } from '@kit.ArkUI';
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -14,10 +13,9 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 ```
 
 Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot-1)  
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)  
 > API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)  
 > object associated with the current UI context.  
 >  
@@ -98,7 +96,6 @@ struct SnapshotExample {
 ```
 
 
-<a id="get-1"></a>
 ## get
 
 ```TypeScript
@@ -106,10 +103,9 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
 Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API uses a promise to return the result.
-
 > **NOTE**  
 >  
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot-1)  
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)  
 > API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)  
 > object associated with the current UI context.  
 >  

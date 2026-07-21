@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="getconnectionpropertiessync"></a>
 ## getConnectionPropertiesSync
 
 ```TypeScript

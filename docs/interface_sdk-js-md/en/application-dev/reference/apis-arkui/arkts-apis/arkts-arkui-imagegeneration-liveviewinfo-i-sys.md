@@ -16,7 +16,6 @@ Information for LiveView in AI image generation.
 import { imageGeneration } from '@kit.ArkUI';
 ```
 
-<a id="getlongtermtaskid"></a>
 ## getLongTermTaskId
 
 ```TypeScript
@@ -41,7 +40,6 @@ Get the long-term task ID for LiveView.
 | --- | --- |
 | number | Returns the long-term task ID. |
 
-<a id="getwant"></a>
 ## getWant
 
 ```TypeScript
@@ -66,7 +64,6 @@ Get the Want object for LiveView.
 | --- | --- |
 | [Want](arkts-arkui-want-t-sys.md) | Returns the Want object. |
 
-<a id="isliveviewneeded"></a>
 ## isLiveViewNeeded
 
 ```TypeScript

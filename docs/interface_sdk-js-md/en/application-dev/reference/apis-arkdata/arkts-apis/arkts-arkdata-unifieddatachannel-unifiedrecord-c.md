@@ -14,7 +14,6 @@ An abstract definition of the data content supported by the UDMF. A **UnifiedRec
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
-<a id="addentry"></a>
 ## addEntry
 
 ```TypeScript
@@ -74,7 +73,6 @@ unifiedData.addRecord(record);
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -100,7 +98,6 @@ let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
 
 ```
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -172,7 +169,6 @@ let pixelMapRecord =
 
 ```
 
-<a id="getentries"></a>
 ## getEntries
 
 ```TypeScript
@@ -247,7 +243,6 @@ for (let i = 0; i < records.length; i++) {
 
 ```
 
-<a id="getentry"></a>
 ## getEntry
 
 ```TypeScript
@@ -335,14 +330,13 @@ for (let i = 0; i < records.length; i++) {
 
 ```
 
-<a id="gettype"></a>
 ## getType
 
 ```TypeScript
 getType(): string
 ```
 
-Obtains the type of this **UnfiedRecord**. The data obtained by [getRecords](arkts-arkdata-unifieddatachannel-unifieddata-c.md#getrecords-1) from the **UnifiedData** object is a **UnifiedRecord** object. You need to use this API to obtain the specific type of the record, convert the **UnifiedRecord** object to its child class, and call the child class interfaces.
+Obtains the type of this **UnfiedRecord**. The data obtained by [getRecords](arkts-arkdata-unifieddatachannel-unifieddata-c.md#getrecords) from the **UnifiedData** object is a **UnifiedRecord** object. You need to use this API to obtain the specific type of the record, convert the **UnifiedRecord** object to its child class, and call the child class interfaces.
 
 **Since:** 10
 
@@ -381,14 +375,13 @@ if (records[0].getType() == uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) {
 
 ```
 
-<a id="gettypes"></a>
 ## getTypes
 
 ```TypeScript
 getTypes(): Array<string>
 ```
 
-Obtains all the data types in the data record. This API can be called using the **UnifiedRecord** object to query all data types in the record, including the data types added using the [addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addentry-1) function.
+Obtains all the data types in the data record. This API can be called using the **UnifiedRecord** object to query all data types in the record, including the data types added using the [addEntry](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#addentry) function.
 
 **Since:** 15
 
@@ -451,7 +444,6 @@ for (let i = 0; i < records.length; i++) {
 
 ```
 
-<a id="getvalue"></a>
 ## getValue
 
 ```TypeScript

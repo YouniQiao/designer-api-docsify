@@ -6,7 +6,6 @@
 import { cloudData } from '@kit.ArkData';
 ```
 
-<a id="changeprivilege"></a>
 ## changePrivilege
 
 ```TypeScript
@@ -21,15 +20,7 @@ Changes the privilege on the shared data.This API uses an asynchronous callback 
 
 **Since:** 11
 
-<!--Device-sharing-function changePrivilege(
-      sharingResource: string,
-      participants: Array<Participant>,
-      callback: AsyncCallback<Result<Array<Result<Participant>>>>
-    ): void--><!--Device-sharing-function changePrivilege(
-      sharingResource: string,
-      participants: Array<Participant>,
-      callback: AsyncCallback<Result<Array<Result<Participant>>>>
-    ): void-End-->
+<!--Device-sharing-function changePrivilege(      sharingResource: string,      participants: Array<Participant>,      callback: AsyncCallback<Result<Array<Result<Participant>>>>    ): void--><!--Device-sharing-function changePrivilege(      sharingResource: string,      participants: Array<Participant>,      callback: AsyncCallback<Result<Array<Result<Participant>>>>    ): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -82,7 +73,6 @@ cloudData.sharing.changePrivilege('sharing_resource_test', participants, ((err: 
 ```
 
 
-<a id="changeprivilege-1"></a>
 ## changePrivilege
 
 ```TypeScript
@@ -96,13 +86,7 @@ Changes the privilege on the shared data.This API uses a promise to return the r
 
 **Since:** 11
 
-<!--Device-sharing-function changePrivilege(
-      sharingResource: string,
-      participants: Array<Participant>
-    ): Promise<Result<Array<Result<Participant>>>>--><!--Device-sharing-function changePrivilege(
-      sharingResource: string,
-      participants: Array<Participant>
-    ): Promise<Result<Array<Result<Participant>>>>-End-->
+<!--Device-sharing-function changePrivilege(      sharingResource: string,      participants: Array<Participant>    ): Promise<Result<Array<Result<Participant>>>>--><!--Device-sharing-function changePrivilege(      sharingResource: string,      participants: Array<Participant>    ): Promise<Result<Array<Result<Participant>>>>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 

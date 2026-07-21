@@ -8,7 +8,6 @@ Sets the progress, maximum value, and color for a mask.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -35,7 +34,6 @@ Constructs a **ProgressMask** object.
 | total | number | Yes | Maximum value of the progress mask.<br> Value range: [0.0, +∞) |
 | color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the progress mask. |
 
-<a id="enablebreathinganimation"></a>
 ## enableBreathingAnimation
 
 ```TypeScript
@@ -60,7 +58,6 @@ Sets whether to enable the breathing animation when the progress indicator is fu
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to enable the breathing animation.<br>**true**: The breathing animation is enabled.<br>**false**: The breathing halo animation is disabled. |
 
-<a id="updatecolor"></a>
 ## updateColor
 
 ```TypeScript
@@ -85,7 +82,6 @@ Updates the color of the progress mask.
 | --- | --- | --- | --- |
 | value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the progress mask. |
 
-<a id="updateprogress"></a>
 ## updateProgress
 
 ```TypeScript

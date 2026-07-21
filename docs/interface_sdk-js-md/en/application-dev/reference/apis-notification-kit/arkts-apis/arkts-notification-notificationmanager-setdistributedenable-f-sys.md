@@ -6,7 +6,6 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="setdistributedenable"></a>
 ## setDistributedEnable
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sets whether to enable distributed notification on this device. This API uses an
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDistributedEnabled(enable:](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md#setdistributedenabled-1)
+**Substitutes:** [setDistributedEnabled(enable:](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md#setdistributedenabled)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -67,7 +66,6 @@ notificationManager.setDistributedEnable(enable, setDistributedEnableCallback);
 ```
 
 
-<a id="setdistributedenable-1"></a>
 ## setDistributedEnable
 
 ```TypeScript
@@ -80,7 +78,7 @@ Sets whether to enable distributed notification on this device. This API uses a 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDistributedEnabled(enable:](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md#setdistributedenabled-1)
+**Substitutes:** [setDistributedEnabled(enable:](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md#setdistributedenabled)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

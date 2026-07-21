@@ -6,7 +6,6 @@
 import { thermal } from '@kit.BasicServicesKit';
 ```
 
-<a id="getthermallevel"></a>
 ## getThermalLevel
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the current thermal level.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLevel](arkts-basicservices-thermal-getlevel-f.md#getlevel-1)
+**Substitutes:** [getLevel](arkts-basicservices-thermal-getlevel-f.md#getlevel)
 
 <!--Device-thermal-function getThermalLevel(): ThermalLevel--><!--Device-thermal-function getThermalLevel(): ThermalLevel-End-->
 

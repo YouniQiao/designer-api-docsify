@@ -6,7 +6,6 @@
 import { media } from '@kit.MediaKit';
 ```
 
-<a id="createaudioplayer"></a>
 ## createAudioPlayer
 
 ```TypeScript
@@ -19,7 +18,7 @@ Creates an AudioPlayer instance in synchronous mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAVPlayer(callback:](arkts-media-media-createavplayer-f.md#createavplayer-1)
+**Substitutes:** [createAVPlayer(callback:](arkts-media-media-createavplayer-f.md#createavplayer)
 
 <!--Device-media-function createAudioPlayer(): AudioPlayer--><!--Device-media-function createAudioPlayer(): AudioPlayer-End-->
 

@@ -8,7 +8,6 @@ Implements a custom transition animation proxy.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="canceltransition"></a>
 ## cancelTransition
 
 ```TypeScript
@@ -27,7 +26,6 @@ Cancels this interactive transition animation, restoring the routing stack to it
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="finishtransition"></a>
 ## finishTransition
 
 ```TypeScript
@@ -46,7 +44,6 @@ Finishes this custom transition animation. This API must be manually called to e
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="updatetransition"></a>
 ## updateTransition
 
 ```TypeScript
@@ -54,10 +51,9 @@ updateTransition?(progress: number): void
 ```
 
 Updates the progress of this interactive transition animation. (Non-interactive animations do not support setting the animation progress).
-
 > **NOTE**  
 >  
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear-1), as the  
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear), as the  
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation  
 > failures.
 

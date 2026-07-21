@@ -1,7 +1,6 @@
 # PolylineOptions
 
 Describes the options of the polyline.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
@@ -24,11 +23,11 @@ Height.Unit: vp, The value must be greater than or equal to 0, The **undefined**
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PolylineOptions-height?: Length--><!--Device-PolylineOptions-height?: Length-End-->
 
@@ -44,11 +43,11 @@ Width.Unit: vp, The value must be greater than or equal to 0, The **undefined**,
 
 **Type:** Length
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PolylineOptions-width?: Length--><!--Device-PolylineOptions-width?: Length-End-->
 

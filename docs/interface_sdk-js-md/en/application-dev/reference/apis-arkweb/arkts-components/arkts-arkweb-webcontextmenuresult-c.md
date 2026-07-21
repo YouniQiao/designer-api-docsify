@@ -8,7 +8,6 @@ Defines the context menu result, related to {@link WebContextMenuResult} method.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="closecontextmenu"></a>
 ## closeContextMenu
 
 ```TypeScript
@@ -25,7 +24,6 @@ When close context menu without other call in WebContextMenuResult,User should c
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -42,7 +40,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="copy"></a>
 ## copy
 
 ```TypeScript
@@ -59,7 +56,6 @@ Executes the copy operation related to this context menu.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="copyimage"></a>
 ## copyImage
 
 ```TypeScript
@@ -76,7 +72,6 @@ If WebContextMenuParam has image content, this function will copy image related 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="cut"></a>
 ## cut
 
 ```TypeScript
@@ -93,7 +88,6 @@ Executes the cut operation related to this context menu.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="paste"></a>
 ## paste
 
 ```TypeScript
@@ -112,7 +106,6 @@ Executes the paste operation related to this context menu.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="pasteandmatchstyle"></a>
 ## pasteAndMatchStyle
 
 ```TypeScript
@@ -129,7 +122,6 @@ Executes the paste and match style operation related to this context menu.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="redo"></a>
 ## redo
 
 ```TypeScript
@@ -144,7 +136,6 @@ Executes the redo operation related to this context menu.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="requestpasswordautofill"></a>
 ## requestPasswordAutoFill
 
 ```TypeScript
@@ -159,7 +150,6 @@ Request to fill the password vault contents into the input field.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="saveimage"></a>
 ## saveImage
 
 ```TypeScript
@@ -176,7 +166,6 @@ Performing the "Save As Image" operation associated with this context menu will 
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="selectall"></a>
 ## selectAll
 
 ```TypeScript
@@ -193,7 +182,6 @@ Executes the selectAll operation related to this context menu.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="undo"></a>
 ## undo
 
 ```TypeScript

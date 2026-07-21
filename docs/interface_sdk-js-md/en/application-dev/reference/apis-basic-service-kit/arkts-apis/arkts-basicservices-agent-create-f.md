@@ -6,7 +6,6 @@
 import { request } from '@kit.BasicServicesKit';
 ```
 
-<a id="create"></a>
 ## create
 
 ```TypeScript
@@ -14,11 +13,10 @@ function create(context: BaseContext, config: Config, callback: AsyncCallback<Ta
 ```
 
 Creates an upload or download task and adds it to the queue. This API uses an asynchronous callback to return the result. HTTP/HTTPS is supported.
-
 > **NOTE**  
 >  
 > For details about how to obtain the context in the example, see  
-> [Obtaining the Context of UIAbility](docroot://application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 10
@@ -51,7 +49,6 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 | [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode. |
 
 
-<a id="create-1"></a>
 ## create
 
 ```TypeScript
@@ -59,11 +56,10 @@ function create(context: BaseContext, config: Config): Promise<Task>
 ```
 
 Creates an upload or download task and adds it to the queue. This API uses a promise to return the result. HTTP/HTTPS is supported.
-
 > **NOTE**  
 >  
 > For details about how to obtain the context in the example, see  
-> [Obtaining the Context of UIAbility](docroot://application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)  
 > .
 
 **Since:** 10

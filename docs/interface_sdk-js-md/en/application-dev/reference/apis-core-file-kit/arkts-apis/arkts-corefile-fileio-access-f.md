@@ -1,6 +1,5 @@
 # access
 
-<a id="access"></a>
 ## access
 
 ```TypeScript
@@ -13,7 +12,7 @@ Checks whether this process can access a file. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:access](arkts-corefile-file-fs-access-f.md#access-1)
+**Substitutes:** [fs:access](arkts-corefile-fileio-access-f.md#access)
 
 <!--Device-unnamed-declare function access(path: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function access(path: string, mode?: number): Promise<void>-End-->
 
@@ -33,7 +32,6 @@ Checks whether this process can access a file. This API uses a promise to return
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 
-<a id="access-1"></a>
 ## access
 
 ```TypeScript
@@ -46,7 +44,7 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:access](arkts-corefile-file-fs-access-f.md#access-1)
+**Substitutes:** [fs:access](arkts-corefile-fileio-access-f.md#access)
 
 <!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -60,7 +58,6 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is asynchronously checked. |
 
 
-<a id="access-2"></a>
 ## access
 
 ```TypeScript
@@ -73,7 +70,7 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:access](arkts-corefile-file-fs-access-f.md#access-1)
+**Substitutes:** [fs:access](arkts-corefile-fileio-access-f.md#access)
 
 <!--Device-unnamed-declare function access(path: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function access(path: string, mode: number, callback: AsyncCallback<void>): void-End-->
 

@@ -6,7 +6,6 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="bulktransfer"></a>
 ## bulkTransfer
 
 ```TypeScript
@@ -19,29 +18,18 @@ function bulkTransfer(
 ```
 
 Performs bulk transfer. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > The total size of data (including **pipe**, **endpoint**, **buffer**, and **timeout**) to be transferred in a  
 > single bulk transfer must be less than 200 KB. Otherwise, the transfer fails and **-1** is returned.  
 >  
 > Before calling this API, call the  
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface-1)  
+> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface)  
 > API to claim a communication interface.
 
 **Since:** 9
 
-<!--Device-usbManager-function bulkTransfer(
-    pipe: USBDevicePipe,
-    endpoint: USBEndpoint,
-    buffer: Uint8Array,
-    timeout?: int
-  ): Promise<int>--><!--Device-usbManager-function bulkTransfer(
-    pipe: USBDevicePipe,
-    endpoint: USBEndpoint,
-    buffer: Uint8Array,
-    timeout?: int
-  ): Promise<int>-End-->
+<!--Device-usbManager-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: int  ): Promise<int>--><!--Device-usbManager-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: int  ): Promise<int>-End-->
 
 **System capability:** SystemCapability.USB.USBManager
 
@@ -49,8 +37,8 @@ Performs bulk transfer. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice-1) to obtain its value. |
-| endpoint | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Yes | USB endpoint, which is used to determine the USB interface for data transfer. You need to call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices-1) to obtain the device information list and endpoint. Wherein, **address** is used to determine the endpoint address, **direction** is used to determine the endpoint direction, and **interfaceId** is used to determine the USB interface to which the endpoint belongs. Other parameters are passed transparently. |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
+| endpoint | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Yes | USB endpoint, which is used to determine the USB interface for data transfer. You need to call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices) to obtain the device information list and endpoint. Wherein, **address** is used to determine the endpoint address, **direction** is used to determine the endpoint direction, and **interfaceId** is used to determine the USB interface to which the endpoint belongs. Other parameters are passed transparently. |
 | buffer | Uint8Array | Yes | Buffer for writing or reading data. |
 | timeout | number | No | Timeout interval.Unit: milliseconds. This parameter is optional. If the bulk transfer is complete within the specified time, the size of the transferred or received data block is returned; otherwise, a timeout error is returned. The default value is **0**, indicating that the system waits infinitely until the control transfer is complete. Set this parameter as required. |
 

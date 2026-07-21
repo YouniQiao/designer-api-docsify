@@ -6,7 +6,6 @@
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="on"></a>
 ## on('BLEDeviceFind')
 
 ```TypeScript

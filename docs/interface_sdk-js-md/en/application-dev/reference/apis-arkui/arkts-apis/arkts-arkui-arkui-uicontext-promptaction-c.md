@@ -1,12 +1,11 @@
 # PromptAction
 
 Provides APIs to create and display toasts, dialog boxes, action menus, and custom popups.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 10.  
 >  
-> - In the following API examples, you must first use [getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction-1) in  
+> - In the following API examples, you must first use [getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) in  
 > **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
@@ -21,7 +20,6 @@ Provides APIs to create and display toasts, dialog boxes, action menus, and cust
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="closecustomdialog"></a>
 ## closeCustomDialog
 
 ```TypeScript
@@ -60,7 +58,6 @@ Closes a custom dialog box corresponding to **dialogContent**. This API uses a p
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
 
-<a id="closecustomdialog-1"></a>
 ## closeCustomDialog
 
 ```TypeScript
@@ -92,7 +89,6 @@ Closes the specified custom dialog box.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
-<a id="closemenu"></a>
 ## closeMenu
 
 ```TypeScript
@@ -131,7 +127,6 @@ Closes the menu corresponding to the provided content. This API uses a promise t
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
-<a id="closepopup"></a>
 ## closePopup
 
 ```TypeScript
@@ -170,7 +165,6 @@ Closes the popup corresponding to the provided **content**. This API uses a prom
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
-<a id="closetoast"></a>
 ## closeToast
 
 ```TypeScript
@@ -203,7 +197,6 @@ Closes the specified toast.
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [103401](../errorcode-promptAction.md#103401-toast-not-found) | Cannot find the toast. |
 
-<a id="getbottomorder"></a>
 ## getBottomOrder
 
 ```TypeScript
@@ -228,7 +221,6 @@ This API returns the order of the dialog box currently at the bottom layer. This
 | --- | --- |
 | [LevelOrder](arkts-arkui-levelorder-t.md) | Order of the topmost dialog box. |
 
-<a id="gettoporder"></a>
 ## getTopOrder
 
 ```TypeScript
@@ -255,7 +247,6 @@ This API returns the order of the dialog box currently at the top layer. This in
 | --- | --- |
 | [LevelOrder](arkts-arkui-levelorder-t.md) | Order of the topmost dialog box. |
 
-<a id="opencustomdialog"></a>
 ## openCustomDialog
 
 ```TypeScript
@@ -295,7 +286,6 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
 
-<a id="opencustomdialog-1"></a>
 ## openCustomDialog
 
 ```TypeScript
@@ -335,7 +325,6 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
-<a id="opencustomdialogwithcontroller"></a>
 ## openCustomDialogWithController
 
 ```TypeScript
@@ -353,9 +342,7 @@ The dialog box displayed through this API has its content fully following style 
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,
-    options?: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,
-    options?: promptAction.BaseDialogOptions): Promise<void>-End-->
+<!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,    options?: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,    options?: promptAction.BaseDialogOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -381,7 +368,6 @@ The dialog box displayed through this API has its content fully following style 
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
 
-<a id="openmenu"></a>
 ## openMenu
 
 ```TypeScript
@@ -389,20 +375,19 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 ```
 
 Opens a menu with the specified content. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - If an invalid **target** is provided, the menu will not be displayed.  
 >  
-> - You must maintain the provided **content**, on which [updateMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#updatemenu-1) and  
-> [closeMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#closemenu-1) rely to identify the target menu.  
+> - You must maintain the provided **content**, on which [updateMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#updatemenu) and  
+> [closeMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#closemenu) rely to identify the target menu.  
 >  
 > - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or  
 > [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md)  
 > constructor must include four parameters, and the **options** parameter must be  
 > **{ nestingBuilderSupported: true }**.  
 >  
-> - Nested subwindow dialog boxes are not supported. For example, when [openMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#openmenu-1) has  
+> - Nested subwindow dialog boxes are not supported. For example, when [openMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#openmenu) has  
 > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
 **Since:** 18
@@ -439,7 +424,6 @@ Opens a menu with the specified content. This API uses a promise to return the r
 | [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The targetId does not exist. |
 | [103305](../errorcode-promptAction.md#103305-node-not-mounted) | The node of targetId is not in the component tree. |
 
-<a id="openpopup"></a>
 ## openPopup
 
 ```TypeScript
@@ -447,13 +431,12 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 ```
 
 Creates and displays a popup with the specified content. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - If an invalid **target** is provided, the popup will not be displayed.  
 >  
-> - You must maintain the provided **content**, on which [updatePopup](arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup-1) and  
-> [closePopup](arkts-arkui-arkui-uicontext-promptaction-c.md#closepopup-1) rely to identify the target popup.  
+> - You must maintain the provided **content**, on which [updatePopup](arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup) and  
+> [closePopup](arkts-arkui-arkui-uicontext-promptaction-c.md#closepopup) rely to identify the target popup.  
 >  
 > - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or  
 > [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md)  
@@ -494,7 +477,6 @@ Creates and displays a popup with the specified content. This API uses a promise
 | [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The targetId does not exist. |
 | [103305](../errorcode-promptAction.md#103305-node-not-mounted) | The node of targetId is not in the component tree. |
 
-<a id="opentoast"></a>
 ## openToast
 
 ```TypeScript
@@ -532,7 +514,6 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
-<a id="presentcustomdialog"></a>
 ## presentCustomDialog
 
 ```TypeScript
@@ -550,9 +531,7 @@ The dialog box ID can be included in the dialog box content for related operatio
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: promptAction.DialogController,
-    options?: promptAction.DialogOptions): Promise<number>--><!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: promptAction.DialogController,
-    options?: promptAction.DialogOptions): Promise<number>-End-->
+<!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: promptAction.DialogController,    options?: promptAction.DialogOptions): Promise<number>--><!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: promptAction.DialogController,    options?: promptAction.DialogOptions): Promise<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -577,7 +556,6 @@ The dialog box ID can be included in the dialog box content for related operatio
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
-<a id="showactionmenu"></a>
 ## showActionMenu
 
 ```TypeScript
@@ -590,7 +568,7 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 **Deprecated since:** 11
 
-**Substitutes:** [showActionMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#showactionmenu-1)
+**Substitutes:** [showActionMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#showactionmenu)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -612,7 +590,6 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
-<a id="showactionmenu-1"></a>
 ## showActionMenu
 
 ```TypeScript
@@ -645,7 +622,6 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
-<a id="showactionmenu-2"></a>
 ## showActionMenu
 
 ```TypeScript
@@ -683,7 +659,6 @@ Creates and displays an action menu. This API uses a promise to return the resul
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
-<a id="showdialog"></a>
 ## showDialog
 
 ```TypeScript
@@ -716,7 +691,6 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
-<a id="showdialog-1"></a>
 ## showDialog
 
 ```TypeScript
@@ -754,7 +728,6 @@ Creates and displays a dialog box. This API uses a promise to return the result.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
-<a id="showtoast"></a>
 ## showToast
 
 ```TypeScript
@@ -786,7 +759,6 @@ Creates and displays a toast.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
-<a id="updatecustomdialog"></a>
 ## updateCustomDialog
 
 ```TypeScript
@@ -826,7 +798,6 @@ Updates a custom dialog box corresponding to **dialogContent**. This API uses a 
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | Dialog content not found. The ComponentContent cannot be found. |
 
-<a id="updatemenu"></a>
 ## updateMenu
 
 ```TypeScript
@@ -834,7 +805,6 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 ```
 
 Updates the style of the menu corresponding to the provided **content**. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > - Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**,  
@@ -877,7 +847,6 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
-<a id="updatepopup"></a>
 ## updatePopup
 
 ```TypeScript
@@ -885,7 +854,6 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 ```
 
 Updates the style of the popup corresponding to the provided **content**. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**.

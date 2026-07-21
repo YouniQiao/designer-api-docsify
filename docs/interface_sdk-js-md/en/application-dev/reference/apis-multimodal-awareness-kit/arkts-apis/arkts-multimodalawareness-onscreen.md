@@ -1,7 +1,6 @@
 # @ohos.multimodalAwareness.onScreen
 
 This module provides the onscreen awareness capability.
-
 > **NOTE**  
 >
 
@@ -30,7 +29,7 @@ import { onScreen } from '@kit.MultimodalAwarenessKit';
 | [interact](arkts-multimodalawareness-onscreen-interact-f-sys.md#interact) | Proactively triggers screen behavior interaction to identify screen behaviors and return behavior receipts. For<br> example, after a link is clicked, the system accurately jumps to the specified paragraph and<br> highlights the text based on the receipt information. |
 | [offReadingScreenPermissionListener](arkts-multimodalawareness-onscreen-offreadingscreenpermissionlistener-f-sys.md#offreadingscreenpermissionlistener) | Disables the screen content access permission monitoring. |
 | [onReadingScreenPermissionListener](arkts-multimodalawareness-onscreen-onreadingscreenpermissionlistener-f-sys.md#onreadingscreenpermissionlistener) | Enables the screen content access permission monitoring and returns the permission status in real time. |
-| [sendControlEvent](arkts-multimodalawareness-onscreen-sendcontrolevent-f-sys.md#sendcontrolevent) | If the target window is displayed on the screen, you can use this API to send screen control events based on the paragraph information obtained via [onScreen.getPageContent](arkts-multimodalawareness-onscreen-getpagecontent-f-sys.md#getpagecontent-1). |
+| [sendControlEvent](arkts-multimodalawareness-onscreen-sendcontrolevent-f-sys.md#sendcontrolevent) | If the target window is displayed on the screen, you can use this API to send screen control events based on the paragraph information obtained via [onScreen.getPageContent](arkts-multimodalawareness-onscreen-getpagecontent-f-sys.md#getpagecontent). |
 | [subscribe](arkts-multimodalawareness-onscreen-subscribe-f-sys.md#subscribe) | Enables proactive awareness on screen content and subscribes to a screen awareness result. |
 | [trigger](arkts-multimodalawareness-onscreen-trigger-f-sys.md#trigger) | Proactively triggers screen content awareness and obtains the current screen awareness result. |
 | [unsubscribe](arkts-multimodalawareness-onscreen-unsubscribe-f-sys.md#unsubscribe) | Disables proactive awareness on screen content and unsubscribes from a screen awareness result. |

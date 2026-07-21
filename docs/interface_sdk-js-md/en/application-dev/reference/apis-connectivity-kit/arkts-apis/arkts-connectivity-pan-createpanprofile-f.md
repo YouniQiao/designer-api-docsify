@@ -6,7 +6,6 @@
 import { pan } from '@kit.ConnectivityKit';
 ```
 
-<a id="createpanprofile"></a>
 ## createPanProfile
 
 ```TypeScript

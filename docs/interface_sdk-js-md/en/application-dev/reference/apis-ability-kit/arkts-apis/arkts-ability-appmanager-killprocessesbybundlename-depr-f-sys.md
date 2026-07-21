@@ -1,6 +1,5 @@
 # killProcessesByBundleName (System API)
 
-<a id="killprocessesbybundlename"></a>
 ## killProcessesByBundleName
 
 ```TypeScript
@@ -53,7 +52,6 @@ appManager.killProcessesByBundleName(bundleName)
 ```
 
 
-<a id="killprocessesbybundlename-1"></a>
 ## killProcessesByBundleName
 
 ```TypeScript

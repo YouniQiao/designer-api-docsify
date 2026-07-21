@@ -6,7 +6,6 @@
 import { thermal } from '@kit.BasicServicesKit';
 ```
 
-<a id="unsubscribethermallevel"></a>
 ## unsubscribeThermalLevel
 
 ```TypeScript
@@ -19,7 +18,7 @@ Unsubscribes from the thermal level changes. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md#unregisterthermallevelcallback-1)
+**Substitutes:** [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md#unregisterthermallevelcallback)
 
 <!--Device-thermal-function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void--><!--Device-thermal-function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void-End-->
 

@@ -1,6 +1,5 @@
 # getFreeBytes
 
-<a id="getfreebytes"></a>
 ## getFreeBytes
 
 ```TypeScript
@@ -13,7 +12,7 @@ Obtains the free size of the specified file system, in bytes. This API uses an a
 
 **Deprecated since:** 9
 
-**Substitutes:** getFreeBytes
+**Substitutes:** [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes)
 
 <!--Device-Statfs-function getFreeBytes(path: string, callback: AsyncCallback<number>): void--><!--Device-Statfs-function getFreeBytes(path: string, callback: AsyncCallback<number>): void-End-->
 
@@ -44,7 +43,6 @@ statfs.getFreeBytes(path, (err: BusinessError, freeBytes:Number) => {
 ```
 
 
-<a id="getfreebytes-1"></a>
 ## getFreeBytes
 
 ```TypeScript
@@ -57,7 +55,7 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 
 **Deprecated since:** 9
 
-**Substitutes:** getFreeBytes
+**Substitutes:** [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes)
 
 <!--Device-Statfs-function getFreeBytes(path: string): Promise<number>--><!--Device-Statfs-function getFreeBytes(path: string): Promise<number>-End-->
 

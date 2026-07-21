@@ -14,7 +14,6 @@ Manages GATT server. Before calling an Gatt server method, you must use {@link c
 import { ble } from '@kit.ConnectivityKit';
 ```
 
-<a id="addservice"></a>
 ## addService
 
 ```TypeScript
@@ -89,7 +88,6 @@ try {
 
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -133,7 +131,6 @@ try {
 
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -171,7 +168,6 @@ Connects to a BLE central device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -208,7 +204,6 @@ Disconnects from or stops an ongoing connection to a BLE central device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="getconnectedstate"></a>
 ## getConnectedState
 
 ```TypeScript
@@ -263,7 +258,6 @@ try {
 
 ```
 
-<a id="getservice"></a>
 ## getService
 
 ```TypeScript
@@ -323,7 +317,6 @@ try {
 
 ```
 
-<a id="getservices"></a>
 ## getServices
 
 ```TypeScript
@@ -375,7 +368,6 @@ try {
 
 ```
 
-<a id="notifycharacteristicchanged"></a>
 ## notifyCharacteristicChanged
 
 ```TypeScript
@@ -398,15 +390,7 @@ This method should be called for every BLE peripheral device that has requested 
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-GattServer-notifyCharacteristicChanged(
-      deviceId: string,
-      notifyCharacteristic: NotifyCharacteristic,
-      callback: AsyncCallback<void>
-    ): void--><!--Device-GattServer-notifyCharacteristicChanged(
-      deviceId: string,
-      notifyCharacteristic: NotifyCharacteristic,
-      callback: AsyncCallback<void>
-    ): void-End-->
+<!--Device-GattServer-notifyCharacteristicChanged(      deviceId: string,      notifyCharacteristic: NotifyCharacteristic,      callback: AsyncCallback<void>    ): void--><!--Device-GattServer-notifyCharacteristicChanged(      deviceId: string,      notifyCharacteristic: NotifyCharacteristic,      callback: AsyncCallback<void>    ): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -455,7 +439,6 @@ try {
 
 ```
 
-<a id="notifycharacteristicchanged-1"></a>
 ## notifyCharacteristicChanged
 
 ```TypeScript
@@ -524,7 +507,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off('characteristicRead')
 
 ```TypeScript
@@ -573,7 +555,6 @@ try {
 
 ```
 
-<a id="off-1"></a>
 ## off('characteristicWrite')
 
 ```TypeScript
@@ -622,7 +603,6 @@ try {
 
 ```
 
-<a id="off-2"></a>
 ## off('descriptorRead')
 
 ```TypeScript
@@ -671,7 +651,6 @@ try {
 
 ```
 
-<a id="off-3"></a>
 ## off('descriptorWrite')
 
 ```TypeScript
@@ -720,7 +699,6 @@ gattServer.off('descriptorWrite');
 
 ```
 
-<a id="off-4"></a>
 ## off('connectionStateChange')
 
 ```TypeScript
@@ -769,7 +747,6 @@ try {
 
 ```
 
-<a id="off-5"></a>
 ## off('BLEMtuChange')
 
 ```TypeScript
@@ -816,7 +793,6 @@ try {
 
 ```
 
-<a id="offblephyupdate"></a>
 ## offBlePhyUpdate
 
 ```TypeScript
@@ -863,7 +839,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on('characteristicRead')
 
 ```TypeScript
@@ -927,7 +902,6 @@ gattServer.on('characteristicRead', ReadCharacteristicReq);
 
 ```
 
-<a id="on-1"></a>
 ## on('characteristicWrite')
 
 ```TypeScript
@@ -994,7 +968,6 @@ gattServer.on('characteristicWrite', WriteCharacteristicReq);
 
 ```
 
-<a id="on-2"></a>
 ## on('descriptorRead')
 
 ```TypeScript
@@ -1058,7 +1031,6 @@ gattServer.on('descriptorRead', ReadDescriptorReq);
 
 ```
 
-<a id="on-3"></a>
 ## on('descriptorWrite')
 
 ```TypeScript
@@ -1125,7 +1097,6 @@ gattServer.on('descriptorWrite', WriteDescriptorReq);
 
 ```
 
-<a id="on-4"></a>
 ## on('connectionStateChange')
 
 ```TypeScript
@@ -1181,7 +1152,6 @@ try {
 
 ```
 
-<a id="on-5"></a>
 ## on('BLEMtuChange')
 
 ```TypeScript
@@ -1230,7 +1200,6 @@ try {
 
 ```
 
-<a id="onblephyupdate"></a>
 ## onBlePhyUpdate
 
 ```TypeScript
@@ -1277,7 +1246,6 @@ try {
 
 ```
 
-<a id="readphy"></a>
 ## readPhy
 
 ```TypeScript
@@ -1333,7 +1301,6 @@ try {
 
 ```
 
-<a id="removeallservices"></a>
 ## removeAllServices
 
 ```TypeScript
@@ -1376,7 +1343,6 @@ try {
 
 ```
 
-<a id="removeservice"></a>
 ## removeService
 
 ```TypeScript
@@ -1428,7 +1394,6 @@ try {
 
 ```
 
-<a id="sendresponse"></a>
 ## sendResponse
 
 ```TypeScript
@@ -1490,7 +1455,6 @@ try {
 
 ```
 
-<a id="setphy"></a>
 ## setPhy
 
 ```TypeScript

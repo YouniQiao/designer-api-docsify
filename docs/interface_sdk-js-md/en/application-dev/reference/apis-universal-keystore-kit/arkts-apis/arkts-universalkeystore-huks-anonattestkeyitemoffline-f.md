@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="anonattestkeyitemoffline"></a>
 ## anonAttestKeyItemOffline
 
 ```TypeScript
@@ -14,7 +13,6 @@ function anonAttestKeyItemOffline(keyAlias: string, params: HuksParam[]): Promis
 ```
 
 Obtains an anonymous key certificate in offline mode. This API uses a promise to return the result.
-
 > **NOTE**  
 > >  
 > - Offline key attestation depends on the network. You need to periodically connect to the network to use this API  

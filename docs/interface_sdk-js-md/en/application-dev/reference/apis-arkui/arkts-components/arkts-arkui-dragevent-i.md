@@ -8,7 +8,6 @@ Provides information about the drag event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="executedropanimation"></a>
 ## executeDropAnimation
 
 ```TypeScript
@@ -33,7 +32,6 @@ Sets the execution function of the custom drop animation. This parameter is vali
 | --- | --- | --- | --- |
 | customDropAnimation | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Custom drop animation in this callback.<br> **NOTE**<br>1. This API is valid only in the **onDrop** callback.<br> 2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.<br> 3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
 
-<a id="getdata"></a>
 ## getData
 
 ```TypeScript
@@ -65,14 +63,13 @@ Obtains drag-related data.
 | [190001](../errorcode-uicontext.md#190001-invalid-uicontext-object) | Data not found. |
 | [190002](../errorcode-uicontext.md#190002-invalid-callback-function) | Data error. |
 
-<a id="getdisplayid"></a>
 ## getDisplayId
 
 ```TypeScript
 getDisplayId(): number
 ```
 
-Obtains the ID of the screen where the current drag event occurs. This API is not supported in the [onDragEnd](arkts-arkui-commonmethod-c.md#ondragend-1) callback.
+Obtains the ID of the screen where the current drag event occurs. This API is not supported in the [onDragEnd](arkts-arkui-commonmethod-c.md#ondragend) callback.
 
 **Since:** 20
 
@@ -90,7 +87,6 @@ Obtains the ID of the screen where the current drag event occurs. This API is no
 | --- | --- |
 | number | ID of the screen where the current drag event occurs. |
 
-<a id="getdisplayx"></a>
 ## getDisplayX
 
 ```TypeScript
@@ -115,7 +111,6 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 | --- | --- |
 | number | X-coordinate of the drag point relative to the upper left corner of the screen, in vp. |
 
-<a id="getdisplayy"></a>
 ## getDisplayY
 
 ```TypeScript
@@ -140,7 +135,6 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 | --- | --- |
 | number | Y-coordinate of the drag point relative to the upper left corner of the screen, in vp. |
 
-<a id="getdragsource"></a>
 ## getDragSource
 
 ```TypeScript
@@ -165,7 +159,6 @@ Obtains the package name of the drag source application.
 | --- | --- |
 | string | Package name of the drag source application. |
 
-<a id="getglobaldisplayx"></a>
 ## getGlobalDisplayX
 
 ```TypeScript
@@ -190,7 +183,6 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 | --- | --- |
 | number | X-coordinate of the drag point relative to the upper left corner of the global screen.<br>Unit: vp. Value range: (-∞, +∞) |
 
-<a id="getglobaldisplayy"></a>
 ## getGlobalDisplayY
 
 ```TypeScript
@@ -215,7 +207,6 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 | --- | --- |
 | number | Y-coordinate of the drag point relative to the upper left corner of the global screen.<br>Unit: vp. Value range: (-∞, +∞) |
 
-<a id="getmodifierkeystate"></a>
 ## getModifierKeyState
 
 ```TypeScript
@@ -252,7 +243,6 @@ Obtains the pressed status of modifier keys.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
-<a id="getpreviewrect"></a>
 ## getPreviewRect
 
 ```TypeScript
@@ -277,7 +267,6 @@ Obtains the position of the drag preview relative to the current window and the 
 | --- | --- |
 | [Rectangle](arkts-arkui-rectangle-i.md) | Position of the drag preview relative to the current window and the preview size, in vp. x and y indicate the window coordinates of the upper left corner of the preview, and width and height indicate the preview size. |
 
-<a id="getresult"></a>
 ## getResult
 
 ```TypeScript
@@ -302,7 +291,6 @@ Obtains the drag result.
 | --- | --- |
 | [DragResult](arkts-arkui-dragresult-e.md) | Drag result. |
 
-<a id="getsummary"></a>
 ## getSummary
 
 ```TypeScript
@@ -327,7 +315,6 @@ Obtains a summary of drag data, including data type and size information. In a d
 | --- | --- |
 | [Summary](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-summary-c.md) | Summary of drag data. |
 
-<a id="getvelocity"></a>
 ## getVelocity
 
 ```TypeScript
@@ -352,7 +339,6 @@ Obtains the dragging velocity along the main axis.
 | --- | --- |
 | number | Dragging velocity along the main axis. The value is the arithmetic square root of the sum of the squares of the velocities along the x-axis and y-axis, in vp. |
 
-<a id="getvelocityx"></a>
 ## getVelocityX
 
 ```TypeScript
@@ -377,7 +363,6 @@ Obtains the dragging velocity along the x-axis.
 | --- | --- |
 | number | Dragging velocity along the x-axis. The origin of the coordinate axis is the upper left corner of the screen. The unit is vp. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. |
 
-<a id="getvelocityy"></a>
 ## getVelocityY
 
 ```TypeScript
@@ -402,7 +387,6 @@ Obtains the dragging velocity along the y-axis.
 | --- | --- |
 | number | Dragging velocity along the y-axis. The origin of the coordinate axis is the upper left corner of the screen. The unit is vp. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. |
 
-<a id="getwindowx"></a>
 ## getWindowX
 
 ```TypeScript
@@ -427,7 +411,6 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 | --- | --- |
 | number | X coordinate of the drag point relative to the upper left corner of the window, in vp. |
 
-<a id="getwindowy"></a>
 ## getWindowY
 
 ```TypeScript
@@ -452,7 +435,6 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 | --- | --- |
 | number | Y-coordinate of the drag point relative to the upper left corner of the window, in vp. |
 
-<a id="getx"></a>
 ## getX
 
 ```TypeScript
@@ -460,14 +442,13 @@ getX(): number
 ```
 
 Obtains the x-coordinate of the drag point relative to the upper left corner of the window, in vp.
-
 > **NOTE**
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [getWindowX](arkts-arkui-dragevent-i.md#getwindowx-1)
+**Substitutes:** [getWindowX](arkts-arkui-dragevent-i.md#getwindowx)
 
 <!--Device-DragEvent-getX(): number--><!--Device-DragEvent-getX(): number-End-->
 
@@ -479,7 +460,6 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 | --- | --- |
 | number | X-coordinate of the drag point relative to the upper left corner of the window.<br>Unit: vp. |
 
-<a id="gety"></a>
 ## getY
 
 ```TypeScript
@@ -487,14 +467,13 @@ getY(): number
 ```
 
 Obtains the y-coordinate of the drag point relative to the upper left corner of the window, in vp.
-
 > **NOTE**
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [getWindowY](arkts-arkui-dragevent-i.md#getwindowy-1)
+**Substitutes:** [getWindowY](arkts-arkui-dragevent-i.md#getwindowy)
 
 <!--Device-DragEvent-getY(): number--><!--Device-DragEvent-getY(): number-End-->
 
@@ -506,7 +485,6 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 | --- | --- |
 | number | Y-coordinate of the drag point relative to the upper left corner of the window.<br>Unit: vp. |
 
-<a id="isremote"></a>
 ## isRemote
 
 ```TypeScript
@@ -531,7 +509,6 @@ Checks whether the drag operation is cross-device.
 | --- | --- |
 | boolean | Whether the drag operation is cross-device. Returns **true** for cross-device drag operations;returns **false** otherwise. |
 
-<a id="setdata"></a>
 ## setData
 
 ```TypeScript
@@ -556,14 +533,13 @@ Sets drag-related data in **DragEvent**.
 | --- | --- | --- | --- |
 | unifiedData | [UnifiedData](arkts-arkui-unifieddata-t.md) | Yes | Drag-related data. |
 
-<a id="setdataloadparams"></a>
 ## setDataLoadParams
 
 ```TypeScript
 setDataLoadParams(dataLoadParams: DataLoadParams): void
 ```
 
-Sets the parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application,the system will use these parameters to request the actual data from the drag source. If this API is used together with [setData](arkts-arkui-dragevent-i.md#setdata-1), the last called API takes precedence. This API takes effect only in the [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart-1) callback.
+Sets the parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application,the system will use these parameters to request the actual data from the drag source. If this API is used together with [setData](arkts-arkui-dragevent-i.md#setdata), the last called API takes precedence. This API takes effect only in the [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) callback.
 
 **Since:** 20
 
@@ -581,7 +557,6 @@ Sets the parameters for deferred data loading from the drag source. This API pro
 | --- | --- | --- | --- |
 | dataLoadParams | [DataLoadParams](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-dataloadparams-i.md) | Yes | Data loading parameters used during a drop operation. |
 
-<a id="setresult"></a>
 ## setResult
 
 ```TypeScript
@@ -606,7 +581,6 @@ Sets the drag result in **DragEvent**.
 | --- | --- | --- | --- |
 | dragResult | [DragResult](arkts-arkui-dragresult-e.md) | Yes | Drag result. |
 
-<a id="startdataloading"></a>
 ## startDataLoading
 
 ```TypeScript
@@ -629,7 +603,7 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | Parameters for obtaining drag data, including the target path, file conflict options, and progress bar type. You can use the [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading-1) API to cancel data loading during data transmission. |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | Parameters for obtaining drag data, including the target path, file conflict options, and progress bar type. You can use the [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading) API to cancel data loading during data transmission. |
 
 **Return value:**
 
@@ -698,7 +672,7 @@ Whether to disable the default drop animation when the dragging ends.
 
 If this parameter is set to **true**, the default drop animation is disabled, and the custom one is used.
 
-If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](arkts-arkui-dragevent-i.md#setresult-1)is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect.
+If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](arkts-arkui-dragevent-i.md#setresult)is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect.
 
 When the default drop animation is not disabled, avoid implementing custom animations to prevent conflicts.
 

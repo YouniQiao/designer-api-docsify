@@ -27,7 +27,7 @@ import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 
 | Name | Description |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Implements management of color space objects.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create-1) to create a color space manager. |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Implements management of color space objects.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) to create a color space manager. |
 
 ### Types
 

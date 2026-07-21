@@ -6,7 +6,6 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
-<a id="importukeycertificate"></a>
 ## importUkeyCertificate
 
 ```TypeScript
@@ -29,7 +28,7 @@ Import the certificate to the USB Key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyUri | string | Yes | Indicates the USB Key credentials URI.<br>The maximum length is 256 and cannot be empty.<br>The keyUri parameter identifies a certificate entity, which can be obtained<br>by calling the [getUkeyCertificateList](arkts-devicecertificate-certificatemanager-getukeycertificatelist-f.md#getukeycertificatelist-1) interface. |
+| keyUri | string | Yes | Indicates the USB Key credentials URI.<br>The maximum length is 256 and cannot be empty.<br>The keyUri parameter identifies a certificate entity, which can be obtained<br>by calling the [getUkeyCertificateList](arkts-devicecertificate-certificatemanager-getukeycertificatelist-f.md#getukeycertificatelist) interface. |
 | cert | Uint8Array | Yes | Indicates the certificate data to be imported.<br>The maximum length is 10240 and cannot be empty.<br>The certificate data format complies with the Smart Key Framework (SKF) specifications. |
 | ukeyInfo | [UkeyInfo](arkts-devicecertificate-certificatemanager-ukeyinfo-i.md) | Yes | Indicates USB Key certificate attribute information.<br>UkeyInfo.CertificatePurpose can only be set to PURPOSE_SIGN, PURPOSE_ENCRYPT or PURPOSE_DEFAULT. |
 

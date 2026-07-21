@@ -14,7 +14,6 @@ Defines the connection of the TCPSocket client and server.
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -65,7 +64,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="close-1"></a>
 ## close
 
 ```TypeScript
@@ -112,7 +110,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="getlocaladdress"></a>
 ## getLocalAddress
 
 ```TypeScript
@@ -181,7 +178,6 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 
 ```
 
-<a id="getremoteaddress"></a>
 ## getRemoteAddress
 
 ```TypeScript
@@ -232,7 +228,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="getremoteaddress-1"></a>
 ## getRemoteAddress
 
 ```TypeScript
@@ -280,7 +275,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="getsocketfd"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -335,7 +329,6 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 
 ```
 
-<a id="off"></a>
 ## off('message')
 
 ```TypeScript
@@ -390,7 +383,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="off-1"></a>
 ## off('close')
 
 ```TypeScript
@@ -436,7 +428,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="off-2"></a>
 ## off('error')
 
 ```TypeScript
@@ -483,7 +474,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="on"></a>
 ## on('message')
 
 ```TypeScript
@@ -535,7 +525,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('close')
 
 ```TypeScript
@@ -578,7 +567,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="on-2"></a>
 ## on('error')
 
 ```TypeScript
@@ -621,7 +609,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="send"></a>
 ## send
 
 ```TypeScript
@@ -671,7 +658,6 @@ tcpServer.on('connect', (client: socket.TCPSocketConnection) => {
 
 ```
 
-<a id="send-1"></a>
 ## send
 
 ```TypeScript

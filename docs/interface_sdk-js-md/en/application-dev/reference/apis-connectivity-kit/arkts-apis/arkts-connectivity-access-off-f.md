@@ -6,7 +6,6 @@
 import { access } from '@kit.ConnectivityKit';
 ```
 
-<a id="off"></a>
 ## off('stateChange')
 
 ```TypeScript

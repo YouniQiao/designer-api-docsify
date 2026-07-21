@@ -6,7 +6,6 @@
 import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="on"></a>
 ## on('steadyStandingDetect')
 
 ```TypeScript

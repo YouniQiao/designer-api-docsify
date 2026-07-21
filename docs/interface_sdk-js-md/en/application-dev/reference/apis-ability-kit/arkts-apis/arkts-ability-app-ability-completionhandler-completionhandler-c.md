@@ -1,6 +1,6 @@
 # CompletionHandler
 
-CompletionHandler provides two callback functions,[onRequestSuccess](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestsuccess-1) and [onRequestFailure](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestfailure-1), to handle the results of successful and failed application launch requests, respectively.
+CompletionHandler provides two callback functions,[onRequestSuccess](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestsuccess) and [onRequestFailure](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestfailure), to handle the results of successful and failed application launch requests, respectively.
 
 **Since:** 20
 
@@ -14,7 +14,6 @@ CompletionHandler provides two callback functions,[onRequestSuccess](arkts-abili
 import { CompletionHandler } from '@kit.AbilityKit';
 ```
 
-<a id="onrequestfailure"></a>
 ## onRequestFailure
 
 ```TypeScript
@@ -38,13 +37,12 @@ Called when the application fails to be launched.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-bundlemanager-elementname-t.md) | Yes | **ElementName** information used to identify the target application.* - Typically, **ElementName** includes only **abilityName** and **bundleName**. The presence of **moduleName** and **deviceId** depends on whether the caller provides them. **shortName** and **uri** are empty.* - **ElementName** information cannot be obtained if the implicit startup fails. |
-| message | string | Yes | Message displayed when the application fails to be launched. This message is in JSON format,as follows:* {* ?"errMsg": "xxx"* }* The value of *xxx* is described as follows:* Failed to call <api-name>: An error occurs when calling the API. <api-name> is the specific API name, for example,**startAbility**.* User refused redirection: The user has closed the application redirection dialog box.* User closed the implicit startup picker: The user has closed the dialog box for selecting an application for implicit startup.* User closed the app clone picker: The user has closed the dialog box for selecting a cloned application.* Free installation failed: The free installation fails. |
+| message | string | Yes | Message displayed when the application fails to be launched. This message is in JSON format,as follows:* {* ?"errMsg": "xxx"* }* The value of *xxx* is described as follows:* Failed to call &lt;api-name&gt;: An error occurs when calling the API. &lt;api-name&gt; is the specific API name, for example,**startAbility**.* User refused redirection: The user has closed the application redirection dialog box.* User closed the implicit startup picker: The user has closed the dialog box for selecting an application for implicit startup.* User closed the app clone picker: The user has closed the dialog box for selecting a cloned application.* Free installation failed: The free installation fails. |
 
 **Example**
 
 See [Usage of CompletionHandler](#usage-of-completionhandler).
 
-<a id="onrequestsuccess"></a>
 ## onRequestSuccess
 
 ```TypeScript

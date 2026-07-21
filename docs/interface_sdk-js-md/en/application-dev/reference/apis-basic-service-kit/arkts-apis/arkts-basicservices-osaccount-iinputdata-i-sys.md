@@ -16,7 +16,6 @@ Provides callbacks for PIN operations.
 import { osAccount } from '@kit.BasicServicesKit';
 ```
 
-<a id="onsetdata"></a>
 ## onSetData
 
 ```TypeScript

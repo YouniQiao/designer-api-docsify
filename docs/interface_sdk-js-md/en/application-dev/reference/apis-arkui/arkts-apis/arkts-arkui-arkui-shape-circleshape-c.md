@@ -18,7 +18,6 @@ This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md).
 import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

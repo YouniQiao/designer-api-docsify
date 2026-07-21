@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="truncate"></a>
 ## truncate
 
 ```TypeScript
@@ -58,7 +57,6 @@ Truncates a file. This API uses a promise to return the result.
 | 13900042 | Unknown error |
 
 
-<a id="truncate-1"></a>
 ## truncate
 
 ```TypeScript
@@ -104,7 +102,6 @@ Truncates a file. This API uses an asynchronous callback to return the result.
 | 13900042 | Unknown error |
 
 
-<a id="truncate-2"></a>
 ## truncate
 
 ```TypeScript

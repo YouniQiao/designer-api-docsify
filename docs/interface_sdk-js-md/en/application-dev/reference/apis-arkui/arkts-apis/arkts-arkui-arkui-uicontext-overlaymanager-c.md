@@ -1,12 +1,11 @@
 # OverlayManager
 
 Provides the capability to draw overlays.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 12.  
 >  
-> - In the following API examples, you must first use [getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager-1) in  
+> - In the following API examples, you must first use [getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager) in  
 > **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance.  
 >  
 > - The nodes on **OverlayManager** are above the page level, but below such components as created through  
@@ -30,7 +29,6 @@ Provides the capability to draw overlays.
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="addcomponentcontent"></a>
 ## addComponentContent
 
 ```TypeScript
@@ -56,7 +54,6 @@ Adds a specified **ComponentContent** node to the **OverlayManager**.
 | content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | Yes | Content to add to the target node on the **OverlayManager**.<br>**NOTE**<br>By default, the new node is centered on the page and stacked according to its stacking level. |
 | index | number | No |  |
 
-<a id="addcomponentcontentwithorder"></a>
 ## addComponentContentWithOrder
 
 ```TypeScript
@@ -84,7 +81,6 @@ This API allows you to define the stacking order of the nodes when they are crea
 | content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | Yes | Content to add to the target node on the **OverlayManager**.<br>**NOTE**<br>By default, the new node is centered on the page and stacked according to its stacking level. |
 | levelOrder | [LevelOrder](arkts-arkui-levelorder-t.md) | No |  |
 
-<a id="hideallcomponentcontents"></a>
 ## hideAllComponentContents
 
 ```TypeScript
@@ -103,7 +99,6 @@ Hides all **ComponentContent** nodes on the **OverlayManager**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="hidecomponentcontent"></a>
 ## hideComponentContent
 
 ```TypeScript
@@ -128,7 +123,6 @@ Hides a specified **ComponentContent** node on the **OverlayManager**.
 | --- | --- | --- | --- |
 | content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | Yes | Content to hide on the **OverlayManager**. |
 
-<a id="openorderoverlay"></a>
 ## openOrderOverlay
 
 ```TypeScript
@@ -166,7 +160,6 @@ Opens an overlay with the specified ComponentContent and options.
 | --- | --- |
 | [103307](../errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) | The overlay cannot be opened due to the system pop-up window. |
 
-<a id="removecomponentcontent"></a>
 ## removeComponentContent
 
 ```TypeScript
@@ -191,7 +184,6 @@ Removes a specified node from the **OverlayManager**.
 | --- | --- | --- | --- |
 | content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | Yes | Content to remove from the **OverlayManager**. |
 
-<a id="showallcomponentcontents"></a>
 ## showAllComponentContents
 
 ```TypeScript
@@ -210,7 +202,6 @@ Shows all **ComponentContent** nodes on the **OverlayManager**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="showcomponentcontent"></a>
 ## showComponentContent
 
 ```TypeScript

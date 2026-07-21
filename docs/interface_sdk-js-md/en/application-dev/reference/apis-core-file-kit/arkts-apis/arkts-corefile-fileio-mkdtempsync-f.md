@@ -1,6 +1,5 @@
 # mkdtempSync
 
-<a id="mkdtempsync"></a>
 ## mkdtempSync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Creates a temporary directory. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:mkdtempSync](arkts-corefile-file-fs-mkdtempsync-f.md#mkdtempsync-1)
+**Substitutes:** [fs:mkdtempSync](arkts-corefile-fileio-mkdtempsync-f.md#mkdtempsync)
 
 <!--Device-unnamed-declare function mkdtempSync(prefix: string): string--><!--Device-unnamed-declare function mkdtempSync(prefix: string): string-End-->
 

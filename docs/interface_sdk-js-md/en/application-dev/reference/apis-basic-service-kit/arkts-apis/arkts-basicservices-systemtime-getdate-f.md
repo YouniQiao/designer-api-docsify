@@ -6,7 +6,6 @@
 import { systemTime } from '@kit.BasicServicesKit';
 ```
 
-<a id="getdate"></a>
 ## getDate
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate-1)
+**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate)
 
 <!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void-End-->
 
@@ -58,7 +57,6 @@ try {
 ```
 
 
-<a id="getdate-1"></a>
 ## getDate
 
 ```TypeScript
@@ -71,7 +69,7 @@ Obtains the current system date. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getdate-1)
+**Substitutes:** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getdate)
 
 <!--Device-systemTime-function getDate(): Promise<Date>--><!--Device-systemTime-function getDate(): Promise<Date>-End-->
 

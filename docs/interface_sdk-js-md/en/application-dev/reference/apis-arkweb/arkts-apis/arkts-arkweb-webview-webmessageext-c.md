@@ -14,7 +14,6 @@ The message received or sent from web message port.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="getarray"></a>
 ## getArray
 
 ```TypeScript
@@ -43,7 +42,6 @@ Get the array value of the web message.
 | --- | --- |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="getarraybuffer"></a>
 ## getArrayBuffer
 
 ```TypeScript
@@ -72,7 +70,6 @@ Get the array buffer value of the web message.
 | --- | --- |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="getboolean"></a>
 ## getBoolean
 
 ```TypeScript
@@ -101,7 +98,6 @@ Get the boolean value of the web message.
 | --- | --- |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="geterror"></a>
 ## getError
 
 ```TypeScript
@@ -130,7 +126,6 @@ Get the error value of the web message.
 | --- | --- |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="getnumber"></a>
 ## getNumber
 
 ```TypeScript
@@ -159,7 +154,6 @@ Get the number value of the web message.
 | --- | --- |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="getstring"></a>
 ## getString
 
 ```TypeScript
@@ -188,7 +182,6 @@ Get the string value of the web message.
 | --- | --- |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="gettype"></a>
 ## getType
 
 ```TypeScript
@@ -211,7 +204,6 @@ Get the type of the web message.
 | --- | --- |
 | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | - Returns data of WebMessageType type |
 
-<a id="setarray"></a>
 ## setArray
 
 ```TypeScript
@@ -241,7 +233,6 @@ Set the array value of the web message.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="setarraybuffer"></a>
 ## setArrayBuffer
 
 ```TypeScript
@@ -271,7 +262,6 @@ Set the array buffer value of the web message.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="setboolean"></a>
 ## setBoolean
 
 ```TypeScript
@@ -301,7 +291,6 @@ Set the boolean value of the web message.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="seterror"></a>
 ## setError
 
 ```TypeScript
@@ -331,7 +320,6 @@ Set the error value of the web message.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="setnumber"></a>
 ## setNumber
 
 ```TypeScript
@@ -361,7 +349,6 @@ Set the number value of the web message.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="setstring"></a>
 ## setString
 
 ```TypeScript
@@ -391,7 +378,6 @@ Set the string value of the web message.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
-<a id="settype"></a>
 ## setType
 
 ```TypeScript

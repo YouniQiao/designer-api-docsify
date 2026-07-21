@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="getcurrentgroup"></a>
 ## getCurrentGroup
 
 ```TypeScript
@@ -34,7 +33,6 @@ Obtains information about the current group.
 | Promise&lt;WifiP2pGroupInfo&gt; | Returns the current group information. |
 
 
-<a id="getcurrentgroup-1"></a>
 ## getCurrentGroup
 
 ```TypeScript

@@ -14,7 +14,6 @@ The **Metadata** class provides APIs for storing image metadata. For details abo
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="clone"></a>
 ## clone
 
 ```TypeScript
@@ -35,7 +34,6 @@ Clones the metadata. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;Metadata&gt; | Promise used to return the metadata instance. |
 
-<a id="getallproperties"></a>
 ## getAllProperties
 
 ```TypeScript
@@ -58,7 +56,6 @@ For details about how to query the property values, see [PropertyKey](arkts-imag
 | --- | --- |
 | Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
 
-<a id="getblob"></a>
 ## getBlob
 
 ```TypeScript
@@ -81,7 +78,6 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;ArrayBuffer&gt; | Promise that returns the binary data of the metadata. |
 
-<a id="getproperties"></a>
 ## getProperties
 
 ```TypeScript
@@ -115,7 +111,6 @@ Obtains the values of properties from the image's metadata. This API uses a prom
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. 3.Parameter verification failed. |
 | [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
-<a id="setblob"></a>
 ## setBlob
 
 ```TypeScript
@@ -150,7 +145,6 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 | --- | --- |
 | [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
-<a id="setproperties"></a>
 ## setProperties
 
 ```TypeScript

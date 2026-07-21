@@ -6,7 +6,6 @@
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="encodeimage"></a>
 ## encodeImage
 
 ```TypeScript

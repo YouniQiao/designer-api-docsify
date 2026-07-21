@@ -5,7 +5,6 @@ The **Text** component is used to display a piece of textual information.
 ## Child Components
 
 This component can contain the [Span]{@link span}, [ImageSpan]{@link image_span}, [SymbolSpan]{@link symbol_span},and [ContainerSpan]{@link container_span} child components.
-
 > **NOTE**  
 >  
 > Use [child components](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-text.md#child-components) to  

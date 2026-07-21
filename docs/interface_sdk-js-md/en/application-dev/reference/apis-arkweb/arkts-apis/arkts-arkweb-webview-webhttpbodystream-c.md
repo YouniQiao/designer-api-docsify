@@ -14,7 +14,6 @@ The http body stream of the request.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="getposition"></a>
 ## getPosition
 
 ```TypeScript
@@ -37,7 +36,6 @@ Get the current position of the data stream. Unit: bytes.
 | --- | --- |
 | number | Return position in post data stream. |
 
-<a id="getsize"></a>
 ## getSize
 
 ```TypeScript
@@ -60,7 +58,6 @@ Get the total size of the data stream. When data is chunked, always return zero.
 | --- | --- |
 | number | Return size of data stream size. |
 
-<a id="initialize"></a>
 ## initialize
 
 ```TypeScript
@@ -89,7 +86,6 @@ Initialize data stream.
 | --- | --- |
 | [17100022](../errorcode-webview.md#17100022-failed-to-initialize-webhttpbodystream) | Failed to initialize the HTTP body stream. |
 
-<a id="ischunked"></a>
 ## isChunked
 
 ```TypeScript
@@ -112,7 +108,6 @@ Whether data stream is chunked.
 | --- | --- |
 | boolean | Whether data stream is chunked. |
 
-<a id="iseof"></a>
 ## isEof
 
 ```TypeScript
@@ -135,7 +130,6 @@ Whether all data stream has been consumed. For chunked uploads,returns false unt
 | --- | --- |
 | boolean | Whether data stream has been consumed. |
 
-<a id="isinmemory"></a>
 ## isInMemory
 
 ```TypeScript
@@ -158,7 +152,6 @@ Returns true if the upload data in the stream is entirely in memory, and all rea
 | --- | --- |
 | boolean | Whether the data stream is in memory. |
 
-<a id="read"></a>
 ## read
 
 ```TypeScript

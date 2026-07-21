@@ -10,7 +10,6 @@ The accessibility extension context. Used to configure, query information, and i
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
-<a id="addaccessibilityvirtualnodes"></a>
 ## addAccessibilityVirtualNodes
 
 ```TypeScript
@@ -53,7 +52,6 @@ Add accessibility virtual nodes.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300000](../errorcode-accessibility.md#9300000-accessibility-service-abnormal) | System abnormality.Possible causes:<br>1.Internal operation failed.<br>2.Failed to obtain the required service or client object (null pointer).<br>3.IPC communication failed.<br>4.Failed to obtain the accessibility service proxy.<br>5.Timed out while waiting for the result of an asynchronous operation. |
 
-<a id="getaccessibilityfocusedelement"></a>
 ## getAccessibilityFocusedElement
 
 ```TypeScript
@@ -87,7 +85,6 @@ Obtains the element that is currently focused. This API uses a promise to return
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-application-and-accessibility-services) | The target application failed to connect to accessibility service. |
 
-<a id="getaccessibilitywindowssync"></a>
 ## getAccessibilityWindowsSync
 
 ```TypeScript
@@ -126,7 +123,6 @@ Obtains the accessibility windows.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getdefaultfocusedelementids"></a>
 ## getDefaultFocusedElementIds
 
 ```TypeScript
@@ -163,7 +159,6 @@ Obtains the custom default focuses of an application. This API uses a promise to
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getelements"></a>
 ## getElements
 
 ```TypeScript
@@ -201,7 +196,6 @@ Obtains node elements in batches. This API uses a promise to return the result.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
-<a id="getrootinactivewindow"></a>
 ## getRootInActiveWindow
 
 ```TypeScript
@@ -241,7 +235,6 @@ Obtains the root element of an active window. This API uses a promise to return 
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-application-and-accessibility-services) | The target application failed to connect to accessibility service. |
 
-<a id="holdrunninglocksync"></a>
 ## holdRunningLockSync
 
 ```TypeScript
@@ -267,7 +260,6 @@ Holds the running lock. After the lock is held, the screen will not turn off aut
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-<a id="notifydisconnect"></a>
 ## notifyDisconnect
 
 ```TypeScript
@@ -295,7 +287,6 @@ This API must be used together with the [on('preDisconnect')](AccessibilityExten
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-<a id="off"></a>
 ## off('preDisconnect')
 
 ```TypeScript
@@ -328,7 +319,6 @@ Unsubscribes from the pre-disconnection event of the accessibility extension ser
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-<a id="on"></a>
 ## on('preDisconnect')
 
 ```TypeScript
@@ -337,7 +327,7 @@ on(type: 'preDisconnect', callback: Callback<void>): void
 
 Subscribes to the pre-disconnection event of the accessibility extension service. This API is called when the accessibility extension service is about to be disconnected. This API uses an asynchronous callback to return the result.
 
-Used together with [notifyDisconnect](arkts-accessibility-accessibilityextensioncontext-c-sys.md#notifydisconnect-1); otherwise, the accessibility extension service is automatically disconnected 30 seconds later by default.
+Used together with [notifyDisconnect](arkts-accessibility-accessibilityextensioncontext-c-sys.md#notifydisconnect); otherwise, the accessibility extension service is automatically disconnected 30 seconds later by default.
 
 **Since:** 20
 
@@ -363,7 +353,6 @@ Used together with [notifyDisconnect](arkts-accessibility-accessibilityextension
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-<a id="removeaccessibilityvirtualnodes"></a>
 ## removeAccessibilityVirtualNodes
 
 ```TypeScript
@@ -405,7 +394,6 @@ Remove accessibility virtual nodes.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300000](../errorcode-accessibility.md#9300000-accessibility-service-abnormal) | System abnormality.Possible causes:<br>1.Internal operation failed.<br>2.Failed to obtain the required service or client object (null pointer).<br>3.IPC communication failed.<br>4.Failed to obtain the accessibility service proxy.<br>5.Timed out while waiting for the result of an asynchronous operation. |
 
-<a id="startability"></a>
 ## startAbility
 
 ```TypeScript
@@ -441,7 +429,6 @@ Starts the foreground page. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 
-<a id="unholdrunninglocksync"></a>
 ## unholdRunningLockSync
 
 ```TypeScript
@@ -467,7 +454,6 @@ Releases the running lock. After the lock is released, the screen will automatic
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-<a id="updateaccessibilityelementproperty"></a>
 ## updateAccessibilityElementProperty
 
 ```TypeScript

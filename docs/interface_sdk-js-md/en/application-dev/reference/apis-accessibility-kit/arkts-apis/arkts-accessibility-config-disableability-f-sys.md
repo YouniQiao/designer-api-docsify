@@ -6,7 +6,6 @@
 import { config } from '@kit.AccessibilityKit';
 ```
 
-<a id="disableability"></a>
 ## disableAbility
 
 ```TypeScript
@@ -47,7 +46,6 @@ Disables an accessibility extension ability. This API uses a promise to return t
 | [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) | Invalid bundle name or ability name. |
 
 
-<a id="disableability-1"></a>
 ## disableAbility
 
 ```TypeScript

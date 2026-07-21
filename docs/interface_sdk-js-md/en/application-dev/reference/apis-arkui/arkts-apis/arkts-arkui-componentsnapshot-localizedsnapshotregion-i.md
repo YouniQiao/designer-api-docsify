@@ -1,14 +1,13 @@
 # LocalizedSnapshotRegion
 
 Defines the rectangular region for capturing the component snapshot, with coordinates adjusted based on the layout direction (LTR or RTL).
-
 > **NOTE**  
 >  
 > Directly using **componentSnapshot** can lead to the issue of  
-> [ambiguous UI context](docroot://ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain a  
+> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain a  
 > **UIContext** instance using **getUIContext()**, and then obtain the associated **componentSnapshot** object  
 > using  
-> [getComponentSnapshot](docroot://reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12).
+> [getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12).
 
 **Since:** 15
 

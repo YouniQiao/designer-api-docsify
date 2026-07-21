@@ -10,7 +10,6 @@ Defines Node interface.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="getnodebypath"></a>
 ## getNodeByPath
 
 ```TypeScript

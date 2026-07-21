@@ -1,7 +1,6 @@
 # RowOptionsV2
 
 Sets the spacing between child components of the **Row** component.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  

@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="uninstall"></a>
 ## uninstall
 
 ```TypeScript
@@ -14,19 +13,18 @@ function uninstall(admin: Want, bundleName: string, callback: AsyncCallback<void
 ```
 
 Uninstalls an application of the current user without retaining the bundle data. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Error code **401** will be returned if this API is called to uninstall an application that is either a non-  
 > removable pre-installed application or one configured as non-uninstallable via the  
-> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync-1)  
+> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync)  
 > API.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstall(admin:](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-5)
+**Substitutes:** [uninstall(admin:](arkts-mdm-bundlemanager-uninstall-f.md#uninstall)
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -79,7 +77,6 @@ bundleManager.uninstall(wantTemp, 'bundleName', (err) => {
 ```
 
 
-<a id="uninstall-1"></a>
 ## uninstall
 
 ```TypeScript
@@ -87,19 +84,18 @@ function uninstall(admin: Want, bundleName: string, userId: number, callback: As
 ```
 
 Uninstalls an application of the specified user without retaining the bundle data This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Error code **401** will be returned if this API is called to uninstall an application that is either a non-  
 > removable pre-installed application or one configured as non-uninstallable via the  
-> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync-1)  
+> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync)  
 > API.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstall(admin:](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-5)
+**Substitutes:** [uninstall(admin:](arkts-mdm-bundlemanager-uninstall-f.md#uninstall)
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -153,7 +149,6 @@ bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
 ```
 
 
-<a id="uninstall-2"></a>
 ## uninstall
 
 ```TypeScript
@@ -161,19 +156,18 @@ function uninstall(admin: Want, bundleName: string, isKeepData: boolean, callbac
 ```
 
 Uninstalls an application of the current user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Error code **401** will be returned if this API is called to uninstall an application that is either a non-  
 > removable pre-installed application or one configured as non-uninstallable via the  
-> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync-1)  
+> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync)  
 > API.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstall(admin:](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-5)
+**Substitutes:** [uninstall(admin:](arkts-mdm-bundlemanager-uninstall-f.md#uninstall)
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -227,7 +221,6 @@ bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
 ```
 
 
-<a id="uninstall-3"></a>
 ## uninstall
 
 ```TypeScript
@@ -235,19 +228,18 @@ function uninstall(admin: Want, bundleName: string, userId: number, isKeepData: 
 ```
 
 Uninstalls an application of the specified user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Error code **401** will be returned if this API is called to uninstall an application that is either a non-  
 > removable pre-installed application or one configured as non-uninstallable via the  
-> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync-1)  
+> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync)  
 > API.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [uninstall(admin:](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-5)
+**Substitutes:** [uninstall(admin:](arkts-mdm-bundlemanager-uninstall-f.md#uninstall)
 
 **Required permissions:** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 

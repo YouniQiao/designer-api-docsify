@@ -1,12 +1,11 @@
 # OffscreenCanvasRenderingContext2D
 
 Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offscreen onto a canvas. Rendering offscreen onto a canvas is a process where content to draw onto the canvas is first drawn in the buffer, and then converted into a picture, and finally the picture is drawn on the canvas. Since off-screen rendering utilizes the CPU, its performance is relatively slow.Therefore, it should be avoided in scenarios where drawing speed is a critical requirement.
-
 > **NOTE**  
 >  
 > **OffscreenCanvasRenderingContext2D** cannot be used in **ServiceExtensionAbility**. It is  
 > recommended that you use the  
-> [drawing module](docroot://reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)  
+> [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)  
 > for offscreen rendering in **ServiceExtensionAbility**.  
 >  
 > The following path-related APIs apply only to paths created within  
@@ -25,7 +24,6 @@ Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offsc
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -52,7 +50,6 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 | height | number | Yes | Height of the offscreen canvas.<br>Default unit: vp<br>Invalid values **NaN** and **Infinity** are treated as invalid. |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.<br>The value **undefined** is treated as the default value of [RenderingContextSettings](#renderingcontextsettings).<br>Default value: **null** |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -82,7 +79,6 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.<br>The value **undefined** is treated as the default value of [RenderingContextSettings](#renderingcontextsettings).<br>Default value: **null** |
 | unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No | Unit of the **OffscreenCanvasRenderingContext2D** object.The value cannot be dynamically changed once set.<br>Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br>Default value: **DEFAULT** |
 
-<a id="todataurl"></a>
 ## toDataURL
 
 ```TypeScript
@@ -114,7 +110,6 @@ Creates a data URL that contains a representation of an image. This API involves
 | --- | --- |
 | string | Image URL. |
 
-<a id="transfertoimagebitmap"></a>
 ## transferToImageBitmap
 
 ```TypeScript

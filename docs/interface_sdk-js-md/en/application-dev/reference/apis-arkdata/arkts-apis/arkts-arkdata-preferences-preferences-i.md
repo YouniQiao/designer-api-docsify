@@ -1,6 +1,6 @@
 # Preferences
 
-Provides APIs for obtaining and modifying the stored data.Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using [preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences-1).
+Provides APIs for obtaining and modifying the stored data.Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using [preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences).
 
 **Since:** 9
 
@@ -14,14 +14,13 @@ Provides APIs for obtaining and modifying the stored data.Before calling any API
 import { preferences } from '@kit.ArkData';
 ```
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
 clear(callback: AsyncCallback<void>): void
 ```
 
-Clears this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -59,14 +58,13 @@ dataPreferences.clear((err: BusinessError) =>{
 
 ```
 
-<a id="clear-1"></a>
 ## clear
 
 ```TypeScript
 clear(): Promise<void>
 ```
 
-Clears this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -102,14 +100,13 @@ promise.then(() => {
 
 ```
 
-<a id="clearsync"></a>
 ## clearSync
 
 ```TypeScript
 clearSync(): void
 ```
 
-Clears this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 10
 
@@ -126,14 +123,13 @@ dataPreferences.clearSync();
 
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
 delete(key: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -147,7 +143,7 @@ Deletes a KV pair from this **Preferences** instance. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be deleted. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -172,14 +168,13 @@ dataPreferences.delete('startup', (err: BusinessError) => {
 
 ```
 
-<a id="delete-1"></a>
 ## delete
 
 ```TypeScript
 delete(key: string): Promise<void>
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -193,7 +188,7 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be deleted. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 
 **Return value:**
 
@@ -222,14 +217,13 @@ promise.then(() => {
 
 ```
 
-<a id="deletesync"></a>
 ## deleteSync
 
 ```TypeScript
 deleteSync(key: string): void
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 10
 
@@ -243,7 +237,7 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be deleted. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 
 **Error codes:**
 
@@ -259,7 +253,6 @@ dataPreferences.deleteSync('startup');
 
 ```
 
-<a id="flush"></a>
 ## flush
 
 ```TypeScript
@@ -304,7 +297,6 @@ dataPreferences.flush((err: BusinessError) => {
 
 ```
 
-<a id="flush-1"></a>
 ## flush
 
 ```TypeScript
@@ -347,7 +339,6 @@ promise.then(() => {
 
 ```
 
-<a id="flushsync"></a>
 ## flushSync
 
 ```TypeScript
@@ -377,7 +368,6 @@ dataPreferences.flushSync();
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -398,7 +388,7 @@ Obtains the value of a key from this **Preferences** instance. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 | defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Default value to be returned. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the value obtained. Otherwise, **err** is an error object. |
 
@@ -424,7 +414,6 @@ dataPreferences.get('startup', 'default', (err: BusinessError, val: preferences.
 
 ```
 
-<a id="get-1"></a>
 ## get
 
 ```TypeScript
@@ -445,7 +434,7 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 | defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Default value to be returned. |
 
 **Return value:**
@@ -475,7 +464,6 @@ promise.then((data: preferences.ValueType) => {
 
 ```
 
-<a id="getall"></a>
 ## getAll
 
 ```TypeScript
@@ -529,7 +517,6 @@ dataPreferences.getAll((err: BusinessError, value: Object) => {
 
 ```
 
-<a id="getall-1"></a>
 ## getAll
 
 ```TypeScript
@@ -581,7 +568,6 @@ promise.then((value: Object) => {
 
 ```
 
-<a id="getallsync"></a>
 ## getAllSync
 
 ```TypeScript
@@ -627,7 +613,6 @@ console.info("getAll object = " + JSON.stringify(value));
 
 ```
 
-<a id="getsync"></a>
 ## getSync
 
 ```TypeScript
@@ -648,7 +633,7 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 | defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Default value to be returned. |
 
 **Return value:**
@@ -671,7 +656,6 @@ let value: preferences.ValueType = dataPreferences.getSync('startup', 'default')
 
 ```
 
-<a id="has"></a>
 ## has
 
 ```TypeScript
@@ -692,7 +676,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be checked. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the **Preferences** instance contains the KV pair, **true** will be returned. Otherwise, **false** will be returned. |
 
 **Error codes:**
@@ -721,7 +705,6 @@ dataPreferences.has('startup', (err: BusinessError, val: boolean) => {
 
 ```
 
-<a id="has-1"></a>
 ## has
 
 ```TypeScript
@@ -742,7 +725,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be checked. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 
 **Return value:**
 
@@ -775,7 +758,6 @@ promise.then((val: boolean) => {
 
 ```
 
-<a id="hassync"></a>
 ## hasSync
 
 ```TypeScript
@@ -796,7 +778,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be checked. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 
 **Return value:**
 
@@ -823,7 +805,6 @@ if (isExist) {
 
 ```
 
-<a id="off"></a>
 ## off('change')
 
 ```TypeScript
@@ -875,7 +856,6 @@ dataPreferences.off('change', observer);
 
 ```
 
-<a id="off-1"></a>
 ## off('multiProcessChange')
 
 ```TypeScript
@@ -927,7 +907,6 @@ dataPreferences.off('multiProcessChange', observer);
 
 ```
 
-<a id="off-2"></a>
 ## off('dataChange')
 
 ```TypeScript
@@ -985,14 +964,13 @@ dataPreferences.off('dataChange', keys, observer);
 
 ```
 
-<a id="on"></a>
 ## on('change')
 
 ```TypeScript
 on(type: 'change', callback: Callback<string>): void
 ```
 
-Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](arkts-arkdata-preferences-preferences-i.md#flush-1).
+Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](arkts-arkdata-preferences-preferences-i.md#flush).
 
 **Since:** 9
 
@@ -1036,14 +1014,13 @@ dataPreferences.flush((err: BusinessError) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('multiProcessChange')
 
 ```TypeScript
 on(type: 'multiProcessChange', callback: Callback<string>): void
 ```
 
-Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](arkts-arkdata-preferences-preferences-i.md#flush-1) in any process (including the current process) will trigger the callback in this API.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-preferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](arkts-arkdata-preferences-preferences-i.md#flush) in any process (including the current process) will trigger the callback in this API.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-preferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 10
 
@@ -1088,14 +1065,13 @@ dataPreferences.flush((err: BusinessError) => {
 
 ```
 
-<a id="on-2"></a>
 ## on('dataChange')
 
 ```TypeScript
 on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, ValueType>>): void
 ```
 
-Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](arkts-arkdata-preferences-preferences-i.md#flush-1).
+Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](arkts-arkdata-preferences-preferences-i.md#flush).
 
 **Since:** 12
 
@@ -1111,7 +1087,7 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Array of the keys to be observed. |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | Callback used to return the changed data, in an array of KV pairs. The keys identify the data changed, and the values are the new values. The values support the following data types: number, string, boolean, Array<number>, Array<string>, Array< boolean>, Uint8Array, and object. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | Callback used to return the changed data, in an array of KV pairs. The keys identify the data changed, and the values are the new values. The values support the following data types: number, string, boolean, Array<number>, Array<string>, Array&lt; boolean&gt;, Uint8Array, and object. |
 
 **Error codes:**
 
@@ -1145,14 +1121,13 @@ dataPreferences.flush((err: BusinessError) => {
 
 ```
 
-<a id="put"></a>
 ## put
 
 ```TypeScript
 put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 ```
 
-Writes data to this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -1166,7 +1141,7 @@ Writes data to this **Preferences** instance. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 | value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to write. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
@@ -1192,14 +1167,13 @@ dataPreferences.put('startup', 'auto', (err: BusinessError) => {
 
 ```
 
-<a id="put-1"></a>
 ## put
 
 ```TypeScript
 put(key: string, value: ValueType): Promise<void>
 ```
 
-Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -1213,7 +1187,7 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 | value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to write. |
 
 **Return value:**
@@ -1243,14 +1217,13 @@ promise.then(() => {
 
 ```
 
-<a id="putsync"></a>
 ## putSync
 
 ```TypeScript
 putSync(key: string, value: ValueType): void
 ```
 
-Writes data to this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush-1) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API returns the result synchronously. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 10
 
@@ -1264,7 +1237,7 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](docroot://reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 | value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to write. |
 
 **Error codes:**

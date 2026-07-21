@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="getconnectowneruid"></a>
 ## getConnectOwnerUid
 
 ```TypeScript

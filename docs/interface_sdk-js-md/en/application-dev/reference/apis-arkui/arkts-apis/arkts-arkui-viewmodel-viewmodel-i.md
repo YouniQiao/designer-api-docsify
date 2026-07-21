@@ -8,7 +8,6 @@ View model
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-<a id="$t"></a>
 ## $t
 
 ```TypeScript

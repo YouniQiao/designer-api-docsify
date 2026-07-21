@@ -6,7 +6,6 @@
 import { tag } from '@kit.ConnectivityKit';
 ```
 
-<a id="makeurirecord"></a>
 ## makeUriRecord
 
 ```TypeScript

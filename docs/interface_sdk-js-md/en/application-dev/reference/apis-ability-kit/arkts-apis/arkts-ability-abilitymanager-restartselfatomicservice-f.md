@@ -6,7 +6,6 @@
 import { abilityManager } from '@kit.AbilityKit';
 ```
 
-<a id="restartselfatomicservice"></a>
 ## restartSelfAtomicService
 
 ```TypeScript
@@ -14,14 +13,13 @@ function restartSelfAtomicService(context: Context): void
 ```
 
 Restarts the current atomic service.
-
 > **NOTE**  
 >  
 > - Currently, atomic services can be started only in an independent window.  
 >  
 > - If you call this API,  
 > [ApplicationContext.restartApp()](./application/ApplicationContext:ApplicationContext/restartApp), or  
-> [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp-1) within 3 seconds  
+> [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds  
 > after a successful call to this API, the system returns error code 16000064.
 
 **Since:** 20

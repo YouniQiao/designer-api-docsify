@@ -6,7 +6,6 @@
 import { particleAbility } from '@kit.AbilityKit';
 ```
 
-<a id="cancelbackgroundrunning"></a>
 ## cancelBackgroundRunning
 
 ```TypeScript
@@ -19,7 +18,7 @@ Requests to cancel a continuous task from the system. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning-1)
+**Substitutes:** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -52,7 +51,6 @@ particleAbility.cancelBackgroundRunning(callback);
 ```
 
 
-<a id="cancelbackgroundrunning-1"></a>
 ## cancelBackgroundRunning
 
 ```TypeScript
@@ -65,7 +63,7 @@ Requests to cancel a continuous task from the system. This API uses a promise to
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning-1)
+**Substitutes:** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)
 
 **Model restriction:** This API can be used only in the FA model.
 

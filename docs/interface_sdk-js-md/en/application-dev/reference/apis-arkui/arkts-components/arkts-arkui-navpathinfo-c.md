@@ -8,7 +8,6 @@ Provides the navigation page information.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -31,9 +30,9 @@ Creates a **NavPathInfo** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the navigation destination page. The name matches the name in the following route tables:<br>1. Custom route table, which is passed via the [navDestination](NavigationAttribute#navDestination) method.<br>2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis). |
+| name | string | Yes | Name of the navigation destination page. The name matches the name in the following route tables:<br>1. Custom route table, which is passed via the [navDestination](NavigationAttribute#navDestination) method.<br>2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis). |
 | param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | No | Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop-1),[popToName](arkts-arkui-navpathstack-c.md#poptoname-1), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex-1) is called on the navigation destination page. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop-1),[popToName](arkts-arkui-navpathstack-c.md#poptoname-1), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex-1).<br>**Since:** 11 |
+| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | No | Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop),[popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex) is called on the navigation destination page. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop),[popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex).<br>**Since:** 11 |
 | isEntry | boolean | No | Whether the navigation destination page is the entry page.<br>**true**: yes;**false**: no<br>Default value: **false**<br>The value of this parameter is reviewed or reset under the following conditions:<br>1. A global return event is triggered on the current navigation destination page.<br>2. The application is switched to the background.<br>**NOTE**<br>The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.<br>**Since:** 12 |
 
 ## isEntry
@@ -76,7 +75,7 @@ name: string
 
 Name of the navigation destination page. The name matches the name in the following route tables:
 
-1. Custom route table, which is passed via the [navDestination](NavigationAttribute#navDestination) method.2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis).
+1. Custom route table, which is passed via the [navDestination](NavigationAttribute#navDestination) method.2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis).
 
 **Type:** string
 
@@ -96,7 +95,7 @@ Name of the navigation destination page. The name matches the name in the follow
 navDestinationId?: string
 ```
 
-Unique ID of the navigation destination page. This ID is system-generated and globally unique. It can be obtained using the [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack-1) API and should not be manually reassigned.
+Unique ID of the navigation destination page. This ID is system-generated and globally unique. It can be obtained using the [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack) API and should not be manually reassigned.
 
 **Type:** string
 
@@ -116,7 +115,7 @@ Unique ID of the navigation destination page. This ID is system-generated and gl
 onPop?: import('../api/@ohos.base').Callback<PopInfo>
 ```
 
-Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop-1),[popToName](arkts-arkui-navpathstack-c.md#poptoname-1), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex-1) is called on the navigation destination page. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop-1),[popToName](arkts-arkui-navpathstack-c.md#poptoname-1), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex-1).
+Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop),[popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex) is called on the navigation destination page. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop),[popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex).
 
 **Type:** import('../api/@ohos.base').Callback&lt;PopInfo&gt;
 

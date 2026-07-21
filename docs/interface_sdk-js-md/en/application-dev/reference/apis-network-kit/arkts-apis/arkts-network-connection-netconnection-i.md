@@ -14,7 +14,6 @@ Represents the network connection handle.
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="on"></a>
 ## on('netAvailable')
 
 ```TypeScript
@@ -64,7 +63,6 @@ netCon.unregister((error: BusinessError) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('netBlockStatusChange')
 
 ```TypeScript
@@ -112,7 +110,6 @@ netCon.unregister((error: BusinessError) => {
 
 ```
 
-<a id="on-2"></a>
 ## on('netCapabilitiesChange')
 
 ```TypeScript
@@ -162,7 +159,6 @@ netCon.unregister((error: BusinessError) => {
 
 ```
 
-<a id="on-3"></a>
 ## on('netConnectionPropertiesChange')
 
 ```TypeScript
@@ -210,7 +206,6 @@ netCon.unregister((error: BusinessError) => {
 
 ```
 
-<a id="on-4"></a>
 ## on('netLost')
 
 ```TypeScript
@@ -260,7 +255,6 @@ netCon.unregister((error: BusinessError) => {
 
 ```
 
-<a id="on-5"></a>
 ## on('netUnavailable')
 
 ```TypeScript
@@ -310,7 +304,6 @@ netCon.unregister((error: BusinessError) => {
 
 ```
 
-<a id="register"></a>
 ## register
 
 ```TypeScript
@@ -359,7 +352,6 @@ netCon.register((error: BusinessError) => {
 
 ```
 
-<a id="unregister"></a>
 ## unregister
 
 ```TypeScript

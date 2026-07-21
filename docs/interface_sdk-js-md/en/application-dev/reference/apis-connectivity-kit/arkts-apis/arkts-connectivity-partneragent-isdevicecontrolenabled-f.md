@@ -6,7 +6,6 @@
 import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
-<a id="isdevicecontrolenabled"></a>
 ## isDeviceControlEnabled
 
 ```TypeScript

@@ -10,7 +10,6 @@ Defines a UIScrollableCommonEvent which is used to set different common event to
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="setondidscroll"></a>
 ## setOnDidScroll
 
 ```TypeScript
@@ -35,7 +34,6 @@ Set or reset the callback which is triggered when the Scroll did scroll.
 | --- | --- | --- | --- |
 | callback | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) \| undefined | Yes | callback function, triggered when the Scroll did scroll. |
 
-<a id="setonwillscroll"></a>
 ## setOnWillScroll
 
 ```TypeScript

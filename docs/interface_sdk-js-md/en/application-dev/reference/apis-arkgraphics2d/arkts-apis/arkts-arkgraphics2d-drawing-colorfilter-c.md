@@ -1,7 +1,6 @@
 # ColorFilter
 
 Defines a color filter.
-
 > **NOTE**  
 >  
 > - This module uses the physical pixel unit, px.  
@@ -21,7 +20,6 @@ Defines a color filter.
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="createblendmodecolorfilter"></a>
 ## createBlendModeColorFilter
 
 ```TypeScript
@@ -55,7 +53,6 @@ Creates a **ColorFilter** object with a given color and blend mode.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="createblendmodecolorfilter-1"></a>
 ## createBlendModeColorFilter
 
 ```TypeScript
@@ -89,7 +86,6 @@ Creates a **ColorFilter** object with a given color and blend mode.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="createcomposecolorfilter"></a>
 ## createComposeColorFilter
 
 ```TypeScript
@@ -123,7 +119,6 @@ Creates a **ColorFilter** object by combining another two color filters.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="createlightingcolorfilter"></a>
 ## createLightingColorFilter
 
 ```TypeScript
@@ -151,7 +146,6 @@ Creates a lighting color filter. It multiplies the RGB channel values by one col
 | --- | --- |
 | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | **ColorFilter** object created. |
 
-<a id="createlineartosrgbgamma"></a>
 ## createLinearToSRGBGamma
 
 ```TypeScript
@@ -172,7 +166,6 @@ Creates a **ColorFilter** object that applies the sRGB gamma curve to the RGB ch
 | --- | --- |
 | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
-<a id="createlumacolorfilter"></a>
 ## createLumaColorFilter
 
 ```TypeScript
@@ -193,7 +186,6 @@ Creates a **ColorFilter** object that multiplies the luma into the alpha channel
 | --- | --- |
 | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
-<a id="creatematrixcolorfilter"></a>
 ## createMatrixColorFilter
 
 ```TypeScript
@@ -226,7 +218,6 @@ Creates a color filter object with a 4*5 color matrix.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="createsrgbgammatolinear"></a>
 ## createSRGBGammaToLinear
 
 ```TypeScript

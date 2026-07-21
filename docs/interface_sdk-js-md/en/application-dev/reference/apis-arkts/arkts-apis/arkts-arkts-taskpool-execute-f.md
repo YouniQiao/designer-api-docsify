@@ -6,7 +6,6 @@
 import { taskpool } from '@kit.ArkTS';
 ```
 
-<a id="execute"></a>
 ## execute
 
 ```TypeScript
@@ -27,8 +26,8 @@ Places a function to be executed in the internal queue of the task pool. The fun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | Function | Yes | Function to be executed. The function must be decorated using [@Concurrent](docroot://arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](docroot://reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
-| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](docroot://reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
+| func | Function | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Return value:**
 
@@ -61,7 +60,6 @@ taskpool.execute(printArgs, 100).then((value: Object) => { // 100: test number
 ```
 
 
-<a id="execute-1"></a>
 ## execute
 
 ```TypeScript
@@ -82,8 +80,8 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](docroot://arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](docroot://reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
-| args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](docroot://reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
+| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Return value:**
 
@@ -132,7 +130,6 @@ taskpool.execute<[[number, string]], string>(testWithArray, [100, "test"]).then(
 ```
 
 
-<a id="execute-2"></a>
 ## execute
 
 ```TypeScript
@@ -198,7 +195,6 @@ taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
 ```
 
 
-<a id="execute-3"></a>
 ## execute
 
 ```TypeScript
@@ -262,7 +258,6 @@ taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: n
 ```
 
 
-<a id="execute-4"></a>
 ## execute
 
 ```TypeScript
@@ -330,7 +325,6 @@ taskpool.execute(taskGroup2).then((res: Array<Object>) => {
 ```
 
 
-<a id="execute-5"></a>
 ## execute
 
 ```TypeScript
@@ -371,7 +365,6 @@ Execute a concurrent task with Configs.
 | 10200058 | Task timed out. |
 
 
-<a id="execute-6"></a>
 ## execute
 
 ```TypeScript
@@ -412,7 +405,6 @@ Execute a concurrent generics task with Configs.
 | 10200058 | Task timed out. |
 
 
-<a id="execute-7"></a>
 ## execute
 
 ```TypeScript

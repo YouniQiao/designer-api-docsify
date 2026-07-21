@@ -13,13 +13,7 @@ The major axis and minor axis of the elliptical mask used in function 'elliptica
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-effectKit-type EllipticalMaskRadius = [
-  double,
-  double
-]--><!--Device-effectKit-type EllipticalMaskRadius = [
-  double,
-  double
-]-End-->
+<!--Device-effectKit-type EllipticalMaskRadius = [  double,  double]--><!--Device-effectKit-type EllipticalMaskRadius = [  double,  double]-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

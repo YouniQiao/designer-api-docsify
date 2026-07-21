@@ -6,7 +6,6 @@
 import { WantAgent } from '@kit.AbilityKit';
 ```
 
-<a id="getbundlename"></a>
 ## getBundleName
 
 ```TypeScript
@@ -106,7 +105,6 @@ try {
 ```
 
 
-<a id="getbundlename-1"></a>
 ## getBundleName
 
 ```TypeScript

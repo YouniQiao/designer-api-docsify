@@ -6,7 +6,6 @@
 import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
-<a id="sendexecuteresult"></a>
 ## sendExecuteResult
 
 ```TypeScript

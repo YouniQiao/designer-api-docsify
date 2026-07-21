@@ -6,7 +6,6 @@
 import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="querybundlestateinfobyinterval"></a>
 ## queryBundleStateInfoByInterval
 
 ```TypeScript
@@ -26,17 +25,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
-<!--Device-bundleState-function queryBundleStateInfoByInterval(
-    byInterval: IntervalType,
-    begin: number,
-    end: number,
-    callback: AsyncCallback<Array<BundleStateInfo>>
-  ): void--><!--Device-bundleState-function queryBundleStateInfoByInterval(
-    byInterval: IntervalType,
-    begin: number,
-    end: number,
-    callback: AsyncCallback<Array<BundleStateInfo>>
-  ): void-End-->
+<!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number,    callback: AsyncCallback<Array<BundleStateInfo>>  ): void--><!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number,    callback: AsyncCallback<Array<BundleStateInfo>>  ): void-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 
@@ -72,7 +61,6 @@ bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED
 ```
 
 
-<a id="querybundlestateinfobyinterval-1"></a>
 ## queryBundleStateInfoByInterval
 
 ```TypeScript
@@ -91,15 +79,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 **Required permissions:** ohos.permission.BUNDLE_ACTIVE_INFO
 
-<!--Device-bundleState-function queryBundleStateInfoByInterval(
-    byInterval: IntervalType,
-    begin: number,
-    end: number
-  ): Promise<Array<BundleStateInfo>>--><!--Device-bundleState-function queryBundleStateInfoByInterval(
-    byInterval: IntervalType,
-    begin: number,
-    end: number
-  ): Promise<Array<BundleStateInfo>>-End-->
+<!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number  ): Promise<Array<BundleStateInfo>>--><!--Device-bundleState-function queryBundleStateInfoByInterval(    byInterval: IntervalType,    begin: number,    end: number  ): Promise<Array<BundleStateInfo>>-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
 

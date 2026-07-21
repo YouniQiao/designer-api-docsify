@@ -6,7 +6,6 @@
 import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
-<a id="setdate"></a>
 ## setDate
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 10
 
-**Substitutes:** [setTime(time:](arkts-basicservices-systemdatetime-settime-f-sys.md#settime-1)
+**Substitutes:** [setTime(time:](arkts-basicservices-systemdatetime-settime-f-sys.md#settime)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -66,7 +65,6 @@ try {
 ```
 
 
-<a id="setdate-1"></a>
 ## setDate
 
 ```TypeScript
@@ -79,7 +77,7 @@ Sets the system date. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [setTime(time:](arkts-basicservices-systemdatetime-settime-f-sys.md#settime-1)
+**Substitutes:** [setTime(time:](arkts-basicservices-systemdatetime-settime-f-sys.md#settime)
 
 **Required permissions:** ohos.permission.SET_TIME
 

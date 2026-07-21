@@ -8,7 +8,6 @@ Gesture recognizer object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="geteventtargetinfo"></a>
 ## getEventTargetInfo
 
 ```TypeScript
@@ -33,7 +32,6 @@ Obtains the information about the component corresponding to this gesture recogn
 | --- | --- |
 | [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | Information about the component corresponding to the current gesture recognizer. |
 
-<a id="getfingercount"></a>
 ## getFingerCount
 
 ```TypeScript
@@ -58,7 +56,6 @@ Obtains the number of fingers required to trigger the preset gesture.
 | --- | --- |
 | number | Number of fingers required to trigger the preset gesture.<br>Value range: an integer from 1 to 10. |
 
-<a id="getstate"></a>
 ## getState
 
 ```TypeScript
@@ -83,7 +80,6 @@ Obtains the state of this gesture recognizer.
 | --- | --- |
 | [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) | State of the gesture recognizer. |
 
-<a id="gettag"></a>
 ## getTag
 
 ```TypeScript
@@ -108,7 +104,6 @@ Obtains the tag of this gesture recognizer.
 | --- | --- |
 | string | Tag of the current gesture recognizer. |
 
-<a id="gettype"></a>
 ## getType
 
 ```TypeScript
@@ -133,7 +128,6 @@ Obtains the type of this gesture recognizer.
 | --- | --- |
 | GestureControl.GestureType | Type of the current gesture recognizer. |
 
-<a id="isbuiltin"></a>
 ## isBuiltIn
 
 ```TypeScript
@@ -158,7 +152,6 @@ Obtains whether this gesture recognizer is a built-in gesture.
 | --- | --- |
 | boolean | Whether the current gesture recognizer is a built-in gesture. The value **true** means that the gesture recognizer is a built-in gesture, and **false** means the opposite. |
 
-<a id="isenabled"></a>
 ## isEnabled
 
 ```TypeScript
@@ -183,7 +176,6 @@ Obtains the enabled state of this gesture recognizer.
 | --- | --- |
 | boolean | Enabled state of the gesture recognizer. The value **true** means that the gesture recognizer is enabled and will trigger events, and **false** means the opposite. |
 
-<a id="isfingercountlimit"></a>
 ## isFingerCountLimit
 
 ```TypeScript
@@ -208,7 +200,6 @@ Checks whether the preset gesture detects the number of fingers on the screen.
 | --- | --- |
 | boolean | Whether the preset gesture will detect the number of fingers on the screen. **true** if the gesture event is bound and detects the number of fingers; **false** otherwise. |
 
-<a id="ishostbelongsto"></a>
 ## isHostBelongsTo
 
 ```TypeScript
@@ -231,7 +222,7 @@ Returns whether the node bound to the current gesture recognizer is a descendant
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | number | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid-1) API. |
+| uniqueId | number | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid) API. |
 
 **Return value:**
 
@@ -239,7 +230,6 @@ Returns whether the node bound to the current gesture recognizer is a descendant
 | --- | --- |
 | boolean | Whether the node bound to the current gesture recognizer is a descendant of the specified component. Returns **true** if the bound node is a descendant, and **false** otherwise. |
 
-<a id="isvalid"></a>
 ## isValid
 
 ```TypeScript
@@ -262,14 +252,13 @@ Whether the current gesture recognizer is valid.
 | --- | --- |
 | boolean | Whether the current gesture recognizer is valid.<br>Returns **false** if the component bound to this recognizer is destroyed or if the recognizer is not on the response chain.<br>Returns **true** if the bound component exists and the recognizer is in the response chain. |
 
-<a id="preventbegin"></a>
 ## preventBegin
 
 ```TypeScript
 preventBegin(): void
 ```
 
-Prevents a gesture recognizer from participating in the current gesture recognition before all fingers are lifted.If the system has already determined the result of the gesture recognizer (regardless of success or failure),calling this API will be ineffective. Unlike GestureRecognizer.[setEnabled](arkts-arkui-gesturerecognizer-c.md#setenabled-1)(isEnabled: boolean),which only affects callback execution, this API prevents the recognizer from participating in the recognition process entirely.
+Prevents a gesture recognizer from participating in the current gesture recognition before all fingers are lifted.If the system has already determined the result of the gesture recognizer (regardless of success or failure),calling this API will be ineffective. Unlike GestureRecognizer.[setEnabled](arkts-arkui-gesturerecognizer-c.md#setenabled)(isEnabled: boolean),which only affects callback execution, this API prevents the recognizer from participating in the recognition process entirely.
 
 **Since:** 20
 
@@ -281,7 +270,6 @@ Prevents a gesture recognizer from participating in the current gesture recognit
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="setenabled"></a>
 ## setEnabled
 
 ```TypeScript

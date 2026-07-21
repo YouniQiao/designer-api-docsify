@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="addinstallationallowedappdistributiontypes"></a>
 ## addInstallationAllowedAppDistributionTypes
 
 ```TypeScript
@@ -15,7 +14,7 @@ function addInstallationAllowedAppDistributionTypes(admin: Want, appDistribution
 
 Adds the distribution type of the application that can be installed. Only applications of the distribution type that is added to [AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md) can be installed on the current device.
 
-For details about the distribution type of the application signing certificate, refer to the **appDistributionType** attribute in [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md).
+For details about the distribution type of the application signing certificate, refer to the **appDistributionType** attribute in [ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md).
 
 **Since:** 20
 

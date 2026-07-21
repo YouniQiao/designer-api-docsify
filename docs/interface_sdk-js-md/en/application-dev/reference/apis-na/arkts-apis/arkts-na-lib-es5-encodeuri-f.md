@@ -1,6 +1,5 @@
 # encodeURI
 
-<a id="encodeuri"></a>
 ## encodeURI
 
 ```TypeScript

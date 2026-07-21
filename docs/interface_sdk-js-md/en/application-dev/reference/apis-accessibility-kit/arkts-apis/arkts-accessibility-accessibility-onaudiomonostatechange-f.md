@@ -6,7 +6,6 @@
 import { accessibility } from '@kit.AccessibilityKit';
 ```
 
-<a id="onaudiomonostatechange"></a>
 ## onAudioMonoStateChange
 
 ```TypeScript
@@ -14,7 +13,6 @@ function onAudioMonoStateChange(callback: Callback<boolean>): void
 ```
 
 Subscribes to the state changes in mono audio mode. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.  

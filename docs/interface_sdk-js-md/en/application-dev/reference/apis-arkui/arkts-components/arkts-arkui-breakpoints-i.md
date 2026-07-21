@@ -1,6 +1,6 @@
 # BreakPoints
 
-Sets breakpoints for the responsive grid container. For details about breakpoints, see [Breakpoints](docroot://ui/arkts-layout-development-grid-layout.md#breakpoints).
+Sets breakpoints for the responsive grid container. For details about breakpoints, see [Breakpoints](../../../ui/arkts-layout-development-grid-layout.md#breakpoints).
 
 <!--code_no_check-->
 

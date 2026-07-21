@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="closeunfinishedussd"></a>
 ## closeUnfinishedUssd
 
 ```TypeScript
@@ -61,7 +60,6 @@ call.closeUnfinishedUssd(slotId, (err: BusinessError) => {
 ```
 
 
-<a id="closeunfinishedussd-1"></a>
 ## closeUnfinishedUssd
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
-<a id="openinstallcertificatedialog"></a>
 ## openInstallCertificateDialog
 
 ```TypeScript
@@ -50,7 +49,7 @@ function openInstallCertificateDialog(context: common.Context, certType: Certifi
 | [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-操作取消) | The user cancels the installation operation. |
 | [29700003](../errorcode-certManagerDialog.md#29700003-证书安装失败错误) | The user install certificate failed in the certificate manager dialog, such as the certificate is in an invalid format. |
-| [29700004](../errorcode-certManagerDialog.md#29700004-设备类型不支持) | For security purposes, the current device does not support this API.You can use the [supportsCACertDialog](arkts-devicecertificate-certificatemanagerdialog-supportscacertdialog-f.md#supportscacertdialog-1) to determine whether the device supports opening the dialog box for installing a CA certificate with certType set to CA. |
+| [29700004](../errorcode-certManagerDialog.md#29700004-设备类型不支持) | For security purposes, the current device does not support this API.You can use the [supportsCACertDialog](arkts-devicecertificate-certificatemanagerdialog-supportscacertdialog-f.md#supportscacertdialog) to determine whether the device supports opening the dialog box for installing a CA certificate with certType set to CA. |
 | [29700005](../errorcode-certManagerDialog.md#29700005-操作不符合设备安全策略) | The operation does not comply with the device security policy, such as the device does not allow users to manage the CA certificate of the global user.<br>**适用版本：** 18+ |
 
 **示例：**

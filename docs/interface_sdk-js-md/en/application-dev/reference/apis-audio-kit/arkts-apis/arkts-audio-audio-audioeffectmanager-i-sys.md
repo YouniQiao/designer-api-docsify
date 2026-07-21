@@ -16,7 +16,6 @@ Implements audio effect management.
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="getaudioeffectproperty"></a>
 ## getAudioEffectProperty
 
 ```TypeScript
@@ -64,7 +63,6 @@ try {
 
 ```
 
-<a id="getsupportedaudioeffectproperty"></a>
 ## getSupportedAudioEffectProperty
 
 ```TypeScript
@@ -112,7 +110,6 @@ try {
 
 ```
 
-<a id="isaudioseparationeffectsupported"></a>
 ## isAudioSeparationEffectSupported
 
 ```TypeScript
@@ -143,7 +140,6 @@ Checks whether the current device supports audio separation effect in system.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-<a id="offaudioseparationeffectenabledchange"></a>
 ## offAudioSeparationEffectEnabledChange
 
 ```TypeScript
@@ -175,7 +171,6 @@ Unsubscribes from the system audio separation effect enabled state change event.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="onaudioseparationeffectenabledchange"></a>
 ## onAudioSeparationEffectEnabledChange
 
 ```TypeScript
@@ -206,7 +201,6 @@ Subscribes to system audio separation effect enabled state change event.The audi
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-<a id="setaudioeffectproperty"></a>
 ## setAudioEffectProperty
 
 ```TypeScript
@@ -256,7 +250,6 @@ try {
 
 ```
 
-<a id="setaudioseparationeffectenabled"></a>
 ## setAudioSeparationEffectEnabled
 
 ```TypeScript
@@ -301,7 +294,6 @@ Sets audio separation effect enable or disable for specific application process,
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Effect is not supported in this device. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
 
-<a id="setaudioseparationeffectvolume"></a>
 ## setAudioSeparationEffectVolume
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
-<a id="getcachedgnsslocationssize"></a>
 ## getCachedGnssLocationsSize
 
 ```TypeScript
@@ -60,7 +59,6 @@ try {
 ```
 
 
-<a id="getcachedgnsslocationssize-1"></a>
 ## getCachedGnssLocationsSize
 
 ```TypeScript

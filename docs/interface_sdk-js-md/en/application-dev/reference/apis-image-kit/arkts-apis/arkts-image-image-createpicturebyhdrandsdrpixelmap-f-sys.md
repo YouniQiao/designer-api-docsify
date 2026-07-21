@@ -6,7 +6,6 @@
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="createpicturebyhdrandsdrpixelmap"></a>
 ## createPictureByHdrAndSdrPixelMap
 
 ```TypeScript
@@ -82,7 +81,6 @@ async function CreatePictureTest(context: Context) {
 ```
 
 
-<a id="createpicturebyhdrandsdrpixelmap-1"></a>
 ## createPictureByHdrAndSdrPixelMap
 
 ```TypeScript
@@ -96,9 +94,7 @@ Creates a Picture object by a HDR PixelMap and a SDR PixelMap with specified opt
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap, 
-      params: GainmapParams): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap, 
-      params: GainmapParams): Promise<Picture>-End-->
+<!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap,       params: GainmapParams): Promise<Picture>--><!--Device-image-function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: PixelMap,       params: GainmapParams): Promise<Picture>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

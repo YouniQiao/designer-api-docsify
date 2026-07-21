@@ -6,7 +6,6 @@
 import { netFirewall } from '@kit.NetworkKit';
 ```
 
-<a id="updatenetfirewallrule"></a>
 ## updateNetFirewallRule
 
 ```TypeScript

@@ -10,7 +10,6 @@ Defines ReplaceSymbolEffect class, which inherits from **SymbolEffect**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -37,7 +36,6 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 | --- | --- | --- | --- |
 | scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER** |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

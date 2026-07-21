@@ -6,7 +6,6 @@
 import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
-<a id="querydeviceinfo"></a>
 ## queryDeviceInfo
 
 ```TypeScript
@@ -29,7 +28,7 @@ Obtains the list of detailed information about peripherals. If the device has no
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | No | Device ID, which is obtained through [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices-1). If no device ID is passed, all device information is obtained by default. If no external device is connected and no device ID is passed, an empty array is returned. |
+| deviceId | number | No | Device ID, which is obtained through [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices). If no device ID is passed, all device information is obtained by default. If no external device is connected and no device ID is passed, an empty array is returned. |
 
 **Return value:**
 

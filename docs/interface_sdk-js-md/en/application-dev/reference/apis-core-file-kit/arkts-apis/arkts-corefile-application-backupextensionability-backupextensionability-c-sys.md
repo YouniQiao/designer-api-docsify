@@ -14,7 +14,6 @@ Class to be override for backup extension ability.
 import { BundleVersion } from '@kit.CoreFileKit';
 ```
 
-<a id="getbackupcompatibilityinfo"></a>
 ## getBackupCompatibilityInfo
 
 ```TypeScript
@@ -45,7 +44,6 @@ Callback to be called when getting application backup compatibilityInfo.Develope
 | --- | --- |
 | Promise&lt;string&gt; | Return backup compatibilityInfo, support promise. |
 
-<a id="getbackupinfo"></a>
 ## getBackupInfo
 
 ```TypeScript
@@ -70,7 +68,6 @@ Callback to be called when getting application backupInfo.Developer could overri
 | --- | --- |
 | string | Return the backup application's info. |
 
-<a id="getrestorecompatibilityinfo"></a>
 ## getRestoreCompatibilityInfo
 
 ```TypeScript

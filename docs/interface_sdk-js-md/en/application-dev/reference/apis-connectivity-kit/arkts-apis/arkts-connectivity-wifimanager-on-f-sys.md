@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="on"></a>
 ## on('streamChange')
 
 ```TypeScript
@@ -43,7 +42,6 @@ Subscribe Wi-Fi stream change events.
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
 
-<a id="on-1"></a>
 ## on('deviceConfigChange')
 
 ```TypeScript
@@ -80,7 +78,6 @@ Subscribe Wi-Fi device config change events.
 | [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
 
 
-<a id="on-2"></a>
 ## on('hotspotStaJoin')
 
 ```TypeScript
@@ -117,7 +114,6 @@ Subscribe Wi-Fi hotspot sta join events.
 | [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) | Operation failed. |
 
 
-<a id="on-3"></a>
 ## on('hotspotStaLeave')
 
 ```TypeScript

@@ -10,7 +10,6 @@ The drag preview of a custom span is blank.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="invalidate"></a>
 ## invalidate
 
 ```TypeScript
@@ -29,7 +28,6 @@ Manually triggers a refresh of the **Text** component that uses this **CustomSpa
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="ondraw"></a>
 ## onDraw
 
 ```TypeScript
@@ -55,7 +53,6 @@ Called to draw a custom span.
 | context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | Drawing context.<br>**NOTE**<br>The **canvas** method of **DrawContext** obtains the canvas of the **Text** component. As such, the custom span does not extend beyond the area of the **Text** component. |
 | drawInfo | [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | Yes | Drawing information of the custom span. |
 
-<a id="onmeasure"></a>
 ## onMeasure
 
 ```TypeScript

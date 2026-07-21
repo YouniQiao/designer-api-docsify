@@ -6,7 +6,6 @@
 import { vibrator } from '@kit.SensorServiceKit';
 ```
 
-<a id="vibrate"></a>
 ## vibrate
 
 ```TypeScript
@@ -19,7 +18,7 @@ Triggers vibration based on a specified duration. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [startVibration(effect:](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)
+**Substitutes:** [startVibration(effect:](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -51,7 +50,6 @@ vibrator.vibrate(1000, (error: BusinessError) => {
 ```
 
 
-<a id="vibrate-1"></a>
 ## vibrate
 
 ```TypeScript
@@ -64,7 +62,7 @@ Triggers vibration based on a specified duration. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [startVibration(effect:](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)
+**Substitutes:** [startVibration(effect:](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -99,7 +97,6 @@ vibrator.vibrate(1000).then(() => {
 ```
 
 
-<a id="vibrate-2"></a>
 ## vibrate
 
 ```TypeScript
@@ -112,7 +109,7 @@ Triggers vibration based on a specified effect. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [startVibration(effect:](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)
+**Substitutes:** [startVibration(effect:](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -147,7 +144,6 @@ vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER).then(() => {
 ```
 
 
-<a id="vibrate-3"></a>
 ## vibrate
 
 ```TypeScript
@@ -160,7 +156,7 @@ Triggers vibration based on a specified effect. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [startVibration(effect:](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1)
+**Substitutes:** [startVibration(effect:](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
 
 **Required permissions:** ohos.permission.VIBRATE
 

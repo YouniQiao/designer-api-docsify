@@ -8,7 +8,6 @@ Defines the js result.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="handlecancel"></a>
 ## handleCancel
 
 ```TypeScript
@@ -42,7 +40,6 @@ Handle the user's JavaScript result if cancel the dialog.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="handleconfirm"></a>
 ## handleConfirm
 
 ```TypeScript
@@ -59,7 +56,6 @@ Handle the user's JavaScript result if confirm the dialog.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="handlepromptconfirm"></a>
 ## handlePromptConfirm
 
 ```TypeScript

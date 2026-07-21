@@ -1,6 +1,5 @@
 # fdatasyncSync
 
-<a id="fdatasyncsync"></a>
 ## fdatasyncSync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Synchronizes the data of a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:fdatasyncSync](arkts-corefile-file-fs-fdatasyncsync-f.md#fdatasyncsync-1)
+**Substitutes:** [fs:fdatasyncSync](arkts-corefile-fileio-fdatasyncsync-f.md#fdatasyncsync)
 
 <!--Device-unnamed-declare function fdatasyncSync(fd: number): void--><!--Device-unnamed-declare function fdatasyncSync(fd: number): void-End-->
 

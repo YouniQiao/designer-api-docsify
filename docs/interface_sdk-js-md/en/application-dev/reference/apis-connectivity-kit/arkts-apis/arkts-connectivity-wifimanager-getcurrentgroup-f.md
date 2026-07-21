@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="getcurrentgroup"></a>
 ## getCurrentGroup
 
 ```TypeScript
@@ -38,7 +37,6 @@ Obtain information about the current p2p group.
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
 
-<a id="getcurrentgroup-1"></a>
 ## getCurrentGroup
 
 ```TypeScript

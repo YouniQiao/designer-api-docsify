@@ -14,7 +14,6 @@ Defines a TCPSocket server connection.
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -70,7 +69,6 @@ tcpServer.listen(listenAddr).then(() => {
 
 ```
 
-<a id="getlocaladdress"></a>
 ## getLocalAddress
 
 ```TypeScript
@@ -123,7 +121,6 @@ tcpServer.listen(listenAddr).then(() => {
 
 ```
 
-<a id="getsocketfd"></a>
 ## getSocketFd
 
 ```TypeScript
@@ -177,7 +174,6 @@ tcpServer.listen(listenAddr).then(() => {
 
 ```
 
-<a id="getstate"></a>
 ## getState
 
 ```TypeScript
@@ -238,7 +234,6 @@ tcpServer.getState((err: BusinessError, data: socket.SocketStateBase) => {
 
 ```
 
-<a id="getstate-1"></a>
 ## getState
 
 ```TypeScript
@@ -296,7 +291,6 @@ tcpServer.getState().then((data: socket.SocketStateBase) => {
 
 ```
 
-<a id="listen"></a>
 ## listen
 
 ```TypeScript
@@ -354,7 +348,6 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 
 ```
 
-<a id="listen-1"></a>
 ## listen
 
 ```TypeScript
@@ -415,7 +408,6 @@ tcpServer.listen(listenAddr).then(() => {
 
 ```
 
-<a id="off"></a>
 ## off('connect')
 
 ```TypeScript
@@ -473,7 +465,6 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 
 ```
 
-<a id="off-1"></a>
 ## off('error')
 
 ```TypeScript
@@ -531,7 +522,6 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 
 ```
 
-<a id="on"></a>
 ## on('connect')
 
 ```TypeScript
@@ -585,7 +575,6 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 
 ```
 
-<a id="on-1"></a>
 ## on('error')
 
 ```TypeScript
@@ -639,7 +628,6 @@ tcpServer.listen(listenAddr, (err: BusinessError) => {
 
 ```
 
-<a id="setextraoptions"></a>
 ## setExtraOptions
 
 ```TypeScript
@@ -717,7 +705,6 @@ tcpServer.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
 
 ```
 
-<a id="setextraoptions-1"></a>
 ## setExtraOptions
 
 ```TypeScript

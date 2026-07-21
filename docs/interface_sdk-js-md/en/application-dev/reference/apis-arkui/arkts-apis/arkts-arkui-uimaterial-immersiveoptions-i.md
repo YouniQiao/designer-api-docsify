@@ -22,7 +22,7 @@ applyShadow?: boolean
 
 Whether to add a shadow effect for a material.
 
-If this parameter is set to **true**, the added shadow effect in the material always takes effect, which takes precedence over the general [shadow](../arkts-components/arkts-arkui-commonmethod-c.md#shadow-1) attribute. If this parameter is set to **false**, only the general shadow attribute takes effect.
+If this parameter is set to **true**, the added shadow effect in the material always takes effect, which takes precedence over the general [shadow](../arkts-components/arkts-arkui-commonmethod-c.md#shadow) attribute. If this parameter is set to **false**, only the general shadow attribute takes effect.
 
 Note: This parameter takes effect only for the display effect of devices with all levels of computing power.
 

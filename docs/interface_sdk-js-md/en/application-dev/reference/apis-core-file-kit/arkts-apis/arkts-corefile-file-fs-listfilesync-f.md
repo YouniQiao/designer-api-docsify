@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="listfilesync"></a>
 ## listFileSync
 
 ```TypeScript
@@ -24,13 +23,7 @@ You can configure the **recursion** parameter in **options** to recursively list
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare function listFileSync(
-  path: string,
-  options?: ListFileOptions
-): string[]--><!--Device-unnamed-declare function listFileSync(
-  path: string,
-  options?: ListFileOptions
-): string[]-End-->
+<!--Device-unnamed-declare function listFileSync(  path: string,  options?: ListFileOptions): string[]--><!--Device-unnamed-declare function listFileSync(  path: string,  options?: ListFileOptions): string[]-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

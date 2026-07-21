@@ -10,7 +10,6 @@ Gesture recognizer object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getdirection"></a>
 ## getDirection
 
 ```TypeScript
@@ -35,7 +34,6 @@ Obtains the recognized direction of the current pan gesture recognizer.
 | --- | --- |
 | [PanDirection](arkts-arkui-pandirection-e.md) | Recognized direction of the current pan gesture recognizer. |
 
-<a id="getdistance"></a>
 ## getDistance
 
 ```TypeScript
@@ -60,7 +58,6 @@ Obtains the minimum pan distance required to trigger this pan gesture recognizer
 | --- | --- |
 | number | Minimum swipe distance. Unit: vp. |
 
-<a id="getdistancemap"></a>
 ## getDistanceMap
 
 ```TypeScript
@@ -68,7 +65,6 @@ getDistanceMap(): Map<SourceTool, number>
 ```
 
 Obtains the minimum pan distances required for different input sources to trigger this pan gesture recognizer.
-
 > **NOTE**  
 >  
 > This API only returns thresholds for input sources that have been explicitly configured during pan gesture  
@@ -91,7 +87,6 @@ Obtains the minimum pan distances required for different input sources to trigge
 | --- | --- |
 | Map&lt;SourceTool, number&gt; | Minimum pan distances required for different input sources to trigger the pan gesture recognizer. Unit: vp. |
 
-<a id="getpangestureoptions"></a>
 ## getPanGestureOptions
 
 ```TypeScript

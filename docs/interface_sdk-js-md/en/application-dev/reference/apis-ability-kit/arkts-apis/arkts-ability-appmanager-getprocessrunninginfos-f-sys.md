@@ -6,7 +6,6 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="getprocessrunninginfos"></a>
 ## getProcessRunningInfos
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains information about the running processes of the current application. This
 
 **Deprecated since:** 10
 
-**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation-1)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.GET_RUNNING_INFO
@@ -43,7 +42,6 @@ Obtains information about the running processes of the current application. This
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; |
 
 
-<a id="getprocessrunninginfos-1"></a>
 ## getProcessRunningInfos
 
 ```TypeScript
@@ -56,7 +54,7 @@ Obtains information about the running processes of the current application. This
 
 **Deprecated since:** 10
 
-**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation-1)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.GET_RUNNING_INFO

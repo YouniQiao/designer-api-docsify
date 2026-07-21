@@ -6,7 +6,6 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-<a id="setnetworkaccesspolicy"></a>
 ## setNetworkAccessPolicy
 
 ```TypeScript

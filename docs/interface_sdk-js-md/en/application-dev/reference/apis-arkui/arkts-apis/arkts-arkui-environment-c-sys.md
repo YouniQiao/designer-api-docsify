@@ -1,6 +1,6 @@
 # Environment
 
-For details about how to use environment parameters, see [Environment: Device Environment Query](docroot://ui/state-management/arkts-environment.md).
+For details about how to use environment parameters, see [Environment: Device Environment Query](../../../ui/state-management/arkts-environment.md).
 
 ## Built-in Environment Variables
 
@@ -19,7 +19,6 @@ For details about how to use environment parameters, see [Environment: Device En
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

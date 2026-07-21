@@ -8,7 +8,6 @@ List element
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-<a id="rotation"></a>
 ## rotation
 
 ```TypeScript
@@ -31,7 +30,6 @@ Requests or cancels the crown rotation focus for a component.If focus is set to 
 | --- | --- | --- | --- |
 | obj | [FocusParamObj](arkts-arkui-viewmodel-focusparamobj-i.md) | No | { focus: true \| false } |
 
-<a id="scrollto"></a>
 ## scrollTo
 
 ```TypeScript

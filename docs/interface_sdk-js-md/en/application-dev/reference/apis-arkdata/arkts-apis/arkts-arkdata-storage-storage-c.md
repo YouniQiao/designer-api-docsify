@@ -8,7 +8,6 @@
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -35,7 +34,6 @@ Clears the stored content.
 | --- | --- | --- | --- |
 | options | [ClearStorageOptions](arkts-arkdata-storage-clearstorageoptions-i.md) | No | Indicates the target options. |
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -62,7 +60,6 @@ Deletes the stored content.
 | --- | --- | --- | --- |
 | options | [DeleteStorageOptions](arkts-arkdata-storage-deletestorageoptions-i.md) | Yes | Indicates the target options. |
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
@@ -89,7 +86,6 @@ Reads the stored content.
 | --- | --- | --- | --- |
 | options | [GetStorageOptions](arkts-arkdata-storage-getstorageoptions-i.md) | Yes | Indicates the target options. |
 
-<a id="set"></a>
 ## set
 
 ```TypeScript

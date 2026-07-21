@@ -6,7 +6,6 @@
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
-<a id="off"></a>
 ## off('connect')
 
 ```TypeScript
@@ -20,9 +19,7 @@ Disables listening for **connect** events.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function off(type: 'connect', sessionId: number,
-        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'connect', sessionId: number,
-        callback?: Callback<EventCallbackInfo>): void-End-->
+<!--Device-abilityConnectionManager-function off(type: 'connect', sessionId: number,        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'connect', sessionId: number,        callback?: Callback<EventCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -52,7 +49,6 @@ abilityConnectionManager.off("connect", sessionId);
 ```
 
 
-<a id="off-1"></a>
 ## off('disconnect')
 
 ```TypeScript
@@ -66,9 +62,7 @@ Disables listening for **disconnect** events.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function off(type: 'disconnect', sessionId: number,
-        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'disconnect', sessionId: number,
-        callback?: Callback<EventCallbackInfo>): void-End-->
+<!--Device-abilityConnectionManager-function off(type: 'disconnect', sessionId: number,        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'disconnect', sessionId: number,        callback?: Callback<EventCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -99,7 +93,6 @@ abilityConnectionManager.off("disconnect", sessionId);
 ```
 
 
-<a id="off-2"></a>
 ## off('receiveMessage')
 
 ```TypeScript
@@ -113,9 +106,7 @@ Disables listening for **receiveMessage** events.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function off(type: 'receiveMessage', sessionId: number,
-        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'receiveMessage', sessionId: number,
-        callback?: Callback<EventCallbackInfo>): void-End-->
+<!--Device-abilityConnectionManager-function off(type: 'receiveMessage', sessionId: number,        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'receiveMessage', sessionId: number,        callback?: Callback<EventCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -146,7 +137,6 @@ abilityConnectionManager.off("receiveMessage", sessionId);
 ```
 
 
-<a id="off-3"></a>
 ## off('receiveData')
 
 ```TypeScript
@@ -160,9 +150,7 @@ Disables listening for **receiveData** events.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-abilityConnectionManager-function off(type: 'receiveData', sessionId: number,
-        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'receiveData', sessionId: number,
-        callback?: Callback<EventCallbackInfo>): void-End-->
+<!--Device-abilityConnectionManager-function off(type: 'receiveData', sessionId: number,        callback?: Callback<EventCallbackInfo>): void--><!--Device-abilityConnectionManager-function off(type: 'receiveData', sessionId: number,        callback?: Callback<EventCallbackInfo>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 

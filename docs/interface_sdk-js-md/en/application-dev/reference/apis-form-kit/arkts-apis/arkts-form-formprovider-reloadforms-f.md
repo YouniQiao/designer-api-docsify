@@ -6,7 +6,6 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
-<a id="reloadforms"></a>
 ## reloadForms
 
 ```TypeScript
@@ -32,7 +31,7 @@ Reloads widgets. For widgets with the same **moduleName**, **abilityName**, and 
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-uiabilitycontext-t.md) | Yes | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md) context, which is used for verification. |
 | moduleName | string | Yes | Module name of the widget. |
 | abilityName | string | Yes | Ability name of the widget. |
-| formName | string | Yes | Name of the widget configured in [form_config.json](docroot://form/arkts-ui-widget-configuration.md#fields-in-configuration-file). |
+| formName | string | Yes | Name of the widget configured in [form_config.json](../../../form/arkts-ui-widget-configuration.md#fields-in-configuration-file). |
 
 **Return value:**
 

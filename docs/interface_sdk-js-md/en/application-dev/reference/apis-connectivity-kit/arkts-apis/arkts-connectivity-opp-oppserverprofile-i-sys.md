@@ -14,7 +14,6 @@ Manager OPP server profile.
 import { opp } from '@kit.ConnectivityKit';
 ```
 
-<a id="canceltransfer"></a>
 ## cancelTransfer
 
 ```TypeScript
@@ -71,7 +70,6 @@ try {
 
 ```
 
-<a id="getcurrenttransferinformation"></a>
 ## getCurrentTransferInformation
 
 ```TypeScript
@@ -114,7 +112,6 @@ Obtains the information about the file that is being transferred.On API 26.0.0 a
 | 2900099 | Failed to obtain the current transmission information. |
 | 2903004 | Current Transfer Information is empty. |
 
-<a id="off"></a>
 ## off('transferStateChange')
 
 ```TypeScript
@@ -171,7 +168,6 @@ try {
 
 ```
 
-<a id="off-1"></a>
 ## off('receiveIncomingFile')
 
 ```TypeScript
@@ -227,7 +223,6 @@ try {
 
 ```
 
-<a id="on"></a>
 ## on('transferStateChange')
 
 ```TypeScript
@@ -294,7 +289,6 @@ try {
 
 ```
 
-<a id="on-1"></a>
 ## on('receiveIncomingFile')
 
 ```TypeScript
@@ -361,7 +355,6 @@ try {
 
 ```
 
-<a id="sendfile"></a>
 ## sendFile
 
 ```TypeScript
@@ -444,7 +437,6 @@ try {
 
 ```
 
-<a id="setincomingfileconfirmation"></a>
 ## setIncomingFileConfirmation
 
 ```TypeScript
@@ -518,7 +510,6 @@ try {
 
 ```
 
-<a id="setlastreceivedfileuri"></a>
 ## setLastReceivedFileUri
 
 ```TypeScript

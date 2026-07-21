@@ -77,7 +77,6 @@ trustCerts: Array<X509Cert>
 ```
 
 Trusted certificates.
-
 > **NOTE**  
 >  
 > You need to configure the trust certificates of all signers.

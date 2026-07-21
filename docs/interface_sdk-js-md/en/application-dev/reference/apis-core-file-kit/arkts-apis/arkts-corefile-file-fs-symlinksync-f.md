@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="symlinksync"></a>
 ## symlinkSync
 
 ```TypeScript
@@ -14,7 +13,6 @@ declare function symlinkSync(target: string, srcPath: string): void
 ```
 
 Creates a symbolic link based on the file path. This API returns the result synchronously.
-
 > **NOTE**  
 >  
 > Since API version 11, this API cannot be used by third-party applications.

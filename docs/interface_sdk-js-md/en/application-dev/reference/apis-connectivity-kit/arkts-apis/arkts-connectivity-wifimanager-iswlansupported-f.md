@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="iswlansupported"></a>
 ## isWlanSupported
 
 ```TypeScript

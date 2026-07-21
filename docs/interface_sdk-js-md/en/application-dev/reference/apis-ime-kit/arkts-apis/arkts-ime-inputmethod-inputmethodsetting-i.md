@@ -1,6 +1,6 @@
 # InputMethodSetting
 
-In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting-1) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -14,7 +14,6 @@ In the following API examples, you must first use [getSetting](arkts-ime-inputme
 import { inputMethod } from '@kit.IMEKit';
 ```
 
-<a id="displayoptionalinputmethod"></a>
 ## displayOptionalInputMethod
 
 ```TypeScript
@@ -52,7 +51,6 @@ inputMethod.getSetting().displayOptionalInputMethod((err: BusinessError) => {
 
 ```
 
-<a id="displayoptionalinputmethod-1"></a>
 ## displayOptionalInputMethod
 
 ```TypeScript
@@ -88,7 +86,6 @@ inputMethod.getSetting().displayOptionalInputMethod().then(() => {
 
 ```
 
-<a id="getallinputmethods"></a>
 ## getAllInputMethods
 
 ```TypeScript
@@ -131,7 +128,6 @@ inputMethod.getSetting().getAllInputMethods((err: BusinessError, data: Array<inp
 
 ```
 
-<a id="getallinputmethods-1"></a>
 ## getAllInputMethods
 
 ```TypeScript
@@ -172,7 +168,6 @@ inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.Inpu
 
 ```
 
-<a id="getallinputmethodssync"></a>
 ## getAllInputMethodsSync
 
 ```TypeScript
@@ -207,7 +202,6 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 
 ```
 
-<a id="getinputmethodstate"></a>
 ## getInputMethodState
 
 ```TypeScript
@@ -248,7 +242,6 @@ inputMethod.getSetting().getInputMethodState().then((status: inputMethod.Enabled
 
 ```
 
-<a id="getinputmethods"></a>
 ## getInputMethods
 
 ```TypeScript
@@ -293,7 +286,6 @@ inputMethod.getSetting().getInputMethods(true, (err: BusinessError, data: Array<
 
 ```
 
-<a id="getinputmethods-1"></a>
 ## getInputMethods
 
 ```TypeScript
@@ -342,7 +334,6 @@ inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.Inp
 
 ```
 
-<a id="getinputmethodssync"></a>
 ## getInputMethodsSync
 
 ```TypeScript
@@ -384,7 +375,6 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 
 ```
 
-<a id="listcurrentinputmethodsubtype"></a>
 ## listCurrentInputMethodSubtype
 
 ```TypeScript
@@ -429,7 +419,6 @@ inputMethodSetting.listCurrentInputMethodSubtype((err: BusinessError, data: Arra
 
 ```
 
-<a id="listcurrentinputmethodsubtype-1"></a>
 ## listCurrentInputMethodSubtype
 
 ```TypeScript
@@ -474,7 +463,6 @@ inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethod
 
 ```
 
-<a id="listinputmethod"></a>
 ## listInputMethod
 
 ```TypeScript
@@ -485,7 +473,7 @@ listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 **Deprecated since:** 9
 
-**Substitutes:** [getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods-1)
+**Substitutes:** [getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)
 
 <!--Device-InputMethodSetting-listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
 
@@ -512,7 +500,6 @@ inputMethod.getSetting().listInputMethod((err: BusinessError, data: Array<inputM
 
 ```
 
-<a id="listinputmethod-1"></a>
 ## listInputMethod
 
 ```TypeScript
@@ -523,7 +510,7 @@ listInputMethod(): Promise<Array<InputMethodProperty>>
 
 **Deprecated since:** 9
 
-**Substitutes:** [getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods-1)
+**Substitutes:** [getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)
 
 <!--Device-InputMethodSetting-listInputMethod(): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-listInputMethod(): Promise<Array<InputMethodProperty>>-End-->
 
@@ -548,7 +535,6 @@ inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMe
 
 ```
 
-<a id="listinputmethodsubtype"></a>
 ## listInputMethodSubtype
 
 ```TypeScript
@@ -562,13 +548,7 @@ List subtype of the specified input method.
 
 **Since:** 9
 
-<!--Device-InputMethodSetting-listInputMethodSubtype(
-      inputMethodProperty: InputMethodProperty,
-      callback: AsyncCallback<Array<InputMethodSubtype>>
-    ): void--><!--Device-InputMethodSetting-listInputMethodSubtype(
-      inputMethodProperty: InputMethodProperty,
-      callback: AsyncCallback<Array<InputMethodSubtype>>
-    ): void-End-->
+<!--Device-InputMethodSetting-listInputMethodSubtype(      inputMethodProperty: InputMethodProperty,      callback: AsyncCallback<Array<InputMethodSubtype>>    ): void--><!--Device-InputMethodSetting-listInputMethodSubtype(      inputMethodProperty: InputMethodProperty,      callback: AsyncCallback<Array<InputMethodSubtype>>    ): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -612,7 +592,6 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty,
 
 ```
 
-<a id="listinputmethodsubtype-1"></a>
 ## listInputMethodSubtype
 
 ```TypeScript
@@ -669,7 +648,6 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array
 
 ```
 
-<a id="off"></a>
 ## off('imeChange')
 
 ```TypeScript
@@ -683,13 +661,7 @@ Unsubscribe input method or subtype change.
 
 **Since:** 9
 
-<!--Device-InputMethodSetting-off(
-      type: 'imeChange',
-      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
-    ): void--><!--Device-InputMethodSetting-off(
-      type: 'imeChange',
-      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
-    ): void-End-->
+<!--Device-InputMethodSetting-off(      type: 'imeChange',      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void--><!--Device-InputMethodSetting-off(      type: 'imeChange',      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -707,7 +679,6 @@ inputMethod.getSetting().off('imeChange');
 
 ```
 
-<a id="on"></a>
 ## on('imeChange')
 
 ```TypeScript
@@ -721,13 +692,7 @@ Subscribe input method or subtype change.
 
 **Since:** 9
 
-<!--Device-InputMethodSetting-on(
-      type: 'imeChange',
-      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
-    ): void--><!--Device-InputMethodSetting-on(
-      type: 'imeChange',
-      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void
-    ): void-End-->
+<!--Device-InputMethodSetting-on(      type: 'imeChange',      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void--><!--Device-InputMethodSetting-on(      type: 'imeChange',      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -751,7 +716,6 @@ inputMethod.getSetting()
 
 ```
 
-<a id="showoptionalinputmethods"></a>
 ## showOptionalInputMethods
 
 ```TypeScript
@@ -801,7 +765,6 @@ inputMethod.getSetting().showOptionalInputMethods((err: BusinessError, result: b
 
 ```
 
-<a id="showoptionalinputmethods-1"></a>
 ## showOptionalInputMethods
 
 ```TypeScript

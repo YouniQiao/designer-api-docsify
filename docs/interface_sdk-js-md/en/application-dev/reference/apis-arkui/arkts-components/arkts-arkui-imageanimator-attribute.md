@@ -1,8 +1,8 @@
 # ImageAnimator properties/events
 
-In addition to the [universal attributes](./common), the following attributes are supported.
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported.
 
-In addition to the [universal events](./common), the following events are supported.
+In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** ImageAnimatorAttribute extends [CommonMethod<ImageAnimatorAttribute>](CommonMethod<ImageAnimatorAttribute>)
 
@@ -12,7 +12,6 @@ In addition to the [universal events](./common), the following events are suppor
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="duration"></a>
 ## duration
 
 ```TypeScript
@@ -37,7 +36,6 @@ Sets the playback duration. This attribute does not take effect when a separate 
 | --- | --- | --- | --- |
 | value | number | Yes | Playback duration.<br>If the value is **0**, no image is played.<br>If the display duration allocated per image is shorter than a single frame interval, playback anomalies may occur.<br>If it is set to a negative value, the default value is used.<br>The value change takes effect only at the start of the next cycle.<br>Unit: ms<br>Default value: **1000** |
 
-<a id="fillmode"></a>
 ## fillMode
 
 ```TypeScript
@@ -62,7 +60,6 @@ Sets the status before and after execution of the animation in the current playb
 | --- | --- | --- | --- |
 | value | [FillMode](../arkts-apis/arkts-arkui-fillmode-e.md) | Yes | Status before and after execution of the animation in the current playback direction.<br>Default value: **FillMode.Forwards** |
 
-<a id="fixedsize"></a>
 ## fixedSize
 
 ```TypeScript
@@ -87,7 +84,6 @@ Sets whether the image size is fixed at the component size.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the image size is fixed at the component size.<br> **true**: The image size is fixed at the component size. In this case, the width, height, top, and left attributes of the image are invalid.<br> **false**: The width, height, top, and left attributes of each image must be set separately. If the image size does not match the component size, the image will not be stretched.<br>Default value: **true** |
 
-<a id="images"></a>
 ## images
 
 ```TypeScript
@@ -112,7 +108,6 @@ Sets image frame information. Dynamic update is not supported.
 | --- | --- | --- | --- |
 | value | Array&lt;ImageFrameInfo&gt; | Yes | Image frame information. The information of each frame includes the path,size, position, and playback duration of an image. For details, see [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md).<br>Default value: **[]**<br> Note: If the input array is too large, memory usage may increase. Therefore, as the controller of memory usage, be sure to assess potential memory consumption before passing in the data to avoid issues such as insufficient memory. |
 
-<a id="iterations"></a>
 ## iterations
 
 ```TypeScript
@@ -135,14 +130,13 @@ Sets the number of times that the animation is played.
 | --- | --- | --- | --- |
 | value | number | Yes | By default, the animation is played once. The value **-1** indicates that the animation is played for an unlimited number of times. Values less than **-1** are treated as the default value. When the value is a floating-point number, it is rounded down.<br>Default value: **1** |
 
-<a id="monitorinvisiblearea"></a>
 ## monitorInvisibleArea
 
 ```TypeScript
 monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 ```
 
-Sets whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1) event.
+Sets whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) event.
 
 **Since:** 17
 
@@ -158,9 +152,8 @@ Sets whether the component should automatically pause or resume based on its vis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorInvisibleArea | boolean | Yes | Whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)event.<br> With the value **true**, when the component's [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) is **Running**, the component automatically pauses once it becomes invisible and resumes playback if it becomes visible again, based on the **onVisibleAreaChange** event.<br>With the value **false**, the pause and playback of the component are not affected by **onVisibleAreaChange**.<br>Default value: **false**<br> **NOTE**<br>When this parameter is dynamically changed from **true** to **false**, the component will resume from its last paused state based on the current [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md).<br>Changes to this property do not affect the custom [state](ImageAnimatorAttribute#state) value. |
+| monitorInvisibleArea | boolean | Yes | Whether the component should automatically pause or resume based on its visibility, using the system's [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)event.<br> With the value **true**, when the component's [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) is **Running**, the component automatically pauses once it becomes invisible and resumes playback if it becomes visible again, based on the **onVisibleAreaChange** event.<br>With the value **false**, the pause and playback of the component are not affected by **onVisibleAreaChange**.<br>Default value: **false**<br> **NOTE**<br>When this parameter is dynamically changed from **true** to **false**, the component will resume from its last paused state based on the current [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md).<br>Changes to this property do not affect the custom [state](ImageAnimatorAttribute#state) value. |
 
-<a id="oncancel"></a>
 ## onCancel
 
 ```TypeScript
@@ -185,7 +178,6 @@ Triggered when the animation playback returns to the initial state.
 | --- | --- | --- | --- |
 | event | () =&gt; void | Yes | Callback triggered when the animation playback returns to the initial state. |
 
-<a id="onfinish"></a>
 ## onFinish
 
 ```TypeScript
@@ -210,7 +202,6 @@ Triggered when the animation playback completes or stops.
 | --- | --- | --- | --- |
 | event | () =&gt; void | Yes | Callback triggered when the animation playback completes or stops. |
 
-<a id="onpause"></a>
 ## onPause
 
 ```TypeScript
@@ -235,7 +226,6 @@ Triggered when the animation playback is paused.
 | --- | --- | --- | --- |
 | event | () =&gt; void | Yes | Callback triggered when the animation playback is paused. |
 
-<a id="onrepeat"></a>
 ## onRepeat
 
 ```TypeScript
@@ -258,7 +248,6 @@ Triggered when the animation playback is repeated.
 | --- | --- | --- | --- |
 | event | () =&gt; void | Yes | Callback triggered when the animation playback is repeated. |
 
-<a id="onstart"></a>
 ## onStart
 
 ```TypeScript
@@ -283,7 +272,6 @@ Triggered when the animation starts to play.
 | --- | --- | --- | --- |
 | event | () =&gt; void | Yes | Callback triggered when the animation starts to play. |
 
-<a id="predecode"></a>
 ## preDecode
 
 ```TypeScript
@@ -291,7 +279,6 @@ preDecode(value: number)
 ```
 
 Sets the number of images to be pre-decoded.
-
 > **NOTE**  
 >  
 > This API is supported since API version 7 and deprecated since API version 9. Currently, no substitute is  
@@ -311,7 +298,6 @@ Sets the number of images to be pre-decoded.
 | --- | --- | --- | --- |
 | value | number | Yes | Number of images to be pre-decoded. For example, the value **2** indicates that two images following the currently playing one are pre-decoded.<br>Default value: **0** |
 
-<a id="reverse"></a>
 ## reverse
 
 ```TypeScript
@@ -336,7 +322,6 @@ Sets the playback direction.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Playback direction.<br>The value **false** indicates that images are played from the first one to the last one, and **true** indicates that images are played from the last one to the first one.<br   >Default value: **false** |
 
-<a id="state"></a>
 ## state
 
 ```TypeScript

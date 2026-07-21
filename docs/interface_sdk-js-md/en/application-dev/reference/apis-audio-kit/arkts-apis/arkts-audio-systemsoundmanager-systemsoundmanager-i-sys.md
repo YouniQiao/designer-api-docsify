@@ -16,7 +16,6 @@ System sound manager object.
 import { systemSoundManager } from '@kit.AudioKit';
 ```
 
-<a id="addcustomizedtone"></a>
 ## addCustomizedTone
 
 ```TypeScript
@@ -90,7 +89,6 @@ systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, path).then((val
 
 ```
 
-<a id="addcustomizedtone-1"></a>
 ## addCustomizedTone
 
 ```TypeScript
@@ -104,9 +102,7 @@ Add customized tone into ringtone library.
 
 **Required permissions:** ohos.permission.WRITE_RINGTONE
 
-<!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)
-      : Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)
-      : Promise<string>-End-->
+<!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)      : Promise<string>--><!--Device-SystemSoundManager-addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: int, offset?: long, length?: long)      : Promise<string>-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -171,7 +167,6 @@ systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, fd, offset, len
 
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -227,7 +222,6 @@ systemSoundManagerInstance.close(fd).then(() => {
 
 ```
 
-<a id="getalarmtoneattrlist"></a>
 ## getAlarmToneAttrList
 
 ```TypeScript
@@ -282,7 +276,6 @@ systemSoundManagerInstance.getAlarmToneAttrList(context).then((value: systemSoun
 
 ```
 
-<a id="getalarmtoneuri"></a>
 ## getAlarmToneUri
 
 ```TypeScript
@@ -337,7 +330,6 @@ systemSoundManagerInstance.getAlarmToneUri(context).then((value: string) => {
 
 ```
 
-<a id="getcurrentringtoneattribute"></a>
 ## getCurrentRingtoneAttribute
 
 ```TypeScript
@@ -389,7 +381,6 @@ systemSoundManagerInstance.getCurrentRingtoneAttribute(type).then((value: system
 
 ```
 
-<a id="getdefaultalarmtoneattrs"></a>
 ## getDefaultAlarmToneAttrs
 
 ```TypeScript
@@ -444,7 +435,6 @@ systemSoundManagerInstance.getDefaultAlarmToneAttrs(context).then((value: system
 
 ```
 
-<a id="getdefaultringtoneattrs"></a>
 ## getDefaultRingtoneAttrs
 
 ```TypeScript
@@ -501,7 +491,6 @@ systemSoundManagerInstance.getDefaultRingtoneAttrs(context, type).then((value: s
 
 ```
 
-<a id="getdefaultsystemtoneattrs"></a>
 ## getDefaultSystemToneAttrs
 
 ```TypeScript
@@ -558,7 +547,6 @@ systemSoundManagerInstance.getDefaultSystemToneAttrs(context, type).then((value:
 
 ```
 
-<a id="gethapticsattrssyncedwithtone"></a>
 ## getHapticsAttrsSyncedWithTone
 
 ```TypeScript
@@ -617,7 +605,6 @@ systemSoundManagerInstance.getHapticsAttrsSyncedWithTone(context, toneUri).then(
 
 ```
 
-<a id="getmockhapticringtoneplayer"></a>
 ## getMockHapticRingtonePlayer
 
 ```TypeScript
@@ -657,7 +644,6 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error.It is recommended to restart your phone. |
 
-<a id="getmockhapticringtoneplayer-1"></a>
 ## getMockHapticRingtonePlayer
 
 ```TypeScript
@@ -698,7 +684,6 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. Possible causes:1.The type exceeds the valid range, please use the RingtoneType enum for input.2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the {@link SystemSoundManager#addCustomizedTone}. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error.It is recommended to restart your phone. |
 
-<a id="getringtoneattrlist"></a>
 ## getRingtoneAttrList
 
 ```TypeScript
@@ -755,7 +740,6 @@ systemSoundManagerInstance.getRingtoneAttrList(context, type).then((value: syste
 
 ```
 
-<a id="getringtoneplayer"></a>
 ## getRingtonePlayer
 
 ```TypeScript
@@ -813,7 +797,6 @@ systemSoundManagerInstance.getRingtonePlayer(context, type).then((value: systemS
 
 ```
 
-<a id="getringtoneuri"></a>
 ## getRingtoneUri
 
 ```TypeScript
@@ -870,7 +853,6 @@ systemSoundManagerInstance.getRingtoneUri(context, type).then((value: string) =>
 
 ```
 
-<a id="getsystemringtoneplayer"></a>
 ## getSystemRingtonePlayer
 
 ```TypeScript
@@ -883,7 +865,7 @@ Gets the ringtone player.
 
 **Deprecated since:** 11
 
-**Substitutes:** [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneplayer-1)
+**Substitutes:** [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneplayer)
 
 <!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void-End-->
 
@@ -922,7 +904,6 @@ systemSoundManagerInstance.getSystemRingtonePlayer(context, type, (err: Business
 
 ```
 
-<a id="getsystemringtoneplayer-1"></a>
 ## getSystemRingtonePlayer
 
 ```TypeScript
@@ -935,7 +916,7 @@ Gets the ringtone player.
 
 **Deprecated since:** 11
 
-**Substitutes:** [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneplayer-1)
+**Substitutes:** [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneplayer)
 
 <!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>-End-->
 
@@ -977,7 +958,6 @@ systemSoundManagerInstance.getSystemRingtonePlayer(context, type).then((value: s
 
 ```
 
-<a id="getsystemringtoneuri"></a>
 ## getSystemRingtoneUri
 
 ```TypeScript
@@ -990,7 +970,7 @@ Gets the ringtone uri.
 
 **Deprecated since:** 11
 
-**Substitutes:** [getRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneuri-1)
+**Substitutes:** [getRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneuri)
 
 <!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void-End-->
 
@@ -1027,7 +1007,6 @@ systemSoundManagerInstance.getSystemRingtoneUri(context, type, (err: BusinessErr
 
 ```
 
-<a id="getsystemringtoneuri-1"></a>
 ## getSystemRingtoneUri
 
 ```TypeScript
@@ -1040,7 +1019,7 @@ Gets the ringtone uri.
 
 **Deprecated since:** 11
 
-**Substitutes:** [getRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneuri-1)
+**Substitutes:** [getRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getringtoneuri)
 
 <!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>-End-->
 
@@ -1080,7 +1059,6 @@ systemSoundManagerInstance.getSystemRingtoneUri(context, type).then((value: stri
 
 ```
 
-<a id="getsystemtoneattrlist"></a>
 ## getSystemToneAttrList
 
 ```TypeScript
@@ -1137,7 +1115,6 @@ systemSoundManagerInstance.getSystemToneAttrList(context, type).then((value: sys
 
 ```
 
-<a id="getsystemtoneplayer"></a>
 ## getSystemTonePlayer
 
 ```TypeScript
@@ -1195,7 +1172,6 @@ systemSoundManagerInstance.getSystemTonePlayer(context, type).then((value: syste
 
 ```
 
-<a id="getsystemtoneuri"></a>
 ## getSystemToneUri
 
 ```TypeScript
@@ -1252,7 +1228,6 @@ systemSoundManagerInstance.getSystemToneUri(context, type).then((value: string) 
 
 ```
 
-<a id="gettonehapticslist"></a>
 ## getToneHapticsList
 
 ```TypeScript
@@ -1309,7 +1284,6 @@ systemSoundManagerInstance.getToneHapticsList(context, false).then((value: syste
 
 ```
 
-<a id="gettonehapticssettings"></a>
 ## getToneHapticsSettings
 
 ```TypeScript
@@ -1367,7 +1341,6 @@ systemSoundManagerInstance.getToneHapticsSettings(context, type).then((value: sy
 
 ```
 
-<a id="openalarmtone"></a>
 ## openAlarmTone
 
 ```TypeScript
@@ -1425,7 +1398,6 @@ systemSoundManagerInstance.openAlarmTone(context, uri).then((value: number) => {
 
 ```
 
-<a id="opentonehaptics"></a>
 ## openToneHaptics
 
 ```TypeScript
@@ -1484,7 +1456,6 @@ systemSoundManagerInstance.openToneHaptics(context, hapticsUri).then((value: num
 
 ```
 
-<a id="opentonelist"></a>
 ## openToneList
 
 ```TypeScript
@@ -1541,7 +1512,6 @@ systemSoundManagerInstance.getCurrentRingtoneAttribute(type).then((toneAttrs) =>
 
 ```
 
-<a id="removecustomizedtone"></a>
 ## removeCustomizedTone
 
 ```TypeScript
@@ -1602,7 +1572,6 @@ systemSoundManagerInstance.removeCustomizedTone(context, uri).then(() => {
 
 ```
 
-<a id="removecustomizedtonelist"></a>
 ## removeCustomizedToneList
 
 ```TypeScript
@@ -1662,7 +1631,6 @@ systemSoundManagerInstance.getCurrentRingtoneAttribute(type).then((toneAttrs) =>
 
 ```
 
-<a id="setalarmtoneuri"></a>
 ## setAlarmToneUri
 
 ```TypeScript
@@ -1720,7 +1688,6 @@ systemSoundManagerInstance.setAlarmToneUri(context, uri).then(() => {
 
 ```
 
-<a id="setringtoneuri"></a>
 ## setRingtoneUri
 
 ```TypeScript
@@ -1779,7 +1746,6 @@ systemSoundManagerInstance.setRingtoneUri(context, uri, type).then(() => {
 
 ```
 
-<a id="setsystemringtoneuri"></a>
 ## setSystemRingtoneUri
 
 ```TypeScript
@@ -1792,7 +1758,7 @@ Sets the ringtone uri to system.
 
 **Deprecated since:** 11
 
-**Substitutes:** [setRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#setringtoneuri-1)
+**Substitutes:** [setRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#setringtoneuri)
 
 <!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void-End-->
 
@@ -1831,7 +1797,6 @@ systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type, (err: Busine
 
 ```
 
-<a id="setsystemringtoneuri-1"></a>
 ## setSystemRingtoneUri
 
 ```TypeScript
@@ -1844,7 +1809,7 @@ Sets the ringtone uri to system.
 
 **Deprecated since:** 11
 
-**Substitutes:** [setRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#setringtoneuri-1)
+**Substitutes:** [setRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#setringtoneuri)
 
 <!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>-End-->
 
@@ -1886,7 +1851,6 @@ systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type).then(() => {
 
 ```
 
-<a id="setsystemtoneuri"></a>
 ## setSystemToneUri
 
 ```TypeScript
@@ -1945,7 +1909,6 @@ systemSoundManagerInstance.setSystemToneUri(context, uri, type).then(() => {
 
 ```
 
-<a id="settonehapticssettings"></a>
 ## setToneHapticsSettings
 
 ```TypeScript

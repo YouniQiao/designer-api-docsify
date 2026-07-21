@@ -1,6 +1,5 @@
 # parseFloat
 
-<a id="parsefloat"></a>
 ## parseFloat
 
 ```TypeScript

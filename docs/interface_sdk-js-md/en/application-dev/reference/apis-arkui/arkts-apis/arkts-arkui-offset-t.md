@@ -38,63 +38,7 @@ Defines the offset property.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare type Offset = {
-  /**
-   * dx property.
-   *
-   *****/
-  /**
-   * dx property.
-   *
-   ******/
-  /**
-   * dx property.
-   *
-   *******/
-  dx: Length;
-
-  /**
-   * dy property.
-   *
-   *****/
-  /**
-   * dy property.
-   *
-   ******/
-  /**
-   * dy property.
-   *
-   *******/
-  dy: Length;
-}--><!--Device-unnamed-declare type Offset = {
-  /**
-   * dx property.
-   *
-   *****/
-  /**
-   * dx property.
-   *
-   ******/
-  /**
-   * dx property.
-   *
-   *******/
-  dx: Length;
-
-  /**
-   * dy property.
-   *
-   *****/
-  /**
-   * dy property.
-   *
-   ******/
-  /**
-   * dy property.
-   *
-   *******/
-  dy: Length;
-}-End-->
+<!--Device-unnamed-declare type Offset = {  /**   * dx property.   *   *****/  /**   * dx property.   *   ******/  /**   * dx property.   *   *******/  dx: Length;  /**   * dy property.   *   *****/  /**   * dy property.   *   ******/  /**   * dy property.   *   *******/  dy: Length;}--><!--Device-unnamed-declare type Offset = {  /**   * dx property.   *   *****/  /**   * dx property.   *   ******/  /**   * dx property.   *   *******/  dx: Length;  /**   * dy property.   *   *****/  /**   * dy property.   *   ******/  /**   * dy property.   *   *******/  dy: Length;}-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

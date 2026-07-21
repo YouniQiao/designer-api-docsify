@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="createquaternion"></a>
 ## createQuaternion
 
 ```TypeScript
@@ -19,7 +18,7 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 
 **Deprecated since:** 9
 
-**Substitutes:** [getQuaternion(rotationVector:](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion-1)
+**Substitutes:** [getQuaternion(rotationVector:](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)
 
 <!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -52,7 +51,6 @@ sensor.createQuaternion([0.20046076, 0.21907, 0.73978853, 0.60376877],
 ```
 
 
-<a id="createquaternion-1"></a>
 ## createQuaternion
 
 ```TypeScript
@@ -65,7 +63,7 @@ Converts a rotation vector into a quaternion. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getQuaternion(rotationVector:](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion-1)
+**Substitutes:** [getQuaternion(rotationVector:](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)
 
 <!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>-End-->
 

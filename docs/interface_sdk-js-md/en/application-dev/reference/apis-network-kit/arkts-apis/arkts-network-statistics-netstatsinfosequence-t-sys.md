@@ -21,33 +21,7 @@ An {@link NetStatsInfo} array with start time and end time.
 
 **Since:** 12
 
-<!--Device-statistics-export type NetStatsInfoSequence = {
-    /**
-     * Start time for querying traffic.
-     *****/
-    startTime: int;
-    /**
-     * End time for querying traffic.
-     *****/
-    endTime: int;
-    /**
-     * Detailed information of statistics.
-     *****/
-    info: NetStatsInfo;
-  }[]--><!--Device-statistics-export type NetStatsInfoSequence = {
-    /**
-     * Start time for querying traffic.
-     *****/
-    startTime: int;
-    /**
-     * End time for querying traffic.
-     *****/
-    endTime: int;
-    /**
-     * Detailed information of statistics.
-     *****/
-    info: NetStatsInfo;
-  }[]-End-->
+<!--Device-statistics-export type NetStatsInfoSequence = {    /**     * Start time for querying traffic.     *****/    startTime: int;    /**     * End time for querying traffic.     *****/    endTime: int;    /**     * Detailed information of statistics.     *****/    info: NetStatsInfo;  }[]--><!--Device-statistics-export type NetStatsInfoSequence = {    /**     * Start time for querying traffic.     *****/    startTime: int;    /**     * End time for querying traffic.     *****/    endTime: int;    /**     * Detailed information of statistics.     *****/    info: NetStatsInfo;  }[]-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

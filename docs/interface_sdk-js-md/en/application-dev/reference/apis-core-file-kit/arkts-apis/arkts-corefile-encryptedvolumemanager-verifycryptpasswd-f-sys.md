@@ -6,7 +6,6 @@
 import { encryptedVolumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="verifycryptpasswd"></a>
 ## verifyCryptPasswd
 
 ```TypeScript

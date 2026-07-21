@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="hasright"></a>
 ## hasRight
 
 ```TypeScript
@@ -19,7 +18,7 @@ Checks whether the application has the permission to access the device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [hasRight](arkts-basicservices-usbmanager-hasright-f.md#hasright-1)
+**Substitutes:** [hasRight](arkts-basicservices-usbmanager-hasright-f.md#hasright)
 
 <!--Device-usb-function hasRight(deviceName: string): boolean--><!--Device-usb-function hasRight(deviceName: string): boolean-End-->
 

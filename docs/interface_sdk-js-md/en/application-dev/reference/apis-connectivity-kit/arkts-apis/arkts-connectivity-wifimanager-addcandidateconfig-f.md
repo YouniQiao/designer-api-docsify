@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="addcandidateconfig"></a>
 ## addCandidateConfig
 
 ```TypeScript
@@ -69,7 +68,6 @@ Add a specified candidate hotspot configuration and returns the networkId.This m
 ```
 
 
-<a id="addcandidateconfig-1"></a>
 ## addCandidateConfig
 
 ```TypeScript

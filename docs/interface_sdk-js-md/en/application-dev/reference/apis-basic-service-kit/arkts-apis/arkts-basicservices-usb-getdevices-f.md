@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="getdevices"></a>
 ## getDevices
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the USB device list.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices-1)
+**Substitutes:** [getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)
 
 <!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>-End-->
 

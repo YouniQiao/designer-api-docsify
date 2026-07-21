@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="getabilityinfo"></a>
 ## getAbilityInfo
 
 ```TypeScript
@@ -36,7 +35,6 @@ No permission is required for obtaining the caller's own information.
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AbilityInfo&gt; | Yes | Callback used to return the ability information. |
 
 
-<a id="getabilityinfo-1"></a>
 ## getAbilityInfo
 
 ```TypeScript

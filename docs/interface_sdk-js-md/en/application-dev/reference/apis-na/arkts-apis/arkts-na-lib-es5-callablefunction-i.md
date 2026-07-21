@@ -4,7 +4,6 @@
 
 <!--Device-unnamed-interface CallableFunction extends Function--><!--Device-unnamed-interface CallableFunction extends Function-End-->
 
-<a id="apply"></a>
 ## apply
 
 ```TypeScript
@@ -28,7 +27,6 @@ Calls the function with the specified object as the this value and the elements 
 | --- | --- |
 | R |  |
 
-<a id="apply-1"></a>
 ## apply
 
 ```TypeScript
@@ -51,7 +49,6 @@ apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args:
 | --- | --- |
 | R |  |
 
-<a id="bind"></a>
 ## bind
 
 ```TypeScript
@@ -75,7 +72,6 @@ For a given function, creates a bound function that has the same body as the ori
 | --- | --- |
 | [OmitThisParameter](arkts-na-omitthisparameter-t.md)&lt;T&gt; |  |
 
-<a id="bind-1"></a>
 ## bind
 
 ```TypeScript
@@ -98,7 +94,6 @@ bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, this
 | --- | --- |
 | (...args: A) =&gt; R |  |
 
-<a id="bind-2"></a>
 ## bind
 
 ```TypeScript
@@ -122,7 +117,6 @@ bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args:
 | --- | --- |
 | (...args: A) =&gt; R |  |
 
-<a id="bind-3"></a>
 ## bind
 
 ```TypeScript
@@ -147,7 +141,6 @@ bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2
 | --- | --- |
 | (...args: A) =&gt; R |  |
 
-<a id="bind-4"></a>
 ## bind
 
 ```TypeScript
@@ -173,7 +166,6 @@ bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, 
 | --- | --- |
 | (...args: A) =&gt; R |  |
 
-<a id="bind-5"></a>
 ## bind
 
 ```TypeScript
@@ -196,7 +188,6 @@ bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): 
 | --- | --- |
 | (...args: AX[]) =&gt; R |  |
 
-<a id="call"></a>
 ## call
 
 ```TypeScript

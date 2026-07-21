@@ -6,7 +6,6 @@
 import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
-<a id="getcfgdirlist"></a>
 ## getCfgDirList
 
 ```TypeScript
@@ -36,7 +35,6 @@ Obtains a list of configuration level directories, in ascending order of priorit
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
 
-<a id="getcfgdirlist-1"></a>
 ## getCfgDirList
 
 ```TypeScript

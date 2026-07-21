@@ -20,7 +20,6 @@ Specifies the worker thread running environment, which is isolated from the host
 import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -61,7 +60,6 @@ parentPort.onmessage = (): void => {
 
 ```
 
-<a id="postmessage"></a>
 ## postMessage
 
 ```TypeScript
@@ -87,7 +85,6 @@ Send a message to be host thread from the worker
 | messageObject | Object | Yes | messageObject Data to be sent to the worker |
 | transfer | Transferable[] | Yes | transfer array cannot contain null. |
 
-<a id="postmessage-1"></a>
 ## postMessage
 
 ```TypeScript
@@ -138,7 +135,6 @@ parentPort.onmessage = (e: MessageEvents) => {
 
 ```
 
-<a id="postmessage-2"></a>
 ## postMessage
 
 ```TypeScript

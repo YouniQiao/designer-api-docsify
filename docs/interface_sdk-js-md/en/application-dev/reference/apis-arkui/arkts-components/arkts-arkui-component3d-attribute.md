@@ -8,7 +8,6 @@
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="customrender"></a>
 ## customRender
 
 ```TypeScript
@@ -32,7 +31,6 @@ Set render pipeline of 3D scene render.
 | uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | The path of Render pipeline config file |
 | selfRenderUpdate | boolean | Yes | Trigger rendering every frame |
 
-<a id="environment"></a>
 ## environment
 
 ```TypeScript
@@ -55,7 +53,6 @@ Load 3D model environment resource.
 | --- | --- | --- | --- |
 | uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | The path of 3D environment resource |
 
-<a id="renderheight"></a>
 ## renderHeight
 
 ```TypeScript
@@ -78,7 +75,6 @@ Set render height resolution.
 | --- | --- | --- | --- |
 | value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Height of gpu render target, target would upscale or downscale to view's height. |
 
-<a id="renderwidth"></a>
 ## renderWidth
 
 ```TypeScript
@@ -101,7 +97,6 @@ Set render width resolution.
 | --- | --- | --- | --- |
 | value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Width of gpu render target, target would upscale or downscale to view's width. |
 
-<a id="shader"></a>
 ## shader
 
 ```TypeScript
@@ -124,7 +119,6 @@ Load shader uri.
 | --- | --- | --- | --- |
 | uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | The path of custom shader |
 
-<a id="shaderimagetexture"></a>
 ## shaderImageTexture
 
 ```TypeScript
@@ -147,7 +141,6 @@ Load shader texture uri.
 | --- | --- | --- | --- |
 | uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | The path of texture used by shader |
 
-<a id="shaderinputbuffer"></a>
 ## shaderInputBuffer
 
 ```TypeScript

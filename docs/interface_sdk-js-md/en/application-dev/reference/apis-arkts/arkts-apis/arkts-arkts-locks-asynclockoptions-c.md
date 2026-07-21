@@ -14,7 +14,6 @@ Lock operation's options
 import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

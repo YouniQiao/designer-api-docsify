@@ -14,7 +14,6 @@ Provides the nnrt device description
 import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
-<a id="deviceid"></a>
 ## deviceID
 
 ```TypeScript
@@ -55,7 +54,6 @@ if (allDevices == null || allDevices.length === 0) {
 
 ```
 
-<a id="devicename"></a>
 ## deviceName
 
 ```TypeScript
@@ -96,7 +94,6 @@ console.info(`Succeeded in getting NNRT device descriptions. Device count: ${all
 
 ```
 
-<a id="devicetype"></a>
 ## deviceType
 
 ```TypeScript

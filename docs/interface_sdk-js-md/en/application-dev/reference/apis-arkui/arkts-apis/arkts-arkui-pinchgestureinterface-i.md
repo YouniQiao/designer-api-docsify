@@ -1,7 +1,6 @@
 # PinchGestureInterface
 
 **PinchGesture** is used to trigger a pinch gesture, which requires two to five fingers with a minimum 5 vp distance between the fingers.
-
 > **NOTE**  
 >  
 > To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make  
@@ -15,7 +14,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -44,7 +42,6 @@ Sets the parameters for the pinch gesture. Inherits from [GestureInterface<T>](a
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -75,7 +72,6 @@ Sets the parameters for the pinch gesture. Compared with [PinchGesture](arkts-ar
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onactioncancel"></a>
 ## onActionCancel
 
 ```TypeScript
@@ -104,14 +100,13 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="onactioncancel-1"></a>
 ## onActionCancel
 
 ```TypeScript
 onActionCancel(event: Callback<GestureEvent>): PinchGestureInterface
 ```
 
-Triggered when a touch cancellation event occurs after successful pinch gesture recognition. Compared with [onActionCancel](arkts-arkui-pinchgestureinterface-i.md#onactioncancel-1), this callback returns gesture event information.
+Triggered when a touch cancellation event occurs after successful pinch gesture recognition. Compared with [onActionCancel](arkts-arkui-pinchgestureinterface-i.md#onactioncancel), this callback returns gesture event information.
 
 **Since:** 18
 
@@ -135,7 +130,6 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onactionend"></a>
 ## onActionEnd
 
 ```TypeScript
@@ -164,7 +158,6 @@ Triggered when all fingers are lifted after successful pinch gesture recognition
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="onactionstart"></a>
 ## onActionStart
 
 ```TypeScript
@@ -193,7 +186,6 @@ Triggered after the pinch gesture is recognized.
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="onactionupdate"></a>
 ## onActionUpdate
 
 ```TypeScript

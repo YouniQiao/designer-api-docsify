@@ -6,7 +6,6 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
-<a id="iswlanbssidmatched"></a>
 ## isWlanBssidMatched
 
 ```TypeScript
@@ -22,9 +21,7 @@ Check whether the WLAN scan results match the WLAN BSSID list.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
 
-<!--Device-geoLocationManager-function isWlanBssidMatched(
-      wlanBssidArray: Array<string>, rssiThreshold: int, needStartScan: boolean): Promise<boolean>--><!--Device-geoLocationManager-function isWlanBssidMatched(
-      wlanBssidArray: Array<string>, rssiThreshold: int, needStartScan: boolean): Promise<boolean>-End-->
+<!--Device-geoLocationManager-function isWlanBssidMatched(      wlanBssidArray: Array<string>, rssiThreshold: int, needStartScan: boolean): Promise<boolean>--><!--Device-geoLocationManager-function isWlanBssidMatched(      wlanBssidArray: Array<string>, rssiThreshold: int, needStartScan: boolean): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 

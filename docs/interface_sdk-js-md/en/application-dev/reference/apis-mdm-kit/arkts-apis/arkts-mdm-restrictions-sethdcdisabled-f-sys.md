@@ -6,20 +6,19 @@
 import { restrictions } from '@kit.MDMKit';
 ```
 
-<a id="sethdcdisabled"></a>
 ## setHdcDisabled
 
 ```TypeScript
 function setHdcDisabled(admin: Want, disabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables [HDC](docroot://../device-dev/subsystems/subsys-toolchain-hdc-guide.md). This API uses an asynchronous callback to return the result.
+Enables or disables [HDC](../../../../device-dev/subsystems/subsys-toolchain-hdc-guide.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1)
+**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)
 
 **Required permissions:** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 
@@ -72,7 +71,6 @@ restrictions.setHdcDisabled(wantTemp, true, (err) => {
 ```
 
 
-<a id="sethdcdisabled-1"></a>
 ## setHdcDisabled
 
 ```TypeScript
@@ -85,7 +83,7 @@ Enables or disables HDC on a device. This API uses a promise to return the resul
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1)
+**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)
 
 **Required permissions:** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 

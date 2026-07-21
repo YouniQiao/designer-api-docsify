@@ -6,7 +6,6 @@
 import { process } from '@kit.ArkTS';
 ```
 
-<a id="getthreadpriority"></a>
 ## getThreadPriority
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the thread priority based on the specified TID.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getThreadPriority](arkts-arkts-process-processmanager-c.md#getthreadpriority-1)
+**Substitutes:** [getThreadPriority](arkts-arkts-process-processmanager-c.md#getthreadpriority)
 
 <!--Device-process-function getThreadPriority(v: number): number--><!--Device-process-function getThreadPriority(v: number): number-End-->
 

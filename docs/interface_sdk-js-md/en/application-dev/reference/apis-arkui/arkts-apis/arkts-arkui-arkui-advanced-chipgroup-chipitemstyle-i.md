@@ -1,7 +1,6 @@
 # ChipItemStyle
 
 Defines the common attributes shared by all chips.
-
 > **NOTE**  
 >  
 > 1. The size settings for chips can be of two types: (1) **ChipSize**, which conveniently offers two size options,  

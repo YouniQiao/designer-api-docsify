@@ -4,7 +4,6 @@
 
 <!--Device-unnamed-interface SyntaxErrorConstructor extends ErrorConstructor--><!--Device-unnamed-interface SyntaxErrorConstructor extends ErrorConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ new(message?: string): SyntaxError
 | --- | --- |
 | SyntaxError |  |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

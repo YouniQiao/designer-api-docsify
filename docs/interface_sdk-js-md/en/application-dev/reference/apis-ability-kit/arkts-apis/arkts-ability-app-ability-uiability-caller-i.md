@@ -1,6 +1,6 @@
 # Caller
 
-A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall-1) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication.
+A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication.
 
 **Since:** 9
 
@@ -14,7 +14,6 @@ A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilityconte
 import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
 ```
 
-<a id="call"></a>
 ## call
 
 ```TypeScript
@@ -112,7 +111,6 @@ export default class MainUIAbility extends UIAbility {
 
 ```
 
-<a id="callwithresult"></a>
 ## callWithResult
 
 ```TypeScript
@@ -213,7 +211,6 @@ export default class MainUIAbility extends UIAbility {
 
 ```
 
-<a id="off"></a>
 ## off('release')
 
 ```TypeScript
@@ -275,7 +272,6 @@ export default class MainUIAbility extends UIAbility {
 
 ```
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -338,7 +334,6 @@ export default class MainUIAbility extends UIAbility {
 
 ```
 
-<a id="on"></a>
 ## on('release')
 
 ```TypeScript
@@ -400,7 +395,6 @@ export default class MainUIAbility extends UIAbility {
 
 ```
 
-<a id="onrelease"></a>
 ## onRelease
 
 ```TypeScript
@@ -460,7 +454,6 @@ export default class MainUIAbility extends UIAbility {
 
 ```
 
-<a id="onremotestatechange"></a>
 ## onRemoteStateChange
 
 ```TypeScript
@@ -521,7 +514,6 @@ export default class MainAbility extends UIAbility {
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript

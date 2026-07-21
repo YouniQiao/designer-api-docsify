@@ -14,14 +14,13 @@ Defines the animator result.
 import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
-<a id="cancel"></a>
 ## cancel
 
 ```TypeScript
 cancel(): void
 ```
 
-Cancels the animation, triggering the [onCancel](docroot://reference/apis-arkui/js-apis-animator.md#properties)callback. This API is functionally identical to [finish](arkts-arkui-animator-animatorresult-i.md#finish-1) except for the callback it triggers. It is recommended that you use the **finish** API to end animations.
+Cancels the animation, triggering the [onCancel](../../../reference/apis-arkui/js-apis-animator.md#properties)callback. This API is functionally identical to [finish](arkts-arkui-animator-animatorresult-i.md#finish) except for the callback it triggers. It is recommended that you use the **finish** API to end animations.
 
 **Since:** 6
 
@@ -40,14 +39,13 @@ animator.cancel();
 
 ```
 
-<a id="finish"></a>
 ## finish
 
 ```TypeScript
 finish(): void
 ```
 
-Ends the animation, triggering the [onFinish](docroot://reference/apis-arkui/js-apis-animator.md#properties)callback.
+Ends the animation, triggering the [onFinish](../../../reference/apis-arkui/js-apis-animator.md#properties)callback.
 
 **Since:** 6
 
@@ -66,7 +64,6 @@ animator.finish();
 
 ```
 
-<a id="pause"></a>
 ## pause
 
 ```TypeScript
@@ -92,7 +89,6 @@ animator.pause();
 
 ```
 
-<a id="play"></a>
 ## play
 
 ```TypeScript
@@ -118,7 +114,6 @@ animator.play();
 
 ```
 
-<a id="reset"></a>
 ## reset
 
 ```TypeScript
@@ -188,14 +183,13 @@ struct AnimatorTest {
 
 ```
 
-<a id="reset-1"></a>
 ## reset
 
 ```TypeScript
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-Resets the animation parameters of this animator. Compared with [reset](arkts-arkui-animator-animatorresult-i.md#reset-1), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
+Resets the animation parameters of this animator. Compared with [reset](arkts-arkui-animator-animatorresult-i.md#reset), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -246,7 +240,6 @@ animatorResult.reset(optionsNew);
 
 ```
 
-<a id="reverse"></a>
 ## reverse
 
 ```TypeScript
@@ -272,7 +265,6 @@ animator.reverse();
 
 ```
 
-<a id="setexpectedframeraterange"></a>
 ## setExpectedFrameRateRange
 
 ```TypeScript
@@ -334,7 +326,6 @@ struct AnimatorTest {
 
 ```
 
-<a id="update"></a>
 ## update
 
 ```TypeScript

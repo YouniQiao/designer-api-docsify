@@ -1,6 +1,6 @@
 # Context
 
-Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations.docroot://
+Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations.../../../
 
 **Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
@@ -10,7 +10,6 @@ Context is the context base class of the stage model. It is used to access appli
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-<a id="createareamodecontext"></a>
 ## createAreaModeContext
 
 ```TypeScript
@@ -41,7 +40,6 @@ Creates an application context with a specific data encryption level. You can ca
 | --- | --- |
 | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Context created based on the data encryption level. |
 
-<a id="createdisplaycontext"></a>
 ## createDisplayContext
 
 ```TypeScript
@@ -78,7 +76,6 @@ Creates an application context based on the specified display ID with screen inf
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 
-<a id="createmodulecontext"></a>
 ## createModuleContext
 
 ```TypeScript
@@ -86,14 +83,13 @@ createModuleContext(moduleName: string): Context
 ```
 
 Creates the context based on the module name.
-
 > **NOTE**  
 >  
 > - Only the context of other modules in the current application and the context of the intra-application HSP can  
 > be obtained. The context of other applications cannot be obtained.  
 >  
 > - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use  
-> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext-1)  
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)  
 > instead. Otherwise, resource acquisition may fail.  
 >  
 > - Creating a module context involves resource querying and initialization, which can be time-consuming. In  
@@ -104,7 +100,7 @@ Creates the context based on the module name.
 
 **Deprecated since:** 12
 
-**Substitutes:** [createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext-1)
+**Substitutes:** [createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,7 +128,6 @@ Creates the context based on the module name.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 
-<a id="getapplicationcontext"></a>
 ## getApplicationContext
 
 ```TypeScript
@@ -163,7 +158,6 @@ Obtains the application context.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
-<a id="getgroupdir"></a>
 ## getGroupDir
 
 ```TypeScript
@@ -196,7 +190,6 @@ Obtains the shared directory based on a group ID. This API uses an asynchronous 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-<a id="getgroupdir-1"></a>
 ## getGroupDir
 
 ```TypeScript
@@ -234,7 +227,6 @@ Obtains the shared directory based on a group ID. This API uses a promise to ret
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
-<a id="iscontextof"></a>
 ## isContextOf
 
 ```TypeScript
@@ -291,7 +283,7 @@ Application information.
 area: contextConstant.AreaMode
 ```
 
-Information about file partitions, which are divided according to the encryption level specified by [AreaMode](./../@ohos.app.ability.contextConstant:contextConstant.areaMode).
+Information about file partitions, which are divided according to the encryption level specified by [AreaMode](arkts-ability-contextconstant-areamode-e.md).
 
 **Type:** contextConstant.AreaMode
 
@@ -311,7 +303,7 @@ Information about file partitions, which are divided according to the encryption
 bundleCodeDir: string
 ```
 
-Bundle code directory. Do not access resource files using concatenated paths.Use [resource manager APIs](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md) instead.For details, see [Application Sandbox](docroot://file-management/app-sandbox-directory.md).
+Bundle code directory. Do not access resource files using concatenated paths.Use [resource manager APIs](arkts-ability-context-c.md#resourcemanager) instead.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -331,7 +323,7 @@ Bundle code directory. Do not access resource files using concatenated paths.Use
 cacheDir: string
 ```
 
-Cache directory.For details, see [Application Sandbox](docroot://file-management/app-sandbox-directory.md).
+Cache directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -371,7 +363,7 @@ Cloud file directory.
 databaseDir: string
 ```
 
-Database directory.For details, see [Application Sandbox](docroot://file-management/app-sandbox-directory.md).
+Database directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -391,7 +383,7 @@ Database directory.For details, see [Application Sandbox](docroot://file-managem
 distributedFilesDir: string
 ```
 
-Distributed file directory.For details, see [Application Sandbox](docroot://file-management/app-sandbox-directory.md).
+Distributed file directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -431,7 +423,7 @@ Event hub that implements event subscription, unsubscription, and triggering.
 filesDir: string
 ```
 
-File directory.For details, see [Application Sandbox](docroot://file-management/app-sandbox-directory.md).
+File directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -471,7 +463,7 @@ Directory for storing log files.
 preferencesDir: string
 ```
 
-Preferences directory.For details, see [Application Sandbox](docroot://file-management/app-sandbox-directory.md).
+Preferences directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -512,10 +504,9 @@ resourceDir: string
 ```
 
 Resource directory.
-
 > **NOTE: **  
 >  
-> You are required to manually create the resfile directory in **<module-name>\resource**.  
+> You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**.  
 > The **resfile** directory can be accessed only in read-only mode.
 
 **Type:** string
@@ -556,7 +547,7 @@ Object for resource management.
 tempDir: string
 ```
 
-Temporary directory.For details, see [Application Sandbox](docroot://file-management/app-sandbox-directory.md).
+Temporary directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 

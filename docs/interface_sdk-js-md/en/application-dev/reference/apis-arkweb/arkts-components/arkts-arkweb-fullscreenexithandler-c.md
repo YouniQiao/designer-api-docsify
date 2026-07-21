@@ -1,7 +1,6 @@
 # FullScreenExitHandler
 
 Implements the **FullScreenExitHandler** object to notify you that the **Web** component exits full screen mode.For details about the sample code,see [onFullScreenEnter](./arkts-basic-components-web-events.md#onfullscreenenter9).
-
 > **NOTE**  
 >  
 > - The sample effect is subject to the actual device.
@@ -12,7 +11,6 @@ Implements the **FullScreenExitHandler** object to notify you that the **Web** c
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -29,7 +27,6 @@ Constructs a **FullScreenExitHandler** API.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="exitfullscreen"></a>
 ## exitFullScreen
 
 ```TypeScript

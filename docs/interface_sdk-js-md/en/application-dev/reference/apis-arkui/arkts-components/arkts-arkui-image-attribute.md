@@ -1,19 +1,17 @@
 # Image properties/events
 
 The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md), [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md), and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF,HEIF, and TIFF. Note that the APNG and SVGA formats are not supported.
-
 > **NOTE**
-
 > - This component supports the TIFF image format since API version 23.  
 >  
 > - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused  
 > state. For instructions on how to set focus, see  
-> [Setting Whether a Component Is Focusable](docroot://ui/arkts-common-events-focus-event.md#setting-whether-a-component-is-focusable).  
+> [Setting Whether a Component Is Focusable](../../../ui/arkts-common-events-focus-event.md#setting-whether-a-component-is-focusable).  
 > By default, the **Image** component is not focusable. To enable it to gain focus, set both the  
-> [focusable](arkts-arkui-commonmethod-c.md#focusable-1) and [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch-1) attributes to  
+> [focusable](arkts-arkui-commonmethod-c.md#focusable) and [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch) attributes to  
 > **true**.  
 >  
-> - The **Image** component supports SVG image sources. For details about SVG tags, see [SVG Tags](./common).  
+> - The **Image** component supports SVG image sources. For details about SVG tags, see [SVG Tags](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).  
 >  
 > - For animated images, animation playback is disabled by default and depends on the visibility of the **Image**  
 > component. When the component is visible, the animation is started through the callback. When the component is  
@@ -38,7 +36,6 @@ The **Image** component is usually used to display images in applications. It su
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="alt"></a>
 ## alt
 
 ```TypeScript
@@ -65,9 +62,8 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource \| PixelMap | Yes | Placeholder image displayed during loading. Local images (in PNG,JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.<br>- Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://<bundleName>/<sandboxPath>**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor-1). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path.<br>Default value: **null**<br>When the value is switched from a valid one (an image resource that can be parsed and loaded correctly) to an invalid one (an image path that cannot be parsed or loaded), the component retains the previously successfully loaded image content without clearing or resetting it.<br>**Since:** 12 |
+| value | string \| Resource \| PixelMap | Yes | Placeholder image displayed during loading. Local images (in PNG,JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.<br>- Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://<bundleName>/<sandboxPath>**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path.<br>Default value: **null**<br>When the value is switched from a valid one (an image resource that can be parsed and loaded correctly) to an invalid one (an image path that cannot be parsed or loaded), the component retains the previously successfully loaded image content without clearing or resetting it.<br>**Since:** 12 |
 
-<a id="alt-1"></a>
 ## alt
 
 ```TypeScript
@@ -75,7 +71,6 @@ alt(src: ResourceStr | PixelMap | ImageAlt)
 ```
 
 Sets the placeholder image displayed during image loading and when image loading fails.
-
 > **NOTE**  
 >  
 > When a placeholder image is configured via [ImageAlt](arkts-arkui-imagealt-i.md), **Image** takes effect based on the  
@@ -102,9 +97,8 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| ImageAlt | Yes | Placeholder image displayed during loading or in case of loading failure. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.<br>-Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://<bundleName>/<sandboxPath>**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor-1). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path. |
+| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| ImageAlt | Yes | Placeholder image displayed during loading or in case of loading failure. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.<br>-Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://<bundleName>/<sandboxPath>**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path. |
 
-<a id="antialiased"></a>
 ## antialiased
 
 ```TypeScript
@@ -112,10 +106,9 @@ antialiased(isAntialiased: Optional<boolean>)
 ```
 
 Sets whether to enable anti-aliasing for the edges of a pixel map image. If the attribute is not set, anti-aliasing is disabled by default. This attribute is not applicable to SVG images.
-
 > **NOTE**  
 >  
-> If the [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor-1) attribute is set for an image,  
+> If the [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor) attribute is set for an image,  
 > setting the **antialiased** attribute of the image to **true** does not affect the aliasing effect of the  
 > background color.  
 >  
@@ -137,7 +130,6 @@ Sets whether to enable anti-aliasing for the edges of a pixel map image. If the 
 | --- | --- | --- | --- |
 | isAntialiased | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Sets whether to enable anti-aliasing for the edges of a pixel map image.<br> **true**: Enable edge anti-aliasing.<br>**false**: Disable edge anti-aliasing.<br>When this parameter is set to **undefined**, edge anti-aliasing is disabled. |
 
-<a id="autoresize"></a>
 ## autoResize
 
 ```TypeScript
@@ -170,7 +162,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to resize the image source based on the size of the display area during image decoding. This resizing can help reduce the memory usage. For example, if the original image size is 800 x 1200and the display area size is 200 x 200, the image will be decoded to 200 x 300 at a downsampled resolution (the actual result may vary depending on the scaling and fill type configurations used in the calculation), greatly reducing the memory occupied by the image.<br>Default value: **false**<br>**true**: Enable resizing.<br>**false**: Disable resizing. |
 
-<a id="colorfilter"></a>
 ## colorFilter
 
 ```TypeScript
@@ -197,7 +188,6 @@ When this attribute is set, [renderMode](ImageAttribute#renderMode) is not effec
 | --- | --- | --- | --- |
 | value | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) \| DrawingColorFilter | Yes | 1. Color filter of the image. The input parameter is a 4 x 5RGBA transformation matrix.<br>2. The ColorFilter type of **@ohos.graphics.drawing** can be used as an input parameter since API version 12.<br>**NOTE**<br>This parameter is not available for SVG images in API version 11and earlier versions.<br>The DrawingColorfilter type can be used in atomic services since API version 12. For SVG sources, the effect only applies when the **stroke** property is set (regardless of the value).<br>Since API version 21, when [supportSvg2](ImageAttribute#supportSvg2) is set to **true**, **colorFilter** takes effect on the entire SVG image source.<br>**Since:** 12 |
 
-<a id="colorfilter-1"></a>
 ## colorFilter
 
 ```TypeScript
@@ -226,7 +216,6 @@ Sets the color filter for the image.
 | --- | --- | --- | --- |
 | value | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) \| DrawingColorFilter \| ResourceColor | Yes | Color filter of image. |
 
-<a id="contenttransition"></a>
 ## contentTransition
 
 ```TypeScript
@@ -251,7 +240,6 @@ Triggers transition animations when the image content changes.
 | --- | --- | --- | --- |
 | transition | [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md) | Yes | Type of transition animation.<br>The value **ContentTransitionEffect.OPACITY** indicates the fade-in/fade-out effect, and the value **ContentTransitionEffect.IDENTITY** indicates no animation effect.<br>Default value:**ContentTransitionEffect.IDENTITY**<br>When this parameter is set to **undefined** or **null**, the value defaults to **ContentTransitionEffect.IDENTITY**.<br>Note: This parameter does not take effect for dynamic image resources. |
 
-<a id="copyoption"></a>
 ## copyOption
 
 ```TypeScript
@@ -278,7 +266,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Specifies whether the image can be copied.<br>Default value: **CopyOptions.None** |
 
-<a id="draggable"></a>
 ## draggable
 
 ```TypeScript
@@ -301,7 +288,6 @@ Specifies whether the image is draggable.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the image is draggable. The value **true** means that the image is draggable, in which case the bound long press gesture will not take effect.<br>Default value:<br>API version 9 and earlier:**false**<br> Since API version 10: **true**<br> To bind custom gestures to the component, set **draggable** to **false**. With the value **false**, drag-related events are not triggered. |
 
-<a id="dynamicrangemode"></a>
 ## dynamicRangeMode
 
 ```TypeScript
@@ -328,7 +314,6 @@ Sets the dynamic range of the image to be displayed. This attribute is not appli
 | --- | --- | --- | --- |
 | value | [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | Yes | Dynamic range of the image.<br>Default value: **DynamicRangeMode.STANDARD** |
 
-<a id="enableanalyzer"></a>
 ## enableAnalyzer
 
 ```TypeScript
@@ -337,21 +322,20 @@ enableAnalyzer(enable: boolean)
 
 Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition,and object lookup.
 
-This attribute cannot be used together with the [overlay](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) attribute. If they are set at the same time, the [CustomBuilder](docroot://reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)attribute in **overlay** has no effect. This feature also depends on device capabilities.
+This attribute cannot be used together with the [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) attribute. If they are set at the same time, the [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)attribute in **overlay** has no effect. This feature also depends on device capabilities.
 
-Images to be analyzed must be static, non-vector images. That is, SVG and GIF images cannot be analyzed.[Pixel maps](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) in [RGBA_8888](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmapformat-e.md) format can be passed in for analysis. For details,see [Example 5: Enabling the AI Image Analyzer](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-image.md#example-5-enabling-the-ai-image-analyzer).
+Images to be analyzed must be static, non-vector images. That is, SVG and GIF images cannot be analyzed.[Pixel maps](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) in [RGBA_8888](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmapformat-e.md) format can be passed in for analysis. For details,see [Example 5: Enabling the AI Image Analyzer](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#example-5-enabling-the-ai-image-analyzer).
 
-The [alt](ImageAttribute#alt(value: string | Resource | PixelMap)) placeholder image does not support analysis. The [objectRepeat](ImageAttribute#objectRepeat) attribute supports analysis only when it is set to **ImageRepeat.NoRepeat**. Analysis is not supported when the [obscured](arkts-arkui-commonmethod-c.md#obscured-1) attribute is enabled.
+The [alt](ImageAttribute#alt(value: string | Resource | PixelMap)) placeholder image does not support analysis. The [objectRepeat](ImageAttribute#objectRepeat) attribute supports analysis only when it is set to **ImageRepeat.NoRepeat**. Analysis is not supported when the [obscured](arkts-arkui-commonmethod-c.md#obscured) attribute is enabled.
 
-Analysis is performed based on the complete original image. Even if the settings of the [clip](arkts-arkui-commonmethod-c.md#clip-1), [margin](arkts-arkui-commonmethod-c.md#margin-1),[borderRadius](arkts-arkui-commonmethod-c.md#borderradius-1),[position](arkts-arkui-commonmethod-c.md#position-1), and [objectFit](ImageAttribute#objectFit) attributes cause incomplete image display, or if a mask layer is set via [renderMode](ImageAttribute#renderMode), analysis will still be conducted on the complete original image. The [copyOption](ImageAttribute#copyOption) attribute does not affect the AI image analyzer functionality.
+Analysis is performed based on the complete original image. Even if the settings of the [clip](arkts-arkui-commonmethod-c.md#clip), [margin](arkts-arkui-commonmethod-c.md#margin),[borderRadius](arkts-arkui-commonmethod-c.md#borderradius),[position](arkts-arkui-commonmethod-c.md#position), and [objectFit](ImageAttribute#objectFit) attributes cause incomplete image display, or if a mask layer is set via [renderMode](ImageAttribute#renderMode), analysis will still be conducted on the complete original image. The [copyOption](ImageAttribute#copyOption) attribute does not affect the AI image analyzer functionality.
 
 This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
-
 > **NOTE**  
 >  
 > - The **ohos.permission.INTERNET** permission is required.  
 >  
-> - This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 12.
+> - This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -369,7 +353,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Whether the **Image** component supports AI analysis.<br>When this parameter is set to **true**, the **Image** component supports AI analysis. When this parameter is set to **false**, the **Image** component does not support AI analysis.<br>Default value: **false** |
 
-<a id="fillcolor"></a>
 ## fillColor
 
 ```TypeScript
@@ -396,7 +379,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Fill color to be superimposed on the image.<br>**NOTE**<br> By default, no fill color is applied. If an invalid value is passed, the system uses the default theme color: black in light mode and white in dark mode.<br>Since API version 21, when [supportSvg2](ImageAttribute#supportSvg2) is set to **true**, **fillColor** depends on the **fill** attribute configuration in the SVG image source. If the **fill** attribute in the SVG image source is set to **'none'**, **fillColor** does not take effect. When **supportSvg2** is set to **false**, **fillColor** takes effect and replaces the fill colors of all drawable elements in the SVG image. |
 
-<a id="fillcolor-1"></a>
 ## fillColor
 
 ```TypeScript
@@ -423,7 +405,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorContent | Yes | Fill color to be superimposed on the image.<br>**NOTE**<br> By default, no fill color is applied. If an invalid value is passed, the system uses the default theme color:black in light mode and white in dark mode.<br>Since API version 21, when [supportSvg2](ImageAttribute#supportSvg2) is set to **true**, **fillColor** depends on the **fill** attribute configuration in the SVG image source. If the **fill** attribute in the SVG image source is set to **'none'**, **fillColor** does not take effect. |
 
-<a id="fillcolor-2"></a>
 ## fillColor
 
 ```TypeScript
@@ -450,7 +431,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorContent \| ColorMetrics | Yes | Fill color to be superimposed on the image.<br>**NOTE**<br> By default, no fill color is applied. If an invalid value is passed, the system uses the default theme color: black in light mode and white in dark mode.<br>Since API version 21, when [supportSvg2](ImageAttribute#supportSvg2) is set to **true**, **fillColor** depends on the **fill** attribute configuration in the SVG image source. If the **fill** attribute in the SVG image source is set to **'none'**, **fillColor** does not take effect. |
 
-<a id="fitoriginalsize"></a>
 ## fitOriginalSize
 
 ```TypeScript
@@ -479,7 +459,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the image display size follows the size of the image source.<br>Default value:**false**<br>**NOTE**<br>**false** or not set: The image display size does not follow the size of the image source.<br> **true**: The image display size follows the size of the image source. |
 
-<a id="hdrbrightness"></a>
 ## hdrBrightness
 
 ```TypeScript
@@ -508,7 +487,6 @@ If this attribute and the [dynamicRangeMode](ImageAttribute#dynamicRangeMode) at
 | --- | --- | --- | --- |
 | brightness | number | Yes | Brightness of HDR images displayed by the component. This API only takes effect for HDR image sources.<br>Default value: **1.0**<br>Value range: [0.0, 1.0]. Values less than 0 or greater than 1.0are clamped to **1.0**. **0**: The image is displayed at SDR brightness.<br>**1.0**: The image is displayed at the highest allowed HDR brightness. |
 
-<a id="imagematrix"></a>
 ## imageMatrix
 
 ```TypeScript
@@ -537,7 +515,6 @@ This attribute is strongly associated with [objectFit](ImageAttribute#objectFit)
 | --- | --- | --- | --- |
 | matrix | [ImageMatrix](arkts-arkui-imagematrix-t.md) | Yes | Transformation matrix of the image. |
 
-<a id="interpolation"></a>
 ## interpolation
 
 ```TypeScript
@@ -564,7 +541,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | value | [ImageInterpolation](arkts-arkui-imageinterpolation-e.md) | Yes | Interpolation effect of the image.<br>Default value:**ImageInterpolation.Low**<br>When set to **undefined**, the value is treated as **ImageInterpolation.None**. |
 
-<a id="matchtextdirection"></a>
 ## matchTextDirection
 
 ```TypeScript
@@ -591,7 +567,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether the image follows the system language direction, displaying a mirrored effect in an RTL language environment.<br>Default value: **false**<br>The value **true** means that the image follows the system language direction, displaying a mirrored effect in an RTL language environment, and **false** means the opposite. |
 
-<a id="objectfit"></a>
 ## objectFit
 
 ```TypeScript
@@ -616,7 +591,6 @@ Sets how the image is resized to fit its container. If the attribute is not set,
 | --- | --- | --- | --- |
 | value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | Yes | How the image is resized to fit its container. |
 
-<a id="objectrepeat"></a>
 ## objectRepeat
 
 ```TypeScript
@@ -643,7 +617,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | value | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | Yes | How the image is repeated.<br>Default value: **ImageRepeat.NoRepeat** |
 
-<a id="oncomplete"></a>
 ## onComplete
 
 ```TypeScript
@@ -792,271 +765,7 @@ Triggered when an image is successfully loaded or decoded.The size of the image 
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-ImageAttribute-onComplete(
-    callback: (event?: {
-      /**
-       * The width of the image source.
-       *
-       ****/
-      /**
-       * The width of the image source.
-       *
-       *****/
-      /**
-       * The width of the image source.
-       *
-       ******/
-      /**
-       * The width of the image source.
-       *
-       *******/
-      width: number;
-      /**
-       * The height of the image source.
-       *
-       ****/
-      /**
-       * The height of the image source.
-       *
-       *****/
-      /**
-       * The height of the image source.
-       *
-       ******/
-      /**
-       * The height of the image source.
-       *
-       *******/
-      height: number;
-      /**
-       * The width of the component source.
-       *
-       ****/
-      /**
-       * The width of the component source.
-       *
-       *****/
-      /**
-       * The width of the component source.
-       *
-       ******/
-      /**
-       * The width of the component source.
-       *
-       *******/
-      componentWidth: number;
-      /**
-       * The height of the component source.
-       *
-       ****/
-      /**
-       * The height of the component source.
-       *
-       *****/
-      /**
-       * The height of the component source.
-       *
-       ******/
-      /**
-       * The height of the component source.
-       *
-       *******/
-      componentHeight: number;
-      /**
-       * The value of the status of the image being loaded successfully.
-       * If the returned status value is 0, the image data is successfully loaded.
-       * If the returned status value is 1, the image is successfully decoded.
-       *
-       ****/
-      /**
-       * The value of the status of the image being loaded successfully.
-       * If the returned status value is 0, the image data is successfully loaded.
-       * If the returned status value is 1, the image is successfully decoded.
-       *
-       *****/
-      /**
-       * The value of the status of the image being loaded successfully.
-       * If the returned status value is 0, the image data is successfully loaded.
-       * If the returned status value is 1, the image is successfully decoded.
-       *
-       ******/
-      /**
-       * The value of the status of the image being loaded successfully.
-       * If the returned status value is 0, the image data is successfully loaded.
-       * If the returned status value is 1, the image is successfully decoded.
-       *
-       *******/
-      loadingStatus: number;
-      /**
-       * The width of the picture that is actually drawn.
-       *
-       *******/
-      /**
-       * The width of the picture that is actually drawn.
-       *
-       ********/
-      contentWidth: number;
-      /**
-       * The height of the picture that is actually drawn.
-       *
-       *******/
-      /**
-       * The height of the picture that is actually drawn.
-       *
-       ********/
-      contentHeight: number;
-      /**
-       * The actual draw is offset from the x-axis of the component itself.
-       *
-       *******/
-      /**
-       * The actual draw is offset from the x-axis of the component itself.
-       *
-       ********/
-      contentOffsetX: number;
-      /**
-       * The actual draw is offset from the y-axis of the component itself.
-       *
-       *******/
-      /**
-       * The actual draw is offset from the y-axis of the component itself.
-       *
-       ********/
-      contentOffsetY: number;
-    }) => void,
-  ): ImageAttribute--><!--Device-ImageAttribute-onComplete(
-    callback: (event?: {
-      /**
-       * The width of the image source.
-       *
-       ****/
-      /**
-       * The width of the image source.
-       *
-       *****/
-      /**
-       * The width of the image source.
-       *
-       ******/
-      /**
-       * The width of the image source.
-       *
-       *******/
-      width: number;
-      /**
-       * The height of the image source.
-       *
-       ****/
-      /**
-       * The height of the image source.
-       *
-       *****/
-      /**
-       * The height of the image source.
-       *
-       ******/
-      /**
-       * The height of the image source.
-       *
-       *******/
-      height: number;
-      /**
-       * The width of the component source.
-       *
-       ****/
-      /**
-       * The width of the component source.
-       *
-       *****/
-      /**
-       * The width of the component source.
-       *
-       ******/
-      /**
-       * The width of the component source.
-       *
-       *******/
-      componentWidth: number;
-      /**
-       * The height of the component source.
-       *
-       ****/
-      /**
-       * The height of the component source.
-       *
-       *****/
-      /**
-       * The height of the component source.
-       *
-       ******/
-      /**
-       * The height of the component source.
-       *
-       *******/
-      componentHeight: number;
-      /**
-       * The value of the status of the image being loaded successfully.
-       * If the returned status value is 0, the image data is successfully loaded.
-       * If the returned status value is 1, the image is successfully decoded.
-       *
-       ****/
-      /**
-       * The value of the status of the image being loaded successfully.
-       * If the returned status value is 0, the image data is successfully loaded.
-       * If the returned status value is 1, the image is successfully decoded.
-       *
-       *****/
-      /**
-       * The value of the status of the image being loaded successfully.
-       * If the returned status value is 0, the image data is successfully loaded.
-       * If the returned status value is 1, the image is successfully decoded.
-       *
-       ******/
-      /**
-       * The value of the status of the image being loaded successfully.
-       * If the returned status value is 0, the image data is successfully loaded.
-       * If the returned status value is 1, the image is successfully decoded.
-       *
-       *******/
-      loadingStatus: number;
-      /**
-       * The width of the picture that is actually drawn.
-       *
-       *******/
-      /**
-       * The width of the picture that is actually drawn.
-       *
-       ********/
-      contentWidth: number;
-      /**
-       * The height of the picture that is actually drawn.
-       *
-       *******/
-      /**
-       * The height of the picture that is actually drawn.
-       *
-       ********/
-      contentHeight: number;
-      /**
-       * The actual draw is offset from the x-axis of the component itself.
-       *
-       *******/
-      /**
-       * The actual draw is offset from the x-axis of the component itself.
-       *
-       ********/
-      contentOffsetX: number;
-      /**
-       * The actual draw is offset from the y-axis of the component itself.
-       *
-       *******/
-      /**
-       * The actual draw is offset from the y-axis of the component itself.
-       *
-       ********/
-      contentOffsetY: number;
-    }) => void,
-  ): ImageAttribute-End-->
+<!--Device-ImageAttribute-onComplete(    callback: (event?: {      /**       * The width of the image source.       *       ****/      /**       * The width of the image source.       *       *****/      /**       * The width of the image source.       *       ******/      /**       * The width of the image source.       *       *******/      width: number;      /**       * The height of the image source.       *       ****/      /**       * The height of the image source.       *       *****/      /**       * The height of the image source.       *       ******/      /**       * The height of the image source.       *       *******/      height: number;      /**       * The width of the component source.       *       ****/      /**       * The width of the component source.       *       *****/      /**       * The width of the component source.       *       ******/      /**       * The width of the component source.       *       *******/      componentWidth: number;      /**       * The height of the component source.       *       ****/      /**       * The height of the component source.       *       *****/      /**       * The height of the component source.       *       ******/      /**       * The height of the component source.       *       *******/      componentHeight: number;      /**       * The value of the status of the image being loaded successfully.       * If the returned status value is 0, the image data is successfully loaded.       * If the returned status value is 1, the image is successfully decoded.       *       ****/      /**       * The value of the status of the image being loaded successfully.       * If the returned status value is 0, the image data is successfully loaded.       * If the returned status value is 1, the image is successfully decoded.       *       *****/      /**       * The value of the status of the image being loaded successfully.       * If the returned status value is 0, the image data is successfully loaded.       * If the returned status value is 1, the image is successfully decoded.       *       ******/      /**       * The value of the status of the image being loaded successfully.       * If the returned status value is 0, the image data is successfully loaded.       * If the returned status value is 1, the image is successfully decoded.       *       *******/      loadingStatus: number;      /**       * The width of the picture that is actually drawn.       *       *******/      /**       * The width of the picture that is actually drawn.       *       ********/      contentWidth: number;      /**       * The height of the picture that is actually drawn.       *       *******/      /**       * The height of the picture that is actually drawn.       *       ********/      contentHeight: number;      /**       * The actual draw is offset from the x-axis of the component itself.       *       *******/      /**       * The actual draw is offset from the x-axis of the component itself.       *       ********/      contentOffsetX: number;      /**       * The actual draw is offset from the y-axis of the component itself.       *       *******/      /**       * The actual draw is offset from the y-axis of the component itself.       *       ********/      contentOffsetY: number;    }) => void,  ): ImageAttribute--><!--Device-ImageAttribute-onComplete(    callback: (event?: {      /**       * The width of the image source.       *       ****/      /**       * The width of the image source.       *       *****/      /**       * The width of the image source.       *       ******/      /**       * The width of the image source.       *       *******/      width: number;      /**       * The height of the image source.       *       ****/      /**       * The height of the image source.       *       *****/      /**       * The height of the image source.       *       ******/      /**       * The height of the image source.       *       *******/      height: number;      /**       * The width of the component source.       *       ****/      /**       * The width of the component source.       *       *****/      /**       * The width of the component source.       *       ******/      /**       * The width of the component source.       *       *******/      componentWidth: number;      /**       * The height of the component source.       *       ****/      /**       * The height of the component source.       *       *****/      /**       * The height of the component source.       *       ******/      /**       * The height of the component source.       *       *******/      componentHeight: number;      /**       * The value of the status of the image being loaded successfully.       * If the returned status value is 0, the image data is successfully loaded.       * If the returned status value is 1, the image is successfully decoded.       *       ****/      /**       * The value of the status of the image being loaded successfully.       * If the returned status value is 0, the image data is successfully loaded.       * If the returned status value is 1, the image is successfully decoded.       *       *****/      /**       * The value of the status of the image being loaded successfully.       * If the returned status value is 0, the image data is successfully loaded.       * If the returned status value is 1, the image is successfully decoded.       *       ******/      /**       * The value of the status of the image being loaded successfully.       * If the returned status value is 0, the image data is successfully loaded.       * If the returned status value is 1, the image is successfully decoded.       *       *******/      loadingStatus: number;      /**       * The width of the picture that is actually drawn.       *       *******/      /**       * The width of the picture that is actually drawn.       *       ********/      contentWidth: number;      /**       * The height of the picture that is actually drawn.       *       *******/      /**       * The height of the picture that is actually drawn.       *       ********/      contentHeight: number;      /**       * The actual draw is offset from the x-axis of the component itself.       *       *******/      /**       * The actual draw is offset from the x-axis of the component itself.       *       ********/      contentOffsetX: number;      /**       * The actual draw is offset from the y-axis of the component itself.       *       *******/      /**       * The actual draw is offset from the y-axis of the component itself.       *       ********/      contentOffsetY: number;    }) => void,  ): ImageAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1066,7 +775,6 @@ Triggered when an image is successfully loaded or decoded.The size of the image 
 | --- | --- | --- | --- |
 | callback | (event?: {       /**        * The width of the image source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @since 7        */       /**        * The width of the image source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @since 9        * @form        */       /**        * The width of the image source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @crossplatform        * @since 10        * @form        */       /**        * The width of the image source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @crossplatform        * @atomicservice        * @since 11        * @form        */       width: number;       /**        * The height of the image source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @since 7        */       /**        * The height of the image source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @since 9        * @form        */       /**        * The height of the image source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @crossplatform        * @since 10        * @form        */       /**        * The height of the image source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @crossplatform        * @atomicservice        * @since 11        * @form        */       height: number;       /**        * The width of the component source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @since 7        */       /**        * The width of the component source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @since 9        * @form        */       /**        * The width of the component source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @crossplatform        * @since 10        * @form        */       /**        * The width of the component source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @crossplatform        * @atomicservice        * @since 11        * @form        */       componentWidth: number;       /**        * The height of the component source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @since 7        */       /**        * The height of the component source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @since 9        * @form        */       /**        * The height of the component source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @crossplatform        * @since 10        * @form        */       /**        * The height of the component source.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @crossplatform        * @atomicservice        * @since 11        * @form        */       componentHeight: number;       /**        * The value of the status of the image being loaded successfully.        * If the returned status value is 0, the image data is successfully loaded.        * If the returned status value is 1, the image is successfully decoded.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @since 7        */       /**        * The value of the status of the image being loaded successfully.        * If the returned status value is 0, the image data is successfully loaded.        * If the returned status value is 1, the image is successfully decoded.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @since 9        * @form        */       /**        * The value of the status of the image being loaded successfully.        * If the returned status value is 0, the image data is successfully loaded.        * If the returned status value is 1, the image is successfully decoded.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @crossplatform        * @since 10        * @form        */       /**        * The value of the status of the image being loaded successfully.        * If the returned status value is 0, the image data is successfully loaded.        * If the returned status value is 1, the image is successfully decoded.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @crossplatform        * @atomicservice        * @since 11        * @form        */       loadingStatus: number;       /**        * The width of the picture that is actually drawn.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @stagemodelonly        * @crossplatform        * @since 10        * @form        */       /**        * The width of the picture that is actually drawn.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @stagemodelonly        * @crossplatform        * @atomicservice        * @since 11        * @form        */       contentWidth: number;       /**        * The height of the picture that is actually drawn.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @stagemodelonly        * @crossplatform        * @since 10        * @form        */       /**        * The height of the picture that is actually drawn.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @stagemodelonly        * @crossplatform        * @atomicservice        * @since 11        * @form        */       contentHeight: number;       /**        * The actual draw is offset from the x-axis of the component itself.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @stagemodelonly        * @crossplatform        * @since 10        * @form        */       /**        * The actual draw is offset from the x-axis of the component itself.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @stagemodelonly        * @crossplatform        * @atomicservice        * @since 11        * @form        */       contentOffsetX: number;       /**        * The actual draw is offset from the y-axis of the component itself.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @stagemodelonly        * @crossplatform        * @since 10        * @form        */       /**        * The actual draw is offset from the y-axis of the component itself.        *        * @type { number }        * @syscap SystemCapability.ArkUI.ArkUI.Full        * @stagemodelonly        * @crossplatform        * @atomicservice        * @since 11        * @form        */       contentOffsetY: number;     }) =&gt; void | Yes |  |
 
-<a id="onerror"></a>
 ## onError
 
 ```TypeScript
@@ -1093,7 +801,6 @@ This event is not triggered if the parameter type of the component is [AnimatedD
 | --- | --- | --- | --- |
 | callback | [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | Yes | Callback triggered when an error occurs during image loading.**NOTE**<You are advised to use this callback to quickly identify the cause of image loading failures. For details,see the [ImageError](arkts-arkui-imageerror-i.md) error codes.<br>**Since:** 11 |
 
-<a id="onfinish"></a>
 ## onFinish
 
 ```TypeScript
@@ -1120,7 +827,6 @@ Only images in SVG format are supported. This event is not triggered if the para
 | --- | --- | --- | --- |
 | event | () =&gt; void | Yes | Triggered when the animation playback in the loaded SVG image is complete. If the animation is an infinite loop, this callback is not triggered. |
 
-<a id="orientation"></a>
 ## orientation
 
 ```TypeScript
@@ -1149,7 +855,6 @@ This attribute does not apply to placeholder images specified by [alt](ImageAttr
 | --- | --- | --- | --- |
 | orientation | [ImageRotateOrientation](arkts-arkui-imagerotateorientation-e.md) | Yes | Display orientation of the image content.<br>Only static pixel map display is supported.<br>For images containing rotation or flip information, use **ImageRotateOrientation.AUTO**.<br>Default value: **ImageRotateOrientation.UP**<br>When this parameter is set to **undefined** or **null**, the value is **ImageRotateOrientation.AUTO**. |
 
-<a id="privacysensitive"></a>
 ## privacySensitive
 
 ```TypeScript
@@ -1176,7 +881,6 @@ Sets whether to secure sensitive information on widgets.
 | --- | --- | --- | --- |
 | supported | boolean | Yes | Whether to secure sensitive information on widgets.<br>**false** (default): Do not secure sensitive information on widgets.<br>**true**: Secure sensitive information on widgets, obscuring the image with a semi-transparent background style in privacy mode.<br>**NOTE**<br>If this parameter is set to **null**, the image is not obscured.<br>Privacy mode requires support from the widget framework. |
 
-<a id="rendermode"></a>
 ## renderMode
 
 ```TypeScript
@@ -1205,7 +909,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | value | [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | Yes | Rendering mode of the image, which can be **Original** or **Template** (monochrome).<br>Default value: **ImageRenderMode.Original** |
 
-<a id="resizable"></a>
 ## resizable
 
 ```TypeScript
@@ -1219,10 +922,9 @@ When a valid [ResizableOptions](arkts-arkui-resizableoptions-i.md) is set, the *
 When the sum of the values of **top** and **bottom** is greater than the source image height, or the sum of the values of **left** and **right** is greater than the source image width, the [ResizableOptions](arkts-arkui-resizableoptions-i.md) attribute does not take effect.
 
 This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) or the image format is SVG.
-
 > **NOTE**  
 >  
-> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier-1) since API version 20.
+> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 11
 
@@ -1240,7 +942,6 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | value | [ResizableOptions](arkts-arkui-resizableoptions-i.md) | Yes | Resizable image options. |
 
-<a id="sourcesize"></a>
 ## sourceSize
 
 ```TypeScript
@@ -1267,14 +968,13 @@ This attribute does not take effect when the parameter type of the component is 
 | --- | --- | --- | --- |
 | value | [ImageSourceSize](arkts-arkui-imagesourcesize-i.md) | Yes | Decoding size of the image. This parameter can be used to reduce the image resolution when the image display size needs to be smaller than the component size. When this parameter is used with **ImageFit.None** of the [objectFit](ImageAttribute#objectFit) API, a small image can be displayed in the component.<br>**Since:** 18 |
 
-<a id="supportsvg2"></a>
 ## supportSvg2
 
 ```TypeScript
 supportSvg2(enable: boolean) : ImageAttribute
 ```
 
-Sets whether to enable [enhanced SVG tag parsing](docroot://reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md). When this feature is enabled, SVG image rendering behavior changes accordingly.
+Sets whether to enable [enhanced SVG tag parsing](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md). When this feature is enabled, SVG image rendering behavior changes accordingly.
 
 After the **Image** component is created, the value of this attribute cannot be dynamically changed.
 
@@ -1296,7 +996,6 @@ After the **Image** component is created, the value of this attribute cannot be 
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Determines whether to enable the enhanced SVG tag parsing feature.<br>Default value:**false**<br>**true**: Enable enhanced SVG parsing.<br>**false**: Use original SVG parsing. |
 
-<a id="syncload"></a>
 ## syncLoad
 
 ```TypeScript
@@ -1323,5 +1022,5 @@ If image flickering occurs during loading, set **syncLoad** to **true**. For det
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to load the image synchronously. By default, the image is loaded asynchronously.During synchronous loading, the UI thread is blocked and the placeholder image is not displayed.<br>Default value: **false**<br>**true**: Load the image synchronously.<br>**false**: Load the image asynchronously.<br>If the main thread is blocked for more than 6s, AppFreeze will occur. For details, see [Application Freeze Detection](docroot://dfx/appfreeze-guidelines.md). |
+| value | boolean | Yes | Whether to load the image synchronously. By default, the image is loaded asynchronously.During synchronous loading, the UI thread is blocked and the placeholder image is not displayed.<br>Default value: **false**<br>**true**: Load the image synchronously.<br>**false**: Load the image asynchronously.<br>If the main thread is blocked for more than 6s, AppFreeze will occur. For details, see [Application Freeze Detection](../../../dfx/appfreeze-guidelines.md). |
 

@@ -34,7 +34,7 @@ Callback invoked when the API call is complete.
 dstUri: string
 ```
 
-URI of the location to which the file is to move. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;<=>?[]|\x7F.2. The value can contain a maximum of 128 characters.
+URI of the location to which the file is to move. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;&lt;=&gt;?[]|\x7F.2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 
@@ -70,7 +70,7 @@ Callback invoked when the API call fails.**data** indicates the error informatio
 srcUri: string
 ```
 
-URI of the file to move. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;<=>?[]|\x7F.2. The value can contain a maximum of 128 characters.
+URI of the file to move. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;&lt;=&gt;?[]|\x7F.2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 

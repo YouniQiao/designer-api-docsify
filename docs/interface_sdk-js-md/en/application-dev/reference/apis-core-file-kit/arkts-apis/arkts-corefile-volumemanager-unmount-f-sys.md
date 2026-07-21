@@ -6,7 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="unmount"></a>
 ## unmount
 
 ```TypeScript
@@ -47,7 +46,6 @@ Unmounts a volume. This API uses an asynchronous callback to return the result.
 | 13900042 | Unknown error. |
 
 
-<a id="unmount-1"></a>
 ## unmount
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { contact } from '@kit.ContactsKit';
 ```
 
-<a id="querycontacts"></a>
 ## queryContacts
 
 ```TypeScript
@@ -19,7 +18,7 @@ Queries all contacts. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContacts(context:](arkts-contacts-contact-querycontacts-f.md#querycontacts-1)
+**Substitutes:** [queryContacts(context:](arkts-contacts-contact-querycontacts-f.md#querycontacts)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -51,7 +50,6 @@ contact.queryContacts((err: BusinessError, data) => {
 ```
 
 
-<a id="querycontacts-1"></a>
 ## queryContacts
 
 ```TypeScript
@@ -104,7 +102,6 @@ contact.queryContacts(context, (err: BusinessError, data) => {
 ```
 
 
-<a id="querycontacts-2"></a>
 ## queryContacts
 
 ```TypeScript
@@ -117,7 +114,7 @@ Queries all contacts based on the specified holder. This API uses an asynchronou
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContacts(context:](arkts-contacts-contact-querycontacts-f.md#querycontacts-1)
+**Substitutes:** [queryContacts(context:](arkts-contacts-contact-querycontacts-f.md#querycontacts)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -154,7 +151,6 @@ contact.queryContacts({
 ```
 
 
-<a id="querycontacts-3"></a>
 ## queryContacts
 
 ```TypeScript
@@ -212,7 +208,6 @@ contact.queryContacts(context, {
 ```
 
 
-<a id="querycontacts-4"></a>
 ## queryContacts
 
 ```TypeScript
@@ -225,7 +220,7 @@ Queries all contacts based on the specified attributes. This API uses an asynchr
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContacts(context:](arkts-contacts-contact-querycontacts-f.md#querycontacts-1)
+**Substitutes:** [queryContacts(context:](arkts-contacts-contact-querycontacts-f.md#querycontacts)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -260,7 +255,6 @@ contact.queryContacts({
 ```
 
 
-<a id="querycontacts-5"></a>
 ## queryContacts
 
 ```TypeScript
@@ -316,7 +310,6 @@ contact.queryContacts(context, {
 ```
 
 
-<a id="querycontacts-6"></a>
 ## queryContacts
 
 ```TypeScript
@@ -329,7 +322,7 @@ Queries all contacts based on the specified holder and attributes. This API uses
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContacts(context:](arkts-contacts-contact-querycontacts-f.md#querycontacts-1)
+**Substitutes:** [queryContacts(context:](arkts-contacts-contact-querycontacts-f.md#querycontacts)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -369,7 +362,6 @@ contact.queryContacts({
 ```
 
 
-<a id="querycontacts-7"></a>
 ## queryContacts
 
 ```TypeScript
@@ -430,7 +422,6 @@ contact.queryContacts(context, {
 ```
 
 
-<a id="querycontacts-8"></a>
 ## queryContacts
 
 ```TypeScript
@@ -443,7 +434,7 @@ Queries all contacts based on the specified holder and attributes. This API uses
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContacts(context:](arkts-contacts-contact-querycontacts-f.md#querycontacts-1)
+**Substitutes:** [queryContacts(context:](arkts-contacts-contact-querycontacts-f.md#querycontacts)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -484,7 +475,6 @@ Queries all contacts based on the specified holder and attributes. This API uses
 ```
 
 
-<a id="querycontacts-9"></a>
 ## queryContacts
 
 ```TypeScript

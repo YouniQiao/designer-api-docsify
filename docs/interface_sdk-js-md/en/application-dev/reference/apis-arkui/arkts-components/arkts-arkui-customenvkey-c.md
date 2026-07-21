@@ -8,7 +8,6 @@ Defines the custom environment Key.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -27,7 +26,6 @@ constructor.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="create"></a>
 ## create
 
 ```TypeScript

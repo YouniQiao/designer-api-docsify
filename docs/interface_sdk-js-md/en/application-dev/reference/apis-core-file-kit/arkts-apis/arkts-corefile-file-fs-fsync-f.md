@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="fsync"></a>
 ## fsync
 
 ```TypeScript
@@ -46,7 +45,6 @@ Synchronizes the cached data of a file to storage. This API uses a promise to re
 | 13900042 | Unknown error |
 
 
-<a id="fsync-1"></a>
 ## fsync
 
 ```TypeScript

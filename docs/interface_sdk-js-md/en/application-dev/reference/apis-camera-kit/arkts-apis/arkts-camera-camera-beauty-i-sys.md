@@ -18,7 +18,6 @@ Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md)Provides A
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getbeauty"></a>
 ## getBeauty
 
 ```TypeScript
@@ -74,14 +73,13 @@ function getBeauty(portraitPhotoSession: camera.PortraitPhotoSession): number {
 
 ```
 
-<a id="setbeauty"></a>
 ## setBeauty
 
 ```TypeScript
 setBeauty(type: BeautyType, value: number): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md) obtained through [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes-1) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md) obtained through [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes) are disabled.
 
 **Since:** 11
 
@@ -96,7 +94,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the [b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | Yes | Beauty type. |
-| value | number | Yes | Beauty level, which is obtained through [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange-1). |
+| value | number | Yes | Beauty level, which is obtained through [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange). |
 
 **Error codes:**
 
@@ -122,7 +120,6 @@ function setBeauty(portraitPhotoSession: camera.PortraitPhotoSession): void {
 
 ```
 
-<a id="setportraitthemetype"></a>
 ## setPortraitThemeType
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { deviceSettings } from '@kit.MDMKit';
 ```
 
-<a id="setpowerpolicy"></a>
 ## setPowerPolicy
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sets the power policy.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setValue](arkts-mdm-devicesettings-setvalue-f.md#setvalue-1)
+**Substitutes:** [setValue](arkts-mdm-devicesettings-setvalue-f.md#setvalue)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SETTINGS
 

@@ -6,7 +6,6 @@
 import { router } from '@kit.ArkUI';
 ```
 
-<a id="getstatebyindex"></a>
 ## getStateByIndex
 
 ```TypeScript
@@ -14,11 +13,10 @@ function getStateByIndex(index: number): RouterState | undefined
 ```
 
 Obtains the status information about a page by its index.
-
 > **NOTE**  
 >  
 > - Since API version 12, you can use the  
-> [getRouter](docroot://reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
 > [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.
 
@@ -26,7 +24,7 @@ Obtains the status information about a page by its index.
 
 **Deprecated since:** 18
 
-**Substitutes:** [getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getstatebyindex-1)
+**Substitutes:** [getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getstatebyindex)
 
 **Model restriction:** This API can be used only in the stage model.
 

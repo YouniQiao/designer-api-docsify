@@ -1,6 +1,5 @@
 # write
 
-<a id="write"></a>
 ## write
 
 ```TypeScript
@@ -22,27 +21,9 @@ Writes data into a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:write](arkts-corefile-file-fs-write-f.md#write-1)
+**Substitutes:** [fs:write](arkts-corefile-fileio-write-f.md#write)
 
-<!--Device-unnamed-declare function write(
-  fd: number,
-  buffer: ArrayBuffer | string,
-  options?: {
-    offset?: number;
-    length?: number;
-    position?: number;
-    encoding?: string;
-  }
-): Promise<number>--><!--Device-unnamed-declare function write(
-  fd: number,
-  buffer: ArrayBuffer | string,
-  options?: {
-    offset?: number;
-    length?: number;
-    position?: number;
-    encoding?: string;
-  }
-): Promise<number>-End-->
+<!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): Promise<number>--><!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): Promise<number>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -61,7 +42,6 @@ Writes data into a file. This API uses a promise to return the result.
 | Promise&lt;number&gt; | Promise that returns the length of the data written, in bytes. |
 
 
-<a id="write-1"></a>
 ## write
 
 ```TypeScript
@@ -74,7 +54,7 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:write](arkts-corefile-file-fs-write-f.md#write-1)
+**Substitutes:** [fs:write](arkts-corefile-fileio-write-f.md#write)
 
 <!--Device-unnamed-declare function write(fd: number, buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function write(fd: number, buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
 
@@ -89,7 +69,6 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously. return the length of the data written, in bytes. |
 
 
-<a id="write-2"></a>
 ## write
 
 ```TypeScript
@@ -112,29 +91,9 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:write](arkts-corefile-file-fs-write-f.md#write-1)
+**Substitutes:** [fs:write](arkts-corefile-fileio-write-f.md#write)
 
-<!--Device-unnamed-declare function write(
-  fd: number,
-  buffer: ArrayBuffer | string,
-  options: {
-    offset?: number;
-    length?: number;
-    position?: number;
-    encoding?: string;
-  },
-  callback: AsyncCallback<number>
-): void--><!--Device-unnamed-declare function write(
-  fd: number,
-  buffer: ArrayBuffer | string,
-  options: {
-    offset?: number;
-    length?: number;
-    position?: number;
-    encoding?: string;
-  },
-  callback: AsyncCallback<number>
-): void-End-->
+<!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  },  callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  },  callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

@@ -6,7 +6,6 @@
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="getsystemlanguage"></a>
 ## getSystemLanguage
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the system language.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage-1)
+**Substitutes:** [getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage)
 
 <!--Device-i18n-export function getSystemLanguage(): string--><!--Device-i18n-export function getSystemLanguage(): string-End-->
 

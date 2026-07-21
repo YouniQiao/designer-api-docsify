@@ -6,7 +6,6 @@
 import { adminManager } from '@kit.MDMKit';
 ```
 
-<a id="unsubscribemanagedevent"></a>
 ## unsubscribeManagedEvent
 
 ```TypeScript
@@ -19,7 +18,7 @@ Unsubscribes from system management events. This API uses an asynchronous callba
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md#unsubscribemanagedeventsync-1)
+**Substitutes:** [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md#unsubscribemanagedeventsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SUBSCRIBE_MANAGED_EVENT
 
@@ -73,7 +72,6 @@ adminManager.unsubscribeManagedEvent(wantTemp, events, (err) => {
 ```
 
 
-<a id="unsubscribemanagedevent-1"></a>
 ## unsubscribeManagedEvent
 
 ```TypeScript
@@ -86,7 +84,7 @@ Unsubscribes from system management events. This API uses a promise to return th
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md#unsubscribemanagedeventsync-1)
+**Substitutes:** [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md#unsubscribemanagedeventsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SUBSCRIBE_MANAGED_EVENT
 

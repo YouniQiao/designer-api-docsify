@@ -6,7 +6,6 @@
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
-<a id="startdlpmanagerforresult"></a>
 ## startDLPManagerForResult
 
 ```TypeScript
@@ -16,7 +15,6 @@ function startDLPManagerForResult(context: common.UIAbilityContext, want: Want):
 Starts the DLP manager application on the current [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md) page in borderless mode. This API uses a promise to return the result.
 
 This API starts the DLP manager application to configure file permissions and return the user operation result to the caller.
-
 > **NOTE**  
 >  
 > This API can be called only by domain accounts.

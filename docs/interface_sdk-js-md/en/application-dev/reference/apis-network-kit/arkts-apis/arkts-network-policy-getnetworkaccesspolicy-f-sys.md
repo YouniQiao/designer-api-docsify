@@ -6,7 +6,6 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
-<a id="getnetworkaccesspolicy"></a>
 ## getNetworkAccessPolicy
 
 ```TypeScript
@@ -65,7 +64,6 @@ policy
 ```
 
 
-<a id="getnetworkaccesspolicy-1"></a>
 ## getNetworkAccessPolicy
 
 ```TypeScript

@@ -6,14 +6,13 @@
 import { asset } from '@kit.AssetStoreKit';
 ```
 
-<a id="prequerysync"></a>
 ## preQuerySync
 
 ```TypeScript
 function preQuerySync(query: AssetMap): Uint8Array
 ```
 
-Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.querySync](arkts-assetstore-asset-querysync-f.md#querysync-1) and [asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postquerysync-1). This API returns the result synchronously.
+Performs preprocessing for the asset query. This API is used when user authentication is required for the access to the asset. After the user authentication is successful, call [asset.querySync](arkts-assetstore-asset-querysync-f.md#querysync) and [asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postquerysync). This API returns the result synchronously.
 
 **Since:** 12
 

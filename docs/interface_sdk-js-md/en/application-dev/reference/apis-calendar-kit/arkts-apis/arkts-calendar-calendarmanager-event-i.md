@@ -74,7 +74,7 @@ End time of an event. The value is a 13-digit timestamp. For an all-day event, t
 id?: number
 ```
 
-Event ID. When you call [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent-1) or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents-1) to create an event, this parameter is not required. When you call [deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteevent-1) or [deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteevents-1) to delete an event, this parameter is required and must be set to an array of integers. If this parameter is set to an invalid value, an error will be reported.
+Event ID. When you call [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent) or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents) to create an event, this parameter is not required. When you call [deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteevent) or [deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteevents) to delete an event, this parameter is required and must be set to an array of integers. If this parameter is set to an invalid value, an error will be reported.
 
 **Type:** number
 
@@ -110,7 +110,7 @@ Unique ID of an event, with a maximum of 5,000 characters. If this parameter is 
 instanceEndTime?: number
 ```
 
-End time of an event. The value is a 13-digit timestamp. This parameter does not need to be set in [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent-1)or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents-1).
+End time of an event. The value is a 13-digit timestamp. This parameter does not need to be set in [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents).
 
 **Type:** number
 
@@ -128,7 +128,7 @@ End time of an event. The value is a 13-digit timestamp. This parameter does not
 instanceStartTime?: number
 ```
 
-Start time of an event. The value is a 13-digit timestamp. This parameter does not need to be set in [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent-1)or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents-1).
+Start time of an event. The value is a 13-digit timestamp. This parameter does not need to be set in [addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents).
 
 **Type:** number
 
@@ -272,7 +272,7 @@ Start time of an event. The value is a 13-digit timestamp. For an all-day event,
 timeZone?: string
 ```
 
-Time zone of the event, with a maximum of 5,000 characters. If this parameter is not specified or set to an invalid value, the current time zone is used by default. If a different time zone is required, enter the corresponding time zone. You can call [systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone-1)to obtain the current system time zone.
+Time zone of the event, with a maximum of 5,000 characters. If this parameter is not specified or set to an invalid value, the current time zone is used by default. If a different time zone is required, enter the corresponding time zone. You can call [systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)to obtain the current system time zone.
 
 **Type:** string
 

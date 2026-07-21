@@ -6,7 +6,6 @@
 import { vpn } from '@kit.NetworkKit';
 ```
 
-<a id="off"></a>
 ## off('connect')
 
 ```TypeScript
@@ -44,7 +43,6 @@ Unsubscribes from vpn connect state changes.
 | [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
 
 
-<a id="off-1"></a>
 ## off('connectMulti')
 
 ```TypeScript

@@ -1,7 +1,6 @@
 # @ohos.PiPWindow
 
 The module provides basic APIs for manipulating Picture in Picture (PiP). For example, you can use the APIs to check whether the PiP feature is supported and create a PiP controller to start or stop a PiP window. PiP is mainly used in video playback, video calls, or video meetings.
-
 > **NOTE**  
 >  
 > - Before <!--RP2-->OpenHarmony 6.0<!--RP2End-->, the PiP feature was supported only on phones and tablets. Starting  
@@ -9,7 +8,7 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 > but is unavailable on all other devices.  
 >  
 > - For the system capability SystemCapability.Window.SessionManager, use  
-> [canIUse()](arkts-arkui-global-caniuse-f.md#caniuse-1) to check whether the device supports this system  
+> [canIUse()](arkts-arkui-global-caniuse-f.md#caniuse) to check whether the device supports this system  
 > capability and the corresponding APIs.
 
 **Since:** 11
@@ -40,7 +39,7 @@ import { PiPWindow } from '@kit.ArkUI';
 | --- | --- |
 | [ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md) | Describes the parameters in the callback of the action event of the PiP controller. |
 | [PiPConfiguration](arkts-arkui-pipwindow-pipconfiguration-i.md) | Defines the parameters for creating a PiP controller. |
-| [PiPController](arkts-arkui-pipwindow-pipcontroller-i.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.  Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create-1) to create a PiPController instance. |
+| [PiPController](arkts-arkui-pipwindow-pipcontroller-i.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.  Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create) to create a PiPController instance. |
 | [PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md) | Describes the PiP window information. |
 | [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md) | Describes the size of a PiP window. |
 
@@ -49,7 +48,7 @@ import { PiPWindow } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [PiPController](arkts-arkui-pipwindow-pipcontroller-i-sys.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.  Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create-1) to create a PiPController instance. |
+| [PiPController](arkts-arkui-pipwindow-pipcontroller-i-sys.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.  Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create) to create a PiPController instance. |
 <!--DelEnd-->
 
 ### Enums
@@ -80,7 +79,7 @@ import { PiPWindow } from '@kit.ArkUI';
 | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | Describes the action event callback of the PiP controller. |
 | [PiPActionEventType](arkts-arkui-pipwindow-pipactioneventtype-t.md) | Enumerates the types of action events of the PiP controller. |
 | [PiPCallActionEvent](arkts-arkui-pipwindow-pipcallactionevent-t.md) | Defines the PiP action event in a video call. |
-| [PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md) | Describes the optional component groups of the PiP controller. An application can configure whether to display these optional components. This API must match [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) when being used.Otherwise, the [create](arkts-arkui-pipwindow-create-f.md#create-1) API returns error code 401. |
+| [PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md) | Describes the optional component groups of the PiP controller. An application can configure whether to display these optional components. This API must match [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) when being used.Otherwise, the [create](arkts-arkui-pipwindow-create-f.md#create) API returns error code 401. |
 | [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) | Defines the PiP action event in a live. |
 | [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) | Defines the PiP action event in a video meeting. |
 | [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) | Defines the PiP action event during video playback. |

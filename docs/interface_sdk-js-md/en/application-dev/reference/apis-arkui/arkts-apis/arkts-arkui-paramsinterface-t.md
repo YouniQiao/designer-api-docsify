@@ -14,11 +14,7 @@ List of routing parameters.
 
 **Substitutes:** params
 
-<!--Device-unnamed-type ParamsInterface = {
-  [key: string]: Object;
-}--><!--Device-unnamed-type ParamsInterface = {
-  [key: string]: Object;
-}-End-->
+<!--Device-unnamed-type ParamsInterface = {  [key: string]: Object;}--><!--Device-unnamed-type ParamsInterface = {  [key: string]: Object;}-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

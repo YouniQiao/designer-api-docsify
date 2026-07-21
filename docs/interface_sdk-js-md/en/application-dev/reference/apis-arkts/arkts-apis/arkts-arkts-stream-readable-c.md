@@ -14,7 +14,6 @@ Stream from which data can be read. A readable stream is used to read data from 
 import { stream } from '@kit.ArkTS';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -38,7 +37,6 @@ let readableStream = new stream.Readable();
 
 ```
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -71,14 +69,13 @@ let readableStream = new stream.Readable(option);
 
 ```
 
-<a id="doinitialize"></a>
 ## doInitialize
 
 ```TypeScript
 doInitialize(callback: Function): void
 ```
 
-You need to implement this API. It is called when the readable stream calls [on](stream.Writable#on(event: string, callback: Callback<emitter.EventData>)) for the first time. This API uses an asynchronous callback to return the result.
+You need to implement this API. It is called when the readable stream calls [on](stream.Writable#on(event: string, callback: Callback&lt;emitter.EventData&gt;)) for the first time. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -113,7 +110,6 @@ myReadable.on('data', () => {
 
 ```
 
-<a id="doread"></a>
 ## doRead
 
 ```TypeScript
@@ -155,14 +151,13 @@ readable.on('data', () => {
 
 ```
 
-<a id="ispaused"></a>
 ## isPaused
 
 ```TypeScript
 isPaused(): boolean
 ```
 
-Checks whether the readable stream is paused. The stream is paused after [pause()](arkts-arkts-stream-readable-c.md#pause-1)is called and resumes from the paused state after [resume()](arkts-arkts-stream-readable-c.md#resume-1) is called.
+Checks whether the readable stream is paused. The stream is paused after [pause()](arkts-arkts-stream-readable-c.md#pause)is called and resumes from the paused state after [resume()](arkts-arkts-stream-readable-c.md#resume) is called.
 
 **Since:** 12
 
@@ -197,7 +192,6 @@ console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaus
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -247,7 +241,6 @@ readable.push('test');
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -292,7 +285,6 @@ readable.on('error', () => {
 
 ```
 
-<a id="pause"></a>
 ## pause
 
 ```TypeScript
@@ -333,7 +325,6 @@ console.info("Readable test pause", readableStream.isPaused()); // Readable test
 
 ```
 
-<a id="pipe"></a>
 ## pipe
 
 ```TypeScript
@@ -394,7 +385,6 @@ readable.pipe(writable);
 
 ```
 
-<a id="push"></a>
 ## push
 
 ```TypeScript
@@ -443,7 +433,6 @@ console.info("Readable push test", readable.readableLength); // Readable push te
 
 ```
 
-<a id="read"></a>
 ## read
 
 ```TypeScript
@@ -498,7 +487,6 @@ console.info('Readable data is', dataChunk); // Readable data is test
 
 ```
 
-<a id="resume"></a>
 ## resume
 
 ```TypeScript
@@ -539,7 +527,6 @@ console.info("Readable test resume", !readableStream.isPaused()); // After a suc
 
 ```
 
-<a id="setencoding"></a>
 ## setEncoding
 
 ```TypeScript
@@ -586,7 +573,6 @@ console.info("Readable result", result); // Readable result true
 
 ```
 
-<a id="unpipe"></a>
 ## unpipe
 
 ```TypeScript

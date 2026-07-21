@@ -1,7 +1,6 @@
 # TextBlob
 
 Defines a block consisting of one or more characters with the same font.
-
 > **NOTE**  
 >  
 > - This module uses the physical pixel unit, px.  
@@ -21,7 +20,6 @@ Defines a block consisting of one or more characters with the same font.
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="bounds"></a>
 ## bounds
 
 ```TypeScript
@@ -42,7 +40,6 @@ Obtains the rectangular bounding box of the text blob.
 | --- | --- |
 | common2D.Rect | Rectangular bounding box. |
 
-<a id="makefrompostext"></a>
 ## makeFromPosText
 
 ```TypeScript
@@ -62,7 +59,7 @@ Creates a **TextBlob** object from the text. The coordinates of each font in the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Content to be used for drawing the text blob. |
-| len | number | Yes | Number of glyphs, which is an integer obtained from [countText](arkts-arkgraphics2d-drawing-font-c.md#counttext-1). |
+| len | number | Yes | Number of glyphs, which is an integer obtained from [countText](arkts-arkgraphics2d-drawing-font-c.md#counttext). |
 | points | common2D.Point[] | Yes | Array of points, which are used to specify the coordinates of each font. The array length must be the same as the value of **len**. |
 | font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | **Font** object. |
 
@@ -78,7 +75,6 @@ Creates a **TextBlob** object from the text. The coordinates of each font in the
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="makefromrunbuffer"></a>
 ## makeFromRunBuffer
 
 ```TypeScript
@@ -113,7 +109,6 @@ Creates a **TextBlob** object based on the **RunBuffer** information.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="makefromstring"></a>
 ## makeFromString
 
 ```TypeScript
@@ -148,7 +143,6 @@ Converts a value of the string type into a **TextBlob** object.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="uniqueid"></a>
 ## uniqueID
 
 ```TypeScript

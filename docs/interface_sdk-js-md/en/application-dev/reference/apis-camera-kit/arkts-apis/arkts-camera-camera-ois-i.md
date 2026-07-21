@@ -16,7 +16,6 @@ OIS (Optical Image Stabilization) interface.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="setoismode"></a>
 ## setOISMode
 
 ```TypeScript
@@ -48,7 +47,6 @@ Sets the OIS mode.
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-<a id="setoismodecustom"></a>
 ## setOISModeCustom
 
 ```TypeScript

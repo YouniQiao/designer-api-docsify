@@ -6,7 +6,6 @@
 import { pointer } from '@kit.InputKit';
 ```
 
-<a id="setpointercolor"></a>
 ## setPointerColor
 
 ```TypeScript
@@ -14,7 +13,6 @@ function setPointerColor(color: number, callback: AsyncCallback<void>): void
 ```
 
 Sets the mouse pointer color. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
@@ -74,7 +72,6 @@ struct Index {
 ```
 
 
-<a id="setpointercolor-1"></a>
 ## setPointerColor
 
 ```TypeScript
@@ -82,7 +79,6 @@ function setPointerColor(color: number): Promise<void>
 ```
 
 Sets the mouse pointer color. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.

@@ -6,7 +6,6 @@
 import { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
-<a id="off"></a>
 ## off('BundleStatusChange')
 
 ```TypeScript
@@ -14,7 +13,6 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 ```
 
 Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  
@@ -43,7 +41,6 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a successful result or error information. |
 
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -51,7 +48,6 @@ function off(type: 'BundleStatusChange'): Promise<string>
 ```
 
 Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use  

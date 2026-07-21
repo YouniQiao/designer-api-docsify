@@ -6,7 +6,6 @@
 import { deviceInfo } from '@kit.MDMKit';
 ```
 
-<a id="getdisplayversion"></a>
 ## getDisplayVersion
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the device version number. This API uses an asynchronous callback to ret
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo-1)
+**Substitutes:** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_DEVICE_INFO
 
@@ -71,7 +70,6 @@ deviceInfo.getDisplayVersion(wantTemp, (err, result) => {
 ```
 
 
-<a id="getdisplayversion-1"></a>
 ## getDisplayVersion
 
 ```TypeScript
@@ -84,7 +82,7 @@ Obtains the device version number. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo-1)
+**Substitutes:** [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo)
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_DEVICE_INFO
 

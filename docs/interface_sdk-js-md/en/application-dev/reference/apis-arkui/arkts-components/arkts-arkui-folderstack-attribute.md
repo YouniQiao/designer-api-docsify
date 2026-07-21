@@ -10,14 +10,13 @@ In addition to the [universal events](arkts-arkui-commonmethod-c.md), the follow
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="aligncontent"></a>
 ## alignContent
 
 ```TypeScript
 alignContent(value: Alignment)
 ```
 
-Sets the alignment of child components in the container. When both this attribute and the [align](arkts-arkui-commonmethod-c.md#align-1) attribute are set, whichever is set last takes effect.
+Sets the alignment of child components in the container. When both this attribute and the [align](arkts-arkui-commonmethod-c.md#align) attribute are set, whichever is set last takes effect.
 
 **Since:** 11
 
@@ -35,7 +34,6 @@ Sets the alignment of child components in the container. When both this attribut
 | --- | --- | --- | --- |
 | value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | Yes | Alignment of child components in the container.<br>Default value: **Alignment.Center**.<br>Invalid values are treated as the default value. |
 
-<a id="autohalffold"></a>
 ## autoHalfFold
 
 ```TypeScript
@@ -58,9 +56,8 @@ Sets whether to enable auto rotation. This attribute is effective only when auto
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable auto rotation.<br>Default value: **true**. **true**: Enable auto rotation when the **FolderStack** component is in [half-folded state](docroot://reference/apis-arkui/arkui-ts/ts-appendix-enums.md#foldstatus11).**false**: Disable auto rotation. This setting applies uniformly across all device types.<br>Invalid values are treated as the default value. |
+| value | boolean | Yes | Whether to enable auto rotation.<br>Default value: **true**. **true**: Enable auto rotation when the **FolderStack** component is in [half-folded state](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#foldstatus11).**false**: Disable auto rotation. This setting applies uniformly across all device types.<br>Invalid values are treated as the default value. |
 
-<a id="enableanimation"></a>
 ## enableAnimation
 
 ```TypeScript
@@ -85,7 +82,6 @@ Sets whether to enable the default animation.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to enable the default animation.<br>Default value: **true**. **true**: Enable the default animation. **false**: Disable the default animation.<br>Invalid values are treated as the default value. |
 
-<a id="onfolderstatechange"></a>
 ## onFolderStateChange
 
 ```TypeScript
@@ -110,7 +106,6 @@ Triggered when the fold state of the device changes. This API takes effect only 
 | --- | --- | --- | --- |
 | callback | [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | Yes | Callback invoked when the fold state of the device changes.<br>**Since:** 18 |
 
-<a id="onhoverstatuschange"></a>
 ## onHoverStatusChange
 
 ```TypeScript

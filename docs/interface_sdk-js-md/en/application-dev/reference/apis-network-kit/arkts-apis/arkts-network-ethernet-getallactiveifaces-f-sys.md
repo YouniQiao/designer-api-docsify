@@ -6,7 +6,6 @@
 import { ethernet } from '@kit.NetworkKit';
 ```
 
-<a id="getallactiveifaces"></a>
 ## getAllActiveIfaces
 
 ```TypeScript
@@ -60,7 +59,6 @@ ethernet.getAllActiveIfaces((error: BusinessError, value: string[]) => {
 ```
 
 
-<a id="getallactiveifaces-1"></a>
 ## getAllActiveIfaces
 
 ```TypeScript

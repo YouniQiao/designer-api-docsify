@@ -59,9 +59,9 @@ import { inputMethod } from '@kit.IMEKit';
 | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Information of Cursor. |
 | [FunctionKey](arkts-ime-inputmethod-functionkey-i.md) | FunctionKey of Input. |
 | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | Attribute of Input. |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller-1). |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller). |
 | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | input method property |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting-1) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance. |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance. |
 | [InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md) | Information of input window. |
 | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | <p>Custom message handler.</p><p>Implement this interface to respond to custom messages.</p> |
 | [Movement](arkts-ime-inputmethod-movement-i.md) | Movement of cursor. |
@@ -73,8 +73,8 @@ import { inputMethod } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i-sys.md) | A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller-1). |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i-sys.md) | In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting-1) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance. |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i-sys.md) | A control class that encapsulates APIs for input method management, which can only be invoked after an **InputMethodController** instance is obtained via [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller). |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i-sys.md) | In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance. |
 | [InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i-sys.md) | Information of input window. |
 <!--DelEnd-->
 

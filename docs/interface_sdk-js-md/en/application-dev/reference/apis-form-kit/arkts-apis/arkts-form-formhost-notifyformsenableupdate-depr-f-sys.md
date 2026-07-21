@@ -1,6 +1,5 @@
 # notifyFormsEnableUpdate (System API)
 
-<a id="notifyformsenableupdate"></a>
 ## notifyFormsEnableUpdate
 
 ```TypeScript
@@ -17,19 +16,11 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyformsenableupdate-1)
+**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-depr-f-sys.md#notifyformsenableupdate)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
-<!--Device-formHost-function notifyFormsEnableUpdate(
-    formIds: Array<string>,
-    isEnableUpdate: boolean,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-formHost-function notifyFormsEnableUpdate(
-    formIds: Array<string>,
-    isEnableUpdate: boolean,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-formHost-function notifyFormsEnableUpdate(    formIds: Array<string>,    isEnableUpdate: boolean,    callback: AsyncCallback<void>  ): void--><!--Device-formHost-function notifyFormsEnableUpdate(    formIds: Array<string>,    isEnableUpdate: boolean,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -44,7 +35,6 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent,**error** is undefined; otherwise, **error** is an error object. |
 
 
-<a id="notifyformsenableupdate-1"></a>
 ## notifyFormsEnableUpdate
 
 ```TypeScript
@@ -57,7 +47,7 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyformsenableupdate-1)
+**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-depr-f-sys.md#notifyformsenableupdate)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

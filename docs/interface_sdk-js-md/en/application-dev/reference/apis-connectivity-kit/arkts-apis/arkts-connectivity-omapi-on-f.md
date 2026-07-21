@@ -6,7 +6,6 @@
 import { omapi } from '@kit.ConnectivityKit';
 ```
 
-<a id="on"></a>
 ## on('stateChanged')
 
 ```TypeScript

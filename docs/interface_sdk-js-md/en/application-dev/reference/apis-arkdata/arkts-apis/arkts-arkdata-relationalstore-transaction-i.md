@@ -1,18 +1,18 @@
 # Transaction
 
-Provides APIs for managing databases in transaction mode. A transaction object is created by using [createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction-1). Operations on different transaction objects are isolated. For details about the transaction types, see [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md).
+Provides APIs for managing databases in transaction mode. A transaction object is created by using [createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction). Operations on different transaction objects are isolated. For details about the transaction types, see [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md).
 
 Currently, an RDB store supports only one write transaction at a time. If the current [RdbStore](arkts-data-relationalstore.md) has a write transaction that is not released, creating an **IMMEDIATE** or **EXCLUSIVE** transaction object will return error 14800024. If a **DEFERRED** transaction object is created, error 14800024 may be returned when it is used to invoke a write operation for the first time.After a write transaction is created using **IMMEDIATE** or **EXCLUSIVE**, or a **DEFERRED** transaction is upgraded to a write transaction, write operations in the [RdbStore](arkts-data-relationalstore.md) will also return error 14800024.
 
 When the number of concurrent transactions is large and the write transaction duration is long, the frequency of returning error 14800024 may increase. You can reduce the occurrence of error 14800024 by shortening the transaction duration or by handling the error 14800024 through retries.
 
-Before using the following APIs, you should obtain a **Transaction** instance by calling the [createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction-1) method and then call the corresponding method through the instance.
+Before using the following APIs, you should obtain a **Transaction** instance by calling the [createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction) method and then call the corresponding method through the instance.
 
 **System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Example**:
 
-For details about the definition of **this.context** in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) of the stage model.
+For details about the definition of **this.context** in the sample code, see the application [context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md) of the stage model.
 
 **Since:** 14
 
@@ -26,7 +26,6 @@ For details about the definition of **this.context** in the sample code, see the
 import { relationalStore } from '@kit.ArkData';
 ```
 
-<a id="batchinsert"></a>
 ## batchInsert
 
 ```TypeScript
@@ -78,7 +77,6 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="batchinsertsync"></a>
 ## batchInsertSync
 
 ```TypeScript
@@ -130,7 +128,6 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="batchinsertwithconflictresolution"></a>
 ## batchInsertWithConflictResolution
 
 ```TypeScript
@@ -151,15 +148,7 @@ Ensure that your application complies with this constraint when calling this API
 
 **Since:** 18
 
-<!--Device-Transaction-batchInsertWithConflictResolution(
-        table: string,
-        values: Array<ValuesBucket>,
-        conflict: ConflictResolution
-    ): Promise<long>--><!--Device-Transaction-batchInsertWithConflictResolution(
-        table: string,
-        values: Array<ValuesBucket>,
-        conflict: ConflictResolution
-    ): Promise<long>-End-->
+<!--Device-Transaction-batchInsertWithConflictResolution(        table: string,        values: Array<ValuesBucket>,        conflict: ConflictResolution    ): Promise<long>--><!--Device-Transaction-batchInsertWithConflictResolution(        table: string,        values: Array<ValuesBucket>,        conflict: ConflictResolution    ): Promise<long>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -200,7 +189,6 @@ Ensure that your application complies with this constraint when calling this API
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="batchinsertwithconflictresolutionsync"></a>
 ## batchInsertWithConflictResolutionSync
 
 ```TypeScript
@@ -220,9 +208,7 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 
 **Since:** 18
 
-<!--Device-Transaction-batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>,
-      conflict: ConflictResolution): long--><!--Device-Transaction-batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>,
-      conflict: ConflictResolution): long-End-->
+<!--Device-Transaction-batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>,      conflict: ConflictResolution): long--><!--Device-Transaction-batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>,      conflict: ConflictResolution): long-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -263,7 +249,6 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="batchinsertwithreturning"></a>
 ## batchInsertWithReturning
 
 ```TypeScript
@@ -287,9 +272,7 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Transaction-batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: ReturningConfig,
-      conflict?: ConflictResolution): Promise<Result>--><!--Device-Transaction-batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: ReturningConfig,
-      conflict?: ConflictResolution): Promise<Result>-End-->
+<!--Device-Transaction-batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>--><!--Device-Transaction-batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -324,7 +307,6 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="batchinsertwithreturningsync"></a>
 ## batchInsertWithReturningSync
 
 ```TypeScript
@@ -348,9 +330,7 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Transaction-batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config: ReturningConfig,
-      conflict?: ConflictResolution): Result--><!--Device-Transaction-batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config: ReturningConfig,
-      conflict?: ConflictResolution): Result-End-->
+<!--Device-Transaction-batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Result--><!--Device-Transaction-batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config: ReturningConfig,      conflict?: ConflictResolution): Result-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -385,7 +365,6 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="commit"></a>
 ## commit
 
 ```TypeScript
@@ -420,7 +399,6 @@ Commits this executed SQL statement. This API uses a promise to return the resul
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -467,7 +445,6 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="deletesync"></a>
 ## deleteSync
 
 ```TypeScript
@@ -514,7 +491,6 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="deletewithreturning"></a>
 ## deleteWithReturning
 
 ```TypeScript
@@ -560,7 +536,6 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object 
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="deletewithreturningsync"></a>
 ## deleteWithReturningSync
 
 ```TypeScript
@@ -606,7 +581,6 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object 
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="execute"></a>
 ## execute
 
 ```TypeScript
@@ -615,7 +589,7 @@ execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 
 Executes an SQL statement that contains parameters but does not return data. This API returns the result synchronously. The SQL statement can be used to create, delete, query, and modify a table. The type of the return value varies, depending on the execution result.
 
-This API does not support query, database attachment, and transaction operations. You can use [querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql-1) or [query](arkts-arkdata-relationalstore-transaction-i.md#query-1) to query data, and use [attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach-1) to attach a database.
+This API does not support query, database attachment, and transaction operations. You can use [querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql) or [query](arkts-arkdata-relationalstore-transaction-i.md#query) to query data, and use [attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach) to attach a database.
 
 Statements separated by semicolons (\;) are not supported.
 
@@ -661,7 +635,6 @@ Statements starting with comments are not supported.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="executesync"></a>
 ## executeSync
 
 ```TypeScript
@@ -672,7 +645,7 @@ Executes an SQL statement that contains specified arguments. The number of relat
 
 This API can be used to add, delete, and modify data, run SQL statements of the PRAGMA syntax, and create,delete, and modify a table. The type of the return value varies, depending on the execution result.
 
-This API does not support query, database attachment, and transaction operations. You can use [querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql-1) or [query](arkts-arkdata-relationalstore-transaction-i.md#query-1) to query data, and use [attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach-1) to attach a database.
+This API does not support query, database attachment, and transaction operations. You can use [querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql) or [query](arkts-arkdata-relationalstore-transaction-i.md#query) to query data, and use [attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach) to attach a database.
 
 Statements separated by semicolons (\;) are not supported.
 
@@ -718,14 +691,13 @@ Statements starting with comments are not supported.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="insert"></a>
 ## insert
 
 ```TypeScript
 insert(table: string, values: ValuesBucket, conflict?: ConflictResolution): Promise<number>
 ```
 
-Inserts a row of data into a table. This API uses a promise to return the result. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB. Otherwise, data cannot be obtained using the **get** methods such as [getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue-1) and [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring-1) after **ResultSet** is obtained through the [query](arkts-arkdata-relationalstore-rdbstore-i.md#query-1)or [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount-1) API of **RdbStore**. As a result, the operation may fail or an exception may be thrown.
+Inserts a row of data into a table. This API uses a promise to return the result. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB. Otherwise, data cannot be obtained using the **get** methods such as [getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue) and [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring) after **ResultSet** is obtained through the [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)or [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount) API of **RdbStore**. As a result, the operation may fail or an exception may be thrown.
 
 A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
@@ -769,7 +741,6 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="insertsync"></a>
 ## insertSync
 
 ```TypeScript
@@ -777,15 +748,13 @@ insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesB
       conflict?: ConflictResolution): number
 ```
 
-Inserts a row of data into a table. This API returns the result synchronously. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB. Otherwise, data cannot be obtained using the **get** methods such as [getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue-1) and [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring-1) after **ResultSet** is obtained through the [query](arkts-arkdata-relationalstore-rdbstore-i.md#query-1)or [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount-1) API of **RdbStore**. As a result, the operation may fail or an exception may be thrown.
+Inserts a row of data into a table. This API returns the result synchronously. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB. Otherwise, data cannot be obtained using the **get** methods such as [getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue) and [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring) after **ResultSet** is obtained through the [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)or [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount) API of **RdbStore**. As a result, the operation may fail or an exception may be thrown.
 
 A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB, only the first 8 MB data is retained. For data storage requirements exceeding 8 MB, the Blob type is recommended.
 
 **Since:** 14
 
-<!--Device-Transaction-insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesBucket,
-      conflict?: ConflictResolution): number--><!--Device-Transaction-insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesBucket,
-      conflict?: ConflictResolution): number-End-->
+<!--Device-Transaction-insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesBucket,      conflict?: ConflictResolution): number--><!--Device-Transaction-insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesBucket,      conflict?: ConflictResolution): number-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -823,7 +792,6 @@ A single string field supports a maximum of 8 MB data. If the data exceeds 8 MB,
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="query"></a>
 ## query
 
 ```TypeScript
@@ -866,7 +834,6 @@ Queries data from the RDB store based on specified conditions. This API uses a p
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="querysql"></a>
 ## querySql
 
 ```TypeScript
@@ -910,7 +877,6 @@ Queries data in the RDB store using the specified SQL statement. The number of r
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="querysqlsync"></a>
 ## querySqlSync
 
 ```TypeScript
@@ -954,14 +920,13 @@ Queries data in the RDB store using the specified SQL statement. The number of r
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="querysqlwithoutrowcount"></a>
 ## querySqlWithoutRowCount
 
 ```TypeScript
 querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteResultSet>
 ```
 
-Queries data from the RDB store based on specified conditions without calculating the row count. This API uses a promise to return the result and delivers better performance than the [querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql-1) API. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000.
+Queries data from the RDB store based on specified conditions without calculating the row count. This API uses a promise to return the result and delivers better performance than the [querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql) API. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000.
 
 **Since:** 23
 
@@ -991,7 +956,6 @@ Queries data from the RDB store based on specified conditions without calculatin
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
-<a id="querysqlwithoutrowcountsync"></a>
 ## querySqlWithoutRowCountSync
 
 ```TypeScript
@@ -1028,7 +992,6 @@ Queries data from the RDB store based on specified SQL statements without calcul
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
-<a id="querysync"></a>
 ## querySync
 
 ```TypeScript
@@ -1072,14 +1035,13 @@ Queries data in a database based on specified conditions. This API returns the r
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="querywithoutrowcount"></a>
 ## queryWithoutRowCount
 
 ```TypeScript
 queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promise<LiteResultSet>
 ```
 
-Queries data from the RDB store based on specified conditions without calculating the row count. This API delivers better performance than the [query](arkts-arkdata-relationalstore-transaction-i.md#query-1) API. This API uses a promise to return the result.
+Queries data from the RDB store based on specified conditions without calculating the row count. This API delivers better performance than the [query](arkts-arkdata-relationalstore-transaction-i.md#query) API. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1108,7 +1070,6 @@ Queries data from the RDB store based on specified conditions without calculatin
 | --- | --- |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
-<a id="querywithoutrowcountsync"></a>
 ## queryWithoutRowCountSync
 
 ```TypeScript
@@ -1144,7 +1105,6 @@ Queries data from the RDB store based on specified conditions without calculatin
 | --- | --- |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
-<a id="rollback"></a>
 ## rollback
 
 ```TypeScript
@@ -1179,14 +1139,13 @@ Rolls back this executed SQL statement. This API uses a promise to return the re
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 
-<a id="update"></a>
 ## update
 
 ```TypeScript
 update(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): Promise<number>
 ```
 
-Updates data based on the specified **RdbPredicates** object. This API uses a promise to return the result. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB. Otherwise, data cannot be obtained using the **get** methods such as [getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue-1) and [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring-1) after **ResultSet** is obtained through the [query](arkts-arkdata-relationalstore-rdbstore-i.md#query-1)or [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount-1) API of **RdbStore**. As a result, the operation may fail or an exception may be thrown.
+Updates data based on the specified **RdbPredicates** object. This API uses a promise to return the result. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB. Otherwise, data cannot be obtained using the **get** methods such as [getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue) and [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring) after **ResultSet** is obtained through the [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)or [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount) API of **RdbStore**. As a result, the operation may fail or an exception may be thrown.
 
 **Since:** 14
 
@@ -1228,14 +1187,13 @@ Updates data based on the specified **RdbPredicates** object. This API uses a pr
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="updatesync"></a>
 ## updateSync
 
 ```TypeScript
 updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): number
 ```
 
-Updates data in the RDB store based on the specified **RdbPredicates** object. This API returns the result synchronously. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB.Otherwise, data cannot be obtained using the **get** methods such as [getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue-1) and [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring-1) after **ResultSet** is obtained through the [query](arkts-arkdata-relationalstore-rdbstore-i.md#query-1)or [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount-1) API of **RdbStore**. As a result, the operation may fail or an exception may be thrown.
+Updates data in the RDB store based on the specified **RdbPredicates** object. This API returns the result synchronously. Due to the limit of the shared memory, the size of a single data record cannot exceed 2 MB.Otherwise, data cannot be obtained using the **get** methods such as [getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue) and [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring) after **ResultSet** is obtained through the [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)or [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount) API of **RdbStore**. As a result, the operation may fail or an exception may be thrown.
 
 **Since:** 14
 
@@ -1277,7 +1235,6 @@ Updates data in the RDB store based on the specified **RdbPredicates** object. T
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="updatewithreturning"></a>
 ## updateWithReturning
 
 ```TypeScript
@@ -1293,9 +1250,7 @@ It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict*
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Transaction-updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,
-      conflict?: ConflictResolution): Promise<Result>--><!--Device-Transaction-updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,
-      conflict?: ConflictResolution): Promise<Result>-End-->
+<!--Device-Transaction-updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>--><!--Device-Transaction-updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Promise<Result>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -1330,7 +1285,6 @@ It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict*
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
 
-<a id="updatewithreturningsync"></a>
 ## updateWithReturningSync
 
 ```TypeScript
@@ -1346,9 +1300,7 @@ It is not recommended to use the **ON_CONFLICT_FAIL** policy for the **conflict*
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Transaction-updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,
-      conflict?: ConflictResolution): Result--><!--Device-Transaction-updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,
-      conflict?: ConflictResolution): Result-End-->
+<!--Device-Transaction-updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Result--><!--Device-Transaction-updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config: ReturningConfig,      conflict?: ConflictResolution): Result-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
 

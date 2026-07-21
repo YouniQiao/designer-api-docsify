@@ -12,7 +12,6 @@ The [universal events](arkts-arkui-commonmethod-c.md) are supported.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="resizeable"></a>
 ## resizeable
 
 ```TypeScript
@@ -20,7 +19,6 @@ resizeable(value: boolean)
 ```
 
 Sets whether the divider can be dragged.
-
 > The divider of **RowSplit** can change the width of the left and right child components, but only to the  
 > extent that the resultant width falls within the maximum and minimum widths of the child components.
 

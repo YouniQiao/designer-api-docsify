@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="releaseinterface"></a>
 ## releaseInterface
 
 ```TypeScript
@@ -15,13 +14,13 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 Releases a USB interface.
 
-Before you do this, ensure that you have claimed the interface by calling [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface-1).
+Before you do this, ensure that you have claimed the interface by calling [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseinterface-1)
+**Substitutes:** [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseinterface)
 
 <!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number--><!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number-End-->
 

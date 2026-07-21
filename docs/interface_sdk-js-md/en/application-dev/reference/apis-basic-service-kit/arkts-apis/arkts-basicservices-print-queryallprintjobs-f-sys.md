@@ -6,7 +6,6 @@
 import { print } from '@kit.BasicServicesKit';
 ```
 
-<a id="queryallprintjobs"></a>
 ## queryAllPrintJobs
 
 ```TypeScript
@@ -43,7 +42,6 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 
-<a id="queryallprintjobs-1"></a>
 ## queryAllPrintJobs
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { featureAbility } from '@kit.AbilityKit';
 ```
 
-<a id="startability"></a>
 ## startAbility
 
 ```TypeScript
@@ -14,11 +13,10 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 ```
 
 Starts an ability. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > For details about the startup rules for the components in the FA model, see  
-> [Component Startup Rules (FA Model)](docroot://application-models/component-startup-rules-fa.md).
+> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 6
 
@@ -67,7 +65,6 @@ featureAbility.startAbility(
 ```
 
 
-<a id="startability-1"></a>
 ## startAbility
 
 ```TypeScript
@@ -75,11 +72,10 @@ function startAbility(parameter: StartAbilityParameter): Promise<number>
 ```
 
 Starts an ability. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > For details about the startup rules for the components in the FA model, see  
-> [Component Startup Rules (FA Model)](docroot://application-models/component-startup-rules-fa.md).
+> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 6
 

@@ -6,7 +6,6 @@
 import { accessibility } from '@kit.AccessibilityKit';
 ```
 
-<a id="sendevent"></a>
 ## sendEvent
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sends an accessibility event. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendAccessibilityEvent(event:](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent-1)
+**Substitutes:** [sendAccessibilityEvent(event:](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent)
 
 <!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void--><!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void-End-->
 
@@ -55,7 +54,6 @@ accessibility.sendEvent(eventInfo, (err: BusinessError) => {
 ```
 
 
-<a id="sendevent-1"></a>
 ## sendEvent
 
 ```TypeScript
@@ -68,7 +66,7 @@ Sends an accessibility event. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendAccessibilityEvent(event:](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent-1)
+**Substitutes:** [sendAccessibilityEvent(event:](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent)
 
 <!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>--><!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>-End-->
 

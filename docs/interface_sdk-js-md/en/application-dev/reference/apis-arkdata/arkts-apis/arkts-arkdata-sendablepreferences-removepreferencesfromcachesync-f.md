@@ -6,14 +6,13 @@
 import { sendablePreferences } from '@kit.ArkData';
 ```
 
-<a id="removepreferencesfromcachesync"></a>
 ## removePreferencesFromCacheSync
 
 ```TypeScript
 function removePreferencesFromCacheSync(context: Context, options: Options): void
 ```
 
-Removes a **Preferences** instance from the cache. This API returns the result synchronously.After an application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences-1) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences-1) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache,calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance.
+Removes a **Preferences** instance from the cache. This API returns the result synchronously.After an application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache,calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance.
 
 **Since:** 12
 

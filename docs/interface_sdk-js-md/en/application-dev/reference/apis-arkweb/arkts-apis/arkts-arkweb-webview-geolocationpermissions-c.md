@@ -1,7 +1,6 @@
 # GeolocationPermissions
 
 Implements a **GeolocationPermissions** object.
-
 > **NOTE**  
 >  
 > - The sample effect is subject to the actual device.  
@@ -12,7 +11,7 @@ Implements a **GeolocationPermissions** object.
 > **ohos.permission.LOCATION**, **ohos.permission.APPROXIMATELY_LOCATION**, and  
 > **ohos.permission.LOCATION_IN_BACKGROUND**, which are required for accessing the location information. For details  
 > about the permissions, see  
-> [@ohos.geolocation (Geolocation)](docroot://reference/apis-location-kit/js-apis-geolocation.md).
+> [@ohos.geolocation (Geolocation)](../../../reference/apis-location-kit/js-apis-geolocation.md).
 
 **Since:** 9
 
@@ -26,7 +25,6 @@ Implements a **GeolocationPermissions** object.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="allowgeolocation"></a>
 ## allowGeolocation
 
 ```TypeScript
@@ -57,7 +55,6 @@ Allows the specified origin to use the geolocation information.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
-<a id="deleteallgeolocation"></a>
 ## deleteAllGeolocation
 
 ```TypeScript
@@ -80,7 +77,6 @@ Clears the geolocation permission status of all sources.
 | --- | --- | --- | --- |
 | incognito | boolean | No | Whether to clear the geolocation permission status of all sources in incognito mode. The value **true** means to clear the geolocation permission status of all sources in incognito mode,and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed in,the value is **false**.<br>**Since:** 11 |
 
-<a id="deletegeolocation"></a>
 ## deleteGeolocation
 
 ```TypeScript
@@ -111,7 +107,6 @@ Clears the geolocation permission status of a specified origin.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
-<a id="getaccessiblegeolocation"></a>
 ## getAccessibleGeolocation
 
 ```TypeScript
@@ -148,7 +143,6 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
-<a id="getaccessiblegeolocation-1"></a>
 ## getAccessibleGeolocation
 
 ```TypeScript
@@ -180,7 +174,6 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
-<a id="getstoredgeolocation"></a>
 ## getStoredGeolocation
 
 ```TypeScript
@@ -215,7 +208,6 @@ Obtains the geolocation permission status of all origins. This API uses a promis
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
-<a id="getstoredgeolocation-1"></a>
 ## getStoredGeolocation
 
 ```TypeScript

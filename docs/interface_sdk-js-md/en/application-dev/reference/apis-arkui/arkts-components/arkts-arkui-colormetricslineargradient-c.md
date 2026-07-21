@@ -8,7 +8,6 @@ Sets the linear gradient background color of the track.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

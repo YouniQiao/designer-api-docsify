@@ -10,7 +10,6 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="triggerselect"></a>
 ## triggerSelect
 
 ```TypeScript

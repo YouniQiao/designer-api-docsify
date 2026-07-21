@@ -14,7 +14,6 @@ Provide functions and keep a decrypt module. Before calling an MediaKeySession m
 import { drm } from '@kit.DrmKit';
 ```
 
-<a id="checkmediakeystatus"></a>
 ## checkMediaKeyStatus
 
 ```TypeScript
@@ -44,7 +43,6 @@ Check the media key status
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="clearmediakeys"></a>
 ## clearMediaKeys
 
 ```TypeScript
@@ -68,7 +66,6 @@ Remove media key.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="destroy"></a>
 ## destroy
 
 ```TypeScript
@@ -92,7 +89,6 @@ Release the resource before the session gonna be unused.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="generatemediakeyrequest"></a>
 ## generateMediaKeyRequest
 
 ```TypeScript
@@ -132,7 +128,6 @@ Generate the media key request.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="generateofflinereleaserequest"></a>
 ## generateOfflineReleaseRequest
 
 ```TypeScript
@@ -169,7 +164,6 @@ Generate offline media key request.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="getcontentprotectionlevel"></a>
 ## getContentProtectionLevel
 
 ```TypeScript
@@ -199,7 +193,6 @@ Get content protection level.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="off"></a>
 ## off('keyRequired')
 
 ```TypeScript
@@ -230,7 +223,6 @@ Unregister keyRequired event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types.3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="off-1"></a>
 ## off('keyExpired')
 
 ```TypeScript
@@ -261,7 +253,6 @@ Unregister keyExpired event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types.3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="off-2"></a>
 ## off('vendorDefined')
 
 ```TypeScript
@@ -292,7 +283,6 @@ Unregister vendorDefined event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types.3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="off-3"></a>
 ## off('expirationUpdate')
 
 ```TypeScript
@@ -323,7 +313,6 @@ Unregister expirationUpdate event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types.3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="off-4"></a>
 ## off('keysChange')
 
 ```TypeScript
@@ -354,7 +343,6 @@ Unregister keysChange event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types.3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="on"></a>
 ## on('keyRequired')
 
 ```TypeScript
@@ -385,7 +373,6 @@ Register keyRequired event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types.3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="on-1"></a>
 ## on('keyExpired')
 
 ```TypeScript
@@ -416,7 +403,6 @@ Register keyExpired event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types.3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="on-2"></a>
 ## on('vendorDefined')
 
 ```TypeScript
@@ -447,7 +433,6 @@ Register vendorDefined event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types.3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="on-3"></a>
 ## on('expirationUpdate')
 
 ```TypeScript
@@ -478,7 +463,6 @@ Register expirationUpdate event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types.3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="on-4"></a>
 ## on('keysChange')
 
 ```TypeScript
@@ -509,7 +493,6 @@ Register keysChange event.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types.3.Parameter verification failed. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="processmediakeyresponse"></a>
 ## processMediaKeyResponse
 
 ```TypeScript
@@ -546,7 +529,6 @@ Process the response corresponding to the media key request obtained by the appl
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="processofflinereleaseresponse"></a>
 ## processOfflineReleaseResponse
 
 ```TypeScript
@@ -584,7 +566,6 @@ Process offline media key response.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="requiresecuredecodermodule"></a>
 ## requireSecureDecoderModule
 
 ```TypeScript
@@ -621,7 +602,6 @@ Whether the encrypted content require a secure decoder or not.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="restoreofflinemediakeys"></a>
 ## restoreOfflineMediaKeys
 
 ```TypeScript

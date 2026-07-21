@@ -8,7 +8,6 @@ Options type
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-<a id="oncreate"></a>
 ## onCreate
 
 ```TypeScript
@@ -25,7 +24,6 @@ Called when the application is created
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-<a id="ondestroy"></a>
 ## onDestroy
 
 ```TypeScript
@@ -42,7 +40,6 @@ Called when the application is destroyed or called when the page is redirected t
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-<a id="onhide"></a>
 ## onHide
 
 ```TypeScript
@@ -59,7 +56,6 @@ Listens for page hiding.Called when the page disappears.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-<a id="oninit"></a>
 ## onInit
 
 ```TypeScript
@@ -76,7 +72,6 @@ Called when the page is initialized. This function can be called only once in a 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-<a id="onready"></a>
 ## onReady
 
 ```TypeScript
@@ -93,7 +88,6 @@ Called when the page is created. This function can be called only once in a life
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-<a id="onrestoredata"></a>
 ## onRestoreData
 
 ```TypeScript
@@ -116,7 +110,6 @@ Called when the user data need to be restored
 | --- | --- | --- | --- |
 | data | Object | Yes | Indicates the user data to restore. |
 
-<a id="onsavedata"></a>
 ## onSaveData
 
 ```TypeScript
@@ -145,7 +138,6 @@ Called when the user data need to be saved
 | --- | --- |
 | boolean | Returns {@code true} if the data is successfully saved; returns {@code false} otherwise. |
 
-<a id="onshow"></a>
 ## onShow
 
 ```TypeScript

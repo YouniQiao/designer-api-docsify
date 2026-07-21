@@ -1,7 +1,6 @@
 # @ohos.bundle.appControl
 
 The module provides APIs for setting, obtaining, and deleting the disposed status of an application. An application in the disposed status is forbidden to run. When a user clicks the application icon on the home screen, the corresponding page is displayed based on the disposal intent.
-
 > **NOTE**  
 >  
 > The APIs provided by this module are system APIs.

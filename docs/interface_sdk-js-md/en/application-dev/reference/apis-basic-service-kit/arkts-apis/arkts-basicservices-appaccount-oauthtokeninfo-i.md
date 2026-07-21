@@ -1,7 +1,6 @@
 # OAuthTokenInfo
 
 Defines authorization token information.
-
 > **NOTE**  
 >  
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use  

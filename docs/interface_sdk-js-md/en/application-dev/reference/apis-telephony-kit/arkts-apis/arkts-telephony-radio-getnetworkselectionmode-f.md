@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="getnetworkselectionmode"></a>
 ## getNetworkSelectionMode
 
 ```TypeScript
@@ -55,7 +54,6 @@ radio.getNetworkSelectionMode(slotId, (err: BusinessError, data: radio.NetworkSe
 ```
 
 
-<a id="getnetworkselectionmode-1"></a>
 ## getNetworkSelectionMode
 
 ```TypeScript

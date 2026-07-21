@@ -6,7 +6,6 @@
 import { dialogRequest } from '@kit.AbilityKit';
 ```
 
-<a id="getrequestcallback"></a>
 ## getRequestCallback
 
 ```TypeScript
@@ -14,7 +13,6 @@ function getRequestCallback(want: Want): RequestCallback
 ```
 
 Obtains the request callback from Want.
-
 > **NOTE**  
 >  
 > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes,  

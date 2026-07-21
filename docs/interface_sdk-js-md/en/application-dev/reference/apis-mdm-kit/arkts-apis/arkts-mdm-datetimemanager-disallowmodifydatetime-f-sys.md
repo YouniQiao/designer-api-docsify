@@ -6,7 +6,6 @@
 import { dateTimeManager } from '@kit.MDMKit';
 ```
 
-<a id="disallowmodifydatetime"></a>
 ## disallowModifyDateTime
 
 ```TypeScript
@@ -19,7 +18,7 @@ Disallows the device to modify the system time. This API uses an asynchronous ca
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1)
+**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_DATETIME
 
@@ -72,7 +71,6 @@ dateTimeManager.disallowModifyDateTime(wantTemp, true, (err) => {
 ```
 
 
-<a id="disallowmodifydatetime-1"></a>
 ## disallowModifyDateTime
 
 ```TypeScript
@@ -85,7 +83,7 @@ Disallows the device to modify the system time. This API uses a promise to retur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1)
+**Substitutes:** [setDisallowedPolicy(admin:](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_DATETIME
 

@@ -1,6 +1,5 @@
 # rmdir
 
-<a id="rmdir"></a>
 ## rmdir
 
 ```TypeScript
@@ -13,7 +12,7 @@ Removes a directory. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir-1)
+**Substitutes:** [fs:rmdir](arkts-corefile-fileio-rmdir-f.md#rmdir)
 
 <!--Device-unnamed-declare function rmdir(path: string): Promise<void>--><!--Device-unnamed-declare function rmdir(path: string): Promise<void>-End-->
 
@@ -32,7 +31,6 @@ Removes a directory. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 
-<a id="rmdir-1"></a>
 ## rmdir
 
 ```TypeScript
@@ -45,7 +43,7 @@ Removes a directory. This API uses an asynchronous callback to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir-1)
+**Substitutes:** [fs:rmdir](arkts-corefile-fileio-rmdir-f.md#rmdir)
 
 <!--Device-unnamed-declare function rmdir(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function rmdir(path: string, callback: AsyncCallback<void>): void-End-->
 

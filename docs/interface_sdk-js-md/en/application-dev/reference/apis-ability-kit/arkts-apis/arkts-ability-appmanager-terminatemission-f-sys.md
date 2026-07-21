@@ -6,7 +6,6 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="terminatemission"></a>
 ## terminateMission
 
 ```TypeScript
@@ -29,7 +28,7 @@ Terminates a mission. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID, which can be obtained by calling [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getmissioninfos-1). |
+| missionId | number | Yes | Mission ID, which can be obtained by calling [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getmissioninfos). |
 
 **Return value:**
 

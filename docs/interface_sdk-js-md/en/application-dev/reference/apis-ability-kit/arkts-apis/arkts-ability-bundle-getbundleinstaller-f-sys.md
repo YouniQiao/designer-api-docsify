@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="getbundleinstaller"></a>
 ## getBundleInstaller
 
 ```TypeScript
@@ -36,7 +35,6 @@ Obtains the installation package. This API uses an asynchronous callback to retu
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInstaller&gt; | Yes | Callback used to return the installation package. |
 
 
-<a id="getbundleinstaller-1"></a>
 ## getBundleInstaller
 
 ```TypeScript

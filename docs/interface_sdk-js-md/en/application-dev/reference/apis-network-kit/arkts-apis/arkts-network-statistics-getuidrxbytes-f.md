@@ -6,7 +6,6 @@
 import { statistics } from '@kit.NetworkKit';
 ```
 
-<a id="getuidrxbytes"></a>
 ## getUidRxBytes
 
 ```TypeScript
@@ -59,7 +58,6 @@ statistics.getUidRxBytes(uid, (error: BusinessError, stats: number) => {
 ```
 
 
-<a id="getuidrxbytes-1"></a>
 ## getUidRxBytes
 
 ```TypeScript

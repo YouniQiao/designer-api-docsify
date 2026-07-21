@@ -16,7 +16,6 @@ Provides APIs for encapsulating file asset attributes.
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="getanalysisdata"></a>
 ## getAnalysisData
 
 ```TypeScript
@@ -56,7 +55,6 @@ Obtains analysis data. This API uses a promise to return the result.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
-<a id="requestsource"></a>
 ## requestSource
 
 ```TypeScript

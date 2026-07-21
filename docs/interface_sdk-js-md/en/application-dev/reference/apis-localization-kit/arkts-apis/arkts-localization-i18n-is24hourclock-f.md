@@ -6,7 +6,6 @@
 import { i18n } from '@kit.LocalizationKit';
 ```
 
-<a id="is24hourclock"></a>
 ## is24HourClock
 
 ```TypeScript
@@ -19,7 +18,7 @@ Checks whether the 24-hour clock is used.
 
 **Deprecated since:** 9
 
-**Substitutes:** [is24HourClock](arkts-localization-i18n-system-c.md#is24hourclock-1)
+**Substitutes:** [is24HourClock](arkts-localization-i18n-system-c.md#is24hourclock)
 
 <!--Device-i18n-export function is24HourClock(): boolean--><!--Device-i18n-export function is24HourClock(): boolean-End-->
 

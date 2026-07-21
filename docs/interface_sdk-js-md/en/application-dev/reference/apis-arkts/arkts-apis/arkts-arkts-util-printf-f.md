@@ -6,7 +6,6 @@
 import { util } from '@kit.ArkTS';
 ```
 
-<a id="printf"></a>
 ## printf
 
 ```TypeScript
@@ -19,7 +18,7 @@ Formats a string by replacing the placeholders in it.
 
 **Deprecated since:** 9
 
-**Substitutes:** [format](arkts-arkts-util-format-f.md#format-1)
+**Substitutes:** [format](arkts-arkts-util-format-f.md#format)
 
 <!--Device-util-function printf(format: string, ...args: Object[]): string--><!--Device-util-function printf(format: string, ...args: Object[]): string-End-->
 

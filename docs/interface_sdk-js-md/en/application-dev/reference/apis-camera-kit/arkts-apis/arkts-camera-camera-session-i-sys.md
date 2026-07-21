@@ -14,7 +14,6 @@
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getactiveparameter"></a>
 ## getActiveParameter
 
 ```TypeScript
@@ -54,7 +53,6 @@ Gets the active value of the given key in camera metadata.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="getcameraoutputcapabilities"></a>
 ## getCameraOutputCapabilities
 
 ```TypeScript
@@ -91,7 +89,6 @@ Get the supported camera output capability set.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="getparameters"></a>
 ## getParameters
 
 ```TypeScript
@@ -131,7 +128,6 @@ Gets the values of the given key in camera metadata.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="getsupportedkeys"></a>
 ## getSupportedKeys
 
 ```TypeScript
@@ -164,7 +160,6 @@ Gets the supported keys in camera metadata.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="setparameters"></a>
 ## setParameters
 
 ```TypeScript
@@ -198,7 +193,6 @@ Sets key-value pairs parameters for the session.
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-<a id="setusage"></a>
 ## setUsage
 
 ```TypeScript

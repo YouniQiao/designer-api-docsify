@@ -12,7 +12,6 @@ Provides APIs to create a **Query** object, which defines different data query c
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
-<a id="and"></a>
 ## and
 
 ```TypeScript
@@ -53,7 +52,6 @@ try {
 
 ```
 
-<a id="begingroup"></a>
 ## beginGroup
 
 ```TypeScript
@@ -94,7 +92,6 @@ try {
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -113,7 +110,6 @@ Defines a constructor used to create a **Query** instance.
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
 
-<a id="deviceid"></a>
 ## deviceId
 
 ```TypeScript
@@ -121,14 +117,13 @@ deviceId(deviceId: string): Query
 ```
 
 Creates a **Query** object with the device ID as the key prefix.
-
 > **NOTE**  
 >  
 > The value of **deviceId** can be obtained by <!--RP1-->  
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync-1).  
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).  
 > <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system  
 > applications.  
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync-1).
+> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
@@ -165,7 +160,6 @@ try {
 
 ```
 
-<a id="endgroup"></a>
 ## endGroup
 
 ```TypeScript
@@ -206,7 +200,6 @@ try {
 
 ```
 
-<a id="equalto"></a>
 ## equalTo
 
 ```TypeScript
@@ -252,7 +245,6 @@ try {
 
 ```
 
-<a id="getsqllike"></a>
 ## getSqlLike
 
 ```TypeScript
@@ -290,7 +282,6 @@ try {
 
 ```
 
-<a id="greaterthan"></a>
 ## greaterThan
 
 ```TypeScript
@@ -336,7 +327,6 @@ try {
 
 ```
 
-<a id="greaterthanorequalto"></a>
 ## greaterThanOrEqualTo
 
 ```TypeScript
@@ -382,7 +372,6 @@ try {
 
 ```
 
-<a id="innumber"></a>
 ## inNumber
 
 ```TypeScript
@@ -428,7 +417,6 @@ try {
 
 ```
 
-<a id="instring"></a>
 ## inString
 
 ```TypeScript
@@ -474,7 +462,6 @@ try {
 
 ```
 
-<a id="isnotnull"></a>
 ## isNotNull
 
 ```TypeScript
@@ -519,7 +506,6 @@ try {
 
 ```
 
-<a id="isnull"></a>
 ## isNull
 
 ```TypeScript
@@ -564,7 +550,6 @@ try {
 
 ```
 
-<a id="lessthan"></a>
 ## lessThan
 
 ```TypeScript
@@ -610,7 +595,6 @@ try {
 
 ```
 
-<a id="lessthanorequalto"></a>
 ## lessThanOrEqualTo
 
 ```TypeScript
@@ -656,7 +640,6 @@ try {
 
 ```
 
-<a id="like"></a>
 ## like
 
 ```TypeScript
@@ -702,7 +685,6 @@ try {
 
 ```
 
-<a id="limit"></a>
 ## limit
 
 ```TypeScript
@@ -751,7 +733,6 @@ try {
 
 ```
 
-<a id="notequalto"></a>
 ## notEqualTo
 
 ```TypeScript
@@ -797,7 +778,6 @@ try {
 
 ```
 
-<a id="notinnumber"></a>
 ## notInNumber
 
 ```TypeScript
@@ -843,7 +823,6 @@ try {
 
 ```
 
-<a id="notinstring"></a>
 ## notInString
 
 ```TypeScript
@@ -889,7 +868,6 @@ try {
 
 ```
 
-<a id="or"></a>
 ## or
 
 ```TypeScript
@@ -930,7 +908,6 @@ try {
 
 ```
 
-<a id="orderbyasc"></a>
 ## orderByAsc
 
 ```TypeScript
@@ -976,7 +953,6 @@ try {
 
 ```
 
-<a id="orderbydesc"></a>
 ## orderByDesc
 
 ```TypeScript
@@ -1022,7 +998,6 @@ try {
 
 ```
 
-<a id="prefixkey"></a>
 ## prefixKey
 
 ```TypeScript
@@ -1068,7 +1043,6 @@ try {
 
 ```
 
-<a id="reset"></a>
 ## reset
 
 ```TypeScript
@@ -1109,7 +1083,6 @@ try {
 
 ```
 
-<a id="setsuggestindex"></a>
 ## setSuggestIndex
 
 ```TypeScript
@@ -1155,7 +1128,6 @@ try {
 
 ```
 
-<a id="unlike"></a>
 ## unlike
 
 ```TypeScript

@@ -24,7 +24,7 @@ import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager-1). |
+| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager). |
 | [PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md) | Represents the permission state change details. |
 
 <!--Del-->
@@ -32,7 +32,7 @@ import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i-sys.md) | Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager-1). |
+| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i-sys.md) | Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager). |
 | [PermissionStatusInfo](arkts-ability-abilityaccessctrl-permissionstatusinfo-i-sys.md) | Indicates the permission status. |
 | [CliInfo](arkts-ability-abilityaccessctrl-cliinfo-i-sys.md) | Represents CLI (Command Line Interface) information. |
 | [PermissionDialogDetail](arkts-ability-abilityaccessctrl-permissiondialogdetail-i-sys.md) | Represents the permission dialog information of a single command. |

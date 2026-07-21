@@ -1,6 +1,5 @@
 # getProcessRunningInfos
 
-<a id="getprocessrunninginfos"></a>
 ## getProcessRunningInfos
 
 ```TypeScript
@@ -8,9 +7,8 @@ function getProcessRunningInfos(): Promise<Array<ProcessRunningInfo>>
 ```
 
 Obtains information about the running processes. This API uses a promise to return the result.
-
 > This API is deprecated since API version 9. You are advised to use  
-> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation-1)  
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)  
 > instead.
 
 **Since:** 8
@@ -46,7 +44,6 @@ appManager.getProcessRunningInfos().then((data) => {
 ```
 
 
-<a id="getprocessrunninginfos-1"></a>
 ## getProcessRunningInfos
 
 ```TypeScript
@@ -54,9 +51,8 @@ function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessRunningInfo
 ```
 
 Obtains information about the running processes. This API uses an asynchronous callback to return the result.
-
 > This API is deprecated since API version 9. You are advised to use  
-> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation-1)  
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)  
 > instead.
 
 **Since:** 8

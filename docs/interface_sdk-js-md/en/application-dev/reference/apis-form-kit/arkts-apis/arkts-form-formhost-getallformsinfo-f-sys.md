@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="getallformsinfo"></a>
 ## getAllFormsInfo
 
 ```TypeScript
@@ -43,7 +42,6 @@ Obtains the widget information provided by all applications on the device (exclu
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getallformsinfo-1"></a>
 ## getAllFormsInfo
 
 ```TypeScript

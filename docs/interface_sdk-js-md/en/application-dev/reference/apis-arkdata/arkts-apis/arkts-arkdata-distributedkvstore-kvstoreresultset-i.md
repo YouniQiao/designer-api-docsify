@@ -1,7 +1,6 @@
 # KVStoreResultSet
 
 Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a time.The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.Before calling any API in **KVStoreResultSet**, you must use **[getKVStore](distributedKVStore.KVManager.getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>))** to construct a **SingleKVStore** or **DeviceKVStore** instance.
-
 > **NOTE**  
 >  
 > The cursor start position of **KVStoreResultSet** is **-1**.
@@ -18,7 +17,6 @@ Provides APIs for obtaining the distributed KV store result sets. A maximum of e
 import { distributedKVStore } from '@kit.ArkData';
 ```
 
-<a id="getcount"></a>
 ## getCount
 
 ```TypeScript
@@ -64,7 +62,6 @@ try {
 
 ```
 
-<a id="getentry"></a>
 ## getEntry
 
 ```TypeScript
@@ -109,14 +106,13 @@ try {
 
 ```
 
-<a id="getposition"></a>
 ## getPosition
 
 ```TypeScript
 getPosition(): number
 ```
 
-Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetofirst-1) and [moveToLast](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetolast-1).
+Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetofirst) and [moveToLast](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetolast).
 
 **Since:** 9
 
@@ -155,7 +151,6 @@ try {
 
 ```
 
-<a id="isafterlast"></a>
 ## isAfterLast
 
 ```TypeScript
@@ -200,7 +195,6 @@ try {
 
 ```
 
-<a id="isbeforefirst"></a>
 ## isBeforeFirst
 
 ```TypeScript
@@ -245,7 +239,6 @@ try {
 
 ```
 
-<a id="isfirst"></a>
 ## isFirst
 
 ```TypeScript
@@ -291,7 +284,6 @@ try {
 
 ```
 
-<a id="islast"></a>
 ## isLast
 
 ```TypeScript
@@ -337,7 +329,6 @@ try {
 
 ```
 
-<a id="move"></a>
 ## move
 
 ```TypeScript
@@ -395,7 +386,6 @@ try {
 
 ```
 
-<a id="movetofirst"></a>
 ## moveToFirst
 
 ```TypeScript
@@ -441,7 +431,6 @@ try {
 
 ```
 
-<a id="movetolast"></a>
 ## moveToLast
 
 ```TypeScript
@@ -487,7 +476,6 @@ try {
 
 ```
 
-<a id="movetonext"></a>
 ## moveToNext
 
 ```TypeScript
@@ -535,7 +523,6 @@ try {
 
 ```
 
-<a id="movetoposition"></a>
 ## moveToPosition
 
 ```TypeScript
@@ -593,7 +580,6 @@ try {
 
 ```
 
-<a id="movetoprevious"></a>
 ## moveToPrevious
 
 ```TypeScript

@@ -14,7 +14,6 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 import { util } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -53,19 +52,17 @@ for (let value of pro) {
 
 ```
 
-<a id="afterremoval"></a>
 ## afterRemoval
 
 ```TypeScript
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#get-1),[put<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#put-1), [remove<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#remove-1),[clear<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#clear-1), and [updateCapacity<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#updatecapacity-1).
-
+Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#get),[put<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#put), [remove<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#remove),[clear<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#clear), and [updateCapacity<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#updatecapacity).
 > **NOTE**  
 >  
-> If the callback method is executed after [clear<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#clear-1) and  
-> [updateCapacity<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#updatecapacity-1) are called and the input **key** and  
+> If the callback method is executed after [clear<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#clear) and  
+> [updateCapacity<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#updatecapacity) are called and the input **key** and  
 > **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
 
 **Since:** 9
@@ -85,7 +82,6 @@ Performs subsequent operations after a value is removed. The subsequent operatio
 | value | V | Yes | Value removed. |
 | newValue | V | Yes | New value for the key if the **put()** method is called and the key to be added already exists. In other cases, this parameter is left blank. |
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -117,7 +113,6 @@ console.info('res = ' + res);
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -147,7 +142,6 @@ let pro = new util.LRUCache<number, number>();
 
 ```
 
-<a id="contains"></a>
 ## contains
 
 ```TypeScript
@@ -187,7 +181,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="createdefault"></a>
 ## createDefault
 
 ```TypeScript
@@ -226,7 +219,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -265,14 +257,13 @@ for (let value of pair) {
 
 ```
 
-<a id="get"></a>
 ## get
 
 ```TypeScript
 get(key: K): V | undefined
 ```
 
-Obtains the value of a key. If the key is not in the cache,[createDefault<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#createdefault-1) is called to create the key. If the value specified in **createDefault** is not **undefined**,[afterRemoval<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#afterremoval-1) is called to return the value specified in **createDefault**.
+Obtains the value of a key. If the key is not in the cache,[createDefault<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#createdefault) is called to create the key. If the value specified in **createDefault** is not **undefined**,[afterRemoval<sup>9+</sup>](arkts-arkts-util-lrucache-c.md#afterremoval) is called to return the value specified in **createDefault**.
 
 **Since:** 9
 
@@ -305,7 +296,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="getcapacity"></a>
 ## getCapacity
 
 ```TypeScript
@@ -338,7 +328,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="getcreatecount"></a>
 ## getCreateCount
 
 ```TypeScript
@@ -384,7 +373,6 @@ console.info('res = ' + res);
 
 ```
 
-<a id="getmatchcount"></a>
 ## getMatchCount
 
 ```TypeScript
@@ -419,7 +407,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="getmisscount"></a>
 ## getMissCount
 
 ```TypeScript
@@ -454,7 +441,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="getputcount"></a>
 ## getPutCount
 
 ```TypeScript
@@ -488,7 +474,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="getremovalcount"></a>
 ## getRemovalCount
 
 ```TypeScript
@@ -524,7 +509,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="isempty"></a>
 ## isEmpty
 
 ```TypeScript
@@ -558,7 +542,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="keys"></a>
 ## keys
 
 ```TypeScript
@@ -602,7 +585,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="put"></a>
 ## put
 
 ```TypeScript
@@ -642,7 +624,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -682,7 +663,6 @@ console.info('result = ' + result);
 
 ```
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -718,7 +698,6 @@ console.info(pro.toString());
 
 ```
 
-<a id="updatecapacity"></a>
 ## updateCapacity
 
 ```TypeScript
@@ -749,7 +728,6 @@ pro.updateCapacity(100);
 
 ```
 
-<a id="values"></a>
 ## values
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="p2pcancelconnect"></a>
 ## p2pCancelConnect
 
 ```TypeScript

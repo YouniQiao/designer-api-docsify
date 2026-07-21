@@ -8,7 +8,6 @@ A **VideoController** object can control one or more **Video** components.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -25,7 +24,6 @@ A constructor used to create a **VideoController** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="exitfullscreen"></a>
 ## exitFullscreen
 
 ```TypeScript
@@ -42,7 +40,6 @@ Exits full-screen mode.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="pause"></a>
 ## pause
 
 ```TypeScript
@@ -59,7 +56,6 @@ Pauses playback. The current frame is then displayed, and playback will be resum
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="requestfullscreen"></a>
 ## requestFullscreen
 
 ```TypeScript
@@ -82,7 +78,6 @@ Requests full-screen playback.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to request full-screen playback (filling the application window).<br>**true**:Request full-screen playback.<br>**false**: Do not request full-screen playback.<br>Default value: **false**. |
 
-<a id="reset"></a>
 ## reset
 
 ```TypeScript
@@ -101,7 +96,6 @@ Resets the **AVPlayer** instance of this component, which displays the current f
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="setcurrenttime"></a>
 ## setCurrentTime
 
 ```TypeScript
@@ -109,7 +103,6 @@ setCurrentTime(value: number)
 ```
 
 Sets the video playback position.
-
 > **NOTE**  
 >  
 > To start playback from a specific position, disable autoplay, wait for video preparation to complete, and then  
@@ -127,9 +120,8 @@ Sets the video playback position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Video playback position.<br>Value range: [0, [duration](arkts-arkui-preparedinfo-i.md)]<br>When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.<br>Unit: second<br>Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime<sup>8+</sup>](arkts-arkui-videocontroller-c.md#setcurrenttime-1). |
+| value | number | Yes | Video playback position.<br>Value range: [0, [duration](arkts-arkui-preparedinfo-i.md)]<br>When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.<br>Unit: second<br>Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime<sup>8+</sup>](arkts-arkui-videocontroller-c.md#setcurrenttime). |
 
-<a id="setcurrenttime-1"></a>
 ## setCurrentTime
 
 ```TypeScript
@@ -153,7 +145,6 @@ Sets the video playback position with the specified seek mode.
 | value | number | Yes | Video playback position.<br>Value range: [0, [duration](arkts-arkui-preparedinfo-i.md)]<br>When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.<br>Unit: second |
 | seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-media-seekmode-e.md) | Yes | Seek mode. |
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -170,7 +161,6 @@ Starts playback.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript

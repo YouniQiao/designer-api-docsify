@@ -4,8 +4,7 @@ Defines APIs to access the result set obtained by querying the RDB store. This r
 
 The **LiteResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.
 
-In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount-1) or [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount-1), and then call the corresponding method through this instance.
-
+In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) or [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount), and then call the corresponding method through this instance.
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 23.
@@ -22,7 +21,6 @@ In the following API examples, you need to obtain an **LiteResultSet** instance 
 import { relationalStore } from '@kit.ArkData';
 ```
 
-<a id="getfloat32array"></a>
 ## getFloat32Array
 
 ```TypeScript

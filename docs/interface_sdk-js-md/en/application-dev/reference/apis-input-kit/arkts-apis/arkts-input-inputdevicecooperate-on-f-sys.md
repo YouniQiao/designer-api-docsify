@@ -6,7 +6,6 @@
 import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
-<a id="on"></a>
 ## on('cooperation')
 
 ```TypeScript

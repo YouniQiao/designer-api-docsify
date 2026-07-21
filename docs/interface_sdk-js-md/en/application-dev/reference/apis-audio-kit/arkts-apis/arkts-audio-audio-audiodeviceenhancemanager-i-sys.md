@@ -14,7 +14,6 @@ Provides enhanced audio device management capabilities.
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="getsoundcardinfo"></a>
 ## getSoundCardInfo
 
 ```TypeScript

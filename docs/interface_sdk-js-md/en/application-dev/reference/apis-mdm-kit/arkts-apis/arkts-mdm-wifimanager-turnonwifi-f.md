@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.MDMKit';
 ```
 
-<a id="turnonwifi"></a>
 ## turnOnWifi
 
 ```TypeScript
@@ -17,7 +16,7 @@ Enables Wi-Fi.
 
 In the following scenario, attempting to enable Wi-Fi using this API will fail, and a message indicating that the system function is disabled will be returned:
 
-?Wi-Fi has been disabled using the [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1)API. In this case, you must call [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1)to enable Wi-Fi.
+?Wi-Fi has been disabled using the [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)API. In this case, you must call [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)to enable Wi-Fi.
 
 **Since:** 20
 
@@ -34,7 +33,7 @@ In the following scenario, attempting to enable Wi-Fi using this API will fail, 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| isForce | boolean | Yes | Whether to forcibly enable Wi-Fi.<br>The value **true** means to forcibly enable Wi-Fi. Once enabled, it cannot be disabled manually. You must call [turnOffWifi](arkts-mdm-wifimanager-turnoffwifi-f.md#turnoffwifi-1)instead. The value **false** means the opposite and the Wi-Fi can be disabled manually. |
+| isForce | boolean | Yes | Whether to forcibly enable Wi-Fi.<br>The value **true** means to forcibly enable Wi-Fi. Once enabled, it cannot be disabled manually. You must call [turnOffWifi](arkts-mdm-wifimanager-turnoffwifi-f.md#turnoffwifi)instead. The value **false** means the opposite and the Wi-Fi can be disabled manually. |
 
 **Error codes:**
 

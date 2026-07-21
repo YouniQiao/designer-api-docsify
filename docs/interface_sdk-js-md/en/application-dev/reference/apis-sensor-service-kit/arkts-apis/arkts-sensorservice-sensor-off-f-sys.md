@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -38,7 +37,6 @@ Unsubscribes from data of the color sensor.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API.<br>**Applicable version:** 11 and later |
 
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -71,7 +69,6 @@ Unsubscribes from data of the color sensor.
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
-<a id="off-2"></a>
 ## off
 
 ```TypeScript
@@ -103,7 +100,6 @@ Unsubscribes from data of the SAR sensor.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API.<br>**Applicable version:** 11 and later |
 
 
-<a id="off-3"></a>
 ## off
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { geolocation } from '@kit.LocationKit';
 ```
 
-<a id="isgeoserviceavailable"></a>
 ## isGeoServiceAvailable
 
 ```TypeScript
@@ -49,7 +48,6 @@ geolocation.isGeoServiceAvailable((err, data) => {
 ```
 
 
-<a id="isgeoserviceavailable-1"></a>
 ## isGeoServiceAvailable
 
 ```TypeScript

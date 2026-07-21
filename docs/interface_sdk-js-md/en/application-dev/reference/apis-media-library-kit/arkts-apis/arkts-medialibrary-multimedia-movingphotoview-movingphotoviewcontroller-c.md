@@ -14,7 +14,6 @@ Defines the MovingPhotoView controller.
 import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from '@kit.MediaLibraryKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -31,7 +30,6 @@ constructor.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-<a id="refreshmovingphoto"></a>
 ## refreshMovingPhoto
 
 ```TypeScript
@@ -48,7 +46,6 @@ refresh moving photo data
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-<a id="startplayback"></a>
 ## startPlayback
 
 ```TypeScript
@@ -65,7 +62,6 @@ Start play moving photo.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-<a id="stopplayback"></a>
 ## stopPlayback
 
 ```TypeScript

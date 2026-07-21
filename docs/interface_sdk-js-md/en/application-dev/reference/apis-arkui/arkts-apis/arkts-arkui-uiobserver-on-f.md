@@ -6,7 +6,6 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-<a id="on"></a>
 ## on('navDestinationUpdate')
 
 ```TypeScript
@@ -91,7 +90,6 @@ struct Index {
 ```
 
 
-<a id="on-1"></a>
 ## on('navDestinationUpdate')
 
 ```TypeScript
@@ -174,7 +172,6 @@ struct Index {
 ```
 
 
-<a id="on-2"></a>
 ## on('scrollEvent')
 
 ```TypeScript
@@ -202,7 +199,6 @@ Registers a callback function to be called when the scroll event start or stop.
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
 
 
-<a id="on-3"></a>
 ## on('scrollEvent')
 
 ```TypeScript
@@ -229,7 +225,6 @@ Registers a callback function to be called when the scroll event start or stop.
 | callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;ScrollEventInfo&gt; | Yes | The callback function to be called when the scroll event start or stop. |
 
 
-<a id="on-4"></a>
 ## on('routerPageUpdate')
 
 ```TypeScript
@@ -294,7 +289,6 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="on-5"></a>
 ## on('densityUpdate')
 
 ```TypeScript
@@ -354,7 +348,6 @@ struct Index {
 ```
 
 
-<a id="on-6"></a>
 ## on('willDraw')
 
 ```TypeScript
@@ -405,7 +398,6 @@ struct Index {
 ```
 
 
-<a id="on-7"></a>
 ## on('didLayout')
 
 ```TypeScript
@@ -456,14 +448,13 @@ struct Index {
 ```
 
 
-<a id="on-8"></a>
 ## on('tabContentUpdate')
 
 ```TypeScript
 export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void
 ```
 
-Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID.Unlike [on('tabChange')](@ohos.arkui.UIContext:UIObserver#on(type: 'tabChange', callback: Callback<observer.TabContentInfo>)),this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
+Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID.Unlike [on('tabChange')](@ohos.arkui.UIContext:UIObserver#on(type: 'tabChange', callback: Callback&lt;observer.TabContentInfo&gt;)),this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
 
 **Since:** 12
 
@@ -536,14 +527,13 @@ struct TabsExample {
 ```
 
 
-<a id="on-9"></a>
 ## on('tabContentUpdate')
 
 ```TypeScript
 export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void
 ```
 
-Subscribes to **TabContent** switch events. Unlike [on('tabChange')](@ohos.arkui.UIContext:UIObserver#on(type: 'tabChange', callback: Callback<observer.TabContentInfo>)),this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
+Subscribes to **TabContent** switch events. Unlike [on('tabChange')](@ohos.arkui.UIContext:UIObserver#on(type: 'tabChange', callback: Callback&lt;observer.TabContentInfo&gt;)),this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
 
 **Since:** 12
 
@@ -615,7 +605,6 @@ struct TabsExample {
 ```
 
 
-<a id="on-10"></a>
 ## on('navDestinationSwitch')
 
 ```TypeScript
@@ -634,15 +623,7 @@ Subscribes to **Navigation** component page switching events.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-uiObserver-export function on(
-    type: 'navDestinationSwitch',
-    context: UIAbilityContext | UIContext,
-    callback: Callback<NavDestinationSwitchInfo>
-  ): void--><!--Device-uiObserver-export function on(
-    type: 'navDestinationSwitch',
-    context: UIAbilityContext | UIContext,
-    callback: Callback<NavDestinationSwitchInfo>
-  ): void-End-->
+<!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    callback: Callback<NavDestinationSwitchInfo>  ): void--><!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    callback: Callback<NavDestinationSwitchInfo>  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -765,7 +746,6 @@ struct Index {
 ```
 
 
-<a id="on-11"></a>
 ## on('navDestinationSwitch')
 
 ```TypeScript
@@ -785,17 +765,7 @@ Subscribes to **Navigation** component page switching events. Compared with [uiO
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-uiObserver-export function on(
-    type: 'navDestinationSwitch',
-    context: UIAbilityContext | UIContext,
-    observerOptions: NavDestinationSwitchObserverOptions,
-    callback: Callback<NavDestinationSwitchInfo>
-  ): void--><!--Device-uiObserver-export function on(
-    type: 'navDestinationSwitch',
-    context: UIAbilityContext | UIContext,
-    observerOptions: NavDestinationSwitchObserverOptions,
-    callback: Callback<NavDestinationSwitchInfo>
-  ): void-End-->
+<!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    observerOptions: NavDestinationSwitchObserverOptions,    callback: Callback<NavDestinationSwitchInfo>  ): void--><!--Device-uiObserver-export function on(    type: 'navDestinationSwitch',    context: UIAbilityContext | UIContext,    observerOptions: NavDestinationSwitchObserverOptions,    callback: Callback<NavDestinationSwitchInfo>  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

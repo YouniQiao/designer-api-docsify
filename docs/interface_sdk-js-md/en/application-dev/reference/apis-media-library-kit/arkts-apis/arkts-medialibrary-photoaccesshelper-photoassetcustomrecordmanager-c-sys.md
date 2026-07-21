@@ -16,7 +16,6 @@ Provides APIs for custom user behavior recording for Gallery.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="addlcdjumpcount"></a>
 ## addLcdJumpCount
 
 ```TypeScript
@@ -53,7 +52,6 @@ Increases the value of **LcdJumpCount** by 1 for the data in the database based 
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes:<br>1. The ids list is empty.<br>2. The number of ids lists exceeds 500. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes:<br>1. Database corrupted;<br>2. The file system is abnormal;<br>3. The IPC request timed out. |
 
-<a id="addsharecount"></a>
 ## addShareCount
 
 ```TypeScript
@@ -90,7 +88,6 @@ Increases the value of **shareCount** by 1 for the data in the database based on
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes:<br>1. The ids list is empty. 2. The number of ids lists exceeds 500. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes:<br>1. Database corrupted;<br>2. The file system is abnormal;<br>3. The IPC request timed out. |
 
-<a id="createcustomrecords"></a>
 ## createCustomRecords
 
 ```TypeScript
@@ -147,7 +144,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="getcustomrecordmanagerinstance"></a>
 ## getCustomRecordManagerInstance
 
 ```TypeScript
@@ -200,7 +196,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="getcustomrecords"></a>
 ## getCustomRecords
 
 ```TypeScript
@@ -262,7 +257,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="removecustomrecords"></a>
 ## removeCustomRecords
 
 ```TypeScript
@@ -323,7 +317,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="setcustomrecords"></a>
 ## setCustomRecords
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="getlinkedinfo"></a>
 ## getLinkedInfo
 
 ```TypeScript
@@ -41,7 +40,6 @@ Obtain connection information about the Wi-Fi connection. If does't have the per
 | [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
 
-<a id="getlinkedinfo-1"></a>
 ## getLinkedInfo
 
 ```TypeScript

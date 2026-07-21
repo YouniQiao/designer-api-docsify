@@ -6,7 +6,6 @@
 import { intelligence } from '@kit.ArkData';
 ```
 
-<a id="getimageembeddingmodel"></a>
 ## getImageEmbeddingModel
 
 ```TypeScript

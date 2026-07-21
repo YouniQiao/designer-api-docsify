@@ -6,7 +6,6 @@
 import { inputMethod } from '@kit.IMEKit';
 ```
 
-<a id="setsimplekeyboardenabled"></a>
 ## setSimpleKeyboardEnabled
 
 ```TypeScript

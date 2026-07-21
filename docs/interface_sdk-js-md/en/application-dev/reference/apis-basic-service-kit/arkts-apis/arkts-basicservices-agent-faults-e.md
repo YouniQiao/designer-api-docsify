@@ -1,7 +1,6 @@
 # Faults
 
 Defines the cause of a task failure.
-
 > **NOTE**  
 >  
 > In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain  

@@ -6,7 +6,6 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
-<a id="setallwallpapers"></a>
 ## setAllWallpapers
 
 ```TypeScript

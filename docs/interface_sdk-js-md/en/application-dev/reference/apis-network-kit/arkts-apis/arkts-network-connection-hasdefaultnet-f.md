@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="hasdefaultnet"></a>
 ## hasDefaultNet
 
 ```TypeScript
@@ -52,7 +51,6 @@ connection.hasDefaultNet((error: BusinessError, data: boolean) => {
 ```
 
 
-<a id="hasdefaultnet-1"></a>
 ## hasDefaultNet
 
 ```TypeScript

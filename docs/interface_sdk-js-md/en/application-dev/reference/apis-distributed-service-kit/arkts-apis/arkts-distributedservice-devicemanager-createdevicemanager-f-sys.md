@@ -6,7 +6,6 @@
 import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
-<a id="createdevicemanager"></a>
 ## createDeviceManager
 
 ```TypeScript
@@ -19,7 +18,7 @@ Creates a **DeviceManager** instance.
 
 **Deprecated since:** 11
 
-**Substitutes:** [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md#createdevicemanager-1)
+**Substitutes:** [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md#createdevicemanager)
 
 <!--Device-deviceManager-function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceManager>): void--><!--Device-deviceManager-function createDeviceManager(bundleName: string, callback: AsyncCallback<DeviceManager>): void-End-->
 

@@ -6,7 +6,6 @@
 import { relationalStore } from '@kit.ArkData';
 ```
 
-<a id="getrdbstoresync"></a>
 ## getRdbStoreSync
 
 ```TypeScript

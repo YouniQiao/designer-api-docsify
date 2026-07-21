@@ -16,7 +16,6 @@ Manager a2dp source profile.
 import { a2dp } from '@kit.ConnectivityKit';
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -54,7 +53,6 @@ Initiate an A2DP connection to a remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="disableabsolutevolume"></a>
 ## disableAbsoluteVolume
 
 ```TypeScript
@@ -97,7 +95,6 @@ Turn off the absolute volume switch.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="disableabsolutevolume-1"></a>
 ## disableAbsoluteVolume
 
 ```TypeScript
@@ -135,7 +132,6 @@ Turn off the absolute volume switch..
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="disableautoplay"></a>
 ## disableAutoPlay
 
 ```TypeScript
@@ -179,7 +175,6 @@ Restriction devices to play music within {@code duration} milliseconds of connec
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript
@@ -217,7 +212,6 @@ Disconnect the A2DP connection with the remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="enableabsolutevolume"></a>
 ## enableAbsoluteVolume
 
 ```TypeScript
@@ -260,7 +254,6 @@ Turn on the absolute volume switch.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="enableabsolutevolume-1"></a>
 ## enableAbsoluteVolume
 
 ```TypeScript
@@ -298,7 +291,6 @@ Turn on the absolute volume switch..
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="enableautoplay"></a>
 ## enableAutoPlay
 
 ```TypeScript
@@ -341,7 +333,6 @@ Allow devices to automatically play music when connected.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="getautoplaydisabledduration"></a>
 ## getAutoPlayDisabledDuration
 
 ```TypeScript
@@ -384,7 +375,6 @@ Obtains the duration for which automatic playback is disabled.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="getcurrentcodecinfo"></a>
 ## getCurrentCodecInfo
 
 ```TypeScript
@@ -427,7 +417,6 @@ Get codec information.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="getcurrentfullcodecinfo"></a>
 ## getCurrentFullCodecInfo
 
 ```TypeScript
@@ -470,7 +459,6 @@ Get the full codec capabilities negotiated between the active device and the loc
 | 2900099 | Operation failed. |
 | 2902008 | Current device is not an active device. |
 
-<a id="isabsolutevolumeenabled"></a>
 ## isAbsoluteVolumeEnabled
 
 ```TypeScript
@@ -513,7 +501,6 @@ Checks whether the absolute volume is enabled.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="isabsolutevolumeenabled-1"></a>
 ## isAbsoluteVolumeEnabled
 
 ```TypeScript
@@ -551,7 +538,6 @@ Checks whether the absolute volume is enabled.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="isabsolutevolumesupported"></a>
 ## isAbsoluteVolumeSupported
 
 ```TypeScript
@@ -594,7 +580,6 @@ Checks whether the device supports absolute volume.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="isabsolutevolumesupported-1"></a>
 ## isAbsoluteVolumeSupported
 
 ```TypeScript
@@ -632,7 +617,6 @@ Checks whether the device supports absolute volume.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="setcurrentcodecinfo"></a>
 ## setCurrentCodecInfo
 
 ```TypeScript

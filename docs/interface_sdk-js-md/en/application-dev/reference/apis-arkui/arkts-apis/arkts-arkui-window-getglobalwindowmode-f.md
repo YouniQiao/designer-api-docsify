@@ -6,7 +6,6 @@
 import { window } from '@kit.ArkUI';
 ```
 
-<a id="getglobalwindowmode"></a>
 ## getGlobalWindowMode
 
 ```TypeScript
@@ -27,7 +26,7 @@ Obtains the window mode of the window that is in the foreground lifecycle on the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | No | Optional display ID, which is used to obtain the window mode information on the corresponding screen. This parameter must be an integer greater than or equal to 0. If it is less than 0, error code 1300016 is returned. If this parameter is not passed or is set to null or undefined, all screens are queried. If a non-integer is passed, the decimal part is ignored. If the specified screen does not exist, the return value is 0. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties-1) to obtain the display ID of the window. |
+| displayId | number | No | Optional display ID, which is used to obtain the window mode information on the corresponding screen. This parameter must be an integer greater than or equal to 0. If it is less than 0, error code 1300016 is returned. If this parameter is not passed or is set to null or undefined, all screens are queried. If a non-integer is passed, the decimal part is ignored. If the specified screen does not exist, the return value is 0. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the display ID of the window. |
 
 **Return value:**
 

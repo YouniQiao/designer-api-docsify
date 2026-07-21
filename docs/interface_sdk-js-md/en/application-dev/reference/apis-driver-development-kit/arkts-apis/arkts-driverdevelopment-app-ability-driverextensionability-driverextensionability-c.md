@@ -14,7 +14,6 @@ The **DriverExtensionAbility** module provides the ExtensionAbility related to d
 import { DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 ```
 
-<a id="onconnect"></a>
 ## onConnect
 
 ```TypeScript
@@ -98,7 +97,6 @@ class DriverExt extends DriverExtensionAbility {
 
 ```
 
-<a id="ondisconnect"></a>
 ## onDisconnect
 
 ```TypeScript
@@ -150,7 +148,6 @@ class DriverExt extends DriverExtensionAbility {
 
 ```
 
-<a id="ondump"></a>
 ## onDump
 
 ```TypeScript
@@ -191,7 +188,6 @@ class DriverExt extends DriverExtensionAbility {
 
 ```
 
-<a id="oninit"></a>
 ## onInit
 
 ```TypeScript
@@ -228,7 +224,6 @@ class DriverExt extends DriverExtensionAbility {
 
 ```
 
-<a id="onrelease"></a>
 ## onRelease
 
 ```TypeScript

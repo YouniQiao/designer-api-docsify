@@ -6,7 +6,6 @@
 import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
-<a id="closetoast"></a>
 ## closeToast
 
 ```TypeScript
@@ -14,13 +13,12 @@ function closeToast(toastId: number): void
 ```
 
 Closes the specified toast.
-
 > **NOTE**  
 >  
 > Directly using **closeToast** can lead to the issue of  
-> [ambiguous UI context](docroot://ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the  
+> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the  
 > **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the  
-> [closeToast](arkts-arkui-arkui-uicontext-promptaction-c.md#closetoast-1) API through this object.
+> [closeToast](arkts-arkui-arkui-uicontext-promptaction-c.md#closetoast) API through this object.
 
 **Since:** 18
 

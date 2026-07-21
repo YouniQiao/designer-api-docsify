@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="factoryreset"></a>
 ## factoryReset
 
 ```TypeScript

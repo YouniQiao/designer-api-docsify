@@ -6,7 +6,6 @@
 import { tag } from '@kit.ConnectivityKit';
 ```
 
-<a id="getnfca"></a>
 ## getNfcA
 
 ```TypeScript

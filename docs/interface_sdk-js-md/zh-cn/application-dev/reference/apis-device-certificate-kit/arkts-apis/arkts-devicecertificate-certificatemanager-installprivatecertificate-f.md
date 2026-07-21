@@ -6,7 +6,6 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
-<a id="installprivatecertificate"></a>
 ## installPrivateCertificate
 
 ```TypeScript
@@ -24,17 +23,7 @@ function installPrivateCertificate(
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
-<!--Device-certificateManager-function installPrivateCertificate(
-    keystore: Uint8Array,
-    keystorePwd: string,
-    certAlias: string,
-    callback: AsyncCallback<CMResult>
-  ): void--><!--Device-certificateManager-function installPrivateCertificate(
-    keystore: Uint8Array,
-    keystorePwd: string,
-    certAlias: string,
-    callback: AsyncCallback<CMResult>
-  ): void-End-->
+<!--Device-certificateManager-function installPrivateCertificate(    keystore: Uint8Array,    keystorePwd: string,    certAlias: string,    callback: AsyncCallback<CMResult>  ): void--><!--Device-certificateManager-function installPrivateCertificate(    keystore: Uint8Array,    keystorePwd: string,    certAlias: string,    callback: AsyncCallback<CMResult>  ): void-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
@@ -83,7 +72,6 @@ try {
 ```
 
 
-<a id="installprivatecertificate-1"></a>
 ## installPrivateCertificate
 
 ```TypeScript
@@ -150,7 +138,6 @@ try {
 ```
 
 
-<a id="installprivatecertificate-2"></a>
 ## installPrivateCertificate
 
 ```TypeScript

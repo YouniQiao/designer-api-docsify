@@ -1,7 +1,6 @@
 # ScrollBarOptions
 
 Parameters of the **ScrollBar** component.
-
 > **NOTE**  
 >  
 > - The **ScrollBar** component defines the behavior style of the scrollable area, and its child nodes define the  
@@ -15,7 +14,7 @@ Parameters of the **ScrollBar** component.
 >  
 > - The visibility of the **ScrollBar** component is set through **BarState**. The component automatically adjusts  
 > **opacity** based on the **BarState** setting to control its visibility. Therefore, setting the  
-> [opacity](arkts-arkui-commonmethod-c.md#opacity-1) attribute for the **ScrollBar**  
+> [opacity](arkts-arkui-commonmethod-c.md#opacity) attribute for the **ScrollBar**  
 > component does not take effect.
 
 **Since:** 8

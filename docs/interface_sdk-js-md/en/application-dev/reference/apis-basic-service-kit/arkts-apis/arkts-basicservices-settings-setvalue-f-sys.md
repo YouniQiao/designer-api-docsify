@@ -6,7 +6,6 @@
 import { settings } from '@kit.BasicServicesKit';
 ```
 
-<a id="setvalue"></a>
 ## setValue
 
 ```TypeScript
@@ -39,7 +38,6 @@ Saves a character string name and its value to the database.
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of setValue result. |
 
 
-<a id="setvalue-1"></a>
 ## setValue
 
 ```TypeScript

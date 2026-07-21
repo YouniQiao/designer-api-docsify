@@ -8,7 +8,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="addcolorstop"></a>
 ## addColorStop
 
 ```TypeScript
@@ -34,7 +33,6 @@ Adds a color stop for the **CanvasGradient** object based on the specified offse
 | offset | number | Yes | Relative position of the gradient stop along the gradient vector,represented by the ratio of the distance between the gradient stop and the start point to the total length. The value ranges from 0 to 1.<br>If the value of **offset** is less than 0 or greater than 1, there is no gradient effect.<br>**undefined** and **null** are treated as invalid values, and the current stop is ignored.**NaN** causes a **CanvasGradient** exception, and **Infinity** causes **CanvasGradient** to be invalid. |
 | color | string | Yes | Gradient color to set. For details about the color notation,see the description of the string type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md).<br>Invalid values result in no gradient effect being displayed. |
 
-<a id="addcolorstop-1"></a>
 ## addColorStop
 
 ```TypeScript
@@ -42,7 +40,6 @@ addColorStop(offset: number, color: string | ColorMetrics): void
 ```
 
 Adds a color stop for the **CanvasGradient** object based on the specified offset and gradient color. Colors in RGB or ARGB format can be set. You can set P3 color gamut values by passing in the [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)type, which can achieve richer color reproduction on devices that support high color gamut.
-
 > **NOTE**  
 >  
 > Only the  
@@ -74,7 +71,7 @@ Adds a color stop for the **CanvasGradient** object based on the specified offse
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Relative position of the gradient stop along the gradient vector,represented by the ratio of the distance between the gradient stop and the start point to the total length. The value ranges from 0 to 1.<br>If the value of **offset** is less than 0 or greater than 1, there is no gradient effect.<br>**undefined** and **null** are treated as invalid values and are not applied.**NaN** causes a **CanvasGradient** exception, and **Infinity** causes **CanvasGradient** to be invalid. |
-| color | string \| ColorMetrics | Yes | Color of the gradient fill.<br>You can use the [colorWithSpace](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md#colorwithspace-1)method to construct a color with the color gamut attribute [ColorSpace](../arkts-apis/arkts-arkui-colorspace-e.md)set to **SRGB** or **DISPLAY_P3**. The color gamut attributes of each gradient ColorMetrics must be the same. If different color gamut attributes are set, an exception is thrown,and the error code is 103701.<br>**undefined** and **null** are treated as invalid values, and the current stop is ignored. |
+| color | string \| ColorMetrics | Yes | Color of the gradient fill.<br>You can use the [colorWithSpace](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md#colorwithspace)method to construct a color with the color gamut attribute [ColorSpace](../arkts-apis/arkts-arkui-colorspace-e.md)set to **SRGB** or **DISPLAY_P3**. The color gamut attributes of each gradient ColorMetrics must be the same. If different color gamut attributes are set, an exception is thrown,and the error code is 103701.<br>**undefined** and **null** are treated as invalid values, and the current stop is ignored. |
 
 **Error codes:**
 

@@ -1,6 +1,5 @@
 # closeSync
 
-<a id="closesync"></a>
 ## closeSync
 
 ```TypeScript
@@ -13,7 +12,7 @@ Closes a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:closeSync](arkts-corefile-file-fs-closesync-f.md#closesync-1)
+**Substitutes:** [fs:closeSync](arkts-corefile-fileio-closesync-f.md#closesync)
 
 <!--Device-unnamed-declare function closeSync(fd: number): void--><!--Device-unnamed-declare function closeSync(fd: number): void-End-->
 

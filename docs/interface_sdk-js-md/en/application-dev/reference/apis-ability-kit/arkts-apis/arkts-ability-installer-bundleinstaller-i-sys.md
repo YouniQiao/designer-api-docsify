@@ -16,7 +16,6 @@ Bundle installer interface, include install uninstall recover.
 import { installer } from '@kit.AbilityKit';
 ```
 
-<a id="addextresource"></a>
 ## addExtResource
 
 ```TypeScript
@@ -84,7 +83,6 @@ try {
 
 ```
 
-<a id="createappclone"></a>
 ## createAppClone
 
 ```TypeScript
@@ -158,7 +156,6 @@ try {
 
 ```
 
-<a id="destroyappclone"></a>
 ## destroyAppClone
 
 ```TypeScript
@@ -183,7 +180,7 @@ Destroys an application clone. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application for which a clone is to be destroyed. |
 | appIndex | number | Yes | Index of the clone to destroy. |
-| userId | number | No | ID of the user for whom the clone is to be destroyed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). The default value is the user ID of the caller. |
+| userId | number | No | ID of the user for whom the clone is to be destroyed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. |
 
 **Return value:**
 
@@ -230,7 +227,6 @@ try {
 
 ```
 
-<a id="destroyappclone-1"></a>
 ## destroyAppClone
 
 ```TypeScript
@@ -311,7 +307,6 @@ try {
 
 ```
 
-<a id="install"></a>
 ## install
 
 ```TypeScript
@@ -319,7 +314,6 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 ```
 
 Installs an application. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > To install applications of different distribution types, the appropriate permissions must be requested. For  
@@ -413,7 +407,6 @@ try {
 
 ```
 
-<a id="install-1"></a>
 ## install
 
 ```TypeScript
@@ -421,7 +414,6 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 ```
 
 Installs an application. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > To install applications of different distribution types, the appropriate permissions must be requested. For  
@@ -508,7 +500,6 @@ try {
 
 ```
 
-<a id="install-2"></a>
 ## install
 
 ```TypeScript
@@ -516,7 +507,6 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
 Installs an application. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > To install applications of different distribution types, the appropriate permissions must be requested. For  
@@ -614,7 +604,6 @@ try {
 
 ```
 
-<a id="installplugin"></a>
 ## installPlugin
 
 ```TypeScript
@@ -700,7 +689,6 @@ try {
 
 ```
 
-<a id="installpreexistingapp"></a>
 ## installPreexistingApp
 
 ```TypeScript
@@ -708,7 +696,6 @@ installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 ```
 
 Installs an application. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API does not support the installation of applications whose  
@@ -730,7 +717,7 @@ Installs an application. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application to install. |
-| userId | number | No | ID of the user for whom the bundle is to be installed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid-1). The value must be greater than 0. The default value is the user ID of the caller. |
+| userId | number | No | ID of the user for whom the bundle is to be installed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The value must be greater than 0. The default value is the user ID of the caller. |
 
 **Return value:**
 
@@ -777,7 +764,6 @@ try {
 
 ```
 
-<a id="recover"></a>
 ## recover
 
 ```TypeScript
@@ -848,7 +834,6 @@ try {
 
 ```
 
-<a id="recover-1"></a>
 ## recover
 
 ```TypeScript
@@ -912,7 +897,6 @@ try {
 
 ```
 
-<a id="recover-2"></a>
 ## recover
 
 ```TypeScript
@@ -987,7 +971,6 @@ try {
 
 ```
 
-<a id="removeextresource"></a>
 ## removeExtResource
 
 ```TypeScript
@@ -1055,7 +1038,6 @@ try {
 
 ```
 
-<a id="uninstall"></a>
 ## uninstall
 
 ```TypeScript
@@ -1130,7 +1112,6 @@ try {
 
 ```
 
-<a id="uninstall-1"></a>
 ## uninstall
 
 ```TypeScript
@@ -1197,7 +1178,6 @@ try {
 
 ```
 
-<a id="uninstall-2"></a>
 ## uninstall
 
 ```TypeScript
@@ -1276,7 +1256,6 @@ try {
 
 ```
 
-<a id="uninstall-3"></a>
 ## uninstall
 
 ```TypeScript
@@ -1342,7 +1321,6 @@ try {
 
 ```
 
-<a id="uninstall-4"></a>
 ## uninstall
 
 ```TypeScript
@@ -1413,7 +1391,6 @@ try {
 
 ```
 
-<a id="uninstallnewpreinstalledapps"></a>
 ## uninstallNewPreinstalledApps
 
 ```TypeScript
@@ -1453,7 +1430,6 @@ Uninstall new preinstalled applications.Only supports uninstalling pre installed
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
-<a id="uninstallplugin"></a>
 ## uninstallPlugin
 
 ```TypeScript
@@ -1526,7 +1502,6 @@ try {
 
 ```
 
-<a id="uninstallupdates"></a>
 ## uninstallUpdates
 
 ```TypeScript
@@ -1602,7 +1577,6 @@ try {
 
 ```
 
-<a id="updatebundleforself"></a>
 ## updateBundleForSelf
 
 ```TypeScript
@@ -1687,7 +1661,6 @@ try {
 
 ```
 
-<a id="updatebundleforself-1"></a>
 ## updateBundleForSelf
 
 ```TypeScript
@@ -1765,7 +1738,6 @@ try {
 
 ```
 
-<a id="updatebundleforself-2"></a>
 ## updateBundleForSelf
 
 ```TypeScript

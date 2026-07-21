@@ -12,7 +12,6 @@
 import { LocaleResponse } from '@kit.ArkUI';
 ```
 
-<a id="getlocale"></a>
 ## getLocale
 
 ```TypeScript

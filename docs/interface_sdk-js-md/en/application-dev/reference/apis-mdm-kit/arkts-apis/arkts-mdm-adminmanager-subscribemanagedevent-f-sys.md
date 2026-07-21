@@ -6,7 +6,6 @@
 import { adminManager } from '@kit.MDMKit';
 ```
 
-<a id="subscribemanagedevent"></a>
 ## subscribeManagedEvent
 
 ```TypeScript
@@ -19,7 +18,7 @@ Subscribes to system management events. This API uses an asynchronous callback t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
+**Substitutes:** [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SUBSCRIBE_MANAGED_EVENT
 
@@ -73,7 +72,6 @@ adminManager.subscribeManagedEvent(wantTemp, events, (err) => {
 ```
 
 
-<a id="subscribemanagedevent-1"></a>
 ## subscribeManagedEvent
 
 ```TypeScript
@@ -86,7 +84,7 @@ Subscribes to system management events. This API uses a promise to return the re
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync-1)
+**Substitutes:** [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SUBSCRIBE_MANAGED_EVENT
 

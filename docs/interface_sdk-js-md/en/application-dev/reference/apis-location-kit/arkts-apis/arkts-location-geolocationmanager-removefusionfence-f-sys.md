@@ -6,7 +6,6 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
-<a id="removefusionfence"></a>
 ## removeFusionFence
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
-<a id="off"></a>
 ## off('locatingRequiredDataChange')
 
 ```TypeScript
@@ -60,7 +59,6 @@ try {
 ```
 
 
-<a id="off-1"></a>
 ## off('locationIconStatusChange')
 
 ```TypeScript

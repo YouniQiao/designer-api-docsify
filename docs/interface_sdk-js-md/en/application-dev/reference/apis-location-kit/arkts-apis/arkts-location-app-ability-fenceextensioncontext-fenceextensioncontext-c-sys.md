@@ -16,7 +16,6 @@ class of static subscriber extension context.
 import { FenceExtensionContext } from '@kit.LocationKit';
 ```
 
-<a id="startability"></a>
 ## startAbility
 
 ```TypeScript

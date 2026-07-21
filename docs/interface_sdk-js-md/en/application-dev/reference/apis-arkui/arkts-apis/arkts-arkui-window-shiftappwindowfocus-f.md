@@ -6,7 +6,6 @@
 import { window } from '@kit.ArkUI';
 ```
 
-<a id="shiftappwindowfocus"></a>
 ## shiftAppWindowFocus
 
 ```TypeScript
@@ -15,13 +14,12 @@ function shiftAppWindowFocus(sourceWindowId: number, targetWindowId: number): Pr
 
 Shifts the window focus from the source window to the target window in the same application. The window focus can be shifted within the main window and child windows. This API uses a promise to return the result.
 
-Ensure that the target window can gain focus (configurable by calling [setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable-1)) and that [showWindow()](arkts-arkui-window-window-i.md#showwindow-1) has been successfully executed.
-
+Ensure that the target window can gain focus (configurable by calling [setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)) and that [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
 > **NOTE**  
 >  
 > Before calling **shiftAppWindowFocus()**, ensure that the target window has called  
-> [loadContent()](arkts-arkui-window-window-i.md#loadcontent-1)  
-> or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent-1)  
+> [loadContent()](arkts-arkui-window-window-i.md#loadcontent)  
+> or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent)  
 > and these operations have been effective. Otherwise, an invisible window may gain focus, causing function  
 > exceptions or affecting user experience.
 
@@ -37,8 +35,8 @@ Ensure that the target window can gain focus (configurable by calling [setWindow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceWindowId | number | Yes | ID of the source window, which is having the focus. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties-1) to obtain the window ID. |
-| targetWindowId | number | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties-1) to obtain the window ID. |
+| sourceWindowId | number | Yes | ID of the source window, which is having the focus. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID. |
+| targetWindowId | number | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID. |
 
 **Return value:**
 

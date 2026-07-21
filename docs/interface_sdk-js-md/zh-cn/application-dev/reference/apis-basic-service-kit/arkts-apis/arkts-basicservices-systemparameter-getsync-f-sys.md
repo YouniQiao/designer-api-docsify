@@ -6,7 +6,6 @@
 import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
-<a id="getsync"></a>
 ## getSync
 
 ```TypeScript
@@ -14,7 +13,6 @@ function getSync(key: string, def?: string): string
 ```
 
 获取系统参数key对应的值。
-
 > **说明：**  
 >  
 > getSync和get方法都用于获取系统参数值：  

@@ -2,12 +2,11 @@
 
 This interface provides APIs for audio monitoring.
 
-Before calling any API in AudioLoopback, you must use [audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback-1) to create an AudioLoopback instance.
+Before calling any API in AudioLoopback, you must use [audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback) to create an AudioLoopback instance.
 
 When audio loopback is enabled, the system creates a low-latency renderer and capturer to implement low-latency in-ear monitoring. The audio captured is routed back to the renderer through an internal path. The renderer follows the audio focus strategy for [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md), whereas the capturer follows the strategy for [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md).
 
 The system automatically chooses the input and output devices. If these devices do not support low latency, audio loopback does not work. If another audio stream takes over the audio focus or if the input or output device changes to the one that does not support low latency, the system disables audio loopback automatically.
-
 > **NOTE**  
 >  
 > - The initial APIs of this interface are supported since API version 20.
@@ -24,7 +23,6 @@ The system automatically chooses the input and output devices. If these devices 
 import { audio } from '@kit.AudioKit';
 ```
 
-<a id="enable"></a>
 ## enable
 
 ```TypeScript
@@ -60,7 +58,6 @@ Enable or disable audio loopback.When audio loopback is enabled, the system auto
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="getequalizerpreset"></a>
 ## getEqualizerPreset
 
 ```TypeScript
@@ -81,7 +78,6 @@ Gets the current equalizer preset.The default equalizer preset of audio loopback
 | --- | --- |
 | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | Equalizer type.<br>If no equalizer type has been set, the default equalizer type is **FULL**. |
 
-<a id="getpreferreddevicepair"></a>
 ## getPreferredDevicePair
 
 ```TypeScript
@@ -104,7 +100,6 @@ Gets the preferred audio device pair in current device connection situation.
 | --- | --- |
 | [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) | The preferred audio device pair in audio system,or null if there is no supported device pair. |
 
-<a id="getreverbpreset"></a>
 ## getReverbPreset
 
 ```TypeScript
@@ -125,7 +120,6 @@ Get the current reverberation.The default reverberation preset of audio loopback
 | --- | --- |
 | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | Reverb mode.<br>If no reverb mode has been set, the default reverb mode is **THEATER**. |
 
-<a id="getstatus"></a>
 ## getStatus
 
 ```TypeScript
@@ -146,7 +140,6 @@ Obtains the audio loopback status. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;AudioLoopbackStatus&gt; | Promise used to return the audio loopback status. |
 
-<a id="getsupporteddevicepairs"></a>
 ## getSupportedDevicePairs
 
 ```TypeScript
@@ -169,7 +162,6 @@ Gets supported audio device pairs in current device connection situation.
 | --- | --- |
 | Array&lt;AudioDevicePair&gt; | Audio device pairs that support loopback,if there is no supported device pair, empty array will be returned. |
 
-<a id="getvolume"></a>
 ## getVolume
 
 ```TypeScript
@@ -192,7 +184,6 @@ Gets the output volume for audio loopback.
 | --- | --- |
 | number | Current audio loopback output volume value. |
 
-<a id="off"></a>
 ## off('statusChange')
 
 ```TypeScript
@@ -220,7 +211,6 @@ Unsubscribes from the audio loopback status event. This API uses an asynchronous
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="on"></a>
 ## on('statusChange')
 
 ```TypeScript
@@ -248,7 +238,6 @@ Subscribes to the audio loopback status change event, which is triggered when th
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="setequalizerpreset"></a>
 ## setEqualizerPreset
 
 ```TypeScript
@@ -281,7 +270,6 @@ Sets the equalizer preset of the audio loopback.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="setreverbpreset"></a>
 ## setReverbPreset
 
 ```TypeScript
@@ -314,7 +302,6 @@ Sets the reverberation of the audio loopback.
 | --- | --- |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-<a id="setvolume"></a>
 ## setVolume
 
 ```TypeScript

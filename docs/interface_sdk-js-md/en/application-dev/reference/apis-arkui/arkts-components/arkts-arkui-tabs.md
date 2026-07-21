@@ -16,7 +16,6 @@ tab page corresponds to a content view.
 ## Child Components
 
 Only the child component [TabContent]{@link tab_content} and rendering control types [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md) and [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md) are supported. You are advised not to use custom components as child components. If **if/else** or **ForEach** is used, only **TabContent** can be used as the child component. You are advised not to use custom components as child components.
-
 > **NOTE**  
 >  
 > If the child component has the **visibility** attribute set to **None** or **Hidden**, it is hidden but still takes  

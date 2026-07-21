@@ -6,7 +6,6 @@
 import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
-<a id="createhtmltextrecord"></a>
 ## createHtmlTextRecord
 
 ```TypeScript
@@ -19,7 +18,7 @@ Creates a **PasteDataRecord** object of the HTML text type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createRecord(mimeType:](arkts-basicservices-pasteboard-createrecord-f.md#createrecord-1)
+**Substitutes:** [createRecord(mimeType:](arkts-basicservices-pasteboard-createrecord-f.md#createrecord)
 
 <!--Device-pasteboard-function createHtmlTextRecord(htmlText: string): PasteDataRecord--><!--Device-pasteboard-function createHtmlTextRecord(htmlText: string): PasteDataRecord-End-->
 

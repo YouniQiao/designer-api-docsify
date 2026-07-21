@@ -16,7 +16,6 @@ This API inherits from [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapeme
 import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
-<a id="height"></a>
 ## height
 
 ```TypeScript
@@ -49,7 +48,6 @@ Sets the height of a shape.
 | --- | --- |
 | T | Current object. |
 
-<a id="size"></a>
 ## size
 
 ```TypeScript
@@ -82,7 +80,6 @@ Sets the size of a shape.
 | --- | --- |
 | T | Current object. |
 
-<a id="width"></a>
 ## width
 
 ```TypeScript

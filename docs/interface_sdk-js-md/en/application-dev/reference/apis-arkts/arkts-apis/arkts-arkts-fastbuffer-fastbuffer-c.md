@@ -14,7 +14,6 @@ The FastBuffer object is a method of handling buffers dedicated to binary data.
 import { fastbuffer } from '@kit.ArkTS';
 ```
 
-<a id="compare"></a>
 ## compare
 
 ```TypeScript
@@ -71,7 +70,6 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 
 ```
 
-<a id="copy"></a>
 ## copy
 
 ```TypeScript
@@ -128,7 +126,6 @@ console.info(buf2.toString('ascii', 0, 25));
 
 ```
 
-<a id="entries"></a>
 ## entries
 
 ```TypeScript
@@ -144,13 +141,7 @@ Creates and returns an iterator of [index, byte] pairs from the contents of buf.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-FastBuffer-entries(): IterableIterator<[
-            number,
-            number
-        ]>--><!--Device-FastBuffer-entries(): IterableIterator<[
-            number,
-            number
-        ]>-End-->
+<!--Device-FastBuffer-entries(): IterableIterator<[            number,            number        ]>--><!--Device-FastBuffer-entries(): IterableIterator<[            number,            number        ]>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -183,7 +174,6 @@ while (!next.done) {
 
 ```
 
-<a id="equals"></a>
 ## equals
 
 ```TypeScript
@@ -234,7 +224,6 @@ console.info(buf1.equals(buf3).toString());
 
 ```
 
-<a id="fill"></a>
 ## fill
 
 ```TypeScript
@@ -284,7 +273,6 @@ console.info(b.toString());
 
 ```
 
-<a id="includes"></a>
 ## includes
 
 ```TypeScript
@@ -328,7 +316,6 @@ console.info(buf.includes('be').toString());
 
 ```
 
-<a id="indexof"></a>
 ## indexOf
 
 ```TypeScript
@@ -372,7 +359,6 @@ console.info(buf.indexOf('is').toString());
 
 ```
 
-<a id="keys"></a>
 ## keys
 
 ```TypeScript
@@ -416,7 +402,6 @@ Output: 0
 
 ```
 
-<a id="lastindexof"></a>
 ## lastIndexOf
 
 ```TypeScript
@@ -460,7 +445,6 @@ console.info(buf.lastIndexOf('buffer').toString());
 
 ```
 
-<a id="readbigint64be"></a>
 ## readBigInt64BE
 
 ```TypeScript
@@ -507,7 +491,6 @@ console.info(buf.readBigInt64BE(0).toString());
 
 ```
 
-<a id="readbigint64le"></a>
 ## readBigInt64LE
 
 ```TypeScript
@@ -554,7 +537,6 @@ console.info(buf.readBigInt64LE(0).toString());
 
 ```
 
-<a id="readbiguint64be"></a>
 ## readBigUInt64BE
 
 ```TypeScript
@@ -601,7 +583,6 @@ console.info(buf.readBigUInt64BE(0).toString());
 
 ```
 
-<a id="readbiguint64le"></a>
 ## readBigUInt64LE
 
 ```TypeScript
@@ -648,7 +629,6 @@ console.info(buf.readBigUInt64LE(0).toString());
 
 ```
 
-<a id="readdoublebe"></a>
 ## readDoubleBE
 
 ```TypeScript
@@ -694,7 +674,6 @@ console.info(buf.readDoubleBE(0).toString());
 
 ```
 
-<a id="readdoublele"></a>
 ## readDoubleLE
 
 ```TypeScript
@@ -740,7 +719,6 @@ console.info(buf.readDoubleLE(0).toString());
 
 ```
 
-<a id="readfloatbe"></a>
 ## readFloatBE
 
 ```TypeScript
@@ -786,7 +764,6 @@ console.info(buf.readFloatBE(0).toString());
 
 ```
 
-<a id="readfloatle"></a>
 ## readFloatLE
 
 ```TypeScript
@@ -832,7 +809,6 @@ console.info(buf.readFloatLE(0).toString());
 
 ```
 
-<a id="readint16be"></a>
 ## readInt16BE
 
 ```TypeScript
@@ -878,7 +854,6 @@ console.info(buf.readInt16BE(0).toString());
 
 ```
 
-<a id="readint16le"></a>
 ## readInt16LE
 
 ```TypeScript
@@ -924,7 +899,6 @@ console.info(buf.readInt16LE(0).toString());
 
 ```
 
-<a id="readint32be"></a>
 ## readInt32BE
 
 ```TypeScript
@@ -970,7 +944,6 @@ console.info(buf.readInt32BE(0).toString());
 
 ```
 
-<a id="readint32le"></a>
 ## readInt32LE
 
 ```TypeScript
@@ -1016,7 +989,6 @@ console.info(buf.readInt32LE(0).toString());
 
 ```
 
-<a id="readint8"></a>
 ## readInt8
 
 ```TypeScript
@@ -1064,7 +1036,6 @@ console.info(buf.readInt8(1).toString());
 
 ```
 
-<a id="readintbe"></a>
 ## readIntBE
 
 ```TypeScript
@@ -1112,7 +1083,6 @@ console.info(num.toString());
 
 ```
 
-<a id="readintle"></a>
 ## readIntLE
 
 ```TypeScript
@@ -1159,7 +1129,6 @@ console.info(buf.readIntLE(0, 6).toString(16));
 
 ```
 
-<a id="readuint16be"></a>
 ## readUInt16BE
 
 ```TypeScript
@@ -1207,7 +1176,6 @@ console.info(buf.readUInt16BE(1).toString(16));
 
 ```
 
-<a id="readuint16le"></a>
 ## readUInt16LE
 
 ```TypeScript
@@ -1255,7 +1223,6 @@ console.info(buf.readUInt16LE(1).toString(16));
 
 ```
 
-<a id="readuint32be"></a>
 ## readUInt32BE
 
 ```TypeScript
@@ -1301,7 +1268,6 @@ console.info(buf.readUInt32BE(0).toString(16));
 
 ```
 
-<a id="readuint32le"></a>
 ## readUInt32LE
 
 ```TypeScript
@@ -1347,7 +1313,6 @@ console.info(buf.readUInt32LE(0).toString(16));
 
 ```
 
-<a id="readuint8"></a>
 ## readUInt8
 
 ```TypeScript
@@ -1395,7 +1360,6 @@ console.info(buf.readUInt8(1).toString());
 
 ```
 
-<a id="readuintbe"></a>
 ## readUIntBE
 
 ```TypeScript
@@ -1442,7 +1406,6 @@ console.info(buf.readUIntBE(0, 6).toString(16));
 
 ```
 
-<a id="readuintle"></a>
 ## readUIntLE
 
 ```TypeScript
@@ -1489,7 +1452,6 @@ console.info(buf.readUIntLE(0, 6).toString(16));
 
 ```
 
-<a id="subarray"></a>
 ## subarray
 
 ```TypeScript
@@ -1535,7 +1497,6 @@ console.info(buf2.toString('ascii', 0, buf2.length));
 
 ```
 
-<a id="swap16"></a>
 ## swap16
 
 ```TypeScript
@@ -1578,7 +1539,6 @@ console.info(buf1.toString('hex'));
 
 ```
 
-<a id="swap32"></a>
 ## swap32
 
 ```TypeScript
@@ -1621,7 +1581,6 @@ console.info(buf1.toString('hex'));
 
 ```
 
-<a id="swap64"></a>
 ## swap64
 
 ```TypeScript
@@ -1664,7 +1623,6 @@ console.info(buf1.toString('hex'));
 
 ```
 
-<a id="tojson"></a>
 ## toJSON
 
 ```TypeScript
@@ -1699,7 +1657,6 @@ console.info(JSON.stringify(obj));
 
 ```
 
-<a id="tostring"></a>
 ## toString
 
 ```TypeScript
@@ -1750,7 +1707,6 @@ console.info(buf1.toString('utf-8'));
 
 ```
 
-<a id="values"></a>
 ## values
 
 ```TypeScript
@@ -1796,7 +1752,6 @@ while (!next.done) {
 
 ```
 
-<a id="write"></a>
 ## write
 
 ```TypeScript
@@ -1852,7 +1807,6 @@ console.info("length = " + length);
 
 ```
 
-<a id="writebigint64be"></a>
 ## writeBigInt64BE
 
 ```TypeScript
@@ -1900,7 +1854,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writebigint64le"></a>
 ## writeBigInt64LE
 
 ```TypeScript
@@ -1948,7 +1901,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writebiguint64be"></a>
 ## writeBigUInt64BE
 
 ```TypeScript
@@ -1996,7 +1948,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writebiguint64le"></a>
 ## writeBigUInt64LE
 
 ```TypeScript
@@ -2044,7 +1995,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writedoublebe"></a>
 ## writeDoubleBE
 
 ```TypeScript
@@ -2092,7 +2042,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writedoublele"></a>
 ## writeDoubleLE
 
 ```TypeScript
@@ -2140,7 +2089,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writefloatbe"></a>
 ## writeFloatBE
 
 ```TypeScript
@@ -2188,7 +2136,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writefloatle"></a>
 ## writeFloatLE
 
 ```TypeScript
@@ -2236,7 +2183,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writeint16be"></a>
 ## writeInt16BE
 
 ```TypeScript
@@ -2284,7 +2230,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writeint16le"></a>
 ## writeInt16LE
 
 ```TypeScript
@@ -2332,7 +2277,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writeint32be"></a>
 ## writeInt32BE
 
 ```TypeScript
@@ -2380,7 +2324,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writeint32le"></a>
 ## writeInt32LE
 
 ```TypeScript
@@ -2428,7 +2371,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writeint8"></a>
 ## writeInt8
 
 ```TypeScript
@@ -2479,7 +2421,6 @@ console.info("result1 = " + result1);
 
 ```
 
-<a id="writeintbe"></a>
 ## writeIntBE
 
 ```TypeScript
@@ -2528,7 +2469,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writeintle"></a>
 ## writeIntLE
 
 ```TypeScript
@@ -2577,7 +2517,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writeuint16be"></a>
 ## writeUInt16BE
 
 ```TypeScript
@@ -2628,7 +2567,6 @@ console.info("result1 = " + result1);
 
 ```
 
-<a id="writeuint16le"></a>
 ## writeUInt16LE
 
 ```TypeScript
@@ -2679,7 +2617,6 @@ console.info("result1 = " + result1);
 
 ```
 
-<a id="writeuint32be"></a>
 ## writeUInt32BE
 
 ```TypeScript
@@ -2727,7 +2664,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writeuint32le"></a>
 ## writeUInt32LE
 
 ```TypeScript
@@ -2775,7 +2711,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writeuint8"></a>
 ## writeUInt8
 
 ```TypeScript
@@ -2832,7 +2767,6 @@ console.info("result3 = " + result3);
 
 ```
 
-<a id="writeuintbe"></a>
 ## writeUIntBE
 
 ```TypeScript
@@ -2881,7 +2815,6 @@ console.info("result = " + result);
 
 ```
 
-<a id="writeuintle"></a>
 ## writeUIntLE
 
 ```TypeScript

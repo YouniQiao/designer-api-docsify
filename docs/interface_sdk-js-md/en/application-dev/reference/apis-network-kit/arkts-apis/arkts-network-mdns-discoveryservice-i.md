@@ -14,7 +14,6 @@ Defines a DiscoveryService object for discovering mDNS services of the specified
 import { mdns } from '@kit.NetworkKit';
 ```
 
-<a id="off"></a>
 ## off('discoveryStart')
 
 ```TypeScript
@@ -65,7 +64,6 @@ discoveryService.off('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
 
 ```
 
-<a id="off-1"></a>
 ## off('discoveryStop')
 
 ```TypeScript
@@ -89,7 +87,6 @@ Cancels listening for discoveryStop events of mDNS services.
 | type | 'discoveryStop' | Yes | Indicates Event name. |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;DiscoveryEventInfo&gt; | No | the callback used to return the result. |
 
-<a id="off-2"></a>
 ## off('serviceFound')
 
 ```TypeScript
@@ -143,7 +140,6 @@ discoveryService.off('serviceFound', (data: mdns.LocalServiceInfo) => {
 
 ```
 
-<a id="off-3"></a>
 ## off('serviceLost')
 
 ```TypeScript
@@ -194,7 +190,6 @@ discoveryService.off('serviceLost', (data: mdns.LocalServiceInfo) => {
 
 ```
 
-<a id="on"></a>
 ## on('discoveryStart')
 
 ```TypeScript
@@ -241,7 +236,6 @@ discoveryService.stopSearchingMDNS();
 
 ```
 
-<a id="on-1"></a>
 ## on('discoveryStop')
 
 ```TypeScript
@@ -288,7 +282,6 @@ discoveryService.stopSearchingMDNS();
 
 ```
 
-<a id="on-2"></a>
 ## on('serviceFound')
 
 ```TypeScript
@@ -338,7 +331,6 @@ discoveryService.stopSearchingMDNS();
 
 ```
 
-<a id="on-3"></a>
 ## on('serviceLost')
 
 ```TypeScript
@@ -385,7 +377,6 @@ discoveryService.stopSearchingMDNS();
 
 ```
 
-<a id="startsearchingmdns"></a>
 ## startSearchingMDNS
 
 ```TypeScript
@@ -419,7 +410,6 @@ discoveryService.startSearchingMDNS();
 
 ```
 
-<a id="stopsearchingmdns"></a>
 ## stopSearchingMDNS
 
 ```TypeScript

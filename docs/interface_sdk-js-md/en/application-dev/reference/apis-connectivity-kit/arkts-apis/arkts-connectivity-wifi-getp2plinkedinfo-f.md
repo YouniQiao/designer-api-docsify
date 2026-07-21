@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="getp2plinkedinfo"></a>
 ## getP2pLinkedInfo
 
 ```TypeScript
@@ -34,7 +33,6 @@ Obtains information about a P2P connection.
 | Promise&lt;WifiP2pLinkedInfo&gt; | Returns the P2P connection information. |
 
 
-<a id="getp2plinkedinfo-1"></a>
 ## getP2pLinkedInfo
 
 ```TypeScript

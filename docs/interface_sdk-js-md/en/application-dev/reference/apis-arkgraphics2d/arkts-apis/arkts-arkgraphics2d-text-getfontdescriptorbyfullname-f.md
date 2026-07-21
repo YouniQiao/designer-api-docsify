@@ -6,7 +6,6 @@
 import { text } from '@kit.ArkGraphics2D';
 ```
 
-<a id="getfontdescriptorbyfullname"></a>
 ## getFontDescriptorByFullName
 
 ```TypeScript
@@ -29,7 +28,7 @@ A font descriptor is a data structure that describes font features. It contains 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullName | string | Yes | Font name. It is obtained with [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype-1) called. |
+| fullName | string | Yes | Font name. It is obtained with [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) called. |
 | fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | Font type. |
 
 **Return value:**

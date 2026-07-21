@@ -16,7 +16,6 @@ Defines the attributes of SelectionContainer.
 import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from '@kit.ArkUI';
 ```
 
-<a id="bindselectionmenu"></a>
 ## bindSelectionMenu
 
 ```TypeScript
@@ -34,9 +33,7 @@ Bind to the selection menu.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuilder>,
-    responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuilder>,
-    responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute-End-->
+<!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuilder>,    responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute--><!--Device-SelectionContainerAttribute-bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuilder>,    responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,7 +52,6 @@ Bind to the selection menu.
 | --- | --- |
 | [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
-<a id="caretcolor"></a>
 ## caretColor
 
 ```TypeScript
@@ -86,7 +82,6 @@ Set the caret color for selected text.
 | --- | --- |
 | [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
-<a id="copyoption"></a>
 ## copyOption
 
 ```TypeScript
@@ -117,7 +112,6 @@ Set whether to allow copy and where data can be copied.
 | --- | --- |
 | [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
-<a id="editmenuoptions"></a>
 ## editMenuOptions
 
 ```TypeScript
@@ -148,7 +142,6 @@ Set the custom text menu.Sets the extended options of the custom context menu on
 | --- | --- |
 | [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
-<a id="enablehapticfeedback"></a>
 ## enableHapticFeedback
 
 ```TypeScript
@@ -179,7 +172,6 @@ Enable or disable haptic feedback.
 | --- | --- |
 | [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
-<a id="oncopy"></a>
 ## onCopy
 
 ```TypeScript
@@ -210,7 +202,6 @@ Called when selected text is copied.Currently, only text can be copied.
 | --- | --- |
 | [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
-<a id="ontextselectionchange"></a>
 ## onTextSelectionChange
 
 ```TypeScript
@@ -241,7 +232,6 @@ Called when text selection changes in SelectionContainer.
 | --- | --- |
 | [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
-<a id="onwillcopy"></a>
 ## onWillCopy
 
 ```TypeScript
@@ -272,7 +262,6 @@ Called before using the Clipboard copy menu.Currently, only text can be copied.
 | --- | --- |
 | [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
-<a id="selectedbackgroundcolor"></a>
 ## selectedBackgroundColor
 
 ```TypeScript
@@ -303,7 +292,6 @@ Set selected text background color.
 | --- | --- |
 | [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
-<a id="textjoinstyle"></a>
 ## textJoinStyle
 
 ```TypeScript

@@ -8,7 +8,6 @@ Provides APIs for configuring gestures bound to a component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="addgesture"></a>
 ## addGesture
 
 ```TypeScript
@@ -35,7 +34,6 @@ Adds a gesture.
 | priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | No | Priority of the bound gesture.<br>Default value: **GesturePriority.NORMAL**. |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
-<a id="addparallelgesture"></a>
 ## addParallelGesture
 
 ```TypeScript
@@ -61,7 +59,6 @@ Adds a gesture that can be recognized at once by the component and its child com
 | gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | Gesture handler object. |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
-<a id="cleargestures"></a>
 ## clearGestures
 
 ```TypeScript
@@ -80,7 +77,6 @@ Clears all gestures that have been bound to the component through a modifier.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="removegesturebytag"></a>
 ## removeGestureByTag
 
 ```TypeScript

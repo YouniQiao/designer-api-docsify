@@ -48,7 +48,7 @@ Whether to automatically clear the dirty data (data that has been deleted from t
 
 Default value: **true**.
 
-For a database with device-cloud synergy, this parameter can be used to set whether to automatically clear the data deleted from the cloud on the device. You can manually clear the data by calling [cleanDirtyData<sup>11+</sup>](arkts-arkdata-relationalstore-rdbstore-i.md#cleandirtydata-1).
+For a database with device-cloud synergy, this parameter can be used to set whether to automatically clear the data deleted from the cloud on the device. You can manually clear the data by calling [cleanDirtyData<sup>11+</sup>](arkts-arkdata-relationalstore-rdbstore-i.md#cleandirtydata).
 
 This parameter is supported since API version 11.
 
@@ -156,7 +156,7 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 encrypt?: boolean
 ```
 
-Whether to encrypt the RDB store. After the database is created, this parameter cannot be modified directly. To change the database encryption status, call the [rekeyEx](arkts-arkdata-relationalstore-rdbstore-i.md#rekeyex-1) API.
+Whether to encrypt the RDB store. After the database is created, this parameter cannot be modified directly. To change the database encryption status, call the [rekeyEx](arkts-arkdata-relationalstore-rdbstore-i.md#rekeyex) API.
 
 **true**: encrypt the RDB store.
 
@@ -240,7 +240,7 @@ SystemCapability.DistributedDataManager.RelationalStore.Core
 pluginLibs?: Array<string>
 ```
 
-Loads custom dynamic libraries. Multiple dynamic library names can be passed in the array. For details, see [Constraints and Examples of pluginLibs](docroot://reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#constraints-and-examples-of-pluginlibs).
+Loads custom dynamic libraries. Multiple dynamic library names can be passed in the array. For details, see [Constraints and Examples of pluginLibs](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#constraints-and-examples-of-pluginlibs).
 
 SystemCapability.DistributedDataManager.RelationalStore.Core
 
@@ -300,7 +300,7 @@ Type of the tokenizer to be used for FTS.
 
 If this parameter is left blank, English tokenization is supported if FTS does not support Chinese or multi-language tokenization.
 
-If you want to use a custom tokenizer, you can configure it through the **pluginLibs** parameter. For details,see [Restrictions and Examples of pluginLibs](docroot://reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#constraints-and-examples-of-pluginlibs).
+If you want to use a custom tokenizer, you can configure it through the **pluginLibs** parameter. For details,see [Restrictions and Examples of pluginLibs](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-i.md#constraints-and-examples-of-pluginlibs).
 
 SystemCapability.DistributedDataManager.RelationalStore.Core
 

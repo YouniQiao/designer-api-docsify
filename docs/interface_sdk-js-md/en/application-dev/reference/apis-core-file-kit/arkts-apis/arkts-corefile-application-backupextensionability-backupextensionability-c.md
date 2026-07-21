@@ -14,7 +14,6 @@ Class to be override for backup extension ability.
 import { BundleVersion } from '@kit.CoreFileKit';
 ```
 
-<a id="onbackup"></a>
 ## onBackup
 
 ```TypeScript
@@ -42,7 +41,6 @@ class BackupExt extends BackupExtensionAbility {
 
 ```
 
-<a id="onbackupex"></a>
 ## onBackupEx
 
 ```TypeScript
@@ -136,7 +134,6 @@ class BackupExt extends BackupExtensionAbility {
 
 ```
 
-<a id="onprocess"></a>
 ## onProcess
 
 ```TypeScript
@@ -236,7 +233,6 @@ function appJob(progressInfo: MigrateProgressInfo, args: number) : string {
 
 ```
 
-<a id="onrelease"></a>
 ## onRelease
 
 ```TypeScript
@@ -299,7 +295,6 @@ class BackupExt extends BackupExtensionAbility {
 
 ```
 
-<a id="onrestore"></a>
 ## onRestore
 
 ```TypeScript
@@ -335,7 +330,6 @@ class BackupExt extends BackupExtensionAbility {
 
 ```
 
-<a id="onrestoreex"></a>
 ## onRestoreEx
 
 ```TypeScript

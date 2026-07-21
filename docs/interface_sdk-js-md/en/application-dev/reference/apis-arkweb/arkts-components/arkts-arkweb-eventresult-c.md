@@ -1,6 +1,6 @@
 # EventResult
 
-Represents the event consumption result sent to the **Web** component. For details about the supported events, see [TouchType](../../apis-arkui/arkts-apis/arkts-arkui-touchtype-e.md), [MouseAction](../../apis-arkui/arkts-apis/arkts-arkui-mouseaction-e.md), and left, middle, and right buttons in [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-mousebutton-e.md).
+Represents the event consumption result sent to the **Web** component. For details about the supported events, see [TouchType](../../apis-arkui/arkts-apis/arkts-arkui-touchtype-e.md), [MouseAction](../../apis-arkui/arkts-apis/arkts-arkui-mouseaction-e.md), and left, middle, and right buttons in [MouseButton](../../apis-test-kit/arkts-apis/arkts-test-uitest-mousebutton-e.md).
 
 If the application does not consume the event, set the consumption result to **false**, and the event will be consumed by the **Web** component. If the application consumes the event, set the consumption result to **true**, and the **Web** component will not consume the event. If the consumption result is not set according to the preceding specifications, exceptions may occur.
 
@@ -14,7 +14,6 @@ For details about the sample code of the mouse event, see [onNativeEmbedMouseEve
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -31,7 +30,6 @@ Constructs a **EventResult** object.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="setgestureeventresult"></a>
 ## setGestureEventResult
 
 ```TypeScript
@@ -54,7 +52,6 @@ Sets the gesture event consumption result.
 | --- | --- | --- | --- |
 | result | boolean | Yes | Whether to consume the gesture event.<br>The value **true** means to consume the gesture event, and **false** means the opposite.<br>If **null** or **undefined** is passed in, the value is **true**. |
 
-<a id="setgestureeventresult-1"></a>
 ## setGestureEventResult
 
 ```TypeScript
@@ -76,7 +73,6 @@ Sets the gesture event consumption result.
 | result | boolean | Yes | Whether to consume the gesture event.<br>The value **true** means to consume the gesture event, and **false** means the opposite.<br>If **null** or **undefined** is passed in, the value is **true**. |
 | stopPropagation | boolean | Yes | Whether to stop propagation. This parameter is valid only when **result** is set to **true**.<br>The value **true** means to stop propagation, and **false** means the opposite.<br>If **null** or **undefined** is passed in, the value is **true**. |
 
-<a id="setmouseeventresult"></a>
 ## setMouseEventResult
 
 ```TypeScript

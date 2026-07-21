@@ -6,7 +6,6 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="getappthreadcpuusage"></a>
 ## getAppThreadCpuUsage
 
 ```TypeScript
@@ -14,7 +13,6 @@ function getAppThreadCpuUsage(): ThreadCpuUsage[]
 ```
 
 Obtains the CPU usage of application threads.
-
 > **NOTE**  
 >  
 > This API involves cross-process communication and takes a long time. To avoid performance problems, you are  

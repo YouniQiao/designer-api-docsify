@@ -6,7 +6,6 @@
 import { ble } from '@kit.ConnectivityKit';
 ```
 
-<a id="disableadvertising"></a>
 ## disableAdvertising
 
 ```TypeScript
@@ -115,7 +114,6 @@ try {
 ```
 
 
-<a id="disableadvertising-1"></a>
 ## disableAdvertising
 
 ```TypeScript

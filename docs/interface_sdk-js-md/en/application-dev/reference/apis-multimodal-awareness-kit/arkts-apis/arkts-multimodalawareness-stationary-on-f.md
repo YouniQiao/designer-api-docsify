@@ -6,7 +6,6 @@
 import { stationary } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript

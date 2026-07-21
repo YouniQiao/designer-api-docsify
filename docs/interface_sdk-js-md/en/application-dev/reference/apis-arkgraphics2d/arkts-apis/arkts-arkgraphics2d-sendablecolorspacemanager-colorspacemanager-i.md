@@ -1,6 +1,6 @@
 # ColorSpaceManager
 
-Implements management of color space objects.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create-1) to create a color space manager.
+Implements management of color space objects.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) to create a color space manager.
 
 **Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md)
 
@@ -16,7 +16,6 @@ Implements management of color space objects.Before calling any of the following
 import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
-<a id="getcolorspacename"></a>
 ## getColorSpaceName
 
 ```TypeScript
@@ -51,7 +50,6 @@ let spaceName: colorSpaceManager.ColorSpace = colorSpace.getColorSpaceName();
 
 ```
 
-<a id="getgamma"></a>
 ## getGamma
 
 ```TypeScript
@@ -86,7 +84,6 @@ let gamma: number = colorSpace.getGamma();
 
 ```
 
-<a id="getwhitepoint"></a>
 ## getWhitePoint
 
 ```TypeScript

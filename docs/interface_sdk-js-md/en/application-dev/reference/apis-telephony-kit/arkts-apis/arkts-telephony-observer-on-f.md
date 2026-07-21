@@ -6,7 +6,6 @@
 import { observer } from '@kit.TelephonyKit';
 ```
 
-<a id="on"></a>
 ## on('networkStateChange')
 
 ```TypeScript
@@ -51,7 +50,6 @@ observer.on('networkStateChange', (data: observer.NetworkState) => {
 ```
 
 
-<a id="on-1"></a>
 ## on('networkStateChange')
 
 ```TypeScript
@@ -100,7 +98,6 @@ observer.on('networkStateChange', options, (data: observer.NetworkState) => {
 ```
 
 
-<a id="on-2"></a>
 ## on('signalInfoChange')
 
 ```TypeScript
@@ -144,7 +141,6 @@ observer.on('signalInfoChange', (data: Array<radio.SignalInformation>) => {
 ```
 
 
-<a id="on-3"></a>
 ## on('signalInfoChange')
 
 ```TypeScript
@@ -192,7 +188,6 @@ observer.on('signalInfoChange', options, (data: Array<radio.SignalInformation>) 
 ```
 
 
-<a id="on-4"></a>
 ## on('cellularDataConnectionStateChange')
 
 ```TypeScript
@@ -234,7 +229,6 @@ observer.on('cellularDataConnectionStateChange', (data: observer.DataConnectionS
 ```
 
 
-<a id="on-5"></a>
 ## on('cellularDataConnectionStateChange')
 
 ```TypeScript
@@ -246,9 +240,7 @@ Callback when the cellular data link connection state corresponding to the monit
 
 **Since:** 11
 
-<!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,
-              callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,
-              callback: Callback<DataConnectionStateInfo>): void-End-->
+<!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void--><!--Device-observer-function on(type: 'cellularDataConnectionStateChange', options: ObserverOptions,              callback: Callback<DataConnectionStateInfo>): void-End-->
 
 **System capability:** SystemCapability.Telephony.StateRegistry
 
@@ -283,7 +275,6 @@ observer.on('cellularDataConnectionStateChange', options, (data: observer.DataCo
 ```
 
 
-<a id="on-6"></a>
 ## on('cellularDataFlowChange')
 
 ```TypeScript
@@ -327,7 +318,6 @@ observer.on('cellularDataFlowChange', (data: data.DataFlowType) => {
 ```
 
 
-<a id="on-7"></a>
 ## on('cellularDataFlowChange')
 
 ```TypeScript
@@ -375,7 +365,6 @@ observer.on('cellularDataFlowChange', options, (data: data.DataFlowType) => {
 ```
 
 
-<a id="on-8"></a>
 ## on('callStateChange')
 
 ```TypeScript
@@ -417,7 +406,6 @@ observer.on('callStateChange', (data: observer.CallStateInfo) => {
 ```
 
 
-<a id="on-9"></a>
 ## on('callStateChange')
 
 ```TypeScript
@@ -463,7 +451,6 @@ observer.on('callStateChange', options, (data: observer.CallStateInfo) => {
 ```
 
 
-<a id="on-10"></a>
 ## on('callStateChangeEx')
 
 ```TypeScript
@@ -513,7 +500,6 @@ observer.on('callStateChangeEx', callback);
 ```
 
 
-<a id="on-11"></a>
 ## on('simStateChange')
 
 ```TypeScript
@@ -555,7 +541,6 @@ observer.on('simStateChange', (data: observer.SimStateData) => {
 ```
 
 
-<a id="on-12"></a>
 ## on('simStateChange')
 
 ```TypeScript
@@ -601,7 +586,6 @@ observer.on('simStateChange', options, (data: observer.SimStateData) => {
 ```
 
 
-<a id="on-13"></a>
 ## on('iccAccountInfoChange')
 
 ```TypeScript

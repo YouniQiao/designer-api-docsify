@@ -1,6 +1,5 @@
 # unlink
 
-<a id="unlink"></a>
 ## unlink
 
 ```TypeScript
@@ -13,7 +12,7 @@ Removes a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:unlink](arkts-corefile-file-fs-unlink-f.md#unlink-1)
+**Substitutes:** [fs:unlink](arkts-corefile-fileio-unlink-f.md#unlink)
 
 <!--Device-unnamed-declare function unlink(path: string): Promise<void>--><!--Device-unnamed-declare function unlink(path: string): Promise<void>-End-->
 
@@ -32,7 +31,6 @@ Removes a file. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 
-<a id="unlink-1"></a>
 ## unlink
 
 ```TypeScript
@@ -45,7 +43,7 @@ Removes a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:unlink](arkts-corefile-file-fs-unlink-f.md#unlink-1)
+**Substitutes:** [fs:unlink](arkts-corefile-fileio-unlink-f.md#unlink)
 
 <!--Device-unnamed-declare function unlink(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function unlink(path: string, callback: AsyncCallback<void>): void-End-->
 

@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="createnetconnection"></a>
 ## createNetConnection
 
 ```TypeScript

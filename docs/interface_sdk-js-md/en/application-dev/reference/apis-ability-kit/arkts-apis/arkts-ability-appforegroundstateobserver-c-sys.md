@@ -10,7 +10,6 @@ The module defines the listener used to listen for application startup and exit 
 
 **System API:** This is a system API.
 
-<a id="onappstatechanged"></a>
 ## onAppStateChanged
 
 ```TypeScript

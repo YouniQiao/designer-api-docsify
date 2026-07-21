@@ -16,7 +16,6 @@ Provides APIs for cloud enhancement management, including managing the tasks of 
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="cancelallcloudenhancementtasks"></a>
 ## cancelAllCloudEnhancementTasks
 
 ```TypeScript
@@ -67,7 +66,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="cancelcloudenhancementtasks"></a>
 ## cancelCloudEnhancementTasks
 
 ```TypeScript
@@ -137,7 +135,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="getcloudenhancementinstance"></a>
 ## getCloudEnhancementInstance
 
 ```TypeScript
@@ -201,7 +198,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="getcloudenhancementpair"></a>
 ## getCloudEnhancementPair
 
 ```TypeScript
@@ -272,7 +268,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="prioritizecloudenhancementtask"></a>
 ## prioritizeCloudEnhancementTask
 
 ```TypeScript
@@ -343,7 +338,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="querycloudenhancementtaskstate"></a>
 ## queryCloudEnhancementTaskState
 
 ```TypeScript
@@ -440,7 +434,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="submitcloudenhancementtasks"></a>
 ## submitCloudEnhancementTasks
 
 ```TypeScript
@@ -510,7 +503,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="submitcloudenhancementtasks-1"></a>
 ## submitCloudEnhancementTasks
 
 ```TypeScript
@@ -527,15 +519,7 @@ Submits cloud enhancement tasks. You can select the trigger mode of the cloud en
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
-<!--Device-CloudEnhancement-submitCloudEnhancementTasks(
-      photoAssets: Array<PhotoAsset>,
-      hasCloudWatermark: boolean,
-      triggerMode?: int
-    ): Promise<void>--><!--Device-CloudEnhancement-submitCloudEnhancementTasks(
-      photoAssets: Array<PhotoAsset>,
-      hasCloudWatermark: boolean,
-      triggerMode?: int
-    ): Promise<void>-End-->
+<!--Device-CloudEnhancement-submitCloudEnhancementTasks(      photoAssets: Array<PhotoAsset>,      hasCloudWatermark: boolean,      triggerMode?: int    ): Promise<void>--><!--Device-CloudEnhancement-submitCloudEnhancementTasks(      photoAssets: Array<PhotoAsset>,      hasCloudWatermark: boolean,      triggerMode?: int    ): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -594,7 +578,6 @@ async function example(context: Context) {
 
 ```
 
-<a id="synccloudenhancementtaskstatus"></a>
 ## syncCloudEnhancementTaskStatus
 
 ```TypeScript

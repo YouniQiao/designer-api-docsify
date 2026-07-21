@@ -6,7 +6,6 @@
 import { scriptManager } from '@kit.AbilityKit';
 ```
 
-<a id="completearktsscriptinapp"></a>
 ## completeArkTSScriptInApp
 
 ```TypeScript

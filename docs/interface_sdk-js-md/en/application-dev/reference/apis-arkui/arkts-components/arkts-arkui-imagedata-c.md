@@ -1,7 +1,6 @@
 # ImageData
 
 An **ImageData** object stores pixel data rendered on a canvas.
-
 > **NOTE**  
 >  
 > A constructor used to create an **ImageData** object. To ensure successful drawing,  
@@ -15,7 +14,6 @@ An **ImageData** object stores pixel data rendered on a canvas.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -42,7 +40,6 @@ Creates an **ImageData** object with the specified width, height, and color.If d
 | height | number | Yes | Height of the rectangle.<br>Default unit: vp<br>Invalid values **NaN** and **Infinity** are treated as **0**. |
 | data | [Uint8ClampedArray](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-uint8clampedarray-i.md) | No | A one-dimensional array of color values.The values range from 0 to 255.<br>If the value specified is **undefined**, **data** is **undefined**.<br>Default value: a one-dimensional array of all 0s |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -123,10 +120,9 @@ readonly width: number
 Actual width of the rectangle on the canvas.
 
 The unit is px.
-
 > **NOTE**  
 >  
-> The [px2vp](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#px2vp-1)  
+> The [px2vp](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#px2vp)  
 > API can be used for unit conversion.
 
 **Type:** number

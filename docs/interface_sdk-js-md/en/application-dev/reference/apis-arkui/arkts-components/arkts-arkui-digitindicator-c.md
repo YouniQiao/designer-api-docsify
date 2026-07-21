@@ -1,7 +1,6 @@
 # DigitIndicator
 
 A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
-
 > **NOTE**  
 >  
 > When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count  
@@ -20,7 +19,6 @@ A constructor used to create a **DigitIndicator** object. It inherits from [Indi
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -28,7 +26,6 @@ constructor()
 ```
 
 A constructor used to create a **DotIndicator** object.
-
 > **NOTE**  
 >  
 > - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain  
@@ -51,7 +48,6 @@ A constructor used to create a **DotIndicator** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="digitfont"></a>
 ## digitFont
 
 ```TypeScript
@@ -84,7 +80,6 @@ Sets the font style of the digit-style navigation indicator.
 | --- | --- |
 | [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
-<a id="fontcolor"></a>
 ## fontColor
 
 ```TypeScript
@@ -117,7 +112,6 @@ Sets the font color of the digit-style navigation indicator.
 | --- | --- |
 | [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
-<a id="selecteddigitfont"></a>
 ## selectedDigitFont
 
 ```TypeScript
@@ -150,7 +144,6 @@ Sets the font style of the selected digit-style navigation indicator.
 | --- | --- |
 | [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
-<a id="selectedfontcolor"></a>
 ## selectedFontColor
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="addrule"></a>
 ## addRule
 
 ```TypeScript
@@ -19,7 +18,7 @@ Adds one or more rules. HiChecker detects unexpected operations or gives feedbac
 
 **Deprecated since:** 9
 
-**Substitutes:** [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule-1)
+**Substitutes:** [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule)
 
 <!--Device-hichecker-function addRule(rule: bigint): void--><!--Device-hichecker-function addRule(rule: bigint): void-End-->
 

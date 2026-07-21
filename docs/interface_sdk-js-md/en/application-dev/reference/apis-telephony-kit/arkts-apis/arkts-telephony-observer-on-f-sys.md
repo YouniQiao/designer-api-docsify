@@ -6,7 +6,6 @@
 import { observer } from '@kit.TelephonyKit';
 ```
 
-<a id="on"></a>
 ## on('cellInfoChange')
 
 ```TypeScript
@@ -56,7 +55,6 @@ observer.on('cellInfoChange', (data: Array<radio.CellInformation>) => {
 ```
 
 
-<a id="on-1"></a>
 ## on('cellInfoChange')
 
 ```TypeScript

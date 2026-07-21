@@ -6,7 +6,6 @@
 import { process } from '@kit.ArkTS';
 ```
 
-<a id="isappuid"></a>
 ## isAppUid
 
 ```TypeScript
@@ -19,7 +18,7 @@ Checks whether a UID belongs to this application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isAppUid](arkts-arkts-process-processmanager-c.md#isappuid-1)
+**Substitutes:** [isAppUid](arkts-arkts-process-processmanager-c.md#isappuid)
 
 <!--Device-process-function isAppUid(v: number): boolean--><!--Device-process-function isAppUid(v: number): boolean-End-->
 

@@ -18,7 +18,6 @@ This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md).
 import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -45,7 +44,6 @@ A constructor used to create a **RectShape** object.
 | --- | --- | --- | --- |
 | options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| RoundRectShapeOptions | No | Rectangle parameters. |
 
-<a id="radius"></a>
 ## radius
 
 ```TypeScript
@@ -78,7 +76,6 @@ Sets the radius of the rectangle border corners.
 | --- | --- |
 | [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | **RectShape** object. |
 
-<a id="radiusheight"></a>
 ## radiusHeight
 
 ```TypeScript
@@ -111,7 +108,6 @@ Sets the radius height of the rectangle border corners.
 | --- | --- |
 | [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | **RectShape** object. |
 
-<a id="radiuswidth"></a>
 ## radiusWidth
 
 ```TypeScript

@@ -6,14 +6,13 @@
 import { asset } from '@kit.AssetStoreKit';
 ```
 
-<a id="query"></a>
 ## query
 
 ```TypeScript
 function query(query: AssetMap): Promise<Array<AssetMap>>
 ```
 
-Queries one or more assets. If user authentication is required for the access to the asset,call [asset.preQuery](arkts-assetstore-asset-prequery-f.md#prequery-1) before this API and call [asset.postQuery](arkts-assetstore-asset-postquery-f.md#postquery-1)after this API. For details about the development procedure, see [Development Guidance](docroot://security/AssetStoreKit/asset-js-query-auth.md).This API uses a promise to return the result.
+Queries one or more assets. If user authentication is required for the access to the asset,call [asset.preQuery](arkts-assetstore-asset-prequery-f.md#prequery) before this API and call [asset.postQuery](arkts-assetstore-asset-postquery-f.md#postquery)after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md).This API uses a promise to return the result.
 
 If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
 

@@ -6,7 +6,6 @@
 import { eSIM } from '@kit.TelephonyKit';
 ```
 
-<a id="getdownloadableprofiles"></a>
 ## getDownloadableProfiles
 
 ```TypeScript
@@ -20,9 +19,7 @@ Gets downloadable profile List which are available for download on this device.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_ESIM_STATE
 
-<!--Device-eSIM-function getDownloadableProfiles(slotId: int, portIndex: int,
-                                   forceDisableProfile: boolean): Promise<GetDownloadableProfilesResult>--><!--Device-eSIM-function getDownloadableProfiles(slotId: int, portIndex: int,
-                                   forceDisableProfile: boolean): Promise<GetDownloadableProfilesResult>-End-->
+<!--Device-eSIM-function getDownloadableProfiles(slotId: int, portIndex: int,                                   forceDisableProfile: boolean): Promise<GetDownloadableProfilesResult>--><!--Device-eSIM-function getDownloadableProfiles(slotId: int, portIndex: int,                                   forceDisableProfile: boolean): Promise<GetDownloadableProfilesResult>-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 

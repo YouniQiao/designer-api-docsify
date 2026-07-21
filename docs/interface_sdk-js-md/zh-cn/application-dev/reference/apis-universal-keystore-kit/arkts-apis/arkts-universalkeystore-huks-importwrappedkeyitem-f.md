@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="importwrappedkeyitem"></a>
 ## importWrappedKeyItem
 
 ```TypeScript
@@ -19,7 +18,6 @@ function importWrappedKeyItem(
 ```
 
 Imports a wrapped key. This API uses an asynchronous callback to return the result.
-
 > **说明：**  
 >  
 > 导入[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别加密密钥需要ohos.permission.ACCESS_SE_KEY权限。
@@ -28,17 +26,7 @@ Imports a wrapped key. This API uses an asynchronous callback to return the resu
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-huks-function importWrappedKeyItem(
-    keyAlias: string,
-    wrappingKeyAlias: string,
-    options: HuksOptions,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-huks-function importWrappedKeyItem(
-    keyAlias: string,
-    wrappingKeyAlias: string,
-    options: HuksOptions,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-huks-function importWrappedKeyItem(    keyAlias: string,    wrappingKeyAlias: string,    options: HuksOptions,    callback: AsyncCallback<void>  ): void--><!--Device-huks-function importWrappedKeyItem(    keyAlias: string,    wrappingKeyAlias: string,    options: HuksOptions,    callback: AsyncCallback<void>  ): void-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.Huks.Core
@@ -253,7 +241,6 @@ function huksImportWrappedKey() {
 ```
 
 
-<a id="importwrappedkeyitem-1"></a>
 ## importWrappedKeyItem
 
 ```TypeScript
@@ -261,7 +248,6 @@ function importWrappedKeyItem(keyAlias: string, wrappingKeyAlias: string, option
 ```
 
 Imports a wrapped key. This API uses a promise to return the result.
-
 > **说明：**  
 >  
 > 导入[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别加密密钥需要ohos.permission.ACCESS_SE_KEY权限。

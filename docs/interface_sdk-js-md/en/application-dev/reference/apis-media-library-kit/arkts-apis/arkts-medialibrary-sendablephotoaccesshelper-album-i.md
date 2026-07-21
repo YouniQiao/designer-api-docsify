@@ -16,7 +16,6 @@ Provides APIs to manage albums.
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="commitmodify"></a>
 ## commitModify
 
 ```TypeScript
@@ -74,7 +73,6 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 
 ```
 
-<a id="converttophotoalbum"></a>
 ## convertToPhotoAlbum
 
 ```TypeScript

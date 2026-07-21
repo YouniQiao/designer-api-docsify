@@ -6,7 +6,6 @@
 import { settings } from '@kit.BasicServicesKit';
 ```
 
-<a id="geturisync"></a>
 ## getUriSync
 
 ```TypeScript

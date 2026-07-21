@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="getallnets"></a>
 ## getAllNets
 
 ```TypeScript
@@ -55,7 +54,6 @@ connection.getAllNets((error: BusinessError, data: connection.NetHandle[]) => {
 ```
 
 
-<a id="getallnets-1"></a>
 ## getAllNets
 
 ```TypeScript

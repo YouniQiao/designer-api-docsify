@@ -6,7 +6,6 @@
 import { data } from '@kit.TelephonyKit';
 ```
 
-<a id="getcellulardatastate"></a>
 ## getCellularDataState
 
 ```TypeScript
@@ -52,7 +51,6 @@ data.getCellularDataState((err: BusinessError, contextData: data.DataConnectStat
 ```
 
 
-<a id="getcellulardatastate-1"></a>
 ## getCellularDataState
 
 ```TypeScript

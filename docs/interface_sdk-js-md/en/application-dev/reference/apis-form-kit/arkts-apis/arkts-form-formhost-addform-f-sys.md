@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="addform"></a>
 ## addForm
 
 ```TypeScript

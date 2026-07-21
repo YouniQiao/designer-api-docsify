@@ -3,7 +3,6 @@
 Instance of the API class between the web media player and the ArkWeb kernel.
 
 The ArkWeb kernel uses an object of this interface class to control the player created by the application to take over web page media.
-
 > **NOTE**  
 >  
 > - The sample effect is subject to the actual device.
@@ -20,7 +19,6 @@ The ArkWeb kernel uses an object of this interface class to control the player c
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="enterfullscreen"></a>
 ## enterFullscreen
 
 ```TypeScript
@@ -37,7 +35,6 @@ Enables the player to enter full screen mode.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="exitfullscreen"></a>
 ## exitFullscreen
 
 ```TypeScript
@@ -54,7 +51,6 @@ Enables the player to exit full screen mode.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="pause"></a>
 ## pause
 
 ```TypeScript
@@ -71,7 +67,6 @@ Pauses playback.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="play"></a>
 ## play
 
 ```TypeScript
@@ -88,7 +83,6 @@ Plays this video.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
@@ -105,7 +99,6 @@ Releases this player.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="resumeplayer"></a>
 ## resumePlayer
 
 ```TypeScript
@@ -120,7 +113,6 @@ Resumes the player and its status information.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="seek"></a>
 ## seek
 
 ```TypeScript
@@ -143,7 +135,6 @@ Seeks to a specific time point in the media.
 | --- | --- | --- | --- |
 | targetTime | number | Yes | Target time point, Unit: seconds. |
 
-<a id="setmuted"></a>
 ## setMuted
 
 ```TypeScript
@@ -166,7 +157,6 @@ Sets the muted status.
 | --- | --- | --- | --- |
 | muted | boolean | Yes | Whether to mute the player.The value **true** means to mute the player, and **false** means the opposite.* |
 
-<a id="setplaybackrate"></a>
 ## setPlaybackRate
 
 ```TypeScript
@@ -189,7 +179,6 @@ Sets the playback rate.
 | --- | --- | --- | --- |
 | playbackRate | number | Yes | Playback rate.Value range: [0, 10.0]. The value **1** indicates the original speed of playback.* |
 
-<a id="setvolume"></a>
 ## setVolume
 
 ```TypeScript
@@ -212,7 +201,6 @@ Sets the playback volume.
 | --- | --- | --- | --- |
 | volume | number | Yes | Playback volume.Value range: [0, 1.0].The value **0** indicates mute, and the value **1.0** indicates the maximum volume.* |
 
-<a id="suspendplayer"></a>
 ## suspendPlayer
 
 ```TypeScript
@@ -233,7 +221,6 @@ Suspends the player and save its status information.
 | --- | --- | --- | --- |
 | type | [SuspendType](arkts-arkweb-webview-suspendtype-e.md) | Yes | Suspension type of the player. |
 
-<a id="updaterect"></a>
 ## updateRect
 
 ```TypeScript

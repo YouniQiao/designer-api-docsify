@@ -6,7 +6,6 @@
 import { request } from '@kit.BasicServicesKit';
 ```
 
-<a id="show"></a>
 ## show
 
 ```TypeScript
@@ -37,7 +36,6 @@ Queries the task details based on the task ID. This API uses an asynchronous cal
 | [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 
 
-<a id="show-1"></a>
 ## show
 
 ```TypeScript

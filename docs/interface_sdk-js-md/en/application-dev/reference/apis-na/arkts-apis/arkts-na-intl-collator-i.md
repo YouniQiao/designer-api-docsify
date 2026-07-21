@@ -2,7 +2,6 @@
 
 <!--Device-Intl-interface Collator--><!--Device-Intl-interface Collator-End-->
 
-<a id="compare"></a>
 ## compare
 
 ```TypeScript
@@ -24,7 +23,6 @@ compare(x: string, y: string): number
 | --- | --- |
 | number |  |
 
-<a id="resolvedoptions"></a>
 ## resolvedOptions
 
 ```TypeScript

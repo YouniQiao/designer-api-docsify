@@ -6,7 +6,6 @@
 import { sendableImage } from '@kit.ImageKit';
 ```
 
-<a id="createimagesource"></a>
 ## createImageSource
 
 ```TypeScript
@@ -15,7 +14,7 @@ function createImageSource(uri: string): ImageSource
 
 Creates an ImageSource instance based on a given URI.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
 
@@ -29,7 +28,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported.<br>The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng [SVG](docroot://reference/apis-image-kit/arkts-apis-image-f.md#svg-tags), and ico. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported.<br>The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng [SVG](../../../reference/apis-image-kit/arkts-apis-image-f.md#svg-tags), and ico. |
 
 **Return value:**
 
@@ -50,7 +49,6 @@ async function Demo(context : Context) {
 ```
 
 
-<a id="createimagesource-1"></a>
 ## createImageSource
 
 ```TypeScript
@@ -59,7 +57,7 @@ function createImageSource(fd: number): ImageSource
 
 Creates an ImageSource instance based on a given file descriptor.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
 
@@ -96,16 +94,15 @@ async function Demo(context : Context) {
 ```
 
 
-<a id="createimagesource-2"></a>
 ## createImageSource
 
 ```TypeScript
 function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
-Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [sendableImage.createPixelMap](arkts-image-sendableimage-createpixelmap-f.md#createpixelmap-1).
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [sendableImage.createPixelMap](arkts-image-sendableimage-createpixelmap-f.md#createpixelmap).
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release-1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
 

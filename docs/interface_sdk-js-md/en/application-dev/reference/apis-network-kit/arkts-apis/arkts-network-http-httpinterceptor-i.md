@@ -14,7 +14,6 @@ Defines an HTTP Interceptor. User can implement this interface to define the han
 import { http } from '@kit.NetworkKit';
 ```
 
-<a id="interceptorhandle"></a>
 ## interceptorHandle
 
 ```TypeScript

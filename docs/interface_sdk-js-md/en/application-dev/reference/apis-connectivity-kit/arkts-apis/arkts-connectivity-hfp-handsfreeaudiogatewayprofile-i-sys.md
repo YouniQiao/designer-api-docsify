@@ -16,7 +16,6 @@ Manager hfp source profile.
 import { hfp } from '@kit.ConnectivityKit';
 ```
 
-<a id="connect"></a>
 ## connect
 
 ```TypeScript
@@ -54,7 +53,6 @@ Initiate an HFP connection to a remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="disconnect"></a>
 ## disconnect
 
 ```TypeScript

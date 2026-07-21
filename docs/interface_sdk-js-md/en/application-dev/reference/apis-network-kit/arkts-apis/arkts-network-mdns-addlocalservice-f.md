@@ -6,7 +6,6 @@
 import { mdns } from '@kit.NetworkKit';
 ```
 
-<a id="addlocalservice"></a>
 ## addLocalService
 
 ```TypeScript
@@ -20,9 +19,7 @@ Adds an mDNS service.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,
-    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,
-    callback: AsyncCallback<LocalServiceInfo>): void-End-->
+<!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
@@ -75,7 +72,6 @@ mdns.addLocalService(context, localServiceInfo, (error:BusinessError, data:mdns.
 ```
 
 
-<a id="addlocalservice-1"></a>
 ## addLocalService
 
 ```TypeScript

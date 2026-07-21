@@ -306,7 +306,7 @@ Popup builder.
 
 **NOTE**
 
-1. The **Popup** attribute is a universal attribute. A custom popup does not support display of another popup. The **position** attribute cannot be used for the first-layer container in the builder. If the **position** attribute is used, the popup will not be displayed.2. If a custom component is used in the **builder**, the **aboutToAppear** and **aboutToDisappear** lifecycle callbacks of the custom component are irrelevant to the visibility of the popup. As such, the lifecycle of the custom component cannot be used to determine whether the popup is displayed or not.3. The **builder** of this constructor can be defined only in UI components, such as the **Builder** function/method or the [build](docroot://reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#build) method.
+1. The **Popup** attribute is a universal attribute. A custom popup does not support display of another popup. The **position** attribute cannot be used for the first-layer container in the builder. If the **position** attribute is used, the popup will not be displayed.2. If a custom component is used in the **builder**, the **aboutToAppear** and **aboutToDisappear** lifecycle callbacks of the custom component are irrelevant to the visibility of the popup. As such, the lifecycle of the custom component cannot be used to determine whether the popup is displayed or not.3. The **builder** of this constructor can be defined only in UI components, such as the **Builder** function/method or the [build](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#build) method.
 
 **Type:** CustomBuilder
 
@@ -589,27 +589,7 @@ Callback for popup visibility state changes. The parameter indicates the visibil
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-CustomPopupOptions-onStateChange?: (event: {
-    /**
-     * is Visible.
-     *
-     ******/
-    /**
-     * is Visible.
-     *
-     *******/
-    isVisible: boolean
-  }) => void--><!--Device-CustomPopupOptions-onStateChange?: (event: {
-    /**
-     * is Visible.
-     *
-     ******/
-    /**
-     * is Visible.
-     *
-     *******/
-    isVisible: boolean
-  }) => void-End-->
+<!--Device-CustomPopupOptions-onStateChange?: (event: {    /**     * is Visible.     *     ******/    /**     * is Visible.     *     *******/    isVisible: boolean  }) => void--><!--Device-CustomPopupOptions-onStateChange?: (event: {    /**     * is Visible.     *     ******/    /**     * is Visible.     *     *******/    isVisible: boolean  }) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

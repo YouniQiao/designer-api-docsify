@@ -8,7 +8,6 @@ Provides methods for Message of NDEF.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-<a id="getndefrecords"></a>
 ## getNdefRecords
 
 ```TypeScript

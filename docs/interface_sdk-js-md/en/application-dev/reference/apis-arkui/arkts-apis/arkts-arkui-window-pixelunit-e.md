@@ -2,7 +2,7 @@
 
 Enumerates the pixel units.
 
-You can use [px2vp](../arkts-components/arkts-arkui-common-px2vp-f.md#px2vp-1) and [vp2px](../arkts-components/arkts-arkui-common-vp2px-f.md#vp2px-1) to convert between physical pixels and virtual pixels.
+You can use [px2vp](../arkts-components/arkts-arkui-common-px2vp-f.md#px2vp) and [vp2px](../arkts-components/arkts-arkui-common-vp2px-f.md#vp2px) to convert between physical pixels and virtual pixels.
 
 **Since:** 22
 

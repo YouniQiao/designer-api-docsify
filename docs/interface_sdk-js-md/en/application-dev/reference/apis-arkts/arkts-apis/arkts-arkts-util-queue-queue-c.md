@@ -14,7 +14,6 @@ Queue follows the principle of First In First Out (FIFO).It supports insertion o
 import { Queue } from '@kit.ArkTS';
 ```
 
-<a id="[symbol.iterator]"></a>
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -75,7 +74,6 @@ while(temp != undefined) {
 
 ```
 
-<a id="add"></a>
 ## add
 
 ```TypeScript
@@ -128,7 +126,6 @@ console.info("result:", queue.length);  // result: 4
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -158,7 +155,6 @@ let queue = new Queue<number | string | Object>();
 
 ```
 
-<a id="foreach"></a>
 ## forEach
 
 ```TypeScript
@@ -206,7 +202,6 @@ queue.forEach((value: number, index: number): void => {
 
 ```
 
-<a id="getfirst"></a>
 ## getFirst
 
 ```TypeScript
@@ -249,7 +244,6 @@ console.info("result:", result);  // result: 2
 
 ```
 
-<a id="pop"></a>
 ## pop
 
 ```TypeScript

@@ -14,7 +14,6 @@ Implements a **Matrix4Transit** object.
 import { matrix4 } from '@kit.ArkUI';
 ```
 
-<a id="combine"></a>
 ## combine
 
 ```TypeScript
@@ -43,7 +42,6 @@ Combines the effects of two matrices to generate a new matrix object. The matrix
 | --- | --- |
 | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Object after matrix combination. |
 
-<a id="copy"></a>
 ## copy
 
 ```TypeScript
@@ -66,7 +64,6 @@ Copies this matrix object.
 | --- | --- |
 | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Copy object of the current matrix. |
 
-<a id="invert"></a>
 ## invert
 
 ```TypeScript
@@ -89,7 +86,6 @@ Inverts this matrix object. The matrix that calls this API will be changed.
 | --- | --- |
 | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Inverse matrix object of the current matrix. |
 
-<a id="rotate"></a>
 ## rotate
 
 ```TypeScript
@@ -118,7 +114,6 @@ Rotates this matrix object along the x, y, and z axes. The matrix that calls thi
 | --- | --- |
 | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after the rotation. |
 
-<a id="scale"></a>
 ## scale
 
 ```TypeScript
@@ -147,7 +142,6 @@ Scales this matrix object along the x, y, and z axes. The matrix that calls this
 | --- | --- |
 | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after the scaling. |
 
-<a id="setpolytopoly"></a>
 ## setPolyToPoly
 
 ```TypeScript
@@ -178,7 +172,6 @@ Maps the vertex coordinates of a polygon to those of another polygon.
 | --- | --- |
 | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after the mapping. |
 
-<a id="skew"></a>
 ## skew
 
 ```TypeScript
@@ -210,7 +203,6 @@ Skews this matrix object along the x and y axes. The matrix that calls this API 
 | --- | --- |
 | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after the skewing. |
 
-<a id="transformpoint"></a>
 ## transformPoint
 
 ```TypeScript
@@ -239,7 +231,6 @@ Applies the current transformation effect to a coordinate point.
 | --- | --- |
 | [number, number] | Point object after matrix transformation |
 
-<a id="translate"></a>
 ## translate
 
 ```TypeScript

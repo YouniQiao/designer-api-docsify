@@ -6,7 +6,6 @@
 import { backup } from '@kit.CoreFileKit';
 ```
 
-<a id="getlocalcapabilities"></a>
 ## getLocalCapabilities
 
 ```TypeScript
@@ -82,7 +81,6 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 ```
 
 
-<a id="getlocalcapabilities-1"></a>
 ## getLocalCapabilities
 
 ```TypeScript
@@ -161,7 +159,6 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 ```
 
 
-<a id="getlocalcapabilities-2"></a>
 ## getLocalCapabilities
 
 ```TypeScript

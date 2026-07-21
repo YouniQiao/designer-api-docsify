@@ -6,7 +6,6 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
-<a id="setglobalproxy"></a>
 ## setGlobalProxy
 
 ```TypeScript
@@ -19,7 +18,7 @@ Sets the global network proxy. This API uses an asynchronous callback to return 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setGlobalProxySync](arkts-mdm-networkmanager-setglobalproxysync-f.md#setglobalproxysync-1)
+**Substitutes:** [setGlobalProxySync](arkts-mdm-networkmanager-setglobalproxysync-f.md#setglobalproxysync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 
@@ -82,7 +81,6 @@ networkManager.setGlobalProxy(wantTemp, httpProxy, (err) => {
 ```
 
 
-<a id="setglobalproxy-1"></a>
 ## setGlobalProxy
 
 ```TypeScript
@@ -95,7 +93,7 @@ Sets the global network proxy. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setGlobalProxySync](arkts-mdm-networkmanager-setglobalproxysync-f.md#setglobalproxysync-1)
+**Substitutes:** [setGlobalProxySync](arkts-mdm-networkmanager-setglobalproxysync-f.md#setglobalproxysync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_NETWORK
 

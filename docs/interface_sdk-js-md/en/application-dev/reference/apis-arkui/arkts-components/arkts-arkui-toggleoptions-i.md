@@ -1,7 +1,6 @@
 # ToggleOptions
 
 Options of the toggle.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
@@ -26,9 +25,9 @@ Whether the toggle is turned on.
 
 Default value: **false**
 
-This parameter supports two-way binding through [$$](docroot://ui/state-management/arkts-two-way-sync.md).
+This parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
-This property supports two-way binding through [!!](docroot://ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+This property supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Type:** boolean
 

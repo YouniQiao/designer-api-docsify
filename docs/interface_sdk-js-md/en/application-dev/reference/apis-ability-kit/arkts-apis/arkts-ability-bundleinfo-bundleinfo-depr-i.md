@@ -23,7 +23,7 @@ readonly abilityInfos: Array<AbilityInfo>
 
 Ability configuration information.
 
-The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo-1).
+The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
 
 **Type:** Array&lt;AbilityInfo&gt;
 
@@ -300,7 +300,7 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 
 Detailed information of the permissions to request from the system.
 
-The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo-1).
+The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
 
 **Type:** Array&lt;ReqPermissionDetail&gt;
 
@@ -346,7 +346,7 @@ readonly reqPermissions: Array<string>
 
 Permissions to request from the system for running the application.
 
-The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo-1).
+The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
 
 **Type:** Array&lt;string&gt;
 

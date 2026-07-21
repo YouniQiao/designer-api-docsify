@@ -8,7 +8,6 @@ Implements the bottom and side tab style.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -32,7 +31,6 @@ A constructor used to create a **BottomTabBarStyle** instance.
 | icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | Image for the tab.<br>**Since:** 12 |
 | text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
 
-<a id="iconstyle"></a>
 ## iconStyle
 
 ```TypeScript
@@ -63,7 +61,6 @@ Sets the style of the label icon on the bottom tab.
 | --- | --- |
 | [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
-<a id="id"></a>
 ## id
 
 ```TypeScript
@@ -86,7 +83,7 @@ Sets the ID of the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | [ID](arkts-arkui-commonmethod-c.md#id-1) of the bottom tab. |
+| value | string | Yes | [ID](arkts-arkui-commonmethod-c.md#id) of the bottom tab. |
 
 **Return value:**
 
@@ -94,7 +91,6 @@ Sets the ID of the bottom tab.
 | --- | --- |
 | [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
-<a id="labelstyle"></a>
 ## labelStyle
 
 ```TypeScript
@@ -125,7 +121,6 @@ Sets the style of the label text and font for the bottom tab.
 | --- | --- |
 | [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
-<a id="layoutmode"></a>
 ## layoutMode
 
 ```TypeScript
@@ -156,7 +151,6 @@ Sets the layout mode of the images and texts on the bottom tab.
 | --- | --- |
 | [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
-<a id="of"></a>
 ## of
 
 ```TypeScript
@@ -188,7 +182,6 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 | --- | --- |
 | [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object created. |
 
-<a id="padding"></a>
 ## padding
 
 ```TypeScript
@@ -219,7 +212,6 @@ Sets the padding of the bottom tab. It cannot be set in percentage. When the par
 | --- | --- |
 | [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
-<a id="symmetricextensible"></a>
 ## symmetricExtensible
 
 ```TypeScript
@@ -250,7 +242,6 @@ Sets whether the images and text on the bottom tab can be symmetrically extended
 | --- | --- |
 | [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | **BottomTabBarStyle** object. |
 
-<a id="verticalalign"></a>
 ## verticalAlign
 
 ```TypeScript

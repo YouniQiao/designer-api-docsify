@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface NumberConstructor--><!--Device-unnamed-interface NumberConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -23,7 +22,6 @@ new(value?: any): Number
 | --- | --- |
 | Number |  |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript

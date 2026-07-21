@@ -18,7 +18,6 @@ Provides a **FileAccessHelper** object.
 import { fileAccess } from '@kit.CoreFileKit';
 ```
 
-<a id="access"></a>
 ## access
 
 ```TypeScript
@@ -120,7 +119,6 @@ async function accessFunc() {
 
 ```
 
-<a id="access-1"></a>
 ## access
 
 ```TypeScript
@@ -219,7 +217,6 @@ try {
 
 ```
 
-<a id="copy"></a>
 ## copy
 
 ```TypeScript
@@ -256,7 +253,6 @@ Copies a file or directory. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;Array&lt;CopyResult&gt;&gt; | Promise used to return the result. If the file or directory is copied successfully, no information is returned. If the file copy fails, a **copyResult** array is returned. |
 
-<a id="copy-1"></a>
 ## copy
 
 ```TypeScript
@@ -323,7 +319,6 @@ try {
 
 ```
 
-<a id="copy-2"></a>
 ## copy
 
 ```TypeScript
@@ -391,7 +386,6 @@ try {
 
 ```
 
-<a id="copyfile"></a>
 ## copyFile
 
 ```TypeScript
@@ -485,7 +479,6 @@ async function copyFunc01() {
 
 ```
 
-<a id="copyfile-1"></a>
 ## copyFile
 
 ```TypeScript
@@ -573,7 +566,6 @@ try {
 
 ```
 
-<a id="createfile"></a>
 ## createFile
 
 ```TypeScript
@@ -678,7 +670,6 @@ async function createFile() {
 
 ```
 
-<a id="createfile-1"></a>
 ## createFile
 
 ```TypeScript
@@ -775,7 +766,6 @@ try {
 
 ```
 
-<a id="delete"></a>
 ## delete
 
 ```TypeScript
@@ -788,7 +778,7 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete-1)
+**Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -874,7 +864,6 @@ async function deleteFile01() {
 
 ```
 
-<a id="delete-1"></a>
 ## delete
 
 ```TypeScript
@@ -887,7 +876,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 23
 
-**Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete-1)
+**Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -969,7 +958,6 @@ try {
 
 ```
 
-<a id="getfileinfofromrelativepath"></a>
 ## getFileInfoFromRelativePath
 
 ```TypeScript
@@ -1026,7 +1014,6 @@ async function getRelativePath() {
 
 ```
 
-<a id="getfileinfofromrelativepath-1"></a>
 ## getFileInfoFromRelativePath
 
 ```TypeScript
@@ -1082,7 +1069,6 @@ try {
 
 ```
 
-<a id="getfileinfofromuri"></a>
 ## getFileInfoFromUri
 
 ```TypeScript
@@ -1140,7 +1126,6 @@ async function getUri() {
 
 ```
 
-<a id="getfileinfofromuri-1"></a>
 ## getFileInfoFromUri
 
 ```TypeScript
@@ -1197,14 +1182,13 @@ try {
 
 ```
 
-<a id="getroots"></a>
 ## getRoots
 
 ```TypeScript
 getRoots(): Promise<RootIterator>
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper** object.This API uses a promise to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next-1) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object.This API uses a promise to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md).
 
 **Since:** 9
 
@@ -1295,14 +1279,13 @@ async function getRoots() {
 
 ```
 
-<a id="getroots-1"></a>
 ## getRoots
 
 ```TypeScript
 getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
-Obtains information about the device root nodes of the file management services associated with the **Helper** object.This API uses an asynchronous callback to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next-1) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md).
+Obtains information about the device root nodes of the file management services associated with the **Helper** object.This API uses an asynchronous callback to return a **RootIterator** object. You can use [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md).
 
 **Since:** 9
 
@@ -1394,7 +1377,6 @@ async function getRoots() {
 
 ```
 
-<a id="mkdir"></a>
 ## mkDir
 
 ```TypeScript
@@ -1499,7 +1481,6 @@ async function createDirectory() {
 
 ```
 
-<a id="mkdir-1"></a>
 ## mkDir
 
 ```TypeScript
@@ -1596,7 +1577,6 @@ try {
 
 ```
 
-<a id="move"></a>
 ## move
 
 ```TypeScript
@@ -1696,7 +1676,6 @@ async function moveFile01() {
 
 ```
 
-<a id="move-1"></a>
 ## move
 
 ```TypeScript
@@ -1793,7 +1772,6 @@ try {
 
 ```
 
-<a id="movefile"></a>
 ## moveFile
 
 ```TypeScript
@@ -1887,7 +1865,6 @@ async function moveFile01() {
 
 ```
 
-<a id="movefile-1"></a>
 ## moveFile
 
 ```TypeScript
@@ -1978,7 +1955,6 @@ try {
 
 ```
 
-<a id="moveitem"></a>
 ## moveItem
 
 ```TypeScript
@@ -2046,7 +2022,6 @@ Moves a file or directory. This API uses a promise to return the result.You can 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
-<a id="moveitem-1"></a>
 ## moveItem
 
 ```TypeScript
@@ -2144,7 +2119,6 @@ try {
 
 ```
 
-<a id="moveitem-2"></a>
 ## moveItem
 
 ```TypeScript
@@ -2243,7 +2217,6 @@ try {
 
 ```
 
-<a id="openfile"></a>
 ## openFile
 
 ```TypeScript
@@ -2341,7 +2314,6 @@ async function openFile01() {
 
 ```
 
-<a id="openfile-1"></a>
 ## openFile
 
 ```TypeScript
@@ -2437,7 +2409,6 @@ try {
 
 ```
 
-<a id="query"></a>
 ## query
 
 ```TypeScript
@@ -2496,7 +2467,6 @@ async function getQuery01() {
 
 ```
 
-<a id="query-1"></a>
 ## query
 
 ```TypeScript
@@ -2555,7 +2525,6 @@ async function getQuery02() {
 
 ```
 
-<a id="registerobserver"></a>
 ## registerObserver
 
 ```TypeScript
@@ -2592,7 +2561,6 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 | --- | --- |
 | 14300002 | Invalid uri |
 
-<a id="rename"></a>
 ## rename
 
 ```TypeScript
@@ -2691,7 +2659,6 @@ async function renameFile01() {
 
 ```
 
-<a id="rename-1"></a>
 ## rename
 
 ```TypeScript
@@ -2787,7 +2754,6 @@ try {
 
 ```
 
-<a id="unregisterobserver"></a>
 ## unregisterObserver
 
 ```TypeScript

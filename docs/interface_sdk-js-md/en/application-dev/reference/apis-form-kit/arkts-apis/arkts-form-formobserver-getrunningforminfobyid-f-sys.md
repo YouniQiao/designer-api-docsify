@@ -6,7 +6,6 @@
 import { formObserver } from '@kit.FormKit';
 ```
 
-<a id="getrunningforminfobyid"></a>
 ## getRunningFormInfoById
 
 ```TypeScript
@@ -51,7 +50,6 @@ Obtains the RunningFormInfo object by formId.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getrunningforminfobyid-1"></a>
 ## getRunningFormInfoById
 
 ```TypeScript
@@ -97,7 +95,6 @@ Obtains the RunningFormInfo object by formId.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getrunningforminfobyid-2"></a>
 ## getRunningFormInfoById
 
 ```TypeScript
@@ -137,7 +134,6 @@ Obtains the RunningFormInfo object by formId.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getrunningforminfobyid-3"></a>
 ## getRunningFormInfoById
 
 ```TypeScript
@@ -156,15 +152,7 @@ Obtains the RunningFormInfo object by formId.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-formObserver-function getRunningFormInfoById(
-    formId: string,
-    isUnusedIncluded: boolean,
-    callback: AsyncCallback<formInfo.RunningFormInfo>
-  ): void--><!--Device-formObserver-function getRunningFormInfoById(
-    formId: string,
-    isUnusedIncluded: boolean,
-    callback: AsyncCallback<formInfo.RunningFormInfo>
-  ): void-End-->
+<!--Device-formObserver-function getRunningFormInfoById(    formId: string,    isUnusedIncluded: boolean,    callback: AsyncCallback<formInfo.RunningFormInfo>  ): void--><!--Device-formObserver-function getRunningFormInfoById(    formId: string,    isUnusedIncluded: boolean,    callback: AsyncCallback<formInfo.RunningFormInfo>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

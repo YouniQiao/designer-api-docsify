@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="removedisallowedinstallbundles"></a>
 ## removeDisallowedInstallBundles
 
 ```TypeScript
@@ -19,7 +18,7 @@ Removes the applications that cannot be installed by the current user. This API 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync-1)
+**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -74,7 +73,6 @@ bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, (err) => {
 ```
 
 
-<a id="removedisallowedinstallbundles-1"></a>
 ## removeDisallowedInstallBundles
 
 ```TypeScript
@@ -87,7 +85,7 @@ Removes the applications that cannot be installed by the user specified by **use
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync-1)
+**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 
@@ -143,7 +141,6 @@ bundleManager.removeDisallowedInstallBundles(wantTemp, appIds, 100, (err) => {
 ```
 
 
-<a id="removedisallowedinstallbundles-2"></a>
 ## removeDisallowedInstallBundles
 
 ```TypeScript
@@ -156,7 +153,7 @@ Removes the applications that cannot be installed by the current or specified us
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync-1)
+**Substitutes:** [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
 

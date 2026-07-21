@@ -6,7 +6,6 @@
 import { functionManager } from '@kit.AbilityKit';
 ```
 
-<a id="invokefunction"></a>
 ## invokeFunction
 
 ```TypeScript
@@ -22,9 +21,7 @@ Invoke a function by functionNamespace and functionName.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-functionManager-function invokeFunction(functionNamespace: string, functionName: string,
-    args: Record<string, Object>, options?: InvokeOptions): Promise<InvokeResult>--><!--Device-functionManager-function invokeFunction(functionNamespace: string, functionName: string,
-    args: Record<string, Object>, options?: InvokeOptions): Promise<InvokeResult>-End-->
+<!--Device-functionManager-function invokeFunction(functionNamespace: string, functionName: string,    args: Record<string, Object>, options?: InvokeOptions): Promise<InvokeResult>--><!--Device-functionManager-function invokeFunction(functionNamespace: string, functionName: string,    args: Record<string, Object>, options?: InvokeOptions): Promise<InvokeResult>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 

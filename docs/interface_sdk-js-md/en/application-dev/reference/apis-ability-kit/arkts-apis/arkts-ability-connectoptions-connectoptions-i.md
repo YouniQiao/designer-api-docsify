@@ -1,6 +1,6 @@
 # ConnectOptions
 
-**ConnectOptions** can be used as an input parameter to receive status changes during the connection to a background service. For example, it is used as an input parameter of [connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability-1)to connect to a ServiceExtensionAbility.
+**ConnectOptions** can be used as an input parameter to receive status changes during the connection to a background service. For example, it is used as an input parameter of [connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability)to connect to a ServiceExtensionAbility.
 
 **Since:** 7
 
@@ -8,7 +8,6 @@
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-<a id="onconnect"></a>
 ## onConnect
 
 ```TypeScript
@@ -30,7 +29,6 @@ Called when a connection is set up.
 | elementName | [ElementName](arkts-ability-bundlemanager-elementname-t.md) | Yes | Element name of the target ability. |
 | remote | rpc.IRemoteObject | Yes | IRemoteObject instance used for IPC with the target ability. |
 
-<a id="ondisconnect"></a>
 ## onDisconnect
 
 ```TypeScript
@@ -51,7 +49,6 @@ Called when a connection is interrupted.
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-bundlemanager-elementname-t.md) | Yes | Element name of the target ability. |
 
-<a id="onfailed"></a>
 ## onFailed
 
 ```TypeScript

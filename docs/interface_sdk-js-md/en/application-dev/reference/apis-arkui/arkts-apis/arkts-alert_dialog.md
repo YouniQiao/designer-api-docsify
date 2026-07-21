@@ -12,7 +12,7 @@
 
 | Name | Description |
 | --- | --- |
-| [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md) | Defines the button style of the alert dialog box.  @since version number is higher than inner elements'. This does not affect interface usability. |
+| [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md) | Defines the button style of the alert dialog box. @since version number is higher than inner elements'. This does not affect interface usability. |
 | [AlertDialogButtonOptions](arkts-arkui-alertdialogbuttonoptions-i.md) | Inherits from [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md). |
 | [AlertDialogParam](arkts-arkui-alertdialogparam-i.md) | Enumerates the alert dialog box styles. |
 | [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) | Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md). |

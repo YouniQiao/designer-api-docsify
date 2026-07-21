@@ -1,6 +1,5 @@
 # unregisterMissionListener (System API)
 
-<a id="unregistermissionlistener"></a>
 ## unregisterMissionListener
 
 ```TypeScript
@@ -67,7 +66,6 @@ missionManager.unregisterMissionListener(listenerId, (error) => {
 ```
 
 
-<a id="unregistermissionlistener-1"></a>
 ## unregisterMissionListener
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
-<a id="isdoubleclickappforself"></a>
 ## isDoubleClickAppForSelf
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="enableleakwatcher"></a>
 ## enableLeakWatcher
 
 ```TypeScript
@@ -55,7 +54,6 @@ jsLeakWatcher.enableLeakWatcher(true, config, (filePath: Array<string>) => {
 ```
 
 
-<a id="enableleakwatcher-1"></a>
 ## enableLeakWatcher
 
 ```TypeScript

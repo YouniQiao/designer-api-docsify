@@ -2,7 +2,7 @@
 
 Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
 
-Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create-1) to create a PiPController instance.
+Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create) to create a PiPController instance.
 
 **Since:** 11
 
@@ -16,7 +16,6 @@ Before calling any of the following APIs, you must use [PiPWindow.create()](arkt
 import { PiPWindow } from '@kit.ArkUI';
 ```
 
-<a id="ispipsupported"></a>
 ## isPiPSupported
 
 ```TypeScript

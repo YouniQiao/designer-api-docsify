@@ -38,7 +38,7 @@ theme?: CustomTheme
 
 Default theme for components in the **WithTheme** scope.
 
-Default value: **undefined**. The default style follows the [default token style](docroot://ui/theme_skinning.md#system-default-token-color-values).
+Default value: **undefined**. The default style follows the [default token style](../../../ui/theme_skinning.md#system-default-token-color-values).
 
 **Type:** CustomTheme
 

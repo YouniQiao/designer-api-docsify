@@ -1,7 +1,6 @@
 # ShaderEffect
 
 Implements the shader effect. After a shader effect is set for a pen or brush, the shader effect instead of the color attribute is used for drawing. In this case, the alpha value set for the pen or brush still takes effect.
-
 > **NOTE**  
 >  
 > - The initial APIs of this class are supported since API version 12.  
@@ -23,7 +22,6 @@ Implements the shader effect. After a shader effect is set for a pen or brush, t
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
-<a id="createcolorshader"></a>
 ## createColorShader
 
 ```TypeScript
@@ -56,7 +54,6 @@ Creates a **ShaderEffect** object with a single color.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types. |
 
-<a id="createcomposeshader"></a>
 ## createComposeShader
 
 ```TypeScript
@@ -68,9 +65,7 @@ Creates a shader by blending two existing shaders in a certain way.
 
 **Since:** 20
 
-<!--Device-ShaderEffect-static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: ShaderEffect,
-        blendMode: BlendMode): ShaderEffect--><!--Device-ShaderEffect-static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: ShaderEffect,
-        blendMode: BlendMode): ShaderEffect-End-->
+<!--Device-ShaderEffect-static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: ShaderEffect,        blendMode: BlendMode): ShaderEffect--><!--Device-ShaderEffect-static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: ShaderEffect,        blendMode: BlendMode): ShaderEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -94,7 +89,6 @@ Creates a shader by blending two existing shaders in a certain way.
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
-<a id="createconicalgradient"></a>
 ## createConicalGradient
 
 ```TypeScript
@@ -107,11 +101,7 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 
 **Since:** 12
 
-<!--Device-ShaderEffect-static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt: common2D.Point,
-        endRadius: number, colors: Array<number>, mode: TileMode,
-        pos?: Array<number> | null, matrix?: Matrix | null): ShaderEffect--><!--Device-ShaderEffect-static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt: common2D.Point,
-        endRadius: number, colors: Array<number>, mode: TileMode,
-        pos?: Array<number> | null, matrix?: Matrix | null): ShaderEffect-End-->
+<!--Device-ShaderEffect-static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt: common2D.Point,        endRadius: number, colors: Array<number>, mode: TileMode,        pos?: Array<number> | null, matrix?: Matrix | null): ShaderEffect--><!--Device-ShaderEffect-static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt: common2D.Point,        endRadius: number, colors: Array<number>, mode: TileMode,        pos?: Array<number> | null, matrix?: Matrix | null): ShaderEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -140,7 +130,6 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="createimageshader"></a>
 ## createImageShader
 
 ```TypeScript
@@ -152,9 +141,7 @@ Creates a shader based on an image. You are advised not to use the function for 
 
 **Since:** 20
 
-<!--Device-ShaderEffect-static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileMode,
-        samplingOptions: SamplingOptions, matrix?: Matrix | null): ShaderEffect--><!--Device-ShaderEffect-static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileMode,
-        samplingOptions: SamplingOptions, matrix?: Matrix | null): ShaderEffect-End-->
+<!--Device-ShaderEffect-static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileMode,        samplingOptions: SamplingOptions, matrix?: Matrix | null): ShaderEffect--><!--Device-ShaderEffect-static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileMode,        samplingOptions: SamplingOptions, matrix?: Matrix | null): ShaderEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -180,7 +167,6 @@ Creates a shader based on an image. You are advised not to use the function for 
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
-<a id="createlineargradient"></a>
 ## createLinearGradient
 
 ```TypeScript
@@ -192,9 +178,7 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 
 **Since:** 12
 
-<!--Device-ShaderEffect-static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colors: Array<int>,
-        mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect--><!--Device-ShaderEffect-static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colors: Array<int>,
-        mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect-End-->
+<!--Device-ShaderEffect-static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colors: Array<int>,        mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect--><!--Device-ShaderEffect-static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colors: Array<int>,        mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -221,7 +205,6 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="createradialgradient"></a>
 ## createRadialGradient
 
 ```TypeScript
@@ -233,9 +216,7 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 
 **Since:** 12
 
-<!--Device-ShaderEffect-static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Array<int>,
-      mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect--><!--Device-ShaderEffect-static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Array<int>,
-      mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect-End-->
+<!--Device-ShaderEffect-static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Array<int>,      mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect--><!--Device-ShaderEffect-static createRadialGradient(centerPt: common2D.Point, radius: double, colors: Array<int>,      mode: TileMode, pos?: Array<double> | null, matrix?: Matrix | null): ShaderEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -262,7 +243,6 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
-<a id="createsweepgradient"></a>
 ## createSweepGradient
 
 ```TypeScript
@@ -275,11 +255,7 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 
 **Since:** 12
 
-<!--Device-ShaderEffect-static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
-        mode: TileMode, startAngle: number, endAngle: number, pos?: Array<number> | null,
-        matrix?: Matrix | null): ShaderEffect--><!--Device-ShaderEffect-static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
-        mode: TileMode, startAngle: number, endAngle: number, pos?: Array<number> | null,
-        matrix?: Matrix | null): ShaderEffect-End-->
+<!--Device-ShaderEffect-static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,        mode: TileMode, startAngle: number, endAngle: number, pos?: Array<number> | null,        matrix?: Matrix | null): ShaderEffect--><!--Device-ShaderEffect-static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,        mode: TileMode, startAngle: number, endAngle: number, pos?: Array<number> | null,        matrix?: Matrix | null): ShaderEffect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

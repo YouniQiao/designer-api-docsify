@@ -6,20 +6,19 @@
 import { print } from '@kit.BasicServicesKit';
 ```
 
-<a id="print"></a>
 ## print
 
 ```TypeScript
 function print(files: Array<string>, callback: AsyncCallback<PrintTask>): void
 ```
 
-Prints files. This API uses an asynchronous callback to return the result. To start the system print preview page,call the [print](arkts-basicservices-print-f.md#print-1) API and pass in context.
+Prints files. This API uses an asynchronous callback to return the result. To start the system print preview page,call the [print](arkts-basicservices-print-f.md#print) API and pass in context.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [print](arkts-basicservices-print-f.md#print-1)
+**Substitutes:** [print](arkts-basicservices-print-f.md#print)
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -64,20 +63,19 @@ print.print([fileUri.getUriFromPath(filePath)], (err: BusinessError, printTask: 
 ```
 
 
-<a id="print-1"></a>
 ## print
 
 ```TypeScript
 function print(files: Array<string>): Promise<PrintTask>
 ```
 
-Prints files. This API uses a promise to return the result. To start the system print preview page, call the [print](arkts-basicservices-print-f.md#print-1) API and pass in context.
+Prints files. This API uses a promise to return the result. To start the system print preview page, call the [print](arkts-basicservices-print-f.md#print) API and pass in context.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [print](arkts-basicservices-print-f.md#print-1)
+**Substitutes:** [print](arkts-basicservices-print-f.md#print)
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -125,7 +123,6 @@ print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask
 ```
 
 
-<a id="print-2"></a>
 ## print
 
 ```TypeScript
@@ -196,7 +193,6 @@ struct Index {
 ```
 
 
-<a id="print-3"></a>
 ## print
 
 ```TypeScript
@@ -270,7 +266,6 @@ struct Index {
 ```
 
 
-<a id="print-4"></a>
 ## print
 
 ```TypeScript
@@ -284,9 +279,7 @@ Prints a file. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.PRINT
 
-<!--Device-print-function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttributes: PrintAttributes,
-    context: Context): Promise<PrintTask>--><!--Device-print-function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttributes: PrintAttributes,
-    context: Context): Promise<PrintTask>-End-->
+<!--Device-print-function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttributes: PrintAttributes,    context: Context): Promise<PrintTask>--><!--Device-print-function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttributes: PrintAttributes,    context: Context): Promise<PrintTask>-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -294,7 +287,7 @@ Prints a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobName | string | Yes | Name of the file to print, for example, **test.pdf**. The printer uses the [onStartLayoutWrite](arkts-basicservices-print-printdocumentadapter-i.md#onstartlayoutwrite-1) API to send the **fd** of the empty PDF file to the API caller. The API caller uses the new print attributes to update the file to print. |
+| jobName | string | Yes | Name of the file to print, for example, **test.pdf**. The printer uses the [onStartLayoutWrite](arkts-basicservices-print-printdocumentadapter-i.md#onstartlayoutwrite) API to send the **fd** of the empty PDF file to the API caller. The API caller uses the new print attributes to update the file to print. |
 | printAdapter | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md) | Yes | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md) API instance implemented by a third-party application. |
 | printAttributes | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | Print attributes. |
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | UIAbilityContext used to start the system print UI. |

@@ -6,7 +6,6 @@
 import { vpnExtension } from '@kit.NetworkKit';
 ```
 
-<a id="startvpnextensionability"></a>
 ## startVpnExtensionAbility
 
 ```TypeScript

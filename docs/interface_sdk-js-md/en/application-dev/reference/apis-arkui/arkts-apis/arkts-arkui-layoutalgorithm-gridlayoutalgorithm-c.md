@@ -1,12 +1,11 @@
 # GridLayoutAlgorithm
 
 Grid layout algorithm class.
-
 > **NOTE**  
 >  
 > The object of the **GridLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as the  
 > input parameter of the  
-> [DynamicLayout](docroot://reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the  
+> [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the  
 > layout algorithm.
 
 **Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
@@ -19,7 +18,6 @@ Grid layout algorithm class.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

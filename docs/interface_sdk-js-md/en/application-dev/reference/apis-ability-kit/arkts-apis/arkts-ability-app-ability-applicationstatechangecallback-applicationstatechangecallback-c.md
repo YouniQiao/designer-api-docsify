@@ -14,7 +14,6 @@ The module is used to listen for state changes of the current application proces
 import { ApplicationStateChangeCallback } from '@kit.AbilityKit';
 ```
 
-<a id="onapplicationbackground"></a>
 ## onApplicationBackground
 
 ```TypeScript
@@ -78,7 +77,6 @@ export default class MyAbility extends UIAbility {
 
 ```
 
-<a id="onapplicationforeground"></a>
 ## onApplicationForeground
 
 ```TypeScript

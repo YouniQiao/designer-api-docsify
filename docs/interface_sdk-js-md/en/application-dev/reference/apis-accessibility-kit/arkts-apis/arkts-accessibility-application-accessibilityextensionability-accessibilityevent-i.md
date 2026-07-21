@@ -53,9 +53,7 @@ Event type.
 
 **Since:** 9
 
-<!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |
-        TouchGuideType | GestureType | PageUpdateType--><!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |
-        TouchGuideType | GestureType | PageUpdateType-End-->
+<!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType--><!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

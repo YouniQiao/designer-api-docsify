@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface Iterator<T, TReturn = any, TNext = undefined>--><!--Device-unnamed-interface Iterator<T, TReturn = any, TNext = undefined>-End-->
 
-<a id="next"></a>
 ## next
 
 ```TypeScript
@@ -23,7 +22,6 @@ next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 | --- | --- |
 | [IteratorResult](arkts-na-iteratorresult-t.md)&lt;T, TReturn&gt; |  |
 
-<a id="return"></a>
 ## return
 
 ```TypeScript
@@ -44,7 +42,6 @@ return?(value?: TReturn): IteratorResult<T, TReturn>
 | --- | --- |
 | [IteratorResult](arkts-na-iteratorresult-t.md)&lt;T, TReturn&gt; |  |
 
-<a id="throw"></a>
 ## throw
 
 ```TypeScript

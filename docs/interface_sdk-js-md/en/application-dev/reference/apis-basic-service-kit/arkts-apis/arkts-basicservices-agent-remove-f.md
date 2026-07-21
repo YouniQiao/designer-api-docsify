@@ -6,7 +6,6 @@
 import { request } from '@kit.BasicServicesKit';
 ```
 
-<a id="remove"></a>
 ## remove
 
 ```TypeScript
@@ -39,7 +38,6 @@ Removes a specified task of the invoker. If the task is being executed, the task
 | [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
 
 
-<a id="remove-1"></a>
 ## remove
 
 ```TypeScript

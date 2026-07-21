@@ -8,7 +8,6 @@ WebGL 1.0
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
-<a id="activetexture"></a>
 ## activeTexture
 
 ```TypeScript
@@ -31,7 +30,6 @@ Selects active texture unit
 | --- | --- | --- | --- |
 | texture | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture unit to activate |
 
-<a id="attachshader"></a>
 ## attachShader
 
 ```TypeScript
@@ -55,7 +53,6 @@ Attaches a shader to a program
 | program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to attach the shader to |
 | shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader to attach |
 
-<a id="bindattriblocation"></a>
 ## bindAttribLocation
 
 ```TypeScript
@@ -80,7 +77,6 @@ Binds a generic vertex index to a named attribute variable
 | index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the generic vertex attribute |
 | name | string | Yes | The name of the attribute variable |
 
-<a id="bindbuffer"></a>
 ## bindBuffer
 
 ```TypeScript
@@ -104,7 +100,6 @@ Binds a buffer to a target
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the buffer to |
 | buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer to bind |
 
-<a id="bindframebuffer"></a>
 ## bindFramebuffer
 
 ```TypeScript
@@ -128,7 +123,6 @@ Binds a framebuffer to a target
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the framebuffer to |
 | framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer to bind |
 
-<a id="bindrenderbuffer"></a>
 ## bindRenderbuffer
 
 ```TypeScript
@@ -152,7 +146,6 @@ Binds a renderbuffer to a target
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the renderbuffer to |
 | renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to bind |
 
-<a id="bindtexture"></a>
 ## bindTexture
 
 ```TypeScript
@@ -176,7 +169,6 @@ Binds a texture to a target
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The target to bind the texture to |
 | texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to bind |
 
-<a id="blendcolor"></a>
 ## blendColor
 
 ```TypeScript
@@ -202,7 +194,6 @@ Sets the blend color
 | blue | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Blue component |
 | alpha | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Alpha component |
 
-<a id="blendfunc"></a>
 ## blendFunc
 
 ```TypeScript
@@ -226,7 +217,6 @@ Sets the blend function
 | sfactor | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Source blend factor |
 | dfactor | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Destination blend factor |
 
-<a id="blendfuncseparate"></a>
 ## blendFuncSeparate
 
 ```TypeScript
@@ -252,7 +242,6 @@ Sets the blend function for RGB and alpha separately
 | srcAlpha | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Source alpha blend factor |
 | dstAlpha | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Destination alpha blend factor |
 
-<a id="checkframebufferstatus"></a>
 ## checkFramebufferStatus
 
 ```TypeScript
@@ -281,7 +270,6 @@ Returns the framebuffer status
 | --- | --- |
 | [GLenum](arkts-arkgraphics2d-glenum-t.md) | The framebuffer status |
 
-<a id="clear"></a>
 ## clear
 
 ```TypeScript
@@ -304,7 +292,6 @@ Clears buffers
 | --- | --- | --- | --- |
 | mask | [GLbitfield](arkts-arkgraphics2d-glbitfield-t.md) | Yes | Which buffers to clear |
 
-<a id="clearcolor"></a>
 ## clearColor
 
 ```TypeScript
@@ -330,7 +317,6 @@ Sets the clear color
 | blue | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Blue component |
 | alpha | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Alpha component |
 
-<a id="cleardepth"></a>
 ## clearDepth
 
 ```TypeScript
@@ -353,7 +339,6 @@ Sets the clear depth
 | --- | --- | --- | --- |
 | depth | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Depth clear value |
 
-<a id="clearstencil"></a>
 ## clearStencil
 
 ```TypeScript
@@ -376,7 +361,6 @@ Sets the clear stencil
 | --- | --- | --- | --- |
 | s | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Stencil clear value |
 
-<a id="colormask"></a>
 ## colorMask
 
 ```TypeScript
@@ -402,7 +386,6 @@ Sets the color mask
 | blue | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write blue |
 | alpha | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write alpha |
 
-<a id="compileshader"></a>
 ## compileShader
 
 ```TypeScript
@@ -425,7 +408,6 @@ Compiles a shader
 | --- | --- | --- | --- |
 | shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader to compile |
 
-<a id="copyteximage2d"></a>
 ## copyTexImage2D
 
 ```TypeScript
@@ -447,25 +429,7 @@ Copies pixels from the framebuffer into a 2D texture image
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGLRenderingContextBase-copyTexImage2D(
-      target: GLenum,
-      level: GLint,
-      internalformat: GLenum,
-      x: GLint,
-      y: GLint,
-      width: GLsizei,
-      height: GLsizei,
-      border: GLint,
-    ): void--><!--Device-WebGLRenderingContextBase-copyTexImage2D(
-      target: GLenum,
-      level: GLint,
-      internalformat: GLenum,
-      x: GLint,
-      y: GLint,
-      width: GLsizei,
-      height: GLsizei,
-      border: GLint,
-    ): void-End-->
+<!--Device-WebGLRenderingContextBase-copyTexImage2D(      target: GLenum,      level: GLint,      internalformat: GLenum,      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,      border: GLint,    ): void--><!--Device-WebGLRenderingContextBase-copyTexImage2D(      target: GLenum,      level: GLint,      internalformat: GLenum,      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,      border: GLint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -482,7 +446,6 @@ Copies pixels from the framebuffer into a 2D texture image
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 | border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border width |
 
-<a id="copytexsubimage2d"></a>
 ## copyTexSubImage2D
 
 ```TypeScript
@@ -504,25 +467,7 @@ Copies a portion of a texture image
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGLRenderingContextBase-copyTexSubImage2D(
-      target: GLenum,
-      level: GLint,
-      xoffset: GLint,
-      yoffset: GLint,
-      x: GLint,
-      y: GLint,
-      width: GLsizei,
-      height: GLsizei,
-    ): void--><!--Device-WebGLRenderingContextBase-copyTexSubImage2D(
-      target: GLenum,
-      level: GLint,
-      xoffset: GLint,
-      yoffset: GLint,
-      x: GLint,
-      y: GLint,
-      width: GLsizei,
-      height: GLsizei,
-    ): void-End-->
+<!--Device-WebGLRenderingContextBase-copyTexSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,    ): void--><!--Device-WebGLRenderingContextBase-copyTexSubImage2D(      target: GLenum,      level: GLint,      xoffset: GLint,      yoffset: GLint,      x: GLint,      y: GLint,      width: GLsizei,      height: GLsizei,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -539,7 +484,6 @@ Copies a portion of a texture image
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
-<a id="createbuffer"></a>
 ## createBuffer
 
 ```TypeScript
@@ -562,7 +506,6 @@ Creates a buffer
 | --- | --- |
 | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) | The created buffer |
 
-<a id="createframebuffer"></a>
 ## createFramebuffer
 
 ```TypeScript
@@ -585,7 +528,6 @@ Creates a framebuffer
 | --- | --- |
 | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) | The created framebuffer |
 
-<a id="createprogram"></a>
 ## createProgram
 
 ```TypeScript
@@ -608,7 +550,6 @@ Creates a program
 | --- | --- |
 | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | The created program |
 
-<a id="createrenderbuffer"></a>
 ## createRenderbuffer
 
 ```TypeScript
@@ -631,7 +572,6 @@ Creates a renderbuffer
 | --- | --- |
 | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) | The created renderbuffer |
 
-<a id="createshader"></a>
 ## createShader
 
 ```TypeScript
@@ -660,7 +600,6 @@ Creates a shader
 | --- | --- |
 | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | The created shader |
 
-<a id="createtexture"></a>
 ## createTexture
 
 ```TypeScript
@@ -683,7 +622,6 @@ Creates a texture
 | --- | --- |
 | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) | The created texture |
 
-<a id="cullface"></a>
 ## cullFace
 
 ```TypeScript
@@ -706,7 +644,6 @@ Sets the cull face mode
 | --- | --- | --- | --- |
 | mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Cull face mode |
 
-<a id="deletebuffer"></a>
 ## deleteBuffer
 
 ```TypeScript
@@ -729,7 +666,6 @@ Deletes a buffer
 | --- | --- | --- | --- |
 | buffer | [WebGLBuffer](arkts-arkgraphics2d-webgl-webglbuffer-i.md) \| null | Yes | The buffer to delete |
 
-<a id="deleteframebuffer"></a>
 ## deleteFramebuffer
 
 ```TypeScript
@@ -752,7 +688,6 @@ Deletes a framebuffer
 | --- | --- | --- | --- |
 | framebuffer | [WebGLFramebuffer](arkts-arkgraphics2d-webgl-webglframebuffer-i.md) \| null | Yes | The framebuffer to delete |
 
-<a id="deleteprogram"></a>
 ## deleteProgram
 
 ```TypeScript
@@ -775,7 +710,6 @@ Deletes a program
 | --- | --- | --- | --- |
 | program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program to delete |
 
-<a id="deleterenderbuffer"></a>
 ## deleteRenderbuffer
 
 ```TypeScript
@@ -798,7 +732,6 @@ Deletes a renderbuffer
 | --- | --- | --- | --- |
 | renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to delete |
 
-<a id="deleteshader"></a>
 ## deleteShader
 
 ```TypeScript
@@ -821,7 +754,6 @@ Deletes a shader
 | --- | --- | --- | --- |
 | shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) \| null | Yes | The shader to delete |
 
-<a id="deletetexture"></a>
 ## deleteTexture
 
 ```TypeScript
@@ -844,7 +776,6 @@ Deletes a texture
 | --- | --- | --- | --- |
 | texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to delete |
 
-<a id="depthfunc"></a>
 ## depthFunc
 
 ```TypeScript
@@ -867,7 +798,6 @@ Sets the depth function
 | --- | --- | --- | --- |
 | func | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Depth function |
 
-<a id="depthmask"></a>
 ## depthMask
 
 ```TypeScript
@@ -890,7 +820,6 @@ Sets the depth mask
 | --- | --- | --- | --- |
 | flag | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to write to depth buffer |
 
-<a id="depthrange"></a>
 ## depthRange
 
 ```TypeScript
@@ -914,7 +843,6 @@ Sets the depth range
 | zNear | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Near depth |
 | zFar | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Far depth |
 
-<a id="detachshader"></a>
 ## detachShader
 
 ```TypeScript
@@ -938,7 +866,6 @@ Detaches a shader from a program
 | program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program |
 | shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader to detach |
 
-<a id="disable"></a>
 ## disable
 
 ```TypeScript
@@ -961,7 +888,6 @@ Disables a capability
 | --- | --- | --- | --- |
 | cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The capability to disable |
 
-<a id="disablevertexattribarray"></a>
 ## disableVertexAttribArray
 
 ```TypeScript
@@ -984,7 +910,6 @@ Disables a vertex attribute array
 | --- | --- | --- | --- |
 | index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the vertex attribute |
 
-<a id="drawarrays"></a>
 ## drawArrays
 
 ```TypeScript
@@ -1009,7 +934,6 @@ Draws arrays
 | first | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Starting index |
 | count | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Number of indices |
 
-<a id="drawelements"></a>
 ## drawElements
 
 ```TypeScript
@@ -1035,7 +959,6 @@ Draws elements
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Type of indices |
 | offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset in the buffer |
 
-<a id="enable"></a>
 ## enable
 
 ```TypeScript
@@ -1058,7 +981,6 @@ Enables a capability
 | --- | --- | --- | --- |
 | cap | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | The capability to enable |
 
-<a id="enablevertexattribarray"></a>
 ## enableVertexAttribArray
 
 ```TypeScript
@@ -1081,7 +1003,6 @@ Enables a vertex attribute array
 | --- | --- | --- | --- |
 | index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | The index of the vertex attribute |
 
-<a id="finish"></a>
 ## finish
 
 ```TypeScript
@@ -1098,7 +1019,6 @@ Signals the completion of GL rendering
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
-<a id="flush"></a>
 ## flush
 
 ```TypeScript
@@ -1115,7 +1035,6 @@ Forces all pending GL commands to be executed
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
-<a id="framebufferrenderbuffer"></a>
 ## framebufferRenderbuffer
 
 ```TypeScript
@@ -1133,17 +1052,7 @@ Attaches a renderbuffer to a framebuffer
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGLRenderingContextBase-framebufferRenderbuffer(
-      target: GLenum,
-      attachment: GLenum,
-      renderbuffertarget: GLenum,
-      renderbuffer: WebGLRenderbuffer | null,
-    ): void--><!--Device-WebGLRenderingContextBase-framebufferRenderbuffer(
-      target: GLenum,
-      attachment: GLenum,
-      renderbuffertarget: GLenum,
-      renderbuffer: WebGLRenderbuffer | null,
-    ): void-End-->
+<!--Device-WebGLRenderingContextBase-framebufferRenderbuffer(      target: GLenum,      attachment: GLenum,      renderbuffertarget: GLenum,      renderbuffer: WebGLRenderbuffer | null,    ): void--><!--Device-WebGLRenderingContextBase-framebufferRenderbuffer(      target: GLenum,      attachment: GLenum,      renderbuffertarget: GLenum,      renderbuffer: WebGLRenderbuffer | null,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -1156,7 +1065,6 @@ Attaches a renderbuffer to a framebuffer
 | renderbuffertarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Renderbuffer target |
 | renderbuffer | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes | The renderbuffer to attach |
 
-<a id="framebuffertexture2d"></a>
 ## framebufferTexture2D
 
 ```TypeScript
@@ -1175,19 +1083,7 @@ Attaches a texture to a framebuffer
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGLRenderingContextBase-framebufferTexture2D(
-      target: GLenum,
-      attachment: GLenum,
-      textarget: GLenum,
-      texture: WebGLTexture | null,
-      level: GLint,
-    ): void--><!--Device-WebGLRenderingContextBase-framebufferTexture2D(
-      target: GLenum,
-      attachment: GLenum,
-      textarget: GLenum,
-      texture: WebGLTexture | null,
-      level: GLint,
-    ): void-End-->
+<!--Device-WebGLRenderingContextBase-framebufferTexture2D(      target: GLenum,      attachment: GLenum,      textarget: GLenum,      texture: WebGLTexture | null,      level: GLint,    ): void--><!--Device-WebGLRenderingContextBase-framebufferTexture2D(      target: GLenum,      attachment: GLenum,      textarget: GLenum,      texture: WebGLTexture | null,      level: GLint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -1201,7 +1097,6 @@ Attaches a texture to a framebuffer
 | texture | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes | The texture to attach |
 | level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Mipmap level |
 
-<a id="frontface"></a>
 ## frontFace
 
 ```TypeScript
@@ -1224,7 +1119,6 @@ Sets the front face direction
 | --- | --- | --- | --- |
 | mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Front face mode |
 
-<a id="generatemipmap"></a>
 ## generateMipmap
 
 ```TypeScript
@@ -1247,7 +1141,6 @@ Generates mipmaps for a texture
 | --- | --- | --- | --- |
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Texture target |
 
-<a id="getactiveattrib"></a>
 ## getActiveAttrib
 
 ```TypeScript
@@ -1277,7 +1170,6 @@ Returns information about an active attribute
 | --- | --- |
 | [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) | Information about the active attribute |
 
-<a id="getactiveuniform"></a>
 ## getActiveUniform
 
 ```TypeScript
@@ -1307,7 +1199,6 @@ Returns information about an active uniform
 | --- | --- |
 | [WebGLActiveInfo](arkts-arkgraphics2d-webgl-webglactiveinfo-i.md) | Information about the active uniform |
 
-<a id="getattachedshaders"></a>
 ## getAttachedShaders
 
 ```TypeScript
@@ -1336,7 +1227,6 @@ Returns the shaders attached to a program
 | --- | --- |
 | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md)[] | Array of attached shaders |
 
-<a id="getattriblocation"></a>
 ## getAttribLocation
 
 ```TypeScript
@@ -1366,7 +1256,6 @@ Returns the location of an attribute variable
 | --- | --- |
 | [GLint](arkts-arkgraphics2d-glint-t.md) | The location of the attribute |
 
-<a id="getbufferparameter"></a>
 ## getBufferParameter
 
 ```TypeScript
@@ -1396,7 +1285,6 @@ Returns a buffer parameter
 | --- | --- |
 | any | The buffer parameter value |
 
-<a id="getcontextattributes"></a>
 ## getContextAttributes
 
 ```TypeScript
@@ -1419,7 +1307,6 @@ Returns the WebGLContextAttributes for the current context
 | --- | --- |
 | [WebGLContextAttributes](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | The WebGLContextAttributes object |
 
-<a id="geterror"></a>
 ## getError
 
 ```TypeScript
@@ -1442,7 +1329,6 @@ Returns the error code
 | --- | --- |
 | [GLenum](arkts-arkgraphics2d-glenum-t.md) | The error code |
 
-<a id="getextension"></a>
 ## getExtension
 
 ```TypeScript
@@ -1471,7 +1357,6 @@ Enables a WebGL extension
 | --- | --- |
 | any | The extension object if available |
 
-<a id="getframebufferattachmentparameter"></a>
 ## getFramebufferAttachmentParameter
 
 ```TypeScript
@@ -1502,7 +1387,6 @@ Returns a framebuffer attachment parameter
 | --- | --- |
 | any | The attachment parameter value |
 
-<a id="getparameter"></a>
 ## getParameter
 
 ```TypeScript
@@ -1531,7 +1415,6 @@ Returns a parameter value
 | --- | --- |
 | any | The parameter value |
 
-<a id="getprograminfolog"></a>
 ## getProgramInfoLog
 
 ```TypeScript
@@ -1560,7 +1443,6 @@ Returns the program info log
 | --- | --- |
 | string | The program info log |
 
-<a id="getprogramparameter"></a>
 ## getProgramParameter
 
 ```TypeScript
@@ -1590,7 +1472,6 @@ Returns a program parameter
 | --- | --- |
 | any | The program parameter value |
 
-<a id="getrenderbufferparameter"></a>
 ## getRenderbufferParameter
 
 ```TypeScript
@@ -1620,7 +1501,6 @@ Returns a renderbuffer parameter
 | --- | --- |
 | any | The renderbuffer parameter value |
 
-<a id="getshaderinfolog"></a>
 ## getShaderInfoLog
 
 ```TypeScript
@@ -1649,7 +1529,6 @@ Returns the shader info log
 | --- | --- |
 | string | The shader info log |
 
-<a id="getshaderparameter"></a>
 ## getShaderParameter
 
 ```TypeScript
@@ -1679,7 +1558,6 @@ Returns a shader parameter
 | --- | --- |
 | any | The shader parameter value |
 
-<a id="getshaderprecisionformat"></a>
 ## getShaderPrecisionFormat
 
 ```TypeScript
@@ -1709,7 +1587,6 @@ Returns the shader precision format
 | --- | --- |
 | [WebGLShaderPrecisionFormat](arkts-arkgraphics2d-webgl-webglshaderprecisionformat-i.md) | The precision format |
 
-<a id="getshadersource"></a>
 ## getShaderSource
 
 ```TypeScript
@@ -1738,7 +1615,6 @@ Returns the shader source
 | --- | --- |
 | string | The shader source |
 
-<a id="getsupportedextensions"></a>
 ## getSupportedExtensions
 
 ```TypeScript
@@ -1761,7 +1637,6 @@ Returns a list of supported extensions
 | --- | --- |
 | string[] | List of supported extensions |
 
-<a id="gettexparameter"></a>
 ## getTexParameter
 
 ```TypeScript
@@ -1791,7 +1666,6 @@ Returns a texture parameter
 | --- | --- |
 | any | The texture parameter value |
 
-<a id="getuniform"></a>
 ## getUniform
 
 ```TypeScript
@@ -1821,7 +1695,6 @@ Returns the value of a uniform
 | --- | --- |
 | any | The uniform value |
 
-<a id="getuniformlocation"></a>
 ## getUniformLocation
 
 ```TypeScript
@@ -1851,7 +1724,6 @@ Returns the location of a uniform variable
 | --- | --- |
 | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) | The uniform location |
 
-<a id="getvertexattrib"></a>
 ## getVertexAttrib
 
 ```TypeScript
@@ -1881,7 +1753,6 @@ Returns a vertex attribute parameter
 | --- | --- |
 | any | The vertex attribute parameter value |
 
-<a id="getvertexattriboffset"></a>
 ## getVertexAttribOffset
 
 ```TypeScript
@@ -1911,7 +1782,6 @@ Returns the offset of a vertex attribute
 | --- | --- |
 | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | The vertex attribute offset |
 
-<a id="hint"></a>
 ## hint
 
 ```TypeScript
@@ -1935,7 +1805,6 @@ Sets a hint
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Hint target |
 | mode | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Hint mode |
 
-<a id="isbuffer"></a>
 ## isBuffer
 
 ```TypeScript
@@ -1964,7 +1833,6 @@ Returns whether a buffer is valid
 | --- | --- |
 | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the buffer is valid |
 
-<a id="iscontextlost"></a>
 ## isContextLost
 
 ```TypeScript
@@ -1987,7 +1855,6 @@ Returns whether the context is lost
 | --- | --- |
 | boolean | Whether the context is lost |
 
-<a id="isenabled"></a>
 ## isEnabled
 
 ```TypeScript
@@ -2016,7 +1883,6 @@ Returns whether a capability is enabled
 | --- | --- |
 | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the capability is enabled |
 
-<a id="isframebuffer"></a>
 ## isFramebuffer
 
 ```TypeScript
@@ -2045,7 +1911,6 @@ Returns whether a framebuffer is valid
 | --- | --- |
 | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the framebuffer is valid |
 
-<a id="isprogram"></a>
 ## isProgram
 
 ```TypeScript
@@ -2074,7 +1939,6 @@ Returns whether a program is valid
 | --- | --- |
 | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the program is valid |
 
-<a id="isrenderbuffer"></a>
 ## isRenderbuffer
 
 ```TypeScript
@@ -2103,7 +1967,6 @@ Returns whether a renderbuffer is valid
 | --- | --- |
 | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the renderbuffer is valid |
 
-<a id="isshader"></a>
 ## isShader
 
 ```TypeScript
@@ -2132,7 +1995,6 @@ Returns whether a shader is valid
 | --- | --- |
 | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the shader is valid |
 
-<a id="istexture"></a>
 ## isTexture
 
 ```TypeScript
@@ -2161,7 +2023,6 @@ Returns whether a texture is valid
 | --- | --- |
 | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Whether the texture is valid |
 
-<a id="linewidth"></a>
 ## lineWidth
 
 ```TypeScript
@@ -2184,7 +2045,6 @@ Sets the line width
 | --- | --- | --- | --- |
 | width | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Line width |
 
-<a id="linkprogram"></a>
 ## linkProgram
 
 ```TypeScript
@@ -2207,7 +2067,6 @@ Links a program
 | --- | --- | --- | --- |
 | program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to link |
 
-<a id="pixelstorei"></a>
 ## pixelStorei
 
 ```TypeScript
@@ -2231,7 +2090,6 @@ Sets pixel storage parameters
 | pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 | param | [GLint](arkts-arkgraphics2d-glint-t.md) \| GLboolean | Yes | Parameter value |
 
-<a id="polygonoffset"></a>
 ## polygonOffset
 
 ```TypeScript
@@ -2255,7 +2113,6 @@ Sets the polygon offset
 | factor | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Scale factor |
 | units | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Units |
 
-<a id="renderbufferstorage"></a>
 ## renderbufferStorage
 
 ```TypeScript
@@ -2281,7 +2138,6 @@ Sets the renderbuffer storage
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
-<a id="samplecoverage"></a>
 ## sampleCoverage
 
 ```TypeScript
@@ -2305,7 +2161,6 @@ Sets the sample coverage
 | value | [GLclampf](arkts-arkgraphics2d-glclampf-t.md) | Yes | Coverage value |
 | invert | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Invert coverage |
 
-<a id="scissor"></a>
 ## scissor
 
 ```TypeScript
@@ -2331,7 +2186,6 @@ Sets the scissor box
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 
-<a id="shadersource"></a>
 ## shaderSource
 
 ```TypeScript
@@ -2355,7 +2209,6 @@ Sets the shader source
 | shader | [WebGLShader](arkts-arkgraphics2d-webgl-webglshader-i.md) | Yes | The shader |
 | source | string | Yes | The source code |
 
-<a id="stencilfunc"></a>
 ## stencilFunc
 
 ```TypeScript
@@ -2380,7 +2233,6 @@ Sets the stencil function
 | ref | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Reference value |
 | mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Mask |
 
-<a id="stencilfuncseparate"></a>
 ## stencilFuncSeparate
 
 ```TypeScript
@@ -2406,7 +2258,6 @@ Sets the stencil function separately for front and back faces
 | ref | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Reference value |
 | mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Mask |
 
-<a id="stencilmask"></a>
 ## stencilMask
 
 ```TypeScript
@@ -2429,7 +2280,6 @@ Sets the stencil mask
 | --- | --- | --- | --- |
 | mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Stencil mask |
 
-<a id="stencilmaskseparate"></a>
 ## stencilMaskSeparate
 
 ```TypeScript
@@ -2453,7 +2303,6 @@ Sets the stencil mask separately for front and back faces
 | face | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Face mode |
 | mask | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Stencil mask |
 
-<a id="stencilop"></a>
 ## stencilOp
 
 ```TypeScript
@@ -2478,7 +2327,6 @@ Sets the stencil operation
 | zfail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test fails |
 | zpass | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test passes |
 
-<a id="stencilopseparate"></a>
 ## stencilOpSeparate
 
 ```TypeScript
@@ -2504,7 +2352,6 @@ Sets the stencil operation separately for front and back faces
 | zfail | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test fails |
 | zpass | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Operation when depth test passes |
 
-<a id="texparameterf"></a>
 ## texParameterf
 
 ```TypeScript
@@ -2529,7 +2376,6 @@ Sets a texture parameter (float)
 | pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 | param | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Parameter value |
 
-<a id="texparameteri"></a>
 ## texParameteri
 
 ```TypeScript
@@ -2554,7 +2400,6 @@ Sets a texture parameter (int)
 | pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 | param | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Parameter value |
 
-<a id="uniform1f"></a>
 ## uniform1f
 
 ```TypeScript
@@ -2578,7 +2423,6 @@ Sets a uniform1f value
 | location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
 | x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
 
-<a id="uniform1i"></a>
 ## uniform1i
 
 ```TypeScript
@@ -2602,7 +2446,6 @@ Sets a uniform1i value
 | location | [WebGLUniformLocation](arkts-arkgraphics2d-webgl-webgluniformlocation-i.md) \| null | Yes | Uniform location |
 | x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
 
-<a id="uniform2f"></a>
 ## uniform2f
 
 ```TypeScript
@@ -2627,7 +2470,6 @@ Sets a uniform2f value
 | x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
 | y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
 
-<a id="uniform2i"></a>
 ## uniform2i
 
 ```TypeScript
@@ -2652,7 +2494,6 @@ Sets a uniform2i value
 | x | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | X value |
 | y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
 
-<a id="uniform3f"></a>
 ## uniform3f
 
 ```TypeScript
@@ -2678,7 +2519,6 @@ Sets a uniform3f value
 | y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
 | z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
 
-<a id="uniform3i"></a>
 ## uniform3i
 
 ```TypeScript
@@ -2704,7 +2544,6 @@ Sets a uniform3i value
 | y | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Y value |
 | z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z value |
 
-<a id="uniform4f"></a>
 ## uniform4f
 
 ```TypeScript
@@ -2731,7 +2570,6 @@ Sets a uniform4f value
 | z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
 | w | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | W value |
 
-<a id="uniform4i"></a>
 ## uniform4i
 
 ```TypeScript
@@ -2758,7 +2596,6 @@ Sets a uniform4i value
 | z | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Z value |
 | w | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | W value |
 
-<a id="useprogram"></a>
 ## useProgram
 
 ```TypeScript
@@ -2781,7 +2618,6 @@ Uses a program
 | --- | --- | --- | --- |
 | program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) \| null | Yes | The program to use |
 
-<a id="validateprogram"></a>
 ## validateProgram
 
 ```TypeScript
@@ -2804,7 +2640,6 @@ Validates a program
 | --- | --- | --- | --- |
 | program | [WebGLProgram](arkts-arkgraphics2d-webgl-webglprogram-i.md) | Yes | The program to validate |
 
-<a id="vertexattrib1f"></a>
 ## vertexAttrib1f
 
 ```TypeScript
@@ -2828,7 +2663,6 @@ Sets a vertex attrib1f value
 | index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
 | x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
 
-<a id="vertexattrib1fv"></a>
 ## vertexAttrib1fv
 
 ```TypeScript
@@ -2852,7 +2686,6 @@ Sets a vertex attrib1fv value
 | index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
 | values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
 
-<a id="vertexattrib2f"></a>
 ## vertexAttrib2f
 
 ```TypeScript
@@ -2877,7 +2710,6 @@ Sets a vertex attrib2f value
 | x | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | X value |
 | y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
 
-<a id="vertexattrib2fv"></a>
 ## vertexAttrib2fv
 
 ```TypeScript
@@ -2901,7 +2733,6 @@ Sets a vertex attrib2fv value
 | index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
 | values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
 
-<a id="vertexattrib3f"></a>
 ## vertexAttrib3f
 
 ```TypeScript
@@ -2927,7 +2758,6 @@ Sets a vertex attrib3f value
 | y | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Y value |
 | z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
 
-<a id="vertexattrib3fv"></a>
 ## vertexAttrib3fv
 
 ```TypeScript
@@ -2951,7 +2781,6 @@ Sets a vertex attrib3fv value
 | index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
 | values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
 
-<a id="vertexattrib4f"></a>
 ## vertexAttrib4f
 
 ```TypeScript
@@ -2978,7 +2807,6 @@ Sets a vertex attrib4f value
 | z | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | Z value |
 | w | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes | W value |
 
-<a id="vertexattrib4fv"></a>
 ## vertexAttrib4fv
 
 ```TypeScript
@@ -3002,7 +2830,6 @@ Sets a vertex attrib4fv value
 | index | [GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
 | values | [Float32List](arkts-arkgraphics2d-float32list-t.md) | Yes | Values |
 
-<a id="vertexattribpointer"></a>
 ## vertexAttribPointer
 
 ```TypeScript
@@ -3022,21 +2849,7 @@ Sets vertex attrib pointer
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGLRenderingContextBase-vertexAttribPointer(
-      index: GLuint,
-      size: GLint,
-      type: GLenum,
-      normalized: GLboolean,
-      stride: GLsizei,
-      offset: GLintptr,
-    ): void--><!--Device-WebGLRenderingContextBase-vertexAttribPointer(
-      index: GLuint,
-      size: GLint,
-      type: GLenum,
-      normalized: GLboolean,
-      stride: GLsizei,
-      offset: GLintptr,
-    ): void-End-->
+<!--Device-WebGLRenderingContextBase-vertexAttribPointer(      index: GLuint,      size: GLint,      type: GLenum,      normalized: GLboolean,      stride: GLsizei,      offset: GLintptr,    ): void--><!--Device-WebGLRenderingContextBase-vertexAttribPointer(      index: GLuint,      size: GLint,      type: GLenum,      normalized: GLboolean,      stride: GLsizei,      offset: GLintptr,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
@@ -3051,7 +2864,6 @@ Sets vertex attrib pointer
 | stride | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Stride |
 | offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 
-<a id="viewport"></a>
 ## viewport
 
 ```TypeScript

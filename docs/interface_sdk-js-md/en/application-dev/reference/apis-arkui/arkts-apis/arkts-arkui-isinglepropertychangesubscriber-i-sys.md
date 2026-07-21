@@ -12,7 +12,6 @@ Inherits from [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md). R
 
 **System API:** This is a system API.
 
-<a id="haschanged"></a>
 ## hasChanged
 
 ```TypeScript

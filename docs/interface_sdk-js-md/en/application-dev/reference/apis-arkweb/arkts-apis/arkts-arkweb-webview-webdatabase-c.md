@@ -1,7 +1,6 @@
 # WebDataBase
 
 Implements a **WebDataBase** object.
-
 > **NOTE**  
 >  
 > - The sample effect is subject to the actual device.  
@@ -20,7 +19,6 @@ Implements a **WebDataBase** object.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="deletehttpauthcredentials"></a>
 ## deleteHttpAuthCredentials
 
 ```TypeScript
@@ -37,7 +35,6 @@ Deletes all HTTP authentication credentials saved in the cache. This API returns
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="existhttpauthcredentials"></a>
 ## existHttpAuthCredentials
 
 ```TypeScript
@@ -60,7 +57,6 @@ Checks whether any saved HTTP authentication credentials exist. This API returns
 | --- | --- |
 | boolean | Whether any saved HTTP authentication credentials exist.<br>**true** is returned if any saved HTTP authentication credentials exist; otherwise, **false** is returned. |
 
-<a id="gethttpauthcredentials"></a>
 ## getHttpAuthCredentials
 
 ```TypeScript
@@ -96,7 +92,6 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
-<a id="savehttpauthcredentials"></a>
 ## saveHttpAuthCredentials
 
 ```TypeScript

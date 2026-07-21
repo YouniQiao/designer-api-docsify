@@ -6,7 +6,6 @@
 import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
-<a id="opendoubleclicksettingspage"></a>
 ## openDoubleClickSettingsPage
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # Parameter (System API)
 
-Sets the parameter for a specific operation when the accessibility node element executes this operation. For details,see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) (executable actions for accessibility node elements).
+Sets the parameter for a specific operation when the accessibility node element executes this operation. For details,see [AccessibilityAction](../../apis-arkui/arkts-components/arkts-arkui-accessibilityaction-e.md) (executable actions for accessibility node elements).
 
 **Since:** 20
 

@@ -6,7 +6,6 @@
 import { serialManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="requestserialright"></a>
 ## requestSerialRight
 
 ```TypeScript
@@ -25,7 +24,7 @@ Requests the permission for the application to access the serial port device. Af
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist-1). |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 
 **Return value:**
 

@@ -6,14 +6,13 @@
 import { usbManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="cancelaccessoryright"></a>
 ## cancelAccessoryRight
 
 ```TypeScript
 function cancelAccessoryRight(accessory: USBAccessory): void
 ```
 
-Cancels the permission of the current application to access USB accessories.You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist-1) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter.
+Cancels the permission of the current application to access USB accessories.You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter.
 
 **Since:** 14
 
@@ -25,7 +24,7 @@ Cancels the permission of the current application to access USB accessories.You 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Yes | USB accessory, which is obtained through [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist-1). |
+| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | Yes | USB accessory, which is obtained through [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md#getaccessorylist). |
 
 **Error codes:**
 

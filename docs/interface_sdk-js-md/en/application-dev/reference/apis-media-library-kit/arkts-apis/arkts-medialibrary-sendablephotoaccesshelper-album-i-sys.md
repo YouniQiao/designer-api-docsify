@@ -16,7 +16,6 @@ Provides APIs to manage albums.
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="getfaceid"></a>
 ## getFaceId
 
 ```TypeScript

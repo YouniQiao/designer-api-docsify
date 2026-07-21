@@ -6,7 +6,6 @@
 import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
-<a id="createtimer"></a>
 ## createTimer
 
 ```TypeScript
@@ -14,11 +13,10 @@ function createTimer(options: TimerOptions, callback: AsyncCallback<number>): vo
 ```
 
 Creates a timer. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This API must be used together with  
-> [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-1). Otherwise  
+> [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer). Otherwise  
 > , memory leakage occurs.
 
 **Since:** 7
@@ -68,7 +66,6 @@ try {
 ```
 
 
-<a id="createtimer-1"></a>
 ## createTimer
 
 ```TypeScript
@@ -76,11 +73,10 @@ function createTimer(options: TimerOptions): Promise<number>
 ```
 
 Creates a timer. This API uses a promise to return the timer ID.
-
 > **NOTE**  
 >  
 > This API must be used together with  
-> [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-1). Otherwise  
+> [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer). Otherwise  
 > , memory leakage occurs.
 
 **Since:** 7

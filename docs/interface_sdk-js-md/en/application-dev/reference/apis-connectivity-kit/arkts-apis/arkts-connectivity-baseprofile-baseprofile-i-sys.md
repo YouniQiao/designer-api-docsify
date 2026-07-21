@@ -14,7 +14,6 @@ Base interface of profile.
 import { baseProfile } from '@kit.ConnectivityKit';
 ```
 
-<a id="getconnectionstrategy"></a>
 ## getConnectionStrategy
 
 ```TypeScript
@@ -55,7 +54,6 @@ Get connection strategy of this profile.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="getconnectionstrategy-1"></a>
 ## getConnectionStrategy
 
 ```TypeScript
@@ -101,7 +99,6 @@ Get connection strategy of this profile.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="setconnectionstrategy"></a>
 ## setConnectionStrategy
 
 ```TypeScript
@@ -148,7 +145,6 @@ Set connection strategy of this profile.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="setconnectionstrategy-1"></a>
 ## setConnectionStrategy
 
 ```TypeScript

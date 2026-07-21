@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="cancelmuted"></a>
 ## cancelMuted
 
 ```TypeScript
@@ -56,7 +55,6 @@ call.cancelMuted((err: BusinessError) => {
 ```
 
 
-<a id="cancelmuted-1"></a>
 ## cancelMuted
 
 ```TypeScript

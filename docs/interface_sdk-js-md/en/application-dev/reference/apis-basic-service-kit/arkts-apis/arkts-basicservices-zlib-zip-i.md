@@ -14,7 +14,6 @@ Defines the **Zip** instance. It provides APIs to zip or unzip data in Zlib, Def
 import { zlib } from '@kit.BasicServicesKit';
 ```
 
-<a id="compress"></a>
 ## compress
 
 ```TypeScript
@@ -74,7 +73,6 @@ zip.compress(arrayBufferOut, arrayBufferIn, 20).then((data) => {
 
 ```
 
-<a id="compress2"></a>
 ## compress2
 
 ```TypeScript
@@ -114,7 +112,6 @@ Compresses the source buffer into the destination buffer. This API uses a promis
 | [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 | [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 
-<a id="compressbound"></a>
 ## compressBound
 
 ```TypeScript
@@ -172,7 +169,6 @@ zip.compressBound(str.length).then((data) => {
 
 ```
 
-<a id="deflate"></a>
 ## deflate
 
 ```TypeScript
@@ -244,7 +240,6 @@ async function demo() {
 
 ```
 
-<a id="deflatebound"></a>
 ## deflateBound
 
 ```TypeScript
@@ -314,7 +309,6 @@ async function demo() {
 
 ```
 
-<a id="deflatecopy"></a>
 ## deflateCopy
 
 ```TypeScript
@@ -384,7 +378,6 @@ async function demo() {
 
 ```
 
-<a id="deflateend"></a>
 ## deflateEnd
 
 ```TypeScript
@@ -459,7 +452,6 @@ async function demo() {
 
 ```
 
-<a id="deflategetdictionary"></a>
 ## deflateGetDictionary
 
 ```TypeScript
@@ -535,7 +527,6 @@ async function demo() {
 
 ```
 
-<a id="deflateinit"></a>
 ## deflateInit
 
 ```TypeScript
@@ -601,7 +592,6 @@ async function demo() {
 
 ```
 
-<a id="deflateinit2"></a>
 ## deflateInit2
 
 ```TypeScript
@@ -615,9 +605,7 @@ Initializes a compression stream with the specified compression level, compressi
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,
-        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,
-        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
+<!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -675,7 +663,6 @@ async function demo() {
 
 ```
 
-<a id="deflateparams"></a>
 ## deflateParams
 
 ```TypeScript
@@ -747,7 +734,6 @@ async function demo() {
 
 ```
 
-<a id="deflatepending"></a>
 ## deflatePending
 
 ```TypeScript
@@ -817,7 +803,6 @@ async function demo() {
 
 ```
 
-<a id="deflateprime"></a>
 ## deflatePrime
 
 ```TypeScript
@@ -889,7 +874,6 @@ async function demo() {
 
 ```
 
-<a id="deflatereset"></a>
 ## deflateReset
 
 ```TypeScript
@@ -959,7 +943,6 @@ async function demo() {
 
 ```
 
-<a id="deflateresetkeep"></a>
 ## deflateResetKeep
 
 ```TypeScript
@@ -1029,7 +1012,6 @@ async function demo() {
 
 ```
 
-<a id="deflatesetdictionary"></a>
 ## deflateSetDictionary
 
 ```TypeScript
@@ -1100,7 +1082,6 @@ async function demo() {
 
 ```
 
-<a id="deflatesetheader"></a>
 ## deflateSetHeader
 
 ```TypeScript
@@ -1172,7 +1153,6 @@ async function demo() {
 
 ```
 
-<a id="deflatetune"></a>
 ## deflateTune
 
 ```TypeScript
@@ -1246,7 +1226,6 @@ async function demo() {
 
 ```
 
-<a id="getzstream"></a>
 ## getZStream
 
 ```TypeScript
@@ -1282,7 +1261,6 @@ zip.getZStream().then(data => {
 
 ```
 
-<a id="inflate"></a>
 ## inflate
 
 ```TypeScript
@@ -1375,7 +1353,6 @@ async function demo() {
 
 ```
 
-<a id="inflateback"></a>
 ## inflateBack
 
 ```TypeScript
@@ -1553,7 +1530,6 @@ async function demo() {
 
 ```
 
-<a id="inflatebackend"></a>
 ## inflateBackEnd
 
 ```TypeScript
@@ -1593,7 +1569,6 @@ Releases all memory allocated by the **inflateBackInit()** function. This API us
 
 For details about the sample code, see [inflateBack](#inflateback12).
 
-<a id="inflatebackinit"></a>
 ## inflateBackInit
 
 ```TypeScript
@@ -1635,7 +1610,6 @@ Initializes the internal stream state for decompression before using the **infla
 
 For details about the sample code, see [inflateBack](#inflateback12).
 
-<a id="inflatecodesused"></a>
 ## inflateCodesUsed
 
 ```TypeScript
@@ -1699,7 +1673,6 @@ async function demo() {
 
 ```
 
-<a id="inflatecopy"></a>
 ## inflateCopy
 
 ```TypeScript
@@ -1765,7 +1738,6 @@ async function demo() {
 
 ```
 
-<a id="inflateend"></a>
 ## inflateEnd
 
 ```TypeScript
@@ -1835,7 +1807,6 @@ async function demo() {
 
 ```
 
-<a id="inflategetdictionary"></a>
 ## inflateGetDictionary
 
 ```TypeScript
@@ -1901,7 +1872,6 @@ async function demo() {
 
 ```
 
-<a id="inflategetheader"></a>
 ## inflateGetHeader
 
 ```TypeScript
@@ -1967,7 +1937,6 @@ async function demo() {
 
 ```
 
-<a id="inflateinit"></a>
 ## inflateInit
 
 ```TypeScript
@@ -2027,7 +1996,6 @@ zip.inflateInit({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOut
 
 ```
 
-<a id="inflateinit2"></a>
 ## inflateInit2
 
 ```TypeScript
@@ -2089,7 +2057,6 @@ zip.inflateInit2({ nextIn: arrayBufferIn, availableIn: 1, nextOut: arrayBufferOu
 
 ```
 
-<a id="inflatemark"></a>
 ## inflateMark
 
 ```TypeScript
@@ -2153,7 +2120,6 @@ async function demo() {
 
 ```
 
-<a id="inflateprime"></a>
 ## inflatePrime
 
 ```TypeScript
@@ -2220,7 +2186,6 @@ async function demo() {
 
 ```
 
-<a id="inflatereset"></a>
 ## inflateReset
 
 ```TypeScript
@@ -2285,7 +2250,6 @@ async function demo() {
 
 ```
 
-<a id="inflatereset2"></a>
 ## inflateReset2
 
 ```TypeScript
@@ -2351,7 +2315,6 @@ async function demo() {
 
 ```
 
-<a id="inflateresetkeep"></a>
 ## inflateResetKeep
 
 ```TypeScript
@@ -2416,7 +2379,6 @@ async function demo() {
 
 ```
 
-<a id="inflatesetdictionary"></a>
 ## inflateSetDictionary
 
 ```TypeScript
@@ -2520,7 +2482,6 @@ async function demo() {
 
 ```
 
-<a id="inflatesync"></a>
 ## inflateSync
 
 ```TypeScript
@@ -2618,7 +2579,6 @@ async function demo() {
 
 ```
 
-<a id="inflatesyncpoint"></a>
 ## inflateSyncPoint
 
 ```TypeScript
@@ -2683,7 +2643,6 @@ async function demo() {
 
 ```
 
-<a id="inflatevalidate"></a>
 ## inflateValidate
 
 ```TypeScript
@@ -2749,7 +2708,6 @@ async function demo() {
 
 ```
 
-<a id="uncompress"></a>
 ## uncompress
 
 ```TypeScript
@@ -2816,7 +2774,6 @@ async function demo() {
 
 ```
 
-<a id="uncompress2"></a>
 ## uncompress2
 
 ```TypeScript
@@ -2883,7 +2840,6 @@ async function demo() {
 
 ```
 
-<a id="zlibcompileflags"></a>
 ## zlibCompileFlags
 
 ```TypeScript
@@ -2919,7 +2875,6 @@ zip.zlibCompileFlags().then((data) => {
 
 ```
 
-<a id="zlibversion"></a>
 ## zlibVersion
 
 ```TypeScript

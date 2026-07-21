@@ -16,7 +16,6 @@ WebNativeMessagingExtensionContext is the context of web native message extensio
 import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
-<a id="startability"></a>
 ## startAbility
 
 ```TypeScript
@@ -97,7 +96,6 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
 
 ```
 
-<a id="startabilityforresult"></a>
 ## startAbilityForResult
 
 ```TypeScript
@@ -154,7 +152,6 @@ Starts an ability and returns the execution result when the ability is destroyed
 | [16000079](../../apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) | The APP_INSTANCE_KEY cannot be specified. |
 | [16000080](../../apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) | Instances cannot be created for other applications during inter-application startup. |
 
-<a id="stopnativeconnection"></a>
 ## stopNativeConnection
 
 ```TypeScript
@@ -211,7 +208,6 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
 
 ```
 
-<a id="terminateself"></a>
 ## terminateSelf
 
 ```TypeScript

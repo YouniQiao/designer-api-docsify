@@ -6,7 +6,6 @@
 import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
-<a id="offhoverhandchange"></a>
 ## offHoverHandChange
 
 ```TypeScript

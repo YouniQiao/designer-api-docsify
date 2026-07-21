@@ -1,6 +1,6 @@
 # SystemPasteboard
 
-Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard-1).
+Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard).
 
 **Since:** 6
 
@@ -14,7 +14,6 @@ Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, 
 import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
-<a id="removeappshareoptions"></a>
 ## removeAppShareOptions
 
 ```TypeScript
@@ -54,7 +53,6 @@ try {
 
 ```
 
-<a id="setappshareoptions"></a>
 ## setAppShareOptions
 
 ```TypeScript

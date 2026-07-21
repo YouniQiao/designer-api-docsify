@@ -6,7 +6,6 @@
 import { inputEventClient } from '@kit.InputKit';
 ```
 
-<a id="injecttouchevent"></a>
 ## injectTouchEvent
 
 ```TypeScript
@@ -30,7 +29,7 @@ Injects a touch event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touchEvent | [TouchEventData](arkts-input-inputeventclient-toucheventdata-i-sys.md) | Yes | Touch event data. [Action](arkts-input-multimodalinput-touchevent-action-e.md) in this parameter cannot be set to **CANCEL**. |
+| touchEvent | [TouchEventData](arkts-input-inputeventclient-toucheventdata-i-sys.md) | Yes | Touch event data. [Action](arkts-input-multimodalinput-keyevent-action-e.md) in this parameter cannot be set to **CANCEL**. |
 
 **Error codes:**
 

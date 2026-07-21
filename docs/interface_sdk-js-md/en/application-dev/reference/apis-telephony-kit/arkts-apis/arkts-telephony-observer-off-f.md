@@ -6,7 +6,6 @@
 import { observer } from '@kit.TelephonyKit';
 ```
 
-<a id="off"></a>
 ## off('networkStateChange')
 
 ```TypeScript
@@ -52,7 +51,6 @@ observer.off('networkStateChange');
 ```
 
 
-<a id="off-1"></a>
 ## off('signalInfoChange')
 
 ```TypeScript
@@ -100,7 +98,6 @@ observer.off('signalInfoChange');
 ```
 
 
-<a id="off-2"></a>
 ## off('cellularDataConnectionStateChange')
 
 ```TypeScript
@@ -146,7 +143,6 @@ observer.off('cellularDataConnectionStateChange');
 ```
 
 
-<a id="off-3"></a>
 ## off('cellularDataFlowChange')
 
 ```TypeScript
@@ -194,7 +190,6 @@ observer.off('cellularDataFlowChange');
 ```
 
 
-<a id="off-4"></a>
 ## off('callStateChange')
 
 ```TypeScript
@@ -240,7 +235,6 @@ observer.off('callStateChange');
 ```
 
 
-<a id="off-5"></a>
 ## off('callStateChangeEx')
 
 ```TypeScript
@@ -286,7 +280,6 @@ observer.off('callStateChangeEx');
 ```
 
 
-<a id="off-6"></a>
 ## off('simStateChange')
 
 ```TypeScript
@@ -332,7 +325,6 @@ observer.off('simStateChange');
 ```
 
 
-<a id="off-7"></a>
 ## off('iccAccountInfoChange')
 
 ```TypeScript

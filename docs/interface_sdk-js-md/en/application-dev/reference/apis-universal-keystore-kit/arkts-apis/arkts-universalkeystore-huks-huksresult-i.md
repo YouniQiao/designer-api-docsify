@@ -1,11 +1,10 @@
 # HuksResult
 
 Represents the result returned.
-
 > **NOTE**  
 >  
 > - For details about the error codes, see  
-> [HUKS Error Codes](docroot://reference/apis-universal-keystore-kit/errorcode-huks.md).
+> [HUKS Error Codes](../../../reference/apis-universal-keystore-kit/errorcode-huks.md).
 
 **Since:** 8
 

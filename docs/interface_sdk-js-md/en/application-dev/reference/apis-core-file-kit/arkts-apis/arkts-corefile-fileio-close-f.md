@@ -1,6 +1,5 @@
 # close
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -13,7 +12,7 @@ Closes a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:close](arkts-corefile-file-fs-close-f.md#close-1)
+**Substitutes:** [fs:close](arkts-corefile-fileio-close-f.md#close)
 
 <!--Device-unnamed-declare function close(fd: number): Promise<void>--><!--Device-unnamed-declare function close(fd: number): Promise<void>-End-->
 
@@ -32,7 +31,6 @@ Closes a file. This API uses a promise to return the result.
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 
-<a id="close-1"></a>
 ## close
 
 ```TypeScript
@@ -45,7 +43,7 @@ Closes a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:close](arkts-corefile-file-fs-close-f.md#close-1)
+**Substitutes:** [fs:close](arkts-corefile-fileio-close-f.md#close)
 
 <!--Device-unnamed-declare function close(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function close(fd: number, callback: AsyncCallback<void>): void-End-->
 

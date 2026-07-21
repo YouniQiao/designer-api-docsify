@@ -6,7 +6,6 @@
 import { bas } from '@kit.ConnectivityKit';
 ```
 
-<a id="getremotedevicebatteryinfo"></a>
 ## getRemoteDeviceBatteryInfo
 
 ```TypeScript

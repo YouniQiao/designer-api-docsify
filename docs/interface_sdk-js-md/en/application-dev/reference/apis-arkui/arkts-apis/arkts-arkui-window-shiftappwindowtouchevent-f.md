@@ -6,7 +6,6 @@
 import { window } from '@kit.ArkUI';
 ```
 
-<a id="shiftappwindowtouchevent"></a>
 ## shiftAppWindowTouchEvent
 
 ```TypeScript
@@ -27,8 +26,8 @@ To transfer touchscreen input events, the source window must call this API withi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceWindowId | number | Yes | ID of the source window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties-1) to obtain the window ID. The value must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. |
-| targetWindowId | number | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties-1) to obtain the window ID. The value must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. |
+| sourceWindowId | number | Yes | ID of the source window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID. The value must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. |
+| targetWindowId | number | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID. The value must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. |
 | fingerId | number | Yes | Unique ID of the finger in the touchscreen input event. You are advised to use the **touches** attribute in the [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) object to obtain the ID. This parameter must be an integer greater than or equal to 0. If the value is less than 0, error code 1300016 is returned. |
 
 **Return value:**

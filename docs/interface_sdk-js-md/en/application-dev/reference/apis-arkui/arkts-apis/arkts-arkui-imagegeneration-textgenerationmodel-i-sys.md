@@ -16,7 +16,6 @@ AI Text Model Abstract Interface.
 import { imageGeneration } from '@kit.ArkUI';
 ```
 
-<a id="canceltextgeneration"></a>
 ## cancelTextGeneration
 
 ```TypeScript
@@ -41,7 +40,6 @@ Cancel AI text generation task.
 | --- | --- | --- | --- |
 | sessionId | number | Yes | The session id for canceling an AI text generation task.<br>Value range:[0, +∞] |
 
-<a id="oncomplain"></a>
 ## onComplain
 
 ```TypeScript
@@ -68,7 +66,6 @@ User use complaint menu to complain the result of an AI-generated text task.
 | request | string | Yes | The origin request for AI-generated text task. |
 | result | [GenerateTextTaskResult](arkts-arkui-imagegeneration-generatetexttaskresult-i-sys.md) | Yes | The result for AI-generated text task. |
 
-<a id="requesttextgeneration"></a>
 ## requestTextGeneration
 
 ```TypeScript
@@ -82,9 +79,7 @@ Request AI text generation task to get the generated text.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TextGenerationModel-requestTextGeneration(sessionId: int, value: string,
-      callback: Callback<GenerateTextTaskPartialResult>): void--><!--Device-TextGenerationModel-requestTextGeneration(sessionId: int, value: string,
-      callback: Callback<GenerateTextTaskPartialResult>): void-End-->
+<!--Device-TextGenerationModel-requestTextGeneration(sessionId: int, value: string,      callback: Callback<GenerateTextTaskPartialResult>): void--><!--Device-TextGenerationModel-requestTextGeneration(sessionId: int, value: string,      callback: Callback<GenerateTextTaskPartialResult>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

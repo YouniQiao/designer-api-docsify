@@ -8,7 +8,6 @@ Implements the proxy object returned during the execution of the custom switchin
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="finishtransition"></a>
 ## finishTransition
 
 ```TypeScript

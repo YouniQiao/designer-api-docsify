@@ -1,7 +1,6 @@
 # BackgroundBrightnessOptions
 
 Provides background brightness options.
-
 > **NOTE**  
 >  
 > The brightness (gray scale value) of each pixel in the component background content is calculated using the  

@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="initsessionasuser"></a>
 ## initSessionAsUser
 
 ```TypeScript

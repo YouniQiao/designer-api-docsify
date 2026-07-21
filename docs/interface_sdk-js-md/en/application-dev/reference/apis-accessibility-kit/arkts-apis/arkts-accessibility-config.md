@@ -48,7 +48,7 @@ import { config } from '@kit.AccessibilityKit';
 | --- | --- |
 | [AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md) | Indicates the senior mode information of an application. |
 | [Config](arkts-accessibility-config-config-i-sys.md) | Implements configuration, acquisition, and listening for properties. |
-| [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) | Callback provided when the [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback-1) API is called to enable an accessibility extension ability. This callback will be invoked when the connection to an auxiliary extension ability is disconnected. |
+| [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) | Callback provided when the [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback) API is called to enable an accessibility extension ability. This callback will be invoked when the connection to an auxiliary extension ability is disconnected. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -1,10 +1,9 @@
 # LuminanceSampler (System API)
 
 Sets the background luminance color picking parameters, registers the luminance change listening callback, and unregisters the listening callback.
-
 > **NOTE**  
 >  
-> In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler-1) in  
+> In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler) in  
 > **UIContext** to obtain a **LuminanceSampler** object, and then call the APIs using the obtained object.
 
 **Since:** 23
@@ -21,7 +20,6 @@ Sets the background luminance color picking parameters, registers the luminance 
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-<a id="offbackgroundluminancechange"></a>
 ## offBackgroundLuminanceChange
 
 ```TypeScript
@@ -46,7 +44,6 @@ Unregisters the callback for listening to color picking. If no callback is speci
 | --- | --- | --- | --- |
 | samplingCallback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | No | Callback to unregister. |
 
-<a id="onbackgroundluminancechange"></a>
 ## onBackgroundLuminanceChange
 
 ```TypeScript
@@ -55,7 +52,7 @@ onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 
 Registers the callback for listening to color picking.
 
-The background luminance is divided into three ranges based on the luminance threshold and dark threshold set by the [setBackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md#setbackgroundluminancesamplingconfigs-1) API:[0, Dark threshold], (Dark threshold, Luminance threshold], and (Luminance threshold, 255]. The callback is triggered when the background luminance range changes (or the listener callback is registered for the first time)and the interval between the current color picking and the last color picking reaches the specified interval, and the current background luminance is returned.
+The background luminance is divided into three ranges based on the luminance threshold and dark threshold set by the [setBackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md#setbackgroundluminancesamplingconfigs) API:[0, Dark threshold], (Dark threshold, Luminance threshold], and (Luminance threshold, 255]. The callback is triggered when the background luminance range changes (or the listener callback is registered for the first time)and the interval between the current color picking and the last color picking reaches the specified interval, and the current background luminance is returned.
 
 **Since:** 23
 
@@ -73,7 +70,6 @@ The background luminance is divided into three ranges based on the luminance thr
 | --- | --- | --- | --- |
 | samplingCallback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | Yes | Callback used to return the current background luminance.<br>Note:[offBackgroundLuminanceChange](LuminanceSampler#off) cannot be called in the listening callback. |
 
-<a id="setbackgroundluminancesamplingconfigs"></a>
 ## setBackgroundLuminanceSamplingConfigs
 
 ```TypeScript

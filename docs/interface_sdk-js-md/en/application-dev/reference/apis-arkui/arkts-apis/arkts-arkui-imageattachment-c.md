@@ -8,7 +8,6 @@ Describes the image attachment.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -33,7 +32,6 @@ A constructor used to create an image object.
 | --- | --- | --- | --- |
 | value | [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | Yes | Image attachment options. |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -170,7 +168,7 @@ If **ImageAttachment** is set to a negative value or **undefined**, **undefined*
 readonly supportSvg2?: boolean
 ```
 
-Whether to enable [enhanced SVG tag parsing capabilities](docroot://reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md).
+Whether to enable [enhanced SVG tag parsing capabilities](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md).
 
 **true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing.
 

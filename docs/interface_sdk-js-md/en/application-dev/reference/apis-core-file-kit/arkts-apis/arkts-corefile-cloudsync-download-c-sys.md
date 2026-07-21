@@ -16,7 +16,6 @@ Provides APIs for downloading image files to **Gallery**. Before using the APIs 
 import { cloudSync } from '@kit.CoreFileKit';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -40,7 +39,6 @@ let download = new cloudSync.Download()
 
 ```
 
-<a id="off"></a>
 ## off
 
 ```TypeScript
@@ -90,7 +88,6 @@ download.off('progress', callback);
 
 ```
 
-<a id="off-1"></a>
 ## off
 
 ```TypeScript
@@ -137,7 +134,6 @@ download.off('progress');
 
 ```
 
-<a id="on"></a>
 ## on
 
 ```TypeScript
@@ -183,7 +179,6 @@ download.on('progress', (pg: cloudSync.DownloadProgress) => {
 
 ```
 
-<a id="start"></a>
 ## start
 
 ```TypeScript
@@ -244,7 +239,6 @@ download.start(uri).then(() => {
 
 ```
 
-<a id="start-1"></a>
 ## start
 
 ```TypeScript
@@ -298,7 +292,6 @@ download.start(uri, (err: BusinessError) => {
 
 ```
 
-<a id="stop"></a>
 ## stop
 
 ```TypeScript
@@ -306,7 +299,6 @@ stop(uri: string): Promise<void>
 ```
 
 Stops downloading a cloud file. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Calling **stop** will terminate the download of the current file and clear the cache file. You can use  
@@ -358,7 +350,6 @@ download.stop(uri).then(() => {
 
 ```
 
-<a id="stop-1"></a>
 ## stop
 
 ```TypeScript
@@ -366,7 +357,6 @@ stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
 Stops downloading a cloud file. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > Calling **stop** will terminate the download of the current file and clear the cache file. You can use  

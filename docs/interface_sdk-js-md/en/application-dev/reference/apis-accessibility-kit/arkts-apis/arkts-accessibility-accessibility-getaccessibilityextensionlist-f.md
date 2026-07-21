@@ -6,7 +6,6 @@
 import { accessibility } from '@kit.AccessibilityKit';
 ```
 
-<a id="getaccessibilityextensionlist"></a>
 ## getAccessibilityExtensionList
 
 ```TypeScript
@@ -24,13 +23,7 @@ Obtains the accessibility application list. This API uses a promise to return th
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-accessibility-function getAccessibilityExtensionList(
-    abilityType: AbilityType,
-    stateType: AbilityState
-  ): Promise<Array<AccessibilityAbilityInfo>>--><!--Device-accessibility-function getAccessibilityExtensionList(
-    abilityType: AbilityType,
-    stateType: AbilityState
-  ): Promise<Array<AccessibilityAbilityInfo>>-End-->
+<!--Device-accessibility-function getAccessibilityExtensionList(    abilityType: AbilityType,    stateType: AbilityState  ): Promise<Array<AccessibilityAbilityInfo>>--><!--Device-accessibility-function getAccessibilityExtensionList(    abilityType: AbilityType,    stateType: AbilityState  ): Promise<Array<AccessibilityAbilityInfo>>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -54,7 +47,6 @@ Obtains the accessibility application list. This API uses a promise to return th
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified;2. Incorrect parameter types;3. Parameter verification failed. |
 
 
-<a id="getaccessibilityextensionlist-1"></a>
 ## getAccessibilityExtensionList
 
 ```TypeScript
@@ -73,15 +65,7 @@ Obtains the accessibility application list. This API uses an asynchronous callba
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
-<!--Device-accessibility-function getAccessibilityExtensionList(
-    abilityType: AbilityType,
-    stateType: AbilityState,
-    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>
-  ): void--><!--Device-accessibility-function getAccessibilityExtensionList(
-    abilityType: AbilityType,
-    stateType: AbilityState,
-    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>
-  ): void-End-->
+<!--Device-accessibility-function getAccessibilityExtensionList(    abilityType: AbilityType,    stateType: AbilityState,    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>  ): void--><!--Device-accessibility-function getAccessibilityExtensionList(    abilityType: AbilityType,    stateType: AbilityState,    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>  ): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 

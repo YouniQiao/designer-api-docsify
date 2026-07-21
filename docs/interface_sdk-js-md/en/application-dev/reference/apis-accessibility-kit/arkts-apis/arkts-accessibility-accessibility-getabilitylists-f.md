@@ -6,7 +6,6 @@
 import { accessibility } from '@kit.AccessibilityKit';
 ```
 
-<a id="getabilitylists"></a>
 ## getAbilityLists
 
 ```TypeScript
@@ -23,17 +22,9 @@ Obtains the accessibility application list. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAccessibilityExtensionList(abilityType:](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist-1)
+**Substitutes:** [getAccessibilityExtensionList(abilityType:](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist)
 
-<!--Device-accessibility-function getAbilityLists(
-    abilityType: AbilityType,
-    stateType: AbilityState,
-    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>
-  ): void--><!--Device-accessibility-function getAbilityLists(
-    abilityType: AbilityType,
-    stateType: AbilityState,
-    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>
-  ): void-End-->
+<!--Device-accessibility-function getAbilityLists(    abilityType: AbilityType,    stateType: AbilityState,    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>  ): void--><!--Device-accessibility-function getAbilityLists(    abilityType: AbilityType,    stateType: AbilityState,    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>  ): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -65,7 +56,6 @@ accessibility.getAbilityLists(abilityType, abilityState, (err: BusinessError, da
 ```
 
 
-<a id="getabilitylists-1"></a>
 ## getAbilityLists
 
 ```TypeScript
@@ -78,7 +68,7 @@ Obtains the accessibility application list. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAccessibilityExtensionList(abilityType:](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist-1)
+**Substitutes:** [getAccessibilityExtensionList(abilityType:](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist)
 
 <!--Device-accessibility-function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>--><!--Device-accessibility-function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>-End-->
 

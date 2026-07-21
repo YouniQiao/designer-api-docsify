@@ -6,7 +6,6 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
-<a id="openformeditability"></a>
 ## openFormEditAbility
 
 ```TypeScript

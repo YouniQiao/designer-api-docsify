@@ -6,7 +6,6 @@
 import { omapi } from '@kit.ConnectivityKit';
 ```
 
-<a id="createservice"></a>
 ## createService
 
 ```TypeScript

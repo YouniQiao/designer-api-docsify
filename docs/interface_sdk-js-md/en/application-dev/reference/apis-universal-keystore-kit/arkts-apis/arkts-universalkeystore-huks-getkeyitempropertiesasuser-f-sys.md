@@ -6,7 +6,6 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
-<a id="getkeyitempropertiesasuser"></a>
 ## getKeyItemPropertiesAsUser
 
 ```TypeScript
@@ -23,15 +22,7 @@ Obtains key properties for the specified user. This API uses a promise to return
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
-<!--Device-huks-function getKeyItemPropertiesAsUser(
-    userId: number,
-    keyAlias: string,
-    huksOptions: HuksOptions
-  ): Promise<HuksReturnResult>--><!--Device-huks-function getKeyItemPropertiesAsUser(
-    userId: number,
-    keyAlias: string,
-    huksOptions: HuksOptions
-  ): Promise<HuksReturnResult>-End-->
+<!--Device-huks-function getKeyItemPropertiesAsUser(    userId: number,    keyAlias: string,    huksOptions: HuksOptions  ): Promise<HuksReturnResult>--><!--Device-huks-function getKeyItemPropertiesAsUser(    userId: number,    keyAlias: string,    huksOptions: HuksOptions  ): Promise<HuksReturnResult>-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
 

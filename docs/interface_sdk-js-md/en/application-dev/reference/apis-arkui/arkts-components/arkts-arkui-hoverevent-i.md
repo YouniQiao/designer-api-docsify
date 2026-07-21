@@ -60,7 +60,7 @@ Unit: vp.
 globalDisplayX?: number
 ```
 
-X coordinate of the cursor or stylus position in the [global coordinate system](docroot://windowmanager/window-terminology.md#global-coordinate-system).
+X coordinate of the cursor or stylus position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp.
 
@@ -84,7 +84,7 @@ Value range: (-∞, +∞).
 globalDisplayY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the [global coordinate system](docroot://windowmanager/window-terminology.md#global-coordinate-system).
+Y coordinate of the cursor or stylus position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
 Unit: vp.
 
@@ -108,7 +108,7 @@ Value range: (-∞, +∞).
 stopPropagation: () => void
 ```
 
-Disables [event bubbling](docroot://ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
+Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
 
 **Type:** () =&gt; void
 
@@ -172,7 +172,7 @@ Unit: vp.
 x?: number
 ```
 
-X coordinate of the cursor or stylus position in the [component coordinate system](docroot://ui/arkui-glossary.md#component-coordinate-system) based on the current component.
+X coordinate of the cursor or stylus position in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component.
 
 Unit: vp.
 
@@ -194,7 +194,7 @@ Unit: vp.
 y?: number
 ```
 
-Y coordinate of the cursor or stylus position in the [component coordinate system](docroot://ui/arkui-glossary.md#component-coordinate-system) based on the current component.
+Y coordinate of the cursor or stylus position in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component.
 
 Unit: vp.
 

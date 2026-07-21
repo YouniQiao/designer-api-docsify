@@ -16,7 +16,6 @@ Defines the segmented button with multi capsule style.
 import { OnSelectedIndexesChange, TabSegmentButtonV2, SegmentButtonV2Items, MultiCapsuleSegmentButtonV2, OnSelectedIndexChange, SegmentButtonV2ItemOptions, SegmentButtonV2Item, CapsuleSegmentButtonV2 } from '@kit.ArkUI';
 ```
 
-<a id="build"></a>
 ## build
 
 ```TypeScript

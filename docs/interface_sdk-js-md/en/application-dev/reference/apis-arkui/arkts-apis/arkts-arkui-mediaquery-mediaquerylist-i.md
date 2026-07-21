@@ -14,7 +14,6 @@ Defines the MediaQuery list info.
 import { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
-<a id="addlistener"></a>
 ## addListener
 
 ```TypeScript
@@ -52,7 +51,6 @@ mMediaQueryList.addListener(maxWidthMatch);
 
 ```
 
-<a id="removelistener"></a>
 ## removeListener
 
 ```TypeScript

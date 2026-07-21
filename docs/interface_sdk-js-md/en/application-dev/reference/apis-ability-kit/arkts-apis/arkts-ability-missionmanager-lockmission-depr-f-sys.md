@@ -1,6 +1,5 @@
 # lockMission (System API)
 
-<a id="lockmission"></a>
 ## lockMission
 
 ```TypeScript
@@ -51,7 +50,6 @@ try {
 ```
 
 
-<a id="lockmission-1"></a>
 ## lockMission
 
 ```TypeScript

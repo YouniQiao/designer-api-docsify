@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="off"></a>
 ## off('wifiStateChange')
 
 ```TypeScript
@@ -54,7 +53,6 @@ wifi.off("wifiStateChange", recvPowerNotifyFunc);
 ```
 
 
-<a id="off-1"></a>
 ## off('wifiConnectionChange')
 
 ```TypeScript
@@ -102,7 +100,6 @@ wifi.off("wifiConnectionChange", recvWifiConnectionChangeFunc);
 ```
 
 
-<a id="off-2"></a>
 ## off('wifiScanStateChange')
 
 ```TypeScript
@@ -150,7 +147,6 @@ wifi.off("wifiScanStateChange", recvWifiScanStateChangeFunc);
 ```
 
 
-<a id="off-3"></a>
 ## off('wifiRssiChange')
 
 ```TypeScript
@@ -199,7 +195,6 @@ wifi.off("wifiRssiChange", recvWifiRssiChangeFunc);
 ```
 
 
-<a id="off-4"></a>
 ## off('hotspotStateChange')
 
 ```TypeScript
@@ -230,7 +225,6 @@ Unsubscribe Wi-Fi hotspot state change events.
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | No | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
 
 
-<a id="off-5"></a>
 ## off('p2pStateChange')
 
 ```TypeScript
@@ -276,7 +270,6 @@ wifi.off("p2pStateChange", recvP2pStateChangeFunc);
 ```
 
 
-<a id="off-6"></a>
 ## off('p2pConnectionChange')
 
 ```TypeScript
@@ -322,7 +315,6 @@ wifi.off("p2pConnectionChange", recvP2pConnectionChangeFunc);
 ```
 
 
-<a id="off-7"></a>
 ## off('p2pDeviceChange')
 
 ```TypeScript
@@ -368,7 +360,6 @@ wifi.off("p2pDeviceChange", recvP2pDeviceChangeFunc);
 ```
 
 
-<a id="off-8"></a>
 ## off('p2pPeerDeviceChange')
 
 ```TypeScript
@@ -414,7 +405,6 @@ wifi.off("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);
 ```
 
 
-<a id="off-9"></a>
 ## off('p2pPersistentGroupChange')
 
 ```TypeScript
@@ -461,7 +451,6 @@ wifi.off("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);
 ```
 
 
-<a id="off-10"></a>
 ## off('p2pDiscoveryChange')
 
 ```TypeScript

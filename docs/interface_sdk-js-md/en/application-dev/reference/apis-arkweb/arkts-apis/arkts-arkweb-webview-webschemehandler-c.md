@@ -14,7 +14,6 @@ This class is used to intercept requests for a specified scheme.
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="onrequeststart"></a>
 ## onRequestStart
 
 ```TypeScript
@@ -28,9 +27,7 @@ Callback for handling the request.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-WebSchemeHandler-onRequestStart(
-      callback: (request: WebSchemeHandlerRequest, handler: WebResourceHandler) => boolean): void--><!--Device-WebSchemeHandler-onRequestStart(
-      callback: (request: WebSchemeHandlerRequest, handler: WebResourceHandler) => boolean): void-End-->
+<!--Device-WebSchemeHandler-onRequestStart(      callback: (request: WebSchemeHandlerRequest, handler: WebResourceHandler) => boolean): void--><!--Device-WebSchemeHandler-onRequestStart(      callback: (request: WebSchemeHandlerRequest, handler: WebResourceHandler) => boolean): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -46,7 +43,6 @@ Callback for handling the request.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
-<a id="onrequeststop"></a>
 ## onRequestStop
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { contact } from '@kit.ContactsKit';
 ```
 
-<a id="querygroups"></a>
 ## queryGroups
 
 ```TypeScript
@@ -19,7 +18,7 @@ Queries all groups of a contact. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryGroups(context:](arkts-contacts-contact-querygroups-f.md#querygroups-1)
+**Substitutes:** [queryGroups(context:](arkts-contacts-contact-querygroups-f.md#querygroups)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -50,7 +49,6 @@ contact.queryGroups((err: BusinessError, data) => {
 ```
 
 
-<a id="querygroups-1"></a>
 ## queryGroups
 
 ```TypeScript
@@ -103,7 +101,6 @@ contact.queryGroups(context, (err: BusinessError, data) => {
 ```
 
 
-<a id="querygroups-2"></a>
 ## queryGroups
 
 ```TypeScript
@@ -116,7 +113,7 @@ Queries all groups of a contact based on the specified holder. This API uses an 
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryGroups(context:](arkts-contacts-contact-querygroups-f.md#querygroups-1)
+**Substitutes:** [queryGroups(context:](arkts-contacts-contact-querygroups-f.md#querygroups)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -152,7 +149,6 @@ contact.queryGroups({
 ```
 
 
-<a id="querygroups-3"></a>
 ## queryGroups
 
 ```TypeScript
@@ -210,7 +206,6 @@ contact.queryGroups(context, {
 ```
 
 
-<a id="querygroups-4"></a>
 ## queryGroups
 
 ```TypeScript
@@ -223,7 +218,7 @@ Queries all groups of a contact based on the specified holder. This API uses a p
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryGroups(context:](arkts-contacts-contact-querygroups-f.md#querygroups-1)
+**Substitutes:** [queryGroups(context:](arkts-contacts-contact-querygroups-f.md#querygroups)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -260,7 +255,6 @@ promise.then((data) => {
 ```
 
 
-<a id="querygroups-5"></a>
 ## queryGroups
 
 ```TypeScript

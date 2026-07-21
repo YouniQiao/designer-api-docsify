@@ -6,7 +6,6 @@
 import { pointer } from '@kit.InputKit';
 ```
 
-<a id="setpointercolorsync"></a>
 ## setPointerColorSync
 
 ```TypeScript
@@ -14,7 +13,6 @@ function setPointerColorSync(color: number): void
 ```
 
 Sets the pointer color. This API returns the result synchronously.
-
 > **NOTE**  
 >  
 > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.

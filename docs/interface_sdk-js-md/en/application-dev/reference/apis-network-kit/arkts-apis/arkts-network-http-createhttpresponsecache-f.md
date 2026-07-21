@@ -6,7 +6,6 @@
 import { http } from '@kit.NetworkKit';
 ```
 
-<a id="createhttpresponsecache"></a>
 ## createHttpResponseCache
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { vpn } from '@kit.NetworkKit';
 ```
 
-<a id="deletesysvpnconfig"></a>
 ## deleteSysVpnConfig
 
 ```TypeScript

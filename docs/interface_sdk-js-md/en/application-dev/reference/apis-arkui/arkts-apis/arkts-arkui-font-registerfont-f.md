@@ -6,7 +6,6 @@
 import { font } from '@kit.ArkUI';
 ```
 
-<a id="registerfont"></a>
 ## registerFont
 
 ```TypeScript
@@ -16,11 +15,10 @@ function registerFont(options: FontOptions): void
 Registers a custom font with the font manager.
 
 This API is asynchronous and does not support concurrent calls.
-
 > **NOTE**  
 >  
 > - Since API version 10, you can use the  
-> [getFont](docroot://reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in  
+> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in  
 > [UIContext](arkts-arkui-uicontext.md) to obtain the [Font](arkts-arkui-uicontext.md) object associated with  
 > the current UI context.
 

@@ -12,7 +12,6 @@ Represents a **Schema** instance, which provides the APIs for defining the value
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
-<a id="appendchild"></a>
 ## appendChild
 
 ```TypeScript
@@ -66,7 +65,6 @@ try {
 
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

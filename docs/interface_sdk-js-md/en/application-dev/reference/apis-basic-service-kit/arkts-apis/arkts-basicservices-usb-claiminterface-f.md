@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="claiminterface"></a>
 ## claimInterface
 
 ```TypeScript
@@ -15,13 +14,13 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 
 Claims a USB interface.
 
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices-1) to obtain the USB device list and USB interfaces,call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright-1) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice-1) to obtain **devicepipe** as an input parameter.
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list and USB interfaces,call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface-1)
+**Substitutes:** [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface)
 
 <!--Device-usb-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number--><!--Device-usb-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number-End-->
 

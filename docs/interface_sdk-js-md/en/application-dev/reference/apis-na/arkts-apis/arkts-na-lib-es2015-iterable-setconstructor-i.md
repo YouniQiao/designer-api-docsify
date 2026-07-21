@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface SetConstructor--><!--Device-unnamed-interface SetConstructor-End-->
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript

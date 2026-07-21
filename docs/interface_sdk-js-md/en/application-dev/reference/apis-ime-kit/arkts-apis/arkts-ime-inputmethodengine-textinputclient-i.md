@@ -18,7 +18,6 @@ In the following API examples, you must first use [on('inputStart')](inputMethod
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-<a id="deletebackward"></a>
 ## deleteBackward
 
 ```TypeScript
@@ -31,7 +30,7 @@ Deletes the fixed-length text after the cursor. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteBackward(length:](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward-1)
+**Substitutes:** [deleteBackward(length:](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)
 
 <!--Device-TextInputClient-deleteBackward(length: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-deleteBackward(length: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -64,7 +63,6 @@ textInputClient.deleteBackward(length, (err: BusinessError, result: boolean) => 
 
 ```
 
-<a id="deletebackward-1"></a>
 ## deleteBackward
 
 ```TypeScript
@@ -77,7 +75,7 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteBackward(length:](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward-1)
+**Substitutes:** [deleteBackward(length:](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)
 
 <!--Device-TextInputClient-deleteBackward(length: number): Promise<boolean>--><!--Device-TextInputClient-deleteBackward(length: number): Promise<boolean>-End-->
 
@@ -113,7 +111,6 @@ textInputClient.deleteBackward(length).then((result: boolean) => {
 
 ```
 
-<a id="deleteforward"></a>
 ## deleteForward
 
 ```TypeScript
@@ -126,7 +123,7 @@ Deletes the fixed-length text before the cursor. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteForward(length:](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward-1)
+**Substitutes:** [deleteForward(length:](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)
 
 <!--Device-TextInputClient-deleteForward(length: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-deleteForward(length: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -159,7 +156,6 @@ textInputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 
 ```
 
-<a id="deleteforward-1"></a>
 ## deleteForward
 
 ```TypeScript
@@ -172,7 +168,7 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteForward(length:](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward-1)
+**Substitutes:** [deleteForward(length:](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)
 
 <!--Device-TextInputClient-deleteForward(length: number): Promise<boolean>--><!--Device-TextInputClient-deleteForward(length: number): Promise<boolean>-End-->
 
@@ -208,7 +204,6 @@ textInputClient.deleteForward(length).then((result: boolean) => {
 
 ```
 
-<a id="getbackward"></a>
 ## getBackward
 
 ```TypeScript
@@ -221,7 +216,7 @@ Obtains the specific-length text after the cursor. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [getBackward(length:](arkts-ime-inputmethodengine-inputclient-i.md#getbackward-1)
+**Substitutes:** [getBackward(length:](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)
 
 <!--Device-TextInputClient-getBackward(length: number, callback: AsyncCallback<string>): void--><!--Device-TextInputClient-getBackward(length: number, callback: AsyncCallback<string>): void-End-->
 
@@ -250,7 +245,6 @@ textInputClient.getBackward(length, (err: BusinessError, text: string) => {
 
 ```
 
-<a id="getbackward-1"></a>
 ## getBackward
 
 ```TypeScript
@@ -263,7 +257,7 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getBackward(length:](arkts-ime-inputmethodengine-inputclient-i.md#getbackward-1)
+**Substitutes:** [getBackward(length:](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)
 
 <!--Device-TextInputClient-getBackward(length: number): Promise<string>--><!--Device-TextInputClient-getBackward(length: number): Promise<string>-End-->
 
@@ -295,7 +289,6 @@ textInputClient.getBackward(length).then((text: string) => {
 
 ```
 
-<a id="geteditorattribute"></a>
 ## getEditorAttribute
 
 ```TypeScript
@@ -308,7 +301,7 @@ Obtains the attribute of the edit box. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEditorAttribute(callback:](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute-1)
+**Substitutes:** [getEditorAttribute(callback:](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)
 
 <!--Device-TextInputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void--><!--Device-TextInputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void-End-->
 
@@ -338,7 +331,6 @@ textInputClient.getEditorAttribute((err: BusinessError,
 
 ```
 
-<a id="geteditorattribute-1"></a>
 ## getEditorAttribute
 
 ```TypeScript
@@ -351,7 +343,7 @@ Obtains the attribute of the edit box. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEditorAttribute(callback:](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute-1)
+**Substitutes:** [getEditorAttribute(callback:](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)
 
 <!--Device-TextInputClient-getEditorAttribute(): Promise<EditorAttribute>--><!--Device-TextInputClient-getEditorAttribute(): Promise<EditorAttribute>-End-->
 
@@ -377,7 +369,6 @@ textInputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Ed
 
 ```
 
-<a id="getforward"></a>
 ## getForward
 
 ```TypeScript
@@ -390,7 +381,7 @@ Obtains the specific-length text before the cursor. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [getForward(length:](arkts-ime-inputmethodengine-inputclient-i.md#getforward-1)
+**Substitutes:** [getForward(length:](arkts-ime-inputmethodengine-inputclient-i.md#getforward)
 
 <!--Device-TextInputClient-getForward(length: number, callback: AsyncCallback<string>): void--><!--Device-TextInputClient-getForward(length: number, callback: AsyncCallback<string>): void-End-->
 
@@ -419,7 +410,6 @@ textInputClient.getForward(length, (err: BusinessError, text: string) => {
 
 ```
 
-<a id="getforward-1"></a>
 ## getForward
 
 ```TypeScript
@@ -432,7 +422,7 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getForward(length:](arkts-ime-inputmethodengine-inputclient-i.md#getforward-1)
+**Substitutes:** [getForward(length:](arkts-ime-inputmethodengine-inputclient-i.md#getforward)
 
 <!--Device-TextInputClient-getForward(length: number): Promise<string>--><!--Device-TextInputClient-getForward(length: number): Promise<string>-End-->
 
@@ -464,7 +454,6 @@ textInputClient.getForward(length).then((text: string) => {
 
 ```
 
-<a id="inserttext"></a>
 ## insertText
 
 ```TypeScript
@@ -477,7 +466,7 @@ Inserts text. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [insertText(text:](arkts-ime-inputmethodengine-inputclient-i.md#inserttext-1)
+**Substitutes:** [insertText(text:](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)
 
 <!--Device-TextInputClient-insertText(text: string, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-insertText(text: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -509,7 +498,6 @@ textInputClient.insertText('test', (err: BusinessError, result: boolean) => {
 
 ```
 
-<a id="inserttext-1"></a>
 ## insertText
 
 ```TypeScript
@@ -522,7 +510,7 @@ Inserts text. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [insertText(text:](arkts-ime-inputmethodengine-inputclient-i.md#inserttext-1)
+**Substitutes:** [insertText(text:](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)
 
 <!--Device-TextInputClient-insertText(text: string): Promise<boolean>--><!--Device-TextInputClient-insertText(text: string): Promise<boolean>-End-->
 
@@ -557,7 +545,6 @@ textInputClient.insertText('test').then((result: boolean) => {
 
 ```
 
-<a id="sendkeyfunction"></a>
 ## sendKeyFunction
 
 ```TypeScript
@@ -570,7 +557,7 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendKeyFunction(action:](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction-1)
+**Substitutes:** [sendKeyFunction(action:](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)
 
 <!--Device-TextInputClient-sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -603,7 +590,6 @@ textInputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) =>
 
 ```
 
-<a id="sendkeyfunction-1"></a>
 ## sendKeyFunction
 
 ```TypeScript
@@ -616,7 +602,7 @@ Sends the function key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendKeyFunction(action:](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction-1)
+**Substitutes:** [sendKeyFunction(action:](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)
 
 <!--Device-TextInputClient-sendKeyFunction(action: number): Promise<boolean>--><!--Device-TextInputClient-sendKeyFunction(action: number): Promise<boolean>-End-->
 

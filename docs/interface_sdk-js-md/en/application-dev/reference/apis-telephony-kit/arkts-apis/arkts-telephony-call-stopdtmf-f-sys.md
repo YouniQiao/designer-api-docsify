@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="stopdtmf"></a>
 ## stopDTMF
 
 ```TypeScript
@@ -60,7 +59,6 @@ call.stopDTMF(1, (err: BusinessError) => {
 ```
 
 
-<a id="stopdtmf-1"></a>
 ## stopDTMF
 
 ```TypeScript

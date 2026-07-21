@@ -6,7 +6,6 @@
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
-<a id="insertdata"></a>
 ## insertData
 
 ```TypeScript
@@ -72,7 +71,6 @@ try {
 ```
 
 
-<a id="insertdata-1"></a>
 ## insertData
 
 ```TypeScript

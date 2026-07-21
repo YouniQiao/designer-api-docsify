@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="rmdirsync"></a>
 ## rmdirSync
 
 ```TypeScript
@@ -14,7 +13,6 @@ declare function rmdirSync(path: string): void
 ```
 
 Removes a directory and all its subdirectories and files synchronously.
-
 > **NOTE**  
 >  
 > This API can be used to remove a single file. However, you are advised to use **unlinkSync** instead.

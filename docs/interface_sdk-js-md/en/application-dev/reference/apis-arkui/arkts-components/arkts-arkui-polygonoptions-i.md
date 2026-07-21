@@ -1,7 +1,6 @@
 # PolygonOptions
 
 Describes the options of the polygon.
-
 > **NOTE**  
 >  
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  

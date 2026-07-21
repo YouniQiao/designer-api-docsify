@@ -1,7 +1,6 @@
 # WebStorage
 
 Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web** components in an application share a **WebStorage** object.
-
 > **NOTE**  
 >  
 > - The sample effect is subject to the actual device.  
@@ -10,7 +9,7 @@ Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web 
 >  
 > - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the kernel  
 > discards Web SQL. For details about the ArkWeb kernel version, see  
-> [Constraints](docroot://web/web-component-overview.md#constraints).
+> [Constraints](../../../web/web-component-overview.md#constraints).
 
 **Since:** 9
 
@@ -24,7 +23,6 @@ Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web 
 import { webview } from '@kit.ArkWeb';
 ```
 
-<a id="deletealldata"></a>
 ## deleteAllData
 
 ```TypeScript
@@ -47,7 +45,6 @@ Deletes all storage data used by JavaScript storage APIs, including the Web SQL 
 | --- | --- | --- | --- |
 | incognito | boolean | No | Whether to delete all data in the Web SQL Database in incognito mode. The value **true** means to delete all data in the Web SQL Database in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **undefined** or **null** is passed, the value is **false**.<br>**Since:** 11 |
 
-<a id="deleteorigin"></a>
 ## deleteOrigin
 
 ```TypeScript
@@ -68,7 +65,7 @@ Deletes all data in the specified origin.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| origin | string | Yes | Index of the origin, which is obtained through [getOrigins](webview.WebStorage.static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>)). |
+| origin | string | Yes | Index of the origin, which is obtained through [getOrigins](webview.WebStorage.static getOrigins(callback: AsyncCallback&lt;Array<WebStorageOrigin>&gt;)). |
 
 **Error codes:**
 
@@ -77,7 +74,6 @@ Deletes all data in the specified origin.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types.<br>3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
-<a id="getoriginquota"></a>
 ## getOriginQuota
 
 ```TypeScript
@@ -113,7 +109,6 @@ Obtains the storage quota of an origin in the Web SQL Database and HTML5-support
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
-<a id="getoriginquota-1"></a>
 ## getOriginQuota
 
 ```TypeScript
@@ -144,7 +139,6 @@ Obtains the storage quota of an origin in Web SQL Database and HTML5-supported W
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
-<a id="getoriginusage"></a>
 ## getOriginUsage
 
 ```TypeScript
@@ -180,7 +174,6 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
-<a id="getoriginusage-1"></a>
 ## getOriginUsage
 
 ```TypeScript
@@ -211,7 +204,6 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
-<a id="getorigins"></a>
 ## getOrigins
 
 ```TypeScript
@@ -241,7 +233,6 @@ Obtains information about origins that are currently using the Web SQL Database 
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100012](../errorcode-webview.md#17100012-no-web-storage-origin) | Invalid web storage origin. |
 
-<a id="getorigins-1"></a>
 ## getOrigins
 
 ```TypeScript

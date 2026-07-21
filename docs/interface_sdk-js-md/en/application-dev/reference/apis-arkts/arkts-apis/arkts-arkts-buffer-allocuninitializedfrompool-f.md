@@ -6,14 +6,13 @@
 import { buffer } from '@kit.ArkTS';
 ```
 
-<a id="allocuninitializedfrompool"></a>
 ## allocUninitializedFromPool
 
 ```TypeScript
 function allocUninitializedFromPool(size: number): Buffer
 ```
 
-Creates a **Buffer** object of the specified size from the buffer pool, without initializing it.You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill-1) to initialize the **Buffer** object created.
+Creates a **Buffer** object of the specified size from the buffer pool, without initializing it.You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created.
 
 **Since:** 9
 

@@ -6,7 +6,6 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="offrtterrcause"></a>
 ## offRttErrCause
 
 ```TypeScript

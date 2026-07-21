@@ -6,7 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="getgeomagneticdip"></a>
 ## getGeomagneticDip
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 
 **Deprecated since:** 9
 
-**Substitutes:** [getInclination(inclinationMatrix:](arkts-sensorservice-sensor-getinclination-f.md#getinclination-1)
+**Substitutes:** [getInclination(inclinationMatrix:](arkts-sensorservice-sensor-getinclination-f.md#getinclination)
 
 <!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void-End-->
 
@@ -49,7 +48,6 @@ sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data:
 ```
 
 
-<a id="getgeomagneticdip-1"></a>
 ## getGeomagneticDip
 
 ```TypeScript
@@ -62,7 +60,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 **Deprecated since:** 9
 
-**Substitutes:** [getInclination(inclinationMatrix:](arkts-sensorservice-sensor-getinclination-f.md#getinclination-1)
+**Substitutes:** [getInclination(inclinationMatrix:](arkts-sensorservice-sensor-getinclination-f.md#getinclination)
 
 <!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>-End-->
 

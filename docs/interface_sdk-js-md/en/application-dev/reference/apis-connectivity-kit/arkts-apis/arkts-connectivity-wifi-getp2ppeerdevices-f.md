@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="getp2ppeerdevices"></a>
 ## getP2pPeerDevices
 
 ```TypeScript
@@ -34,7 +33,6 @@ Obtains the information about the found devices.
 | Promise&lt;WifiP2pDevice[]&gt; | Returns the found devices list. |
 
 
-<a id="getp2ppeerdevices-1"></a>
 ## getP2pPeerDevices
 
 ```TypeScript

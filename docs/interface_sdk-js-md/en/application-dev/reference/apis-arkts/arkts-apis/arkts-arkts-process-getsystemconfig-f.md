@@ -6,7 +6,6 @@
 import { process } from '@kit.ArkTS';
 ```
 
-<a id="getsystemconfig"></a>
 ## getSystemConfig
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the system configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSystemConfig](arkts-arkts-process-processmanager-c.md#getsystemconfig-1)
+**Substitutes:** [getSystemConfig](arkts-arkts-process-processmanager-c.md#getsystemconfig)
 
 <!--Device-process-function getSystemConfig(name: number): number--><!--Device-process-function getSystemConfig(name: number): number-End-->
 

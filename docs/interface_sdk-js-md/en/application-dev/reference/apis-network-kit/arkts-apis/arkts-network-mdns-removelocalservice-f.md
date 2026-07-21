@@ -6,7 +6,6 @@
 import { mdns } from '@kit.NetworkKit';
 ```
 
-<a id="removelocalservice"></a>
 ## removeLocalService
 
 ```TypeScript
@@ -20,9 +19,7 @@ Removes an mDNS service.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-mdns-function removeLocalService(context: Context, serviceInfo: LocalServiceInfo,
-    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function removeLocalService(context: Context, serviceInfo: LocalServiceInfo,
-    callback: AsyncCallback<LocalServiceInfo>): void-End-->
+<!--Device-mdns-function removeLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function removeLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
 
@@ -75,7 +72,6 @@ mdns.removeLocalService(context, localServiceInfo, (error: BusinessError, data: 
 ```
 
 
-<a id="removelocalservice-1"></a>
 ## removeLocalService
 
 ```TypeScript

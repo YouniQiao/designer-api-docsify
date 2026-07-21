@@ -6,7 +6,6 @@
 import { distributedBundle } from '@kit.AbilityKit';
 ```
 
-<a id="getremoteabilityinfo"></a>
 ## getRemoteAbilityInfo
 
 ```TypeScript
@@ -37,7 +36,6 @@ Obtains the information about the remote ability that matches the given element 
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RemoteAbilityInfo&gt; | Yes | Callback used to return the remote ability information. |
 
 
-<a id="getremoteabilityinfo-1"></a>
 ## getRemoteAbilityInfo
 
 ```TypeScript

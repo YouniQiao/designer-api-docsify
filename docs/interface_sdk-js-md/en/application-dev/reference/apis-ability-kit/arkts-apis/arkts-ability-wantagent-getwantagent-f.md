@@ -6,7 +6,6 @@
 import { WantAgent } from '@kit.AbilityKit';
 ```
 
-<a id="getwantagent"></a>
 ## getWantAgent
 
 ```TypeScript
@@ -95,7 +94,6 @@ try {
 ```
 
 
-<a id="getwantagent-1"></a>
 ## getWantAgent
 
 ```TypeScript

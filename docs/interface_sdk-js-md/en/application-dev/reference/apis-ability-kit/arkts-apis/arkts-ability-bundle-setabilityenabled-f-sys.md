@@ -6,7 +6,6 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
-<a id="setabilityenabled"></a>
 ## setAbilityEnabled
 
 ```TypeScript
@@ -38,7 +37,6 @@ Sets whether to enable an ability. This API uses an asynchronous callback to ret
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
-<a id="setabilityenabled-1"></a>
 ## setAbilityEnabled
 
 ```TypeScript

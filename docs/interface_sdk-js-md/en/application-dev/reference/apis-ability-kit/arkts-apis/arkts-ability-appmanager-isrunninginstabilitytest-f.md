@@ -6,7 +6,6 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="isrunninginstabilitytest"></a>
 ## isRunningInStabilityTest
 
 ```TypeScript
@@ -14,7 +13,6 @@ function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 ```
 
 Checks whether the system is undergoing a stability test. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > A stability test scenario refers to a specific testing environment designed to verify application reliability  
@@ -57,7 +55,6 @@ appManager.isRunningInStabilityTest((err, flag) => {
 ```
 
 
-<a id="isrunninginstabilitytest-1"></a>
 ## isRunningInStabilityTest
 
 ```TypeScript
@@ -65,7 +62,6 @@ function isRunningInStabilityTest(): Promise<boolean>
 ```
 
 Checks whether the system is undergoing a stability test. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > A stability test scenario refers to a specific testing environment designed to verify application reliability  

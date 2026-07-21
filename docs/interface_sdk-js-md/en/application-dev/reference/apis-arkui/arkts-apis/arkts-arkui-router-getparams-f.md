@@ -6,7 +6,6 @@
 import { router } from '@kit.ArkUI';
 ```
 
-<a id="getparams"></a>
 ## getParams
 
 ```TypeScript
@@ -14,11 +13,10 @@ function getParams(): Object
 ```
 
 Obtains the parameters passed from the page that initiates redirection to the current page.
-
 > **NOTE**  
 >  
 > - Since API version 10, you can use the  
-> [getRouter](docroot://reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in  
 > [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated  
 > with the current UI context.  
 >  
@@ -29,7 +27,7 @@ Obtains the parameters passed from the page that initiates redirection to the cu
 
 **Deprecated since:** 18
 
-**Substitutes:** [getParams](arkts-arkui-arkui-uicontext-router-c.md#getparams-1)
+**Substitutes:** [getParams](arkts-arkui-arkui-uicontext-router-c.md#getparams)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

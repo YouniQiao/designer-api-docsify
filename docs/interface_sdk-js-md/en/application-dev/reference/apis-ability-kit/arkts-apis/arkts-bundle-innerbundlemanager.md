@@ -1,7 +1,6 @@
 # @ohos.bundle.innerBundleManager
 
 The module provides APIs for the Home Screen application.
-
 > **NOTE**  
 >  
 > This module is deprecated since API version 9. You are advised to use  

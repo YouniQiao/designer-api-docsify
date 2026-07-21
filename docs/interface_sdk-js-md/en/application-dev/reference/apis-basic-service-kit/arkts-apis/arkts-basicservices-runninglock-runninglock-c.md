@@ -14,7 +14,6 @@ Defines a **RunningLock** object.
 import { runningLock } from '@kit.BasicServicesKit';
 ```
 
-<a id="hold"></a>
 ## hold
 
 ```TypeScript
@@ -76,7 +75,6 @@ class RunningLockTest {
 
 ```
 
-<a id="isholding"></a>
 ## isHolding
 
 ```TypeScript
@@ -125,7 +123,6 @@ class RunningLockTest {
 
 ```
 
-<a id="isused"></a>
 ## isUsed
 
 ```TypeScript
@@ -138,7 +135,7 @@ Checks whether this running lock is used.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isHolding](arkts-basicservices-runninglock-runninglock-c.md#isholding-1)
+**Substitutes:** [isHolding](arkts-basicservices-runninglock-runninglock-c.md#isholding)
 
 <!--Device-RunningLock-isUsed(): boolean--><!--Device-RunningLock-isUsed(): boolean-End-->
 
@@ -164,7 +161,6 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 
 ```
 
-<a id="lock"></a>
 ## lock
 
 ```TypeScript
@@ -177,7 +173,7 @@ Locks and holds a **RunningLock** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [hold](arkts-basicservices-runninglock-runninglock-c.md#hold-1)
+**Substitutes:** [hold](arkts-basicservices-runninglock-runninglock-c.md#hold)
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -205,7 +201,6 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 
 ```
 
-<a id="unhold"></a>
 ## unhold
 
 ```TypeScript
@@ -260,7 +255,6 @@ class RunningLockTest {
 
 ```
 
-<a id="unlock"></a>
 ## unlock
 
 ```TypeScript
@@ -273,7 +267,7 @@ Releases this running lock.
 
 **Deprecated since:** 9
 
-**Substitutes:** [unhold](arkts-basicservices-runninglock-runninglock-c.md#unhold-1)
+**Substitutes:** [unhold](arkts-basicservices-runninglock-runninglock-c.md#unhold)
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 

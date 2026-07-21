@@ -6,7 +6,6 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
-<a id="on"></a>
 ## on('sharingStateChange')
 
 ```TypeScript
@@ -52,7 +51,6 @@ sharing.on('sharingStateChange', (data: boolean) => {
 ```
 
 
-<a id="on-1"></a>
 ## on('interfaceSharingStateChange')
 
 ```TypeScript
@@ -98,7 +96,6 @@ sharing.on('interfaceSharingStateChange', (data: object) => {
 ```
 
 
-<a id="on-2"></a>
 ## on('sharingUpstreamChange')
 
 ```TypeScript

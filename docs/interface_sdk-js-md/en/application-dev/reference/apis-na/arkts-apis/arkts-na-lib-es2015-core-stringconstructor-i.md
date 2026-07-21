@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface StringConstructor--><!--Device-unnamed-interface StringConstructor-End-->
 
-<a id="fromcodepoint"></a>
 ## fromCodePoint
 
 ```TypeScript
@@ -25,7 +24,6 @@ Return the String value whose elements are, in order, the elements in the List e
 | --- | --- |
 | string |  |
 
-<a id="raw"></a>
 ## raw
 
 ```TypeScript

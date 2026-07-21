@@ -10,14 +10,13 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md). In non-event injection sc
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="gethistoricalpoints"></a>
 ## getHistoricalPoints
 
 ```TypeScript
 getHistoricalPoints(): Array<HistoricalPoint>
 ```
 
-Obtains all historical touch points for the current frame. The touch event frequency per frame varies by device.This API can be called only in [TouchEvent](arkts-arkui-touchevent-i.md). This API is only available within [TouchEvent](arkts-arkui-touchevent-i.md) during [onTouch](arkts-arkui-commonmethod-c.md#ontouch-1) invocations. Typically,[onTouch](arkts-arkui-commonmethod-c.md#ontouch-1) is invoked once per frame. If multiple [TouchEvent](arkts-arkui-touchevent-i.md)instances are received in a single frame, the last point is returned through **onTouch**, and the remaining points are stored as historical points. For multi-touch events within the same frame, multiple** onTouch** calls may occur.
+Obtains all historical touch points for the current frame. The touch event frequency per frame varies by device.This API can be called only in [TouchEvent](arkts-arkui-touchevent-i.md). This API is only available within [TouchEvent](arkts-arkui-touchevent-i.md) during [onTouch](arkts-arkui-commonmethod-c.md#ontouch) invocations. Typically,[onTouch](arkts-arkui-commonmethod-c.md#ontouch) is invoked once per frame. If multiple [TouchEvent](arkts-arkui-touchevent-i.md)instances are received in a single frame, the last point is returned through **onTouch**, and the remaining points are stored as historical points. For multi-touch events within the same frame, multiple** onTouch** calls may occur.
 
 **Since:** 10
 
@@ -65,7 +64,7 @@ Value range: [0, +∞)
 
 **NOTE**
 
-This field is used when dispatching events using the [postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy-1) API. Each time an event is dispatched, this field is increased by 100000.
+This field is used when dispatching events using the [postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000.
 
 Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
@@ -111,7 +110,7 @@ This API is only supported by the [Hyperlink](arkts-arkui-hyperlink.md) componen
 stopPropagation: () => void
 ```
 
-Disables [event bubbling](docroot://ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
+Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
 
 **Type:** () =&gt; void
 

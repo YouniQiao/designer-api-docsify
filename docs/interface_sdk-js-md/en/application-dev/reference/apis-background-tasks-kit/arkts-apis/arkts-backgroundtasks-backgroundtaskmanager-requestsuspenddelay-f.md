@@ -6,7 +6,6 @@
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="requestsuspenddelay"></a>
 ## requestSuspendDelay
 
 ```TypeScript
@@ -14,11 +13,10 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 ```
 
 Requests a transient task.
-
 > **NOTE**  
 >  
 > For details about the constraints on requesting and using a transient task, see  
-> [Transient Task (ArkTS)](docroot://task-management/transient-task.md#constraints).
+> [Transient Task (ArkTS)](../../../task-management/transient-task.md#constraints).
 
 **Since:** 9
 

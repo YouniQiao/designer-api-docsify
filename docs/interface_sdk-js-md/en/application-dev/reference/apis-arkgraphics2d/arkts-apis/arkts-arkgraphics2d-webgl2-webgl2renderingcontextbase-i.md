@@ -8,7 +8,6 @@ WebGL 2.0
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-<a id="beginquery"></a>
 ## beginQuery
 
 ```TypeScript
@@ -32,7 +31,6 @@ Begins a query
 | target | webgl.GLenum | Yes | Target |
 | query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes | Query |
 
-<a id="begintransformfeedback"></a>
 ## beginTransformFeedback
 
 ```TypeScript
@@ -55,7 +53,6 @@ Begins transform feedback
 | --- | --- | --- | --- |
 | primitiveMode | webgl.GLenum | Yes | Primitive mode |
 
-<a id="bindbufferbase"></a>
 ## bindBufferBase
 
 ```TypeScript
@@ -80,7 +77,6 @@ Binds buffer base
 | index | webgl.GLuint | Yes | Index |
 | buffer | webgl.WebGLBuffer \| null | Yes | Buffer |
 
-<a id="bindbufferrange"></a>
 ## bindBufferRange
 
 ```TypeScript
@@ -99,19 +95,7 @@ Binds buffer range
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-bindBufferRange(
-      target: webgl.GLenum,
-      index: webgl.GLuint,
-      buffer: webgl.WebGLBuffer | null,
-      offset: webgl.GLintptr,
-      size: webgl.GLsizeiptr,
-    ): void--><!--Device-WebGL2RenderingContextBase-bindBufferRange(
-      target: webgl.GLenum,
-      index: webgl.GLuint,
-      buffer: webgl.WebGLBuffer | null,
-      offset: webgl.GLintptr,
-      size: webgl.GLsizeiptr,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-bindBufferRange(      target: webgl.GLenum,      index: webgl.GLuint,      buffer: webgl.WebGLBuffer | null,      offset: webgl.GLintptr,      size: webgl.GLsizeiptr,    ): void--><!--Device-WebGL2RenderingContextBase-bindBufferRange(      target: webgl.GLenum,      index: webgl.GLuint,      buffer: webgl.WebGLBuffer | null,      offset: webgl.GLintptr,      size: webgl.GLsizeiptr,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -125,7 +109,6 @@ Binds buffer range
 | offset | webgl.GLintptr | Yes | Offset |
 | size | webgl.GLsizeiptr | Yes | Size |
 
-<a id="bindsampler"></a>
 ## bindSampler
 
 ```TypeScript
@@ -149,7 +132,6 @@ Binds a sampler
 | unit | webgl.GLuint | Yes | Texture unit |
 | sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes | Sampler |
 
-<a id="bindtransformfeedback"></a>
 ## bindTransformFeedback
 
 ```TypeScript
@@ -173,7 +155,6 @@ Binds a transform feedback
 | target | webgl.GLenum | Yes | Target |
 | tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes | Transform feedback |
 
-<a id="bindvertexarray"></a>
 ## bindVertexArray
 
 ```TypeScript
@@ -196,7 +177,6 @@ Binds a vertex array
 | --- | --- | --- | --- |
 | array | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes | Vertex array |
 
-<a id="blitframebuffer"></a>
 ## blitFramebuffer
 
 ```TypeScript
@@ -220,29 +200,7 @@ Blits framebuffer
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-blitFramebuffer(
-      srcX0: webgl.GLint,
-      srcY0: webgl.GLint,
-      srcX1: webgl.GLint,
-      srcY1: webgl.GLint,
-      dstX0: webgl.GLint,
-      dstY0: webgl.GLint,
-      dstX1: webgl.GLint,
-      dstY1: webgl.GLint,
-      mask: webgl.GLbitfield,
-      filter: webgl.GLenum,
-    ): void--><!--Device-WebGL2RenderingContextBase-blitFramebuffer(
-      srcX0: webgl.GLint,
-      srcY0: webgl.GLint,
-      srcX1: webgl.GLint,
-      srcY1: webgl.GLint,
-      dstX0: webgl.GLint,
-      dstY0: webgl.GLint,
-      dstX1: webgl.GLint,
-      dstY1: webgl.GLint,
-      mask: webgl.GLbitfield,
-      filter: webgl.GLenum,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-blitFramebuffer(      srcX0: webgl.GLint,      srcY0: webgl.GLint,      srcX1: webgl.GLint,      srcY1: webgl.GLint,      dstX0: webgl.GLint,      dstY0: webgl.GLint,      dstX1: webgl.GLint,      dstY1: webgl.GLint,      mask: webgl.GLbitfield,      filter: webgl.GLenum,    ): void--><!--Device-WebGL2RenderingContextBase-blitFramebuffer(      srcX0: webgl.GLint,      srcY0: webgl.GLint,      srcX1: webgl.GLint,      srcY1: webgl.GLint,      dstX0: webgl.GLint,      dstY0: webgl.GLint,      dstX1: webgl.GLint,      dstY1: webgl.GLint,      mask: webgl.GLbitfield,      filter: webgl.GLenum,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -261,7 +219,6 @@ Blits framebuffer
 | mask | webgl.GLbitfield | Yes | Mask |
 | filter | webgl.GLenum | Yes | Filter |
 
-<a id="clearbufferfi"></a>
 ## clearBufferfi
 
 ```TypeScript
@@ -287,7 +244,6 @@ Clears bufferfi
 | depth | webgl.GLfloat | Yes | Depth |
 | stencil | webgl.GLint | Yes | Stencil |
 
-<a id="clearbufferfv"></a>
 ## clearBufferfv
 
 ```TypeScript
@@ -305,17 +261,7 @@ Clears bufferfv
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-clearBufferfv(
-      buffer: webgl.GLenum,
-      drawbuffer: webgl.GLint,
-      values: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-clearBufferfv(
-      buffer: webgl.GLenum,
-      drawbuffer: webgl.GLint,
-      values: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-clearBufferfv(      buffer: webgl.GLenum,      drawbuffer: webgl.GLint,      values: webgl.Float32List,      srcOffset?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-clearBufferfv(      buffer: webgl.GLenum,      drawbuffer: webgl.GLint,      values: webgl.Float32List,      srcOffset?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -328,7 +274,6 @@ Clears bufferfv
 | values | webgl.Float32List | Yes | Values |
 | srcOffset | webgl.GLuint | No | Source offset |
 
-<a id="clearbufferiv"></a>
 ## clearBufferiv
 
 ```TypeScript
@@ -346,17 +291,7 @@ Clears bufferiv
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-clearBufferiv(
-      buffer: webgl.GLenum,
-      drawbuffer: webgl.GLint,
-      values: webgl.Int32List,
-      srcOffset?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-clearBufferiv(
-      buffer: webgl.GLenum,
-      drawbuffer: webgl.GLint,
-      values: webgl.Int32List,
-      srcOffset?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-clearBufferiv(      buffer: webgl.GLenum,      drawbuffer: webgl.GLint,      values: webgl.Int32List,      srcOffset?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-clearBufferiv(      buffer: webgl.GLenum,      drawbuffer: webgl.GLint,      values: webgl.Int32List,      srcOffset?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -369,7 +304,6 @@ Clears bufferiv
 | values | webgl.Int32List | Yes | Values |
 | srcOffset | webgl.GLuint | No | Source offset |
 
-<a id="clearbufferuiv"></a>
 ## clearBufferuiv
 
 ```TypeScript
@@ -395,7 +329,6 @@ Clears bufferuiv
 | values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Values |
 | srcOffset | webgl.GLuint | No | Source offset |
 
-<a id="clientwaitsync"></a>
 ## clientWaitSync
 
 ```TypeScript
@@ -426,7 +359,6 @@ Client waits for sync object
 | --- | --- |
 | webgl.GLenum | Result |
 
-<a id="compressedteximage3d"></a>
 ## compressedTexImage3D
 
 ```TypeScript
@@ -449,27 +381,7 @@ Compressed texture image 3D from PBO offset
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-compressedTexImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLenum,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      imageSize: webgl.GLsizei,
-      offset: webgl.GLintptr,
-    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLenum,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      imageSize: webgl.GLsizei,
-      offset: webgl.GLintptr,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-compressedTexImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      imageSize: webgl.GLsizei,      offset: webgl.GLintptr,    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      imageSize: webgl.GLsizei,      offset: webgl.GLintptr,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -487,7 +399,6 @@ Compressed texture image 3D from PBO offset
 | imageSize | webgl.GLsizei | Yes | Image size |
 | offset | webgl.GLintptr | Yes | Offset |
 
-<a id="compressedteximage3d-1"></a>
 ## compressedTexImage3D
 
 ```TypeScript
@@ -511,29 +422,7 @@ Compressed texture image 3D from ArrayBufferView
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-compressedTexImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLenum,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      srcData: ArrayBufferView,
-      srcOffset?: webgl.GLuint,
-      srcLengthOverride?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLenum,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      srcData: ArrayBufferView,
-      srcOffset?: webgl.GLuint,
-      srcLengthOverride?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-compressedTexImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -552,7 +441,6 @@ Compressed texture image 3D from ArrayBufferView
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLengthOverride | webgl.GLuint | No | Source length override |
 
-<a id="compressedtexsubimage3d"></a>
 ## compressedTexSubImage3D
 
 ```TypeScript
@@ -577,31 +465,7 @@ Compressed texture sub image 3D from PBO offset
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      format: webgl.GLenum,
-      imageSize: webgl.GLsizei,
-      offset: webgl.GLintptr,
-    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      format: webgl.GLenum,
-      imageSize: webgl.GLsizei,
-      offset: webgl.GLintptr,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      imageSize: webgl.GLsizei,      offset: webgl.GLintptr,    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      imageSize: webgl.GLsizei,      offset: webgl.GLintptr,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -621,7 +485,6 @@ Compressed texture sub image 3D from PBO offset
 | imageSize | webgl.GLsizei | Yes | Image size |
 | offset | webgl.GLintptr | Yes | Offset |
 
-<a id="compressedtexsubimage3d-1"></a>
 ## compressedTexSubImage3D
 
 ```TypeScript
@@ -647,33 +510,7 @@ Compressed texture sub image 3D from ArrayBufferView
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      format: webgl.GLenum,
-      srcData: ArrayBufferView,
-      srcOffset?: webgl.GLuint,
-      srcLengthOverride?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      format: webgl.GLenum,
-      srcData: ArrayBufferView,
-      srcOffset?: webgl.GLuint,
-      srcLengthOverride?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-compressedTexSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset?: webgl.GLuint,      srcLengthOverride?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -694,7 +531,6 @@ Compressed texture sub image 3D from ArrayBufferView
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLengthOverride | webgl.GLuint | No | Source length override |
 
-<a id="copybuffersubdata"></a>
 ## copyBufferSubData
 
 ```TypeScript
@@ -713,19 +549,7 @@ Copies data from one buffer to another
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-copyBufferSubData(
-      readTarget: webgl.GLenum,
-      writeTarget: webgl.GLenum,
-      readOffset: webgl.GLintptr,
-      writeOffset: webgl.GLintptr,
-      size: webgl.GLsizeiptr,
-    ): void--><!--Device-WebGL2RenderingContextBase-copyBufferSubData(
-      readTarget: webgl.GLenum,
-      writeTarget: webgl.GLenum,
-      readOffset: webgl.GLintptr,
-      writeOffset: webgl.GLintptr,
-      size: webgl.GLsizeiptr,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-copyBufferSubData(      readTarget: webgl.GLenum,      writeTarget: webgl.GLenum,      readOffset: webgl.GLintptr,      writeOffset: webgl.GLintptr,      size: webgl.GLsizeiptr,    ): void--><!--Device-WebGL2RenderingContextBase-copyBufferSubData(      readTarget: webgl.GLenum,      writeTarget: webgl.GLenum,      readOffset: webgl.GLintptr,      writeOffset: webgl.GLintptr,      size: webgl.GLsizeiptr,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -739,7 +563,6 @@ Copies data from one buffer to another
 | writeOffset | webgl.GLintptr | Yes | Write offset |
 | size | webgl.GLsizeiptr | Yes | Size to copy |
 
-<a id="copytexsubimage3d"></a>
 ## copyTexSubImage3D
 
 ```TypeScript
@@ -762,27 +585,7 @@ Copies a portion of a 3D texture image
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-copyTexSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      x: webgl.GLint,
-      y: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-    ): void--><!--Device-WebGL2RenderingContextBase-copyTexSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      x: webgl.GLint,
-      y: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-copyTexSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-copyTexSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -800,7 +603,6 @@ Copies a portion of a 3D texture image
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
 
-<a id="createquery"></a>
 ## createQuery
 
 ```TypeScript
@@ -823,7 +625,6 @@ Creates a query
 | --- | --- |
 | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | The created query |
 
-<a id="createsampler"></a>
 ## createSampler
 
 ```TypeScript
@@ -846,7 +647,6 @@ Creates a sampler
 | --- | --- |
 | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | The created sampler |
 
-<a id="createtransformfeedback"></a>
 ## createTransformFeedback
 
 ```TypeScript
@@ -869,7 +669,6 @@ Creates a transform feedback object
 | --- | --- |
 | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) | The created transform feedback |
 
-<a id="createvertexarray"></a>
 ## createVertexArray
 
 ```TypeScript
@@ -892,7 +691,6 @@ Creates a vertex array object
 | --- | --- |
 | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) | The created vertex array object |
 
-<a id="deletequery"></a>
 ## deleteQuery
 
 ```TypeScript
@@ -915,7 +713,6 @@ Deletes a query
 | --- | --- | --- | --- |
 | query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | Yes | Query to delete |
 
-<a id="deletesampler"></a>
 ## deleteSampler
 
 ```TypeScript
@@ -938,7 +735,6 @@ Deletes a sampler
 | --- | --- | --- | --- |
 | sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes | Sampler to delete |
 
-<a id="deletesync"></a>
 ## deleteSync
 
 ```TypeScript
@@ -961,7 +757,6 @@ Deletes a sync object
 | --- | --- | --- | --- |
 | sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) \| null | Yes | Sync object to delete |
 
-<a id="deletetransformfeedback"></a>
 ## deleteTransformFeedback
 
 ```TypeScript
@@ -984,7 +779,6 @@ Deletes a transform feedback object
 | --- | --- | --- | --- |
 | tf | [WebGLTransformFeedback](arkts-arkgraphics2d-webgl2-webgltransformfeedback-i.md) \| null | Yes | Transform feedback to delete |
 
-<a id="deletevertexarray"></a>
 ## deleteVertexArray
 
 ```TypeScript
@@ -1007,7 +801,6 @@ Deletes a vertex array object
 | --- | --- | --- | --- |
 | vertexArray | [WebGLVertexArrayObject](arkts-arkgraphics2d-webgl2-webglvertexarrayobject-i.md) \| null | Yes | Vertex array to delete |
 
-<a id="drawarraysinstanced"></a>
 ## drawArraysInstanced
 
 ```TypeScript
@@ -1025,17 +818,7 @@ Draws arrays instanced
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-drawArraysInstanced(
-      mode: webgl.GLenum,
-      first: webgl.GLint,
-      count: webgl.GLsizei,
-      instanceCount: webgl.GLsizei,
-    ): void--><!--Device-WebGL2RenderingContextBase-drawArraysInstanced(
-      mode: webgl.GLenum,
-      first: webgl.GLint,
-      count: webgl.GLsizei,
-      instanceCount: webgl.GLsizei,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-drawArraysInstanced(      mode: webgl.GLenum,      first: webgl.GLint,      count: webgl.GLsizei,      instanceCount: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-drawArraysInstanced(      mode: webgl.GLenum,      first: webgl.GLint,      count: webgl.GLsizei,      instanceCount: webgl.GLsizei,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1048,7 +831,6 @@ Draws arrays instanced
 | count | webgl.GLsizei | Yes | Count |
 | instanceCount | webgl.GLsizei | Yes | Instance count |
 
-<a id="drawbuffers"></a>
 ## drawBuffers
 
 ```TypeScript
@@ -1071,7 +853,6 @@ Sets draw buffers
 | --- | --- | --- | --- |
 | buffers | webgl.GLenum[] | Yes | Buffers |
 
-<a id="drawelementsinstanced"></a>
 ## drawElementsInstanced
 
 ```TypeScript
@@ -1090,19 +871,7 @@ Draws elements instanced
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-drawElementsInstanced(
-      mode: webgl.GLenum,
-      count: webgl.GLsizei,
-      type: webgl.GLenum,
-      offset: webgl.GLintptr,
-      instanceCount: webgl.GLsizei,
-    ): void--><!--Device-WebGL2RenderingContextBase-drawElementsInstanced(
-      mode: webgl.GLenum,
-      count: webgl.GLsizei,
-      type: webgl.GLenum,
-      offset: webgl.GLintptr,
-      instanceCount: webgl.GLsizei,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-drawElementsInstanced(      mode: webgl.GLenum,      count: webgl.GLsizei,      type: webgl.GLenum,      offset: webgl.GLintptr,      instanceCount: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-drawElementsInstanced(      mode: webgl.GLenum,      count: webgl.GLsizei,      type: webgl.GLenum,      offset: webgl.GLintptr,      instanceCount: webgl.GLsizei,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1116,7 +885,6 @@ Draws elements instanced
 | offset | webgl.GLintptr | Yes | Offset |
 | instanceCount | webgl.GLsizei | Yes | Instance count |
 
-<a id="drawrangeelements"></a>
 ## drawRangeElements
 
 ```TypeScript
@@ -1136,21 +904,7 @@ Draws range elements
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-drawRangeElements(
-      mode: webgl.GLenum,
-      start: webgl.GLuint,
-      end: webgl.GLuint,
-      count: webgl.GLsizei,
-      type: webgl.GLenum,
-      offset: webgl.GLintptr,
-    ): void--><!--Device-WebGL2RenderingContextBase-drawRangeElements(
-      mode: webgl.GLenum,
-      start: webgl.GLuint,
-      end: webgl.GLuint,
-      count: webgl.GLsizei,
-      type: webgl.GLenum,
-      offset: webgl.GLintptr,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-drawRangeElements(      mode: webgl.GLenum,      start: webgl.GLuint,      end: webgl.GLuint,      count: webgl.GLsizei,      type: webgl.GLenum,      offset: webgl.GLintptr,    ): void--><!--Device-WebGL2RenderingContextBase-drawRangeElements(      mode: webgl.GLenum,      start: webgl.GLuint,      end: webgl.GLuint,      count: webgl.GLsizei,      type: webgl.GLenum,      offset: webgl.GLintptr,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1165,7 +919,6 @@ Draws range elements
 | type | webgl.GLenum | Yes | Type |
 | offset | webgl.GLintptr | Yes | Offset |
 
-<a id="endquery"></a>
 ## endQuery
 
 ```TypeScript
@@ -1188,7 +941,6 @@ Ends a query
 | --- | --- | --- | --- |
 | target | webgl.GLenum | Yes | Target |
 
-<a id="endtransformfeedback"></a>
 ## endTransformFeedback
 
 ```TypeScript
@@ -1205,7 +957,6 @@ Ends transform feedback
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-<a id="fencesync"></a>
 ## fenceSync
 
 ```TypeScript
@@ -1235,7 +986,6 @@ Creates a sync object
 | --- | --- |
 | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | The created sync object |
 
-<a id="framebuffertexturelayer"></a>
 ## framebufferTextureLayer
 
 ```TypeScript
@@ -1254,19 +1004,7 @@ Attaches a texture layer to a framebuffer
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-framebufferTextureLayer(
-      target: webgl.GLenum,
-      attachment: webgl.GLenum,
-      texture: webgl.WebGLTexture | null,
-      level: webgl.GLint,
-      layer: webgl.GLint,
-    ): void--><!--Device-WebGL2RenderingContextBase-framebufferTextureLayer(
-      target: webgl.GLenum,
-      attachment: webgl.GLenum,
-      texture: webgl.WebGLTexture | null,
-      level: webgl.GLint,
-      layer: webgl.GLint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-framebufferTextureLayer(      target: webgl.GLenum,      attachment: webgl.GLenum,      texture: webgl.WebGLTexture | null,      level: webgl.GLint,      layer: webgl.GLint,    ): void--><!--Device-WebGL2RenderingContextBase-framebufferTextureLayer(      target: webgl.GLenum,      attachment: webgl.GLenum,      texture: webgl.WebGLTexture | null,      level: webgl.GLint,      layer: webgl.GLint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1280,7 +1018,6 @@ Attaches a texture layer to a framebuffer
 | level | webgl.GLint | Yes | Mipmap level |
 | layer | webgl.GLint | Yes | Layer |
 
-<a id="getactiveuniformblockname"></a>
 ## getActiveUniformBlockName
 
 ```TypeScript
@@ -1310,7 +1047,6 @@ Gets active uniform block name
 | --- | --- |
 | string | Uniform block name |
 
-<a id="getactiveuniformblockparameter"></a>
 ## getActiveUniformBlockParameter
 
 ```TypeScript
@@ -1327,15 +1063,7 @@ Gets active uniform block parameter
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-getActiveUniformBlockParameter(
-      program: webgl.WebGLProgram,
-      uniformBlockIndex: webgl.GLuint,
-      pname: webgl.GLenum,
-    ): any--><!--Device-WebGL2RenderingContextBase-getActiveUniformBlockParameter(
-      program: webgl.WebGLProgram,
-      uniformBlockIndex: webgl.GLuint,
-      pname: webgl.GLenum,
-    ): any-End-->
+<!--Device-WebGL2RenderingContextBase-getActiveUniformBlockParameter(      program: webgl.WebGLProgram,      uniformBlockIndex: webgl.GLuint,      pname: webgl.GLenum,    ): any--><!--Device-WebGL2RenderingContextBase-getActiveUniformBlockParameter(      program: webgl.WebGLProgram,      uniformBlockIndex: webgl.GLuint,      pname: webgl.GLenum,    ): any-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1353,7 +1081,6 @@ Gets active uniform block parameter
 | --- | --- |
 | any | Parameter value |
 
-<a id="getactiveuniforms"></a>
 ## getActiveUniforms
 
 ```TypeScript
@@ -1384,7 +1111,6 @@ Gets active uniforms
 | --- | --- |
 | any | Parameter value |
 
-<a id="getbuffersubdata"></a>
 ## getBufferSubData
 
 ```TypeScript
@@ -1403,19 +1129,7 @@ Gets buffer sub data
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-getBufferSubData(
-      target: webgl.GLenum,
-      srcByteOffset: webgl.GLintptr,
-      dstBuffer: ArrayBufferView,
-      dstOffset?: webgl.GLuint,
-      length?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-getBufferSubData(
-      target: webgl.GLenum,
-      srcByteOffset: webgl.GLintptr,
-      dstBuffer: ArrayBufferView,
-      dstOffset?: webgl.GLuint,
-      length?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-getBufferSubData(      target: webgl.GLenum,      srcByteOffset: webgl.GLintptr,      dstBuffer: ArrayBufferView,      dstOffset?: webgl.GLuint,      length?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-getBufferSubData(      target: webgl.GLenum,      srcByteOffset: webgl.GLintptr,      dstBuffer: ArrayBufferView,      dstOffset?: webgl.GLuint,      length?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1429,7 +1143,6 @@ Gets buffer sub data
 | dstOffset | webgl.GLuint | No | Destination offset |
 | length | webgl.GLuint | No | Length |
 
-<a id="getfragdatalocation"></a>
 ## getFragDataLocation
 
 ```TypeScript
@@ -1459,7 +1172,6 @@ Gets fragment data location
 | --- | --- |
 | webgl.GLint | Location |
 
-<a id="getindexedparameter"></a>
 ## getIndexedParameter
 
 ```TypeScript
@@ -1489,7 +1201,6 @@ Gets indexed parameter
 | --- | --- |
 | any | Parameter value |
 
-<a id="getinternalformatparameter"></a>
 ## getInternalformatParameter
 
 ```TypeScript
@@ -1520,7 +1231,6 @@ Gets internal format parameter
 | --- | --- |
 | any | Parameter value |
 
-<a id="getquery"></a>
 ## getQuery
 
 ```TypeScript
@@ -1550,7 +1260,6 @@ Gets a query
 | --- | --- |
 | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | The query |
 
-<a id="getqueryparameter"></a>
 ## getQueryParameter
 
 ```TypeScript
@@ -1580,7 +1289,6 @@ Gets query parameter
 | --- | --- |
 | any | Parameter value |
 
-<a id="getsamplerparameter"></a>
 ## getSamplerParameter
 
 ```TypeScript
@@ -1610,7 +1318,6 @@ Gets sampler parameter
 | --- | --- |
 | any | Parameter value |
 
-<a id="getsyncparameter"></a>
 ## getSyncParameter
 
 ```TypeScript
@@ -1640,7 +1347,6 @@ Gets sync parameter
 | --- | --- |
 | any | Parameter value |
 
-<a id="gettransformfeedbackvarying"></a>
 ## getTransformFeedbackVarying
 
 ```TypeScript
@@ -1670,7 +1376,6 @@ Gets transform feedback varying
 | --- | --- |
 | webgl.WebGLActiveInfo | Active info |
 
-<a id="getuniformblockindex"></a>
 ## getUniformBlockIndex
 
 ```TypeScript
@@ -1700,7 +1405,6 @@ Gets uniform block index
 | --- | --- |
 | webgl.GLuint | Uniform block index |
 
-<a id="getuniformindices"></a>
 ## getUniformIndices
 
 ```TypeScript
@@ -1730,7 +1434,6 @@ Gets uniform indices
 | --- | --- |
 | webgl.GLuint[] | Uniform indices |
 
-<a id="invalidateframebuffer"></a>
 ## invalidateFramebuffer
 
 ```TypeScript
@@ -1754,7 +1457,6 @@ Invalidates framebuffer attachments
 | target | webgl.GLenum | Yes | Framebuffer target |
 | attachments | webgl.GLenum[] | Yes | Attachments to invalidate |
 
-<a id="invalidatesubframebuffer"></a>
 ## invalidateSubFramebuffer
 
 ```TypeScript
@@ -1774,21 +1476,7 @@ Invalidates sub framebuffer attachments
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-invalidateSubFramebuffer(
-      target: webgl.GLenum,
-      attachments: webgl.GLenum[],
-      x: webgl.GLint,
-      y: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-    ): void--><!--Device-WebGL2RenderingContextBase-invalidateSubFramebuffer(
-      target: webgl.GLenum,
-      attachments: webgl.GLenum[],
-      x: webgl.GLint,
-      y: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-invalidateSubFramebuffer(      target: webgl.GLenum,      attachments: webgl.GLenum[],      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-invalidateSubFramebuffer(      target: webgl.GLenum,      attachments: webgl.GLenum[],      x: webgl.GLint,      y: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -1803,7 +1491,6 @@ Invalidates sub framebuffer attachments
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
 
-<a id="isquery"></a>
 ## isQuery
 
 ```TypeScript
@@ -1832,7 +1519,6 @@ Returns whether a query is valid
 | --- | --- |
 | webgl.GLboolean | Whether the query is valid |
 
-<a id="issampler"></a>
 ## isSampler
 
 ```TypeScript
@@ -1861,7 +1547,6 @@ Returns whether a sampler is valid
 | --- | --- |
 | webgl.GLboolean | Whether the sampler is valid |
 
-<a id="issync"></a>
 ## isSync
 
 ```TypeScript
@@ -1890,7 +1575,6 @@ Returns whether a sync object is valid
 | --- | --- |
 | webgl.GLboolean | Whether the sync is valid |
 
-<a id="istransformfeedback"></a>
 ## isTransformFeedback
 
 ```TypeScript
@@ -1919,7 +1603,6 @@ Returns whether a transform feedback is valid
 | --- | --- |
 | webgl.GLboolean | Whether the transform feedback is valid |
 
-<a id="isvertexarray"></a>
 ## isVertexArray
 
 ```TypeScript
@@ -1948,7 +1631,6 @@ Returns whether a vertex array is valid
 | --- | --- |
 | webgl.GLboolean | Whether the vertex array is valid |
 
-<a id="pausetransformfeedback"></a>
 ## pauseTransformFeedback
 
 ```TypeScript
@@ -1965,7 +1647,6 @@ Pauses transform feedback
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-<a id="readbuffer"></a>
 ## readBuffer
 
 ```TypeScript
@@ -1988,7 +1669,6 @@ Sets the read buffer
 | --- | --- | --- | --- |
 | src | webgl.GLenum | Yes | Read buffer |
 
-<a id="renderbufferstoragemultisample"></a>
 ## renderbufferStorageMultisample
 
 ```TypeScript
@@ -2007,19 +1687,7 @@ Sets renderbuffer storage with multisampling
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-renderbufferStorageMultisample(
-      target: webgl.GLenum,
-      samples: webgl.GLsizei,
-      internalformat: webgl.GLenum,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-    ): void--><!--Device-WebGL2RenderingContextBase-renderbufferStorageMultisample(
-      target: webgl.GLenum,
-      samples: webgl.GLsizei,
-      internalformat: webgl.GLenum,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-renderbufferStorageMultisample(      target: webgl.GLenum,      samples: webgl.GLsizei,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-renderbufferStorageMultisample(      target: webgl.GLenum,      samples: webgl.GLsizei,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2033,7 +1701,6 @@ Sets renderbuffer storage with multisampling
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
 
-<a id="resumetransformfeedback"></a>
 ## resumeTransformFeedback
 
 ```TypeScript
@@ -2050,7 +1717,6 @@ Resumes transform feedback
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
-<a id="samplerparameterf"></a>
 ## samplerParameterf
 
 ```TypeScript
@@ -2075,7 +1741,6 @@ Sets sampler parameterf
 | pname | webgl.GLenum | Yes | Parameter name |
 | param | webgl.GLfloat | Yes | Parameter value |
 
-<a id="samplerparameteri"></a>
 ## samplerParameteri
 
 ```TypeScript
@@ -2100,7 +1765,6 @@ Sets sampler parameteri
 | pname | webgl.GLenum | Yes | Parameter name |
 | param | webgl.GLint | Yes | Parameter value |
 
-<a id="teximage3d"></a>
 ## texImage3D
 
 ```TypeScript
@@ -2124,29 +1788,7 @@ Sets texture image 3D from PBO offset
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-texImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      pboOffset: webgl.GLintptr,
-    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      pboOffset: webgl.GLintptr,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      pboOffset: webgl.GLintptr,    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      pboOffset: webgl.GLintptr,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2165,7 +1807,6 @@ Sets texture image 3D from PBO offset
 | type | webgl.GLenum | Yes | Type |
 | pboOffset | webgl.GLintptr | Yes | PBO offset |
 
-<a id="teximage3d-1"></a>
 ## texImage3D
 
 ```TypeScript
@@ -2189,29 +1830,7 @@ Sets texture image 3D from TexImageSource
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-texImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      source: webgl.TexImageSource,
-    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      source: webgl.TexImageSource,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      source: webgl.TexImageSource,    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      source: webgl.TexImageSource,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2230,7 +1849,6 @@ Sets texture image 3D from TexImageSource
 | type | webgl.GLenum | Yes | Type |
 | source | webgl.TexImageSource | Yes | Image source |
 
-<a id="teximage3d-2"></a>
 ## texImage3D
 
 ```TypeScript
@@ -2254,29 +1872,7 @@ Sets texture image 3D from ArrayBufferView
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-texImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      srcData: ArrayBufferView | null,
-    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      srcData: ArrayBufferView | null,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView | null,    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView | null,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2295,7 +1891,6 @@ Sets texture image 3D from ArrayBufferView
 | type | webgl.GLenum | Yes | Type |
 | srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) \| null | Yes | Source data |
 
-<a id="teximage3d-3"></a>
 ## texImage3D
 
 ```TypeScript
@@ -2320,31 +1915,7 @@ Sets texture image 3D from ArrayBufferView with offset
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-texImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      srcData: ArrayBufferView,
-      srcOffset: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      internalformat: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      border: webgl.GLint,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      srcData: ArrayBufferView,
-      srcOffset: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-texImage3D(      target: webgl.GLenum,      level: webgl.GLint,      internalformat: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      border: webgl.GLint,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView,      srcOffset: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2364,7 +1935,6 @@ Sets texture image 3D from ArrayBufferView with offset
 | srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) | Yes | Source data |
 | srcOffset | webgl.GLuint | Yes | Source offset |
 
-<a id="texstorage2d"></a>
 ## texStorage2D
 
 ```TypeScript
@@ -2383,19 +1953,7 @@ Sets texture storage 2D
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-texStorage2D(
-      target: webgl.GLenum,
-      levels: webgl.GLsizei,
-      internalformat: webgl.GLenum,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-    ): void--><!--Device-WebGL2RenderingContextBase-texStorage2D(
-      target: webgl.GLenum,
-      levels: webgl.GLsizei,
-      internalformat: webgl.GLenum,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-texStorage2D(      target: webgl.GLenum,      levels: webgl.GLsizei,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-texStorage2D(      target: webgl.GLenum,      levels: webgl.GLsizei,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2409,7 +1967,6 @@ Sets texture storage 2D
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
 
-<a id="texstorage3d"></a>
 ## texStorage3D
 
 ```TypeScript
@@ -2429,21 +1986,7 @@ Sets texture storage 3D
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-texStorage3D(
-      target: webgl.GLenum,
-      levels: webgl.GLsizei,
-      internalformat: webgl.GLenum,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-    ): void--><!--Device-WebGL2RenderingContextBase-texStorage3D(
-      target: webgl.GLenum,
-      levels: webgl.GLsizei,
-      internalformat: webgl.GLenum,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-texStorage3D(      target: webgl.GLenum,      levels: webgl.GLsizei,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,    ): void--><!--Device-WebGL2RenderingContextBase-texStorage3D(      target: webgl.GLenum,      levels: webgl.GLsizei,      internalformat: webgl.GLenum,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2458,7 +2001,6 @@ Sets texture storage 3D
 | height | webgl.GLsizei | Yes | Height |
 | depth | webgl.GLsizei | Yes | Depth |
 
-<a id="texsubimage3d"></a>
 ## texSubImage3D
 
 ```TypeScript
@@ -2483,31 +2025,7 @@ Sets texture sub image 3D from PBO offset
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-texSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      pboOffset: webgl.GLintptr,
-    ): void--><!--Device-WebGL2RenderingContextBase-texSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      pboOffset: webgl.GLintptr,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-texSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      pboOffset: webgl.GLintptr,    ): void--><!--Device-WebGL2RenderingContextBase-texSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      pboOffset: webgl.GLintptr,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2527,7 +2045,6 @@ Sets texture sub image 3D from PBO offset
 | type | webgl.GLenum | Yes | Type |
 | pboOffset | webgl.GLintptr | Yes | PBO offset |
 
-<a id="texsubimage3d-1"></a>
 ## texSubImage3D
 
 ```TypeScript
@@ -2552,31 +2069,7 @@ Sets texture sub image 3D from TexImageSource
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-texSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      source: webgl.TexImageSource,
-    ): void--><!--Device-WebGL2RenderingContextBase-texSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      source: webgl.TexImageSource,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-texSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      source: webgl.TexImageSource,    ): void--><!--Device-WebGL2RenderingContextBase-texSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      source: webgl.TexImageSource,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2596,7 +2089,6 @@ Sets texture sub image 3D from TexImageSource
 | type | webgl.GLenum | Yes | Type |
 | source | webgl.TexImageSource | Yes | Image source |
 
-<a id="texsubimage3d-2"></a>
 ## texSubImage3D
 
 ```TypeScript
@@ -2622,33 +2114,7 @@ Sets texture sub image 3D from ArrayBufferView
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-texSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      srcData: ArrayBufferView | null,
-      srcOffset?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-texSubImage3D(
-      target: webgl.GLenum,
-      level: webgl.GLint,
-      xoffset: webgl.GLint,
-      yoffset: webgl.GLint,
-      zoffset: webgl.GLint,
-      width: webgl.GLsizei,
-      height: webgl.GLsizei,
-      depth: webgl.GLsizei,
-      format: webgl.GLenum,
-      type: webgl.GLenum,
-      srcData: ArrayBufferView | null,
-      srcOffset?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-texSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView | null,      srcOffset?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-texSubImage3D(      target: webgl.GLenum,      level: webgl.GLint,      xoffset: webgl.GLint,      yoffset: webgl.GLint,      zoffset: webgl.GLint,      width: webgl.GLsizei,      height: webgl.GLsizei,      depth: webgl.GLsizei,      format: webgl.GLenum,      type: webgl.GLenum,      srcData: ArrayBufferView | null,      srcOffset?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2669,7 +2135,6 @@ Sets texture sub image 3D from ArrayBufferView
 | srcData | [ArrayBufferView](../../apis-na/arkts-apis/arkts-na-lib-es5-arraybufferview-i.md) \| null | Yes | Source data |
 | srcOffset | webgl.GLuint | No | Source offset |
 
-<a id="transformfeedbackvaryings"></a>
 ## transformFeedbackVaryings
 
 ```TypeScript
@@ -2694,7 +2159,6 @@ Sets transform feedback varyings
 | varyings | string[] | Yes | Varyings |
 | bufferMode | webgl.GLenum | Yes | Buffer mode |
 
-<a id="uniform1ui"></a>
 ## uniform1ui
 
 ```TypeScript
@@ -2718,7 +2182,6 @@ Sets uniform1ui value
 | location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
 | v0 | webgl.GLuint | Yes | Value |
 
-<a id="uniform1uiv"></a>
 ## uniform1uiv
 
 ```TypeScript
@@ -2736,17 +2199,7 @@ Sets uniform1uiv value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniform1uiv(
-      location: webgl.WebGLUniformLocation | null,
-      data: Uint32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniform1uiv(
-      location: webgl.WebGLUniformLocation | null,
-      data: Uint32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniform1uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniform1uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2759,7 +2212,6 @@ Sets uniform1uiv value
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
-<a id="uniform2ui"></a>
 ## uniform2ui
 
 ```TypeScript
@@ -2784,7 +2236,6 @@ Sets uniform2ui value
 | v0 | webgl.GLuint | Yes | X value |
 | v1 | webgl.GLuint | Yes | Y value |
 
-<a id="uniform2uiv"></a>
 ## uniform2uiv
 
 ```TypeScript
@@ -2802,17 +2253,7 @@ Sets uniform2uiv value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniform2uiv(
-      location: webgl.WebGLUniformLocation | null,
-      data: Uint32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniform2uiv(
-      location: webgl.WebGLUniformLocation | null,
-      data: Uint32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniform2uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniform2uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2825,7 +2266,6 @@ Sets uniform2uiv value
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
-<a id="uniform3ui"></a>
 ## uniform3ui
 
 ```TypeScript
@@ -2851,7 +2291,6 @@ Sets uniform3ui value
 | v1 | webgl.GLuint | Yes | Y value |
 | v2 | webgl.GLuint | Yes | Z value |
 
-<a id="uniform3uiv"></a>
 ## uniform3uiv
 
 ```TypeScript
@@ -2869,17 +2308,7 @@ Sets uniform3uiv value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniform3uiv(
-      location: webgl.WebGLUniformLocation | null,
-      data: Uint32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniform3uiv(
-      location: webgl.WebGLUniformLocation | null,
-      data: Uint32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniform3uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniform3uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2892,7 +2321,6 @@ Sets uniform3uiv value
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
-<a id="uniform4ui"></a>
 ## uniform4ui
 
 ```TypeScript
@@ -2911,19 +2339,7 @@ Sets uniform4ui value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniform4ui(
-      location: webgl.WebGLUniformLocation | null,
-      v0: webgl.GLuint,
-      v1: webgl.GLuint,
-      v2: webgl.GLuint,
-      v3: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniform4ui(
-      location: webgl.WebGLUniformLocation | null,
-      v0: webgl.GLuint,
-      v1: webgl.GLuint,
-      v2: webgl.GLuint,
-      v3: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniform4ui(      location: webgl.WebGLUniformLocation | null,      v0: webgl.GLuint,      v1: webgl.GLuint,      v2: webgl.GLuint,      v3: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniform4ui(      location: webgl.WebGLUniformLocation | null,      v0: webgl.GLuint,      v1: webgl.GLuint,      v2: webgl.GLuint,      v3: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2937,7 +2353,6 @@ Sets uniform4ui value
 | v2 | webgl.GLuint | Yes | Z value |
 | v3 | webgl.GLuint | Yes | W value |
 
-<a id="uniform4uiv"></a>
 ## uniform4uiv
 
 ```TypeScript
@@ -2955,17 +2370,7 @@ Sets uniform4uiv value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniform4uiv(
-      location: webgl.WebGLUniformLocation | null,
-      data: Uint32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniform4uiv(
-      location: webgl.WebGLUniformLocation | null,
-      data: Uint32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniform4uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniform4uiv(      location: webgl.WebGLUniformLocation | null,      data: Uint32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -2978,7 +2383,6 @@ Sets uniform4uiv value
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
-<a id="uniformblockbinding"></a>
 ## uniformBlockBinding
 
 ```TypeScript
@@ -2995,15 +2399,7 @@ Sets uniform block binding
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniformBlockBinding(
-      program: webgl.WebGLProgram,
-      uniformBlockIndex: webgl.GLuint,
-      uniformBlockBinding: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniformBlockBinding(
-      program: webgl.WebGLProgram,
-      uniformBlockIndex: webgl.GLuint,
-      uniformBlockBinding: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniformBlockBinding(      program: webgl.WebGLProgram,      uniformBlockIndex: webgl.GLuint,      uniformBlockBinding: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniformBlockBinding(      program: webgl.WebGLProgram,      uniformBlockIndex: webgl.GLuint,      uniformBlockBinding: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3015,7 +2411,6 @@ Sets uniform block binding
 | uniformBlockIndex | webgl.GLuint | Yes | Uniform block index |
 | uniformBlockBinding | webgl.GLuint | Yes | Uniform block binding |
 
-<a id="uniformmatrix2x3fv"></a>
 ## uniformMatrix2x3fv
 
 ```TypeScript
@@ -3034,19 +2429,7 @@ Sets uniformMatrix2x3fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniformMatrix2x3fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix2x3fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniformMatrix2x3fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix2x3fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3060,7 +2443,6 @@ Sets uniformMatrix2x3fv value
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
-<a id="uniformmatrix2x4fv"></a>
 ## uniformMatrix2x4fv
 
 ```TypeScript
@@ -3079,19 +2461,7 @@ Sets uniformMatrix2x4fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniformMatrix2x4fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix2x4fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniformMatrix2x4fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix2x4fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3105,7 +2475,6 @@ Sets uniformMatrix2x4fv value
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
-<a id="uniformmatrix3x2fv"></a>
 ## uniformMatrix3x2fv
 
 ```TypeScript
@@ -3124,19 +2493,7 @@ Sets uniformMatrix3x2fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniformMatrix3x2fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix3x2fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniformMatrix3x2fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix3x2fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3150,7 +2507,6 @@ Sets uniformMatrix3x2fv value
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
-<a id="uniformmatrix3x4fv"></a>
 ## uniformMatrix3x4fv
 
 ```TypeScript
@@ -3169,19 +2525,7 @@ Sets uniformMatrix3x4fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniformMatrix3x4fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix3x4fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniformMatrix3x4fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix3x4fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3195,7 +2539,6 @@ Sets uniformMatrix3x4fv value
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
-<a id="uniformmatrix4x2fv"></a>
 ## uniformMatrix4x2fv
 
 ```TypeScript
@@ -3214,19 +2557,7 @@ Sets uniformMatrix4x2fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniformMatrix4x2fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix4x2fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniformMatrix4x2fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix4x2fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3240,7 +2571,6 @@ Sets uniformMatrix4x2fv value
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
-<a id="uniformmatrix4x3fv"></a>
 ## uniformMatrix4x3fv
 
 ```TypeScript
@@ -3259,19 +2589,7 @@ Sets uniformMatrix4x3fv value
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-uniformMatrix4x3fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix4x3fv(
-      location: webgl.WebGLUniformLocation | null,
-      transpose: webgl.GLboolean,
-      data: webgl.Float32List,
-      srcOffset?: webgl.GLuint,
-      srcLength?: webgl.GLuint,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-uniformMatrix4x3fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void--><!--Device-WebGL2RenderingContextBase-uniformMatrix4x3fv(      location: webgl.WebGLUniformLocation | null,      transpose: webgl.GLboolean,      data: webgl.Float32List,      srcOffset?: webgl.GLuint,      srcLength?: webgl.GLuint,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3285,7 +2603,6 @@ Sets uniformMatrix4x3fv value
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLength | webgl.GLuint | No | Source length |
 
-<a id="vertexattribdivisor"></a>
 ## vertexAttribDivisor
 
 ```TypeScript
@@ -3309,7 +2626,6 @@ Sets vertex attrib divisor
 | index | webgl.GLuint | Yes | Vertex attribute index |
 | divisor | webgl.GLuint | Yes | Divisor |
 
-<a id="vertexattribi4i"></a>
 ## vertexAttribI4i
 
 ```TypeScript
@@ -3336,7 +2652,6 @@ Sets vertex attrib I4i value
 | z | webgl.GLint | Yes | Z value |
 | w | webgl.GLint | Yes | W value |
 
-<a id="vertexattribi4iv"></a>
 ## vertexAttribI4iv
 
 ```TypeScript
@@ -3360,7 +2675,6 @@ Sets vertex attrib I4iv value
 | index | webgl.GLuint | Yes | Vertex attribute index |
 | values | webgl.Int32List | Yes | Values |
 
-<a id="vertexattribi4ui"></a>
 ## vertexAttribI4ui
 
 ```TypeScript
@@ -3387,7 +2701,6 @@ Sets vertex attrib I4ui value
 | z | webgl.GLuint | Yes | Z value |
 | w | webgl.GLuint | Yes | W value |
 
-<a id="vertexattribi4uiv"></a>
 ## vertexAttribI4uiv
 
 ```TypeScript
@@ -3411,7 +2724,6 @@ Sets vertex attrib I4uiv value
 | index | webgl.GLuint | Yes | Vertex attribute index |
 | values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Values |
 
-<a id="vertexattribipointer"></a>
 ## vertexAttribIPointer
 
 ```TypeScript
@@ -3430,19 +2742,7 @@ Sets vertex attrib integer pointer
 
 **Model restriction:** This API can be used only in the FA model.
 
-<!--Device-WebGL2RenderingContextBase-vertexAttribIPointer(
-      index: webgl.GLuint,
-      size: webgl.GLint,
-      type: webgl.GLenum,
-      stride: webgl.GLsizei,
-      offset: webgl.GLintptr,
-    ): void--><!--Device-WebGL2RenderingContextBase-vertexAttribIPointer(
-      index: webgl.GLuint,
-      size: webgl.GLint,
-      type: webgl.GLenum,
-      stride: webgl.GLsizei,
-      offset: webgl.GLintptr,
-    ): void-End-->
+<!--Device-WebGL2RenderingContextBase-vertexAttribIPointer(      index: webgl.GLuint,      size: webgl.GLint,      type: webgl.GLenum,      stride: webgl.GLsizei,      offset: webgl.GLintptr,    ): void--><!--Device-WebGL2RenderingContextBase-vertexAttribIPointer(      index: webgl.GLuint,      size: webgl.GLint,      type: webgl.GLenum,      stride: webgl.GLsizei,      offset: webgl.GLintptr,    ): void-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL2
 
@@ -3456,7 +2756,6 @@ Sets vertex attrib integer pointer
 | stride | webgl.GLsizei | Yes | Stride |
 | offset | webgl.GLintptr | Yes | Offset |
 
-<a id="waitsync"></a>
 ## waitSync
 
 ```TypeScript

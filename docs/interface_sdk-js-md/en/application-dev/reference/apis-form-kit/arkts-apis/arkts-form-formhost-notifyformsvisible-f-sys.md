@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="notifyformsvisible"></a>
 ## notifyFormsVisible
 
 ```TypeScript
@@ -46,7 +45,6 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
-<a id="notifyformsvisible-1"></a>
 ## notifyFormsVisible
 
 ```TypeScript

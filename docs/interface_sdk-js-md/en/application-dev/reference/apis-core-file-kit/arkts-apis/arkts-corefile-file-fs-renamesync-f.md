@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="renamesync"></a>
 ## renameSync
 
 ```TypeScript
@@ -14,7 +13,6 @@ declare function renameSync(oldPath: string, newPath: string): void
 ```
 
 Renames a file or directory. This API returns the result synchronously.
-
 > **NOTE**  
 >  
 > This API is not supported in a distributed directory.

@@ -6,7 +6,6 @@
 import { media } from '@kit.MediaKit';
 ```
 
-<a id="createavrecorder"></a>
 ## createAVRecorder
 
 ```TypeScript
@@ -14,7 +13,6 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 ```
 
 Creates an AVRecorder instance. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > An application can create multiple AVRecorder instances. However, because the device shares a common audio  
@@ -57,7 +55,6 @@ media.createAVRecorder((error: BusinessError, recorder: media.AVRecorder) => {
 ```
 
 
-<a id="createavrecorder-1"></a>
 ## createAVRecorder
 
 ```TypeScript
@@ -65,7 +62,6 @@ function createAVRecorder(): Promise<AVRecorder>
 ```
 
 Creates an AVRecorder instance. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > An application can create multiple AVRecorder instances. However, because the device shares a common audio  

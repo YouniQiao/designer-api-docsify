@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="shareform"></a>
 ## shareForm
 
 ```TypeScript
@@ -46,7 +45,6 @@ Shares a specified widget with a remote device. This API uses an asynchronous ca
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
-<a id="shareform-1"></a>
 ## shareForm
 
 ```TypeScript

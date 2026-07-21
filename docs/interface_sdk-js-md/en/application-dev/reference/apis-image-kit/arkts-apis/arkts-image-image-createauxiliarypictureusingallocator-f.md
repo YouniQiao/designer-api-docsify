@@ -6,7 +6,6 @@
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="createauxiliarypictureusingallocator"></a>
 ## createAuxiliaryPictureUsingAllocator
 
 ```TypeScript
@@ -20,9 +19,7 @@ Create an <b>AuxiliaryPicture</b> object, the memory type used by the AuxiliaryP
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPictureInfo,
-    allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture--><!--Device-image-function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPictureInfo,
-    allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture-End-->
+<!--Device-image-function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPictureInfo,    allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture--><!--Device-image-function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPictureInfo,    allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

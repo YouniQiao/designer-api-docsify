@@ -6,14 +6,13 @@
 import { systemManager } from '@kit.MDMKit';
 ```
 
-<a id="setotaupdatepolicy"></a>
 ## setOtaUpdatePolicy
 
 ```TypeScript
 function setOtaUpdatePolicy(admin: Want, policy: OtaUpdatePolicy): void
 ```
 
-Sets the update policy. In intranet updates, call [systemManager.notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md#notifyupdatepackages-1) to notify the system of the update packages and then call this API to set the upgrade policy.
+Sets the update policy. In intranet updates, call [systemManager.notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md#notifyupdatepackages) to notify the system of the update packages and then call this API to set the upgrade policy.
 
 **Since:** 12
 

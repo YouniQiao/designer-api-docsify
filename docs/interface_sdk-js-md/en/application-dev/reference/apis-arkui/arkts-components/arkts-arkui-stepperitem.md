@@ -20,7 +20,6 @@ StepperItem()
 ```
 
 Creates a page component for the [Stepper]{@link stepper} container.
-
 > **NOTE**
 
 **Since:** 8

@@ -6,14 +6,13 @@
 import { curves } from '@kit.ArkUI';
 ```
 
-<a id="responsivespringmotion"></a>
 ## responsiveSpringMotion
 
 ```TypeScript
 function responsiveSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve
 ```
 
-Creates a responsive spring animation curve. It is a special case of [springMotion](arkts-arkui-curves-springmotion-f.md#springmotion-1),with the only difference in the default values. It can be used together with **springMotion**.
+Creates a responsive spring animation curve. It is a special case of [springMotion](arkts-arkui-curves-springmotion-f.md#springmotion),with the only difference in the default values. It can be used together with **springMotion**.
 
 **Since:** 9
 
@@ -35,7 +34,7 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 | Type | Description |
 | --- | --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | Curve.<br>**NOTE**<br>1. To apply custom settings for a spring animation, you are advised to use **springMotion**. When using **responsiveSpringMotion**, you are advised to retain the default settings.<br>2. The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in [animation](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), [animateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md),or [pageTransition](../arkts-components/arkts-arkui-pagetransitionenter.md). In addition, the interpolation cannot be obtained using the [interpolate](arkts-arkui-curves-icurve-i.md#interpolate-1) function of the curve. |
+| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | Curve.<br>**NOTE**<br>1. To apply custom settings for a spring animation, you are advised to use **springMotion**. When using **responsiveSpringMotion**, you are advised to retain the default settings.<br>2. The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in [animation](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), [animateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md),or [pageTransition](../arkts-components/arkts-arkui-pagetransitionenter.md). In addition, the interpolation cannot be obtained using the [interpolate](arkts-arkui-curves-icurve-i.md#interpolate) function of the curve. |
 
 **Example**
 

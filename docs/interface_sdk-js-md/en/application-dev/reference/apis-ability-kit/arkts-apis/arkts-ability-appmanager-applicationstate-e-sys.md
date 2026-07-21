@@ -1,6 +1,6 @@
 # ApplicationState (System API)
 
-Enumerates the application states. This enum can be used together with [AbilityStateData](arkts-ability-abilitystatedata-c.md) to return the application state.
+Enumerates the application states. This enum can be used together with [AbilityStateData](arkts-ability-appmanager-abilitystatedata-t.md) to return the application state.
 
 **Since:** 9
 

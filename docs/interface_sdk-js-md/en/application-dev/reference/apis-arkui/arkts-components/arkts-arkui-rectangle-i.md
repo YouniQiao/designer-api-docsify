@@ -1,7 +1,6 @@
 # Rectangle
 
 The data type used to describe a rectangular area.
-
 > **NOTE**  
 >  
 > - **x** and **y** can be set to a positive or negative percentage value. For example, when **x** is set to  
@@ -18,7 +17,7 @@ The data type used to describe a rectangular area.
 >  
 > - The percentage is measured relative to the component itself.  
 >  
-> - When the parent component has [clip](arkts-arkui-commonmethod-c.md#clip-1) set to **true**, child component  
+> - When the parent component has [clip](arkts-arkui-commonmethod-c.md#clip) set to **true**, child component  
 > interaction is affected by the parent component's response region. Children outside the parent component's response  
 > region won't respond to gestures or events.  
 >  

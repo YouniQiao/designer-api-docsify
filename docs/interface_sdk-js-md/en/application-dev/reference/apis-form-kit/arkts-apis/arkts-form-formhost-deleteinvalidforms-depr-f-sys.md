@@ -1,6 +1,5 @@
 # deleteInvalidForms (System API)
 
-<a id="deleteinvalidforms"></a>
 ## deleteInvalidForms
 
 ```TypeScript
@@ -13,7 +12,7 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md#deleteinvalidforms-1)
+**Substitutes:** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-depr-f-sys.md#deleteinvalidforms)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -31,7 +30,6 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the invalid widgets are deleted, **error** is undefined and **data** is the number of widgets deleted; otherwise, **error** is an error object. |
 
 
-<a id="deleteinvalidforms-1"></a>
 ## deleteInvalidForms
 
 ```TypeScript
@@ -44,7 +42,7 @@ Deletes invalid widgets from the list. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md#deleteinvalidforms-1)
+**Substitutes:** [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-depr-f-sys.md#deleteinvalidforms)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

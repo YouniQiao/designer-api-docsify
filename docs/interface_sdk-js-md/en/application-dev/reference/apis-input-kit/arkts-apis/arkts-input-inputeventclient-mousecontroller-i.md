@@ -16,7 +16,6 @@ Provides the capability of simulating mouse operations. The simulated mouse oper
 import { inputEventClient } from '@kit.InputKit';
 ```
 
-<a id="beginaxis"></a>
 ## beginAxis
 
 ```TypeScript
@@ -94,7 +93,6 @@ struct Index {
 
 ```
 
-<a id="endaxis"></a>
 ## endAxis
 
 ```TypeScript
@@ -137,7 +135,6 @@ Ends an axis event. This API uses a promise to return the result.
 
 For details, see [beginAxis](#beginaxis).
 
-<a id="moveto"></a>
 ## moveTo
 
 ```TypeScript
@@ -208,7 +205,6 @@ struct Index {
 
 ```
 
-<a id="pressbutton"></a>
 ## pressButton
 
 ```TypeScript
@@ -281,7 +277,6 @@ struct Index {
 
 ```
 
-<a id="releasebutton"></a>
 ## releaseButton
 
 ```TypeScript
@@ -324,7 +319,6 @@ Release a mouse button. This API uses a promise to return the result.
 
 For details, see [pressButton](#pressbutton).
 
-<a id="updateaxis"></a>
 ## updateAxis
 
 ```TypeScript

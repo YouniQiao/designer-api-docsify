@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface PromiseLike<T>--><!--Device-unnamed-interface PromiseLike<T>-End-->
 
-<a id="then"></a>
 ## then
 
 ```TypeScript

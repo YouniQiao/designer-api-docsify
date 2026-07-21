@@ -6,7 +6,7 @@ Defines the type of a continuous task.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md)
+**Substitutes:** [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-depr-e.md)
 
 <!--Device-backgroundTaskManager-export enum BackgroundMode--><!--Device-backgroundTaskManager-export enum BackgroundMode-End-->
 

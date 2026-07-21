@@ -6,7 +6,6 @@
 import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
-<a id="flush"></a>
 ## flush
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
-<a id="getlinkedinfo"></a>
 ## getLinkedInfo
 
 ```TypeScript
@@ -34,7 +33,6 @@ Obtains information about a Wi-Fi connection.
 | Promise&lt;WifiLinkedInfo&gt; | Returns Wi-Fi linked information. |
 
 
-<a id="getlinkedinfo-1"></a>
 ## getLinkedInfo
 
 ```TypeScript

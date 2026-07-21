@@ -14,7 +14,6 @@ Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we
 import { drm } from '@kit.DrmKit';
 ```
 
-<a id="clearofflinemediakeys"></a>
 ## clearOfflineMediaKeys
 
 ```TypeScript
@@ -45,7 +44,6 @@ Remove media keys corresponding to the mediaKeyId.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="createmediakeysession"></a>
 ## createMediaKeySession
 
 ```TypeScript
@@ -83,7 +81,6 @@ Create a MediaKeySession instance with level.
 | [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="createmediakeysession-1"></a>
 ## createMediaKeySession
 
 ```TypeScript
@@ -114,7 +111,6 @@ Create a MediaKeySession instance.
 | [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="destroy"></a>
 ## destroy
 
 ```TypeScript
@@ -138,7 +134,6 @@ Release the resource before the MediaKeySystem gonna be unused.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="generatekeysystemrequest"></a>
 ## generateKeySystemRequest
 
 ```TypeScript
@@ -168,7 +163,6 @@ Generate a media key system provision request.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="getcertificatestatus"></a>
 ## getCertificateStatus
 
 ```TypeScript
@@ -198,7 +192,6 @@ Get certificate status of the MediaKeySystem.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="getconfigurationbytearray"></a>
 ## getConfigurationByteArray
 
 ```TypeScript
@@ -235,7 +228,6 @@ Get the specified configuration.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="getconfigurationstring"></a>
 ## getConfigurationString
 
 ```TypeScript
@@ -272,7 +264,6 @@ Get the specified configuration.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="getmaxcontentprotectionlevel"></a>
 ## getMaxContentProtectionLevel
 
 ```TypeScript
@@ -302,7 +293,6 @@ Get max content protection level the device supports.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="getofflinemediakeyids"></a>
 ## getOfflineMediaKeyIds
 
 ```TypeScript
@@ -332,7 +322,6 @@ Get the list of offline MediaKeyIds.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="getofflinemediakeystatus"></a>
 ## getOfflineMediaKeyStatus
 
 ```TypeScript
@@ -369,7 +358,6 @@ Get offline media key status corresponding to the mediaKeyId.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="getstatistics"></a>
 ## getStatistics
 
 ```TypeScript
@@ -399,7 +387,6 @@ Get performance statistics information.That includes currentSessionNum, version,
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="off"></a>
 ## off('keySystemRequired')
 
 ```TypeScript
@@ -430,7 +417,6 @@ Unregister keySystemRequired events.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="on"></a>
 ## on('keySystemRequired')
 
 ```TypeScript
@@ -461,7 +447,6 @@ Register keySystemRequired events.
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because:1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-<a id="processkeysystemresponse"></a>
 ## processKeySystemResponse
 
 ```TypeScript
@@ -498,7 +483,6 @@ Process the response corresponding the key system request obtained by the applic
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="setconfigurationbytearray"></a>
 ## setConfigurationByteArray
 
 ```TypeScript
@@ -530,7 +514,6 @@ Set the specified configuration.
 | [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 | [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
 
-<a id="setconfigurationstring"></a>
 ## setConfigurationString
 
 ```TypeScript

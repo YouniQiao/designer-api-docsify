@@ -6,14 +6,13 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
-<a id="getprofilebyextensionabilitysync"></a>
 ## getProfileByExtensionAbilitySync
 
 ```TypeScript
 function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityName: string, metadataName?: string): Array<string>
 ```
 
-Obtains the JSON string array of the current application's configuration file based on the given module name,ExtensionAbility name, and metadata name (name configured in [metadata](docroot://quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API returns the result synchronously. The result value is a string array.
+Obtains the JSON string array of the current application's configuration file based on the given module name,ExtensionAbility name, and metadata name (name configured in [metadata](../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API returns the result synchronously. The result value is a string array.
 
 **Since:** 10
 
@@ -29,7 +28,7 @@ Obtains the JSON string array of the current application's configuration file ba
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name. |
 | extensionAbilityName | string | Yes | Name of the ExtensionAbility component. |
-| metadataName | string | No | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under [extensionAbilities](docroot://quick-start/module-configuration-file.md#extensionabilities) in the **module.json5** file. The default value is null. |
+| metadataName | string | No | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) in the **module.json5** file. The default value is null. |
 
 **Return value:**
 

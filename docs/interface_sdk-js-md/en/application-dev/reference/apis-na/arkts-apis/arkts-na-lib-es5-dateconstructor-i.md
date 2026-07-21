@@ -2,7 +2,6 @@
 
 <!--Device-unnamed-interface DateConstructor--><!--Device-unnamed-interface DateConstructor-End-->
 
-<a id="utc"></a>
 ## UTC
 
 ```TypeScript
@@ -31,7 +30,6 @@ Returns the number of milliseconds between midnight, January 1, 1970 Universal C
 | --- | --- |
 | number |  |
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -46,7 +44,6 @@ new(): Date
 | --- | --- |
 | Date |  |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -67,7 +64,6 @@ new(value: number | string): Date
 | --- | --- |
 | Date |  |
 
-<a id="constructor-2"></a>
 ## constructor
 
 ```TypeScript
@@ -96,7 +92,6 @@ Creates a new Date.
 | --- | --- |
 | Date |  |
 
-<a id="constructor-3"></a>
 ## constructor
 
 ```TypeScript
@@ -111,7 +106,6 @@ Creates a new Date.
 | --- | --- |
 | string |  |
 
-<a id="now"></a>
 ## now
 
 ```TypeScript
@@ -128,7 +122,6 @@ Returns the number of milliseconds elapsed since midnight, January 1, 1970 Unive
 | --- | --- |
 | number |  |
 
-<a id="parse"></a>
 ## parse
 
 ```TypeScript

@@ -8,7 +8,6 @@ Used to mix colors.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="createhdrcolor"></a>
 ## createHDRColor
 
 ```TypeScript
@@ -43,7 +42,6 @@ Create ColorMetrics class using HDR color with default exposure.Create an HDR co
 | --- | --- |
 | [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | ColorMetrics class instance with HDR color. |
 
-<a id="createhdrcolorwithlinearexposure"></a>
 ## createHDRColorWithLinearExposure
 
 ```TypeScript
@@ -57,9 +55,7 @@ Create ColorMetrics class using HDR color with linear exposure.Create an HDR col
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,
-    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,
-    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
+<!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,7 +78,6 @@ Create ColorMetrics class using HDR color with linear exposure.Create an HDR col
 | --- | --- |
 | [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | ColorMetrics class instance with HDR color. |
 
-<a id="createhdrcolorwithlogexposure"></a>
 ## createHDRColorWithLogExposure
 
 ```TypeScript
@@ -96,9 +91,7 @@ Create ColorMetrics class using HDR color with linear exposure.Create an HDR col
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
-    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
-    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
+<!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -121,7 +114,6 @@ Create ColorMetrics class using HDR color with linear exposure.Create an HDR col
 | --- | --- |
 | [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | ColorMetrics class instance with HDR color. |
 
-<a id="getbluevalue"></a>
 ## getBlueValue
 
 ```TypeScript
@@ -146,7 +138,6 @@ Get blue value.Returns blue channel value as a floating-point number.For SDR col
 | --- | --- |
 | number | The blue value.Valid range:For SDR colors: [0, 1].Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
 
-<a id="getcolorspace"></a>
 ## getColorSpace
 
 ```TypeScript
@@ -171,7 +162,6 @@ Get color space of the ColorMetrics.Returns the color space used when creating t
 | --- | --- |
 | [ColorSpace](arkts-arkui-window-colorspace-e.md) | The color space of the ColorMetrics.Possible value: ColorSpace.SRGB, ColorSpace.DISPLAY_P3, ColorSpace.BT2020. |
 
-<a id="getgreenvalue"></a>
 ## getGreenValue
 
 ```TypeScript
@@ -196,7 +186,6 @@ Get green value.Returns green channel value as a floating-point number.For SDR c
 | --- | --- |
 | number | The green value.Valid range:For SDR colors: [0, 1].Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
 
-<a id="getredvalue"></a>
 ## getRedValue
 
 ```TypeScript
@@ -221,7 +210,6 @@ Get red value.Returns red channel value as a floating-point number.For SDR color
 | --- | --- |
 | number | The red value.Valid range:For SDR colors: [0, 1].Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
 
-<a id="ishdr"></a>
 ## isHDR
 
 ```TypeScript

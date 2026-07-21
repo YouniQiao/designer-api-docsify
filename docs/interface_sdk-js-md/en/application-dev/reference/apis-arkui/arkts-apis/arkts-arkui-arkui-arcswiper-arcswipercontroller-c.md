@@ -14,7 +14,6 @@ Implements the controller of the **ArcSwiper** component. You can bind this obje
 import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -31,7 +30,6 @@ A constructor used to create an **ArcSwiperController** instance.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
-<a id="finishanimation"></a>
 ## finishAnimation
 
 ```TypeScript
@@ -54,14 +52,13 @@ Stops an animation.
 | --- | --- | --- | --- |
 | handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.<br>If no value is provided,no callback is performed. |
 
-<a id="shownext"></a>
 ## showNext
 
 ```TypeScript
 showNext()
 ```
 
-Turns to the next page. Page turning occurs with the animation, whose duration is specified by [duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration-1).
+Turns to the next page. Page turning occurs with the animation, whose duration is specified by [duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration).
 
 **Since:** 18
 
@@ -71,14 +68,13 @@ Turns to the next page. Page turning occurs with the animation, whose duration i
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
-<a id="showprevious"></a>
 ## showPrevious
 
 ```TypeScript
 showPrevious()
 ```
 
-Turns to the previous page. Page turning occurs with the animation, whose duration is specified by [duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration-1).
+Turns to the previous page. Page turning occurs with the animation, whose duration is specified by [duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration).
 
 **Since:** 18
 

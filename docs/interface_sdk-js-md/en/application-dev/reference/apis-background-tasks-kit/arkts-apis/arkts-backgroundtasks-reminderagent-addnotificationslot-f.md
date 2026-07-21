@@ -6,7 +6,6 @@
 import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="addnotificationslot"></a>
 ## addNotificationSlot
 
 ```TypeScript
@@ -19,7 +18,7 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md#addnotificationslot-1)
+**Substitutes:** [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md#addnotificationslot)
 
 <!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
 
@@ -50,7 +49,6 @@ reminderAgent.addNotificationSlot(mySlot, (err: BusinessError, data: void) => {
 ```
 
 
-<a id="addnotificationslot-1"></a>
 ## addNotificationSlot
 
 ```TypeScript
@@ -63,7 +61,7 @@ Adds a notification slot. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md#addnotificationslot-1)
+**Substitutes:** [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md#addnotificationslot)
 
 <!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot): Promise<void>--><!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot): Promise<void>-End-->
 

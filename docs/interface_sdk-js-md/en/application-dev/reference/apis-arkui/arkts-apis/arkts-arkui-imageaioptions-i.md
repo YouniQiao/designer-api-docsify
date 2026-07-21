@@ -1,7 +1,6 @@
 # ImageAIOptions
 
 Provides the AI image analysis options.
-
 > **NOTE**  
 >  
 > The **types** parameter of this API has a higher priority than that of  
@@ -10,7 +9,7 @@ Provides the AI image analysis options.
 >  
 > This API depends on device capabilities and must be used together with the  
 > [enableAnalyzer](ImageAttribute#enableAnalyzer) API of the corresponding component (for example, the  
-> [Image](./image) component).
+> [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) component).
 
 **Since:** 12
 

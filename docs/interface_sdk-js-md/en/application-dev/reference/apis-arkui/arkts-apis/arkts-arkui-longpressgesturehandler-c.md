@@ -10,7 +10,6 @@ Defines a long press gesture handler object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -35,7 +34,6 @@ Constructor used to create a long press gesture handler instance.
 | --- | --- | --- | --- |
 | options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No | Parameters of the long press gesture handler. |
 
-<a id="onaction"></a>
 ## onAction
 
 ```TypeScript
@@ -66,7 +64,6 @@ Sets the callback for successful long press gesture recognition.
 | --- | --- |
 | [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Long press gesture handler object. |
 
-<a id="onactioncancel"></a>
 ## onActionCancel
 
 ```TypeScript
@@ -97,14 +94,13 @@ Sets the callback for long press gesture cancellation. This callback is triggere
 | --- | --- |
 | [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Long press gesture handler object. |
 
-<a id="onactioncancel-1"></a>
 ## onActionCancel
 
 ```TypeScript
 onActionCancel(event: Callback<GestureEvent>): LongPressGestureHandler
 ```
 
-Sets the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](arkts-arkui-longpressgesturehandler-c.md#onactioncancel-1), this API returns gesture event information.
+Sets the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](arkts-arkui-longpressgesturehandler-c.md#onactioncancel), this API returns gesture event information.
 
 **Since:** 18
 
@@ -128,7 +124,6 @@ Sets the callback for long press gesture cancellation. This callback is triggere
 | --- | --- |
 | [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Long press gesture handler object. |
 
-<a id="onactionend"></a>
 ## onActionEnd
 
 ```TypeScript

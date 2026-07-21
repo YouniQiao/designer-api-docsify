@@ -6,7 +6,6 @@
 import { image } from '@kit.ImageKit';
 ```
 
-<a id="createpixelmapusingallocator"></a>
 ## createPixelMapUsingAllocator
 
 ```TypeScript
@@ -18,9 +17,7 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 **Since:** 20
 
-<!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,
-    allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,
-    allocatorType?: AllocatorType): Promise<PixelMap>-End-->
+<!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): Promise<PixelMap>-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

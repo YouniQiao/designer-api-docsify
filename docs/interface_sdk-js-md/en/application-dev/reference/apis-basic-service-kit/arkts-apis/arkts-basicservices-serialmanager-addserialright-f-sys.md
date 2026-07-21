@@ -6,7 +6,6 @@
 import { serialManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="addserialright"></a>
 ## addSerialRight
 
 ```TypeScript
@@ -30,7 +29,7 @@ Adds the permission to an application for accessing the serial port device.seria
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tokenId | number | Yes | ID of the token that requires the access permission. |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist-1). |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 
 **Error codes:**
 

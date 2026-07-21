@@ -6,7 +6,6 @@
 import { ble } from '@kit.ConnectivityKit';
 ```
 
-<a id="createblescanner"></a>
 ## createBleScanner
 
 ```TypeScript

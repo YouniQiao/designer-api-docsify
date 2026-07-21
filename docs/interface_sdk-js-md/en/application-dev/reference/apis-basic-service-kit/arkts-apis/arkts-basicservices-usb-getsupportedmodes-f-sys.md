@@ -6,7 +6,6 @@
 import { usb } from '@kit.BasicServicesKit';
 ```
 
-<a id="getsupportedmodes"></a>
 ## getSupportedModes
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getsupportedmodes-1)
+**Substitutes:** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getsupportedmodes)
 
 <!--Device-usb-function getSupportedModes(portId: number): PortModeType--><!--Device-usb-function getSupportedModes(portId: number): PortModeType-End-->
 

@@ -1,6 +1,5 @@
 # construct
 
-<a id="construct"></a>
 ## construct
 
 ```TypeScript
@@ -13,15 +12,7 @@ function construct<A extends readonly any[], R>(
 
 Constructs the target with the elements of specified array as the arguments and the specified constructor as the `new.target` value.
 
-<!--Device-Reflect-function construct<A extends readonly any[], R>(
-        target: new (...args: A) => R,
-        argumentsList: Readonly<A>,
-        newTarget?: new (...args: any) => any,
-    ): R--><!--Device-Reflect-function construct<A extends readonly any[], R>(
-        target: new (...args: A) => R,
-        argumentsList: Readonly<A>,
-        newTarget?: new (...args: any) => any,
-    ): R-End-->
+<!--Device-Reflect-function construct<A extends readonly any[], R>(        target: new (...args: A) => R,        argumentsList: Readonly<A>,        newTarget?: new (...args: any) => any,    ): R--><!--Device-Reflect-function construct<A extends readonly any[], R>(        target: new (...args: A) => R,        argumentsList: Readonly<A>,        newTarget?: new (...args: any) => any,    ): R-End-->
 
 **Parameters:**
 
@@ -38,7 +29,6 @@ Constructs the target with the elements of specified array as the arguments and 
 | R |  |
 
 
-<a id="construct-1"></a>
 ## construct
 
 ```TypeScript

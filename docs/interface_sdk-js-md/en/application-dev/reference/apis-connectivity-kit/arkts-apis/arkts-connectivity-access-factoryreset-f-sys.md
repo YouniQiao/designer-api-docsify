@@ -6,7 +6,6 @@
 import { access } from '@kit.ConnectivityKit';
 ```
 
-<a id="factoryreset"></a>
 ## factoryReset
 
 ```TypeScript
@@ -59,7 +58,6 @@ try {
 ```
 
 
-<a id="factoryreset-1"></a>
 ## factoryReset
 
 ```TypeScript

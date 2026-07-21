@@ -6,7 +6,6 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
-<a id="getnetworkcapability"></a>
 ## getNetworkCapability
 
 ```TypeScript
@@ -20,9 +19,7 @@ Get the network capability state according to the specified capability type.
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
-<!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,
-    callback: AsyncCallback<NetworkCapabilityState>): void--><!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,
-    callback: AsyncCallback<NetworkCapabilityState>): void-End-->
+<!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,    callback: AsyncCallback<NetworkCapabilityState>): void--><!--Device-radio-function getNetworkCapability(slotId: int, type: NetworkCapabilityType,    callback: AsyncCallback<NetworkCapabilityState>): void-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
 
@@ -66,7 +63,6 @@ radio.getNetworkCapability(slotId, type, (err: BusinessError, data: radio.Networ
 ```
 
 
-<a id="getnetworkcapability-1"></a>
 ## getNetworkCapability
 
 ```TypeScript

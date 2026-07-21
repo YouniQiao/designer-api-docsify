@@ -6,7 +6,6 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="uninstall"></a>
 ## uninstall
 
 ```TypeScript
@@ -14,12 +13,11 @@ function uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?
 ```
 
 Uninstalls an application of the current or specified user. The **isKeepData** parameter specifies whether to retain the bundle data. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > Error code **401** will be returned if this API is called to uninstall an application that is either a non-  
 > removable pre-installed application or one configured as non-uninstallable via the  
-> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync-1)  
+> [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync)  
 > API.
 
 **Since:** 12

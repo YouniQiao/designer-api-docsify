@@ -6,7 +6,7 @@ The hint is obtained when an [AudioSessionStateChangedEvent](arkts-audio-audio-a
 
 The hint specifies the action (such as audio pause or volume adjustment) to take on the audio session based on the focus strategy.
 
-For details, see [Audio Session Management](docroot://media/audio/audio-session-management.md).
+For details, see [Audio Session Management](../../../media/audio/audio-session-management.md).
 
 **Since:** 20
 
@@ -78,7 +78,7 @@ AUDIO_SESSION_STATE_CHANGE_HINT_DUCK = 4
 
 A hint is displayed, indicating that audio ducking starts and the audio is played at a lower volume.
 
-If [enableMuteSuggestionWhenMixWithOthers](arkts-audio-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers-1)is enabled, you can choose to mute the audio.
+If [enableMuteSuggestionWhenMixWithOthers](arkts-audio-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers)is enabled, you can choose to mute the audio.
 
 **Since:** 20
 
@@ -94,7 +94,7 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK = 5
 
 A hint is displayed, indicating that audio ducking ends and the audio is played at the normal volume.
 
-If [enableMuteSuggestionWhenMixWithOthers](arkts-audio-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers-1)is enabled, you can unmute the audio.
+If [enableMuteSuggestionWhenMixWithOthers](arkts-audio-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers)is enabled, you can unmute the audio.
 
 **Since:** 20
 

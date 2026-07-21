@@ -6,7 +6,6 @@
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-<a id="rmdir"></a>
 ## rmdir
 
 ```TypeScript
@@ -14,7 +13,6 @@ declare function rmdir(path: string): Promise<void>
 ```
 
 Removes a directory and all its subdirectories and files. This API uses a promise to return the result.
-
 > **NOTE**  
 >  
 > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.
@@ -57,7 +55,6 @@ Removes a directory and all its subdirectories and files. This API uses a promis
 | 13900042 | Unknown error |
 
 
-<a id="rmdir-1"></a>
 ## rmdir
 
 ```TypeScript
@@ -65,7 +62,6 @@ declare function rmdir(path: string, callback: AsyncCallback<void>): void
 ```
 
 Removes a directory and all its subdirectories and files. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > This API can be used to remove a single file. However, you are advised to use **unlink()** instead.

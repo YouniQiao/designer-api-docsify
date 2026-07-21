@@ -6,20 +6,19 @@
 import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
-<a id="publishreminder"></a>
 ## publishReminder
 
 ```TypeScript
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<number>): void
 ```
 
-Publishes a reminder through the reminder agent. This API uses an asynchronous callback to return the result. It can be called only when notification is enabled for the application through [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification-1)
+Publishes a reminder through the reminder agent. This API uses an asynchronous callback to return the result. It can be called only when notification is enabled for the application through [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder-1)
+**Substitutes:** [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder)
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -52,20 +51,19 @@ reminderAgent.publishReminder(timer, (err: BusinessError, reminderId: number) =>
 ```
 
 
-<a id="publishreminder-1"></a>
 ## publishReminder
 
 ```TypeScript
 function publishReminder(reminderReq: ReminderRequest): Promise<number>
 ```
 
-Publishes a reminder through the reminder agent. This API uses a promise to return the result. It can be called only when notification is enabled for the application through [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification-1)
+Publishes a reminder through the reminder agent. This API uses a promise to return the result. It can be called only when notification is enabled for the application through [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder-1)
+**Substitutes:** [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder)
 
 **Required permissions:** ohos.permission.PUBLISH_AGENT_REMINDER
 

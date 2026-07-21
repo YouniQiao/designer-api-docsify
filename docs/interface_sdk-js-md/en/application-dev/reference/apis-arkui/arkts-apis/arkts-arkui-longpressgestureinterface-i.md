@@ -1,7 +1,6 @@
 # LongPressGestureInterface
 
 **LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.
-
 > **NOTE**  
 >  
 > Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing  
@@ -15,7 +14,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -50,7 +48,6 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -87,7 +84,6 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onaction"></a>
 ## onAction
 
 ```TypeScript
@@ -116,7 +112,6 @@ Registers the callback for successful long press gesture recognition.
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="onactioncancel"></a>
 ## onActionCancel
 
 ```TypeScript
@@ -145,7 +140,6 @@ Registers the callback for long press gesture cancellation. This callback is tri
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@crossplatform |
 
-<a id="onactioncancel-1"></a>
 ## onActionCancel
 
 ```TypeScript
@@ -176,7 +170,6 @@ Registers the callback for long press gesture cancellation. This callback is tri
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@atomicservice |
 
-<a id="onactionend"></a>
 ## onActionEnd
 
 ```TypeScript

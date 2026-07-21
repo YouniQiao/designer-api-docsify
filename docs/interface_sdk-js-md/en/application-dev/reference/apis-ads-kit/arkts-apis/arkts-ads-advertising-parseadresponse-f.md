@@ -6,7 +6,6 @@
 import { advertising } from '@kit.AdsKit';
 ```
 
-<a id="parseadresponse"></a>
 ## parseAdResponse
 
 ```TypeScript
@@ -18,9 +17,7 @@ Parses and processes the body of an ad response(this API is only open to some pr
 
 **Since:** 12
 
-<!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, 
-    context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, 
-    context: common.UIAbilityContext): void-End-->
+<!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,     context: common.UIAbilityContext): void-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
 

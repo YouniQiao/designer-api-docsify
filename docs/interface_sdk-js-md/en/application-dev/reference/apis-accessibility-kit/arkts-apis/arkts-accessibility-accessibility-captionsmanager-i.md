@@ -1,6 +1,6 @@
 # CaptionsManager
 
-Implements configuration management for captions. Before calling any API of **CaptionsManager**, you must use the [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager-1) API to obtain a **CaptionsManager** instance.
+Implements configuration management for captions. Before calling any API of **CaptionsManager**, you must use the [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager) API to obtain a **CaptionsManager** instance.
 
 **Since:** 8
 
@@ -14,7 +14,6 @@ Implements configuration management for captions. Before calling any API of **Ca
 import { accessibility } from '@kit.AccessibilityKit';
 ```
 
-<a id="off"></a>
 ## off('enableChange')
 
 ```TypeScript
@@ -75,7 +74,6 @@ struct Index {
 
 ```
 
-<a id="off-1"></a>
 ## off('styleChange')
 
 ```TypeScript
@@ -136,7 +134,6 @@ struct Index {
 
 ```
 
-<a id="on"></a>
 ## on('enableChange')
 
 ```TypeScript
@@ -144,7 +141,6 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 ```
 
 Subscribes to the state changes of captions configuration. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.  
@@ -201,7 +197,6 @@ struct Index {
 
 ```
 
-<a id="on-1"></a>
 ## on('styleChange')
 
 ```TypeScript
@@ -209,7 +204,6 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 ```
 
 Subscribes to captions style changes. This API uses an asynchronous callback to return the result.
-
 > **NOTE**  
 >  
 > - The callback parameter for registering a listener must use a named function instead of an anonymous function.  

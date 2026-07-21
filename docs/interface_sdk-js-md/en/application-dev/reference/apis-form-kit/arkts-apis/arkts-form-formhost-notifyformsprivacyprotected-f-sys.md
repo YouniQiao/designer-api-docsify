@@ -6,7 +6,6 @@
 import { formHost } from '@kit.FormKit';
 ```
 
-<a id="notifyformsprivacyprotected"></a>
 ## notifyFormsPrivacyProtected
 
 ```TypeScript
@@ -23,15 +22,7 @@ Notifies that the privacy protection status of the specified widgets changes. Th
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
-<!--Device-formHost-function notifyFormsPrivacyProtected(
-    formIds: Array<string>,
-    isProtected: boolean,
-    callback: AsyncCallback<void>
-  ): void--><!--Device-formHost-function notifyFormsPrivacyProtected(
-    formIds: Array<string>,
-    isProtected: boolean,
-    callback: AsyncCallback<void>
-  ): void-End-->
+<!--Device-formHost-function notifyFormsPrivacyProtected(    formIds: Array<string>,    isProtected: boolean,    callback: AsyncCallback<void>  ): void--><!--Device-formHost-function notifyFormsPrivacyProtected(    formIds: Array<string>,    isProtected: boolean,    callback: AsyncCallback<void>  ): void-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -57,7 +48,6 @@ Notifies that the privacy protection status of the specified widgets changes. Th
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="notifyformsprivacyprotected-1"></a>
 ## notifyFormsPrivacyProtected
 
 ```TypeScript

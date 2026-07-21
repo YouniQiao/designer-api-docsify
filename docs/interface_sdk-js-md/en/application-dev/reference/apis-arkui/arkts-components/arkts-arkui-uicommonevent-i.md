@@ -8,14 +8,13 @@ Implements a common event callback. Passing **undefined** as the input parameter
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="setonappear"></a>
 ## setOnAppear
 
 ```TypeScript
 setOnAppear(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onappear-1) event.
+Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onappear) event.
 
 **Since:** 12
 
@@ -33,14 +32,13 @@ Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onappear-1) e
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes | Callback invoked when the component appears. |
 
-<a id="setonblur"></a>
 ## setOnBlur
 
 ```TypeScript
 setOnBlur(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur-1) event.
+Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur) event.
 
 **Since:** 12
 
@@ -58,14 +56,13 @@ Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur-1) event
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes | Callback for the blur event. |
 
-<a id="setonclick"></a>
 ## setOnClick
 
 ```TypeScript
 setOnClick(callback: Callback<ClickEvent> | undefined): void
 ```
 
-Set the callback for the [click event](arkts-arkui-commonmethod-c.md#onclick-1).
+Set the callback for the [click event](arkts-arkui-commonmethod-c.md#onclick).
 
 **Since:** 12
 
@@ -83,14 +80,13 @@ Set the callback for the [click event](arkts-arkui-commonmethod-c.md#onclick-1).
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt; \| undefined | Yes | Callback for the click event. |
 
-<a id="setondisappear"></a>
 ## setOnDisappear
 
 ```TypeScript
 setOnDisappear(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear-1) event.
+Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear) event.
 
 **Since:** 12
 
@@ -108,14 +104,13 @@ Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#ondisappea
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes | Callback invoked when the component disappears. |
 
-<a id="setonfocus"></a>
 ## setOnFocus
 
 ```TypeScript
 setOnFocus(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onfocus-1) event.
+Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onfocus) event.
 
 **Since:** 12
 
@@ -133,14 +128,13 @@ Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onfocus-1) eve
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes | Callback for the focus event. |
 
-<a id="setonhover"></a>
 ## setOnHover
 
 ```TypeScript
 setOnHover(callback: HoverCallback | undefined): void
 ```
 
-Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onhover-1) event.
+Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onhover) event.
 
 **Since:** 12
 
@@ -158,7 +152,6 @@ Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onhover-1) eve
 | --- | --- | --- | --- |
 | callback | [HoverCallback](arkts-arkui-hovercallback-t.md) \| undefined | Yes | Callback for the hover event. |
 
-<a id="setonkeyevent"></a>
 ## setOnKeyEvent
 
 ```TypeScript
@@ -183,14 +176,13 @@ Sets the callback for the [key event](../../apis-ability-kit/arkts-apis/arkts-ap
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyEvent&gt; \| undefined | Yes | Callback for the key event. |
 
-<a id="setonmouse"></a>
 ## setOnMouse
 
 ```TypeScript
 setOnMouse(callback: Callback<MouseEvent> | undefined): void
 ```
 
-Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse-1) event.
+Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse) event.
 
 **Since:** 12
 
@@ -208,14 +200,13 @@ Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse-1) eve
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MouseEvent&gt; \| undefined | Yes | Callback for the mouse event. |
 
-<a id="setonsizechange"></a>
 ## setOnSizeChange
 
 ```TypeScript
 setOnSizeChange(callback: SizeChangeCallback | undefined): void
 ```
 
-Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizechange-1) event, which is triggered when the component's size changes.
+Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizechange) event, which is triggered when the component's size changes.
 
 **Since:** 12
 
@@ -233,14 +224,13 @@ Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizecha
 | --- | --- | --- | --- |
 | callback | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) \| undefined | Yes | Callback invoked when the component's size changes. |
 
-<a id="setontouch"></a>
 ## setOnTouch
 
 ```TypeScript
 setOnTouch(callback: Callback<TouchEvent> | undefined): void
 ```
 
-Sets the callback for the [touch event](arkts-arkui-commonmethod-c.md#ontouch-1).
+Sets the callback for the [touch event](arkts-arkui-commonmethod-c.md#ontouch).
 
 **Since:** 12
 
@@ -258,14 +248,13 @@ Sets the callback for the [touch event](arkts-arkui-commonmethod-c.md#ontouch-1)
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt; \| undefined | Yes | Callback for the touch event. |
 
-<a id="setonvisibleareaapproximatechange"></a>
 ## setOnVisibleAreaApproximateChange
 
 ```TypeScript
 setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): void
 ```
 
-Sets the callback for the [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange-1)visible area change event.
+Sets the callback for the [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)visible area change event.
 
 **Since:** 12
 

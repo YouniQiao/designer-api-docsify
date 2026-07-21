@@ -6,7 +6,6 @@
 import { mechanicManager } from '@kit.MechanicKit';
 ```
 
-<a id="setcameratrackinglayout"></a>
 ## setCameraTrackingLayout
 
 ```TypeScript

@@ -1,6 +1,5 @@
 # lstat
 
-<a id="lstat"></a>
 ## lstat
 
 ```TypeScript
@@ -13,7 +12,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:lstat](arkts-corefile-file-fs-lstat-f.md#lstat-1)
+**Substitutes:** [fs:lstat](arkts-corefile-fileio-lstat-f.md#lstat)
 
 <!--Device-unnamed-declare function lstat(path: string): Promise<Stat>--><!--Device-unnamed-declare function lstat(path: string): Promise<Stat>-End-->
 
@@ -32,7 +31,6 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | Promise&lt;Stat&gt; | Promise that returns the symbolic link information obtained. For details, see **stat**. |
 
 
-<a id="lstat-1"></a>
 ## lstat
 
 ```TypeScript
@@ -45,7 +43,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Deprecated since:** 9
 
-**Substitutes:** [fs:lstat](arkts-corefile-file-fs-lstat-f.md#lstat-1)
+**Substitutes:** [fs:lstat](arkts-corefile-fileio-lstat-f.md#lstat)
 
 <!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void-End-->
 

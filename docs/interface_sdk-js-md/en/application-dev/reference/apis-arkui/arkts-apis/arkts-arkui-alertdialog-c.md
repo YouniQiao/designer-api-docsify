@@ -10,7 +10,6 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="show"></a>
 ## show
 
 ```TypeScript
@@ -18,11 +17,10 @@ static show(value: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | A
 ```
 
 Shows an alert dialog box.
-
 > **NOTE**  
 >  
 > Since API version 10, you can use the  
-> [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showalertdialog-1) API in  
+> [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showalertdialog) API in  
 > [UIContext](arkts-arkui-uicontext.md), which ensures that the alert dialog box is shown in the intended UI  
 > instance.
 

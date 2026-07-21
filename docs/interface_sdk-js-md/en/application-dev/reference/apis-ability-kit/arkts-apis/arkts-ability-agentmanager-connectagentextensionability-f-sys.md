@@ -6,7 +6,6 @@
 import { agentManager } from '@kit.AbilityKit';
 ```
 
-<a id="connectagentextensionability"></a>
 ## connectAgentExtensionAbility
 
 ```TypeScript
@@ -22,9 +21,7 @@ Connects to an AgentExtensionAbility.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-agentManager-function connectAgentExtensionAbility(want: Want, agentId: string,
-    callback: AgentExtensionConnectCallback): Promise<AgentProxy>--><!--Device-agentManager-function connectAgentExtensionAbility(want: Want, agentId: string,
-    callback: AgentExtensionConnectCallback): Promise<AgentProxy>-End-->
+<!--Device-agentManager-function connectAgentExtensionAbility(want: Want, agentId: string,    callback: AgentExtensionConnectCallback): Promise<AgentProxy>--><!--Device-agentManager-function connectAgentExtensionAbility(want: Want, agentId: string,    callback: AgentExtensionConnectCallback): Promise<AgentProxy>-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 

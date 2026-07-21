@@ -16,7 +16,6 @@ A class object that functions as a thumbnail proxy.
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="getthumbnail"></a>
 ## getThumbnail
 
 ```TypeScript
@@ -58,7 +57,6 @@ function getThumbnail(proxyObj: camera.DeferredPhotoProxy): void {
 
 ```
 
-<a id="release"></a>
 ## release
 
 ```TypeScript

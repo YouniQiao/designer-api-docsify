@@ -85,7 +85,7 @@ import { appManager } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) | Describes the filter for application lifecycle change events. It can be used as a parameter of [on](appManager.on(type: 'applicationState', observer: ApplicationStateObserver, filter: AppStateFilter)) to filter application lifecycle change events you want to listen for. |
-| [KeepAliveBundleInfo](arkts-ability-appmanager-keepalivebundleinfo-i-sys.md) | Describes the keep-alive application information, which can be obtained by calling [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles-1) or [getKeepAliveAppServiceExtensions](arkts-ability-appmanager-getkeepaliveappserviceextensions-f-sys.md#getkeepaliveappserviceextensions-1). |
+| [KeepAliveBundleInfo](arkts-ability-appmanager-keepalivebundleinfo-i-sys.md) | Describes the keep-alive application information, which can be obtained by calling [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles) or [getKeepAliveAppServiceExtensions](arkts-ability-appmanager-getkeepaliveappserviceextensions-f-sys.md#getkeepaliveappserviceextensions). |
 <!--DelEnd-->
 
 ### Enums

@@ -1,6 +1,5 @@
 # getMissionInfos (System API)
 
-<a id="getmissioninfos"></a>
 ## getMissionInfos
 
 ```TypeScript
@@ -48,7 +47,6 @@ missionManager.getMissionInfos('', 10, (error, missions) => {
 ```
 
 
-<a id="getmissioninfos-1"></a>
 ## getMissionInfos
 
 ```TypeScript

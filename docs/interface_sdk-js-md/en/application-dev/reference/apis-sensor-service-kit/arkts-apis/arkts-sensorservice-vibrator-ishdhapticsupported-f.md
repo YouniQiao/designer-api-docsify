@@ -6,7 +6,6 @@
 import { vibrator } from '@kit.SensorServiceKit';
 ```
 
-<a id="ishdhapticsupported"></a>
 ## isHdHapticSupported
 
 ```TypeScript

@@ -14,7 +14,6 @@ Represents the base class providing overridable methods for [PixelMap](../../api
 import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
-<a id="getpixelmap"></a>
 ## getPixelMap
 
 ```TypeScript
@@ -49,7 +48,6 @@ Obtains this **PixelMap** instance.
 
 For details, see [LayeredDrawableDescriptor](#layereddrawabledescriptor).
 
-<a id="invalidate"></a>
 ## invalidate
 
 ```TypeScript
@@ -68,14 +66,13 @@ Redraws **DrawableDescriptor**. Currently, this API is supported for the [Pictur
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="isreleased"></a>
 ## isReleased
 
 ```TypeScript
 isReleased(): boolean
 ```
 
-Checks whether **DrawableDescriptor** is released. If **true** is returned, the object has been released. In this case, calling APIs such as [getPixelMap](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#getpixelmap-1),[getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground-1),[getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground-1), [getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask-1),[loadSync](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#loadsync-1), and [load](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#load-1) will throw error code 111002. If **false** is returned, the object has not been released and can be used normally.
+Checks whether **DrawableDescriptor** is released. If **true** is returned, the object has been released. In this case, calling APIs such as [getPixelMap](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#getpixelmap),[getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground),[getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground), [getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask),[loadSync](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#loadsync), and [load](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#load) will throw error code 111002. If **false** is returned, the object has not been released and can be used normally.
 
 **Since:** 26.0.0
 
@@ -93,7 +90,6 @@ Checks whether **DrawableDescriptor** is released. If **true** is returned, the 
 | --- | --- |
 | boolean | Whether **DrawableDescriptor** is released. The value **true** indicates that the object is released, and **false** indicates that the object is not released. |
 
-<a id="load"></a>
 ## load
 
 ```TypeScript
@@ -129,7 +125,6 @@ Asynchronously loads the image resource and returns the loading result. This API
 
 For details, see [DrawableDescriptorLoadedResult](#drawabledescriptorloadedresult21).
 
-<a id="loadsync"></a>
 ## loadSync
 
 ```TypeScript
@@ -165,14 +160,13 @@ Synchronously loads the image resource and returns the loading result.
 
 For details, see [DrawableDescriptorLoadedResult](#drawabledescriptorloadedresult21).
 
-<a id="release"></a>
 ## release
 
 ```TypeScript
 release(): void
 ```
 
-Releases the resource held by **DrawableDescriptor**. After the **release** API is called, the object becomes unavailable. In this case, if you call APIs such as [getPixelMap](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#getpixelmap-1),[getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground-1),[getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground-1), [getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask-1),[loadSync](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#loadsync-1), and [load](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#load-1) again, error code 111002will be thrown. No crash occurs when the **release** API is called repeatedly.
+Releases the resource held by **DrawableDescriptor**. After the **release** API is called, the object becomes unavailable. In this case, if you call APIs such as [getPixelMap](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#getpixelmap),[getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground),[getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground), [getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask),[loadSync](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#loadsync), and [load](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#load) again, error code 111002will be thrown. No crash occurs when the **release** API is called repeatedly.
 
 **Since:** 26.0.0
 

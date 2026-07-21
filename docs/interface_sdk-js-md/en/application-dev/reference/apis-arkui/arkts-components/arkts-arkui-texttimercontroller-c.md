@@ -14,7 +14,6 @@ textTimerController: TextTimerController = new TextTimerController()
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -33,7 +32,6 @@ A constructor used to create a **TextTimerController** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="pause"></a>
 ## pause
 
 ```TypeScript
@@ -52,7 +50,6 @@ Pauses the timer.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="reset"></a>
 ## reset
 
 ```TypeScript
@@ -71,7 +68,6 @@ Resets the timer.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="start"></a>
 ## start
 
 ```TypeScript

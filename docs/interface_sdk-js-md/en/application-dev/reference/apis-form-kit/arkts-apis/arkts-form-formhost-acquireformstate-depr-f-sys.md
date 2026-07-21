@@ -1,6 +1,5 @@
 # acquireFormState (System API)
 
-<a id="acquireformstate"></a>
 ## acquireFormState
 
 ```TypeScript
@@ -13,7 +12,7 @@ Obtains the widget state. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md#acquireformstate-1)
+**Substitutes:** [acquireFormState](arkts-form-formhost-acquireformstate-depr-f-sys.md#acquireformstate)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -31,7 +30,6 @@ Obtains the widget state. This API uses an asynchronous callback to return the r
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;formInfo.FormStateInfo&gt; | Yes | Callback used to return the result. If the widget state is obtained, **error** is undefined and **data** is the widget state obtained; otherwise, **error** is an error object. |
 
 
-<a id="acquireformstate-1"></a>
 ## acquireFormState
 
 ```TypeScript
@@ -44,7 +42,7 @@ Obtains the widget state. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md#acquireformstate-1)
+**Substitutes:** [acquireFormState](arkts-form-formhost-acquireformstate-depr-f-sys.md#acquireformstate)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

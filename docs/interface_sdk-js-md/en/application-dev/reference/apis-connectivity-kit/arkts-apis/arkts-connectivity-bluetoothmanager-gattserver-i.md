@@ -18,7 +18,6 @@ Manages GATT server. Before calling an Gatt server method, you must use {@link c
 import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
-<a id="addservice"></a>
 ## addService
 
 ```TypeScript
@@ -97,7 +96,6 @@ try {
 
 ```
 
-<a id="close"></a>
 ## close
 
 ```TypeScript
@@ -143,7 +141,6 @@ try {
 
 ```
 
-<a id="notifycharacteristicchanged"></a>
 ## notifyCharacteristicChanged
 
 ```TypeScript
@@ -213,7 +210,6 @@ try {
 
 ```
 
-<a id="off"></a>
 ## off('characteristicRead')
 
 ```TypeScript
@@ -264,7 +260,6 @@ gattServer.off("characteristicRead");
 
 ```
 
-<a id="off-1"></a>
 ## off('characteristicWrite')
 
 ```TypeScript
@@ -315,7 +310,6 @@ gattServer.off("characteristicWrite");
 
 ```
 
-<a id="off-2"></a>
 ## off('descriptorRead')
 
 ```TypeScript
@@ -366,7 +360,6 @@ gattServer.off("descriptorRead");
 
 ```
 
-<a id="off-3"></a>
 ## off('descriptorWrite')
 
 ```TypeScript
@@ -417,7 +410,6 @@ gattServer.off("descriptorWrite");
 
 ```
 
-<a id="off-4"></a>
 ## off('connectStateChange')
 
 ```TypeScript
@@ -468,7 +460,6 @@ gattServer.off("connectStateChange");
 
 ```
 
-<a id="on"></a>
 ## on('characteristicRead')
 
 ```TypeScript
@@ -533,7 +524,6 @@ gattServer.on("characteristicRead", ReadCharacteristicReq);
 
 ```
 
-<a id="on-1"></a>
 ## on('characteristicWrite')
 
 ```TypeScript
@@ -601,7 +591,6 @@ gattServer.on("characteristicWrite", WriteCharacteristicReq);
 
 ```
 
-<a id="on-2"></a>
 ## on('descriptorRead')
 
 ```TypeScript
@@ -666,7 +655,6 @@ gattServer.on("descriptorRead", ReadDescriptorReq);
 
 ```
 
-<a id="on-3"></a>
 ## on('descriptorWrite')
 
 ```TypeScript
@@ -734,7 +722,6 @@ gattServer.on("descriptorWrite", WriteDescriptorReq);
 
 ```
 
-<a id="on-4"></a>
 ## on('connectStateChange')
 
 ```TypeScript
@@ -789,7 +776,6 @@ gattServer.on("connectStateChange", Connected);
 
 ```
 
-<a id="removeservice"></a>
 ## removeService
 
 ```TypeScript
@@ -843,7 +829,6 @@ try {
 
 ```
 
-<a id="sendresponse"></a>
 ## sendResponse
 
 ```TypeScript
@@ -908,7 +893,6 @@ try {
 
 ```
 
-<a id="startadvertising"></a>
 ## startAdvertising
 
 ```TypeScript
@@ -999,7 +983,6 @@ try {
 
 ```
 
-<a id="stopadvertising"></a>
 ## stopAdvertising
 
 ```TypeScript

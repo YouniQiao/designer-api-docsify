@@ -6,7 +6,6 @@
 import { process } from '@kit.ArkTS';
 ```
 
-<a id="getuidforname"></a>
 ## getUidForName
 
 ```TypeScript
@@ -19,7 +18,7 @@ Obtains the UID of a user from the user database of the system based on the spec
 
 **Deprecated since:** 9
 
-**Substitutes:** [getUidForName](arkts-arkts-process-processmanager-c.md#getuidforname-1)
+**Substitutes:** [getUidForName](arkts-arkts-process-processmanager-c.md#getuidforname)
 
 <!--Device-process-function getUidForName(v: string): number--><!--Device-process-function getUidForName(v: string): number-End-->
 

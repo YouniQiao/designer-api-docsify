@@ -6,7 +6,6 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
-<a id="deletevlanip"></a>
 ## deleteVlanIp
 
 ```TypeScript

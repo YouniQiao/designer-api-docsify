@@ -6,7 +6,6 @@
 import { serialManager } from '@kit.BasicServicesKit';
 ```
 
-<a id="open"></a>
 ## open
 
 ```TypeScript
@@ -25,7 +24,7 @@ Opens a serial port device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist-1). |
+| portId | number | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 
 **Error codes:**
 

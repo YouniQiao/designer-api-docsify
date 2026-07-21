@@ -1,6 +1,5 @@
 # isExtensible
 
-<a id="isextensible"></a>
 ## isExtensible
 
 ```TypeScript

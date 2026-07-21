@@ -6,7 +6,6 @@
 import { intelligence } from '@kit.ArkData';
 ```
 
-<a id="getsupportedcloudmodel"></a>
 ## getSupportedCloudModel
 
 ```TypeScript

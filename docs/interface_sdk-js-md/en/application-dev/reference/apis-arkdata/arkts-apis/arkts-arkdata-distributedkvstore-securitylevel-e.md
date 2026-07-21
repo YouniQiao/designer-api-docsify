@@ -1,7 +1,6 @@
 # SecurityLevel
 
 Enumerates the KV store security levels.
-
 > **NOTE**  
 >  
 > For the scenarios involving a single device, you can upgrade the security level of a KV store by modifying the  

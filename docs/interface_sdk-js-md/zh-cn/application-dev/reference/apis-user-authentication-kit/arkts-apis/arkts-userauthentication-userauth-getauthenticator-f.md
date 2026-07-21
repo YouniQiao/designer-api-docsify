@@ -6,7 +6,6 @@
 import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
-<a id="getauthenticator"></a>
 ## getAuthenticator
 
 ```TypeScript
@@ -19,7 +18,7 @@ function getAuthenticator(): Authenticator
 
 **废弃版本：** 8
 
-**替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance-1)
+**替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance)
 
 <!--Device-userAuth-function getAuthenticator(): Authenticator--><!--Device-userAuth-function getAuthenticator(): Authenticator-End-->
 

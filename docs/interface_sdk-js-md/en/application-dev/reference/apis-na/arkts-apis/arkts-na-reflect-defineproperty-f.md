@@ -1,6 +1,5 @@
 # defineProperty
 
-<a id="defineproperty"></a>
 ## defineProperty
 
 ```TypeScript

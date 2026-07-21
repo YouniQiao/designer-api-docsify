@@ -10,7 +10,6 @@ Implements a swipe gesture recognizer. Inherits from [GestureRecognizer](arkts-a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="getdirection"></a>
 ## getDirection
 
 ```TypeScript
@@ -35,7 +34,6 @@ Obtains the direction for recognizing swipe gestures.
 | --- | --- |
 | [SwipeDirection](arkts-arkui-swipedirection-e.md) | Direction for recognizing swipe gestures. |
 
-<a id="getvelocitythreshold"></a>
 ## getVelocityThreshold
 
 ```TypeScript

@@ -6,7 +6,6 @@
 import { mdns } from '@kit.NetworkKit';
 ```
 
-<a id="creatediscoveryservice"></a>
 ## createDiscoveryService
 
 ```TypeScript

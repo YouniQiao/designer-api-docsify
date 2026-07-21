@@ -8,7 +8,6 @@ Encompassed message information as parameters to {@link onConsole} method.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="constructor"></a>
 ## constructor
 
 ```TypeScript
@@ -36,7 +35,6 @@ Constructor.
 | lineNumber | number | Yes | The line number of the console message. |
 | messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | Yes | The console log level. |
 
-<a id="constructor-1"></a>
 ## constructor
 
 ```TypeScript
@@ -53,7 +51,6 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
-<a id="getlinenumber"></a>
 ## getLineNumber
 
 ```TypeScript
@@ -76,7 +73,6 @@ Gets the line number of a console message.
 | --- | --- |
 | number | Return the line number of a console message. |
 
-<a id="getmessage"></a>
 ## getMessage
 
 ```TypeScript
@@ -99,7 +95,6 @@ Gets the message of a console message.
 | --- | --- |
 | string | Return the message of a console message. |
 
-<a id="getmessagelevel"></a>
 ## getMessageLevel
 
 ```TypeScript
@@ -122,7 +117,6 @@ Gets the message level of a console message.
 | --- | --- |
 | [MessageLevel](arkts-arkweb-messagelevel-e.md) | Return the message level of a console message, which can be {@link MessageLevel}. |
 
-<a id="getsource"></a>
 ## getSource
 
 ```TypeScript
@@ -143,7 +137,6 @@ Gets the source of a console message.
 | --- | --- |
 | [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) | Return the source of a console message. |
 
-<a id="getsourceid"></a>
 ## getSourceId
 
 ```TypeScript
