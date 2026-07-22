@@ -27,8 +27,8 @@ Starts a synchronous trace with the trace output level specified. For details, s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | Trace output level. |
-| name | string | Yes | Name of the trace to start.<br>The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
-| customArgs | string | No | Key-value pair. The format is key=value. Multiple key-value pairs are separated by commas (,). The default value is an empty string.<br>The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
+| name | string | Yes | Name of the trace to start.The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
+| customArgs | string | No | Key-value pair. The format is key=value. Multiple key-value pairs are separated by commas (,). The default value is an empty string.The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name** and **customArgs** be less than or equal to 420 bytes. |
 
 **Example**
 

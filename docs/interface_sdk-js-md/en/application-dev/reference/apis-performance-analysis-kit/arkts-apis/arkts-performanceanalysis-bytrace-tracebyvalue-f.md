@@ -6,7 +6,7 @@
 function traceByValue(name: string, count: number): void
 ```
 
-Records a trace for generating a count, such as clock pulse and the number of layers.
+Defines a numeric variable that indicates the number of timeslice trace tasks.
 
 **Since:** 7
 
@@ -22,8 +22,8 @@ Records a trace for generating a count, such as clock pulse and the number of la
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Indicates the name used to identify the count. |
-| count | number | Yes | Indicates the number of the count. |
+| name | string | Yes | Name of the numeric variable. |
+| count | number | Yes | Value of the numeric variable. |
 
 **Example**
 

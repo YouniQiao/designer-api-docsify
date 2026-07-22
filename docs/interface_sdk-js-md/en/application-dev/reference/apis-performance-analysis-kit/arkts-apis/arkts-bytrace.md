@@ -1,12 +1,10 @@
 # @ohos.bytrace
 
-Provides interfaces to trace a task for performance measure, the logs can be capture by the bytrace cmdline available on the device.
-
-<p>This interfaces trace the start, end, and value changes of key processes that last for at least 3 ms.
-
-<p>Example:To trace a name verification that is expected to complete within 5 ms:<pre>{@code bytrace.startTrace("checkName", 111, 5);//your process bytrace.finishTrace("checkName", 111);}</pre>To trace the number of layers, which is 3:<pre>{@code bytrace.traceByValue("curLayer", 3);}</pre>
-
-<p>Each {@code startTrace} matches one {@code finishTrace}, and they must have the same name and taskId.
+The **bytrace** module implements performance tracing for processes.
+> **NOTE**  
+>  
+> - The APIs provided by this module are deprecated since API version 8. You are advised to use the new APIs  
+> [@ohos.hiTraceMeter](arkts-hitracemeter.md) instead.
 
 **Since:** 7
 
@@ -24,7 +22,7 @@ Provides interfaces to trace a task for performance measure, the logs can be cap
 
 | Name | Description |
 | --- | --- |
-| [finishTrace](arkts-performanceanalysis-bytrace-finishtrace-f.md#finishtrace) | Records a trace and marks it as the end of a task.  This method is invoked at the end of a transaction to indicate that a task has ended, whose name is specified by {@code name}. This method must be invoked after the the startTrace. |
-| [startTrace](arkts-performanceanalysis-bytrace-starttrace-f.md#starttrace) | Records a trace marking it as the start of a task, can with the expected completion time between startTrace and finishTrace.This method is invoked at the start of a transaction to indicate that a task has started, whose name is specified by {@code name}, and the taskId is used to distinguish the tasks. It must be followed by{@link #finishTrace}, the name and taskId need to be the same. |
-| [traceByValue](arkts-performanceanalysis-bytrace-tracebyvalue-f.md#tracebyvalue) | Records a trace for generating a count, such as clock pulse and the number of layers. |
+| [finishTrace](arkts-performanceanalysis-bytrace-finishtrace-f.md#finishtrace) | Marks the end of a timeslice trace task. |
+| [startTrace](arkts-performanceanalysis-bytrace-starttrace-f.md#starttrace) | Marks the start of a timeslice trace task. |
+| [traceByValue](arkts-performanceanalysis-bytrace-tracebyvalue-f.md#tracebyvalue) | Defines a numeric variable that indicates the number of timeslice trace tasks. |
 

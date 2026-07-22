@@ -28,7 +28,7 @@ If the current thread's TLS already contains a valid HiTrace ID, this function d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Traced service name.<br>It is recommended that the length of this parameter be less than or equal to 63 bytes. The excess part will be truncated. |
+| name | string | Yes | Traced service name.It is recommended that the length of this parameter be less than or equal to 63 bytes. The excess part will be truncated. |
 | flags | number | No | Trace flag combination. For details, see [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md). The default value is **0**. |
 
 **Return value:**

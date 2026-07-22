@@ -32,8 +32,8 @@ Since API version 19, you are advised to use [startAsyncTrace()](arkts-performan
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the trace to start.<br>The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420bytes. |
-| taskId | number | Yes | Task ID.<br>It is used to distinguish multiple tasks with the same name. Ensure that the task IDs of concurrently executed tasks with the same name are unique. |
+| name | string | Yes | Name of the trace to start.The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
+| taskId | number | Yes | Task ID.It is used to distinguish multiple tasks with the same name. Ensure that the task IDs of concurrently executed tasks with the same name are unique. |
 
 **Example**
 

@@ -26,13 +26,13 @@ Unregisters the callback function used to notify whether the trace capture is en
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the registered callback function, that is, the return value when [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registertracelistener) is successfully called<br>The value range is all integers. |
+| index | number | Yes | Index of the registered callback function, that is, the return value when [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registertracelistener) is successfully called. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Callback deregistration status.<br>**0**: Deregistration succeeded.<br>**-1**: The callback corresponding to the index is not registered.<br>**-2**: Invalid index. The index value is not within the range of 0 to 9. |
+| number | Callback deregistration status.**0**: Deregistration succeeded.**-1**: The callback corresponding to the index is not registered.**-2**: Invalid index. The index value is not within the range of 0 to 9. |
 
 **Example**
 

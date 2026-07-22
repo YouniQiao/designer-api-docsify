@@ -32,10 +32,10 @@ If the trace tasks with the same name are not performed at the same time, the sa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | Trace output level. |
-| name | string | Yes | Name of the trace to start.<br>The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name**, **customCategory**, and **customArgs** be less than or equal to 420 bytes. |
-| taskId | number | Yes | Task ID.<br>It is used to distinguish multiple tasks with the same name. Ensure that the task IDs of concurrently executed tasks with the same name are unique. |
-| customCategory | string | Yes | Custom category name, which is used to collect asynchronous trace data of the same type.<br>The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name**, **customCategory**, and **customArgs** be less than or equal to420 bytes. |
-| customArgs | string | No | Custom key-value pair. The format is key=value. Multiple key-value pairs are separated by commas (,). The default value is an empty string.<br>The maximum length of a trace record is 512bytes. The excess part will be truncated. It is recommended that the total length of **name**,**customCategory**, and **customArgs** be less than or equal to 420 bytes. |
+| name | string | Yes | Name of the trace to start.The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name**, **customCategory**, and **customArgs** be less than or equal to 420 bytes. |
+| taskId | number | Yes | Task ID.It is used to distinguish multiple tasks with the same name. Ensure that the task IDs of concurrently executed tasks with the same name are unique. |
+| customCategory | string | Yes | Custom category name, which is used to collect asynchronous trace data of the same type.The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name**, **customCategory**, and **customArgs** be less than or equal to 420 bytes. |
+| customArgs | string | No | Custom key-value pair. The format is key=value. Multiple key-value pairs are separated by commas (,). The default value is an empty string.The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name**, **customCategory**, and **customArgs** be less than or equal to 420 bytes. |
 
 **Example**
 

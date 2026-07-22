@@ -45,8 +45,8 @@ After a notification is published, it will be displayed as a notification widget
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | No permission.<br>**Applicable version:** 11 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations.<br>**Applicable version:** 11 and later |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low.<br>**Applicable version:** 11 and later |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings.<br>**Applicable version:** 12 and later |
-| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings.<br>**Applicable version:** 12 and later |
+| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable.<br>**Applicable version:** 11 and later |
 
 **Example**
@@ -123,8 +123,8 @@ After a notification is published, it will be displayed as a notification card i
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | No permission.<br>**Applicable version:** 11 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations.<br>**Applicable version:** 11 and later |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low.<br>**Applicable version:** 11 and later |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings.<br>**Applicable version:** 12 and later |
-| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings.<br>**Applicable version:** 12 and later |
+| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable.<br>**Applicable version:** 11 and later |
 
 **Example**

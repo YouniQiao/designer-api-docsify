@@ -6,7 +6,13 @@
 function startTrace(name: string, taskId: number, expectedTime?: number): void
 ```
 
-Records a trace marking it as the start of a task, can with the expected completion time between startTrace and finishTrace.This method is invoked at the start of a transaction to indicate that a task has started, whose name is specified by {@code name}, and the taskId is used to distinguish the tasks. It must be followed by{@link #finishTrace}, the name and taskId need to be the same.
+Marks the start of a timeslice trace task.
+> **NOTE**  
+>  
+> If multiple trace tasks with the same name need to be performed at the same time or a trace task needs to be  
+> performed multiple times concurrently, different task IDs must be specified in **startTrace**. If the trace tasks  
+> with the same name are not performed at the same time, the same task ID can be used. For details, see the  
+> bytrace.finishTrace example.
 
 **Since:** 7
 
@@ -22,9 +28,9 @@ Records a trace marking it as the start of a task, can with the expected complet
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Indicates the task name. |
-| taskId | number | Yes | The unique id used to distinguish the tasks and match with the id in follow finishTrace. |
-| expectedTime | number | No | Indicates the expected time required for completing the task, in milliseconds. |
+| name | string | Yes | Name of a timeslice trace task. |
+| taskId | number | Yes | ID of a timeslice trace task. |
+| expectedTime | number | No | Expected duration of the trace, in ms. This parameter is optional and is left blank by default. |
 
 **Example**
 

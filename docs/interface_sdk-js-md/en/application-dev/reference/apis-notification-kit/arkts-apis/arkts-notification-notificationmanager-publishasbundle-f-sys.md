@@ -58,11 +58,11 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
+| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
 | [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 and later |
 | [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 and later |
 | [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service is off.<br>**Applicable version:** 23 and later |
-| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
 
 **Example**
@@ -151,11 +151,11 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
+| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
 | [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 and later |
 | [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 and later |
 | [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service is off.<br>**Applicable version:** 23 and later |
-| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
 
 **Example**
@@ -239,11 +239,11 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
 | [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) | The notification version for this update is too low. |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-is-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
+| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) | The application is not allowed to send notifications due to permission settings. |
 | [1600025](../errorcode-notification.md#1600025-geofencing-disabled) | Geofencing disabled.<br>**Applicable version:** 23 and later |
 | [1600026](../errorcode-notification.md#1600026-location-disabled) | The location switch is off.<br>**Applicable version:** 23 and later |
 | [1600027](../errorcode-notification.md#1600027-awareness-suggestions-switch-of-the-location-service-disabled) | The "Awareness & suggestions" switch of the location-based service is off.<br>**Applicable version:** 23 and later |
-| 1600029 | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
+| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) | The system failed to find the ExtensionAbility instance for the custom Live View widget template.<br>**Applicable version:** 26.0.0 and later |
 | [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) | Network unreachable. |
 
 **Example**

@@ -39,7 +39,7 @@
 - [Network Kit (52)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-http-type-h.md)
 - [Notification Kit (345)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-notification-kit/arkts-apis/arkts-application-notificationsubscriberextensionability.md)
 - Others
-- [Performance Analysis Kit (208)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-faultlogger.md)
+- [Performance Analysis Kit (240)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-bytrace.md)
 - [Telephony Kit (82)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-sim.md)
 - [Test Kit (54)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-test-kit/arkts-apis/arkts-uitest.md)
 - [Universal Keystore Kit (129)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-universal-keystore-kit/arkts-apis/arkts-security-cryptoextensionability.md)

@@ -15,7 +15,7 @@
 - [Basic Service Kit (916)](interface_sdk-js-md/en/application-dev/reference/apis-basic-service-kit/arkts-apis/arkts-wallpaperextensionability.md)
 - [Basic Services Kit (49)](interface_sdk_c-md/en/application-dev/reference/apis-basic-services-kit/c-apis/capi-oh-pasteboard-err-code-h.md)
 - [Calendar Kit (19)](interface_sdk-js-md/en/application-dev/reference/apis-calendar-kit/arkts-apis/arkts-calendarmanager.md)
-- [Camera Kit (296)](interface_sdk-js-md/en/application-dev/reference/apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)
+- [Camera Kit (299)](interface_sdk-js-md/en/application-dev/reference/apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)
 - [Connectivity Kit (902)](interface_sdk-js-md/en/application-dev/reference/apis-connectivity-kit/arkts-apis/arkts-fusionconnectivity-partneragentextensionability.md)
 - [Contacts Kit (53)](interface_sdk-js-md/en/application-dev/reference/apis-contacts-kit/arkts-apis/arkts-contact.md)
 - [Content Embed Kit (23)](interface_sdk_c-md/en/application-dev/reference/apis-content-embed-kit/c-apis/capi-content-embed-proxy-h.md)

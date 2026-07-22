@@ -6,9 +6,11 @@
 function finishTrace(name: string, taskId: number): void
 ```
 
-Records a trace and marks it as the end of a task.
-
-This method is invoked at the end of a transaction to indicate that a task has ended, whose name is specified by {@code name}. This method must be invoked after the the startTrace.
+Marks the end of a timeslice trace task.
+> **NOTE**  
+>  
+> To stop a trace task, the values of name and task ID in **finishTrace** must be the same as those in  
+> **startTrace**.
 
 **Since:** 7
 
@@ -24,8 +26,8 @@ This method is invoked at the end of a transaction to indicate that a task has e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Indicates the task name. It must be the same with the { |
-| taskId | number | Yes | The unique id used to distinguish the tasks and must be the same with the . |
+| name | string | Yes | Name of a timeslice trace task. |
+| taskId | number | Yes | ID of a timeslice trace task. |
 
 **Example**
 

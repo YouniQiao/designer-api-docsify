@@ -28,7 +28,7 @@ Since API version 19, you are advised to use the [traceByValue<sup>19+</sup>()](
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the integer variable to trace.<br>The maximum length of a trace record is 512bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
+| name | string | Yes | Name of the integer variable to trace.The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
 | count | number | Yes | Value of an integer variable. |
 
 **Example**
@@ -64,7 +64,7 @@ Traces an integer with the trace output level specified. It is used to mark the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | Trace output level. |
-| name | string | Yes | Name of the integer variable to trace.<br>The maximum length of a trace record is 512bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
+| name | string | Yes | Name of the integer variable to trace.The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the length of this parameter be less than or equal to 420 bytes. |
 | count | number | Yes | Value of an integer variable. |
 
 **Example**
