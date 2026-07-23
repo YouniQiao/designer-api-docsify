@@ -979,7 +979,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |
@@ -1028,7 +1028,7 @@ startAbility(want: Want): Promise<void>
 | [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) | The call with the continuation and prepare continuation flag is forbidden. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled.<br>**适用版本：** 10+ |

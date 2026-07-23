@@ -62,7 +62,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 | [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
 | [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
+| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 
 ## disconnectServiceExtensionAbility

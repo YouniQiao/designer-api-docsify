@@ -52,7 +52,7 @@ function execute(param: ExecuteParam, callback: AsyncCallback<insightIntent.Exec
 | [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16000137](../errorcode-ability.md#16000137-跨设备执行意图连接失败) | Cross-device execution failed due to a connection error.<br>**适用版本：** 26.0.0+ |
 | [16000138](../errorcode-ability.md#16000138-跨设备执行意图设备断连) | Device disconnected during cross-device intent execution.<br>**适用版本：** 26.0.0+ |
@@ -144,7 +144,7 @@ function execute(param: ExecuteParam): Promise<insightIntent.ExecuteResult>
 | [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 | [16000137](../errorcode-ability.md#16000137-跨设备执行意图连接失败) | Cross-device execution failed due to a connection error.<br>**适用版本：** 26.0.0+ |
 | [16000138](../errorcode-ability.md#16000138-跨设备执行意图设备断连) | Device disconnected during cross-device intent execution.<br>**适用版本：** 26.0.0+ |

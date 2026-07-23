@@ -54,6 +54,30 @@ Left-top corner position in 3D space.
 
 **System API:** This is a system API.
 
+## positionMode
+
+```TypeScript
+positionMode?: SpatialPositionMode
+```
+
+Coordinate mode of the corner positions.
+
+**Type:** SpatialPositionMode
+
+**Default:** SpatialPositionMode.WORLD_XYZ
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SpatialPosition-positionMode?: SpatialPositionMode--><!--Device-SpatialPosition-positionMode?: SpatialPositionMode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
 ## rightBottom
 
 ```TypeScript

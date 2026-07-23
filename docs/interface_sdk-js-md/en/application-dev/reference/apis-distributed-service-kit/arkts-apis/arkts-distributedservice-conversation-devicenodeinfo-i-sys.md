@@ -42,7 +42,7 @@ Device name.
 deviceTypeId: number
 ```
 
-Device type ID, which indicates the device type. The value is an integer, for example, **0x0E** is the mobile phone ID, **0x11** is the tablet ID, **0x9C** is the TV ID, and **0x0C** is the PC ID. The specific value is subject to the system definition.The value should be an integer.
+Device type ID, which indicates the device type. The value is an integer, for example, **0x0E** is the mobile phone ID, **0x11** is the tablet ID, **0x9C** is the TV ID, and **0x0C** is the PC ID. The specific value is subject to the system definition.
 
 **Type:** number
 

@@ -750,7 +750,7 @@ restartApp(want: Want): void
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000053](../errorcode-ability.md#16000053-非顶层应用) | The ability is not on the top of the UI. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
 | [16000063](../errorcode-ability.md#16000063-重启应用指定组件无效) | The target to restart does not belong to the current application or is not a UIAbility. |
 | [16000064](../errorcode-ability.md#16000064-重启应用频繁) | Restart too frequently. Try again at least 3s later. |
 
