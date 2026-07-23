@@ -1,6 +1,6 @@
 # MultiNavPathStack
 
-当前，MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用[NavDestination](../arkts-components/arkts-arkui-navdestination.md)的[onReady](NavDestinationAttribute#onReady)等类似事件或接口来获取NavPathStack并进行栈操作，因为这可能会导致不可预知的问题。
+MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用[NavDestination](../arkts-components/arkts-arkui-navdestination.md)的[onReady](NavDestinationAttribute#onReady)等类似事件或接口来获取NavPathStack并进行栈操作，因为这可能会导致不可预知的问题。
 
 **继承/实现关系：** MultiNavPathStack extends [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
@@ -48,7 +48,7 @@ clear(animated?: boolean): void
 constructor()
 ```
 
-Creates an instance of MultiNavPathStack.
+创建MultiNavPathStack路由栈实例。
 
 **起始版本：** 14
 
@@ -66,7 +66,12 @@ Creates an instance of MultiNavPathStack.
 disableAnimation(disable: boolean): void
 ```
 
-关闭（true）或打开（false）当前MultiNavigation中所有转场动画。
+关闭（true）或打开（false）当前MultiNavigation中所有转场动画。适用于需要提升页面切换性能或实现自定义转场效果的场景。
+> **说明：**  
+>  
+> 此配置会影响以下栈操作方法的动画效果：pushPath、pushPathByName、replacePath、replacePathByName、pop、popToName、  
+> popToIndex、moveToTop、moveIndexToTop、clear。配置立即生效，在MultiNavigation生命周期内持续有效。  
+> 建议在批量栈操作前调用disableAnimation(true)关闭动画以提升性能，操作完成后调用disableAnimation(false)恢复动画。
 
 **起始版本：** 14
 
@@ -106,7 +111,7 @@ getAllPathName(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 返回栈中所有NavDestination页面的名称。 |
+| Array&lt;string&gt; | 返回栈中所有NavDestination页面的名称，数组元素按栈底到栈顶的顺序排列。 |
 
 ## getIndexByName
 
@@ -166,7 +171,7 @@ getParamByIndex(index: number): Object | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Object | **Object**: parameter information of the matching navigation destination page.<br>**undefined**: returned when an invalid index is provided. |
+| Object | **Object**: 返回对应NavDestination页面的参数信息，具体字段由pushPath或pushPathByName时传入的param决定。<br/>undefined: 传入index无效时返回undefined。 |
 
 ## getParamByName
 
@@ -254,7 +259,7 @@ moveIndexToTop(index: number, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | NavDestination页面的位置索引。<br/>取值范围：[0, +∞) |
+| index | number | 是 | NavDestination页面的位置索引。<br/>取值范围：[0, +∞)。超出范围时操作不生效。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
 
 ## moveToTop
@@ -265,12 +270,12 @@ moveToTop(name: string, animated?: boolean): number
 
 将由栈底开始第一个名为name的NavDestination页面移到栈顶。
 > **说明：**
-> 根据找到的第一个名为name的页面的不同，MultiNavigation会进行不同的处理：
-> 1)当找到的是最上层主页或者全屏页，此时不做任何处理；
-> 2)当找到的是最上层主页对应的详情页，则会将对应的详情页移到栈顶；
-> 3)当找到的是非最上层的主页，则会将主页和对应所有详情页移到栈顶，详情页相对栈关系不变；
-> 4)当找到的是非最上层的详情页，则会将主页和对应所有详情页移到栈顶，且将目标详情页移动到对应所有详情页的栈顶；
-> 5)当找到的是非最上层的全屏页，则会将全屏页移动到栈顶。
+> 根据指定的index页面的不同，MultiNavigation会进行不同的处理：
+> 1)当指定的是最上层主页或者全屏页的index，此时不做任何处理；
+> 2)当指定的是最上层主页对应的详情页的index，则会将对应的详情页移到栈顶；
+> 3)当指定的是非最上层的主页的index，则会将主页和对应所有详情页移到栈顶，详情页相对栈关系不变；
+> 4)当指定的是非最上层的详情页的index，则会将主页和对应所有详情页移到栈顶，且将目标详情页移动到对应所有详情页的栈顶；
+> 5)当指定的是非最上层的全屏页的index，则会将全屏页移动到栈顶。
 
 **起始版本：** 14
 
@@ -325,7 +330,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 返回栈顶NavDestination页面的信息。栈为空时返回undefined。 |
 
 ## pop
 
@@ -351,14 +356,14 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | Object | 否 | 页面自定义处理结果。 |
+| result | Object | 否 | 页面自定义处理结果。具体内容由开发者自定义，建议包含明确的业务标识和处理结果数据。该结果将传递给入栈时设置的onPop回调函数。省略时不传递结果数据。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Information about the navigation destination page at the top of the stack. |
+| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 返回栈顶NavDestination页面的信息。栈为空时返回undefined。 |
 
 ## popToIndex
 
@@ -366,7 +371,7 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 popToIndex(index: number, animated?: boolean): void
 ```
 
-回退路由栈到index指定的NavDestination页面。
+回退路由栈到index指定的NavDestination页面。当index无效（超出范围）时，不执行回退操作。
 
 **起始版本：** 14
 
@@ -382,7 +387,7 @@ popToIndex(index: number, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | NavDestination页面的位置索引。<br/>取值范围：[0, +∞) |
+| index | number | 是 | NavDestination页面的位置索引。<br/>取值范围：[0, +∞)。超出范围时操作不生效。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
 
 ## popToIndex
@@ -391,7 +396,7 @@ popToIndex(index: number, animated?: boolean): void
 popToIndex(index: number, result: Object, animated?: boolean): void
 ```
 
-回退路由栈到index指定的NavDestination页面，并触发onPop回调传入页面处理结果。
+回退路由栈到index指定的NavDestination页面，并触发onPop回调传入页面处理结果。当index无效（超出范围）时，不执行回退操作。
 
 **起始版本：** 14
 
@@ -407,8 +412,8 @@ popToIndex(index: number, result: Object, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | NavDestination页面的位置索引。<br/>取值范围：[0, +∞) |
-| result | Object | 是 | 页面自定义处理结果。 |
+| index | number | 是 | NavDestination页面的位置索引。<br/>取值范围：[0, +∞)。超出范围时操作不生效。 |
+| result | Object | 是 | 页面自定义处理结果。具体内容由开发者自定义，建议包含明确的业务标识和处理结果数据。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
 
 ## popToName
@@ -465,7 +470,7 @@ popToName(name: string, result: Object, animated?: boolean): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
-| result | Object | 是 | 页面自定义处理结果。 |
+| result | Object | 是 | 页面自定义处理结果。具体内容由开发者自定义，建议包含明确的业务标识和处理结果数据。该结果将传递给入栈时设置的onPop回调函数。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
 
 **返回值：**
@@ -498,7 +503,7 @@ pushPath(info: NavPathInfo, animated?: boolean, policy?: SplitPolicy): void
 | --- | --- | --- | --- |
 | info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
 
 ## pushPath
 
@@ -523,8 +528,8 @@ pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | 否 | 页面栈操作选项。仅支持其中的animated字段。 |
-| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | 否 | 页面栈操作选项。仅支持其中的animated字段，使用其他字段将被忽略。省略时使用默认动画配置。 |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
 
 ## pushPathByName
 
@@ -548,10 +553,10 @@ pushPathByName(name: string, param: Object, animated?: boolean, policy?: SplitPo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
-| param | Object | 是 | NavDestination页面详细参数。 |
+| name | string | 是 | NavDestination页面名称。需要与NavDestinationBuildFunction中注册的页面名称一致。 |
+| param | Object | 是 | NavDestination页面详细参数，用于向目标页面传递自定义数据。具体字段规格请参考NavDestination相关文档。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
 
 ## pushPathByName
 
@@ -576,11 +581,11 @@ pushPathByName(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | NavDestination页面名称。 |
-| param | Object | 是 | NavDestination页面详细参数。 |
-| onPop | base.Callback&lt;PopInfo&gt; | 否 | Callback回调，用于页面出栈时触发该回调处理返回结果。 |
+| name | string | 是 | NavDestination页面名称。需要与NavDestinationBuildFunction中注册的页面名称一致。 |
+| param | Object | 是 | NavDestination页面详细参数，用于向目标页面传递自定义数据。具体字段规格请参考NavDestination相关文档。 |
+| onPop | base.Callback&lt;PopInfo&gt; | 否 | Callback回调，用于页面出栈时触发该回调处理返回结果。省略时不触发回调处理。可通过pop方法、popToName方法、popToIndex方法的result参数传递数据给此回调。 |
 | animated | boolean | 否 | 是否支持转场动画。<br/>默认值：true<br/>true：支持转场动画。<br/>false：不支持转场动画。 |
-| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
+| policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。<br/>默认值：DETAIL_PAGE |
 
 ## removeByIndexes
 
@@ -604,7 +609,7 @@ removeByIndexes(indexes: Array<number>): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indexes | Array&lt;number&gt; | 是 | 待删除NavDestination页面的索引值数组。<br/>number类型的取值范围：[0, +∞) |
+| indexes | Array&lt;number&gt; | 是 | 待删除NavDestination页面的索引值数组。<br/>number类型的取值范围：[0, +∞)。超出范围时操作不生效。 |
 
 **返回值：**
 
@@ -740,8 +745,8 @@ setHomeWidthRange(minPercent: number, maxPercent: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| minPercent | number | 是 | 最小主页宽度百分比。<br/>取值范围：[0, 100] |
-| maxPercent | number | 是 | 最大主页宽度百分比。<br/>取值范围：[0, 100] |
+| minPercent | number | 是 | 最小主页宽度百分比。<br/>取值范围：[0, 100]，且需小于等于maxPercent。 |
+| maxPercent | number | 是 | 最大主页宽度百分比。<br/>取值范围：[0, 100]，且需大于等于minPercent。 |
 
 ## setPlaceholderPage
 
@@ -750,10 +755,12 @@ setPlaceholderPage(info: NavPathInfo): void
 ```
 
 设置占位页面。
-> **说明**
-> 占位页面为特殊页面类型，当应用设置后，在一些大屏设备上会和主页默认形成左右分栏的效果，即左边主页，右边占位页。
+> **说明：**
+> 占位页面为特殊页面类型，当应用设置后，在支持分栏显示的大屏设备上会和主页默认形成左右分栏的效果，即左边主页，右边占位页。  
+>  
 > 当应用可绘制区域小于600vp、折叠屏由展开态切换为折叠态及平板横屏转竖屏等场景时，会自动将占位页出栈，只显示主页；  
-> > 而当应用可绘制区域大于等于600vp、折叠屏由折叠态切换为展开态及平板竖屏转横屏等场景时，会自动补充占位页，形成分栏。
+>  
+> 而当应用可绘制区域大于等于600vp、折叠屏由折叠态切换为展开态及平板竖屏转横屏等场景时，会自动补充占位页，形成分栏。
 
 **起始版本：** 14
 
@@ -769,7 +776,7 @@ setPlaceholderPage(info: NavPathInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | 占位页页面信息。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | 占位页页面信息，用于设置占位页。占位页在大屏设备上会与主页形成左右分栏效果。 |
 
 ## size
 
@@ -801,7 +808,7 @@ size(): number
 switchFullScreenState(isFullScreen?: boolean): boolean
 ```
 
-切换当前顶栈详情页面的显示模式。
+切换当前栈顶详情页面的显示模式。适用于视频播放、图片浏览等需要全屏展示的场景。
 
 **起始版本：** 14
 
@@ -817,7 +824,7 @@ switchFullScreenState(isFullScreen?: boolean): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isFullScreen | boolean | 否 | 是否切换为全屏。默认值为false。true表示全屏模式，false表示分栏模式。 |
+| isFullScreen | boolean | 否 | 是否切换为全屏模式。<br/>默认值：false<br/>true：全屏模式；false：分栏模式。 |
 
 **返回值：**
 

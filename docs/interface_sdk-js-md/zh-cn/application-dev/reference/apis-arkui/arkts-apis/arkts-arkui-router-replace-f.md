@@ -12,7 +12,7 @@ import { router } from '@kit.ArkUI';
 function replace(options: RouterOptions): void
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。
+用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../ui/arkts-navigation-architecture.md)。
 > **说明：**  
 >  
 > 从API version 8开始支持，从API version 9开始废弃，建议使用  

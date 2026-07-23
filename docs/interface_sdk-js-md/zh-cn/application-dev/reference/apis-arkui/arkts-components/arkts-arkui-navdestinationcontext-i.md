@@ -40,6 +40,8 @@ mode?: NavDestinationMode
 
 当前NavDestination的类型。默认值：NavDestinationMode.Standard。
 
+从API version 22开始，该接口支持在原子化服务中使用。
+
 **类型：** NavDestinationMode
 
 **起始版本：** 22

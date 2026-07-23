@@ -1,6 +1,6 @@
 # TabBarIconStyle
 
-Labelͼ����ʽ����
+Label图标样式对象。
 
 **起始版本：** 12
 
@@ -14,13 +14,13 @@ Labelͼ����ʽ����
 selectedColor?: ResourceColor
 ```
 
-����Labelͼ��ѡ��ʱ����ɫ��
+设置Label图标选中时的颜色。
 
-Ĭ��ֵ��#FF007DFF
+默认值：#FF007DFF
 
-**˵����**
+**说明：**
 
-����svgͼԴ��Ч�����ú���滻svgͼƬ�������ɫ��
+仅对svg图源生效，设置后会替换svg图片的填充颜色。
 
 **类型：** ResourceColor
 
@@ -42,13 +42,13 @@ selectedColor?: ResourceColor
 unselectedColor?: ResourceColor
 ```
 
-����Labelͼ��δѡ��ʱ����ɫ��
+设置Label图标未选中时的颜色。
 
-Ĭ��ֵ��#33182431
+默认值：#33182431
 
-**˵����**
+**说明：**
 
-����svgͼԴ��Ч�����ú���滻svgͼƬ�������ɫ��
+仅对svg图源生效，设置后会替换svg图片的填充颜色。
 
 **类型：** ResourceColor
 

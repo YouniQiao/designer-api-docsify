@@ -3,8 +3,15 @@
 系统转场动画类型。
 > **说明：**
 > 设置系统转场动画，支持分别设置系统标题栏动画和内容动画。
-> 系统默认转场动画中只有STANDARD页面的push和pop动画有单独的标题栏动画，存在如下限制：
-> 设置NONE或者TITLE时没有系统转场动画，设置CONTENT和DEFAULT时默认系统转场动画。
+> 系统默认转场动画中只有STANDARD页面的push和pop动画有单独的标题栏动画，存在如下限制：  
+>  
+> - 设置NavigationSystemTransitionType为TITLE时，系统转场只有标题栏动画。  
+>  
+> - 设置NavigationSystemTransitionType为CONTENT时，系统转场只有内容区动画。  
+>  
+> - 设置NavigationSystemTransitionType为NONE时，没有系统转场动画。  
+>  
+> - 设置NavigationSystemTransitionType为DEFAULT时，使用默认系统转场动画。
 
 **起始版本：** 14
 

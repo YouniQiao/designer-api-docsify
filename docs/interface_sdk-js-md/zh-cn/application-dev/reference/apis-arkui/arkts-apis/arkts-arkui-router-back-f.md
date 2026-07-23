@@ -12,7 +12,7 @@ import { router } from '@kit.ArkUI';
 function back(options?: RouterOptions): void
 ```
 
-返回上一页面或指定的页面，会删除当前页面与指定页面之间的所有页面。
+返回上一页面或指定的页面，会删除当前页面与指定页面之间的所有页面。如果此前调用了[showAlertBeforeBackPage](#routershowalertbeforebackpagedeprecated)开启了返回询问对话框，则在执行返回操作时会先弹出确认对话框，用户确认后才执行返回；用户取消则不执行返回。
 > **说明：**  
 >  
 > - 从API version 8开始支持，从API version 18开始废弃，建议使用  
@@ -41,7 +41,7 @@ function back(options?: RouterOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | 否 | 返回页面描述信息，其中参数url指路由跳转时会返回到指定url的界面，如果页面栈上没有url页面，则不响应该情况。如果url未设置，则返回上一页，页面不会重新构建，页面栈里面的page不会回收，出栈后会被回收。back是返回接口，url设置为特殊值"/"不生效。如果是用命名路由的方式跳转，传入的url需是命名路由的名称。 |
+| options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | 否 | 返回页面描述信息，其中url指返回目标页面的路由地址，如果页面栈中不存在指定url的页面，则不响应当前返回请求。如果url未设置，则返回上一页，页面不会重新构建，页面栈里面的page不会回收，出栈后会被回收。back是返回接口，url设置为特殊值"/"不生效。如果是用命名路由的方式跳转，传入的url需是命名路由的名称。 |
 
 **示例：**
 
@@ -57,7 +57,7 @@ this.getUIContext().getRouter().back({ url: 'pages/detail' });
 function back(index: number, params?: Object): void
 ```
 
-返回指定的页面，会删除当前页面与指定页面之间的所有页面。
+返回指定的页面，会删除当前页面与指定页面之间的所有页面。如果此前调用了[showAlertBeforeBackPage](#routershowalertbeforebackpagedeprecated)开启了返回询问对话框，则在执行返回操作时会先弹出确认对话框，用户确认后才执行返回；用户取消则不执行返回。
 > **说明：**  
 >  
 > - 从API version 12开始支持，从API version 18开始废弃，建议使用  
@@ -88,8 +88,8 @@ function back(index: number, params?: Object): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 跳转目标页面的索引值。 从栈底到栈顶，index从1开始递增。 |
-| params | Object | 否 | 页面返回时携带的参数。 |
+| index | number | 是 | 返回目标页面的索引值，取值范围[1, 页面栈大小]，页面栈最大数量为32。从栈底到栈顶，index从1开始递增。索引不存在或超出页面栈有效范围时不响应。 |
+| params | Object | 否 | 页面返回时携带的参数。<br/>**说明：** <br/>params参数只能传递可序列化的参数，不能传递方法和系统接口返回的对象（例如，媒体接口定义和返回的PixelMap对象）。建议开发者提取系统接口返回的对象中需要被传递的基础类型属性，自行构造object类型对象进行传递。 |
 
 **示例：**
 

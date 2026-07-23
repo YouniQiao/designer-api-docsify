@@ -1,6 +1,6 @@
 # DrawableTabBarIndicator
 
-ʹ��ͼƬ��Դ��Ϊ�»��ߵĶ���
+使用图片资源作为下划线的对象。
 
 **起始版本：** 22
 
@@ -14,13 +14,13 @@
 borderRadius?: Length
 ```
 
-�»��ߵ�Բ�ǰ뾶����֧�ְٷֱ����ã���
+下划线的圆角半径（不支持百分比设置）。
 
-Ĭ��ֵ��0.0
+默认值：0.0
 
-��λ��vp
+单位：vp
 
-ȡֵ��Χ��[0, +��)
+取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** Length
 
@@ -42,7 +42,7 @@ borderRadius?: Length
 drawable?: DrawableDescriptor
 ```
 
-�»��ߵ�ͼԴ��֧��[DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)��[PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)��[LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)��[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)���͡���������ЧͼԴʱ����ʾĬ�ϵ�ʵ�����»��ߡ�
+下划线的图源。支持[DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、[PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、[LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示默认的实线型下划线。
 
 **类型：** DrawableDescriptor
 
@@ -62,13 +62,13 @@ drawable?: DrawableDescriptor
 height?: Length
 ```
 
-�»��ߵĸ߶ȣ���֧�ְٷֱ����ã���
+下划线的高度（不支持百分比设置）。
 
-Ĭ��ֵ��2.0
+默认值：2.0
 
-��λ��vp
+单位：vp
 
-ȡֵ��Χ��[0, +��)
+取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** Length
 
@@ -90,13 +90,13 @@ height?: Length
 marginTop?: Length
 ```
 
-�»��������ֵļ�ࣨ��֧�ְٷֱ����ã���
+下划线与文字的间距（不支持百分比设置）。
 
-Ĭ��ֵ��8.0
+默认值：8.0
 
-��λ��vp
+单位：vp
 
-ȡֵ��Χ��[0, +��)
+取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** Length
 
@@ -118,15 +118,15 @@ marginTop?: Length
 width?: Length
 ```
 
-�»��ߵĿ��ȣ���֧�ְٷֱ����ã���
+下划线的宽度（不支持百分比设置）。
 
-Ĭ��ֵ��0.0
+默认值：0.0
 
-��λ��vp
+单位：vp
 
-ȡֵ��Χ��[0, +��)
+取值范围：[0, +∞)。异常值时取默认值。
 
-��������Ϊ0ʱ����ҳǩ�ı�������ʾ��
+宽度设置为0时，按页签文本宽度显示。
 
 **类型：** Length
 

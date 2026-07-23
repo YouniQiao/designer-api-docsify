@@ -1,19 +1,19 @@
 # TabContent
 
-����[Tabs]{@link tabs}��ʹ�ã���Ӧһ���л�ҳǩ��������ͼ��
+仅在[Tabs]{@link tabs}中使用，对应一个切换页签的内容视图。
 
-> **˵����**
+> **说明：**
 
-> - �����Ĭ��������[clip]{@link CommonMethod#clip(value: boolean)}���Ե�ֵΪtrue������Ҫ��չ���������������ʾ�����ȹر�clip���ԡ�
+> - 该组件默认设置了[clip]{@link CommonMethod#clip(value: boolean)}属性的值为true，若需要扩展内容区到组件外显示，需先关闭clip属性。
 
-## �����
+## 子组件
 
-֧�ֵ����������
-> **˵����**  
+支持单个子组件。
+> **说明：**  
 >  
-> ������ϵͳ������Զ��������֧����Ⱦ�������ͣ�[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)��  
-> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)��  
-> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)����
+> 可内置系统组件和自定义组件，支持渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、  
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)和  
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
 
 ## TabContent
 
@@ -21,7 +21,10 @@
 TabContent()
 ```
 
-����TabContentҳǩ�����ݡ�
+创建TabContent页签和内容。
+> **说明：**  
+>  
+> TabContent组件仅能作为Tabs组件的子组件使用，否则会导致组件无法正常显示。
 
 **起始版本：** 7
 

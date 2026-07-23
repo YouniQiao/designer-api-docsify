@@ -4,7 +4,7 @@
 declare type CommonModifier = import('../api/arkui/CommonModifier').CommonModifier
 ```
 
-作为Tabs组件的参数对象。
+CommonModifier类型用于设置Tabs组件参数。
 
 **起始版本：** 15
 

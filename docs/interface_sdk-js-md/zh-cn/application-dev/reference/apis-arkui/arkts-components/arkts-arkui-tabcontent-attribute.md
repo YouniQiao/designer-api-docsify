@@ -1,8 +1,8 @@
 # TabContent属性/事件
 
-��֧��[ͨ������](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)�⣬��֧���������ԣ�
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性：
 
-��֧��[ͨ���¼�](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)�⣬��֧�������¼���
+除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下事件：
 
 **继承/实现关系：** TabContentAttribute extends [CommonMethod<TabContentAttribute>](CommonMethod<TabContentAttribute>)
 
@@ -18,9 +18,9 @@
 onWillHide(event: VoidCallback)
 ```
 
-�߼��ص���TabContent��Ҫ���ص�ʱ�򴥷��ûص�����������TabContent�л���ҳ���л�������ǰ��̨�л���
-> **˵����**
-> ��API version 20��ʼ���ýӿ�֧����[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)�е��á�
+逻辑回调，TabContent将要隐藏的时候触发该回调。场景包括TabContent切换，页面切换，窗口前后台切换。
+> **说明：**
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ onWillHide(event: VoidCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | TabContent��Ҫ���صĻص������� |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | TabContent将要隐藏的回调函数。 |
 
 ## onWillShow
 
@@ -44,9 +44,9 @@ onWillHide(event: VoidCallback)
 onWillShow(event: VoidCallback)
 ```
 
-�߼��ص���TabContent��Ҫ��ʾ��ʱ�򴥷��ûص�����������TabContent�״���ʾ��TabContent�л���ҳ���л�������ǰ��̨�л���
-> **˵����**
-> ��API version 20��ʼ���ýӿ�֧����[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)�е��á�
+逻辑回调，TabContent将要显示的时候触发该回调。场景包括TabContent首次显示，TabContent切换，页面切换，窗口前后台切换。
+> **说明：**
+> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 12
 
@@ -62,7 +62,7 @@ onWillShow(event: VoidCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | TabContent��Ҫ��ʾ�Ļص������� |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | TabContent将要显示的回调函数。 |
 
 ## tabBar
 
@@ -70,11 +70,9 @@ onWillShow(event: VoidCallback)
 tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 ```
 
-����TabBar����ʾ���ݡ�
+设置TabBar上显示内容。
 
-���icon����svg��ʽͼԴ����ɾ��svgͼԴ���õĿ�������ֵ������icon��С��ʹ��svgͼԴ���õĿ�������ֵ��
-
-���õ����ݳ���tabBarҳǩʱ���в��С�
+设置的内容超出tabBar页签时进行裁切。
 
 **起始版本：** 7
 
@@ -88,7 +86,7 @@ tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | string \| Resource \| CustomBuilder \| TabBarOptions | 是 | TabBar����ʾ���ݡ�<br/>CustomBuilder��?���������ڲ����Դ��������API version 8�汾�������ã���<br>**起始版本：** 18 |
+| options | string \| Resource \| CustomBuilder \| TabBarOptions | 是 | TabBar上显示内容。<br/>CustomBuilder：?构造器，内部可以传入组件（API version 8版本以上适用）。<br>**起始版本：** 18 |
 
 ## tabBar
 
@@ -96,13 +94,17 @@ tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 ```
 
-����TabBar����ʾ���ݡ��ײ���ʽû���»���Ч����icon�쳣ʱ��ʾ��ɫͼ�顣
-> **˵����**
-> - ��ҳǩ��[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)����ʽ��ͨ��Ϊ����+�»��ߣ�����+�����ҳǩ������������ı���ʽ����������ڶ������ߵײ�ʹ�á��л�ҳǩʱĬ��֧�ֶ�����תЧ������������Ѷ  
-> ��Ӧ�õĶ������ࣨ��"��ע����Ƶ������"��������ģ��Ķ�������������  
+设置TabBar上显示内容。底部样式没有下划线效果。icon异常时显示灰色图块。
+
+如果icon采用svg格式图源，需删除svg图源内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。
+
+设置的内容超出TabBar页签时进行裁切。
+> **说明：**
+> - 子页签（[SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md)）样式：通常为文字+下划线或文字+背板的页签风格，允许设置文本样式，建议放置在顶部或者底部使用。切换页签时默认支持动画跳转效果。适用于资讯  
+> 类应用的顶部分类（如"关注、视频、数码"）、功能模块的二级导航场景。  
 >  
-> - �ײ�ҳǩ/���ҳǩ��[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)����ʽ�����»��ߺͱ���Ч����ҳǩ��ʽͨ��Ϊͼ��+���ֵ���Ϸ�ʽ���л�ҳǩʱĬ���޶�����תЧ�����ײ�ҳǩͨ������Ӧ��  
-> ������������ҳ�����֡��Ƽ��������ҳǩ�����ڿ���������������vertical(true)�������򲼾֣���ҳǩ�ڲ����ʾ��Ĭ�������ʾ��
+> - 底部页签/侧边页签（[BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md)）样式：无下划线和背板效果，页签样式通常为图标+文字的组合方式。切换页签时默认无动画跳转效果。底部页签通常用于应用  
+> 主导航（如首页、发现、推荐）。侧边页签适用于宽屏场景，可设置vertical(true)启用纵向布局，让页签在侧边显示，默认左侧显示。
 
 **起始版本：** 9
 
@@ -116,7 +118,7 @@ tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| BottomTabBarStyle | 是 | TabBar����ʾ���ݡ�<br/>SubTabBarStyle��?��ҳǩ��ʽ��<br/>BottomTabBarStyle��?�ײ�ҳǩ�Ͳ��ҳǩ��ʽ�� |
+| value | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| BottomTabBarStyle | 是 | TabBar上显示内容。<br/>SubTabBarStyle：?子页签样式。<br/>BottomTabBarStyle：?底部页签和侧边页签样式，底部样式没有下划线效果。 |
 
 ## tabBar
 
@@ -125,11 +127,11 @@ tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string |
     TabBarOptions)
 ```
 
-����TabBar����ʾ���ݡ�
+设置TabBar上显示内容。
 
-ʹ��BottomTabBarStyle��TabBarOptions������Ϊ��β�����icon��icon�쳣ʱ��ʾ��ɫͼ�顣���icon����svg��ʽͼԴ����ɾ��svgͼԴ���õĿ�������ֵ������icon��С��ʹ��svgͼԴ���õĿ�������ֵ��
+使用BottomTabBarStyle或TabBarOptions类型作为入参并设置icon，icon异常时显示灰色图块。如果icon采用svg格式图源，需删除svg图源内置的宽高属性属性。否则，icon大小将使用svg图源内置的宽高属性值。
 
-���õ����ݳ���TabBarҳǩʱ���в��С�
+设置的内容超出TabBar页签时进行裁切。
 
 **起始版本：** 18
 

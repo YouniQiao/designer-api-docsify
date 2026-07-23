@@ -12,7 +12,7 @@ import { router } from '@kit.ArkUI';
 function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。
+用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../ui/arkts-navigation-architecture.md)。
 > **说明：**  
 >  
 > - 从API version 9开始支持，除Lite Wearable外，从API version 18开始废弃，建议使用  
@@ -165,7 +165,7 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。
+用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../ui/arkts-navigation-architecture.md)。
 > **说明：**  
 >  
 > - 从API version 9开始支持，除Lite Wearable外，从API version 18开始废弃，建议使用  
@@ -195,7 +195,7 @@ function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 替换页面使用的模式。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异常响应回调。 |
 
 **错误码：**
@@ -239,7 +239,7 @@ router.replaceUrl({
 function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。
+用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../ui/arkts-navigation-architecture.md)。
 > **说明：**  
 >  
 > - 从API version 9开始支持，除Lite Wearable外，从API version 18开始废弃，建议使用  

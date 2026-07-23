@@ -43,13 +43,13 @@ function getStateByIndex(index: number): RouterState | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 表示要获取的页面索引。从栈底到栈顶，index从1开始递增。 |
+| index | number | 是 | 表示要获取的页面索引，取值范围[1, 页面栈大小]，页面栈最大数量为32。从栈底到栈顶，index从1开始递增。索引不存在时返回undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RouterState](arkts-arkui-router-routerstate-i.md) | State information about the target page; **undefined** if the specified index does not exist. |
+| [RouterState](arkts-arkui-router-routerstate-i.md) | 返回对应索引页面的状态信息，包含页面索引、名称、路径和参数。索引不存在时返回undefined。 |
 
 **示例：**
 

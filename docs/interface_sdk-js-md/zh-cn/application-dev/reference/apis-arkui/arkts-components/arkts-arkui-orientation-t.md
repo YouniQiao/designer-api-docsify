@@ -4,7 +4,7 @@
 declare type Orientation = import('../api/@ohos.window').default.Orientation
 ```
 
-Orientation实例对象。
+页面显示方向的枚举类型。
 
 **起始版本：** 19
 

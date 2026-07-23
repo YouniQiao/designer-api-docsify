@@ -1,8 +1,8 @@
 # SwiperDynamicSyncScene
 
-提供Swiper组件相关帧率的配置。
+提供Swiper组件动态帧率场景的相关配置，适用于为动画过渡和手势跟手等不同交互场景设置差异化帧率范围，以兼顾流畅度和功耗。
 > **说明**  
-> SwiperDynamicSyncScene继承自[DynamicSyncScene](arkts-arkui-uicontext.md)，对应Swiper的动态帧率场景。
+> SwiperDynamicSyncScene继承自[DynamicSyncScene](arkts-arkui-uicontext.md)，对应Swiper的动态帧率场景。使用前需先通过UIContext的requireDynamicSyncScene方法获取实例，再调用继承的方法设置对应场景的帧率范围。
 
 **继承/实现关系：** SwiperDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)
 
@@ -24,7 +24,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 readonly type: SwiperDynamicSyncSceneType
 ```
 
-Swiper的动态帧率场景。
+Swiper的动态帧率场景类型。
 
 **类型：** SwiperDynamicSyncSceneType
 

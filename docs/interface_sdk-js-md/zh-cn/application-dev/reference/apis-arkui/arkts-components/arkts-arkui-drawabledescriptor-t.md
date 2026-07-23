@@ -4,7 +4,7 @@
 declare type DrawableDescriptor = import ('../api/@ohos.arkui.drawableDescriptor').DrawableDescriptor
 ```
 
-��ΪDrawableTabBarIndicator������drawable���Ե���ζ���
+作为DrawableTabBarIndicator对象中drawable属性的入参对象。
 
 **起始版本：** 22
 

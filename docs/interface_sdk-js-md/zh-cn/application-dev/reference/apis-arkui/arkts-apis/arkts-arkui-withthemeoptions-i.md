@@ -1,6 +1,6 @@
 # WithThemeOptions
 
-设置WithTheme作用域内组件缺省样式及深浅色模式。
+设置WithTheme作用域内组件默认配色及深浅色模式。
 
 **起始版本：** 12
 
@@ -14,7 +14,7 @@
 colorMode?: ThemeColorMode
 ```
 
-用于指定WithTheme作用域内组件配色深浅色模式。
+用于指定WithTheme作用域内组件配色的深浅色模式。
 
 默认值：ThemeColorMode.SYSTEM
 
@@ -36,9 +36,9 @@ colorMode?: ThemeColorMode
 theme?: CustomTheme
 ```
 
-用于自定义WithTheme作用域内组件缺省配色。
+用于设置WithTheme作用域内组件的自定义主题配色。
 
-默认值：undefined，缺省样式跟随系统[token默认样式](../../../ui/theme_skinning.md#系统缺省token色值)。
+默认值：undefined，默认配色跟随系统[token默认样式](../../../ui/theme_skinning.md#系统缺省token色值)。
 
 **类型：** CustomTheme
 

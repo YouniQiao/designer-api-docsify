@@ -1,6 +1,6 @@
 # Tabs
 
-通过页签进行内容视图切换的容器组件，每个页签对应一个内容视图。
+通过页签进行内容视图切换的容器组件，每个页签对应一个内容视图。适用于应用底部导航栏、顶部页签切换、侧边栏导航等需要在不同内容视图间快速切换的场景。使用Tabs组件可以简化多视图导航的实现，提升用户切换效率。
 
 > **说明：**
 
@@ -41,7 +41,7 @@ Tabs(options?: TabsOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TabsOptions](arkts-arkui-tabsoptions-i.md) | 否 | Tabs组件参数。 |
+| options | [TabsOptions](arkts-arkui-tabsoptions-i.md) | 否 | Tabs组件参数。 默认值：undefined，不设置参数时使用默认配置。 |
 
 ## 汇总
 

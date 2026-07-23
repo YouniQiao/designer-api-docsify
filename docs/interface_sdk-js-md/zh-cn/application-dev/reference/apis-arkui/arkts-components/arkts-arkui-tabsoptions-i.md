@@ -1,6 +1,6 @@
 # TabsOptions
 
-Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tabs控制器和TabBar的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tabs控制器和页签栏（TabBar）的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
 **起始版本：** 15
 
@@ -14,7 +14,7 @@ Tabs组件参数，设置Tabs的页签位置，当前显示页签的索引，Tab
 barModifier?: CommonModifier
 ```
 
-设置TabBar的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+设置TabBar的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，用于通过CommonModifier统一管理TabBar的样式、布局等通用属性。当需要动态修改TabBar的通用属性或实现属性的状态管理时传入此参数，不传入时TabBar使用默认样式和布局，无额外通用属性设置。
 
 **说明：**
 
