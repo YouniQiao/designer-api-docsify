@@ -14,7 +14,7 @@ Enumerates the expansion mode of child nodes.
 NOT_EXPAND = 0
 ```
 
-The child nodes of the current FrameNode are not expanded. If the FrameNode contains [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md) child nodes, the child nodes are not expanded when the nodes in the main tree are being obtained. The child node sequence numbers are calculated based on the nodes in the main tree.
+The child nodes of the current FrameNode are not expanded. If the FrameNode contains [LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i) child nodes, the child nodes are not expanded when the nodes in the main tree are being obtained. The child node sequence numbers are calculated based on the nodes in the main tree.
 
 **Since:** 15
 
@@ -32,7 +32,7 @@ The child nodes of the current FrameNode are not expanded. If the FrameNode cont
 EXPAND = 1
 ```
 
-The child nodes of the current FrameNode are expanded. If the FrameNode contains [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md)child nodes, all child nodes are expanded when being obtained. The child node sequence numbers are calculated based on all child nodes.
+The child nodes of the current FrameNode are expanded. If the FrameNode contains [LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i) child nodes, all child nodes are expanded when being obtained. The child node sequence numbers are calculated based on all child nodes.
 
 **Since:** 15
 
@@ -50,7 +50,7 @@ The child nodes of the current FrameNode are expanded. If the FrameNode contains
 LAZY_EXPAND = 2
 ```
 
-The child nodes of the current FrameNode are expanded on demand. If the FrameNode contains [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md) child nodes, the child nodes are not expanded when the nodes in the main tree are being obtained, but are expanded when nodes not in the main tree are being obtained. The child node sequence numbers are calculated based on all child nodes.
+The child nodes of the current FrameNode are expanded on demand. If the FrameNode contains [LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i) child nodes, the child nodes are not expanded when the nodes in the main tree are being obtained, but are expanded when nodes not in the main tree are being obtained.The child node sequence numbers are calculated based on all child nodes.
 
 **Since:** 15
 
@@ -68,7 +68,7 @@ The child nodes of the current FrameNode are expanded on demand. If the FrameNod
 LAZY_NOT_EXPAND = 3
 ```
 
-Do not expand children of node.If the FrameNode contains LazyForEach child nodes, child nodes can be obtained directly when nodes in main tree.When nodes are not in main tree, only a node at corresponding position will be created,rather than expanding all child nodes.The child node sequence numbers are calculated based on all child nodes.
+The child nodes of the current FrameNode are not expanded. If the FrameNode contains [LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i) child nodes, expanded child nodes can be obtained directly. To obtain the child nodes that are not expanded, only the nodes at the corresponding positions are created, and all child nodes are not expanded. The child node sequence numbers are calculated based on all child nodes.
 
 **Since:** 26.0.0
 

@@ -14,7 +14,7 @@
 static show(options?: CalendarDialogOptions): void
 ```
 
-定义日历选择器弹窗。
+显示日历选择器弹窗，供用户选择日期。
 
 **起始版本：** 10
 
@@ -30,5 +30,5 @@ static show(options?: CalendarDialogOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | 否 | 配置日历选择器弹窗参数。参数缺省时无法弹出弹窗。 |
+| options | [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | 否 | 配置日历选择器弹窗的参数，缺省时无法弹出弹窗。 |
 

@@ -4,7 +4,7 @@
 declare type ArcSliderChangeHandler = (progress: number) => void
 ```
 
-弧形Slider的进度值发生变化时，告知应用。
+弧形Slider的进度值发生变化时触发回调。
 
 **起始版本：** 18
 

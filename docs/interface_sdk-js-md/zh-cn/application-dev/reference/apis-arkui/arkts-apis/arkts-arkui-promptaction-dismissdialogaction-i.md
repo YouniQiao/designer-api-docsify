@@ -40,7 +40,7 @@ Dialog关闭回调函数。开发者需要退出时调用，不需要退出时�
 reason: DismissReason
 ```
 
-Dialog无法关闭原因。根据开发者需求选择不同操作下，Dialog是否关闭。
+触发Dialog关闭的操作类型（如点击遮障层、按返回键等）。开发者可根据reason判断用户的具体关闭操作，决定是否调用dismiss()关闭Dialog。
 
 **类型：** DismissReason
 

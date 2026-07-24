@@ -1,6 +1,6 @@
 # TextPickerDialog
 
-A text picker dialog box is a dialog box that allows users to select text from the given range.
+Defines TextPickerDialog which uses show method to show TextPicker dialog.
 
 **起始版本：** 8
 
@@ -15,12 +15,10 @@ static show(options?: TextPickerDialogOptions)
 ```
 
 定义文本滑动选择器弹窗并弹出。
-> **说明：**
-
-showTextPickerDialog需先获取[UIContext](../arkts-apis/arkts-arkui-uicontext.md)实例后再进行调用。
+> **说明：**  
+>  
 > 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md)中的  
-> [showTextPickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showtextpickerdialog)  
-> 来明确UI的执行上下文。
+> [showTextPickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showtextpickerdialog)来明确UI的执行上下文。
 
 **起始版本：** 8
 
@@ -38,5 +36,5 @@ showTextPickerDialog需先获取[UIContext](../arkts-apis/arkts-arkui-uicontext.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | 否 | 配置文本选择器弹窗的参数。参数缺省时无法弹出弹窗。 |
+| options | [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | 否 | 配置文本选择器弹窗的参数，缺省时无法弹出弹窗。至少需要提供range参数才能正常弹出弹窗，其他参数均为可选配置。 |
 

@@ -39,7 +39,7 @@ function addOsAccountAsync(admin: Want, name: string, type: osAccount.OsAccountT
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;osAccount.OsAccountInfo&gt; | Promise used to return the added account information. |
+| Promise&lt;osAccount.OsAccountInfo&gt; | Promise对象，返回添加的账号信息。 |
 
 **错误码：**
 

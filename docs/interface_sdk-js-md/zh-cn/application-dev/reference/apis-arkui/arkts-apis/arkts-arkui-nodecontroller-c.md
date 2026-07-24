@@ -1,6 +1,9 @@
 # NodeController
 
-通常搭配{@link node_container}进行使用。用于创建控制器管理绑定的{@link node_container}组件。一个NodeController只允许与一个{@link node_container}进行绑定。最佳实践请参考[组件动态创建-组件动态添加、更新和删除](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-ui-dynamic-operations#section153921947151012)。
+NodeController用于管理自定义节点的创建、显示、更新等操作，并负责将自定义节点挂载到[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)上，适用于需要在页面中动态创建、更新、复用自定义节点的场景。
+> **说明：**  
+>  
+> - NodeController对象不支持使用JSON序列化。
 
 **起始版本：** 11
 
@@ -14,7 +17,7 @@
 aboutToAppear?(): void
 ```
 
-当NodeController绑定的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)挂载显示后触发此回调。
+当NodeController绑定的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)挂载显示后触发此回调。
 > **说明：**  
 >  
 > 回调时机参考[onAppear](../arkts-components/arkts-arkui-commonmethod-c.md#onappear)。
@@ -35,7 +38,7 @@ aboutToAppear?(): void
 aboutToDisappear?(): void
 ```
 
-当NodeController绑定的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)销毁时触发此回调。
+当NodeController绑定的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)销毁时触发此回调。
 > **说明：**  
 >  
 > 回调时机参考[onDisAppear](../arkts-components/arkts-arkui-commonmethod-c.md#ondisappear)。
@@ -56,7 +59,7 @@ aboutToDisappear?(): void
 aboutToResize?(size: Size): void
 ```
 
-当NodeController绑定的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)布局的时候触发此回调。
+当NodeController绑定的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)布局时触发此回调。
 
 **起始版本：** 11
 
@@ -72,7 +75,7 @@ aboutToResize?(size: Size): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [Size](../arkts-components/arkts-arkui-size-i.md) | 是 | 用于返回组件布局大小的宽和高，单位为vp。 |
+| size | [Size](../arkts-components/arkts-arkui-size-i.md) | 是 | 组件布局大小的宽和高，单位为vp。 |
 
 ## makeNode
 
@@ -80,16 +83,16 @@ aboutToResize?(size: Size): void
 abstract makeNode(uiContext: UIContext): FrameNode | null
 ```
 
-当实例绑定的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)创建的时候进行回调。回调方法将返回一个节点，将该节点挂载至[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)。
+当NodeController绑定的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)创建时触发此回调。回调方法将返回一个节点，该节点将被挂载至[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)。
 
-或者可以通过NodeController的rebuild()方法进行回调的触发。
+或者可以通过NodeController的rebuild()方法触发回调。
 > **说明：**  
 >  
-> [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)不支持跨实例复用。如果出现跨实例复用[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)，传入  
-> [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)的[NodeController](arkts-arkui-nodecontroller-c.md)触发  
+> [NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)不支持跨实例复用。如果出现跨实例复用  
+> [NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)，传入  
+> [NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)的[NodeController](arkts-arkui-nodecontroller-c.md)触发  
 > [makeNode](arkts-arkui-nodecontroller-c.md#makenode)回调方法时，入参中的[UIContext](arkts-arkui-uicontext.md)对象可能为undefined，此时需要开发者  
-> 判断入参中的[UIContext](arkts-arkui-uicontext.md)对象是否为undefined，防止后续使用此入参时出现  
-> [UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
+> 判断该对象是否为undefined，防止后续使用此入参时出现[UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
 
 **起始版本：** 11
 
@@ -105,13 +108,13 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 | 回调该方法的时候，绑定[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)的UI上下文。 |
+| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 | 回调该方法时，绑定[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)的UI上下文。跨实例复用[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)时，该参数可能为undefined，需要开发者自行判断。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | **FrameNode** object, which will be mounted to the placeholder node of the [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md) component. If a null object is returned, the child nodes of the corresponding [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md) component are removed. |
+| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | 一个FrameNode对象，返回的节点将被挂载至[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)的占位节点上。若返回null对象，将清空对应[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)的子节点。 |
 
 ## onAttach
 
@@ -119,7 +122,7 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 onAttach?(): void
 ```
 
-当NodeController绑定的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)挂载至主节点树时触发此回调。
+当NodeController绑定的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)挂载至主节点树时触发此回调。与[aboutToAppear](arkts-arkui-nodecontroller-c.md#abouttoappear)不同，aboutToAppear在NodeContainer挂载显示后触发，onAttach在NodeContainer挂载至主节点树时触发，两者触发时机可能不同。
 > **说明：**  
 >  
 > 回调时机参考[onAttach](../arkts-components/arkts-arkui-commonmethod-c.md#onattach)。
@@ -140,7 +143,7 @@ onAttach?(): void
 onBind?(containerId: number): void
 ```
 
-当NodeController与[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)绑定后触发此回调。
+当NodeController与[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)绑定后触发此回调。该回调后于[onWillBind](arkts-arkui-nodecontroller-c.md#onwillbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
 
 **起始版本：** 18
 
@@ -156,7 +159,7 @@ onBind?(containerId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| containerId | number | 是 | 回调该方法时，NodeController与NodeContainerId对应的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)绑定完成。 |
+| containerId | number | 是 | 回调该方法时，已完成与NodeController绑定的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)的标识。 |
 
 ## onDetach
 
@@ -164,7 +167,7 @@ onBind?(containerId: number): void
 onDetach?(): void
 ```
 
-当NodeController绑定的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)从主节点树卸载时触发此回调。
+当NodeController绑定的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)从主节点树卸载时触发此回调。与[aboutToDisappear](arkts-arkui-nodecontroller-c.md#abouttodisappear)不同，aboutToDisappear在NodeContainer销毁时触发，onDetach在NodeContainer从主节点树卸载时触发，两者触发时机可能不同。
 > **说明：**  
 >  
 > 回调时机参考[onDetach](../arkts-components/arkts-arkui-commonmethod-c.md#ondetach)。
@@ -185,7 +188,7 @@ onDetach?(): void
 onTouchEvent?(event: TouchEvent): void
 ```
 
-当NodeController绑定的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)收到Touch事件时触发此回调。
+当NodeController绑定的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)收到触摸事件时触发此回调。
 
 **起始版本：** 11
 
@@ -201,7 +204,7 @@ onTouchEvent?(event: TouchEvent): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | 是 | 触摸事件。 |
+| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | 是 | 触摸事件，包含触摸点的坐标、触摸动作类型等信息，具体结构详见TouchEvent。 |
 
 ## onUnbind
 
@@ -209,7 +212,7 @@ onTouchEvent?(event: TouchEvent): void
 onUnbind?(containerId: number): void
 ```
 
-当NodeController与[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)解绑后触发此回调。
+当NodeController与[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)解绑后触发此回调。该回调后于[onWillUnbind](arkts-arkui-nodecontroller-c.md#onwillunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
 
 **起始版本：** 18
 
@@ -225,7 +228,7 @@ onUnbind?(containerId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| containerId | number | 是 | 回调该方法时，NodeController与NodeContainerId对应的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)解绑完成。 |
+| containerId | number | 是 | 回调该方法时，已完成与NodeController解绑的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)的标识。 |
 
 ## onWillBind
 
@@ -233,7 +236,7 @@ onUnbind?(containerId: number): void
 onWillBind?(containerId: number): void
 ```
 
-当NodeController与[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)即将绑定前触发此回调。
+当NodeController与[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)即将绑定前触发此回调。该回调先于[onBind](arkts-arkui-nodecontroller-c.md#onbind)触发，两者均为可选回调，可根据需要在绑定前或绑定后执行相应逻辑。
 
 **起始版本：** 18
 
@@ -249,7 +252,7 @@ onWillBind?(containerId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| containerId | number | 是 | 回调该方法时，NodeController与NodeContainerId对应的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)即将绑定。 |
+| containerId | number | 是 | 回调该方法时，即将与NodeController绑定的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)的标识。 |
 
 ## onWillUnbind
 
@@ -257,7 +260,7 @@ onWillBind?(containerId: number): void
 onWillUnbind?(containerId: number): void
 ```
 
-当NodeController与[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)即将解绑前触发此回调。
+当NodeController与[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)即将解绑前触发此回调。该回调先于[onUnbind](arkts-arkui-nodecontroller-c.md#onunbind)触发，两者均为可选回调，可根据需要在解绑前或解绑后执行相应逻辑。
 
 **起始版本：** 18
 
@@ -273,7 +276,7 @@ onWillUnbind?(containerId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| containerId | number | 是 | 回调该方法时，NodeController与NodeContainerId对应的[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)即将解绑。 |
+| containerId | number | 是 | 回调该方法时，即将与NodeController解绑的[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)的标识。 |
 
 ## rebuild
 
@@ -281,12 +284,13 @@ onWillUnbind?(containerId: number): void
 rebuild(): void
 ```
 
-调用此接口通知[NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md)组件重新回调[makeNode](arkts-arkui-nodecontroller-c.md#makenode)方法，更改子节点。
+调用此接口通知[NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i)组件重新回调[makeNode](arkts-arkui-nodecontroller-c.md#makenode)方法，更改子节点。例如，当NodeContainer展示的内容数据发生变化、需要更新显示的子节点时，可调用此方法触发重新构建。
 > **说明：**  
-> > 由于rebuild方法为应用主动调用的方法，且该操作与UI相关。需要开发者自行保证调用该接口时UI上下文有效，即与绑定的NodeContainer保持UI上下文一致。  
+>  
+> 由于rebuild方法为应用主动调用的方法，且该操作与UI相关，需要开发者自行保证调用该接口时UI上下文有效，即与绑定的NodeContainer保持UI上下文一致。  
 >  
 > 监听回调等[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)时，可以通过[UIContext](arkts-arkui-uicontext.md)的  
-> [runScopedTask](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#runscopedtask)方法明确调用时的UI上下文。
+> [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask)方法明确调用时的UI上下文。
 
 **起始版本：** 11
 

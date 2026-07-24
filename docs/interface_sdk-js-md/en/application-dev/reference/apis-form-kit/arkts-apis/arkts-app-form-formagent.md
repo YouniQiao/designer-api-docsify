@@ -25,5 +25,6 @@ import { formAgent } from '@kit.FormKit';
 | --- | --- |
 | [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md#requestpublishform) | Requests to publish a widget to the widget host. This API uses an asynchronous callback to return the result. The widget host is usually the home screen. |
 | [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md#requestpublishform-1) | Requests to publish a widget to the widget host. This API uses a promise to return the result. The widget host is usually the home screen. |
+| [updateFormCrossBundle](arkts-form-formagent-updateformcrossbundle-f-sys.md#updateformcrossbundle) | Updates a widget by cross bundle. This API uses a promise to return the result. |
 <!--DelEnd-->
 

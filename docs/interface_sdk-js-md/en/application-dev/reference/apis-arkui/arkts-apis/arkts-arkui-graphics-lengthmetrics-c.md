@@ -14,7 +14,7 @@ Defines the length attribute. When the length unit is PERCENT, the value **1** i
 autoRefresh?(value: boolean): LengthMetrics
 ```
 
-Sets automatic refresh for the LengthMetrics object.When enabled, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes.
+Sets whether the **LengthMetrics** object automatically updates with system configuration changes.
 
 **Since:** 26.0.0
 
@@ -30,13 +30,13 @@ Sets automatic refresh for the LengthMetrics object.When enabled, the length val
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | whether to automatically update the length value when the system configuration changes.<br>If set to true, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes. If set to false, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes.The default value is false. |
+| value | boolean | Yes | Whether the **LengthMetrics** object constructed using [resource](arkts-arkui-graphics-lengthmetrics-c.md#resource) automatically refreshes the value when the system configuration changes.<br>**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes.<br>**false**: The object does not proactively listen to the system configuration changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the LengthMetrics object for chaining. |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | **LengthMetrics** object. |
 
 ## constructor
 

@@ -1,6 +1,6 @@
 # TerminationInfo
 
-Indicates the information when the provider of the embedded UI is terminated.
+Provides the result returned by the started **EmbeddedUIExtensionAbility**.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Indicates the information when the provider of the embedded UI is terminated.
 code: number
 ```
 
-Defines the termination code.
+Result code returned when the EmbeddedUIExtensionAbility exits. The result code is determined by the data passed when terminateSelfWithResult or terminateSelf is called.
 
 **Type:** number
 
@@ -34,7 +34,7 @@ Defines the termination code.
 want?: import('../api/@ohos.app.ability.Want').default
 ```
 
-Defines the additional termination information.
+Data returned when the EmbeddedUIExtensionAbility exits.
 
 **Type:** import('../api/@ohos.app.ability.Want').default
 

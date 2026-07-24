@@ -14,7 +14,7 @@ Represents a vector including three values: x, y, and z.
 x: number
 ```
 
-X coordinate value of the vector.
+Rotation angle along the x-axis.
 
 Value range: (-∞, +∞).
 
@@ -36,7 +36,7 @@ Value range: (-∞, +∞).
 y: number
 ```
 
-Y coordinate value of the vector.
+Rotation angle along the y-axis.
 
 Value range: (-∞, +∞).
 

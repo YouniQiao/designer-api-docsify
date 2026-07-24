@@ -4,7 +4,7 @@
 declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void
 ```
 
-弧形Slider放大或缩小时，告知应用。
+弧形Slider放大或缩小时触发回调。
 
 **起始版本：** 18
 

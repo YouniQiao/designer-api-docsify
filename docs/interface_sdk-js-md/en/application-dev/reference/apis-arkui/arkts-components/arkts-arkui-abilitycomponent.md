@@ -1,6 +1,6 @@
 # AbilityComponent
 
-Defines AbilityComponent Component.
+**AbilityComponent** is a container for independently displaying an ability.
 
 
 ## AbilityComponent

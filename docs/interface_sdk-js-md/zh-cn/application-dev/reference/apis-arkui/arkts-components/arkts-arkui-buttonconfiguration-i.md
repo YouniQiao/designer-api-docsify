@@ -16,7 +16,7 @@
 label: string
 ```
 
-Button的文本标签。
+Button的文本标签，用于标识按钮的功能。
 
 **说明**：当文本字符的长度超过按钮本身的宽度时，文本将会被截断。
 
@@ -66,7 +66,7 @@ true：按下；false：未按下。
 triggerClick: ButtonTriggerClickCallback
 ```
 
-使用builder新构建出来组件的点击事件。
+点击事件回调，用于处理使用builder新构建出来组件的点击操作。
 
 **类型：** ButtonTriggerClickCallback
 

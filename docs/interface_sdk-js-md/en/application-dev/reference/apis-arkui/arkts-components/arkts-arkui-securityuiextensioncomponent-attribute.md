@@ -1,6 +1,8 @@
 # SecurityUIExtensionComponent properties/events
 
-Define the attribute functions of UIExtensionComponent.
+The [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are supported.
+
+The following events are supported:
 
 **Inheritance/Implementation:** SecurityUIExtensionComponentAttribute extends [CommonMethod<SecurityUIExtensionComponentAttribute>](CommonMethod<SecurityUIExtensionComponentAttribute>)
 

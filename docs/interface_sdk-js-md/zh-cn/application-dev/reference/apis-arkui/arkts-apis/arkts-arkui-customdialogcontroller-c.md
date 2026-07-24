@@ -96,7 +96,7 @@ getState(): PromptActionCommonState
 open()
 ```
 
-显示自定义弹窗内容，允许多次使用，但如果弹框为SubWindow模式，则该弹框不允许再弹出SubWindow弹框。
+显示自定义弹窗内容，允许多次使用，但如果弹窗为SubWindow模式（showInSubWindow为true），则该弹窗不允许再弹出SubWindow模式的弹窗。
 > **说明：**  
 >  
 > 不支持在输入法类型窗口中使用子窗（showInSubwindow为true）的CustomDialog，详情见输入法框架的约束与限制说明  

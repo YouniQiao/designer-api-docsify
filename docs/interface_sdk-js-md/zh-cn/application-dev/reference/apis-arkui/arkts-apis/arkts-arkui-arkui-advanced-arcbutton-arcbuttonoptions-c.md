@@ -124,7 +124,7 @@ fontFamily: string | Resource
 fontMargin: LocalizedMargin
 ```
 
-弧形按钮文本边距。
+弧形按钮文本边距，单位：vp。
 
 默认值：{start:24vp, top: 10vp,end: 24vp, bottom:16vp }。
 
@@ -144,7 +144,7 @@ fontMargin: LocalizedMargin
 fontSize: LengthMetrics
 ```
 
-弧形按钮文本大小。
+弧形按钮文本大小，单位：fp。
 
 默认值：19fp。
 
@@ -364,7 +364,7 @@ status: ArcButtonStatus
 styleMode: ArcButtonStyleMode
 ```
 
-弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)样式同时使用。
+弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)同时使用。
 
 默认值：ArcButtonStyleMode.EMPHASIZED_LIGHT。
 

@@ -7,7 +7,7 @@
 
 | Name | Description |
 | --- | --- |
-| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) | Define the attribute functions of IsolatedComponent. |
+| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) | Only the [width](../arkts-components/arkts-arkui-commonmethod-c.md#width), [height](../arkts-components/arkts-arkui-commonmethod-c.md#height), and [backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md#backgroundcolor) universal attributes are supported.  The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are not supported.  Events are asynchronously passed to the restricted Worker thread after coordinate conversion.  The following events are supported: |
 <!--DelEnd-->
 
 <!--Del-->
@@ -15,7 +15,7 @@
 
 | Name | Description |
 | --- | --- |
-| [IsolatedOptions](arkts-arkui-isolatedoptions-i-sys.md) | This interface is used to set the options for IsolatedComponentAttribute during construction |
+| [IsolatedOptions](arkts-arkui-isolatedoptions-i-sys.md) | Describes the optional construction parameters during **IsolatedComponent** construction. |
 <!--DelEnd-->
 
 <!--Del-->

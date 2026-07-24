@@ -1,8 +1,8 @@
 # PluginComponentTemplate
 
-Plugin component template property.
+Describes the **PluginComponent** template parameters.
 
-**Since:** 12
+**Since:** 8
 
 <!--Device-unnamed-interface PluginComponentTemplate--><!--Device-unnamed-interface PluginComponentTemplate-End-->
 
@@ -20,11 +20,11 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 ability: string
 ```
 
-Defines the ability
+Bundle name of the provider ability.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +38,11 @@ Defines the ability
 source: string
 ```
 
-Defines the source
+Component template name.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

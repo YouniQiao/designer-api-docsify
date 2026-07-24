@@ -1,8 +1,8 @@
 # RequestEventResult
 
-Plugin component request event result value.
+Provides the result returned after the request listener is registered and the requested event is received.
 
-**Since:** 12
+**Since:** 8
 
 <!--Device-pluginComponentManager-interface RequestEventResult--><!--Device-pluginComponentManager-interface RequestEventResult-End-->
 
@@ -20,11 +20,11 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 data?: KVObject
 ```
 
-Defines data.
+Component data.
 
 **Type:** KVObject
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +38,11 @@ Defines data.
 extraData?: KVObject
 ```
 
-Defines extraData.
+Extra data.
 
 **Type:** KVObject
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,11 +56,11 @@ Defines extraData.
 template?: string
 ```
 
-Defines template.
+Component template.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

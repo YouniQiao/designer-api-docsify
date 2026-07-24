@@ -1,5 +1,7 @@
 # ArkTS Components<!--arkts-components-arkui-->
 
+- [AbilityComponent](arkts-arkui-abilitycomponent.md)
+  - [AbilityComponent属性/事件](arkts-arkui-abilitycomponent-attribute.md)
 - [AlphabetIndexer](arkts-arkui-alphabetindexer.md)
   - [AlphabetIndexer属性/事件](arkts-arkui-alphabetindexer-attribute.md)
   - [AlphabetIndexerOptions](arkts-arkui-alphabetindexer-alphabetindexeroptions-i.md)

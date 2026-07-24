@@ -1,6 +1,6 @@
 # SecurityDpiFollowStrategy (System API)
 
-Enumeration of different types of DpiFollowStrategy.
+Defines the enum of the resolution following strategy for **SecurityUIExtensionComponent**.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Enumeration of different types of DpiFollowStrategy.
 FOLLOW_HOST_DPI = 0
 ```
 
-Followed the host DPI.
+The resolution follows the host application.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Followed the host DPI.
 FOLLOW_UI_EXTENSION_ABILITY_DPI = 1
 ```
 
-Followed the UIExtensionAbility.
+The resolution follows the **UIExtensionAbility**.
 
 **Since:** 26.0.0
 

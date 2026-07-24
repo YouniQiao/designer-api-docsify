@@ -14,7 +14,7 @@
 group: string
 ```
 
-当前单选框的所属群组名称，相同group的Radio只能有一个被选中。
+当前单选框的所属群组名称，相同group的单选框只能有一个被选中。
 
 **类型：** string
 
@@ -34,7 +34,7 @@ group: string
 indicatorBuilder?: CustomBuilder
 ```
 
-配置单选框的选中样式为自定义组件。自定义组件与Radio组件为中心点对齐显示。indicatorBuilder设置为undefined时，按照RadioIndicatorType.TICK进行显示。
+配置单选框的选中样式为自定义组件。自定义组件与Radio组件以中心点对齐显示。indicatorBuilder设置为undefined时，按照RadioIndicatorType.TICK进行显示。
 
 **类型：** CustomBuilder
 

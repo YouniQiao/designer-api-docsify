@@ -16,7 +16,7 @@
 name: string
 ```
 
-当前多选框群组名称。
+当前多选框群组名称，用于标识和关联Checkbox与CheckboxGroup，与Checkbox的group属性值相同时属于同一群组。
 
 **类型：** string
 

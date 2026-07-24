@@ -14,7 +14,7 @@
 icon: string | Resource
 ```
 
-图片资源。 icon是string类型时，表示图片存放的路径，例如"/common/hello.png"。
+图片资源。当icon为string类型时，表示图片存放的路径，例如"/common/hello.png"；当icon为Resource类型时，表示资源引用。
 
 **类型：** string \| Resource
 
@@ -35,10 +35,11 @@ text?: string | Resource
 ```
 
 文本信息。
-
-默认值：空字符串
-
-**说明**：当文本长度大于列宽时，文本被截断。
+> 默认值：空字符串
+> **说明**：  
+>  
+> 1. 未设置该属性时，使用默认值。  
+> 2. 当文本长度大于列宽时，文本被截断。
 
 **类型：** string \| Resource
 

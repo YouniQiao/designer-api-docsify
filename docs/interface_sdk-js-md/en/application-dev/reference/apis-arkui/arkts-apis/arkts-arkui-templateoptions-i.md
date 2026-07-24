@@ -26,7 +26,7 @@ When **cachedCount** is set to the maximum number of nodes in the display area o
 cachedCount?: number
 ```
 
-Maximum number of child component nodes that can be cached in the cache pool of the current template. The value range is [0, +∞). The default value is the sum of the number of nodes in the display area of the container component and the number of nodes in the preloading area. When this sum increases (during the scrolling, when only part of the height of child components is within the display area), the value of **cachedCount** also increases accordingly.Note that the value of **cachedCount** does not decrease.
+Maximum number of child component nodes that can be cached in the cache pool of the current template. The value range is [0, +∞). The default value is the sum of the number of nodes in the display area of the container component and the number of nodes in the preloading area. When this sum increases (during the scrolling, when only part of the height of child components is within the display area), the value of **cachedCount** also increases accordingly. Note that the value of **cachedCount** does not decrease.
 
 **Type:** number
 

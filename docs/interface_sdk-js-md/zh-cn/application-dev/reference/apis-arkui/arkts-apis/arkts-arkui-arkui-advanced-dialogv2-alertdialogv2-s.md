@@ -68,7 +68,7 @@ primaryButton?: AdvancedDialogV2Button
 primaryTitle?: ResourceStr
 ```
 
-确认弹出框一级标题。
+确认弹出框标题。
 
 默认不显示。
 
@@ -118,7 +118,7 @@ secondaryButton?: AdvancedDialogV2Button
 secondaryTitle?: ResourceStr
 ```
 
-确认弹出框二级标题。
+确认弹出框辅助文本。
 
 默认不显示。
 

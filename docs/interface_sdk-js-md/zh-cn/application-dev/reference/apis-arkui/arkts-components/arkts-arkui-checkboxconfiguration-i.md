@@ -56,7 +56,7 @@ selected: boolean
 triggerChange: Callback<boolean>
 ```
 
-触发多选框选中状态变化。true表示从未选中变为选中，false表示从选中变为未选中。
+触发多选框选中状态变化的回调函数。调用时传入true，多选框被设置为选中状态；传入false，多选框被设置为未选中状态。
 
 **类型：** Callback&lt;boolean&gt;
 

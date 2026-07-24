@@ -4,7 +4,7 @@
 declare type ErrorCallback = import('../api/@ohos.base').ErrorCallback
 ```
 
-Indicates error callback.
+Defines the error callback type, which is used to receive exception information.
 
 **Since:** 26.0.0
 

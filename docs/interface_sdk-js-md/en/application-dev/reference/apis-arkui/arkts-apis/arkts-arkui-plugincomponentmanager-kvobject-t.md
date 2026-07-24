@@ -4,9 +4,9 @@
 type KVObject = { [key: string]: number | string | boolean | [] | KVObject }
 ```
 
-Defines KVObject
+Defines a key-value pair data structure that conforms to JSON format.
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -16,7 +16,7 @@ count?: number
 
 Number of data records to delete.
 
-Default value: **1**.
+Default value: **1**
 
 **Type:** number
 

@@ -62,7 +62,7 @@ localStorage?: LocalStorage
 nestingBuilderSupported?: boolean
 ```
 
-是否支持Builder嵌套Builder进行使用。其中，true表示支持，false表示不支持。
+是否支持Builder嵌套Builder使用。其中，true表示支持，false表示不支持。
 
 默认值：false
 

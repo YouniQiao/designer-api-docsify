@@ -13,6 +13,11 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 ```
 
 Shows a full-screen ad.
+> **NOTE**  
+>  
+> 1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API.  
+>  
+> 2. This API only supports displaying rewarded ads and interstitial ads.
 
 **Since:** 11
 

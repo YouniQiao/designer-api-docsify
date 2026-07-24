@@ -64,3 +64,21 @@ The album is_removed operation attribute.
 
 **System API:** This is a system API.
 
+## FRIEND_ID_ATTR
+
+```TypeScript
+FRIEND_ID_ATTR = 'friend_id'
+```
+
+The album friend_id operation attribute.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AlbumAttribute-FRIEND_ID_ATTR = 'friend_id'--><!--Device-AlbumAttribute-FRIEND_ID_ATTR = 'friend_id'-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+

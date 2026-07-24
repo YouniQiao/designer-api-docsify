@@ -2,7 +2,7 @@
 
 Defines the application clone preference configuration.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 <!--Device-unnamed-export interface AppClonePreference--><!--Device-unnamed-export interface AppClonePreference-End-->
 
@@ -20,7 +20,7 @@ Index of the application clone.This value is valid only when the mode is CLONE_A
 
 **Type:** number
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +40,7 @@ Preference mode for application cloning.
 
 **Type:** bundleManager.AppClonePreferenceMode
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 

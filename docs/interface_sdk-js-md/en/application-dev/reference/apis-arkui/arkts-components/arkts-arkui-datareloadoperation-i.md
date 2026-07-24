@@ -14,13 +14,7 @@ Represents an operation for reloading data. If the **onDatasetChange** event con
 reuseImmediately?: boolean
 ```
 
-Whether to enable the feature that reuse old child components when \@Reuseable or \@ReuseableV2 is used and recycle pool is empty.
-
-**true**: Enable the feature.
-
-**false**: Disable the feature.
-
-Default value: **false**.
+Whether to enable the feature that reuse old child components when \@Reuseable or \@ReuseableV2 is used and recycle pool is empty.**true**: Enable the feature.**false**: Disable the feature.Default value: **false**.
 
 **Type:** boolean
 

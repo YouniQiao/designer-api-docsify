@@ -62,7 +62,7 @@ content?: ResourceStr
 controller: CustomDialogController
 ```
 
-选择弹出框控制器。
+选择弹出框控制器，用于控制弹出框的显示和隐藏。
 
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 

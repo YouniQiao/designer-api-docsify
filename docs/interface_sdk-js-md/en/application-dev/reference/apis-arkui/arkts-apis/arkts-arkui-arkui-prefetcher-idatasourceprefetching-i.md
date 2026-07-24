@@ -1,12 +1,12 @@
 # IDataSourcePrefetching
 
-Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md) API to add data prefetching capability to your data source.
+Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md) API to provide a data source that can be prefetched.
 
 **Inheritance/Implementation:** IDataSourcePrefetching extends [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md)
 
 **Since:** 12
 
-<!--Device-unnamed-/* * Copyright (c) 2024 Huawei Device Co., Ltd. * Licensed under the Apache License, Version 2.0 (the "License"); * you may not use this file except in compliance with the License. * You may obtain a copy of the License at * *     http://www.apache.org/licenses/LICENSE-2.0 * * Unless required by applicable law or agreed to in writing, software * distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the License for the specific language governing permissions and * limitations under the License. */export interface IDataSourcePrefetching extends IDataSource--><!--Device-unnamed-/* * Copyright (c) 2024 Huawei Device Co., Ltd. * Licensed under the Apache License, Version 2.0 (the "License"); * you may not use this file except in compliance with the License. * You may obtain a copy of the License at * *     http://www.apache.org/licenses/LICENSE-2.0 * * Unless required by applicable law or agreed to in writing, software * distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the License for the specific language governing permissions and * limitations under the License. */export interface IDataSourcePrefetching extends IDataSource-End-->
+<!--Device-unnamed-export interface IDataSourcePrefetching extends IDataSource--><!--Device-unnamed-export interface IDataSourcePrefetching extends IDataSource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,7 +22,7 @@ import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI
 cancel?(index: number): Promise<void> | void
 ```
 
-Cancels the prefetching of a specified data item from the dataset. This API can be either synchronous or asynchronous.
+Cancels the prefetching of a specified data item from the dataset. This API can be either synchronous or asynchronous. This API is optional. If the data source does not implement this API, the prefetching cancellation operation will not be performed.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Cancels the prefetching of a specified data item from the dataset. This API can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the data item to cancel prefetching for. |
+| index | number | Yes | Index of the data item whose prefetching is to be canceled. The value range is [0, **totalCount()** – 1]. |
 
 **Return value:**
 
@@ -52,7 +52,7 @@ Cancels the prefetching of a specified data item from the dataset. This API can 
 prefetch(index: number): Promise<void> | void
 ```
 
-Prefetches a specified data item from the dataset. This API can be either synchronous or asynchronous.
+Prefetches a specified data item from the dataset. This API can be either synchronous or asynchronous. When the visible area changes, the prefetching algorithm calls this API if it determines that the data item about to enter the visible area needs to be prefetched.
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ Prefetches a specified data item from the dataset. This API can be either synchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the data item to prefetch. |
+| index | number | Yes | Index of the data item to be prefetched. The value range is [0, **totalCount()** – 1]. |
 
 **Return value:**
 

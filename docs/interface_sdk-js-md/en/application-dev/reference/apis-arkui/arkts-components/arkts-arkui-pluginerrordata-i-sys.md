@@ -1,8 +1,13 @@
 # PluginErrorData (System API)
 
-Data provided when an error occurs.AnonyMous Object Rectification
+Data provided when the error occurs.
+> **NOTE**  
+>  
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element  
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
-**Since:** 18
+**Since:** 9
 
 <!--Device-unnamed-declare interface PluginErrorData--><!--Device-unnamed-declare interface PluginErrorData-End-->
 
@@ -16,11 +21,11 @@ Data provided when an error occurs.AnonyMous Object Rectification
 errcode: number
 ```
 
-Error code.AnonyMous Object Rectification
+Error code.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 9
 
 <!--Device-PluginErrorData-errcode: number--><!--Device-PluginErrorData-errcode: number-End-->
 
@@ -34,11 +39,11 @@ Error code.AnonyMous Object Rectification
 msg: string
 ```
 
-Error message.AnonyMous Object Rectification
+Error message.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 9
 
 <!--Device-PluginErrorData-msg: string--><!--Device-PluginErrorData-msg: string-End-->
 

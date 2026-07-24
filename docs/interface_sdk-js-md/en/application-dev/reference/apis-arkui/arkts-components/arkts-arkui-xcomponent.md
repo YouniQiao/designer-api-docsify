@@ -1,7 +1,14 @@
 # XComponent
 
-Defines XComponent Component.
+**XComponent** provides a [surface](docroot://ui/napi-xcomponent-guidelines.md#overview) for graphics rendering and
+media data input into your view. You can customize the position and size of the surface as needed. For details, see
+[Native XComponent](docroot://ui/napi-xcomponent-guidelines.md).
 
+> **NOTE**
+
+## Child Components
+
+Not supported
 
 ## XComponent
 
@@ -33,9 +40,11 @@ Constructor parameters
 XComponent(value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 ```
 
-Constructor parameters
+Creates an **XComponent** component, whose lifecycle callbacks can be triggered from the native side.
 
-**Since:** 12
+This API is deprecated since API version 12. You are advised to use [XComponent(options: XComponentOptions)](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12)instead.
+
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,13 +66,13 @@ Constructor parameters
 XComponent(options: XComponentOptions)
 ```
 
-Constructor parameters
+Creates an **XComponent** component, allowing you to obtain the **SurfaceId** value on the ArkTS side, register the lifecycle callbacks for the surface held by the **XComponent** and the callbacks for component events such as touch, mouse, and key events, and configure the AI analyzer feature.
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentInterface-(options: XComponentOptions): XComponentAttribute--><!--Device-XComponentInterface-(options: XComponentOptions): XComponentAttribute-End-->
 
@@ -73,7 +82,7 @@ Constructor parameters
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [XComponentOptions](arkts-arkui-xcomponentoptions-i.md) | Yes | Indicates the options of the xcomponent.  |
+| options | [XComponentOptions](arkts-arkui-xcomponentoptions-i.md) | Yes | Options of the **XComponent**.  |
 
 ## XComponent
 
@@ -81,7 +90,7 @@ Constructor parameters
 XComponent(params: NativeXComponentParameters)
 ```
 
-Constructor parameters
+Obtains an **XComponent** node instance on the native side, and registers the lifecycle callbacks for the surface held by the **XComponent** and the callbacks for component events, such as touch, mouse, and key events.
 
 **Since:** 19
 
@@ -97,7 +106,7 @@ Constructor parameters
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [NativeXComponentParameters](arkts-arkui-nativexcomponentparameters-i.md) | Yes | Indicates the constructor parameters of the xcomponent for native developing.  |
+| params | [NativeXComponentParameters](arkts-arkui-nativexcomponentparameters-i.md) | Yes | Options of the **XComponent**.  |
 
 ## Summary
 

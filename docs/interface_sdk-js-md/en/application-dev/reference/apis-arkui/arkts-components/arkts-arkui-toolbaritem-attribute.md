@@ -1,6 +1,6 @@
 # ToolBarItem properties/events
 
-Defines the ToolBarItem component attribute functions.
+The [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are not supported.
 
 **Since:** 20
 

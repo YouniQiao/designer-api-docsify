@@ -1,6 +1,6 @@
 # ToolBarItemPlacement
 
-Declare the placement of the toolbar item.
+Enumerates the placement options for toolbar items in the title bar.
 
 **Since:** 20
 
@@ -14,7 +14,7 @@ Declare the placement of the toolbar item.
 TOP_BAR_LEADING = 0
 ```
 
-Place toolbar item at the leading of top bar.
+Places the item at the start of the top bar.
 
 **Since:** 20
 
@@ -30,7 +30,7 @@ Place toolbar item at the leading of top bar.
 TOP_BAR_TRAILING = 1
 ```
 
-Place toolbar item at the trailing of top bar.
+Places the item at the end of the top bar.
 
 **Since:** 20
 

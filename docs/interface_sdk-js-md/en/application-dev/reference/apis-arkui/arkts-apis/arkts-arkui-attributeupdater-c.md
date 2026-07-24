@@ -1,6 +1,6 @@
 # AttributeUpdater
 
-Represents the implementation class of AttributeModifier. You need to customize a class to inherit AttributeUpdater.C indicates the constructor type of the component, for example, TextInterface of the Text component and ImageInterface of the Image component. It is required only when updateConstructorParams is used.
+**AttributeUpdater** directly set attributes to a component to trigger UI re-renders, without marking them as state variables.
 
 **Inheritance/Implementation:** AttributeUpdater implements [AttributeModifier<T>](AttributeModifier<T>)
 
@@ -32,7 +32,7 @@ Defines the function for updating attributes in normal state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | T | Yes | Component attribute class, which identifies the type of component to which attributes will be applied, for example, ButtonAttribute for the Button component and TextAttribute for the Text component. |
+| instance | T | Yes | Component attribute class, which identifies the type of component to which attributes will be applied, for example, **ButtonAttribute** for the **Button** component and **TextAttribute** for the **Text** component. |
 
 ## initializeModifier
 
@@ -40,7 +40,7 @@ Defines the function for updating attributes in normal state.
 initializeModifier(instance: T): void
 ```
 
-Initializes the component's attributes to the default values defined in this AttributeUpdater.
+Initializes the component's attributes to the default values defined in this **AttributeUpdater**.
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Initializes the component's attributes to the default values defined in this Att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instance | T | Yes | Component attribute class, which identifies the type of component to which attributes will be applied, for example, ButtonAttribute for the Button component and TextAttribute for the Text component. |
+| instance | T | Yes | Component attribute class, which identifies the type of component to which attributes will be applied, for example, **ButtonAttribute** for the **Button** component and **TextAttribute** for the **Text** component. |
 
 ## onComponentChanged
 
@@ -64,7 +64,7 @@ Initializes the component's attributes to the default values defined in this Att
 onComponentChanged(component: T): void
 ```
 
-Invoked to notify the application that the component bound to the same custom Modifier object changes.
+Invoked to notify the application that the component bound to the same custom **Modifier** object changes.
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ Invoked to notify the application that the component bound to the same custom Mo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| component | T | Yes | Component attribute class, which identifies the type of component to which attributes will be applied, for example, ButtonAttribute for the Button component and TextAttribute for the Text component. |
+| component | T | Yes | Component attribute class, which identifies the type of component to which attributes will be applied, for example, **ButtonAttribute** for the **Button** component and **TextAttribute** for the **Text** component. |
 
 ## attribute
 
@@ -88,7 +88,7 @@ Invoked to notify the application that the component bound to the same custom Mo
 get attribute(): T | undefined
 ```
 
-Obtains the attribute class instance corresponding to the component in AttributeUpdater.The instance can then be used to directly update attributes.
+Obtains the attribute class instance corresponding to the component in **AttributeUpdater**. The instance can then be used to directly update attributes.
 
 **Type:** T
 
@@ -108,7 +108,7 @@ Obtains the attribute class instance corresponding to the component in Attribute
 updateConstructorParams: C
 ```
 
-The type is used to change the constructor input parameters of the component.C indicates the constructor type of the component, for example, TextInterface of the Text component and ImageInterface of the Image component.
+**C** indicates the constructor type of the component, for example, **TextInterface** of the **Text** component and **ImageInterface** of the **Image** component. The type is used to change the constructor input parameters of the component.
 
 **Type:** C
 

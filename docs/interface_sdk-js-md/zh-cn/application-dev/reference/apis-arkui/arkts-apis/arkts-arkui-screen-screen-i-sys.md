@@ -353,7 +353,7 @@ setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: The screen is not an external display in extended mode. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: The screen is not a wired external display in extended mode. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 **示例：**

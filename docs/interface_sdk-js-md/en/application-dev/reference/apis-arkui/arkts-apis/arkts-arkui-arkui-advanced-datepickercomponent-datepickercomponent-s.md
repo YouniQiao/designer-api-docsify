@@ -2,6 +2,10 @@
 
 DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second).
 
+## Child Components
+
+None
+
 **Since:** 26.0.0
 
 **Decorator:** @Component

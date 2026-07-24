@@ -1,6 +1,13 @@
 # DynamicComponent
 
-Defines DynamicComponent Component.
+**DynamicComponent** is designed to support the embedding and display of UIs provided by independent .abc files
+within the current page, with the displayed content running in a worker thread.
+
+It is typically used in modular development scenarios where .abc pages are dynamically loaded.
+
+## Child Components
+
+None
 
 ## DynamicComponent
 
@@ -8,7 +15,7 @@ Defines DynamicComponent Component.
 DynamicComponent(options: DynamicOptions)
 ```
 
-Construct the DynamicComponentInterface.<br/>Called when the DynamicComponentInterface is used.
+Creates a **DynamicComponent** component to display the .abc UI running in the worker thread.
 
 **Since:** 26.0.0
 
@@ -24,7 +31,7 @@ Construct the DynamicComponentInterface.<br/>Called when the DynamicComponentInt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DynamicOptions](arkts-arkui-dynamicoptions-i-sys.md) | Yes | Construction configuration of DynamicComponentAttribute  |
+| options | [DynamicOptions](arkts-arkui-dynamicoptions-i-sys.md) | Yes | Configuration parameters for constructing a **DynamicComponent**, which are used to configure the entry of the .abc page to be loaded, worker thread to run, and display options.  |
 
 ## Summary
 

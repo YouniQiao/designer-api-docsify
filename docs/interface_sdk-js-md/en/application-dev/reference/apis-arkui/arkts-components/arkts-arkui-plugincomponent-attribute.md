@@ -1,6 +1,10 @@
 # PluginComponent properties/events
 
-Defines the plugin component attribute functions.
+The width and height of the component must be explicitly set to non-zero valid values.
+
+[Gesture events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) can be distributed to and processed inside the provider page.
+
+In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** PluginComponentAttribute extends [CommonMethod<PluginComponentAttribute>](CommonMethod<PluginComponentAttribute>)
 

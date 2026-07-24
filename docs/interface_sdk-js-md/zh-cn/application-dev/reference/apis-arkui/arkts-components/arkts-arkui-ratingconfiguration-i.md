@@ -112,7 +112,7 @@ stepSize: number
 triggerChange: Callback<number>
 ```
 
-触发评分数量变化。
+触发评分变化的回调，参数为新的评分值。
 
 **类型：** Callback&lt;number&gt;
 

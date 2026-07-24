@@ -1,8 +1,13 @@
 # PluginComponentOptions (System API)
 
-Define options used to construct a plugin component.AnonyMous Object Rectification
+Defines options for constructing a **PluginComponent**.
+> **NOTE**  
+>  
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.  
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element  
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
-**Since:** 18
+**Since:** 9
 
 <!--Device-unnamed-declare interface PluginComponentOptions--><!--Device-unnamed-declare interface PluginComponentOptions-End-->
 
@@ -16,11 +21,11 @@ Define options used to construct a plugin component.AnonyMous Object Rectificati
 data: any
 ```
 
-Plugin component data.AnonyMous Object Rectification
+Data passed to the **PluginComponent** provider.
 
 **Type:** any
 
-**Since:** 18
+**Since:** 9
 
 <!--Device-PluginComponentOptions-data: any--><!--Device-PluginComponentOptions-data: any-End-->
 
@@ -34,11 +39,11 @@ Plugin component data.AnonyMous Object Rectification
 template: PluginComponentTemplate
 ```
 
-Plugin component template.AnonyMous Object Rectification
+Template of the **PluginComponent**, which is bound to the component defined by the provider.
 
 **Type:** PluginComponentTemplate
 
-**Since:** 18
+**Since:** 9
 
 <!--Device-PluginComponentOptions-template: PluginComponentTemplate--><!--Device-PluginComponentOptions-template: PluginComponentTemplate-End-->
 

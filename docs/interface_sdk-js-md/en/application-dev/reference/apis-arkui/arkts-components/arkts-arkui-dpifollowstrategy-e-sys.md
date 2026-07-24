@@ -16,7 +16,7 @@ Enumeration of different types of DpiFollowStrategy.
 FOLLOW_HOST_DPI = 0
 ```
 
-Followed the host DPI.
+The DPI settings follow the host.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Followed the host DPI.
 FOLLOW_UI_EXTENSION_ABILITY_DPI = 1
 ```
 
-Followed the UIExtensionAbility.
+The DPI settings follow the UIExtensionAbility.
 
 **Since:** 12
 

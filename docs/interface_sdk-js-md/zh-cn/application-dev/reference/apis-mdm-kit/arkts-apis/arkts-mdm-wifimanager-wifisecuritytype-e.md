@@ -46,7 +46,7 @@ WIFI_SEC_TYPE_OPEN = 1
 WIFI_SEC_TYPE_WEP = 2
 ```
 
-Wired?Equivalent?Privacy?(WEP)加密类型。
+Wired Equivalent Privacy (WEP)加密类型。
 
 **起始版本：** 12
 
@@ -62,7 +62,7 @@ Wired?Equivalent?Privacy?(WEP)加密类型。
 WIFI_SEC_TYPE_PSK = 3
 ```
 
-Pre-shared?key?(PSK)加密类型。 例如家庭、小型办公室Wi-Fi。
+Pre-shared key (PSK)加密类型。 例如家庭、小型办公室Wi-Fi。
 
 **起始版本：** 12
 
@@ -78,7 +78,7 @@ Pre-shared?key?(PSK)加密类型。 例如家庭、小型办公室Wi-Fi。
 WIFI_SEC_TYPE_SAE = 4
 ```
 
-Simultaneous?Authentication?of?Equals?(SAE)加密类型。例如智能家居、中小型企业网络。
+Simultaneous Authentication of Equals (SAE)加密类型。例如智能家居、中小型企业网络。
 
 **起始版本：** 12
 

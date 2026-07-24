@@ -43,7 +43,9 @@ onDataAdded(index: number): void
 ```
 
 Invoked when data is added to the position indicated by the specified index.
-> This API is deprecated since API version 8. You are advised to use  
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 8. Use  
 > [onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd) instead.
 
 **Since:** 7
@@ -91,7 +93,9 @@ onDataChanged(index: number): void
 ```
 
 Invoked when data in the position indicated by the specified index is changed.
-> This API is deprecated since API version 8. You are advised to use  
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 8. Use  
 > [onDataChange](arkts-arkui-datachangelistener-i.md#ondatachange) instead.
 
 **Since:** 7
@@ -143,7 +147,9 @@ onDataDeleted(index: number): void
 ```
 
 Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
-> This API is deprecated since API version 8. You are advised to use  
+> **NOTE**  
+>  
+> This API is supported since API version 7 and deprecated since API version 8. Use  
 > [onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete) instead.
 
 **Since:** 7
@@ -196,12 +202,13 @@ onDataMoved(from: number, to: number): void
 ```
 
 Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
-> This API is deprecated since API version 8. You are advised to use  
-> [onDataMove](arkts-arkui-datachangelistener-i.md#ondatamove) instead.
 > **NOTE**  
 >  
-> The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data  
-> must be called.
+> - This API is supported since API version 7 and deprecated since API version 8. Use  
+> [onDataMove](arkts-arkui-datachangelistener-i.md#ondatamove) instead.  
+>  
+> - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding  
+> data must be called.
 
 **Since:** 7
 

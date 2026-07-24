@@ -4,9 +4,9 @@
 type OnRequestEventCallback = (source: Want, name: string, data: KVObject) => RequestEventResult
 ```
 
-Plugin component request event callback.
+Registers the listener for the request event.
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -18,13 +18,13 @@ Plugin component request event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Want](arkts-arkui-want-t-sys.md) | Yes |  |
-| name | string | Yes |  |
-| data | [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Yes |  |
+| source | [Want](arkts-arkui-want-t-sys.md) | Yes | Information about the request sender.  |
+| name | string | Yes | Template name.  |
+| data | [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Yes | Data.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | Returns the request event result.  |
+| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | Provides the result returned after the request listener is registered and the requested event is received. |
 

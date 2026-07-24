@@ -14,7 +14,7 @@
 count?: number
 ```
 
-插入数量，默认为1。
+添加数量，必须是正整数（大于0），默认为1。传入0或负数时可能导致渲染效果异常。
 
 **类型：** number
 
@@ -36,7 +36,7 @@ count?: number
 index: number
 ```
 
-插入数据索引值。取值范围是[0, 数据源长度]。
+添加数据索引值。取值范围是[0, 数据源长度]。超出取值范围时渲染异常。
 
 **类型：** number
 
@@ -56,7 +56,7 @@ index: number
 key?: string | Array<string>
 ```
 
-为插入的数据分配键值，默认使用原键值。
+为添加的数据分配键值，默认使用原键值。键值支持string或Array<string>类型；当键值为数组且长度大于count时报参数无效错误。
 
 **类型：** string \| Array&lt;string&gt;
 

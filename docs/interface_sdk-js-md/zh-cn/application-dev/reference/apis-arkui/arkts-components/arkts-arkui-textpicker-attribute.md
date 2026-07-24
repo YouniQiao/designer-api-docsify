@@ -34,7 +34,7 @@ canLoop(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否可循环滚动。<br/>- true：可循环。<br/>- false：不可循环。<br/>默认值：true |
+| value | boolean | 是 | 是否可循环滚动。<br>- true：可循环。<br>- false：不可循环。<br>默认值：true |
 
 ## canLoop
 
@@ -58,7 +58,7 @@ canLoop(isLoop: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否可循环滚动。<br/>- true：可循环。<br/>- false：不可循环。<br/>默认值：true<br/>当isLoop的值为undefined时，使用默认值。 |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否可循环滚动。<br>- true：可循环。<br>- false：不可循环。<br>默认值：true<br>当isLoop的值为undefined时，使用默认值。 |
 
 ## defaultPickerItemHeight
 
@@ -80,7 +80,7 @@ defaultPickerItemHeight(value: number | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string | 是 | 选择项的高度。<br />取值范围：<br />number类型：[0, +∞)，单位为vp。<br />string类型：仅支持number类型取值的字符串形式，例如"56"。<br />默认值：选中项56vp，非选中项36vp。<br />**说明：**<br />设置该参数后，选中项与非选中项的高度均为所设置的值。 |
+| value | number \| string | 是 | 选择项的高度。<br>取值范围：<br>number类型：[0, +∞)，单位为vp。<br>string类型：仅支持number类型取值的字符串形式，例如"56"。<br>默认值：选中项56vp，非选中项36vp。<br>**说明：**<br>设置该参数后，选中项与非选中项的高度均为所设置的值。<br>当value的值为负数时，使用默认值。 |
 
 ## defaultPickerItemHeight
 
@@ -104,7 +104,7 @@ defaultPickerItemHeight(height: Optional<number | string>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [Optional](arkts-arkui-optional-t.md)&lt;number \| string&gt; | 是 | 选择项的高度。<br />取值范围：<br />number类型：[0, +∞)，单位为vp。<br />string类型：仅支持number类型取值的字符串形式，例如"56"。<br />默认值：选中项56vp，非选中项36vp。<br />**说明：**<br />1. 设置该参数后，选中项与非选中项的高度均为所设置的值。<br/>2. 当height的值为undefined时，维持上次取值。 |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;number \| string&gt; | 是 | 选择项的高度。<br>取值范围：<br>number类型：[0, +∞)，单位为vp。<br>string类型：仅支持number类型取值的字符串形式，例如"56"。<br>默认值：选中项56vp，非选中项36vp。<br>**说明：**<br>1. 设置该参数后，选中项与非选中项的高度均为所设置的值。<br>2. 当height的值为undefined时，维持上次取值。 |
 
 ## defaultTextStyle
 
@@ -128,7 +128,7 @@ defaultTextStyle(style: TextPickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) | 是 | 设置关闭滑动过程中文本样式变化的动效时，各个选项的文本样式。<br/>默认值：与[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)组件默认值相同。 |
+| style | [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md) | 是 | 设置关闭滑动过程中文本样式变化的动效时，各个选项的文本样式。<br>默认值：与[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)组件默认值相同。 |
 
 ## digitalCrownSensitivity
 
@@ -152,7 +152,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 | 表冠响应灵敏度。<br/>默认值：CrownSensitivity.MEDIUM，响应速度适中。 |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 | 表冠响应灵敏度。<br>默认值：CrownSensitivity.MEDIUM，响应速度适中。不同灵敏度值影响表冠滚动速度与选择项切换速度的对应关系，具体各枚举值的效果请参考[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)。 |
 
 ## disableTextStyleAnimation
 
@@ -176,7 +176,7 @@ disableTextStyleAnimation(disabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| disabled | boolean | 是 | 是否关闭滑动过程中文本样式变化的动效。<br/>- true：关闭文本样式变化动效。<br/>- false：不关闭文本样式变化动效。<br/>默认值：false<br/>**说明：**<br/>设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为[defaultTextStyle](TextPickerAttribute#defaultTextStyle)属性设置的样式。如未设置[defaultTextStyle](TextPickerAttribute#defaultTextStyle)，则显示为[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)组件默认样式。 |
+| disabled | boolean | 是 | 是否关闭滑动过程中文本样式变化的动效。<br>- true：关闭文本样式变化动效。<br>- false：不关闭文本样式变化动效。<br>默认值：false<br>**说明：**<br>设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为[defaultTextStyle](TextPickerAttribute#defaultTextStyle)属性设置的样式。如未设置[defaultTextStyle](TextPickerAttribute#defaultTextStyle)，则显示为[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)组件默认样式。设置为false时，使用系统默认的滑动文本样式变化动效。 |
 
 ## disappearTextStyle
 
@@ -200,7 +200,7 @@ disappearTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号、字体粗细。<br/>默认值：<br/>{<br/>color: '#ff182431',<br/>font: {<br/>size: '14fp', <br/>weight: FontWeight.Regular<br/>}<br/>} |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp',<br>weight: FontWeight.Regular<br>}<br>}<br>**说明**：未调用该方法设置样式时，使用默认值。 |
 
 ## disappearTextStyle
 
@@ -224,7 +224,7 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细。<br/>默认值：<br/>{<br/>color:'#ff182431',<br/>font: {<br/>size: '14fp', <br/>weight: FontWeight.Regular<br/>}<br/>}<br/>当style的值为undefined时，使用默认值。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp',<br>weight: FontWeight.Regular<br>}<br>}<br>当style的值为undefined时，使用默认值。 |
 
 ## disappearTextStyle
 
@@ -232,7 +232,7 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[disappearTextStyle](TextPickerAttribute#disappearTextStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)类型的支持。
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[disappearTextStyle<sup>18+</sup>](TextPickerAttribute#disappearTextStyle(style: Optional<PickerTextStyle>))相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 
@@ -248,7 +248,7 @@ disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle \| TextPickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。<br/>默认值：<br/>{<br/>color: '#ff182431',<br/>font: {<br/>size: '14fp', <br/>weight:FontWeight.Regular<br/>},<br/>minFontSize: 0,<br/>maxFontSize: 0,<br/>overflow: TextOverflow.Clip<br/>}<br/>当style的值为undefined时，使用默认值。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle \| TextPickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。<br>默认值：<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp',<br>weight: FontWeight.Regular<br>},<br>minFontSize: 0,<br>maxFontSize: 0,<br>overflow: TextOverflow.Clip<br>}<br>当style的值为undefined时，使用默认值。 |
 
 ## divider
 
@@ -300,7 +300,7 @@ divider(textDivider: Optional<DividerOptions | null>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textDivider | [Optional](arkts-arkui-optional-t.md)&lt;DividerOptions \| null&gt; | 是 | 默认值：<br/>{<br/>strokeWidth: '2px', <br/>startMargin: 0,<br/>endMargin: 0, <br/>color: '#33000000'<br/>}<br/>1. 当textDivider的值为undefined时，使用默认值。<br/>2. 当textDivider设置为有效的[DividerOptions](arkts-arkui-divideroptions-i.md)时，按设置的样式显示分割线。<br/>3. 当textDivider设置为null时，不显示分割线。 |
+| textDivider | [Optional](arkts-arkui-optional-t.md)&lt;DividerOptions \| null&gt; | 是 | 默认值：<br>{<br>strokeWidth: '2px',<br>startMargin: 0,<br>endMargin: 0,<br>color: '#33000000'<br>}<br>1. 当textDivider的值为undefined时，使用默认值。<br>2. 当textDivider设置为有效的[DividerOptions](arkts-arkui-divideroptions-i.md)时，按设置的样式显示分割线。<br>3. 当textDivider设置为null时，不显示分割线。 |
 
 ## enableHapticFeedback
 
@@ -324,7 +324,7 @@ enableHapticFeedback(enable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 设置是否开启触控反馈。<br/>- true：开启触控反馈。<br/>- false：不开启触控反馈。<br/>默认值：true<br/>设置为true后，其生效情况取决于系统的硬件是否支持。 |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 设置是否开启触控反馈。<br>- true：开启触控反馈。<br>- false：不开启触控反馈。<br>默认值：true<br>设置为true后，其生效情况取决于系统的硬件是否支持。若硬件不支持触控反馈功能，开启该功能不会产生触控反馈效果，也不会抛出异常。 |
 
 ## gradientHeight
 
@@ -348,7 +348,7 @@ gradientHeight(value: Dimension)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | 内容区上下边缘的渐隐高度。<br/>默认值：36vp<br/>取值范围：[0, +∞)，支持百分比。<br/>**说明：**<br/>1. value设置为百分比时，100%为TextPicker高度的一半。<br/>2. value设置为0时不显示渐隐效果。<br/>3. value设置为数字且超过TextPicker高度的一半时，使用默认值。<br/>4. 当value的值为负数时，使用默认值。 |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | 内容区上下边缘的渐隐高度。<br>默认值：36vp<br>取值范围：[0, +∞)，支持百分比。<br>**说明：**<br>1. value设置为百分比时，100%为TextPicker高度的一半。<br>2. value设置为0时不显示渐隐效果。<br>3. value设置为数字且超过TextPicker高度的一半时，使用默认值。<br>4. 当value的值为负数时，使用默认值。 |
 
 ## gradientHeight
 
@@ -372,7 +372,7 @@ gradientHeight(height: Optional<Dimension>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [Optional](arkts-arkui-optional-t.md)&lt;Dimension&gt; | 是 | 内容区上下边缘的渐隐高度。<br/>默认值：36vp<br/>取值范围：[0, +∞)，支持百分比。<br/>**说明：**<br/>1. height设置为百分比时，100%为TextPicker高度的一半。<br/>2. height设置为0时不显示渐隐效果。<br/>3. height设置为数字且超过TextPicker高度的一半时，使用默认值。<br/>4. 当height的值为undefined或负数时，使用默认值。 |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;Dimension&gt; | 是 | 内容区上下边缘的渐隐高度。<br>默认值：36vp<br>取值范围：[0, +∞)，支持百分比。<br>**说明：**<br>1. height设置为百分比时，100%为TextPicker高度的一半。<br>2. height设置为0时不显示渐隐效果。<br>3. height设置为数字且超过TextPicker高度的一半时，使用默认值。<br>4. 当height的值为undefined或负数时，使用默认值。 |
 
 ## onAccept
 
@@ -381,8 +381,9 @@ onAccept(callback: (value: string, index: number) => void)
 ```
 
 点击弹窗中的“确定”按钮时触发该回调。该事件仅在[文本滑动选择器弹窗](arkts-arkui-textpicker.md)中生效。
-
-从API version 8开始支持，从API version 10开始废弃，无替代接口。
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 10开始废弃。此接口已完全移除，无替代接口。
 
 **起始版本：** 8
 
@@ -405,8 +406,9 @@ onCancel(callback: () => void)
 ```
 
 点击弹窗中的“取消”按钮时触发该回调。该事件仅在[文本滑动选择器弹窗](arkts-arkui-textpicker.md)中生效。
-
-从API version 8开始支持，从API version 10开始废弃，无替代接口。
+> **说明：**  
+>  
+> 从API version 8开始支持，从API version 10开始废弃。此接口已完全移除，无替代接口。
 
 **起始版本：** 8
 
@@ -428,7 +430,7 @@ onCancel(callback: () => void)
 onChange(callback: (value: string | string[], index: number | number[]) => void)
 ```
 
-滑动TextPicker文本内容后，选项归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。当显示文本或图片加文本列表时，value值为选中项中的文本值，当显示图片列表时，value值为空。
+滑动TextPicker文本内容后，选项归位至选中项位置时，触发该回调。当用户滑动选择器导致选中项变化时触发，不能通过修改双向绑定的状态变量（如selected）来触发。当显示文本或图片加文本列表时，value值为选中项中的文本值，当显示图片列表时，value值为空。
 
 回调会在滑动动画结束后触发，如果需要快速获取索引值变化，建议使用[onEnterSelectedArea](TextPickerAttribute#onEnterSelectedArea)接口。
 
@@ -452,7 +454,7 @@ onChange(callback: (value: string | string[], index: number | number[]) => void)
 onChange(callback: Optional<OnTextPickerChangeCallback>)
 ```
 
-滑动TextPicker文本内容后，选项归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。当显示文本或图片加文本列表时，value值为选中项中的文本值，当显示图片列表时，value值为空。与[onChange](TextPickerAttribute#onChange(callback: (value: string | string[],index: number | number[]) => void))相比，callback参数新增了对undefined类型的支持。
+滑动TextPicker文本内容后，选项归位至选中项位置时，触发该回调。当用户滑动选择器导致选中项变化时触发，不能通过修改双向绑定的状态变量（如selected）来触发。当显示文本或图片加文本列表时，value值为选中项中的文本值，当显示图片列表时，value值为空。与[onChange](TextPickerAttribute#onChange(callback: (value: string | string[], index: number |number[]) => void))相比，callback参数新增了对undefined类型的支持。
 
 回调会在滑动动画结束后触发，如果需要快速获取索引值变化，建议使用[onEnterSelectedArea](TextPickerAttribute#onEnterSelectedArea)接口。
 
@@ -470,7 +472,7 @@ onChange(callback: Optional<OnTextPickerChangeCallback>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;OnTextPickerChangeCallback&gt; | 是 | 滑动选中TextPicker文本内容后，触发的回调。<br/>当callback的值为undefined时，不使用回调函数。 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;OnTextPickerChangeCallback&gt; | 是 | 滑动选中TextPicker文本内容后，触发的回调。<br>当callback的值为undefined时，不使用回调函数。 |
 
 ## onEnterSelectedArea
 
@@ -481,13 +483,20 @@ onEnterSelectedArea(callback: TextPickerEnterSelectedAreaCallback)
 滑动TextPicker过程中，选项进入分割线区域内（当前列的滑动距离超过选中项高度的一半）时，触发该回调。
 > **说明：**  
 >  
-> - 与[onChange]  
-> {@link TextPickerAttribute#onChange(callback:(value: string | string[], index: number | number[]) => void)}事件  
-> 的差别在于，该事件的触发时机早于[onChange]  
-> {@link TextPickerAttribute#onChange(callback:(value: string | string[], index: number | number[]) => void)}事件。  
+> - 与  
+> [onChange](TextPickerAttribute#onChange(callback: (value: string | string[], index: number | number[]) => void))  
+> 事件的差别在于，该事件的触发时机早于  
+> [onChange](TextPickerAttribute#onChange(callback: (value: string | string[], index: number | number[]) => void))  
+> 事件。onEnterSelectedArea在滑动过程中选项进入选中区域时触发，适合实时获取索引值变化，适用于需要快速响应用户滑动的场景；onChange在滑  
+> 动结束且选中项归位后触发，适合获取最终确认的选中值，适用于需要获取用户最终选择的场景。  
 >  
-> - 在多列联动场景中，不建议使用该回调，由于该回调标识的是滑动过程中选项进入分割线区域内的节点，而跟随变化的选项并不涉及滑动，  
-> 因此，回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。  
+> - 与[onScrollStop](TextPickerAttribute#onScrollStop(callback: TextPickerScrollStopCallback))事件的差别在于，  
+> onEnterSelectedArea关注的是选项进入选中区域的逻辑状态，onScrollStop关注的是滚动行为完全停止。需要更早响应索引变化时使用  
+> onEnterSelectedArea，需要确认滚动完全停止时使用  
+> [onScrollStop](TextPickerAttribute#onScrollStop(callback: TextPickerScrollStopCallback))。  
+>  
+> - 在多列联动场景中，不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节点；跟随变化的选项并不涉及滑动，因此回调返回值中仅当  
+> 前滑动列的值会正常变化，其余未滑动列的值保持不变。  
 >  
 > - 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
@@ -518,7 +527,12 @@ onScrollStop(callback: TextPickerScrollStopCallback)
 手指拖动选项列触发的滑动，手指离开屏幕且滑动停止时会触发该事件。
 > **说明：**  
 >  
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> - 与[onEnterSelectedArea](TextPickerAttribute#onEnterSelectedArea)事件的差别在于，onScrollStop关注的  
+> 是滚动行为完全停止，onEnterSelectedArea关注的是选项进入选中区域的逻辑状态。onEnterSelectedArea能更早响应索引变化，  
+> 适合实时反馈场景，建议使用[onEnterSelectedArea](TextPickerAttribute#onEnterSelectedArea)；若需确认滚动行为完全停止，  
+> 则使用onScrollStop。  
+>  
+> - 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 14
 
@@ -547,7 +561,11 @@ onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 手指拖动选项列触发的滑动，手指离开屏幕且滑动停止时会触发该事件。
 > **说明：**  
 >  
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> - 与[onEnterSelectedArea](TextPickerAttribute#onEnterSelectedArea)事件的差别在于，onScrollStop关注的是滚动行为完全  
+> 停止，onEnterSelectedArea关注的是选项进入选中区域的逻辑状态。onEnterSelectedArea能更早响应索引变化，适合实时反馈场景，建议使用  
+> [onEnterSelectedArea](TextPickerAttribute#onEnterSelectedArea)；若需确认滚动行为完全停止，则使用onScrollStop。  
+>  
+> - 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 18
 
@@ -563,7 +581,7 @@ onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;TextPickerScrollStopCallback&gt; | 是 | 文本选择器的选项列滑动停止时触发该事件。<br/>当callback的值为undefined时，不使用回调函数。 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;TextPickerScrollStopCallback&gt; | 是 | 文本选择器的选项列滑动停止时触发该事件。<br>当callback的值为undefined时，不使用回调函数。 |
 
 ## selectedBackgroundStyle
 
@@ -587,7 +605,7 @@ selectedBackgroundStyle(style: Optional<PickerBackgroundStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerBackgroundStyle&gt; | 是 | 选中项背景的颜色和边框圆角半径，多列模式时会同时设置所有列的选中项背景的颜色和圆角半径。<br/>默认值：<br/>{ <br/>color: $r('sys.color.comp_background_tertiary'),<br/>borderRadius: $r('sys.float.corner_radius_level12')<br/>} |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerBackgroundStyle&gt; | 是 | 选中项背景的颜色和边框圆角半径，多列模式时会同时设置所有列的选中项背景的颜色和圆角半径。<br>默认值：<br>{<br>color: $r('sys.color.comp_background_tertiary'),<br>borderRadius: $r('sys.float.corner_radius_level12')<br>} |
 
 ## selectedIndex
 
@@ -611,7 +629,7 @@ selectedIndex(value: number | number[])
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| number[] | 是 | 选中项在数据选择列表中的索引值，索引从0开始。<br/>默认值：0<br/>当value的值为负数或者超过数据选择列表的最大索引值时，使用默认值。 |
+| value | number \| number[] | 是 | 选中项在数据选择列表中的索引值，索引从0开始。<br>默认值：0<br>当value的值为负数或者超过数据选择列表的最大索引值时，使用默认值。<br> |
 
 ## selectedIndex
 
@@ -635,7 +653,7 @@ selectedIndex(index: Optional<number | number[]>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | [Optional](arkts-arkui-optional-t.md)&lt;number \| number[]&gt; | 是 | 选中项在数据选择列表中的索引值，索引从0开始。<br/>默认值：0<br/>当index的值为undefined时，使用[TextPickerOptions](arkts-arkui-textpickeroptions-i.md)中的selected值。<br/>当index的值为负数或者超过数据选择列表的最大索引值时，使用默认值。<br/> |
+| index | [Optional](arkts-arkui-optional-t.md)&lt;number \| number[]&gt; | 是 | 选中项在数据选择列表中的索引值，索引从0开始。<br>默认值：0<br>当index的值为undefined时，使用[TextPickerOptions](arkts-arkui-textpickeroptions-i.md)中的selected值。<br>当index的值为负数或者超过数据选择列表的最大索引值时，使用默认值。<br> |
 
 ## selectedTextStyle
 
@@ -659,7 +677,7 @@ selectedTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。<br/>默认值：<br/>{<br/>color: '#ff007dff',<br/>font: {<br/>size: '20fp', <br/>weight: FontWeight.Medium<br/>}<br/>} |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp',<br>weight: FontWeight.Medium<br>}<br>}<br>**说明**：未调用该方法设置样式时，使用默认值。 |
 
 ## selectedTextStyle
 
@@ -683,7 +701,7 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细。<br/>默认值：<br/>{<br/>color:'#ff007dff',<br/>font: {<br/>size: '20fp', <br/>weight: FontWeight.Medium<br/>}<br/>}<br/>当style的值为undefined时，使用默认值。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp',<br>weight: FontWeight.Medium<br>}<br>}<br>当style的值为undefined时，使用默认值。 |
 
 ## selectedTextStyle
 
@@ -691,7 +709,7 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[selectedTextStyle](TextPickerAttribute#selectedTextStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)类型的支持。
+设置选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[selectedTextStyle<sup>18+</sup>](TextPickerAttribute#selectedTextStyle(style: Optional<PickerTextStyle>))相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 
@@ -707,7 +725,7 @@ selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle \| TextPickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。<br/>默认值：<br/>{<br/>color: '#ff007dff',<br/>font: {<br/>size: '20fp', <br/>weight:FontWeight.Medium<br/>},<br/>minFontSize: 0,<br/>maxFontSize: 0,<br/>overflow: TextOverflow.Clip<br/>}<br/>当style的值为undefined时，使用默认值。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle \| TextPickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。<br>默认值：<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp',<br>weight: FontWeight.Medium<br>},<br>minFontSize: 0,<br>maxFontSize: 0,<br>overflow: TextOverflow.Clip<br>}<br>当style的值为undefined时，使用默认值。 |
 
 ## textStyle
 
@@ -731,7 +749,7 @@ textStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。<br/>默认值：<br/>{<br/>color: '#ff182431',<br/>font: {<br/>size: '16fp', <br/>weight: FontWeight.Regular<br/>}<br/>} |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp',<br>weight: FontWeight.Regular<br>}<br>}<br>**说明**：未调用该方法设置样式时，使用默认值。 |
 
 ## textStyle
 
@@ -755,7 +773,7 @@ textStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细。<br/>默认值：<br/>{<br/>color:'#ff182431',<br/>font: {<br/>size: '16fp', <br/>weight: FontWeight.Regular<br/>}<br/>}<br/>当style的值为undefined时，使用默认值。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp',<br>weight: FontWeight.Regular<br>}<br>}<br>当style的值为undefined时，使用默认值。 |
 
 ## textStyle
 
@@ -763,7 +781,7 @@ textStyle(style: Optional<PickerTextStyle>)
 textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[textStyle](TextPickerAttribute#textStyle(style: Optional<PickerTextStyle>))<sup>18+</sup>相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)类型的支持。
+设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[textStyle<sup>18+</sup>](TextPickerAttribute#textStyle(style: Optional<PickerTextStyle>))相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 
@@ -779,5 +797,5 @@ textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle \| TextPickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。<br/>默认值：<br/>{<br/>color: '#ff182431',<br/>font: {<br/>size: '16fp', <br/>weight:FontWeight.Regular<br/>},<br/>minFontSize: 0,<br/>maxFontSize: 0,<br/>overflow: TextOverflow.Clip<br/>}<br/>当style的值为undefined时，使用默认值。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle \| TextPickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。<br>默认值：<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp',<br>weight: FontWeight.Regular<br>},<br>minFontSize: 0,<br>maxFontSize: 0,<br>overflow: TextOverflow.Clip<br>}<br>当style的值为undefined时，使用默认值。 |
 

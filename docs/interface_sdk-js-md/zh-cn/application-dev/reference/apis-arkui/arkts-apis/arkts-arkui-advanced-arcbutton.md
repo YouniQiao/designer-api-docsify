@@ -19,7 +19,7 @@ import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcB
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcButton](arkts-arkui-arkui-advanced-arcbutton-arcbutton-s.md) | 弧形按钮组件提供强调、普通、警告等样式按钮，推荐用于圆形屏幕的设备。 |
+| [ArcButton](arkts-arkui-arkui-advanced-arcbutton-arcbutton-s.md) | 弧形按钮组件提供强调、普通等样式按钮，推荐用于圆形屏幕的设备。 |
 
 ### 接口
 

@@ -1,8 +1,20 @@
 # SurfaceRect
 
-Surface Rectangle information.
+Describes the rectangle of the surface held by the **XComponent**.
+> **NOTE**
+> The **surfaceWidth** and **surfaceHeight** attributes default to the size of the **XComponent** if the  
+> [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API is not called and neither  
+> [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border) nor  
+> [padding](arkts-arkui-commonmethod-c.md#padding) is set.  
+>  
+> Make sure the values of **surfaceWidth** and **surfaceHeight** do not exceed 8192 px. Exceeding this limit may  
+> lead to rendering issues.  
+>  
+> In immersive scenarios, the default layout of **SurfaceRect** does not include the safe area. To achieve an  
+> immersive effect, you must set the surface display area using the  
+> [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API.
 
-**Since:** 20
+**Since:** 12
 
 <!--Device-unnamed-declare interface SurfaceRect--><!--Device-unnamed-declare interface SurfaceRect-End-->
 
@@ -14,15 +26,17 @@ Surface Rectangle information.
 offsetX?: number
 ```
 
-The horizontal offset of the surface relative to XComponent.
+X-coordinate of the surface rectangle relative to the upper-left corner of the **XComponent**.
+
+Unit: px
 
 **Type:** number
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SurfaceRect-offsetX?: number--><!--Device-SurfaceRect-offsetX?: number-End-->
 
@@ -34,15 +48,17 @@ The horizontal offset of the surface relative to XComponent.
 offsetY?: number
 ```
 
-The vertical offset of the surface relative to XComponent.
+Y-coordinate of the surface rectangle relative to the upper left corner of the **XComponent**.
+
+Unit: px
 
 **Type:** number
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SurfaceRect-offsetY?: number--><!--Device-SurfaceRect-offsetY?: number-End-->
 
@@ -54,15 +70,17 @@ The vertical offset of the surface relative to XComponent.
 surfaceHeight: number
 ```
 
-The height of the surface created by XComponent
+Height of the surface rectangle.
+
+Unit: px.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SurfaceRect-surfaceHeight: number--><!--Device-SurfaceRect-surfaceHeight: number-End-->
 
@@ -74,15 +92,17 @@ The height of the surface created by XComponent
 surfaceWidth: number
 ```
 
-The width of the surface created by XComponent
+Width of the surface rectangle.
+
+Unit: px.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SurfaceRect-surfaceWidth: number--><!--Device-SurfaceRect-surfaceWidth: number-End-->
 

@@ -1,9 +1,9 @@
 # NodeAdapter
 
-NodeAdapter提供FrameNode的数据懒加载能力，通过[LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md)实现接口功能。
+NodeAdapter提供FrameNode的数据懒加载能力，通过[LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i)实现接口功能。适用于长列表等需要按需加载节点数据的场景，可提升渲染性能并降低内存占用。
 > **说明：**  
 >  
-> 入参不能为负数，入参为负数时不做处理。
+> NodeAdapter各方法中的数值入参（如start、count、from、to）不能为负数，入参为负数时不做处理。
 
 **起始版本：** 12
 
@@ -160,7 +160,7 @@ insertItem(start: number, count: number): void
 isDisposed(): boolean
 ```
 
-查询当前FrameNode对象是否已解除与后端实体节点的引用关系。前端节点均绑定有相应的后端实体节点，当节点调用dispose接口解除绑定后，再次调用接口可能会出现crash、返回默认值的情况。由于业务需求，可能存在节点在dispose后仍被调用接口的情况。为此，提供此接口以供开发者在操作节点前检查其有效性，避免潜在风险。
+查询当前NodeAdapter对象是否已解除与后端实体节点的引用关系。前端节点均绑定有相应的后端实体节点，当节点调用dispose接口解除绑定后，再次调用该节点的其他接口可能会出现crash、返回默认值的情况。由于业务需求，可能存在节点在dispose后仍被调用接口的情况。为此，提供此接口以供开发者在操作节点前检查其有效性，避免潜在风险。
 
 **起始版本：** 20
 
@@ -210,6 +210,14 @@ onAttachToNode?(target: FrameNode): void
 ```
 
 FrameNode绑定NodeAdapter时回调。
+> **说明：**  
+>  
+> 在API版本26.0.0之前，该回调在宿主节点挂载到主树时触发。如果通过动态赋值方式设置该回调，开发者可以在调用[attachNodeAdapter](arkts-arkui-framenode-nodeadapter-c.md#attachnodeadapter)后  
+> 、宿主节点挂载到主树前完成设置，并在宿主节点挂载到主树时收到该回调。  
+>  
+> 从API版本26.0.0开始，该回调会在NodeAdapter绑定到宿主节点时立即触发，而不是在宿主节点挂载到主节点树时触发。此时宿主节点可能尚未挂载到主节点树。如果回调逻辑依赖节点已挂载（例如访问布局信息或执行动画），建议在  
+> 该回调中注册[onAppear](../arkts-components/arkts-arkui-commonmethod-c.md#onappear)，并将相关逻辑放入onAppear中执行。如果通过动态赋值方式设置该回调，请在调用  
+> [attachNodeAdapter](arkts-arkui-framenode-nodeadapter-c.md#attachnodeadapter)前完成设置，否则回调可能无法触发。
 
 **起始版本：** 12
 
@@ -361,7 +369,7 @@ onUpdateChild?(id: number, node: FrameNode): void
 reloadAllItems(): void
 ```
 
-重新加载全部数据操作。实际调用了LazyForEach中的[OnDataReloaded](../arkts-components/arkts-arkui-datachangelistener-i.md#ondatareloaded)接口通知组件重新加载所有数据。
+重新加载全部数据操作。实际调用了LazyForEach中的[onDataReloaded](../arkts-components/arkts-arkui-datachangelistener-i.md#ondatareloaded)接口通知组件重新加载所有数据。
 
 **起始版本：** 12
 

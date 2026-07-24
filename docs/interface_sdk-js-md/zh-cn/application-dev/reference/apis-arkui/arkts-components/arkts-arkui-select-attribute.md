@@ -163,7 +163,7 @@ controlSize(size: Optional<ControlSize>)
 divider(options: Optional<DividerOptions> | null)
 ```
 
-设置分割线样式，不设置该属性则按“默认值”展示分割线。
+设置分割线样式，不设置该属性则按“默认值”展示分割线。该属性与dividerStyle冲突，如果同时设置，按调用顺序生效，后者覆盖前者。
 
 **起始版本：** 12
 
@@ -187,7 +187,7 @@ divider(options: Optional<DividerOptions> | null)
 dividerStyle(style: Optional<DividerStyleOptions>)
 ```
 
-设置分割线样式，不设置该属性则按“默认值”展示分割线。该属性与divider互斥，按调用顺序生效。
+设置分割线样式，不设置该属性则按“默认值”展示分割线。该属性与divider冲突，如果同时设置，按调用顺序生效，后者覆盖前者。
 
 **起始版本：** 19
 
@@ -203,7 +203,7 @@ dividerStyle(style: Optional<DividerStyleOptions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;DividerStyleOptions&gt; | 是 | 1.设置DividerOptions，则按设置的样式显示分割线。<br/>默认值：<br/>{<br/>strokeWidth: '1px' , <br/>color: '#33182431'<br/>}<br/>2.设置为null或undefined时，展示默认分割线。<br/>3.当mode为FLOAT_ABOVE_MENU时，strokeWidth设置过宽时，会覆盖文字。分割线会从每一个Item底部开始，同时向上向下画分割线。当mode为EMBEDDED_IN_MENU时，分割线在Menu中展开，独立占用高度。<br/>4.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。startMargin和endMargin的和与optionWidth的值相等时，不显示分割线。startMargin和endMargin的和超过optionWidth的值时，按照默认样式显示分割线。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;DividerStyleOptions&gt; | 是 | 1.设置DividerStyleOptions，则按设置的样式显示分割线。<br/>默认值：<br/>{<br/>strokeWidth: '1px' , <br/>color: '#33182431'<br/>}<br/>2.设置为null或undefined时，展示默认分割线。<br/>3.当mode为FLOAT_ABOVE_MENU时，strokeWidth设置过宽时，会覆盖文字。分割线会从每一个Item底部开始，同时向上向下画分割线。当mode为EMBEDDED_IN_MENU时，分割线在Menu中展开，独立占用高度。<br/>4.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。startMargin和endMargin的和与optionWidth的值相等时，不显示分割线。startMargin和endMargin的和超过optionWidth的值时，按照默认样式显示分割线。 |
 
 ## font
 
@@ -319,7 +319,7 @@ keyboardAvoidMode(mode: Optional<MenuKeyboardAvoidMode>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;MenuKeyboardAvoidMode&gt; | 是 | 设置下拉菜单是否避让软键盘。取值为undefined时，按照MenuKeyboardAvoidMode.NONE处理，不避让软键盘。 |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;MenuKeyboardAvoidMode&gt; | 是 | 设置下拉菜单是否避让软键盘。取值为undefined时，按照MenuKeyboardAvoidMode.NONE处理，不避让软键盘。各枚举值的具体效果参见MenuKeyboardAvoidMode枚举说明。 |
 
 ## menuAlign
 
@@ -344,7 +344,7 @@ menuAlign(alignType: MenuAlignType, offset?: Offset)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | alignType | [MenuAlignType](arkts-arkui-menualigntype-e.md) | 是 | 对齐方式类型。<br/>默认值：MenuAlignType.START |
-| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。<br/> 默认值：{dx: 0, dy: 0} |
+| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。dx控制水平方向偏移，dy控制垂直方向偏移。<br/> 默认值：{dx: 0, dy: 0} |
 
 ## menuAlign
 
@@ -527,7 +527,7 @@ menuBackgroundEffect(effect: Optional<BackgroundEffectOptions>)
 menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>)
 ```
 
-定制Select下拉菜单项内容区的方法。在应用了menuItemContentModifier后，下拉菜单的内容将完全由开发者自定义，此时为Select组件设置的分割线、选项颜色及下拉菜单的字体颜色等属性将不再生效。
+定制Select下拉菜单项内容区的方法。在应用了menuItemContentModifier后，下拉菜单的内容将完全由开发者自定义，此时为Select组件设置的分割线、选项颜色及下拉菜单的字体颜色等属性将不再生效。适用于下拉菜单项需要展示图文混排、多行文本、复杂图标或内置控件等复杂布局的场景。
 > **说明：**  
 >  
 > 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
@@ -573,7 +573,7 @@ menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;ContentModifier&lt;MenuItemConfiguration&gt;&gt; | 是 | 在Select组件上，定制下拉菜单项内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。<br/>当modifier的值为undefined时，不使用内容修改器。 |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;ContentModifier&lt;MenuItemConfiguration&gt;&gt; | 是 | 在Select组件上，定制下拉菜单项内容区的方法。<br/>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。<br/>当modifier的值为undefined或null时，不使用内容修改器。 |
 
 ## menuOutline
 
@@ -817,9 +817,9 @@ optionHeight(value: Dimension)
 
 设置下拉菜单显示的最大高度，不支持设置百分比。默认最大高度是屏幕可用高度的80%，设置的菜单最大高度不能超过默认最大高度。
 
-当设置为异常值或零时，属性不生效。
+当设置为无效值或零时，属性不生效。
 
-如果下拉菜单所有选项的实际高度没有设定的高度大，下拉菜单的高度按实际高度显示。
+如果下拉菜单所有选项的实际高度小于设定的高度，下拉菜单的高度按实际高度显示。
 
 **起始版本：** 11
 
@@ -845,7 +845,7 @@ optionHeight(height: Optional<Dimension>)
 
 设置下拉菜单显示的最大高度，不支持设置百分比。默认最大高度是屏幕可用高度的80%，设置的菜单最大高度不能超过默认最大高度。与[optionHeight](SelectAttribute#optionHeight(value: Dimension))<sup>11+</sup>相比，height参数新增了对undefined类型的支持。
 
-当设置为异常值或零时，属性不生效。
+当设置为无效值或零时，属性不生效。
 
 如果下拉菜单所有选项的实际高度小于设定的高度，下拉菜单的高度按实际高度显示。
 
@@ -892,7 +892,7 @@ optionTextModifier(modifier: Optional<TextModifier>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [Optional](arkts-arkui-optional-t.md)&lt;TextModifier&gt; | 是 | 在Select组件上，定制Select下拉菜单未选中项样式的方法。<br/> 当modifier的值为undefined时，不自定义下拉菜单未选中项的文本样式。 |
+| modifier | [Optional](arkts-arkui-optional-t.md)&lt;TextModifier&gt; | 是 | 在Select组件上，定制Select下拉菜单未选中项文本样式的方法。 <br/> 当modifier的值为undefined时，不自定义下拉菜单未选中项的文本样式。 |
 
 ## optionWidth
 
@@ -902,7 +902,7 @@ optionWidth(value: Dimension | OptionWidthMode )
 
 设置下拉菜单项的宽度，不支持设置百分比。OptionWidthMode类型为枚举类型，OptionWidthMode决定下拉菜单是否继承下拉按钮宽度。
 
-当设置为异常值或小于最小宽度56vp时，属性无效，菜单项宽度设为默认值，即2栅格。
+当设置为无效值或小于最小宽度56vp时，属性无效，菜单项宽度设为默认值，即2栅格。
 
 Select组件距屏幕边缘的左右间距为16vp，建议将组件本身及菜单项的宽度设置为小于等于`calc(100% - 32vp)`的值，以避免下拉菜单弹出时发生偏移。
 
@@ -930,7 +930,7 @@ optionWidth(width: Optional<Dimension | OptionWidthMode> )
 
 设置下拉菜单项的宽度，不支持设置百分比。OptionWidthMode类型为枚举类型，OptionWidthMode决定下拉菜单是否继承下拉按钮宽度。与[optionWidth](SelectAttribute#optionWidth(value: Dimension | OptionWidthMode ))<sup>11+</sup>相比，width参数新增了对undefined类型的支持。
 
-当设置为异常值或小于最小宽度56vp时，属性无效，菜单项宽度设为默认值，即2栅格。
+当设置为无效值或小于最小宽度56vp时，属性无效，菜单项宽度设为默认值，即2栅格。
 
 Select组件距屏幕边缘的左右间距为16vp，建议将组件本身及菜单项的宽度设置为小于等于`calc(100% - 32vp)`的值，以避免下拉菜单弹出时发生偏移。
 
@@ -956,7 +956,7 @@ Select组件距屏幕边缘的左右间距为16vp，建议将组件本身及菜�
 selected(value: number | Resource)
 ```
 
-设置下拉菜单初始选项的索引，第一项的索引为0。当不设置selected属性或设置为异常值时，默认选中值为-1，菜单项不选中；当设置为undefined、null时，选中第一项。
+设置下拉菜单初始选项的索引，第一项的索引为0。当不设置selected属性、或设置为负数、非整数、超出索引范围等异常值时，默认选中值为-1，菜单项不选中；当设置为undefined、null时，选中第一项。
 
 从API version 10开始，该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
@@ -982,7 +982,7 @@ selected(value: number | Resource)
 selected(numCount: Optional<number | Resource>)
 ```
 
-设置下拉菜单初始选项的索引，第一项的索引为0。当不设置selected属性或设置异常值时，默认选择值为-1，菜单项不选中；当设置为undefined、null时，选中第一项。
+设置下拉菜单初始选项的索引，第一项的索引为0。当不设置selected属性、或设置为负数、非整数、超出索引范围等异常值时，默认选中值为-1，菜单项不选中；当设置为undefined、null时，选中第一项。
 
 该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)、[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
@@ -1000,7 +1000,7 @@ selected(numCount: Optional<number | Resource>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | 是 | 下拉菜单初始选项的索引。<br/>当numCount的值为undefined时，选中第一项。 |
+| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | 是 | 下拉菜单初始选项的索引，索引值从0开始。<br/>当numCount的值为undefined或null时，选中第一项。 |
 
 ## selectedOptionBgColor
 

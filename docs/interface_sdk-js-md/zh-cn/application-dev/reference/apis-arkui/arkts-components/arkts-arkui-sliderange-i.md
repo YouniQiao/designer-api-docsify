@@ -1,6 +1,6 @@
 # SlideRange
 
-定义SlideRange中使用的回调类型。
+定义有效滑动区间。
 > **说明：**  
 >  
 > - 当前仅当min<=from<=to<=max时该接口生效(min和max不依赖于其设置的值，而取决于其实际生效的值)。  

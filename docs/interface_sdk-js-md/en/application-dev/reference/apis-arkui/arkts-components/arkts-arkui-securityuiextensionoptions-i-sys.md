@@ -1,6 +1,6 @@
 # SecurityUIExtensionOptions (System API)
 
-This interface is used to set the options for UIExtensionComponentAttribute during construction
+Defines the options to be passed when constructing **SecurityUIExtensionComponent**.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ This interface is used to set the options for UIExtensionComponentAttribute duri
 dpiFollowStrategy?: SecurityDpiFollowStrategy
 ```
 
-Set UIExtensionComponent Content Dpi Follow Strategy.
+Resolution following strategy for **SecurityUIExtensionComponent**, used to control whether the embedded **UIExtensionAbility** content follows the host application's resolution or uses its own resolution.Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**.
 
 **Type:** SecurityDpiFollowStrategy
 
@@ -38,7 +38,7 @@ Set UIExtensionComponent Content Dpi Follow Strategy.
 isTransferringCaller?: boolean
 ```
 
-Set whether the current capability is used as a Caller.<br/>If set to true, as a Caller, the current token of UIExtensionComponent is set to rootToken.
+Whether the **UIExtensionComponent** forwards the upper-level caller information when it is used for nesting.**true**: yes; **false**: no.The default value is **false**.
 
 **Type:** boolean
 
@@ -60,7 +60,7 @@ Set whether the current capability is used as a Caller.<br/>If set to true, as a
 placeholder?: ComponentContent
 ```
 
-Set placeholder.If set placeholder ComponentContent, show placeholder node when connection is not established.
+Placeholder to be displayed before the **SecurityUIExtensionComponent** establishes a connection with the **UIExtensionAbility**.
 
 **Type:** ComponentContent
 

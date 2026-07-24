@@ -1,6 +1,6 @@
 # ArcSliderLayoutOptionsConstructorOptions
 
-ArcSliderLayoutValueOptions的构造信息。
+ArcSliderLayoutOptions的构造信息。
 
 **起始版本：** 18
 
@@ -42,7 +42,7 @@ position?: ArcSliderPosition
 reverse?: boolean
 ```
 
-设置弧形Slider取值范围是否反向。值为false时表示从上往下滑。
+设置弧形Slider的滑动方向。值为false时表示从上往下滑。
 
 默认值：true，表示从下往上滑动。
 

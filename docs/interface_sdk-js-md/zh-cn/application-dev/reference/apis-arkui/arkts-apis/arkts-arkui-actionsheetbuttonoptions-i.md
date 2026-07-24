@@ -35,7 +35,7 @@ Button选中时的回调。
 defaultFocus?: boolean
 ```
 
-设置Button是否是默认焦点，true表示Button是默认焦点，false表示Button不是默认焦点。
+设置Button是否是默认焦点，true表示Button是默认焦点，false表示Button不是默认焦点。在弹窗获焦且未进行tab键走焦时，该按钮默认响应Enter键。多重弹窗情况下，可自动获焦并连续响应。默认响应Enter键能力在defaultFocus为true时不生效。
 
 默认值：false
 

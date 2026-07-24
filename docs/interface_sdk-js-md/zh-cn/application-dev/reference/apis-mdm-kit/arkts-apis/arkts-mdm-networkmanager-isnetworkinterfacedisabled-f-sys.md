@@ -16,6 +16,10 @@ function isNetworkInterfaceDisabled(admin: Want, networkInterface: string, callb
 
 **起始版本：** 10
 
+**废弃版本：** 26.0.0
+
+**替代接口：** [isNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-isnetworkinterfacedisabledsync-f.md#isnetworkinterfacedisabledsync)
+
 **需要权限：** ohos.permission.ENTERPRISE_GET_NETWORK_INFO
 
 **模型约束：** 此接口仅可在Stage模型下使用。

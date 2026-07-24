@@ -9,7 +9,7 @@ import { adminManager } from '@kit.MDMKit';
 ## enableSelfDeviceAdmin
 
 ```TypeScript
-function enableSelfDeviceAdmin(admin: Want, credential: string): Promise<void>
+function enableSelfDeviceAdmin(admin: Want, credential: string): void
 ```
 
 在企业设备中，MDM应用没有预置激活的场景下，MDM应用可以通过该接口实现自激活。该接口仅支持激活MDM应用自身，不支持激活其他MDM应用；支持的激活类型包括超级设备管理应用和普通设备管理应用。
@@ -22,7 +22,7 @@ function enableSelfDeviceAdmin(admin: Want, credential: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-adminManager-function enableSelfDeviceAdmin(admin: Want, credential: string): Promise<void>--><!--Device-adminManager-function enableSelfDeviceAdmin(admin: Want, credential: string): Promise<void>-End-->
+<!--Device-adminManager-function enableSelfDeviceAdmin(admin: Want, credential: string): void--><!--Device-adminManager-function enableSelfDeviceAdmin(admin: Want, credential: string): void-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
@@ -32,12 +32,6 @@ function enableSelfDeviceAdmin(admin: Want, credential: string): Promise<void>
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | credential | string | 是 | 激活凭证。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | the promise returned by the enableSelfDeviceAdmin. |
 
 **错误码：**
 
@@ -50,4 +44,29 @@ function enableSelfDeviceAdmin(admin: Want, credential: string): Promise<void>
 | [9200018](../errorcode-enterpriseDeviceManager.md#9200018-该设备非企业设备) | This device is not an enterprise device. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Failed to call the API due to limited device capabilities. |
+
+**示例：**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { adminManager } from '@kit.MDMKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// 需根据实际情况进行替换
+let credential: string = '{"enterpriseId": "123456", "appIdentifier": "123456", "type": "SDA", "sign": "", "certs": []}';
+
+try {
+  adminManager.enableSelfDeviceAdmin(wantTemp, credential);
+  console.info(`succeed in enable self device admin.`);
+} catch (err) {
+  console.error(`Failed to enable self device admin. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
 

@@ -20,7 +20,7 @@ import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOpt
 buttons?: [PopupButtonOptions?, PopupButtonOptions?]
 ```
 
-设置popup操作按钮，按钮最多设置两个。
+设置Popup操作按钮，按钮最多设置两个。
 
 默认不显示按钮。
 
@@ -42,7 +42,7 @@ buttons?: [PopupButtonOptions?, PopupButtonOptions?]
 direction?: Direction
 ```
 
-布局方向。
+设置Popup内容的布局方向，可用枚举值见[Direction](ts-appendix-enums.md#direction)。
 
 默认值：Direction.Auto
 
@@ -64,7 +64,7 @@ direction?: Direction
 icon?: PopupIconOptions
 ```
 
-设置popup图标。
+设置Popup图标。
 
 **说明：**
 
@@ -90,7 +90,7 @@ icon?: PopupIconOptions
 maxWidth?: Dimension
 ```
 
-设置popup的最大宽度，通过此接口popup可以自定义宽度显示。
+设置Popup的最大宽度，支持自定义宽度显示。
 
 **说明：**
 
@@ -116,7 +116,7 @@ maxWidth?: Dimension
 message: PopupTextOptions
 ```
 
-设置popup内容文本。
+设置Popup内容文本。
 
 **说明：**
 
@@ -142,7 +142,7 @@ message不支持设置fontWeight。
 onClose?: () => void
 ```
 
-设置popup关闭按钮回调函数。
+设置Popup关闭按钮回调函数。
 
 默认不设置关闭按钮回调函数。
 
@@ -164,7 +164,7 @@ onClose?: () => void
 showClose?: boolean | Resource
 ```
 
-设置popup关闭按钮。
+设置Popup关闭按钮。
 
 true：显示关闭按钮；false：不显示关闭按钮。
 
@@ -190,7 +190,7 @@ Resource：显示对应的图标。
 title?: PopupTextOptions
 ```
 
-设置popup标题文本。
+设置Popup标题文本。
 
 默认不显示标题文本。
 

@@ -110,7 +110,9 @@ The width of the arrow.
 autoCancel?: boolean
 ```
 
-页面有操作时，值为true表示自动关闭气泡，值为false表示气泡不会自动关闭。
+页面有操作时，气泡是否自动关闭。
+
+true：自动关闭气泡；false：气泡不会自动关闭。
 
 默认值：true
 
@@ -300,7 +302,7 @@ colorMode?: AnchoredColorMode
 enableArrow?: boolean
 ```
 
-是否显示箭头。值为true时显示箭头，值为false时不显示箭头。
+设置是否显示箭头。值为true时显示箭头，值为false时不显示箭头。
 
 如果箭头所在方位侧的气泡长度不足以显示下箭头，则会默认不显示箭头。比如：placement设置为Left，此时如果气泡高度小于箭头的宽度（32vp）与气泡圆角两倍（48vp）之和（80vp），则实际不会显示箭头。
 
@@ -672,7 +674,9 @@ The style of popup Shadow.
 showInSubWindow?: boolean
 ```
 
-取值为true时，气泡会显示在创建的子窗里，取值为false时，气泡会显示在对应的主窗中。
+气泡是否显示在创建的子窗里。
+
+true：气泡会显示在创建的子窗里；false：气泡会显示在对应的主窗中。
 
 默认值：false
 

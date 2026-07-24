@@ -60,7 +60,7 @@ layoutOptions?: ArcSliderLayoutOptions
 onChange?: ArcSliderChangeHandler
 ```
 
-弧形Slider的进度值发生变化时，告知应用。
+弧形Slider的进度值发生变化时触发回调。
 
 默认值：不传入的情况，无回调。
 
@@ -80,7 +80,7 @@ onChange?: ArcSliderChangeHandler
 onEnlarge?: ArcSliderEnlargeHandler
 ```
 
-弧形Slider放大或缩小时，告知应用。
+弧形Slider放大或缩小时触发回调。
 
 默认值：不传入的情况，无回调。
 
@@ -100,7 +100,7 @@ onEnlarge?: ArcSliderEnlargeHandler
 onTouch?: ArcSliderTouchHandler
 ```
 
-弧形Slider被触摸时，告知应用。
+弧形Slider被触摸时触发回调。
 
 默认值：不传入的情况，无回调。
 

@@ -14,7 +14,7 @@ function getAppClonePreference(bundleName: string): Promise<AppClonePreference>
 
 Obtains the application clone preference configuration based on the given bundle name.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Required permissions:** ohos.permission.MANAGE_CLONE_BUNDLE_PREFERENCES
 

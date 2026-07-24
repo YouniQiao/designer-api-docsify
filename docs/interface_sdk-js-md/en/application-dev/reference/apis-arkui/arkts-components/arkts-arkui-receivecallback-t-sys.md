@@ -4,7 +4,7 @@
 declare type ReceiveCallback = import('../api/@ohos.base').Callback<Record<string, Object>>
 ```
 
-Get Callback from @ohos.base.AnonyMous Object Rectification
+Triggered to encapsulate the data sent by the started ability.
 
 **Since:** 18
 

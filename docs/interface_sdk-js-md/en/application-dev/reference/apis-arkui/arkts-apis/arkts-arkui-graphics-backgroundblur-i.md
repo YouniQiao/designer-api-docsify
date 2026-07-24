@@ -1,6 +1,6 @@
 # BackgroundBlur
 
-Defines the background blur effect.
+Sets a background blur effect.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ Defines the background blur effect.
 grayscale?: [number, number]
 ```
 
-Grayscale parameters for the blur effect.Value range for each parameter: [0, 127].
+Grayscale blur, with two parameters in the value range of [0, 127]. The default value is [0, 0]. The color gradation of the black and white in the image is adjusted to create different shades of gray. The first parameter indicates the degree of brightening the black color, and the second parameter indicates the degree of darkening the white color. A larger value indicates a more obvious adjustment (black and white become more gray). For example, if the value specified is (20, 20), the RGB value [0, 0, 0](black) is adjusted to [20, 20, 20](0+20), RGB value [255, 255, 255](white) is adjusted to [235, 235, 235](255-20), and the color pixels remain unchanged in the image.
 
 **Type:** [number, number]
 
@@ -34,7 +34,7 @@ Grayscale parameters for the blur effect.Value range for each parameter: [0, 127
 radius: number
 ```
 
-Blur radius for background blur.The value must be greater than or equal to 0, the larger the value, the more blurred the background.The value 0 indicates no blur.
+Blur radius. The value range is [0, +∞). The default value is **0**. A negative value, **NaN**, and **Infinity** are invalid and treated as the default value. A larger value indicates a more obvious background blur effect. If the value is **0**, the background is not blurred.
 
 **Type:** number
 

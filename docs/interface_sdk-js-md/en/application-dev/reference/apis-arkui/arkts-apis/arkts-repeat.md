@@ -1,4 +1,4 @@
-# repeat (Defines Repeat component.)
+# repeat
 
 ## Summary
 

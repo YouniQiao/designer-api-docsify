@@ -12,9 +12,9 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 function request(param: RequestParameters, callback: AsyncCallback<RequestCallbackParameters>): void
 ```
 
-Plugin component request method.
+Requests the component from the component provider.
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -26,8 +26,8 @@ Plugin component request method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | Yes |  |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestCallbackParameters&gt; | Yes |  |
+| param | [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | Yes | Information about the component request. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestCallbackParameters&gt; | Yes | Asynchronous callback used to return the requested data. |
 
 **Example**
 

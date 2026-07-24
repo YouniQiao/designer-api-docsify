@@ -1,6 +1,14 @@
 # RenderNode
 
 The **RenderNode** module provides APIs for creating a RenderNode in custom drawing settings with C APIs.
+> **NOTE**  
+>  
+> - Avoid modifying RenderNodes in [BuilderNode](arkts-arkui-buildernode-c.md). The [FrameNode](arkts-arkui-framenode-c.md) associated  
+> with BuilderNode is designed solely for mounting the BuilderNode as a child component. Modifying attributes or  
+> operations on the FrameNode's child nodes or their corresponding RenderNodes may lead to undefined behavior,  
+> including display, event handling, and stability issues.  
+>  
+> - RenderNode objects do not support JSON serialization.
 
 **Since:** 11
 
@@ -540,7 +548,7 @@ Get frame info of the RenderNode.
 get label(): string
 ```
 
-Get label of the RenderNode. Default value: **""**.
+Get label of the RenderNode.
 
 **Type:** string
 

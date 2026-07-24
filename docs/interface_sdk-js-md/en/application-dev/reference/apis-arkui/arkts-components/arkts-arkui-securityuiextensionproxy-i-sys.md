@@ -1,6 +1,6 @@
 # SecurityUIExtensionProxy (System API)
 
-This interface is used for send data to the UIExtensionAbility.<br/>It is returned from onRemoteReady callback of UIExtensionComponent<br/>when UIExtensionAbility connects successfully
+Implements a **SecurityUIExtensionProxy** instance for the component host to send data to, subscribe to, or unsubscribe from the started ability through the connection established between the two parties.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ This interface is used for send data to the UIExtensionAbility.<br/>It is return
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-Deregisters the listener that watches for async data receiver callback being registered by UIExtensionAbility.
+Unsubscribes from the callback triggered for the asynchronous registration of the started ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -32,8 +32,8 @@ Deregisters the listener that watches for async data receiver callback being reg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'asyncReceiverRegister' | Yes | type of the listened event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | No | callback of the listened event. |
+| type | 'asyncReceiverRegister' | Yes | The value is fixed to **asyncReceiverRegister**, indicating unsubscription from the callback triggered for asynchronous registration of the extended ability. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | No | Callback function. If this parameter is left empty, it means unsubscribing from all callbacks triggered after **UIExtensionAbility**'s asynchronous registration. If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**. |
 
 ## off('syncReceiverRegister')
 
@@ -41,7 +41,7 @@ Deregisters the listener that watches for async data receiver callback being reg
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-Deregisters the listener that watches for sync data receiver callback being registered by UIExtensionAbility.
+Unsubscribes from the callback triggered for the synchronous registration of the started ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -57,8 +57,8 @@ Deregisters the listener that watches for sync data receiver callback being regi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'syncReceiverRegister' | Yes | type of the listened event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | No | callback of the listened event. |
+| type | 'syncReceiverRegister' | Yes | The value is fixed to **syncReceiverRegister**, indicating unsubscription to the asynchronous registration of the extension ability. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | No | Callback to unsubscribe from. If this parameter is left empty,it means unsubscribing from all callbacks triggered after **UIExtensionAbility**'s synchronous registration. |
 
 ## on('asyncReceiverRegister')
 
@@ -66,7 +66,7 @@ Deregisters the listener that watches for sync data receiver callback being regi
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-Register the listener that watches for async data receiver callback being registered by UIExtensionAbility.
+Subscribes to the callback triggered for asynchronous registration of the started ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -82,8 +82,8 @@ Register the listener that watches for async data receiver callback being regist
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'asyncReceiverRegister' | Yes | Indicates the type of event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | Yes | callback of the listened event. |
+| type | 'asyncReceiverRegister' | Yes | The value is fixed to **asyncReceiverRegister**, indicating a subscription to the callback triggered for asynchronous registration of the extended ability. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | Yes | Callback triggered after the extension ability registers a [setReceiveDataCallback](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md#setreceivedatacallback). |
 
 ## on('syncReceiverRegister')
 
@@ -91,7 +91,7 @@ Register the listener that watches for async data receiver callback being regist
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-Register the listener that watches for sync data receiver callback being registered by UIExtensionAbility.
+Subscribes to the callback triggered for synchronous registration of the started ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -107,8 +107,8 @@ Register the listener that watches for sync data receiver callback being registe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'syncReceiverRegister' | Yes | Indicates the type of event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | Yes | callback of the listened event. |
+| type | 'syncReceiverRegister' | Yes | The value is fixed to **syncReceiverRegister**, indicating subscription to the asynchronous registration of the extension ability. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | Yes | Callback triggered after the extension ability registers a [setReceiveDataForResultCallback](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md#setreceivedataforresultcallback). |
 
 ## send
 
@@ -116,7 +116,7 @@ Register the listener that watches for sync data receiver callback being registe
 send(data: Record<string, Object>): void
 ```
 
-This function is for sending data to the UIExtensionAbility.
+Asynchronously sends data to the ability started by the component host through the connection established between the two parties.
 
 **Since:** 26.0.0
 
@@ -132,7 +132,7 @@ This function is for sending data to the UIExtensionAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |  |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes | Data to be asynchronously sent to the started **UIExtensionAbility**. |
 
 ## sendSync
 
@@ -140,7 +140,7 @@ This function is for sending data to the UIExtensionAbility.
 sendSync(data: Record<string, Object>): Record<string, Object>
 ```
 
-This function is for sending data to the UIExtensionAbility and waiting the result in blocking mode.
+Synchronously sends data to the ability started by the component host through the connection established between the two parties.
 
 **Since:** 26.0.0
 
@@ -156,13 +156,13 @@ This function is for sending data to the UIExtensionAbility and waiting the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes | data send to the UIExtensionAbility |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes | Data to be synchronously sent to the started **UIExtensionAbility**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | data - data transferred from the UIExtensionAbility |
+| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Data returned by the extension ability. |
 
 **Error codes:**
 

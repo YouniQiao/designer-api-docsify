@@ -66,7 +66,7 @@ contentAreaPadding?: Padding
 @BuilderParam contentBuilder: () => void
 ```
 
-弹出框内容。
+用于构建弹出框内容区域的组件构建函数。
 
 **类型：** () =&gt; void
 
@@ -88,7 +88,7 @@ contentAreaPadding?: Padding
 controller: CustomDialogController
 ```
 
-弹出框控制器。
+弹出框控制器，用于控制弹出框的显示和隐藏。
 
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
@@ -110,7 +110,7 @@ controller: CustomDialogController
 localizedContentAreaPadding?: LocalizedPadding
 ```
 
-弹出框内容区内边距。
+弹出框内容区内边距，支持按语言方向自适应。设置了该属性时，contentAreaPadding不生效。
 
 **类型：** LocalizedPadding
 

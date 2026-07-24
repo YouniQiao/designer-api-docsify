@@ -4,7 +4,7 @@
 type Toggle = TypedFrameNode<ToggleInterface, ToggleAttribute>
 ```
 
-FrameNode of the [Toggle](../arkts-components/arkts-arkui-toggle.md) type.
+FrameNode of the [Toggle](../../apis-arkui/arkts-components/arkts-arkui-toggle-i) type.
 
 **Since:** 18
 

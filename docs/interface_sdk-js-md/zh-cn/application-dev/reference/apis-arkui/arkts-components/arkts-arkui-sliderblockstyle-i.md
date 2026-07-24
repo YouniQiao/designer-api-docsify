@@ -56,7 +56,7 @@ shape?: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute
 type: SliderBlockType
 ```
 
-设置滑块形状。
+滑块形状。
 
 默认值：SliderBlockType.DEFAULT，使用圆形滑块。
 

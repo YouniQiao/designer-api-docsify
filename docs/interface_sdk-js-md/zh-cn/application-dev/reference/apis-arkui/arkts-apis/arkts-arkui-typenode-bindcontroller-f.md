@@ -24,7 +24,7 @@ export function bindController(node: FrameNode, controller: TextController, node
 | --- | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定文本控制器的目标节点。 |
 | controller | [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) | 是 | 文本控制器。 |
-| nodeType | 'Text' | 是 | 绑定输入框控制器的目标节点的节点类型为Text。 |
+| nodeType | 'Text' | 是 | 绑定文本控制器的目标节点的节点类型为Text。 |
 
 **错误码：**
 
@@ -91,7 +91,7 @@ function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 绑定滚动控制器的目标节点。 |
-| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 | the controller which is bind to 绑定滚动控制器的目标节点。 |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 | 滚动控制器。 |
 | nodeType | 'Scroll' | 是 | 绑定滚动控制器的目标节点的节点类型为Scroll。 |
 
 **错误码：**
@@ -142,7 +142,7 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void
 ```
 
-将输入框控制器[TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md)绑定到[TextInput](arkts-arkui-typenode-textinput-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。该接口从API版本26.0.0开始支持声明式方式创建的节点。
+将输入框控制器[TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md)绑定到[TextInput](arkts-arkui-typenode-textinput-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API版本26.0.0开始，该接口支持声明式方式创建的节点，API版本26.0.0以下版本不支持。
 
 **起始版本：** 20
 
@@ -210,7 +210,7 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void
 ```
 
-将输入框控制器[TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md)绑定到[TextArea](arkts-arkui-typenode-textarea-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。该接口从API版本26.0.0开始支持声明式方式创建的节点。
+将输入框控制器[TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md)绑定到[TextArea](arkts-arkui-typenode-textarea-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API版本26.0.0开始，该接口支持声明式方式创建的节点，API版本26.0.0以下版本不支持。
 
 **起始版本：** 20
 

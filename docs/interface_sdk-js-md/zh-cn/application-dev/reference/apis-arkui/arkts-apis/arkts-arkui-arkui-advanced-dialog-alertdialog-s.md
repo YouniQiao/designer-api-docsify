@@ -1,6 +1,6 @@
 # AlertDialog
 
-操作确认类弹出框，触发一个将产生严重后果的不可逆操作时，如删除、重置、取消编辑、停止等。
+操作确认类弹出框，用于在触发一个将产生严重后果的不可逆操作（如删除、重置、取消编辑、停止等）时进行确认。
 
 **起始版本：** 10
 
@@ -20,7 +20,7 @@ import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, P
 content: ResourceStr
 ```
 
-确认弹出框内容。
+操作确认弹出框内容。
 
 默认不设置或设置为undefined，确认弹出框内容不显示。
 
@@ -42,7 +42,7 @@ content: ResourceStr
 controller: CustomDialogController
 ```
 
-确认弹出框控制器。
+操作确认弹出框控制器，用于控制弹出框的显示和隐藏。
 
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
@@ -64,7 +64,7 @@ controller: CustomDialogController
 primaryButton?: ButtonOptions
 ```
 
-确认弹出框左侧按钮。
+操作确认弹出框左侧按钮。
 
 默认不设置或设置为undefined，确认弹出框左侧按钮不显示。
 
@@ -86,7 +86,7 @@ primaryButton?: ButtonOptions
 primaryTitle?: ResourceStr
 ```
 
-确认弹出框一级标题。
+操作确认弹出框一级标题。
 
 默认不设置或设置为undefined，确认弹出框一级标题不显示。
 
@@ -110,7 +110,7 @@ primaryTitle?: ResourceStr
 secondaryButton?: ButtonOptions
 ```
 
-确认弹出框右侧按钮。
+操作确认弹出框右侧按钮。
 
 默认不设置或设置为undefined，确认弹出框右侧按钮不显示。
 
@@ -132,7 +132,7 @@ secondaryButton?: ButtonOptions
 secondaryTitle?: ResourceStr
 ```
 
-确认弹出框二级标题。
+操作确认弹出框二级标题。
 
 默认不设置或设置为undefined，确认弹出框二级标题不显示。
 

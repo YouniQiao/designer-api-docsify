@@ -113,7 +113,7 @@ mark(value: MarkStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | 是 | 多选框内部图标样式。 |
+| value | [MarkStyle](../arkts-apis/arkts-arkui-markstyle-i.md) | 是 | 多选框内部图标样式。<br/>异常值按照默认值处理。 |
 
 ## mark
 
@@ -145,7 +145,7 @@ mark(style: Optional<MarkStyle>)
 onChange(callback: OnCheckboxGroupChangeCallback)
 ```
 
-CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化时，触发回调。
+CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化时，触发回调。在与带有缓存功能的组件（如[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md)）配合使用时，需注意未创建的Checkbox的选中状态对回调结果的影响。
 
 **起始版本：** 8
 
@@ -169,7 +169,7 @@ CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化�
 onChange(callback: Optional<OnCheckboxGroupChangeCallback>)
 ```
 
-CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化时，触发回调。与[onChange](CheckboxGroupAttribute#onChange(callback: OnCheckboxGroupChangeCallback))相比，callback参数新增了对undefined类型的支持。
+CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化时，触发回调。与[onChange](CheckboxGroupAttribute#onChange(callback: OnCheckboxGroupChangeCallback))相比，callback参数新增了对undefined类型的支持。在与带有缓存功能的组件（如[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md)）配合使用时，需注意未创建的Checkbox的选中状态对回调结果的影响。
 
 **起始版本：** 18
 

@@ -1,6 +1,6 @@
 # IPrefetcher
 
-Provides prefetching capabilities.
+Provides the prefetching capability. It works with **LazyForEach** to prefetch data items when users swipe through container components such as **List** and **Grid**, improving user browsing experience.
 
 **Since:** 12
 
@@ -44,7 +44,7 @@ Sets the prefetching-capable data source to bind to the **Prefetcher**.
 visibleAreaChanged(minVisible: number, maxVisible: number): void
 ```
 
-Called when the boundaries of the visible area change. This API works with the **List**, **Grid**, **WaterFlow**,and **Swiper** components.
+Called when the boundary of the visible area changes. It notifies **Prefetcher** of the current visible area range so that **Prefetcher** can determine whether to prefetch or cancel the prefetching of data items. Before calling this API, you need to set a data source using **setDataSource**. This API works with the **List**, **Grid**,**WaterFlow**, and **Swiper** components.
 
 **Since:** 12
 
@@ -60,6 +60,6 @@ Called when the boundaries of the visible area change. This API works with the *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minVisible | number | Yes | Upper bound of the visible area. |
-| maxVisible | number | Yes | Lower bound of the visible area. |
+| minVisible | number | Yes | Index of the first data item in the current visible area. |
+| maxVisible | number | Yes | Index of the last data item in the current visible area. |
 

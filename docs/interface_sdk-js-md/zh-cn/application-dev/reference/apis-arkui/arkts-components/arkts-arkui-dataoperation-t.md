@@ -5,8 +5,7 @@ declare type DataOperation =
   DataAddOperation | DataDeleteOperation | DataChangeOperation | DataMoveOperation | DataExchangeOperation | DataReloadOperation
 ```
 
-定义数据操作类型。
-> **说明**
+数据操作类型。
 
 **起始版本：** 12
 
@@ -20,10 +19,10 @@ declare type DataOperation =
 
 | 类型 | 说明 |
 | --- | --- |
-| DataAddOperation | Represents Represents Represents Represents Represents Represents Represents 添加单个数据。 |
-| DataDeleteOperation | Represents Represents Represents Represents Represents Represents Represents 删除单个数据。 |
-| DataChangeOperation | Represents Represents Represents Represents Represents Represents Represents 执行单个数据的插入、更新或删除。 |
-| DataMoveOperation | Represents Represents Represents Represents Represents Represents Represents 移动单个数据。 |
-| DataExchangeOperation | Represents Represents Represents Represents Represents Represents Represents 交换单个数据。 |
-| DataReloadOperation | Represents Represents Represents Represents Represents Represents Represents 重载所有数据。 |
+| DataAddOperation | 添加数据操作。 |
+| DataDeleteOperation | 删除数据操作。 |
+| DataChangeOperation | 改变数据操作。 |
+| DataMoveOperation | 移动数据操作。 |
+| DataExchangeOperation | 交换数据操作。 |
+| DataReloadOperation | 重载所有数据操作。 |
 

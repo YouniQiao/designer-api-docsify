@@ -50,6 +50,24 @@ complexityRegex?: string
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## passwordAlgs
+
+```TypeScript
+passwordAlgs?: PasswordAlgs
+```
+
+密码加密算法
+
+**类型：** PasswordAlgs
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs--><!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## validityPeriod
 
 ```TypeScript

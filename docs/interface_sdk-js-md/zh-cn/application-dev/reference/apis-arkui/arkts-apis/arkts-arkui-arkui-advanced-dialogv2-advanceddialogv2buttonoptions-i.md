@@ -42,7 +42,7 @@ action?: AdvancedDialogV2ButtonAction
 background?: ColorMetrics
 ```
 
-按钮的背景。
+按钮的背景。当buttonStyle和role为默认值时生效。
 
 默认值跟随buttonStyle。
 
@@ -164,7 +164,7 @@ false：按钮不可用。
 fontColor?: ColorMetrics
 ```
 
-按钮的字体颜色。
+按钮的字体颜色。当buttonStyle和role为默认值时生效。
 
 默认值跟随buttonStyle。
 

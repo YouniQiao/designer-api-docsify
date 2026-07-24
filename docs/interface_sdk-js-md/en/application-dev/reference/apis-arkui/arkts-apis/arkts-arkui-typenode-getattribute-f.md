@@ -294,7 +294,7 @@ Obtains the attributes of a **RelativeContainer** node. If the node is not creat
 export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): LoadingProgressAttribute | undefined
 ```
 
-Obtains the attributes of a [LoadingProgress](../arkts-components/arkts-arkui-loadingprogress.md) node. If the node is not created using ArkTS,cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
+Obtains the attributes of a [LoadingProgress](../../apis-arkui/arkts-components/arkts-arkui-loading_progress-i) node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 

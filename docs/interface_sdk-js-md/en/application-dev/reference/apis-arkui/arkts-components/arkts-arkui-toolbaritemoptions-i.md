@@ -1,6 +1,6 @@
 # ToolBarItemOptions
 
-ToolBarItem constructor options.
+Provides optional parameters for **ToolBarItem** configuration.
 
 **Since:** 20
 
@@ -14,7 +14,13 @@ ToolBarItem constructor options.
 placement?: ToolBarItemPlacement
 ```
 
-Vertical layout element spacing.
+Placement position of the toolbar item.
+
+Default value: **ToolBarItemPlacement.TOP_BAR_LEADING**.
+
+**ToolBarItemPlacement.TOP_BAR_LEADING**: places the item at the start of the top bar.
+
+**ToolBarItemPlacement.TOP_BAR_TRAILING**: places the item at the end of the top bar.
 
 **Type:** ToolBarItemPlacement
 

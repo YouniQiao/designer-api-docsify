@@ -64,9 +64,7 @@ true：开关打开；false：开关关闭。
 triggerChange: Callback<boolean>
 ```
 
-触发switch选中状态变化。
-
-true：状态从关切换为开；false：状态从开切换为关。
+用于触发Toggle开关状态变化的回调函数，通常在自定义ContentModifier中通过编程方式改变开关状态。调用此回调并传入true可将开关状态设置为打开，传入false可将开关状态设置为关闭。
 
 **类型：** Callback&lt;boolean&gt;
 

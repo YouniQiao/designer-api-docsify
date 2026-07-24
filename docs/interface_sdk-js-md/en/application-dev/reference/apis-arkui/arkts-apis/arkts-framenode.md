@@ -2,7 +2,7 @@
 
 Provides APIs for creating a specific type of FrameNode, which can be mounted through the basic API of the FrameNode and be displayed using a placeholder container.
 
-When **typeNode** is used to create [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md), [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md), [Select](../arkts-components/arkts-arkui-select.md), or [Toggle](../arkts-components/arkts-arkui-toggle.md) nodes, if the UI instance corresponding to the input [UIContext](arkts-arkui-uicontext.md)is destroyed, this API returns an invalid FrameNode that cannot be properly mounted or displayed.
+When **typeNode** is used to create [Text](../../apis-arkui/arkts-components/arkts-arkui-text-i),[Image](../../apis-arkui/arkts-components/arkts-arkui-image-i), [Select](../../apis-arkui/arkts-components/arkts-arkui-select-i), or [Toggle](../../apis-arkui/arkts-components/arkts-arkui-toggle-i) nodes, if the UI instance corresponding to the input [UIContext](arkts-arkui-uicontext.md) is destroyed, this API returns an invalid FrameNode that cannot be properly mounted or displayed.
 
 ## Summary
 
@@ -10,14 +10,14 @@ When **typeNode** is used to create [Text](../../apis-arkgraphics2d/arkts-apis/a
 
 | Name | Description |
 | --- | --- |
-| [typeNode](arkts-arkui-typenode-n.md) | Provides APIs for creating a specific type of FrameNode, which can be mounted through the basic API of the FrameNode and be displayed using a placeholder container.  When **typeNode** is used to create [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md), [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md), [Select](../arkts-components/arkts-arkui-select.md), or [Toggle](../arkts-components/arkts-arkui-toggle.md) nodes, if the UI instance corresponding to the input [UIContext](arkts-arkui-uicontext.md)is destroyed, this API returns an invalid FrameNode that cannot be properly mounted or displayed. |
+| [typeNode](arkts-arkui-typenode-n.md) | Provides APIs for creating a specific type of FrameNode, which can be mounted through the basic API of the FrameNode and be displayed using a placeholder container.  When **typeNode** is used to create [Text](../../apis-arkui/arkts-components/arkts-arkui-text-i),[Image](../../apis-arkui/arkts-components/arkts-arkui-image-i), [Select](../../apis-arkui/arkts-components/arkts-arkui-select-i), or [Toggle](../../apis-arkui/arkts-components/arkts-arkui-toggle-i) nodes, if the UI instance corresponding to the input [UIContext](arkts-arkui-uicontext.md) is destroyed, this API returns an invalid FrameNode that cannot be properly mounted or displayed. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | Defines FrameNode. |
-| [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Provides lazy loading capabilities for FrameNode data, implementing [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md) API functionality. |
+| [FrameNode](arkts-arkui-framenode-c.md) | **FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md) to mount a [BuilderNode](arkts-arkui-buildernode-c.md) (that holds the FrameNode) to a [NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i) or mount a [RenderNode](arkts-arkui-rendernode-c.md) to another FrameNode.<!--RP2--><!--RP2End--> |
+| [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | Provides lazy loading capabilities for FrameNode data, implementing [LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i) API functionality. |
 
 ### Interfaces
 
@@ -32,7 +32,7 @@ When **typeNode** is used to create [Text](../../apis-arkgraphics2d/arkts-apis/a
 
 | Name | Description |
 | --- | --- |
-| [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | Enum for children count mode.Specifies how to count children when querying number of child nodes. |
+| [ChildrenCountMode](arkts-arkui-framenode-childrencountmode-e.md) | Enumerates the modes of counting child nodes. |
 | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | Enumerates the expansion mode of child nodes. |
 | [UIState](arkts-arkui-framenode-uistate-e.md) | Enumerates polymorphic style states, which are used to process polymorphic styles. |
 

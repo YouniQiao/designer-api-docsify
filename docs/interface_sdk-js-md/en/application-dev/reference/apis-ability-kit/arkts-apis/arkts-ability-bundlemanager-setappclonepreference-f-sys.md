@@ -14,7 +14,7 @@ function setAppClonePreference(bundleName: string, appClonePreference: AppCloneP
 
 Sets the application clone preference configuration.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Required permissions:** ohos.permission.MANAGE_CLONE_BUNDLE_PREFERENCES
 

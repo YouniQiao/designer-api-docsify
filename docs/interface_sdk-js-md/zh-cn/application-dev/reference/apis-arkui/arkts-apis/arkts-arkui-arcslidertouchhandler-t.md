@@ -4,7 +4,7 @@
 declare type ArcSliderTouchHandler = (event: TouchEvent) => void
 ```
 
-弧形Slider被触摸时，告知应用。
+弧形Slider被触摸时触发回调。
 
 **起始版本：** 18
 

@@ -1,6 +1,6 @@
 # MenuItemOptions
 
-Menu中具体item菜单项信息。
+Menu中的菜单项信息。
 
 **起始版本：** 9
 
@@ -14,7 +14,7 @@ Menu中具体item菜单项信息。
 builder?: CustomBuilder
 ```
 
-用于构建二级菜单。
+用于构建二级菜单。默认不显示二级菜单。
 
 **类型：** CustomBuilder
 
@@ -32,7 +32,7 @@ builder?: CustomBuilder
 content?: ResourceStr
 ```
 
-MenuItem的内容。
+MenuItem的内容。默认为空字符串。
 
 **类型：** ResourceStr
 
@@ -50,7 +50,7 @@ MenuItem的内容。
 endIcon?: ResourceStr
 ```
 
-MenuItem的末尾图标。不支持Symbol图标。使用Symbol图标时，须使用symbolEndIcon。
+MenuItem的末尾图标。不支持Symbol图标。使用Symbol图标时，须使用symbolEndIcon。默认不显示末尾图标。
 
 **类型：** ResourceStr
 
@@ -68,7 +68,7 @@ MenuItem的末尾图标。不支持Symbol图标。使用Symbol图标时，须使
 labelInfo?: ResourceStr
 ```
 
-MenuItem结束的标签信息，如快捷方式Ctrl+C等。
+MenuItem结束的标签信息，如快捷方式Ctrl+C等。默认不显示标签信息。
 
 **类型：** ResourceStr
 
@@ -86,7 +86,7 @@ MenuItem结束的标签信息，如快捷方式Ctrl+C等。
 startIcon?: ResourceStr
 ```
 
-MenuItem的起始图标。不支持Symbol图标。使用Symbol图标时，须使用symbolStartIcon。
+MenuItem的起始图标。不支持Symbol图标。使用Symbol图标时，须使用symbolStartIcon。默认不显示起始图标。
 
 **类型：** ResourceStr
 
@@ -104,7 +104,7 @@ MenuItem的起始图标。不支持Symbol图标。使用Symbol图标时，须使
 symbolEndIcon?: SymbolGlyphModifier
 ```
 
-MenuItem末尾的Symbol图标。配置该项时，原先endIcon图标不显示。
+MenuItem末尾的Symbol图标。配置该项时，原先endIcon图标不显示。默认不显示Symbol末尾图标。
 
 **类型：** SymbolGlyphModifier
 
@@ -124,7 +124,7 @@ MenuItem末尾的Symbol图标。配置该项时，原先endIcon图标不显示�
 symbolStartIcon?: SymbolGlyphModifier
 ```
 
-MenuItem起始的Symbol图标。配置该项时，原先startIcon图标不显示。
+MenuItem起始的Symbol图标。配置该项时，原先startIcon图标不显示。默认不显示Symbol起始图标。
 
 **类型：** SymbolGlyphModifier
 

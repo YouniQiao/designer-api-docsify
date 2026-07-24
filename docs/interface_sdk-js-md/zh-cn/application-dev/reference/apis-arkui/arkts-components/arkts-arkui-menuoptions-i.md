@@ -1,6 +1,6 @@
 # MenuOptions
 
-菜单项的信息，继承自[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)。
+配置弹出菜单的参数，继承自[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)。
 
 **继承/实现关系：** MenuOptions extends [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)
 

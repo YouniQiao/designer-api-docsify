@@ -1,6 +1,6 @@
 # DatePickerComponentResult
 
-DatePickerComponentResult定义日期时间选择器的选择结果。
+DatePickerComponentResult定义日期时间选择器的选择结果，包含用户选择的年、月、日、时、分、秒信息，用于在onChange和onScrollStop回调中传递选择的具体日期时间值。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerCompo
 day?: number
 ```
 
-所选日期的日。取值限定为整数。
+所选日期的日。
 
 **类型：** number
 
@@ -40,7 +40,7 @@ day?: number
 hour?: number
 ```
 
-所选时间的小时部分。取值限定为整数。
+所选时间的小时部分。
 
 **类型：** number
 
@@ -60,7 +60,7 @@ hour?: number
 minute?: number
 ```
 
-所选时间的分钟部分。取值限定为整数。
+所选时间的分钟部分。
 
 **类型：** number
 
@@ -80,7 +80,7 @@ minute?: number
 month?: number
 ```
 
-所选日期的月份索引，从0开始，0表示1月，11表示12月。取值限定为整数。
+所选日期的月份索引，从0开始，0表示1月，11表示12月。
 
 **类型：** number
 
@@ -100,7 +100,7 @@ month?: number
 second?: number
 ```
 
-所选时间的秒部分。取值限定为整数。
+所选时间的秒部分。
 
 **类型：** number
 
@@ -120,7 +120,7 @@ second?: number
 year?: number
 ```
 
-所选日期的年份。取值限定为整数。
+所选日期的年份。
 
 **类型：** number
 

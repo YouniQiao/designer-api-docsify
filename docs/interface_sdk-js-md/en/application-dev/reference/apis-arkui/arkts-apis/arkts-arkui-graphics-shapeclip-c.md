@@ -14,7 +14,7 @@ Sets the clipping shape.
 constructor()
 ```
 
-A constructor used to create a **ShapeClip** instance.
+A constructor used to create a **ShapeClip** object.
 
 **Since:** 12
 

@@ -36,7 +36,7 @@ ArcSliderLayoutOptions的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | 否 | ArcSliderLayoutOptions的构造信息。 |
+| options | [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | 否 | ArcSliderLayoutOptions的构造信息。不传入时，ArcSliderLayoutOptions的各项子属性均取其默认值。 |
 
 ## position
 
@@ -66,7 +66,7 @@ position?: ArcSliderPosition
 reverse?: boolean
 ```
 
-设置弧形Slider取值范围是否反向。值为false时表示从上往下滑。
+设置弧形Slider的滑动方向。值为false时表示从上往下滑。
 
 默认值：true，表示从下往上滑动。
 

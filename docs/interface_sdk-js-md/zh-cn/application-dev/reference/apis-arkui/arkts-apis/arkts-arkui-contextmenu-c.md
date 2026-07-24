@@ -14,7 +14,7 @@
 static close()
 ```
 
-可以通过该方法在页面范围内关闭通过[bindContextMenu](../arkts-components/arkts-arkui-commonmethod-c.md#bindcontextmenu)为组件绑定的菜单。
+在页面范围内关闭通过[bindContextMenu](../arkts-components/arkts-arkui-commonmethod-c.md#bindcontextmenu)绑定的菜单。常用于页面跳转、拖拽开始等需要主动关闭已显示菜单的交互场景。
 > **说明：**  
 >  
 > 从API version 18开始废弃，建议使用[UIContext](arkts-arkui-uicontext.md)中的  

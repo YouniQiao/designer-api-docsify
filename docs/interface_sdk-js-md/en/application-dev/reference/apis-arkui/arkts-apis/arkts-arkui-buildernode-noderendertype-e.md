@@ -1,6 +1,61 @@
 # NodeRenderType
 
 Enumerates the node rendering types.
+> **NOTE**  
+>  
+> - Currently, the **RENDER_TYPE_TEXTURE** type takes effect only for the  
+> [XComponentNode](arkts-arkui-xcomponentnode-c.md) and the [BuilderNode](arkts-arkui-buildernode-c.md) holding a  
+> component tree whose root node is a custom component.  
+>  
+> - The following custom components currently support texture export as root nodes in  
+> [BuilderNode](arkts-arkui-buildernode-c.md) scenarios: [Badge](../../apis-arkui/arkts-components/arkts-arkui-badge-i),  
+> [Blank](../../apis-arkui/arkts-components/arkts-arkui-blank-i), [Button](../../apis-arkui/arkts-components/arkts-arkui-button-i),  
+> [CanvasGradient](../../apis-arkui/arkts-components/arkts-arkui-canvas-i),  
+> [CanvasPattern](../../apis-arkui/arkts-components/arkts-arkui-canvas-i),  
+> [CanvasRenderingContext2D](../../apis-arkui/arkts-components/arkts-arkui-canvas-i),  
+> [Canvas](../../apis-arkui/arkts-components/arkts-arkui-canvas-i), [CheckboxGroup](../../apis-arkui/arkts-components/arkts-arkui-checkboxgroup-i),  
+> [Checkbox](../../apis-arkui/arkts-components/arkts-arkui-checkbox-i), [Circle](../../apis-arkui/arkts-components/arkts-arkui-circle-i),  
+> [ColumnSplit](../../apis-arkui/arkts-components/arkts-arkui-column_split-i), [Column](../../apis-arkui/arkts-components/arkts-arkui-column-i),  
+> [ContainerSpan](../../apis-arkui/arkts-components/arkts-arkui-container_span-i),  
+> [Counter](../../apis-arkui/arkts-components/arkts-arkui-counter-i), [DataPanel](../../apis-arkui/arkts-components/arkts-arkui-data_panel-i),  
+> [Divider](../../apis-arkui/arkts-components/arkts-arkui-divider-i), [Ellipse](../../apis-arkui/arkts-components/arkts-arkui-ellipse-i),  
+> [Flex](../../apis-arkui/arkts-components/arkts-arkui-flex-i), [Gauge](../../apis-arkui/arkts-components/arkts-arkui-gauge-i),  
+> [Hyperlink](../../apis-arkui/arkts-components/arkts-arkui-hyperlink-i), [ImageBitmap](../../apis-arkui/arkts-components/arkts-arkui-canvas-i),  
+> [ImageData](../../apis-arkui/arkts-components/arkts-arkui-canvas-i), [Image](../../apis-arkui/arkts-components/arkts-arkui-image-i),  
+> [Line](../../apis-arkui/arkts-components/arkts-arkui-line-i),  
+> [LoadingProgress](../../apis-arkui/arkts-components/arkts-arkui-loading_progress-i),  
+> [Marquee](../../apis-arkui/arkts-components/arkts-arkui-marquee-i), [Matrix2D](../../apis-arkui/arkts-components/arkts-arkui-canvas-i),  
+> [OffscreenCanvasRenderingContext2D](../../apis-arkui/arkts-components/arkts-arkui-canvas-i),  
+> [OffscreenCanvas](../../apis-arkui/arkts-components/arkts-arkui-canvas-i), [Path2D](../../apis-arkui/arkts-components/arkts-arkui-canvas-i),  
+> [Path](../../apis-arkui/arkts-components/arkts-arkui-path-i), [PatternLock](../../apis-arkui/arkts-components/arkts-arkui-pattern_lock-i),  
+> [Polygon](../../apis-arkui/arkts-components/arkts-arkui-polygon-i), [Polyline](../../apis-arkui/arkts-components/arkts-arkui-polyline-i),  
+> [Progress](../../apis-arkui/arkts-components/arkts-arkui-progress-i), [QRCode](../../apis-arkui/arkts-components/arkts-arkui-qrcode-i),  
+> [Radio](../../apis-arkui/arkts-components/arkts-arkui-radio-i), [Rating](../../apis-arkui/arkts-components/arkts-arkui-rating-i),  
+> [Rect](../../apis-arkui/arkts-components/arkts-arkui-rect-i),  
+> [RelativeContainer](../../apis-arkui/arkts-components/arkts-arkui-relative_container-i),  
+> [RowSplit](../../apis-arkui/arkts-components/arkts-arkui-row_split-i), [Row](../../apis-arkui/arkts-components/arkts-arkui-row-i),  
+> [Shape](../../apis-arkui/arkts-components/arkts-arkui-shape-i), [Slider](../../apis-arkui/arkts-components/arkts-arkui-slider-i),  
+> [Span](../../apis-arkui/arkts-components/arkts-arkui-span-i), [Stack](../../apis-arkui/arkts-components/arkts-arkui-stack-i),  
+> [TextArea](../../apis-arkui/arkts-components/arkts-arkui-text_area-i), [TextClock](../../apis-arkui/arkts-components/arkts-arkui-text_clock-i),  
+> [TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i), [TextTimer](../../apis-arkui/arkts-components/arkts-arkui-text_timer-i),  
+> [Text](../../apis-arkui/arkts-components/arkts-arkui-text-i), [Toggle](../../apis-arkui/arkts-components/arkts-arkui-toggle-i),  
+> [Video](../../apis-arkui/arkts-components/arkts-arkui-video-i) (excluding full-screen playback),  
+> [Web](../../apis-arkui/arkts-components/arkts-arkui-web-i), [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i).  
+>  
+> - Since API version 12, the following components also support texture export:  
+> [DatePicker](../../apis-arkui/arkts-components/arkts-arkui-date_picker-i), [ForEach](../../apis-arkui/arkts-components/arkts-arkui-for_each-i),  
+> [Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-i),  
+> [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md),  
+> [LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i), [List](../../apis-arkui/arkts-components/arkts-arkui-list-i),  
+> [Scroll](../../apis-arkui/arkts-components/arkts-arkui-scroll-i), [Swiper](../../apis-arkui/arkts-components/arkts-arkui-swiper-i),  
+> [TimePicker](../../apis-arkui/arkts-components/arkts-arkui-time_picker-i), custom components decorated with  
+> [@Component](../../../ui/state-management/arkts-create-custom-components.md#component),  
+> [NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i), and [FrameNode](arkts-arkui-framenode-c.md) and  
+> [RenderNode](arkts-arkui-rendernode-c.md) mounted to  
+> [NodeContainer](../../apis-arkui/arkts-components/arkts-arkui-node_container-i).  
+>  
+> - For details, see  
+> [Rendering and Drawing Video and Button Components at the Same Layer](../../../web/web-same-layer.md).
 
 **Since:** 11
 
@@ -33,38 +88,6 @@ RENDER_TYPE_TEXTURE = 1
 ```
 
 The node is exported as a texture.
-> **NOTE**  
->  
-> - Currently, the **RENDER_TYPE_TEXTURE** type takes effect only for the  
-> [XComponentNode](arkts-arkui-xcomponentnode-c.md) and  
-> the [BuilderNode](arkts-arkui-buildernode-c.md) holding a component tree whose root node is a custom component.  
->  
-> - The following custom components currently support texture export as root nodes in  
-> [BuilderNode](arkts-arkui-buildernode-c.md) scenarios: [Badge](../arkts-components/arkts-arkui-badge.md), [Blank](../arkts-components/arkts-arkui-blank.md), [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md),  
-> [CanvasGradient](../arkts-components/arkts-arkui-canvas.md), [CanvasPattern](../arkts-components/arkts-arkui-canvas.md), [CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvas.md),  
-> [Canvas](../arkts-components/arkts-arkui-canvas.md), [CheckboxGroup](../arkts-components/arkts-arkui-checkboxgroup.md), [Checkbox](../arkts-components/arkts-arkui-checkbox.md), [Circle](arkts-arkui-graphics-circle-i.md),  
-> [ColumnSplit](../arkts-components/arkts-arkui-columnsplit.md), [Column](../arkts-components/arkts-arkui-column.md), [ContainerSpan](../arkts-components/arkts-arkui-containerspan.md),  
-> [Counter](../arkts-components/arkts-arkui-counter.md), [DataPanel](../arkts-components/arkts-arkui-datapanel.md), [Divider](../arkts-components/arkts-arkui-divider.md), [Ellipse](../arkts-components/arkts-arkui-ellipse.md),  
-> [Flex](../arkts-components/arkts-arkui-flex.md), [Gauge](../arkts-components/arkts-arkui-gauge.md), [Hyperlink](../arkts-components/arkts-arkui-hyperlink.md), [ImageBitmap](../arkts-components/arkts-arkui-canvas.md),  
-> [ImageData](../arkts-components/arkts-arkui-canvas.md), [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md), [Line](../arkts-components/arkts-arkui-line.md), [LoadingProgress](../arkts-components/arkts-arkui-loadingprogress.md),  
-> [Marquee](../arkts-components/arkts-arkui-marquee.md), [Matrix2D](../arkts-components/arkts-arkui-canvas.md), [OffscreenCanvasRenderingContext2D](../arkts-components/arkts-arkui-canvas.md),  
-> [OffscreenCanvas](../arkts-components/arkts-arkui-canvas.md), [Path2D](../arkts-components/arkts-arkui-canvas.md), [Path](../arkts-components/arkts-arkui-path.md), [PatternLock](../arkts-components/arkts-arkui-patternlock.md),  
-> [Polygon](../arkts-components/arkts-arkui-polygon.md), [Polyline](../arkts-components/arkts-arkui-polyline.md), [Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-progress-i.md), [QRCode](../arkts-components/arkts-arkui-qrcode.md),  
-> [Radio](../../apis-telephony-kit/arkts-apis/arkts-telephony-radio.md), [Rating](../arkts-components/arkts-arkui-rating.md), [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md), [RelativeContainer](../arkts-components/arkts-arkui-relativecontainer.md),  
-> [RowSplit](../arkts-components/arkts-arkui-rowsplit.md), [Row](../arkts-components/arkts-arkui-row.md), [Shape](../arkts-components/arkts-arkui-shape.md), [Slider](../arkts-components/arkts-arkui-slider.md), [Span](../arkts-components/arkts-arkui-span.md),  
-> [Stack](../../apis-arkts/arkts-apis/arkts-arkts-util-stack-stack-c.md), [TextArea](../arkts-components/arkts-arkui-textarea.md), [TextClock](../arkts-components/arkts-arkui-textclock.md), [TextInput](../arkts-components/arkts-arkui-textinput.md),  
-> [TextTimer](../arkts-components/arkts-arkui-texttimer.md), [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md), [Toggle](../arkts-components/arkts-arkui-toggle.md), [Video](../arkts-components/arkts-arkui-video.md) (excluding full-  
-> screen playback), [Web](../../apis-arkweb/arkts-components/arkts-arkweb-web.md), [XComponent](../arkts-components/arkts-arkui-xcomponent.md).  
->  
-> - Since API version 12, the following components also support texture export: [DatePicker](../arkts-components/arkts-arkui-datepicker.md),  
-> [ForEach](../arkts-components/arkts-arkui-foreach.md), [Grid](../arkts-components/arkts-arkui-grid.md),  
-> [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md),  
-> [List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md), [Scroll](../arkts-components/arkts-arkui-scroll.md), [Swiper](../arkts-components/arkts-arkui-swiper.md), [TimePicker](../arkts-components/arkts-arkui-timepicker.md), custom  
-> components decorated with [@Component](../../../ui/state-management/arkts-create-custom-components.md#component),  
-> [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md), and [FrameNode](arkts-arkui-framenode-c.md) and  
-> [RenderNode](arkts-arkui-rendernode-c.md) mounted to [NodeContainer](../arkts-components/arkts-arkui-nodecontainer.md).  
->  
-> - For details, see [Rendering and Drawing Video and Button Components at the Same Layer](../../../web/web-same-layer.md).
 
 **Since:** 11
 

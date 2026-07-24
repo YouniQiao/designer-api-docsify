@@ -604,7 +604,9 @@ Operates album attribute.
 
 **Since:** 26.0.0
 
-**Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+**Required permissions:** 
+- API version 26.0.0 - since 26.0.0: ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+- API version 26.1.0+: ohos.permission.ACCESS_MEDIALIB_THUMB_DB or ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -626,7 +628,7 @@ Operates album attribute.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>1. The attr of operation is invalid;<br>2. The type of operation is invalid;<br>3. The values or operation is incorrect; |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>1. The attr of operation is invalid;<br>2. The type of operation is invalid;<br>3. The values of operation is incorrect; |
 | [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) | Unsupported operation type. It is recommended to check the logs.Possible causes:<br>1. Unsupported AlbumAttribute for the album.<br>2. Unsupported AlbumOperationType for the AlbumAttribute.<br>3. Other operation limit. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error.It is recommended to retry and check the logs.<br>Possible causes:1. Database corrupted.2. The file system is abnormal.3. The IPC request timed out. |
 

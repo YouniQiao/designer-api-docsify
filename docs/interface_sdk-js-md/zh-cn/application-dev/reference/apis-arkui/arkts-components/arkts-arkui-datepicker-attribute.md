@@ -34,7 +34,7 @@ canLoop(isLoop: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否可循环滚动。<br/>- true：可循环滚动，年份随着月份的循环滚动进行联动加减，月份随着日的循环滚动进行联动加减。- false：不可循环滚动，年、月、日到达本列的顶部或底部时，无法再进行滚动，年、月、日之间也无法再联动加减。<br/>默认值：true<br/>当isLoop的值为undefined时，使用默认值。 |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否可循环滚动。<br>- true：可循环滚动，年份随着月份的循环滚动进行联动加减，月份随着日的循环滚动进行联动加减。<br>- false：非循环滚动，年、月、日到达本列的顶部或底部时停止滚动，年、月、日之间保持独立，不进行联动加减。<br>默认值：true<br>当isLoop的值为undefined时，使用默认值。<br>**说明：**<br>设置了[start](arkts-arkui-datepickeroptions-i.md)或[end](arkts-arkui-datepickeroptions-i.md)且为非默认值的场景下，canLoop不生效。这是因为设置了日期范围限制后，循环滚动可能导致日期超出有效范围，为确保日期选择的准确性，强制使用非循环模式。 |
 
 ## digitalCrownSensitivity
 
@@ -58,7 +58,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 | 表冠响应灵敏度。<br/>默认值：CrownSensitivity.MEDIUM，响应速度适中。 |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 | 表冠响应灵敏度。<br>默认值：CrownSensitivity.MEDIUM，响应速度适中。 |
 
 ## disappearTextStyle
 
@@ -82,7 +82,7 @@ disappearTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号、字体粗细。默认值： { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 边缘项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp',<br>weight: FontWeight.Regular<br>}<br>} |
 
 ## disappearTextStyle
 
@@ -90,7 +90,7 @@ disappearTextStyle(value: PickerTextStyle)
 disappearTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本样式。与[disappearTextStyle(10+)](DatePickerAttribute#disappearTextStyle(value: PickerTextStyle))相比，style参数新增了对undefined类型的支持。
+设置边缘项（以选中项为基准向上或向下的第二项）的文本样式。与[disappearTextStyle<sup>10+</sup>](DatePickerAttribute#disappearTextStyle(value: PickerTextStyle))相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -106,7 +106,7 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细。默认值： { color: '#ff182431', font: {size: '14fp', weight: FontWeight.Regular } }当style的值为undefined时，使用默认值。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 边缘项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431',<br>font: {<br>size: '14fp',<br>weight: FontWeight.Regular<br>}<br>}<br>当style的值为undefined时，使用默认值。 |
 
 ## enableHapticFeedback
 
@@ -130,7 +130,7 @@ enableHapticFeedback(enable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 设置是否开启触控反馈。- true：开启触控反馈。- false：不开启触控反馈。默认值：true<br/>设置为true后，其生效情况取决于系统的硬件是否支持。当enable的值为undefined时，使用默认值。 |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 设置是否开启触控反馈。<br>- true：开启触控反馈。<br>- false：不开启触控反馈。<br>默认值：true<br>设置为true后，其生效情况取决于系统的硬件是否支持。<br>当enable的值为undefined时，使用默认值。 |
 
 ## lunar
 
@@ -155,7 +155,7 @@ lunar(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 日期是否显示为农历。<br/>- true：显示为农历。<br/>- false：不显示为农历。<br/>默认值：false |
+| value | boolean | 是 | 日期是否显示为农历。<br>- true：显示为农历。<br>- false：不显示为农历。<br>默认值：false |
 
 ## lunar
 
@@ -163,7 +163,7 @@ lunar(value: boolean)
 lunar(isLunar: Optional<boolean>)
 ```
 
-设置弹窗的日期是否显示为农历。与[lunar](DatePickerAttribute#lunar(value: boolean))相比，isLunar参数新增了对undefined类型的支持。
+设置日期是否显示为农历。与[lunar](DatePickerAttribute#lunar(value: boolean))相比，isLunar参数新增了对undefined类型的支持。
 > **说明：**  
 >  
 > 仅在简体中文和繁体中文语言环境下生效，其他语言环境下设置该属性无效果。
@@ -182,7 +182,7 @@ lunar(isLunar: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isLunar | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 日期是否显示为农历。- true：显示为农历。- false：不显示为农历。默认值：false<br/>当isLunar的值为undefined时，使用默认值。 |
+| isLunar | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 日期是否显示为农历。<br>- true：显示为农历。<br>- false：不显示为农历。<br>默认值：false<br>当isLunar的值为undefined时，使用默认值。 |
 
 ## onChange
 
@@ -191,6 +191,8 @@ onChange(callback: (value: DatePickerResult) => void)
 ```
 
 滑动DatePicker文本内容后，选项完全归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。
+
+从API version 8开始支持，从API version 10开始废弃，建议使用[onDateChange](DatePickerAttribute#onDateChange(callback: Callback<Date>))替代。
 
 **起始版本：** 8
 
@@ -206,7 +208,7 @@ onChange(callback: (value: DatePickerResult) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (value: DatePickerResult) =&gt; void | 是 | 返回选中的时间。 |
+| callback | (value: DatePickerResult) =&gt; void | 是 | 返回选中的时间，包含年、月、日字段。 |
 
 ## onDateChange
 
@@ -214,7 +216,7 @@ onChange(callback: (value: DatePickerResult) => void)
 onDateChange(callback: Callback<Date>)
 ```
 
-滑动DatePicker文本内容后，选项完全归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。
+滑动DatePicker文本内容后，选项完全归位至选中项位置时，触发该回调。归位是指滚动动画结束、选项稳定停靠在选中位置。不能通过双向绑定的状态变量触发，可以响应用户的滑动操作。
 
 **起始版本：** 10
 
@@ -230,7 +232,7 @@ onDateChange(callback: Callback<Date>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Date&gt; | 是 | 返回选中的时间，年、月、日为选中的日期，时、分取决于当前系统时间的时、分，秒恒为00。<br>**起始版本：** 18 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Date&gt; | 是 | 返回选中的时间，年、月、日为选中的日期，时、分取决于当前系统时间的时、分，秒恒为00。适用于需要在用户确认日期选择后获取选中日期、更新界面或执行业务逻辑的场景。<br>**起始版本：** 18 |
 
 ## onDateChange
 
@@ -257,7 +259,7 @@ onDateChange(callback: Optional<Callback<Date>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;Date&gt;&gt; | 是 | 返回选中的时间，年、月、日为选中的日期，时、分取决于当前系统时间的时、分，秒恒为00。<br/>当callback的值为undefined时，不使用回调函数。 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;Date&gt;&gt; | 是 | 返回选中的时间，年、月、日为选中的日期，时、分取决于当前系统时间的时、分，秒恒为00。适用于需要在用户确认日期选择后获取选中日期、更新界面或执行业务逻辑的场景。<br>当callback的值为undefined时，不使用回调函数。 |
 
 ## selectedTextStyle
 
@@ -281,7 +283,7 @@ selectedTextStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。默认值： { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } } |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 选中项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp',<br>weight: FontWeight.Medium<br>}<br>} |
 
 ## selectedTextStyle
 
@@ -305,7 +307,7 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细。默认值： { color: '#ff007dff', font: { size: '20fp', weight: FontWeight.Medium } }当style的值为undefined时，使用默认值。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 选中项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff007dff',<br>font: {<br>size: '20fp',<br>weight: FontWeight.Medium<br>}<br>}<br>当style的值为undefined时，使用默认值。 |
 
 ## textStyle
 
@@ -329,7 +331,7 @@ textStyle(value: PickerTextStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。默认值： { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } } |
+| value | [PickerTextStyle](arkts-arkui-pickertextstyle-i.md) | 是 | 待选项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp',<br>weight: FontWeight.Regular<br>}<br>} |
 
 ## textStyle
 
@@ -353,5 +355,5 @@ textStyle(style: Optional<PickerTextStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细。默认值： { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }当style的值为undefined时，使用默认值。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerTextStyle&gt; | 是 | 待选项的文本颜色、字号、字体粗细。<br>默认值：<br>{<br>color: '#ff182431',<br>font: {<br>size: '16fp',<br>weight: FontWeight.Regular<br>}<br>}<br>当style的值为undefined时，使用默认值。 |
 

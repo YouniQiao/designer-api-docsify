@@ -34,7 +34,7 @@ name: Array<string>
 status: SelectStatus
 ```
 
-选中状态。
+群组多选框的选中状态。
 
 **类型：** SelectStatus
 

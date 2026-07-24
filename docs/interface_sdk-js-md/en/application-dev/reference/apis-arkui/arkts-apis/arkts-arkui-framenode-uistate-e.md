@@ -106,7 +106,7 @@ Only supported by specific components: **Checkbox**, **Radio**, **Toggle**, **Li
 HOVERED = 1 << 4
 ```
 
-The hovered state.
+Hovered state.
 
 **Since:** 26.0.0
 

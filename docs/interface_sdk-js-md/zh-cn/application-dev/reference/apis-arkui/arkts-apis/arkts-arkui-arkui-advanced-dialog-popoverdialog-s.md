@@ -28,7 +28,7 @@ import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, P
 popover: PopoverOptions
 ```
 
-配置跟手弹出框的参数。
+配置跟手弹出框的参数，包含弹出框内容、位置等属性，具体参见PopoverOptions类型说明。
 
 **类型：** PopoverOptions
 
@@ -50,7 +50,7 @@ popover: PopoverOptions
 targetBuilder: Callback<void>
 ```
 
-跟手弹出框基于的目标组件。
+跟手弹出框基于的目标组件构建器函数，用于定义弹出框显示的参考位置组件。
 
 **类型：** Callback&lt;void&gt;
 
@@ -72,7 +72,7 @@ targetBuilder: Callback<void>
 visible: boolean
 ```
 
-跟手弹出框显示状态。visible为true时，表示显示弹出框，visible为false时，表示隐藏弹出框。
+是否显示跟手弹出框。true表示显示弹出框，false表示隐藏弹出框。
 
 默认值为false，隐藏弹出框。
 

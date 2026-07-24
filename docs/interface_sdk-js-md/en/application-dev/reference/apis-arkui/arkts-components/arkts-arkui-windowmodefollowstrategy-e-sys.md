@@ -1,6 +1,6 @@
 # WindowModeFollowStrategy (System API)
 
-Enumeration of different types of WindowModeFollowStrategy.
+Enumerates the following strategies of the window mode.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Enumeration of different types of WindowModeFollowStrategy.
 FOLLOW_HOST_WINDOW_MODE = 0
 ```
 
-Followed the host Window Mode.
+The window mode follows the host.
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ Followed the host Window Mode.
 FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE = 1
 ```
 
-Followed the UIExtensionAbility.
+The window mode follows the UIExtensionAbility.
 
 **Since:** 18
 

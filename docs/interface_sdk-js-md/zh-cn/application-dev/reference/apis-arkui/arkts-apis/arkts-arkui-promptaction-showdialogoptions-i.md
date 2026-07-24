@@ -124,7 +124,7 @@ backgroundEffect?: BackgroundEffectOptions
 buttons?: Array<Button>
 ```
 
-对话框中按钮的数组，结构为：{text:'button',&nbsp;color:&nbsp;'\#666666'}，支持大于1个按钮。
+对话框中按钮的数组，结构为：{text:'button',&nbsp;color:&nbsp;'\#666666'}，支持1个或多个按钮。
 
 **类型：** Array&lt;Button&gt;
 

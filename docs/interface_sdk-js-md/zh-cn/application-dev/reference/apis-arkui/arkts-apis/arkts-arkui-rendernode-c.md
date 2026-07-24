@@ -1,7 +1,8 @@
 # RenderNode
 
-提供自绘制渲染节点RenderNode，支持开发者通过C API进行开发，完成自定义绘制需求。
-> **说明：**
+提供自绘制渲染节点RenderNode，支持开发者通过C API进行开发，完成自定义绘制需求。RenderNode还支持渲染节点树管理（添加、删除、查询子节点）、背景色与不透明度等视觉属性设置、变换（缩放、旋转、平移、变换矩阵）、阴影、边框、遮罩与裁剪、模糊效果等能力，适用于在Stage模型下进行自定义渲染与节点树管理的场景。
+> **说明：**  
+>  
 > - 不建议对[BuilderNode](arkts-arkui-buildernode-c.md)中的RenderNode进行修改操作。BuilderNode中持有的[FrameNode](arkts-arkui-framenode-c.md)仅用于将该  
 > BuilderNode作为子节点挂载到其他FrameNode上，对该FrameNode或对应的RenderNode进行属性设置与子节点操作可能会产生未定义行为，包括但不限于显示异常、事件异常、稳定性问题等。  
 >  
@@ -85,7 +86,7 @@ RenderNode的构造函数。
 dispose(): void
 ```
 
-立即释放当前RenderNode。
+立即释放当前RenderNode。调用此方法后，RenderNode将解除与后端实体节点的引用关系，再次调用该节点的接口可能会出现crash或返回默认值。可通过[isDisposed](arkts-arkui-rendernode-c.md#isdisposed)接口查询节点是否已释放。
 
 **起始版本：** 12
 
@@ -148,13 +149,13 @@ getChild(index: number): RenderNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 需要查询的子节点的序列号。 |
+| index | number | 是 | 需要查询的子节点的序列号，从0开始。取值范围：[0, 子节点数量-1]，超出范围时返回null。不支持负索引。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) | Child node obtained. If the RenderNode does not contain the specified child node,null is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) | 子节点。若该RenderNode不包含所查询的子节点，则返回空对象null。 |
 
 ## getFirstChild
 
@@ -178,7 +179,7 @@ getFirstChild(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) | First child node. If the RenderNode does not contain any child node, null is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) | 首个子节点。若该RenderNode不包含子节点，则返回空对象null。 |
 
 ## getNextSibling
 
@@ -202,7 +203,7 @@ getNextSibling(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) | Next sibling node of the current RenderNode. If the RenderNode does not have the next sibling node, null is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) | 当前RenderNode的下一个同级节点。若该RenderNode不包含下一个同级节点，则返回空对象null。 |
 
 ## getPreviousSibling
 
@@ -226,7 +227,7 @@ getPreviousSibling(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](arkts-arkui-rendernode-c.md) | Previous sibling node of the current RenderNode. If the RenderNode does not have the previous sibling node, null is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) | 当前RenderNode的上一个同级节点。若该RenderNode不包含上一个同级节点，则返回空对象null。 |
 
 ## insertChildAfter
 
@@ -251,7 +252,7 @@ insertChildAfter(child: RenderNode, sibling: RenderNode | null): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | child | [RenderNode](arkts-arkui-rendernode-c.md) | 是 | 需要添加的子节点。 |
-| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | 是 | 需要添加的子节点。 |
+| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
 
 **错误码：**
 
@@ -265,7 +266,7 @@ insertChildAfter(child: RenderNode, sibling: RenderNode | null): void
 invalidate(): void
 ```
 
-该方法会触发RenderNode的重新渲染。
+该方法会触发RenderNode的重新渲染，重新渲染时会调用[draw](arkts-arkui-rendernode-c.md#draw)方法。若开发者继承了RenderNode并实现了draw方法，调用invalidate()后将重新执行draw方法中的绘制逻辑。
 
 **起始版本：** 11
 
@@ -283,7 +284,7 @@ invalidate(): void
 isDisposed(): boolean
 ```
 
-查询当前RenderNode对象是否已解除与后端实体节点的引用关系。前端节点均绑定有相应的后端实体节点，当节点调用dispose接口解除绑定后，再次调用接口可能会出现crash、返回默认值的情况。由于业务需求，可能存在节点在dispose后仍被调用接口的情况。为此，提供此接口以供开发者在操作节点前检查其有效性，避免潜在风险。
+查询当前RenderNode对象是否已解除与后端实体节点的引用关系。当节点调用dispose接口后，再次调用其他接口可能会出现crash、返回默认值的情况，建议开发者在操作节点前调用此接口检查其有效性，避免潜在风险。
 
 **起始版本：** 20
 
@@ -299,7 +300,7 @@ isDisposed(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 后端实体节点是否解除引用。true为节点已与后端实体节点解除引用，false为节点未与后端实体节点解除引用。 |
+| boolean | 后端实体节点是否解除引用。true表示节点已与后端实体节点解除引用，false表示节点未与后端实体节点解除引用。 |
 
 ## removeChild
 
@@ -351,7 +352,7 @@ get backgroundBlur(): BackgroundBlur
 get backgroundColor(): number
 ```
 
-Get the background color of the RenderNode.
+获取当前RenderNode的背景颜色。
 
 **类型：** number
 
@@ -373,7 +374,7 @@ Get the background color of the RenderNode.
 get borderColor(): Edges<number>
 ```
 
-Get border color of the RenderNode.
+获取当前RenderNode的边框颜色。
 
 **类型：** Edges&lt;number&gt;
 
@@ -395,7 +396,7 @@ Get border color of the RenderNode.
 get borderRadius(): BorderRadiuses
 ```
 
-Get border radius of the RenderNode.
+获取当前RenderNode的边框圆角。
 
 **类型：** BorderRadiuses
 
@@ -437,7 +438,7 @@ get borderStyle(): Edges<BorderStyle>
 get borderWidth(): Edges<number>
 ```
 
-Get border width of the RenderNode.
+获取当前RenderNode的边框宽度。
 
 **类型：** Edges&lt;number&gt;
 
@@ -459,7 +460,7 @@ Get border width of the RenderNode.
 get clipToFrame(): boolean
 ```
 
-Get whether the RenderNode clip to frame.
+获取当前RenderNode是否需要进行剪裁。
 
 **类型：** boolean
 
@@ -481,7 +482,7 @@ Get whether the RenderNode clip to frame.
 get contentBlur(): ContentBlur
 ```
 
-获取内容模糊效果。
+背景模糊效果。默认值为{radius: 0}。
 
 **类型：** ContentBlur
 
@@ -501,7 +502,7 @@ get contentBlur(): ContentBlur
 get foregroundBlur(): ForegroundBlur
 ```
 
-获取前景模糊效果。
+获取内容模糊效果。
 
 **类型：** ForegroundBlur
 
@@ -521,7 +522,7 @@ get foregroundBlur(): ForegroundBlur
 get frame(): Frame
 ```
 
-Get frame info of the RenderNode.
+获取当前RenderNode的大小和位置。
 
 **类型：** Frame
 
@@ -543,7 +544,7 @@ Get frame info of the RenderNode.
 get label(): string
 ```
 
-获取当前RenderNode的标签。默认值为""。
+获取当前RenderNode的标签。
 
 **类型：** string
 
@@ -563,7 +564,7 @@ get label(): string
 get lengthMetricsUnit(): LengthMetricsUnit
 ```
 
-Get the length metrics unit of RenderNode.
+获取RenderNode各个属性使用的单位。
 
 **类型：** LengthMetricsUnit
 
@@ -585,7 +586,7 @@ Get the length metrics unit of RenderNode.
 get markNodeGroup(): boolean
 ```
 
-Get whether to preferentially draw the node and its children.
+获取当前节点是否标记了优先绘制。
 
 **类型：** boolean
 
@@ -607,7 +608,7 @@ Get whether to preferentially draw the node and its children.
 get opacity(): number
 ```
 
-Get opacity of the RenderNode.
+获取当前RenderNode的不透明度。
 
 **类型：** number
 
@@ -629,7 +630,7 @@ Get opacity of the RenderNode.
 get pivot(): Pivot
 ```
 
-Get pivot vector of the RenderNode.
+获取当前RenderNode的轴心。
 
 **类型：** Pivot
 
@@ -651,7 +652,7 @@ Get pivot vector of the RenderNode.
 get position(): Position
 ```
 
-Get frame position of the RenderNode.
+获取当前RenderNode的位置。
 
 **类型：** Position
 
@@ -673,7 +674,7 @@ Get frame position of the RenderNode.
 get rotation(): Rotation
 ```
 
-Get rotation vector of the RenderNode.
+获取当前RenderNode的旋转角度。
 
 **类型：** Rotation
 
@@ -695,7 +696,7 @@ Get rotation vector of the RenderNode.
 get scale(): Scale
 ```
 
-Get scale vector of the RenderNode.
+获取当前RenderNode的缩放比例。
 
 **类型：** Scale
 
@@ -717,7 +718,7 @@ Get scale vector of the RenderNode.
 get shadowAlpha(): number
 ```
 
-Get shadow alpha of the RenderNode.
+获取当前RenderNode的阴影颜色的Alpha值。
 
 **类型：** number
 
@@ -739,7 +740,7 @@ Get shadow alpha of the RenderNode.
 get shadowColor(): number
 ```
 
-Get shadow color of the RenderNode.
+获取当前RenderNode的阴影颜色。
 
 **类型：** number
 
@@ -761,7 +762,7 @@ Get shadow color of the RenderNode.
 get shadowElevation(): number
 ```
 
-Get shadow elevation of the RenderNode.
+获取当前RenderNode的阴影的光照高度。
 
 **类型：** number
 
@@ -783,7 +784,7 @@ Get shadow elevation of the RenderNode.
 get shadowOffset(): Offset
 ```
 
-Get shadow offset of the RenderNode.
+获取当前RenderNode的阴影偏移。
 
 **类型：** Offset
 
@@ -805,7 +806,7 @@ Get shadow offset of the RenderNode.
 get shadowRadius(): number
 ```
 
-Get shadow radius of the RenderNode.
+获取当前RenderNode的阴影模糊半径。
 
 **类型：** number
 
@@ -827,7 +828,7 @@ Get shadow radius of the RenderNode.
 get shapeClip(): ShapeClip
 ```
 
-获取目标RenderNode的形状裁剪属性
+获取当前RenderNode的裁剪形状。
 
 **类型：** ShapeClip
 
@@ -867,7 +868,7 @@ get shapeMask(): ShapeMask
 get size(): Size
 ```
 
-Get frame size of the RenderNode.
+获取当前RenderNode的大小。
 
 **类型：** Size
 
@@ -889,7 +890,14 @@ Get frame size of the RenderNode.
 get transform(): Matrix4
 ```
 
-Get transform info of the RenderNode.
+获取当前RenderNode的变换矩阵。默认值为：```ts
+[
+1, 0, 0, 0,
+0, 1, 0, 0,
+0, 0, 1, 0,
+0, 0, 0, 1
+]
+```
 
 **类型：** Matrix4
 
@@ -911,7 +919,7 @@ Get transform info of the RenderNode.
 get translation(): Translation
 ```
 
-Get translation vector of the RenderNode.
+获取当前RenderNode的平移量。
 
 **类型：** Translation
 

@@ -19,7 +19,7 @@
 | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) | 继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。  confirm参数优先级：fontColor、backgroundColor > style > defaultFocus |
 | [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。 |
 | [DismissDialogAction](arkts-arkui-dismissdialogaction-i.md) | Dialog关闭的信息。 |
-| [TextStyle](arkts-arkui-textstyle-i.md) | 弹窗中message的截断方式。 |
+| [TextStyle](arkts-arkui-textstyle-i.md) | 弹窗中message的文本样式，包含文本截断方式等。 |
 
 <!--Del-->
 ### 接口（系统接口）

@@ -1,6 +1,6 @@
 # MenuItemGroupOptions
 
-菜单MenuItem分组的标题和尾部信息。
+MenuItem分组的标题和尾部信息。
 
 **起始版本：** 9
 
@@ -14,9 +14,9 @@
 footer?: ResourceStr | CustomBuilder
 ```
 
-设置对应group的尾部显示信息。
+设置分组的菜单页脚，显示在分组中所有菜单项的底部。
 
-未设置时，不显示尾部信息。
+未设置时，不显示菜单页脚。
 
 **类型：** ResourceStr \| CustomBuilder
 
@@ -34,9 +34,9 @@ footer?: ResourceStr | CustomBuilder
 header?: ResourceStr | CustomBuilder
 ```
 
-设置对应group的标题显示信息。
+设置分组的标题，显示在分组中所有菜单项的顶部。
 
-未设置时，不显示标题信息。
+未设置时，不显示标题。
 
 **类型：** ResourceStr \| CustomBuilder
 

@@ -130,7 +130,7 @@ onChange(callback: OnCheckboxChangeCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | 是 | 返回选中的状态。<br>**起始版本：** 18 |
+| callback | [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) | 是 | 返回选中的状态，true表示已选中，false表示未选中。<br>**起始版本：** 18 |
 
 ## onChange
 
@@ -156,7 +156,7 @@ onChange(callback: Optional<OnCheckboxChangeCallback>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;OnCheckboxChangeCallback&gt; | 是 | 返回选中的状态。<br/>当callback的值为undefined时，不使用回调函数。 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;OnCheckboxChangeCallback&gt; | 是 | 返回选中的状态，true表示已选中，false表示未选中。<br/>当callback的值为undefined时，不使用回调函数。 |
 
 ## select
 
@@ -296,7 +296,7 @@ shape(value: CheckBoxShape)
 shape(shape: Optional<CheckBoxShape>)
 ```
 
-设置Checkbox组件形状，包括圆形和圆角方形。与[shape](CheckboxAttribute#shape(value: CheckBoxShape))<sup>11+</sup>相比，shape参数新增了对undefined类型的支持。如果想要调整当前Checkbox的样式，需使用[contentModifier](CheckboxAttribute#contentModifier(modifier: ContentModifier<CheckBoxConfiguration>))属性自定义Checkbox样式。
+设置Checkbox组件形状。与[shape](CheckboxAttribute#shape(value: CheckBoxShape))<sup>11+</sup>相比，shape参数新增了对undefined类型的支持。如果想要调整当前Checkbox的样式，需使用[contentModifier](CheckboxAttribute#contentModifier(modifier: ContentModifier<CheckBoxConfiguration>))属性自定义Checkbox样式。
 
 **起始版本：** 18
 

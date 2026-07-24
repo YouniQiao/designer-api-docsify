@@ -1,8 +1,8 @@
 # NodeContainer属性/事件
 
-支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。
+支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，但不支持[动态属性设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
-支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)。
+支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
 **继承/实现关系：** NodeContainerAttribute extends [CommonMethod<NodeContainerAttribute>](CommonMethod<NodeContainerAttribute>)
 

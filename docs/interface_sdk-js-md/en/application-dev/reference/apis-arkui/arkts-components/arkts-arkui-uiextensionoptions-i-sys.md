@@ -1,6 +1,6 @@
 # UIExtensionOptions (System API)
 
-This interface is used to set the options for UIExtensionComponentAttribute during construction
+Describes the optional construction parameters during **UIExtensionComponent** construction.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ This interface is used to set the options for UIExtensionComponentAttribute duri
 areaChangePlaceholder?: Record<string, ComponentContent>
 ```
 
-Set Areachange placeholder.If the Areachange placeholder ComponentContent is set, the placeholder node is displayed until the UIExtensionComponent size change is complete.
+Placeholder for size changes, displayed when the UIExtensionComponent's size changes and the internal rendering of **UIExtension** is not completed. The key value can be **FOLD_TO_EXPAND** (size change for folding and expanding)or **UNDEFINED** (default size change).
 
 **Type:** Record&lt;string, ComponentContent&gt;
 
@@ -36,7 +36,9 @@ Set Areachange placeholder.If the Areachange placeholder ComponentContent is set
 dpiFollowStrategy?: DpiFollowStrategy
 ```
 
-Set UIExtensionComponent Content Dpi Follow Strategy.
+Whether the DPI settings follow the host or UIExtensionAbility.
+
+Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**
 
 **Type:** DpiFollowStrategy
 
@@ -58,7 +60,9 @@ Set UIExtensionComponent Content Dpi Follow Strategy.
 isTransferringCaller?: boolean
 ```
 
-Set whether the current capability is used as a Caller.<br/>If set to true, as a Caller, the current token of UIExtensionComponent is set to rootToken.
+Whether the **UIExtensionComponent** forwards the upper-level caller information when it is used for nesting.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -80,7 +84,7 @@ Set whether the current capability is used as a Caller.<br/>If set to true, as a
 placeholder?: ComponentContent
 ```
 
-Set placeholder.If set placeholder ComponentContent, show placeholder node when connection is not established.
+Placeholder to be displayed before the UIExtensionComponent establishes a connection with the UIExtensionAbility.
 
 **Type:** ComponentContent
 
@@ -100,7 +104,9 @@ Set placeholder.If set placeholder ComponentContent, show placeholder node when 
 windowModeFollowStrategy?: WindowModeFollowStrategy
 ```
 
-Set UIExtensionComponent Content Window Mode Follow Strategy.
+Following strategy of the window mode.
+
+Default value: **FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE**
 
 **Type:** WindowModeFollowStrategy
 

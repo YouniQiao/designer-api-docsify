@@ -14,7 +14,7 @@ Used to mix colors.
 autoRefresh?(value: boolean): ColorMetrics
 ```
 
-Sets automatic refresh for the ColorMetrics object.When enabled, the color values of objects created with ColorMetrics.resourceColor() are automatically updated when the system configuration changes.
+Sets whether the **ColorMetrics** object automatically updates with system configuration changes.
 
 **Since:** 26.0.0
 
@@ -30,13 +30,13 @@ Sets automatic refresh for the ColorMetrics object.When enabled, the color value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to automatically refresh the color value when system configuration changes.<br>If this parameter is set to true, the color values of objects created using ColorMetrics.resourceColor()are automatically updated when the system configuration changes. If set to false, the color values of objects created by ColorMetrics.resourceColor() are not automatically updated.The default value is false. |
+| value | boolean | Yes | Whether the **ColorMetrics** object constructed using [resourceColor](arkts-arkui-graphics-colormetrics-c.md#resourcecolor) automatically refreshes the color value when the system configuration changes.<br>**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes.<br>**false**: The object does not proactively listen to the system configuration changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Returns the ColorMetrics object for chaining. |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | **ColorMetrics** object. |
 
 ## blendColor
 
@@ -96,7 +96,7 @@ Creates a **ColorMetrics** instance using specified [ColorSpace](arkts-arkui-col
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space used to specify the color. If ColorSpace.DISPLAY_P3 is used, the [setWindowColorSpace](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowcolorspace9-1) API must be called to set the current window to the wide color gamut mode. |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space used to specify the color. If ColorSpace.DISPLAY_P3 is used, the [setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace) API must be called to set the current window to the wide color gamut mode. |
 | red | number | Yes | Red component of the color. The value is a floating point number ranging from 0 to 1. |
 | green | number | Yes | Green component of the color. The value is a floating point number ranging from 0 to 1. |
 | blue | number | Yes | Blue component of the color. The value is a floating point number ranging from 0 to 1. |

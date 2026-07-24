@@ -14,7 +14,7 @@
 icon?: ResourceStr
 ```
 
-下拉选项图片。
+下拉选项图片，默认不显示。
 
 **类型：** ResourceStr
 
@@ -32,7 +32,7 @@ icon?: ResourceStr
 symbolIcon?: SymbolGlyphModifier
 ```
 
-下拉选项Symbol图片。
+下拉选项Symbol图片，默认不显示。
 
 symbolIcon优先级高于icon。
 

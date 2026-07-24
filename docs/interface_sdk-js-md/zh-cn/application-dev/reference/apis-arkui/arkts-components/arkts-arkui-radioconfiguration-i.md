@@ -40,7 +40,7 @@ checked: boolean
 triggerChange: Callback<boolean>
 ```
 
-触发单选框选中状态变化。
+用于触发单选框选中状态变化的回调函数。
 
 值为true时，表示从未选中变为选中。值为false时，表示从选中变为未选中。
 

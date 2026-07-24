@@ -105,7 +105,6 @@
   - [isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md)
   - [isModifyAutoStartAppsDisallowed](arkts-mdm-applicationmanager-ismodifyautostartappsdisallowed-f.md)
   - [isModifyKeepAliveAppsDisallowed](arkts-mdm-applicationmanager-ismodifykeepaliveappsdisallowed-f.md)
-  - [publishFormToDesktop](arkts-mdm-applicationmanager-publishformtodesktop-f.md)
   - [queryBundleStatsInfos](arkts-mdm-applicationmanager-querybundlestatsinfos-f.md)
   - [queryTrafficStats](arkts-mdm-applicationmanager-querytrafficstats-f.md)
   - [removeAllowedDistributeAbilityConnBundles](arkts-mdm-applicationmanager-removealloweddistributeabilityconnbundles-f.md)
@@ -234,6 +233,7 @@
   - [resetFactory(系统接口)](arkts-mdm-devicecontrol-resetfactory-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [shutdown(系统接口)](arkts-mdm-devicecontrol-shutdown-f-sys.md)<!--DelEnd-->
+  - [Operation](arkts-mdm-devicecontrol-operation-e.md)
 - [@ohos.enterprise.deviceInfo](arkts-enterprise-deviceinfo.md)
   - [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md)
   <!--Del-->
@@ -249,7 +249,6 @@
   - [getPowerPolicy(系统接口)](arkts-mdm-devicesettings-getpowerpolicy-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getScreenOffTime(系统接口)](arkts-mdm-devicesettings-getscreenofftime-f-sys.md)<!--DelEnd-->
-  - [getSwitchStatus](arkts-mdm-devicesettings-getswitchstatus-f.md)
   - [getValue](arkts-mdm-devicesettings-getvalue-f.md)
   - [getValueForAccount](arkts-mdm-devicesettings-getvalueforaccount-f.md)
   <!--Del-->
@@ -370,17 +369,16 @@
   - [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md)
   - [FeatureForAccount](arkts-mdm-restrictions-featureforaccount-e.md)
   - [FeatureForDevice](arkts-mdm-restrictions-featurefordevice-e.md)
+  - [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md)
+  - [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md)
 - [@ohos.enterprise.securityManager](arkts-enterprise-securitymanager.md)
   - [addAllowedPermissionBundle](arkts-mdm-securitymanager-addallowedpermissionbundle-f.md)
-  - [addUserExtCredential](arkts-mdm-securitymanager-adduserextcredential-f.md)
   - [cancelScreenWatermarkImage](arkts-mdm-securitymanager-cancelscreenwatermarkimage-f.md)
   - [cancelWatermarkImage](arkts-mdm-securitymanager-cancelwatermarkimage-f.md)
-  - [closeSession](arkts-mdm-securitymanager-closesession-f.md)
   - [getAllowedPermissionBundles](arkts-mdm-securitymanager-getallowedpermissionbundles-f.md)
   - [getAppClipboardPolicy](arkts-mdm-securitymanager-getappclipboardpolicy-f.md)
   <!--Del-->
   - [getDeviceEncryptionStatus(系统接口)](arkts-mdm-securitymanager-getdeviceencryptionstatus-f-sys.md)<!--DelEnd-->
-  - [getDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-getdevicesecuritylevelpolicy-f.md)
   - [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md)
   - [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md)
   - [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f.md)
@@ -390,29 +388,22 @@
   <!--Del-->
   - [getSecurityPatchTag(系统接口)](arkts-mdm-securitymanager-getsecuritypatchtag-f-sys.md)<!--DelEnd-->
   - [getSecurityStatus](arkts-mdm-securitymanager-getsecuritystatus-f.md)
-  - [getUnlockPolicy](arkts-mdm-securitymanager-getunlockpolicy-f.md)
   - [getUserCertificates](arkts-mdm-securitymanager-getusercertificates-f.md)
-  - [getUserExtCredential](arkts-mdm-securitymanager-getuserextcredential-f.md)
   - [getWatermarkImageApps](arkts-mdm-securitymanager-getwatermarkimageapps-f.md)
   - [installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md)
   - [installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md)
   - [isScreenLockDisabledForAccount](arkts-mdm-securitymanager-isscreenlockdisabledforaccount-f.md)
-  - [openSession](arkts-mdm-securitymanager-opensession-f.md)
   - [removeAllowedPermissionBundle](arkts-mdm-securitymanager-removeallowedpermissionbundle-f.md)
-  - [removeUserExtCredential](arkts-mdm-securitymanager-removeuserextcredential-f.md)
   - [setAppClipboardPolicy](arkts-mdm-securitymanager-setappclipboardpolicy-f.md)
-  - [setDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-setdevicesecuritylevelpolicy-f.md)
   - [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)
   - [setExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-setexternalsourceextensionspolicy-f.md)
   - [setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md)
   - [setPermissionManagedState](arkts-mdm-securitymanager-setpermissionmanagedstate-f.md)
   - [setScreenLockDisabledForAccount](arkts-mdm-securitymanager-setscreenlockdisabledforaccount-f.md)
   - [setScreenWatermarkImage](arkts-mdm-securitymanager-setscreenwatermarkimage-f.md)
-  - [setUnlockPolicy](arkts-mdm-securitymanager-setunlockpolicy-f.md)
   - [setWatermarkImage](arkts-mdm-securitymanager-setwatermarkimage-f.md)
   - [uninstallEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md)
   - [uninstallUserCertificate](arkts-mdm-securitymanager-uninstallusercertificate-f.md)
-  - [AddCredentialInfo](arkts-mdm-securitymanager-addcredentialinfo-i.md)
   - [ApplicationInstance](arkts-mdm-securitymanager-applicationinstance-i.md)
   - [CertBlob](arkts-mdm-securitymanager-certblob-i.md)
   <!--Del-->
@@ -420,6 +411,7 @@
   - [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md)
   - [WatermarkProperties](arkts-mdm-securitymanager-watermarkproperties-i.md)
   - [ClipboardPolicy](arkts-mdm-securitymanager-clipboardpolicy-e.md)
+  - [PasswordAlgs](arkts-mdm-securitymanager-passwordalgs-e.md)
   - [PermissionManagedState](arkts-mdm-securitymanager-permissionmanagedstate-e.md)
 - [@ohos.enterprise.systemManager](arkts-enterprise-systemmanager.md)
   - [addDisallowedNearLinkProtocols](arkts-mdm-systemmanager-adddisallowednearlinkprotocols-f.md)
@@ -469,38 +461,36 @@
   - [activeSim](arkts-mdm-telephonymanager-activesim-f.md)
   - [addIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-addincomingcallpolicynumbers-f.md)
   - [addOutgoingCallPolicyNumbers](arkts-mdm-telephonymanager-addoutgoingcallpolicynumbers-f.md)
-  - [addReceiveSmsPolicyNumbers](arkts-mdm-telephonymanager-addreceivesmspolicynumbers-f.md)
-  - [addSendSmsPolicyNumbers](arkts-mdm-telephonymanager-addsendsmspolicynumbers-f.md)
   - [deactiveSim](arkts-mdm-telephonymanager-deactivesim-f.md)
   - [getDefaultData](arkts-mdm-telephonymanager-getdefaultdata-f.md)
   - [getIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-getincomingcallpolicynumbers-f.md)
   - [getOutgoingCallPolicyNumbers](arkts-mdm-telephonymanager-getoutgoingcallpolicynumbers-f.md)
-  - [getReceiveSmsPolicyNumbers](arkts-mdm-telephonymanager-getreceivesmspolicynumbers-f.md)
-  - [getSendSmsPolicyNumbers](arkts-mdm-telephonymanager-getsendsmspolicynumbers-f.md)
   - [hangupCalling](arkts-mdm-telephonymanager-hangupcalling-f.md)
   - [isSimDisabled](arkts-mdm-telephonymanager-issimdisabled-f.md)
   - [removeIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-removeincomingcallpolicynumbers-f.md)
   - [removeOutgoingCallPolicyNumbers](arkts-mdm-telephonymanager-removeoutgoingcallpolicynumbers-f.md)
-  - [removeReceiveSmsPolicyNumbers](arkts-mdm-telephonymanager-removereceivesmspolicynumbers-f.md)
-  - [removeSendSmsPolicyNumbers](arkts-mdm-telephonymanager-removesendsmspolicynumbers-f.md)
   - [setDefaultData](arkts-mdm-telephonymanager-setdefaultdata-f.md)
   - [setSimDisabled](arkts-mdm-telephonymanager-setsimdisabled-f.md)
   - [setSimEnabled](arkts-mdm-telephonymanager-setsimenabled-f.md)
 - [@ohos.enterprise.usbManager](arkts-enterprise-usbmanager.md)
   - [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md)
+  - [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)
   - [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md)
   <!--Del-->
   - [disableUsb(系统接口)](arkts-mdm-usbmanager-disableusb-f-sys.md)<!--DelEnd-->
   - [getAllowedUsbDevices](arkts-mdm-usbmanager-getallowedusbdevices-f.md)
+  - [getDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-getdisallowedpermissiveusbdevices-f.md)
   - [getDisallowedUsbDevices](arkts-mdm-usbmanager-getdisallowedusbdevices-f.md)
   - [getUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-getusbstoragedeviceaccesspolicy-f.md)
   <!--Del-->
   - [isUsbDisabled(系统接口)](arkts-mdm-usbmanager-isusbdisabled-f-sys.md)<!--DelEnd-->
   - [removeAllowedUsbDevices](arkts-mdm-usbmanager-removeallowedusbdevices-f.md)
+  - [removeDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-removedisallowedpermissiveusbdevices-f.md)
   - [removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md)
   <!--Del-->
   - [setUsbPolicy(系统接口)](arkts-mdm-usbmanager-setusbpolicy-f-sys.md)<!--DelEnd-->
   - [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md)
+  - [PermissiveUsbDeviceType](arkts-mdm-usbmanager-permissiveusbdevicetype-i.md)
   - [UsbDeviceId](arkts-mdm-usbmanager-usbdeviceid-i.md)
   - [UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md)
   - [Descriptor](arkts-mdm-usbmanager-descriptor-e.md)

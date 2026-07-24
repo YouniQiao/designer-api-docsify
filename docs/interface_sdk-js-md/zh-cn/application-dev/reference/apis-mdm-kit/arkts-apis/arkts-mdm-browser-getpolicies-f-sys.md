@@ -18,7 +18,7 @@ function getPolicies(admin: Want, appId: string, callback: AsyncCallback<string>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** getPolicySync
+**替代接口：** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,7 +80,7 @@ function getPolicies(admin: Want, appId: string): Promise<string>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** getPolicySync
+**替代接口：** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

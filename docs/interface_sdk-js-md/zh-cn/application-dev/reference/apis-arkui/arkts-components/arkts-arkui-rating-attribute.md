@@ -14,7 +14,7 @@
 contentModifier(modifier: ContentModifier<RatingConfiguration>)
 ```
 
-定制Rating内容区的方法。
+定制Rating内容区的方法。开发者需自定义class实现ContentModifier接口，并在applyContent方法中返回WrappedBuilder，以此重新定义Rating组件内容区的渲染逻辑。
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ contentModifier(modifier: ContentModifier<RatingConfiguration>)
 contentModifier(modifier: Optional<ContentModifier<RatingConfiguration>>)
 ```
 
-定制Rating内容区的方法。与[contentModifier](RatingAttribute#contentModifier(modifier: ContentModifier<RatingConfiguration>))相比，modifier参数新增了对undefined类型的支持。
+定制Rating内容区的方法。与[contentModifier](RatingAttribute#contentModifier(modifier: ContentModifier<RatingConfiguration>))相比，modifier参数新增了对undefined类型的支持。当modifier的值为undefined时，不使用内容修改器。
 
 **起始版本：** 18
 
@@ -62,7 +62,7 @@ contentModifier(modifier: Optional<ContentModifier<RatingConfiguration>>)
 onChange(callback: (value: number) => void)
 ```
 
-当评分条的评星变化时触发该回调。
+当评分条的评分变化时触发该回调。
 
 **起始版本：** 7
 
@@ -86,7 +86,7 @@ onChange(callback: (value: number) => void)
 onChange(callback: Optional<OnRatingChangeCallback>)
 ```
 
-当评分条的评星变化时触发该回调。与[onChange](RatingAttribute#onChange(callback: (value: number) => void))相比，callback参数新增了对undefined类型的支持。
+当评分条的评分变化时触发该回调。与[onChange](RatingAttribute#onChange(callback: (value: number) => void))相比，callback参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -104,7 +104,7 @@ onChange(callback: Optional<OnRatingChangeCallback>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;OnRatingChangeCallback&gt; | 是 | 操作评分条的评星变化时触发该回调。<br/>当callback的值为undefined时，不使用回调函数。 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;OnRatingChangeCallback&gt; | 是 | 当评分条的评分变化时触发该回调。<br/>当callback的值为undefined时，不使用回调函数。 |
 
 ## starStyle
 
@@ -172,7 +172,7 @@ starStyle(options: Optional<StarStyleOptions>)
 stars(value: number)
 ```
 
-设置评分总数。设置为小于等于0的值时，按默认值显示。
+设置评分总数。默认值：5。
 
 **起始版本：** 7
 
@@ -196,7 +196,7 @@ stars(value: number)
 stars(starCount: Optional<number>)
 ```
 
-设置评分总数。设置为小于等于0的值时，按默认值显示。与[stars](RatingAttribute#stars(value: number))相比，starCount参数新增了对undefined类型的支持。
+设置评分总数。与[stars](RatingAttribute#stars(value: number))相比，starCount参数新增了对undefined类型的支持。当starCount的值为undefined时，默认值：5。
 
 **起始版本：** 18
 
@@ -214,7 +214,7 @@ stars(starCount: Optional<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| starCount | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 设置评分总数。<br/>当starCount的值为undefined时，默认值：5 |
+| starCount | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 设置评分总数。<br/>取值范围：大于0，小于等于0或undefined时按5显示。 |
 
 ## stepSize
 
@@ -222,7 +222,7 @@ stars(starCount: Optional<number>)
 stepSize(value: number)
 ```
 
-设置操作评级的步长。设置为小于0.1的值时，按默认值显示。
+设置操作评级的步长。设置为小于0.1的值时，按默认值显示。默认值：0.5。
 
 **起始版本：** 7
 
@@ -246,7 +246,7 @@ stepSize(value: number)
 stepSize(size: Optional<number>)
 ```
 
-设置操作评级的步长。设置为小于0.1的值时，按默认值显示。与[stepSize](RatingAttribute#stepSize(value: number))相比，size参数新增了对undefined类型的支持。
+设置操作评级的步长。设置为小于0.1的值时，按默认值显示。与[stepSize](RatingAttribute#stepSize(value: number))相比，size参数新增了对undefined类型的支持。当size的值为undefined时，默认值：0.5。
 
 **起始版本：** 18
 

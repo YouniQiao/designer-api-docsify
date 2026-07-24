@@ -1,6 +1,6 @@
 # IsolatedOptions (System API)
 
-This interface is used to set the options for IsolatedComponentAttribute during construction
+Describes the optional construction parameters during **IsolatedComponent** construction.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ This interface is used to set the options for IsolatedComponentAttribute during 
 want: Want
 ```
 
-Indicates want of the IsolatedOptions.
+.abc file information to load.
 
 **Type:** Want
 
@@ -36,7 +36,7 @@ Indicates want of the IsolatedOptions.
 worker: RestrictedWorker
 ```
 
-Indicates restricted worker for run abc.
+Restricted Worker thread where the .abc file is running.
 
 **Type:** RestrictedWorker
 

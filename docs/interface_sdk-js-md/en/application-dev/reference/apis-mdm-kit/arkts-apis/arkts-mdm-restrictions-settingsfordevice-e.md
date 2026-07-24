@@ -30,7 +30,7 @@ APN configuration.
 POWER_LONG_PRESS = 1
 ```
 
-Capability to open the power menu bu long-pressing the power button.
+Capability to open the power menu by long-pressing the power button.
 
 **Since:** 26.0.0
 

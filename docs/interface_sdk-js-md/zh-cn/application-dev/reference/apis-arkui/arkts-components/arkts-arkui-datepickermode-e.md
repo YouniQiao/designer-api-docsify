@@ -2,14 +2,6 @@
 
 设置日期展示模式。
 
-| 名称 | 值 | 说明 |  
-| -------- | - |-------- |  
-| DATE | 0 | 显示年、月、日三列。|  
-| YEAR_AND_MONTH | 1 | 显示年、月二列。|  
-| MONTH_AND_DAY | 2 | 显示月、日二列。
-
-在此模式下，年份始终保持不变。|
-
 **起始版本：** 18
 
 <!--Device-unnamed-declare enum DatePickerMode--><!--Device-unnamed-declare enum DatePickerMode-End-->
@@ -22,7 +14,7 @@
 DATE = 0
 ```
 
-The date displays three columns: year, month, and day.
+显示年、月、日三列。
 
 **起始版本：** 18
 
@@ -40,7 +32,7 @@ The date displays three columns: year, month, and day.
 YEAR_AND_MONTH = 1
 ```
 
-The date displays two columns: year and month.
+显示年、月二列。
 
 **起始版本：** 18
 
@@ -58,7 +50,9 @@ The date displays two columns: year and month.
 MONTH_AND_DAY = 2
 ```
 
-Defines a mode that displays the date in months and days of the month.In this mode, if the month changes from December to January,the year does not increment by one; if the month changes from January to December,the year does not decrement by one. The year remains fixed at the currently set value.
+显示月、日二列。
+
+在此模式下，年份始终保持不变，取值为selected参数指定的年份。若selected未指定则取当前系统年份。当月份滚动导致日期超出有效范围时，日期会自动调整至该月最后一天。
 
 **起始版本：** 18
 

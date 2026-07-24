@@ -6,8 +6,6 @@ declare type OnUIPickerComponentCallback = (selectedIndex: number) => void
 
 定义[onChange](UIPickerComponentAttribute#onChange)和[onScrollStop](UIPickerComponentAttribute#onScrollStop)事件的回调类型。
 
-取值范围：[0, 子组件的个数-1]内的整数。
-
 **起始版本：** 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -22,5 +20,5 @@ declare type OnUIPickerComponentCallback = (selectedIndex: number) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectedIndex | number | 是 | 当前选中项的索引值。  |
+| selectedIndex | number | 是 | 当前选中项的索引值。 <br>取值范围：[0, 子组件的个数-1]内的整数。  |
 

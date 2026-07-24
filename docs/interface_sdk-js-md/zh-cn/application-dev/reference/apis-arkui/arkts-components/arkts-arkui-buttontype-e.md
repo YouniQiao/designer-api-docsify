@@ -90,7 +90,7 @@ Normal
 ROUNDED_RECTANGLE = 3
 ```
 
-圆角矩形按钮（默认值：controlSize为NORMAL，圆角大小20vp，controlSize为SMALL，圆角大小14vp）。
+圆角矩形按钮（在不设置borderRadius时，默认值：controlSize为NORMAL，圆角大小20vp，controlSize为SMALL，圆角大小14vp）。
 
 **起始版本：** 15
 

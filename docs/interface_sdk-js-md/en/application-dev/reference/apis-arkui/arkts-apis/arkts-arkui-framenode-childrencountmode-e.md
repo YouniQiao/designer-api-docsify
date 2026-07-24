@@ -1,6 +1,6 @@
 # ChildrenCountMode
 
-Enum for children count mode.Specifies how to count children when querying number of child nodes.
+Enumerates the modes of counting child nodes.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,11 @@ Enum for children count mode.Specifies how to count children when querying numbe
 ALL_EXPAND = 0
 ```
 
-Expand mode. When encountering lazy-loaded nodes (e.g., LazyForEach),the nodes are expanded and the count includes all child nodes.This is the default behavior.
+Counting all child node after expansion. When a lazy loading node (for example,[LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i)) is encountered, the node is expanded and the number of all child nodes is returned.
+
+Whether to expand lazy loading nodes: yes
+
+Application scenario: A node needs to be expanded and the number of all child nodes needs to be returned.
 
 **Since:** 26.0.0
 
@@ -32,7 +36,11 @@ Expand mode. When encountering lazy-loaded nodes (e.g., LazyForEach),the nodes a
 ONLY_EXPANDED = 1
 ```
 
-Count expanded mode. Does not expand lazy-loaded nodes.Returns the count of only currently expanded child nodes. Unexpanded lazy-loaded nodes are not included in the count.
+Counting currently expanded child nodes. Lazy loading nodes are not expanded, and only the number of currently expanded child nodes is returned. Lazy loading nodes that are not expanded are not included in the count.
+
+Whether to expand lazy loading nodes: yes
+
+Application scenario: Only the number of expanded child nodes needs to be queried.
 
 **Since:** 26.0.0
 
@@ -50,7 +58,11 @@ Count expanded mode. Does not expand lazy-loaded nodes.Returns the count of only
 ALL_NOT_EXPAND = 2
 ```
 
-Count all mode. Does not expand lazy-loaded nodes,but returns the count including all potential children (both expanded and unexpanded lazy-loaded nodes).This provides the total potential child count without triggering expansion.
+Counting all child nodes. Lazy loading nodes are not expanded, but the total number of potential child nodes (including both expanded and unexpanded lazy loading nodes) is returned. This counting mode provides the total number of potential child nodes without triggering any expansion.
+
+Whether to expand lazy loading nodes: yes
+
+Application scenario: This counting mode is used when the total number of all child nodes needs to be obtained.Unlike **ALL_EXPAND**, this mode does not expand child nodes.
 
 **Since:** 26.0.0
 

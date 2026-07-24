@@ -2,7 +2,7 @@
 
 Enumerates the application clone preference modes.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 <!--Device-bundleManager-export enum AppClonePreferenceMode--><!--Device-bundleManager-export enum AppClonePreferenceMode-End-->
 
@@ -18,7 +18,7 @@ ALWAYS_ASK = 0
 
 Always prompts the user to select an application.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +36,7 @@ MAIN_APP = 1
 
 Uses the main application by default.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +54,7 @@ CLONE_APP = 2
 
 Uses the application clone by default.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 

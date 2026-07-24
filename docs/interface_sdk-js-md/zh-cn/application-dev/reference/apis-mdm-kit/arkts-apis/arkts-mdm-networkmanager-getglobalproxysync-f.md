@@ -34,7 +34,7 @@ function getGlobalProxySync(admin: Want): connection.HttpProxy
 
 | 类型 | 说明 |
 | --- | --- |
-| connection.HttpProxy | Global HTTP proxy configuration information. |
+| connection.HttpProxy | 返回网络全局HTTP代理配置信息。 |
 
 **错误码：**
 

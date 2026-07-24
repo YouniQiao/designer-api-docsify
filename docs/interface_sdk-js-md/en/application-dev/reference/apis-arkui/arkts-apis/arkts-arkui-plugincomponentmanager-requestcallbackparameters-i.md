@@ -1,8 +1,8 @@
 # RequestCallbackParameters
 
-Plugin component request callback parameters.
+Provides the result returned after the **PluginManager.Request** API is called.
 
-**Since:** 12
+**Since:** 8
 
 <!--Device-pluginComponentManager-interface RequestCallbackParameters--><!--Device-pluginComponentManager-interface RequestCallbackParameters-End-->
 
@@ -20,11 +20,11 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 componentTemplate: PluginComponentTemplate
 ```
 
-Defines componentTemplate.
+Component template.
 
 **Type:** PluginComponentTemplate
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +38,11 @@ Defines componentTemplate.
 data: KVObject
 ```
 
-Defines data.
+Component data.
 
 **Type:** KVObject
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,11 +56,11 @@ Defines data.
 extraData: KVObject
 ```
 
-Defines extraData.
+Extra data.
 
 **Type:** KVObject
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -27,7 +27,7 @@ import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSli
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | ArcSliderLayoutValueOptions的构造信息。 |
+| [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | ArcSliderLayoutOptions的构造信息。 |
 | [ArcSliderOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | ArcSliderOptions的构造信息。 |
 | [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | ArcSliderStyleOptions的构造信息。 |
 | [ArcSliderValueOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | ArcSliderValueOptions的构造信息。 |
@@ -42,7 +42,7 @@ import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSli
 
 | 名称 | 说明 |
 | --- | --- |
-| [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md) | 弧形Slider的进度值发生变化时，告知应用。 |
-| [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md) | 弧形Slider放大或缩小时，告知应用。 |
-| [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md) | 弧形Slider被触摸时，告知应用。 |
+| [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md) | 弧形Slider的进度值发生变化时触发回调。 |
+| [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md) | 弧形Slider放大或缩小时触发回调。 |
+| [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md) | 弧形Slider被触摸时触发回调。 |
 

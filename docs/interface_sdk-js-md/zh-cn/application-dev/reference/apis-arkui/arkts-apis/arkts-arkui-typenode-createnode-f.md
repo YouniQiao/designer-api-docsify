@@ -6,7 +6,7 @@
 function createNode(context: UIContext, nodeType: 'Text'): Text
 ```
 
-创建Text类型的FrameNode节点。
+创建Text类型的FrameNode节点。使用typeNode创建Text节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。
 
 **起始版本：** 12
 
@@ -486,7 +486,7 @@ function createNode(context: UIContext, nodeType: 'Blank'): Blank
 function createNode(context: UIContext, nodeType: 'Image'): Image
 ```
 
-创建Image类型的FrameNode节点。
+创建Image类型的FrameNode节点。使用typeNode创建Image节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。
 
 **起始版本：** 12
 
@@ -968,7 +968,7 @@ function createNode(context: UIContext, nodeType: 'Rating'): Rating
 function createNode(context: UIContext, nodeType: 'Select'): Select
 ```
 
-创建Select类型的FrameNode节点。
+创建Select类型的FrameNode节点。使用typeNode创建Select节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。
 
 **起始版本：** 18
 
@@ -1032,7 +1032,7 @@ function createNode(context: UIContext, nodeType: 'Slider'): Slider
 function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOptions): Toggle
 ```
 
-创建Toggle类型的FrameNode节点。
+创建Toggle类型的FrameNode节点。使用typeNode创建Toggle节点时，当传入的UIContext对应的UI实例销毁后，调用该接口会返回一个无效的FrameNode节点，无法正常挂载和显示。
 
 **起始版本：** 18
 
@@ -1050,7 +1050,7 @@ function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOpti
 | --- | --- | --- | --- |
 | context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Toggle' | 是 | 创建Toggle类型的节点。 |
-| options | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | 否 | 创建Toggle节点的接口参数，仅可通过ToggleOptions中的type属性设置开关样式。 |
+| options | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | 否 | 创建Toggle节点的接口参数，仅可通过ToggleOptions中的type属性设置开关样式。不传入该参数时，需通过initialize接口设置Toggle的type属性。 |
 
 **返回值：**
 

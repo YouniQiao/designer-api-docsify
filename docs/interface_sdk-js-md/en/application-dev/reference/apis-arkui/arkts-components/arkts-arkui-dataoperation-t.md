@@ -6,7 +6,6 @@ declare type DataOperation =
 ```
 
 All data operation types.
-> **NOTE**
 
 **Since:** 12
 

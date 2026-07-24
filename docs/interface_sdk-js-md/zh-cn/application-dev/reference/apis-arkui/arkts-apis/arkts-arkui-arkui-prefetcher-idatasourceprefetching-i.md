@@ -1,12 +1,12 @@
 # IDataSourcePrefetching
 
-继承自[IDataSource](../arkts-components/arkts-arkui-idatasource-i.md)。实现该接口，提供具备预取能力的DataSource。
+继承自[IDataSource](../arkts-components/arkts-arkui-idatasource-i.md)。实现该接口，提供具备预取能力的数据源。
 
 **继承/实现关系：** IDataSourcePrefetching extends [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md)
 
 **起始版本：** 12
 
-<!--Device-unnamed-/* * Copyright (c) 2024 Huawei Device Co., Ltd. * Licensed under the Apache License, Version 2.0 (the "License"); * you may not use this file except in compliance with the License. * You may obtain a copy of the License at * *     http://www.apache.org/licenses/LICENSE-2.0 * * Unless required by applicable law or agreed to in writing, software * distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the License for the specific language governing permissions and * limitations under the License. */export interface IDataSourcePrefetching extends IDataSource--><!--Device-unnamed-/* * Copyright (c) 2024 Huawei Device Co., Ltd. * Licensed under the Apache License, Version 2.0 (the "License"); * you may not use this file except in compliance with the License. * You may obtain a copy of the License at * *     http://www.apache.org/licenses/LICENSE-2.0 * * Unless required by applicable law or agreed to in writing, software * distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the License for the specific language governing permissions and * limitations under the License. */export interface IDataSourcePrefetching extends IDataSource-End-->
+<!--Device-unnamed-export interface IDataSourcePrefetching extends IDataSource--><!--Device-unnamed-export interface IDataSourcePrefetching extends IDataSource-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,7 +22,7 @@ import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI
 cancel?(index: number): Promise<void> | void
 ```
 
-取消从数据集中预取指定的元素。该方法可以为同步，也可为异步。
+取消从数据集中预取指定的数据项。该方法可以为同步，也可为异步。该方法为可选方法，若数据源未实现该方法，则不执行取消预取操作。
 
 **起始版本：** 12
 
@@ -38,13 +38,13 @@ cancel?(index: number): Promise<void> | void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 取消预取数据项索引值。 |
+| index | number | 是 | 取消预取数据项索引值，取值范围为[0, totalCount()-1]。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise when this API is executed asynchronously; no return value when this API is executed synchronously. The promise only indicates that the operation is completed and contains no actual return content. |
+| Promise&lt;void&gt; | 异步执行时返回Promise对象，同步执行时无返回值。Promise仅表示操作完成，无实际返回内容。 |
 
 ## prefetch
 
@@ -52,7 +52,7 @@ cancel?(index: number): Promise<void> | void
 prefetch(index: number): Promise<void> | void
 ```
 
-从数据集中预取指定的元素。该方法可以为同步，也可为异步。
+从数据集中预取指定的数据项。该方法可以为同步，也可为异步。当可见区域发生变化时，预取算法判断即将进入可见区域的数据项需要预取时，会调用该方法。
 
 **起始版本：** 12
 
@@ -68,11 +68,11 @@ prefetch(index: number): Promise<void> | void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 预取数据项索引值。 |
+| index | number | 是 | 预取数据项索引值，取值范围为[0, totalCount()-1]。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise when this API is executed asynchronously; no return value when this API is executed synchronously. The promise only indicates that the operation is completed and contains no actual return content. |
+| Promise&lt;void&gt; | 异步执行时返回Promise对象，同步执行时无返回值。Promise仅表示操作完成，无实际返回内容。 |
 

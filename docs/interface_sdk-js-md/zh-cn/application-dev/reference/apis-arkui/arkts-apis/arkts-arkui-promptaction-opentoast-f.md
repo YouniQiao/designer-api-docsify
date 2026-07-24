@@ -37,7 +37,7 @@ function openToast(options: ShowToastOptions): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-prompt-showtoastoptions-i.md) | 是 | Toast选项。 |
+| options | [ShowToastOptions](arkts-arkui-prompt-showtoastoptions-i.md) | 是 | Toast选项，用于配置Toast的显示内容和样式。 |
 
 **返回值：**
 

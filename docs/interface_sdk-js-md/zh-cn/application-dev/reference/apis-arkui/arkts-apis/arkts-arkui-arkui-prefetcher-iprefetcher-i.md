@@ -1,6 +1,6 @@
 # IPrefetcher
 
-实现此接口以提供预取能力。
+实现此接口以提供预取能力，配合LazyForEach在List、Grid等容器组件滑动浏览时预取数据项，提升用户浏览体验。
 
 **起始版本：** 12
 
@@ -44,7 +44,7 @@ setDataSource(dataSource: IDataSourcePrefetching): void
 visibleAreaChanged(minVisible: number, maxVisible: number): void
 ```
 
-当可见区域边界发生改变时调用此方法。支持与`List`、`Grid`、`WaterFlow`和`Swiper`组件配合使用。
+当可见区域边界发生改变时调用此方法，将当前可见区域范围通知给Prefetcher，使其据此决定预取或取消预取的数据项。调用此方法前需先通过setDataSource方法设置数据源。支持与`List`、`Grid`、`WaterFlow`和`Swiper`组件配合使用。
 
 **起始版本：** 12
 
@@ -60,6 +60,6 @@ visibleAreaChanged(minVisible: number, maxVisible: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| minVisible | number | 是 | 列表可见区域的上界。 |
-| maxVisible | number | 是 | 列表可见区域的下界。 |
+| minVisible | number | 是 | 当前可见区域中第一项数据的索引值，取值范围为[0, totalCount()-1]。超出范围时计算错误。 |
+| maxVisible | number | 是 | 当前可见区域中最后一项数据的索引值，取值范围为[0, totalCount()-1]。超出范围时计算错误。 |
 

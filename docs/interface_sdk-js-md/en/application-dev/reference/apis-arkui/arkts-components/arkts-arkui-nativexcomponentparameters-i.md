@@ -1,6 +1,6 @@
 # NativeXComponentParameters
 
-Defines the native xcomponent parameters.
+Defines the options of the **XComponent**. An XComponent created with such constructor parameters can pass its corresponding [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) object to the Native side, enabling the use of NDK APIs for surface lifecycle–related settings and [component event listening](../../../ui/ndk-listen-to-component-events.md).
 
 **Since:** 19
 
@@ -14,7 +14,7 @@ Defines the native xcomponent parameters.
 imageAIOptions?: ImageAIOptions
 ```
 
-Image ai options.
+AI analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
 
 **Type:** ImageAIOptions
 
@@ -34,7 +34,7 @@ Image ai options.
 type: XComponentType
 ```
 
-The type of xcomponent
+Type of the component.
 
 **Type:** XComponentType
 

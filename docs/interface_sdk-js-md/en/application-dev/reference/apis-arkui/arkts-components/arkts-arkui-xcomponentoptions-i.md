@@ -1,8 +1,8 @@
 # XComponentOptions
 
-Defines the xcomponent options.
+Defines the options of the **XComponent**.
 
-**Since:** 20
+**Since:** 12
 
 <!--Device-unnamed-declare interface XComponentOptions--><!--Device-unnamed-declare interface XComponentOptions-End-->
 
@@ -14,15 +14,15 @@ Defines the xcomponent options.
 controller: XComponentController
 ```
 
-The controller of xcomponent.
+Controller bound to the component, which can be used to invoke methods of the component. This parameter is effective only when **type** is **SURFACE** or **TEXTURE**.
 
 **Type:** XComponentController
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentOptions-controller: XComponentController--><!--Device-XComponentOptions-controller: XComponentController-End-->
 
@@ -34,7 +34,7 @@ The controller of xcomponent.
 imageAIOptions?: ImageAIOptions
 ```
 
-AI image analysis options.You can configure the analysis type or bind an analyzer controller through this parameter.
+AI analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
 
 **Type:** ImageAIOptions
 
@@ -54,15 +54,15 @@ AI image analysis options.You can configure the analysis type or bind an analyze
 type: XComponentType
 ```
 
-The type of xcomponent
+Type of the component.
 
 **Type:** XComponentType
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentOptions-type: XComponentType--><!--Device-XComponentOptions-type: XComponentType-End-->
 

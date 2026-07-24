@@ -6,11 +6,11 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AttributeUpdater](arkts-arkui-attributeupdater-c.md) | 为[AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)的实现类，开发者需要自定义class继承AttributeUpdater。其中C代表组件的构造函数类型，比如Text组件的TextInterface，Image组件的ImageInterface等，仅在使用updateConstructorParams时才需要传递C类型。 |
+| [AttributeUpdater](arkts-arkui-attributeupdater-c.md) | 将属性直接设置给组件，无需标记为状态变量即可直接触发UI更新。适用于需要在不定义状态变量的情况下动态更新组件属性的场景，如动态修改组件构造参数、避免为一次性属性更新定义状态变量等。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [Initializer](arkts-arkui-initializer-t.md) | 可以将属性更新到本地的修饰器。 |
+| [Initializer](arkts-arkui-initializer-t.md) | 组件属性的初始化函数类型，用于创建并返回组件的属性实例。 |
 

@@ -20,7 +20,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 index: number
 ```
 
-选中按钮在buttons数组中的索引，从0开始。
+选中按钮在buttons数组中的索引，从0开始，可用于判断用户点击了哪个按钮。
 
 **类型：** number
 

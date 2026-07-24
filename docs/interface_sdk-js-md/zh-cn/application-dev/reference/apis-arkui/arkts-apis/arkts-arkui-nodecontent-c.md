@@ -1,6 +1,9 @@
 # NodeContent
 
-NodeContent是节点内容的实体封装。
+NodeContent是ArkUI提供的[ContentSlot](../../apis-arkui/arkts-components/arkts-arkui-content_slot-i)的管理器，用于管理挂载到ContentSlot上的FrameNode节点内容，支持动态添加、删除FrameNode节点。适用于需要通过ContentSlot动态管理FrameNode节点内容的场景，例如根据用户交互动态新增或移除文本、图片等自定义FrameNode节点。
+> **说明：**  
+>  
+> - NodeContent对象不支持使用JSON序列化。
 
 **继承/实现关系：** NodeContent extends [Content](arkts-arkui-content-c.md)
 
@@ -16,7 +19,7 @@ NodeContent是节点内容的实体封装。
 addFrameNode(node: FrameNode): void
 ```
 
-根据参数将FrameNode添加到NodeContent中。
+将FrameNode添加到NodeContent中，添加后FrameNode将通过关联的ContentSlot渲染显示。适用于需要动态管理ContentSlot中显示内容节点的场景，例如根据用户交互动态新增文本、图片等自定义FrameNode节点。
 
 **起始版本：** 12
 
@@ -32,7 +35,7 @@ addFrameNode(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | 是 | 需要添加的FrameNode。 |
+| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | 是 | 需要添加的FrameNode，该节点需为可被添加的有效FrameNode。 |
 
 **错误码：**
 
@@ -64,7 +67,7 @@ constructor()
 removeFrameNode(node: FrameNode): void
 ```
 
-根据参数将FrameNode从NodeContent中删除。
+将FrameNode从NodeContent中删除，删除后FrameNode将不再通过ContentSlot显示。适用于需要动态移除已添加内容节点的场景，例如用户交互后移除指定的文本、图片等自定义FrameNode节点。
 
 **起始版本：** 12
 
@@ -80,5 +83,5 @@ removeFrameNode(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | 是 | 需要删除的FrameNode。 |
+| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | 是 | 需要删除的FrameNode，该节点需已添加到当前NodeContent中，若未添加则删除无效。 |
 

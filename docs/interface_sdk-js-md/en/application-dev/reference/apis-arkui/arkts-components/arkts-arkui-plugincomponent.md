@@ -1,7 +1,11 @@
 # PluginComponent
 
-Defines PluginComponent Component.
+The **PluginComponent** allows an application to display external UI from another application. To implement update
+through inter-process communication (IPC), see [@ohos.pluginComponent]{@link @ohos.pluginComponent}.
 
+## Child Components
+
+Not supported
 
 ## PluginComponent
 
@@ -9,9 +13,9 @@ Defines PluginComponent Component.
 PluginComponent(options: PluginComponentOptions)
 ```
 
-Called when setting the plugin.AnonyMous Object Rectification
+Creates a **PluginComponent** to display the UI provided by an external application.
 
-**Since:** 18
+**Since:** 9
 
 <!--Device-PluginComponentInterface-(options: PluginComponentOptions): PluginComponentAttribute--><!--Device-PluginComponentInterface-(options: PluginComponentOptions): PluginComponentAttribute-End-->
 
@@ -23,7 +27,7 @@ Called when setting the plugin.AnonyMous Object Rectification
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | Yes | Plugin component options  |
+| options | [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | Yes | Configuration options of the **PluginComponent**. |
 
 ## Summary
 

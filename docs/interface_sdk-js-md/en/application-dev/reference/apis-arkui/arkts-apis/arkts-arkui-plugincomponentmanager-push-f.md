@@ -12,9 +12,9 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 function push(param: PushParameters, callback: AsyncCallback<void>): void
 ```
 
-Plugin component push method.
+Pushes the component and data to the component user.
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

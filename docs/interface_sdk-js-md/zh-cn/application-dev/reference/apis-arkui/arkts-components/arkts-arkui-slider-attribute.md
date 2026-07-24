@@ -108,7 +108,7 @@ blockColor(value: ResourceColor)
 blockColor(value: ResourceColor | LinearGradient)
 ```
 
-设置Slider滑块的颜色，支持渐变色。
+设置Slider滑块的颜色，支持渐变色。与blockColor相比，新增LinearGradient类型支持。
 
 当滑块形状设置为SliderBlockType.DEFAULT时，blockColor可设置默认圆形滑块颜色。
 
@@ -210,7 +210,7 @@ contentModifier(modifier: ContentModifier<SliderConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;SliderConfiguration&gt; | 是 | 在Slider组件上，定制内容区的方法。<br/>ContentModifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;SliderConfiguration&gt; | 是 | 在Slider组件上，定制内容区的方法。<br/>ContentModifier为内容修改器，需自定义class实现该接口。 |
 
 ## digitalCrownSensitivity
 
@@ -218,7 +218,7 @@ contentModifier(modifier: ContentModifier<SliderConfiguration>)
 digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 ```
 
-设置旋转表冠的灵敏度。
+设置旋转表冠灵敏度。
 > **说明：**  
 >  
 > 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
@@ -237,7 +237,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 | 旋转表冠的灵敏度。<br />默认值：CrownSensitivity.MEDIUM |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 | 旋转表冠灵敏度。<br />默认值：CrownSensitivity.MEDIUM |
 
 ## enableHapticFeedback
 
@@ -263,7 +263,7 @@ enableHapticFeedback(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 设置是否开启触控反馈。<br/>true：开启触控反馈；false：不开启触控反馈。<br/>默认值：true |
+| enabled | boolean | 是 | 是否开启触控反馈。<br/>true：开启触控反馈；false：不开启触控反馈。<br/>默认值：true |
 
 ## maxLabel
 
@@ -271,7 +271,7 @@ enableHapticFeedback(enabled: boolean)
 maxLabel(value: string)
 ```
 
-设置最大值。
+设置最大值标签的文本内容。
 > **说明：**  
 >  
 > 从API version 7开始支持，从API version 9开始废弃，建议使用max替代。max是[SliderOptions](arkts-arkui-slideroptions-i.md)中的属性。
@@ -290,7 +290,7 @@ maxLabel(value: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 最大值。 |
+| value | string | 是 | 最大值标签文本。 |
 
 ## minLabel
 
@@ -298,7 +298,7 @@ maxLabel(value: string)
 minLabel(value: string)
 ```
 
-设置最小值。
+设置最小值标签的文本内容。
 > **说明：**  
 >  
 > 从API version 7开始支持，从API version 9开始废弃，建议使用min替代。min是[SliderOptions](arkts-arkui-slideroptions-i.md)中的属性。
@@ -317,7 +317,7 @@ minLabel(value: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 最小值。 |
+| value | string | 是 | 最小值标签文本。 |
 
 ## minResponsiveDistance
 
@@ -325,7 +325,7 @@ minLabel(value: string)
 minResponsiveDistance(value: number)
 ```
 
-设置滑动响应的最小距离。
+设置滑块开始滑动的最小响应距离。
 
 **起始版本：** 12
 
@@ -341,7 +341,7 @@ minResponsiveDistance(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 设置滑动响应的最小距离，滑动超过此距离后滑块才开始滑动。<br/>默认值：0<br/>**说明：** <br/>单位与[SliderOptions](arkts-arkui-slideroptions-i.md)中的属性min以及属性max一致。<br/>当value小于0、大于max-min或非法值时，取默认值。 |
+| value | number | 是 | 设置滑块开始滑动的最小响应距离。<br/>默认值：0<br/>**说明：** <br/>单位与[SliderOptions](arkts-arkui-slideroptions-i.md)中的属性min以及属性max一致。<br/>当value小于0、大于max-min或非法值时，取默认值。 |
 
 ## onChange
 
@@ -351,9 +351,9 @@ onChange(callback: (value: number, mode: SliderChangeMode) => void)
 
 Slider拖动或点击时触发事件回调。
 
-Begin和End状态当手势点击时都会触发，Moving和Click状态当value值发生变化时触发。
+Begin和End状态在点击时触发，Moving和Click状态在value值变化时触发。
 
-当连贯动作为拖动动作时，不触发Click状态。
+连贯拖动动作不触发Click状态。
 
 **起始版本：** 7
 
@@ -393,7 +393,7 @@ prefix(content: ComponentContent, options?: SliderPrefixOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | 是 | 自定义组件内容，用于定义滑块前缀的可视化内容，该内容会显示在滑块的起始位置。 |
+| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | 是 | 滑块前缀的可视化内容，显示在滑块起始位置。 |
 | options | [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md) | 否 | 滑块前缀的配置选项，用于设置与无障碍功能相关的属性。 <br/>默认值：null |
 
 ## selectedBorderRadius
@@ -476,7 +476,7 @@ selectedColor(selectedColor: ResourceColor | LinearGradient)
 showSteps(value: boolean)
 ```
 
-设置当前是否显示步长刻度值。
+设置是否显示步长刻度值。
 
 **起始版本：** 7
 
@@ -492,7 +492,7 @@ showSteps(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 当前是否显示步长刻度值。<br/>true：显示刻度值；false：不显示刻度值。<br/>默认值：false |
+| value | boolean | 是 | 是否显示步长刻度值。<br/>true：显示刻度值；false：不显示刻度值。<br/>默认值：false |
 
 ## showSteps
 
@@ -522,7 +522,7 @@ showSteps(value: boolean, options?: SliderShowStepOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 当前是否显示步长刻度值。<br/>true：显示刻度值；false：不显示刻度值。<br />默认值：false |
+| value | boolean | 是 | 是否显示步长刻度值。<br/>true：显示刻度值；false：不显示刻度值。<br />默认值：false |
 | options | [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | 否 | 刻度点无障碍文本的配置选项，用于设置与无障碍功能相关的属性。<br/>默认值：null |
 
 ## showTips
@@ -533,9 +533,9 @@ showTips(value: boolean, content?: ResourceStr)
 
 设置滑动时是否显示气泡提示。
 
-当direction的值为Axis.Horizontal时，tip显示在滑块上方，如果上方空间不够，则在下方显示。当值为Axis.Vertical时，tip显示在滑块左边，如果左边空间不够，则在右边显示。当不设置周边边距或者周边边距比较小时，tip会被截断。
+当direction的值为Axis.Horizontal时，气泡提示显示在滑块上方；若上方空间不足以显示完整气泡提示，则在下方显示。当值为Axis.Vertical时，气泡提示显示在滑块左边；若左边空间不足以显示完整气泡提示，则在右边显示。当未设置周边边距或边距小于气泡提示所需空间时，气泡提示会被截断。
 
-tip的绘制区域为Slider自身节点的overlay。
+气泡提示的绘制区域为Slider自身节点的overlay。
 
 **起始版本：** 7
 
@@ -552,7 +552,7 @@ tip的绘制区域为Slider自身节点的overlay。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean | 是 | 滑动时是否显示气泡提示。<br/>true：显示气泡；false：不显示气泡。<br/>默认值：false |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 气泡提示的文本内容，默认显示当前百分比。<br/><br>**起始版本：** 10 |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 气泡提示的文本内容。传入时显示自定义文本（当需要展示特定格式或额外信息时使用），不传入时默认显示当前百分比数值。<br/><br>**起始版本：** 10 |
 
 ## slideRange
 
@@ -560,7 +560,7 @@ tip的绘制区域为Slider自身节点的overlay。
 slideRange(value: SlideRange)
 ```
 
-设置有效滑动区间。
+设置有效滑动区间。设置后滑块滑动范围被限制在[from, to]区间内，区间外的点击和手势不会触发滑动；value初始值若超出区间会自动调整到区间边界。
 
 **起始版本：** 12
 
@@ -576,7 +576,7 @@ slideRange(value: SlideRange)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SlideRange](arkts-arkui-sliderange-i.md) | 是 | 设置有效滑动区间 |
+| value | [SlideRange](arkts-arkui-sliderange-i.md) | 是 | 有效滑动区间 |
 
 ## sliderInteractionMode
 
@@ -672,7 +672,7 @@ suffix(content: ComponentContent, options?: SliderSuffixOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | 是 | 自定义组件内容，用于定义滑块后缀的可视化内容，该内容会显示在滑块的结束位置。 |
+| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | 是 | 滑块后缀的可视化内容，显示在滑块结束位置。 |
 | options | [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md) | 否 | 滑块后缀的配置选项，用于设置与无障碍功能相关的属性。 <br/>默认值：null |
 
 ## trackBorderRadius
@@ -707,7 +707,7 @@ trackColor(value: ResourceColor | LinearGradient)
 
 设置滑轨的背景颜色。
 
-从API version 12开始支持利用LinearGradient设置滑轨的渐变色。
+从API version 12开始，支持使用LinearGradient类型设置滑轨的渐变色。
 
 **起始版本：** 7
 
@@ -731,7 +731,7 @@ trackColor(value: ResourceColor | LinearGradient)
 trackColorMetrics(color: ColorMetricsLinearGradient)
 ```
 
-设置滑轨轨道的线性渐变背景颜色。
+设置滑轨轨道的线性渐变背景颜色。与trackColorMetrics相比，使用ColorMetricsLinearGradient类型支持指定色域的渐变。
 
 **起始版本：** 23
 

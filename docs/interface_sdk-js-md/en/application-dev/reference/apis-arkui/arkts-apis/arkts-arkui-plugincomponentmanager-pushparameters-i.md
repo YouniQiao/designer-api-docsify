@@ -1,8 +1,8 @@
 # PushParameters
 
-Plugin component push parameters.
+Defines the parameters required when using the **PluginManager.Push** API.
 
-**Since:** 12
+**Since:** 8
 
 <!--Device-pluginComponentManager-interface PushParameters--><!--Device-pluginComponentManager-interface PushParameters-End-->
 
@@ -20,11 +20,11 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 data: KVObject
 ```
 
-Defines data.
+Component data.
 
 **Type:** KVObject
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,11 +38,11 @@ Defines data.
 extraData: KVObject
 ```
 
-Defines extraData.
+Extra data.
 
 **Type:** KVObject
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,11 +56,11 @@ Defines extraData.
 jsonPath?: string
 ```
 
-Defines jsonPath.
+Path to the [external.json](../../../reference/apis-arkui/js-apis-plugincomponent.md#about-the-externaljson-file) file that stores the template path.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,11 +74,11 @@ Defines jsonPath.
 name: string
 ```
 
-Defines name.
+Component name.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -92,11 +92,11 @@ Defines name.
 want: Want
 ```
 
-Defines want.
+Ability information of the component user.
 
 **Type:** Want
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

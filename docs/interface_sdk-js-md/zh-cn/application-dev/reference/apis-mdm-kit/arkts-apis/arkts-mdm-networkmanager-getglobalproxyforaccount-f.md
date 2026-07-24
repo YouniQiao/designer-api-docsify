@@ -35,7 +35,7 @@ function getGlobalProxyForAccount(admin: Want | null, accountId: number): connec
 
 | 类型 | 说明 |
 | --- | --- |
-| connection.HttpProxy | HTTP proxy configuration of the network. |
+| connection.HttpProxy | admin - 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 
 **错误码：**
 

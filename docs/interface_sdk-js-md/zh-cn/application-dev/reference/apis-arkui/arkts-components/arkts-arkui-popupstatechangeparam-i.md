@@ -14,7 +14,7 @@
 isVisible: boolean
 ```
 
-气泡的显示状态。返回true时，表示气泡从关闭到打开，返回false时，表示气泡从打开到关闭。
+气泡的显示状态。true表示气泡打开，false表示气泡关闭。
 
 **类型：** boolean
 

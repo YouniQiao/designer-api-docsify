@@ -42,7 +42,7 @@ function addOsAccount(admin: Want, name: string, type: osAccount.OsAccountType):
 
 | 类型 | 说明 |
 | --- | --- |
-| osAccount.OsAccountInfo | Information about the account added. |
+| osAccount.OsAccountInfo | 返回添加的账号信息。 |
 
 **错误码：**
 

@@ -22,7 +22,7 @@ export function edgeColors(all: number): Edges<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| all | number | 是 | 边框颜色，ARGB格式，示例：0xffff00ff。<br/>取值范围：[0, 0xffffffff] |
+| all | number | 是 | 边框颜色，ARGB格式，示例：0xffff00ff。<br>取值范围：[0, 0xffffffff]<br>超出范围时按边界值处理。 |
 
 **返回值：**
 

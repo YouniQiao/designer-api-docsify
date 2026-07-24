@@ -80,7 +80,7 @@ Toast的背板颜色。<br/>默认值：Color.Transparent<br/>**说明：**<br/>
 bottom?: string | number
 ```
 
-设置Toast底部边框距离导航条的高度，软键盘拉起时，如果bottom值过小，Toast要被软键盘遮挡时，会自动避让至距离软键盘80vp处。<br/>默认值：80vp<br/>**说明：**<br/>当底部没有导航条时，bottom为设置弹窗底部边框距离窗口底部的高度。<br/>设置对齐方式alignment后，bottom不生效。
+设置Toast底部边框距离导航条的高度。软键盘拉起时，若bottom值过小且Toast会被遮挡，则自动避让至距离软键盘80vp处。<br/>默认值：80vp<br/>**说明：**<br/>当底部没有导航条时，bottom为设置弹窗底部边框距离窗口底部的高度。<br/>设置对齐方式alignment后，bottom不生效。
 
 **类型：** string \| number
 

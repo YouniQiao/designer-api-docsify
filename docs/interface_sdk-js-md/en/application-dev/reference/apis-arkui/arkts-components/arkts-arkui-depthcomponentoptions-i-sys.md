@@ -10,6 +10,30 @@ Defines the options of DepthComponent.
 
 **System API:** This is a system API.
 
+## colorSpace
+
+```TypeScript
+colorSpace?: import('../api/@ohos.graphics.colorSpaceManager').default.ColorSpace
+```
+
+Color space of the background.
+
+**Type:** import('../api/@ohos.graphics.colorSpaceManager').default.ColorSpace
+
+**Default:** colorSpaceManager.ColorSpace.SRGB
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthComponentOptions-colorSpace?: import('../api/@ohos.graphics.colorSpaceManager').default.ColorSpace--><!--Device-DepthComponentOptions-colorSpace?: import('../api/@ohos.graphics.colorSpaceManager').default.ColorSpace-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
 ## depthSpace
 
 ```TypeScript

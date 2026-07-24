@@ -27,7 +27,7 @@ buttons: [
         ]
 ```
 
-菜单中菜单项按钮的数组，结构为：{text:'button',&nbsp;color:&nbsp;'\#666666'}，支持1-6个按钮。按钮数量大于6个时，仅显示前6个按钮，之后的按钮不显示。
+菜单中菜单项按钮的数组，结构为：{text:'button',&nbsp;color:&nbsp;'\#666666'}，支持1-6个按钮。按钮数量大于6个时，仅显示buttons数组中的前6个按钮（索引0到5），数组中索引大于5的按钮不显示。
 
 **类型：** [             Button,             Button?,             Button?,             Button?,             Button?,             Button?         ]
 

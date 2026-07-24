@@ -600,8 +600,8 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | 是 | 操作菜单选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 回调函数。弹出操作菜单成功，err为undefined，data为获取到的操作菜单响应结果，否则为错误对象。 |
+| options | promptAction.ActionMenuOptions | 是 | 操作菜单选项。用于配置操作菜单的显示内容和样式，包括title、buttons等属性。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果。 |
 
 **错误码：**
 

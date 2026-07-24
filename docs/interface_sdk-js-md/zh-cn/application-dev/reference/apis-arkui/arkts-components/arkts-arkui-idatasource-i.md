@@ -1,6 +1,6 @@
 # IDataSource
 
-LazyForEach的数据源。
+LazyForEach的数据源，开发者需要实现该接口以提供数据访问和数据变化通知能力，包括获取数据总数、按索引获取数据、注册和注销数据变化监听器等。
 
 **起始版本：** 7
 
@@ -28,7 +28,7 @@ getData(index: number): any
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 获取数据对应的索引值。取值范围是[0, 数据源长度-1]。 |
+| index | number | 是 | 获取数据对应的索引值。取值范围是[0, 数据源长度-1]。超出取值范围时行为由数据源实现决定，建议开发者做边界检查。 |
 
 **返回值：**
 
@@ -56,7 +56,7 @@ registerDataChangeListener(listener: DataChangeListener): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 是 | 数据变化监听器。 |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 是 | 数据变化监听器，用于在数据源发生变化时通知组件刷新。 |
 
 ## totalCount
 
@@ -100,5 +100,5 @@ unregisterDataChangeListener(listener: DataChangeListener): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 是 | 数据变化监听器。 |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | 是 | 数据变化监听器，用于在数据源发生变化时通知组件刷新。 |
 

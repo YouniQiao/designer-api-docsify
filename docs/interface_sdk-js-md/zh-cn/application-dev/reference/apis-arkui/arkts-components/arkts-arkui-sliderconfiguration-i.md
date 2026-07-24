@@ -56,7 +56,7 @@ min: number
 step: number
 ```
 
-Slider滑动步长。
+Slider滑动步长，表示滑动条每次滑动的数值增量。
 
 **类型：** number
 

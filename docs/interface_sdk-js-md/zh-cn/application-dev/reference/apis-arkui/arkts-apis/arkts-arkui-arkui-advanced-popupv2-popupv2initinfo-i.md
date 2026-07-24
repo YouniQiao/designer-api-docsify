@@ -40,7 +40,7 @@ buttons?: [PopupV2Button?, PopupV2Button?]
 direction?: Direction
 ```
 
-布局方向。
+设置PopupV2的布局方向，用于控制文本排列与对齐方式，适用于国际化场景下的RTL（从右到左）布局。具体枚举值含义见[Direction](ts-appendix-enums.md#direction)。
 
 默认值：Direction.Auto
 

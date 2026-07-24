@@ -1,8 +1,8 @@
 # XComponentOptions
 
-Defines the xcomponent options.
+Defines the options of the **XComponent**.
 
-**Since:** 20
+**Since:** 12
 
 <!--Device-unnamed-declare interface XComponentOptions--><!--Device-unnamed-declare interface XComponentOptions-End-->
 

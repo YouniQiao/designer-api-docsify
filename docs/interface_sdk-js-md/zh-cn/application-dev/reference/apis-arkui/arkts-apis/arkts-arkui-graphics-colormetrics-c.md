@@ -1,6 +1,6 @@
 # ColorMetrics
 
-用于混合颜色。
+提供颜色的统一表示与封装，支持颜色混合以及 RGB、Alpha 分量的获取。
 
 **起始版本：** 12
 
@@ -14,7 +14,7 @@
 autoRefresh?(value: boolean): ColorMetrics
 ```
 
-设置ColorMetrics对象的自动刷新。启用时，当系统配置发生变化时，使用ColorMetrics.resourceColor()创建的对象的颜色值将自动更新
+设置ColorMetrics对象是否跟随系统配置变化自动更新。
 
 **起始版本：** 26.0.0
 
@@ -30,13 +30,13 @@ autoRefresh?(value: boolean): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 当系统配置发生变化时，是否自动刷新颜色值。<br>如果设置为true，则使用ColorMetrics.resourceColor()创建的对象的颜色值会在系统配置发生变化时自动更新。如果设置为false，则对象的颜色值由ColorMetrics.resourceColor()创建的，不会自动更新。默认值为false。 |
+| value | boolean | 是 | 使用[resourceColor](arkts-arkui-graphics-colormetrics-c.md#resourcecolor)方法构造的ColorMetrics对象是否在系统配置变化时自动刷新颜色值。<br>true表示主动监听系统配置变化，变化时值刷新为对应配置下的资源值。<br>false表示不主动监听系统配置变化。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 返回用于链接的ColorMetrics对象。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 返回设置自动刷新属性后的ColorMetrics对象。 |
 
 ## blendColor
 
@@ -80,7 +80,7 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-使用[ColorSpace](arkts-arkui-colorspace-e.md)和rgba格式颜色实例化ColorMetrics类。仅部分属性支持在display-p3色彩空间中设置颜色。
+使用[ColorSpace](arkts-arkui-colorspace-e.md)和rgba格式颜色实例化ColorMetrics类。仅red、green、blue属性支持在display-p3色彩空间中设置颜色，alpha属性不受色彩空间影响。
 
 **起始版本：** 20
 
@@ -96,17 +96,17 @@ static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 | 颜色空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用[setWindowColorSpace](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowcolorspace9-1)接口，将当前窗口设置为广色域模式。 |
-| red | number | 是 | 颜色的R分量（红色），值是0~1的浮动数值。 |
-| green | number | 是 | 颜色的G分量（绿色），值是0~1的浮动数值。 |
-| blue | number | 是 | 颜色的B分量（蓝色），值是0~1的浮动数值。 |
-| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。 |
+| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 | 色彩空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用[setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace)接口，将当前窗口设置为广色域模式。 |
+| red | number | 是 | 颜色的R分量（红色），值是0~1的浮点数。超出范围时按边界值处理。 |
+| green | number | 是 | 颜色的G分量（绿色），值是0~1的浮点数。超出范围时按边界值处理。 |
+| blue | number | 是 | 颜色的B分量（蓝色），值是0~1的浮点数。超出范围时按边界值处理。 |
+| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。<br> **说明：** alpha小于0为全透明，大于1为不透明。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics类的实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 指定色彩空间下rgba格式颜色对应的颜色对象。 |
 
 ## numeric
 
@@ -130,13 +130,13 @@ static numeric(value: number): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | HEX格式颜色。<br/>取值范围：支持rgb或者argb |
+| value | number | 是 | HEX格式颜色，支持RGB或者ARGB。<br>取值范围：[0, 0xffffffff]<br>超出范围时按边界值处理。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | HEX格式颜色对应的颜色对象。 |
 
 ## resourceColor
 
@@ -166,7 +166,7 @@ static resourceColor(color: ResourceColor): ColorMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 资源格式颜色对应的颜色对象。 |
 
 **错误码：**
 
@@ -197,16 +197,16 @@ static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| red | number | 是 | 颜色的R分量（红色），值是0~255的整数。 |
-| green | number | 是 | 颜色的G分量（绿色），值是0~255的整数。 |
-| blue | number | 是 | 颜色的B分量（蓝色），值是0~255的整数。 |
-| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。<br/> **说明：** alpha小于0为全透明，大于1为不透明。 |
+| red | number | 是 | 颜色的R分量（红色），值是0~255的整数。超出范围时按边界值处理。 |
+| green | number | 是 | 颜色的G分量（绿色），值是0~255的整数。超出范围时按边界值处理。 |
+| blue | number | 是 | 颜色的B分量（蓝色），值是0~255的整数。超出范围时按边界值处理。 |
+| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。<br> **说明：** alpha小于0为全透明，大于1为不透明。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | rgb或rgba格式颜色对应的颜色对象。 |
 
 ## alpha
 

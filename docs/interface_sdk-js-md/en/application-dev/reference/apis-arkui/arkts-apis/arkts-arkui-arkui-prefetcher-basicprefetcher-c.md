@@ -24,7 +24,7 @@ import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI
 constructor(dataSource?: IDataSourcePrefetching)
 ```
 
-A constructor used to create a prefetching-capable data source to bind to the **Prefetcher**.
+Passes the data source that supports prefetching and binds it to **Prefetcher** when an object is created. If no data source is passed during the creation, you can use **setDataSource** to set a data source after the creation.
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ A constructor used to create a prefetching-capable data source to bind to the **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | No | Prefetching-capable data source. |
+| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md) | No | Prefetching-capable data source. If this parameter is not specified,the value is empty by default. You can set a data source using **setDataSource** later. |
 
 ## setDataSource
 
@@ -72,7 +72,7 @@ Sets the prefetching-capable data source to bind to the **Prefetcher**.
 visibleAreaChanged(minVisible: number, maxVisible: number): void
 ```
 
-Called when the boundaries of the visible area change. This API works with the **List**, **Grid**, **WaterFlow**,and **Swiper** components.
+Called when the boundary of the visible area changes. It notifies **Prefetcher** of the current visible area range so that **Prefetcher** can determine whether to prefetch or cancel the prefetching of data items. Before calling this API, ensure that the data source has been set using the constructor or the **setDataSource** API. This API works with the **List**, **Grid**, **WaterFlow**, and **Swiper** components.
 
 **Since:** 12
 
@@ -88,6 +88,6 @@ Called when the boundaries of the visible area change. This API works with the *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minVisible | number | Yes | Upper bound of the visible area. |
-| maxVisible | number | Yes | Lower bound of the visible area. |
+| minVisible | number | Yes | Index of the first data item in the current visible area. |
+| maxVisible | number | Yes | Index of the last data item in the current visible area. |
 

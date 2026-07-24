@@ -1,6 +1,6 @@
 # @ohos.pluginComponent
 
-Plugin component manager interface.
+Implements a plugin component manager.
 
 ## Modules to Import
 
@@ -14,11 +14,11 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [pluginComponentManager](arkts-arkui-plugincomponentmanager-n.md) | Plugin component manager interface. |
+| [pluginComponentManager](arkts-arkui-plugincomponentmanager-n.md) | Implements a plugin component manager. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) | Plugin component template property. |
+| [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) | Describes the **PluginComponent** template parameters. |
 

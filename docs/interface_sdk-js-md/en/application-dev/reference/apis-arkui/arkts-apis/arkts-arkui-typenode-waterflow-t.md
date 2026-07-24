@@ -4,7 +4,7 @@
 type WaterFlow = TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>
 ```
 
-Represents a FrameNode of the **WaterFlow** type. Only [FlowItem](../arkts-components/arkts-arkui-flowitem.md) child components can be added.
+Represents a FrameNode of the **WaterFlow** type. Only [FlowItem](../../apis-arkui/arkts-components/arkts-arkui-flow_item-i) child components can be added.
 
 **Since:** 12
 

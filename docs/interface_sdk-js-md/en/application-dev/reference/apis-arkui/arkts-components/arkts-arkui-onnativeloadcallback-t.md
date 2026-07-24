@@ -4,7 +4,7 @@
 declare type OnNativeLoadCallback = (event?: object) => void
 ```
 
-Triggered after the surface held by the XComponent is created.
+Triggered after the surface held by **XComponent** is created.
 
 **Since:** 18
 
@@ -20,5 +20,5 @@ Triggered after the surface held by the XComponent is created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | object | No | Context of the XComponent object. The APIs contained in the context are defined at the native layer by developers.  |
+| event | object | No | Context of the **XComponent** object. The APIs contained in the context are defined at the native layer by developers.  |
 

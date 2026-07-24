@@ -18,7 +18,7 @@ declare type InputEventType = TouchEvent | MouseEvent | AxisEvent
 
 | 类型 | 说明 |
 | --- | --- |
-| TouchEvent | Touch 触摸事件。 |
-| MouseEvent | Mouse 鼠标事件。 |
-| AxisEvent | Axis 轴事件。 |
+| TouchEvent | 触摸事件。 |
+| MouseEvent | 鼠标事件。 |
+| AxisEvent | 轴事件。 |
 

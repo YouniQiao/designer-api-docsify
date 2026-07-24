@@ -16,7 +16,7 @@ count?: number
 
 Number of data records to insert.
 
-Default value: **1**.
+Default value: **1**
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Default value: **1**.
 index: number
 ```
 
-Index at which to insert the data record. The value range is [0, data source length - 1].
+Index at which to insert the data record. The value range is [0, data source length].
 
 **Type:** number
 

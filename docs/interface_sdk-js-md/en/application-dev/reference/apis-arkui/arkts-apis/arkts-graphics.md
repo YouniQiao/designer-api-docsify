@@ -33,13 +33,13 @@
 
 | Name | Description |
 | --- | --- |
-| [BackgroundBlur](arkts-arkui-graphics-backgroundblur-i.md) | Defines the background blur effect. |
+| [BackgroundBlur](arkts-arkui-graphics-backgroundblur-i.md) | Sets a background blur effect. |
 | [Circle](arkts-arkui-graphics-circle-i.md) | Describes a circle. |
 | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Describes the command for drawing a path. |
-| [ContentBlur](arkts-arkui-graphics-contentblur-i.md) | Defines the content blur effect. |
+| [ContentBlur](arkts-arkui-graphics-contentblur-i.md) | Sets a content blur effect. |
 | [Corners](arkts-arkui-graphics-corners-i.md) | Describes the four corners. |
 | [Edges](arkts-arkui-graphics-edges-i.md) | Describes the edges. |
-| [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md) | Defines the foreground blur effect. |
+| [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md) | Sets a foreground blur effect. |
 | [Frame](arkts-arkui-graphics-frame-i.md) | Sets or returns the layout size and position of the component. |
 | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | Describes a rectangle with rounded corners. |
 | [Size](arkts-arkui-graphics-size-i.md) | Returns the width and height of the component. The default unit is vp, but APIs that use the Size type may specify a different unit, in which case the unit specified by the API takes precedence. |
@@ -62,9 +62,9 @@
 | --- | --- |
 | [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | Sets the uniform radius of the four corners. |
 | [CornerRadius](arkts-arkui-cornerradius-t.md) | Sets the semi-axis lengths for the x-axis and y-axis of the rounded corners. |
-| [Matrix4](arkts-arkui-matrix4-t.md) | Sets a 4x4 matrix.The **Matrix4** type is used to set transformation information for components.Value range of each number: (-∞, +∞).The following is an example:``` const transform: Matrix4 = [ 1, 0, 45, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ] ```. |
+| [Matrix4](arkts-arkui-matrix4-t.md) | Sets a 4x4 matrix.  The **Matrix4** type is used to set transformation information for components. The following is an example:``` const transform: Matrix4 = [ 1, 0, 45, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ] ```. |
 | [Offset](arkts-arkui-offset-t.md) | Sets the offset of the component or effect. |
-| [Pivot](arkts-arkui-pivot-t.md) | Sets the pivot of the component. As the rotation or scaling center of the component, the pivot affects the rotation and scaling effects. X and Y coordinates of the pivot is a floating point number in the range [0.0, 1.0], and the default value is **0.5**. |
+| [Pivot](arkts-arkui-pivot-t.md) | Sets the pivot of the component. As the rotation or scaling center of the component, the pivot affects the rotation and scaling effects. |
 | [Position](arkts-arkui-position-t.md) | Sets or returns the position of the component. |
 | [PositionT](arkts-arkui-positiont-t.md) | Sets or returns the position of the component. |
 | [Rect](arkts-arkui-rect-t.md) | Describes a rectangle. |

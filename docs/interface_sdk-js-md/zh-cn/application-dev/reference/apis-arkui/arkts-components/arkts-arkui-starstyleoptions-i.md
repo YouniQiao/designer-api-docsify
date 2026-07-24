@@ -20,7 +20,7 @@
 backgroundUri: ResourceStr
 ```
 
-未选中的星级的图片链接，可由用户自定义或使用系统默认图片。
+未选中的星级的图片路径，可由用户自定义或使用系统默认图片。
 
 从API version 20开始，该接口支持设置Resource资源。参考[示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#示例3通过resource资源设置评分的样式)代码。
 
@@ -64,7 +64,7 @@ foregroundUri: ResourceStr
 secondaryUri?: ResourceStr
 ```
 
-部分选中的星级的图片路径，可由用户自定义或使用系统默认图片。
+部分选中的星级的图片路径，可由用户自定义或使用系统默认图片。未设置时将优先使用backgroundUri，效果等同于仅设置foregroundUri和backgroundUri。
 
 从API version 20开始，该接口支持设置Resource资源。参考[示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#示例3通过resource资源设置评分的样式)代码。
 

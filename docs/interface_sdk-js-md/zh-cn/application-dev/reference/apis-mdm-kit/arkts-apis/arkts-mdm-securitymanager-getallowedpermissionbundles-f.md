@@ -36,7 +36,7 @@ function getAllowedPermissionBundles(admin: Want | null, permission: string, acc
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;common.ApplicationInstance&gt; | the list of applications that are allowed to be granted the permission. |
+| Array&lt;common.ApplicationInstance&gt; | 返回权限使用例外名单列表。 |
 
 **错误码：**
 

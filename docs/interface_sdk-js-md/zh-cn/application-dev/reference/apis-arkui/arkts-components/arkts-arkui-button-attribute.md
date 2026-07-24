@@ -18,7 +18,7 @@
 buttonStyle(value: ButtonStyleMode)
 ```
 
-设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动会调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、[fontColor](ButtonAttribute#fontColor)和[role](ButtonAttribute#role)接口设置，实际显示效果以最后一次设置为准。
+设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、[fontColor](ButtonAttribute#fontColor)和[role](ButtonAttribute#role)接口设置，实际显示效果以最后一次设置为准。
 > **说明：**  
 >  
 > 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
@@ -164,7 +164,7 @@ fontSize(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 文本显示字号。<br/>默认值：当controlSize为ControlSize.NORMAL时，默认值为`$r('sys.float.Body_L')`。<br/>当controlSize为ControlSize.SMALL时，默认值为`$r('sys.float.Body_S')`。<br/>**说明**：设置string类型时，不支持百分比。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置文本显示字号。<br/>默认值：当controlSize为ControlSize.NORMAL时，默认值为`$r('sys.float.Body_L')`。<br/>当controlSize为ControlSize.SMALL时，默认值为`$r('sys.float.Body_S')`。<br/>**说明**：设置string类型时，不支持百分比。 |
 
 ## fontStyle
 
@@ -292,7 +292,7 @@ minFontScale(scale: number | Resource)
 role(value: ButtonRole)
 ```
 
-设置Button组件的角色。根据设置枚举值的不同，系统自动会调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、[fontColor](ButtonAttribute#fontColor)和[buttonStyle](ButtonAttribute#buttonStyle)接口设置，实际显示效果以最后一次设置为准。
+设置Button组件的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、[fontColor](ButtonAttribute#fontColor)和[buttonStyle](ButtonAttribute#buttonStyle)接口设置，实际显示效果以最后一次设置为准。ERROR角色通常用于删除、清空等危险或警示性操作。
 
 **起始版本：** 12
 
@@ -310,7 +310,7 @@ role(value: ButtonRole)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | 是 | 设置Button组件的角色。<br/>默认值：ButtonRole.NORMAL |
+| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | 是 | Button组件的角色。<br/>默认值：ButtonRole.NORMAL |
 
 ## stateEffect
 

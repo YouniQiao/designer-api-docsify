@@ -1,6 +1,6 @@
 # Checkbox
 
-提供多选框组件，通常用于某选项的打开或关闭。
+提供多选框组件，用于在多个选项中进行选择。
 
 > **说明：**
 >
@@ -16,7 +16,7 @@
 Checkbox(options?: CheckboxOptions)
 ```
 
-多选框组件。
+提供多选框组件，用于在多个选项中进行选择。
 
 **起始版本：** 8
 
@@ -32,7 +32,7 @@ Checkbox(options?: CheckboxOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | 否 | 配置多选框的参数。  |
+| options | [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | 否 | 配置多选框的参数。不传入该参数时，多选框使用默认配置。  |
 
 ## 汇总
 

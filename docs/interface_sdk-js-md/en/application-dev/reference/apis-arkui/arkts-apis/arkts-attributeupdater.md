@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [AttributeUpdater](arkts-arkui-attributeupdater-c.md) | Represents the implementation class of AttributeModifier. You need to customize a class to inherit AttributeUpdater.C indicates the constructor type of the component, for example, TextInterface of the Text component and ImageInterface of the Image component. It is required only when updateConstructorParams is used. |
+| [AttributeUpdater](arkts-arkui-attributeupdater-c.md) | **AttributeUpdater** directly set attributes to a component to trigger UI re-renders, without marking them as state variables. |
 
 ### Types
 

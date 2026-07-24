@@ -1,6 +1,6 @@
 # NodeAdapter
 
-Provides lazy loading capabilities for FrameNode data, implementing [LazyForEach](../arkts-components/arkts-arkui-lazyforeach.md) API functionality.
+Provides lazy loading capabilities for FrameNode data, implementing [LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i) API functionality.
 > **NOTE**  
 >  
 > Negative input parameters are ignored and trigger no processing.
@@ -161,7 +161,7 @@ Inserts a specified number of items starting from a specific index.
 isDisposed(): boolean
 ```
 
-Checks whether this FrameNode object has released its reference to its backend entity node. Frontend nodes maintain references to corresponding backend entity nodes. After a node calls the **dispose** API to release this reference,subsequent API calls may cause crashes or return default values. This API facilitates validation of node validity prior to operations, thereby mitigating risks in scenarios where calls after disposal are required.
+Checks whether the NodeAdapter's backend reference has been released. Frontend nodes maintain references to corresponding backend entity nodes. After a node calls the **dispose** API to release this reference, subsequent API calls may cause crashes or return default values. This API facilitates validation of node validity prior to operations, thereby mitigating risks in scenarios where calls after disposal are required.
 
 **Since:** 20
 
@@ -211,6 +211,20 @@ onAttachToNode?(target: FrameNode): void
 ```
 
 Called when a FrameNode is attached to the NodeAdapter.
+> **NOTE**  
+>  
+> In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the  
+> main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling  
+> [attachNodeAdapter](arkts-arkui-framenode-nodeadapter-c.md#attachnodeadapter) and before the host node is attached to the main tree.  
+> In this case, you will receive this callback when the host node is attached to the main tree.  
+>  
+> In API version 26.0.0 and later, this callback is triggered immediately when the NodeAdapter is bound to the host  
+> node, instead of when the host node is attached to the main tree. In this case, the host node may not have been  
+> attached to the main tree. If the node on which the callback logic depends has been mounted (for example,  
+> accessing layout information or executing animation), you are advised to register  
+> [onAppear](../arkts-components/arkts-arkui-commonmethod-c.md#onappear) in the callback and place the related logic in **onAppear** for  
+> execution. If you set this callback by dynamically assigning a value, complete the setting before calling  
+> [attachNodeAdapter](arkts-arkui-framenode-nodeadapter-c.md#attachnodeadapter). Otherwise, the callback may fail to be triggered.
 
 **Since:** 12
 

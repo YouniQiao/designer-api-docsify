@@ -37,8 +37,8 @@ function addWatcher(watcher: Watcher): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to read system event forbidden by permission:ohos.permission.READ_DFX_SYSEVENT. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed. |
-| [11200101](../errorcode-hisysevent-sys.md#11200101-事件监听者的数量超过限制) | The number of watchers exceeds the limit. |
-| [11200102](../errorcode-hisysevent-sys.md#11200102-事件监听者包含的监听规则数量超过限制) | The number of watch rules exceeds the limit. |
+| [11200101](../errorcode-hisysevent-sys.md#11200101-系统事件监听者的数量超过限制) | The number of watchers exceeds the limit. |
+| [11200102](../errorcode-hisysevent-sys.md#11200102-系统事件监听者包含的监听规则数量超过限制) | The number of watch rules exceeds the limit. |
 
 **示例：**
 

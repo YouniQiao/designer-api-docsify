@@ -1,6 +1,6 @@
 # DynamicOptions (System API)
 
-This interface is used to set the options for DynamicComponentAttribute during construction
+Defines the parameters to be passed during **DynamicComponent** construction.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ This interface is used to set the options for DynamicComponentAttribute during c
 allowCrossProcessNesting?: boolean
 ```
 
-Indicates allow Inter-process UEC of the DynamicComponent.
+Whether to allow cross-process [UIExtensionComponent](arkts-arkui-uiextensioncomponent.md) nesting.**true**: yes; **false**: no.The default value is **false**.
 
 **Type:** boolean
 
@@ -56,7 +56,7 @@ Indicates allow keyboard avoidance inside the DynamicComponent.
 backgroundTransparent?: boolean
 ```
 
-Indicates backgroundTransparent of the DynamicComponent.
+Whether to enable the transparent background for the component.**true**: yes; **false**: no.The default value is **false**.
 
 **Type:** boolean
 
@@ -76,7 +76,7 @@ Indicates backgroundTransparent of the DynamicComponent.
 entryPoint: string
 ```
 
-Indicates entryPoint of the DynamicOptions.
+Entry of the .abc page to be loaded.
 
 **Type:** string
 
@@ -96,7 +96,7 @@ Indicates entryPoint of the DynamicOptions.
 worker: Worker
 ```
 
-Indicates restricted worker for run abc.
+Worker for running the .abc file.
 
 **Type:** Worker
 

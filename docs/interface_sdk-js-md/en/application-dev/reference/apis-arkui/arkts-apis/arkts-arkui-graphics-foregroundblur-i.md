@@ -1,6 +1,6 @@
 # ForegroundBlur
 
-Defines the foreground blur effect.
+Sets a foreground blur effect.
 
 **Since:** 26.0.0
 
@@ -14,7 +14,7 @@ Defines the foreground blur effect.
 radius: number
 ```
 
-Blur radius for foreground blur.The value must be greater than or equal to 0, the larger the value, the more blurred the foreground.The value 0 indicates no blur.
+Blur radius. The value range is [0, +∞). The default value is **0**. A negative value, **NaN**, and **Infinity** are invalid and treated as the default value. A larger value indicates a more obvious foreground blur effect. If the value is **0**, the foreground is not blurred.
 
 **Type:** number
 

@@ -35,7 +35,7 @@ function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsA
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;osAccount.OsAccountInfo&gt; | Returns the information about the added OS account. |
+| Promise&lt;osAccount.OsAccountInfo&gt; | Promise对象，返回创建的系统账号信息。 |
 
 **错误码：**
 

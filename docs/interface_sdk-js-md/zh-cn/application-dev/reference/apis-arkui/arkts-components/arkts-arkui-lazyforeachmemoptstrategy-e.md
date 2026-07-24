@@ -32,7 +32,7 @@ DEFAULT = 0
 ENABLE_AUTO_CACHE_OPTIMIZATION = 1 << 0
 ```
 
-自动内存优化策略，当LazyForEach子节点内存占用较高时，建议使用此策略以降低内存使用量。
+自动内存优化策略，当LazyForEach承载的列表项数量较多（例如达到数百项以上）或单项子组件结构复杂（例如包含多层嵌套或数十个子节点），导致内存占用偏高（可通过性能分析工具检测内存占用情况）时，建议使用此策略以降低内存使用量。
 
 当应用退后台时、LazyForEach所在组件不可见时（[visibility](arkts-arkui-commonmethod-c.md#visibility)属性设置为[Visible](../arkts-apis/arkts-arkui-visibility-e.md)以外的值，或组件面积为0，不考虑遮挡）、整机低内存时（[MemoryLevel](../../apis-ability-kit/arkts-apis/arkts-ability-abilityconstant-memorylevel-e.md)达到MEMORY_LEVEL_LOW或MEMORY_LEVEL_CRITICAL），释放[预加载区域](../../../ui/rendering-control/arkts-rendering-control-overview.md#基本概念)内的部分节点，直至上下预加载区域内的节点数量均不超过2。
 

@@ -16,7 +16,7 @@ PluginComponentTemplate
 bundleName: string
 ```
 
-Defines the bundle name of the Template.
+Bundle name of the provider ability.
 
 **Type:** string
 
@@ -34,7 +34,7 @@ Defines the bundle name of the Template.
 source: string
 ```
 
-Defines the plugin source name.
+Component template name.
 
 **Type:** string
 

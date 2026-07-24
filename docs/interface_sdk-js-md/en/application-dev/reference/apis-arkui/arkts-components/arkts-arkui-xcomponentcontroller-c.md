@@ -1,8 +1,8 @@
 # XComponentController
 
-Defines the controller of the XComponent.You can bind the controller to the XComponent to call the component APIs through the controller.
+Defines the controller of the **XComponent**. You can bind the controller to the **XComponent** to call the component APIs through the controller.
 
-**Since:** 12
+**Since:** 8
 
 <!--Device-unnamed-declare class XComponentController--><!--Device-unnamed-declare class XComponentController-End-->
 
@@ -14,9 +14,9 @@ Defines the controller of the XComponent.You can bind the controller to the XCom
 constructor()
 ```
 
-A constructor used to create a XComponentController instance.
+A constructor used to create a **XComponentController** object.
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -30,9 +30,9 @@ A constructor used to create a XComponentController instance.
 getXComponentContext(): Object
 ```
 
-Obtains the context of an XComponent object.This API works only when type of the XComponent is set to SURFACE("surface") or TEXTURE.
+Obtains the context of an **XComponent** object. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
 
-**Since:** 12
+**Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,7 +44,7 @@ Obtains the context of an XComponent object.This API works only when type of the
 
 | Type | Description |
 | --- | --- |
-| Object | Context of the XComponent object.The APIs contained in the context are defined by developers.The context is passed in as the first parameter of the onLoad callback. |
+| Object | Context of the **XComponent** object. The APIs contained in the context are defined by developers. The context is passed as the first parameter of the **onLoad** callback. |
 
 ## getXComponentSurfaceId
 
@@ -52,9 +52,9 @@ Obtains the context of an XComponent object.This API works only when type of the
 getXComponentSurfaceId(): string
 ```
 
-Obtains the ID of the surface held by the XComponent, which can then be used for @ohos APIs.This API works only when type of the XComponent is set to SURFACE("surface") or TEXTURE.
+Obtains the ID of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is **SURFACE("surface")** or **TEXTURE**.
 
-**Since:** 12
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,7 +66,7 @@ Obtains the ID of the surface held by the XComponent, which can then be used for
 
 | Type | Description |
 | --- | --- |
-| string | ID of the surface held by the XComponent. |
+| string | ID of the surface held by the **XComponent**. |
 
 ## getXComponentSurfaceRect
 
@@ -74,13 +74,13 @@ Obtains the ID of the surface held by the XComponent, which can then be used for
 getXComponentSurfaceRect(): SurfaceRect
 ```
 
-Get the rectangle information of surface created by XComponent.
+Obtains the display area for the surface held by the **XComponent**, including the width, height, and position coordinates relative to the upper left corner of the component. This API is only effective when the **XComponent** type is **SURFACE("surface")** or **TEXTURE**.
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentController-getXComponentSurfaceRect(): SurfaceRect--><!--Device-XComponentController-getXComponentSurfaceRect(): SurfaceRect-End-->
 
@@ -90,7 +90,7 @@ Get the rectangle information of surface created by XComponent.
 
 | Type | Description |
 | --- | --- |
-| [SurfaceRect](arkts-arkui-surfacerect-i.md) | The surface rectangle information. |
+| [SurfaceRect](arkts-arkui-surfacerect-i.md) | Rectangle of the surface held by the **XComponent**. |
 
 ## getXComponentSurfaceRotation
 
@@ -98,13 +98,13 @@ Get the rectangle information of surface created by XComponent.
 getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 ```
 
-Get the rotation options result of the Surface created by XComponent.
+Obtains whether the orientation of the surface held by this **XComponent** is locked when the screen rotates. This API is effective only when the **XComponent** type is **SURFACE** (**"surface"**).
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentController-getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>--><!--Device-XComponentController-getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>-End-->
 
@@ -114,7 +114,7 @@ Get the rotation options result of the Surface created by XComponent.
 
 | Type | Description |
 | --- | --- |
-| [Required](../../apis-na/arkts-apis/arkts-na-required-t.md)&lt;SurfaceRotationOptions&gt; | The surface rotation options result. |
+| [Required](../../apis-na/arkts-apis/arkts-na-required-t.md)&lt;SurfaceRotationOptions&gt; | Whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates. |
 
 ## lockCanvas
 
@@ -122,7 +122,7 @@ Get the rotation options result of the Surface created by XComponent.
 lockCanvas(): DrawingCanvas | null
 ```
 
-Get a Canvas for drawing into the surface created by XComponent.
+Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods,see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md).
 
 **Since:** 20
 
@@ -146,13 +146,13 @@ Get a Canvas for drawing into the surface created by XComponent.
 onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 ```
 
-Called after the surface rectangle information is changed.
+Triggered when the surface held by the **XComponent** has its size changed (including the time when the **XComponent** is created with the specified size). This API works only when **type** of the **XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentController-onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void--><!--Device-XComponentController-onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void-End-->
 
@@ -162,8 +162,8 @@ Called after the surface rectangle information is changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | The id of the surface created by XComponent. |
-| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes | The rectangle information of the surface created by XComponent. |
+| surfaceId | string | Yes | ID of the surface held by the **XComponent**. |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes | Area for displaying the surface held by the **XComponent**. |
 
 ## onSurfaceCreated
 
@@ -171,13 +171,13 @@ Called after the surface rectangle information is changed.
 onSurfaceCreated(surfaceId: string): void
 ```
 
-Called after the surface is first created.
+Triggered when the surface held by the **XComponent** is created. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentController-onSurfaceCreated(surfaceId: string): void--><!--Device-XComponentController-onSurfaceCreated(surfaceId: string): void-End-->
 
@@ -187,7 +187,7 @@ Called after the surface is first created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | The id of the surface created by XComponent. |
+| surfaceId | string | Yes | ID of the surface held by the **XComponent**. |
 
 ## onSurfaceDestroyed
 
@@ -195,13 +195,13 @@ Called after the surface is first created.
 onSurfaceDestroyed(surfaceId: string): void
 ```
 
-Called when the surface is about to be destroyed.
+Triggered when the surface held by the **XComponent** is destroyed. This API works only when **type** of the **XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentController-onSurfaceDestroyed(surfaceId: string): void--><!--Device-XComponentController-onSurfaceDestroyed(surfaceId: string): void-End-->
 
@@ -211,7 +211,7 @@ Called when the surface is about to be destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | The id of the surface created by XComponent. |
+| surfaceId | string | Yes | ID of the surface held by the **XComponent**. |
 
 ## setXComponentSurfaceConfig
 
@@ -219,7 +219,10 @@ Called when the surface is about to be destroyed.
 setXComponentSurfaceConfig(config: SurfaceConfig):void
 ```
 
-Set the config of the surface created by the XComponent.
+Sets the options of the surface created by the **XComponent**, which determine whether the surface held by the **XComponent** is considered opaque during rendering.
+> **NOTE**  
+>  
+> This API takes effect only when the type of **XComponent** is **TEXTURE** or **SURFACE**.
 
 **Since:** 22
 
@@ -243,13 +246,13 @@ Set the config of the surface created by the XComponent.
 setXComponentSurfaceRect(rect: SurfaceRect): void
 ```
 
-Set the rectangle information of surface created by XComponent.
+Sets the display area for the surface held by the **XComponent**, including the width, height, and position coordinates relative to the upper left corner of the component. This API is only effective when the **XComponent** type is **SURFACE("surface")** or **TEXTURE**.
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentController-setXComponentSurfaceRect(rect: SurfaceRect): void--><!--Device-XComponentController-setXComponentSurfaceRect(rect: SurfaceRect): void-End-->
 
@@ -259,7 +262,7 @@ Set the rectangle information of surface created by XComponent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes | The surface rectangle information. |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes | Rectangle of the surface held by the **XComponent**. |
 
 ## setXComponentSurfaceRotation
 
@@ -267,13 +270,13 @@ Set the rectangle information of surface created by XComponent.
 setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 ```
 
-Set the rotation options of the Surface created by XComponent.
+Sets whether to lock the orientation of the surface held by this **XComponent** when the screen rotates. This API is effective only when the **XComponent** type is **SURFACE** (**"surface"**).
 
-**Since:** 20
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-XComponentController-setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void--><!--Device-XComponentController-setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void-End-->
 
@@ -283,7 +286,7 @@ Set the rotation options of the Surface created by XComponent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | Yes | The surface rotation options. |
+| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | Yes | Whether to lock the orientation of the surface held by the current **XComponent** when the screen rotates. |
 
 ## setXComponentSurfaceSize
 
@@ -294,7 +297,9 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-Sets the width and height of the surface held by the XComponent.This API works only when type of the XComponent is set to SURFACE("surface") or TEXTURE.
+Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
+
+Unit: px.
 
 **Since:** 9
 
@@ -318,7 +323,15 @@ Sets the width and height of the surface held by the XComponent.This API works o
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Starts AI image analysis in the given settings.Before calling this API, make sure the AI image analyzer is enabled.Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.If this API is repeatedly called before the execution is complete, an error callback is triggered.
+Starts AI image analysis in the given settings. Before calling this API, make sure the AI image analyzer is [enabled](XComponentAttribute#enableAnalyzer). This API uses a promise to return the result.
+
+Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.
+
+If this API is repeatedly called before the execution is complete, an error callback is triggered.
+> **NOTE**
+> The image analysis type cannot be dynamically modified.  
+>  
+> This API depends on device capabilities. If it is called on an incompatible device, an error code is returned.
 
 **Since:** 12
 
@@ -340,7 +353,7 @@ Starts AI image analysis in the given settings.Before calling this API, make sur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise that returns no value. It is used to indicate AI-based analysis is successfully executed. |
 
 **Error codes:**
 
@@ -356,7 +369,12 @@ Starts AI image analysis in the given settings.Before calling this API, make sur
 stopImageAnalyzer(): void
 ```
 
-Stops AI image analysis.The content displayed by the AI image analyzer will be destroyed.
+Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed.
+> **NOTE**
+> If this API is called when the **startImageAnalyzer** API has not yet returned any result, an error callback is  
+> triggered.  
+>  
+> This feature depends on device capabilities.
 
 **Since:** 12
 
@@ -374,7 +392,7 @@ Stops AI image analysis.The content displayed by the AI image analyzer will be d
 unlockCanvasAndPost(canvas: DrawingCanvas):void
 ```
 
-Posts the new contents of the Canvas to the surface created by XComponent and releases the Canvas.
+Submits the drawn content from a canvas object to the display area of the **XComponent** component and releases the canvas object.
 
 **Since:** 20
 

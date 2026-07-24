@@ -1,6 +1,9 @@
 # NodeContent
 
-NodeContent is the entity encapsulation of the node content.
+**NodeContent** is the ArkUI-provided manager for [ContentSlot](../../apis-arkui/arkts-components/arkts-arkui-content_slot-i).
+> **NOTE**  
+>  
+> - **NodeContent** objects do not support JSON serialization.
 
 **Inheritance/Implementation:** NodeContent extends [Content](arkts-arkui-content-c.md)
 

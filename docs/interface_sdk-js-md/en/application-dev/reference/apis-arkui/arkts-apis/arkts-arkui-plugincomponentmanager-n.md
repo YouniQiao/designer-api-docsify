@@ -1,8 +1,8 @@
 # pluginComponentManager
 
-Plugin component manager interface.
+Implements a plugin component manager.
 
-**Since:** 12
+**Since:** 8
 
 <!--Device-unnamed-declare namespace pluginComponentManager--><!--Device-unnamed-declare namespace pluginComponentManager-End-->
 
@@ -20,9 +20,9 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [push](arkts-arkui-plugincomponentmanager-push-f.md#push) | Plugin component push method. |
-| [request](arkts-arkui-plugincomponentmanager-request-f.md#request) | Plugin component request method. |
-| [on](arkts-arkui-plugincomponentmanager-on-f.md#on) | Plugin component event listener. |
+| [push](arkts-arkui-plugincomponentmanager-push-f.md#push) | Pushes the component and data to the component user. |
+| [request](arkts-arkui-plugincomponentmanager-request-f.md#request) | Requests the component from the component provider. |
+| [on](arkts-arkui-plugincomponentmanager-on-f.md#on) | Listens for events of the request type and returns the requested data, or listens for events of the push type and receives the data pushed by the provider. |
 
 <!--Del-->
 ### Functions（系统接口）
@@ -37,10 +37,10 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | Plugin component push parameters. |
-| [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | Plugin component request parameters. |
-| [RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md) | Plugin component request callback parameters. |
-| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | Plugin component request event result value. |
+| [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | Defines the parameters required when using the **PluginManager.Push** API. |
+| [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | Defines the parameters required when using the **PluginManager.Request** API. |
+| [RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md) | Provides the result returned after the **PluginManager.Request** API is called. |
+| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | Provides the result returned after the request listener is registered and the requested event is received. |
 
 <!--Del-->
 ### Interfaces（系统接口）
@@ -55,7 +55,7 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Defines KVObject |
-| [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) | Plugin component push event callback. |
-| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | Plugin component request event callback. |
+| [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Defines a key-value pair data structure that conforms to JSON format. |
+| [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) | Registers the listener for the push event. |
+| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | Registers the listener for the request event. |
 
