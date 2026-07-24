@@ -1,6 +1,6 @@
 # @ohos.arkui.inspector
 
-用于观察组件的布局和绘制事件。
+提供注册组件布局和组件绘制送显完成回调通知的能力。适用于需要在组件布局或绘制送显完成后执行自定义逻辑的场景，帮助开发者精准掌控组件渲染时机。
 
 **起始版本：** 10
 
@@ -20,11 +20,11 @@ import { inspector } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver) |  |
+| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver) | 绑定指定组件，返回对应的监听句柄。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | ComponentObserver用于监听布局和绘制事件。 |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件布局和组件绘制送显完成回调的句柄，通过该句柄可调用以下方法。 |
 

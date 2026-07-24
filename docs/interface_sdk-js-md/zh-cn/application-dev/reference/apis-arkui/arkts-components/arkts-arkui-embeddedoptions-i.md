@@ -1,6 +1,6 @@
 # EmbeddedOptions
 
-该接口用于在构造时设置EmbeddedComponentAttribute的选项。
+用于在EmbeddedComponent创建时传递可选的构造参数。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,9 @@
 areaChangePlaceholder?: Record<string, ComponentContent>
 ```
 
-设置区域变化占位符。如果设置了区域变化占位ComponentContent，在EmbeddedComponent尺寸变化完成之前显示占位节点。
+设置尺寸变化占位符，在EmbeddedComponent尺寸发生变化并且内部渲染未完成时显示。key为尺寸变化场景类型（如"FOLD_TO_EXPAND"表示折叠展开场景），value为对应场景的占位符组件。当前支持的键值包括：FOLD_TO_EXPAND。传入不支持的键值时，该占位符不生效。
+
+默认值：null，表示不设置尺寸变化占位符。
 
 **类型：** Record&lt;string, ComponentContent&gt;
 
@@ -34,7 +36,9 @@ areaChangePlaceholder?: Record<string, ComponentContent>
 dpiFollowStrategy?: EmbeddedDpiFollowStrategy
 ```
 
-设置EmbeddedComponent内容的DPI跟随策略。
+设置DPI，使其能够跟随宿主或EmbeddedUIExtensionAbility。
+
+默认值：FOLLOW_UI_EXTENSION_ABILITY_DPI，表示跟随EmbeddedUIExtensionAbility。
 
 **类型：** EmbeddedDpiFollowStrategy
 
@@ -56,7 +60,9 @@ dpiFollowStrategy?: EmbeddedDpiFollowStrategy
 placeholder?: ComponentContent
 ```
 
-设置占位符。如果设置了占位ComponentContent，在连接未建立时显示占位节点。
+设置占位符，在EmbeddedComponent与EmbeddedUIExtensionAbility建立连接前显示。
+
+默认值：null，表示不显示占位符。
 
 **类型：** ComponentContent
 
@@ -76,7 +82,9 @@ placeholder?: ComponentContent
 windowModeFollowStrategy?: EmbeddedWindowModeFollowStrategy
 ```
 
-设置EmbeddedComponent内容的窗口模式跟随策略。
+设置窗口模式，使其能够跟随宿主或EmbeddedUIExtensionAbility。
+
+默认值：FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE，表示窗口模式跟随EmbeddedUIExtensionAbility。
 
 **类型：** EmbeddedWindowModeFollowStrategy
 

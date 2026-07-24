@@ -1,6 +1,6 @@
 # ToolBarItemOptions
 
-ToolBarItem构造选项。
+用于配置ToolBarItem的可选参数，主要通过placement设置工具栏项在标题栏的放置位置。
 
 **起始版本：** 20
 
@@ -14,7 +14,13 @@ ToolBarItem构造选项。
 placement?: ToolBarItemPlacement
 ```
 
-垂直布局元素的间距。
+设置工具栏项的放置位置。
+
+默认值：**ToolBarItemPlacement.TOP_BAR_LEADING**。
+
+**ToolBarItemPlacement.TOP_BAR_LEADING**：将工具栏项放置在对应顶部栏的开头位置。
+
+**ToolBarItemPlacement.TOP_BAR_TRAILING**：将工具栏项放置在对应顶部栏的末尾位置。
 
 **类型：** ToolBarItemPlacement
 

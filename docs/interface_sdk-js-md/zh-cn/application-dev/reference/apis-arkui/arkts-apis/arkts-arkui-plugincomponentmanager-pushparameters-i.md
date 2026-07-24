@@ -1,8 +1,8 @@
 # PushParameters
 
-插件组件push参数。
+使用pluginComponentManager.push方法时需要传递的参数。
 
-**起始版本：** 12
+**起始版本：** 8
 
 <!--Device-pluginComponentManager-interface PushParameters--><!--Device-pluginComponentManager-interface PushParameters-End-->
 
@@ -20,11 +20,11 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 data: KVObject
 ```
 
-定义data。
+组件数据，以键值对形式存储，用于传递给组件使用方的业务数据，键和值类型由业务定义。
 
 **类型：** KVObject
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,11 +38,11 @@ data: KVObject
 extraData: KVObject
 ```
 
-定义extraData。
+附加数据，以键值对形式存储，用于传递额外的业务信息，键和值类型由业务定义。
 
 **类型：** KVObject
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,11 +56,11 @@ extraData: KVObject
 jsonPath?: string
 ```
 
-定义jsonPath。
+存放模板路径的external.json文件的路径。当需要通过外部配置文件直接加载模板而非通过push通信发送时传入此参数；当jsonPath字段不为空时不触发push通信，直接从external.json中读取模板路径进行加载。不传入或为空时，触发push通信向组件使用方推送组件和数据。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -74,11 +74,11 @@ jsonPath?: string
 name: string
 ```
 
-定义name。
+组件名称。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -92,11 +92,11 @@ name: string
 want: Want
 ```
 
-定义want。
+组件使用方Ability信息。
 
 **类型：** Want
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -1,8 +1,8 @@
 # RequestParameters
 
-插件组件request参数。
+使用pluginComponentManager.request方法时需要传递的参数。
 
-**起始版本：** 12
+**起始版本：** 8
 
 <!--Device-pluginComponentManager-interface RequestParameters--><!--Device-pluginComponentManager-interface RequestParameters-End-->
 
@@ -20,11 +20,11 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 data: KVObject
 ```
 
-定义data。
+组件数据，以键值对形式存储，用于传递给组件提供方的业务数据，键和值类型由业务定义。
 
 **类型：** KVObject
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,11 +38,11 @@ data: KVObject
 jsonPath?: string
 ```
 
-定义jsonPath。
+存放模板路径的external.json文件的路径。当需要通过外部配置文件直接加载模板而非通过request通信获取时传入此参数；当jsonPath字段不为空时不触发request通信，直接从external.json中读取模板路径。不传入或为空时，触发request通信向组件提供方请求模板。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,11 +56,11 @@ jsonPath?: string
 name: string
 ```
 
-定义name。
+请求组件名称。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -74,11 +74,11 @@ name: string
 want: Want
 ```
 
-定义want。
+组件提供方Ability信息。
 
 **类型：** Want
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

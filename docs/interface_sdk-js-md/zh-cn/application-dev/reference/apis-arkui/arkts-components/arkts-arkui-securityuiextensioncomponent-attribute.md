@@ -1,6 +1,8 @@
 # SecurityUIExtensionComponent属性/事件
 
-定义UIExtensionComponent的属性函数。
+支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+
+支持以下事件：
 
 **继承/实现关系：** SecurityUIExtensionComponentAttribute extends [CommonMethod<SecurityUIExtensionComponentAttribute>](CommonMethod<SecurityUIExtensionComponentAttribute>)
 

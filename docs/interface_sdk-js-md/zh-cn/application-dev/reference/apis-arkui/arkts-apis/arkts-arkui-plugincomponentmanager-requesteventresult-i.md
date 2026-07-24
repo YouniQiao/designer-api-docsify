@@ -1,8 +1,8 @@
 # RequestEventResult
 
-插件组件request事件结果值。
+注册request监听方法后，接收到请求事件时回应请求的数据类型。
 
-**起始版本：** 12
+**起始版本：** 8
 
 <!--Device-pluginComponentManager-interface RequestEventResult--><!--Device-pluginComponentManager-interface RequestEventResult-End-->
 
@@ -20,11 +20,11 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 data?: KVObject
 ```
 
-定义data。
+组件数据，以键值对形式存储，用于回应请求时传递的业务数据，键和值类型由业务定义。该字段为可选字段，不提供时默认不包含在返回结果中。
 
 **类型：** KVObject
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,11 +38,11 @@ data?: KVObject
 extraData?: KVObject
 ```
 
-定义extraData。
+request事件中传递的附加数据。该字段为可选字段，不提供时默认不包含在返回结果中。
 
 **类型：** KVObject
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,11 +56,11 @@ extraData?: KVObject
 template?: string
 ```
 
-定义template。
+组件模板。该字段为可选字段，不提供时默认不包含在返回结果中。当需要返回组件模板信息时设置此字段；不需要返回模板时可省略。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

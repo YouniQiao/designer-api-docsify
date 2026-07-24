@@ -1,6 +1,12 @@
 # DynamicComponent
 
-定义DynamicComponent组件。
+**DynamicComponent**用于支持在本页面内嵌入显示独立Abc（.abc文件）提供的UI，展示的内容在Worker线程中运行。
+
+通常用于动态加载Abc页面的模块化开发场景。通过Worker线程隔离运行Abc UI，避免阻塞主线程，提升应用流畅度。
+
+## 子组件
+
+无
 
 ## DynamicComponent
 
@@ -8,7 +14,7 @@
 DynamicComponent(options: DynamicOptions)
 ```
 
-构造DynamicComponentInterface。<br/>在使用DynamicComponentInterface时调用。
+创建DynamicComponent组件，用于显示Worker线程中运行的Abc UI。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +30,7 @@ DynamicComponent(options: DynamicOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DynamicOptions](arkts-arkui-dynamicoptions-i-sys.md) | 是 | DynamicComponentAttribute的构造配置  |
+| options | [DynamicOptions](arkts-arkui-dynamicoptions-i-sys.md) | 是 | DynamicComponent的构造配置参数，用于配置要加载的Abc页面入口、运行Worker及显示选项。  |
 
 ## 汇总
 

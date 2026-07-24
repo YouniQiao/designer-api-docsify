@@ -1,6 +1,6 @@
 # IsolatedOptions（系统接口）
 
-该接口用于在构造时设置IsolatedComponentAttribute的选项。
+用于在IsolatedComponent构造时传递构造参数。
 
 **起始版本：** 12
 
@@ -16,7 +16,7 @@
 want: Want
 ```
 
-表示IsolatedOptions的Want。
+要加载的Abc信息。Want对象的parameters中需包含以下字段：<br/>resourcePath：资源路径，需为.hap文件路径；<br/>abcPath：经verifyAbc校验后的Abc文件路径，需以'/abcs'开头；<br/>entryPoint：Abc入口，格式为'bundleName/页面路径'。
 
 **类型：** Want
 
@@ -36,7 +36,7 @@ want: Want
 worker: RestrictedWorker
 ```
 
-表示用于运行abc的受限worker。
+运行Abc的受限Worker。
 
 **类型：** RestrictedWorker
 

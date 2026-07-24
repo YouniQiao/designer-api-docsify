@@ -4,7 +4,7 @@
 declare type Worker = import('../api/@ohos.worker').default.Worker
 ```
 
-表示用于运行abc的worker。
+用于运行Abc的Worker线程对象。
 
 **起始版本：** 26.0.0
 

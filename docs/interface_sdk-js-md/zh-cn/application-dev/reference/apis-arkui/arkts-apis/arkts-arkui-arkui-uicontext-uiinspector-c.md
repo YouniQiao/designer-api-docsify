@@ -2,6 +2,8 @@
 
 class UIInspector
 
+提供注册组件布局和组件绘制送显完成回调通知的能力。送显指节点的绘制命令发送到图形服务并完成显示。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作，适用于需要精确感知组件布局和绘制时机的场景。
+
 **起始版本：** 10
 
 <!--Device-unnamed-export class UIInspector--><!--Device-unnamed-export class UIInspector-End-->
@@ -20,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 createComponentObserver(id: string): inspector.ComponentObserver
 ```
 
-Sets the component after layout or draw criteria and returns the corresponding listening handle
+注册组件布局和组件绘制送显完成回调通知。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作。
 
 **起始版本：** 10
 
@@ -36,13 +38,13 @@ Sets the component after layout or draw criteria and returns the corresponding l
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | ID of the target component, set using the universal attributes [id](../arkts-components/arkts-arkui-commonmethod-c.md#id)or [key](../arkts-components/arkts-arkui-commonmethod-c.md#key). |
+| id | string | 是 | 指定组件id，该id通过通用属性[id](../arkts-components/arkts-arkui-commonmethod-c.md#id)或者[key](../arkts-components/arkts-arkui-commonmethod-c.md#key)设置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| inspector.ComponentObserver | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
+| inspector.ComponentObserver | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
 ## createComponentObserver
 
@@ -50,7 +52,7 @@ Sets the component after layout or draw criteria and returns the corresponding l
 createComponentObserver(id: string | number): inspector.ComponentObserver
 ```
 
-创建当前节点或者当前节点的子节点的布局和送显的事件监听句柄。
+注册组件布局和组件绘制送显完成回调通知。送显指节点的绘制命令发送到图形服务并完成显示。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作。相比createComponentObserver，新增支持传入UniqueID（系统为节点分配的唯一标识）。
 
 **起始版本：** 23
 
@@ -66,11 +68,11 @@ createComponentObserver(id: string | number): inspector.ComponentObserver
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string \| number | 是 | 当前节点的inspector key或者唯一id。 |
+| id | string \| number | 是 | 类型为string时，为指定的组件id，该id通过通用属性[id](../arkts-components/arkts-arkui-commonmethod-c.md#id)或者[key](../arkts-components/arkts-arkui-commonmethod-c.md#key)设置。使用组件id创建监听句柄时，请确保该id对应的组件已经存在，否则后续监听无法生效。类型为number时，为系统为节点分配的唯一标识UniqueID，UniqueID通过getUniqueId获取。使用UniqueID创建监听句柄时，请确保UniqueID对应的节点已经存在，否则后续监听无法生效。number的取值范围为1~2147483647的整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| inspector.ComponentObserver | Component observer, which is used to register or unregister listeners for completion of component layout or drawing display. |
+| inspector.ComponentObserver | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 

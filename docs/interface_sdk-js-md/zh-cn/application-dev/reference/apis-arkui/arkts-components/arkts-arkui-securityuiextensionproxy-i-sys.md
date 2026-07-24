@@ -1,6 +1,6 @@
 # SecurityUIExtensionProxy（系统接口）
 
-该接口用于向UIExtensionAbility发送数据。<br/>当UIExtensionAbility连接成功时，<br/>它从UIExtensionComponent的onRemoteReady回调中返回。
+用于在双方建立连接成功后，向被拉起的Ability发送数据，以及订阅和取消订阅事件回调。
 
 **起始版本：** 26.0.0
 
@@ -16,7 +16,7 @@
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-注销监听器，该监听器监听UIExtensionAbility注册的异步数据接收回调。
+取消订阅被拉起的Ability异步注册时触发的回调。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -32,8 +32,8 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'asyncReceiverRegister' | 是 | 监听事件的类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | 否 | 监听事件的回调。 |
+| type | 'asyncReceiverRegister' | 是 | 固定填'asyncReceiverRegister'，取消订阅被拉起的Ability异步注册时触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | 否 | 回调函数。为空时取消订阅所有异步注册的回调。非空时取消订阅指定的异步注册回调。 |
 
 ## off('syncReceiverRegister')
 
@@ -41,7 +41,7 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-注销监听器，该监听器监听UIExtensionAbility注册的同步数据接收回调。
+取消订阅被拉起的Ability同步注册时触发的回调。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -57,8 +57,8 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'syncReceiverRegister' | 是 | 监听事件的类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | 否 | 监听事件的回调。 |
+| type | 'syncReceiverRegister' | 是 | 固定填'syncReceiverRegister'，取消订阅被拉起的Ability同步注册时触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | 否 | 回调函数。为空时取消订阅所有同步注册的回调。非空时取消订阅指定的同步注册回调。 |
 
 ## on('asyncReceiverRegister')
 
@@ -66,7 +66,7 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-注册监听器，监听UIExtensionAbility注册的异步数据接收回调。
+在双方建立连接成功后，订阅被拉起的Ability异步注册时触发的回调。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -82,8 +82,8 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'asyncReceiverRegister' | 是 | 表示事件的类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | 是 | 监听事件的回调。 |
+| type | 'asyncReceiverRegister' | 是 | 固定填'asyncReceiverRegister'，代表订阅被拉起的Ability异步注册时触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | 是 | 回调函数。订阅被拉起的Ability注册setReceiveDataCallback后触发的回调。 |
 
 ## on('syncReceiverRegister')
 
@@ -91,7 +91,7 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-注册监听器，监听UIExtensionAbility注册的同步数据接收回调。
+在双方建立连接成功后，订阅被拉起的Ability同步注册时触发的回调。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -107,8 +107,8 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'syncReceiverRegister' | 是 | 表示事件的类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | 是 | 监听事件的回调。 |
+| type | 'syncReceiverRegister' | 是 | 固定填'syncReceiverRegister'，代表订阅被拉起的Ability同步注册时触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | 是 | 回调函数。被拉起的Ability注册setReceiveDataForResultCallback后触发的回调。 |
 
 ## send
 
@@ -116,7 +116,7 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 send(data: Record<string, Object>): void
 ```
 
-该接口用于向UIExtensionAbility发送数据。
+用于在双方建立连接成功后，向被拉起的Ability发送数据，提供异步发送能力。数据将被扩展Ability通过setReceiveDataCallback接收处理。
 
 **起始版本：** 26.0.0
 
@@ -132,7 +132,7 @@ send(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 |  |
+| data | Record&lt;string, Object&gt; | 是 | 异步发送给被拉起的Ability的数据。 |
 
 ## sendSync
 
@@ -140,7 +140,7 @@ send(data: Record<string, Object>): void
 sendSync(data: Record<string, Object>): Record<string, Object>
 ```
 
-该接口用于向UIExtensionAbility发送数据，并以阻塞方式等待结果。
+用于在双方建立连接成功后，向被拉起的Ability同步发送数据，数据将被拉起的Ability通过setReceiveDataForResultCallback处理并返回结果。
 
 **起始版本：** 26.0.0
 
@@ -156,13 +156,13 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 | 发送给UIExtensionAbility的数据。 |
+| data | Record&lt;string, Object&gt; | 是 | 同步发送给被拉起的Ability的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Record&lt;string, Object&gt; | data - 从UIExtensionAbility传输回来的数据。 |
+| Record&lt;string, Object&gt; | 被拉起的Ability对同步发送请求处理后返回的响应数据。 |
 
 **错误码：**
 

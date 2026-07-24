@@ -4,7 +4,7 @@
 declare type ReceiveCallback = import('../api/@ohos.base').Callback<Record<string, Object>>
 ```
 
-从@ohos.base获取Callback。AnonyMous Object Rectification
+回调函数，用于封装被拉起的Ability发送的数据。
 
 **起始版本：** 18
 

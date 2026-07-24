@@ -2,7 +2,7 @@
 
 定义XComponent的选项。
 
-**起始版本：** 20
+**起始版本：** 12
 
 <!--Device-unnamed-declare interface XComponentOptions--><!--Device-unnamed-declare interface XComponentOptions-End-->
 
@@ -14,15 +14,15 @@
 controller: XComponentController
 ```
 
-XComponent的控制器。
+绑定到组件的控制器，可用于调用组件的方法。该参数仅在type为SURFACE或TEXTURE时有效。
 
 **类型：** XComponentController
 
-**起始版本：** 20
+**起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-XComponentOptions-controller: XComponentController--><!--Device-XComponentOptions-controller: XComponentController-End-->
 
@@ -34,7 +34,7 @@ XComponent的控制器。
 imageAIOptions?: ImageAIOptions
 ```
 
-AI图像分析选项。您可以通过此参数配置分析类型或绑定分析器控制器。
+给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器，仅类型为SURFACE或TEXTURE时有效。未设置时不配置AI分析选项，可通过[enableAnalyzer](XComponentAttribute#enableAnalyzer)属性单独启用AI分析。
 
 **类型：** ImageAIOptions
 
@@ -54,15 +54,15 @@ AI图像分析选项。您可以通过此参数配置分析类型或绑定分析
 type: XComponentType
 ```
 
-XComponent的类型。
+组件的类型。
 
 **类型：** XComponentType
 
-**起始版本：** 20
+**起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-XComponentOptions-type: XComponentType--><!--Device-XComponentOptions-type: XComponentType-End-->
 

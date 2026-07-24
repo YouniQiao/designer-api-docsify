@@ -1,6 +1,6 @@
 # DynamicOptions（系统接口）
 
-该接口用于在构造时设置DynamicComponentAttribute的选项。
+用于在DynamicComponent构造时传递参数。
 
 **起始版本：** 26.0.0
 
@@ -16,7 +16,7 @@
 allowCrossProcessNesting?: boolean
 ```
 
-表示是否允许DynamicComponent跨进程嵌套UEC。
+是否允许跨进程[UIExtensionComponent](arkts-arkui-uiextensioncomponent.md)嵌套。<br/>true：允许跨进程嵌套；false：不允许跨进程嵌套。<br/>默认值：false
 
 **类型：** boolean
 
@@ -56,7 +56,7 @@ allowOccupied?: boolean
 backgroundTransparent?: boolean
 ```
 
-表示DynamicComponent的背景是否透明。
+是否启用组件背景透明。<br/>true：启用背景透明；false：不启用背景透明。<br/>默认值：false
 
 **类型：** boolean
 
@@ -76,7 +76,7 @@ backgroundTransparent?: boolean
 entryPoint: string
 ```
 
-表示DynamicOptions的entryPoint。
+要加载的Abc页面入口。<br/>取值格式：'bundleName/moduleName/pagePath'，例如'com.example.myapplication/entry/ets/pages/DynamicPage'。
 
 **类型：** string
 
@@ -96,7 +96,7 @@ entryPoint: string
 worker: Worker
 ```
 
-表示用于运行abc的受限worker。
+用于运行Abc的Worker线程对象，需通过worker.ThreadWorker创建。Worker在独立线程中执行Abc的UI逻辑，与主线程通信。
 
 **类型：** Worker
 

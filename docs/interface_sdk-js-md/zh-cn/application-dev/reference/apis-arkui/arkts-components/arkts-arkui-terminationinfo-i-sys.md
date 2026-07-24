@@ -1,6 +1,6 @@
 # TerminationInfo（系统接口）
 
-表示嵌入式UI提供方终止时的信息。
+用于表示被拉起的UIExtensionAbility通过调用terminateSelfWithResult或者terminateSelf正常退出时的返回结果。
 
 **起始版本：** 12
 
@@ -16,7 +16,7 @@
 code: number
 ```
 
-定义终止码。
+被拉起的UIExtensionAbility退出时返回的结果码，返回的结果码由terminateSelfWithResult或者terminateSelf被调用时传入的数据决定。若通过terminateSelf退出，code取默认值0。
 
 **类型：** number
 
@@ -36,7 +36,7 @@ code: number
 want?: import('../api/@ohos.app.ability.Want').default
 ```
 
-定义额外的终止信息。
+被拉起的UIExtensionAbility退出时返回的数据。默认值为undefined。
 
 **类型：** import('../api/@ohos.app.ability.Want').default
 

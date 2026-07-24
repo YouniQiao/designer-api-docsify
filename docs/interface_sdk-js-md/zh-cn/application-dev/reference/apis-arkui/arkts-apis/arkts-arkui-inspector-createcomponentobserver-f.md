@@ -12,6 +12,8 @@ import { inspector } from '@kit.ArkUI';
 function createComponentObserver(id: string): ComponentObserver
 ```
 
+绑定指定组件，返回对应的监听句柄。
+
 **起始版本：** 10
 
 **废弃版本：** 18
@@ -30,13 +32,13 @@ function createComponentObserver(id: string): ComponentObserver
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 组件id。 |
+| id | string | 是 | 指定组件id，该id通过通用属性id或者key设置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 创建用于观察组件事件的监听器。 |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
 
 **示例：**
 

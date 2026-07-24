@@ -2,7 +2,7 @@
 
 定义XComponent的控制器。您可以将该控制器绑定到XComponent，以通过控制器调用组件接口。
 
-**起始版本：** 12
+**起始版本：** 8
 
 <!--Device-unnamed-declare class XComponentController--><!--Device-unnamed-declare class XComponentController-End-->
 
@@ -16,7 +16,7 @@ constructor()
 
 用于创建XComponentController实例的构造函数。
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +32,7 @@ getXComponentContext(): Object
 
 获取XComponent对象的context。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +54,7 @@ getXComponentSurfaceId(): string
 
 获取XComponent所持有的surface的ID，可用于@ohos相关接口。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -74,13 +74,13 @@ getXComponentSurfaceId(): string
 getXComponentSurfaceRect(): SurfaceRect
 ```
 
-获取XComponent创建的surface的矩形信息。
+获取XComponent所持有的surface的矩形。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-**起始版本：** 20
+**起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-XComponentController-getXComponentSurfaceRect(): SurfaceRect--><!--Device-XComponentController-getXComponentSurfaceRect(): SurfaceRect-End-->
 
@@ -90,7 +90,7 @@ getXComponentSurfaceRect(): SurfaceRect
 
 | 类型 | 说明 |
 | --- | --- |
-| [SurfaceRect](arkts-arkui-surfacerect-i.md) | surface的矩形信息。 |
+| [SurfaceRect](arkts-arkui-surfacerect-i.md) | XComponent所持有的surface的矩形。 |
 
 ## getXComponentSurfaceRotation
 
@@ -98,13 +98,13 @@ getXComponentSurfaceRect(): SurfaceRect
 getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 ```
 
-获取XComponent创建的Surface的旋转选项结果。
+获取屏幕旋转时此XComponent所持有的surface的方向是否锁定。该接口仅在XComponent的type设置为SURFACE("surface")时生效。
 
-**起始版本：** 20
+**起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-XComponentController-getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>--><!--Device-XComponentController-getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>-End-->
 
@@ -122,7 +122,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 lockCanvas(): DrawingCanvas | null
 ```
 
-获取用于在XComponent创建的surface上绘制的Canvas。
+获取用于在XComponent创建的surface上绘制的Canvas。有关绘制方法的详细信息，请参见[Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md)。
 
 **起始版本：** 20
 
@@ -146,13 +146,15 @@ lockCanvas(): DrawingCanvas | null
 onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 ```
 
-当surface矩形信息发生变化后回调。
+当XComponent所持有的surface大小发生变化时触发（包括XComponent以指定大小创建时）。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-**起始版本：** 20
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
+
+**起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-XComponentController-onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void--><!--Device-XComponentController-onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void-End-->
 
@@ -162,8 +164,8 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | XComponent创建的surface的id。 |
-| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | XComponent创建的surface的矩形信息。 |
+| surfaceId | string | 是 | XComponent所持有的surface的ID。 |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | 用于显示XComponent所持有的surface的矩形。 |
 
 ## onSurfaceCreated
 
@@ -171,13 +173,15 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 onSurfaceCreated(surfaceId: string): void
 ```
 
-当surface首次创建完成后回调。
+当XComponent所持有的surface创建完成时触发。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-**起始版本：** 20
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
+
+**起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-XComponentController-onSurfaceCreated(surfaceId: string): void--><!--Device-XComponentController-onSurfaceCreated(surfaceId: string): void-End-->
 
@@ -187,7 +191,7 @@ onSurfaceCreated(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | XComponent创建的surface的id。 |
+| surfaceId | string | 是 | XComponent所持有的surface的ID。 |
 
 ## onSurfaceDestroyed
 
@@ -195,13 +199,15 @@ onSurfaceCreated(surfaceId: string): void
 onSurfaceDestroyed(surfaceId: string): void
 ```
 
-当surface即将被销毁时回调。
+当XComponent所持有的surface销毁时触发。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-**起始版本：** 20
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
+
+**起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-XComponentController-onSurfaceDestroyed(surfaceId: string): void--><!--Device-XComponentController-onSurfaceDestroyed(surfaceId: string): void-End-->
 
@@ -211,7 +217,7 @@ onSurfaceDestroyed(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | XComponent创建的surface的id。 |
+| surfaceId | string | 是 | XComponent所持有的surface的ID。 |
 
 ## setXComponentSurfaceConfig
 
@@ -220,6 +226,9 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 ```
 
 设置XComponent创建的surface的配置。
+> **说明：**  
+>  
+> 此接口仅在XComponent的type为TEXTURE或SURFACE时生效。
 
 **起始版本：** 22
 
@@ -243,13 +252,13 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 setXComponentSurfaceRect(rect: SurfaceRect): void
 ```
 
-设置XComponent创建的surface的矩形信息。
+设置XComponent所持有的surface的矩形。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
-**起始版本：** 20
+**起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-XComponentController-setXComponentSurfaceRect(rect: SurfaceRect): void--><!--Device-XComponentController-setXComponentSurfaceRect(rect: SurfaceRect): void-End-->
 
@@ -259,7 +268,7 @@ setXComponentSurfaceRect(rect: SurfaceRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | surface的矩形信息。 |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | XComponent所持有的surface的矩形。 |
 
 ## setXComponentSurfaceRotation
 
@@ -267,13 +276,13 @@ setXComponentSurfaceRect(rect: SurfaceRect): void
 setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 ```
 
-设置XComponent创建的Surface的旋转选项。
+设置屏幕旋转时是否锁定此XComponent所持有的surface的方向。该接口仅在XComponent的type设置为SURFACE("surface")时生效。
 
-**起始版本：** 20
+**起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-XComponentController-setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void--><!--Device-XComponentController-setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void-End-->
 
@@ -283,7 +292,7 @@ setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | 是 | surface的旋转选项。 |
+| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | 是 | 屏幕旋转时是否锁定当前XComponent所持有的surface的方向。 |
 
 ## setXComponentSurfaceSize
 
@@ -295,6 +304,8 @@ setXComponentSurfaceSize(value: {
 ```
 
 设置XComponent所持有的surface的宽度和高度。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+单位：px。
 
 **起始版本：** 9
 
@@ -318,7 +329,15 @@ setXComponentSurfaceSize(value: {
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-在给定设置中启动AI图像分析。调用此接口前，请确保已启用AI图像分析器。由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。如果在执行完成之前重复调用此接口，将触发错误回调。
+配置AI分析并启动AI分析功能，使用前需先启用图像AI分析能力[enableAnalyzer](XComponentAttribute#enableAnalyzer)，仅type为SURFACE或TEXTURE时有效。使用Promise异步回调来返回结果。
+
+由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。
+
+如果在执行完成之前重复调用此接口，将触发错误回调。
+> **说明：**
+> 图像分析类型无法动态修改。  
+>  
+> 此接口依赖于设备能力。在不兼容的设备上调用将返回错误码。
 
 **起始版本：** 12
 
@@ -356,7 +375,11 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 stopImageAnalyzer(): void
 ```
 
-停止AI图像分析。AI图像分析器显示的内容将被销毁。
+停止AI分析功能，AI分析展示的内容将被销毁。仅type为SURFACE或TEXTURE时有效。
+> **说明：**
+> 如果在startImageAnalyzer接口尚未返回任何结果时调用此接口，将触发错误回调。  
+>  
+> 此特性依赖于设备能力。
 
 **起始版本：** 12
 

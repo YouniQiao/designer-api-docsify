@@ -1,6 +1,6 @@
 # ToolBarItem属性/事件
 
-定义ToolBarItem组件的属性方法。
+不支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
 **起始版本：** 20
 

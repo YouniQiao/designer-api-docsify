@@ -1,7 +1,12 @@
 # SecurityUIExtensionComponent
 
-定义SecurityUIExtensionComponent组件。
+**SecurityUIExtensionComponent**用于将其他应用提供的UI嵌入到当前页面中。显示的内容运行在另一个进程中，当前应用不参与其布局和渲染。
 
+通常用于需要进程隔离的模块化开发场景。目前，**SecurityUIExtensionComponent**只能启动[PhotoPicker]{@link @ohos.file.PhotoPickerComponent}类型的**UIExtensionAbility**。
+
+## 子组件
+
+无
 
 ## SecurityUIExtensionComponent
 
@@ -11,7 +16,7 @@ SecurityUIExtensionComponent(
   )
 ```
 
-构造UIExtensionComponent。<br/>在使用UIExtensionComponent时调用。
+创建**SecurityUIExtensionComponent**组件，用于嵌入显示远程**UIExtensionAbility**提供的UI。
 
 **起始版本：** 26.0.0
 
@@ -27,8 +32,8 @@ SecurityUIExtensionComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | import('../api/@ohos.app.ability.Want').default | 是 | 表示UIExtensionAbility的Want  |
-| options | [SecurityUIExtensionOptions](arkts-arkui-securityuiextensionoptions-i-sys.md) | 否 | UIExtensionComponentAttribute的构造配置  |
+| want | import('../api/@ohos.app.ability.Want').default | 是 | 要加载的Ability信息。 通过bundleName和abilityName共同确定被拉起的UIExtensionAbility， 同时需要在parameters中配置ability.want.params.uiExtensionType字段指定UIExtensionAbility的类型， 当前仅支持'sysPicker/photoPicker'。  |
+| options | [SecurityUIExtensionOptions](arkts-arkui-securityuiextensionoptions-i-sys.md) | 否 | 用于构造**SecurityUIExtensionComponent**的参数。不填时各字段使用默认值。  |
 
 ## 汇总
 

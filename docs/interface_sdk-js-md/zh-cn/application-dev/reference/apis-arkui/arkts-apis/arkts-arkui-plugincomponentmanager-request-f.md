@@ -12,9 +12,9 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 function request(param: RequestParameters, callback: AsyncCallback<RequestCallbackParameters>): void
 ```
 
-插件组件request方法。
+组件使用方向组件提供方主动请求组件。适用于使用方需按需获取提供方组件及数据的场景。
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -26,8 +26,8 @@ function request(param: RequestParameters, callback: AsyncCallback<RequestCallba
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | 是 |  |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestCallbackParameters&gt; | 是 |  |
+| param | [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | 是 | 组件模板的详细请求信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestCallbackParameters&gt; | 是 | 此次请求的异步回调，通过回调接口的参数返回请求所获取的数据。 |
 
 **示例：**
 

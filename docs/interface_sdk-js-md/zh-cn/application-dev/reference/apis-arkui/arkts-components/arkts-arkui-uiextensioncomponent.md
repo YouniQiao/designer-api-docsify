@@ -1,7 +1,22 @@
 # UIExtensionComponent
 
-定义UIExtensionComponent组件。
+**UIExtensionComponent**用于将其他应用提供的UI嵌入到本应用UI中。嵌入内容运行在另一个进程中，本应用不参与其布局和渲染。
 
+通常用于需要进程隔离的模块化开发场景。
+
+## 约束
+
+该组件不支持预览。
+
+待启动的能力必须是UIExtensionAbility，即带UI的扩展能力。关于如何实现UIExtensionAbility的详细信息，请参见[@ohos.app.ability.UIExtensionAbility（带UI的ExtensionAbility基类）]{@link @ohos.app.ability.UIExtensionAbility:UIExtensionAbility}。
+
+组件的宽高必须显式设置为非零有效值。
+
+不支持到达边缘后继续滚动的场景。当**UIExtensionComponent**宿主和UIExtensionAbility都支持内容滚动时，基于手势的滚动会导致**UIExtensionComponent**内外同时响应，包括但不限于[Scroll]{@link ./scroll}、[Swiper]{@link ./swiper}、[List]{@link ./list}、[Grid]{@link ./grid}等可滚动容器。关于如何避免**UIExtensionComponent**内外同时滚动的详细信息，请参见[示例2](docroot://reference/apis-arkui/arkui-ts/ts-container-ui-extension-component-sys.md#example-2-isolating-scrolling-inside-and-outside-of-uiextensioncomponent)。
+
+## 子组件
+
+不支持
 
 ## UIExtensionComponent
 
@@ -13,7 +28,7 @@ UIExtensionComponent(
 
 构造UIExtensionComponent。<br/>在使用UIExtensionComponent时调用。
 
-**起始版本：** 11
+**起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -28,7 +43,7 @@ UIExtensionComponent(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | import('../api/@ohos.app.ability.Want').default | 是 | 表示UIExtensionAbility的want  |
-| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | 否 | UIExtensionComponentAttribute的构造配置  |
+| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | 否 | UIExtensionComponentAttribute的构造配置 |
 
 ## 汇总
 

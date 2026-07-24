@@ -1,6 +1,10 @@
 # EmbeddedComponent属性/事件
 
-定义EmbeddedComponent的属性函数。
+支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+
+与屏幕坐标相关的事件信息，根据**EmbeddedComponent**的位置、宽高进行转换后，传递给EmbeddedUIExtensionAbility处理。
+
+不支持[点击事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)等通用事件。仅支持以下事件。
 
 **继承/实现关系：** EmbeddedComponentAttribute extends [CommonMethod<EmbeddedComponentAttribute>](CommonMethod<EmbeddedComponentAttribute>)
 
@@ -32,7 +36,7 @@ EmbeddedUIExtensionAbility绘制首帧时的回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |  |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 回调函数，在EmbeddedUIExtensionAbility绘制第一帧时触发。 |
 
 ## onError
 
@@ -40,7 +44,10 @@ EmbeddedUIExtensionAbility绘制首帧时的回调。
 onError(callback: import('../api/@ohos.base').ErrorCallback)
 ```
 
-当发生错误时回调。
+当启动的EmbeddedUIExtensionAbility运行过程中发生错误时调用。通过回调参数中的**code**、**name**和**message**可以获取并处理错误信息。关于错误码的详细信息，请参见[UIExtension错误码](../../../reference/apis-arkui/errorcode-uiextension.md)。
+> **说明**  
+>  
+> 该接口不能在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)内调用。
 
 **起始版本：** 12
 
@@ -56,7 +63,7 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | import('../api/@ohos.base').ErrorCallback | 是 |  |
+| callback | import('../api/@ohos.base').ErrorCallback | 是 | 用于返回[BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)类型错误信息的回调。基于**code**、**name**和**message**参数可以获取并处理错误信息。 |
 
 ## onTerminated
 
@@ -64,7 +71,10 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 ```
 
-当嵌入式UI的提供方终止时回调。
+当启动的EmbeddedUIExtensionAbility通过调用[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult)或[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself)正常退出时回调。
+> **说明**  
+>  
+> 该接口不能在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)内调用。
 
 **起始版本：** 12
 
@@ -80,5 +90,5 @@ onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | import('../api/@ohos.base').Callback&lt;TerminationInfo&gt; | 是 |  |
+| callback | import('../api/@ohos.base').Callback&lt;TerminationInfo&gt; | 是 | 用于返回EmbeddedUIExtensionAbility结果的回调。 |
 

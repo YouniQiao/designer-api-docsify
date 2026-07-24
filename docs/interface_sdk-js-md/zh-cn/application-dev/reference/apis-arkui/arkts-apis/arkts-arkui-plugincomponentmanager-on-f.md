@@ -12,9 +12,9 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCallback): void
 ```
 
-插件组件事件监听。
+提供方监听"request"类型的事件，给使用方返回通过request接口主动请求的数据；使用方监听"push"类型的事件，接收提供方通过push接口主动推送的数据。
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -26,8 +26,8 @@ function on(eventType: string, callback: OnPushEventCallback | OnRequestEventCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventType | string | 是 |  |
-| callback | [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) \| OnRequestEventCallback | 是 |  |
+| eventType | string | 是 | 监听的事件类型，可选值为："push"、"request"。"push"：指组件提供方向使用方主动推送数据。"request"：指组件使用方向提供方主动请求数据。 |
+| callback | [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) \| OnRequestEventCallback | 是 | 对应监听回调，push事件对应回调类型为OnPushEventCallback，request事件对应回调类型为OnRequestEventCallback。 |
 
 **示例：**
 

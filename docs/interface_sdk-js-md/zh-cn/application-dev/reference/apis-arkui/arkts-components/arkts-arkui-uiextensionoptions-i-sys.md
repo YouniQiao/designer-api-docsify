@@ -16,7 +16,7 @@
 areaChangePlaceholder?: Record<string, ComponentContent>
 ```
 
-设置区域变化占位符。如果设置了区域变化占位ComponentContent，则占位节点会一直显示，直到UIExtensionComponent尺寸变化完成。
+设置尺寸变化占位符，在UIExtensionComponent尺寸发生变化并且UIExtensionAbility内部渲染未完成时显示。key值仅支持"FOLD_TO_EXPAND"（折叠展开尺寸变化）、"UNDEFINED"（默认尺寸变化），传入其他key值时不生效。不设置时默认不显示尺寸变化占位内容。
 
 **类型：** Record&lt;string, ComponentContent&gt;
 
@@ -38,6 +38,8 @@ dpiFollowStrategy?: DpiFollowStrategy
 
 设置UIExtensionComponent内容的DPI跟随策略。
 
+默认值：**FOLLOW_UI_EXTENSION_ABILITY_DPI**
+
 **类型：** DpiFollowStrategy
 
 **默认值：** DpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
@@ -58,7 +60,9 @@ dpiFollowStrategy?: DpiFollowStrategy
 isTransferringCaller?: boolean
 ```
 
-设置当前能力是否作为调用方使用。<br/>如果设置为true，则作为调用方，将UIExtensionComponent的当前token设置为rootToken。
+在使用UIExtensionComponent嵌套时，设置当前UIExtensionComponent是否转发上一级的Caller信息。true表示转发上一级的Caller信息，false表示不转发上一级的Caller信息。
+
+默认值：**false**
 
 **类型：** boolean
 
@@ -101,6 +105,8 @@ windowModeFollowStrategy?: WindowModeFollowStrategy
 ```
 
 设置UIExtensionComponent内容的窗口模式跟随策略。
+
+默认值：**FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE**
 
 **类型：** WindowModeFollowStrategy
 

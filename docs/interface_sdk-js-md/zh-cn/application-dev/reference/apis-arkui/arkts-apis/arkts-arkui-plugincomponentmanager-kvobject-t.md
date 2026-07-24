@@ -4,9 +4,9 @@
 type KVObject = { [key: string]: number | string | boolean | [] | KVObject }
 ```
 
-定义KVObject
+以键值对形式存储信息，符合JSON格式。
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

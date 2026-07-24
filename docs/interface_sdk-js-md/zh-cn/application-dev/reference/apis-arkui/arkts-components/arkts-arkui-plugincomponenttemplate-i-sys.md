@@ -1,6 +1,6 @@
 # PluginComponentTemplate（系统接口）
 
-PluginComponentTemplate
+定义插件组件模板信息，用于与提供方定义的组件绑定。
 
 **起始版本：** 9
 
@@ -16,7 +16,7 @@ PluginComponentTemplate
 bundleName: string
 ```
 
-定义模板的bundleName。
+提供方应用的bundleName。使用绝对路径提供模板时不需要填写，使用应用包提供模板时需要填写。
 
 **类型：** string
 
@@ -34,7 +34,7 @@ bundleName: string
 source: string
 ```
 
-定义插件来源名称。
+组件模板，取值可为模板绝对路径（不建议）、相对HAP包的相对路径（多HAP场景使用"相对路径&模块名称"格式）或FA模型下的AbilityName。
 
 **类型：** string
 

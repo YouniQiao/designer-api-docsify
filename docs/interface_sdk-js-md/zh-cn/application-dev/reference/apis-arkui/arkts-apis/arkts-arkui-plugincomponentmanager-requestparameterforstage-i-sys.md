@@ -1,6 +1,6 @@
 # RequestParameterForStage（系统接口）
 
-在request函数中使用的插件组件request参数。
+用于设置Stage模型下使用pluginComponentManager.request方法时需要传递的参数。
 
 **起始版本：** 9
 
@@ -22,7 +22,7 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 data: KVObject
 ```
 
-定义data。
+附加数据，以键值对形式存储。用于向组件提供方传递请求时的自定义业务参数，以便提供方根据这些数据返回合适的组件模板。
 
 **类型：** KVObject
 
@@ -40,7 +40,7 @@ data: KVObject
 jsonPath?: string
 ```
 
-定义jsonPath。
+存放模板路径的external.json文件的路径。当需要从external.json文件加载模板路径而非通过Request通信获取模板时传入此参数。当jsonPath字段不为空时不触发Request通信；当jsonPath为空（默认）时，通过Request通信向组件提供方请求组件模板。
 
 **类型：** string
 
@@ -58,7 +58,7 @@ jsonPath?: string
 name: string
 ```
 
-定义name。
+请求组件名称，当jsonPath不为空时需与external.json文件中的键名一致。
 
 **类型：** string
 
@@ -76,7 +76,7 @@ name: string
 owner: Want
 ```
 
-定义owner。
+组件使用方Ability信息。
 
 **类型：** Want
 
@@ -94,7 +94,7 @@ owner: Want
 target: Want
 ```
 
-定义target。
+组件提供方Ability信息。
 
 **类型：** Want
 

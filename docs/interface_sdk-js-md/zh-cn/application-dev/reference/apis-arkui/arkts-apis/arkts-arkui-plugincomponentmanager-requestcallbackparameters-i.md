@@ -1,8 +1,8 @@
 # RequestCallbackParameters
 
-插件组件request回调参数。
+pluginComponentManager.request方法接收到的回调结果。
 
-**起始版本：** 12
+**起始版本：** 8
 
 <!--Device-pluginComponentManager-interface RequestCallbackParameters--><!--Device-pluginComponentManager-interface RequestCallbackParameters-End-->
 
@@ -20,11 +20,11 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 componentTemplate: PluginComponentTemplate
 ```
 
-定义componentTemplate。
+组件模板。
 
 **类型：** PluginComponentTemplate
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,11 +38,11 @@ componentTemplate: PluginComponentTemplate
 data: KVObject
 ```
 
-定义data。
+组件数据，以键值对形式存储，键和值类型由业务定义。
 
 **类型：** KVObject
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,11 +56,11 @@ data: KVObject
 extraData: KVObject
 ```
 
-定义extraData。
+附加数据。该字段为可选字段，不提供时默认不包含在返回结果中。
 
 **类型：** KVObject
 
-**起始版本：** 12
+**起始版本：** 8
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
