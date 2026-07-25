@@ -18,7 +18,7 @@ declare type SegmentButtonItemTuple = ItemRestriction<SegmentButtonTextItem> | I
 
 | 类型 | 说明 |
 | --- | --- |
-| ItemRestriction&lt;SegmentButtonTextItem&gt; | A A A 仅文本按钮信息的元组。 |
-| ItemRestriction&lt;SegmentButtonIconItem&gt; | A A A 仅图标按钮信息的元组。 |
-| ItemRestriction&lt;SegmentButtonIconTextItem&gt; | A A A 图标+文本按钮信息的元组。 |
+| ItemRestriction&lt;SegmentButtonTextItem&gt; | 仅文本按钮信息的元组。 |
+| ItemRestriction&lt;SegmentButtonIconItem&gt; | 仅图标按钮信息的元组。 |
+| ItemRestriction&lt;SegmentButtonIconTextItem&gt; | 图标+文本按钮信息的元组。 |
 

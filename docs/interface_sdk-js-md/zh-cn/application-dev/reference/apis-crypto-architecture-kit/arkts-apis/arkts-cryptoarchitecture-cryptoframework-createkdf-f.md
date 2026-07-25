@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createKdf(algName: string): Kdf
 ```
 
-密钥派生函数（key derivation function）实例生成。
+创建密钥派生函数实例。
 
 **起始版本：** 11
 
@@ -28,13 +28,13 @@ function createKdf(algName: string): Kdf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algName | string | 是 | 指定密钥派生算法（包含HMAC配套的散列函数）：目前支持PBKDF2、HKDF、SCRYPT、X963KDF算法，如"PBKDF2\|SHA256", "HKDF\|SHA256", "SCRYPT", "X963KDF\|SHA256"。<br>支持的规格详见[密钥派生函数规格](../../../security/CryptoArchitectureKit/crypto-key-derivation-overview.md)。 |
+| algName | string | 是 | 指定密钥派生算法（包含HMAC配套的散列函数）：目前支持PBKDF2、HKDF、SCRYPT、X963KDF算法，如"PBKDF2\|SHA256"、 "HKDF\|SHA256"、 "SCRYPT"和"X963KDF\|SHA256"等。<br>支持的规格详见[密钥派生函数规格](../../../security/CryptoArchitectureKit/crypto-key-derivation-overview.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Kdf](arkts-cryptoarchitecture-cryptoframework-kdf-i.md) | 返回由输入算法指定生成的Kdf对象。 |
+| [Kdf](arkts-cryptoarchitecture-cryptoframework-kdf-i.md) | 返回对应算法的Kdf实例。 |
 
 **错误码：**
 

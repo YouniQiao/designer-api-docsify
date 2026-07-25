@@ -20,7 +20,7 @@ import { emitter } from '@kit.BasicServicesKit';
 data?: T
 ```
 
-Data passed in the event. T: generic type.
+Data carried by the emitted event. **T** represents a generic type, which can be customized based on service requirements.
 
 **Type:** T
 

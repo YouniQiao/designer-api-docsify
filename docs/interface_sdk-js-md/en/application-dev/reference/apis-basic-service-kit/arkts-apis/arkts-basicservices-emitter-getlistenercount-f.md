@@ -26,7 +26,7 @@ Obtains the number of subscriptions to a specified event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | number \| string | Yes | Event ID, which is a custom string with a maximum of 10240 bytes. The value cannot be empty. |
+| eventId | number \| string | Yes | Event ID. The value is a string, which cannot be empty or exceed 10,240bytes. Excess content will be truncated. |
 
 **Return value:**
 

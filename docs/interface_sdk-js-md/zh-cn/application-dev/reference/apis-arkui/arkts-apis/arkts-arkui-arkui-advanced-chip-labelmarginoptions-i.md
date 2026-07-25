@@ -20,7 +20,7 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 left?: Dimension
 ```
 
-文本与左侧图标之间间距，不支持百分比。
+文本与左侧图标的间距，不支持百分比。
 
 默认值：
 

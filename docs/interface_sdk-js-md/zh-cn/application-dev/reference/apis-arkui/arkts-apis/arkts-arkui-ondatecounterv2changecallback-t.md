@@ -4,7 +4,7 @@
 export type OnDateCounterV2ChangeCallback = (date: CounterV2DateData) => void
 ```
 
-定义日期型CounterV2的日期变化回调类型。
+定义日期内联型CounterV2的日期变化回调类型。
 
 **起始版本：** 26.0.0
 

@@ -14,7 +14,7 @@ Enumerates the entry types in certificate extensions that can be obtained.
 EXTENSION_ENTRY_TYPE_ENTRY = 0
 ```
 
-Entire object.
+Entire extension entry.
 
 **Since:** 10
 
@@ -30,7 +30,7 @@ Entire object.
 EXTENSION_ENTRY_TYPE_ENTRY_CRITICAL = 1
 ```
 
-Critical attribute of the object.
+Critical attribute (**critical** flag) of the extension entry.
 
 **Since:** 10
 
@@ -46,7 +46,7 @@ Critical attribute of the object.
 EXTENSION_ENTRY_TYPE_ENTRY_VALUE = 2
 ```
 
-Data of the object.
+Value (extension-specific data) of the extension entry.
 
 **Since:** 10
 

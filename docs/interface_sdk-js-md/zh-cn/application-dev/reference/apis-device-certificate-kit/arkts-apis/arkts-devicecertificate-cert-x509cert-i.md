@@ -1,6 +1,6 @@
 # X509Cert
 
-X509证书类。
+提供用于X.509证书操作的API。
 
 **起始版本：** 9
 
@@ -20,7 +20,7 @@ import { cert } from '@kit.DeviceCertificateKit';
 checkValidityWithDate(date: string): void
 ```
 
-表示校验X509证书有效期。
+表示校验X.509证书有效期。
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ checkValidityWithDate(date: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | string | 是 | 表示日期，ASN.1时间格式。 |
+| date | string | 是 | 表示日期，UTC时间或通用时间字符串格式。 |
 
 **错误码：**
 
@@ -52,7 +52,7 @@ checkValidityWithDate(date: string): void
 getBasicConstraints(): number
 ```
 
-表示获取X509证书基本约束。
+表示获取X.509证书基本约束。
 
 **起始版本：** 9
 
@@ -66,7 +66,7 @@ getBasicConstraints(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 表示X509证书基本约束。 |
+| number | 表示X.509证书基本约束。 |
 
 ## getCRLDistributionPoint
 
@@ -74,7 +74,7 @@ getBasicConstraints(): number
 getCRLDistributionPoint(): DataArray
 ```
 
-获取X509证书CRL的分发点统一资源标识符。
+获取X.509证书CRL的分发点统一资源标识符。
 
 **起始版本：** 12
 
@@ -88,7 +88,7 @@ getCRLDistributionPoint(): DataArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 表示X509证书CRL的分发点统一资源标识符。 |
+| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 表示X.509证书CRL的分发点统一资源标识符。 |
 
 **错误码：**
 
@@ -104,7 +104,7 @@ getCRLDistributionPoint(): DataArray
 getCertSerialNumber(): bigint
 ```
 
-表示获取X509证书序列号。
+表示获取X.509证书序列号。
 
 **起始版本：** 10
 
@@ -118,7 +118,7 @@ getCertSerialNumber(): bigint
 
 | 类型 | 说明 |
 | --- | --- |
-| bigint | 表示X509证书序列号。 |
+| bigint | 表示X.509证书序列号。 |
 
 **错误码：**
 
@@ -132,7 +132,7 @@ getCertSerialNumber(): bigint
 getEncoded(callback: AsyncCallback<EncodingBlob>): void
 ```
 
-表示获取X509证书序列化数据。使用Callback异步回调。
+表示获取X.509证书序列化数据。使用Callback异步回调。
 
 **起始版本：** 9
 
@@ -146,7 +146,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EncodingBlob&gt; | 是 | 回调函数。当获取X509证书序列化数据成功时，err为undefined，data为获取到的X509证书序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EncodingBlob&gt; | 是 | 回调函数。当获取X.509证书序列化数据成功时，err为undefined，data为获取到的X.509证书序列化数据；否则为错误对象。 |
 
 **错误码：**
 
@@ -163,7 +163,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 getEncoded(): Promise<EncodingBlob>
 ```
 
-表示获取X509证书序列化数据。使用Promise方式返回结果。
+表示获取X.509证书序列化数据。使用Promise方式返回结果。
 
 **起始版本：** 9
 
@@ -177,7 +177,7 @@ getEncoded(): Promise<EncodingBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;EncodingBlob&gt; | Promise对象，返回X509证书序列化数据。 |
+| Promise&lt;EncodingBlob&gt; | Promise对象，返回X.509证书序列化数据。 |
 
 **错误码：**
 
@@ -194,7 +194,7 @@ getEncoded(): Promise<EncodingBlob>
 getExtKeyUsage(): DataArray
 ```
 
-表示获取X509证书扩展密钥用途。
+表示获取X.509证书扩展密钥用途。
 
 **起始版本：** 9
 
@@ -208,7 +208,7 @@ getExtKeyUsage(): DataArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 表示X509证书扩展密钥用途。 |
+| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 表示X.509证书扩展密钥用途。 |
 
 **错误码：**
 
@@ -224,7 +224,7 @@ getExtKeyUsage(): DataArray
 getExtensionsObject(): CertExtension
 ```
 
-获取对应实体的扩展域DER格式数据。
+获取证书扩展对象。
 
 **起始版本：** 12
 
@@ -238,7 +238,7 @@ getExtensionsObject(): CertExtension
 
 | 类型 | 说明 |
 | --- | --- |
-| [CertExtension](arkts-devicecertificate-cert-certextension-i.md) | 证书扩展域段类对象。 |
+| [CertExtension](arkts-devicecertificate-cert-certextension-i.md) | 证书扩展对象。 |
 
 **错误码：**
 
@@ -254,10 +254,10 @@ getExtensionsObject(): CertExtension
 getIssuerAltNames(): DataArray
 ```
 
-表示获取X509证书颁发者可选名称。
+表示获取X.509证书颁发者可选名称。
 > **说明：**  
 >  
-> 获取到的X509证书颁发者可选名称数据带字符串结束符。
+> 获取到的X.509证书颁发者可选名称数据带字符串结束符。
 
 **起始版本：** 9
 
@@ -271,7 +271,7 @@ getIssuerAltNames(): DataArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 表示X509证书颁发者可选名称。 |
+| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 表示X.509证书颁发者可选名称。 |
 
 **错误码：**
 
@@ -287,10 +287,11 @@ getIssuerAltNames(): DataArray
 getIssuerName(): DataBlob
 ```
 
-表示获取X509证书颁发者。
+表示获取X.509证书颁发者名称。
 > **说明：**  
 >  
-> 获取到的X509证书颁发者名称包含字符串终止符。
+> - 获取的X.509证书颁发者名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。  
+> - 获取的证书颁发者名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的可分辨名称字符串。
 
 **起始版本：** 9
 
@@ -304,7 +305,7 @@ getIssuerName(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X509证书颁发者。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书颁发者名称。 |
 
 **错误码：**
 
@@ -320,7 +321,7 @@ getIssuerName(): DataBlob
 getIssuerName(encodingType: EncodingType): string
 ```
 
-表示根据编码类型获取X509证书颁发者名称。
+表示根据编码类型获取X.509证书颁发者名称。
 
 **起始版本：** 20
 
@@ -340,7 +341,7 @@ getIssuerName(encodingType: EncodingType): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 表示X509证书颁发者名称，以逗号（,）分隔。 |
+| string | 表示X.509证书颁发者名称，以逗号（,）分隔。 |
 
 **错误码：**
 
@@ -387,7 +388,7 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 getItem(itemType: CertItemType): DataBlob
 ```
 
-表示获取X509证书对应的字段。
+表示获取X.509证书对应的字段。
 
 **起始版本：** 10
 
@@ -407,7 +408,7 @@ getItem(itemType: CertItemType): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X509证书对应的字段，返回值为DER格式。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书对应的字段，返回值为DER格式。 |
 
 **错误码：**
 
@@ -424,7 +425,7 @@ getItem(itemType: CertItemType): DataBlob
 getKeyUsage(): DataBlob
 ```
 
-表示获取X509证书密钥用途。
+表示获取X.509证书密钥用途。
 
 **起始版本：** 9
 
@@ -438,7 +439,7 @@ getKeyUsage(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X509证书密钥用途。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书密钥用途。 |
 
 **错误码：**
 
@@ -453,7 +454,7 @@ getKeyUsage(): DataBlob
 getNotAfterTime(): string
 ```
 
-表示获取X509证书过期时间。
+表示获取X.509证书过期时间。
 
 **起始版本：** 9
 
@@ -467,7 +468,7 @@ getNotAfterTime(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 表示X509证书过期时间，ASN.1时间格式。 |
+| string | 表示X.509证书过期时间，采用UTC时间或通用时间字符串格式。 |
 
 **错误码：**
 
@@ -483,7 +484,7 @@ getNotAfterTime(): string
 getNotBeforeTime(): string
 ```
 
-表示获取X509证书生效时间。
+表示获取X.509证书生效时间。
 
 **起始版本：** 9
 
@@ -497,7 +498,7 @@ getNotBeforeTime(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 表示X509证书生效时间，ASN.1时间格式。 |
+| string | 表示X.509证书生效时间，采用UTC时间或通用时间字符串格式。 |
 
 **错误码：**
 
@@ -513,7 +514,7 @@ getNotBeforeTime(): string
 getPublicKey(): cryptoFramework.PubKey
 ```
 
-表示获取X509证书公钥。
+表示获取X.509证书公钥。
 
 **起始版本：** 9
 
@@ -527,7 +528,7 @@ getPublicKey(): cryptoFramework.PubKey
 
 | 类型 | 说明 |
 | --- | --- |
-| cryptoFramework.PubKey | 表示X509证书公钥对象。该对象仅用于**X509Cert**的**verify()**。 |
+| cryptoFramework.PubKey | 表示X.509证书公钥对象。该对象仅用于**X509Cert**的**verify()**。 |
 
 **错误码：**
 
@@ -542,7 +543,7 @@ getPublicKey(): cryptoFramework.PubKey
 getSerialNumber(): number
 ```
 
-表示获取X509证书序列号。
+表示获取X.509证书序列号。
 > **说明：**  
 >  
 > 从API version 9开始支持，从API version 10开始废弃，建议使用  
@@ -562,7 +563,7 @@ getSerialNumber(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 表示X509证书序列号。 |
+| number | 表示X.509证书序列号。 |
 
 ## getSignature
 
@@ -570,7 +571,7 @@ getSerialNumber(): number
 getSignature(): DataBlob
 ```
 
-表示获取X509证书签名数据。
+表示获取X.509证书签名数据。
 
 **起始版本：** 9
 
@@ -584,7 +585,7 @@ getSignature(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X509证书签名数据。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书签名数据。 |
 
 **错误码：**
 
@@ -600,7 +601,7 @@ getSignature(): DataBlob
 getSignatureAlgName(): string
 ```
 
-表示获取X509证书签名算法名称。
+表示获取X.509证书签名算法名称。
 
 **起始版本：** 9
 
@@ -614,7 +615,7 @@ getSignatureAlgName(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 表示X509证书签名算法名称。 |
+| string | 表示X.509证书签名算法名称。 |
 
 **错误码：**
 
@@ -630,7 +631,7 @@ getSignatureAlgName(): string
 getSignatureAlgOid(): string
 ```
 
-表示获取X509证书签名算法的对象标识符（OID）。OID由国际标准化组织（ISO）分配。
+表示获取X.509证书签名算法的对象标识符（OID）。OID由国际标准化组织（ISO）分配。
 
 **起始版本：** 9
 
@@ -660,7 +661,7 @@ getSignatureAlgOid(): string
 getSignatureAlgParams(): DataBlob
 ```
 
-表示获取X509证书签名算法参数。
+表示获取X.509证书签名算法参数。
 
 **起始版本：** 9
 
@@ -674,7 +675,7 @@ getSignatureAlgParams(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X509证书签名算法参数。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书签名算法参数。 |
 
 **错误码：**
 
@@ -691,10 +692,10 @@ getSignatureAlgParams(): DataBlob
 getSubjectAltNames(): DataArray
 ```
 
-表示获取X509证书主体可选名称。
+表示获取X.509证书主体可选名称。
 > **说明：**  
 >  
-> 获取到的X509证书主体可选名称数据带字符串结束符。
+> 获取到的X.509证书主体可选名称数据带字符串结束符。
 
 **起始版本：** 9
 
@@ -708,7 +709,7 @@ getSubjectAltNames(): DataArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 表示X509证书主体可选名称。 |
+| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 表示X.509证书主体可选名称。 |
 
 **错误码：**
 
@@ -724,10 +725,13 @@ getSubjectAltNames(): DataArray
 getSubjectName(encodingType?: EncodingType): DataBlob
 ```
 
-表示获取X509证书主体。
+表示获取X.509证书主体名称。
 > **说明：**  
 >  
-> 获取到的X509证书主体名称包含字符串终止符。
+> - 若不设置encodingType参数，获取的证书主体名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。  
+> - 若不设置encodingType参数，获取的证书主体名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的  
+> 可分辨名称字符串。  
+> - 建议设置encodingType参数为EncodingType.ENCODING_UTF8，获取的证书主体名称是以逗号（,）分隔相对可分辨名称的可分辨名称字符串。
 
 **起始版本：** 9
 
@@ -747,7 +751,7 @@ getSubjectName(encodingType?: EncodingType): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X509证书主体名称。不设置encodingType参数，数据转换为字符串后以斜杠（/）分隔相对可分辨名称，设置encodingType参数为EncodingType.ENCODING_UTF8时，数据转换为字符串后以逗号（,）分隔相对可分辨名称。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书主体名称。 |
 
 **错误码：**
 
@@ -794,7 +798,7 @@ getSubjectX500DistinguishedName(): X500DistinguishedName
 getVersion(): number
 ```
 
-表示获取X509证书版本号。
+表示获取X.509证书版本号。
 
 **起始版本：** 9
 
@@ -808,7 +812,7 @@ getVersion(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 表示X509证书版本号。 |
+| number | 表示X.509证书版本号。 |
 
 ## hashCode
 

@@ -59,29 +59,29 @@ import { cert } from '@kit.DeviceCertificateKit';
 | [CertExtension](arkts-devicecertificate-cert-certextension-i.md) | Provides APIs for operating on certificate extensions. |
 | [CertValidationParams](arkts-devicecertificate-cert-certvalidationparams-i.md) | Parameters for certificate validation. |
 | [CertValidationResult](arkts-devicecertificate-cert-certvalidationresult-i.md) | Result of certificate validation. |
-| [CmsEnvelopedDecryptionConfig](arkts-devicecertificate-cert-cmsenvelopeddecryptionconfig-i.md) | Represents CMS decapsulation configuration. |
+| [CmsEnvelopedDecryptionConfig](arkts-devicecertificate-cert-cmsenvelopeddecryptionconfig-i.md) | Configuration used for decrypting CMS enveloped data. |
 | [CmsGenerator](arkts-devicecertificate-cert-cmsgenerator-i.md) | Provides APIs for generating the messages in CMS format. |
 | [CmsGeneratorOptions](arkts-devicecertificate-cert-cmsgeneratoroptions-i.md) | Represents the configuration for generating a CMS message. |
 | [CmsKeyAgreeRecipientInfo](arkts-devicecertificate-cert-cmskeyagreerecipientinfo-i.md) | Represents KeyAgree recipient information for CMS enveloped data. |
 | [CmsKeyTransRecipientInfo](arkts-devicecertificate-cert-cmskeytransrecipientinfo-i.md) | Represents KeyTrans recipient information for CMS enveloped data. |
-| [CmsParser](arkts-devicecertificate-cert-cmsparser-i.md) | Verifies or decrypts a CMS message. |
+| [CmsParser](arkts-devicecertificate-cert-cmsparser-i.md) | Provides APIs for parsing, verifying, and decrypting CMS messages. |
 | [CmsRecipientInfo](arkts-devicecertificate-cert-cmsrecipientinfo-i.md) | Represents recipient information for the CMS message. |
 | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | Represents the configuration of the CMS signer. |
 | [CmsVerificationConfig](arkts-devicecertificate-cert-cmsverificationconfig-i.md) | Represents CMS verification configuration. |
-| [CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md) | Defines the CSR attribute representation.  CSR attribute field. Currently, only character string attribute fields are supported. The attribute value added to the CSR is encoded in UTF-8 format. The common type is challengePassword. |
+| [CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md) | Defines the CSR attribute representation.  <br>CSR attribute field. Currently, only string-type attribute fields are supported. The attribute value added to the CSR is encoded in UTF-8 format. The common type is challengePassword. |
 | [CsrGenerationConfig](arkts-devicecertificate-cert-csrgenerationconfig-i.md) | Configuration parameters for generating a CSR, including the subject name, digest algorithm, attribute,and output format. |
 | [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | Defines a list of data arrays. |
 | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Encapsulates binary data. The core field **data** is of the Uint8Array type. |
-| [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Defines a binary data array in encoding format. |
-| [GeneralName](arkts-devicecertificate-cert-generalname-i.md) | Represents the GeneralName. |
+| [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Represents an encoded binary data block. |
+| [GeneralName](arkts-devicecertificate-cert-generalname-i.md) | Represents an X.509 GeneralName as defined in RFC 5280, which can appear in Subject Alternative Name and other extensions. |
 | [PbesParams](arkts-devicecertificate-cert-pbesparams-i.md) | Represents PBES algorithm parameters. Currently, only PBES2 is supported. |
 | [Pkcs12CreationConfig](arkts-devicecertificate-cert-pkcs12creationconfig-i.md) | Represents the configuration for creating .p12 files. |
 | [Pkcs12Data](arkts-devicecertificate-cert-pkcs12data-i.md) | P12(PKCS #12) data, which includes private key, certificate, and other certificates. |
 | [Pkcs12ParsingConfig](arkts-devicecertificate-cert-pkcs12parsingconfig-i.md) | Represents the configuration for parsing P12. |
 | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | Represents the private key information. |
 | [RevocationCheckParameter](arkts-devicecertificate-cert-revocationcheckparameter-i.md) | Represents the parameters for checking the certificate revocation status for a certificate chain. |
-| [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md) | Provides APIs for managing the **X500DistinguishedName** instance. |
-| [X509CRL](arkts-devicecertificate-cert-x509crl-i.md) | Provides APIs for managing a CRL object. |
+| [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md) | Provides APIs for X.500 distinguished name operations. |
+| [X509CRL](arkts-devicecertificate-cert-x509crl-i.md) | Provides APIs for X.509 CRL operations. |
 | [X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md) | Provides APIs for operating on a revoked certificate entry in a CRL. |
 | [X509CRLMatchParameters](arkts-devicecertificate-cert-x509crlmatchparameters-i.md) | Represents the parameters used to match a certificate revocation list (CRL). If no parameter is specified, all CRLs are matched. |
 | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | Provides APIs for X.509 certificate operations. |

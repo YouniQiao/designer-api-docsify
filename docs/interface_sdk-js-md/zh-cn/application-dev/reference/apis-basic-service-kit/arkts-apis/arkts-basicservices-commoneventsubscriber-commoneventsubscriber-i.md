@@ -1,6 +1,6 @@
 # CommonEventSubscriber
 
-表示公共事件的订阅者。
+表示公共事件的订阅者。CommonEventSubscriber提供了对有序公共事件的处理能力，包括获取和设置事件传递的Code和Data数据、查询当前公共事件是否为有序或粘性公共事件、中止或清理有序公共事件的中止状态、结束对当前有序公共事件的处理，以及获取订阅者的订阅信息等，适用于订阅者需要对接收到的公共事件进行数据处理和流程控制的场景。
 
 **起始版本：** 7
 
@@ -60,7 +60,7 @@ abortCommonEvent(): Promise<void>
 abortCommonEventSync(): void
 ```
 
-添加有序公共事件的中止状态。当该接口与[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。
+同步添加有序公共事件的中止状态。当该接口与[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。
 
 **起始版本：** 10
 
@@ -120,7 +120,7 @@ clearAbortCommonEvent(): Promise<void>
 clearAbortCommonEventSync(): void
 ```
 
-清理有序公共事件的中止状态。当该接口与[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以使该公共事件继续向下一个订阅者传递。
+同步清理有序公共事件的中止状态。当该接口与[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以使该公共事件继续向下一个订阅者传递。
 
 **起始版本：** 10
 
@@ -192,7 +192,7 @@ getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件没有处于中止状态。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 当查询成功时，err为undefined，data为true表示当前有序公共事件处于中止状态，data为false表示当前有序公共事件没有处于中止状态；否则err为错误对象。 |
 
 **错误码：**
 
@@ -218,7 +218,7 @@ getAbortCommonEvent(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件没有处于中止状态。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件未处于中止状态。 |
 
 ## getAbortCommonEventSync
 
@@ -226,7 +226,7 @@ getAbortCommonEvent(): Promise<boolean>
 getAbortCommonEventSync(): boolean
 ```
 
-获取当前有序公共事件是否处于中止状态。
+同步获取当前有序公共事件是否处于中止状态。
 
 **起始版本：** 10
 
@@ -238,7 +238,7 @@ getAbortCommonEventSync(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件没有处于中止状态。 |
+| boolean | 返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件未处于中止状态。 |
 
 ## getCode
 
@@ -246,7 +246,7 @@ getAbortCommonEventSync(): boolean
 getCode(callback: AsyncCallback<number>): void
 ```
 
-获取有序公共事件传递的数据（number类型）。使用callback异步回调。
+获取有序公共事件传递的数据。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -260,7 +260,7 @@ getCode(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回有序公共事件传递的数据（number类型）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取有序公共事件传递的数据成功时，err为undefined，data为获取到的数据；否则err为错误对象。 |
 
 **错误码：**
 
@@ -274,7 +274,7 @@ getCode(callback: AsyncCallback<number>): void
 getCode(): Promise<number>
 ```
 
-获取有序公共事件传递的数据（number类型）。使用Promise异步回调。
+获取有序公共事件传递的数据。使用Promise异步回调。
 
 **起始版本：** 7
 
@@ -288,7 +288,7 @@ getCode(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回有序公共事件传递的数据（number类型）。 |
+| Promise&lt;number&gt; | Promise对象。返回有序公共事件传递的数据。 |
 
 ## getCodeSync
 
@@ -296,7 +296,7 @@ getCode(): Promise<number>
 getCodeSync(): number
 ```
 
-获取有序公共事件传递的数据（number类型）。
+同步获取有序公共事件传递的数据。
 
 **起始版本：** 10
 
@@ -310,7 +310,7 @@ getCodeSync(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 表示有序公共事件传递的数据（number类型）。 |
+| number | 表示有序公共事件传递的数据。 |
 
 ## getData
 
@@ -318,7 +318,7 @@ getCodeSync(): number
 getData(callback: AsyncCallback<string>): void
 ```
 
-获取有序公共事件传递的数据（string类型）。使用callback异步回调。
+获取有序公共事件传递的数据。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -332,7 +332,7 @@ getData(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。返回有序公共事件传递的数据（string类型）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取有序公共事件传递的数据成功时，err为undefined，data为获取到的数据；否则err为错误对象。 |
 
 **错误码：**
 
@@ -346,7 +346,7 @@ getData(callback: AsyncCallback<string>): void
 getData(): Promise<string>
 ```
 
-获取有序公共事件传递的数据（string类型）。使用Promise异步回调。
+获取有序公共事件传递的数据。使用Promise异步回调。
 
 **起始版本：** 7
 
@@ -360,7 +360,7 @@ getData(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回有序公共事件传递的数据（string类型）。 |
+| Promise&lt;string&gt; | Promise对象。返回有序公共事件传递的数据。 |
 
 ## getDataSync
 
@@ -368,7 +368,7 @@ getData(): Promise<string>
 getDataSync(): string
 ```
 
-获取有序公共事件传递的数据（string类型）。
+同步获取有序公共事件传递的数据。
 
 **起始版本：** 10
 
@@ -382,7 +382,7 @@ getDataSync(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 有序公共事件传递的数据（string类型）。 |
+| string | 有序公共事件传递的数据。 |
 
 ## getSubscribeInfo
 
@@ -404,7 +404,7 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventSubscribeInfo&gt; | 是 | 回调函数。返回订阅者的订阅信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventSubscribeInfo&gt; | 是 | 回调函数。当获取成功时，err为undefined，data为订阅者的订阅信息；否则err为错误对象。 |
 
 **错误码：**
 
@@ -440,7 +440,7 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 getSubscribeInfoSync(): CommonEventSubscribeInfo
 ```
 
-获取订阅者的订阅信息。
+同步获取订阅者的订阅信息。
 
 **起始版本：** 10
 
@@ -474,7 +474,7 @@ isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示有序公共事件；返回false表示无序公共事件。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当查询成功时，err为undefined，data为true表示有序公共事件，data为false表示不是有序公共事件；否则err为错误对象。 |
 
 **错误码：**
 
@@ -508,7 +508,7 @@ isOrderedCommonEvent(): Promise<boolean>
 isOrderedCommonEventSync(): boolean
 ```
 
-查询当前公共事件是否为有序公共事件。
+同步查询当前公共事件是否为有序公共事件。
 
 **起始版本：** 10
 
@@ -528,7 +528,7 @@ isOrderedCommonEventSync(): boolean
 isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 ```
 
-检查当前公共事件是否为一个粘性事件。使用callback异步回调。
+查询当前公共事件是否为一个粘性公共事件。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -540,7 +540,7 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示是粘性公共事件；返回false表示不是粘性公共事件。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当查询成功时，err为undefined，data为true表示是粘性公共事件，data为false表示不是粘性公共事件；否则err为错误对象。 |
 
 **错误码：**
 
@@ -554,7 +554,7 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 isStickyCommonEvent(): Promise<boolean>
 ```
 
-检查当前公共事件是否为一个粘性事件。使用Promise异步回调。
+查询当前公共事件是否为一个粘性公共事件。使用Promise异步回调。
 
 **起始版本：** 7
 
@@ -574,7 +574,7 @@ isStickyCommonEvent(): Promise<boolean>
 isStickyCommonEventSync(): boolean
 ```
 
-检查当前公共事件是否为一个粘性事件。
+同步检查当前公共事件是否为一个粘性公共事件。
 
 **起始版本：** 10
 
@@ -594,7 +594,7 @@ isStickyCommonEventSync(): boolean
 setCode(code: number, callback: AsyncCallback<void>): void
 ```
 
-设置有序公共事件传递的数据（number类型）。使用callback异步回调。
+设置有序公共事件传递的数据。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -608,8 +608,8 @@ setCode(code: number, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | 有序公共事件传递的数据（number类型）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置有序公共事件传递的数据（number类型）成功时，err为undefined，否则为错误对象。 |
+| code | number | 是 | 有序公共事件传递的数据。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置有序公共事件传递的数据成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -623,7 +623,7 @@ setCode(code: number, callback: AsyncCallback<void>): void
 setCode(code: number): Promise<void>
 ```
 
-设置有序公共事件传递的数据（number类型）。使用Promise异步回调。
+设置有序公共事件传递的数据。使用Promise异步回调。
 
 **起始版本：** 7
 
@@ -637,7 +637,7 @@ setCode(code: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | 有序公共事件传递的数据（number类型）。 |
+| code | number | 是 | 有序公共事件传递的数据。 |
 
 **返回值：**
 
@@ -657,7 +657,7 @@ setCode(code: number): Promise<void>
 setCodeAndData(code: number, data: string, callback: AsyncCallback<void>): void
 ```
 
-设置有序公共事件数据。使用callback异步回调。
+设置有序公共事件传递的数据。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -671,8 +671,8 @@ setCodeAndData(code: number, data: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | 有序公共事件传递的数据（number类型）。 |
-| data | string | 是 | 有序公共事件传递的数据（string类型）。 |
+| code | number | 是 | 有序公共事件传递的数据。 |
+| data | string | 是 | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置有序公共事件传递的数据成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -701,8 +701,8 @@ setCodeAndData(code: number, data: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | 有序公共事件传递的数据（number类型）。 |
-| data | string | 是 | 有序公共事件传递的数据（string类型）。 |
+| code | number | 是 | 有序公共事件传递的数据。 |
+| data | string | 是 | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
 
 **返回值：**
 
@@ -722,7 +722,7 @@ setCodeAndData(code: number, data: string): Promise<void>
 setCodeAndDataSync(code: number, data: string): void
 ```
 
-设置有序公共事件传递的数据。
+同步设置有序公共事件传递的数据。
 
 **起始版本：** 10
 
@@ -736,8 +736,8 @@ setCodeAndDataSync(code: number, data: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | 有序公共事件传递的数据（number类型）。 |
-| data | string | 是 | 有序公共事件传递的数据（string类型）。 |
+| code | number | 是 | 有序公共事件传递的数据。 |
+| data | string | 是 | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
 
 **错误码：**
 
@@ -751,7 +751,7 @@ setCodeAndDataSync(code: number, data: string): void
 setCodeSync(code: number): void
 ```
 
-设置有序公共事件传递的数据（number类型）。
+同步设置有序公共事件传递的数据。
 
 **起始版本：** 10
 
@@ -765,7 +765,7 @@ setCodeSync(code: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | 有序公共事件传递的数据（number类型）。 |
+| code | number | 是 | 有序公共事件传递的数据。 |
 
 **错误码：**
 
@@ -779,7 +779,7 @@ setCodeSync(code: number): void
 setData(data: string, callback: AsyncCallback<void>): void
 ```
 
-设置有序公共事件传递的数据（string类型）。使用callback异步回调。
+设置有序公共事件传递的数据。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -793,8 +793,8 @@ setData(data: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string | 是 | 有序公共事件传递的数据（string类型）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置有序公共事件传递的数据（string类型）成功时，err为undefined，否则为错误对象。 |
+| data | string | 是 | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置有序公共事件传递的数据成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -808,7 +808,7 @@ setData(data: string, callback: AsyncCallback<void>): void
 setData(data: string): Promise<void>
 ```
 
-设置有序公共事件传递的数据（string类型）。使用Promise异步回调。
+设置有序公共事件传递的数据。使用Promise异步回调。
 
 **起始版本：** 7
 
@@ -822,7 +822,7 @@ setData(data: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string | 是 | 有序公共事件传递的数据（string类型）。 |
+| data | string | 是 | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
 
 **返回值：**
 
@@ -842,7 +842,7 @@ setData(data: string): Promise<void>
 setDataSync(data: string): void
 ```
 
-设置有序公共事件传递的数据（string类型）。
+同步设置有序公共事件传递的数据。
 
 **起始版本：** 10
 
@@ -856,7 +856,7 @@ setDataSync(data: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string | 是 | 有序公共事件传递的数据（string类型）。 |
+| data | string | 是 | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
 
 **错误码：**
 

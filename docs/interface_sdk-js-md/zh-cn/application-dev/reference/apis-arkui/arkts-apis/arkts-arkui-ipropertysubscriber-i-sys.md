@@ -1,6 +1,6 @@
 # IPropertySubscriber（系统接口）
 
-提供属性订阅者的接口。
+属性订阅者接口，定义订阅者需要实现的方法，用于接收属性变化通知和生命周期回调。
 
 **起始版本：** 7
 
@@ -30,7 +30,7 @@ aboutToBeDeleted(owningView?: IPropertySubscriber): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 | 所在自定义组件。 |
+| owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 否 | 所在自定义组件；不传入则不指定关联的自定义组件。 |
 
 ## id
 
@@ -38,7 +38,7 @@ aboutToBeDeleted(owningView?: IPropertySubscriber): void
 id(): number
 ```
 
-获取id时调用。
+获取ID时调用。
 
 **起始版本：** 7
 
@@ -52,5 +52,5 @@ id(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回变量id。 |
+| number | 返回订阅者的唯一标识ID。 |
 

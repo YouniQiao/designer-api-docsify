@@ -24,7 +24,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [USER_LOGIN](arkts-performanceanalysis-event-depr-con.md#user_login) | 用户登录 |
+| [USER_LOGIN](arkts-performanceanalysis-event-depr-con.md#user_login) | 用户登录事件。 |
 | [USER_LOGOUT](arkts-performanceanalysis-event-depr-con.md#user_logout) | 用户登出事件。 |
 | [DISTRIBUTED_SERVICE_START](arkts-performanceanalysis-event-depr-con.md#distributed_service_start) | 分布式服务启动事件。 |
 

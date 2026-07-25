@@ -1,6 +1,6 @@
 # CmsGenerator
 
-CmsGenerator对象用于生成CMS（Cryptographic Message Syntax）格式的消息。
+提供生成CMS（Cryptographic Message Syntax）消息的API。
 > **说明：**  
 >  
 > PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、  
@@ -26,7 +26,7 @@ addCert(cert: X509Cert): void
 
 用于添加内容类型为SIGNED_DATA的CMS的证书，例如签名证书的颁发者证书。
 
-如果未调用addSigner接口，并且仅添加证书后，生成的CMS签名数据将只包含证书。
+<br>如果未调用addSigner接口，并且仅添加证书后，生成的CMS签名数据将只包含证书。
 
 **起始版本：** 18
 
@@ -40,7 +40,7 @@ addCert(cert: X509Cert): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 | 要添加的X509证书。 |
+| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 | 要添加的X.509证书。 |
 
 **错误码：**
 
@@ -117,7 +117,7 @@ addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 
 为内容类型为ENVELOPED_DATA的CMS添加接收者信息。使用Promise方式返回结果。
 
-该方法至少需要设置一个接收者。
+<br>该方法至少需要设置一个接收者。
 
 **起始版本：** 22
 
@@ -252,7 +252,7 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 | 指定X509证书。 |
+| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 | 指定X.509证书。 |
 | keyInfo | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | 是 | 指定私钥信息。 |
 | config | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | 是 | 指定签名者选项。 |
 
@@ -634,7 +634,7 @@ getEncryptedContentData(): Promise<Uint8Array>
 
 用于获取内容类型为ENVELOPED_DATA的CMS的加密内容数据。使用Promise方式返回结果。
 
-如果创建了类型为ENVELOPED_DATA的CmsGenerator并使用了数据分离来生成CMS封装数据，使用此方法来获取加密的内容数据。
+<br>如果创建了类型为ENVELOPED_DATA的CmsGenerator并使用了数据分离来生成CMS封装数据，使用此方法来获取加密的内容数据。
 
 **起始版本：** 22
 
@@ -764,7 +764,7 @@ setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): voi
 
 为内容类型为ENVELOPED_DATA的CMS设置加密算法。
 
-该方法应在创建ENVELOPED_DATA类型的CmsGenerator后立即调用。如果未调用此方法，则默认使用AES_256_GCM作为加密算法。
+<br>该方法应在创建ENVELOPED_DATA类型的CmsGenerator后立即调用。如果未调用此方法，则默认使用AES_256_GCM作为加密算法。
 
 **起始版本：** 22
 

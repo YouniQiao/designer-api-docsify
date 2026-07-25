@@ -4,7 +4,7 @@
 
 **继承/实现关系：** CustomComponent extends [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md)
 
-**起始版本：** 18
+**起始版本：** 7
 
 <!--Device-unnamed-declare class CustomComponent extends BaseCustomComponent--><!--Device-unnamed-declare class CustomComponent extends BaseCustomComponent-End-->
 
@@ -18,11 +18,11 @@ aboutToReuse?(params: Record<string, Object | undefined | null>): void
 
 Invoked when a reusable custom component is re-added to the node tree from the reuse cache to receive construction parameters of the component.
 
-**起始版本：** 20
+**起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CustomComponent-aboutToReuse?(params: Record<string, Object | undefined | null>): void--><!--Device-CustomComponent-aboutToReuse?(params: Record<string, Object | undefined | null>): void-End-->
 

@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createKem(algNameId: KemAlgNameId): Kem
 ```
 
-创建一个用于密钥封装和解封装操作的KEM实例。
+创建一个用于密钥封装和解封装操作的Kem实例。
 
 **起始版本：** 26.0.0
 
@@ -34,7 +34,7 @@ function createKem(algNameId: KemAlgNameId): Kem
 
 | 类型 | 说明 |
 | --- | --- |
-| [Kem](arkts-cryptoarchitecture-cryptoframework-kem-i.md) | KEM实例。 |
+| [Kem](arkts-cryptoarchitecture-cryptoframework-kem-i.md) | 返回对应算法的Kem实例。 |
 
 **错误码：**
 

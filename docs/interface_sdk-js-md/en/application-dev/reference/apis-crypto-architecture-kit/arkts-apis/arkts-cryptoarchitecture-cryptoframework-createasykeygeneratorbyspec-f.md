@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorBySpec
 ```
 
-Obtains an asymmetric key generator instance with the specified key parameters.
+Creates an **AsyKeyGeneratorBySpec** instance based on the specified key specifications.
 
 **Since:** 10
 

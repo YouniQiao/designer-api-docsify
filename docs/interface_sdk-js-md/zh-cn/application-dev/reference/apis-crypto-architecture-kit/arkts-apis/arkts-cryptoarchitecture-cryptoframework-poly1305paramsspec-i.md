@@ -2,7 +2,7 @@
 
 加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，封装使用ChaCha20-Poly1305 AEAD模式进行加密或解密的参数，需要nonce、AAD和认证标签。它是[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。
 
-适用于[ChaCha20-Poly1305](../../../security/CryptoArchitectureKit/crypto-sym-encrypt-decrypt-spec.md#chacha20)。
+<br>适用于[ChaCha20-Poly1305](../../../security/CryptoArchitectureKit/crypto-sym-encrypt-decrypt-spec.md#chacha20)。
 > **说明：**  
 >  
 > 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需要  

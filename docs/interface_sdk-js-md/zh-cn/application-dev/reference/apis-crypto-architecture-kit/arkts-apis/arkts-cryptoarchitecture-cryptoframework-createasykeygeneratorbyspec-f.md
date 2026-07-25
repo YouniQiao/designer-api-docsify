@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorBySpec
 ```
 
-指定密钥参数，获取AsyKeyGeneratorBySpec非对称密钥生成器实例。
+创建指定密钥规格的非对称密钥生成器实例。
 
 **起始版本：** 10
 
@@ -34,7 +34,7 @@ function createAsyKeyGeneratorBySpec(asyKeySpec: AsyKeySpec): AsyKeyGeneratorByS
 
 | 类型 | 说明 |
 | --- | --- |
-| [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md) | 返回AsyKeyGeneratorBySpec非对称密钥生成器实例。 |
+| [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md) | 返回AsyKeyGeneratorBySpec实例。 |
 
 **错误码：**
 

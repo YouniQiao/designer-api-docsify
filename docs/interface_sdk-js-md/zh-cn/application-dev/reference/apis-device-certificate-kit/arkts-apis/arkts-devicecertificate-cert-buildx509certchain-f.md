@@ -12,7 +12,7 @@ import { cert } from '@kit.DeviceCertificateKit';
 function buildX509CertChain(param: CertChainBuildParameters): Promise<CertChainBuildResult>
 ```
 
-表示使用CertChainBuildParameters对象方式创建X509证书链对象。使用Promise方式返回结果。
+表示使用CertChainBuildParameters对象方式创建X.509证书链对象。使用Promise方式返回结果。
 
 **起始版本：** 12
 

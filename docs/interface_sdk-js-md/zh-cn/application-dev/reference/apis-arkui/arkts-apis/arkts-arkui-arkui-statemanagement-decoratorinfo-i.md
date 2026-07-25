@@ -72,7 +72,7 @@ owningComponentId: number
 
 V1对象返回被使用的组件id。
 
-**V1对象有属性使用[@Track](../../../ui/state-management/arkts-track.md)装饰器时和V2对象返回的是对象名称，无组件id，返回-1。**
+**当V1对象有属性使用[@Track](../../../ui/state-management/arkts-track.md)装饰器时，无组件id，返回-1；V2对象同样无组件id，返回-1。**
 
 **类型：** number
 

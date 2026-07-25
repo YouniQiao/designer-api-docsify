@@ -2,7 +2,7 @@
 
 View
 
-**Since:** 9
+**Since:** 7
 
 <!--Device-unnamed-declare class View--><!--Device-unnamed-declare class View-End-->
 
@@ -18,7 +18,7 @@ create(value: any): any
 
 Just use for generate tsbundle
 
-**Since:** 9
+**Since:** 7
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

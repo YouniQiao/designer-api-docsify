@@ -4,7 +4,7 @@ Custom Component
 
 **Inheritance/Implementation:** CustomComponent extends [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md)
 
-**Since:** 18
+**Since:** 7
 
 <!--Device-unnamed-declare class CustomComponent extends BaseCustomComponent--><!--Device-unnamed-declare class CustomComponent extends BaseCustomComponent-End-->
 
@@ -16,13 +16,13 @@ Custom Component
 aboutToReuse?(params: Record<string, Object | undefined | null>): void
 ```
 
-Invoked when a reusable custom component is re-added to the node tree from the reuse cache to receive construction parameters of the component.
+aboutToReuse Method
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CustomComponent-aboutToReuse?(params: Record<string, Object | undefined | null>): void--><!--Device-CustomComponent-aboutToReuse?(params: Record<string, Object | undefined | null>): void-End-->
 
@@ -32,7 +32,7 @@ Invoked when a reusable custom component is re-added to the node tree from the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object \| undefined \| null&gt; | Yes | Custom component init params. |
+| params | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object \| undefined \| null&gt; | Yes | Custom component init params.<br>**Since:** 20 |
 
 ## onLayout
 

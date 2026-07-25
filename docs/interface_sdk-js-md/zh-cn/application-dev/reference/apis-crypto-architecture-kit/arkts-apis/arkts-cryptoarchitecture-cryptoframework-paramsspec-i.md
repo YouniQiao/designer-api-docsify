@@ -2,7 +2,7 @@
 
 加解密参数，在进行对称加解密时需要构造其子类对象，并将子类对象传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法。
 
-适用于需要iv等参数的对称加解密模式（对于无iv等参数的模式如ECB模式，无需构造，在[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)中传入null即可）。
+<br>适用于需要iv等参数的对称加解密模式（对于无iv等参数的模式如ECB模式，无需构造，在[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)中传入null即可）。
 > **说明：**  
 >  
 > iv（Initialization Vector，初始化向量）是用于对称加密模式（如 CBC/CTR/OFB/CFB/GCM/CCM/ChaCha20-Poly1305）中引入随机性或  

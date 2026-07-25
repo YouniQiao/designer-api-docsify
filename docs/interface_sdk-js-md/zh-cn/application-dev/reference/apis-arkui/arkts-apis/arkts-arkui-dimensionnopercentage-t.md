@@ -18,9 +18,9 @@ declare type DimensionNoPercentage = PX | VP | FP | LPX | Resource
 
 | 类型 | 说明 |
 | --- | --- |
-| PX | Length Length Length 长度类型，用于描述以px为单位的长度。 |
-| VP | Length Length Length 长度类型，用于描述以vp为单位的长度。 |
-| FP | Length Length Length 长度类型，用于描述以fp为单位的长度。 |
-| LPX | Length Length Length 长度类型，用于描述以lpx为单位的长度。 |
-| Resource | Resource Resource Resource 资源引用类型，用于设置组件属性的值。 |
+| PX | 长度类型，用于描述以px为单位的长度。 |
+| VP | 长度类型，用于描述以vp为单位的长度。 |
+| FP | 长度类型，用于描述以fp为单位的长度。 |
+| LPX | 长度类型，用于描述以lpx为单位的长度。 |
+| Resource | 资源引用类型，用于设置组件属性的值。 |
 

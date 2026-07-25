@@ -1,6 +1,6 @@
 # CmsEnvelopedDecryptionConfig
 
-Represents CMS decapsulation configuration.
+Configuration used for decrypting CMS enveloped data.
 
 **Since:** 22
 

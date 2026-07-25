@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createKeyAgreement(algName: string): KeyAgreement
 ```
 
-生成KeyAgreement实例。
+创建密钥协商实例。
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ function createKeyAgreement(algName: string): KeyAgreement
 
 | 类型 | 说明 |
 | --- | --- |
-| [KeyAgreement](arkts-cryptoarchitecture-cryptoframework-keyagreement-i.md) | 返回由输入算法指定生成的KeyAgreement对象。 |
+| [KeyAgreement](arkts-cryptoarchitecture-cryptoframework-keyagreement-i.md) | 返回对应算法的KeyAgreement实例。 |
 
 **错误码：**
 

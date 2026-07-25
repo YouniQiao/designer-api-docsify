@@ -18,7 +18,7 @@ declare type SegmentButtonItemArray = Array<SegmentButtonTextItem> | Array<Segme
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;SegmentButtonTextItem&gt; | An An An An An An 仅文本按钮信息的数组。 |
-| Array&lt;SegmentButtonIconItem&gt; | An An An An An An 仅图标按钮信息的数组。 |
-| Array&lt;SegmentButtonIconTextItem&gt; | An An An An An An 图标+文本按钮信息的数组。 |
+| Array&lt;SegmentButtonTextItem&gt; | 仅文本按钮信息的数组。 |
+| Array&lt;SegmentButtonIconItem&gt; | 仅图标按钮信息的数组。 |
+| Array&lt;SegmentButtonIconTextItem&gt; | 图标+文本按钮信息的数组。 |
 

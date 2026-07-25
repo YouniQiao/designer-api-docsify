@@ -1,8 +1,8 @@
 # WrappedBuilder
 
-The WrappedBuilder object is also a template class.
+Defines the WrappedBuilder class.
 
-**Since:** 12
+**Since:** 11
 
 <!--Device-unnamed-declare class WrappedBuilder<Args extends Object[]>--><!--Device-unnamed-declare class WrappedBuilder<Args extends Object[]>-End-->
 
@@ -14,7 +14,7 @@ The WrappedBuilder object is also a template class.
 constructor(builder: (...args: Args) => void)
 ```
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,11 +36,9 @@ constructor(builder: (...args: Args) => void)
 builder: (...args: Args) => void
 ```
 
-global @Builder decorated function.
-
 **Type:** (...args: Args) =&gt; void
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 

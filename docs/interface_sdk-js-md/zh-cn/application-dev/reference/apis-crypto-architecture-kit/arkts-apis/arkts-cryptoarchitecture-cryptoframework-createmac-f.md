@@ -12,9 +12,9 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createMac(algName: string): Mac
 ```
 
-生成Mac实例，用于消息认证码的计算与操作。
+创建消息认证码实例。
 
-支持的规格详见[HMAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
+<br>支持的规格详见[HMAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
 
 **起始版本：** 9
 
@@ -36,7 +36,7 @@ function createMac(algName: string): Mac
 
 | 类型 | 说明 |
 | --- | --- |
-| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 返回由输入算法指定生成的[Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md)对象。 |
+| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 返回对应算法的Mac实例。 |
 
 **错误码：**
 
@@ -68,9 +68,9 @@ try {
 function createMac(macSpec: MacSpec): Mac
 ```
 
-生成Mac实例，用于进行消息认证码的计算与操作。
+创建消息认证码实例。
 
-支持的规格详见[MAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
+<br>支持的规格详见[MAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
 
 **起始版本：** 18
 
@@ -90,7 +90,7 @@ function createMac(macSpec: MacSpec): Mac
 
 | 类型 | 说明 |
 | --- | --- |
-| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 返回由指定入参参数生成的[Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md)对象。 |
+| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 返回对应算法的Mac实例。 |
 
 **错误码：**
 

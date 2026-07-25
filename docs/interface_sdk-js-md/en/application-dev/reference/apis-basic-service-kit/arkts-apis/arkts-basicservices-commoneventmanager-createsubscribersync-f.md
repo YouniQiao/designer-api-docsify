@@ -12,7 +12,7 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEventSubscriber
 ```
 
-Creates a subscriber. The API returns the result synchronously.
+Creates a subscriber synchronously.
 
 **Since:** 10
 

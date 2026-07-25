@@ -1,6 +1,8 @@
 # ChipV2SuffixSymbolIcon
 
-定义Symbol类型后缀图标。
+ChipV2SuffixSymbolIcon定义后缀Symbol图标类。
+
+继承自[ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md)。
 
 **继承/实现关系：** ChipV2SuffixSymbolIcon extends [ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md)
 
@@ -24,7 +26,7 @@ import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig
 constructor(config: ChipV2SuffixSymbolIconConfig)
 ```
 
-ChipV2SuffixSymbolIcon的构造函数
+ChipV2SuffixSymbolIcon的构造函数。
 
 **起始版本：** 26.0.0
 
@@ -40,7 +42,7 @@ ChipV2SuffixSymbolIcon的构造函数
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ChipV2SuffixSymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2suffixsymboliconconfig-i.md) | 是 | 后缀符号配置 |
+| config | [ChipV2SuffixSymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2suffixsymboliconconfig-i.md) | 是 | 后缀Symbol图标属性配置，用于设置后缀Symbol图标的显示属性和无障碍功能，继承自ChipV2SymbolIconConfig，包含normal、activated、normalAccessibility、activatedAccessibility、action等配置项。 |
 
 ## action
 
@@ -48,7 +50,11 @@ ChipV2SuffixSymbolIcon的构造函数
 public action?: VoidCallback
 ```
 
-在单击后缀符号时调用。
+后缀图标点击事件回调函数。点击后缀图标时调用此回调函数。
+
+默认值：不设定后缀图标事件。
+
+值为undefined时，按默认值处理。
 
 **类型：** VoidCallback
 
@@ -68,7 +74,9 @@ public action?: VoidCallback
 public activatedAccessibility?: ChipV2Accessibility
 ```
 
-为后缀符号设置激活的无障碍配置。
+激活态无障碍朗读功能属性。
+
+默认值：undefined，无朗读内容。
 
 **类型：** ChipV2Accessibility
 
@@ -88,7 +96,9 @@ public activatedAccessibility?: ChipV2Accessibility
 public normalAccessibility?: ChipV2Accessibility
 ```
 
-为后缀符号设置正常的无障碍配置。
+非激活态无障碍朗读功能属性。
+
+默认值：undefined，无朗读内容。
 
 **类型：** ChipV2Accessibility
 

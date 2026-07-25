@@ -3,7 +3,8 @@
 ChipSymbolGlyphOptions定义前缀图标和后缀图标的属性。
 > **说明：**  
 >  
-> 不支持使用[SymbolEffect](../arkts-components/arkts-arkui-symboleffect-c.md)修改动效类型及effectStrategy设置动效。
+> 不支持使用[SymbolEffect](SymbolGlyphAttribute#symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean))修改动效类型及  
+> effectStrategy设置动效。
 
 **起始版本：** 12
 
@@ -23,7 +24,7 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 activated?: SymbolGlyphModifier
 ```
 
-激活时图标设定。
+设置Chip在激活状态下显示的symbol类型图标。
 
 默认值：不显示前缀图标或后缀图标
 
@@ -47,7 +48,7 @@ activated?: SymbolGlyphModifier
 normal?: SymbolGlyphModifier
 ```
 
-非激活时图标设定。
+设置Chip在非激活状态下显示的symbol类型图标。
 
 默认值：不显示前缀图标或后缀图标
 

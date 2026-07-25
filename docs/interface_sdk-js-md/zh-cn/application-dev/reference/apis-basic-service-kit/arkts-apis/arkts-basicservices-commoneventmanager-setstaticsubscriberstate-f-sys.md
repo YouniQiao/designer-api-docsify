@@ -28,7 +28,7 @@ function setStaticSubscriberState(enable: boolean, callback: AsyncCallback<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 表示静态订阅事件使能状态。 true：使能 false：去使能。 |
+| enable | boolean | 是 | 表示静态订阅事件使能状态。true：使能，false：去使能。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置静态订阅事件使能状态成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -78,7 +78,7 @@ function setStaticSubscriberState(enable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 表示静态订阅事件使能状态。 true：使能 false：去使能。 |
+| enable | boolean | 是 | 表示静态订阅事件使能状态。true：使能，false：去使能。 |
 
 **返回值：**
 
@@ -115,7 +115,7 @@ commonEventManager.setStaticSubscriberState(false).then(() => {
 function setStaticSubscriberState(enable: boolean, events?: Array<string>): Promise<void>
 ```
 
-为当前应用设置静态订阅事件的使能状态，并且记录事件名称。使用Promise异步回调。
+设置当前应用的静态订阅公共事件的使能状态。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -131,8 +131,8 @@ function setStaticSubscriberState(enable: boolean, events?: Array<string>): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 表示静态订阅事件使能状态。 true：使能 false：去使能。 |
-| events | Array&lt;string&gt; | 否 | 表示记录事件名称。 |
+| enable | boolean | 是 | 表示静态订阅事件使能状态。true：使能，false：去使能。 |
+| events | Array&lt;string&gt; | 否 | 表示需要设置的公共事件名称列表，默认为空列表，表示设置当前应用所有的静态订阅公共事件状态。 |
 
 **返回值：**
 

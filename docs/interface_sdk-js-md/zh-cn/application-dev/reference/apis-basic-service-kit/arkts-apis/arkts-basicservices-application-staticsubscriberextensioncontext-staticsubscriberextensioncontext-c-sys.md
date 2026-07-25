@@ -26,12 +26,7 @@ import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-拉起一个静态订阅所属的同应用的Ability。使用callback异步回调。
-
-使用规则：
-
-- 调用方应用位于后台时，使用该接口启动Ability需申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限  
-- 跨应用场景下，目标Ability的visible属性若配置为false，调用方应用需申请`ohos.permission.START_INVISIBLE_ABILITY`权限
+拉起与静态订阅同属一个应用的Ability。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -50,7 +45,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 启动Ability的want信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback形式返回启动结果。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，用于接收启动结果。 |
 
 **错误码：**
 
@@ -115,12 +110,7 @@ class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbilit
 startAbility(want: Want): Promise<void>
 ```
 
-拉起一个静态订阅所属的同应用的Ability。使用Promise异步回调。
-
-使用规则：
-
-- 调用方应用位于后台时，使用该接口启动Ability需申请`ohos.permission.START_ABILITIES_FROM_BACKGROUND`权限  
-- 跨应用场景下，目标Ability的visible属性若配置为false，调用方应用需申请`ohos.permission.START_INVISIBLE_ABILITY`权限
+拉起与静态订阅同属一个应用的Ability。使用Promise异步回调。
 
 **起始版本：** 10
 

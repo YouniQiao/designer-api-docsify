@@ -50,7 +50,7 @@ COMPACT = 1
 INLINE = 2
 ```
 
-普通数字内联调节型Counter。
+数值内联型Counter。
 
 **起始版本：** 11
 
@@ -68,7 +68,7 @@ INLINE = 2
 INLINE_DATE = 3
 ```
 
-日期型内联型Counter。
+日期内联型Counter。
 
 **起始版本：** 11
 

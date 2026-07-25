@@ -1,6 +1,6 @@
 # GeneralName
 
-Represents the GeneralName.
+Represents an X.509 GeneralName as defined in RFC 5280, which can appear in Subject Alternative Name and other extensions.
 
 **Since:** 12
 

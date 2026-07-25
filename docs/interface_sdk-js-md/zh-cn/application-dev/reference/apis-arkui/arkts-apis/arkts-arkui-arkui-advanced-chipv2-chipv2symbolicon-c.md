@@ -1,6 +1,8 @@
 # ChipV2SymbolIcon
 
-定义Symbol类型图标。
+ChipV2SymbolIcon定义Symbol图标类。
+
+继承自[ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)。
 
 **继承/实现关系：** ChipV2SymbolIcon extends [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
@@ -24,7 +26,7 @@ import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig
 constructor(config: ChipV2SymbolIconConfig)
 ```
 
-ChipV2SymbolIcon的构造函数
+ChipV2SymbolIcon的构造函数。
 
 **起始版本：** 26.0.0
 
@@ -40,7 +42,7 @@ ChipV2SymbolIcon的构造函数
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md) | 是 | ChipV2符号图标配置 |
+| config | [ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md) | 是 | Symbol图标属性配置，用于设置Symbol类型图标在不同状态下的显示属性，包含normal、activated等配置项。 |
 
 ## activated
 
@@ -48,7 +50,13 @@ ChipV2SymbolIcon的构造函数
 public activated?: SymbolGlyphModifier
 ```
 
-激活态符号。
+激活时图标设定。
+
+默认值：不显示前缀图标或后缀图标。
+
+值为undefined时，按默认值处理。
+
+不支持使用[SymbolEffect](SymbolGlyphAttribute#symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean))修改动效类型及[effectStrategy](SymbolGlyphAttribute#effectStrategy)设置动效。
 
 **类型：** SymbolGlyphModifier
 
@@ -68,7 +76,13 @@ public activated?: SymbolGlyphModifier
 public normal?: SymbolGlyphModifier
 ```
 
-正常态符号
+非激活时图标设定。
+
+默认值：不显示前缀图标或后缀图标。
+
+值为undefined时，按默认值处理。
+
+不支持使用[SymbolEffect](SymbolGlyphAttribute#symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean))修改动效类型及[effectStrategy](SymbolGlyphAttribute#effectStrategy)设置动效。
 
 **类型：** SymbolGlyphModifier
 

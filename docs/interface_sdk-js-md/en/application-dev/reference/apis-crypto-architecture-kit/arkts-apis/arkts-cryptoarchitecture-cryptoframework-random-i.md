@@ -1,6 +1,6 @@
 # Random
 
-Provides APIs for random number operations. Before using any API of the **Random** class, you must create a **Random** instance by using [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom).
+Random interface, defining methods for generating random numbers. Before use, you must create a **Random** instance by using [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom).
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 enableHardwareEntropy(): void
 ```
 
-Enables the hardware entropy source.
+Enables the hardware entropy source. Secure random numbers obtained from TEE will be used as the entropy source of this random instance.
 
 **Since:** 21
 

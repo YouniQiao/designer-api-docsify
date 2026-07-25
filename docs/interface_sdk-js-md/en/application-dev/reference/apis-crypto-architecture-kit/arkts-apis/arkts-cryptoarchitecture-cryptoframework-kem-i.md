@@ -1,6 +1,6 @@
 # Kem
 
-Provides APIs for key encapsulation and decapsulation operations using the key encapsulation mechanism (KEM).
+Key encapsulation mechanism (KEM) interface, defining methods for key encapsulation and decapsulation based on KEM.Before use, you must create a **Kem** instance by using [createKem(algNameId: KemAlgNameId): Kem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createkem).
 
 **Since:** 26.0.0
 

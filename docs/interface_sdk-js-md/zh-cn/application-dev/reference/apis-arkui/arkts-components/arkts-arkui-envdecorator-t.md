@@ -4,7 +4,7 @@
 declare type EnvDecorator = (value: SystemProperties) => PropertyDecorator
 ```
 
-定义Env装饰器类型
+定义EnvDecorator属性装饰器类型。
 
 **起始版本：** 22
 
@@ -20,11 +20,11 @@ declare type EnvDecorator = (value: SystemProperties) => PropertyDecorator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SystemProperties](arkts-arkui-systemproperties-e.md) | 是 | 用户输入的环境变量key值  |
+| value | [SystemProperties](arkts-arkui-systemproperties-e.md) | 是 | 环境变量属性名，用于指定要获取的系统环境变量。  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PropertyDecorator | Env装饰器  |
+| PropertyDecorator | 属性装饰器，开发者无需关注该返回值。  |
 

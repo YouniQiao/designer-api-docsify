@@ -1,6 +1,6 @@
 # ChipV2SymbolIconConfig
 
-定义符号图标配置。
+ChipV2SymbolIconConfig定义Symbol图标的属性配置。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,13 @@ import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig
 activated?: SymbolGlyphModifier
 ```
 
-激活态符号。
+激活时图标设定。
+
+默认值：不显示前缀图标或后缀图标。
+
+值为undefined时，按默认值处理。
+
+不支持使用[SymbolEffect](SymbolGlyphAttribute#symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean))修改动效类型及[effectStrategy](SymbolGlyphAttribute#effectStrategy)设置动效。
 
 **类型：** SymbolGlyphModifier
 
@@ -40,7 +46,13 @@ activated?: SymbolGlyphModifier
 normal?: SymbolGlyphModifier
 ```
 
-正常态符号
+非激活时图标设定。
+
+默认值：不显示前缀图标或后缀图标。
+
+值为undefined时，按默认值处理。
+
+不支持使用[SymbolEffect](SymbolGlyphAttribute#symbolEffect(symbolEffect: SymbolEffect, isActive?: boolean))修改动效类型及[effectStrategy](SymbolGlyphAttribute#effectStrategy)设置动效。
 
 **类型：** SymbolGlyphModifier
 

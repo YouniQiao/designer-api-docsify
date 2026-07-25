@@ -2,7 +2,7 @@
 
 分段按钮选项集合。
 
-继承自 Array\&lt;[SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)&gt;
+继承自 Array\&lt;[SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md)&gt;
 
 **继承/实现关系：** SegmentButtonV2Items extends [Array<SegmentButtonV2Item>](Array<SegmentButtonV2Item>)
 
@@ -50,7 +50,7 @@ constructor(items: SegmentButtonV2ItemOptions[])
 get hasHybrid(): boolean
 ```
 
-是否支持图文混合选项。
+是否包含图文混合选项。
 
 **类型：** boolean
 

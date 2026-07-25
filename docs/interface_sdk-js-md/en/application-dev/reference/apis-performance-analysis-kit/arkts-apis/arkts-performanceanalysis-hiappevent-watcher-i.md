@@ -3,7 +3,7 @@
 Defines parameters for a **Watcher** object. This API is used to configure and manage event watchers to subscribe to and process specified events.
 > **NOTE**  
 >  
-> You are not advised to [remove watchers](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher) in the callback. Once a watcher is  
+> You are not advised to call [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher) in the callback. Once a watcher is  
 > removed, the subscription callback of the watcher becomes invalid, and the callback may not be triggered when an  
 > event occurs.
 
@@ -43,7 +43,7 @@ Subscription filtering condition. This parameter is passed only when subscriptio
 name: string
 ```
 
-Unique name of a watcher. The value contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z), and underscore (_). It must start with a letter and end with a digit or letter. For example, **testName1** and **crash_Watcher**.
+Unique name of a watcher. The value contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z), and underscore (_). It must start with a letter and end with a digit or letter. For example,**testName1** and **crash_Watcher**.
 
 **Type:** string
 

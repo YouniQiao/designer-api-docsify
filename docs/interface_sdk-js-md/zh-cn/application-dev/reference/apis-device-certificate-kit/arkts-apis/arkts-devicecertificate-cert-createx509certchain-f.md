@@ -12,7 +12,7 @@ import { cert } from '@kit.DeviceCertificateKit';
 function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>
 ```
 
-表示创建X509证书链对象。使用Promise方式返回结果。
+表示创建X.509证书链对象。使用Promise方式返回结果。
 
 **起始版本：** 11
 
@@ -26,7 +26,7 @@ function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X509证书序列化数据。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X.509证书序列化数据。 |
 
 **返回值：**
 
@@ -140,7 +140,7 @@ createX509CertChain();
 function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X509CertChain>): void
 ```
 
-表示创建X509证书链对象。使用Callback异步回调。
+表示创建X.509证书链对象。使用Callback异步回调。
 
 **起始版本：** 11
 
@@ -154,8 +154,8 @@ function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X50
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X509证书序列化数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509CertChain&gt; | 是 | 回调函数。当创建X509证书链对象成功时，err为undefined，data为获取到的X509CertChain实例；否则为错误对象。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X.509证书序列化数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509CertChain&gt; | 是 | 回调函数。当创建X.509证书链对象成功时，err为undefined，data为获取到的X509CertChain实例；否则为错误对象。 |
 
 **错误码：**
 
@@ -258,7 +258,7 @@ cert.createX509CertChain(encodingBlob, (err, certChain) => {
 function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 ```
 
-表示使用X509Cert数组方式创建X509证书链对象，并同步返回结果。
+表示使用X509Cert数组方式创建X.509证书链对象，并同步返回结果。
 
 **起始版本：** 11
 
@@ -272,13 +272,13 @@ function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| certs | Array&lt;X509Cert&gt; | 是 | X509证书对象数组。 |
+| certs | Array&lt;X509Cert&gt; | 是 | X.509证书对象数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md) | 表示X509证书链对象。 |
+| [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md) | 表示X.509证书链对象。 |
 
 **错误码：**
 

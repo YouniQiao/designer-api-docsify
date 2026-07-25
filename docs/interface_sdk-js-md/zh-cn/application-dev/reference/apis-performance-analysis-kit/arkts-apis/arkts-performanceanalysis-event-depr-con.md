@@ -24,7 +24,7 @@ const DISTRIBUTED_SERVICE_START: string
 const USER_LOGIN: string
 ```
 
-用户登录
+用户登录事件。
 
 **起始版本：** 7
 

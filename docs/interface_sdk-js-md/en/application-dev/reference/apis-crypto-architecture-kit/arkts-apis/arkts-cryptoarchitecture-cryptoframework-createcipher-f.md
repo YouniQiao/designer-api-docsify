@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createCipher(transformation: string): Cipher
 ```
 
-Creates a [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance based on the specified algorithm.
+Creates a **Cipher** instance.
 > **NOTE**  
 >  
 > 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding  
@@ -47,7 +47,7 @@ Creates a [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instanc
 
 | Type | Description |
 | --- | --- |
-| [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) | [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance created. |
+| [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) | Returns the **Cipher** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 

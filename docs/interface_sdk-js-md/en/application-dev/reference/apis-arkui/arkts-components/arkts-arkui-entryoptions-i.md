@@ -2,7 +2,7 @@
 
 Defines the options of Entry ClassDecorator.
 
-**Since:** 23
+**Since:** 10
 
 <!--Device-unnamed-declare interface EntryOptions--><!--Device-unnamed-declare interface EntryOptions-End-->
 
@@ -18,13 +18,13 @@ Named route name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
 <!--Device-EntryOptions-routeName? : string--><!--Device-EntryOptions-routeName? : string-End-->
 
@@ -40,13 +40,13 @@ LocalStorage to be passed.
 
 **Type:** LocalStorage
 
-**Since:** 23
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+**Widget capability:** This API can be used in ArkTS widgets since API version 10.
 
 <!--Device-EntryOptions-storage? : LocalStorage--><!--Device-EntryOptions-storage? : LocalStorage-End-->
 

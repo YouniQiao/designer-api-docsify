@@ -1,6 +1,6 @@
 # X509CRL
 
-X.509 CRL操作。
+提供用于X.509证书吊销列表操作的API。
 
 **起始版本：** 11
 
@@ -20,7 +20,7 @@ import { cert } from '@kit.DeviceCertificateKit';
 getEncoded(callback: AsyncCallback<EncodingBlob>): void
 ```
 
-表示获取X509证书吊销列表的序列化数据。使用Callback异步回调。
+表示获取X.509证书吊销列表的序列化数据。使用Callback异步回调。
 
 **起始版本：** 11
 
@@ -34,7 +34,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EncodingBlob&gt; | 是 | 回调函数。当获取X509证书吊销列表序列化数据成功时，err为undefined，data为获取到的X509证书吊销列表序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EncodingBlob&gt; | 是 | 回调函数。当获取X.509证书吊销列表序列化数据成功时，err为undefined，data为获取到的X.509证书吊销列表序列化数据；否则为错误对象。 |
 
 **错误码：**
 
@@ -51,7 +51,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 getEncoded(): Promise<EncodingBlob>
 ```
 
-表示获取X509证书吊销列表的序列化数据。使用Promise方式返回结果。
+表示获取X.509证书吊销列表的序列化数据。使用Promise方式返回结果。
 
 **起始版本：** 11
 
@@ -65,7 +65,7 @@ getEncoded(): Promise<EncodingBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;EncodingBlob&gt; | Promise对象，返回X509证书吊销列表的序列化数据。 |
+| Promise&lt;EncodingBlob&gt; | Promise对象，返回X.509证书吊销列表的序列化数据。 |
 
 **错误码：**
 
@@ -142,10 +142,10 @@ getExtensionsObject(): CertExtension
 getIssuerName(): DataBlob
 ```
 
-表示获取X509证书吊销列表颁发者名称。
+表示获取X.509证书吊销列表颁发者名称。
 > **说明：**  
 >  
-> 获取到的X509证书吊销列表颁发者名称数据带字符串结束符。
+> 获取到的X.509证书吊销列表颁发者名称数据带字符串结束符。
 
 **起始版本：** 11
 
@@ -159,7 +159,7 @@ getIssuerName(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X509证书吊销列表颁发者名称。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书吊销列表颁发者名称。 |
 
 **错误码：**
 
@@ -175,7 +175,7 @@ getIssuerName(): DataBlob
 getIssuerName(encodingType: EncodingType): string
 ```
 
-根据编码类型获取X509证书吊销列表颁发者名称。
+根据编码类型获取X.509证书吊销列表颁发者名称。
 
 **起始版本：** 20
 
@@ -195,7 +195,7 @@ getIssuerName(encodingType: EncodingType): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 表示X509证书吊销列表颁发者名称，使用逗号分隔相对可分辨名称。 |
+| string | 表示X.509证书吊销列表颁发者名称，使用逗号分隔相对可分辨名称。 |
 
 **错误码：**
 
@@ -242,7 +242,7 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 getLastUpdate(): string
 ```
 
-表示获取X509证书吊销列表最后一次更新日期，日期为ASN.1时间格式。
+表示获取X.509证书吊销列表最后一次更新日期，日期为UTC时间或通用时间字符串格式。
 
 **起始版本：** 11
 
@@ -256,7 +256,7 @@ getLastUpdate(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 表示X509证书吊销列表最后一次更新日期，日期为ASN.1时间格式。 |
+| string | 表示X.509证书吊销列表最后一次更新日期，日期为UTC时间或通用时间字符串格式。 |
 
 **错误码：**
 
@@ -272,7 +272,7 @@ getLastUpdate(): string
 getNextUpdate(): string
 ```
 
-表示获取证书吊销列表下一次更新的日期，日期为ASN.1时间格式。
+表示获取证书吊销列表下一次更新的日期，日期为UTC时间或通用时间字符串格式。
 
 **起始版本：** 11
 
@@ -286,7 +286,7 @@ getNextUpdate(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 表示X509证书吊销列表下一次更新的日期，日期为ASN.1时间格式。 |
+| string | 表示X.509证书吊销列表下一次更新的日期，日期为UTC时间或通用时间字符串格式。 |
 
 **错误码：**
 
@@ -434,7 +434,7 @@ getRevokedCerts(): Promise<Array<X509CRLEntry>>
 getSignature(): DataBlob
 ```
 
-表示获取X509证书吊销列表的签名数据。
+表示获取X.509证书吊销列表的签名数据。
 
 **起始版本：** 11
 
@@ -448,7 +448,7 @@ getSignature(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X509证书吊销列表的签名数据。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书吊销列表的签名数据。 |
 
 **错误码：**
 
@@ -464,7 +464,7 @@ getSignature(): DataBlob
 getSignatureAlgName(): string
 ```
 
-表示获取X509证书吊销列表签名的算法名称。
+表示获取X.509证书吊销列表签名的算法名称。
 
 **起始版本：** 11
 
@@ -478,7 +478,7 @@ getSignatureAlgName(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 表示X509证书吊销列表签名的算法名。 |
+| string | 表示X.509证书吊销列表签名的算法名。 |
 
 **错误码：**
 
@@ -494,7 +494,7 @@ getSignatureAlgName(): string
 getSignatureAlgOid(): string
 ```
 
-表示获取X509证书吊销列表签名算法的对象标识符OID（Object Identifier）。OID是由国际标准化组织（ISO）的名称注册机构分配。
+表示获取X.509证书吊销列表签名算法的对象标识符OID（Object Identifier）。OID是由国际标准化组织（ISO）的名称注册机构分配。
 
 **起始版本：** 11
 
@@ -508,7 +508,7 @@ getSignatureAlgOid(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 表示X509证书吊销列表签名算法的对象标识符OID。 |
+| string | 表示X.509证书吊销列表签名算法的对象标识符OID。 |
 
 **错误码：**
 
@@ -524,7 +524,7 @@ getSignatureAlgOid(): string
 getSignatureAlgParams(): DataBlob
 ```
 
-表示获取X509证书吊销列表签名的算法参数。
+表示获取X.509证书吊销列表签名的算法参数。
 
 **起始版本：** 11
 
@@ -538,7 +538,7 @@ getSignatureAlgParams(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X509证书吊销列表签名的算法参数。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书吊销列表签名的算法参数。 |
 
 **错误码：**
 
@@ -607,7 +607,7 @@ getType(): string
 getVersion(): number
 ```
 
-表示获取X509证书吊销列表的版本号。
+表示获取X.509证书吊销列表的版本号。
 
 **起始版本：** 11
 
@@ -621,7 +621,7 @@ getVersion(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 表示获取X509证书吊销列表的版本号。 |
+| number | 表示获取X.509证书吊销列表的版本号。 |
 
 ## hashCode
 
@@ -796,7 +796,7 @@ toString(encodingType: EncodingType): string
 verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 ```
 
-表示对X509证书吊销列表进行验签。使用Callback异步回调。验签支持RSA算法。
+表示对X.509证书吊销列表进行验签。使用Callback异步回调。验签支持RSA算法。
 
 **起始版本：** 11
 
@@ -826,7 +826,7 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 verify(key: cryptoFramework.PubKey): Promise<void>
 ```
 
-表示对X509证书吊销列表进行验签。使用Promise方式返回结果。验签支持RSA算法。
+表示对X.509证书吊销列表进行验签。使用Promise方式返回结果。验签支持RSA算法。
 
 **起始版本：** 11
 

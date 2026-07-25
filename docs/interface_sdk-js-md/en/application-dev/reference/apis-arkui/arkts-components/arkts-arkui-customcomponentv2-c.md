@@ -16,7 +16,7 @@ Custom ComponentV2
 aboutToReuse?(): void
 ```
 
-Invoked when a reusable custom component managed by state management V2is taken from the reuse pool and reinserted into the node tree.
+aboutToReuse Method for @ComponentV2, it is executed when fetching instance of custom component from RecyclePool.It is different from the @Reusable in CustomComponent, there is no param parameter in this callback.
 
 **Since:** 18
 

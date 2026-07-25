@@ -42,5 +42,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [EventType](arkts-performanceanalysis-hiappevent-eventtype-depr-e.md) | 枚举事件类型。 |
+| [EventType](arkts-performanceanalysis-hiappevent-eventtype-depr-e.md) | 事件类型枚举。 |
 

@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createSign(algName: string): Sign
 ```
 
-生成Sign实例。
+创建签名实例。
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ function createSign(algName: string): Sign
 
 | 类型 | 说明 |
 | --- | --- |
-| [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) | 返回由输入算法指定生成的Sign对象。 |
+| [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) | 返回对应算法的Sign实例。 |
 
 **错误码：**
 

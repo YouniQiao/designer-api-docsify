@@ -34,7 +34,7 @@ Creates a **Verify** instance.
 
 | Type | Description |
 | --- | --- |
-| [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) | Returns the **Verify** instance created. |
+| [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) | Returns the **Verify** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 

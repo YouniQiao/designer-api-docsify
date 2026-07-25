@@ -1,18 +1,18 @@
 # Sign
 
-Provides APIs for signing. Before using any API of the **Sign** class, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign). Invoke **init()**, **update()**, and **sign()** in this class in sequence to complete the signing operation. For details about the sample code, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+Signing interface, defining methods for signing data using a private key. Before use, you must create a **Sign** instance by using [createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign). Invoke **init()**,**update()**, and **sign()** in this class in sequence to complete the signing operation.For details about the sample code, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
 
-The **Sign** class does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization.
+<br>The **Sign** instance does not support repeated initialization. When a new key is used for signing, you must create a new **Sign** instance and call **init()** for initialization.
 
-The signing mode is determined by **createSign()**, and the key is set by **init()**.
+<br>The signing mode is determined by **createSign()**, and the key is set by **init()**.
 
-If a small amount of data is to be signed, you can directly call **sign()** to pass in the data for signing after **init()**.
+<br>If a small amount of data is to be signed, you can directly call **sign()** to pass in the data for signing after **init()**.
 
-If a large amount of data is to be signed, you can use **update()** to pass in the data by segment, and then use **sign()** to sign the entire data.
+<br>If a large amount of data is to be signed, you can use **update()** to pass in the data by segment, and then use **sign()** to sign the entire data.
 
-When **update()** is used, the **sign()** API supports only **DataBlob** in versions earlier than API version 10and starts to support **null** since API version 10. After all the data is passed in by using **update()**, call **sign()** to sign the data.
+<br>When **update()** is used, the **sign()** API supports only **DataBlob** in versions earlier than API version10 and starts to support **null** since API version 10. After all the data is passed in by using **update()**, call **sign()** to sign the data.
 
-If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, the **update()** operation is not supported. If **update()** is called in this case, the error code **ERR_CRYPTO_OPERATION** will be returned.
+<br>If the DSA algorithm is used for signing and the digest algorithm is **NoHash**, the **update()** operation is not supported. If **update()** is called in this case, the error code **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ init(priKey: PriKey, callback: AsyncCallback<void>): void
 
 Initializes the **Sign** object using a private key. This API uses an asynchronous callback to return the result.**init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional.
 
-The **Sign** class does not support repeated use of **init**.
+<br>The **Sign** instance does not support repeated use of **init**.
 
 **Since:** 9
 
@@ -129,7 +129,7 @@ Initializes the **Sign** object using a private key. This API uses a promise to 
 
 **init**, **update**, and **sign** must be used together. **init** and **sign** are mandatory, and **update** is optional.
 
-The **Sign** class does not support repeated use of **init**.
+<br>The **Sign** instance does not support repeated use of **init**.
 
 **Since:** 9
 
@@ -173,7 +173,7 @@ Initializes the **Sign** instance with a private key. This API returns the resul
 
 **initSync**, **updateSync**, and **signSync** must be used together. **initSync** and **signSync** are mandatory, and **updateSync** is optional.
 
-The **Sign** class does not support repeated use of **initSync**.
+<br>The **Sign** instance does not support repeated use of **initSync**.
 
 <br><br>**NOTE**<br>It is recommended to prioritize the use of asynchronous API, {@link init}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
@@ -209,7 +209,7 @@ setSignSpec(itemType: SignSpecItem, itemValue: number): void
 
 Sets signing specifications. You can use this API to set signing parameters that cannot be set by [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign).
 
-Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing parameters can be set.
+<br>Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing parameters can be set.
 
 **Since:** 10
 
@@ -257,9 +257,9 @@ function testSetSignSpec() {
 setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 ```
 
-Sets the specified parameter for the Sign object.
+Sets the specified parameter for the Sign instance.
 
-Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
+<br>Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
 
 **Since:** 11
 
@@ -296,9 +296,9 @@ Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
 setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean): void
 ```
 
-Sets the specified parameter for the Sign object.
+Sets the specified parameter for the Sign instance.
 
-Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU, and ML_DSA_CONTEXT in ML-DSA are supported.
+<br>Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU, and ML_DSA_CONTEXT in ML-DSA are supported.
 
 **Since:** 26.0.0
 
@@ -733,7 +733,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 Updates data to be signed. This API uses an asynchronous callback to return the result.
 
-This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance is initialized by using [init](arkts-cryptoarchitecture-cryptoframework-sign-i.md#init) or [initSync](arkts-cryptoarchitecture-cryptoframework-sign-i.md#initsync).
+<br>This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance is initialized by using [init](arkts-cryptoarchitecture-cryptoframework-sign-i.md#init) or [initSync](arkts-cryptoarchitecture-cryptoframework-sign-i.md#initsync).
 > **NOTE**  
 >  
 > You can call **update** multiple times or do not use **update** (call [sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) after  
@@ -787,7 +787,7 @@ update(data: DataBlob): Promise<void>
 
 Updates data to be signed. This API uses a promise to return the result.
 
-Before using this API, you must initialize the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance by using [init()](arkts-cryptoarchitecture-cryptoframework-sign-i.md#init).
+<br>Before using this API, you must initialize the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance by using [init()](arkts-cryptoarchitecture-cryptoframework-sign-i.md#init).
 > **NOTE**  
 >  
 > You can call **update** multiple times or do not use **update** (call  
@@ -847,7 +847,7 @@ updateSync(data: DataBlob): void
 
 Updates data to be signed. This API returns the result synchronously.
 
-This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance is initialized by using [initSync()](arkts-cryptoarchitecture-cryptoframework-sign-i.md#initsync).
+<br>This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance is initialized by using [initSync()](arkts-cryptoarchitecture-cryptoframework-sign-i.md#initsync).
 > **NOTE**  
 >  
 > You can call **updateSync** multiple times or do not use **updateSync** (call  
@@ -900,7 +900,7 @@ This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptofram
 readonly algName: string
 ```
 
-Indicates the algorithm name of the Sign object.
+Indicates the algorithm name of the Sign instance.
 
 **Type:** string
 

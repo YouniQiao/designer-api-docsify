@@ -1,6 +1,6 @@
 # Random
 
-Random类，调用Random方法生成随机数。调用前，需要通过[createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom)构造Random实例。
+随机数接口，定义随机数生成的方法。调用前，需通过[createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom)创建一个Random实例。
 
 **起始版本：** 9
 
@@ -22,7 +22,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 enableHardwareEntropy(): void
 ```
 
-开启硬件熵源。
+开启硬件熵源。将从TEE中获取安全随机数作为该随机数实例的熵源。
 
 **起始版本：** 21
 
@@ -255,7 +255,7 @@ generateRandomSync(len: number): DataBlob
 
 同步生成指定长度的随机数。
 
-<br><br>**说明：**<br>建议优先使用异步API{@link generateRandom}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API，{@link generateRandom}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 10
 

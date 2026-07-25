@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createRandom(): Random
 ```
 
-生成Random实例，用于进行随机数的计算与设置种子。
+创建随机数实例。
 
 **起始版本：** 9
 
@@ -32,7 +32,7 @@ function createRandom(): Random
 
 | 类型 | 说明 |
 | --- | --- |
-| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) | 返回由输入算法指定生成的[Random](arkts-cryptoarchitecture-cryptoframework-random-i.md)对象。<br>支持的规格详见框架概述[随机数算法规格](../../../security/CryptoArchitectureKit/crypto-generate-random-number.md#支持的算法与规格)。 |
+| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) | 返回Random实例。 |
 
 **错误码：**
 

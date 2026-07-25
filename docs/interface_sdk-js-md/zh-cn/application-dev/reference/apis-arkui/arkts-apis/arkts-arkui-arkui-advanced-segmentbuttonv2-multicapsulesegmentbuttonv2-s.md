@@ -1,5 +1,7 @@
 # MultiCapsuleSegmentButtonV2
 
+分段按钮组件用于创建页签型、单选或多选的胶囊型分段按钮，支持文本、图标、Symbol等多种选项类型及图文混合配置，可自定义字体、颜色、圆角等样式。页签型分段按钮适用于页签切换场景，单选胶囊型分段按钮适用于单选切换场景，多选胶囊型分段按钮适用于多选筛选场景。
+
 **起始版本：** 18
 
 **装饰器类型：** @ComponentV2
@@ -39,6 +41,8 @@ $selectedIndexes: OnSelectedIndexesChange
 ```
 
 配置分段按钮选中项变更时触发的回调函数。
+
+默认值：undefined，未设置时不触发回调。
 
 **类型：** OnSelectedIndexesChange
 
@@ -202,7 +206,7 @@ readonly itemFontColor?: ColorMetrics
 
 **说明：**
 
-items设置textModifier的fontColor属性值时，itemFontColor不生效。
+items设置textModifier/fontColor属性值时，itemFontColor不生效。
 
 该成员只读，不支持更改。
 
@@ -226,7 +230,7 @@ items设置textModifier的fontColor属性值时，itemFontColor不生效。
 readonly itemFontSize?: LengthMetrics
 ```
 
-配置分段按钮非选中选项的字体大小。
+配置分段按钮非选中的选项字体大小。
 
 取值范围：[0, +∞)
 
@@ -236,7 +240,7 @@ readonly itemFontSize?: LengthMetrics
 
 不支持设置百分比类型，异常值按默认值处理。
 
-items设置textModifier的fontSize属性值时，itemFontSize不生效。
+items设置textModifier/fontSize属性值时，itemFontSize不生效。
 
 该成员只读，不支持更改。
 
@@ -268,7 +272,7 @@ readonly itemFontWeight?: FontWeight
 
 **说明：**
 
-items设置textModifier的fontWeight属性值时，itemFontWeight不生效。
+items设置textModifier/fontWeight属性值时，itemFontWeight不生效。
 
 该成员只读，不支持更改。
 
@@ -300,7 +304,9 @@ readonly itemIconFillColor?: ColorMetrics
 
 **说明：**
 
-items设置iconModifier的fillColor属性值时，itemIconFillColor不生效。
+items设置iconModifier/fillColor属性值时，itemIconFillColor不生效。
+
+backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
 
 该成员只读，不支持更改。
 
@@ -334,7 +340,7 @@ readonly itemIconSize?: SizeT<LengthMetrics>
 
 **说明：**
 
-items设置iconModifier的width、height属性值时，itemIconSize不生效。
+items设置iconModifier/width、height属性值时，itemIconSize不生效。
 
 该成员只读，不支持更改。
 
@@ -358,7 +364,7 @@ items设置iconModifier的width、height属性值时，itemIconSize不生效。
 readonly itemMaxFontScale?: number | Resource
 ```
 
-配置分段按钮选项文字大小的最大放大倍数。
+配置分段按钮选项文字大小的最大字体缩放倍数。
 
 取值范围：[1, 2]
 
@@ -398,7 +404,7 @@ readonly itemMinFontScale?: number | Resource
 
 **说明：**
 
-设置的值小于 0 时，按值为 0 处理，设置的值大于 1，按值为 1 处理，异常值默认不生效。
+设置的最小字体缩放值小于 0 时，按值为 0 处理，设置的最小字体缩放值大于 1 时，按值为 1 处理，异常值默认不生效。
 
 该成员只读，不支持更改。
 
@@ -510,15 +516,17 @@ readonly itemSelectedBackgroundColor?: ColorMetrics
 readonly itemSelectedFontColor?: ColorMetrics
 ```
 
-配置分段按钮选中项的字体颜色。
+配置分段按钮非选中选项的字体颜色。
 
-默认值：`$r('sys.color.font_primary')`
+默认值：`$r('sys.color.font_secondary')`
 
 值为undefined时，按默认值处理。
 
 **说明：**
 
-items设置textModifier的fontColor属性值时，itemSelectedFontColor不生效。
+items设置textModifier/fontColor属性值时，itemFontColor不生效。
+
+backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
 
 该成员只读，不支持更改。
 
@@ -542,7 +550,7 @@ items设置textModifier的fontColor属性值时，itemSelectedFontColor不生效
 readonly itemSelectedFontSize?: LengthMetrics
 ```
 
-配置分段按钮选中项的字体大小。
+配置分段按钮选中的选项字体大小。
 
 取值范围：[0, +∞)
 
@@ -552,7 +560,7 @@ readonly itemSelectedFontSize?: LengthMetrics
 
 不支持设置百分比类型，异常值按默认值处理。
 
-items设置textModifier的fontSize属性值时，itemSelectedFontSize不生效。
+items设置textModifier/fontSize属性值时，itemSelectedFontSize不生效。
 
 该成员只读，不支持更改。
 
@@ -584,7 +592,7 @@ readonly itemSelectedFontWeight?: FontWeight
 
 **说明：**
 
-items设置textModifier的fontWeight属性值时，itemSelectedFontWeight不生效。
+items设置textModifier/fontWeight属性值时，itemSelectedFontWeight不生效。
 
 该成员只读，不支持更改。
 
@@ -616,7 +624,9 @@ readonly itemSelectedIconFillColor?: ColorMetrics
 
 **说明：**
 
-items设置iconModifier的fillColor属性值时，itemSelectedIconFillColor不生效。
+items设置iconModifier/fillColor属性值时，itemSelectedIconFillColor不生效。
+
+backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
 
 该成员只读，不支持更改。
 
@@ -648,7 +658,9 @@ readonly itemSelectedSymbolFontColor?: ColorMetrics
 
 **说明：**
 
-items设置symbolModifier的fontColor属性值时，itemSelectedSymbolFontColor不生效。
+items设置symbolModifier/fontColor属性值时，itemSelectedSymbolFontColor不生效。
+
+backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
 
 该成员只读，不支持更改。
 
@@ -712,7 +724,9 @@ readonly itemSymbolFontColor?: ColorMetrics
 
 **说明：**
 
-items设置symbolModifier的fontColor属性值时，itemSymbolFontColor不生效。
+items设置symbolModifier/fontColor属性值时，itemSymbolFontColor不生效。
+
+backgroundSystemMaterial设置自动反色的系统材质时，该属性使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
 
 该成员只读，不支持更改。
 
@@ -746,7 +760,7 @@ readonly itemSymbolFontSize?: LengthMetrics
 
 不支持设置百分比类型，异常值按默认值处理。
 
-items设置symbolModifier的fontSize属性值时，itemSymbolFontSize不生效。
+items设置symbolModifier/fontSize属性值时，itemSymbolFontSize不生效。
 
 该成员只读，不支持更改。
 
@@ -824,7 +838,9 @@ readonly languageDirection?: Direction
 onItemClicked?: Callback<number>
 ```
 
-配置分段按钮选项被单击时触发的回调函数。
+配置分段按钮选项被单击时触发的回调函数。回调参数为number类型，表示被单击选项的下标，第一项编号为0，之后按顺序递增。
+
+默认值：undefined，未设置时不触发回调。
 
 **类型：** Callback&lt;number&gt;
 
@@ -850,7 +866,7 @@ readonly selectedIndexes: number[]
 
 **说明：**
 
-仅支持有效的按钮编号（第一个按钮编号为0，之后按顺序累加），如没有选中项可传入空数组`[]`。
+仅支持有效的按钮编号（第一个按钮编号为0，之后按顺序累加，取值范围：[0, items长度-1]），如没有选中项可传入空数组`[]`。传入无效编号（小于0或大于items长度-1）时，该编号不选中对应选项。
 
 该成员只读，不支持更改。
 

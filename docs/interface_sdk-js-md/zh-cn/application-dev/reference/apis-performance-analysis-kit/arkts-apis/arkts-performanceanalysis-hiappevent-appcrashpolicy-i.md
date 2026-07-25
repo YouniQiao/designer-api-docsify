@@ -20,7 +20,17 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 collectMinidump?: boolean
 ```
 
-APP_CRASH事件策略值为true表示启用日志转储捕获功能。false表示关闭日志转储功能。<br>默认值：false。
+是否使能[minidump](../../../dfx/performance-analysis-kit-terminology.md#minidump)，默认值为false。
+
+true：[params字段说明](../../../dfx/hiappevent-watcher-crash-events.md#params字段说明)中log_over_limit字段判断生成的与已存在的故障日志文件的大小总和上限调整为35MB。
+
+false：log_over_limit字段判断生成的与已存在的故障日志文件的大小总和上限恢复为5MB。
+
+**说明**：该配置项为持久化配置，应用未重新设置前，值不变。
+
+**起始版本**：26.0.0
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **类型：** boolean
 
@@ -46,7 +56,7 @@ false：64位系统打印pc和lr寄存器地址向前16字节、向后232字节�
 
 默认值：false。
 
-26.0.0
+**起始版本**：26.0.0
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
@@ -68,7 +78,7 @@ logFileCutoffSzBytes?: number
 
 设置崩溃日志截断大小。单位为byte，取值范围为[0, 5242880]。默认值取0，表示不截断崩溃日志。
 
-26.0.0
+**起始版本**：26.0.0
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
@@ -122,7 +132,7 @@ false：打印所有VMA映射信息。
 
 默认值：false。
 
-26.0.0
+**起始版本**：26.0.0
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 

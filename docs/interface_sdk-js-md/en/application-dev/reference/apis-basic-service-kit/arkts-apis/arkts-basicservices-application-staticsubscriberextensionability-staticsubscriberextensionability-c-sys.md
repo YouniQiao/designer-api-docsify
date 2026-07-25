@@ -1,6 +1,12 @@
 # StaticSubscriberExtensionAbility (System API)
 
-The **StaticSubscriberExtensionAbility** module provides Extension abilities for static subscribers.
+This module provides extension abilities of Basic Services Kit for static subscribers,which can be used to subscribe to common events in static mode. Static subscription enables receiving common events without keeping the app running in the background. This ability is applicable to scenarios where system services or system apps need to perform background processing when specific common events occur.
+
+**StaticSubscriberExtensionAbility** provides the **onReceiveEvent** method and the **context** attribute. The **context** attribute is of the **StaticSubscriberExtensionContext** type, which is the running context of the extension ability. It is inherited from **ExtensionContext** and provides **startAbility** to start other abilities in the same app during event processing.
+
+**APIs used in combination**
+
+The typical process of this module is as follows: Inherit the base class, override **onReceiveEvent**, start a callback, read the event data, and start the target ability. Note that **context.startAbility** can start only the abilities that belong to the same app as the current **StaticSubscriberExtensionAbility**.
 
 **Since:** 9
 
@@ -22,7 +28,7 @@ import { StaticSubscriberExtensionAbility } from '@kit.BasicServicesKit';
 onReceiveEvent(event: CommonEventData): void
 ```
 
-Represents a callback of the common event of a static subscriber.
+Defines a callback to be invoked when a common event is triggered in static mode.
 
 **Since:** 9
 
@@ -38,7 +44,7 @@ Represents a callback of the common event of a static subscriber.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | Yes | Common event of a static subscriber. |
+| event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | Yes | Common event data received through static subscription. |
 
 **Example**
 
@@ -59,7 +65,7 @@ class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbilit
 context: StaticSubscriberExtensionContext
 ```
 
-Context of the ExtensionAbility.
+Context of the extension ability subscribed to in static mode.
 
 **Type:** StaticSubscriberExtensionContext
 

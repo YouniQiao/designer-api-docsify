@@ -1,6 +1,10 @@
 # LabelOptions
 
 LabelOptions定义文本属性。
+> **说明：**  
+>  
+> 从API版本26.0.0开始，backgroundSystemMaterial设置自动反色的系统材质时，fontColor使用支持反色的特殊系统资源，文字颜色自动适配到材质背景色的反色；  
+> activatedBackgroundSystemMaterial设置自动反色的系统材质时，activatedFontColor使用支持反色的特殊系统资源，Chip激活时的文字颜色自动适配到材质背景色的反色。
 
 **起始版本：** 11
 
@@ -20,7 +24,7 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 activatedFontColor?: ResourceColor
 ```
 
-操作块激活时的文字颜色。
+Chip激活时的文字颜色。
 
 默认值：$r('sys.color.ohos_id_color_text_primary_contrary')
 
@@ -68,7 +72,7 @@ fontColor?: ResourceColor
 fontFamily?: string
 ```
 
-文字字体。
+设置Chip组件文本的字体样式。
 
 默认值："HarmonyOS Sans"
 
@@ -92,9 +96,13 @@ fontFamily?: string
 fontSize?: Dimension
 ```
 
-文字字号，不支持百分比。
+字体大小，不支持百分比，传入百分比时按默认值处理。
+
+传入负数时，按默认值处理。
 
 默认值：$r('sys.float.ohos_id_text_size_button2')
+
+单位：fp
 
 值为undefined时，按默认值处理。
 
@@ -120,9 +128,9 @@ labelMargin?: LabelMarginOptions
 
 默认值：
 
-size为ChipSize.SMALL时，默认值：{ left: 4, right: 4 }
+size为ChipSize.SMALL时，{ left: 4, right: 4 }
 
-size为ChipSize.NORMAL时，默认值：{ left: 6, right: 6 }
+size为ChipSize.NORMAL时，{ left: 6, right: 6 }
 
 单位：vp
 
@@ -150,11 +158,11 @@ localizedLabelMargin?: LocalizedLabelMarginOptions
 
 默认值：
 
-size为ChipSize.SMALL时，默认值：
+size为ChipSize.SMALL时，
 
 `{ start: LengthMetrics.resource($r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource($r('sys.float.chip_small_text_margin')) }`
 
-size为ChipSize.NORMAL时，默认值：
+size为ChipSize.NORMAL时，
 
 `{ start: LengthMetrics.resource($r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource($r('sys.float.chip_normal_text_margin')) }`
 
@@ -178,7 +186,7 @@ size为ChipSize.NORMAL时，默认值：
 text: string
 ```
 
-文本文字内容。
+Chip组件显示的文本内容。
 
 **类型：** string
 

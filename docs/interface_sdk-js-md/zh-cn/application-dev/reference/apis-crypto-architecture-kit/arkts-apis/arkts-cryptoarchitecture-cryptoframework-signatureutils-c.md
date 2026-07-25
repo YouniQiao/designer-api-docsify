@@ -20,7 +20,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 static genEccSignature(spec: EccSignatureSpec): Uint8Array
 ```
 
-将（r、s）的ECC/SM2签名数据转换为ASN1 DER格式。
+将（r、s）的ECC/SM2签名数据转换为ASN.1 DER编码。
 
 **起始版本：** 20
 
@@ -40,7 +40,7 @@ static genEccSignature(spec: EccSignatureSpec): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | ASN1 DER格式的签名数据。 |
+| Uint8Array | ASN.1 DER编码的签名数据。 |
 
 **错误码：**
 
@@ -81,7 +81,7 @@ function testGenEccSignature() {
 static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec
 ```
 
-从ASN1 DER格式的ECC/SM2签名数据获取r和s。
+从ASN.1 DER编码的ECC/SM2签名数据获取r和s。
 
 **起始版本：** 20
 
@@ -95,7 +95,7 @@ static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Uint8Array | 是 | ASN1 DER格式的签名数据。 |
+| data | Uint8Array | 是 | ASN.1 DER编码的签名数据。 |
 
 **返回值：**
 

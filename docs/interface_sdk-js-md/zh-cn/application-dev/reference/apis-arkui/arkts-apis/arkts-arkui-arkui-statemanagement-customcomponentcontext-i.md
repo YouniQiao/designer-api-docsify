@@ -20,7 +20,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 getReusePool(): IReusePool | undefined
 ```
 
-返回该自定义组件拥有的全局复用池。如果组件没有通过`reusePool`和`poolAccepts`配置复用池，则返回`undefined`。配置全局复用池方式请参考[全局复用开发指南](../../../ui/state-management/arkts-global-reuse-pool.md)。
+返回该自定义组件拥有的全局复用池。如果组件或其上层组件没有通过`reusePool`和`poolAccepts`配置全局复用池，则返回`undefined`。配置全局复用池方式请参考[全局复用开发指南](../../../ui/state-management/arkts-global-reuse-pool.md)。
 
 **起始版本：** 26.0.0
 
@@ -36,7 +36,7 @@ getReusePool(): IReusePool | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [IReusePool](arkts-arkui-arkui-statemanagement-ireusepool-i.md) | If a global reuse pool is configured for the current component, the reuse pool information is returned. Otherwise, **undefined** is returned. |
+| [IReusePool](arkts-arkui-arkui-statemanagement-ireusepool-i.md) | 当前组件配置全局复用池时，返回复用池信息，否则返回`undefined`。 |
 
 **示例：**
 

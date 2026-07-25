@@ -1,6 +1,6 @@
 # Storage（系统接口）
 
-定义存储的基类
+持久化存储后端接口，提供基于键值对（key-value）的数据持久化能力，包括数据的读取、写入、清除和删除。PersistentStorage通过该接口实现AppStorage数据的本地持久化，适用于需要对应用数据进行灵活本地持久化存储的场景。
 
 **起始版本：** 7
 
@@ -16,7 +16,7 @@
 clear(): void
 ```
 
-当数据被清除时调用此方法。
+清除所有存储数据。
 
 **起始版本：** 7
 
@@ -32,7 +32,7 @@ clear(): void
 constructor(needCrossThread?: boolean, file?: string)
 ```
 
-构造函数参数。
+创建Storage实例的构造函数。
 
 **起始版本：** 7
 
@@ -46,8 +46,8 @@ constructor(needCrossThread?: boolean, file?: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| needCrossThread | boolean | 否 |  |
-| file | string | 否 |  |
+| needCrossThread | boolean | 否 | 是否需要跨线程访问存储。预留接口，暂不提供具体功能。 |
+| file | string | 否 | 指定存储文件名。预留接口，暂不提供具体功能。默认使用应用文件目录下的persistent_storage作为存储文件。 |
 
 ## delete
 
@@ -55,7 +55,7 @@ constructor(needCrossThread?: boolean, file?: string)
 delete(key: string): void
 ```
 
-当数据被删除时调用。
+删除指定key对应的存储数据。
 
 **起始版本：** 7
 
@@ -69,7 +69,7 @@ delete(key: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 |  |
+| key | string | 是 | 要删除的存储key名称。 |
 
 ## get
 
@@ -77,13 +77,11 @@ delete(key: string): void
 get(key: string): string | undefined
 ```
 
-获取数据时调用。
+根据指定key从磁盘中读取对应的存储数据。
 
 **起始版本：** 7
 
 <!--Device-Storage-get(key: string): string | undefined--><!--Device-Storage-get(key: string): string | undefined-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
 
@@ -91,13 +89,13 @@ get(key: string): string | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 |  |
+| key | string | 是 | 要获取的存储key名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | @syscap SystemCapability.ArkUI.ArkUI.Full@systemapi@FaAndStageModel |
+| string | key对应的值；key不存在时返回undefined。@systemapi@FaAndStageModel |
 
 ## set
 
@@ -105,7 +103,7 @@ get(key: string): string | undefined
 set(key: string, val: any): void
 ```
 
-设置时调用。
+将指定key对应的数据持久化存储到磁盘。
 
 **起始版本：** 7
 
@@ -119,6 +117,6 @@ set(key: string, val: any): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 |  |
-| val | any | 是 |  |
+| key | string | 是 | 要设置的存储key名称。 |
+| val | any | 是 | 要存储的数据，支持string、number、boolean等基本类型以及可序列化的对象和数组，数据将被序列化后持久化到存储文件中。 |
 

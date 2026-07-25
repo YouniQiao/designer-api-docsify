@@ -14,7 +14,7 @@
 PKCS1_PADDING = 0
 ```
 
-PKCS1填充方式。
+PKCS #1 v1.5填充方式。
 
 **起始版本：** 22
 
@@ -30,7 +30,7 @@ PKCS1填充方式。
 PKCS1_PSS_PADDING = 1
 ```
 
-PKCS1 PSS填充方式。
+PKCS #1 PSS填充方式。
 
 **起始版本：** 22
 

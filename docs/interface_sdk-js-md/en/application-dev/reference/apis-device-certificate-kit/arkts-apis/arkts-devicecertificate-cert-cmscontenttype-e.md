@@ -30,7 +30,7 @@ Signed data.
 ENVELOPED_DATA = 1
 ```
 
-Enveloped data.
+Enveloped data, including authenticated enveloped data.
 
 **Since:** 22
 

@@ -1,6 +1,6 @@
 # Support
 
-System common events are events published by system services or system applications. Subscribing to these common events requires specific permissions and values.
+System common events are events published by system services or system apps. Subscribing to these common events requires specific permissions and event values.
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'
 
 Indicates that the battery level is normal.
 
-When the battery level changes from the low level to normal level, the event notification service is triggered to publish this event.
+When the battery level increases from a low level to a level higher than the low level, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -409,7 +409,7 @@ Indicates that an installed bundle has been uninstalled from the device.
 COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 ```
 
-Indicates that an installed bundle has been uninstalled from the device.
+(Reserved, not supported yet) Indicates that an installed bundle has been uninstalled from the device.
 
 **Since:** 9
 
@@ -513,7 +513,7 @@ When the cache of an application package installed on the device is cleared, the
 COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 ```
 
-Indicates that application packages have been suspended.
+(Reserved, not supported yet) Indicates that the package has been suspended.
 
 **Since:** 9
 
@@ -541,7 +541,7 @@ COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 ```
 
-Indicates that application packages have been suspended by the system.
+(Reserved, not supported yet) Indicates that application packages have been suspended by the system.
 
 **Since:** 9
 
@@ -555,7 +555,7 @@ Indicates that application packages have been suspended by the system.
 COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'
 ```
 
-Indicates that application packages have been unsuspended by the system.
+(Reserved, not supported yet) Indicates that application packages have been unsuspended by the system.
 
 **Since:** 9
 

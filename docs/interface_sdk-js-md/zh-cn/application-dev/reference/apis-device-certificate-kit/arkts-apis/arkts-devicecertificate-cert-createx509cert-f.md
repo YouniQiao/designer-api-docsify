@@ -12,7 +12,7 @@ import { cert } from '@kit.DeviceCertificateKit';
 function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert>): void
 ```
 
-表示创建X509证书对象。使用Callback异步回调。
+表示创建一个X.509证书对象。使用Callback异步回调。
 
 **起始版本：** 9
 
@@ -26,8 +26,8 @@ function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X509证书序列化数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509Cert&gt; | 是 | 回调函数。当创建X509证书对象成功时，err为undefined，data为获取到的X509Cert实例；否则为错误对象。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X.509证书序列化数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509Cert&gt; | 是 | 回调函数。当创建X.509证书对象成功时，err为undefined，data为获取到的X509Cert实例；否则为错误对象。 |
 
 **错误码：**
 
@@ -86,7 +86,7 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>
 ```
 
-表示创建X509证书对象。使用Promise方式返回结果。
+表示创建一个X.509证书对象。使用Promise方式返回结果。
 
 **起始版本：** 9
 
@@ -100,7 +100,7 @@ function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X509证书序列化数据。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | X.509证书序列化数据。 |
 
 **返回值：**
 

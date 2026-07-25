@@ -3,7 +3,7 @@
 Configuration parameters for generating a CSR, including the subject name, digest algorithm, attribute,and output format.
 > **NOTE**  
 >  
-> - subject is an object of the Name type defined by X509.  
+> - subject is an X500DistinguishedName object.  
 >  
 > - mdName indicates the digest algorithm name. Currently, SHA1, SHA256, SHA384, and SHA512 are supported.  
 >  

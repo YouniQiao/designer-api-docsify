@@ -2,7 +2,7 @@
 
 Define IMonitorValue interface
 
-**Since:** 23
+**Since:** 12
 
 <!--Device-unnamed-declare interface IMonitorValue<T>--><!--Device-unnamed-declare interface IMonitorValue<T>-End-->
 
@@ -18,11 +18,11 @@ Get the previous value.
 
 **Type:** T
 
-**Since:** 23
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
@@ -40,11 +40,11 @@ Get current value.
 
 **Type:** T
 
-**Since:** 23
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
@@ -62,11 +62,11 @@ Monitored path input by the user.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 

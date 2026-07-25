@@ -77,7 +77,7 @@ function emit(eventId: string, data?: EventData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventId | string | 是 | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| eventId | string | 是 | 发送的事件ID。不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 | 事件携带的数据，默认为空。 |
 
 **示例：**
@@ -119,7 +119,7 @@ function emit<T>(eventId: string, data?: GenericEventData<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventId | string | 是 | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| eventId | string | 是 | 发送的事件ID。不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 | 事件携带的数据，默认为空。 |
 
 **示例：**
@@ -168,7 +168,7 @@ function emit(eventId: string, options: Options, data?: EventData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventId | string | 是 | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| eventId | string | 是 | 发送的事件ID。不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
 | options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 事件优先级。 |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | 否 | 事件携带的数据，默认为空。 |
 
@@ -215,7 +215,7 @@ function emit<T>(eventId: string, options: Options, data?: GenericEventData<T>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventId | string | 是 | 发送的事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| eventId | string | 是 | 发送的事件ID。不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
 | options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 事件优先级。 |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | 否 | 事件携带的数据，默认为空。 |
 

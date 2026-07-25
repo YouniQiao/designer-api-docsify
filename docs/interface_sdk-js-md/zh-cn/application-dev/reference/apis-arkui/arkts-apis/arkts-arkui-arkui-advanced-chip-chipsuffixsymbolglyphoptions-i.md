@@ -1,6 +1,6 @@
 # ChipSuffixSymbolGlyphOptions
 
-symbol类型后缀图标属性的无障碍朗读功能属性类型。
+symbol类型后缀图标的无障碍朗读功能属性及点击事件回调。
 
 **起始版本：** 14
 
@@ -20,7 +20,9 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 action?: VoidCallback
 ```
 
-后缀图标设定事件。
+后缀图标点击事件回调。
+
+值为undefined时，不设定后缀图标事件。
 
 默认值：undefined
 

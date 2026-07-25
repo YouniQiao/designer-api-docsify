@@ -20,5 +20,5 @@ export type OnInlineCounterV2Change = (value: number) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 当前显示的数值。<br/>。 <br>取值范围：(-∞, +∞)。  |
+| value | number | 是 | 当前显示的数值。 <br>取值范围：[min, max]，其中min和max分别对应CounterV2的最小值和最大值。  |
 

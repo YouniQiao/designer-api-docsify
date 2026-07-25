@@ -6,7 +6,7 @@ declare type UIContext = import('../api/@ohos.arkui.UIContext').UIContext
 
 UIContext
 
-**起始版本：** 12
+**起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

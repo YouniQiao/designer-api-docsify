@@ -6,9 +6,9 @@
 declare function wrapBuilder<Args extends Object[]>(builder: (...args: Args) => void): WrappedBuilder<Args>
 ```
 
-wrapBuilder is a template function that returns a WrappedBuilder object.wrapBuilder only accepts a global @Builder decorated function as its argument.Of the WrappedBuilder object it returns, the builder attribute method can be used only inside the struct.
+Defining wrapBuilder function.
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 

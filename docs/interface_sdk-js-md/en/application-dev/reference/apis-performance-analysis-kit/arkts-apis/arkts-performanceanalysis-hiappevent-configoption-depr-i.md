@@ -38,7 +38,7 @@ Application event logging switch. The value **true** means to disable the applic
 maxStorage?: string
 ```
 
-Maximum size of the event file storage directory. The default value is **10M**. If the specified size is exceeded, the oldest event logging files in the directory will be deleted to free up space.
+Maximum size of the event file storage directory. The default value is **10MB**. If the specified size is exceeded, the oldest event logging files in the directory will be deleted to free up space.
 
 **Type:** string
 

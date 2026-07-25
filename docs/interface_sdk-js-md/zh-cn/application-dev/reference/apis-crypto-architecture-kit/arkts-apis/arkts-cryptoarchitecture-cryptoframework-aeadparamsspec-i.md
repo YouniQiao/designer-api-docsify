@@ -2,7 +2,7 @@
 
 用于AEAD（带附加数据的认证加密）对称加解密的[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法参数，继承自[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)。
 
-适用于[AES算法](../../../security/CryptoArchitectureKit/crypto-sym-encrypt-decrypt-spec.md#aes)的CCM和GCM分组模式。适用于[SM4算法](../../../security/CryptoArchitectureKit/crypto-sym-encrypt-decrypt-spec.md#sm4)的GCM分组模式。适用于[ChaCha20-Poly1305算法](../../../security/CryptoArchitectureKit/crypto-sym-encrypt-decrypt-spec.md#chacha20)分组模式。
+<br>适用于[AES算法](../../../security/CryptoArchitectureKit/crypto-sym-encrypt-decrypt-spec.md#aes)的CCM和GCM分组模式。<br>适用于[SM4算法](../../../security/CryptoArchitectureKit/crypto-sym-encrypt-decrypt-spec.md#sm4)的GCM分组模式。<br>适用于[ChaCha20-Poly1305算法](../../../security/CryptoArchitectureKit/crypto-sym-encrypt-decrypt-spec.md#chacha20)分组模式。
 > **说明：**  
 >  
 > 在AES-CCM模式下使用AeadParamsSpec加密时：  
@@ -51,7 +51,12 @@ authenticatedData?: Uint8Array
 nonce: Uint8Array
 ```
 
-指明加解密参数nonce。<br>对于AES-CCM，nonce长度的取值范围为7~13字节。对于AES-GCM，nonce长度范围为1~128字节，推荐使用12字节。对于SM4-GCM，nonce长度范围为1~128字节，推荐使用12字节。对于ChaCha20-Poly1305，nonce长度必须为12字节。
+指明加解密参数nonce。
+> **说明：**  
+> - 对于AES-CCM，nonce长度的取值范围为7~13字节。  
+> - 对于AES-GCM，nonce长度范围为1~128字节，推荐使用12字节。  
+> - 对于SM4-GCM，nonce长度范围为1~128字节，推荐使用12字节。  
+> - 对于ChaCha20-Poly1305，nonce长度必须为12字节。
 
 **类型：** Uint8Array
 
@@ -71,7 +76,14 @@ nonce: Uint8Array
 tagLen?: number
 ```
 
-指定加解密参数authTag长度。对于加密操作，tag将被添加到密文的末尾。对于解密操作，tag应位于密文的末尾。取值限定为整数。<br>对于 AES-CCM，其默认值为12。支持的范围为4、6、8、10、12、14 和 16。对于 AES-GCM，其默认值为16。支持的范围为4、8、12、13、14、15 和 16。对于 SM4-GCM，其默认值为16。支持的范围为4、8、12、13、14、15 和 16。对于 ChaCha20-Poly1305，其默认值为16。支持的范围为16。
+认证标签长度，单位为字节。
+
+<br>加密时，标签将被添加到密文末尾。<br>解密时，标签应位于密文末尾。<br>取值应为整数。
+> **说明：**  
+> - 对于AES-CCM，默认值为12。支持的取值为4、6、8、10、12、14和16。  
+> - 对于AES-GCM，默认值为16。支持的取值为4、8、12、13、14、15和16。  
+> - 对于SM4-GCM，默认值为16。支持的取值为4、8、12、13、14、15和16。  
+> - 对于ChaCha20-Poly1305，默认值为16。支持的取值为16。
 
 **类型：** number
 

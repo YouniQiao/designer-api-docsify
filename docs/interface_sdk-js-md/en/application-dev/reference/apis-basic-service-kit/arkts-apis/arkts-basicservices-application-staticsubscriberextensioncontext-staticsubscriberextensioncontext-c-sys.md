@@ -1,8 +1,8 @@
 # StaticSubscriberExtensionContext (System API)
 
-The **StaticSubscriberExtensionContext** module, inherited from **StaticSubscriberExtensionAbility**, provides context for StaticSubscriberExtensionAbilities.
+The **StaticSubscriberExtensionContext** module, inherited from **ExtensionContext**, provides context for **StaticSubscriberExtensionAbility**.
 
-You can use the APIs of this module to start StaticSubscriberExtensionAbilities.
+You can use the APIs of this module to start **StaticSubscriberExtensionAbility**.
 
 **Inheritance/Implementation:** StaticSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
@@ -26,12 +26,7 @@ import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts an ability that belongs to the same application as this StaticSubscriberExtensionAbility. This API uses an asynchronous callback to return the result.
-
-Observe the following when using this API:
-
-- If an application running in the background needs to call this API to start an ability, it must have the **ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission.  
-- If **visible** of the target ability is **false** in cross-application scenarios, the caller must have the **ohos.permission.START_INVISIBLE_ABILITY** permission.
+Starts an ability that belongs to the same application as this **StaticSubscriberExtensionAbility**. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -50,7 +45,7 @@ Observe the following when using this API:
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | Want information about the target ability. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of starting the ability. |
 
 **Error codes:**
 
@@ -115,12 +110,7 @@ class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbilit
 startAbility(want: Want): Promise<void>
 ```
 
-Starts an ability that belongs to the same application as this StaticSubscriberExtensionAbility. This API uses a promise to return the result.
-
-Observe the following when using this API:
-
-- If an application running in the background needs to call this API to start an ability, it must have the **ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission.  
-- If **visible** of the target ability is **false** in cross-application scenarios, the caller must have the **ohos.permission.START_INVISIBLE_ABILITY** permission.
+Starts an ability that belongs to the same application as this **StaticSubscriberExtensionAbility**. This API uses a promise to return the result.
 
 **Since:** 10
 

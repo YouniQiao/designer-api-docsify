@@ -1,6 +1,6 @@
 # CertExtension
 
-证书扩展域段类。
+提供操作X.509证书扩展的API。
 
 **起始版本：** 10
 
@@ -20,7 +20,7 @@ import { cert } from '@kit.DeviceCertificateKit';
 checkCA(): number
 ```
 
-表示校验证书是否为CA证书。
+检查证书是否为CA证书。
 
 **起始版本：** 10
 
@@ -34,7 +34,7 @@ checkCA(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 当证书扩展域段中密钥用途扩展包含keyCertSign位，并且基本约束中cA字段为true时，表示证书为CA证书。如果证书不是CA证书，则返回-1；否则返回基本约束中的路径长度。如果证书是CA证书，但是基本约束中未给定路径长度，则返回-2，表示无路径长度限制。 |
+| number | 当证书扩展中密钥用途扩展包含keyCertSign位，并且基本约束中cA字段为true时，表示证书为CA证书。如果证书不是CA证书，则返回-1；否则返回基本约束中的路径长度。如果证书是CA证书，但是基本约束中未给定路径长度，则返回-2，表示无路径长度限制。 |
 
 **错误码：**
 
@@ -90,7 +90,7 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
 getEncoded(): EncodingBlob
 ```
 
-表示获取证书扩展域段序列化数据。
+获取证书扩展的序列化数据。
 
 **起始版本：** 10
 
@@ -104,7 +104,7 @@ getEncoded(): EncodingBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 表示证书扩展域段序列化数据。 |
+| [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 获取的证书扩展序列化数据。 |
 
 **错误码：**
 
@@ -161,7 +161,7 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
 getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob
 ```
 
-表示获取证书扩展域段对象信息。
+根据OID获取证书扩展项的值。
 
 **起始版本：** 10
 
@@ -175,14 +175,14 @@ getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| valueType | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | 是 | 表示证书扩展域段获取的类型。 |
-| oid | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 是 | 表示证书扩展域段获取的对象标识符。 |
+| valueType | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | 是 | 指定要获取的扩展信息类型。 |
+| oid | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 是 | 指定要获取的扩展项OID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示证书扩展域段对象的数据。 |
+| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 获取的证书扩展项数据。 |
 
 **错误码：**
 
@@ -244,7 +244,7 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
 getOidList(valueType: ExtensionOidType): DataArray
 ```
 
-表示获取证书扩展域段对象标识符列表。
+获取证书扩展的OID列表。
 
 **起始版本：** 10
 
@@ -258,13 +258,13 @@ getOidList(valueType: ExtensionOidType): DataArray
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| valueType | [ExtensionOidType](arkts-devicecertificate-cert-extensionoidtype-e.md) | 是 | 表示证书扩展域段对象标识符类型。 |
+| valueType | [ExtensionOidType](arkts-devicecertificate-cert-extensionoidtype-e.md) | 是 | 指定要获取的OID类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 表示证书扩展域段对象标识符列表。 |
+| [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | 获取的证书扩展OID列表。 |
 
 **错误码：**
 

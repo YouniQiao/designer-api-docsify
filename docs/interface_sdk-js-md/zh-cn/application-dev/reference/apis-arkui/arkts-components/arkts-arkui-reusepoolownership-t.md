@@ -4,7 +4,7 @@
 declare type ReusePoolOwnership = 'shared' | 'perInstance'
 ```
 
-定义自定义组件的重用类型。
+全局复用池的持有类型。
 
 **起始版本：** 26.0.0
 

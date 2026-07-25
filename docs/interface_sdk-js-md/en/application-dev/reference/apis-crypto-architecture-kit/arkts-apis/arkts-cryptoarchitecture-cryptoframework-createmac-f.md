@@ -12,9 +12,9 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createMac(algName: string): Mac
 ```
 
-Creates a **Mac** instance for MAC operations.
+Creates a **Mac** instance.
 
-For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
+<br>For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ For details about the supported specifications, see [MAC Overview and Algorithm 
 
 | Type | Description |
 | --- | --- |
-| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | Returns the [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) instance created. |
+| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | Returns the **Mac** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 
@@ -68,9 +68,9 @@ try {
 function createMac(macSpec: MacSpec): Mac
 ```
 
-Creates a **Mac** instance for message authentication code (MAC) operations.
+Creates a **Mac** instance.
 
-For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
+<br>For details about the supported specifications, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
 
 **Since:** 18
 
@@ -90,7 +90,7 @@ For details about the supported specifications, see [MAC Overview and Algorithm 
 
 | Type | Description |
 | --- | --- |
-| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) instance created. |
+| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | Returns the **Mac** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 

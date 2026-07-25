@@ -45,7 +45,9 @@ allowDownloadCrl?: boolean
 allowOcspCheckOnline?: boolean
 ```
 
-是否允许在线OCSP检查，默认值为false。true：执行在线OCSP检查，即尝试从证书AIA扩展获取OCSP URL并发送请求获取响应；false：不执行在线OCSP检查。
+是否允许在线OCSP检查，默认值为false。  
+- true：执行在线OCSP检查，即尝试从证书AIA扩展获取OCSP URL并发送请求获取响应；  
+- false：不执行在线OCSP检查。
 > **说明：**  
 >  
 > 如果在ocspResponses中找到匹配的OCSP响应，则跳过在线OCSP检查。

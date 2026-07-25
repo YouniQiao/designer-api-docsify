@@ -2,7 +2,7 @@
 
 私钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在非对称解密、签名、密钥协商时需要将其作为输入使用。
 
-私钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md)、[AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md)来生成。
+<br>私钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md)、[AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md)来生成。
 
 **继承/实现关系：** PriKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)
 
@@ -166,7 +166,7 @@ getEncodedDer(format: string): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 返回满足ASN.1语法和DER编码的指定密钥格式的ECC私钥数据。 |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | DER编码的私钥数据。 |
 
 **错误码：**
 
@@ -201,7 +201,7 @@ async function testGetEncodedDer() {
 getEncodedPem(format: string): string
 ```
 
-获取密钥数据。此API以同步方式返回结果。
+获取PEM编码的私钥数据。此API以同步方式返回结果。
 
 **起始版本：** 12
 
@@ -215,13 +215,13 @@ getEncodedPem(format: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| format | string | 是 | 指定的获取密钥字符串的编码格式。支持RSA密钥，format取值支持'PKCS8'或'PKCS1'。<br>自API版本26.0.0起，支持EC密钥，format取值支持'PKCS8'或'EC'。<br>自API版本26.0.0起，支持ML-DSA和ML-KEM密钥，format取值支持'PKCS8'。 |
+| format | string | 是 | 指定的获取密钥字符串的编码格式。支持RSA密钥，format取值支持"PKCS8"或"PKCS1"。<br>自API版本26.0.0起，支持EC密钥，format取值支持"PKCS8"或"EC"。<br>自API版本26.0.0起，支持ML-DSA和ML-KEM密钥，format取值支持"PKCS8"。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 用于获取指定密钥格式的具体内容。 |
+| string | PEM编码的私钥数据。 |
 
 **错误码：**
 
@@ -270,7 +270,7 @@ function TestPriKeyPkcs1ToPkcs8BySync1024() {
 getEncodedPem(format: string, config: KeyEncodingConfig): string
 ```
 
-获取密钥数据。此API以同步方式返回结果。目前仅支持RSA密钥。
+获取PEM编码的加密的私钥数据。此API以同步方式返回结果。目前仅支持RSA密钥。
 
 **起始版本：** 18
 
@@ -284,14 +284,14 @@ getEncodedPem(format: string, config: KeyEncodingConfig): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| format | string | 是 | 指定的获取密钥字符串的编码格式。对于RSA密钥，格式可以是'PKCS8'或'PKCS1'。 |
-| config | [KeyEncodingConfig](arkts-cryptoarchitecture-cryptoframework-keyencodingconfig-i.md) | 是 | 指定编码的算法跟口令，对私钥进行编码操作。 |
+| format | string | 是 | 指定的获取密钥字符串的编码格式。对于RSA密钥，格式可以是"PKCS8"或"PKCS1"。 |
+| config | [KeyEncodingConfig](arkts-cryptoarchitecture-cryptoframework-keyencodingconfig-i.md) | 是 | 用于加密私钥的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 用于获取指定密钥格式的具体内容。如果填了config参数，则获取编码后的内容。 |
+| string | PEM编码的加密的私钥数据。 |
 
 **错误码：**
 
@@ -399,7 +399,7 @@ getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 
 根据指定的密钥数据类型获取私钥数据。此API以同步方式返回结果。
 
-<br><br>**说明：**<br>建议优先使用异步API{@link getKeyData}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API，{@link getKeyData}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 26.0.0
 
@@ -555,7 +555,7 @@ getPubKeySync(): PubKey
 
 以同步方式，从私钥对象中获取公钥对象。
 
-<br><br>**说明：**<br>建议优先使用异步API{@link getPubKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API，{@link getPubKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 

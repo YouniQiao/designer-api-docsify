@@ -1,6 +1,6 @@
 # ExtensionEntryType
 
-表示获取扩展域中对象类型的枚举。
+证书扩展项类型的枚举。
 
 **起始版本：** 10
 
@@ -14,7 +14,7 @@
 EXTENSION_ENTRY_TYPE_ENTRY = 0
 ```
 
-表示获取整个对象。
+整个扩展项。
 
 **起始版本：** 10
 
@@ -30,7 +30,7 @@ EXTENSION_ENTRY_TYPE_ENTRY = 0
 EXTENSION_ENTRY_TYPE_ENTRY_CRITICAL = 1
 ```
 
-表示获取对象的critical属性。
+扩展项的critical属性。
 
 **起始版本：** 10
 
@@ -46,7 +46,7 @@ EXTENSION_ENTRY_TYPE_ENTRY_CRITICAL = 1
 EXTENSION_ENTRY_TYPE_ENTRY_VALUE = 2
 ```
 
-表示获取对象的数据。
+扩展项的值（扩展特定数据）。
 
 **起始版本：** 10
 

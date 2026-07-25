@@ -106,7 +106,7 @@ customConfigs?: Record<string, string>
 - 参数值为string类型，参数值长度需在1024个字符以内。  
 - 参数个数需在32个以内。
 
-元服务API： 从API version 12开始，该参数支持在元服务中使用。
+**原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
 **类型：** Record&lt;string, string&gt;
 

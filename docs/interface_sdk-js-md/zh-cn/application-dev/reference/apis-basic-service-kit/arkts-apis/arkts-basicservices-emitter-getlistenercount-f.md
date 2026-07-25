@@ -26,7 +26,7 @@ function getListenerCount(eventId: number | string): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventId | number \| string | 是 | 事件ID，string类型的eventId取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
+| eventId | number \| string | 是 | 事件ID，由开发者定义，用于辨别事件。string类型：不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
 
 **返回值：**
 

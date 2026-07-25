@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createKem(algNameId: KemAlgNameId): Kem
 ```
 
-Creates a KEM instance for key encapsulation and decapsulation operations.
+Creates a Kem instance for key encapsulation and decapsulation operations.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Creates a KEM instance for key encapsulation and decapsulation operations.
 
 | Type | Description |
 | --- | --- |
-| [Kem](arkts-cryptoarchitecture-cryptoframework-kem-i.md) | The KEM instance. |
+| [Kem](arkts-cryptoarchitecture-cryptoframework-kem-i.md) | Returns the **Kem** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 

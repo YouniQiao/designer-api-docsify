@@ -14,7 +14,7 @@ Enum for ChipSize
 NORMAL = "NORMAL"
 ```
 
-normal尺寸操作块。
+normal尺寸操作块，适用于常规展示场景。
 
 **起始版本：** 11
 
@@ -32,7 +32,7 @@ normal尺寸操作块。
 SMALL = "SMALL"
 ```
 
-small尺寸操作块。
+small尺寸操作块，适用于紧凑布局场景。
 
 **起始版本：** 11
 

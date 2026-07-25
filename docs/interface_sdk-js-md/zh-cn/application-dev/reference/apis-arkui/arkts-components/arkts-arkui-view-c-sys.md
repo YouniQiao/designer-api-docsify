@@ -2,7 +2,7 @@
 
 自定义组件
 
-**起始版本：** 9
+**起始版本：** 7
 
 <!--Device-unnamed-declare class View--><!--Device-unnamed-declare class View-End-->
 
@@ -18,7 +18,7 @@ create(value: any): any
 
 只需使用生成tsbundle
 
-**起始版本：** 9
+**起始版本：** 7
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 

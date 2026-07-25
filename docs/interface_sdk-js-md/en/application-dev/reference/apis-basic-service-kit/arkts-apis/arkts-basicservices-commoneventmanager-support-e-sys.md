@@ -1,6 +1,6 @@
 # Support
 
-System common events are events published by system services or system applications. Subscribing to these common events requires specific permissions and values.
+System common events are events published by system services or system apps. Subscribing to these common events requires specific permissions and event values.
 
 **Since:** 9
 
@@ -684,7 +684,7 @@ COMMON_EVENT_PRIVACY_STATE_CHANGED = 'usual.event.PRIVACY_STATE_CHANGED'
 
 Indicates the privacy state has been changed.
 
-When a user clicks **Agree** in a privacy dialog box, the event notification service is triggered to publish this event.
+When a user taps the agree button in the privacy statement dialog box, the event notification service is triggered to publish this event.
 
 **Since:** 11
 

@@ -3,6 +3,9 @@
 InlineStyleOptions定义了数值内联型Counter的属性和事件。
 
 继承于[CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md)。
+> **说明：**  
+>  
+> 1. min应小于等于max。若min大于max，则按max处理。
 
 **继承/实现关系：** InlineStyleOptions extends [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md)
 
@@ -28,7 +31,9 @@ max?: number
 
 默认值：999
 
-取值范围：(-∞, +∞)
+取值范围：[min, +∞)
+
+超出取值范围时（即设置值小于min），按min处理。
 
 值为undefined时，按默认值处理。
 
@@ -56,7 +61,9 @@ min?: number
 
 默认值：0
 
-取值范围：(-∞, +∞)
+取值范围：(-∞, max]
+
+超出取值范围时（即设置值大于max），按max处理。
 
 值为undefined时，按默认值处理。
 
@@ -80,7 +87,7 @@ min?: number
 onChange?: (value: number) => void
 ```
 
-数值改变时，返回当前值。
+数值改变时，返回当前值。使用场景：当需要在数值变化时执行自定义操作（如更新关联UI、记录日志、保存状态等）时传入此回调。
 
 value：当前显示的数值。
 
@@ -114,7 +121,9 @@ textWidth?: number
 
 单位：vp
 
-超出取值范围时，如果值为undefined，按默认值处理，否则按最大值处理。
+超出取值范围时（即设置值小于0），按0处理。
+
+值为undefined时，按默认值处理。
 
 **类型：** number
 
@@ -140,9 +149,9 @@ value?: number
 
 默认值：0
 
-取值范围：[min, max]，其中min和max分别对应下述Counter的最小值和最大值。
+取值范围：[min, max]，其中min和max分别对应下述Counter的最小值和最大值（min默认为0，max默认为999）。
 
-超出取值范围时，如果值为undefined，按默认值处理，否则按最大值处理。
+超出取值范围时，如果值小于min，按min处理；如果值大于max，按max处理。
 
 **类型：** number
 

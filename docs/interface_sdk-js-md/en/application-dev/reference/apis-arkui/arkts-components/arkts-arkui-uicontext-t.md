@@ -6,7 +6,7 @@ declare type UIContext = import('../api/@ohos.arkui.UIContext').UIContext
 
 UIContext
 
-**Since:** 12
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 

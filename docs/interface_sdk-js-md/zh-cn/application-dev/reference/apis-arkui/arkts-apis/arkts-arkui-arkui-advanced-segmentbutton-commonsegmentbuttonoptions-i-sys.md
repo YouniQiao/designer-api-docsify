@@ -20,7 +20,13 @@ import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions,
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-分段按钮组件的背景板的系统材质。不同系统材质包含不同的属性影响效果。传入材质后，SegmentButton的动效发生改变。对于胶囊类多选按钮（即type为"capsule"且multiply为true），该属性不生效。默认值：无材质效果。
+分段按钮组件的背景板的系统材质。不同系统材质具有不同的属性，产生不同的效果。传入材质后，SegmentButton的动效发生改变。
+
+对于胶囊类多选分段按钮（即type为"capsule"且multiply为true），该属性不生效。
+
+默认值：无材质效果。
+
+从API版本26.0.0开始，除胶囊类多选分段按钮（即type为"capsule"且multiply为true）外，backgroundSystemMaterial设置自动反色的系统材质时，fontColor和selectedFontColor使用支持反色的特殊系统资源，颜色自动适配到材质背景色的反色。
 
 **类型：** uiMaterial.Material
 

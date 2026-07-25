@@ -1,6 +1,6 @@
 # ChipV2LabelConfig
 
-定义标签选项。
+ChipV2LabelConfig定义文本属性配置。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,13 @@ import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig
 activatedFontColor?: ColorMetrics
 ```
 
-激活时的文本字体颜色。
+ChipV2激活时的文字颜色。
+
+默认值：$r('sys.color.chip_activated_fontcolor')
+
+值为undefined时，按默认值处理。
+
+值为非法值时，按默认值处理。
 
 **类型：** ColorMetrics
 
@@ -40,7 +46,13 @@ activatedFontColor?: ColorMetrics
 fontColor?: ColorMetrics
 ```
 
-文本字体颜色。
+文字颜色。
+
+默认值：$r('sys.color.chip_font_color')
+
+值为undefined时，按默认值处理。
+
+值为非法值时，按默认值处理。
 
 **类型：** ColorMetrics
 
@@ -60,7 +72,11 @@ fontColor?: ColorMetrics
 fontFamily?: string
 ```
 
-文本字体族
+文字字体。
+
+默认值："HarmonyOS Sans"
+
+值为undefined时，按默认值处理。
 
 **类型：** string
 
@@ -80,7 +96,17 @@ fontFamily?: string
 fontSize?: LengthMetrics
 ```
 
-文本字体大小。
+文字字号，不支持百分比。传入百分比时按默认值处理。
+
+默认值：
+
+size为ChipV2Size.SMALL时，默认值：$r('sys.float.chip_small_font_size')。
+
+其他情况下，默认值：$r('sys.float.chip_normal_font_size')
+
+单位：fp
+
+值为undefined时，按默认值处理。
 
 **类型：** LengthMetrics
 
@@ -100,7 +126,15 @@ fontSize?: LengthMetrics
 labelMargin?: ChipV2LabelMarginConfig
 ```
 
-标签边距。
+文本与左右侧图标之间间距。
+
+默认值：
+
+size为ChipV2Size.SMALL时，默认值：{ left: 4, right: 4 }。
+
+size为ChipV2Size.NORMAL时，默认值：{ left: 6, right: 6 }。
+
+值为undefined时，按默认值处理。
 
 **类型：** ChipV2LabelMarginConfig
 
@@ -120,7 +154,19 @@ labelMargin?: ChipV2LabelMarginConfig
 localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
 ```
 
-标签边距。
+本地化文本与左右侧图标之间间距。
+
+默认值：
+
+size为ChipV2Size.SMALL时，默认值：
+
+`{ start: LengthMetrics.resource($r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource($r('sys.float.chip_small_text_margin')) }`。
+
+size为ChipV2Size.NORMAL时，默认值：
+
+`{ start: LengthMetrics.resource($r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource($r('sys.float.chip_normal_text_margin')) }`。
+
+值为undefined时，按默认值处理。
 
 **类型：** ChipV2LocalizedLabelMarginConfig
 
@@ -140,7 +186,9 @@ localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
 modifier?: TextModifier
 ```
 
-标签文本的modifier对象。
+文本修饰器，用于设置文本的通用属性。当需要通过modifier动态修改文本属性（如fontWeight、fontStyle等）时传入此参数。不传入或传入undefined时，不应用修饰器，文本使用默认属性设置。
+
+默认值：undefined，不应用修饰器。
 
 **类型：** TextModifier
 
@@ -160,7 +208,7 @@ modifier?: TextModifier
 text: string
 ```
 
-文本内容。
+文本文字内容。
 
 **类型：** string
 

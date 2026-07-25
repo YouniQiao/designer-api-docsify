@@ -12,7 +12,7 @@ import { cert } from '@kit.DeviceCertificateKit';
 function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<CertExtension>): void
 ```
 
-表示创建证书扩展域段的对象。使用Callback异步回调。
+创建一个证书扩展对象。使用Callback异步回调。
 
 **起始版本：** 10
 
@@ -27,7 +27,7 @@ function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<Cer
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 | 表示序列化的证书扩展数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CertExtension&gt; | 是 | 回调函数。当创建证书扩展域段对象成功时，err为undefined，data为获取到的CertExtension实例；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CertExtension&gt; | 是 | 回调函数。当创建证书扩展对象成功时，err为undefined，data为获取到的CertExtension实例；否则为错误对象。 |
 
 **错误码：**
 
@@ -79,7 +79,7 @@ cert.createCertExtension(encodingBlob, (error, certExt) => {
 function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>
 ```
 
-表示创建证书扩展域段的对象。使用Promise方式返回结果。
+创建一个证书扩展对象。使用Promise方式返回结果。
 
 **起始版本：** 10
 

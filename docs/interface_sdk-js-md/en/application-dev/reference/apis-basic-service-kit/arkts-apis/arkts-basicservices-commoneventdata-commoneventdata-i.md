@@ -1,6 +1,6 @@
 # CommonEventData
 
-Describes the data of a common event.
+Describes the data of a common event. The **CommonEventData** module is used to carry the common event data received by subscribers in common event subscription scenarios. The data includes the event name, publisher bundle name, code, data, and additional parameters. This module is applicable to scenarios where apps subscribe to and process common events and parse the data carried in the events.
 
 **Since:** 7
 
@@ -14,7 +14,7 @@ Describes the data of a common event.
 bundleName?: string
 ```
 
-Bundle name. The default value is an empty string.
+Bundle name of the common event publisher. The default value is an empty string.
 
 **Type:** string
 
@@ -32,7 +32,7 @@ Bundle name. The default value is an empty string.
 code?: number
 ```
 
-Common event data received by the subscriber. The value of this field is the same as that of the **code** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event. The default value is **0**.
+Common event data received by the subscriber. The value of this field is the same as that of the **code** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event. The value ranges from –2147483648 to 2147483647.The default value is **0**.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Common event data received by the subscriber. The value of this field is the sam
 data?: string
 ```
 
-Common event data received by the subscriber. The value of this field is the same as that of the **data** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event.
+Common event data received by the subscriber. The data size cannot exceed 64 KB.The value of this field is the same as that of the **data** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event.
 
 **Type:** string
 

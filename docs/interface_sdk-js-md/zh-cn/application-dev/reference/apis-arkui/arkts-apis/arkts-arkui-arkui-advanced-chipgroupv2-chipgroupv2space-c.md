@@ -1,6 +1,6 @@
 # ChipGroupV2Space
 
-ChipGroupV2Space定义了ChipGroupV2左右内边距，以及Chip与Chip之间的间距。
+ChipGroupV2Space定义了ChipGroupV2左右内边距，以及ChipV2与ChipV2之间的间距。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ ChipGroupV2Space的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ChipGroupV2SpaceConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2spaceconfig-i.md) | 是 | 芯片组间距配置。 |
+| config | [ChipGroupV2SpaceConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2spaceconfig-i.md) | 是 | ChipGroupV2间距配置。 |
 
 ## endSpace
 
@@ -77,8 +77,10 @@ ChipV2与ChipV2之间的间距（不支持百分比）。
 取值范围：
 
 - number类型：[0, +∞)，如0、8、16、24.5。  
-- string类型：单位为fp|vp|px|lpx且数值部分大于等于0的字符串，如"8vp"、"16fp"、"12px"、"10lpx"。  
+- string类型：单位为fp | vp | px | lpx且数值部分大于等于0的字符串，如"8vp"、"16fp"、"12px"、"10lpx"。  
 - 不支持：负数、百分比单位、无效字符串格式。
+
+传入不在取值范围内或不支持格式的值时，按默认值处理。
 
 默认值：8
 

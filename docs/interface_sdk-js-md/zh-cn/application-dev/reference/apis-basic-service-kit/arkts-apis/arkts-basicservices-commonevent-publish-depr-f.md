@@ -6,7 +6,7 @@
 function publish(event: string, callback: AsyncCallback<void>): void
 ```
 
-发布公共事件（回调形式）。
+以回调形式发布公共事件。
 
 **起始版本：** 7
 
@@ -22,8 +22,8 @@ function publish(event: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | string | 是 | 表示要发送的公共事件。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示指定的回调方法。 |
+| event | string | 是 | 表示要发布的公共事件。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示发布公共事件的回调方法。 |
 
 **示例：**
 
@@ -51,7 +51,7 @@ commonEvent.publish("event", publishCallBack);
 function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void
 ```
 
-以回调的形式发布公共事件。
+以回调形式发布公共事件。
 
 **起始版本：** 7
 
@@ -69,7 +69,7 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发布的公共事件。 |
 | options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 是 | 表示发布公共事件的属性。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示指定的回调方法。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示发布公共事件的回调方法。 |
 
 **示例：**
 

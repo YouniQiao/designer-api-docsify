@@ -14,7 +14,7 @@ function createSymKeyGenerator(algName: string): SymKeyGenerator
 
 Creates a symmetric key generator instance with the specified algorithm.
 
-For details about the supported specifications, see [Symmetric Key Generation and Conversion Specifications](../../../security/CryptoArchitectureKit/crypto-sym-key-generation-conversion-spec.md).
+<br>For details about the supported specifications, see [Symmetric Key Generation and Conversion Specifications](../../../security/CryptoArchitectureKit/crypto-sym-key-generation-conversion-spec.md).
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ For details about the supported specifications, see [Symmetric Key Generation an
 
 | Type | Description |
 | --- | --- |
-| [SymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md) | **SymKeyGenerator** instance created. |
+| [SymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md) | Returns the **SymKeyGenerator** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 

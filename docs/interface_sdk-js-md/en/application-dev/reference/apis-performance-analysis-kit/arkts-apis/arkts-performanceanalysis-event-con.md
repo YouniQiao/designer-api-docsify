@@ -294,9 +294,9 @@ User logout event. This is a reserved application event name constant.
 const appFreezeWarning: string
 ```
 
-App encounter a longer hang and trigger an system warning, such as THREAD_BLOCK_3S or LIFECYCLE_HALF_TIMEOUT.This is a system event name constant.
+Application freeze warning event. This is a system event name constant.
 
-**Atomic service API**: This parameter can be used in atomic services since API version 26.0.0.
+**Model restriction**: This API can be used only in the stage model.**Atomic service API**: This parameter can be used in atomic services since API version 26.0.0.
 
 **Since:** 26.0.0
 

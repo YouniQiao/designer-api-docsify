@@ -1,6 +1,6 @@
 # ChipV2Icon
 
-定义ChipV2图标的基类
+ChipV2Icon定义图标的基类。
 
 **起始版本：** 26.0.0
 
@@ -22,7 +22,7 @@ import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig
 constructor()
 ```
 
-ChipV2Icon的构造函数
+ChipV2Icon的构造函数。
 
 **起始版本：** 26.0.0
 

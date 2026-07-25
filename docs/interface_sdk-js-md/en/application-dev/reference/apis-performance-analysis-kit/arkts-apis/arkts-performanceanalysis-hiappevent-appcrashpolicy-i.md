@@ -38,7 +38,11 @@ Policy for the APP_CRASH event the value true means to the minidump capture capa
 extendPcLrPrinting?: boolean
 ```
 
-The policy for APP_CRASH event The value true means to print the memory values of the 248 bytes before and 256 bytes after the PC and LR in the 64-bit system, or print the memory values of the 124 bytes before and 128 bytes after the PC and LR in the 32-bit system.The value false means to print the memory values of the 16 bytes before and 232 bytes after the PC and LR in the 64-bit system, or print the memory values of the 8 bytes before and 116 bytes after the PC and LR in the 32-bit system.If not set the param, the default value is false.
+The policy for APP_CRASH event.Whether to print the memory values before and after the PC and LR registers in crash logs.The value **true** means to print the memory values of 248 bytes before and 256 bytes after the PC and LR on 64-bit system, or 124 bytes before and 128 bytes after on 32-bit systems.
+
+The value **false** means to print the memory values of 16 bytes before and 232 bytes after the PC and LR on 64-bit system, or 8 bytes before and 116 bytes after on 32-bit systems.
+
+The default value is **false**.
 
 **Type:** boolean
 
@@ -56,7 +60,7 @@ The policy for APP_CRASH event The value true means to print the memory values o
 logFileCutoffSzBytes?: number
 ```
 
-The policy for APP_CRASH event The value ranges from 0 to 5242880, in bytes. The crash log is truncated to the specified size when this parameter is set. Otherwise, the default value 0 is used, which means no truncation.
+The policy for APP_CRASH event.Truncation size for crash logs. The value ranges from 0 to 5242880, in bytes. The default value is 0, indicating that crash logs are not truncated.
 
 **Type:** number
 
@@ -100,7 +104,13 @@ Note: The enabling behavior of an application takes effect only in its current l
 simplifyVmaPrinting?: boolean
 ```
 
-The policy for APP_CRASH event The value true means to print only the Virtual Memory Area (VMA) mapping information of the addresses in the crash log, that is, Maps in the crash log, to reduce the log size.The value false means to print all VMA mapping information.Default value: false.
+The policy for APP_CRASH event.Whether to print the mapping information of all virtual memory areas (VMAs) in the crash log, that is, the **Maps** field in the crash log.
+
+The value **true** means to print only the VMA mapping information of the addresses in the crash log to reduce the log size.
+
+The value **false** means to print all VMA mapping information.
+
+The default value is **false**.
 
 **Type:** boolean
 

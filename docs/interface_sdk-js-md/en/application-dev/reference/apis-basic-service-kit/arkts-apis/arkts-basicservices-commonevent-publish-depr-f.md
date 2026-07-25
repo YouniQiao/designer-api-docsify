@@ -6,7 +6,7 @@
 function publish(event: string, callback: AsyncCallback<void>): void
 ```
 
-Publishes a common event. This API uses an asynchronous callback to return the result.
+Publishes a common event with given properties. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -23,7 +23,7 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
 
 **Example**
 
@@ -69,7 +69,7 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
 | options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | Yes | Properties of the common event to publish. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of publishing a common event. |
 
 **Example**
 

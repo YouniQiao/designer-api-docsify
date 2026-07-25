@@ -46,7 +46,7 @@ constructor(options: SegmentButtonItemOptionsConstructorOptions)
 accessibilityDescription?: ResourceStr
 ```
 
-无障碍说明，为用户解释组件操作，设置详细解释文本，帮助用户理解操作后果。若组件有文本和无障碍说明，选中时先播报文本，再播报无障碍说明。
+无障碍说明，用于为用户进一步说明当前组件，开发人员可为组件的该属性设置相对较详细的解释文本，帮助用户理解将要执行的操作。如帮助用户理解将要执行的操作可能导致什么后果，尤其是当这些后果无法从组件本身属性与无障碍文本中了解到时。若组件既拥有文本属性又拥有无障碍说明属性，则组件被选中时，先播报组件的文本属性，再播报无障碍说明属性的内容。
 
 默认值：空字符串。
 
@@ -74,7 +74,7 @@ accessibilityLevel?: string
 
 无障碍重要性，控制当前组件是否可被无障碍辅助服务识别。
 
-支持的值为:
+支持的值为：
 
 "auto"：当前组件可被无障碍辅助服务所识别。
 
@@ -113,6 +113,8 @@ icon?: ResourceStr
 默认值：不显示未选中态的按钮图标。
 
 值为undefined时，按默认值处理。
+
+**说明：** icon和selectedIcon需同时设置，单独设置无效。
 
 **类型：** ResourceStr
 
@@ -163,6 +165,8 @@ selectedIcon?: ResourceStr
 默认值：不显示选中态按钮图标。
 
 值为undefined时，按默认值处理。
+
+**说明：** icon和selectedIcon需同时设置，单独设置无效。
 
 **类型：** ResourceStr
 

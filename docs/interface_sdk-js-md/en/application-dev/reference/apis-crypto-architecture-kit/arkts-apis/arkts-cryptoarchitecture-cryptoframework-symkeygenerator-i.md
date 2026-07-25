@@ -1,8 +1,6 @@
 # SymKeyGenerator
 
-Provides APIs for using the **SymKeyGenerator**.
-
-Before using the APIs of this class, use [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator) to create a **SymKeyGenerator** instance.
+Symmetric key generator interface, defining methods for generating symmetric keys. Before use, you must create a **SymKeyGenerator** instance by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator).
 
 **Since:** 9
 
@@ -25,8 +23,6 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 ```
 
 Converts specified data into a symmetric key. This API uses an asynchronous callback to return the result.
-
-This API can be used only after a **symKeyGenerator** instance is created by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator).
 > **NOTE**  
 >  
 > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified  
@@ -91,8 +87,6 @@ convertKey(key: DataBlob): Promise<SymKey>
 ```
 
 Converts specified data into a symmetric key. This API uses a promise to return the result.
-
-Before using this API, create a symmetric key generator by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator).
 
 **Since:** 9
 
@@ -159,8 +153,6 @@ convertKeySync(key: DataBlob): SymKey
 ```
 
 Converts specified data into a symmetric key.
-
-This API can be used only after a **symKeyGenerator** instance is created by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator).
 > **NOTE**  
 >  
 > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified  
@@ -225,11 +217,7 @@ function testConvertKeySync() {
 generateSymKey(callback: AsyncCallback<SymKey>): void
 ```
 
-Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the result.
-
-This API can be used only after a **symKeyGenerator** instance is created by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator).
-
-RAND_priv_bytes() of OpenSSL can be used to generate random keys.
+Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the result.<br>OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 > **NOTE**  
 >  
 > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified  
@@ -279,11 +267,7 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
 generateSymKey(): Promise<SymKey>
 ```
 
-Generates a random key using this symmetric key generator. This API uses a promise to return the result.
-
-This API can be used only after a **symKeyGenerator** instance is created by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator).
-
-RAND_priv_bytes() of OpenSSL can be used to generate random keys.
+Generates a random key using this symmetric key generator. This API uses a promise to return the result.<br>OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 
 **Since:** 9
 
@@ -330,11 +314,7 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
 generateSymKeySync(): SymKey
 ```
 
-Generates a random key using this symmetric key generator. This API returns the result synchronously.
-
-This API can be used only after a **symKeyGenerator** instance is created by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator).
-
-RAND_priv_bytes() of OpenSSL can be used to generate random keys.
+Generates a random key using this symmetric key generator. This API returns the result synchronously.<br>OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 > **NOTE**  
 >  
 > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified  

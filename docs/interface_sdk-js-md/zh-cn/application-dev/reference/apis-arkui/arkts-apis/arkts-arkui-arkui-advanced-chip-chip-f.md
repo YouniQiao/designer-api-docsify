@@ -12,7 +12,7 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 export declare function Chip(options: ChipOptions): void
 ```
 
-Chip的构建函数。
+创建Chip组件。
 
 **起始版本：** 11
 
@@ -30,5 +30,5 @@ Chip的构建函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) | 是 | 定义Chip组件的参数。 |
+| options | [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) | 是 | 定义Chip组件的参数，包括尺寸、启用状态、激活态、前缀/后缀图标、文本内容、背景颜色、圆角、无障碍属性等，用于自定义Chip组件的样式和行为。 |
 

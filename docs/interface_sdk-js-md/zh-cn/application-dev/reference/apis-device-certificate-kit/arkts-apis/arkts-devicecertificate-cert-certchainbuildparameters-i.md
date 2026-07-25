@@ -1,6 +1,6 @@
 # CertChainBuildParameters
 
-用于指定证书链创建参数。
+证书链创建参数。
 
 **起始版本：** 12
 

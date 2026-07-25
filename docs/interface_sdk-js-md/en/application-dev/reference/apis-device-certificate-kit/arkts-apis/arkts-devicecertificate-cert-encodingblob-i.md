@@ -1,6 +1,6 @@
 # EncodingBlob
 
-Defines a binary data array in encoding format.
+Represents an encoded binary data block.
 
 **Since:** 9
 

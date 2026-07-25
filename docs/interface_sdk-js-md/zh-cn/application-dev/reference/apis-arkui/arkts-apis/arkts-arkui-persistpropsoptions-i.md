@@ -14,7 +14,7 @@
 defaultValue: number | string | boolean | Object
 ```
 
-在PersistentStorage和AppStorage未查询到时，则使用默认值初始化它。从API version 12开始，defaultValue允许为null或undefined。
+在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。从API version 12开始，defaultValue可以为null或undefined。
 
 **类型：** number \| string \| boolean \| Object
 
@@ -32,7 +32,7 @@ defaultValue: number | string | boolean | Object
 key: string
 ```
 
-属性名。
+要持久化的属性名。
 
 **类型：** string
 

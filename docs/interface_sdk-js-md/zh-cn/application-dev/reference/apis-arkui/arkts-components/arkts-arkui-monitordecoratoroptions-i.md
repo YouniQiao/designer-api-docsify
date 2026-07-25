@@ -1,7 +1,5 @@
 # MonitorDecoratorOptions
 
-定义MonitorDecoratorOptions接口
-
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-declare interface MonitorDecoratorOptions--><!--Device-unnamed-declare interface MonitorDecoratorOptions-End-->
@@ -14,7 +12,7 @@
 enableWildcard?: boolean
 ```
 
-启用通配符功能。设置为true可启用通配符功能，设置为false可禁用通配符功能。<br>默认值为true。
+是否支持通配符能力。true：使能通配符能力，路径中可使用通配符（'*'）进行模糊监听；false：关闭通配符能力。默认值为true。
 
 **类型：** boolean
 

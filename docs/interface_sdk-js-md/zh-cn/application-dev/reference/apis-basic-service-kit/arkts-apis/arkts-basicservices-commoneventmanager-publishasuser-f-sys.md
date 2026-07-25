@@ -26,8 +26,8 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | string | 是 | 表示要发送的公共事件。 |
-| userId | number | 是 | 表示指定向该用户ID发送此公共事件。 |
+| event | string | 是 | 表示要发布的公共事件。 |
+| userId | number | 是 | 表示指定接收此公共事件的用户ID。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -92,7 +92,7 @@ function publishAsUser(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 表示要发布的公共事件。 |
-| userId | number | 是 | 表示指定向该用户ID发送此公共事件。 |
+| userId | number | 是 | 表示指定接收此公共事件的用户ID。 |
 | options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 是 | 表示发布公共事件的属性。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
 

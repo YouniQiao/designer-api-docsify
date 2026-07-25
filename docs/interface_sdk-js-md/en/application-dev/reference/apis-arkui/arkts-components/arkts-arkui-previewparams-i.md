@@ -2,7 +2,7 @@
 
 Define Preview property
 
-**Since:** 11
+**Since:** 9
 
 <!--Device-unnamed-interface PreviewParams--><!--Device-unnamed-interface PreviewParams-End-->
 
@@ -18,11 +18,11 @@ Define Preview colorMode
 
 **Type:** string
 
-**Since:** 11
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PreviewParams-colorMode?: string--><!--Device-PreviewParams-colorMode?: string-End-->
 
@@ -38,11 +38,11 @@ Define Preview deviceType
 
 **Type:** string
 
-**Since:** 11
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PreviewParams-deviceType?: string--><!--Device-PreviewParams-deviceType?: string-End-->
 
@@ -58,11 +58,11 @@ Define Preview dpi
 
 **Type:** number
 
-**Since:** 11
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PreviewParams-dpi?: number--><!--Device-PreviewParams-dpi?: number-End-->
 
@@ -78,11 +78,11 @@ Define Preview height
 
 **Type:** number
 
-**Since:** 11
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PreviewParams-height?: number--><!--Device-PreviewParams-height?: number-End-->
 
@@ -98,11 +98,11 @@ Define Preview locale
 
 **Type:** string
 
-**Since:** 11
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PreviewParams-locale?: string--><!--Device-PreviewParams-locale?: string-End-->
 
@@ -118,11 +118,11 @@ Define Preview orientation
 
 **Type:** string
 
-**Since:** 11
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PreviewParams-orientation?: string--><!--Device-PreviewParams-orientation?: string-End-->
 
@@ -138,11 +138,11 @@ Define Preview roundScreen
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PreviewParams-roundScreen?: boolean--><!--Device-PreviewParams-roundScreen?: boolean-End-->
 
@@ -158,11 +158,11 @@ Define Preview title
 
 **Type:** string
 
-**Since:** 11
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PreviewParams-title?: string--><!--Device-PreviewParams-title?: string-End-->
 
@@ -178,11 +178,11 @@ Define Preview width
 
 **Type:** number
 
-**Since:** 11
+**Since:** 9
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-PreviewParams-width?: number--><!--Device-PreviewParams-width?: number-End-->
 

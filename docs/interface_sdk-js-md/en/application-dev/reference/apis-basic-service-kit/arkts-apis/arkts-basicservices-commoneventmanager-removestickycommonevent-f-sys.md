@@ -29,7 +29,7 @@ Removes a sticky common event. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Sticky common event to remove. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the sticky common event is successfully removed, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError) 
 function removeStickyCommonEvent(event: string): Promise<void>
 ```
 
-Removes a sticky common event. This API uses a promise to return the result.
+Removes a sticky common event that has been published. This API uses a promise to return the result.
 
 **Since:** 10
 

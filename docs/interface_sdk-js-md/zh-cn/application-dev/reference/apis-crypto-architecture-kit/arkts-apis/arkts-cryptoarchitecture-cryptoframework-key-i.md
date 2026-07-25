@@ -2,7 +2,7 @@
 
 密钥（父类），在运行密码算法（如加解密）时需要提前生成其子类对象，并传入[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法。
 
-密钥通过子类密钥生成器来生成，详见子类描述。具体子类有：[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)、[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)、[PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)。
+<br>密钥通过子类密钥生成器来生成，详见子类描述。具体子类有：[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)、[PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md)、[PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md)。
 
 **起始版本：** 9
 
@@ -73,7 +73,7 @@ async function testGenerateAesKey() {
 getKeySize(): number
 ```
 
-以同步方式获取密钥的比特长度。密钥可以是对称密钥、公钥或私钥。
+获取密钥大小，单位为bits。密钥可以是对称密钥、公钥或私钥。
 
 **起始版本：** 26.0.0
 
@@ -89,7 +89,7 @@ getKeySize(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 获取密钥的比特长度。 |
+| number | 密钥大小，单位为bits。 |
 
 **错误码：**
 

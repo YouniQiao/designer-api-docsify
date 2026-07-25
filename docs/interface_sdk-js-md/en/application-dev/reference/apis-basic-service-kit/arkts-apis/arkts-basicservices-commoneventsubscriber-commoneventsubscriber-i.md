@@ -1,6 +1,6 @@
 # CommonEventSubscriber
 
-The **CommonEventSubscriber** module provides APIs for describing the common event subscriber.
+Represents the subscriber of a common event. The **CommonEventSubscriber** module provides the capabilities for processing ordered common events, including obtaining and setting the data and code transferred by events, checking whether the current common event is an ordered or sticky event, terminating an ordered common event or clearing the termination status, ending the processing of the current ordered common event, and obtaining subscription information of a subscriber. This module is applicable to data processing and process control of the received common event by the subscriber.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ Aborts an ordered common event. This API is used with [finishCommonEvent](arkts-
 abortCommonEvent(): Promise<void>
 ```
 
-Aborts this ordered common event. This API is used with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the abort,the common event is not sent to the next subscriber. This API uses a promise to return the result.
+Aborts an ordered common event. This API is used with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the abort,the common event is not sent to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ Aborts this ordered common event. This API is used with [finishCommonEvent](arkt
 abortCommonEventSync(): void
 ```
 
-Aborts this ordered common event synchronously. This API is used with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the abort,the common event is not sent to the next subscriber.
+Aborts an ordered common event when used with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). With the abort state, the common event is not sent to the next subscriber. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -120,7 +120,7 @@ Clears the abort state of this ordered common event. Use this API together with 
 clearAbortCommonEventSync(): void
 ```
 
-Clears the abort state of this ordered common event. Use this API together with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent), and the common event can be passed to the next subscriber.
+Clears the abort state of an ordered common event when used with [finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the clearance, the common event is sent to the next subscriber. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -146,7 +146,7 @@ Finishes this ordered common event. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the subscriber successfully finishes this ordered common event, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -192,7 +192,7 @@ Checks whether this ordered common event should be aborted. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the ordered common event is in the abort state; returns **false** otherwise. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined** and **data** is **true** if the current ordered common event is in the abort state, or **false** if the current ordered common event is not in the abort state.If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
@@ -218,7 +218,7 @@ Checks whether this ordered common event should be aborted. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the ordered common event is in the abort state; returns **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The **true** indicates that the ordered common event is in the abort state; the value **false** indicates otherwise. |
 
 ## getAbortCommonEventSync
 
@@ -226,7 +226,7 @@ Checks whether this ordered common event should be aborted. This API uses a prom
 getAbortCommonEventSync(): boolean
 ```
 
-Checks whether this ordered common event should be aborted.
+Checks whether an ordered common event is aborted. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -238,7 +238,7 @@ Checks whether this ordered common event should be aborted.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the ordered common event is in the abort state; returns **false** otherwise. |
+| boolean | The value **true** indicates that the ordered common event is in the abort state; the value **false** indicates otherwise. |
 
 ## getCode
 
@@ -246,7 +246,7 @@ Checks whether this ordered common event should be aborted.
 getCode(callback: AsyncCallback<number>): void
 ```
 
-Obtains the result code (number type) of an ordered common event. This API uses an asynchronous callback to return the result.
+Obtains the result code of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -260,7 +260,7 @@ Obtains the result code (number type) of an ordered common event. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the result code(number type) of an ordered common event is successfully obtained, **err** is **undefined**, and **data** is the code obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -274,7 +274,7 @@ Obtains the result code (number type) of an ordered common event. This API uses 
 getCode(): Promise<number>
 ```
 
-Obtains the result code (number type) of an ordered common event. This API uses a promise to return the result.
+Obtains the result code of an ordered common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -288,7 +288,7 @@ Obtains the result code (number type) of an ordered common event. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | Promise used to return the result code. |
 
 ## getCodeSync
 
@@ -296,7 +296,7 @@ Obtains the result code (number type) of an ordered common event. This API uses 
 getCodeSync(): number
 ```
 
-Obtains the result code (number type) of an ordered common event.
+Obtains the result code of an ordered common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -310,7 +310,7 @@ Obtains the result code (number type) of an ordered common event.
 
 | Type | Description |
 | --- | --- |
-| number | Result code of an ordered common event. |
+| number | Code delivered by the ordered common event. |
 
 ## getData
 
@@ -318,7 +318,7 @@ Obtains the result code (number type) of an ordered common event.
 getData(callback: AsyncCallback<string>): void
 ```
 
-Obtains the result data (string type) of an ordered common event. This API uses an asynchronous callback to return the result.
+Obtains the data of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -332,7 +332,7 @@ Obtains the result data (string type) of an ordered common event. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the result data(string type) of an ordered common event is successfully obtained, **err** is **undefined**, and **data** is the data obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -346,7 +346,7 @@ Obtains the result data (string type) of an ordered common event. This API uses 
 getData(): Promise<string>
 ```
 
-Obtains the result data (string type) of an ordered common event. This API uses a promise to return the result.
+Obtains the data of an ordered common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -360,7 +360,7 @@ Obtains the result data (string type) of an ordered common event. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result data (string type) of an ordered common event. |
 
 ## getDataSync
 
@@ -368,7 +368,7 @@ Obtains the result data (string type) of an ordered common event. This API uses 
 getDataSync(): string
 ```
 
-Obtains the result data (string type) of an ordered common event.
+Obtains the data of an ordered common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -382,7 +382,7 @@ Obtains the result data (string type) of an ordered common event.
 
 | Type | Description |
 | --- | --- |
-| string | Result data of an ordered common event. |
+| string | Data delivered by the ordered common event. |
 
 ## getSubscribeInfo
 
@@ -404,7 +404,7 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventSubscribeInfo&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventSubscribeInfo&gt; | Yes | Callback used to return the result. If the subscriber information is successfully obtained, **err** is **undefined** and **data** is the subscription information of the subscriber. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -440,7 +440,7 @@ Obtains the subscriber information. This API uses a promise to return the result
 getSubscribeInfoSync(): CommonEventSubscribeInfo
 ```
 
-Obtains the subscriber information.
+Obtains the subscriber information. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -474,7 +474,7 @@ Checks whether the current common event is an ordered common event. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**. If **data** is **true**, the common event is ordered; if **data** is **false**, the common event is not ordered. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -508,7 +508,7 @@ Checks whether the current common event is an ordered common event. This API use
 isOrderedCommonEventSync(): boolean
 ```
 
-Checks whether the current common event is an ordered common event.
+Checks whether a common event is an ordered one. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -528,7 +528,7 @@ Checks whether the current common event is an ordered common event.
 isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a common event is a sticky one. This API uses an asynchronous callback to return the result.
+Checks whether the current common event is a sticky common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -540,7 +540,7 @@ Checks whether a common event is a sticky one. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the common event is a sticky one; returns **false** otherwise. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**. If **data** is **true**, the common event is sticky; if **data** is **false**, the common event is not sticky. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -554,7 +554,7 @@ Checks whether a common event is a sticky one. This API uses an asynchronous cal
 isStickyCommonEvent(): Promise<boolean>
 ```
 
-Checks whether a common event is a sticky one. This API uses a promise to return the result.
+Checks whether the current common event is a sticky common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -574,7 +574,7 @@ Checks whether a common event is a sticky one. This API uses a promise to return
 isStickyCommonEventSync(): boolean
 ```
 
-Checks whether a common event is a sticky one.
+Checks whether the current common event is a sticky common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -594,7 +594,7 @@ Checks whether a common event is a sticky one.
 setCode(code: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the result code (number type) of an ordered common event. This API uses an asynchronous callback to return the result.
+Sets the code of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -608,7 +608,7 @@ Sets the result code (number type) of an ordered common event. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Result code of an ordered common event. |
+| code | number | Yes | Code delivered by the ordered common event. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -623,7 +623,7 @@ Sets the result code (number type) of an ordered common event. This API uses an 
 setCode(code: number): Promise<void>
 ```
 
-Sets the result code (number type) of an ordered common event. This API uses a promise to return the result.
+Sets the result code of an ordered common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -637,7 +637,7 @@ Sets the result code (number type) of an ordered common event. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Result code of an ordered common event. |
+| code | number | Yes | Code delivered by the ordered common event. |
 
 **Return value:**
 
@@ -671,8 +671,8 @@ Sets the result code and data of an ordered common event. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Result code of an ordered common event. |
-| data | string | Yes | Result data of an ordered common event. |
+| code | number | Yes | Code delivered by the ordered common event. |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -701,8 +701,8 @@ Sets the result code and data of an ordered common event. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Result code of an ordered common event. |
-| data | string | Yes | Result data of an ordered common event. |
+| code | number | Yes | Code delivered by the ordered common event. |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
 
 **Return value:**
 
@@ -722,7 +722,7 @@ Sets the result code and data of an ordered common event. This API uses a promis
 setCodeAndDataSync(code: number, data: string): void
 ```
 
-Sets the result code and data of an ordered common event.
+Sets the code and data of an ordered common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -736,8 +736,8 @@ Sets the result code and data of an ordered common event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Result code of an ordered common event. |
-| data | string | Yes | Result data of an ordered common event. |
+| code | number | Yes | Code delivered by the ordered common event. |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
 
 **Error codes:**
 
@@ -751,7 +751,7 @@ Sets the result code and data of an ordered common event.
 setCodeSync(code: number): void
 ```
 
-Sets the result code (number type) of an ordered common event.
+Sets the result code of an ordered common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -765,7 +765,7 @@ Sets the result code (number type) of an ordered common event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Result code of an ordered common event. |
+| code | number | Yes | Code delivered by the ordered common event. |
 
 **Error codes:**
 
@@ -779,7 +779,7 @@ Sets the result code (number type) of an ordered common event.
 setData(data: string, callback: AsyncCallback<void>): void
 ```
 
-Sets the result data (string type) of an ordered common event. This API uses an asynchronous callback to return the result.
+Sets the data of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -793,7 +793,7 @@ Sets the result data (string type) of an ordered common event. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string | Yes | Result data of an ordered common event. |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -808,7 +808,7 @@ Sets the result data (string type) of an ordered common event. This API uses an 
 setData(data: string): Promise<void>
 ```
 
-Sets the result data (string type) of an ordered common event. This API uses a promise to return the result.
+Sets the result data of an ordered common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -822,7 +822,7 @@ Sets the result data (string type) of an ordered common event. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string | Yes | Result data of an ordered common event. |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
 
 **Return value:**
 
@@ -842,7 +842,7 @@ Sets the result data (string type) of an ordered common event. This API uses a p
 setDataSync(data: string): void
 ```
 
-Sets the result data (string type) of an ordered common event.
+Sets the result data of an ordered common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -856,7 +856,7 @@ Sets the result data (string type) of an ordered common event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string | Yes | Result data of an ordered common event. |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
 
 **Error codes:**
 

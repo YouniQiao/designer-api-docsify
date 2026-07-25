@@ -6,7 +6,7 @@ declare type Context = import('../api/application/Context').default
 
 Get context.
 
-**Since:** 11
+**Since:** 9
 
 **Model restriction:** This API can be used only in the stage model.
 

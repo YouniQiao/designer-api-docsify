@@ -3,7 +3,7 @@
 用于生成CSR的配置参数，包含主体名称、扩展、摘要算法、输出格式等。
 > **说明：**  
 >  
-> - subject是X509定义的Name类型的对象。  
+> - subject是X500DistinguishedName对象。  
 >  
 > - mdName是摘要算法名，当前支持SHA1、SHA256、SHA384、SHA512。  
 >  

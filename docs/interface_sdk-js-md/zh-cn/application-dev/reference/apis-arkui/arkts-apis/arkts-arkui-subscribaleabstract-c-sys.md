@@ -1,6 +1,6 @@
 # SubscribaleAbstract（系统接口）
 
-定义Subscribale基类。
+可订阅抽象类，用于管理所持有的属性集合，提供属性的添加、删除和变更通知能力。
 
 **起始版本：** 7
 
@@ -16,7 +16,7 @@
 public addOwningProperty(subscriber: IPropertySubscriber): void
 ```
 
-添加持有的属性。
+添加持有的属性。属性不再使用时，应调用[removeOwningProperty](arkts-arkui-subscribaleabstract-c-sys.md#removeowningproperty)或[removeOwningPropertyById](arkts-arkui-subscribaleabstract-c-sys.md#removeowningpropertybyid)移除。
 
 **起始版本：** 7
 
@@ -30,7 +30,7 @@ public addOwningProperty(subscriber: IPropertySubscriber): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 | 订阅者。 |
+| subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 | 要添加的订阅者，该订阅者将接收属性变化通知。 |
 
 ## constructor
 
@@ -54,7 +54,7 @@ constructor()
 protected notifyPropertyHasChanged(propName: string, newValue: any): void
 ```
 
-当通知属性更改时调用。
+通知属性更改时调用。
 
 **起始版本：** 7
 
@@ -68,8 +68,8 @@ protected notifyPropertyHasChanged(propName: string, newValue: any): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| propName | string | 是 | 属性名称。 |
-| newValue | any | 是 | 更改的新值。 |
+| propName | string | 是 | 要通知变更的属性名称。 |
+| newValue | any | 是 | 更改后的新值。 |
 
 ## removeOwningProperty
 
@@ -77,7 +77,7 @@ protected notifyPropertyHasChanged(propName: string, newValue: any): void
 public removeOwningProperty(property: IPropertySubscriber): void
 ```
 
-删除已拥有的属性时调用。
+使用ID删除持有的属性时调用。
 
 **起始版本：** 7
 
@@ -91,7 +91,7 @@ public removeOwningProperty(property: IPropertySubscriber): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 | 要删除的属性。 |
+| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 | 要删除的订阅者，需为已通过[addOwningProperty](arkts-arkui-subscribaleabstract-c-sys.md#addowningproperty)添加的订阅者。 |
 
 ## removeOwningPropertyById
 
@@ -99,7 +99,7 @@ public removeOwningProperty(property: IPropertySubscriber): void
 public removeOwningPropertyById(subscriberId: number): void
 ```
 
-使用id删除已拥有的属性时调用。
+使用ID删除持有的属性时调用。
 
 **起始版本：** 7
 
@@ -113,7 +113,7 @@ public removeOwningPropertyById(subscriberId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriberId | number | 是 | 要删除的属性id。 |
+| subscriberId | number | 是 | 要删除的订阅者ID，需为已通过[addOwningProperty](arkts-arkui-subscribaleabstract-c-sys.md#addowningproperty)添加的订阅者ID，通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
 
 ## owningProperties_
 
@@ -121,7 +121,7 @@ public removeOwningPropertyById(subscriberId: number): void
 private owningProperties_: Set<number>
 ```
 
-返回所持有的属性。
+所持有的属性集合。
 
 **类型：** Set&lt;number&gt;
 

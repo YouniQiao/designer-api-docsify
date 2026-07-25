@@ -1,6 +1,6 @@
 # X500DistinguishedName
 
-X509定义的Name类型的对象。
+提供X.500可分辨名称操作的API。
 
 **起始版本：** 12
 

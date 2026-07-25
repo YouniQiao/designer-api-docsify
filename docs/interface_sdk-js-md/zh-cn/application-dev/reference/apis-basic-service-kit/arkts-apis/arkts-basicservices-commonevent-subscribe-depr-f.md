@@ -23,7 +23,7 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | 是 | 表示订阅者对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventData&gt; | 是 | 表示接收公共事件数据的回调函数。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventData&gt; | 是 | 表示接收公共事件数据的回调方法。 |
 
 **示例：**
 

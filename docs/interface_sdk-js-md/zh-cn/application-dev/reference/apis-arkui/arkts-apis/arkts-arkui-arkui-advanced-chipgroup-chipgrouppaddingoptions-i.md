@@ -22,11 +22,13 @@ bottom: Length
 
 ChipGroup的下方内边距（不支持百分比）。
 
+传入负数、百分比或无效字符串格式时，使用默认值。
+
 默认值：14
 
 单位：vp
 
-为undefined时，bottom取默认值。
+值为undefined时，按默认值处理。
 
 **类型：** Length
 
@@ -48,11 +50,13 @@ top: Length
 
 ChipGroup的上方内边距（不支持百分比）。
 
+传入负数、百分比或无效字符串格式时，使用默认值。
+
 默认值：14
 
 单位：vp
 
-为undefined时，top取默认值。
+值为undefined时，按默认值处理。
 
 **类型：** Length
 

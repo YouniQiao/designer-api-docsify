@@ -1,6 +1,6 @@
 # MutableBuilder
 
-定义MutableBuilder类。
+`MutableBuilder`继承自[WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)，用于封装[全局`@Builder`](../../../ui/state-management/arkts-builder.md#全局自定义构建函数)，并支持在运行时切换构建函数。需要根据状态或条件动态替换全局`@Builder`内容时，建议使用[mutableBuilder](../../../ui/state-management/arkts-mutableBuilder.md)函数创建`MutableBuilder`对象。其`builder`属性方法只能在自定义组件的`build`函数或`@Builder`装饰的函数内部被调用。
 
 **继承/实现关系：** MutableBuilder extends [WrappedBuilder<Args>](WrappedBuilder<Args>)
 

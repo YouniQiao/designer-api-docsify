@@ -6,7 +6,7 @@
 const DISTRIBUTED_SERVICE_INSTANCE_ID: string
 ```
 
-分布式服务实例id。
+分布式服务实例ID。
 
 **起始版本：** 7
 
@@ -42,7 +42,7 @@ const DISTRIBUTED_SERVICE_NAME: string
 const USER_ID: string
 ```
 
-用户ID。
+用户自定义ID。
 
 **起始版本：** 7
 

@@ -44,7 +44,7 @@ constructor(options: SegmentButtonV2ItemOptions)
 accessibilityDescription?: ResourceStr
 ```
 
-分段按钮选项的无障碍说明[accessibilityDescription](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitydescription)。
+分段按钮选项无障碍说明[accessibilityDescription](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitydescription)。
 
 默认值：""
 
@@ -70,7 +70,7 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-分段按钮选项的无障碍重要性[accessibilityLevel](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel)。
+分段按钮选项无障碍重要性[accessibilityLevel](../arkts-components/arkts-arkui-commonmethod-c.md#accessibilitylevel)。
 
 默认值："auto"
 
@@ -198,7 +198,7 @@ iconModifier?: ImageModifier
 get isHybrid(): boolean
 ```
 
-检查分段按钮选项是否已配置文本和图标。
+检查分段按钮选项是否已配置文本和图标。与[hasHybrid](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md#hashybrid)的区别：hasHybrid用于检查整个选项集合是否包含图文混合选项，本接口用于检查单个选项是否已配置文本和图标。
 
 **类型：** boolean
 

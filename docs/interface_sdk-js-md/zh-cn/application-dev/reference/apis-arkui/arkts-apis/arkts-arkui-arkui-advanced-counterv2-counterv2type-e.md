@@ -52,7 +52,7 @@ COMPACT = 1
 INLINE = 2
 ```
 
-普通数字内联调节型CounterV2。
+数值内联型CounterV2。
 
 **起始版本：** 26.0.0
 

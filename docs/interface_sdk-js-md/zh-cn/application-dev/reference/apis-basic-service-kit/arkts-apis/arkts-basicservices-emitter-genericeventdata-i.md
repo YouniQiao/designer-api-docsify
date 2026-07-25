@@ -20,7 +20,7 @@ import { emitter } from '@kit.BasicServicesKit';
 data?: T
 ```
 
-发送事件时传递的数据。T：泛型类型。
+发送事件时传递的数据。T：泛型类型，由开发者根据业务需要自定义具体的数据类型。
 
 **类型：** T
 

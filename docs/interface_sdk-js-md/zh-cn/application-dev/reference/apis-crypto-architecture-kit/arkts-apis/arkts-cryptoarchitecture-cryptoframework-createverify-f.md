@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createVerify(algName: string): Verify
 ```
 
-生成Verify实例。
+创建验签实例。
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ function createVerify(algName: string): Verify
 
 | 类型 | 说明 |
 | --- | --- |
-| [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) | 返回由输入算法指定生成的Verify对象。 |
+| [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) | 返回对应算法的Verify实例。 |
 
 **错误码：**
 

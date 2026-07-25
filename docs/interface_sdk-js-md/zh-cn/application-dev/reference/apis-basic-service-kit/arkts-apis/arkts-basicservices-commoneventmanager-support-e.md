@@ -1,6 +1,6 @@
 # Support
 
-系统公共事件是指由系统服务或系统应用发布的事件，订阅这些公共事件需要特定的权限、使用相应的值。
+系统公共事件是指由系统服务或系统应用发布的事件，订阅这些公共事件需要特定的权限，并使用相应的事件值。
 
 **起始版本：** 9
 
@@ -78,7 +78,7 @@ COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'
 COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'
 ```
 
-表示电池电量低的普通事件的动作。
+表示电池电量低的公共事件的动作。
 
 当电池电量低于设备设置的低电量百分比值时，将会触发事件通知服务发布该系统公共事件。<!--Del-->设备设置低电量百分比值请参考[电量等级定制开发指导](../../../../../device-dev/subsystems/subsys-power-battery-level-customization.md)。<!--DelEnd-->
 
@@ -96,7 +96,7 @@ COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'
 
 表示电池退出低电量状态的公共事件的动作。
 
-当电池电量从低电量等级变化到电池电量高于低电量等级时，将会触发事件通知服务发布该系统公共事件。
+当电池电量从低电量等级上升到高于低电量等级时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
 
@@ -110,7 +110,7 @@ COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'
 COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'
 ```
 
-设备连接到外部电源的公共事件的动作。
+表示设备连接到外部电源的公共事件的动作。
 
 当设备连接到外部可识别的充电器类型充电时，将会触发事件通知服务发布该系统公共事件。
 
@@ -126,7 +126,7 @@ COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'
 COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'
 ```
 
-设备与外部电源断开的公共事件的动作。
+表示设备与外部电源断开的公共事件的动作。
 
 当设备与外部电源断开时，将会触发事件通知服务发布该系统公共事件。
 
@@ -407,7 +407,7 @@ COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'
 COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 ```
 
-表示现有的应用程序包从设备中移除的事件。
+（预留事件，暂未支持）表示现有的应用程序包从设备中移除的事件。
 
 **起始版本：** 9
 
@@ -437,7 +437,7 @@ COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 
 表示应用包已更改的公共事件的动作（例如，包中的组件已启用或禁用）。
 
-在设备上安装的应用程序包更新或者包的组件被禁用使能，将会触发事件通知服务发布该系统公共事件。
+在设备上安装的应用程序包更新或者包的组件被启用/禁用，将会触发事件通知服务发布该系统公共事件。
 > **说明：**  
 >  
 > 三方应用只能监听自身应用的更改事件。
@@ -511,7 +511,7 @@ COMMON_EVENT_PACKAGE_CACHE_CLEARED = 'usual.event.PACKAGE_CACHE_CLEARED'
 COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 ```
 
-表示包已经被挂起。
+（预留事件，暂未支持）表示包已经被挂起。
 
 **起始版本：** 9
 
@@ -539,7 +539,7 @@ COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 ```
 
-发送到已被系统挂起的包。
+（预留事件，暂未支持）发送到已被系统挂起的包。
 
 **起始版本：** 9
 
@@ -553,7 +553,7 @@ COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'
 ```
 
-发送到已被系统解除挂起的包。
+（预留事件，暂未支持）发送到已被系统解除挂起的包。
 
 **起始版本：** 9
 
@@ -923,7 +923,7 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGO
 
 表示分布式账号注销的动作。
 
-分布式账号注销成功会时触发事件通知服务发布该系统公共事件，事件携带系统账号ID和子身份ID。
+分布式账号注销成功会触发事件通知服务发布该系统公共事件，事件携带系统账号ID和子身份ID。
 
 与这个公共事件相关的接口：setOsAccountDistributedInfo、updateOsAccountDistributedInfo(已废弃)，这些为公共API，setOsAccountDistributedInfoByLocalId为系统API，具体参看[分布式账号接口文档](../../../reference/js-apis-distributed-account.md)。
 
@@ -1827,7 +1827,7 @@ COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE =
         'usual.event.bluetooth.host.NAME_UPDATE'
 ```
 
-指示设备蓝牙适配器名称已更改的公共事件的操作。
+表示设备蓝牙适配器名称已更改的公共事件的操作。
 
 要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
 
@@ -1902,9 +1902,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE =
 COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_STATE_CHANGED'
 ```
 
-指示设备NFC状态已更改的公共事件的操作。
+表示设备NFC状态已更改的公共事件的操作。
 
-指示设备NFC状态更改时，将会触发事件通知服务发布该系统公共事件。
+表示设备NFC状态更改时，将会触发事件通知服务发布该系统公共事件。
 
 **起始版本：** 9
 
@@ -2132,7 +2132,7 @@ COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHAN
 COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'
 ```
 
-（预留事件，暂未支持）表示表示车辆的车载信息娱乐（IVI）系统正在休眠的常见事件的动作。
+（预留事件，暂未支持）表示车辆的车载信息娱乐（IVI）系统正在休眠的公共事件的动作。
 
 **起始版本：** 9
 
@@ -2230,7 +2230,7 @@ COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'
 COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'
 ```
 
-（预留事件，暂未支持）表示车载系统具有极端温度的常见事件的动作。
+（预留事件，暂未支持）表示车载系统具有极端温度的公共事件的动作。
 
 **起始版本：** 9
 
@@ -2612,7 +2612,7 @@ COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'
 ```
 
-指示飞行模式状态变化。
+表示飞行模式状态变化。
 
 在开启或者关闭系统飞行模式状态后，将会触发事件通知服务发布该系统公共事件。
 
@@ -2731,7 +2731,7 @@ COMMON_EVENT_USER_INFO_UPDATED = 'usual.event.USER_INFO_UPDATED'
 COMMON_EVENT_HTTP_PROXY_CHANGE = 'usual.event.HTTP_PROXY_CHANGE'
 ```
 
-指示网络Http代理配置信息更新。
+表示网络Http代理配置信息更新。
 
 在系统全局代理或者各类网络（以太网、Wi-Fi、蜂窝等）Http代理配置信息发生变化时，将会触发事件通知服务发布该系统公共事件。
 
@@ -2849,9 +2849,9 @@ COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'
 COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'
 ```
 
-指示网络连接状态变化。
+表示网络连接状态变化。
 
-各类网络（以太网、Wi-Fi、蜂窝等）在发生连接状态状态变化时（断开、断开中、连接中、已连接等），将会触发事件通知服务发布该系统公共事件。
+各类网络（以太网、Wi-Fi、蜂窝等）在连接状态变化时（断开、断开中、连接中、已连接等），将会触发事件通知服务发布该系统公共事件。
 
 具体枚举值及其对应的连接状态如下表所示：
 > **说明**  

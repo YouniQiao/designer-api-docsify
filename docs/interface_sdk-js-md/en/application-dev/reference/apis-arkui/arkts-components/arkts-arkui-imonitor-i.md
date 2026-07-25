@@ -2,7 +2,7 @@
 
 Define IMonitor interface
 
-**Since:** 23
+**Since:** 12
 
 <!--Device-unnamed-declare interface IMonitor--><!--Device-unnamed-declare interface IMonitor-End-->
 
@@ -16,11 +16,11 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 
 Return the pair of the value before the most recent change and current value for given path.If path does not exist, return undefined; If path is not specified, return the value pair corresponding to the first path in dirty.
 
-**Since:** 23
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
@@ -38,7 +38,7 @@ Return the pair of the value before the most recent change and current value for
 
 | Type | Description |
 | --- | --- |
-| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form@atomicservice |
+| [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; | @syscap SystemCapability.ArkUI.ArkUI.Full@stagemodelonly@crossplatform@form |
 
 ## dirty
 
@@ -50,11 +50,11 @@ Array of changed paths(keys)
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 23.
 

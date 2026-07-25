@@ -20,7 +20,7 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 end?: LengthMetrics
 ```
 
-文本与右侧图标之间间距，不支持百分比。
+文本与结束侧图标之间间距，不支持百分比。
 
 默认值：
 
@@ -28,7 +28,7 @@ size为ChipSize.SMALL时，end默认值：
 
 `LengthMetrics.resource($r('sys.float.chip_small_text_margin'))`
 
-size为ChipSize.NORMAL时，end默认值:
+size为ChipSize.NORMAL时，end默认值：
 
 `LengthMetrics.resource($r('sys.float.chip_normal_text_margin'))`
 
@@ -52,11 +52,11 @@ size为ChipSize.NORMAL时，end默认值:
 start?: LengthMetrics
 ```
 
-文本与左侧图标之间间距，不支持百分比。
+文本与起始侧图标的间距，不支持百分比。
 
 默认值：
 
-size为ChipSize.SMALL时，start默认值:
+size为ChipSize.SMALL时，start默认值：
 
 `LengthMetrics.resource($r('sys.float.chip_small_text_margin'))`
 

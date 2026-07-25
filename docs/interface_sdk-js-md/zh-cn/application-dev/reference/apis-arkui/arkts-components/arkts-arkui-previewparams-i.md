@@ -2,7 +2,7 @@
 
 Define Preview property
 
-**起始版本：** 11
+**起始版本：** 9
 
 <!--Device-unnamed-interface PreviewParams--><!--Device-unnamed-interface PreviewParams-End-->
 
@@ -18,11 +18,11 @@ Define Preview colorMode
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PreviewParams-colorMode?: string--><!--Device-PreviewParams-colorMode?: string-End-->
 
@@ -38,11 +38,11 @@ deviceType?: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PreviewParams-deviceType?: string--><!--Device-PreviewParams-deviceType?: string-End-->
 
@@ -58,11 +58,11 @@ dpi?: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PreviewParams-dpi?: number--><!--Device-PreviewParams-dpi?: number-End-->
 
@@ -78,11 +78,11 @@ Define Preview height
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PreviewParams-height?: number--><!--Device-PreviewParams-height?: number-End-->
 
@@ -98,11 +98,11 @@ Define Preview locale
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PreviewParams-locale?: string--><!--Device-PreviewParams-locale?: string-End-->
 
@@ -118,11 +118,11 @@ Define Preview orientation
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PreviewParams-orientation?: string--><!--Device-PreviewParams-orientation?: string-End-->
 
@@ -138,11 +138,11 @@ Define Preview roundScreen
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PreviewParams-roundScreen?: boolean--><!--Device-PreviewParams-roundScreen?: boolean-End-->
 
@@ -158,11 +158,11 @@ Define Preview title
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PreviewParams-title?: string--><!--Device-PreviewParams-title?: string-End-->
 
@@ -178,11 +178,11 @@ Define Preview width
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PreviewParams-width?: number--><!--Device-PreviewParams-width?: number-End-->
 

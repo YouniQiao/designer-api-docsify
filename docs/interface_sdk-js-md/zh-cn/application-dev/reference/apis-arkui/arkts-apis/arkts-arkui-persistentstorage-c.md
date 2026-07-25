@@ -1,7 +1,8 @@
 # PersistentStorage
 
-PersistentStorage具体UI使用说明，详见[PersistentStorage(持久化存储UI状态)](../../../ui/state-management/arkts-persiststorage.md)
-> **说明：**
+PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStorage属性持久化到文件中，在应用重启时从文件中恢复这些属性值并写入到AppStorage。具体UI使用说明，详见[PersistentStorage：持久化存储UI状态](../../../ui/state-management/arkts-persiststorage.md)。
+> **说明：**  
+>  
 > 从API version 12开始，PersistentStorage支持null、undefined。
 
 **起始版本：** 7
@@ -16,7 +17,7 @@ PersistentStorage具体UI使用说明，详见[PersistentStorage(持久化存储
 static DeleteProp(key: string): void
 ```
 
-[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)的逆向操作。将key对应的属性从[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)中删除，后续[AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作，对PersistentStorage不会再有影响。
+是[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)的逆向操作。将key对应的属性从[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)中删除，后续[AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)接口。
 
 **起始版本：** 7
 
@@ -64,17 +65,17 @@ static Keys(): Array<string>
 static PersistProp<T>(key: string, defaultValue: T): void
 ```
 
-将[AppStorage](../../../ui/state-management/arkts-appstorage.md)中key对应的属性持久化到文件中。该接口的调用通常在访问AppStorage之前。
+将[AppStorage](../../../ui/state-management/arkts-appstorage.md)中key对应的属性持久化到文件中。该接口应在访问AppStorage之前调用。
 
 确定属性的类型和值的顺序如下：
 
-1. 如果[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)文件中存在key对应的属性，在AppStorage中创建对应的propName，并用在PersistentStorage中找到的key的属性初始化。
+1. 如果[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)文件中存在key对应的属性，在AppStorage中创建对应的key，并用在PersistentStorage中找到的key的属性初始化。
 
 2. 如果PersistentStorage文件中没有查询到key对应的属性，则在AppStorage中查找key对应的属性。如果找到key对应的属性，则将该属性持久化。
 
 3. 如果AppStorage也没查找到key对应的属性，则在AppStorage中创建key对应的属性。用defaultValue初始化其值，并将该属性持久化。
 
-根据上述的初始化流程，如果AppStorage中有该属性，则会使用其值，覆盖掉PersistentStorage文件中的值。由于AppStorage是内存内数据，该行为会导致数据丧失持久化能力。
+根据上述的初始化流程，如果AppStorage中有该属性，则会使用其值覆盖PersistentStorage文件中的值。由于AppStorage是内存中的数据，这种操作会使持久化文件中的数据被内存数据覆盖，导致持久化数据失去意义。
 
 **起始版本：** 7
 
@@ -90,8 +91,8 @@ static PersistProp<T>(key: string, defaultValue: T): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 属性名。 |
-| defaultValue | T | 是 | 在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。不允许为null或undefined。 |
+| key | string | 是 | 要持久化的属性名。 |
+| defaultValue | T | 是 | 在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。默认值不允许为null或undefined。 |
 
 ## PersistProps
 
@@ -104,7 +105,7 @@ static PersistProps(
   ): void
 ```
 
-行为和[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)类似，不同在于可以一次性持久化多个数据，适合在应用启动的时候初始化。
+行为与[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)类似，不同在于可以一次性持久化多个数据。该接口应在访问AppStorage之前调用，适合在应用启动时初始化。
 
 **起始版本：** 7
 
@@ -128,7 +129,7 @@ static PersistProps(
 static deleteProp(key: string): void
 ```
 
-[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)的逆向操作。将key对应的属性从PersistentStorage中删除，后续[AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作，对[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)不会再有影响。该操作会将对应的key从持久化文件中删除，如果希望再次持久化，可以再次调用[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)接口。
+是[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)的逆向操作。将key对应的属性从[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)中删除，后续[AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)接口。
 
 **起始版本：** 10
 
@@ -172,17 +173,17 @@ static keys(): Array<string>
 static persistProp<T>(key: string, defaultValue: T): void
 ```
 
-将[AppStorage](../../../ui/state-management/arkts-appstorage.md)中key对应的属性持久化到文件中。该接口的调用通常在访问AppStorage之前。
+将[AppStorage](../../../ui/state-management/arkts-appstorage.md)中key对应的属性持久化到文件中。该接口通常在访问AppStorage之前调用。
 
 确定属性的类型和值的顺序如下：
 
-1. 如果[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)文件中存在key对应的属性，在AppStorage中创建对应的propName，并用在PersistentStorage中找到的key的属性初始化。
+1. 如果[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)文件中存在key对应的属性，在AppStorage中创建对应的key，并用在PersistentStorage中找到的key的属性初始化。
 
 2. 如果PersistentStorage文件中没有查询到key对应的属性，则在AppStorage中查找key对应的属性。如果找到key对应的属性，则将该属性持久化。
 
 3. 如果AppStorage中也没查找到key对应的属性，则在AppStorage中创建key对应的属性。用defaultValue初始化其值，并将该属性持久化。
 
-根据上述的初始化流程，如果AppStorage中有该属性，则会使用其值，覆盖掉PersistentStorage文件中的值。由于AppStorage是内存内数据，该行为会导致数据丧失持久化能力。
+根据上述的初始化流程，如果AppStorage中有该属性，则会使用其值覆盖PersistentStorage文件中的值。由于AppStorage是内存中的数据，这种操作会使持久化文件中的数据被内存数据覆盖，导致持久化数据失去意义。
 
 **起始版本：** 10
 
@@ -196,8 +197,8 @@ static persistProp<T>(key: string, defaultValue: T): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 属性名。 |
-| defaultValue | T | 是 | 在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。从API version 12开始允许为null或undefined。 |
+| key | string | 是 | 要持久化的属性名。 |
+| defaultValue | T | 是 | 在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。从API version 12开始可以为null或undefined。 |
 
 ## persistProps
 
@@ -205,7 +206,7 @@ static persistProp<T>(key: string, defaultValue: T): void
 static persistProps(props: PersistPropsOptions[]): void
 ```
 
-行为和[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)类似，不同在于可以一次性持久化多个数据，适合在应用启动的时候初始化。
+行为与[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)类似，不同在于可以一次性持久化多个数据。该接口通常在访问AppStorage之前调用，适合在应用启动时初始化。
 
 **起始版本：** 10
 
@@ -219,5 +220,5 @@ static persistProps(props: PersistPropsOptions[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | 是 | 持久化数组。 |
+| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | 是 | 持久化数组，每项包含属性名和默认值。 |
 

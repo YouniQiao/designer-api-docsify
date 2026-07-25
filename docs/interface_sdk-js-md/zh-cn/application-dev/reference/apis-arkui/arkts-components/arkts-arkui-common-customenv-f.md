@@ -6,7 +6,9 @@
 declare function CustomEnv<T>(key: CustomEnvKey<T>): PropertyDecorator
 ```
 
-定义自定义环境PropertyDecorator。
+用于获取自定义环境变量。
+
+开发者指南见：[\@CustomEnv开发者指南](../../../ui/arkts-custom-env-property.md)。
 
 **起始版本：** 26.0.0
 
@@ -22,11 +24,11 @@ declare function CustomEnv<T>(key: CustomEnvKey<T>): PropertyDecorator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | [CustomEnvKey](arkts-arkui-customenvkey-c.md)&lt;T&gt; | 是 | 自定义环境密钥 |
+| key | [CustomEnvKey](arkts-arkui-customenvkey-c.md)&lt;T&gt; | 是 | 自定义环境变量Key，用于标识要获取的自定义环境变量。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| PropertyDecorator | CustomEnv装饰器 |
+| PropertyDecorator | 属性装饰器，开发者无需关注该返回值。 |
 

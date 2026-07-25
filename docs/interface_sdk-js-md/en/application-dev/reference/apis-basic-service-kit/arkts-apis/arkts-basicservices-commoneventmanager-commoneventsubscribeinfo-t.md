@@ -4,7 +4,7 @@
 export type CommonEventSubscribeInfo = _CommonEventSubscribeInfo
 ```
 
-Describes the information about a subscriber.
+Describes information about a common event subscriber.
 
 **Since:** 10
 

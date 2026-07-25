@@ -1,16 +1,16 @@
 # Verify
 
-Provides APIs for signature verification. Before using any API of the **Verify** class, you must create a **Verify** instance by using [createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify). Invoke **init()**, **update()**, and **verify()** in this class in sequence to complete the signature verification. For details about the sample code, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
+Signature verification interface, defining methods for verifying signatures using a public key. Before use, you must create a **Verify** instance by using [createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify). Invoke **init()**, **update()**, and **verify()** in this class in sequence to complete the signature verification. For details about the sample code, see [Signing and Signature Verification with an RSA Key Pair (PKCS1 Mode)](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md).
 
-The **Verify** class does not support repeated initialization. When a new key is used for signature verification,you must create a new **Verify** instance and call **init()** for initialization.
+<br>The **Verify** class does not support repeated initialization. When a new key is used for signature verification,you must create a new **Verify** instance and call **init()** for initialization.
 
-The signature verification mode is determined in **createVerify()**, and the key is set by **init()**.
+<br>The signature verification mode is determined in **createVerify()**, and the key is set by **init()**.
 
-If the signed message is short, you can call **verify()** to pass in the signed message and signature (**signatureData**) for signature verification after **init()**. That is, you do not need to use **update()**.
+<br>If the signed message is short, you can call **verify()** to pass in the signed message and signature (**signatureData**) for signature verification after **init()**. That is, you do not need to use **update()**.
 
-If the signed message is too long, you can call **update()** multiple times to pass in the signed message by segment, and then call **verify()** to verify the full text of the message. In versions earlier than API version 10, the input parameter **data** of **verify()** supports only **DataBlob**. Since API version 10, **data** also supports **null**. After all the data is passed in by using **update()**, **verify()** can be called to verify the signature data.
+<br>If the signed message is too long, you can call **update()** multiple times to pass in the signed message by segment, and then call **verify()** to verify the full text of the message. In versions earlier than API version 10, the input parameter **data** of **verify()** supports only **DataBlob**. Since API version 10, **data** also supports **null**. After all the data is passed in by using **update()**, **verify()** can be called to verify the signature data.
 
-If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
+<br>If the DSA algorithm is used for signature verification and the digest algorithm is **NoHash**, **update()** is not supported. If **update()** is called in this case, **ERR_CRYPTO_OPERATION** will be returned.
 
 **Since:** 9
 
@@ -360,9 +360,9 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number): void
 
 Sets signature verification specifications. You can use this API to set signature verification parameters that cannot be set by [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify).
 
-Currently, only RSA and SM2 are supported. Since API version 11, SM2 signature verification parameters can be set.
+<br>Currently, only RSA and SM2 are supported. Since API version 11, SM2 signature verification parameters can be set.
 
-The parameters for signature verification must be the same as those for signing.
+<br>The parameters for signature verification must be the same as those for signing.
 
 **Since:** 10
 
@@ -410,11 +410,11 @@ function testSetVerifySpec() {
 setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 ```
 
-Sets the specified parameter for the Verify object.
+Sets the specified parameter for the Verify instance.
 
-Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
+<br>Currently, only PSS_SALT_LEN in RSA and USER_ID in SM2 are supported.
 
-The parameters for signature verification must be the same as those for signing.
+<br>The parameters for signature verification must be the same as those for signing.
 
 **Since:** 11
 
@@ -451,11 +451,11 @@ The parameters for signature verification must be the same as those for signing.
 setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean): void
 ```
 
-Sets the specified parameter for the Verify object.
+Sets the specified parameter for the Verify instance.
 
-Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU and ML_DSA_CONTEXT in ML-DSA are supported.
+<br>Currently, only PSS_SALT_LEN in RSA, USER_ID in SM2, and ML_DSA_DETERMINISTIC, ML_DSA_MU and ML_DSA_CONTEXT in ML-DSA are supported.
 
-The parameters for signature verification must be the same as those for signing.
+<br>The parameters for signature verification must be the same as those for signing.
 
 **Since:** 26.0.0
 
@@ -505,7 +505,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 Updates the data for signature verification. This API uses an asynchronous callback to return the result.
 
-This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init](arkts-cryptoarchitecture-cryptoframework-verify-i.md#init) or [initSync](arkts-cryptoarchitecture-cryptoframework-verify-i.md#initsync).
+<br>This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init](arkts-cryptoarchitecture-cryptoframework-verify-i.md#init) or [initSync](arkts-cryptoarchitecture-cryptoframework-verify-i.md#initsync).
 > **NOTE**  
 >  
 > You can call **update** multiple times or do not use **update** (call  
@@ -562,7 +562,7 @@ update(data: DataBlob): Promise<void>
 
 Updates the data for signature verification. This API uses a promise to return the result.
 
-This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init()](arkts-cryptoarchitecture-cryptoframework-verify-i.md#init).
+<br>This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init()](arkts-cryptoarchitecture-cryptoframework-verify-i.md#init).
 > **NOTE**  
 >  
 > You can call **update** multiple times or do not use **update** (call  
@@ -619,7 +619,7 @@ updateSync(data: DataBlob): void
 
 Updates the data for signature verification. This API returns the result synchronously.
 
-This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized by using [initSync()](arkts-cryptoarchitecture-cryptoframework-verify-i.md#initsync).
+<br>This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized by using [initSync()](arkts-cryptoarchitecture-cryptoframework-verify-i.md#initsync).
 > **NOTE**  
 >  
 > You can call **updateSync** multiple times or do not use **updateSync** (call  
@@ -1088,7 +1088,7 @@ function verifyBySync() {
 readonly algName: string
 ```
 
-Indicates the algorithm name of the Verify object.
+Indicates the algorithm name of the Verify instance.
 
 **Type:** string
 

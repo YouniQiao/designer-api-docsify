@@ -12,7 +12,7 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEventSubscriber
 ```
 
-createSubscriber的同步接口。
+同步创建订阅者的接口。
 
 **起始版本：** 10
 

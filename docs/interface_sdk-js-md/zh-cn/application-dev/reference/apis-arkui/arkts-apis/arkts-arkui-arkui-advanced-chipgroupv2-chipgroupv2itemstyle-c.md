@@ -1,6 +1,6 @@
 # ChipGroupV2ItemStyle
 
-ChipGroupV2ItemStyle定义了ChipV2的共通属性类。
+ChipGroupV2ItemStyleConfig定义了ChipV2的共通属性配置。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ ChipGroupV2ItemStyle的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ChipGroupV2ItemStyleConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md) | 是 | 芯片组项样式配置。 |
+| config | [ChipGroupV2ItemStyleConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md) | 是 | ChipGroupV2项样式配置。 |
 
 ## backgroundColor
 
@@ -116,7 +116,7 @@ ChipV2文字颜色。
 public selectedBackgroundColor?: ColorMetrics
 ```
 
-ChipV2激活时的背景颜色。
+ChipV2选中时的背景颜色。设置后，当ChipV2被选中时，背景会填充此颜色，替代未选中状态下的backgroundColor。
 
 默认值：$r('sys.color.ohos_id_color_emphasize')
 
@@ -140,7 +140,7 @@ ChipV2激活时的背景颜色。
 public selectedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件选中状态下的系统材质样式。不同材质具有不同的效果，能够影响组件的背景色[backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](../arkts-components/arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](../arkts-components/arkts-arkui-commonmethod-c.md#borderwidth)、阴影[shadow](../arkts-components/arkts-arkui-commonmethod-c.md#shadow)效果、材质层滤镜效果[materialFilter](../arkts-components/arkts-arkui-commonmethod-c.md#materialfilter)。
+设置组件选中状态下的系统材质样式。设置后，当ChipV2被选中时，应用此材质样式，替代未选中状态下的backgroundSystemMaterial。不同材质具有不同的效果，能够影响组件的背景色[backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](../arkts-components/arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](../arkts-components/arkts-arkui-commonmethod-c.md#borderwidth)、阴影[shadow](../arkts-components/arkts-arkui-commonmethod-c.md#shadow)效果、材质层滤镜效果[materialFilter](../arkts-components/arkts-arkui-commonmethod-c.md#materialfilter)。
 
 默认值：undefined，不应用材质样式。
 
@@ -162,7 +162,7 @@ public selectedBackgroundSystemMaterial?: uiMaterial.Material
 public selectedFontColor?: ColorMetrics
 ```
 
-ChipV2激活时的文字颜色。
+ChipV2选中时的文字颜色。设置后，当ChipV2被选中时，label文本会显示此颜色，替代未选中状态下的fontColor。
 
 默认值：$r('sys.color.ohos_id_color_text_primary_contrary')
 
@@ -186,7 +186,7 @@ ChipV2激活时的文字颜色。
 public size?: ChipV2Size | SizeT<LengthMetrics>
 ```
 
-ChipV2尺寸。
+ChipV2尺寸，使用时需要从ChipV2组件引入ChipV2Size类型。
 
 默认值：ChipV2Size.NORMAL
 

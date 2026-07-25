@@ -1,6 +1,6 @@
 # SystemEnvKey
 
-定义System Env Key的类。
+系统环境变量Key对应的类型。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,7 @@
 protected constructor()
 ```
 
-构造函数。
+用于创建该类的实例对象。
 
 **起始版本：** 26.0.0
 
@@ -32,7 +32,7 @@ protected constructor()
 private type?: T
 ```
 
-系统env key对应的类型。
+系统环境变量Key对应值的数据类型，默认值为undefined。
 
 **类型：** T
 

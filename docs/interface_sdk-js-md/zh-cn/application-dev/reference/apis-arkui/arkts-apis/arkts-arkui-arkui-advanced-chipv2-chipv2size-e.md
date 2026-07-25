@@ -1,6 +1,6 @@
 # ChipV2Size
 
-控制ChipV2组件大小类型的枚举值
+ChipV2Size是ChipV2可指定的尺寸类型，如普通型ChipV2。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,7 @@
 NORMAL = 'NORMAL'
 ```
 
-正常类型。
+普通尺寸ChipV2。
 
 **起始版本：** 26.0.0
 
@@ -32,7 +32,7 @@ NORMAL = 'NORMAL'
 SMALL = 'SMALL'
 ```
 
-小型类型。
+小尺寸ChipV2。
 
 **起始版本：** 26.0.0
 

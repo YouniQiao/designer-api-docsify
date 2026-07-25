@@ -1,6 +1,6 @@
 # ChipGroupV2
 
-ChipGroupV2组件提供操作块群组，用于文件或资源内容的分类等场景。
+ChipGroupV2组件提供操作块群组容器，支持单选或多选、自定义样式和间距、以及尾部自定义内容。该组件适用于文件或资源内容的分类、标签选择、筛选等场景，可帮助开发者快速构建美观且交互丰富的标签组界面。
 
 该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以更灵活地控制组件的数据和状态，实现更高效的用户界面刷新。
 
@@ -42,7 +42,7 @@ build函数用于构造ChipGroupV2高级组件。
 $items?: Callback<ChipGroupV2Items>
 ```
 
-ChipV2项的双向绑定回调方法。
+ChipV2项的双向绑定回调方法，当需要监听或修改ChipV2项列表时传入此回调。
 
 默认值：undefined，不触发回调。
 
@@ -64,7 +64,7 @@ ChipV2项的双向绑定回调方法。
 $selectedIndexes?: Callback<Array<number>>
 ```
 
-被选中ChipV2索引的双向绑定回调方法。
+被选中ChipV2索引的双向绑定回调方法，当需要监听或修改选中的ChipV2索引时传入此回调。
 
 默认值：undefined，不触发回调。
 
@@ -114,7 +114,7 @@ chipGroupPadding?: ChipGroupV2Padding
 chipGroupSpace?: ChipGroupV2Space
 ```
 
-左右内边距及ChipV2之间间距。参考[ChipGroupV2Space](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)类型。
+左右内边距及ChipV2之间间距。设置后可调整ChipGroupV2的左右内边距和ChipV2之间的间距，增大间距使布局更宽松，减小间距使布局更紧凑。参考[ChipGroupV2Space](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2space-c.md)类型。
 
 默认值：{ itemSpace: 8, startSpace: 16, endSpace: 16 }
 
@@ -142,7 +142,7 @@ chipGroupSpace?: ChipGroupV2Space
 itemStyle?: ChipGroupV2ItemStyle
 ```
 
-ChipV2的style属性，如颜色，大小等，参考[ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)类型。
+ChipV2的style属性，如颜色、大小等，参考[ChipGroupV2ItemStyle](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyle-c.md)类型。
 
 默认值：
 
@@ -150,7 +150,7 @@ ChipV2的style属性，如颜色，大小等，参考[ChipGroupV2ItemStyle](arkt
 
 值为undefined时，按默认值处理。
 
-图标填充色（[fillColor](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipV2.md#chipv2imageiconconfig)和[activatedFillColor](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipV2.md#chipv2imageiconconfig)）的设置与字体颜色（[fontColor](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)）保持一致。如果需要设置不同的颜色，可以在传入items时使用[prefixSymbolIcon](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)和[suffixSymbolIcon](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)。
+图标填充色（[fillColor](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)和[activatedFillColor](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)）的设置与对应的字体颜色保持一致：未选中状态下fillColor与[fontColor](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)保持一致，选中状态下activatedFillColor与[selectedFontColor](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemstyleconfig-i.md)保持一致。如果需要设置不同的颜色，可以在传入items时使用[prefixSymbolIcon](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)和[suffixSymbolIcon](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)。
 
 **类型：** ChipGroupV2ItemStyle
 
@@ -174,7 +174,7 @@ items: ChipGroupV2Items
 
 每个ChipV2的特定属性，参考[ChipGroupV2ItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2itemconfig-i.md)类型。
 
-值为undefined或空数组时，ChipGroupV2不渲染内部的[ChipV2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ChipV2.md)。
+值为undefined或空数组时，ChipGroupV2不渲染内部的[ChipV2](arkts-arkui-advanced-chipv2.md)。
 
 **类型：** ChipGroupV2Items
 
@@ -224,7 +224,9 @@ true：支持多个ChipV2选中；false：仅支持单个ChipV2选中。
 onChange?: Callback<Array<number>>
 ```
 
-ChipV2状态改变时的回调方法。
+ChipV2状态改变时的回调方法，用于响应ChipV2选中状态变化。当需要监听ChipV2选中状态改变时传入此回调。
+
+触发场景：用户点击ChipV2改变选中状态时触发，返回当前选中ChipV2的索引数组。
 
 默认值：undefined，不触发事件。
 
@@ -248,11 +250,15 @@ selectedIndexes?: Array<number>
 
 被选中ChipV2的索引。
 
+取值范围：索引值必须为大于等于0且小于items数组长度的整数。传入不在取值范围内的索引时，该索引不生效。
+
 默认值：[0]
 
 值为undefined时，按默认值处理。
 
 当multiple等于false时，如果没有传入selectedIndexes，默认是第一个ChipV2被选中，如果传入的selectedIndexes有多个元素时，默认第一个索引的ChipV2被选中。
+
+当multiple等于true时，如果没有传入selectedIndexes，默认第一个ChipV2被选中；如果传入的selectedIndexes有多个元素时，所有对应索引的ChipV2均被选中。
 
 **类型：** Array&lt;number&gt;
 

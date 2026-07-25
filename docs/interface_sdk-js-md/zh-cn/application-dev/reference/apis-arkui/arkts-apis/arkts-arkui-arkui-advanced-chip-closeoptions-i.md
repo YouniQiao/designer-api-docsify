@@ -24,15 +24,17 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 fontSize?: Dimension
 ```
 
-设置Chip组件默认关闭图标的大小，不支持百分比。
+设置Chip组件默认关闭图标的字体大小，不支持百分比，传入百分比时按默认值处理。
 
 默认值：
 
-size为ChipSize.SMALL时，`默认值：$r('sys.float.chip_small_font_size')`
+size为ChipSize.SMALL时，`$r('sys.float.chip_small_font_size')`
 
-其他情况默认值：`$r('sys.float.chip_normal_font_size')`
+其他情况：`$r('sys.float.chip_normal_font_size')`
 
-值为undefined时，按默认值处理。
+单位：fp
+
+传入负数时，按默认值处理。值为undefined时，按默认值处理。
 
 **类型：** Dimension
 

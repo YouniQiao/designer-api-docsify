@@ -1,6 +1,6 @@
 # LabelOptions
 
-Label定义图标属性。
+LabelOptions定义文本属性。
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixI
 text: string
 ```
 
-文本属性。
+Chip项显示的文本内容，用于设置Chip上展示的文字信息。
 
 **类型：** string
 

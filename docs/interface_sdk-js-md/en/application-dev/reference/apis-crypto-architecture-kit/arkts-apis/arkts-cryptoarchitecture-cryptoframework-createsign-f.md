@@ -34,7 +34,7 @@ Creates a **Sign** instance.
 
 | Type | Description |
 | --- | --- |
-| [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) | Returns the **Sign** instance created. |
+| [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) | Returns the **Sign** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 

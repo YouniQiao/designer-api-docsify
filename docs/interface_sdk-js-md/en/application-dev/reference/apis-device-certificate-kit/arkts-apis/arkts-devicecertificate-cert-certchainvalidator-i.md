@@ -22,7 +22,7 @@ validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 
 Validates an X.509 certificate chain. This API uses an asynchronous callback to return the result.
 
-The certificate chain validator does not verify the certificate validity period because the system time on the device is untrusted. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
+<br>Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
 
 **Since:** 9
 
@@ -43,16 +43,16 @@ The certificate chain validator does not verify the certificate validity period 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | runtime error. Possible causes:<br>1. Memory copy failed;<br>2. A null pointer occurs inside the system;<br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | crypto operation error. |
-| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | the certificate signature verification failed. |
-| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | the certificate has not taken effect. |
-| [19030004](../errorcode-cert.md#19030004-certificate-expired) | the certificate has expired. |
-| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | failed to obtain the certificate issuer. |
-| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | the key cannot be used for signing a certificate. |
-| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | the key cannot be used for a digital signature. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed;<br>2. A null pointer occurs inside the system;<br>3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | The key cannot be used for signing a certificate. |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | The key cannot be used for a digital signature. |
 
 **Example**
 
@@ -156,7 +156,7 @@ validate(certChain: CertChainData): Promise<void>
 
 Validates an X.509 certificate chain. This API uses a promise to return the result.
 
-The certificate chain validator does not verify the certificate validity period because the system time on the device is untrusted. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
+<br>Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
 
 **Since:** 9
 
@@ -182,16 +182,16 @@ The certificate chain validator does not verify the certificate validity period 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | runtime error. Possible causes:<br>1. Memory copy failed;<br>2. A null pointer occurs inside the system;<br>3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | crypto operation error. |
-| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | the certificate signature verification failed. |
-| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | the certificate has not taken effect. |
-| [19030004](../errorcode-cert.md#19030004-certificate-expired) | the certificate has expired. |
-| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | failed to obtain the certificate issuer. |
-| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | the key cannot be used for signing a certificate. |
-| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | the key cannot be used for a digital signature. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types;<br>3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed;<br>2. A null pointer occurs inside the system;<br>3. Failed to obtain the native object or convert parameters. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | The key cannot be used for signing a certificate. |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | The key cannot be used for a digital signature. |
 
 **Example**
 
@@ -293,7 +293,7 @@ validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidati
 
 Validates a certificate by building and verifying its certificate chain. This API uses a promise to return the result.
 
-The certificate chain construction process complies with the following rules:1. Trusted anchor source: The trusted certificate list (trustedCerts) is always used as the trust anchor source.The preconfigured certificate is used as the trust anchor source only when trustSystemCa is set to true.2. Issuer search sequence: The system searches for the issuer from the trust anchor source first. If the issuer cannot be found, the system searches for the issuer in the untrusted certificate list (untrustedCerts). The intermediate CA certificate downloaded online is an untrusted certificate.3. Trust anchor locking: Once the issuer is found in the trust anchor source, the subsequent lookup process does not roll back to the untrusted certificate, that is, the subsequent certificates must come from the trust anchor source.4. Construction completion conditions:If partialChain is false (default value), the build is complete only when the root certificate (self-signed certificate) is found.If partialChain is true, the first time the issuer is found in the trust anchor source, the build is complete.5. Follow-up verification: After the certificate chain is constructed, perform other verification operations,such as certificate signature verification and certificate revocation check.
+<br>The certificate chain construction process complies with the following rules:1. Trusted anchor source: The trusted certificate list (trustedCerts) is always used as the trust anchor source.The preconfigured certificate is used as the trust anchor source only when trustSystemCa is set to true.2. Issuer search sequence: The system searches for the issuer from the trust anchor source first. If the issuer cannot be found, the system searches for the issuer in the untrusted certificate list (untrustedCerts). The intermediate CA certificate downloaded online is an untrusted certificate.3. Trust anchor locking: Once the issuer is found in the trust anchor source, the subsequent lookup process does not roll back to the untrusted certificate, that is, the subsequent certificates must come from the trust anchor source.4. Construction completion conditions:If partialChain is false (default value), the build is complete only when the root certificate (self-signed certificate) is found.If partialChain is true, the first time the issuer is found in the trust anchor source, the build is complete.5. Follow-up verification: After the certificate chain is constructed, perform other verification operations,such as certificate signature verification and certificate revocation check.
 
 **Since:** 26.0.0
 
@@ -322,32 +322,32 @@ The certificate chain construction process complies with the following rules:1. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) | runtime error. Possible causes:<br>1. Memory copy failed;<br>2. A null pointer occurs inside the system;<br>3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | parameter check failed. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | crypto operation error. |
-| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | the certificate signature verification failed. |
-| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | the certificate has not taken effect. |
-| [19030004](../errorcode-cert.md#19030004-certificate-expired) | the certificate has expired. |
-| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | failed to obtain the certificate issuer. |
-| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | the key cannot be used for signing a certificate. |
-| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | the key cannot be used for a digital signature. |
-| [19030009](../errorcode-cert.md#19030009-untrusted-certificate) | untrusted certificate. |
-| [19030010](../errorcode-cert.md#19030010-certificate-revoked) | the certificate has been revoked. |
-| [19030011](../errorcode-cert.md#19030011-unsupported-key-extensions) | unsupported critical extension. |
-| [19030012](../errorcode-cert.md#19030012-host-name-mismatch) | hostname mismatch in the certificate. |
-| [19030013](../errorcode-cert.md#19030013-email-address-mismatch) | email address mismatch in the certificate. |
-| [19030014](../errorcode-cert.md#19030014-key-usage-mismatch) | key usage mismatch in the certificate. |
-| [19030015](../errorcode-cert.md#19030015-crl-not-found) | failed to obtain the certificate revocation list. |
-| [19030016](../errorcode-cert.md#19030016-invalid-crl) | the certificate revocation list has not taken effect. |
-| [19030017](../errorcode-cert.md#19030017-crl-expired) | the certificate revocation list has expired. |
-| [19030018](../errorcode-cert.md#19030018-crl-signature-verification-failure) | failed to verify the signature of the certificate revocation list. |
-| [19030019](../errorcode-cert.md#19030019-crl-issuer-not-found) | failed to find the issuer of the certificate revocation list. |
-| [19030020](../errorcode-cert.md#19030020-ocsp-response-not-found) | failed to obtain the OCSP response. |
-| [19030021](../errorcode-cert.md#19030021-invalid-ocsp-response) | invalid OCSP response. |
-| [19030022](../errorcode-cert.md#19030022-ocsp-signature-verification-failure) | failed to verify the OCSP signature. |
-| [19030023](../errorcode-cert.md#19030023-unknown-ocsp-certificate-status) | unknown OCSP certificate status. |
-| [19030024](../errorcode-cert.md#19030024-network-connection-timeout) | network connection timed out. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:<br>1. Memory copy failed;<br>2. A null pointer occurs inside the system;<br>3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | The key cannot be used for signing a certificate. |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | The key cannot be used for a digital signature. |
+| [19030009](../errorcode-cert.md#19030009-untrusted-certificate) | Untrusted certificate. |
+| [19030010](../errorcode-cert.md#19030010-certificate-revoked) | The certificate has been revoked. |
+| [19030011](../errorcode-cert.md#19030011-unsupported-key-extensions) | Unsupported critical extension. |
+| [19030012](../errorcode-cert.md#19030012-host-name-mismatch) | Hostname mismatch in the certificate. |
+| [19030013](../errorcode-cert.md#19030013-email-address-mismatch) | Email address mismatch in the certificate. |
+| [19030014](../errorcode-cert.md#19030014-key-usage-mismatch) | Key usage mismatch in the certificate. |
+| [19030015](../errorcode-cert.md#19030015-crl-not-found) | Failed to obtain the certificate revocation list. |
+| [19030016](../errorcode-cert.md#19030016-invalid-crl) | The certificate revocation list has not taken effect. |
+| [19030017](../errorcode-cert.md#19030017-crl-expired) | The certificate revocation list has expired. |
+| [19030018](../errorcode-cert.md#19030018-crl-signature-verification-failure) | Failed to verify the signature of the certificate revocation list. |
+| [19030019](../errorcode-cert.md#19030019-crl-issuer-not-found) | Failed to find the issuer of the certificate revocation list. |
+| [19030020](../errorcode-cert.md#19030020-ocsp-response-not-found) | Failed to obtain the OCSP response. |
+| [19030021](../errorcode-cert.md#19030021-invalid-ocsp-response) | Invalid OCSP response. |
+| [19030022](../errorcode-cert.md#19030022-ocsp-signature-verification-failure) | Failed to verify the OCSP signature. |
+| [19030023](../errorcode-cert.md#19030023-unknown-ocsp-certificate-status) | Unknown OCSP certificate status. |
+| [19030024](../errorcode-cert.md#19030024-network-connection-timeout) | Network connection timed out. |
 
 **Example**
 

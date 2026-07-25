@@ -1,16 +1,16 @@
 # Verify
 
-Verify类，使用Verify方法之前需要创建该类的实例进行操作，通过[createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify)方法构造此实例。按序调用本类中的init、update、verify方法完成签名操作。验签操作的示例代码详见[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md)。
+验签接口，定义基于公钥对签名数据进行验签的方法。调用前，需通过[createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify)方法创建一个Verify实例。按序调用Verify实例中的init、update（可选）、verify方法完成验签操作。验签操作的示例代码详见[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify-pkcs1.md)。
 
-Verify类不支持重复初始化，当业务方需要使用新密钥验签时，需要重新创建新Verify对象并调用init初始化。
+<br>Verify实例不支持重复初始化，当业务方需要使用新密钥验签时，需要重新创建新Verify实例并调用init初始化。
 
-业务方使用时，在createVerify时确定验签的模式，调用init接口设置密钥。
+<br>业务方使用时，在createVerify时确定验签的模式，调用init接口设置密钥。
 
-当被签名的消息较短时，可在init初始化后，（无需update）直接调用verify接口传入被签名的消息和签名（signatureData）进行验签。
+<br>当被签名的消息较短时，可在init初始化后，（无需update）直接调用verify接口传入被签名的消息和签名（signatureData）进行验签。
 
-当被签名的消息较长时，可通过update接口分段传入被签名的消息，最后调用verify接口对消息全文进行验签。verify接口的data入参在API 10之前只支持DataBlob， API 10之后增加支持null。业务方可在循环中调用update接口，循环结束后调用verify传入签名（signatureData）进行验签。
+<br>当被签名的消息较长时，可通过update接口分段传入被签名的消息，最后调用verify接口对消息全文进行验签。verify接口的data入参在API 10之前只支持DataBlob， API 10之后增加支持null。业务方可在循环中调用update接口，循环结束后调用verify传入签名（signatureData）进行验签。
 
-当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
+<br>当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
 
 **起始版本：** 9
 
@@ -86,7 +86,7 @@ function testGetVerifySpec() {
 init(pubKey: PubKey, callback: AsyncCallback<void>): void
 ```
 
-传入公钥初始化Verify对象。使用callback异步回调。init、update、verify为三段式接口，需要成组使用。其中init和verify必选，update可选。
+传入公钥初始化Verify实例。使用callback异步回调。init、update、verify为三段式接口，需要成组使用。其中init和verify必选，update可选。
 
 **起始版本：** 9
 
@@ -121,7 +121,7 @@ init(pubKey: PubKey, callback: AsyncCallback<void>): void
 init(pubKey: PubKey): Promise<void>
 ```
 
-传入公钥初始化Verify对象。使用Promise异步回调。init、update、verify为三段式接口，需要成组使用。其中init和verify必选，update可选。
+传入公钥初始化Verify实例。使用Promise异步回调。init、update、verify为三段式接口，需要成组使用。其中init和verify必选，update可选。
 
 **起始版本：** 9
 
@@ -161,9 +161,9 @@ init(pubKey: PubKey): Promise<void>
 initSync(pubKey: PubKey): void
 ```
 
-传入公钥初始化Verify对象，通过同步方式获取结果。initSync、updateSync、verifySync为三段式接口，需要成组使用。其中initSync和verifySync必选，updateSync可选。
+传入公钥初始化Verify实例，通过同步方式获取结果。initSync、updateSync、verifySync为三段式接口，需要成组使用。其中initSync和verifySync必选，updateSync可选。
 
-<br><br>**说明：**<br>建议优先使用异步API{@link init}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API，{@link init}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -320,7 +320,7 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 >  
 > - 目前仅RSA支持。
 
-<br><br>**说明：**<br>建议优先使用异步API{@link recover}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API，{@link recover}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -360,9 +360,9 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number): void
 
 设置验签参数。常用的验签参数直接通过[createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify) 来指定，剩余参数通过本接口指定。
 
-支持RSA算法和SM2算法，从API version 11开始，支持SM2算法设置签名验证参数。
+<br>支持RSA算法和SM2算法，从API version 11开始，支持SM2算法设置签名验证参数。
 
-验签的参数应当与签名的参数保持一致。
+<br>验签的参数应当与签名的参数保持一致。
 
 **起始版本：** 10
 
@@ -412,9 +412,9 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 
 设置签名验证参数。
 
-当前仅支持RSA算法中的PSS_SALT_LEN和SM2签名验证中的USER_ID。
+<br>当前仅支持RSA算法中的PSS_SALT_LEN和SM2签名验证中的USER_ID。
 
-验签的参数应当与签名的参数保持一致。
+<br>验签的参数应当与签名的参数保持一致。
 
 **起始版本：** 11
 
@@ -453,9 +453,9 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array | boolean):
 
 设置签名验证参数。
 
-当前仅支持RSA算法中的PSS_SALT_LEN，SM2算法中的USER_ID以及ML-DSA算法中的ML_DSA_DETERMINISTIC、ML_DSA_MU和ML_DSA_CONTEXT。
+<br>当前仅支持RSA算法中的PSS_SALT_LEN，SM2算法中的USER_ID以及ML-DSA算法中的ML_DSA_DETERMINISTIC、ML_DSA_MU和ML_DSA_CONTEXT。
 
-验签的参数应当与签名的参数保持一致。
+<br>验签的参数应当与签名的参数保持一致。
 
 **起始版本：** 26.0.0
 
@@ -505,7 +505,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 追加待验签数据，使用callback异步回调完成更新。
 
-必须在对[Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)实例使用[init](arkts-cryptoarchitecture-cryptoframework-verify-i.md#init)或[initSync](arkts-cryptoarchitecture-cryptoframework-verify-i.md#initsync)初始化后，才能使用本函数。
+<br>必须在对[Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)实例使用[init](arkts-cryptoarchitecture-cryptoframework-verify-i.md#init)或[initSync](arkts-cryptoarchitecture-cryptoframework-verify-i.md#initsync)初始化后，才能使用本函数。
 > **说明：**  
 >  
 > 根据数据量，可以不调用update（即[init](arkts-cryptoarchitecture-cryptoframework-verify-i.md#init)  
@@ -559,7 +559,7 @@ update(data: DataBlob): Promise<void>
 
 追加待验签数据，使用Promise异步回调完成更新。
 
-必须在对[Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)实例使用[init()](arkts-cryptoarchitecture-cryptoframework-verify-i.md#init)初始化后，才能使用本函数。
+<br>必须在对[Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)实例使用[init()](arkts-cryptoarchitecture-cryptoframework-verify-i.md#init)初始化后，才能使用本函数。
 > **说明：**  
 >  
 > 根据数据量，可以不调用update（即[init](arkts-cryptoarchitecture-cryptoframework-verify-i.md#init)完成后直接调用  
@@ -616,7 +616,7 @@ updateSync(data: DataBlob): void
 
 追加待验签数据，通过同步方式完成更新。
 
-必须在对[Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)实例使用[initSync()](arkts-cryptoarchitecture-cryptoframework-verify-i.md#initsync)初始化后，才能使用本函数。
+<br>必须在对[Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)实例使用[initSync()](arkts-cryptoarchitecture-cryptoframework-verify-i.md#initsync)初始化后，才能使用本函数。
 > **说明：**  
 >  
 > 根据数据量，可以不调用updateSync（即[initSync](arkts-cryptoarchitecture-cryptoframework-verify-i.md#initsync)完成后直接调用  
@@ -633,7 +633,7 @@ updateSync(data: DataBlob): void
 >  
 > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持updateSync操作，updateSync接口会返回错误码ERR_CRYPTO_OPERATION。
 
-<br><br>**说明：**<br>建议优先使用异步API{@link update}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API，{@link update}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -821,7 +821,7 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 
 对数据进行验签，通过同步方式返回验签结果。
 
-<br><br>**说明：**<br>建议优先使用异步API{@link verify}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+<br><br>**说明：**<br>建议优先使用异步API，{@link verify}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 

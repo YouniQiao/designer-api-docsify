@@ -1,8 +1,8 @@
 # WrappedBuilder
 
-Defines the WrappedBuilder class.
+`WrappedBuilder`是`@Builder`函数的包装类，用于封装全局`@Builder`函数及其参数，实现按引用传递和动态调用。
 
-**起始版本：** 12
+**起始版本：** 11
 
 <!--Device-unnamed-declare class WrappedBuilder<Args extends Object[]>--><!--Device-unnamed-declare class WrappedBuilder<Args extends Object[]>-End-->
 
@@ -14,7 +14,9 @@ Defines the WrappedBuilder class.
 constructor(builder: (...args: Args) => void)
 ```
 
-**起始版本：** 12
+`WrappedBuilder`的构造函数。
+
+**起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -28,7 +30,7 @@ constructor(builder: (...args: Args) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | (...args: Args) =&gt; void | 是 |  |
+| builder | (...args: Args) =&gt; void | 是 | `@Builder`装饰的全局函数，作为构造参数用于初始化`WrappedBuilder`实例。函数参数`args`为该`@Builder`函数所需的参数列表。 |
 
 ## builder
 
@@ -36,9 +38,11 @@ constructor(builder: (...args: Args) => void)
 builder: (...args: Args) => void
 ```
 
+`@Builder`装饰的全局函数，用于生成对应的自定义构建内容。
+
 **类型：** (...args: Args) =&gt; void
 
-**起始版本：** 12
+**起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
