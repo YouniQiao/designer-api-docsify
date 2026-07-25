@@ -1,6 +1,8 @@
 # SwipeActionItem
 
-List垂直布局，ListItem向右滑动时，item左边的长距离滑动删除选项。向左滑动时，item右边的长距离滑动删除选项。List水平布局，ListItem向上滑动时，item下边的长距离滑动删除选项。向下滑动时，item上边的长距离滑动删除选项。
+SwipeActionItem用于配置[SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md)中的start或end划出项，包括划出时显示的操作项、长距离操作区域的距离阈值，以及进入、退出长距离操作区域、抬手触发操作和状态变化时的回调。
+
+作为start划出项时，List为垂直布局时显示在ListItem左侧，List为水平布局时显示在ListItem上方；作为end划出项时，List为垂直布局时显示在ListItem右侧，List为水平布局时显示在ListItem下方。
 
 **起始版本：** 10
 

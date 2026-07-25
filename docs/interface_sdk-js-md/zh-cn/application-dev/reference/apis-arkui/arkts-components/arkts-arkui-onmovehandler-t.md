@@ -4,7 +4,7 @@
 declare type OnMoveHandler = (from: number, to: number) => void
 ```
 
-Defines the onMove callback.
+定义数据源拖拽回调。
 
 **起始版本：** 12
 
@@ -20,6 +20,6 @@ Defines the onMove callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | number | 是 | Index number for moving elements.  |
-| to | number | 是 | Target index number for moving elements.  |
+| from | number | 是 | 数据源拖拽起始索引号。取值范围是[0, 数据源长度-1]。  |
+| to | number | 是 | 数据源拖拽目标索引号。取值范围是[0, 数据源长度-1]。  |
 

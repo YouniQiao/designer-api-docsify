@@ -17,7 +17,8 @@ function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap
 **起始版本：** 7
 
 **需要权限：** 
-- API版本22+：ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API版本26.1.0+：ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API版本22 - 26.0.0：ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API版本7 - 21：ohos.permission.CAPTURE_SCREEN
 
 <!--Device-screenshot-function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap>): void--><!--Device-screenshot-function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap>): void-End-->
@@ -85,7 +86,8 @@ function save(callback: AsyncCallback<image.PixelMap>): void
 **起始版本：** 7
 
 **需要权限：** 
-- API版本22+：ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API版本26.1.0+：ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API版本22 - 26.0.0：ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API版本7 - 21：ohos.permission.CAPTURE_SCREEN
 
 <!--Device-screenshot-function save(callback: AsyncCallback<image.PixelMap>): void--><!--Device-screenshot-function save(callback: AsyncCallback<image.PixelMap>): void-End-->
@@ -137,7 +139,8 @@ function save(options?: ScreenshotOptions): Promise<image.PixelMap>
 **起始版本：** 7
 
 **需要权限：** 
-- API版本22+：ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API版本26.1.0+：ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API版本22 - 26.0.0：ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API版本7 - 21：ohos.permission.CAPTURE_SCREEN
 
 <!--Device-screenshot-function save(options?: ScreenshotOptions): Promise<image.PixelMap>--><!--Device-screenshot-function save(options?: ScreenshotOptions): Promise<image.PixelMap>-End-->

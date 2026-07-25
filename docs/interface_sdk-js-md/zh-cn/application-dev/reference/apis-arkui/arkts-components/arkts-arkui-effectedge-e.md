@@ -1,6 +1,6 @@
 # EffectEdge
 
-Enumerates the effective edge of the edge effect.
+表示当前边缘效果要生效的边缘。
 
 **起始版本：** 18
 
@@ -14,7 +14,7 @@ Enumerates the effective edge of the edge effect.
 START = 1
 ```
 
-Effective only for the starting edge.
+起始边生效。
 
 **起始版本：** 18
 
@@ -32,7 +32,7 @@ Effective only for the starting edge.
 END = 2
 ```
 
-Effective only for the end edge.
+末尾边生效。
 
 **起始版本：** 18
 

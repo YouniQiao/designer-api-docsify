@@ -1,6 +1,6 @@
 # GridItemOptions
 
-GridItem样式对象。
+GridItem样式对象，用于配置GridItem的样式选项。
 
 **起始版本：** 11
 
@@ -20,7 +20,7 @@ style?: GridItemStyle
 
 设置为GridItemStyle.NONE时无样式。
 
-设置为GridItemStyle.PLAIN时，显示Hover、Press态样式。
+设置为GridItemStyle.PLAIN时，显示Hover、Press态样式。Hover态为鼠标悬停时的样式，Press态为按下时的样式。
 
 **类型：** GridItemStyle
 

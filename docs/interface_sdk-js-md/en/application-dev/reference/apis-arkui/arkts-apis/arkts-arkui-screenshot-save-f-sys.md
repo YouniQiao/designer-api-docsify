@@ -17,7 +17,8 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 **Since:** 7
 
 **Required permissions:** 
-- API version 22+: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 26.1.0+: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 22 - 26.0.0: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API version 7 - 21: ohos.permission.CAPTURE_SCREEN
 
 <!--Device-screenshot-function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap>): void--><!--Device-screenshot-function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap>): void-End-->
@@ -85,7 +86,8 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 **Since:** 7
 
 **Required permissions:** 
-- API version 22+: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 26.1.0+: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 22 - 26.0.0: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API version 7 - 21: ohos.permission.CAPTURE_SCREEN
 
 <!--Device-screenshot-function save(callback: AsyncCallback<image.PixelMap>): void--><!--Device-screenshot-function save(callback: AsyncCallback<image.PixelMap>): void-End-->
@@ -137,7 +139,8 @@ Obtains a screenshot. This API uses a promise to return the result.
 **Since:** 7
 
 **Required permissions:** 
-- API version 22+: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 26.1.0+: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API version 22 - 26.0.0: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API version 7 - 21: ohos.permission.CAPTURE_SCREEN
 
 <!--Device-screenshot-function save(options?: ScreenshotOptions): Promise<image.PixelMap>--><!--Device-screenshot-function save(options?: ScreenshotOptions): Promise<image.PixelMap>-End-->

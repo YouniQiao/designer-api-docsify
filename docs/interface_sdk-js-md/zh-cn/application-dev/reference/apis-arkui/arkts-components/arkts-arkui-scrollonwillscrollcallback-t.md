@@ -30,5 +30,5 @@ Scroll滚动前触发的回调。
 
 | 类型 | 说明 |
 | --- | --- |
-| void \| OffsetResult | the remain offset for the Scroll, same as (xOffset, yOffset) when no OffsetResult is returned.  |
+| void \| OffsetResult | 返回OffsetResult时按照开发者指定的偏移量滚动； 不返回时按回调参数(xOffset, yOffset)滚动。  |
 

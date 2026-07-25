@@ -1,6 +1,6 @@
 # ScrollResult
 
-The actual offset by which the scrollable scrolls.
+[OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md)返回值对象。
 
 **起始版本：** 12
 
@@ -14,7 +14,7 @@ The actual offset by which the scrollable scrolls.
 offsetRemain: number
 ```
 
-Actual offset by which the scrollable scrolls in vp.
+将要滑动偏移量，单位vp。
 
 **类型：** number
 

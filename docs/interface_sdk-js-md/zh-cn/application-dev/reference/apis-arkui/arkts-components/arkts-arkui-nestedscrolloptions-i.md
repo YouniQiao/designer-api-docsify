@@ -1,6 +1,6 @@
 # NestedScrollOptions
 
-定义嵌套滚动选项
+[nestedScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#nestedscroll11)属性参数对象。
 
 **起始版本：** 23
 
@@ -14,7 +14,7 @@
 scrollBackward: NestedScrollMode
 ```
 
-Set NestedScrollMode when the scrollable component scrolls backward
+滚动组件往起始端滚动时的嵌套滚动选项。NestedScrollMode.SELF_ONLY表示仅自身滚动，不与父组件联动；NestedScrollMode.SELF_FIRST表示自身先滚动，自身滚动到边缘后父组件滚动；NestedScrollMode.PARENT_FIRST表示父组件先滚动，父组件滚动到边缘后自身滚动。
 
 **类型：** NestedScrollMode
 
@@ -34,7 +34,7 @@ Set NestedScrollMode when the scrollable component scrolls backward
 scrollForward: NestedScrollMode
 ```
 
-Set NestedScrollMode when the scrollable component scrolls forward
+滚动组件往末尾端滚动时的嵌套滚动选项。NestedScrollMode.SELF_ONLY表示仅自身滚动，不与父组件联动；NestedScrollMode.SELF_FIRST表示自身先滚动，自身滚动到边缘后父组件滚动；NestedScrollMode.PARENT_FIRST表示父组件先滚动，父组件滚动到边缘后自身滚动。
 
 **类型：** NestedScrollMode
 

@@ -75,7 +75,7 @@ forceRebuild(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 在触发组件build时是否重新创建此节点。<br/>默认值：false |
+| value | boolean | 是 | 设置为true时，在触发组件build时重新创建此节点；设置为false时，不强制重新创建此节点。<br/>默认值：false |
 
 ## onSelect
 
@@ -191,5 +191,5 @@ selected(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 当前GridItem选中状态。设置为true时为选中状态，设置为false时为默认状态。<br/>默认值：false |
+| value | boolean | 是 | 当前GridItem选中状态。设置为true时为选中状态，设置为false时为非选中状态。<br/>默认值：false |
 

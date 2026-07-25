@@ -1,6 +1,6 @@
 # ScrollToIndexOptions
 
-滚动到指定索引的参数。
+滑动到指定Index的参数选项。
 
 **起始版本：** 12
 

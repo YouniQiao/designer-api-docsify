@@ -1,6 +1,6 @@
 # OffsetResult
 
-表示滚动操作产生的偏移量。
+滑动偏移量对象。
 
 **起始版本：** 11
 
@@ -14,7 +14,9 @@
 xOffset: number
 ```
 
-水平滚动偏移量。
+水平滑动偏移。
+
+单位：vp。
 
 **类型：** number
 
@@ -34,7 +36,9 @@ xOffset: number
 yOffset: number
 ```
 
-竖直滚动偏移量。
+竖直滑动偏移。
+
+单位：vp。
 
 **类型：** number
 

@@ -1,6 +1,6 @@
 # ArcListItemAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性：
 
 **继承/实现关系：** ArcListItemAttribute extends [CommonMethod<ArcListItemAttribute>](CommonMethod<ArcListItemAttribute>)
 
@@ -22,7 +22,7 @@ import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@k
 autoScale(enable: Optional<boolean>): ArcListItemAttribute
 ```
 
-用于设置ArcListItem是否支持自动缩放显示。
+用于设置ArcListItem是否自动缩放。开启后，ArcListItem会根据其在弧形列表中的位置自动调整显示尺寸。
 
 **起始版本：** 18
 
@@ -36,7 +36,7 @@ autoScale(enable: Optional<boolean>): ArcListItemAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | ArcListItem是否支持自动缩放显示，true表示支持自动缩放显示，false表示不支持自动缩放显示。<br/>默认值：true，支持自动缩放显示。 |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | ArcListItem是否支持自动缩放显示，true表示支持，false表示不支持。<br>默认值：true，支持自动缩放显示。 |
 
 **返回值：**
 
@@ -50,7 +50,7 @@ autoScale(enable: Optional<boolean>): ArcListItemAttribute
 swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute
 ```
 
-用于设置ArcListItem的划出组件。
+用于设置ArcListItem的划出操作。
 
 **起始版本：** 18
 
@@ -64,7 +64,7 @@ swipeAction(options: Optional<SwipeActionOptions>): ArcListItemAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;SwipeActionOptions&gt; | 是 | ArcListItem的划出组件。 |
+| options | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;SwipeActionOptions&gt; | 是 | ArcListItem划出操作的配置选项，具体配置请参考SwipeActionOptions。未设置时，不配置划出操作。 |
 
 **返回值：**
 

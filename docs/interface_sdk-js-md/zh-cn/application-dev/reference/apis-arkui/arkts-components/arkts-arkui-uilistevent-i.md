@@ -44,7 +44,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void
 ```
 
-设置[onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#onscrollindex)事件的回调。
+设置[onScrollIndex](ListAttribute#onScrollIndex)事件的回调。
 
 方法入参为undefined时，会重置事件回调。
 

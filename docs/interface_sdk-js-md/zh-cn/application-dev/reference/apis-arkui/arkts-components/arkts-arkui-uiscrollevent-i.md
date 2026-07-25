@@ -1,6 +1,8 @@
 # UIScrollEvent
 
-定义UIScrollEvent，用于设置目标组件的不同通用事件。
+frameNode中[getEvent('Scroll')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent)方法的返回值，可用于给Scroll节点设置滚动事件。
+
+UIScrollEvent继承于[UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)。
 
 **继承/实现关系：** UIScrollEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
 
@@ -16,7 +18,9 @@
 setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void
 ```
 
-设置或重置Scroll滚动时触发的回调。
+[onDidScroll](ScrollAttribute#onDidScroll)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -32,7 +36,7 @@ setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) \| undefined | 是 | 回调函数，在Scroll滚动时触发。 |
+| callback | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) \| undefined | 是 | onDidScroll事件的回调函数。 |
 
 ## setOnWillScroll
 
@@ -40,7 +44,9 @@ setOnDidScroll(callback: ScrollOnScrollCallback | undefined): void
 setOnWillScroll(callback: ScrollOnWillScrollCallback | undefined): void
 ```
 
-设置或重置Scroll滚动前触发的回调。
+[onWillScroll](ScrollAttribute#onWillScroll)事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -56,5 +62,5 @@ setOnWillScroll(callback: ScrollOnWillScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) \| undefined | 是 | 回调函数，在Scroll即将滚动时触发。 |
+| callback | [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) \| undefined | 是 | onWillScroll事件的回调函数。 |
 

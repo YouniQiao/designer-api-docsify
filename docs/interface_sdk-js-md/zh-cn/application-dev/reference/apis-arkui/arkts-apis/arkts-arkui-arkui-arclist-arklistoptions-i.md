@@ -20,7 +20,7 @@ import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@k
 header?: ComponentContent
 ```
 
-支持标题设置。
+ArcList的头部组件，用于在列表顶部显示标题或自定义内容。不设置时不显示头部组件。
 
 **类型：** ComponentContent
 
@@ -38,7 +38,13 @@ header?: ComponentContent
 initialIndex?: number
 ```
 
-设置当前ArcList初次加载时视窗起始位置显示的item的索引值。<br/>默认值：0<br/>设置为负数或超过了当前ArcList最后一个item的索引值时视为无效取值，无效取值按默认值显示。
+设置当前ArcList初次加载时视窗起始位置显示的item的索引值。
+
+默认值：0
+
+**说明：**
+
+设置为负数或超过了当前ArcList最后一个item的索引值时视为无效取值，无效取值按默认值显示。
 
 **类型：** number
 
@@ -56,7 +62,11 @@ initialIndex?: number
 scroller?: Scroller
 ```
 
-可滚动组件的控制器。与ArcList绑定后，可以通过它控制ArcList的滚动。<br/>不允许和其他滚动类组件绑定同一个滚动控制对象。
+可滚动组件的控制器。与ArcList绑定后，可以通过它控制ArcList的滚动。不设置时不绑定滚动控制器。
+
+**说明：**
+
+不允许和其他滚动类组件，如：[List](../../apis-arkui/arkts-components/arkts-arkui-list-i)、[Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-i)、[Scroll](../../apis-arkui/arkts-components/arkts-arkui-scroll-i)和[WaterFlow](../../apis-arkui/arkts-components/arkts-arkui-water_flow-i)绑定同一个滚动控制对象。
 
 **类型：** Scroller
 

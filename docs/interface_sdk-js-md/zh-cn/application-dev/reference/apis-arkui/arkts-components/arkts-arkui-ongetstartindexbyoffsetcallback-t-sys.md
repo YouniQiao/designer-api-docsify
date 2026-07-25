@@ -4,7 +4,7 @@
 declare type OnGetStartIndexByOffsetCallback = (totalOffset: number) => StartLineInfo
 ```
 
-根据Grid的总偏移量，计算当前页面起始行的位置，用于快速滑动或反向滑动场景。
+根据Grid的总偏移量，计算当前页面起始行的位置，用于快速滑动或反向滑动场景。此回调需与onGetStartIndexByIndex同时设置才能生效。
 
 **起始版本：** 23
 

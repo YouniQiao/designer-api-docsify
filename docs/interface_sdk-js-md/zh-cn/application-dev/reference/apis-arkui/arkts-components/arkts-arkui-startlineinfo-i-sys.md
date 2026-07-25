@@ -16,7 +16,7 @@
 startIndex: number
 ```
 
-目标索引或目标偏移量所在行的起始索引。
+在OnGetStartIndexByOffsetCallback中，表示滚动偏移量所在行的起始索引；在OnGetStartIndexByIndexCallback中，表示目标索引所在行的起始索引。
 
 **类型：** number
 
@@ -36,7 +36,7 @@ startIndex: number
 startLine: number
 ```
 
-startIndex对应的GridItem所在的起始行，一般为Grid视窗内的起始行，对于跨多行的GridItem需要找到该节点的起始行，可能在视窗外。
+startIndex对应GridItem在Grid布局中的起始行号。若该GridItem跨多行，且当前视窗从该GridItem中间位置开始显示，startLine仍表示该GridItem在完整Grid布局中实际占用的首行行号。
 
 **类型：** number
 
@@ -56,7 +56,9 @@ startIndex对应的GridItem所在的起始行，一般为Grid视窗内的起始�
 startOffset: number
 ```
 
-startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。<br/>单位：vp
+startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。
+
+单位：vp
 
 **类型：** number
 
@@ -76,7 +78,9 @@ startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。<br/>单�
 totalOffset: number
 ```
 
-总滚动偏移量，即Grid中第一个GridItem的顶部与Grid顶部之间的偏移量。<br/>单位：vp
+总滚动偏移量，即Grid中第一个GridItem的顶部与Grid顶部之间的偏移量。
+
+单位：vp
 
 **类型：** number
 

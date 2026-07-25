@@ -1,6 +1,6 @@
 # EditModeOptions
 
-定义编辑模式选项
+List/Grid组件编辑模式选项属性参数对象。
 
 **起始版本：** 23
 

@@ -20,7 +20,7 @@ declare type GetItemMainSizeByIndex = (index: number) => number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | FlowItem在WaterFlow中的索引。<br/>取值范围：[0, 子节点总数-1]  |
+| index | number | 是 | FlowItem在WaterFlow中的索引。<br/>取值范围：[0, 子组件总数-1]  |
 
 **返回值：**
 

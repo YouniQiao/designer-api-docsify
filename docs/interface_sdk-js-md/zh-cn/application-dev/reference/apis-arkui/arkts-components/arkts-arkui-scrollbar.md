@@ -217,6 +217,8 @@ this.array.push(i);
 ScrollBar(value: ScrollBarOptions)
 ```
 
+创建滚动条组件。
+
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -229,7 +231,7 @@ ScrollBar(value: ScrollBarOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScrollBarOptions](arkts-arkui-scrollbaroptions-i.md) | 是 | @returns { ScrollBarAttribute }  |
+| value | [ScrollBarOptions](arkts-arkui-scrollbaroptions-i.md) | 是 | 滚动条组件参数。  |
 
 ## 汇总
 

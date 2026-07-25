@@ -40,6 +40,8 @@ onSelect(event: (isSelected: boolean) => void)
 
 ListItem元素被鼠标框选的状态改变时触发回调。
 
+外层[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md)组件设置[multiSelectable](ListAttribute#multiSelectable)为true开启鼠标框选，且当前ListItem的[selectable](ListItemAttribute#selectable)属性为true时，触发该回调。
+
 **起始版本：** 8
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -62,7 +64,7 @@ ListItem元素被鼠标框选的状态改变时触发回调。
 selectable(value: boolean)
 ```
 
-设置当前ListItem元素是否可以被鼠标框选。外层List容器的鼠标框选开启时，ListItem的框选才生效。
+设置当前ListItem元素是否可以被鼠标框选。外层[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md)组件设置[multiSelectable](ListAttribute#multiSelectable)为true开启鼠标框选时，ListItem的框选才生效。
 
 **起始版本：** 8
 
@@ -86,7 +88,7 @@ selectable(value: boolean)
 selected(value: boolean)
 ```
 
-设置当前ListItem选中状态。该属性支持$$双向绑定变量。该属性需要在设置多态样式前使用才能生效选中态样式。
+设置当前ListItem选中状态。该属性支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。该属性需要在设置[多态样式](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)前使用才能生效选中态样式。
 
 **起始版本：** 10
 
@@ -104,7 +106,7 @@ selected(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 当前ListItem选中状态。设置为true时为选中状态，设置为false时为默认状态。默认值：false |
+| value | boolean | 是 | 当前ListItem选中状态。设置为true时为选中状态，设置为false时为默认状态。<br/>默认值：false<br/>**说明：** 需要在设置多态样式前使用才能生效选中态样式。 |
 
 ## sticky
 
@@ -113,6 +115,9 @@ sticky(value: Sticky)
 ```
 
 设置ListItem吸顶效果。
+> **说明：**  
+>  
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -150,5 +155,5 @@ swipeAction(value: SwipeActionOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md) | 是 | ListItem的划出组件。 |
+| value | [SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md) | 是 | ListItem的划出组件配置，用于设置划出时显示的组件、滑动效果和滑动状态回调等。 |
 

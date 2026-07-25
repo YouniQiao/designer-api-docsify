@@ -19,8 +19,10 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
 设置[onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+> **说明：**  
+>  
+> setOnWillScroll用于设置每帧滚动开始前的回调，setOnDidScroll用于设置每帧滚动完成后的回调。两者可同时使用，setOnWillScroll的回调先于setOnDidScroll触发。  
+> 方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -44,7 +46,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 setOnScrollIndex(callback: OnWaterFlowScrollIndexCallback | undefined): void
 ```
 
-设置[onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-waterflow.md#onscrollindex11)事件的回调。
+设置[onScrollIndex](WaterFlowAttribute#onScrollIndex)事件的回调。
 
 方法入参为undefined时，会重置事件回调。
 

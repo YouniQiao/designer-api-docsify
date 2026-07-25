@@ -36,7 +36,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | 是 | onDidScroll事件的回调函数。 |
+| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | 是 | onDidScroll事件的回调函数。传入undefined时，会重置事件回调。 |
 
 ## setOnScrollIndex
 
@@ -44,7 +44,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 ```
 
-设置[onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#onscrollindex)事件的回调。
+设置[onScrollIndex](GridAttribute#onScrollIndex)事件的回调。
 
 方法入参为undefined时，会重置事件回调。
 
@@ -62,7 +62,7 @@ setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md) \| undefined | 是 | onScrollIndex事件的回调函数。 |
+| callback | [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md) \| undefined | 是 | onScrollIndex事件的回调函数。传入undefined时，会重置事件回调。 |
 
 ## setOnWillScroll
 
@@ -88,5 +88,5 @@ setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) \| undefined | 是 | onWillScroll事件的回调函数。 |
+| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) \| undefined | 是 | onWillScroll事件的回调函数。传入undefined时，会重置事件回调。 |
 

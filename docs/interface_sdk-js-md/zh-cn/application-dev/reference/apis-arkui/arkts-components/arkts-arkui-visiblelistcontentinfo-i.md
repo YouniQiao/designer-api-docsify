@@ -14,7 +14,7 @@
 index: number
 ```
 
-Index of the list item or list item group in the list display area.
+表示ListItem或ListItemGroup在List中的索引值。
 
 **类型：** number
 
@@ -34,7 +34,7 @@ Index of the list item or list item group in the list display area.
 itemGroupArea?: ListItemGroupArea
 ```
 
-Position of the top or bottom edge of the viewport in the list item group to which the edge is located, if applicable.
+表示处于ListItemGroup的哪一个区域。
 
 **类型：** ListItemGroupArea
 
@@ -54,7 +54,7 @@ Position of the top or bottom edge of the viewport in the list item group to whi
 itemIndexInGroup?: number
 ```
 
-Index of the starting or ending list item in the list item group to which the top or bottom edge of the viewport is located.
+表示ListItem在ListItemGroup中的索引值。
 
 **类型：** number
 

@@ -4,7 +4,7 @@
 declare type OnScrollCallback = (scrollOffset: number, scrollState: ScrollState) => void
 ```
 
-On scroll callback using in scrollable onDidScroll.
+滚动组件滑动时触发的回调。
 
 **起始版本：** 12
 
@@ -22,6 +22,6 @@ On scroll callback using in scrollable onDidScroll.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scrollOffset | number | 是 | offset this frame did scroll.  |
-| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | 是 | current scroll state.  |
+| scrollOffset | number | 是 | 相对于上一帧的偏移量，滚动组件的内容向上滚动时偏移量为正，向下滚动时偏移量为负。<br/>单位vp。  |
+| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | 是 | 当前滑动状态。  |
 

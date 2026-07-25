@@ -1,13 +1,6 @@
 # Grid属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)和[滚动组件通用属性](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还支持以下属性：  
-> **说明：**  
->  
-> Grid组件使用通用属性[clip<sup>12+</sup>](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip12)和通用属性[clip<sup>18+</sup>](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-sharp-clipping.md#clip18)时默认值都为true。  
->  
-> 设置Grid的padding后，如果子组件部分位于Grid内容区且部分位于padding区域内，则会显示；如果子组件完全位于padding区域内，则不会显示。如下图所示，GridItem1显示，而GridItem2不显示。  
->  
-> ![GridPadding示意图](figures/gridPadding.png)
+除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)和[滚动组件通用属性](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)外，还支持以下属性：
 
 除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持以下事件：
 
@@ -49,9 +42,9 @@ alignItems(alignment: Optional<GridItemAlignment>)
 cachedCount(value: number)
 ```
 
-设置预加载的GridItem的数量，只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了[virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll)开关的[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。<!--Del-->具体使用可参考[减少应用白块说明](../../../performance/arkts-performance-improvement-recommendation.md#减少应用滑动白块)。<!--DelEnd-->
+设置主轴方向前后两侧分别预加载的网格行/列数，只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了[virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll)开关的[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。<!--Del-->具体使用可参考[减少应用白块说明](../../../performance/arkts-performance-improvement-recommendation.md#减少应用滑动白块)。<!--DelEnd-->
 
-设置缓存后会在Grid显示区域上下各缓存cachedCount*列数个GridItem。
+设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。
 
 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了[virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll)开关的[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)超出显示和缓存范围的GridItem会被释放。
 
@@ -75,9 +68,9 @@ cachedCount(value: number)
 cachedCount(count: number, show: boolean)
 ```
 
-设置预加载的GridItem数量，并配置是否显示预加载节点。
+设置主轴方向前后两侧分别预加载的网格行/列数，并配置是否显示预加载节点，只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了[virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll)开关的[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效。
 
-设置缓存后会在Grid显示区域上下各缓存cachedCount*列数个GridItem。配合裁剪[clip](arkts-arkui-commonmethod-c.md#clip)或内容裁剪[clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14)属性可以显示出预加载节点。
+设置缓存后，会在Grid显示区域沿主轴方向的前后两侧分别预加载cachedCount个网格行/列。垂直滚动时，上下两侧分别预加载cachedCount行；水平滚动时，左右两侧分别预加载cachedCount列。配合裁剪[clip](arkts-arkui-commonmethod-c.md#clip)或内容裁剪[clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14)属性可以显示出预加载节点。
 
 **起始版本：** 14
 
@@ -103,8 +96,10 @@ cellLength(value: number)
 ```
 
 设置一行的高度或者一列的宽度。
-
-当layoutDirection是Row/RowReverse时，表示一行的高度。
+> **说明：**  
+>  
+> 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。  
+> 当layoutDirection是Row/RowReverse时，表示一行的高度。
 
 当layoutDirection是Column/ColumnReverse时，表示一列的宽度。
 
@@ -120,7 +115,7 @@ cellLength(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 一行的高度或者一列的宽度。<br/>默认值：第一个元素的大小 <br/>单位：vp <br/>取值范围：(0, +∞)，设置为小于等于0的值时，按默认值显示。 |
+| value | number | 是 | 一行的高度或者一列的宽度。<br/>默认值：当layoutDirection是Row/RowReverse时，为首个GridItem的高度；当layoutDirection是Column/ColumnReverse时，为首个GridItem的宽度。<br/>单位：vp <br/>取值范围：(0, +∞)，设置为小于等于0的值时，按默认值显示。 |
 
 ## columnsGap
 
@@ -142,7 +137,7 @@ columnsGap(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 列与列的间距。<br/>默认值：0 <br/>取值范围：[0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 列与列的间距。<br/>默认值：0 <br/>取值范围：[0, +∞)，设置为小于0的值时，按默认值0显示。 |
 
 ## columnsTemplate
 
@@ -210,7 +205,7 @@ columnsTemplate(value: string | ItemFillPolicy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| ItemFillPolicy | 是 | 当前网格组件布局列的数量。 |
+| value | string \| ItemFillPolicy | 是 | 当前网格组件布局列的数量。value为string类型时，表示固定列数或repeat函数形式；value为ItemFillPolicy类型时，根据断点自动确定列数。 |
 
 ## edgeEffect
 
@@ -244,6 +239,9 @@ editMode(value: boolean)
 ```
 
 设置Grid是否进入编辑模式，进入编辑模式可以拖拽Grid组件内部[GridItem](arkts-arkui-griditem.md)。
+> **说明：**  
+>  
+> 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 
 **起始版本：** 8
 
@@ -281,7 +279,7 @@ editModeOptions(options?: EditModeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | 否 | 编辑模式选项。 |
+| options | [EditModeOptions](arkts-arkui-editmodeoptions-i.md) | 否 | 编辑模式选项，用于配置Grid编辑模式下的多选聚拢动画、预览角标、多选样式、双指滑动多选等行为。需要调整上述行为时传入；不传入时，各选项使用EditModeOptions中的默认值。 |
 
 ## enableEditMode
 
@@ -305,7 +303,7 @@ enableEditMode(enabled: boolean | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | 是 | 是否启用编辑模式。设置为true时启用编辑模式，可以滑动多选，设置为false或undefined时关闭编辑模式，不可滑动多选。 |
+| enabled | boolean \| undefined | 是 | 是否启用编辑模式，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。设置为true时启用编辑模式，可以滑动多选，设置为false或undefined时关闭编辑模式，不可滑动多选。 |
 
 ## enableScrollInteraction
 
@@ -314,10 +312,6 @@ enableScrollInteraction(value: boolean)
 ```
 
 设置是否支持滚动手势。
-
-**说明：**
-
-组件无法通过鼠标按下拖动操作进行滚动。
 
 **起始版本：** 10
 
@@ -365,7 +359,7 @@ focusWrapMode(mode: Optional<FocusWrapMode>)
 friction(value: number | Resource)
 ```
 
-设置摩擦系数，手动划动滚动区域时生效，仅影响惯性滚动过程，对惯性滚动过程中的链式效果有间接影响。
+设置摩擦系数，手动滑动滚动区域时生效，仅影响惯性滚动过程，对惯性滚动过程中的链式效果有间接影响。
 
 **起始版本：** 10
 
@@ -390,6 +384,9 @@ layoutDirection(value: GridDirection)
 ```
 
 设置布局的主轴方向。
+> **说明：**  
+>  
+> 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。
 
 **起始版本：** 8
 
@@ -412,8 +409,10 @@ maxCount(value: number)
 ```
 
 设置可显示的最大行数或列数。设置为小于1的值时，按默认值显示。
-
-当layoutDirection是Row/RowReverse时，表示可显示的最大列数。
+> **说明：**  
+>  
+> 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。  
+> 当layoutDirection是Row/RowReverse时，表示可显示的最大列数。
 
 当layoutDirection是Column/ColumnReverse时，表示可显示的最大行数。
 
@@ -431,7 +430,7 @@ maxCount(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 可显示的最大行数或列数。<br/>默认值：Infinity |
+| value | number | 是 | 可显示的最大行数或列数。<br/>默认值：Infinity<br/>取值范围：[1, +∞)，设置为小于1的值时，按默认值Infinity处理。 |
 
 ## minCount
 
@@ -440,8 +439,10 @@ minCount(value: number)
 ```
 
 设置可显示的最小行数或列数。设置为小于1的值时，按默认值显示。
-
-当layoutDirection是Row/RowReverse时，表示可显示的最小列数。
+> **说明：**  
+>  
+> 此属性仅在rowsTemplate和columnsTemplate都不设置时生效。  
+> 当layoutDirection是Row/RowReverse时，表示可显示的最小列数。
 
 当layoutDirection是Column/ColumnReverse时，表示可显示的最小行数。
 
@@ -459,7 +460,7 @@ minCount(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 可显示的最小行数或列数。<br/>默认值：1 |
+| value | number | 是 | 可显示的最小行数或列数。<br/>默认值：1<br/>取值范围：[1, +∞)，设置为小于1的值时，按默认值1处理。 |
 
 ## multiSelectable
 
@@ -505,7 +506,7 @@ nestedScroll(value: NestedScrollOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。 |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项，用于设置Grid组件与父组件的嵌套滚动联动行为。 |
 
 ## onEditModeChange
 
@@ -513,7 +514,7 @@ nestedScroll(value: NestedScrollOptions)
 onEditModeChange(callback: Callback<boolean> | undefined)
 ```
 
-编辑模式状态变化时触发。
+[enableEditMode](GridAttribute#enableEditMode)编辑模式状态变化时触发。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -529,7 +530,7 @@ onEditModeChange(callback: Callback<boolean> | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; \| undefined | 是 | 编辑模式状态变化时触发的回调。<br>传入undefined会取消注册回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; \| undefined | 是 | 编辑模式状态变化时触发的回调。回调参数类型为boolean，true表示进入编辑模式，false表示退出编辑模式。<br>传入undefined时取消回调。 |
 
 ## onItemDragEnter
 
@@ -537,7 +538,7 @@ onEditModeChange(callback: Callback<boolean> | undefined)
 onItemDragEnter(event: (event: ItemDragInfo) => void)
 ```
 
-拖拽进入网格元素范围内时触发。
+拖拽进入GridItem范围内时触发。
 
 **起始版本：** 8
 
@@ -559,7 +560,7 @@ onItemDragEnter(event: (event: ItemDragInfo) => void)
 onItemDragLeave(event: (event: ItemDragInfo, itemIndex: number) => void)
 ```
 
-拖拽离开网格元素时触发。
+拖拽离开GridItem时触发。
 
 **起始版本：** 8
 
@@ -581,7 +582,7 @@ onItemDragLeave(event: (event: ItemDragInfo, itemIndex: number) => void)
 onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: number) => void)
 ```
 
-拖拽在网格元素范围内移动时触发。
+拖拽在GridItem范围内移动时触发。
 
 **起始版本：** 8
 
@@ -603,15 +604,15 @@ onItemDragMove(event: (event: ItemDragInfo, itemIndex: number, insertIndex: numb
 onItemDragStart(event: OnItemDragStartCallback)
 ```
 
-开始拖拽网格元素时触发。
+开始拖拽GridItem时触发。
 
 手指长按GridItem时触发该事件。
 
 由于拖拽检测也需要长按，且事件处理机制优先触发子组件事件，GridItem上绑定[LongPressGesture](../arkts-apis/arkts-arkui-longpressgestureinterface-i.md)时无法触发拖拽。如有长按和拖拽同时使用的需求可以使用通用拖拽事件。
 
-拖拽浮起的网格元素可在应用窗口内移动，若需限制移动范围，可通过自定义手势实现，具体参考[示例16（实现GridItem自定义拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例16实现griditem自定义拖拽)。
+拖拽浮起的GridItem可在应用窗口内移动，若需限制移动范围，可通过自定义手势实现，具体参考[示例16（实现GridItem自定义拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例16实现griditem自定义拖拽)。
 
-不支持拖动到Grid边缘时自动滚动，可使用通用拖拽实现，具体参考[示例17（通过拖拽事件实现griditem拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例17通过拖拽事件实现griditem拖拽)。
+不支持拖动到Grid边缘时自动滚动，可使用通用拖拽实现，具体参考[示例17（通过拖拽事件实现GridItem拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例17通过拖拽事件实现griditem拖拽)。从API版本26.0.0开始，可以使用[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)、[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)的[onMove](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-drag-sorting.md#onmove)接口实现该效果，参考[示例22（使用OnMove进行拖拽）](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例22使用onmove进行拖拽)。它同时支持跨行跨列的GridItem的拖拽，但需注意Grid必须是可滚动的。
 
 **起始版本：** 8
 
@@ -625,7 +626,7 @@ onItemDragStart(event: OnItemDragStartCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | 是 | 网格元素拖拽开始时触发的回调。<br>API version 22及之前版本，该参数类型为(event: ItemDragInfo,itemIndex: number) => (() => any) \| void，其中event和itemIndex参数含义参考[OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md)。<br>**起始版本：** 23 |
+| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | 是 | GridItem拖拽开始时触发的回调。<br>API version 22及之前版本，该参数类型为(event: ItemDragInfo, itemIndex: number) => (() => any) \| void，其中event和itemIndex参数含义参考[OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md)。<br>**起始版本：** 23 |
 
 ## onItemDrop
 
@@ -659,9 +660,9 @@ onItemDrop(
 onReachEnd(event: () => void)
 ```
 
-网格到达末尾位置时触发。不满一屏并且最后一个子组件末端在Grid内时触发。
+网格到达末尾位置时触发。当网格内容不满一屏，并且最后一个子组件末端在Grid内时触发。
 
-Grid边缘效果为弹簧效果时，划动经过末尾位置时触发一次，回弹回末尾位置时再触发一次。
+Grid边缘效果为弹簧效果时，滑动经过末尾位置时触发一次，回弹返回末尾位置时再触发一次。
 
 **起始版本：** 10
 
@@ -687,7 +688,7 @@ onReachStart(event: () => void)
 
 网格到达起始位置时触发。
 
-Grid初始化时会触发一次，Grid滚动到起始位置时触发一次。Grid边缘效果为弹簧效果时，划动经过起始位置时触发一次，回弹回起始位置时再触发一次。
+Grid初始化时会触发一次，Grid滚动到起始位置时触发一次。Grid边缘效果为弹簧效果时，滑动经过起始位置时触发一次，回弹返回起始位置时再触发一次。
 
 **起始版本：** 10
 
@@ -881,7 +882,7 @@ rowsGap(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 行与行的间距。<br/>默认值：0 <br/>取值范围：[0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 行与行的间距。<br/>默认值：0 <br/>取值范围：[0, +∞)，设置为小于0的值时，按默认值0显示。 |
 
 ## rowsTemplate
 
@@ -993,7 +994,7 @@ scrollBarColor(color: Color | number | string | Resource)
 scrollBarWidth(value: number | string)
 ```
 
-设置滚动条的宽度，不支持百分比设置。宽度设置后，滚动条正常状态和按压状态宽度均为滚动条的宽度值。如果滚动条的宽度超过Grid组件主轴方向的高度，则滚动条的宽度会变为默认值。
+设置滚动条的宽度，不支持百分比设置。宽度设置后，滚动条正常状态和按压状态宽度均为滚动条的宽度值。如果滚动条的宽度超过Grid组件主轴方向的可视尺寸，则滚动条的宽度会变为默认值4vp。
 
 **起始版本：** 7
 
@@ -1007,7 +1008,7 @@ scrollBarWidth(value: number | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string | 是 | 滚动条的宽度。<br/>默认值：4<br/>单位：vp<br/>取值范围：设置为小于0的值时，按默认值处理。设置为0时，不显示滚动条。 |
+| value | number \| string | 是 | 滚动条的宽度。<br/>默认值：4<br/>单位：vp<br/>取值范围：[0, +∞)，设置为小于0的值时，按默认值处理。设置为0时，不显示滚动条。 |
 
 ## scrollBarWidth
 
@@ -1015,7 +1016,7 @@ scrollBarWidth(value: number | string)
 scrollBarWidth(value: number | string | Resource)
 ```
 
-设置滚动条的宽度，不支持百分比设置。宽度设置后，滚动条正常状态和按压状态宽度均为滚动条的宽度值。如果滚动条的宽度超过Grid组件主轴方向的高度，则滚动条的宽度会变为4vp。支持Resource资源类型。
+设置滚动条的宽度，不支持百分比设置。宽度设置后，滚动条正常状态和按压状态宽度均为滚动条的宽度值。如果滚动条的宽度超过Grid组件主轴方向的可视尺寸，则滚动条的宽度会变为默认值4vp。支持Resource资源类型。
 
 未通过该接口设置时，设置滚动条的宽度为4vp。
 
@@ -1083,7 +1084,7 @@ supportEmptyBranchInLazyLoading(supported: boolean | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| supported | boolean \| undefined | 是 | 当前Grid组件是否支持在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)或[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中使用[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)渲染控制语法生成一个不含任何子节点的空分支节点。</br>true表示支持空分支节点；false表示不支持空分支节点。</br>值为undefined时，按false处理。 |
+| supported | boolean \| undefined | 是 | 当前Grid组件是否支持在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)或[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中使用[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)渲染控制语法生成一个不含任何子节点的空分支节点。<br/>true表示支持空分支节点；false表示不支持空分支节点。<br/>值为undefined时，按false处理。 |
 
 ## syncLoad
 

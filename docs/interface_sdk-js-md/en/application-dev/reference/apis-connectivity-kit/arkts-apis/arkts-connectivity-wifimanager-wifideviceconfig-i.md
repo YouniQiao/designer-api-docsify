@@ -50,24 +50,6 @@ Wi-Fi bssid type.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
-## defaultNetworkWhenNoInternet
-
-```TypeScript
-defaultNetworkWhenNoInternet?: NetworkType
-```
-
-Set the default network binding when current Wi-Fi has no internet.When the connected Wi-Fi network has no internet access, if this field is set to UNKNOWN, a prompt dialog will appear asking the user to manually choose the default network; when set to CELLULAR, the system will bind the default network to the cellular; when set to WIFI, it will bind to the Wi-Fi instead.Default value: UNKNOWN.
-
-**Type:** NetworkType
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WifiDeviceConfig-defaultNetworkWhenNoInternet?: NetworkType--><!--Device-WifiDeviceConfig-defaultNetworkWhenNoInternet?: NetworkType-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.STA
-
 ## eapConfig
 
 ```TypeScript
@@ -149,6 +131,24 @@ Security type: reference definition of WifiSecurityType
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WifiDeviceConfig-securityType: WifiSecurityType--><!--Device-WifiDeviceConfig-securityType: WifiSecurityType-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+## showNoInternetDialog
+
+```TypeScript
+showNoInternetDialog?: boolean
+```
+
+Whether to show a dialog when the first network probe detects no internet.If false, the default network is bound to cellular with no dialog shown.If true, will show a no-internet dialog prompts the user to select the default network binding.Default value: true.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WifiDeviceConfig-showNoInternetDialog?: boolean--><!--Device-WifiDeviceConfig-showNoInternetDialog?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

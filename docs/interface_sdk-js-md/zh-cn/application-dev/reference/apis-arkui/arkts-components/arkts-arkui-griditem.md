@@ -6,7 +6,7 @@
 >
 > *
 >
-> * 仅支持作为[Grid]{@link grid}组件的子组件使用。
+> * 仅支持作为[Grid]{@link ./grid}组件的子组件使用。
 >
 > * 当GridItem配合[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，GridItem子组件在
 > GridItem创建时创建。配合[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
@@ -43,7 +43,7 @@ GridItem(value?: GridItemOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [GridItemOptions](arkts-arkui-griditemoptions-i.md) | 否 | 为GridItem提供可选参数，该对象内含有[GridItemStyle]{@link GridItemStyle}枚举类型的style参 数。 |
+| value | [GridItemOptions](arkts-arkui-griditemoptions-i.md) | 否 | 为GridItem提供可选参数，该对象内包含[GridItemStyle]{@link GridItemStyle}枚举类型的style参数。不传入时使用默认样 式，即GridItemStyle.NONE。<br/> |
 
 ## 汇总
 
