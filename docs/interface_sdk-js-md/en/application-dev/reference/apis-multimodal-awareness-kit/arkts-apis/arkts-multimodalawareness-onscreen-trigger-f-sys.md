@@ -17,7 +17,9 @@ Proactively triggers screen content awareness and obtains the current screen awa
 
 **Since:** 23
 
-**Required permissions:** ohos.permission.GET_SCREEN_CONTENT
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
+- API version 23 - 24: ohos.permission.GET_SCREEN_CONTENT
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +46,7 @@ Proactively triggers screen content awareness and obtains the current screen awa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to get page content forbidden by<br> permission: ohos.permission.GET_SCREEN_CONTENT. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to get page content forbidden by<br> permission: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to limited<br> device capabilities. |
 | [34000001](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000001-service-exception) | Service exception. |
