@@ -40,3 +40,35 @@ playVideo.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## PLAY_MUSIC_LIST
+
+```TypeScript
+PLAY_MUSIC_LIST = 'playMusicList'
+```
+
+play music list.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SearchPlayInfoType-PLAY_MUSIC_LIST = 'playMusicList'--><!--Device-SearchPlayInfoType-PLAY_MUSIC_LIST = 'playMusicList'-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## PLAY_VIDEO_LIST
+
+```TypeScript
+PLAY_VIDEO_LIST = 'playVideoList'
+```
+
+play video list.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SearchPlayInfoType-PLAY_VIDEO_LIST = 'playVideoList'--><!--Device-SearchPlayInfoType-PLAY_VIDEO_LIST = 'playVideoList'-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+

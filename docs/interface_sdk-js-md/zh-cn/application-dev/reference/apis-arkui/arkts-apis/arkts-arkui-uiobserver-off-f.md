@@ -111,7 +111,7 @@ struct Index {
                 .fontSize(16)
                 .textAlign(TextAlign.Center)
                 .margin({ top: 10 })
-            }, (item: string) => item)
+            }, (item: number) => item.toString())
           }.width('100%')
         }
         .id('testId')

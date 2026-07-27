@@ -84,7 +84,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
 
-  dlpFile?.closeDLPFile(); // 关闭DLP对象。
+  await dlpFile?.closeDLPFile(); // 关闭DLP对象。
   if (file) {
     fileIo.closeSync(file);
   }
@@ -156,7 +156,7 @@ async function ExampleFunction() {
   file = fileIo.openSync(uri).fd;
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
   dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
-    if (err !== undefined) {
+    if (err) {
       console.error('addDLPLinkFile error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -233,7 +233,7 @@ async function ExampleFunction() {
   file = fileIo.openSync(uri).fd;
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
 
-  dlpFile?.closeDLPFile(); // 关闭DLP对象。
+  await dlpFile?.closeDLPFile(); // 关闭DLP对象。
   if (file) {
     fileIo.closeSync(file);
   }
@@ -307,7 +307,7 @@ async function ExampleFunction() {
   file = fileIo.openSync(uri).fd;
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
   dlpFile.closeDLPFile((err, res) => { // 关闭DLP文件。
-    if (err !== undefined) {
+    if (err) {
       console.error('closeDLPFile error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -462,7 +462,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
   dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // 删除link文件。
-    if (err !== undefined) {
+    if (err) {
       console.error('deleteDLPLinkFile error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -546,10 +546,10 @@ async function ExampleFunction() {
   appId = data.signatureInfo.appId;
 
   file = fileIo.openSync(uri).fd;
-  destFile = fileIo.openSync('destUri').fd;
+  destFile = fileIo.openSync('file://docs/storage/Users/currentUser/Desktop/dest.txt').fd;
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
   await dlpFile.recoverDLPFile(destFile); // 还原DLP文件。
-  dlpFile?.closeDLPFile(); // 关闭DLP对象。
+  await dlpFile?.closeDLPFile(); // 关闭DLP对象。
   if (file) {
     fileIo.closeSync(file);
   }
@@ -630,7 +630,7 @@ async function ExampleFunction() {
   destFile = fileIo.openSync('destUri').fd;
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
   dlpFile.recoverDLPFile(destFile, async (err, res) => { // 还原DLP文件。
-    if (err !== undefined) {
+    if (err) {
       console.error('recoverDLPFile error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -651,7 +651,7 @@ ExampleFunction();
 replaceDLPLinkFile(linkFileName: string): Promise<void>
 ```
 
-替换link文件。使用Promise异步回调。调用成功后，使用新的link文件名替换当前link文件。
+替换link文件。使用Promise异步回调。调用成功后，使用新的link文件名替换当前link文件。需要先创建link文件并停止FUSE读写，才能执行此操作。
 
 需要切换访问不同的DLP文件时，通过替换link文件实现文件映射的切换。
 
@@ -732,7 +732,7 @@ replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 
 替换link文件，使用callback异步回调。调用成功后，使用新的link文件名替换当前link文件。
 
-需要切换访问不同的DLP文件时替换link文件。
+需要切换访问不同的DLP文件时替换link文件。需要先创建link文件并停止FUSE读写，才能执行此操作。
 
 **起始版本：** 10
 
@@ -786,7 +786,7 @@ async function ExampleFunction() {
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
   await dlpFile.stopFuseLink(); // 暂停link读写。
   dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // 替换link文件。
-    if (err !== undefined) {
+    if (err) {
       console.error('replaceDLPLinkFile error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -864,7 +864,7 @@ async function ExampleFunction() {
   await dlpFile.stopFuseLink(); // 暂停link读写。
   await dlpFile.resumeFuseLink(); // 恢复link读写。
   
-  dlpFile?.closeDLPFile(); // 关闭DLP对象。
+  await dlpFile?.closeDLPFile(); // 关闭DLP对象。
   if (file) {
     fileIo.closeSync(file);
   }
@@ -937,7 +937,7 @@ async function ExampleFunction() {
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
   await dlpFile.stopFuseLink(); // 暂停link读写。
   dlpFile.resumeFuseLink(async (err, res) => {
-    if (err !== undefined) {
+    if (err) {
       console.error('resumeFuseLink error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -1009,10 +1009,10 @@ async function ExampleFunction() {
   appId = data.signatureInfo.appId;
 
   file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId) // 打开DLP文件。
-  dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
-  dlpFile.stopFuseLink(); // 暂停link读写。
-  dlpFile?.closeDLPFile(); // 关闭DLP对象。
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
+  await dlpFile.stopFuseLink(); // 暂停link读写。
+  await dlpFile?.closeDLPFile(); // 关闭DLP对象。
   if (file) {
     fileIo.closeSync(file);
   }
@@ -1084,7 +1084,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // 添加link文件。
   dlpFile.stopFuseLink(async (err, res) => {
-    if (err !== undefined) {
+    if (err) {
       console.error('stopFuseLink error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));

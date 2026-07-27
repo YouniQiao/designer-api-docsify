@@ -1,6 +1,6 @@
 # RepeatMode
 
-Defines the Border Image Repeat Mode.
+用于设置被切割的图片在边框上的重复方式。
 
 **起始版本：** 11
 
@@ -14,7 +14,7 @@ Defines the Border Image Repeat Mode.
 Repeat = 0
 ```
 
-The source image's slices are tiled. Tiles beyond the border box will be clipped.
+被切割的图片会重复铺平在图片边框上，超出部分会被剪裁。
 
 **起始版本：** 11
 
@@ -32,7 +32,7 @@ The source image's slices are tiled. Tiles beyond the border box will be clipped
 Stretch = 1
 ```
 
-The source image's slices are stretched to fill the border box.
+被切割的图片会以拉伸填充的方式铺满图片边框。
 
 **起始版本：** 11
 
@@ -50,7 +50,7 @@ The source image's slices are stretched to fill the border box.
 Round = 2
 ```
 
-The source image's slices are tiled to fill the border box. Tiles may be compressed when needed.
+被切割的图片会以整数次平铺在图片边框上，无法以整数次平铺时会压缩图片。
 
 **起始版本：** 11
 
@@ -68,7 +68,7 @@ The source image's slices are tiled to fill the border box. Tiles may be compres
 Space = 3
 ```
 
-The source image's slices are tiled to fill the border box. Extra space will be distributed in between tiles.
+被切割的图片会以整数次平铺在图片边框上，无法以整数次平铺时会以空白填充。
 
 **起始版本：** 11
 

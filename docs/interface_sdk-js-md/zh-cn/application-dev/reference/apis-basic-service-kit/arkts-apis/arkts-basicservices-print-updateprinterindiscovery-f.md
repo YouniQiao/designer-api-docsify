@@ -77,7 +77,7 @@ let printerInformation : print.PrinterInformation = {
 print.updatePrinterInDiscovery(printerInformation).then(() => {
     console.info('updatePrinterInDiscovery success');
 }).catch((error: BusinessError) => {
-    console.error('updatePrinterInDiscovery error : ' + JSON.stringify(error));
+    console.error(`Failed to updatePrinterInDiscovery. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

@@ -38,3 +38,30 @@ Create an HdrDarkenBlender, which is used to apply HDR-adaptive darken blender o
 | --- | --- |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | Returns the blender. |
 
+**Example**
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D'
+
+// Create an HDR darken blender instance.
+let blender : uiEffect.HdrDarkenBlender = 
+  uiEffect.createHdrDarkenBlender(1.3, [0.299, 0.587, 0.114])
+
+@Entry
+@Component
+struct Example {
+  build() { 
+    RelativeContainer() { 
+      Stack(){ 
+          Text("TextWord") 
+          Image($r("app.media.screenshot")) 
+            .width("100%") 
+            .height("100%") 
+            .advancedBlendMode(blender) 
+      } 
+    } 
+  } 
+}
+
+```
+

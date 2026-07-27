@@ -33,6 +33,7 @@ function unregisterMissionListener(listenerId: number, callback: AsyncCallback<v
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 console.info('registerMissionListener');
 let listenerId = missionManager.registerMissionListener({

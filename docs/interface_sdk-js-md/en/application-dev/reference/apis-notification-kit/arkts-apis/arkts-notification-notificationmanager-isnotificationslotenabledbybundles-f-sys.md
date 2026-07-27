@@ -47,3 +47,25 @@ Checks whether a notification slot type is enabled for the specified application
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Obtain whether the live view switch function is enabled for multiple applications in batches.
+const bundles: Array<notificationManager.BundleOption> = [
+    { bundle: 'com.example.app1', uid: 10001 },
+    { bundle: 'com.example.app2', uid: 10002 },
+];
+
+notificationManager.isNotificationSlotEnabledByBundles(
+    bundles, notificationManager.SlotType.LIVE_VIEW).then((data) => {
+    data.forEach((value: boolean, key: notificationManager.BundleOption) => {
+        console.info(`bundle: ${key.bundle}, enabled: ${value}`);
+    });
+}).catch((err: BusinessError) => {
+    console.error(`isNotificationSlotEnabledByBundles failed, code is ${err.code}, message is ${err.message}`);
+});
+
+```
+

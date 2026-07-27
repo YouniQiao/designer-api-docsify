@@ -1,6 +1,6 @@
 # SelectParams
 
-Contents, events, and styles of the select area.
+Provides optional attributes for the selection area.
 
 **Since:** 18
 

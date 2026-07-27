@@ -1,6 +1,6 @@
 # TabBarPosition
 
-the enum for TabBarOption.
+Position of the tab bar. The default value is **TabBarPosition.BOTTOM**.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ the enum for TabBarOption.
 LEFT = 0
 ```
 
-when the TabBarPosition set left,the tabs is located on the left of the tabs
+The tab bar is on the left side of the screen.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ when the TabBarPosition set left,the tabs is located on the left of the tabs
 BOTTOM = 1
 ```
 
-when the TabBarPosition set bottom,the tabs is located on the bottom of the tabs
+The tab bar is at the bottom of the screen.
 
 **Since:** 12
 

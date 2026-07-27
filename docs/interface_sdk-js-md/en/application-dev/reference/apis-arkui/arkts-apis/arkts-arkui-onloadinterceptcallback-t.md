@@ -4,7 +4,7 @@
 export type OnLoadInterceptCallback = (event: OnLoadInterceptEvent) => boolean
 ```
 
-Callback for OnLoadIntercept
+Represents the callback invoked when resource loading is intercepted.
 
 **Since:** 12
 
@@ -18,11 +18,11 @@ Callback for OnLoadIntercept
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [OnLoadInterceptEvent](arkts-arkui-atomicservice-atomicserviceweb-onloadinterceptevent-i.md) | Yes | the load intercept event when the resources loading is intercepted.  |
+| event | [OnLoadInterceptEvent](arkts-arkui-atomicservice-atomicserviceweb-onloadinterceptevent-i.md) | Yes | Event triggered when resource loading is intercepted.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the load is intercepted else false.  |
+| boolean | Whether resource loading is intercepted. The value **true** indicates that resource loading is intercepted.  |
 

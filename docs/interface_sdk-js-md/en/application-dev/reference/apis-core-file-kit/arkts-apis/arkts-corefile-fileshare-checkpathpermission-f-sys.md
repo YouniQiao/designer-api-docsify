@@ -56,27 +56,26 @@ import { fileShare } from '@kit.CoreFileKit';
 async function checkPersistentPermissionExample() {
   try {
     let pathPolicyInfo1: fileShare.PathPolicyInfo = {
-      path: "/storage/Users/currentUser/Documents/1.txt",
+      path: '/storage/Users/currentUser/Documents/1.txt',
       operationMode: fileShare.OperationMode.READ_MODE,
     }
     let pathPolicyInfo2: fileShare.PathPolicyInfo = {
-      path: "/storage/Users/currentUser/Desktop/2.txt",
+      path: '/storage/Users/currentUser/Desktop/2.txt',
       operationMode: fileShare.OperationMode.READ_MODE,
     }
 
     let policies: Array<fileShare.PathPolicyInfo> = [pathPolicyInfo1, pathPolicyInfo2];
     let policyType: fileShare.PolicyType = fileShare.PolicyType.PERSISTENT_TYPE;
-    let tokenid = 537688848; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system application, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system application.
+    let tokenID = 537688848; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system app, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system app.
 
-    fileShare.checkPathPermission(tokenid, policies, policyType).then((result:Array<boolean>) => {
-      for (let x of result) {
-        console.info('check permission result is', x);
+    fileShare.checkPathPermission(tokenID, policies, policyType).then((result: Array<boolean>) => {
+      for (let hasPermission of result) {
+        console.info('check permission result is', hasPermission);
       }
-    })
-    console.info("checkPathPermission finish");
-  }
-  catch (error) {
-    console.info(error.code + 'checkPathPermission error' + error.message);
+    });
+    console.info('checkPathPermission finish');
+  } catch (error) {
+    console.info(`checkPathPermission error, Code: ${error.code}, message: ${error.message}`);
   }
 }
 

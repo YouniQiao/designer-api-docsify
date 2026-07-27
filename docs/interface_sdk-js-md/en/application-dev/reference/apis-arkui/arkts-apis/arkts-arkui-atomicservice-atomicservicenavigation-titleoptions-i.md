@@ -1,6 +1,6 @@
 # TitleOptions
 
-Indicates the options of Navigation's Titlebar.
+Title bar options.
 
 **Since:** 12
 

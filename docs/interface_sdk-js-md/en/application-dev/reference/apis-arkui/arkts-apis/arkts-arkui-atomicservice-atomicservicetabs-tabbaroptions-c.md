@@ -1,6 +1,6 @@
 # TabBarOptions
 
-the class for TabBarOption
+Array of tab bar container configurations.
 
 **Since:** 12
 
@@ -21,7 +21,7 @@ constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr,
     unselectedColor?: ResourceColor, selectedColor?: ResourceColor)
 ```
 
-constructor to init the tabbar including icon, text, unselectedColor and selectedColor.
+A constructor used to create a **TabBarOptions** instance.
 
 **Since:** 12
 
@@ -35,8 +35,8 @@ constructor to init the tabbar including icon, text, unselectedColor and selecte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes |  |
-| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | cannot be empty |
-| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No |  |
-| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No |  |
+| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | Image for the tab. |
+| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Text of the tab. |
+| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | Color of the tab when it is not selected.<br>Default value: **#99182431** |
+| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | Color of the tab when it is selected.<br>Default value: **#FF007DFF** |
 

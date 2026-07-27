@@ -54,13 +54,13 @@ let printerInfo : print.PrinterInfo = {
     capability : undefined,
     options : 'opt'
 };
-print.addPrinters([printerInfo], (err: BusinessError) => {
-    if (err) {
-        console.error('addPrinters failed, because : ' + JSON.stringify(err));
+print.addPrinters([printerInfo], (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to add printers. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('addPrinters success');
     }
-})
+});
 
 ```
 
@@ -121,8 +121,8 @@ let printerInfo : print.PrinterInfo = {
 print.addPrinters([printerInfo]).then(() => {
     console.info('add printers success.');
 }).catch((error: BusinessError) => {
-    console.error('add printers error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to add printers. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

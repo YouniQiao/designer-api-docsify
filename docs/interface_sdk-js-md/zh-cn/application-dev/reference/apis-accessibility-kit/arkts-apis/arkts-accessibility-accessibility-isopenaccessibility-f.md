@@ -38,7 +38,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 accessibility.isOpenAccessibility((err: BusinessError, data: boolean) => {
   if (err) {
-    console.error(`failed to isOpenAccessibility, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to isOpenAccessibility. Code:${err.code}, message:${err.message}`);
     return;
   }
   console.info(`success data:isOpenAccessibility : ${JSON.stringify(data)}`);
@@ -78,9 +78,9 @@ import { accessibility } from '@kit.AccessibilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 accessibility.isOpenAccessibility().then((data: boolean) => {
-  console.info(`success data:isOpenAccessibility : ${JSON.stringify(data)}`)
+  console.info(`success data:isOpenAccessibility : ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to  isOpenAccessibility, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to isOpenAccessibility. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

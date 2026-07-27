@@ -52,6 +52,10 @@ struct Index {
     accessibility.onAnimationReduceStateChange(this.callback);
   }
 
+  aboutToDisappear(): void {
+    accessibility.offAnimationReduceStateChange(this.callback);
+  }
+
   build() {
     Column() {
     }

@@ -54,10 +54,10 @@ Get the senior mode state for app.
 import { config } from '@kit.AccessibilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-config.getSeniorModeStateForApp("com.example.myapplication", 0).then((data: boolean) => {
+config.getSeniorModeStateForApp('com.example.myapplication', 0).then((data: boolean) => {
   console.info(`Succeeded in getting seniorModeState for app, data: ${data}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to call getSeniorModeStateForApp, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to get seniorModeState for app. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

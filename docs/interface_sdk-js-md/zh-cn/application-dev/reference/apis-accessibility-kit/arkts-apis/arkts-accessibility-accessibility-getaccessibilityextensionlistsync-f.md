@@ -57,7 +57,7 @@ try {
   console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
 } catch (error) {
   let err = error as BusinessError;
-  console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
 }
 
 // 例如：系统内安装一个包名为com.example.myaccessibilityapp的辅助应用。
@@ -87,7 +87,7 @@ try {
   console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
 } catch (error) {
   let err = error as BusinessError;
-  console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

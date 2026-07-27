@@ -59,7 +59,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let bundleName = "ohos.samples.etsclock";
+  let bundleName = 'ohos.samples.etsclock';
   let userId = 100;
   let mode = appManager.PreloadMode.PRESS_DOWN;
   let appIndex = 0;

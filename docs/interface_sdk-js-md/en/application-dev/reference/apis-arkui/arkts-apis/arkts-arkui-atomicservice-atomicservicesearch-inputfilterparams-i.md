@@ -1,6 +1,6 @@
 # InputFilterParams
 
-Defines the InputFilter parameters.
+Sets regular expression for input filtering.
 
 **Since:** 18
 
@@ -20,7 +20,7 @@ import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams,
 error?: Callback<string>
 ```
 
-If the regular expression matching fails, the filtered content is returned.
+Callback used to return the filtered-out content when regular expression matching fails. Default value:**undefined**.
 
 **Type:** Callback&lt;string&gt;
 

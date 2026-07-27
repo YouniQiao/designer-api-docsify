@@ -59,7 +59,7 @@ let capability: accessibility.Capability[] = ['retrieve'];
 config.enableAbility(name, capability).then(() => {
   console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to enable ability, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```
@@ -116,7 +116,7 @@ let capability: accessibility.Capability[] = ['retrieve'];
 
 config.enableAbility(name, capability, (err: BusinessError) => {
   if (err) {
-    console.error(`failed to enable ability, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`); 

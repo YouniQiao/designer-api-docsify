@@ -52,13 +52,13 @@ try {
   // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext。
   let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
   notificationExtensionSubscription.openSubscriptionSettings(context).then(() => {
-    console.info(`openSubscriberSettings success`);
-  }).catch((e:Error) => {
+    console.info(`openSubscriptionSettings success`);
+  }).catch((e: Error) => {
     let error = e as BusinessError
-    console.error(`failed to call openSubscriptionSettings ${JSON.stringify(error)}`)
+    console.error(`failed to call openSubscriptionSettings, code is ${error.code}, message is ${error.message}`)
   });
 } catch (error) {
-  console.error(`failed to call openSubscriptionSettings ${JSON.stringify(error)}`)
+  console.error(`failed to call openSubscriptionSettings, code is ${error.code}, message is ${error.message}`)
 }
 
 ```

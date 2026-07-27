@@ -50,6 +50,24 @@ displayName of the Media.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## extras
+
+```TypeScript
+extras?: string
+```
+
+extras of the Media.
+
+**Type:** string
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SearchPlayMusicInfo-extras?: string--><!--Device-SearchPlayMusicInfo-extras?: string-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
 ## items
 
 ```TypeScript

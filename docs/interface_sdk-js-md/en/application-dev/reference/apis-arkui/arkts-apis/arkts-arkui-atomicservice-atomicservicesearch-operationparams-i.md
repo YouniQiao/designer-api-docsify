@@ -1,6 +1,6 @@
 # OperationParams
 
-Function settings in the selection area (right).
+Sets initialization parameters of the function area.
 
 **Since:** 18
 
@@ -20,7 +20,7 @@ import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams,
 auxiliaryItem?: OperationOption
 ```
 
-Function bits attached to the search area (right).
+Auxiliary item on the right of the search area. Default value: **undefined**.
 
 **Type:** OperationOption
 
@@ -38,7 +38,7 @@ Function bits attached to the search area (right).
 independentItem?: OperationOption
 ```
 
-Function bits independent of search area (right).
+Independent item on the right of the search area. Default value: **undefined**.
 
 **Type:** OperationOption
 

@@ -105,8 +105,8 @@ let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
 let file: number | undefined = undefined;
 file = fileIo.openSync(uri).fd;
 dlpPermission.isDLPFile(file, (err, isDLPFile) => {
- if (err != undefined) {
-    console.error('isDLPFile error,', err.code, err.message);
+ if (err) {
+    console.error(`Failed to check if file is DLP file. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('isDLPFile:', isDLPFile);
   }

@@ -92,6 +92,22 @@ getCurrentSpatialAudioSourceType(): SpatialAudioSourceType
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
+**示例：**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let sourceType: audio.SpatialAudioSourceType = audioSpatializationManager.getCurrentSpatialAudioSourceType();
+  console.info(`current spatial audio source type: ${sourceType}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error.code}, message: ${error.message}`);
+}
+
+```
+
 ## getSpatializationSceneType
 
 ```TypeScript
@@ -170,6 +186,39 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例：**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 设备描述符，用于指定要查询的设备。实际使用时应通过音频框架接口获取真实设备信息，address等字段应使用真实值。
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+
+try {
+  // 查询指定设备的自适应空间音频渲染效果开关状态。
+  let isEnabled: boolean = audioSpatializationManager.isAdaptiveSpatialRenderingEnabled(deviceDescriptor);
+  console.info(`isAdaptiveSpatialRenderingEnabled: ${isEnabled}`);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`ERROR: ${error.code}, message: ${error.message}`);
+}
+
+```
 
 ## isHeadTrackingEnabled
 
@@ -926,6 +975,26 @@ Unsubscribes to the adaptive spatial rendering enable state change events.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例：**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+// 取消该事件的所有监听。
+audioSpatializationManager.offAdaptiveSpatialRenderingEnabledChangeForAnyDevice();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let adaptiveSpatialRenderingEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+  console.info(`deviceDescriptor: ${JSON.stringify(audioSpatialEnabledStateForDevice.deviceDescriptor)}`);
+  console.info(`isAdaptiveSpatialRenderingEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
+};
+
+audioSpatializationManager.onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(adaptiveSpatialRenderingEnabledChangeForAnyDeviceCallback);
+
+audioSpatializationManager.offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(adaptiveSpatialRenderingEnabledChangeForAnyDeviceCallback);
+
+```
+
 ## offPersonalizedSpatializationEnabledChangeForAnyDevice
 
 ```TypeScript
@@ -987,6 +1056,23 @@ offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): vo
 | --- | --- |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例：**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+// 取消该事件的所有监听。
+audioSpatializationManager.offSpatialAudioSourceTypeChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let spatialAudioSourceTypeChangeCallback = (spatialAudioSourceType: audio.SpatialAudioSourceType) => {
+  console.info(`spatial audio source type changed to: ${spatialAudioSourceType}`);
+};
+audioSpatializationManager.onSpatialAudioSourceTypeChange(spatialAudioSourceTypeChangeCallback);
+audioSpatializationManager.offSpatialAudioSourceTypeChange(spatialAudioSourceTypeChangeCallback);
+
+```
 
 ## on('spatializationEnabledChange')
 
@@ -1195,6 +1281,18 @@ Subscribes to the adaptive spatial rendering enable state change events.When the
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例：**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.onAdaptiveSpatialRenderingEnabledChangeForAnyDevice((audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+  console.info(`deviceDescriptor: ${JSON.stringify(audioSpatialEnabledStateForDevice.deviceDescriptor)}`);
+  console.info(`isAdaptiveSpatialRenderingEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
+});
+
+```
+
 ## onPersonalizedSpatializationEnabledChangeForAnyDevice
 
 ```TypeScript
@@ -1257,6 +1355,17 @@ onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+**示例：**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.onSpatialAudioSourceTypeChange((spatialAudioSourceType: audio.SpatialAudioSourceType) => {
+  console.info(`spatial audio source type changed to: ${spatialAudioSourceType}`);
+});
+
+```
+
 ## setAdaptiveSpatialRenderingEnabled
 
 ```TypeScript
@@ -1296,6 +1405,37 @@ Sets the adaptive spatial rendering enabled or disabled by the specified device.
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on the device. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+**示例：**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 设备描述符，用于指定要设置的设备。实际使用时应通过音频框架接口获取真实设备信息，address等字段应使用真实值。
+let deviceDescriptor: audio.AudioDeviceDescriptor = {
+  deviceRole : audio.DeviceRole.OUTPUT_DEVICE,
+  deviceType : audio.DeviceType.BLUETOOTH_A2DP,
+  id : 1,
+  name : "",
+  address : "123",
+  sampleRates : [44100],
+  channelCounts : [2],
+  channelMasks : [0],
+  networkId : audio.LOCAL_NETWORK_ID,
+  interruptGroupId : 1,
+  volumeGroupId : 1,
+  displayName : ""
+};
+
+// 开启自适应空间音频渲染
+audioSpatializationManager.setAdaptiveSpatialRenderingEnabled(deviceDescriptor, true).then(() => {
+  console.info('Succeeded in setting adaptive spatial rendering enabled');
+}).catch((err: BusinessError) => {
+  console.error(`setAdaptiveSpatialRenderingEnabled failed: ${err.code}, message: ${err.message}`);
+});
+
+```
 
 ## setHeadTrackingEnabled
 

@@ -33,7 +33,7 @@ When a DLP management application or an authorized application needs to access a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2<sup>31</sup>-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2<sup>31</sup>-1, the excess part will be truncated. |
-| appId | string | Yes | ID of the caller. The value contains 8 to 1024 bytes. If the value is out of range,error code 401 is returned. |
+| appId | string | Yes | ID of the caller. The value contains 8 to 1024 bytes. If the value is out of range,error code 401 is thrown. |
 
 **Return value:**
 
@@ -81,6 +81,7 @@ async function ExampleFunction() {
 
   file = fileIo.openSync(uri).fd; // The FD is obtained by opening a file.
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
 
   if (file) {
     fileIo.closeSync(file);
@@ -115,7 +116,7 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2<sup>31</sup>-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2<sup>31</sup>-1, the excess part will be truncated. |
-| appId | string | Yes | ID of the caller. The value contains 8 to 1024 bytes. If the value is out of range,error code 401 is returned. |
+| appId | string | Yes | ID of the caller. The value contains 8 to 1024 bytes. If the value is out of range,error code 401 is thrown. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DLPFile&gt; | Yes | Callback used to receive the result of opening a DLP file. The callback parameters include **err** and **res**. **err** is **undefined** when the operation is successful;otherwise, **err** is an error object. **res** is a **DLPFile** object that represents the DLP file opened. |
 
 **Error codes:**
@@ -155,12 +156,13 @@ let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
 appId = data.signatureInfo.appId; // The app ID is obtained from the application package.
 
 file = fileIo.openSync(uri).fd; // The FD is obtained by opening a file.
-dlpPermission.openDLPFile(file, appId, (err, res) => { // Open a DLP file.
-  if (err !== undefined) {
+dlpPermission.openDLPFile(file, appId, async (err, res) => { // Open a DLP file.
+  if (err) {
     console.error('openDLPFile error,', err.code, err.message);
   } else {
     console.info('res', JSON.stringify(res));
   }
+  await res?.closeDLPFile(); // Close the DLP object.
   if (file) {
     fileIo.closeSync(file);
   }

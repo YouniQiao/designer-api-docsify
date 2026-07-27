@@ -88,7 +88,7 @@ let customProperty: dlpPermission.CustomProperty = {
 dlpPermission.generateDlpFileForEnterprise(plaintextFd, dlpFd, dlpProperty, customProperty).then((res) => {
   console.info('Successfully generate DLP file for enterprise.');
 }).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
+  console.error(`Failed to generate DLP file for enterprise. Code: ${error.code}, message: ${error.message}`);
 }).finally(()=>{
   if (dlpFd) {
     fileIo.closeSync(dlpFd);

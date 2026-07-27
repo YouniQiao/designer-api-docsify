@@ -151,10 +151,10 @@ import DemoProcess from '../process/DemoProcess';
 try {
   DemoProcess.toString(); // 这里要调用下DemoProcess类的任意方法，防止没有引用到而被构建工具优化掉
   childProcessManager.startChildProcess("./ets/process/DemoProcess.ets", childProcessManager.StartMode.SELF_FORK, (err, data) => {
-    if (data) {
-      console.info(`startChildProcess success, pid: ${data}`);
+    if (err) {
+      console.error(`startChildProcess error. Code: ${err.code}, message: ${err.message}`);
     } else {
-      console.error(`startChildProcess error, errorCode: ${err.code}`);
+      console.info(`startChildProcess success, pid: ${data}`);
     }
   });
 } catch (err: BusinessError) {

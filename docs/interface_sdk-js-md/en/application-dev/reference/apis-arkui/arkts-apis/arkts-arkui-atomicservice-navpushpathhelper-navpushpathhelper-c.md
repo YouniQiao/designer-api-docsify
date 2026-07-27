@@ -1,6 +1,6 @@
 # NavPushPathHelper
 
-provides a push method for the target page in the routing table.
+On the initial launch, the atomic service only downloads and installs the main package and its dependencies.Therefore, if the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable [Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i) to support dynamic loading of the HSP subpackage before the navigation occurs.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ import { NavPushPathHelper } from '@kit.ArkUI';
 constructor(navPathStack: NavPathStack)
 ```
 
-The constructor used to create a NavPushPathHelper object.
+A constructor used to create a **NavPushPathHelper** object.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ The constructor used to create a NavPushPathHelper object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| navPathStack | [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md) | Yes | The stack of the route table. |
+| navPathStack | [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md) | Yes | [Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i) stack. |
 
 ## pushDestination
 
@@ -42,7 +42,7 @@ The constructor used to create a NavPushPathHelper object.
 pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-Pushes the route page into the stack.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -56,15 +56,15 @@ Pushes the route page into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the route page to be pushed. |
-| animated | boolean | No | Indicates whether the transition is animated. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -82,7 +82,9 @@ Pushes the route page into the stack.
 pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Pushes the NavDestination into the stack.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+
+Depending on the [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -96,15 +98,15 @@ Pushes the NavDestination into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Indicates options of stack operation. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -122,7 +124,7 @@ Pushes the NavDestination into the stack.
 pushDestinationByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-Pushes the specified route page into the stack.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -136,16 +138,16 @@ Pushes the specified route page into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| name | string | Yes | Indicates the name of the route page to be pushed. |
-| param | Object | Yes | Indicates the detailed parameter of the route page to be pushed. |
-| animated | boolean | No | Indicates whether the transition is animated. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| param | Object | Yes | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -164,7 +166,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
     onPop: Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-Pushes the specified route page into the stack.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -178,17 +180,17 @@ Pushes the specified route page into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| name | string | Yes | Indicates the name of the route page to be pushed. |
-| param | Object | Yes | Indicates the detailed parameter of the route page to be pushed. |
-| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PopInfo&gt; | Yes | The callback when next page returns. |
-| animated | boolean | No | Indicates whether the transition is animated. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| param | Object | Yes | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PopInfo&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -206,7 +208,7 @@ Pushes the specified route page into the stack.
 pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-Pushes the route page into the stack.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -220,15 +222,15 @@ Pushes the route page into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the route page to be pushed. |
-| animated | boolean | No | Indicates whether the transition is animated. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -242,7 +244,9 @@ Pushes the route page into the stack.
 pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Pushes the NavDestination into the stack.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+
+Depending on the [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -256,15 +260,15 @@ Pushes the NavDestination into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Indicates options of stack operation. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -278,7 +282,7 @@ Pushes the NavDestination into the stack.
 pushPathByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-Pushes the specified route page into the stack.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -292,16 +296,16 @@ Pushes the specified route page into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| name | string | Yes | Indicates the name of the route page to be pushed. |
-| param | Object | Yes | Indicates the detailed parameter of the route page to be pushed. |
-| animated | boolean | No | Indicates whether the transition is animated. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| param | Object | Yes | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -316,7 +320,7 @@ pushPathByName(moduleName: string, name: string, param: Object,
     onPop: Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-Pushes the specified route page into the stack.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -330,17 +334,17 @@ Pushes the specified route page into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| name | string | Yes | Indicates the name of the route page to be pushed. |
-| param | Object | Yes | Indicates the detailed parameter of the route page to be pushed. |
-| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PopInfo&gt; | Yes | The callback when next page returns. |
-| animated | boolean | No | Indicates whether the transition is animated. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| param | Object | Yes | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PopInfo&gt; | Yes | Callback used to receive the result. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -354,7 +358,7 @@ Pushes the specified route page into the stack.
 replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-replace the current page with the specific one.The current page will be destroyed.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pops the top page from the current navigation stack and pushes the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -368,15 +372,15 @@ replace the current page with the specific one.The current page will be destroye
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the the new route page in top of the stack. |
-| animated | boolean | No | Indicates whether the transition is animated. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Parameters of the page to replace the top of the navigation stack. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -390,7 +394,9 @@ replace the current page with the specific one.The current page will be destroye
 replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Replace the current NavDestination with the specific one.The current NavDestination will be destroyed.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pops the top page from the current navigation stack. This API uses a promise to handle asynchronous operations.
+
+Depending on the [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -404,15 +410,15 @@ Replace the current NavDestination with the specific one.The current NavDestinat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the new NavDestination in top of the stack. |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Indicates options of stack operation. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Parameters of the page to replace the top of the navigation stack. |
+| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -426,7 +432,7 @@ Replace the current NavDestination with the specific one.The current NavDestinat
 replacePathByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-replace the current page with the specific one.The current page will be destroyed.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pops the top page from the current navigation stack and pushes the page specified by the **name** parameter onto the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -440,16 +446,16 @@ replace the current page with the specific one.The current page will be destroye
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name |
-| name | string | Yes | Indicates name of the new route page in top of stack. |
-| param | Object | Yes | Indicates the detailed parameter of the new route page in top of the stack. |
-| animated | boolean | No | Indicates whether the transition is animated. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
+| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| param | Object | Yes | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| animated | boolean | No | Whether to support the transition animation.<br>Default value: **true**.<br>**true**: The transition animation is supported.<br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

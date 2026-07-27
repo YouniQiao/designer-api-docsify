@@ -50,13 +50,14 @@ function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): P
 import { scan } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// uniqueId可通过getAddedScanners()获取已添加扫描仪的唯一ID，或从scan.on('scanDeviceAdd')事件回调中获得
 let uniqueId: string = 'unique_scanner_001';
 let discoveryMode: scan.ScannerDiscoveryMode = scan.ScannerDiscoveryMode.TCP_STR;
 scan.deleteScanner(uniqueId, discoveryMode).then(() => {
     console.info('delete scanner success');
 }).catch((error: BusinessError) => {
-    console.error('delete scanner failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to delete scanner. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

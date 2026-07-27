@@ -56,8 +56,8 @@ let type : print.DefaultPrinterType = print.DefaultPrinterType.DEFAULT_PRINTER_T
 print.setDefaultPrinter(printerId, type).then(() => {
     console.info('setDefaultPrinter success');
 }).catch((error: BusinessError) => {
-    console.error('setDefaultPrinter error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to set default printer. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

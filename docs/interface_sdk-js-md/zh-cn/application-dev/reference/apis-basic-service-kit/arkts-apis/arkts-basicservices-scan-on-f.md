@@ -42,7 +42,7 @@ import { scan } from '@kit.BasicServicesKit';
 
 scan.on('scanDeviceFound', (device: scan.ScannerDevice) => {
     console.info('scan device found: ' + JSON.stringify(device));
-})
+});
 
 ```
 
@@ -83,7 +83,7 @@ import { scan } from '@kit.BasicServicesKit';
 
 scan.on('scanDeviceSync', (device: scan.ScannerSyncDevice) => {
     console.info('scan device sync: ' + JSON.stringify(device));
-})
+});
 
 ```
 

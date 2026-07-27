@@ -62,7 +62,7 @@ let infos: config.AppSeniorModeInfo[] = [{
 config.setSeniorModeStateForApp(infos).then(() => {
   console.info(`Succeeded in setting seniorModeState for App.`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to call setSeniorModeStateForApp, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to set seniorModeState for app. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

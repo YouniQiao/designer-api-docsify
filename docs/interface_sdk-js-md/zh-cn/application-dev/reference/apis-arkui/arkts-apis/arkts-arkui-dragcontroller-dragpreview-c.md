@@ -67,8 +67,7 @@ export default class EntryAbility extends UIAbility {
 
     windowStage.loadContent('pages/Index', this.storage, (err, data) => {
       if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s',
-          `Code is ${err.code}, message is ${err.message}`);
+        console.error(`Failed to load the content. Code: ${err.code}, message: ${err.message}`);
         return;
       }
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s',
@@ -125,19 +124,19 @@ struct DragControllerPage {
         .onDragEnter(() => {
           try {
             let uiContext: UIContext = this.storages?.get<UIContext>('uiContext') as UIContext;
-            let previewObj: dragController.DragPreview = uiContext.getDragController().getDragPreview();
+            let dragPreview: dragController.DragPreview = uiContext.getDragController().getDragPreview();
             let foregroundColor: ResourceColor = Color.Green;
 
             let previewAnimation: dragController.AnimationOptions = {
               curve: curves.cubicBezierCurve(0.2, 0, 0, 1),
             }
-            previewObj.animate(previewAnimation, () => {
-              previewObj.setForegroundColor(foregroundColor);
+            dragPreview.animate(previewAnimation, () => {
+              dragPreview.setForegroundColor(foregroundColor);
             });
           } catch (error) {
-            let msg = (error as BusinessError).message;
+            let message = (error as BusinessError).message;
             let code = (error as BusinessError).code;
-            hilog.error(0x0000, `show error code is ${code}, message is ${msg}`, '');
+            console.error(`Failed to animate drag preview. Code: ${code}, message: ${message}`);
           }
         })
         .onDrop(() => {
@@ -153,21 +152,23 @@ struct DragControllerPage {
               data: unifiedData,
               extraParams: ''
             }
-            let eve: DragInfo = new DragInfo();
             this.getUIContext()
               .getDragController()
               .executeDrag(() => { // 建议使用 this.getUIContext().getDragController().executeDrag()接口
                 this.draggingBuilder()
-              }, dragInfo, (err, eve) => {
-                hilog.info(0x0000, `${JSON.stringify(err)}`, '')
-                if (eve && eve.event) {
-                  if (eve.event.getResult() == DragResult.DRAG_SUCCESSFUL) {
-                    hilog.info(0x0000, 'success', '');
-                  } else if (eve.event.getResult() == DragResult.DRAG_FAILED) {
-                    hilog.info(0x0000, 'failed', '');
-                  }
+              }, dragInfo, (err, dragEventParam) => {
+                if (err) {
+                  console.error(`Failed to execute drag. Code: ${err.code}, message: ${err.message}`);
+                  return;
                 }
-              })
+                if (dragEventParam && dragEventParam.event) {
+                  if (dragEventParam.event.getResult() == DragResult.DRAG_SUCCESSFUL) {
+                    hilog.info(0x0000, 'success', '');
+                  } else if (dragEventParam.event.getResult() == DragResult.DRAG_FAILED) {
+                    hilog.info(0x0000, 'failed', '');
+                   }
+                 }
+               })
           }
         }
       }).margin({ top: 100 })

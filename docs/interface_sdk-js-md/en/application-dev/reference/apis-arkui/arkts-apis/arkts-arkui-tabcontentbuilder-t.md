@@ -4,7 +4,7 @@
 export type TabContentBuilder = () => void
 ```
 
-CustomBuilder for tabContent
+Defines the content view container.
 
 **Since:** 12
 

@@ -248,7 +248,7 @@ insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 指示要插入的数据的路径。 |
-| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 指示要插入的数据。 |
+| valueBucket | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 指示要插入的数据。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回插入数据记录的索引。 |
 
 **示例：**
@@ -468,7 +468,7 @@ update?(
 | --- | --- | --- | --- |
 | uri | string | 是 | 指示要更新的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 指示筛选条件。 |
-| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 指示要更新的数据。 |
+| valueBucket | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 指示要更新的数据。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回更新的数据记录数。 |
 
 **示例：**

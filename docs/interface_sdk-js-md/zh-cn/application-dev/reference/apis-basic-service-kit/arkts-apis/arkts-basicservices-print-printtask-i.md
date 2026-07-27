@@ -66,7 +66,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                     })
                 })
             }
@@ -132,7 +132,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                     })
                 })
             }
@@ -198,7 +198,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                     })
                 })
             }
@@ -264,7 +264,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                     })
                 })
             }
@@ -330,7 +330,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                     })
                 })
             }
@@ -396,7 +396,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                     })
                 })
             }
@@ -462,7 +462,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                     })
                 })
             }
@@ -528,7 +528,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error('print err ' + JSON.stringify(error));
+                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
                     })
                 })
             }

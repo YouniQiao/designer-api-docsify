@@ -43,7 +43,7 @@ function getRunningProcessInfoByBundleName(bundleName: string, callback: AsyncCa
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let bundleName = "bundleName";
+let bundleName = 'bundleName';
 function getRunningProcessInfoByBundleNameCallback(err: BusinessError, data: Array<appManager.ProcessInformation>) {
   if (err) {
     console.error(`getRunningProcessInfoByBundleNameCallback fail, err: ${JSON.stringify(err)}`);
@@ -101,7 +101,7 @@ function getRunningProcessInfoByBundleName(bundleName: string, userId: number, c
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let bundleName = "bundleName";
+let bundleName = 'bundleName';
 let userId = 0;
 function getRunningProcessInfoByBundleNameCallback(err: BusinessError, data: Array<appManager.ProcessInformation>) {
   if (err) {
@@ -164,7 +164,7 @@ function getRunningProcessInfoByBundleName(bundleName: string): Promise<Array<Pr
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let bundleName = "bundleName";
+let bundleName = 'bundleName';
 
 try {
   appManager.getRunningProcessInfoByBundleName(bundleName).then((data) => {
@@ -224,7 +224,7 @@ function getRunningProcessInfoByBundleName(bundleName: string, userId: number): 
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let bundleName = "bundleName";
+let bundleName = 'bundleName';
 let userId = 0;
 
 try {

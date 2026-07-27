@@ -1,6 +1,6 @@
 # SideBarOptions
 
-Side bar options.
+Defines sidebar options.
 
 **Since:** 18
 

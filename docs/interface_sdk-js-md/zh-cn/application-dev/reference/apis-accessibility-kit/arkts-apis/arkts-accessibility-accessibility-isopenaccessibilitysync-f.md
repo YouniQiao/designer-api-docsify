@@ -34,7 +34,6 @@ function isOpenAccessibilitySync(): boolean
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 // 1、系统内已安装多个辅助应用，若都没有开启，返回false。
 // 2、系统内已安装多个辅助应用，若开启任意一个，返回true。

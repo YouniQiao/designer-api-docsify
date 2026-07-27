@@ -47,11 +47,12 @@ function getPrinterInformationById(printerId: string): Promise<PrinterInformatio
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// printerId可通过on('printerChange')回调获取
 let printerId : string = 'testPrinterId';
 print.getPrinterInformationById(printerId).then((printerInformation : print.PrinterInformation) => {
     console.info('getPrinterInformationById data : ' + JSON.stringify(printerInformation));
 }).catch((error: BusinessError) => {
-    console.error('getPrinterInformationById error : ' + JSON.stringify(error));
+    console.error(`Failed to getPrinterInformationById. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

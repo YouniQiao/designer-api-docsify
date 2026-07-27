@@ -222,7 +222,7 @@ let userId: number = 1;
 notificationSubscribe.removeAll(userId).then(() => {
   console.info("removeAll success");
 }).catch((err: BusinessError) => {
-  console.error(`removeAll fail: ${JSON.stringify(err)}`);
+  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```
@@ -279,7 +279,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 notificationSubscribe.removeAll().then(() => {
   console.info("removeAll success");
 }).catch((err: BusinessError) => {
-  console.error(`removeAll fail: ${JSON.stringify(err)}`);
+  console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

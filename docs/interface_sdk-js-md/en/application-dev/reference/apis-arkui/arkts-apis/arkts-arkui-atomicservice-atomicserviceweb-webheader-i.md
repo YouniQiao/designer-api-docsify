@@ -1,6 +1,6 @@
 # WebHeader
 
-Defines the Web's request/response header.
+Describes the request/response header returned by the **AtomicServiceWeb** component.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 headerKey: string
 ```
 
-Gets the key of the request/response header.
+Key of the request/response header.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Gets the key of the request/response header.
 headerValue: string
 ```
 
-Gets the value of the request/response header.
+Value of the request/response header.
 
 **Type:** string
 

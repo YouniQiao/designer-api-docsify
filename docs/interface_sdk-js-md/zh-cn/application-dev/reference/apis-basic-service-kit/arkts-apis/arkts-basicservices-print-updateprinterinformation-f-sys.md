@@ -82,7 +82,7 @@ let printerInformation : print.PrinterInformation = {
 print.updatePrinterInformation(printerInformation).then(() => {
     console.info('updatePrinterInformation success');
 }).catch((error: BusinessError) => {
-    console.error('updatePrinterInformation error : ' + JSON.stringify(error));
+    console.error(`Failed to updatePrinterInformation. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

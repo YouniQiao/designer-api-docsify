@@ -52,6 +52,10 @@ struct Index {
     accessibility.onAudioMonoStateChange(this.callback);
   }
 
+  aboutToDisappear(): void {
+    accessibility.offAudioMonoStateChange(this.callback);
+  }
+
   build() {
     Column() {
     }

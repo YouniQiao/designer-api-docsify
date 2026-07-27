@@ -62,7 +62,7 @@ let source: string = '/data/storage/el1/base/test.png';
 let accountId: number = 100;
 try {
   securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId);
-  console.info(`Succeeded in setting set watermarkImage policy.`);
+  console.info(`Succeeded in setting watermarkImage policy.`);
 } catch(err) {
   console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
 }

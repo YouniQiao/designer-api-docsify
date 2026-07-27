@@ -51,7 +51,7 @@ off(
 ```TypeScript
 inputMethodEngine.getInputMethodEngine()
   .off('inputStart',
-    (_kbController: inputMethodEngine.KeyboardController, _textClient: inputMethodEngine.TextInputClient) => {
+    (kbController: inputMethodEngine.KeyboardController, textClient: inputMethodEngine.TextInputClient) => {
       console.info('delete inputStart notification.');
     });
 

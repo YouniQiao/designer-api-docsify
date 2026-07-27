@@ -104,7 +104,7 @@ try {
   let result: string = securityManager.getAppClipboardPolicy(wantTemp, tokenId);
   console.info(`Succeeded in getting clipboard policy, result : ${result}`);
 } catch(err) {
-  console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```
@@ -207,7 +207,7 @@ try {
   let result: string = securityManager.getAppClipboardPolicy(wantTemp, bundleName, accountId);
   console.info(`Succeeded in getting clipboard policy, result : ${result}`);
 } catch(err) {
-  console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

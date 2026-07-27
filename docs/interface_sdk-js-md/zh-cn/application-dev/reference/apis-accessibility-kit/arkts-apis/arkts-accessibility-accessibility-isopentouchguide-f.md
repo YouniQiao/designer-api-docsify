@@ -38,7 +38,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 accessibility.isOpenTouchGuide((err: BusinessError, data: boolean) => {
   if (err) {
-    console.error(`failed to isOpenTouchGuide, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to isOpenTouchGuide. Code:${err.code}, message:${err.message}`);
     return;
   }
   console.info(`success data:isOpenTouchGuide : ${JSON.stringify(data)}`);
@@ -80,7 +80,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 accessibility.isOpenTouchGuide().then((data: boolean) => {
   console.info(`success data:isOpenTouchGuide : ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to  isOpenTouchGuide, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to isOpenTouchGuide. Code:${err.code}, message:${err.message}`);
 });
 
 ```

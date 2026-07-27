@@ -46,13 +46,13 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let printerId: string = 'printerId_32';
-print.disconnectPrinter(printerId, (err: BusinessError) => {
-    if (err) {
-        console.error('failed to disconnect Printer because : ' + JSON.stringify(err));
+print.disconnectPrinter(printerId, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to disconnect printer. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('start disconnect Printer success');
     }
-})
+});
 
 ```
 
@@ -105,8 +105,8 @@ let printerId: string = 'printerId_32';
 print.disconnectPrinter(printerId).then(() => {
     console.info('start disconnect Printer success');
 }).catch((error: BusinessError) => {
-    console.error('failed to disconnect Printer because : ' + JSON.stringify(error));
-})
+    console.error(`Failed to disconnect printer. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

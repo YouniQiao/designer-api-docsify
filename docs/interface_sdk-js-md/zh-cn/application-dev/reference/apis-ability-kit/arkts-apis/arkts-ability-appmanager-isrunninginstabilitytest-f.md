@@ -45,7 +45,7 @@ import { appManager } from '@kit.AbilityKit';
 
 appManager.isRunningInStabilityTest((err, flag) => {
   if (err) {
-    console.error(`isRunningInStabilityTest fail, err: ${JSON.stringify(err)}`);
+    console.error(`isRunningInStabilityTest fail, code: ${err.code}, msg:${err.message}`);
   } else {
     console.info(`The result of isRunningInStabilityTest is: ${JSON.stringify(flag)}`);
   }

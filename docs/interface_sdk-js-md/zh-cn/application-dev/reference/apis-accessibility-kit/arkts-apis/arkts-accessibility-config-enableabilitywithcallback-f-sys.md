@@ -59,14 +59,14 @@ let name: string = 'com.ohos.example/axExtension';
 let capability: accessibility.Capability[] = ['retrieve'];
 let connectCallback: config.ConnectCallback = {
   onDisconnect: () => {
-    console.info(`Ability is disconnected.`)
+    console.info(`Ability is disconnected.`);
   }
-}
+};
 
 config.enableAbilityWithCallback(name, capability, connectCallback).then(() => {
   console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to enable ability, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

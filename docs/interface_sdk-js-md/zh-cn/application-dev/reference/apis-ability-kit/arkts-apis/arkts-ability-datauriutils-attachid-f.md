@@ -53,7 +53,7 @@ try {
   );
   console.info(`attachId the uri is: ${uri}`);
 } catch (err) {
-  console.error(`get id err, code: ${JSON.stringify((err as BusinessError).code)}, msg: ${JSON.stringify((err as BusinessError).message)}`);
+  console.error(`attachId err, code: ${JSON.stringify((err as BusinessError).code)}, msg: ${JSON.stringify((err as BusinessError).message)}`);
 }
 
 ```

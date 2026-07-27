@@ -200,7 +200,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let abilityFirstFrameStateObserverForAll: appManager.AbilityFirstFrameStateObserver = {
   onAbilityFirstFrameDrawn(abilityStateData: appManager.AbilityFirstFrameStateData) {
-    console.info("abilityFirstFrame: ", JSON.stringify(abilityStateData));
+    console.info('abilityFirstFrame: ', JSON.stringify(abilityStateData));
   }
 };
 

@@ -1,6 +1,11 @@
 # HalfScreenLaunchComponent
 
-Declare component HalfScreenLaunchComponent
+**HalfScreenLaunchComponent** is a component designed for launching atomic services in half screen. If the invoked application (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in half-screen embedded mode. If authorization is not provided,the invoker will launch the atomic service in a pop-up manner.
+> **NOTE**  
+>  
+> To implement an embeddable atomic service, make sure it inherits from  
+> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). If the atomic service does  
+> not inherit from **EmbeddableUIAbility**, the system cannot guarantee its proper operation.
 
 **Since:** 18
 
@@ -22,7 +27,7 @@ import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 appId: string
 ```
 
-Indicates atomic service appId.
+Application ID for the atomic service.
 
 **Type:** string
 
@@ -37,10 +42,10 @@ Indicates atomic service appId.
 ## content
 
 ```TypeScript
-@BuilderParam content: Callback<void>
+content: Callback<void>
 ```
 
-Sets the component content.
+Content displayed in the component.
 
 **Type:** Callback&lt;void&gt;
 
@@ -50,7 +55,7 @@ Sets the component content.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-HalfScreenLaunchComponent-@BuilderParam content: Callback<void>--><!--Device-HalfScreenLaunchComponent-@BuilderParam content: Callback<void>-End-->
+<!--Device-HalfScreenLaunchComponent-content: Callback<void>--><!--Device-HalfScreenLaunchComponent-content: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,7 +65,7 @@ Sets the component content.
 onError?: ErrorCallback
 ```
 
-Indicates the callback of onError.
+Invoked when an error occurs during the running of the atomic service.
 
 **Type:** ErrorCallback
 
@@ -78,7 +83,7 @@ Indicates the callback of onError.
 onReceive?: Callback<Record<string, Object>>
 ```
 
-Indicates the callback of onReceive.
+Callback triggered when an embedded atomic service calls [@ohos.window (window)](arkts-window.md) APIs.
 
 **Type:** Callback&lt;Record&lt;string, Object&gt;&gt;
 
@@ -96,7 +101,7 @@ Indicates the callback of onReceive.
 onTerminated?: Callback<TerminationInfo>
 ```
 
-Indicates the callback of onTerminated.
+Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)or [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Type:** Callback&lt;TerminationInfo&gt;
 
@@ -114,7 +119,7 @@ Indicates the callback of onTerminated.
 options?: AtomicServiceOptions
 ```
 
-Indicates the atomic service start options.
+Parameters for starting the atomic service. The default value is empty.
 
 **Type:** AtomicServiceOptions
 

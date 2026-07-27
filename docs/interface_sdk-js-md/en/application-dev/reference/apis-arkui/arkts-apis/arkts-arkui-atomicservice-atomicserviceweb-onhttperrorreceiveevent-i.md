@@ -1,6 +1,6 @@
 # OnHttpErrorReceiveEvent
 
-Http error receive event when the web page receives a web resource loading HTTP error.
+Represents the callback invoked when an HTTP error occurs during web page resource loading.
 
 **Since:** 12
 

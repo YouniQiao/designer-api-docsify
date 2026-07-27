@@ -43,7 +43,7 @@ Unsubscribes from the notification extension. This API uses a promise to return 
 notificationExtensionSubscription.unsubscribe().then(() => {
   console.info(`unsubscribe success`);
 }).catch((err: BusinessError) => {
-  console.error(`unsubscribe fail: ${JSON.stringify(err)}`);
+  console.error(`unsubscribe fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

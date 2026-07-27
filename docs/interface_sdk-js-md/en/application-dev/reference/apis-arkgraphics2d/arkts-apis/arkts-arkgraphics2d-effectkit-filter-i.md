@@ -51,22 +51,25 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function ImageBlur(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+function imageBlur(imageData: ArrayBuffer): Promise<image.PixelMap> {
+  return new Promise(async (resolve) => {
+    // Create an image source.
+    let imageSource = image.createImageSource(imageData);
+    await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+      // Set the blur radius.
       let radius = 5;
+      // Create a Filter instance.
       let headFilter = effectKit.createEffect(pixelMap);
       if (headFilter != null) {
-        // Add an effect flag to the image.
+        // Add a blur effect to the image.
         headFilter.blur(radius);
+        // Process the image based on the added effect identifiers and return the processed image data.
+        headFilter.getEffectPixelMap().then(imageData => {
+          resolve(imageData);
+        });
       }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
+    });
+  });
 }
 
 @Entry
@@ -76,23 +79,23 @@ struct Index {
   private imageBuffer: ArrayBuffer | undefined = undefined;
   // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
   async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
+    try {
       const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
       const buffer: ArrayBuffer = fileData.buffer.slice(0);
       return buffer;
-    }catch (err){
-      return undefined
+    } catch (err) {
+      return undefined;
     }
   }
 
-  async aboutToAppear(): Promise<void>{
+  async aboutToAppear(): Promise<void> {
     this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
+    if (this.imageBuffer == undefined) {
       return;
     }
     // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageBlur(this.imageBuffer);
+    this.imagePixelMap = await imageBlur(this.imageBuffer);
   }
 
   build() {
@@ -142,22 +145,25 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function ImageBlur(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
+function imageBlur(Image: ArrayBuffer): Promise<image.PixelMap> {
+  return new Promise(async (resolve) => {
+    // Create the image source.
     let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+    await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+      // Set the blur radius.
       let radius = 30;
+      // Create a Filter instance.
       let headFilter = effectKit.createEffect(pixelMap);
       if (headFilter != null) {
-        // Add an effect flag to the image.
+        // Add a blur effect to the image and set the tile mode.
         headFilter.blur(radius, effectKit.TileMode.DECAL);
+        // Process the image based on the added effect identifier and return the processed image data.
+        headFilter.getEffectPixelMap().then(imageData => {
+          resolve(imageData);
+        });
       }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
+    });
+  });
 }
 
 @Entry
@@ -167,23 +173,23 @@ struct Index {
   private imageBuffer: ArrayBuffer | undefined = undefined;
   // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
   async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
+    try {
       const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
       const buffer: ArrayBuffer = fileData.buffer.slice(0);
       return buffer;
-    }catch (err){
-      return undefined
+    } catch (err) {
+      return undefined;
     }
   }
 
-  async aboutToAppear(): Promise<void>{
+  async aboutToAppear(): Promise<void> {
     this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
+    if (this.imageBuffer == undefined) {
       return;
     }
     // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageBlur(this.imageBuffer);
+    this.imagePixelMap = await imageBlur(this.imageBuffer);
   }
 
   build() {
@@ -236,22 +242,25 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function ImageBrightness(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+function imageBrightness(imageData: ArrayBuffer): Promise<image.PixelMap> {
+  return new Promise(async (resolve) => {
+    // Create the image source.
+    let imageSource = image.createImageSource(imageData);
+    await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+      // Set the brightness value.
       let bright = 0.5;
+      // Create a Filter instance.
       let headFilter = effectKit.createEffect(pixelMap);
       if (headFilter != null) {
-        // Add an effect flag to the image.
+        // Add a highlight effect to the image.
         headFilter.brightness(bright);
+        // Process the image based on the added effect identifier and return the processed image data.
+        headFilter.getEffectPixelMap().then(imageData => {
+          resolve(imageData);
+        });
       }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
+    });
+  });
 }
 
 @Entry
@@ -261,23 +270,23 @@ struct Index {
   private imageBuffer: ArrayBuffer | undefined = undefined;
   // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
   async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
+    try {
       const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
       const buffer: ArrayBuffer = fileData.buffer.slice(0);
       return buffer;
-    }catch (err){
-      return undefined
+    } catch (err) {
+      return undefined;
     }
   }
 
-  async aboutToAppear(): Promise<void>{
+  async aboutToAppear(): Promise<void> {
     this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
+    if (this.imageBuffer == undefined) {
       return;
     }
     // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageBrightness(this.imageBuffer);
+    this.imagePixelMap = await imageBrightness(this.imageBuffer);
   }
 
   build() {
@@ -320,10 +329,12 @@ Obtains image.PixelMap of the source image to which the filter linked list is ad
 **Example**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+// Create a buffer for image effects.
+const colorBuffer = new ArrayBuffer(96);
+// Set image initialization options.
 let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -332,11 +343,17 @@ let opts : image.InitializationOptions = {
     width: 6
   }
 };
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createEffect(pixelMap).grayscale().getEffectPixelMap().then(data => {
-    console.info('getPixelBytesNumber = ', data.getPixelBytesNumber());
-  })
-})
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a Filter instance.
+  let headFilter = effectKit.createEffect(pixelMap);
+  if (headFilter != null) {
+    // Add a grayscale effect and obtain the processed PixelMap.
+    headFilter.grayscale().getEffectPixelMap().then(data => {
+      console.info('getPixelBytesNumber = ', data.getPixelBytesNumber());
+    });
+  }
+});
 
 ```
 
@@ -373,10 +390,12 @@ Gets the PixelMap where all filter effects have been added to the image.
 **Example**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+// Create a buffer for the image effect.
+const colorBuffer = new ArrayBuffer(96);
+// Set the image initialization options.
 let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -385,11 +404,13 @@ let opts : image.InitializationOptions = {
     width: 6
   }
 };
-image.createPixelMap(color, opts).then((pixelMap) => {
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a Filter instance, add a grayscale effect, and obtain the processed PixelMap.
   effectKit.createEffect(pixelMap).grayscale().getEffectPixelMap(false).then(data => {
     console.info('getPixelBytesNumber = ', data.getPixelBytesNumber());
-  })
-})
+  });
+});
 
 ```
 
@@ -420,10 +441,10 @@ Obtains image.PixelMap of the source image to which the filter linked list is ad
 **Example**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+const colorBuffer = new ArrayBuffer(96);
 let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -432,10 +453,10 @@ let opts : image.InitializationOptions = {
     width: 6
   }
 };
-image.createPixelMap(color, opts).then((pixelMap) => {
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
   let pixel = effectKit.createEffect(pixelMap).grayscale().getPixelMap();
   console.info('getPixelBytesNumber = ', pixel.getPixelBytesNumber());
-})
+});
 
 ```
 
@@ -470,21 +491,23 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function ImageGrayscale(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+function imageGrayscale(imageData: ArrayBuffer): Promise<image.PixelMap> {
+  return new Promise(async (resolve) => {
+    // Create the image source.
+    let imageSource = image.createImageSource(imageData);
+    await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+      // Create a Filter instance.
       let headFilter = effectKit.createEffect(pixelMap);
       if (headFilter != null) {
-        // Add an effect flag to the image.
+        // Add a grayscale effect to the image.
         headFilter.grayscale();
+        // Process the image based on the added effect identifier and return the processed image data.
+        headFilter.getEffectPixelMap().then(imageData => {
+          resolve(imageData);
+        });
       }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
+    });
+  });
 }
 
 @Entry
@@ -494,23 +517,23 @@ struct Index {
   private imageBuffer: ArrayBuffer | undefined = undefined;
   // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
   async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
+    try {
       const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
       const buffer: ArrayBuffer = fileData.buffer.slice(0);
       return buffer;
-    }catch (err){
-      return undefined
+    } catch (err) {
+      return undefined;
     }
   }
 
-  async aboutToAppear(): Promise<void>{
+  async aboutToAppear(): Promise<void> {
     this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
+    if (this.imageBuffer == undefined) {
       return;
     }
     // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageGrayscale(this.imageBuffer);
+    this.imagePixelMap = await imageGrayscale(this.imageBuffer);
   }
 
   build() {
@@ -553,21 +576,23 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function ImageInvert(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+function imageInvert(imageData: ArrayBuffer): Promise<image.PixelMap> {
+  return new Promise(async (resolve) => {
+    // Create the image source.
+    let imageSource = image.createImageSource(imageData);
+    await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+      // Create a Filter instance.
       let headFilter = effectKit.createEffect(pixelMap);
       if (headFilter != null) {
-        // Add an effect flag to the image.
+        // Add an inversion effect to the image.
         headFilter.invert();
+        // Process the image based on the added effect identifiers and return the processed image data.
+        headFilter.getEffectPixelMap().then(imageData => {
+          resolve(imageData);
+        });
       }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
+    });
+  });
 }
 
 @Entry
@@ -577,23 +602,23 @@ struct Index {
   private imageBuffer: ArrayBuffer | undefined = undefined;
   // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
   async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
+    try {
       const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
       const buffer: ArrayBuffer = fileData.buffer.slice(0);
       return buffer;
-    }catch (err){
-      return undefined
+    } catch (err) {
+      return undefined;
     }
   }
 
-  async aboutToAppear(): Promise<void>{
+  async aboutToAppear(): Promise<void> {
     this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
+    if (this.imageBuffer == undefined) {
       return;
     }
     // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageInvert(this.imageBuffer);
+    this.imagePixelMap = await imageInvert(this.imageBuffer);
   }
 
   build() {
@@ -648,27 +673,30 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // Pass the image data to be read.
-function ImageColorFilter(Image: ArrayBuffer): Promise<image.PixelMap> {
-  return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
-    imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
-      let colorMatrix:Array<number> = [
-      0.2126,0.7152,0.0722,0,0,
-      0.2126,0.7152,0.0722,0,0,
-      0.2126,0.7152,0.0722,0,0,
-      0,0,0,1,0
+function imageColorFilter(imageData: ArrayBuffer): Promise<image.PixelMap> {
+  return new Promise(async (resolve) => {
+    // Create the image source.
+    let imageSource = image.createImageSource(imageData);
+    await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
+      // Define the color matrix.
+      let colorMatrix: Array<number> = [
+        0.2126, 0.7152, 0.0722, 0, 0,
+        0.2126, 0.7152, 0.0722, 0, 0,
+        0.2126, 0.7152, 0.0722, 0, 0,
+        0, 0, 0, 1, 0
       ];
+      // Create a Filter instance.
       let headFilter = effectKit.createEffect(pixelMap);
       if (headFilter != null) {
-        // Add an effect flag to the image.
+        // Apply a custom color matrix effect to the image.
         headFilter.setColorMatrix(colorMatrix);
+        // Process the image based on the added effect identifier and return the processed image data.
+        headFilter.getEffectPixelMap().then(imageData => {
+          resolve(imageData);
+        });
       }
-      // Process the image based on the added effect flag and return the processed image data.
-      headFilter.getEffectPixelMap().then(imageData => {
-        resolve(imageData);
-      })
-    })
-  })
+    });
+  });
 }
 
 @Entry
@@ -678,23 +706,23 @@ struct Index {
   private imageBuffer: ArrayBuffer | undefined = undefined;
   // Read the image file in the rawfile folder. You can also change the read mode as required to ensure that the image data in ArrayBuffer format is obtained.
   async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try{
+    try {
       const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
       const buffer: ArrayBuffer = fileData.buffer.slice(0);
       return buffer;
-    }catch (err){
-      return undefined
+    } catch (err) {
+      return undefined;
     }
   }
 
-  async aboutToAppear(): Promise<void>{
+  async aboutToAppear(): Promise<void> {
     this.imageBuffer = await this.getFileBuffer();
-    if(this.imageBuffer == undefined){
+    if (this.imageBuffer == undefined) {
       return;
     }
     // Image processing is an asynchronous operation. You can perform the next step based on whether the processed image data needs to be obtained. Add await as required for synchronization.
-    this.imagePixelMap = await ImageColorFilter(this.imageBuffer);
+    this.imagePixelMap = await imageColorFilter(this.imageBuffer);
   }
 
   build() {

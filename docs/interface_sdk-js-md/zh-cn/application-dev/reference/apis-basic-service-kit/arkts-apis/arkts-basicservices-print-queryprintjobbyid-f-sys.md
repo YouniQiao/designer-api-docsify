@@ -46,13 +46,13 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let jobId : string = '1';
-print.queryPrintJobById(jobId, (err: BusinessError, printJob : print.PrintJob) => {
-    if (err) {
-        console.error('queryPrintJobById failed, because : ' + JSON.stringify(err));
+print.queryPrintJobById(jobId, (error: BusinessError, printJob : print.PrintJob) => {
+    if (error) {
+        console.error(`Failed to query print job by id. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('queryPrintJobById success, data : ' + JSON.stringify(printJob));
     }
-})
+});
 
 ```
 
@@ -105,8 +105,8 @@ let jobId : string = '1';
 print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
     console.info('queryPrintJobById data : ' + JSON.stringify(printJob));
 }).catch((error: BusinessError) => {
-    console.error('queryPrintJobById error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to query print job by id. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

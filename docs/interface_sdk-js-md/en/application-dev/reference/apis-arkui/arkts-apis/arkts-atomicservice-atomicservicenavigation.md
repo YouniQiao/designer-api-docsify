@@ -12,28 +12,28 @@ import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, Sid
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceNavigation](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md) | Defines AtomicServiceNavigation. |
+| [AtomicServiceNavigation](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md) | **AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)) and non-home page content through routing. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [GradientBackground](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md) | Indicates the options of Navigation's gradientBackground. |
-| [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md) | Side bar options. |
-| [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md) | Indicates the options of Navigation's Titlebar. |
+| [GradientBackground](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md) | Provides options for setting gradient colors for branding. |
+| [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md) | Defines sidebar options. |
+| [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md) | Title bar options. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [BackgroundTheme](arkts-arkui-atomicservice-atomicservicenavigation-backgroundtheme-e.md) | the theme of the background color. |
-| [GradientAlpha](arkts-arkui-atomicservice-atomicservicenavigation-gradientalpha-e.md) | the enum for the opacity of the background color. |
-| [MixMode](arkts-arkui-atomicservice-atomicservicenavigation-mixmode-e.md) | the enum for the blend mode of background color. |
-| [TitleBarType](arkts-arkui-atomicservice-atomicservicenavigation-titlebartype-e.md) | Title bar types. |
+| [BackgroundTheme](arkts-arkui-atomicservice-atomicservicenavigation-backgroundtheme-e.md) | Enumerates the navigation bar background themes. |
+| [GradientAlpha](arkts-arkui-atomicservice-atomicservicenavigation-gradientalpha-e.md) | Enumerates the opacity levels of the navigation bar background. |
+| [MixMode](arkts-arkui-atomicservice-atomicservicenavigation-mixmode-e.md) | Provides options for background color blending modes. |
+| [TitleBarType](arkts-arkui-atomicservice-atomicservicenavigation-titlebartype-e.md) | Enumerates the title bar types. The default type is **ROUND_ICON**. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [NavDestinationBuilder](arkts-arkui-navdestinationbuilder-t.md) | The builder function of NavDestination component. |
+| [NavDestinationBuilder](arkts-arkui-navdestinationbuilder-t.md) | Defines the content of the **NavDestination** component. |
 

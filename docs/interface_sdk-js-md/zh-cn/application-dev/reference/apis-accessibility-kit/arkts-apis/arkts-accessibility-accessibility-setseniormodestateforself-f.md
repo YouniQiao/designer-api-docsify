@@ -53,7 +53,7 @@ struct Index {
     accessibility.setSeniorModeStateForSelf(true).then(() => {
       console.info(`Succeeded in setting seniorModeStateForSelf`);
     }).catch((err: BusinessError) => {
-      console.error(`failed to call setSeniorModeStateForSelf, Code is ${err.code}, message is ${err.message}`);
+      console.error(`Failed to call setSeniorModeStateForSelf. Code:${err.code}, message:${err.message}`);
     });
   }
 

@@ -40,11 +40,10 @@ function unregisterWatermarkCallback(callback?: WatermarkCallback): void
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => {
     console.info('Watermark callback triggered, jobId: ' + jobId + ', fd: ' + fd);
-}
+};
 
 try {
     print.registerWatermarkCallback(watermarkCallback);
@@ -53,7 +52,7 @@ try {
     print.unregisterWatermarkCallback(watermarkCallback);
     console.info('unregisterWatermarkCallback success');
 } catch (error) {
-    console.error('unregisterWatermarkCallback error: ' + JSON.stringify(error));
+    console.error(`Failed to unregisterWatermarkCallback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```

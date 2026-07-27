@@ -69,7 +69,7 @@ export default class DataCapsulePlugin implements dlpPermission.DlpConnPlugin {
   connectServer(requestId: string, requestData: string, callback: Callback<string>): void {
     let callbackJson = JSON.stringify({
       'requestId': requestId,
-    }); // 构造回调JSON数据
+    }); // 构造回调JSON数据。
     callback(callbackJson);  // 调用回调函数返回结果。
   }
 }

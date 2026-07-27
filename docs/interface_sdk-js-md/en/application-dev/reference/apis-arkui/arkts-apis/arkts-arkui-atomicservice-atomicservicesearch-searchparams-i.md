@@ -1,6 +1,6 @@
 # SearchParams
 
-Events and styles supported by the search area.
+Provides optional attributes for the search area.
 
 **Since:** 18
 
@@ -20,7 +20,9 @@ import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams,
 cancelIcon?: IconOptions
 ```
 
-Set the cancel button style.
+Style of the cancel button on the right. Default value:**{style: CancelButtonStyle.INPUT, icon: {size: '16vp', color: '#99ffffff', src:' '}}**.
+
+When style is set to **CancelButtonStyle.CONSTANT**, the cancel button is displayed in a default style.
 
 **Type:** IconOptions
 
@@ -38,7 +40,7 @@ Set the cancel button style.
 caretStyle?: CaretStyle
 ```
 
-Set the cursor style.
+Pointer style. Default value: **{width: '1.5vp', color: '#007DFF'}**.
 
 **Type:** CaretStyle
 
@@ -56,7 +58,7 @@ Set the cursor style.
 componentBackgroundColor?: ResourceColor
 ```
 
-Indicates the background color of a component.
+Background color of a component. Default value: **$r('sys.color.ohos_id_color_text_field_sub_bg')**.
 
 **Type:** ResourceColor
 
@@ -74,7 +76,7 @@ Indicates the background color of a component.
 copyOptions?: CopyOptions
 ```
 
-Called when the copy option is set.
+Whether the input text can be copied. Default value: **CopyOptions.LocalDevice**.
 
 **Type:** CopyOptions
 
@@ -92,7 +94,7 @@ Called when the copy option is set.
 decoration?: TextDecorationOptions
 ```
 
-Called when the text decoration of the text is set.
+Text decorative line options. Default value:**{type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID}**.
 
 **Type:** TextDecorationOptions
 
@@ -110,7 +112,7 @@ Called when the text decoration of the text is set.
 editMenuOptions?: EditMenuOptions
 ```
 
-Set the custom text menu.
+Extended options of the custom context menu on selection, including the text content, icon, and callback. Default value: **undefined**.
 
 **Type:** EditMenuOptions
 
@@ -128,7 +130,7 @@ Set the custom text menu.
 enableHapticFeedback?: boolean
 ```
 
-Enable or disable haptic feedback.
+Whether to enable haptic feedback. The value **true** means to enable haptic feedback. Default value: **true**.
 
 **Type:** boolean
 
@@ -146,7 +148,7 @@ Enable or disable haptic feedback.
 enableKeyboardOnFocus?: boolean
 ```
 
-Sets whether request keyboard or not when on focus.
+Whether to automatically open the soft keyboard when the **Search** component gains focus. The value **true** means to automatically open the soft keyboard when the **Search** component gains focus. Default value: **true**.
 
 **Type:** boolean
 
@@ -164,7 +166,9 @@ Sets whether request keyboard or not when on focus.
 enablePreviewText?: boolean
 ```
 
-Define the preview text mode of the text input.
+Whether to enable preview text. The value **true** means to enable preview text. Default value: **true**.
+
+Preview text of the input method should be enabled. Preview text is in a temporary state and does not support text interception. As such, it does not trigger **onWillInsert** and **onDidInsert** callbacks.
 
 **Type:** boolean
 
@@ -182,7 +186,7 @@ Define the preview text mode of the text input.
 enterKeyType?: EnterKeyType
 ```
 
-Set enter key type of soft keyboard.
+Type of the Enter key. Default value: **EnterKeyType.Search**.
 
 **Type:** EnterKeyType
 
@@ -200,7 +204,7 @@ Set enter key type of soft keyboard.
 fontColor?: ResourceColor
 ```
 
-Set the SearchButton fontColor.
+Font color of the input text. Default value: **$r('sys.color.ohos_id_color_text_secondary')**.
 
 **Type:** ResourceColor
 
@@ -218,7 +222,15 @@ Set the SearchButton fontColor.
 fontFeature?: ResourceStr
 ```
 
-Set font feature.normal | &lt;feature-tag-value&gt;,where &lt;feature-tag-value&gt; = <string> [ <integer> | on | off ], like: "ss01" 0the values of &lt;feature-tag-value&gt; reference to doc of search component number of &lt;feature-tag-value&gt; can be single or multiple, and separated by comma ','.
+Font feature, for example, monospaced digits.
+
+Format: normal | &lt;feature-tag-value&gt;
+
+Syntax for **&lt;feature-tag-value&gt;**: <string> [ <integer> | on | off ]
+
+There can be multiple **&lt;feature-tag-value&gt;** values, which are separated by commas (,).
+
+For example, the input format for monospaced digits is "ss01" on. Default value: **undefined**.
 
 **Type:** ResourceStr
 
@@ -236,7 +248,9 @@ Set font feature.normal | &lt;feature-tag-value&gt;,where &lt;feature-tag-value&
 hideSelectionMenu?: boolean
 ```
 
-Controls whether the selection menu pops up.
+Whether to hide the system text selection menu.
+
+**true**: The system text selection menu does not appear under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box. **false**: The system text selection menu appears under the following circumstances: clicking the text box cursor, long-pressing the text box, double-tapping the text box, triple-tapping the text box, or right-clicking the text box. Default value: **false**.
 
 **Type:** boolean
 
@@ -254,7 +268,10 @@ Controls whether the selection menu pops up.
 inputFilter?: InputFilterParams
 ```
 
-Called when the inputFilter of text is set.
+Regular expression for input filtering. Only inputs that comply with the regular expression can be displayed. Other inputs are filtered out. The specified regular expression can match single characters, but not strings. Default value: **undefined**.
+
+- **value**: regular expression.  
+- **error**: Filtered-out content to return when regular expression matching fails.
 
 **Type:** InputFilterParams
 
@@ -272,7 +289,7 @@ Called when the inputFilter of text is set.
 letterSpacing?: number | string | Resource
 ```
 
-Called when the distance between text fonts is set.
+Letter spacing. A positive value causes characters to spread farther apart, and a negative value bring characters closer together. The value for floating point numbers is **0.0**, in units of px. If the input is not a number and cannot be parsed as a number, the default value will be used.
 
 **Type:** number \| string \| Resource
 
@@ -290,7 +307,7 @@ Called when the distance between text fonts is set.
 maxFontSize?: number | string | Resource
 ```
 
-Called when the maximum font size of the font is set.
+Maximum font size. For the setting to take effect, this attribute must be used together with **minFontSize** or layout constraint settings. Default value: **undefined**.
 
 **Type:** number \| string \| Resource
 
@@ -308,7 +325,7 @@ Called when the maximum font size of the font is set.
 maxLength?: number
 ```
 
-Called when the input of maximum text length is set.
+Maximum number of characters in the text input. By default, there is no maximum number of characters. When the maximum number is reached, no more characters can be entered. Default value: **-1**.
 
 **Type:** number
 
@@ -326,7 +343,7 @@ Called when the input of maximum text length is set.
 minFontSize?: number | string | Resource
 ```
 
-Called when the minimum font size of the font is set.
+Minimum font size. For the setting to take effect, this attribute must be used together with **maxFontSize** or layout constraint settings. Default value: **undefined**.
 
 **Type:** number \| string \| Resource
 
@@ -344,7 +361,7 @@ Called when the minimum font size of the font is set.
 onChange?: EditableTextOnChangeCallback
 ```
 
-Call the function when editing the input text.
+Callback triggered when the content in the text box changes. Default value: **undefined**.
 
 **Type:** EditableTextOnChangeCallback
 
@@ -362,7 +379,7 @@ Call the function when editing the input text.
 onContentScroll?: OnContentScrollCallback
 ```
 
-Called when the content scrolls.
+Callback triggered when the text content is scrolled. Default value: **undefined**.
 
 **Type:** OnContentScrollCallback
 
@@ -380,7 +397,7 @@ Called when the content scrolls.
 onCopy?: Callback<string>
 ```
 
-Called when using the Clipboard menu.
+Callback triggered when a copy operation is performed. Default value: **undefined**.
 
 **Type:** Callback&lt;string&gt;
 
@@ -398,7 +415,7 @@ Called when using the Clipboard menu.
 onCut?: Callback<string>
 ```
 
-Called when using the Clipboard menu.
+Callback triggered when a cut operation is performed. Default value: **undefined**.
 
 **Type:** Callback&lt;string&gt;
 
@@ -416,7 +433,7 @@ Called when using the Clipboard menu.
 onDidDelete?: Callback<DeleteValue>
 ```
 
-Get text value information when the deletion has been completed.
+Callback triggered when text is deleted. Default value: **undefined**.
 
 **Type:** Callback&lt;DeleteValue&gt;
 
@@ -434,7 +451,7 @@ Get text value information when the deletion has been completed.
 onDidInsert?: Callback<InsertValue>
 ```
 
-Get text value information when completed input.
+Callback triggered when text is inserted. Default value: **undefined**.
 
 **Type:** Callback&lt;InsertValue&gt;
 
@@ -452,7 +469,7 @@ Get text value information when completed input.
 onEditChange?: Callback<boolean>
 ```
 
-Called when judging whether the text editing change finished.
+Callback triggered when the input status changes. If a cursor is displayed, that is, the value of **isEditing** is **true**, the text box is in the editing state. Default value: **undefined**.
 
 **Type:** Callback&lt;boolean&gt;
 
@@ -470,7 +487,7 @@ Called when judging whether the text editing change finished.
 onPaste?: OnPasteCallback
 ```
 
-Called when using the Clipboard menu.
+Callback triggered when a paste operation is performed. Default value: **undefined**.
 
 **Type:** OnPasteCallback
 
@@ -488,7 +505,7 @@ Called when using the Clipboard menu.
 onSubmit?: Callback<string> | SearchSubmitCallback
 ```
 
-Call the function when clicked the search button.
+Callback triggered when users click the search icon or the search button, or touch the search button on a soft keyboard. Default value: **undefined**.
 
 **Type:** Callback&lt;string&gt; \| SearchSubmitCallback
 
@@ -506,7 +523,7 @@ Call the function when clicked the search button.
 onTextSelectionChange?: OnTextSelectionChangeCallback
 ```
 
-Called when the text selection changes.
+Callback triggered when the position of the text selection changes or when the cursor position changes during the editing state. Default value: **undefined**.
 
 **Type:** OnTextSelectionChangeCallback
 
@@ -524,7 +541,7 @@ Called when the text selection changes.
 onWillDelete?: Callback<DeleteValue, boolean>
 ```
 
-Get text value information when about to delete.
+Callback triggered when text is about to be deleted. **true**: Delete the text. **false**: Do not delete the text.Default value: **undefined**.
 
 **Type:** Callback&lt;DeleteValue, boolean&gt;
 
@@ -542,7 +559,7 @@ Get text value information when about to delete.
 onWillInsert?: Callback<InsertValue, boolean>
 ```
 
-Get text value information when about to input.
+Callback triggered when text is about to be inserted. **true**: Insert the input content into the result string.**false**: Do not insert the input content into the result string. Default value: **undefined**.
 
 **Type:** Callback&lt;InsertValue, boolean&gt;
 
@@ -560,7 +577,7 @@ Get text value information when about to input.
 placeholderColor?: ResourceColor
 ```
 
-Set the place hold text color.
+Placeholder text color. Default value: **$r('sys.color.ohos_id_color_text_secondary')**.
 
 **Type:** ResourceColor
 
@@ -578,7 +595,7 @@ Set the place hold text color.
 placeholderFont?: Font
 ```
 
-Set the font used for place holder text.
+Placeholder text style, including the font size, font weight, font family, and font style. Default value:**{size: $r('sys_float.ohos_id_text_size_body1')}**.
 
 **Type:** Font
 
@@ -596,7 +613,7 @@ Set the font used for place holder text.
 pressedBackgroundColor?: ResourceColor
 ```
 
-Background color when pressed.
+Background color of the pressed component. Default value: **$r('sys.color.ohos_id_color_click_effect')**.
 
 **Type:** ResourceColor
 
@@ -614,7 +631,10 @@ Background color when pressed.
 searchButton?: SearchButtonParams
 ```
 
-Set the search button text, fontSize and fontColor.
+Search button located next to the search text box. Clicking the search button triggers both **onSubmit** and **onClick** callbacks.
+
+- **value**: Text on the search button located next to the search text box.  
+- **option**: Font of the search text box. Default value: **{fontSize: '16fp', fontColor: '#ff3f97e9'}**
 
 **Type:** SearchButtonParams
 
@@ -632,7 +652,11 @@ Set the search button text, fontSize and fontColor.
 searchIcon?: IconOptions | SymbolGlyphModifier
 ```
 
-Set the search icon style.
+Style of the search icon on the left.
+
+Default value in light mode: **{size: '16vp', color: '#99182431', src:' '}**.
+
+Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
 
 **Type:** IconOptions \| SymbolGlyphModifier
 
@@ -650,7 +674,7 @@ Set the search icon style.
 searchKey?: ResourceStr
 ```
 
-Used to identify a unique search component.
+Search key used to find a unique **search** component. Default value: **undefined**.
 
 **Type:** ResourceStr
 
@@ -668,7 +692,7 @@ Used to identify a unique search component.
 selectedBackgroundColor?: ResourceColor
 ```
 
-Define the text selected background color of the text input.
+Background color of the selected text. By default, a 20% opacity is applied.
 
 **Type:** ResourceColor
 
@@ -686,7 +710,7 @@ Define the text selected background color of the text input.
 textAlign?: TextAlign
 ```
 
-Called when the text align is set.
+Text alignment mode in the search text box. Default value: **TextAlign.Start**.
 
 **Type:** TextAlign
 
@@ -704,7 +728,7 @@ Called when the text align is set.
 textFont?: Font
 ```
 
-Set enter key type of soft keyboard.
+Style of the text entered in the search box, including the font size, font width, font family, and font style.Currently, only the default font family is supported. Default value:**{size: $r('sys_float.ohos_id_text_size_body1')}**.
 
 **Type:** Font
 
@@ -722,7 +746,7 @@ Set enter key type of soft keyboard.
 textIndent?: Dimension
 ```
 
-Specify the indentation of the first line in a text-block.
+Indent of the first line text. Default value: **0**.
 
 **Type:** Dimension
 
@@ -740,7 +764,7 @@ Specify the indentation of the first line in a text-block.
 type?: SearchType
 ```
 
-Called when the search type is set.
+Text box type. Default value: **SearchType.Normal**.
 
 **Type:** SearchType
 

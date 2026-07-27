@@ -50,8 +50,8 @@ let scannerId: string = 'scanner_001';
 scan.openScanner(scannerId).then(() => {
     console.info('open scanner success');
 }).catch((error: BusinessError) => {
-    console.error('open scanner failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to open scanner. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

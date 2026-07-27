@@ -32,7 +32,7 @@ function createEffect(): VisualEffect
 
 ```TypeScript
 // 创建VisualEffect实例
-let visualEffect : uiEffect.VisualEffect = uiEffect.createEffect();
+let visualEffect: uiEffect.VisualEffect = uiEffect.createEffect();
 
 ```
 

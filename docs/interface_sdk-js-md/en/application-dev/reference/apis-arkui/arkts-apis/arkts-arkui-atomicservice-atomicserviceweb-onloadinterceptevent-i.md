@@ -1,6 +1,6 @@
 # OnLoadInterceptEvent
 
-Load intercept event when the resources loading is intercepted.
+Represents the event triggered when resource loading is intercepted.
 
 **Since:** 12
 

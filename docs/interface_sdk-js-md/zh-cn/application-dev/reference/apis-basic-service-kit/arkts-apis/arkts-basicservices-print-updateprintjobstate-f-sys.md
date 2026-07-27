@@ -50,12 +50,13 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// jobId可通过打印扩展能力PrintExtensionAbility的onStartPrintJob回调获得
 let jobId : string = 'jobId';
 let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
 let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
-print.updatePrintJobState(jobId, state, subState, (err: BusinessError) => {
-    if (err) {
-        console.error('updatePrintJobState failed, because : ' + JSON.stringify(err));
+print.updatePrintJobState(jobId, state, subState, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to updatePrintJobState. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('updatePrintJobState success');
     }
@@ -112,13 +113,14 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// jobId可通过打印扩展能力PrintExtensionAbility的onStartPrintJob回调获得
 let jobId : string = 'jobId';
 let state : print.PrintJobState = print.PrintJobState.PRINT_JOB_PREPARE;
 let subState : print.PrintJobSubState = print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS;
 print.updatePrintJobState(jobId, state, subState).then(() => {
     console.info('update print job state success');
 }).catch((error: BusinessError) => {
-    console.error('update print job state error : ' + JSON.stringify(error));
+    console.error(`Failed to updatePrintJobState. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

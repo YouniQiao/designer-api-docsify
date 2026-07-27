@@ -85,7 +85,7 @@ import { appManager } from '@kit.AbilityKit';
 
 appManager.isRamConstrainedDevice((err, data) => {
   if (err) {
-    console.error(`isRamConstrainedDevice fail, err: ${JSON.stringify(err)}`);
+    console.error(`isRamConstrainedDevice fail, code: ${err.code}, msg:${err.message}`);
   } else {
     console.info(`The result of isRamConstrainedDevice is: ${JSON.stringify(data)}`);
   }

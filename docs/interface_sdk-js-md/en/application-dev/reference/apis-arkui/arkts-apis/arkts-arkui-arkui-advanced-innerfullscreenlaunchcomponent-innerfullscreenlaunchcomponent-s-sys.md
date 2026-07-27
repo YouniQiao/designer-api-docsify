@@ -1,6 +1,11 @@
 # InnerFullScreenLaunchComponent (System API)
 
-Declare component InnerFullScreenLaunchComponent
+**InnerFullScreenLaunchComponent** is a component that allows the invoker to choose the timing for launching an atomic service. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.
+> **NOTE**  
+>  
+> To implement an embeddable atomic service within this component, it must inherit from  
+> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). If it does not inherit from  
+> **EmbeddableUIAbility**, the system cannot guarantee that the atomic service will function properly.
 
 **Since:** 12
 
@@ -21,10 +26,10 @@ import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 ## content
 
 ```TypeScript
-@BuilderParam content: Callback<void>
+content: Callback<void>
 ```
 
-Sets the component content.
+Content displayed in the component.
 
 **Type:** Callback&lt;void&gt;
 
@@ -32,7 +37,7 @@ Sets the component content.
 
 **Decorator:** @BuilderParam
 
-<!--Device-InnerFullScreenLaunchComponent-@BuilderParam content: Callback<void>--><!--Device-InnerFullScreenLaunchComponent-@BuilderParam content: Callback<void>-End-->
+<!--Device-InnerFullScreenLaunchComponent-content: Callback<void>--><!--Device-InnerFullScreenLaunchComponent-content: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,7 +49,7 @@ Sets the component content.
 controller: LaunchController
 ```
 
-Sets the component Controller.
+Controller for launching the atomic service.
 
 **Type:** LaunchController
 
@@ -62,7 +67,7 @@ Sets the component Controller.
 onError?: ErrorCallback
 ```
 
-Callback triggered when an error occurs during running of the started ExtensionAbility.It is supported only when the atomic service runs in embedded mode,with the parameter being of type BusinessError.
+Callback triggered when an exception occurs during the execution of an embedded atomic service. You can obtain the error information based on the **code**, **name**, and **message** parameters in the callback and rectify the exception accordingly.
 
 **Type:** ErrorCallback
 
@@ -80,7 +85,7 @@ Callback triggered when an error occurs during running of the started ExtensionA
 onReceive?: Callback<Record<string, Object>>
 ```
 
-Indicates the callback of onReceive.
+Callback triggered when an embedded atomic service calls [@ohos.window (window)](arkts-window.md) APIs.
 
 **Type:** Callback&lt;Record&lt;string, Object&gt;&gt;
 
@@ -98,7 +103,7 @@ Indicates the callback of onReceive.
 onTerminated?: Callback<TerminationInfo>
 ```
 
-Callback triggered when the EmbeddableUIAbility is terminated to receive the information about the termination. It is supported only when the atomic service runs in embedded mode,with the parameter being of type TerminationInfo.
+Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)or [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Type:** Callback&lt;TerminationInfo&gt;
 

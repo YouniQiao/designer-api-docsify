@@ -1,6 +1,6 @@
 # AtomicServiceSearch
 
-Defines AtomicServiceSearch.
+**AtomicServiceSearch** allows you to customize the default search area, customizable selection area, and function area (a maximum of two).
 
 **Since:** 18
 

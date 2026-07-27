@@ -54,7 +54,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 config.highContrastText.get().then((data: boolean) => {
   console.info(`succeeded in getting highContrastText, data is ${data}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to get highContrastText, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to get highContrastText. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```
@@ -95,7 +95,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 config.highContrastText.get((err: BusinessError, data: boolean) => {
   if (err) {
-    console.error(`failed to get highContrastText, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to get highContrastText. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info(`succeeded in getting highContrastText, data is ${data}`);
@@ -139,9 +139,11 @@ off(callback?: Callback<T>): void
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
 
-config.highContrastText.off((data: boolean) => {
-  console.info(`Unsubscribe highContrastText success, result: ${JSON.stringify(data)}`);
-});
+let callback = (data: boolean) => {
+  console.info(`subscribe highContrastText success, result: ${JSON.stringify(data)}`);
+};
+config.highContrastText.on(callback);
+config.highContrastText.off(callback);
 
 ```
 
@@ -237,7 +239,7 @@ let value: boolean = true;
 config.highContrastText.set(value).then(() => {
   console.info(`succeeded in setting highContrastText value is ${value}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to set highContrastText, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to set highContrastText. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```
@@ -285,7 +287,7 @@ let value: boolean = true;
 
 config.highContrastText.set(value, (err: BusinessError) => {
   if (err) {
-    console.error(`failed to set highContrastText, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to set highContrastText. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info(`succeeded in setting highContrastText, value is ${value}`);

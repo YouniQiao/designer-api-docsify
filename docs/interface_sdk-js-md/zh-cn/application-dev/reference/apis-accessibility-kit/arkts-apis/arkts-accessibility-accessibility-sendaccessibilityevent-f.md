@@ -51,7 +51,7 @@ let eventInfo: accessibility.EventInfo = ({
 
 accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
   if (err) {
-    console.error(`failed to send event, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to send event. Code:${err.code}, message:${err.message}`);
     return;
   }
   console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
@@ -89,7 +89,7 @@ let eventInfo: accessibility.EventInfo = ({
 
 accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
   if (err) {
-    console.error(`failed to send event, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to send event. Code:${err.code}, message:${err.message}`);
     return;
   }
   console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
@@ -112,7 +112,7 @@ let eventInfo: accessibility.EventInfo = ({
 
 accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
   if (err) {
-    console.error(`failed to send event, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to send event. Code:${err.code}, message:${err.message}`);
     return;
   }
   console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
@@ -172,7 +172,7 @@ let eventInfo: accessibility.EventInfo = ({
 accessibility.sendAccessibilityEvent(eventInfo).then(() => {
   console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to send event , Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to send event. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

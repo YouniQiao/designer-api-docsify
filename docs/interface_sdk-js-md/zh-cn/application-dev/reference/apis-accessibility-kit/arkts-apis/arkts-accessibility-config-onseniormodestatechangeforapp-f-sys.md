@@ -55,6 +55,10 @@ struct Index {
     config.onSeniorModeStateChangeForApp(this.callback);
   }
 
+  aboutToDisappear(): void {
+    config.offSeniorModeStateChangeForApp(this.callback);
+  }
+
   build() {
     Column() {
     }

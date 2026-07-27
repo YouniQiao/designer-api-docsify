@@ -41,3 +41,23 @@ Provides a permission grant for application-shared directories
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 13900001 | Operation not permitted. |
 
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function grantSharedDirectoryPermission() {
+  try {
+    fileShare.grantSharedDirectoryPermission().then(() => {
+      console.info('grantSharedDirectoryPermission success');
+    }).catch((err: BusinessError) => {
+      console.error(`grantSharedDirectoryPermission err: ${JSON.stringify(err)}`);
+    });
+  } catch (error) {
+    console.error(`grantSharedDirectoryPermission error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+
+```
+

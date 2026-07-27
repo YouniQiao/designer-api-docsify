@@ -1,6 +1,11 @@
 # FullScreenLaunchComponent
 
-Declares the FullScreenLaunchComponent, a component provided by ArkUI that allows you to define and use it in your application through the ArkTS-based declarative development paradigm.
+**FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner,the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.
+> **NOTE**  
+>  
+> To implement an embeddable atomic service within this component, it must inherit from  
+> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). Otherwise, the system  
+> cannot guarantee that the atomic service will function properly.
 
 **Since:** 12
 
@@ -22,7 +27,7 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 appId: string
 ```
 
-Indicates atomic service appId.
+App ID of the atomic service to be launched. It is the unique identifier for the atomic service.
 
 **Type:** string
 
@@ -37,10 +42,10 @@ Indicates atomic service appId.
 ## content
 
 ```TypeScript
-@BuilderParam content: Callback<void>
+content: Callback<void>
 ```
 
-Sets the component content.
+Custom placeholder icon displayed before the atomic service is launched. This allows you to create a large launch icon similar to those used by desktop apps. Clicking the placeholder icon will launch the atomic service.
 
 **Type:** Callback&lt;void&gt;
 
@@ -50,7 +55,7 @@ Sets the component content.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-FullScreenLaunchComponent-@BuilderParam content: Callback<void>--><!--Device-FullScreenLaunchComponent-@BuilderParam content: Callback<void>-End-->
+<!--Device-FullScreenLaunchComponent-content: Callback<void>--><!--Device-FullScreenLaunchComponent-content: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,7 +65,7 @@ Sets the component content.
 onError?: ErrorCallback
 ```
 
-Callback triggered when an error occurs during running of the started ExtensionAbility.It is supported only when the atomic service runs in embedded mode,with the parameter being of type BusinessError.
+Callback triggered when an exception occurs during the execution of an embedded atomic service. You can obtain the error information based on the **code**, **name**, and **message** parameters in the callback and rectify the exception accordingly.
 
 **Type:** ErrorCallback
 
@@ -78,7 +83,7 @@ Callback triggered when an error occurs during running of the started ExtensionA
 onReceive?: Callback<Record<string, Object>>
 ```
 
-Indicates the callback of onReceive.
+Callback triggered when an embedded atomic service calls [@ohos.window (window)](arkts-window.md) APIs.
 
 **Type:** Callback&lt;Record&lt;string, Object&gt;&gt;
 
@@ -96,7 +101,7 @@ Indicates the callback of onReceive.
 onTerminated?: Callback<TerminationInfo>
 ```
 
-Callback triggered when the EmbeddableUIAbility is terminated to receive the information about the termination. It is supported only when the atomic service runs in embedded mode,with the parameter being of type TerminationInfo.
+Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)or [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Type:** Callback&lt;TerminationInfo&gt;
 
@@ -114,7 +119,7 @@ Callback triggered when the EmbeddableUIAbility is terminated to receive the inf
 options?: AtomicServiceOptions
 ```
 
-Indicates the atomic service start options.
+Parameters for launching the atomic service.
 
 **Type:** AtomicServiceOptions
 

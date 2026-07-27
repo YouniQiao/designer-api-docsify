@@ -46,8 +46,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 scan.getAddedScanners().then((scanners: scan.ScannerDevice[]) => {
     console.info('get added scanners success: ' + JSON.stringify(scanners));
 }).catch((error: BusinessError) => {
-    console.error('get added scanners failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to get added scanners. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

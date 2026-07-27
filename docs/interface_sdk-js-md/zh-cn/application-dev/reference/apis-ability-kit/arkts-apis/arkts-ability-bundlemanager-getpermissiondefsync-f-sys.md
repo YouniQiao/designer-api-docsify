@@ -54,8 +54,8 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let permissionName = "ohos.permission.GET_BUNDLE_INFO";
 try {
-  let PermissionDef = bundleManager.getPermissionDefSync(permissionName);
-  hilog.info(0x0000, 'testTag', 'getPermissionDefSync successfully. Data: %{public}s', JSON.stringify(PermissionDef));
+  let permissionDef = bundleManager.getPermissionDefSync(permissionName);
+  hilog.info(0x0000, 'testTag', 'getPermissionDefSync successfully. Data: %{public}s', JSON.stringify(permissionDef));
 } catch (err) {
   let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'getPermissionDefSync failed. Cause: %{public}s', message);

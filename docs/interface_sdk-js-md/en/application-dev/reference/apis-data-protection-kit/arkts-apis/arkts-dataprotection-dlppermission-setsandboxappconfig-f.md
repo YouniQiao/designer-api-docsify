@@ -12,7 +12,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function setSandboxAppConfig(configInfo: string): Promise<void>
 ```
 
-Sets the configuration information of the sandbox application. The configuration information is in JSON string format and can be set by the application. After the API is successfully called, the sandbox application runs based on the configuration information. This API uses a promise to return the result.
+Sets the configuration information of the sandbox application. The configuration information is in JSON string format and can be set by the application. After the API is successfully called, the sandbox application runs based on the configuration information. This API uses a promise to return the result. This API can be called only in non-DLP sandbox applications.
 
 This API sets the sandbox application configuration so that the application can pass custom parameters as required.
 
@@ -49,8 +49,8 @@ This API sets the sandbox application configuration so that the application can 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 
-dlpPermission.setSandboxAppConfig('configInfo').then((configInfo) => { // Set sandbox application configuration.
-  console.info('configInfo: ', configInfo);
+dlpPermission.setSandboxAppConfig('configInfo').then(() => { // Set sandbox application configuration.
+  console.info('setSandboxAppConfig success');
 }).catch((error: BusinessError)=> {
   console.error(JSON.stringify(error));
 });

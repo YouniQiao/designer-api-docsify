@@ -53,8 +53,8 @@ let jobId : string = '121212';
 print.restartPrintJob(jobId).then(() => {
     console.info('restartPrintJob success');
 }).catch((error: BusinessError) => {
-    console.error('restartPrintJob failed, because : ' + JSON.stringify(error));
-})
+    console.error(`Failed to restart print job. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

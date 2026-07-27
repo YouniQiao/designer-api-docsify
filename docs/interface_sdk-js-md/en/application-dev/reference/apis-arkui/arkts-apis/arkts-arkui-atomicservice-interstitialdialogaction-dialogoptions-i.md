@@ -1,6 +1,6 @@
 # DialogOptions
 
-Defines the properties required by the dialog.
+Defines the attributes specific to the dialog box and custom click actions for the user.
 
 **Since:** 12
 

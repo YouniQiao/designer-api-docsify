@@ -33,6 +33,7 @@ function clearMission(missionId: number, callback: AsyncCallback<void>): void
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {

@@ -60,7 +60,7 @@ export default class EntryAbility extends UIAbility {
     let moduleContext: common.Context;
     try {
       application.createPluginModuleContextForHostBundle(this.context, 'com.example.pluginBundleName', 'pluginModuleName', 'com.example.hostBundleName')
-        .then((data: Context) => {
+        .then((data: common.Context) => {
           moduleContext = data;
           console.info('createPluginModuleContextForHostBundle success!');
         })

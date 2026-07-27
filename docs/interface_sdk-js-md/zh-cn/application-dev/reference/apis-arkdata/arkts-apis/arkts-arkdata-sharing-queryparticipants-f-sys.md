@@ -42,13 +42,13 @@ function queryParticipants(sharingResource: string, callback: AsyncCallback<Resu
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-cloudData.sharing.queryParticipants('sharing_resource_test', ((err: BusinessError, result) => {
+cloudData.sharing.queryParticipants('sharing_resource_test', (err: BusinessError, result) => {
   if (err) {
     console.error(`query participants failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`query participants succeeded, result: ${result}`);
-}))
+});
 
 ```
 
@@ -98,7 +98,7 @@ cloudData.sharing.queryParticipants('sharing_resource_test').then((result) => {
   console.info(`query participants succeeded, result: ${result}`);
 }).catch((err: BusinessError) => {
   console.error(`query participants failed, code is ${err.code},message is ${err.message}`);
-})
+});
 
 ```
 

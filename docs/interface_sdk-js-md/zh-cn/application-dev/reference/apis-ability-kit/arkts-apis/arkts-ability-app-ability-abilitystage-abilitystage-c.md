@@ -132,13 +132,13 @@ onAcceptWantAsync(want: Want): Promise<string>
 **示例：**
 
 ```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
+import { AbilityStage, Want } from '@kit.AbilityKit';
 
 class MyAbilityStage extends AbilityStage {
   async onAcceptWantAsync(want: Want): Promise<string> {
     await new Promise<string>((res, rej) => {
       setTimeout(res, 1000); // 延时1秒后执行
-      console.info(`onNewProcessRequestAsync, want: ${JSON.stringify(want)}`);
+      console.info(`onAcceptWantAsync, want: ${JSON.stringify(want)}`);
     });
     return 'default';
   }
@@ -424,7 +424,7 @@ onNewProcessRequestAsync(want: Want): Promise<string>
 **示例：**
 
 ```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
+import { AbilityStage, Want } from '@kit.AbilityKit';
 
 class MyAbilityStage extends AbilityStage {
   async onNewProcessRequestAsync(want: Want): Promise<string> {

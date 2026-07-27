@@ -41,7 +41,7 @@ struct Index {
     accessibility.isFlashReminderEnabled().then((data: boolean) => {
       console.info(`success data:isFlashReminderEnabled : ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      console.error(`failed to isFlashReminderEnabled, Code is ${err.code}, message is ${err.message}`);
+      console.error(`Failed to isFlashReminderEnabled. Code:${err.code}, message:${err.message}`);
     });
   }
 

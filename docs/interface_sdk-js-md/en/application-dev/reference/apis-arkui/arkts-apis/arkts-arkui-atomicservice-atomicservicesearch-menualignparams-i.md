@@ -1,6 +1,6 @@
 # MenuAlignParams
 
-Defines the MenuAlign parameters.
+Sets the alignment between the drop-down list button and the drop-down list box.
 
 **Since:** 18
 
@@ -20,7 +20,7 @@ import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams,
 alignType: MenuAlignType
 ```
 
-Indicates the fontSize and fontColor of the search button.
+Alignment type. Default value: **MenuAlignType.START**
 
 **Type:** MenuAlignType
 
@@ -38,7 +38,7 @@ Indicates the fontSize and fontColor of the search button.
 offset?: Offset
 ```
 
-Offset of the drop-down menu relative to the drop-down button.after alignment based on the alignment type.
+Offset of the drop-down list box relative to the drop-down list button after alignment based on the alignment type.Default value: **{dx: 0, dy: 0}**
 
 **Type:** Offset
 

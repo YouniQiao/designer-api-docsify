@@ -59,40 +59,40 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
 ```TypeScript
 import { image } from '@kit.ImageKit';
 import { uiEffect, common2D } from '@kit.ArkGraphics2D';
-import { BusinessError } from '@kit.BasicServicesKit'
+import { BusinessError } from '@kit.BasicServicesKit';
 
 const colorBuffer = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
-  let srcRect : common2D.Rect = {
+  let srcRect: common2D.Rect = {
     left: 0,
     top: 0,
     right: 1,
     bottom: 1
-  }
-  let dstRect : common2D.Rect = {
+  };
+  let dstRect: common2D.Rect = {
     left: 0,
     top: 0,
     right: 1,
     bottom: 1
-  }
-  let fillColor : uiEffect.Color = {
+  };
+  let fillColor: uiEffect.Color = {
     red: 0,
     green: 0,
     blue: 0,
     alpha: 1
-  }
+  };
   let mask = uiEffect.Mask.createPixelMapMask(pixelMap, srcRect, dstRect, fillColor);
 }).catch((error: BusinessError)=>{
   console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
-})
+});
 
 ```
 
@@ -160,7 +160,7 @@ struct Index {
     try {
       let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       // this path should be created in local
-      const path: string = context.resourceDir + "/perlin_worley_noise_3d_64.bmp";
+      const path: string = context.resourceDir + '/perlin_worley_noise_3d_64.bmp';
       const imageSource: image.ImageSource = image.createImageSource(path);
       if (!imageSource) {
         return undefined;
@@ -185,13 +185,13 @@ struct Index {
     }
     effect.liquidMaterial({
       enable: true,
-      distortProgress : this.distortProgress,
+      distortProgress: this.distortProgress,
       rippleProgress: this.rippleProgress,
       distortFactor: this.distortFactor,
-      materialFactor : this.materialFactor,
-      refractionFactor : this.refractionFactor,
+      materialFactor: this.materialFactor,
+      refractionFactor: this.refractionFactor,
       reflectionFactor: this.reflectionFactor,
-      tintColor : [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
+      tintColor: [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
       ripplePosition: undefined,
     },
       uiEffect.Mask.createUseEffectMask(true),
@@ -213,10 +213,10 @@ struct Index {
       .backgroundEffect({
         radius: 15,
       }, { disableSystemAdaptation: true })
-      .width("100%").height("100%").align(Alignment.Center)
+      .width('100%').height('100%').align(Alignment.Center)
     }
     .backgroundImage($r('app.media.bg6'), ImageRepeat.NoRepeat) // the image should be created in local
-    .width("100%").height("100%").align(Alignment.Center)
+    .width('100%').height('100%').align(Alignment.Center)
   }
 }
 
@@ -361,13 +361,13 @@ struct Index {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
     effect.liquidMaterial({
         enable: true,
-        distortProgress : this.distortProgress,
+        distortProgress: this.distortProgress,
         rippleProgress: this.rippleProgress,
         distortFactor: this.distortFactor,
-        materialFactor : this.materialFactor,
-        refractionFactor : this.refractionFactor,
+        materialFactor: this.materialFactor,
+        refractionFactor: this.refractionFactor,
         reflectionFactor: this.reflectionFactor,
-        tintColor : [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
+        tintColor: [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
         ripplePosition: undefined,
       },
       uiEffect.Mask.createUseEffectMask(true), // useEffectMask使用示例
@@ -388,10 +388,10 @@ struct Index {
       .backgroundEffect({
         radius: 15,
       }, { disableSystemAdaptation: true })
-      .width("100%").height("100%").align(Alignment.Center)
+      .width('100%').height('100%').align(Alignment.Center)
     }
     .backgroundImage($r('app.media.bg6'), ImageRepeat.NoRepeat)
-    .width("100%").height("100%").align(Alignment.Center)
+    .width('100%').height('100%').align(Alignment.Center)
   }
 }
 
@@ -439,7 +439,7 @@ static createWaveGradientMask(center: common2D.Point, width: number, propagation
 **示例：**
 
 ```TypeScript
-import { uiEffect } from "@kit.ArkGraphics2D";
+import { uiEffect } from '@kit.ArkGraphics2D';
 // center: [0.5, 0.5]；width: 0.01; propagationRadius: 0.5; blurRadius: 0.1; turbulenceStrength: 0.1
 let mask = uiEffect.Mask.createWaveGradientMask({x: 0.5, y: 0.5}, 0.01, 0.5, 0.1, 0.1);
 @Entry

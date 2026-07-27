@@ -95,8 +95,8 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 
 let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
 dlpPermission.cancelRetentionState([uri], (err, res) => {
-  if (err != undefined) {
-    console.error('cancelRetentionState error,', err.code, err.message);
+  if (err) {
+    console.error(`Failed to cancel retention state. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('cancelRetentionState success');
   }

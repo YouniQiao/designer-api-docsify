@@ -45,7 +45,7 @@ function isLocalWantAgent(agent: WantAgent): boolean
 **示例：**
 
 ```TypeScript
-import { wantAgent } from '@kit.AbilityKit';
+import { wantAgent, Want } from '@kit.AbilityKit';
 import type { WantAgent } from '@kit.AbilityKit';
 
 // 声明wantAgent实例

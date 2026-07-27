@@ -1,6 +1,6 @@
 # OnProgressChangeEvent
 
-Progress change event when the page loading progress changes.
+Represents the callback invoked when the web page loading progress changes.
 
 **Since:** 12
 

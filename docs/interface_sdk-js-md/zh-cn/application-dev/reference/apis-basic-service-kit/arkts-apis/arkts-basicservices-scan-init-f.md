@@ -43,8 +43,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 scan.init().then(() => {
     console.info('scan init success');
 }).catch((error: BusinessError) => {
-    console.error('scan init failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to init scan. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

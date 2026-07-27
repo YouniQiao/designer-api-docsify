@@ -105,6 +105,7 @@ import { avMusicTemplate } from '@kit.AVSessionKit';
 | --- | --- |
 | [ActionType](arkts-avsession-avmusictemplate-actiontype-t.md) | Action type add & remove. |
 | [ClearSearchHistoryEvent](arkts-avsession-avmusictemplate-clearsearchhistoryevent-t.md) | The clear search history event. |
+| [CustomCommandEvent](arkts-avsession-avmusictemplate-customcommandevent-t.md) | The custom command event. |
 | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | Custom tab type USER_INFO & TAB, COMPILATION, SETTINGS. |
 | [DialogActionType](arkts-avsession-avmusictemplate-dialogactiontype-t.md) | Dialog action type open & close, refresh. |
 | [DialogControlType](arkts-avsession-avmusictemplate-dialogcontroltype-t.md) | Dialog control type open & close, refresh, toast. |

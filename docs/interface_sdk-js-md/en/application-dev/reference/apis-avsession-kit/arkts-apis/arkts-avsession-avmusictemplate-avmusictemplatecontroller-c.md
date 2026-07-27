@@ -1527,6 +1527,43 @@ Request dialog info.
 | [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
 | [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
 
+## sendCustomCommand
+
+```TypeScript
+sendCustomCommand(command: string, args: string): Promise<OperResult>
+```
+
+Send custom commands to AVMusicTemplate
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVMusicTemplateController-sendCustomCommand(command: string, args: string): Promise<OperResult>--><!--Device-AVMusicTemplateController-sendCustomCommand(command: string, args: string): Promise<OperResult>-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | string | Yes | The command name to be sent. |
+| args | string | Yes | The parameters of command event. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;OperResult&gt; | Promise used to return OperResult. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) | Template listener not registered. |
+| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) | AVMusicTemplate does not exist. |
+| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) | AVMusicTemplateController does not exist. |
+
 ## updateSettings
 
 ```TypeScript

@@ -44,9 +44,11 @@ function off(type: 'enabledAccessibilityExtensionListChange', callback?: Callbac
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
 
-config.off('enabledAccessibilityExtensionListChange', () => {
-  console.info('Unsubscribe enabled accessibility extension list change state success');
-});
+let callback = () => {
+  console.info('subscribe enabled accessibility extension list change state success');
+};
+config.on('enabledAccessibilityExtensionListChange', callback);
+config.off('enabledAccessibilityExtensionListChange', callback);
 
 ```
 
@@ -89,9 +91,11 @@ function off(type: 'installedAccessibilityListChange', callback?: Callback<void>
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
 
-config.off('installedAccessibilityListChange', () => {
-  console.info('Unsubscribe installed accessibility extension list change state success');
-});
+let callback = () => {
+  console.info('subscribe installed accessibility extension list change state success');
+};
+config.on('installedAccessibilityListChange', callback);
+config.off('installedAccessibilityListChange', callback);
 
 ```
 

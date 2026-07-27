@@ -10,7 +10,7 @@ Defines the page node information used for auto-fill.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-autoFillManager-export type PageNodeInfo = _PageNodeInfo.default--><!--Device-autoFillManager-export type PageNodeInfo = _PageNodeInfo.default-End-->
 

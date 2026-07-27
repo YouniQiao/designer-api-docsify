@@ -1,6 +1,6 @@
 # OnPageEndEvent
 
-Page end event at the end of web page loading.
+Represents the callback invoked when the web page loading ends.
 
 **Since:** 12
 

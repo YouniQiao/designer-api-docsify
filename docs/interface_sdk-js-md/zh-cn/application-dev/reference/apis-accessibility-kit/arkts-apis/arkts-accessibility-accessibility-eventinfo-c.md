@@ -43,7 +43,7 @@ constructor(jsonObject: Object)
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
 
-let eventInfo: accessibility.EventInfo = ({
+let eventInfo = new accessibility.EventInfo({
   type: 'click',
   bundleName: 'com.example.MyApplication',
   triggerAction: 'click',
@@ -82,6 +82,7 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
 
+// 参数依次为：type、bundleName、triggerAction。
 let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication', 'click');
 
 ```

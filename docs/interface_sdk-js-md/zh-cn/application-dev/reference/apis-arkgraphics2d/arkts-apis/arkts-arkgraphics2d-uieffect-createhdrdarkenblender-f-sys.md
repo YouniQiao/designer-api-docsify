@@ -41,26 +41,26 @@ function createHdrDarkenBlender(hdrBrightnessRatio: number,
 **示例：**
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D'
+import { uiEffect } from '@kit.ArkGraphics2D';
 
 // 创建HDR压暗混合器实例
-let blender : uiEffect.HdrDarkenBlender = 
-  uiEffect.createHdrDarkenBlender(1.3, [0.299, 0.587, 0.114])
+let blender: uiEffect.HdrDarkenBlender =
+  uiEffect.createHdrDarkenBlender(1.3, [0.299, 0.587, 0.114]);
 
 @Entry
 @Component
 struct Example {
-  build() { 
-    RelativeContainer() { 
-      Stack(){ 
-          Text("TextWord") 
-          Image($r("app.media.screenshot")) 
-            .width("100%") 
-            .height("100%") 
-            .advancedBlendMode(blender) 
-      } 
-    } 
-  } 
+  build() {
+    RelativeContainer() {
+      Stack(){
+          Text('TextWord')
+          Image($r('app.media.screenshot'))
+            .width('100%')
+            .height('100%')
+            .advancedBlendMode(blender)
+      }
+    }
+  }
 }
 
 ```

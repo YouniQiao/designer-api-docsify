@@ -24,7 +24,7 @@ Height of the AutoFill form or page node. The unit is px.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AutoFillRect-height: double--><!--Device-AutoFillRect-height: double-End-->
 
@@ -46,7 +46,7 @@ Distance between the AutoFill form or page node and the left boundary of the pag
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AutoFillRect-left: double--><!--Device-AutoFillRect-left: double-End-->
 
@@ -68,7 +68,7 @@ Distance between the AutoFill form or page node and the upper boundary of the pa
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AutoFillRect-top: double--><!--Device-AutoFillRect-top: double-End-->
 
@@ -90,7 +90,7 @@ Width of the AutoFill form or page node. The unit is px.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AutoFillRect-width: double--><!--Device-AutoFillRect-width: double-End-->
 

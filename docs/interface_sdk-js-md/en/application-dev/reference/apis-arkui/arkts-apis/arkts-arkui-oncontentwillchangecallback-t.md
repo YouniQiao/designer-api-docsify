@@ -4,7 +4,7 @@
 export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: number) => boolean
 ```
 
-Callback for OnContentWillChange
+Defines the callback function triggered when the page content changes.
 
 **Since:** 12
 
@@ -18,8 +18,8 @@ Callback for OnContentWillChange
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| currentIndex | number | Yes | the index value of the current tab.  |
-| comingIndex | number | Yes | the index value of the tab that will change.  |
+| currentIndex | number | Yes | Index of the current tab.  |
+| comingIndex | number | Yes | Index of the tab to be switched to.  |
 
 **Return value:**
 

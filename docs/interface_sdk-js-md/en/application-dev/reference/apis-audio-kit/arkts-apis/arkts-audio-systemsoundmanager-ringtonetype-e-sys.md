@@ -90,7 +90,7 @@ RINGTONE_TYPE_ESIM_CARD_0 = 2
 
 Ringtone type for esim card 0.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,7 +108,7 @@ RINGTONE_TYPE_ESIM_CARD_1 = 3
 
 Ringtone type for esim card 1.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 

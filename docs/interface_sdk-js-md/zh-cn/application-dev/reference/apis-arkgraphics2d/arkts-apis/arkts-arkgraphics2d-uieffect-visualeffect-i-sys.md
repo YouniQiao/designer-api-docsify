@@ -47,13 +47,13 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 **示例：**
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D'
-let blender : uiEffect.BrightnessBlender =
+import { uiEffect } from '@kit.ArkGraphics2D';
+let blender: uiEffect.BrightnessBlender =
   uiEffect.createBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
-    positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
+    positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0});
 let visualEffect = uiEffect.createEffect();
 // 将混合器添加至组件上以改变组件背景颜色
-visualEffect.backgroundColorBlender(blender)
+visualEffect.backgroundColorBlender(blender);
 
 ```
 
@@ -98,19 +98,19 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 **示例：**
 
 ```TypeScript
-import { common2D, uiEffect } from '@kit.ArkGraphics2D'
+import { common2D, uiEffect } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
 struct Index {
   @State borderLightPosition: common2D.Point3d = {
     x: 0, y: 0, z: 2
-  }
+  };
   @State borderLightColor: common2D.Color = {
     red: 1, green: 1, blue: 1, alpha: 1
-  }
-  @State lightIntensity: number = 1
-  @State borderWidth_: number = 20
+  };
+  @State lightIntensity: number = 1;
+  @State borderWidth_: number = 20;
 
   build() {
     Column() {
@@ -180,7 +180,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 **示例：**
 
 ```TypeScript
-import { common2D, uiEffect } from '@kit.ArkGraphics2D'
+import { common2D, uiEffect } from '@kit.ArkGraphics2D';
 
 @Entry
 @Component
@@ -207,11 +207,11 @@ struct ColorGradientExample {
           uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.1)
         )
       )
-      .width("1024px")
-      .height("1024px")
+      .width('1024px')
+      .height('1024px')
     }
-    .width("100%")
-    .height("100%")
+    .width('100%')
+    .height('100%')
   }
 }
 
@@ -339,13 +339,13 @@ struct Index {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
     effect.liquidMaterial({
       enable: true,
-      distortProgress : this.distortProgress,
+      distortProgress: this.distortProgress,
       rippleProgress: this.rippleProgress,
       distortFactor: this.distortFactor,
-      materialFactor : this.materialFactor,
-      refractionFactor : this.refractionFactor,
+      materialFactor: this.materialFactor,
+      refractionFactor: this.refractionFactor,
       reflectionFactor: this.reflectionFactor,
-      tintColor : [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
+      tintColor: [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
       ripplePosition: undefined,
     },
       uiEffect.Mask.createUseEffectMask(true),
@@ -366,10 +366,10 @@ struct Index {
       .backgroundEffect({
         radius: 15,
       }, { disableSystemAdaptation: true })
-      .width("100%").height("100%").align(Alignment.Center)
+      .width('100%').height('100%').align(Alignment.Center)
     }
     .backgroundImage($r('app.media.bg6'), ImageRepeat.NoRepeat)
-    .width("100%").height("100%").align(Alignment.Center)
+    .width('100%').height('100%').align(Alignment.Center)
   }
 }
 

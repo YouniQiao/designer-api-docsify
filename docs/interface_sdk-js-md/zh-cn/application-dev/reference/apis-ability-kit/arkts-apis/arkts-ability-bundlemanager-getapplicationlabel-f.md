@@ -59,8 +59,6 @@ try {
     hilog.error(0x0000, 'testTag', 'getApplicationLabel failed: %{public}d  %{public}s', err.code, err.message);
   });
 } catch (err) {
-  let code = (err as BusinessError).code;
-  let message = (err as BusinessError).message;
   hilog.error(0x0000, 'testTag', 'getApplicationLabel failed: error %{public}d  %{public}s', err.code, err.message);
 }
 

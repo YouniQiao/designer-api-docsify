@@ -47,11 +47,12 @@ function removePrinterFromDiscovery(printerId: string): Promise<void>
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// printerId可通过on('printerChange')回调获取
 let printerId : string = 'testPrinterId';
 print.removePrinterFromDiscovery(printerId).then(() => {
     console.info('removePrinterFromDiscovery success');
 }).catch((error: BusinessError) => {
-    console.error('removePrinterFromDiscovery error : ' + JSON.stringify(error));
+    console.error(`Failed to removePrinterFromDiscovery. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

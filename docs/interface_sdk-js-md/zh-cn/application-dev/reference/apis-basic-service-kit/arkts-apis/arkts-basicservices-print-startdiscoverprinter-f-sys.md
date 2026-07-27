@@ -50,9 +50,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let extensionList: string[] = [];
 // 通过指定自己应用的包名，在发现时加载自己的打印扩展能力
 // let extensionList: string[] = ['com.myapplication.test'];
-print.startDiscoverPrinter(extensionList, (err: BusinessError) => {
-    if (err) {
-        console.error('failed to start Discover Printer because : ' + JSON.stringify(err));
+print.startDiscoverPrinter(extensionList, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to startDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('start Discover Printer success');
     }
@@ -113,7 +113,7 @@ let extensionList: string[] = [];
 print.startDiscoverPrinter(extensionList).then(() => {
     console.info('start Discovery success');
 }).catch((error: BusinessError) => {
-    console.error('failed to start Discovery because : ' + JSON.stringify(error));
+    console.error(`Failed to startDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

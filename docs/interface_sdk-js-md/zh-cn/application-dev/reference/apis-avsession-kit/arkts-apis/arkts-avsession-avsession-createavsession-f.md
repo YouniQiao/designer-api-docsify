@@ -48,7 +48,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 @Entry
 @Component
 struct Index {
-  private avsessioncontroller !: avSession.AVSessionController;
   @State message: string = 'hello world';
 
   build() {
@@ -123,7 +122,6 @@ import { avSession } from '@kit.AVSessionKit';
 @Entry
 @Component
 struct Index {
-  private avsessionController !: avSession.AVSessionController;
   @State message: string = 'hello world';
 
   build() { 

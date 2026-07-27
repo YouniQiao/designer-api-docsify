@@ -52,8 +52,8 @@ let batchMode: boolean = true;
 scan.startScan(scannerId, batchMode).then(() => {
     console.info('start scan success');
 }).catch((error: BusinessError) => {
-    console.error('start scan failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to start scan. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

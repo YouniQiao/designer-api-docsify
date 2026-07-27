@@ -27,7 +27,7 @@ Searching for a specified target.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | Target infomation. |
-| params | [SearchParams](arkts-mechanic-mechanicmanager-searchparams-i-sys.md) | 是 | Parameters to use when searching. |
+| params | [SearchParams](../../apis-arkui/arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | 是 | Parameters to use when searching. |
 
 **返回值：**
 

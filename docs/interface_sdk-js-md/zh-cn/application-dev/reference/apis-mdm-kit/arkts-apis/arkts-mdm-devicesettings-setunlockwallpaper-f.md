@@ -70,6 +70,8 @@ deviceSettings.setUnlockWallpaper(wantTemp, fd).then(() => {
   console.info('Succeeded in setting lock wallpaper');
 }).catch((err: BusinessError) => {
   console.error(`Failed to set lock wallpaper. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  fs.closeSync(fd);
 });
 
 ```

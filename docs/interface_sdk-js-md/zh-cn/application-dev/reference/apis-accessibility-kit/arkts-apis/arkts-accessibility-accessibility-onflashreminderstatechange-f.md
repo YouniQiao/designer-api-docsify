@@ -52,6 +52,10 @@ struct Index {
     accessibility.onFlashReminderStateChange(this.callback);
   }
 
+  aboutToDisappear(): void {
+    accessibility.offFlashReminderStateChange(this.callback);
+  }
+
   build() {
     Column() {
     }

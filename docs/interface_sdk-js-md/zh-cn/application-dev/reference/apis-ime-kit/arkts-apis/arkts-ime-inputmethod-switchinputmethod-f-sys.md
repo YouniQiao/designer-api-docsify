@@ -66,6 +66,7 @@ async function switchInputMethodWithSubtype() {
   } catch (err) {
     console.error(`Failed to switchInputMethod. Code: ${err.code}, message: ${err.message}`);
   }
+  // 3. 获取当前输入法子类型
   const currentSubtype: InputMethodSubtype | undefined = inputMethod.getCurrentInputMethodSubtype();
   if (!currentSubtype) {
     console.error("Failed to get current input subtype");

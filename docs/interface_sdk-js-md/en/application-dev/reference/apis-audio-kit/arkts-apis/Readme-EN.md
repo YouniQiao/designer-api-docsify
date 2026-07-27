@@ -74,6 +74,8 @@
   - [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md)
   <!--Del-->
   - [AudioRendererOptions(system api)](arkts-audio-audio-audiorendereroptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AudioRendererTargetParams(system api)](arkts-audio-audio-audiorenderertargetparams-i-sys.md)<!--DelEnd-->
   - [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i.md)
   <!--Del-->
   - [AudioRoutingManager(system api)](arkts-audio-audio-audioroutingmanager-i-sys.md)<!--DelEnd-->
@@ -172,6 +174,8 @@
   <!--Del-->
   - [AudioSeparationVolumeType(system api)](arkts-audio-audio-audioseparationvolumetype-e-sys.md)<!--DelEnd-->
   - [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)
+  <!--Del-->
+  - [AudioSessionBehaviorFlags(system api)](arkts-audio-audio-audiosessionbehaviorflags-e-sys.md)<!--DelEnd-->
   - [AudioSessionDeactivatedReason](arkts-audio-audio-audiosessiondeactivatedreason-e.md)
   - [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md)
   - [AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md)

@@ -12,7 +12,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function setControlledAppLists(appLists: Array<string>, userId?: number): Promise<void>
 ```
 
-Set the list of applications that are subject to enterprise DLP control.
+Sets the list of applications controlled by enterprise DLP. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -28,8 +28,8 @@ Set the list of applications that are subject to enterprise DLP control.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appLists | Array&lt;string&gt; | Yes | The appIdentifiers of applications to be put under controlled<br>The maximum length is 100.<br>The value range of Array is [0, 100], and the value range of String is [0, 4096]. |
-| userId | number | No | The target userId for which the controlled app list is configured.If not specified, the current user is used by default<br>The value range is all integers. |
+| appLists | Array&lt;string&gt; | Yes | List of application identifiers of the controlled applications.<br>The maximum length of the array is 100. If the length exceeds 100, error code 19100001 is returned.<br>Each element in the array is the appIdentifier of the application. The maximum length of a single application identifier is 4096 bytes. If the length exceeds 4096 bytes, error code 19100001 is returned. |
+| userId | number | No | ID of the user for whom the controlled application is configured.If this parameter is not specified, the current user is used by default.<br>The value should be an integer. |
 
 **Return value:**
 
@@ -47,4 +47,22 @@ Set the list of applications that are subject to enterprise DLP control.
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 | [19100023](../errorcode-dlp.md#19100023-specified-user-id-inconsistent-with-the-current-user-id) | The specified userId is inconsistent with the current userId. |
 | [19100024](../errorcode-dlp.md#19100024-personal-space-users-cannot-set-controlled-apps) | The specified userId belongs to a personal space user and cannot be managed. |
+
+**Example**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appList: Array<string> = ["appId1", "appId2"];
+let userId: number = 100;
+dlpPermission.setControlledAppLists(appList, userId).then(() => {
+  console.info("Successfully set controlled appLists.");
+}).catch((error: BusinessError) => {
+  console.error(error.message);
+}).finally(() => {
+  console.info("Completed set controlled appLists operation.");
+});
+
+```
 

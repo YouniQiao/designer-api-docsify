@@ -1,6 +1,6 @@
 # LaunchController (System API)
 
-Declare type LaunchController
+Controller for launching the atomic service.
 
 **Since:** 12
 

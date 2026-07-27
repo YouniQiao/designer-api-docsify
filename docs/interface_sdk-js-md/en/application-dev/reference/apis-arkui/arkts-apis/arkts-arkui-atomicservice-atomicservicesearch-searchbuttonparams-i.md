@@ -1,6 +1,6 @@
 # SearchButtonParams
 
-Defines the SearchButton parameters.
+Sets the search button located next to the search text box.
 
 **Since:** 18
 
@@ -20,7 +20,7 @@ import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams,
 options?: SearchButtonOptions
 ```
 
-Indicates the fontSize and fontColor of the search button.
+Font of the search text box. Default value: **{fontSize: '16fp',fontColor: '#ff3f97e9'}**
 
 **Type:** SearchButtonOptions
 
@@ -38,7 +38,7 @@ Indicates the fontSize and fontColor of the search button.
 searchButtonValue: ResourceStr
 ```
 
-Indicates the text of the search button.
+Text on the search button located next to the search text box.
 
 **Type:** ResourceStr
 

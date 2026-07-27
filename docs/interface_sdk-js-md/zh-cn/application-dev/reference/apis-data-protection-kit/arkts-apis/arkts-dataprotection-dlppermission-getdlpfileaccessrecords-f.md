@@ -87,8 +87,8 @@ function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileIn
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getDLPFileAccessRecords((err, accessRecords) => {
-  if (err != undefined) {
-    console.error('getDLPFileAccessRecords error,', err.code, err.message);
+  if (err) {
+    console.error(`Failed to get DLP file access records. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('accessRecords', JSON.stringify(accessRecords));
   }

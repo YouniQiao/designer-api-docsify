@@ -4,7 +4,7 @@
 declare type OnTextSelectionChangeCallback = (selectionStart: number, selectionEnd: number) => void
 ```
 
-Callback when the position of the cursor entered in the search box changes.
+Called when the position of the text selection changes or when the cursor position changes during the editing state.
 
 **Since:** 18
 
@@ -18,6 +18,6 @@ Callback when the position of the cursor entered in the search box changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | Indicates the start position of the text selection area.  |
-| selectionEnd | number | Yes | Indicates end position of the text selection area.  |
+| selectionStart | number | Yes | Start position of the text to be selected.  |
+| selectionEnd | number | Yes | End position of the text to be selected.  |
 

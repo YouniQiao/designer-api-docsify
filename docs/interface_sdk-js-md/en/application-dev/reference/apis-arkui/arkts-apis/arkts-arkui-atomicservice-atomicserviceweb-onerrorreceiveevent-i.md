@@ -1,6 +1,6 @@
 # OnErrorReceiveEvent
 
-Error receive event when the web page receives a web resource loading error.
+Represents the callback invoked when an error occurs during web page loading.
 
 **Since:** 12
 

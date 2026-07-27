@@ -41,10 +41,10 @@ Subscribe to a callback of a specified type of web event once.
 // xxx.ets
 import { webview } from '@kit.ArkWeb';
 
-webview.once("webInited", () => {
-  console.info("configCookieSync");
-  webview.WebCookieManager.configCookieSync("https://www.example.com", "a=b");
-})
+webview.once('webInited', () => {
+  console.info('configCookieSync');
+  webview.WebCookieManager.configCookieSync('https://www.example.com', 'a=b');
+});
 
 @Entry
 @Component

@@ -58,7 +58,7 @@ try {
   appManager.killProcessesByBundleName(bundleName, isClearPageStack, appIndex).then((data) => {
     console.info('killProcessesByBundleName success.');
   }).catch((err: BusinessError) => {
-    console.error(`killProcessesByBundleName fail, err: ${JSON.stringify(err)}`);
+    console.error(`killProcessesByBundleName fail, code: ${err.code}, msg:${err.message}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;

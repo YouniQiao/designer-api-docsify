@@ -51,7 +51,6 @@ import { avSession } from '@kit.AVSessionKit';
 @Entry
 @Component
 struct Index {
-  private avsessioncontroller !: avSession.AVSessionController;
   @State message: string = 'hello world';
 
   build() {

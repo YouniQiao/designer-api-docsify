@@ -81,7 +81,7 @@ static registerPlugin(plugin: DlpConnPlugin): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 注册结果，返回该回调的唯一标识ID。取值范围为[0, 2<sup>64</sup>-1]。 |
+| number | 注册结果，返回该回调的唯一标识ID。取值范围为[0, 2<sup>53</sup>-1]。 |
 
 **错误码：**
 

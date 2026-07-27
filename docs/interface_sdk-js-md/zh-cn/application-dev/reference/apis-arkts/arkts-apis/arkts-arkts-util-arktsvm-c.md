@@ -254,9 +254,9 @@ static setMultithreadingDetectionEnabled(enabled: boolean, options?: Multithread
 ```TypeScript
 import { util } from '@kit.ArkTS';
 
-// 打开多线程检测开关
+// 打开多线程安全检测开关
 util.ArkTSVM.setMultithreadingDetectionEnabled(true);
-// 关闭多线程检测开关
+// 关闭多线程安全检测开关
 util.ArkTSVM.setMultithreadingDetectionEnabled(false);
 // 设置崩溃行为
 util.ArkTSVM.setMultithreadingDetectionEnabled(true, { abort: false });

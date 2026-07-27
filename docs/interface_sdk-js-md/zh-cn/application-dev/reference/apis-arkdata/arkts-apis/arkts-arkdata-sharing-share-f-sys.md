@@ -60,14 +60,14 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
-cloudData.sharing.share('sharing_resource_test', participants, ((err: BusinessError, result) => {
+});
+cloudData.sharing.share('sharing_resource_test', participants, (err: BusinessError, result) => {
   if (err) {
     console.error(`share failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`share succeeded, result: ${result}`);
-}))
+});
 
 ```
 
@@ -130,12 +130,12 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 cloudData.sharing.share('sharing_resource_test', participants).then((result) => {
   console.info(`share success, result: ${result}`);
 }).catch((err: BusinessError) => {
   console.error(`share failed, code is ${err.code},message is ${err.message}`);
-})
+});
 
 ```
 

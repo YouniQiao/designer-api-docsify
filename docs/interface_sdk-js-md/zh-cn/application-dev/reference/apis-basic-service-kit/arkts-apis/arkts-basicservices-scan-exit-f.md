@@ -43,8 +43,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 scan.exit().then(() => {
     console.info('scan exit success');
 }).catch((error: BusinessError) => {
-    console.error('scan exit failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to exit scan. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

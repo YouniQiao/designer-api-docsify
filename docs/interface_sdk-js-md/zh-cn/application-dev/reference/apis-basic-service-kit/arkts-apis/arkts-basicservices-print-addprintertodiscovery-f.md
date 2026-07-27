@@ -59,7 +59,7 @@ let printerInformation : print.PrinterInformation = {
 print.addPrinterToDiscovery(printerInformation).then(() => {
     console.info('addPrinterToDiscovery success');
 }).catch((error: BusinessError) => {
-    console.error('addPrinterToDiscovery error : ' + JSON.stringify(error));
+    console.error(`Failed to addPrinterToDiscovery. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

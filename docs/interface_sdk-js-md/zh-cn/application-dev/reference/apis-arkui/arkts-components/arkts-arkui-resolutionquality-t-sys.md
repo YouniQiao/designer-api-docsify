@@ -4,6 +4,8 @@
 declare type ResolutionQuality = import('../api/@ohos.multimedia.image').default.ResolutionQuality
 ```
 
+分辨率质量等级类型。
+
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。

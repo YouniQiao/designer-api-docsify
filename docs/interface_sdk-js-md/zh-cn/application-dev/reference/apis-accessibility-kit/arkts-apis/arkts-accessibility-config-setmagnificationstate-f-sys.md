@@ -43,11 +43,13 @@ function setMagnificationState(state: boolean): void
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   config.setMagnificationState(true);
-} catch (e) {
-  console.error(`Set magnification failed,  error code: ${e?.code}, error msg: ${e?.message}`);
+} catch (err) {
+  let e = err as BusinessError;
+  console.error(`Failed to set magnification. Code: ${e.code}, message: ${e.message}`);
 }
 
 ```

@@ -77,20 +77,20 @@ export default class EntryAbility extends UIExtensionAbility {
   onSessionCreate(want: Want, session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
     // 隐藏非安全窗口
-    extensionHostWindow.hideNonSecureWindows(true).then(()=> {
+    extensionHostWindow.hideNonSecureWindows(true).then(() => {
       console.info(`Succeeded in hiding the non-secure windows.`);
-    }).catch((err: BusinessError)=> {
-      console.error(`Failed to hide the non-secure windows. Cause:${JSON.stringify(err)}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to hide the non-secure windows. Code: ${err.code}, message: ${err.message}`);
     });
   }
   
   onSessionDestroy(session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
     // 取消隐藏非安全窗口
-    extensionHostWindow.hideNonSecureWindows(false).then(()=> {
+    extensionHostWindow.hideNonSecureWindows(false).then(() => {
       console.info(`Succeeded in showing the non-secure windows.`);
-    }).catch((err: BusinessError)=> {
-      console.error(`Failed to show the non-secure windows. Cause:${JSON.stringify(err)}`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to show the non-secure windows. Code: ${err.code}, message: ${err.message}`);
     });
   }
 }
@@ -152,7 +152,7 @@ export default class EntryAbility extends UIExtensionAbility {
     extensionHostWindow.setWaterMarkFlag(true).then(() => {
       console.info(`Succeeded in setting water mark flag of window.`);
     }).catch((err: BusinessError) => {
-      console.error(`Failed to set water mark flag of window. Cause:${JSON.stringify(err)}`);
+      console.error(`Failed to set water mark flag of window. Code: ${err.code}, message: ${err.message}`);
     });
   }
   onSessionDestroy(session: UIExtensionContentSession) {
@@ -161,7 +161,7 @@ export default class EntryAbility extends UIExtensionAbility {
     extensionHostWindow.setWaterMarkFlag(false).then(() => {
       console.info(`Succeeded in deleting water mark flag of window.`);
     }).catch((err: BusinessError) => {
-      console.error(`Failed to delete water mark flag of window. Cause:${JSON.stringify(err)}`);
+      console.error(`Failed to delete water mark flag of window. Code: ${err.code}, message: ${err.message}`);
     });
   }
 }

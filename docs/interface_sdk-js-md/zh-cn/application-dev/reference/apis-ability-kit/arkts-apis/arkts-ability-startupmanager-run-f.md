@@ -132,7 +132,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class MyAbilityStage extends AbilityStage {
   onCreate(): void {
     hilog.info(0x0000, 'testTag', 'AbilityStage onCreate');
-    let onCompletedCallback = (error: BusinessError<void>) => {
+    let onCompletedCallback = (error: BusinessError) => {
       if (error) {
         hilog.error(0x0000, 'testTag', `onCompletedCallback error code: ${error.code}, error msg: ${error.message}`);
       } else {
@@ -151,7 +151,7 @@ export default class MyAbilityStage extends AbilityStage {
       // 手动调用run方法
       startupManager.run(['StartupTask_001', 'libentry_001'], this.context, config).then(() => {
         hilog.info(0x0000, 'testTag', '%{public}s', 'startupManager.run success');
-      }).catch((error: BusinessError<void>) => {
+      }).catch((error: BusinessError) => {
         hilog.error(0x0000, 'testTag', `startupManager.run promise catch error code: ${error.code}, error msg: ${error.message}`);
       })
     } catch (error) {

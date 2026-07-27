@@ -69,21 +69,27 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 let sharingResource: string;
 let predicates = new relationalStore.RdbPredicates('test_table');
 predicates.equalTo('data', 'data_test');
 cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, ['uuid', 'data']).then((resultSet) => {
-  if (!resultSet.goToFirstRow()) {
-    console.error(`row error`);
-    return;
+  try {
+    if (!resultSet.goToFirstRow()) {
+      console.error(`row error`);
+      return;
+    }
+    const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
+    console.info(`sharing resource: ${res}`);
+    sharingResource = res;
+  } catch (err) {
+    console.error(`Failed to get sharing resource: ${err}`);
+  } finally {
+    resultSet.close();
   }
-  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-  console.info(`sharing resource: ${res}`);
-  sharingResource = res;
 }).catch((err: BusinessError) => {
   console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
-})
+});
 
 ```
 
@@ -145,7 +151,7 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 let sharingResource: string;
 let predicates = new relationalStore.RdbPredicates('test_table');
 predicates.equalTo('data', 'data_test');
@@ -154,14 +160,20 @@ cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, (
     console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
     return;
   }
-  if (!resultSet.goToFirstRow()) {
-    console.error(`row error`);
-    return;
+  try {
+    if (!resultSet.goToFirstRow()) {
+      console.error(`row error`);
+      return;
+    }
+    const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
+    console.info(`sharing resource: ${res}`);
+    sharingResource = res;
+  } catch (err) {
+    console.error(`Failed to get sharing resource: ${err}`);
+  } finally {
+    resultSet.close();
   }
-  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-  console.info(`sharing resource: ${res}`);
-  sharingResource = res;
-})
+});
 
 ```
 
@@ -225,7 +237,7 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 let sharingResource: string;
 let predicates = new relationalStore.RdbPredicates('test_table');
 predicates.equalTo('data', 'data_test');
@@ -234,14 +246,20 @@ cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, [
     console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
     return;
   }
-  if (!resultSet.goToFirstRow()) {
-    console.error(`row error`);
-    return;
+  try {
+    if (!resultSet.goToFirstRow()) {
+      console.error(`row error`);
+      return;
+    }
+    const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
+    console.info(`sharing resource: ${res}`);
+    sharingResource = res;
+  } catch (err) {
+    console.error(`Failed to get sharing resource: ${err}`);
+  } finally {
+    resultSet.close();
   }
-  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-  console.info(`sharing resource: ${res}`);
-  sharingResource = res;
-})
+});
 
 ```
 

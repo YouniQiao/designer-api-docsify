@@ -1329,7 +1329,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceIds | string[] | 是 | 同一组网环境下，需要同步的设备的networkId列表。 |
-| mode | [SyncMode](arkts-arkdata-distributeddata-syncmode-e.md) | 是 | 同步模式。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 同步模式。 |
 | delayMs | number | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。 |
 
 **示例：**

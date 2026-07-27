@@ -60,9 +60,9 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // 传入读取的图片数据
-function ImageEllipticalGradientBlur(Image: ArrayBuffer): Promise<image.PixelMap> {
+function ImageEllipticalGradientBlur(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(Image);
+    let imageSource = image.createImageSource(imageBuffer);
     let blurRadius:number = 25;
     let fractionStops:FractionStop[] = [[0, 0.2], [0.5, 0.7]];
     let maskRadius:effectKit.EllipticalMaskRadius = [1, 1];

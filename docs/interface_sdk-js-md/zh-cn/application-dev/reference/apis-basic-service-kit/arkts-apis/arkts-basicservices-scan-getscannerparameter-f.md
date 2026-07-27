@@ -50,8 +50,8 @@ let scannerId: string = 'scanner_001';
 scan.getScannerParameter(scannerId).then((parameters: scan.ScannerParameter[]) => {
     console.info('get scanner parameters success: ' + JSON.stringify(parameters));
 }).catch((error: BusinessError) => {
-    console.error('get scanner parameters failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to get scanner parameters. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

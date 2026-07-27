@@ -12,5 +12,5 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [FullScreenLaunchComponent](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) | Declares the FullScreenLaunchComponent, a component provided by ArkUI that allows you to define and use it in your application through the ArkTS-based declarative development paradigm. |
+| [FullScreenLaunchComponent](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) | **FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner,the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. |
 

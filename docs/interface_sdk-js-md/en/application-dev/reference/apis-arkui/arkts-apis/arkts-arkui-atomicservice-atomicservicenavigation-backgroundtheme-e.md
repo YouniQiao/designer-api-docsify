@@ -1,6 +1,6 @@
 # BackgroundTheme
 
-the theme of the background color.
+Enumerates the navigation bar background themes.
 
 **Since:** 18
 
@@ -14,7 +14,7 @@ the theme of the background color.
 DARK = 1
 ```
 
-when the BackgroundTheme set DARK,the basic color of background is dark.
+Dark theme.
 
 **Since:** 18
 
@@ -30,7 +30,7 @@ when the BackgroundTheme set DARK,the basic color of background is dark.
 LIGHT = 2
 ```
 
-when the BackgroundTheme set LIGHT,the basic color of background is white.
+Light theme.
 
 **Since:** 18
 
@@ -46,7 +46,7 @@ when the BackgroundTheme set LIGHT,the basic color of background is white.
 DEFAULT = 3
 ```
 
-when the BackgroundTheme set DEFAULT,the basic color of background is F1F3F5.
+Light gray theme, with the color value of #F1F3F5.
 
 **Since:** 18
 

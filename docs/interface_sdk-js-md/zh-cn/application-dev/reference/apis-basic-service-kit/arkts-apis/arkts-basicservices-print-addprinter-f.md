@@ -58,7 +58,7 @@ let ppdName : string = 'ppdName';
 print.addPrinter(printerName, uri, ppdName).then(() => {
     console.info('add printer success');
 }).catch((error: BusinessError) => {
-    console.error('add printer error : ' + JSON.stringify(error));
+    console.error(`Failed to addPrinter. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

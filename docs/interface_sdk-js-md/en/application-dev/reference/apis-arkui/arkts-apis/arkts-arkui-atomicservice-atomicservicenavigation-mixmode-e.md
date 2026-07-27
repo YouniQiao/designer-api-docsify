@@ -1,6 +1,6 @@
 # MixMode
 
-the enum for the blend mode of background color.
+Provides options for background color blending modes.
 
 **Since:** 18
 
@@ -14,7 +14,7 @@ the enum for the blend mode of background color.
 AVERAGE = 1
 ```
 
-when the MixMode set AVERAGE,the mixing method for background colors is that the two colors have equal proportions.
+Both colors are evenly mixed.
 
 **Since:** 18
 
@@ -30,7 +30,7 @@ when the MixMode set AVERAGE,the mixing method for background colors is that the
 CROSS = 2
 ```
 
-when the MixMode set CROSS,the color mixing method for the background is a transition where one color crosses through to another.
+One color passes through the other.
 
 **Since:** 18
 
@@ -46,7 +46,7 @@ when the MixMode set CROSS,the color mixing method for the background is a trans
 TOWARDS = 3
 ```
 
-when the MixMode set TOWARDS,the color mixing method for the background is a transition from one color to another.
+One color gradually blends into the other.
 
 **Since:** 18
 

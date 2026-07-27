@@ -120,7 +120,7 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
   uri).then((dlpSandboxInfo: dlpPermission.DLPSandboxInfo) => {
   console.info('dlpSandboxInfo：', JSON.stringify(dlpSandboxInfo));
   dlpPermission.uninstallDLPSandbox('com.ohos.note', 100, dlpSandboxInfo.appIndex, (err, res) => {
-    if (err !== undefined) {
+    if (err) {
       console.error('uninstallDLPSandbox error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));

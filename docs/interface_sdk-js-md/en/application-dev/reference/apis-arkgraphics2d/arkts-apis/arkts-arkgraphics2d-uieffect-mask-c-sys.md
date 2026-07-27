@@ -57,11 +57,11 @@ Create a Mask of pixelmap.
 **Example**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { uiEffect, common2D } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { uiEffect, common2D } from '@kit.ArkGraphics2D';
 import { BusinessError } from '@kit.BasicServicesKit'
 
-const color = new ArrayBuffer(96);
+const colorBuffer = new ArrayBuffer(96);
 let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -70,7 +70,7 @@ let opts : image.InitializationOptions = {
     width: 6
   }
 }
-image.createPixelMap(color, opts).then((pixelMap) => {
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
   let srcRect : common2D.Rect = {
     left: 0,
     top: 0,
@@ -91,7 +91,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
   }
   let mask = uiEffect.Mask.createPixelMapMask(pixelMap, srcRect, dstRect, fillColor);
 }).catch((error: BusinessError)=>{
-  console.error('Failed to create pixelmap. code is ${error.code}, message is ${error.message}');
+  console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
 })
 
 ```
@@ -150,7 +150,11 @@ struct Index {
   @State tintColorG: number = 1.;
   @State tintColorB: number = 1.;
   @State tintColorA: number = 1.;
-  @State pixelMapDistort: image.PixelMap | undefined = this.getPixelMap();
+  @State pixelMapDistort: image.PixelMap | undefined = undefined;
+
+  aboutToAppear(): void {
+    this.pixelMapDistort = this.getPixelMap();
+  }
 
   private getPixelMap(): image.PixelMap | undefined {
     try {
@@ -161,7 +165,11 @@ struct Index {
       if (!imageSource) {
         return undefined;
       }
-      const pixelMap: image.PixelMap = imageSource.createPixelMapSync();
+      const pixelMap: image.PixelMap | null = imageSource.createPixelMapSync();
+      if (!pixelMap) {
+        imageSource.release();
+        return undefined;
+      }
       imageSource.release();
       return pixelMap;
     } catch (err) {
@@ -169,8 +177,12 @@ struct Index {
     }
   }
 
-  private GetMaterialVisualEffect(): uiEffect.VisualEffect {
+  private getMaterialVisualEffect(): uiEffect.VisualEffect {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
+    let distortMask: uiEffect.Mask | undefined = undefined;
+    if (this.pixelMapDistort) {
+      distortMask = uiEffect.Mask.createPixelMapMask(this.pixelMapDistort);
+    }
     effect.liquidMaterial({
       enable: true,
       distortProgress : this.distortProgress,
@@ -183,7 +195,7 @@ struct Index {
       ripplePosition: undefined,
     },
       uiEffect.Mask.createUseEffectMask(true),
-      uiEffect.Mask.createPixelMapMask (this.pixelMapDistort), // Example of using createImageMask.
+      distortMask
       );
     return effect;
   }
@@ -196,7 +208,7 @@ struct Index {
           .height(553 + 'px')
           .width(553 + 'px')
           .borderRadius(12)
-          .visualEffect(this.GetMaterialVisualEffect())
+          .visualEffect(this.getMaterialVisualEffect())
       }
       .backgroundEffect({
         radius: 15,
@@ -288,7 +300,7 @@ Create a Mask of ripple.
 **Example**
 
 ```TypeScript
-  let mask = uiEffect.Mask.createRippleMask({x:0.5, y:1.0}, 0.5, 0.3, 0.0);
+  let mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 1.0}, 0.5, 0.3, 0.0);
 
 ```
 
@@ -345,7 +357,7 @@ struct Index {
   @State tintColorB: number = 1.;
   @State tintColorA: number = 1.;
 
-  private GetMaterialVisualEffect(): uiEffect.VisualEffect {
+  private getMaterialVisualEffect(): uiEffect.VisualEffect {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
     effect.liquidMaterial({
         enable: true,
@@ -371,7 +383,7 @@ struct Index {
           .height(553 + 'px')
           .width(553 + 'px')
           .borderRadius(12)
-          .visualEffect(this.GetMaterialVisualEffect())
+          .visualEffect(this.getMaterialVisualEffect())
       }
       .backgroundEffect({
         radius: 15,

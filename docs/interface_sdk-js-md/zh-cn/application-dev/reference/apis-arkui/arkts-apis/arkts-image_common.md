@@ -6,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ImageAnalyzerController](arkts-arkui-imageanalyzercontroller-c.md) | 图像AI分析控制器。可以将此对象绑定至支持的组件，通过控制器来调用支持的方法。 |
+| [ImageAnalyzerController](arkts-arkui-imageanalyzercontroller-c.md) | 图像AI分析控制器。可以将此对象绑定至支持的组件，并通过该控制器调用其提供的方法。 |
 
 ### 接口
 

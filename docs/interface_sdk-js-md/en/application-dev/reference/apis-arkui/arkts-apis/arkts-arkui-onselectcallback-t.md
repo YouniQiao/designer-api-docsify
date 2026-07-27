@@ -4,7 +4,7 @@
 declare type OnSelectCallback = (index: number, selectValue: string) => void
 ```
 
-Callback when the Select option is clicked.
+Called when an item in the drop-down list box is selected.
 
 **Since:** 18
 
@@ -18,6 +18,6 @@ Callback when the Select option is clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Indicates the index of the selected item.  |
-| selectValue | string | Yes | Indicates the value of the selected item.  |
+| index | number | Yes | Index of the selected option. The index is zero-based.  |
+| selectValue | string | Yes | Value of the selected option.  |
 

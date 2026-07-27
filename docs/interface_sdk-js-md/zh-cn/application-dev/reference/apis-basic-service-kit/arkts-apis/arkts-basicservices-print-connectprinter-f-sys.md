@@ -46,10 +46,11 @@ function connectPrinter(printerId: string, callback: AsyncCallback<void>): void
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// printerId可通过on('printerChange')回调获取
 let printerId: string = 'printerId_32';
-print.connectPrinter(printerId, (err: BusinessError) => {
-    if (err) {
-        console.error('failed to connect Printer because : ' + JSON.stringify(err));
+print.connectPrinter(printerId, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to connectPrinter. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('start connect Printer success');
     }
@@ -103,11 +104,12 @@ function connectPrinter(printerId: string): Promise<void>
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// printerId可通过on('printerChange')回调获取
 let printerId: string = 'printerId_32';
 print.connectPrinter(printerId).then(() => {
     console.info('start connect Printer success');
 }).catch((error: BusinessError) => {
-    console.error('failed to connect Printer because : ' + JSON.stringify(error));
+    console.error(`Failed to connectPrinter. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

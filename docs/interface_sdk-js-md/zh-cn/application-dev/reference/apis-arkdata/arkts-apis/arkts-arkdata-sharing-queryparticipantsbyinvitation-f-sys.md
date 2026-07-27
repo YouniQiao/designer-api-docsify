@@ -45,13 +45,13 @@ function queryParticipantsByInvitation(
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test', ((err: BusinessError, result) => {
+cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test', (err: BusinessError, result) => {
   if (err) {
     console.error(`query participants by invitation failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`query participants by invitation succeeded, result: ${result}`);
-}))
+});
 
 ```
 
@@ -101,7 +101,7 @@ cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test').
   console.info(`query participants by invitation succeeded, result: ${result}`);
 }).catch((err: BusinessError) => {
   console.error(`query participants by invitation failed, code is ${err.code},message is ${err.message}`);
-})
+});
 
 ```
 

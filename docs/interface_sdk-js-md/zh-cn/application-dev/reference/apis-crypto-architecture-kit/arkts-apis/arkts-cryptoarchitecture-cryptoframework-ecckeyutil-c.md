@@ -174,8 +174,8 @@ async function doTest() {
   let keyPair = await generator.generateKeyPair();
   let eccPkX = keyPair.pubKey.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_PK_X_BN);
   let eccPkY = keyPair.pubKey.getAsyKeySpec(cryptoFramework.AsyKeySpecItem.ECC_PK_Y_BN);
-  console.info('ECC_PK_X_BN 16：' + eccPkX.toString(16));
-  console.info('ECC_PK_Y_BN 16：' + eccPkY.toString(16));
+  console.info('ECC_PK_X_BN 16: ' + eccPkX.toString(16));
+  console.info('ECC_PK_Y_BN 16: ' + eccPkY.toString(16));
   // 将eccPkX.toString(16)结果放入x，eccPkY.toString(16)结果放入y。
   let returnPoint: cryptoFramework.Point = {
     x: BigInt('0x' + eccPkX.toString(16)),

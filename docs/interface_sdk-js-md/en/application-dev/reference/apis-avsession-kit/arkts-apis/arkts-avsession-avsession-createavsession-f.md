@@ -40,6 +40,8 @@ Create an AVSession instance. An ability can only create one AVSession
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
 @Entry
 @Component
 struct Index {
@@ -54,7 +56,7 @@ struct Index {
           let context: Context = this.getUIContext().getHostContext() as Context;
           let sessionId: string;  // Used as an input parameter of subsequent functions.
 
-          avSession.createAVSession(context, tag, "audio", async (data: avSession.AVSession) => {
+          avSession.createAVSession(context, tag, "audio", async (err:BusinessError, data: avSession.AVSession) => {
               currentAVSession = data;
               sessionId = currentAVSession.sessionId;
               console.info(`Succeeded in creating AV session, sessionId: ${sessionId}`);
@@ -110,6 +112,7 @@ Create an AVSession instance. An ability can only create one AVSession
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
+
 @Entry
 @Component
 struct Index {

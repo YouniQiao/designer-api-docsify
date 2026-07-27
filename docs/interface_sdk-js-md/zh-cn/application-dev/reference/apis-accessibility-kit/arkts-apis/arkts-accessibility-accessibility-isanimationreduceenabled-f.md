@@ -41,7 +41,7 @@ struct Index {
     accessibility.isAnimationReduceEnabled().then((data: boolean) => {
       console.info(`success data:isAnimationReduceEnabled : ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      console.error(`failed to isAnimationReduceEnabled, Code is ${err.code}, message is ${err.message}`);
+      console.error(`Failed to isAnimationReduceEnabled. Code: ${err.code}, message: ${err.message}`);
     });
   }
 

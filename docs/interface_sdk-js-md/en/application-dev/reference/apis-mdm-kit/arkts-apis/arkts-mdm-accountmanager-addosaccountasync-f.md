@@ -34,7 +34,7 @@ Adds an account in the background. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | name | string | Yes | Account name, which is the name of the account to be added. An account with the same name or an empty name cannot be created. |
-| type | osAccount.OsAccountType | Yes | Type of the account to add.<br>The value can be any of the following:<br>�� **ADMIN**: administrator account.<br>�� **NORMAL**: normal account.<br>�� **GUEST**: guest account. |
+| type | osAccount.OsAccountType | Yes | Type of the account to add.<br>The value can be any of the following:<br>**ADMIN**: administrator account.<br> **NORMAL**: normal account.<br> **GUEST**: guest account. |
 
 **Return value:**
 

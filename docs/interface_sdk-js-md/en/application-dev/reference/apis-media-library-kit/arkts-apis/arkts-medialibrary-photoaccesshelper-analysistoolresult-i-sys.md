@@ -22,7 +22,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 errCode: number
 ```
 
-Error code of the tool execution.Possible error codes:<br>0 - Success.<br>23800203 - Temperature is too high.<br>23800204 - Battery level is too low.<br>23800205 - Storage space is insufficient.<br>23800206 - Power saving mode is enabled.<br>23800207 - Intelligent analysis service is already running.<br>23800208 - Intelligent analysis switch is disabled.<br>23800209 - Analysis service error. Check the logs for details.<br>23800301 - Internal system error.
+Error code of the tool execution. The value 0 indicates success.Possible error codes:<br>23800203 - Temperature is too high.<br>23800204 - Battery level is too low.<br>23800205 - Storage space is insufficient.<br>23800206 - Power saving mode is enabled.<br>23800207 - Intelligent analysis service is already running.<br>23800208 - Intelligent analysis switch is disabled.<br>23800209 - Analysis service error. Check the logs for details.<br>23800301 - Internal system error.
 
 **Type:** number
 

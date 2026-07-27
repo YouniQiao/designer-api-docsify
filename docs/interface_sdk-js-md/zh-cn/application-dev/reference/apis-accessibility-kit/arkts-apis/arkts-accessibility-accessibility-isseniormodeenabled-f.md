@@ -47,7 +47,7 @@ struct Index {
     accessibility.isSeniorModeEnabled().then((data: boolean) => {
       console.info(`success data:isSeniorModeEnabled : ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      console.error(`failed to call isSeniorModeEnabled, Code is ${err.code}, message is ${err.message}`);
+      console.error(`Failed to call isSeniorModeEnabled. Code:${err.code}, message:${err.message}`);
     });
   }
 

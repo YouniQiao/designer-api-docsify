@@ -46,13 +46,13 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let info : string = 'WIFI_INACTIVE';
-print.updateExtensionInfo(info, (err: BusinessError) => {
-    if (err) {
-        console.error('updateExtensionInfo failed, because : ' + JSON.stringify(err));
+print.updateExtensionInfo(info, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to update extension info. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('updateExtensionInfo success');
     }
-})
+});
 
 ```
 
@@ -103,10 +103,10 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let info : string = 'WIFI_INACTIVE';
 print.updateExtensionInfo(info).then(() => {
-    console.info('update print job state success');
+    console.info('updateExtensionInfo success');
 }).catch((error: BusinessError) => {
-    console.error('update print job state error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to update extension info. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

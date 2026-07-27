@@ -18,7 +18,7 @@
 duration(value: number)
 ```
 
-设置播放时长。当Images中任意一帧图片设置了单独的duration后，该属性设置无效。
+设置播放时长。当[images](ImageAnimatorAttribute#images)中任意一帧图片设置了单独的duration后，该属性设置无效。
 
 **起始版本：** 7
 
@@ -34,7 +34,7 @@ duration(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 播放时长。<br/>value为0时，不播放图片。<br/>value平均分配给单张图片的播放时长小于一帧时间，将导致播放异常。<br/>设置为负数时，取默认值。<br/>value的改变只会在下一次循环开始时生效。<br/>单位：毫秒<br/>默认值：1000ms |
+| value | number | 是 | 播放时长。<br/>value为0时，不播放图片。<br/>value平均分配给单张图片的播放时长小于一帧时间，将导致播放异常。<br/>设置为负数时，取默认值1000毫秒。<br/>value的改变只会在下一次循环开始时生效。<br/>单位：毫秒<br/>默认值：1000 |
 
 ## fillMode
 
@@ -90,7 +90,7 @@ fixedSize(value: boolean)
 images(value: Array<ImageFrameInfo>)
 ```
 
-设置图片帧信息集合。不支持动态更新，动态更新可能会导致不可预期的行为。
+设置图片帧信息集合。不支持动态更新，否则可能导致显示错乱、帧切换异常或内存上涨等问题（该属性按非动态更新设计，运行时修改不保证生效）。
 
 **起始版本：** 7
 
@@ -106,7 +106,7 @@ images(value: Array<ImageFrameInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;ImageFrameInfo&gt; | 是 | 设置图片帧信息集合。每一帧的帧信息(ImageFrameInfo)包含图片路径、图片大小、图片位置和图片播放时长信息，详见[ImageFrameInfo](../../../reference/apis-arkui/arkui-ts/ts-basic-components-imageanimator.md#imageframeinfo对象说明)对象说明。<br/>默认值：[] <br/> **说明：** 传入数组的内容过大时，内存占用会随之升高。此内存由开发者自行控制。因此，开发者在传入数据前，请充分评估内存消耗情况，以避免内存不足等问题。 |
+| value | Array&lt;ImageFrameInfo&gt; | 是 | 设置图片帧信息集合。每一帧的帧信息(ImageFrameInfo)包含图片路径、图片大小、图片位置和图片播放时长信息，详见[ImageFrameInfo](arkts-arkui-imageframeinfo-i.md) 。<br/>默认值：[] <br/> **说明：** 传入数组的内容过大时，内存占用会随之升高。此内存由开发者自行控制。因此，开发者在传入数据前，请充分评估内存消耗情况，以避免内存不足等问题。 |
 
 ## iterations
 
@@ -128,7 +128,7 @@ iterations(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 默认播放一次，设置为-1时表示无限次播放，设置为小于-1的负数时取默认值。设置为浮点数时，数值向下取整。<br/>默认值：1 |
+| value | number | 是 | 默认播放一次；-1表示无限次播放，小于-1的负数取默认值1；浮点数向下取整。<br/>默认值：1 |
 
 ## monitorInvisibleArea
 
@@ -152,7 +152,7 @@ monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitorInvisibleArea | boolean | 是 | 当设置为true时，组件将基于系统的[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)可见性判定，控制组件的暂停和播放。<br/> 当组件的运行状态为[AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)的Running时，若判定组件不可见，则自动执行暂停操作；若判定为可见，则自动恢复播放。<br/>当设置为false时，组件的暂停和播放不受到onVisibleAreaChange影响。<br/>默认值：false<br/> **说明：** <br/>当该属性由true动态修改为false时，组件将依据当前的[AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)状态进行处理。<br/> 例如，若当前状态为Running且因[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)的不可见回调暂停，则在属性由true改为false后，组件会从上次暂停的位置重新开始播放。<br/>由该属性导致的不可见暂停和可见暂停操作不会改变用户设置的[state](ImageAnimatorAttribute#state)值。 |
+| monitorInvisibleArea | boolean | 是 | true时，组件基于系统的[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)可见性判定控制暂停和播放；当组件的运行状态为[AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)的Running时，若判定不可见则自动暂停，若判定可见则自动恢复播放。false时，组件的暂停和播放不受onVisibleAreaChange影响。<br/>默认值：false <br/> **说明：** <br/>当该属性由true动态修改为false时，组件将依据当前的[AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)状态进行处理。<br/> 例如，若当前状态为Running且因[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)的不可见回调暂停，则在属性由true改为false后，组件会从上次暂停的位置重新开始播放。<br/>由该属性导致的不可见暂停和可见播放操作不会改变用户设置的[state](ImageAnimatorAttribute#state)值。 |
 
 ## onCancel
 
@@ -160,7 +160,7 @@ monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 onCancel(event: () => void)
 ```
 
-状态回调，动画返回最初状态时触发。
+状态回调，动画取消时触发。当state被设置为[AnimationStatus.Initial](../arkts-apis/arkts-arkui-animationstatus-e.md)时触发；触发后图片显示回到第一帧（正播）或最后一帧（逆播）。与[onFinish](ImageAnimatorAttribute#onFinish)的区别在于：onCancel对应回到Initial初始状态，onFinish对应动画自然结束或停止（Stopped）状态。
 
 **起始版本：** 7
 
@@ -176,7 +176,7 @@ onCancel(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () =&gt; void | 是 | 状态回调，动画返回最初状态时触发。 |
+| event | () =&gt; void | 是 | 状态回调，动画取消时触发。当state被设置为AnimationStatus.Initial时触发；触发后图片显示回到第一帧（正播）或最后一帧（逆播）。 |
 
 ## onFinish
 
@@ -184,7 +184,7 @@ onCancel(event: () => void)
 onFinish(event: () => void)
 ```
 
-状态回调，动画播放完成时或者停止播放时触发。
+状态回调，动画播放完成时（iterations设置的轮次全部播完且动画自然结束）或者停止播放时（state被切换为[AnimationStatus.Stopped](../arkts-apis/arkts-arkui-animationstatus-e.md)）触发。当动画处于[AnimationStatus.Initial](../arkts-apis/arkts-arkui-animationstatus-e.md)状态时返回初始状态不会触发该事件，对应触发的是onCancel。
 
 **起始版本：** 7
 
@@ -200,7 +200,7 @@ onFinish(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () =&gt; void | 是 | 状态回调，动画播放完成时或者停止播放时触发。 |
+| event | () =&gt; void | 是 | 状态回调，动画播放完成时（iterations轮次全部播完且动画自然结束）或者停止播放时（state被切换为AnimationStatus.Stopped）触发。 |
 
 ## onPause
 
@@ -295,7 +295,7 @@ preDecode(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 预解码的图片数量。例如，设置为2时，播放当前页时会提前加载后面两张图片至缓存，以提升性能。<br/>默认值：0 |
+| value | number | 是 | 预解码的图片数量。例如，设置为2时，播放当前帧时会提前加载后面两张图片至缓存，以提升性能。<br/>默认值：0 |
 
 ## reverse
 
@@ -319,7 +319,7 @@ reverse(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 播放方向。<br/>false表示从第1张图片播放到最后1张图片，true表示从最后1张图片播放到第1张图片。<br/>默认值：false |
+| value | boolean | 是 | 播放方向。<br/>false表示从第1张图片播放到最后1张图片，true表示从最后1张图片播放到第1张图片。<br/>动画结束后保留哪一帧还与[fillMode](ImageAnimatorAttribute#fillMode)属性有关，详见fillMode说明。<br/>默认值：false |
 
 ## state
 
@@ -343,5 +343,5 @@ state(value: AnimationStatus)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | 是 | 默认为初始状态，用于控制播放状态。<br/>默认值：AnimationStatus.Initial |
+| value | [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md) | 是 | 用于控制播放状态。<br/>默认值：AnimationStatus.Initial |
 

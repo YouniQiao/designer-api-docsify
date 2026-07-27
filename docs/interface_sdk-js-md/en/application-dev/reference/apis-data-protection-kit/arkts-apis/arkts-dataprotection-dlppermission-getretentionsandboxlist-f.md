@@ -95,8 +95,8 @@ This API is used to query the sandbox retention information of a specified appli
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getRetentionSandboxList("bundleName", (err, sandboxList) => {
-  if (err != undefined) {
-    console.error('getRetentionSandboxList error,', err.code, err.message);
+  if (err) {
+    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('sandboxList', JSON.stringify(sandboxList));
   }
@@ -113,7 +113,7 @@ function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxI
 
 Obtains the sandbox applications in the retention state of an application. This API uses an asynchronous callback to return the result.
 
-This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.
+This API is used to query the sandbox retention information of a specified application, so that the sandbox environment in the retention state can be checked or managed.This API can be called only in non-DLP sandbox applications.
 
 **Since:** 10
 
@@ -142,10 +142,10 @@ This API is used to query the sandbox retention information of a specified appli
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
-  if (err != undefined) {
+  if (err) {
     console.error('getRetentionSandboxList error,', err.code, err.message);
   } else {
-    console.info('res', JSON.stringify(retentionSandboxList));
+    console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
   }
 }); // Obtain the sandbox retention information.
 

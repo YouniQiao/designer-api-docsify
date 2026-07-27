@@ -28,3 +28,11 @@ function startTrace(name: string, taskId: number, expectedTime?: number): void
 | taskId | number | 是 | 时间片跟踪任务id。 |
 | expectedTime | number | 否 | 期望的耗时时间（单位：ms）。设置该值后，系统会在实际执行时间超过期望值时产生性能警告。可选，默认为空表示不产生警告。 |
 
+**示例：**
+
+```TypeScript
+bytrace.startTrace("myTestFunc", 1);
+bytrace.startTrace("myTestFunc", 1, 5); // 从startTrace到finishTrace流程的期望耗时为5ms
+
+```
+

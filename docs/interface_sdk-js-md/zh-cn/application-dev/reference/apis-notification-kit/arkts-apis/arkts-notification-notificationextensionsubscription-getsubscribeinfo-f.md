@@ -43,7 +43,7 @@ function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>
 notificationExtensionSubscription.getSubscribeInfo().then((data: notificationExtensionSubscription.NotificationExtensionSubscriptionInfo[]) => {
   console.info(`getSubscribeInfo successfully. Data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`getSubscribeInfo fail: ${JSON.stringify(err)}`);
+  console.error(`getSubscribeInfo fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

@@ -51,18 +51,17 @@ function isAppRunning(bundleName: string, appCloneIndex?: number): Promise<boole
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let bundleName = "ohos.samples.etsclock";
+  let bundleName = 'ohos.samples.etsclock';
   appManager.isAppRunning(bundleName).then((data: boolean) => {
-      hilog.info(0x0000, 'testTag', `data: ${JSON.stringify(data)}`);
+      console.info(`data: ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', `isAppRunning error, code: ${err.code}, msg:${err.message}`);
-    })
+      console.error(`isAppRunning error, code: ${err.code}, msg:${err.message}`);
+    });
 } catch (err) {
-  hilog.error(0x0000, 'testTag', `isAppRunning error, code: ${err.code}, msg:${err.message}`);
+  console.error(`isAppRunning error, code: ${err.code}, msg:${err.message}`);
 }
 
 ```

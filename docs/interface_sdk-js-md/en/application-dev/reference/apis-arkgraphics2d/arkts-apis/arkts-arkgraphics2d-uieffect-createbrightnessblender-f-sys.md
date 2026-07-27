@@ -39,6 +39,7 @@ Create a BrightnessBlender, which is used to adjust the brightness of UI compone
 **Example**
 
 ```TypeScript
+// Create a BrightnessBlender instance to add a brightening effect to a component.
 let blender : uiEffect.BrightnessBlender =
   uiEffect.createBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
     positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})

@@ -52,8 +52,8 @@ let optionIndex: number = 1;
 scan.setScanAutoOption(scannerId, optionIndex).then(() => {
     console.info('set scan auto option success');
 }).catch((error: BusinessError) => {
-    console.error('set scan auto option failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to set scan auto option. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

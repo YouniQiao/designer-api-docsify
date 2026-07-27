@@ -62,7 +62,7 @@ let operationInfo: notificationSubscribe.OperationInfo = {
 notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
   console.info("distributeOperation success");
 }).catch((err: BusinessError) => {
-  console.error(`distributeOperation fail: ${JSON.stringify(err)}`);
+  console.error(`distributeOperation fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

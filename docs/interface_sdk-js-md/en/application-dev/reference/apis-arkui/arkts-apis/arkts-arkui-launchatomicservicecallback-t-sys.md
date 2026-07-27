@@ -4,7 +4,7 @@
 export declare type LaunchAtomicServiceCallback = (appId: string, options?: AtomicServiceOptions) => void
 ```
 
-Callback for launch atomicservice.
+Triggered when an atomic service is launched.
 
 **Since:** 12
 
@@ -18,6 +18,6 @@ Callback for launch atomicservice.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | appId of atomicservice.  |
-| options | [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | No | options that could be empty.  |
+| appId | string | Yes | App ID for the atomic service.  |
+| options | [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | No | Parameters for launching the atomic service.  |
 

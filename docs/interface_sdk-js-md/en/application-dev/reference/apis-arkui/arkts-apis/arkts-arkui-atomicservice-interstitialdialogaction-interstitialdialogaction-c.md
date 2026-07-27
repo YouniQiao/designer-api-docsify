@@ -1,6 +1,6 @@
 # InterstitialDialogAction
 
-Declare dialog action.
+The **InterstitialDialogAction** component is a dialog box used in atomic services to temporarily display information that requires user attention or actions to be taken while maintaining the current context. Users can trigger corresponding actions by clicking different areas of the dialog box.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from
 closeDialog(): void
 ```
 
-Execute a dialog close event.
+Closes the dialog box.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Execute a dialog close event.
 constructor(dialogOptions: DialogOptions)
 ```
 
-The constructor transfers parameter settings.
+A constructor used to create an **InterstitialDialogAction** instance.
 
 **Since:** 12
 
@@ -58,7 +58,7 @@ The constructor transfers parameter settings.
 openDialog(): void
 ```
 
-Execute a dialog open event.
+Opens the dialog box.
 
 **Since:** 12
 

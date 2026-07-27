@@ -51,7 +51,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 appManager.getRunningProcessInformation().then((data) => {
   console.info(`The running process information is: ${JSON.stringify(data)}`);
 }).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
+  console.error(`code: ${error.code}, msg:${error.message}`);
 });
 
 ```
@@ -101,7 +101,7 @@ import { appManager } from '@kit.AbilityKit';
 
 appManager.getRunningProcessInformation((err, data) => {
   if (err) {
-    console.error(`getRunningProcessInformation fail, err: ${JSON.stringify(err)}`);
+    console.error(`getRunningProcessInformation fail, code: ${err.code}, msg:${err.message}`);
   } else {
     console.info(`The running process information is: ${JSON.stringify(data)}`);
   }

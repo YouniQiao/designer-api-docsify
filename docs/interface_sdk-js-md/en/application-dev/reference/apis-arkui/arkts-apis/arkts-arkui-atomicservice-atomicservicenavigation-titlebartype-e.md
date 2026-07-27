@@ -1,6 +1,6 @@
 # TitleBarType
 
-Title bar types.
+Enumerates the title bar types. The default type is **ROUND_ICON**.
 
 **Since:** 18
 
@@ -14,7 +14,7 @@ Title bar types.
 SQUARED_ICON = 1
 ```
 
-Set title bar type with squared icon.
+Square icon style.
 
 **Since:** 18
 
@@ -30,7 +30,7 @@ Set title bar type with squared icon.
 ROUND_ICON = 2
 ```
 
-Set title bar type with round icon.
+Round icon style.
 
 **Since:** 18
 
@@ -46,7 +46,7 @@ Set title bar type with round icon.
 DRAWER = 3
 ```
 
-Set title bar type with drawer.
+Drawer style.
 
 **Since:** 18
 

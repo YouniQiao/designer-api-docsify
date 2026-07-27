@@ -42,6 +42,7 @@ function requestRight(deviceName: string): Promise<boolean>
 **示例：**
 
 ```TypeScript
+import {BusinessError} from '@kit.BasicServicesKit';
 function requestRight() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {

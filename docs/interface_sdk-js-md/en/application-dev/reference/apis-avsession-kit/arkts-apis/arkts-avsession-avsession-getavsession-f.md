@@ -45,6 +45,7 @@ Get an AVSession instance if already created.
 
 ```TypeScript
 import { avSession } from '@kit.AVSessionKit';
+
 @Entry
 @Component
 struct Index {

@@ -139,7 +139,7 @@ let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveRea
 notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
   console.info("remove success");
 }).catch((err: BusinessError) => {
-  console.error(`remove fail: ${JSON.stringify(err)}`);
+  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```
@@ -311,7 +311,7 @@ let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveRea
 notificationSubscribe.remove(hashCode, reason).then(() => {
   console.info("remove success");
 }).catch((err: BusinessError) => {
-  console.error(`remove fail: ${JSON.stringify(err)}`);
+  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```
@@ -369,7 +369,7 @@ let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveRea
 notificationSubscribe.remove(hashCodes, reason).then(() => {
   console.info("remove success");
 }).catch((err: BusinessError) => {
-  console.error(`remove fail: ${JSON.stringify(err)}`);
+  console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

@@ -33,7 +33,7 @@ DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ciphertextFd | number | 是 | 加密文件的fd。取值范围为[0, 2<sup>31</sup>-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2<sup>31</sup>-1时，fd的值被截断。 |
-| appId | string | 是 | 调用方身份。最小8字节，最大1024字节。超出范围时返回错误码401。 |
+| appId | string | 是 | 调用方身份。最小8字节，最大1024字节。超出范围时抛出错误码401。 |
 
 **返回值：**
 
@@ -81,6 +81,7 @@ async function ExampleFunction() {
 
   file = fileIo.openSync(uri).fd; // file通过文件打开获取fd
   dlpFile = await dlpPermission.openDLPFile(file, appId); // 打开DLP文件。
+  await dlpFile?.closeDLPFile(); // 关闭DLP对象。
 
   if (file) {
     fileIo.closeSync(file);
@@ -115,7 +116,7 @@ DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ciphertextFd | number | 是 | 加密文件的fd。取值范围为[0, 2<sup>31</sup>-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2<sup>31</sup>-1时，fd的值被截断。 |
-| appId | string | 是 | 调用方身份。最小8字节，最大1024字节。超出范围时返回错误码401。 |
+| appId | string | 是 | 调用方身份。最小8字节，最大1024字节。超出范围时抛出错误码401。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DLPFile&gt; | 是 | 回调函数。用于接收打开DLP文件的结果。回调参数包括：err（错误对象，成功时为undefined）和res（DLPFile对象，表示打开的DLP文件）。 |
 
 **错误码：**
@@ -155,12 +156,13 @@ let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
 appId = data.signatureInfo.appId; // appId通过应用包信息获取
 
 file = fileIo.openSync(uri).fd; // file通过文件打开获取fd
-dlpPermission.openDLPFile(file, appId, (err, res) => { // 打开DLP文件。
-  if (err !== undefined) {
+dlpPermission.openDLPFile(file, appId, async (err, res) => { // 打开DLP文件。
+  if (err) {
     console.error('openDLPFile error,', err.code, err.message);
   } else {
     console.info('res', JSON.stringify(res));
   }
+  await res?.closeDLPFile(); // 关闭DLP对象。
   if (file) {
     fileIo.closeSync(file);
   }

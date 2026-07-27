@@ -50,7 +50,7 @@ CALL_ESIM_CARD_0 = 2
 
 Haptics in incoming call scenario for esim card 0.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,7 +68,7 @@ CALL_ESIM_CARD_1 = 3
 
 Haptics in incoming call scenario for esim card 1.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,7 +118,7 @@ TEXT_MESSAGE_ESIM_CARD_0 = 22
 
 Haptics in text message scenario for esim card 0.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,7 +136,7 @@ TEXT_MESSAGE_ESIM_CARD_1 = 23
 
 Haptics in text message scenario for esim card 1.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 

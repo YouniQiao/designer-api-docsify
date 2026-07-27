@@ -54,10 +54,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // 传入读取的图片数据
-function imageBlur(imageData: ArrayBuffer): Promise<image.PixelMap> {
+function imageBlur(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // 创建图像源
-    let imageSource = image.createImageSource(imageData);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // 设置模糊半径
       let radius = 5;
@@ -151,10 +151,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // 传入读取的图片数据
-function imageBlur(Image: ArrayBuffer): Promise<image.PixelMap> {
+function imageBlur(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // 创建图像源
-    let imageSource = image.createImageSource(Image);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // 设置模糊半径
       let radius = 30;
@@ -248,10 +248,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // 传入读取的图片数据
-function imageBrightness(imageData: ArrayBuffer): Promise<image.PixelMap> {
+function imageBrightness(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // 创建图像源
-    let imageSource = image.createImageSource(imageData);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // 设置亮度值
       let bright = 0.5;
@@ -341,7 +341,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 // 创建用于图像效果的buffer
 const colorBuffer = new ArrayBuffer(96);
 // 设置图像初始化选项
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
@@ -402,7 +402,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 // 创建用于图像效果的buffer
 const colorBuffer = new ArrayBuffer(96);
 // 设置图像初始化选项
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
@@ -454,7 +454,7 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 
 const colorBuffer = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
@@ -500,10 +500,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // 传入读取的图片数据
-function imageGrayscale(imageData: ArrayBuffer): Promise<image.PixelMap> {
+function imageGrayscale(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // 创建图像源
-    let imageSource = image.createImageSource(imageData);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // 创建Filter实例
       let headFilter = effectKit.createEffect(pixelMap);
@@ -585,10 +585,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // 传入读取的图片数据
-function imageInvert(imageData: ArrayBuffer): Promise<image.PixelMap> {
+function imageInvert(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // 创建图像源
-    let imageSource = image.createImageSource(imageData);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // 创建Filter实例
       let headFilter = effectKit.createEffect(pixelMap);
@@ -682,10 +682,10 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // 传入读取的图片数据
-function imageColorFilter(imageData: ArrayBuffer): Promise<image.PixelMap> {
+function imageColorFilter(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise(async (resolve) => {
     // 创建图像源
-    let imageSource = image.createImageSource(imageData);
+    let imageSource = image.createImageSource(imageBuffer);
     await imageSource.createPixelMap().then(async (pixelMap: image.PixelMap) => {
       // 定义颜色矩阵
       let colorMatrix: Array<number> = [

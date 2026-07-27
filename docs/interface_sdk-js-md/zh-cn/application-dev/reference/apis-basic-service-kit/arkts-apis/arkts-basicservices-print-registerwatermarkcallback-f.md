@@ -40,17 +40,16 @@ function registerWatermarkCallback(callback: WatermarkCallback): void
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => {
     console.info('Watermark callback triggered, jobId: ' + jobId + ', fd: ' + fd);
-}
+};
 
 try {
     print.registerWatermarkCallback(watermarkCallback);
     console.info('registerWatermarkCallback success');
 } catch (error) {
-    console.error('registerWatermarkCallback error: ' + JSON.stringify(error));
+    console.error(`Failed to registerWatermarkCallback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```

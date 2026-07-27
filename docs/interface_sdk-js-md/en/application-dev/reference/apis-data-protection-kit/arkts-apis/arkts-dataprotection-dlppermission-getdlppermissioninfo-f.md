@@ -93,8 +93,8 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the application is running in a sandbox.
   if (inSandbox) {
     dlpPermission.getDLPPermissionInfo((err, permissionInfo) => { 
-      if (err != undefined) {
-        console.error('getDLPPermissionInfo error', err.code, err.message);
+      if (err) {
+        console.error(`Failed to get DLP permission info. Code: ${err.code}, message: ${err.message}`);
       } else {
         console.info('permissionInfo', JSON.stringify(permissionInfo));
       }

@@ -12,7 +12,10 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getControlledAppLists(): Promise<Array<string>>
 ```
 
-Obtain the list of applications that are subject to enterprise DLP control for the current user.
+Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result.
+> **NOTE**  
+> This API can only be used to query the list of applications controlled by enterprise DLP, which is set using  
+> [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setcontrolledapplists).
 
 **Since:** 26.0.0
 
@@ -28,7 +31,7 @@ Obtain the list of applications that are subject to enterprise DLP control for t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise that returns the appIdentifiers of controlled application for the current user. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of applications controlled by enterprise DLP for the current user. |
 
 **Error codes:**
 
@@ -37,4 +40,20 @@ Obtain the list of applications that are subject to enterprise DLP control for t
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+
+**Example**
+
+```TypeScript
+import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+dlpPermission.getControlledAppLists().then((res) => {
+  console.info('res', JSON.stringify(res));
+}).catch((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+}).finally(() => {
+  console.info("Completed getControlledAppLists operation.");
+})
+
+```
 

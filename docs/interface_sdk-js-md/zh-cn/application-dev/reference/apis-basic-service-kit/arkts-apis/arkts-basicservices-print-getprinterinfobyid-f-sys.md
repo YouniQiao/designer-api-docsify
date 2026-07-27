@@ -54,8 +54,8 @@ let printerId : string = '1';
 print.getPrinterInfoById(printerId).then((printerInfo : print.PrinterInfo) => {
     console.info('getPrinterInfoById data : ' + JSON.stringify(printerInfo));
 }).catch((error: BusinessError) => {
-    console.error('getPrinterInfoById error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to get printer info by id. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

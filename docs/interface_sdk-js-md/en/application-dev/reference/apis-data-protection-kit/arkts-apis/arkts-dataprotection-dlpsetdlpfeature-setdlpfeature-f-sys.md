@@ -55,8 +55,8 @@ import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 
 async function exampleFunction() {
   let statusInfoResult: dlpSetDlpFeature.StatusInfoResult =
-    await dlpSetDlpFeature.setDlpFeature(dlpSetDlpFeature.DlpFeatureStatus.ENABLED_FEATURE); // Record the execution result.
-  console.info('setDlpFeature result: ', JSON.stringify(statusInfoResult));
+    await dlpSetDlpFeature.setDlpFeature(dlpSetDlpFeature.DlpFeatureStatus.ENABLED_FEATURE);
+  console.info('setDlpFeature result: ', JSON.stringify(statusInfoResult)); 
 } // Set the DLP status.
 
 exampleFunction();

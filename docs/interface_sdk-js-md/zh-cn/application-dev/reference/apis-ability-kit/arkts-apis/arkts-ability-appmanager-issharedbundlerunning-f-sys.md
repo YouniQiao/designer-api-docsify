@@ -52,7 +52,7 @@ function isSharedBundleRunning(bundleName: string, versionCode: number): Promise
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-const bundleName = "this is a bundleName";
+const bundleName = 'this is a bundleName';
 const versionCode = 1;
 
 appManager.isSharedBundleRunning(bundleName, versionCode).then((data) => {
@@ -104,7 +104,7 @@ function isSharedBundleRunning(bundleName: string, versionCode: number, callback
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
 
-const bundleName = "this is a bundleName";
+const bundleName = 'this is a bundleName';
 const versionCode = 1;
 
 appManager.isSharedBundleRunning(bundleName, versionCode, (err, data) => {

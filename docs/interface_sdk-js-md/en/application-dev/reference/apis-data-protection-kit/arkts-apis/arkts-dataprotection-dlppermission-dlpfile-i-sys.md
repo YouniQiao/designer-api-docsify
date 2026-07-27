@@ -84,7 +84,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
 
-  dlpFile?.closeDLPFile(); // Close the DLP object.
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
   if (file) {
     fileIo.closeSync(file);
   }
@@ -156,7 +156,7 @@ async function ExampleFunction() {
   file = fileIo.openSync(uri).fd;
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
   dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
-    if (err !== undefined) {
+    if (err) {
       console.error('addDLPLinkFile error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -233,7 +233,7 @@ async function ExampleFunction() {
   file = fileIo.openSync(uri).fd;
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
 
-  dlpFile?.closeDLPFile(); // Close the DLP object.
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
   if (file) {
     fileIo.closeSync(file);
   }
@@ -307,7 +307,7 @@ async function ExampleFunction() {
   file = fileIo.openSync(uri).fd;
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
   dlpFile.closeDLPFile((err, res) => {// Close the DLP file.
-    if (err !== undefined) {
+    if (err) {
       console.error('closeDLPFile error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -462,7 +462,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
   dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // Delete a link file.
-    if (err !== undefined) {
+    if (err) {
       console.error('deleteDLPLinkFile error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -546,10 +546,10 @@ async function ExampleFunction() {
   appId = data.signatureInfo.appId;
 
   file = fileIo.openSync(uri).fd;
-  destFile = fileIo.openSync('destUri').fd;
+  destFile = fileIo.openSync('file://docs/storage/Users/currentUser/Desktop/dest.txt').fd;
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
   await dlpFile.recoverDLPFile(destFile); // Recover the plaintext of a DLP file.
-  dlpFile?.closeDLPFile(); // Close the DLP object.
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
   if (file) {
     fileIo.closeSync(file);
   }
@@ -630,7 +630,7 @@ async function ExampleFunction() {
   destFile = fileIo.openSync('destUri').fd;
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
   dlpFile.recoverDLPFile(destFile, async (err, res) => { // Recover the plaintext of a DLP file.
-    if (err !== undefined) {
+    if (err) {
       console.error('recoverDLPFile error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -651,7 +651,7 @@ ExampleFunction();
 replaceDLPLinkFile(linkFileName: string): Promise<void>
 ```
 
-Replaces a link file. This API uses a promise to return the result. After the API is successfully called, the current link file is replaced with the new link file.
+Replaces a link file. This API uses a promise to return the result. After the API is successfully called, the current link file is replaced with the new link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.
 
 When you need to access a different DLP file, you can replace the link file to change the file mapping.
 
@@ -732,7 +732,7 @@ replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 
 Replaces a link file. This API uses an asynchronous callback to return the result. After the API is successfully called, the current link file is replaced with the new link file.
 
-When you need to access a different DLP file, you can replace the link file.
+When you need to access a different DLP file, you can replace the link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.
 
 **Since:** 10
 
@@ -786,7 +786,7 @@ async function ExampleFunction() {
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
   await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
   dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // Replace a link file.
-    if (err !== undefined) {
+    if (err) {
       console.error('replaceDLPLinkFile error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -864,7 +864,7 @@ async function ExampleFunction() {
   await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
   await dlpFile.resumeFuseLink(); // Resume read/write on the link file.
   
-  dlpFile?.closeDLPFile(); // Close the DLP object.
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
   if (file) {
     fileIo.closeSync(file);
   }
@@ -937,7 +937,7 @@ async function ExampleFunction() {
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
   await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
   dlpFile.resumeFuseLink(async (err, res) => {
-    if (err !== undefined) {
+    if (err) {
       console.error('resumeFuseLink error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));
@@ -1009,10 +1009,10 @@ async function ExampleFunction() {
   appId = data.signatureInfo.appId;
 
   file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId) // Open a DLP file.
-  dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  dlpFile.stopFuseLink(); // Stop read/write on the link file.
-  dlpFile?.closeDLPFile(); // Close the DLP object.
+  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
+  await dlpFile?.closeDLPFile(); // Close the DLP object.
   if (file) {
     fileIo.closeSync(file);
   }
@@ -1084,7 +1084,7 @@ async function ExampleFunction() {
   dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
   await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
   dlpFile.stopFuseLink(async (err, res) => {
-    if (err !== undefined) {
+    if (err) {
       console.error('stopFuseLink error,', err.code, err.message);
     } else {
       console.info('res', JSON.stringify(res));

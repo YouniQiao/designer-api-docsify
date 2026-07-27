@@ -47,9 +47,12 @@ A backgroundColorEffect effect is added to the Component.
 **Example**
 
 ```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D'
 let blender : uiEffect.BrightnessBlender =
   uiEffect.createBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
     positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
+let visualEffect = uiEffect.createEffect();
+// Add the blender to the component to change the component background color.
 visualEffect.backgroundColorBlender(blender)
 
 ```
@@ -100,14 +103,14 @@ import { common2D, uiEffect } from '@kit.ArkGraphics2D'
 @Entry
 @Component
 struct Index {
-  @State point1:common2D.Point3d = {
-    x:0,y:0,z:2
+  @State borderLightPosition: common2D.Point3d = {
+    x: 0, y: 0, z: 2
   }
-  @State color1:common2D.Color = {
-    red:1,green:1,blue:1,alpha:1
+  @State borderLightColor: common2D.Color = {
+    red: 1, green: 1, blue: 1, alpha: 1
   }
-  @State lightIntensity1:number = 1
-  @State borderWidth:number = 20
+  @State lightIntensity: number = 1
+  @State borderWidth_: number = 20
 
   build() {
     Column() {
@@ -120,8 +123,9 @@ struct Index {
           .width('646px')
           .height('900px')
           .borderRadius(10)
-          .visualEffect(uiEffect.createEffect().borderLight(this.point1, this.color1, this.lightIntensity1,
-            this.borderWidth))
+          // Add 3D lighting effect to the border of a rounded rectangle component.
+          .visualEffect(uiEffect.createEffect().borderLight(this.borderLightPosition, this.borderLightColor, this.lightIntensity,
+            this.borderWidth_))
       }
       .width('100%')
       .height('55%')
@@ -176,7 +180,7 @@ Sets the color gradient effect, may blend with alpha mask.
 **Example**
 
 ```TypeScript
-import { common2D, uiEffect } from "@kit.ArkGraphics2D"
+import { common2D, uiEffect } from '@kit.ArkGraphics2D'
 
 @Entry
 @Component
@@ -184,6 +188,7 @@ struct ColorGradientExample {
   build() {
     Stack() {
       Stack() {}
+      // Adds a color gradient effect to the component.
       .visualEffect(uiEffect.createEffect()
         .colorGradient(
           [
@@ -244,6 +249,35 @@ NOTE1. This visual effect supports drawing outside the bounds of the control,but
 | --- | --- |
 | [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | - Returns the VisualEffect that the current effect have been added. |
 
+**Example**
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct Index {
+  private distortionParam: DistortionParam = {
+    topLeft: {x: 0.09, y: 0.007},
+    topRight: {x: 0.91, y: 0.007},
+    bottomRight: {x: 1.09, y: 0.702},
+    bottomLeft: {x: -0.09, y: 0.702},
+    barrelDistortion: {x: 0.551, y: 0.551, z: 0.092, w: 0.092},
+  }
+
+  build() {
+    Column() {
+      Image($r('app.media.man')).width('80%').height('80%')
+        .visualEffect(uiEffect.createEffect().distortionCollapse(this.distortionParam))
+    }
+    .justifyContent(FlexAlign.Center)
+    .height('100%')
+    .width('100%')
+  }
+}
+
+```
+
 ## liquidMaterial
 
 ```TypeScript
@@ -301,7 +335,7 @@ struct Index {
   @State tintColorB: number = 1.;
   @State tintColorA: number = 1.;
 
-  private GetMaterialVisualEffect(): uiEffect.VisualEffect {
+  private getMaterialVisualEffect(): uiEffect.VisualEffect {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
     effect.liquidMaterial({
       enable: true,
@@ -327,7 +361,7 @@ struct Index {
           .height(553 + 'px')
           .width(553 + 'px')
           .borderRadius(12)
-          .visualEffect(this.GetMaterialVisualEffect())
+          .visualEffect(this.getMaterialVisualEffect())
       }
       .backgroundEffect({
         radius: 15,

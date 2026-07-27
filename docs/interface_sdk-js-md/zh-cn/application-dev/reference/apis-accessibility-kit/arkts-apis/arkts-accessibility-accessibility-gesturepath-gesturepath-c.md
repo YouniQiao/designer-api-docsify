@@ -41,9 +41,12 @@ constructor(durationTime: number)
 **示例：**
 
 ```TypeScript
-import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePath, GesturePoint } from '@kit.AccessibilityKit';
 
 let gesturePath = new GesturePath(20);
+let startPoint = new GesturePoint(100, 100);
+let endPoint = new GesturePoint(200, 200);
+gesturePath.points = [startPoint, endPoint];
 
 ```
 

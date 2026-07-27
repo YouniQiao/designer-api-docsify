@@ -42,9 +42,27 @@ function off(type: 'accessibilityStateChange', callback?: Callback<boolean>): vo
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
 
-accessibility.off('accessibilityStateChange', (data: boolean) => {
-  console.info(`Unsubscribe accessibility state change, result: ${JSON.stringify(data)}`);
-});
+@Entry
+@Component
+struct Index {
+  callback: (data: boolean) => void = this.eventCallback;
+  eventCallback(data: boolean): void {
+    console.info(`subscribe accessibility state change, result: ${JSON.stringify(data)}`);
+  }
+
+  aboutToAppear(): void {
+    accessibility.on('accessibilityStateChange', this.callback);
+  }
+
+  aboutToDisappear(): void {
+    accessibility.off('accessibilityStateChange', this.callback);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
 
 ```
 
@@ -85,9 +103,27 @@ function off(type: 'touchGuideStateChange', callback?: Callback<boolean>): void
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
 
-accessibility.off('touchGuideStateChange', (data: boolean) => {
-  console.info(`Unsubscribe touch guide state change, result: ${JSON.stringify(data)}`);
-});
+@Entry
+@Component
+struct Index {
+  callback: (data: boolean) => void = this.eventCallback;
+  eventCallback(data: boolean): void {
+    console.info(`subscribe touch guide state change, result: ${JSON.stringify(data)}`);
+  }
+
+  aboutToAppear(): void {
+    accessibility.on('touchGuideStateChange', this.callback);
+  }
+
+  aboutToDisappear(): void {
+    accessibility.off('touchGuideStateChange', this.callback);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
 
 ```
 
@@ -128,9 +164,27 @@ function off(type: 'screenReaderStateChange', callback?: Callback<boolean>): voi
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
 
-accessibility.off('screenReaderStateChange', (data: boolean) => {
-  console.info(`Unsubscribe screen reader state change, result: ${JSON.stringify(data)}`);
-});
+@Entry
+@Component
+struct Index {
+  callback: (data: boolean) => void = this.eventCallback;
+  eventCallback(data: boolean): void {
+    console.info(`subscribe screen reader state change, result: ${JSON.stringify(data)}`);
+  }
+
+  aboutToAppear(): void {
+    accessibility.on('screenReaderStateChange', this.callback);
+  }
+
+  aboutToDisappear(): void {
+    accessibility.off('screenReaderStateChange', this.callback);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
 
 ```
 

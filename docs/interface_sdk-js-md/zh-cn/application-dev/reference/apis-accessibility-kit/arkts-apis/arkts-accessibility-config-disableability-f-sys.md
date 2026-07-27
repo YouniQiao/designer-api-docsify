@@ -48,7 +48,7 @@ function disableAbility(name: string): Promise<void>
 **示例：**
 
 ```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let name: string = 'com.ohos.example/axExtension';
@@ -56,8 +56,8 @@ let name: string = 'com.ohos.example/axExtension';
 config.disableAbility(name).then(() => {
   console.info(`Succeeded in disabling ability, name is ${name}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to disable ability, Code is ${err.code}, message is ${err.message}`);
-})
+  console.error(`Failed to disable ability. Code: ${err.code}, message: ${err.message}`);
+});
 
 ```
 
@@ -99,14 +99,14 @@ function disableAbility(name: string, callback: AsyncCallback<void>): void
 **示例：**
 
 ```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let name: string = 'com.ohos.example/axExtension';
 
 config.disableAbility(name, (err: BusinessError) => {
   if (err) {
-    console.error(`failed to disable ability, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to disable ability. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info(`Succeeded in disabling, name is ${name}`);

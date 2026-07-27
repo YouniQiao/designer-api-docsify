@@ -45,7 +45,7 @@ Obtains all applications that have requested the ohos.permission.SUBSCRIBE_NOTIF
 notificationExtensionSubscription.getAllSubscriptionBundles().then((data: notificationExtensionSubscription.BundleOption[]) => {
   console.info(`getAllSubscriptionBundles successfully. Data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`getAllSubscriptionBundles fail: ${JSON.stringify(err)}`);
+  console.error(`getAllSubscriptionBundles fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

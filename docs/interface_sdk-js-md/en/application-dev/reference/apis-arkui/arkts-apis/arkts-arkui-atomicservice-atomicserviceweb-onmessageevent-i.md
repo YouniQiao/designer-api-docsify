@@ -1,6 +1,6 @@
 # OnMessageEvent
 
-Message event after page is back or destroyed if postMessage() is called in H5 page.
+Represents the callback invoked when the page is navigated back or destroyed.
 
 **Since:** 12
 

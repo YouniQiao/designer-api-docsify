@@ -52,8 +52,8 @@ let optionIndex: number = 1;
 scan.getScannerCurrentSetting(scannerId, optionIndex).then((value: scan.ScannerOptionValue) => {
     console.info('get scanner current setting success: ' + JSON.stringify(value));
 }).catch((error: BusinessError) => {
-    console.error('get scanner current setting failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to get scanner current setting. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

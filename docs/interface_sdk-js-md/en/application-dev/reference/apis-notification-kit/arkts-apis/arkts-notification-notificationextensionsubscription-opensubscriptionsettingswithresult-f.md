@@ -55,12 +55,12 @@ try {
   let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
   notificationExtensionSubscription.openSubscriptionSettingsWithResult(context).then((data) => {
     console.info(`openSubscriptionSettingsWithResult success, data: ${JSON.stringify(data)}`);
-  }).catch((e:Error) => {
+  }).catch((e: Error) => {
     let error = e as BusinessError
-    console.error(`failed to call openSubscriptionSettingsWithResult ${JSON.stringify(error)}`)
+    console.error(`failed to call openSubscriptionSettingsWithResult, code is ${error.code}, message is ${error.message}`)
   });
 } catch (error) {
-  console.error(`failed to call openSubscriptionSettingsWithResult ${JSON.stringify(error)}`)
+  console.error(`failed to call openSubscriptionSettingsWithResult, code is ${error.code}, message is ${error.message}`)
 }
 
 ```

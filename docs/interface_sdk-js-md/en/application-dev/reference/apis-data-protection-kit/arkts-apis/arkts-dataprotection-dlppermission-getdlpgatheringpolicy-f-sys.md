@@ -97,7 +97,7 @@ This API is used to obtain the DLP sandbox gathering policy of the current syste
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
-  if (err !== undefined) {
+  if (err) {
     console.error('getDLPGatheringPolicy error,', err.code, err.message);
   } else {
     console.info('gatheringPolicy: ', JSON.stringify(gatheringPolicy));

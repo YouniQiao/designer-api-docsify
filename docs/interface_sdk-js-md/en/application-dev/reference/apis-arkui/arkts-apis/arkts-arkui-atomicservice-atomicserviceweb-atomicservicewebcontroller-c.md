@@ -1,6 +1,6 @@
 # AtomicServiceWebController
 
-Provides methods for controlling the AtomicServiceWeb controller.
+Implements an **AtomicServiceWebController** object for controlling the behavior of the **AtomicServiceWeb** component. An **AtomicServiceWebController** can control only one **AtomicServiceWeb** component, and the APIs on the **AtomicServiceWebController** can be called only after it has been bound to the target **AtomicServiceWeb** component.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 accessBackward(): boolean
 ```
 
-Checks whether the web page can go back.
+Checks whether going to the previous page can be performed on this page.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Checks whether the web page can go back.
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the web page can go back else false. |
+| boolean | Returns **true** if going to the previous page can be performed on the current page; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -50,7 +50,7 @@ Checks whether the web page can go back.
 accessForward(): boolean
 ```
 
-Checks whether the web page can go forward.
+Checks whether going to the next page can be performed on this page.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Checks whether the web page can go forward.
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the web page can go forward else false. |
+| boolean | Returns **true** if going to the next page can be performed on the current page; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -78,7 +78,7 @@ Checks whether the web page can go forward.
 accessStep(step: number): boolean
 ```
 
-Checks whether the web page can go back or forward the given number of steps.
+Checks whether this page can navigate forward or backward by the specified number of steps.
 
 **Since:** 12
 
@@ -92,13 +92,13 @@ Checks whether the web page can go back or forward the given number of steps.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| step | number | Yes | The number of steps. |
+| step | number | Yes | Number of the steps to take. A positive number means to go forward, and a negative number means to go backward. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | True if the web page can go back else false. |
+| boolean | Whether the page can navigate forward or backward by the specified number of steps. Returns **true** if navigation can be performed on the current page; returns **false** otherwise. |
 
 **Error codes:**
 
@@ -113,7 +113,7 @@ Checks whether the web page can go back or forward the given number of steps.
 backward(): void
 ```
 
-Goes back in the history of the web page.
+Moves to the previous page based on the history stack. This API is generally used together with [accessBackward](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md#accessbackward).
 
 **Since:** 12
 
@@ -135,7 +135,7 @@ Goes back in the history of the web page.
 forward(): void
 ```
 
-Goes forward in the history of the web page.
+Moves to the next page based on the history stack. This API is generally used together with [accessForward](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md#accessforward).
 
 **Since:** 12
 
@@ -157,7 +157,7 @@ Goes forward in the history of the web page.
 getCustomUserAgent(): string
 ```
 
-Get custom user agent.
+Obtains a custom user agent.
 
 **Since:** 12
 
@@ -171,7 +171,7 @@ Get custom user agent.
 
 | Type | Description |
 | --- | --- |
-| string | Get custom User agent information. |
+| string | Information about the custom user agent. For details about the specifications and usage scenarios, see [Developing User-Agent](../../../web/web-default-userAgent.md). |
 
 **Error codes:**
 
@@ -185,7 +185,7 @@ Get custom user agent.
 getUserAgent(): string
 ```
 
-Gets the default user agent.
+Obtains the default user agent of this web page.
 
 **Since:** 12
 
@@ -199,7 +199,7 @@ Gets the default user agent.
 
 | Type | Description |
 | --- | --- |
-| string | Return user agent information. |
+| string | Default user agent. For details about the specifications and usage scenarios, see [Developing User-Agent](../../../web/web-default-userAgent.md). |
 
 **Error codes:**
 
@@ -213,7 +213,7 @@ Gets the default user agent.
 loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 ```
 
-Loads the URL.
+Loads a specified URL.
 
 **Since:** 12
 
@@ -227,8 +227,8 @@ Loads the URL.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string \| Resource | Yes | The URL to load. |
-| headers | Array&lt;WebHeader&gt; | No | Additional HTTP request header for URL. |
+| url | string \| Resource | Yes | URL to load. |
+| headers | Array&lt;WebHeader&gt; | No | Additional HTTP request header of the URL. |
 
 **Error codes:**
 
@@ -245,7 +245,7 @@ Loads the URL.
 refresh(): void
 ```
 
-Refreshes the current URL.
+Refreshes the web page.
 
 **Since:** 12
 
@@ -267,7 +267,14 @@ Refreshes the current URL.
 setCustomUserAgent(userAgent: string): void
 ```
 
-Set custom user agent.
+Sets a custom user agent, which will override the default user agent.
+
+Set the user agent in the **onControllerAttached** callback to ensure that it takes effect. For details about the setting, see the example. Avoid setting the user agent in **onLoadIntercept**. Otherwise, the setting may fail occasionally.
+> **NOTE**  
+>  
+> If a URL is set for the **Web** component **src** and **UserAgent** is not set in the **onControllerAttached**  
+> callback, calling **setCustomUserAgent** may cause mismatches between the loaded page and the intended user  
+> agent.
 
 **Since:** 12
 
@@ -281,7 +288,7 @@ Set custom user agent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userAgent | string | Yes | User custom agent information. |
+| userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getUserAgent](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md#getuseragent) and then customize the obtained user agent. |
 
 **Error codes:**
 

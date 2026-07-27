@@ -1,12 +1,12 @@
 # AtomicServiceTabs
 
-Defines AtomicServiceTabs.
+**AtomicServiceTabs** is an advanced component designed to streamline the use of the **Tabs** component by limiting customization options. It restricts the display to a maximum of five tabs, with fixed styles, positions, and sizes for the tabs.
 
 **Since:** 12
 
 **Decorator:** @Component
 
-<!--Device-unnamed-export declare struct AtomicServiceTabs--><!--Device-unnamed-export declare struct AtomicServiceTabs-End-->
+<!--Device-unnamed-/** Copyright (C) 2024 Huawei Device Co., Ltd.* Licensed under the Apache License, Version 2.0 (the "License");* you may not use this file except in compliance with the License.* You may obtain a copy of the License at** http://www.apache.org/licenses/LICENSE-2.0** Unless required by applicable law or agreed to in writing, software* distributed under the License is distributed on an "AS IS" BASIS,* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.* See the License for the specific language governing permissions and* limitations under the License.*/export declare struct AtomicServiceTabs--><!--Device-unnamed-/** Copyright (C) 2024 Huawei Device Co., Ltd.* Licensed under the Apache License, Version 2.0 (the "License");* you may not use this file except in compliance with the License.* You may obtain a copy of the License at** http://www.apache.org/licenses/LICENSE-2.0** Unless required by applicable law or agreed to in writing, software* distributed under the License is distributed on an "AS IS" BASIS,* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.* See the License for the specific language governing permissions and* limitations under the License.*/export declare struct AtomicServiceTabs-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,7 +100,7 @@ Sets the index of tabs.
 layoutMode?: LayoutMode
 ```
 
-Set the layout mode of the bottom tab bar
+Sets the layout mode of the bottom tab bar
 
 **Type:** LayoutMode
 

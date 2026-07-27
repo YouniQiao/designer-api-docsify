@@ -88,7 +88,7 @@ try {
     dlpPermission.setEnterprisePolicy(enterprisePolicy);
     console.info('set enterprise policy success'); 
 } catch (err) { 
-    console.error('error:' + err.code + err.message); // Throw an error if the operation fails.
+    console.error(`Failed to set enterprise policy. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

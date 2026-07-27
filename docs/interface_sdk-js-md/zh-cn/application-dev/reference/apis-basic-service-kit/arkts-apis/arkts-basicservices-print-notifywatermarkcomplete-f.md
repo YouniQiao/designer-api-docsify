@@ -41,7 +41,6 @@ function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): 
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => {
     console.info('Watermark callback triggered, jobId: ' + jobId + ', fd: ' + fd);
@@ -51,15 +50,15 @@ let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => 
         print.notifyWatermarkComplete(jobId, print.WatermarkHandleResult.WATERMARK_HANDLE_SUCCESS);
         console.info('notifyWatermarkComplete success');
     } catch (error) {
-        console.error('notifyWatermarkComplete error: ' + JSON.stringify(error));
+        console.error(`Failed to notifyWatermarkComplete. Code: ${error.code}, message: ${error.message}`);
     }
-}
+};
 
 try {
     print.registerWatermarkCallback(watermarkCallback);
     console.info('registerWatermarkCallback success');
 } catch (error) {
-    console.error('registerWatermarkCallback error: ' + JSON.stringify(error));
+    console.error(`Failed to registerWatermarkCallback. Code: ${error.code}, message: ${error.message}`);
 }
 
 ```

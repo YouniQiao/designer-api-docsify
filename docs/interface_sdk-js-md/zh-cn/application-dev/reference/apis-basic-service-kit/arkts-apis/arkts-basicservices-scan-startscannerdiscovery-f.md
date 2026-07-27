@@ -43,8 +43,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 scan.startScannerDiscovery().then(() => {
     console.info('start scanner discovery success');
 }).catch((error: BusinessError) => {
-    console.error('start scanner discovery failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to start scanner discovery. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

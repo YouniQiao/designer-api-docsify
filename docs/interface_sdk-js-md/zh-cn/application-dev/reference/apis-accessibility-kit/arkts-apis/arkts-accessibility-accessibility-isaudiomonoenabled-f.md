@@ -41,7 +41,7 @@ struct Index {
     accessibility.isAudioMonoEnabled().then((data: boolean) => {
       console.info(`success data:isAudioMonoEnabled : ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      console.error(`failed to isAudioMonoEnabled, Code is ${err.code}, message is ${err.message}`);
+      console.error(`Failed to isAudioMonoEnabled. Code:${err.code}, message:${err.message}`);
     });
   }
 

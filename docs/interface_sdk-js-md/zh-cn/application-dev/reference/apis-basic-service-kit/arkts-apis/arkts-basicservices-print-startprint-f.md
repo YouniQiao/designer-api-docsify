@@ -54,21 +54,21 @@ let file: fileIo.File;
 file = fileIo.openSync(tempPath, 4);
 
 let printJobData: print.PrintJobData = {
-    printerId: "printerId",
-    jobName: "jobName",
+    printerId: 'printerId', // printerId可通过on('printerChange')回调获取
+    jobName: 'jobName',
     documentFormat: print.PrintDocumentFormat.DOCUMENT_FORMAT_AUTO,
     docFlavor: print.DocFlavor.FILE_DESCRIPTOR,
     copyNumber: 1,
     isLandscape: false,
     colorMode: print.PrintColorMode.COLOR_MODE_MONOCHROME,
     duplexMode: print.PrintDuplexMode.DUPLEX_MODE_NONE,
-    pageSize: {id: "ISO_A4", name: "ISO_A4", width:8268, height: 11692},
+    pageSize: {id: 'ISO_A4', name: 'ISO_A4', width: 8268, height: 11692},
     fdList: [file.fd],
-}
+};
 print.startPrint(printJobData).then(() => {
     console.info('start print success');
 }).catch((error: BusinessError) => {
-    console.error('failed to print because : ' + JSON.stringify(error));
+    console.error(`Failed to startPrint. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

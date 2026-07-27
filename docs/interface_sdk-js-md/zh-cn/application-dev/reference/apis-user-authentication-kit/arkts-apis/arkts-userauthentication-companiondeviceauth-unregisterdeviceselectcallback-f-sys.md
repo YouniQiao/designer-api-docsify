@@ -43,7 +43,7 @@ try {
   companionDeviceAuth.unregisterDeviceSelectCallback();
 } catch (error) {
   const err = error as BusinessError;
-  console.error(`error has been captured: ${err.code} ${err.message}`);
+  console.error(`error has been captured. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

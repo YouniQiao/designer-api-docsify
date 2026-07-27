@@ -1,6 +1,6 @@
 # GradientAlpha
 
-the enum for the opacity of the background color.
+Enumerates the opacity levels of the navigation bar background.
 
 **Since:** 18
 
@@ -14,7 +14,7 @@ the enum for the opacity of the background color.
 OPACITY_20 = 1
 ```
 
-when the GradientAlpha set OPACITY_20,the opacity of background colors is 0.2.
+0.2 opacity.
 
 **Since:** 18
 
@@ -30,7 +30,7 @@ when the GradientAlpha set OPACITY_20,the opacity of background colors is 0.2.
 OPACITY_60 = 2
 ```
 
-when the GradientAlpha set OPACITY_60,the opacity of background colors is 0.6.
+0.6 opacity.
 
 **Since:** 18
 
@@ -46,7 +46,7 @@ when the GradientAlpha set OPACITY_60,the opacity of background colors is 0.6.
 OPACITY_80 = 3
 ```
 
-when the GradientAlpha set OPACITY_80,the opacity of background colors is 0.8.
+0.8 opacity.
 
 **Since:** 18
 
@@ -62,7 +62,7 @@ when the GradientAlpha set OPACITY_80,the opacity of background colors is 0.8.
 OPACITY_100 = 4
 ```
 
-when the GradientAlpha set OPACITY_100,the opacity of background colors is 1.0.
+1.0 opacity.
 
 **Since:** 18
 

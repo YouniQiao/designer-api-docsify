@@ -30,7 +30,7 @@ function createFilter(): Filter
 
 ```TypeScript
 // 创建Filter实例
-let filter : uiEffect.Filter = uiEffect.createFilter();
+let filter: uiEffect.Filter = uiEffect.createFilter();
 
 ```
 

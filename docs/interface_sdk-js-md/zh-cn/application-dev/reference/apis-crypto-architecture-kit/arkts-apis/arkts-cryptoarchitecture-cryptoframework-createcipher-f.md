@@ -61,7 +61,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let cipherAlgName = '3DES192|ECB|PKCS7';
 try {
   let cipher = cryptoFramework.createCipher(cipherAlgName);
-  console.info('cipher algName：' + cipher.algName);
+  console.info('cipher algName: ' + cipher.algName);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   console.error(`sync failed: errCode: ${e.code}, errMsg: ${e.message}`);

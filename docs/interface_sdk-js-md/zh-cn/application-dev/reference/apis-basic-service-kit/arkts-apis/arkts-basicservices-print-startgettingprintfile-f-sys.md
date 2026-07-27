@@ -47,7 +47,7 @@ function startGettingPrintFile(jobId: string, printAttributes: PrintAttributes, 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
 
-let jobId : string= '1';
+let jobId : string = '1';
 class MyPrintAttributes implements print.PrintAttributes {
     copyNumber?: number;
     pageRange?: print.PrintPageRange;
@@ -63,13 +63,6 @@ class MyPrintPageRange implements print.PrintPageRange {
     pages?: Array<number>;
 }
 
-class MyPrintPageSize implements print.PrintPageSize {
-    id: string = '0';
-    name: string = '0';
-    width: number = 210;
-    height: number = 297;
-}
-
 let printAttributes = new MyPrintAttributes();
 printAttributes.copyNumber = 2;
 printAttributes.pageRange = new MyPrintPageRange();
@@ -79,10 +72,11 @@ printAttributes.directionMode = print.PrintDirectionMode.DIRECTION_MODE_AUTO;
 printAttributes.colorMode = print.PrintColorMode.COLOR_MODE_MONOCHROME;
 printAttributes.duplexMode = print.PrintDuplexMode.DUPLEX_MODE_NONE;
 
+// fd可通过fs.open等文件操作获取文件描述符
 let fd : number = 1;
 print.startGettingPrintFile(jobId, printAttributes, fd, (state: print.PrintFileCreationState) => {
     console.info('onFileStateChanged success, data : ' + JSON.stringify(state));
-})
+});
 
 ```
 

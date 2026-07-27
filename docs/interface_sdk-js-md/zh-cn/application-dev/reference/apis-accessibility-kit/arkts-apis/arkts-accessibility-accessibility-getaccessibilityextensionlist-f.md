@@ -57,7 +57,7 @@ let abilityState: accessibility.AbilityState = 'install'; // 辅助应用状态�
 accessibility.getAccessibilityExtensionList(abilityType, abilityState).then((data: accessibility.AccessibilityAbilityInfo[]) => {
   console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
 });
 
 // 例如：系统内安装一个包名为com.example.myaccessibilityapp的辅助应用。
@@ -84,7 +84,7 @@ let abilityState: accessibility.AbilityState = 'enable'; // 辅助应用状态�
 accessibility.getAccessibilityExtensionList(abilityType, abilityState).then((data: accessibility.AccessibilityAbilityInfo[]) => {
   console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```
@@ -133,9 +133,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let abilityType: accessibility.AbilityType = 'all'; // 辅助应用类型为所有类型。
 let abilityState: accessibility.AbilityState = 'install'; // 辅助应用状态为已安装。
 
-accessibility.getAccessibilityExtensionList(abilityType, abilityState,(err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
+accessibility.getAccessibilityExtensionList(abilityType, abilityState, (err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
   if (err) {
-    console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
@@ -162,9 +162,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let abilityType: accessibility.AbilityType = 'spoken'; // 辅助应用类型为具有语音反馈类型。
 let abilityState: accessibility.AbilityState = 'enable'; // 辅助应用状态为已启用。
 
-accessibility.getAccessibilityExtensionList(abilityType, abilityState,(err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
+accessibility.getAccessibilityExtensionList(abilityType, abilityState, (err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
   if (err) {
-    console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);

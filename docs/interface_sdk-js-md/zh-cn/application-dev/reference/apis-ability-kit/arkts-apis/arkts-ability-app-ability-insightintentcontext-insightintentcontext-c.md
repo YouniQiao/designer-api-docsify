@@ -50,6 +50,7 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class InsightIntentExecutorUI extends InsightIntentExecutor {
   onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
@@ -122,6 +123,7 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 ```TypeScript
 import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class InsightIntentExecutorUI extends InsightIntentExecutor {
   onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>,

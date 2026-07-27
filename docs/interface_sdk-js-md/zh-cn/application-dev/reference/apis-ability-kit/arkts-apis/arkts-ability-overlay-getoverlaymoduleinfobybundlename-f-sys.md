@@ -198,7 +198,7 @@ let moduleName = "feature";
   } catch (err) {
     let code = (err as BusinessError).code;
     let message = (err as BusinessError).message;
-    console.error('getTargetOverlayModuleInfos failed due to err code : ' + code + ' ' + 'message :' + message);
+    console.error('getOverlayModuleInfoByBundleName failed due to err code : ' + code + ' ' + 'message :' + message);
   }
 })();
 

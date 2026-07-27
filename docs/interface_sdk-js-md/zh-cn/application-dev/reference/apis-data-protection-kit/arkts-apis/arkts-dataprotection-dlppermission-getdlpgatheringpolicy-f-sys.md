@@ -97,7 +97,7 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
-  if (err !== undefined) {
+  if (err) {
     console.error('getDLPGatheringPolicy error,', err.code, err.message);
   } else {
     console.info('gatheringPolicy：', JSON.stringify(gatheringPolicy));

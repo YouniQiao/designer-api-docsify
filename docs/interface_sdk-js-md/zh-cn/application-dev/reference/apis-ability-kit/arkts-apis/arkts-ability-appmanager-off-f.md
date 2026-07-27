@@ -48,25 +48,25 @@ let observerId = 0;
 
 // 1.注册应用状态监听器
 let applicationStateObserver: appManager.ApplicationStateObserver = {
-  onForegroundApplicationChanged(appStateData) {
+  onForegroundApplicationChanged(appStateData: appManager.AppStateData) {
     console.info(`[appManager] onForegroundApplicationChanged: ${JSON.stringify(appStateData)}`);
   },
-  onAbilityStateChanged(abilityStateData) {
+  onAbilityStateChanged(abilityStateData: appManager.AbilityStateData) {
     console.info(`[appManager] onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
   },
-  onProcessCreated(processData) {
+  onProcessCreated(processData: appManager.ProcessData) {
     console.info(`[appManager] onProcessCreated: ${JSON.stringify(processData)}`);
   },
-  onProcessDied(processData) {
+  onProcessDied(processData: appManager.ProcessData) {
     console.info(`[appManager] onProcessDied: ${JSON.stringify(processData)}`);
   },
-  onProcessStateChanged(processData) {
+  onProcessStateChanged(processData: appManager.ProcessData) {
     console.info(`[appManager] onProcessStateChanged: ${JSON.stringify(processData)}`);
   },
-  onAppStarted(appStateData) {
+  onAppStarted(appStateData: appManager.AppStateData) {
     console.info(`[appManager] onAppStarted: ${JSON.stringify(appStateData)}`);
   },
-  onAppStopped(appStateData) {
+  onAppStopped(appStateData: appManager.AppStateData) {
     console.info(`[appManager] onAppStopped: ${JSON.stringify(appStateData)}`);
   }
 };
@@ -147,25 +147,25 @@ let observerId = 0;
 
 // 1.注册应用状态监听器
 let applicationStateObserver: appManager.ApplicationStateObserver = {
-  onForegroundApplicationChanged(appStateData) {
+  onForegroundApplicationChanged(appStateData: appManager.AppStateData) {
     console.info(`[appManager] onForegroundApplicationChanged: ${JSON.stringify(appStateData)}`);
   },
-  onAbilityStateChanged(abilityStateData) {
+  onAbilityStateChanged(abilityStateData: appManager.AbilityStateData) {
     console.info(`[appManager] onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
   },
-  onProcessCreated(processData) {
+  onProcessCreated(processData: appManager.ProcessData) {
     console.info(`[appManager] onProcessCreated: ${JSON.stringify(processData)}`);
   },
-  onProcessDied(processData) {
+  onProcessDied(processData: appManager.ProcessData) {
     console.info(`[appManager] onProcessDied: ${JSON.stringify(processData)}`);
   },
-  onProcessStateChanged(processData) {
+  onProcessStateChanged(processData: appManager.ProcessData) {
     console.info(`[appManager] onProcessStateChanged: ${JSON.stringify(processData)}`);
   },
-  onAppStarted(appStateData) {
+  onAppStarted(appStateData: appManager.AppStateData) {
     console.info(`[appManager] onAppStarted: ${JSON.stringify(appStateData)}`);
   },
-  onAppStopped(appStateData) {
+  onAppStopped(appStateData: appManager.AppStateData) {
     console.info(`[appManager] onAppStopped: ${JSON.stringify(appStateData)}`);
   }
 };
@@ -184,7 +184,7 @@ try {
   appManager.off('applicationState', observerId).then((data) => {
     console.info(`unregisterApplicationStateObserver success, data: ${JSON.stringify(data)}`);
   }).catch((err: BusinessError) => {
-    console.error(`unregisterApplicationStateObserver fail, err: ${JSON.stringify(err)}`);
+    console.error(`unregisterApplicationStateObserver fail, code: ${err.code}, msg:${err.message}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;

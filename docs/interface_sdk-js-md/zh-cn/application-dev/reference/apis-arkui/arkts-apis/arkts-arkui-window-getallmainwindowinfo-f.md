@@ -47,7 +47,7 @@ export default class EntryAbility extends UIAbility {
     console.info('Ability onWindowStageCreate');
     windowStage.loadContent('pages/Index', (err) => {
       if (err.code) {
-        console.error(`Failed to load the content. Cause: ${JSON.stringify(err)}`);
+        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
       }
       reqPermissionsFromUser(permissions, this.context);
       console.info('Succeeded in loading the content');
@@ -57,10 +57,10 @@ export default class EntryAbility extends UIAbility {
       windowInfoPromise.then((list: Array<window.MainWindowInfo>) => {
         console.info('Get all main window info success.');
       }).catch((err: BusinessError) => {
-        console.error(`Get all main window info failed. Error info: ${JSON.stringify(err)}`);
+        console.error(`Get all main window info failed. Cause code: ${err.code}, message: ${err.message}`);
       });
     } catch (err) {
-      console.error(`Get all main window info failed. Cause info: ${JSON.stringify(err)}`);
+      console.error(`Get all main window info failed. Cause code: ${err.code}, message: ${err.message}`);
     }
   }
 }

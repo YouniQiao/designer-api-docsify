@@ -36,7 +36,8 @@ import { accessibility } from '@kit.AccessibilityKit';
 @Entry
 @Component
 struct Index {
-  callback = (data: boolean): void => {
+  callback: (data: boolean) => void = this.eventCallback;
+  eventCallback(data: boolean): void {
     console.info(`subscribe senior mode state change, result: ${JSON.stringify(data)}`);
   }
 

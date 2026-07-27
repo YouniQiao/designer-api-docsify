@@ -98,7 +98,7 @@ class StubTest extends rpc.RemoteObject{
 }
 class ServiceExt extends ServiceExtensionAbility {
   onConnect(want: Want) {
-    console.info('onConnect , want: ${want.abilityName}');
+    console.info(`onConnect, want: ${want.abilityName}`);
     return new StubTest('test');
   }
 }
@@ -328,7 +328,7 @@ import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
 
 class ServiceExt extends ServiceExtensionAbility {
   onReconnect(want: Want) {
-    console.info('onReconnect, want: ${want.abilityName}');
+    console.info(`onReconnect, want: ${want.abilityName}`);
   }
 }
 
@@ -366,7 +366,7 @@ import { ServiceExtensionAbility, Want } from '@kit.AbilityKit';
 
 class ServiceExt extends ServiceExtensionAbility {
   onRequest(want: Want, startId: number) {
-    console.info('onRequest, want: ${want.abilityName}');
+    console.info(`onRequest, want: ${want.abilityName}`);
   }
 }
 

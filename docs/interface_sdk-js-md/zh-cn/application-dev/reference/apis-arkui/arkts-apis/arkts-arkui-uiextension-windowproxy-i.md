@@ -73,22 +73,22 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
     extensionWindow.createSubWindowWithOptions('subWindowForHost', subWindowOpts)
       .then((subWindow: window.Window) => {
         subWindow.setUIContent('pages/Index', (err, data) => {
-          if (err && err.code != 0) {
+          if (err && err.code) {
             return;
           }
           subWindow?.resize(300, 300, (err, data) => {
-            if (err && err.code != 0) {
+            if (err && err.code) {
               return;
             }
             subWindow?.moveWindowTo(100, 100, (err, data) => {
-              if (err && err.code != 0) {
+              if (err && err.code) {
                 return;
               }
               subWindow?.showWindow((err, data) => {
-                if (err && err.code == 0) {
-                  console.info(`The subwindow has been shown!`);
+                if (err && err.code) {
+                  console.error(`Failed to show the subwindow. Code: ${err.code}, message: ${err.message}`);
                 } else {
-                  console.error(`Failed to show the subwindow!`);
+                  console.info(`The subwindow has been shown!`);
                 }
               });
             });
@@ -160,22 +160,22 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
     extensionWindow.createSubWindowWithOptions('subWindowForHost', subWindowConfig, true)
       .then((subWindow: window.Window) => {
         subWindow.setUIContent('pages/Index', (err, data) => {
-          if (err && err.code != 0) {
+          if (err && err.code) {
             return;
           }
           subWindow?.resize(300, 300, (err, data) => {
-            if (err && err.code != 0) {
+            if (err && err.code) {
               return;
             }
             subWindow?.moveWindowTo(100, 100, (err, data) => {
-              if (err && err.code != 0) {
+              if (err && err.code) {
                 return;
               }
               subWindow?.showWindow((err, data) => {
-                if (err && err.code == 0) {
-                  console.info(`The subwindow has been shown!`);
+                if (err && err.code) {
+                  console.error(`Failed to show the subwindow. Code: ${err.code}, message: ${err.message}`);
                 } else {
-                  console.error(`Failed to show the subwindow!`);
+                  console.info(`The subwindow has been shown!`);
                 }
               });
             });

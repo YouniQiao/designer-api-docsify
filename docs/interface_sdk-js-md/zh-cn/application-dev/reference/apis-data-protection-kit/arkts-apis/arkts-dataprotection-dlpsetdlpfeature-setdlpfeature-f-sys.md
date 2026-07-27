@@ -55,8 +55,8 @@ import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 
 async function exampleFunction() {
   let statusInfoResult: dlpSetDlpFeature.StatusInfoResult =
-    await dlpSetDlpFeature.setDlpFeature(dlpSetDlpFeature.DlpFeatureStatus.ENABLED_FEATURE); // 记录执行结果
-  console.info('setDlpFeature result: ', JSON.stringify(statusInfoResult));
+    await dlpSetDlpFeature.setDlpFeature(dlpSetDlpFeature.DlpFeatureStatus.ENABLED_FEATURE);
+  console.info('setDlpFeature result: ', JSON.stringify(statusInfoResult)); 
 } // 设置DLP特性开关状态。
 
 exampleFunction();

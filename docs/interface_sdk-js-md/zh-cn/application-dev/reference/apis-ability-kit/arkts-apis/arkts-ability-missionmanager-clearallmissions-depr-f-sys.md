@@ -32,6 +32,7 @@ function clearAllMissions(callback: AsyncCallback<void>): void
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 try {
   // 清理所有未锁定的任务

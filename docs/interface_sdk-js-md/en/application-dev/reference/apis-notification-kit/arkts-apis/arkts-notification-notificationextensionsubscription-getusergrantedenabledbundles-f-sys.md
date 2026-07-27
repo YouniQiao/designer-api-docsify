@@ -57,7 +57,7 @@ let targetBundle: notificationExtensionSubscription.BundleOption =
 notificationExtensionSubscription.getUserGrantedEnabledBundles(targetBundle).then((data: notificationExtensionSubscription.BundleOption[]) => {
   console.info(`getUserGrantedEnabledBundles successfully. Data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`getUserGrantedEnabledBundles fail: ${JSON.stringify(err)}`);
+  console.error(`getUserGrantedEnabledBundles fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

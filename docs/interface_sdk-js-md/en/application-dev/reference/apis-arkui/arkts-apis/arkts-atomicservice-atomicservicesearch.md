@@ -1,4 +1,4 @@
-# @ohos.atomicservice.AtomicServiceSearch
+# @ohos.atomicservice.AtomicServiceSearch (This section describes the interfaces used by AtomicServiceSearch)
 
 ## Modules to Import
 
@@ -12,25 +12,25 @@ import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams,
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceSearch](arkts-arkui-atomicservice-atomicservicesearch-atomicservicesearch-s.md) | Defines AtomicServiceSearch. |
+| [AtomicServiceSearch](arkts-arkui-atomicservice-atomicservicesearch-atomicservicesearch-s.md) | **AtomicServiceSearch** allows you to customize the default search area, customizable selection area, and function area (a maximum of two). |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [InputFilterParams](arkts-arkui-atomicservice-atomicservicesearch-inputfilterparams-i.md) | Defines the InputFilter parameters. |
-| [MenuAlignParams](arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | Defines the MenuAlign parameters. |
-| [OperationParams](arkts-arkui-atomicservice-atomicservicesearch-operationparams-i.md) | Function settings in the selection area (right). |
-| [SearchButtonParams](arkts-arkui-atomicservice-atomicservicesearch-searchbuttonparams-i.md) | Defines the SearchButton parameters. |
-| [SearchParams](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | Events and styles supported by the search area. |
-| [SelectParams](arkts-arkui-atomicservice-atomicservicesearch-selectparams-i.md) | Contents, events, and styles of the select area. |
+| [InputFilterParams](arkts-arkui-atomicservice-atomicservicesearch-inputfilterparams-i.md) | Sets regular expression for input filtering. |
+| [MenuAlignParams](arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | Sets the alignment between the drop-down list button and the drop-down list box. |
+| [OperationParams](arkts-arkui-atomicservice-atomicservicesearch-operationparams-i.md) | Sets initialization parameters of the function area. |
+| [SearchButtonParams](arkts-arkui-atomicservice-atomicservicesearch-searchbuttonparams-i.md) | Sets the search button located next to the search text box. |
+| [SearchParams](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | Provides optional attributes for the search area. |
+| [SelectParams](arkts-arkui-atomicservice-atomicservicesearch-selectparams-i.md) | Provides optional attributes for the selection area. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) | Callback when the content in the search box scrolls. |
-| [OnPasteCallback](arkts-arkui-onpastecallback-t.md) | Callback when text is pasted into the search box. |
-| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Callback when the Select option is clicked. |
-| [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | Callback when the position of the cursor entered in the search box changes. |
+| [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) | Called when the text content is scrolled. |
+| [OnPasteCallback](arkts-arkui-onpastecallback-t.md) | Called when a paste operation is performed. |
+| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Called when an item in the drop-down list box is selected. |
+| [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | Called when the position of the text selection changes or when the cursor position changes during the editing state. |
 

@@ -52,7 +52,7 @@ let controller: windowAnimationManager.WindowAnimationController = {
         target = startingWindowTarget;
         finishCallback.onAnimationFinish();
     },
-    onAppTransition(fromWindowTarget: windowAnimationManager.WindowAnimationTarget, toWindowTarget: WindowAnimationTarget, finishCallback: windowAnimationManager.WindowAnimationFinishedCallback): void {
+    onAppTransition(fromWindowTarget: windowAnimationManager.WindowAnimationTarget, toWindowTarget: windowAnimationManager.WindowAnimationTarget, finishCallback: windowAnimationManager.WindowAnimationFinishedCallback): void {
         console.info('onAppTransition, the fromWindowTarget is: ' + fromWindowTarget);
         console.info('onAppTransition, the toWindowTarget is: ' + toWindowTarget);
         target = toWindowTarget;
@@ -143,7 +143,7 @@ let controller: windowAnimationManager.WindowAnimationController = {
         console.info('onStartAppFromOther, the startingWindowTarget is: ' + startingWindowTarget);
         finishCallback.onAnimationFinish();
     },
-    onAppTransition(fromWindowTarget: windowAnimationManager.WindowAnimationTarget, toWindowTarget: WindowAnimationTarget, finishCallback: windowAnimationManager.WindowAnimationFinishedCallback): void {
+    onAppTransition(fromWindowTarget: windowAnimationManager.WindowAnimationTarget, toWindowTarget: windowAnimationManager.WindowAnimationTarget, finishCallback: windowAnimationManager.WindowAnimationFinishedCallback): void {
         console.info('onAppTransition, the fromWindowTarget is: ' + fromWindowTarget);
         console.info('onAppTransition, the toWindowTarget is: ' + toWindowTarget);
         finishCallback.onAnimationFinish();

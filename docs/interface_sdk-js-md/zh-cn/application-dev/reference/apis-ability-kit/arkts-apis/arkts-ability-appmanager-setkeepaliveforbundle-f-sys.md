@@ -67,7 +67,7 @@ import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let bundleName = "ohos.samples.keepaliveapp";
+  let bundleName = 'ohos.samples.keepaliveapp';
   let userId = 100;
   appManager.setKeepAliveForBundle(bundleName, userId, true).then(() => {
     console.info(`setKeepAliveForBundle success`);

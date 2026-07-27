@@ -1157,7 +1157,7 @@ onContentScroll(callback: OnContentScrollCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) | 是 | 文本内容滚动回调。<br>**起始版本：** 18 |
+| callback | [OnContentScrollCallback](../arkts-apis/arkts-arkui-oncontentscrollcallback-t.md) | 是 | 文本内容滚动回调。<br>**起始版本：** 18 |
 
 ## onCopy
 
@@ -1320,7 +1320,7 @@ onPaste(callback: OnPasteCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnPasteCallback](arkts-arkui-onpastecallback-t.md) | 是 | Executed when a paste operation is performed.<br>**起始版本：** 18 |
+| callback | [OnPasteCallback](../arkts-apis/arkts-arkui-onpastecallback-t.md) | 是 | Executed when a paste operation is performed.<br>**起始版本：** 18 |
 
 ## onSecurityStateChange
 

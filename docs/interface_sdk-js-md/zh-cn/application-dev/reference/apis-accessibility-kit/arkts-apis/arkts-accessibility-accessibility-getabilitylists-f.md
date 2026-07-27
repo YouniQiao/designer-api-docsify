@@ -47,11 +47,11 @@ let abilityState: accessibility.AbilityState = 'enable';
 
 accessibility.getAbilityLists(abilityType, abilityState, (err: BusinessError, data: accessibility.AccessibilityAbilityInfo[]) => {
   if (err) {
-    console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
     return;
   }
   console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
-})
+});
 
 ```
 
@@ -99,7 +99,7 @@ let abilityState: accessibility.AbilityState = 'enable';
 accessibility.getAbilityLists(abilityType, abilityState).then((data: accessibility.AccessibilityAbilityInfo[]) => {
   console.info(`succeeded in getting accessibility extension list, ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`failed to get accessibility extension list, Code is ${err.code}, message is ${err.message}`);
+  console.error(`Failed to get accessibility extension list. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

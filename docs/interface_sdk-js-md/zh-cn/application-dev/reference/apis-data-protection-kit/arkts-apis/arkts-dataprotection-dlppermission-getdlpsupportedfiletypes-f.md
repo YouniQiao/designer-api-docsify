@@ -85,8 +85,8 @@ function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getDLPSupportedFileTypes((err, fileTypes) => {
-  if (err != undefined) {
-    console.error('getDLPSupportedFileTypes error', err.code, err.message);
+  if (err) {
+    console.error(`Failed to get DLP supported file types. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('fileTypes', JSON.stringify(fileTypes));
   }

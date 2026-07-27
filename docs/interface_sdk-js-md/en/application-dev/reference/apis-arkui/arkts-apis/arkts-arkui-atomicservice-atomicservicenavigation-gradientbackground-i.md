@@ -1,6 +1,6 @@
 # GradientBackground
 
-Indicates the options of Navigation's gradientBackground.
+Provides options for setting gradient colors for branding.
 
 **Since:** 18
 

@@ -67,7 +67,7 @@ function off(eventId: string): void
 
 ```TypeScript
 // 取消eventId为"eventId1"的所有事件回调处理函数
-emitter.off("eventId1");
+emitter.off('eventId1');
 
 ```
 
@@ -147,7 +147,7 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 };
 // 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
 // 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off("eventId1", callback);
+emitter.off('eventId1', callback);
 
 ```
 
@@ -201,7 +201,7 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 };
 // 取消eventId为"eventId1"的事件回调处理函数，callback对象应使用订阅时的对象
 // 如果该回调处理函数没有被订阅，则不做任何处理
-emitter.off("eventId1", callback);
+emitter.off('eventId1', callback);
 
 ```
 

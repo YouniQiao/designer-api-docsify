@@ -34,6 +34,7 @@ function getMissionSnapShot(deviceId: string, missionId: number, callback: Async
 
 ```TypeScript
 import missionManager from '@ohos.application.missionManager';
+import { BusinessError } from '@ohos.base';
 
 let testMissionId = 2;
 try {

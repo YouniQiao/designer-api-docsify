@@ -54,8 +54,8 @@ let event : print.ApplicationEvent = print.ApplicationEvent.APPLICATION_CREATED;
 print.notifyPrintServiceEvent(event).then(() => {
     console.info('notifyPrintServiceEvent success');
 }).catch((error: BusinessError) => {
-    console.error('notifyPrintServiceEvent error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to notify print service event. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 
@@ -110,8 +110,8 @@ let jobId : string = '1';
 print.notifyPrintServiceEvent(event, jobId).then(() => {
     console.info('notifyPrintServiceEvent success');
 }).catch((error: BusinessError) => {
-    console.error('notifyPrintServiceEvent error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to notify print service event. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

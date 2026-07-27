@@ -4,7 +4,7 @@
 export type NavDestinationBuilder = (name: string, param?: Object) => void
 ```
 
-The builder function of NavDestination component.
+Defines the content of the **NavDestination** component.
 
 **Since:** 12
 
@@ -18,6 +18,6 @@ The builder function of NavDestination component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | The name of route page.  |
-| param | Object | No |  |
+| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page.  |
+| param | Object | No | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. The default value is undefined.  |
 

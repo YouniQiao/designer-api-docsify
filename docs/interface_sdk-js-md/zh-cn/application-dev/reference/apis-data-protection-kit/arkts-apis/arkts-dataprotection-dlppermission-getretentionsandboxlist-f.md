@@ -95,8 +95,8 @@ function getRetentionSandboxList(bundleName: string, callback: AsyncCallback<Arr
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getRetentionSandboxList("bundleName", (err, sandboxList) => {
-  if (err != undefined) {
-    console.error('getRetentionSandboxList error,', err.code, err.message);
+  if (err) {
+    console.error(`Failed to get retention sandbox list. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('sandboxList', JSON.stringify(sandboxList));
   }
@@ -113,7 +113,7 @@ function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxI
 
 查询当前应用的保留沙箱信息列表。使用callback异步回调。
 
-该接口用于查询指定应用的保留沙箱列表，以便查看或管理当前处于保留状态的沙箱环境。
+该接口用于查询指定应用的保留沙箱列表，以便查看或管理当前处于保留状态的沙箱环境。仅支持在非DLP沙箱应用中调用。
 
 **起始版本：** 10
 
@@ -142,10 +142,10 @@ function getRetentionSandboxList(callback: AsyncCallback<Array<RetentionSandboxI
 import { dlpPermission } from '@kit.DataProtectionKit';
 
 dlpPermission.getRetentionSandboxList((err, retentionSandboxList) => {
-  if (err != undefined) {
+  if (err) {
     console.error('getRetentionSandboxList error,', err.code, err.message);
   } else {
-    console.info('res', JSON.stringify(retentionSandboxList));
+    console.info('retentionSandboxList', JSON.stringify(retentionSandboxList));
   }
 }); // 获取沙箱保留列表。
 

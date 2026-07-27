@@ -380,7 +380,7 @@ compDivider: ResourceColor
 compEmphasizeSecondary: ResourceColor
 ```
 
-20%高亮背景颜色。</br>**影响组件：** [Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-progress-i.md)、[ProgressButton](@ohos.arkui.advanced.ProgressButton)、[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、</br>[Select](../arkts-components/arkts-arkui-select.md)、[Toggle](../arkts-components/arkts-arkui-toggle.md)
+20%高亮背景颜色。</br>**影响组件：** [Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-progress-i.md)、[ProgressButton](arkts-arkui-advanced-progressbutton.md)、[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、</br>[Select](../arkts-components/arkts-arkui-select.md)、[Toggle](../arkts-components/arkts-arkui-toggle.md)
 
 **类型：** ResourceColor
 
@@ -660,7 +660,7 @@ fontOnTertiary: ResourceColor
 fontPrimary: ResourceColor
 ```
 
-一级文本字体颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[LoadingDialog](arkts-arkui-arkui-advanced-dialog-loadingdialog-s.md)、[TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md)、</br>[ConfirmDialog](arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md)、[AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、[SelectDialog](arkts-arkui-arkui-advanced-dialog-selectdialog-s.md)、</br>[CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、[Swiper](../arkts-components/arkts-arkui-swiper.md)、[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)、</br>[SubHeader](@ohos.arkui.advanced.SubHeader)、[ProgressButton](@ohos.arkui.advanced.ProgressButton)、[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、</br>[Popup](arkts-arkui-advanced-popup.md)、[Select](../arkts-components/arkts-arkui-select.md)、[Chip](arkts-arkui-advanced-chip.md)、</br>[ToolBar](@ohos.arkui.advanced.ToolBar)、[Menu](../arkts-components/arkts-arkui-menu.md)、[TextInput](../arkts-components/arkts-arkui-textinput.md)、</br>[Search](../arkts-components/arkts-arkui-search.md)、[TimePicker](../arkts-components/arkts-arkui-timepicker.md)、[DatePicker](../arkts-components/arkts-arkui-datepicker.md)、</br>[TextPicker](../arkts-components/arkts-arkui-textpicker.md)、[ComposeListItem](arkts-arkui-advanced-composelistitem.md)、[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增[CalendarPicker](../arkts-components/arkts-arkui-calendarpicker.md)、[UIPickerComponent](../arkts-components/arkts-arkui-uipickercomponent.md)、[RichEditor](../arkts-components/arkts-arkui-richeditor.md)、[MenuItem](../arkts-components/arkts-arkui-menuitem.md)、[MenuItemGroup](../arkts-components/arkts-arkui-menuitemgroup.md)、[Counter](../arkts-components/arkts-arkui-counter.md)。
+一级文本字体颜色。</br>**影响组件：** [EditableTitleBar](@ohos.arkui.advanced.EditableTitleBar)、[LoadingDialog](arkts-arkui-arkui-advanced-dialog-loadingdialog-s.md)、[TipsDialog](arkts-arkui-arkui-advanced-dialog-tipsdialog-s.md)、</br>[ConfirmDialog](arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md)、[AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)、[SelectDialog](arkts-arkui-arkui-advanced-dialog-selectdialog-s.md)、</br>[CustomContentDialog](arkts-arkui-arkui-advanced-dialog-customcontentdialog-s.md)、[Swiper](../arkts-components/arkts-arkui-swiper.md)、[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)、</br>[SubHeader](@ohos.arkui.advanced.SubHeader)、[ProgressButton](arkts-arkui-advanced-progressbutton.md)、[AlphabetIndexer](../arkts-components/arkts-arkui-alphabetindexer.md)、</br>[Popup](arkts-arkui-advanced-popup.md)、[Select](../arkts-components/arkts-arkui-select.md)、[Chip](arkts-arkui-advanced-chip.md)、</br>[ToolBar](@ohos.arkui.advanced.ToolBar)、[Menu](../arkts-components/arkts-arkui-menu.md)、[TextInput](../arkts-components/arkts-arkui-textinput.md)、</br>[Search](../arkts-components/arkts-arkui-search.md)、[TimePicker](../arkts-components/arkts-arkui-timepicker.md)、[DatePicker](../arkts-components/arkts-arkui-datepicker.md)、</br>[TextPicker](../arkts-components/arkts-arkui-textpicker.md)、[ComposeListItem](arkts-arkui-advanced-composelistitem.md)、[TreeView](@ohos.arkui.advanced.TreeView)。从API版本26.0.0开始，新增[CalendarPicker](../arkts-components/arkts-arkui-calendarpicker.md)、[UIPickerComponent](../arkts-components/arkts-arkui-uipickercomponent.md)、[RichEditor](../arkts-components/arkts-arkui-richeditor.md)、[MenuItem](../arkts-components/arkts-arkui-menuitem.md)、[MenuItemGroup](../arkts-components/arkts-arkui-menuitemgroup.md)、[Counter](../arkts-components/arkts-arkui-counter.md)。
 
 **类型：** ResourceColor
 
@@ -760,7 +760,7 @@ iconFourth: ResourceColor
 iconOnFourth: ResourceColor
 ```
 
-四级图标反转颜色，用于彩色背景。</br>**影响组件：** [ProgressButton](@ohos.arkui.advanced.ProgressButton)
+四级图标反转颜色，用于彩色背景。</br>**影响组件：** [ProgressButton](arkts-arkui-advanced-progressbutton.md)
 
 **类型：** ResourceColor
 

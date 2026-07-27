@@ -48,6 +48,27 @@ Revoke all persistence permissions for the application.
 | 13900001 | Operation not permitted. |
 | 13900020 | Invalid tokenID |
 
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function revokeAllPermissionExample() {
+  try {
+    let tokenID = 537688848; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system app, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system app.
+    fileShare.revokePermission(tokenID).then(() => {
+      console.info('revoke persist permission successfully.');
+    }).catch((err: BusinessError) => {
+      console.error(`revoke persist permission failed, Code: ${err.code}, message: ${err.message}`);
+    });
+  } catch (error) {
+    console.error(`revoke persist permission failed error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+
+```
+
 
 ## revokePermission
 
@@ -93,4 +114,37 @@ Revoke persistence permissions for the URI.
 | 13900001 | Operation not permitted. |
 | 13900011 | Out of memory |
 | 13900020 | Invalid tokenID |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function revokeSpecificPermissionExample() {
+  try {
+    let tokenID = 537688848; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system app, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system app.
+    let policyInfo: fileShare.PolicyInfo = {
+      uri: 'file://docs/storage/Users/currentUser/Documents/1.txt',
+      operationMode: fileShare.OperationMode.READ_MODE | fileShare.OperationMode.WRITE_MODE,
+    };
+    let policies: Array<fileShare.PolicyInfo> = [policyInfo];
+    fileShare.revokePermission(tokenID, policies).then(() => {
+      console.info('revoke persist permission successfully.');
+    }).catch((err: BusinessError<Array<fileShare.PolicyErrorResult>>) => {
+      console.error(`revoke persist permission failed. Code: ${err.code}, message: ${err.message}`);
+      if (err.code === 13900001 && err.data) {
+        for (let i = 0; i < err.data.length; i++) {
+          console.error(`error code: ${JSON.stringify(err.data[i].code)}`);
+          console.error(`error URI: ${JSON.stringify(err.data[i].uri)}`);
+          console.error(`error reason: ${JSON.stringify(err.data[i].message)}`);
+        }
+      }
+    });
+  } catch (error) {
+    console.error(`revokePermission error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+
+```
 

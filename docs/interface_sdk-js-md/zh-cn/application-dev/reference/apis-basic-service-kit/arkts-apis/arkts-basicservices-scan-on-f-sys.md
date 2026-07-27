@@ -45,7 +45,7 @@ import { scan } from '@kit.BasicServicesKit';
 
 scan.on('scanDeviceAdd', (device: scan.ScannerDevice) => {
     console.info('scan device add: ' + JSON.stringify(device));
-})
+});
 
 ```
 
@@ -89,7 +89,7 @@ import { scan } from '@kit.BasicServicesKit';
 
 scan.on('scanDeviceDel', (device: scan.ScannerDevice) => {
     console.info('scan device delete: ' + JSON.stringify(device));
-})
+});
 
 ```
 

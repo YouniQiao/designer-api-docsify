@@ -50,7 +50,7 @@ SYSTEM_TONE_TYPE_ESIM_CARD_0 = 2
 
 System tone type for esim card 0.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,7 +68,7 @@ SYSTEM_TONE_TYPE_ESIM_CARD_1 = 3
 
 System tone type for esim card 1.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 

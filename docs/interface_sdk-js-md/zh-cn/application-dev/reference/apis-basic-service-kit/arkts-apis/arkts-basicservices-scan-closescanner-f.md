@@ -50,8 +50,8 @@ let scannerId: string = 'scanner_001';
 scan.closeScanner(scannerId).then(() => {
     console.info('close scanner success');
 }).catch((error: BusinessError) => {
-    console.error('close scanner failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to close scanner. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

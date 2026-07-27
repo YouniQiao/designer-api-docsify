@@ -47,7 +47,7 @@ notificationExtensionSubscription.isUserGranted().then((isOpen: boolean) => {
     console.info('isUserGranted false');
   }
 }).catch((err: BusinessError) => {
-  console.error(`isUserGranted fail: ${JSON.stringify(err)}`);
+  console.error(`isUserGranted fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

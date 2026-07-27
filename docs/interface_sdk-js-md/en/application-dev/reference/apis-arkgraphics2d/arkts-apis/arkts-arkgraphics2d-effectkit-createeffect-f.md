@@ -39,10 +39,12 @@ Creates a Filter instance based on a pixel map.
 **Example**
 
 ```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
+import { image } from '@kit.ImageKit';
+import { effectKit } from '@kit.ArkGraphics2D';
 
-const color = new ArrayBuffer(96);
+// Create a buffer for the image effect.
+const colorBuffer = new ArrayBuffer(96);
+// Set the image initialization options.
 let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -50,10 +52,12 @@ let opts : image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
+};
+// Create a PixelMap instance.
+image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
+  // Create a Filter instance.
   let headFilter = effectKit.createEffect(pixelMap);
-})
+});
 
 ```
 

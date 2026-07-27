@@ -50,7 +50,7 @@ async function testGenerateAesKeyFun() {
   console.info('key blob: '+ encodedKey.data);
   key.clearMem();
   encodedKey = key.getEncoded();
-  console.info('key blob：' + encodedKey.data);
+  console.info('key blob: ' + encodedKey.data);
 }
 
 ```

@@ -1,6 +1,6 @@
 # AtomicServiceNavigation
 
-Defines AtomicServiceNavigation.
+**AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)) and non-home page content through routing.
 
 **Since:** 12
 
@@ -165,7 +165,7 @@ navBarWidthRange?: [
 
 Sets the minimum width and the maximum width of navigation bar.
 
-**Type:** [     Dimension,     Dimension   ]
+**Type:** [     Dimension,     Dimension   ]
 
 **Since:** 12
 

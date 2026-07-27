@@ -38,7 +38,7 @@ Whether the third-party app supports custom accessibility features.Default value
 isHideDialScreen?: boolean
 ```
 
-Whether to hide the dialer screen after call ends.Default value: false.
+Whether to hide the dialer screen after call ends.<br>Default value: false.
 
 **Type:** boolean
 

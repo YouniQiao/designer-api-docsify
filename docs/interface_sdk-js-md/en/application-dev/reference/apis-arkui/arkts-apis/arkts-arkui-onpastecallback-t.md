@@ -4,7 +4,7 @@
 declare type OnPasteCallback = (pasteValue: string, event: PasteEvent) => void
 ```
 
-Callback when text is pasted into the search box.
+Called when a paste operation is performed.
 
 **Since:** 18
 
@@ -18,6 +18,6 @@ Callback when text is pasted into the search box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pasteValue | string | Yes | Indicates the text content to be pasted.  |
-| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | Yes | Indicates a user-defined paste event.  |
+| pasteValue | string | Yes | Text to be pasted.  |
+| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | Yes | Custom paste event.  |
 

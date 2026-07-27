@@ -46,13 +46,13 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let jobId : string = '121212';
-print.cancelPrintJob(jobId, (err: BusinessError) => {
-    if (err) {
-        console.error('cancelPrintJob failed, because : ' + JSON.stringify(err));
+print.cancelPrintJob(jobId, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to cancel print job. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('cancelPrintJob success');
     }
-})
+});
 
 ```
 
@@ -105,8 +105,8 @@ let jobId : string = '121212';
 print.cancelPrintJob(jobId).then(() => {
     console.info('cancelPrintJob success');
 }).catch((error: BusinessError) => {
-    console.error('cancelPrintJob failed, because : ' + JSON.stringify(error));
-})
+    console.error(`Failed to cancel print job. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

@@ -96,12 +96,11 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 let uri = "file://docs/storage/Users/currentUser/Desktop/test.txt.dlp";
 dlpPermission.isInSandbox().then((inSandbox) => { // Check whether the application is running in a sandbox.
   if (inSandbox) {
-    dlpPermission.setRetentionState([uri], (err, retentionState) => {
-      if (err != undefined) {
-        console.error('setRetentionState error,', err.code, err.message);
+    dlpPermission.setRetentionState([uri], (err) => {
+      if (err) {
+        console.error(`Failed to set retention state. Code: ${err.code}, message: ${err.message}`);
       } else {
         console.info('setRetentionState success');
-        console.info('retentionState: ', JSON.stringify(retentionState));
       }
     }); // Set the sandbox retention state.
   }

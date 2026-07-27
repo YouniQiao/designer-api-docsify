@@ -42,3 +42,25 @@ Gets the shared sandbox directories of applications
 | 13900001 | Operation not permitted. |
 | 13900011 | Out of memory. |
 
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function getSharedDirectoryInfo() {
+  try {
+    fileShare.getSharedDirectoryInfo().then((infos: Array<fileShare.SharedDirectoryInfo>) => {
+      infos.forEach((info: fileShare.SharedDirectoryInfo) => {
+        console.info(`bundleName=${info.bundleName} path=${info.path} mode=${info.permissionMode}`);
+      });
+    }).catch((err: BusinessError) => {
+      console.error(`getSharedDirectoryInfo err: ${JSON.stringify(err)}`);
+    });
+  } catch (error) {
+    console.error(`getSharedDirectoryInfo error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+
+```
+

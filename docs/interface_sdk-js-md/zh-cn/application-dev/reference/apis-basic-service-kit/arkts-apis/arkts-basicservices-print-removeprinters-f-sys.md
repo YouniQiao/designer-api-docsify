@@ -46,13 +46,13 @@ import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let printerId : string = '1212';
-print.removePrinters([printerId], (err: BusinessError) => {
-    if (err) {
-        console.error('removePrinters failed, because : ' + JSON.stringify(err));
+print.removePrinters([printerId], (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to remove printers. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('removePrinters success');
     }
-})
+});
 
 ```
 
@@ -105,8 +105,8 @@ let printerId : string = '1212';
 print.removePrinters([printerId]).then(() => {
     console.info('remove printers success');
 }).catch((error: BusinessError) => {
-    console.error('remove printers error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to remove printers. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

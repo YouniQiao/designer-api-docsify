@@ -57,8 +57,8 @@ let value: scan.ScannerOptionValue = {
 scan.setScannerParameter(scannerId, optionIndex, value).then(() => {
     console.info('set scanner parameter success');
 }).catch((error: BusinessError) => {
-    console.error('set scanner parameter failed: ' + JSON.stringify(error));
-})
+    console.error(`Failed to set scanner parameter. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

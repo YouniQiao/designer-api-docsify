@@ -61,7 +61,7 @@ notificationExtensionSubscription.getUserGrantedState(targetBundle).then((isOpen
     console.info('GrantedState false');
   }
 }).catch((err: BusinessError) => {
-  console.error(`getUserGrantedState fail: ${JSON.stringify(err)}`);
+  console.error(`getUserGrantedState fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

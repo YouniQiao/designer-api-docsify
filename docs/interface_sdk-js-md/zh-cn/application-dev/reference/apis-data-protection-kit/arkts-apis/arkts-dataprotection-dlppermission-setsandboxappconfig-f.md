@@ -12,7 +12,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function setSandboxAppConfig(configInfo: string): Promise<void>
 ```
 
-设置沙箱应用配置信息，配置信息为JSON字符串格式，具体内容由应用自行设置。调用成功后，沙箱应用将按照配置信息运行。使用Promise异步回调。
+设置沙箱应用配置信息，配置信息为JSON字符串格式，具体内容由应用自行设置。调用成功后，沙箱应用将按照配置信息运行。使用Promise异步回调。仅支持在非DLP沙箱应用中调用。
 
 该接口用于设置沙箱应用的配置信息，以便应用按需传递自定义参数。
 
@@ -49,8 +49,8 @@ function setSandboxAppConfig(configInfo: string): Promise<void>
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 
-dlpPermission.setSandboxAppConfig('configInfo').then((configInfo) => { // 设置沙箱应用配置信息。
-  console.info('configInfo：', configInfo);
+dlpPermission.setSandboxAppConfig('configInfo').then(() => { // 设置沙箱应用配置信息。
+  console.info('setSandboxAppConfig success');
 }).catch((error: BusinessError)=> {
   console.error(JSON.stringify(error));
 });

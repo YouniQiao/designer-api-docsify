@@ -2887,7 +2887,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceIds | string[] | 是 | 同一组网环境下，需要同步的设备的networkId列表。 |
-| mode | [SyncMode](arkts-arkdata-distributeddata-syncmode-e.md) | 是 | 同步模式。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 同步模式。 |
 | delayMs | number | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。设置delayMs后，调用sync接口时延时时间为delayMs。未设置时以[setSyncParam](arkts-arkdata-distributedkvstore-singlekvstore-i.md#setsyncparam)设置的时长为准。 |
 
 **错误码：**
@@ -2984,7 +2984,7 @@ sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 | --- | --- | --- | --- |
 | deviceIds | string[] | 是 | 同一组网环境下，需要同步的设备的networkId列表。 |
 | query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示数据库的查询谓词条件。 |
-| mode | [SyncMode](arkts-arkdata-distributeddata-syncmode-e.md) | 是 | 同步模式。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 同步模式。 |
 | delayMs | number | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。设置delayMs后，调用sync接口时延时时间为delayMs。未设置时以[setSyncParam](arkts-arkdata-distributedkvstore-singlekvstore-i.md#setsyncparam)设置的时长为准。 |
 
 **错误码：**

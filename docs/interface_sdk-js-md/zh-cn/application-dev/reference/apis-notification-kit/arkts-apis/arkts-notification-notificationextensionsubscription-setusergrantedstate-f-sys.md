@@ -58,7 +58,7 @@ let targetBundle: notificationExtensionSubscription.BundleOption =
 notificationExtensionSubscription.setUserGrantedState(targetBundle, true).then(() => {
   console.info(`setUserGrantedState successfully.`);
 }).catch((err: BusinessError) => {
-  console.error(`setUserGrantedState fail: ${JSON.stringify(err)}`);
+  console.error(`setUserGrantedState fail, code is ${err.code}, message is ${err.message}`);
 });
 
 ```

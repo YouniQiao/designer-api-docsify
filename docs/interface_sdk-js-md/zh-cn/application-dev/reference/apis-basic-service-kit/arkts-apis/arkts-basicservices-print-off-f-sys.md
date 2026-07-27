@@ -46,7 +46,7 @@ import { print } from '@kit.BasicServicesKit';
 
 print.off('printerStateChange', (data: boolean) => {
     console.info('off printerStateChange data : ' + JSON.stringify(data));
-})
+});
 
 ```
 
@@ -91,7 +91,7 @@ import { print } from '@kit.BasicServicesKit';
 
 print.off('jobStateChange', (data: boolean) => {
     console.info('offJobStateChanged data : ' + JSON.stringify(data));
-})
+});
 
 ```
 
@@ -136,7 +136,7 @@ import { print } from '@kit.BasicServicesKit';
 
 print.off('extInfoChange', (data: boolean) => {
     console.info('offExtInfoChange data : ' + JSON.stringify(data));
-})
+});
 
 ```
 

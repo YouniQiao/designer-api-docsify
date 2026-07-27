@@ -48,13 +48,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let printerId : string = '1212';
 let state : print.PrinterState = print.PrinterState.PRINTER_CONNECTED;
-print.updatePrinterState(printerId, state, (err: BusinessError) => {
-    if (err) {
-        console.error('updatePrinterState failed, because : ' + JSON.stringify(err));
+print.updatePrinterState(printerId, state, (error: BusinessError) => {
+    if (error) {
+        console.error(`Failed to update printer state. Code: ${error.code}, message: ${error.message}`);
     } else {
         console.info('updatePrinterState success');
     }
-})
+});
 
 ```
 
@@ -109,8 +109,8 @@ let state : print.PrinterState = print.PrinterState.PRINTER_CONNECTED;
 print.updatePrinterState(printerId, state).then(() => {
     console.info('update printer state success');
 }).catch((error: BusinessError) => {
-    console.error('update printer state error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to update printer state. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

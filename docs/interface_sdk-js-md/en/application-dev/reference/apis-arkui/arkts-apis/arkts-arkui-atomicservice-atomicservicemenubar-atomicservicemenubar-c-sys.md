@@ -1,10 +1,10 @@
 # AtomicServiceMenuBar (System API)
 
-Provide configuration capabilities for the menuBar of atomicservice
+Creates an **AtomicServiceMenuBar** object based on the context of the current atomic service. The object is used to control the display of the menu function capsule in the upper right corner.
 
 **Since:** 23
 
-<!--Device-unnamed-export declare class AtomicServiceMenuBar--><!--Device-unnamed-export declare class AtomicServiceMenuBar-End-->
+<!--Device-unnamed-/* * Copyright (c) 2025 Huawei Device Co., Ltd. * Licensed under the Apache License, Version 2.0 (the "License"); * you may not use this file except in compliance with the License. * You may obtain a copy of the License at * *     http://www.apache.org/licenses/LICENSE-2.0 * * Unless required by applicable law or agreed to in writing, software * distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the License for the specific language governing permissions and * limitations under the License. */export declare class AtomicServiceMenuBar--><!--Device-unnamed-/* * Copyright (c) 2025 Huawei Device Co., Ltd. * Licensed under the Apache License, Version 2.0 (the "License"); * you may not use this file except in compliance with the License. * You may obtain a copy of the License at * *     http://www.apache.org/licenses/LICENSE-2.0 * * Unless required by applicable law or agreed to in writing, software * distributed under the License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. * See the License for the specific language governing permissions and * limitations under the License. */export declare class AtomicServiceMenuBar-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,7 +22,7 @@ import { AtomicServiceMenuBar } from '@kit.ArkUI';
 constructor(uiContext: UIContext)
 ```
 
-The constructor used to create a AtomicServiceMenuBar object.
+A constructor used to create an **AtomicServiceMenuBar** object.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ The constructor used to create a AtomicServiceMenuBar object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | The atomicservice context instance. |
+| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | Context information of the current atomic service. |
 
 ## setVisible
 
@@ -48,7 +48,7 @@ The constructor used to create a AtomicServiceMenuBar object.
 public setVisible(visible: boolean): void
 ```
 
-Set the visibility of the atomicservice menubar.
+Sets whether to display or hide the menu function capsule of the current atomic service.
 
 **Since:** 23
 
@@ -66,5 +66,5 @@ Set the visibility of the atomicservice menubar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | whether this bar is visible,true indicate the menubar is visible. |
+| visible | boolean | Yes | Expected status of the menu function capsule. true: The menu function capsule is displayed. false: The menu function capsule is hidden. |
 

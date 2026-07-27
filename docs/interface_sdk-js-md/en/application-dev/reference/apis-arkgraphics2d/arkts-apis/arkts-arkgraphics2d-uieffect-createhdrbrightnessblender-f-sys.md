@@ -43,15 +43,16 @@ Create an HdrBrightnessBlender, which is used to adjust the HDR brightness of UI
 **Example**
 
 ```TypeScript
-import { uiEffect } from "@kit.ArkGraphics2D"
+import { uiEffect } from '@kit.ArkGraphics2D'
 
+// Create a BrightnessBlender instance that supports HDR.
 let blender : uiEffect.HdrBrightnessBlender =
   uiEffect.createHdrBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
     positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
 
 @Entry
 @Component
-struct example {
+struct Example {
   build() {
     RelativeContainer() {
       Image($r("app.media.screenshot"))

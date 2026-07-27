@@ -773,7 +773,7 @@ insert(uri: string, value: ValuesBucket, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要插入的数据的路径。 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
+| value | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当将单条数据插入数据库成功，err为undefined，data为获取到的插入数据记录的索引；否则为错误对象。<br />因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此callback也无法返回索引值。 |
 
 **错误码：**
@@ -847,7 +847,7 @@ insert(uri: string, value: ValuesBucket): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 要插入的数据的路径。 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
+| value | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 要插入的数据的值。 |
 
 **返回值：**
 
@@ -1123,7 +1123,7 @@ notifyChange(data: ChangeInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [ChangeInfo](arkts-arkdata-datashare-changeinfo-i-sys.md) | 是 | 表示数据变更类型、变化的uri、变更的数据内容。 |
+| data | [ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md) | 是 | 表示数据变更类型、变化的uri、变更的数据内容。 |
 
 **返回值：**
 
@@ -1984,7 +1984,7 @@ update(
 | --- | --- | --- | --- |
 | uri | string | 是 | 要更新的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。<br />update接口是否支持谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
+| value | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当更新数据库中的数据记录成功，err为undefined，data为获取到的更新的数据记录数；否则为错误对象。<br />因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回更新的数据记录数。 |
 
 **错误码：**
@@ -2061,7 +2061,7 @@ update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: 
 | --- | --- | --- | --- |
 | uri | string | 是 | 要更新的数据的路径。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 筛选条件。<br />update接口是否支持谓词筛选条件取决于服务端所选用的数据库，如KVDB目前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
+| value | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 要更新的数据的值。 |
 
 **返回值：**
 

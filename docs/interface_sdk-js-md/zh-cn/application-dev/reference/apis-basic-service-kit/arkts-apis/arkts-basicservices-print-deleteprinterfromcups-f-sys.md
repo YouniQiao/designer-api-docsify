@@ -51,13 +51,13 @@ function deletePrinterFromCups(printerName: string): Promise<void>
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let printerName : string = "testPrinterName";
+let printerName : string = 'testPrinterName';
 
 print.deletePrinterFromCups(printerName).then(() => {
     console.info('deletePrinterFromCups success');
 }).catch((error: BusinessError) => {
-    console.error('deletePrinterFromCups error : ' + JSON.stringify(error));
-})
+    console.error(`Failed to delete printer from cups. Code: ${error.code}, message: ${error.message}`);
+});
 
 ```
 

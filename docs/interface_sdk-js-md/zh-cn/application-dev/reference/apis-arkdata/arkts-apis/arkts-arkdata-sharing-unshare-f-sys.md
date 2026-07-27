@@ -61,13 +61,13 @@ participants.push({
   },
   attachInfo: ''
 })
-cloudData.sharing.unshare('sharing_resource_test', participants, ((err: BusinessError, result) => {
+cloudData.sharing.unshare('sharing_resource_test', participants, (err: BusinessError, result) => {
   if (err) {
     console.error(`unshare failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`unshare succeeded, result: ${result}`);
-}))
+});
 
 ```
 
@@ -130,12 +130,12 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 cloudData.sharing.unshare('sharing_resource_test', participants).then((result) => {
   console.info(`unshare succeeded, result: ${result}`);
 }).catch((err: BusinessError) => {
   console.error(`unshare failed, code is ${err.code},message is ${err.message}`);
-})
+});
 
 ```
 

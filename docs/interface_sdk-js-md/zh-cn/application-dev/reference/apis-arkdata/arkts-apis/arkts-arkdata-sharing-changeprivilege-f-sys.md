@@ -60,15 +60,15 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 
-cloudData.sharing.changePrivilege('sharing_resource_test', participants, ((err: BusinessError, result) => {
+cloudData.sharing.changePrivilege('sharing_resource_test', participants, (err: BusinessError, result) => {
   if (err) {
     console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`change privilege succeeded, result: ${result}`);
-}))
+});
 
 ```
 
@@ -131,13 +131,13 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-})
+});
 
 cloudData.sharing.changePrivilege('sharing_resource_test', participants).then((result) => {
   console.info(`change privilege succeeded, result: ${result}`);
 }).catch((err: BusinessError) => {
   console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
-})
+});
 
 ```
 

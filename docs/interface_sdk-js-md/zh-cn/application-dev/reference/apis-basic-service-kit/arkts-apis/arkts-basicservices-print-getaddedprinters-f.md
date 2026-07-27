@@ -44,7 +44,7 @@ print.getAddedPrinters().then((printers: string[]) => {
     console.info('getAddedPrinters success ' + JSON.stringify(printers));
     // ...
 }).catch((error: BusinessError) => {
-    console.error('failed to getAddedPrinters because ' + JSON.stringify(error));
+    console.error(`Failed to getAddedPrinters. Code: ${error.code}, message: ${error.message}`);
 })
 
 ```

@@ -4,7 +4,7 @@
 declare type OnContentScrollCallback = (totalOffsetX: number, totalOffsetY: number) => void
 ```
 
-Callback when the content in the search box scrolls.
+Called when the text content is scrolled.
 
 **Since:** 18
 
@@ -18,6 +18,6 @@ Callback when the content in the search box scrolls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| totalOffsetX | number | Yes | Indicates horizontal coordinate offset of the text in the content area, in px.  |
-| totalOffsetY | number | Yes | Indicates the vertical coordinate offset of the text in the content area, in px.  |
+| totalOffsetX | number | Yes | Offset of the horizontal coordinate of the upper left corner of the text relative to the horizontal coordinate of the upper left corner of the entire content input area.  |
+| totalOffsetY | number | Yes | Offset of the vertical coordinate of the upper left corner of the text relative to the vertical coordinate of the upper left corner of the entire content input area.  |
 

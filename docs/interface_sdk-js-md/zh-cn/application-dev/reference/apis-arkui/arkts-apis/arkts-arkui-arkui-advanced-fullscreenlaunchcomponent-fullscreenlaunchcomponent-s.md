@@ -1,0 +1,132 @@
+# FullScreenLaunchComponent
+
+全屏启动原子化服务组件，当被拉起方授权使用方可以嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。
+> **说明：**  
+>  
+> 如果需要在该组件中实现可嵌入式运行的原子化服务，必须继承自[EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)  
+> 。否则，系统无法保证原子化服务功能正常。
+
+**起始版本：** 12
+
+**装饰器类型：** @Component
+
+<!--Device-unnamed-export declare struct FullScreenLaunchComponent--><!--Device-unnamed-export declare struct FullScreenLaunchComponent-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入模块
+
+```TypeScript
+import { FullScreenLaunchComponent } from '@kit.ArkUI';
+```
+
+## appId
+
+```TypeScript
+appId: string
+```
+
+需要拉起的原子化服务appId，appId是原子化服务的唯一标识。
+
+**类型：** string
+
+**起始版本：** 12
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FullScreenLaunchComponent-appId: string--><!--Device-FullScreenLaunchComponent-appId: string-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## content
+
+```TypeScript
+content: Callback<void>
+```
+
+可以使用组件组合来自定义拉起原子化服务前的占位图标，实现类似大桌面应用图标的效果。点击占位组件后，将拉起原子化服务。
+
+**类型：** Callback&lt;void&gt;
+
+**起始版本：** 12
+
+**装饰器类型：** @BuilderParam
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FullScreenLaunchComponent-content: Callback<void>--><!--Device-FullScreenLaunchComponent-content: Callback<void>-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onError
+
+```TypeScript
+onError?: ErrorCallback
+```
+
+被拉起的嵌入式运行原子化服务在运行过程中发生异常时触发本回调。可通过回调参数中的code、name和message获取错误信息并做处理。
+
+**类型：** ErrorCallback
+
+**起始版本：** 18
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FullScreenLaunchComponent-onError?: ErrorCallback--><!--Device-FullScreenLaunchComponent-onError?: ErrorCallback-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onReceive
+
+```TypeScript
+onReceive?: Callback<Record<string, Object>>
+```
+
+被拉起的嵌入式运行原子化服务通过[@ohos.window (窗口)](arkts-window.md)调用API时，触发本回调。
+
+**类型：** Callback&lt;Record&lt;string, Object&gt;&gt;
+
+**起始版本：** 20
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FullScreenLaunchComponent-onReceive?: Callback<Record<string, Object>>--><!--Device-FullScreenLaunchComponent-onReceive?: Callback<Record<string, Object>>-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onTerminated
+
+```TypeScript
+onTerminated?: Callback<TerminationInfo>
+```
+
+被拉起的嵌入式运行原子化服务通过点击原子化服务退出按钮、手势侧滑、调用[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)或者[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateself)正常退出时，触发本回调函数。
+
+**类型：** Callback&lt;TerminationInfo&gt;
+
+**起始版本：** 18
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FullScreenLaunchComponent-onTerminated?: Callback<TerminationInfo>--><!--Device-FullScreenLaunchComponent-onTerminated?: Callback<TerminationInfo>-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## options
+
+```TypeScript
+options?: AtomicServiceOptions
+```
+
+拉起原子化服务参数。
+
+**类型：** AtomicServiceOptions
+
+**起始版本：** 12
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-FullScreenLaunchComponent-options?: AtomicServiceOptions--><!--Device-FullScreenLaunchComponent-options?: AtomicServiceOptions-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+

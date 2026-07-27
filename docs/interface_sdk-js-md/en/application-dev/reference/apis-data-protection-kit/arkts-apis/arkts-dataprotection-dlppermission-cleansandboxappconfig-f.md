@@ -14,7 +14,7 @@ function cleanSandboxAppConfig(): Promise<void>
 
 Clears the sandbox application configuration. After the API is successfully called, the sandbox application configuration is cleared and the default state is restored. This API uses a promise to return the result.
 
-This API clears the sandbox application configuration and restores the default state to prevent residual configurations from affecting subsequent use.
+This API clears the sandbox application configuration and restores the default state to prevent residual configurations from affecting subsequent use. This API can be called only in non-sandbox applications.
 
 **Since:** 11
 
@@ -42,8 +42,8 @@ This API clears the sandbox application configuration and restores the default s
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 
-dlpPermission.cleanSandboxAppConfig().then((configInfo) => { // Clear sandbox application configuration.
-  console.info('configInfo: ', configInfo);
+dlpPermission.cleanSandboxAppConfig().then(() => { // Clear sandbox application configuration.
+  console.info('cleanSandboxAppConfig success');
 }).catch((error: BusinessError)=> {
   console.error(JSON.stringify(error));
 });

@@ -49,27 +49,31 @@ Identifies sensitive content in a specified file based on the configured policy 
 **Example**
 
 ```TypeScript
-// Import the sensitive content identification module.
 import { identifySensitiveContent } from '@kit.DataProtectionKit';
 
 // Define the physical file path to be scanned.
-let filepath = "/data/app/el1/bundle/public/bundleName/test.txt";
+let filePath = "/data/service/el2/100/hmdfs/account/files/Docs/Documents/test.txt";
 
-// Configures the policy for sensitive content identification.
+// Configure the policy for sensitive content identification.
 let policies: Array<identifySensitiveContent.Policy> = [
-  {"sensitiveLabel":"1", "keywords":[], "regex":""}
+  {"sensitiveLabel":"name", "keywords":["name"], "regex":""},
+  {"sensitiveLabel":"phone", "keywords":[], "regex":"phone"},
+  {"sensitiveLabel":"address", "keywords":["address"], "regex":"xx City, xx Province"}
 ];
 try {
-  // Call the scanFile API to identify sensitive content in the file.
-  identifySensitiveContent.scanFile(filepath, policies).then(records => {
-    // Identification result
+  identifySensitiveContent.scanFile(filePath, policies).then(records => {
     console.info('scanFile finish');
-  }).catch((err:Error) => {
-    // Failed to identify.
-    console.error('error message', err.message);
+    for (let i = 0; i < records.length; ++i) {
+      const sensitiveLabel = records[i].sensitiveLabel;
+      const matchContent = records[i].matchContent;
+      const matchNumber = records[i].matchNumber;
+      console.info(`scanFile result sensitiveLabel: ${sensitiveLabel} matchNumber ${matchNumber} matchContent ${matchContent}`);
+    }
+  }).catch((err: BusinessError) => {
+    // Identification fails.
+    console.error(`Failed to scanFile. Code:${err.code}, message:${err.message}`);
   })
 } catch (err) {
-  // Capture exceptions.
   console.error('error message', err.message);
 }
 

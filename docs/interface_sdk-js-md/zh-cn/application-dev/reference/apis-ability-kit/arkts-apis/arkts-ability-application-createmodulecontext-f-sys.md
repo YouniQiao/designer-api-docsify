@@ -66,7 +66,7 @@ export default class EntryAbility extends UIAbility {
   onCreate() {
     let moduleContext: common.Context;
     try {
-      application.createModuleContext(this.context, 'bundlename', 'entry').then((data: Context)=>{
+      application.createModuleContext(this.context, 'bundlename', 'entry').then((data: common.Context)=>{
         moduleContext = data;
         console.info('createModuleContext success!');
       }).catch((error : BusinessError)=>{

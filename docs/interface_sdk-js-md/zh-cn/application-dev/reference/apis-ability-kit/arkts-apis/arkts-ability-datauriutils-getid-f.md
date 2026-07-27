@@ -46,7 +46,7 @@ import { dataUriUtils } from '@kit.AbilityKit';
 try {
   let id = dataUriUtils.getId('com.example.dataUriUtils/1221');
   console.info(`get id: ${id}`);
-} catch(err) {
+} catch (err) {
   console.error(`get id err ,check the uri ${err}`);
 }
 

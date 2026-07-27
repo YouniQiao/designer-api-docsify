@@ -45,7 +45,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 // 创建用于图像效果的buffer
 const colorBuffer = new ArrayBuffer(96);
 // 设置图像初始化选项
-let opts : image.InitializationOptions = {
+let opts: image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {

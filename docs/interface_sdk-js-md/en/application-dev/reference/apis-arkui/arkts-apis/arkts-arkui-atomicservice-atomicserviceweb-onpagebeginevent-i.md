@@ -1,6 +1,6 @@
 # OnPageBeginEvent
 
-Page begin event at the begin of web page loading.
+Represents the callback invoked when the web page loading begins.
 
 **Since:** 12
 

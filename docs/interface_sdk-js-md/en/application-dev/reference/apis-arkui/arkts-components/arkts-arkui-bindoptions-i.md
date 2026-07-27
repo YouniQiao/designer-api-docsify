@@ -2,7 +2,7 @@
 
 Overlay module options
 
-**Since:** 11
+**Since:** 10
 
 <!--Device-unnamed-declare interface BindOptions--><!--Device-unnamed-declare interface BindOptions-End-->
 
@@ -18,7 +18,7 @@ Background color of the sheet.<br>Default value: **Color.White**.
 
 **Type:** ResourceColor
 
-**Since:** 11
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ Callback for when the sheet is displayed (after the animation ends).
 
 **Type:** () =&gt; void
 
-**Since:** 11
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,7 +58,7 @@ Callback for when the sheet disappears (after the animation ends).
 
 **Type:** () =&gt; void
 
-**Since:** 11
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 

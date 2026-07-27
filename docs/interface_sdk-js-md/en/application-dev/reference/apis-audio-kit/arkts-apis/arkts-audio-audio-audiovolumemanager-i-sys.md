@@ -1161,3 +1161,89 @@ Sets the system volume percentage, using an integer ranging from minimum system 
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, including volumeType or percentage param begin out of range. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
 
+## setVoipCapturerMuteForUid
+
+```TypeScript
+setVoipCapturerMuteForUid(uid: number, streamId: number, muted: boolean): Promise<void>
+```
+
+Sets the mute state for the VoIP audio capture stream of a specified application.If there are multiple callers setting muted states for the same uid and streamId,only when all callers cancel muted state the VoIP capture stream will be truly unmuted.When the application abnormally exits, the application releases the audio stream and restarts it, or the audio service abnormally exits and restarts, the mute state set for this audio stream will automatically become invalid. In these cases, you need to call this API again to apply the mute state.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.MUTE_VOIP_CAPTURE
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioVolumeManager-setVoipCapturerMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>--><!--Device-AudioVolumeManager-setVoipCapturerMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uid | number | Yes | Uid of the application to be muted.<br>The value should be an integer. |
+| streamId | number | Yes | Unique ID of the VoIP audio stream. |
+| muted | boolean | Yes | Mute state to set. The value **true** means to mute the VoIP capture stream,and **false** means to unmute the VoIP capture stream. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+
+## setVoipRendererMuteForUid
+
+```TypeScript
+setVoipRendererMuteForUid(uid: number, streamId: number, muted: boolean): Promise<void>
+```
+
+Sets the mute state for the VoIP audio renderer stream of a specified application.If there are multiple callers setting muted states for the same uid and streamId,only when all callers cancel muted state the VoIP renderer stream will be truly unmuted.When the application abnormally exits, the application releases the audio stream and restarts it, or the audio service abnormally exits and restarts, the mute state set for this audio stream will automatically become invalid. In these cases, you need to call this API again to apply the mute state.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.MUTE_VOIP_PLAYBACK
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioVolumeManager-setVoipRendererMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>--><!--Device-AudioVolumeManager-setVoipRendererMuteForUid(uid: int, streamId: long, muted: boolean): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uid | number | Yes | Uid of the application to be muted.<br>The value should be an integer. |
+| streamId | number | Yes | Unique ID of the VoIP audio stream. |
+| muted | boolean | Yes | Mute state to set. The value **true** means to mute the VoIP renderer stream,and **false** means to unmute the VoIP renderer stream. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Crash or blocking occurs in system process. |
+

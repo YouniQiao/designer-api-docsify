@@ -49,3 +49,26 @@ Get all persistence permissions for the application.
 | 13900011 | Out of memory |
 | 13900020 | Invalid tokenID |
 
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function getPersistentPolicyExample() {
+  try {
+    let tokenID = 537688848; // Use bundleManager.getApplicationInfo() to obtain the token ID for a system app, and use bundleManager.getBundleInfoForSelf() to obtain the token ID for a non-system app.
+    fileShare.getPersistentPolicy(tokenID).then((result: Array<fileShare.PolicyInfo>) => {
+      for (let policy of result) {
+        console.info(`get persist policy URI: ${policy.uri}, operationMode: ${policy.operationMode}`);
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`get persist policy failed with error, Code: ${err.code}, message: ${err.message}`);
+    });
+  } catch (error) {
+    console.error(`get persist policy failed with error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+
+```
+

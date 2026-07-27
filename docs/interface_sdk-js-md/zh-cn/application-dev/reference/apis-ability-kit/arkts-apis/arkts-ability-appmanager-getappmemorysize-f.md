@@ -43,7 +43,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 appManager.getAppMemorySize().then((data) => {
   console.info(`The size of app memory is: ${JSON.stringify(data)}`);
 }).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
+  console.error(`code: ${error.code}, msg:${error.message}`);
 });
 
 ```
@@ -85,7 +85,7 @@ import { appManager } from '@kit.AbilityKit';
 
 appManager.getAppMemorySize((err, data) => {
   if (err) {
-    console.error(`getAppMemorySize fail, err: ${JSON.stringify(err)}`);
+    console.error(`getAppMemorySize fail, code: ${err.code}, msg:${err.message}`);
   } else {
     console.info(`The size of app memory is: ${JSON.stringify(data)}`);
   }
