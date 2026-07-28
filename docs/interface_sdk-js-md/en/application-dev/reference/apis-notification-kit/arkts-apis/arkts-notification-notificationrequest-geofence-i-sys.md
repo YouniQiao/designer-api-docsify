@@ -34,7 +34,7 @@ Coordinate system type of the center point.
 delayTime?:number
 ```
 
-Delay time from geofence entry to event trigger, in seconds.The value ranges from 0 to 300. The default value is **0**.
+Delay time of the geofence, in seconds. That is, the delay time before the geofence is triggered after entering the geofence. Value range: [0, 300]. Default value: **0**.
 
 **Type:** number
 
@@ -106,7 +106,7 @@ Event type for monitoring a geofence.
 radius:number
 ```
 
-Geofence radius, in meters. The value ranges from 200 to 2000.
+Radius of the geofence, in meters. Value range: [200, 2000].
 
 **Type:** number
 

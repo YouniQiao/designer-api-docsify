@@ -58,7 +58,7 @@ enable?: boolean
 uid: number
 ```
 
-应用程序的UID。
+应用的UID。
 
 **类型：** number
 

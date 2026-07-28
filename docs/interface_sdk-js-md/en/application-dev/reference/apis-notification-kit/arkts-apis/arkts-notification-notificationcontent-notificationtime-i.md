@@ -17,7 +17,7 @@ Describes the notification timing information.
 initialTime?: number
 ```
 
-Initial time for the timer, used to set the starting point of the timer in the Live View. The value range is all non-negative integers. The default value is **0**. Unit: millisecond.
+Initial time for the timer, which is used to set the starting point of the timer in the live view. The default value is **0**. Unit: ms.
 
 **Type:** number
 

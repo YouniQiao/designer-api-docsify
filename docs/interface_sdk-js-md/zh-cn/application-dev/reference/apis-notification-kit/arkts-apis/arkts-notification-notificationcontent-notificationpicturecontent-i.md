@@ -59,7 +59,7 @@ expandedTitle: string
 picture: image.PixelMap
 ```
 
-通知展开后显示的图片内容。图像像素的总字节数不能超过2MB。
+通知展开后显示的图片内容。图标像素的总字节数不能超过2MB（图标像素的总字节数通过[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取）。
 
 **类型：** image.PixelMap
 

@@ -34,7 +34,7 @@ function open(portId: number): void
 | [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |  |
 | [31400002](../../apis-basic-services-kit/errorcode-usb.md#31400002-没有串口设备访问权限) |  |
 | [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |  |
-| [31400004](../../apis-basic-services-kit/errorcode-usb.md#31400004-端口正在被其他应用程序使用) |  |
+| [31400004](../../apis-basic-services-kit/errorcode-usb.md#31400004-串口设备被占用) |  |
 
 **示例：**
 

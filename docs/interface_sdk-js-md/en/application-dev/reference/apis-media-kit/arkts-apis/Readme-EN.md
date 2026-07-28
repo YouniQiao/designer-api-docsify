@@ -162,6 +162,12 @@
   - [SwitchMode](arkts-media-media-switchmode-e.md)
   - [VideoScaleType](arkts-media-media-videoscaletype-e.md)
   - [VideoSourceType](arkts-media-media-videosourcetype-e.md)
+- [@ohos.multimedia.videoProcessing](arkts-multimedia-videoprocessing.md)
+  - [createVideoProcessor](arkts-media-videoprocessing-createvideoprocessor-f.md)
+  - [VideoProcessor](arkts-media-videoprocessing-videoprocessor-i.md)
+  - [VideoProcessorAiHdrStatus](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md)
+  - [VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md)
+  - [VideoProcessorStatusCallback](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md)
 - multimedia<!--arkts-mediakit-multimedia-->
   - [soundPool](arkts-soundpool.md)
     - [ErrorInfo](arkts-media-soundpool-errorinfo-i.md)

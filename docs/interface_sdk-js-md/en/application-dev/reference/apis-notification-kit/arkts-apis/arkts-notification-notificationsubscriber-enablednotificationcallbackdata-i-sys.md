@@ -1,6 +1,6 @@
 # EnabledNotificationCallbackData (System API)
 
-Returns the changes of the application badge enabling state.
+Returns the changes of the application enabling state.
 
 **Since:** 8
 

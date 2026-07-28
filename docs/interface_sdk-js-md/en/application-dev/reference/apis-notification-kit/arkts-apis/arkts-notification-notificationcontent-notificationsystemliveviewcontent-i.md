@@ -19,7 +19,7 @@ Describes the system live view notification content, which is used to display re
 button?: NotificationButton
 ```
 
-Button in the notification. This parameter is left empty by default.
+Button of the notification. This parameter is left empty by default.
 
 **Type:** NotificationButton
 

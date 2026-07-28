@@ -23,11 +23,11 @@ Duration of the video.Unit: second. The value range is all integers. Value range
 
 **Type:** number
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PreparedInfo-duration: number--><!--Device-PreparedInfo-duration: number-End-->
 

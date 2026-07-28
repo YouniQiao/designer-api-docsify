@@ -27,7 +27,7 @@ Value range: [0, +∞)
 
 **Type:** number
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 

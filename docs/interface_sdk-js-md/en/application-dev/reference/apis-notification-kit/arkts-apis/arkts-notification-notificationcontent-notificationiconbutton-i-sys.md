@@ -1,6 +1,6 @@
 # NotificationIconButton (System API)
 
-Describes the information of a system notification button.
+Describes the system notification button.
 
 **Since:** 18
 

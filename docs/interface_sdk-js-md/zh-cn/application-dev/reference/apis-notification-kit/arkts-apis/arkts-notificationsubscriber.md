@@ -1,4 +1,4 @@
-# notificationSubscriber (Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled)
+# notificationSubscriber
 
 ## 汇总
 
@@ -9,7 +9,7 @@
 | --- | --- |
 | [BadgeEnabledChangedCallback](arkts-notification-notificationsubscriber-badgeenabledchangedcallback-i-sys.md) | 注册应用角标使能状态变化的回调函数类型。type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void |
 | [BadgeNumberCallbackData](arkts-notification-notificationsubscriber-badgenumbercallbackdata-i-sys.md) | 应用角标数量变化的回调函数类型。 |
-| [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | 应用角标使能状态变化的回调函数类型。 |
+| [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | 应用使能状态变化的回调函数类型。 |
 | [EnabledPriorityNotificationByBundleCallbackData](arkts-notification-notificationsubscriber-enabledprioritynotificationbybundlecallbackdata-i-sys.md) | 应用通知优先级开关状态。 |
 | [EnabledPriorityNotificationCallbackData](arkts-notification-notificationsubscriber-enabledprioritynotificationcallbackdata-i-sys.md) | 通知优先级总开关状态。 |
 | [EnabledSilentReminderCallbackData](arkts-notification-notificationsubscriber-enabledsilentremindercallbackdata-i-sys.md) | 应用通知静默提醒开关状态的回调函数类型。 |

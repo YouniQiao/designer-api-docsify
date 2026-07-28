@@ -12,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>
 ```
 
-获取允许通知的应用程序列表。使用Promise异步回调。
+获取允许通知的应用列表。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -28,7 +28,7 @@ function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleOption&gt;&gt; | 返回允许通知的应用程序列表。 |
+| Promise&lt;Array&lt;BundleOption&gt;&gt; | 返回允许通知的应用列表。 |
 
 **错误码：**
 
@@ -64,7 +64,7 @@ notificationManager.getAllNotificationEnabledBundles().then((data: Array<notific
 function getAllNotificationEnabledBundles(userId: number): Promise<Array<BundleOption>>
 ```
 
-获取指定用户下允许通知的应用程序列表。使用Promise异步回调。
+获取指定用户下允许通知的应用列表。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -80,13 +80,13 @@ function getAllNotificationEnabledBundles(userId: number): Promise<Array<BundleO
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | number | 是 | 要获取允许通知的应用程序列表的用户。 |
+| userId | number | 是 | 要获取允许通知的应用列表的用户。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleOption&gt;&gt; | 返回允许通知的应用程序列表。 |
+| Promise&lt;Array&lt;BundleOption&gt;&gt; | 返回允许通知的应用列表。 |
 
 **错误码：**
 

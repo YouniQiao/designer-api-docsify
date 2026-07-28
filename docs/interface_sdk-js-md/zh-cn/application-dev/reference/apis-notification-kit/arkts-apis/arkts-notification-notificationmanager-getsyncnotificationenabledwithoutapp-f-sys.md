@@ -12,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function getSyncNotificationEnabledWithoutApp(userId: number, callback: AsyncCallback<boolean>): void
 ```
 
-获取同步通知到未安装应用程序设备的开关是否开启(callback形式)。
+获取同步通知到未安装应用设备的开关是否开启(callback形式)。
 
 **起始版本：** 9
 
@@ -31,7 +31,7 @@ function getSyncNotificationEnabledWithoutApp(userId: number, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取同步通知到未安装应用程序设备的开关是否开启的回调函数（true：开启，false：未开启）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取同步通知到未安装应用设备的开关是否开启的回调函数（true：开启，false：未开启）。 |
 
 **错误码：**
 
@@ -71,7 +71,7 @@ notificationManager.getSyncNotificationEnabledWithoutApp(userId, getSyncNotifica
 function getSyncNotificationEnabledWithoutApp(userId: number): Promise<boolean>
 ```
 
-获取同步通知到未安装应用程序设备的开关是否开启(Promise形式)。
+获取同步通知到未安装应用设备的开关是否开启(Promise形式)。
 
 **起始版本：** 9
 
@@ -95,7 +95,7 @@ function getSyncNotificationEnabledWithoutApp(userId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回获取同步通知到未安装应用程序设备的开关是否开启的结果（true：开启，false：未开启）。 |
+| Promise&lt;boolean&gt; | 以Promise形式返回获取同步通知到未安装应用设备的开关是否开启的结果（true：开启，false：未开启）。 |
 
 **错误码：**
 

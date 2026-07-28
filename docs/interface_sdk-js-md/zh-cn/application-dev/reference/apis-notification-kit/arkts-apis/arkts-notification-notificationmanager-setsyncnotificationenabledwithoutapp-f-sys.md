@@ -12,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置是否将通知同步到未安装应用程序的设备(callback形式)。
+设置是否将通知同步到未安装应用的设备(callback形式)。
 
 **起始版本：** 9
 
@@ -32,7 +32,7 @@ function setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean, c
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
 | enable | boolean | 是 | 是否启用（true：使能，false：禁止）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置是否将通知同步到未安装应用程序的设备的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设置是否将通知同步到未安装应用的设备的回调函数。 |
 
 **错误码：**
 
@@ -73,7 +73,7 @@ notificationManager.setSyncNotificationEnabledWithoutApp(userId, enable, setSync
 function setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean): Promise<void>
 ```
 
-设置是否将通知同步到未安装应用程序的设备(Promise形式)。
+设置是否将通知同步到未安装应用的设备(Promise形式)。
 
 **起始版本：** 9
 
@@ -98,7 +98,7 @@ function setSyncNotificationEnabledWithoutApp(userId: number, enable: boolean): 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 以Promise形式返回设置是否将通知同步到未安装应用程序的设备的结果。 |
+| Promise&lt;void&gt; | 以Promise形式返回设置是否将通知同步到未安装应用的设备的结果。 |
 
 **错误码：**
 

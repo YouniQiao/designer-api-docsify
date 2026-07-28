@@ -46,7 +46,7 @@ Name of the application that creates the notification.
 readonly bundleName: string
 ```
 
-Name of the bundle that creates the notification.
+Bundle name of the application that creates the notification.
 
 **Type:** string
 
@@ -126,7 +126,7 @@ Unique identifier of the notification.
 readonly notificationSlotType: notificationManager.SlotType
 ```
 
-Notification slot type, which identifies the channel category to which the notification belongs (such as social communication, service reminder, etc.). Different slot types correspond to different reminder methods.
+Notification slot type, which identifies the slot category of the notification (such as social communication and service reminder). Different slot types correspond to different reminder types.
 
 **Type:** notificationManager.SlotType
 

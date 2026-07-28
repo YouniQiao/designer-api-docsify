@@ -71,7 +71,7 @@ desc?: string
 readonly enabled?: boolean
 ```
 
-表示是否允许发布此通知渠道的通知。
+是否允许发布此通知渠道类型的通知。
 
 - true：允许发布通知。  
 - false：禁止发布通知。
@@ -179,7 +179,7 @@ notificationLevel?: notificationManager.SlotLevel
 notificationType?: notificationManager.SlotType
 ```
 
-描述通知渠道，不同通知渠道对应的通知提醒方式不同。
+渠道类型。不同渠道类型的通知提醒方式不同。
 
 **类型：** notificationManager.SlotType
 

@@ -4,7 +4,7 @@
 export type SystemUpdateCallback = (data: SubscribeCallbackData) => void
 ```
 
-Defines the SystemUpdateCallback callback.type SystemUpdateCallback = (data: SubscribeCallbackData) => void
+Returns the notification information carrying system property values.type SystemUpdateCallback = (data: SubscribeCallbackData) => void
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ Defines the SystemUpdateCallback callback.type SystemUpdateCallback = (data: Sub
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [SubscribeCallbackData](arkts-notification-notificationsubscribe-subscribecallbackdata-t-sys.md) | Yes | -Notification information that carries the system property value. |
+| data | [SubscribeCallbackData](arkts-notification-notificationsubscribe-subscribecallbackdata-t-sys.md) | Yes | Notification information that carries the system property value.  |
 

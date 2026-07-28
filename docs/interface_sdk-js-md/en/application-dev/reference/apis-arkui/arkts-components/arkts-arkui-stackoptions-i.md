@@ -23,7 +23,7 @@ Alignment of child components in the container.Default value: Alignment.Center.<
 
 **Type:** Alignment
 
-**Since:** 18
+**Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

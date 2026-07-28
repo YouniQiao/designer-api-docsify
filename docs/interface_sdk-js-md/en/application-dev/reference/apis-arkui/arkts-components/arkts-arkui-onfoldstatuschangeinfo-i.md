@@ -23,11 +23,11 @@ Current fold state of the device.
 
 **Type:** FoldStatus
 
-**Since:** 18
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnFoldStatusChangeInfo-foldStatus: FoldStatus--><!--Device-OnFoldStatusChangeInfo-foldStatus: FoldStatus-End-->
 

@@ -1,6 +1,6 @@
 # OperationInfo (System API)
 
-Cross-device operation information.
+Defines cross-device collaborative operation information.
 
 **Since:** 18
 

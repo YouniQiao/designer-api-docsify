@@ -16,7 +16,7 @@ Returns notification information carrying system property values.
 readonly notificationClassification?: NotificationClassification
 ```
 
-Notification classification information. It exists only when enableClassification in NotificationSubscribeInfo is true.
+Notification classification information. It exists only when **enableClassification** in NotificationSubscribeInfo is **true**.
 
 **Type:** NotificationClassification
 
@@ -129,7 +129,7 @@ Notification vibration.
 readonly voiceContent?: VoiceContent
 ```
 
-Voice broadcast content of the notification. It exists only when voiceContentOptions.enabled is true in NotificationSubscribeInfo.
+Voice broadcast content of the notification.
 
 **Type:** VoiceContent
 

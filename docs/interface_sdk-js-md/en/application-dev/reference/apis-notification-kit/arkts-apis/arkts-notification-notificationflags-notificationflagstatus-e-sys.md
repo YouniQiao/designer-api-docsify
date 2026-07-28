@@ -16,7 +16,7 @@ Enumerates the notification flag states.
 TYPE_NONE = 0
 ```
 
-Default flag, which has the same effect as **TYPE_OPEN**.
+Default flag when no flag is set. It has the same effect as **TYPE_OPEN**.
 
 **Since:** 11
 

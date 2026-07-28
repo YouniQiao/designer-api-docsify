@@ -56,7 +56,7 @@ readonly switchName: string
 readonly userId: number
 ```
 
-用户ID。取值为所有整数。
+用户ID。
 
 **类型：** number
 

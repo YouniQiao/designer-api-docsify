@@ -1,6 +1,6 @@
 # EnabledNotificationCallbackData（系统接口）
 
-应用角标使能状态变化的回调函数类型。
+应用使能状态变化的回调函数类型。
 
 **起始版本：** 8
 

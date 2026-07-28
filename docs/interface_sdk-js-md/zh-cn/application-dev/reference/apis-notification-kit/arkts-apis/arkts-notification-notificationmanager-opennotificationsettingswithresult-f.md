@@ -34,7 +34,7 @@ function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;NotificationSetting&gt; | Promise对象，返回此应用程序的通知设置。 |
+| Promise&lt;NotificationSetting&gt; | Promise对象，返回此应用的通知设置。 |
 
 **错误码：**
 

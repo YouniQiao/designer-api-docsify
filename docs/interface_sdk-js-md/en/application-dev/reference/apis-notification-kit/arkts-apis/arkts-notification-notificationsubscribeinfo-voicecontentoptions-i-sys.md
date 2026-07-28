@@ -1,6 +1,6 @@
 # VoiceContentOptions (System API)
 
-Describes the voice content options for notification subscriptions.
+Describes the configuration options for notification voice broadcast.
 
 **Since:** 26.0.0
 

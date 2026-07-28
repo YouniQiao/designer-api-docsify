@@ -1,6 +1,6 @@
 # RemoveReason (System API)
 
-Reason for removing the notification.
+Defines the reasons for notification removal.
 
 **Since:** 9
 

@@ -61,7 +61,7 @@ Title when the notification is expanded. It cannot be an empty string. The size 
 picture: image.PixelMap
 ```
 
-Picture content displayed after the notification is expanded. The total bytes of the image pixels cannot exceed2 MB.
+Picture content displayed after the notification is expanded. The total bytes of the image pixels (obtained through getPixelBytesNumber) cannot exceed 2 MB.
 
 **Type:** image.PixelMap
 

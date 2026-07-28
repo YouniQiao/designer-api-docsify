@@ -27,11 +27,11 @@ Spacing between child components.Since API version 9, this parameter does not ta
 
 **Type:** string \| number
 
-**Since:** 18
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RowOptions-space?: string | number--><!--Device-RowOptions-space?: string | number-End-->
 

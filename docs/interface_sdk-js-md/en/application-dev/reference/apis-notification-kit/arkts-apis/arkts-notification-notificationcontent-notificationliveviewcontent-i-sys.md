@@ -1,6 +1,6 @@
 # NotificationLiveViewContent (System API)
 
-Describes the common live view.
+Describes the normal live notification content. This API inherits from NotificationBasicContent.
 
 **Inheritance/Implementation:** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 

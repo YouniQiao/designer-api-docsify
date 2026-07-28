@@ -24,11 +24,11 @@ On hover, child components with IDs in this array automatically shift away from 
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 18
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FolderStackOptions-upperItems?: Array<string>--><!--Device-FolderStackOptions-upperItems?: Array<string>-End-->
 

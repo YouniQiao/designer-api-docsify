@@ -12,7 +12,7 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>
 ```
 
-获取指定应用中“已获取的本机通知”通知开关开启的应用列表。使用Promise异步回调。
+获取本应用中“已获取的本机通知”通知开关开启的应用列表。使用Promise异步回调。
 
 **起始版本：** 22
 
@@ -26,7 +26,7 @@ function getUserGrantedEnabledBundles(): Promise<GrantedBundleInfo[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GrantedBundleInfo[]&gt; | Promise对象，返回获取指定应用中“已获取的本机通知”通知开关开启的应用列表。 |
+| Promise&lt;GrantedBundleInfo[]&gt; | Promise对象，返回本应用中“已获取的本机通知”通知开关开启的应用列表。 |
 
 **错误码：**
 

@@ -1,6 +1,6 @@
 # NotificationKey (System API)
 
-Notification key.
+Defines the notification key value.
 
 **Since:** 9
 

@@ -12,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-根据应用的包获取应用程序是否支持分布式通知。使用callback异步回调。
+根据应用的包获取应用是否支持分布式通知。使用callback异步回调。
 
 **起始版本：** 9
 

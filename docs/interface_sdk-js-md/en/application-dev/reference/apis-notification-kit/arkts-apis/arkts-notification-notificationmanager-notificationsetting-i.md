@@ -22,7 +22,7 @@ badgeNumberEnabled?: boolean
 
 Whether to enable the display of notification badges.
 
-- **true**: enabled.  
+- **true**: enable.  
 - **false**: disable.
 
 **Type:** boolean
@@ -43,7 +43,7 @@ bannerEnabled?: boolean
 
 Whether to enable banner notification.
 
-- **true**: enabled.  
+- **true**: enable.  
 - **false**: disable.
 
 **Type:** boolean
@@ -64,7 +64,7 @@ lockScreenEnabled?: boolean
 
 Whether to enable lock screen notification.
 
-- **true**: enabled.  
+- **true**: enable.  
 - **false**: disable.
 
 **Type:** boolean
@@ -85,7 +85,7 @@ notificationEnabled?: boolean
 
 Whether to enable the application notification.
 
-- **true**: enabled.  
+- **true**: enable.  
 - **false**: disable.
 
 **Type:** boolean
@@ -106,7 +106,7 @@ soundEnabled: boolean
 
 Whether to enable ringtone.
 
-- **true**: enabled.  
+- **true**: enable.  
 - **false**: disable.
 
 **Type:** boolean
@@ -125,7 +125,7 @@ vibrationEnabled: boolean
 
 Whether to enable vibration.
 
-- **true**: enabled.  
+- **true**: enable.  
 - **false**: disable.
 
 **Type:** boolean

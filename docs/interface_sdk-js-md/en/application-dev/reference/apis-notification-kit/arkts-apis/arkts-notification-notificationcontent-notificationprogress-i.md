@@ -17,7 +17,7 @@ Describes the notification progress, which is used to display progress bar infor
 currentValue?: number
 ```
 
-Current value of the progress. The value range is all non-negative integers.
+Current value of the progress.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Whether to display the progress as a percentage. The value defaults to **false**
 maxValue?: number
 ```
 
-Maximum value of the progress. The value range is all non-negative integers.
+Maximum value of the progress.
 
 **Type:** number
 

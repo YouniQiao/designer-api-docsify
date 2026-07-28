@@ -16,7 +16,7 @@ Provides callback methods for subscribers to receive and cancel notifications.
 onBadgeChanged?:(data: BadgeNumberCallbackData) => void
 ```
 
-Callback used to return the listened application information.
+Listens for changes of the application badge number.
 
 **Type:** (data: BadgeNumberCallbackData) =&gt; void
 
@@ -52,7 +52,7 @@ Returns the changes of the enabling state of the application's badge.
 onBatchCancel?: (data: Array<SubscribeCallbackData>) => void
 ```
 
-Notification information of batch deletion.
+Called for batch deletion.
 
 **Type:** (data: Array&lt;SubscribeCallbackData&gt;) =&gt; void
 
@@ -70,7 +70,7 @@ Notification information of batch deletion.
 onCancel?:(data: SubscribeCallbackData) => void
 ```
 
-Information about the notification to cancel.
+Called when a notification is canceled.
 
 **Type:** (data: SubscribeCallbackData) =&gt; void
 
@@ -88,7 +88,7 @@ Information about the notification to cancel.
 onConnect?:() => void
 ```
 
-Callback invoked when subscription is complete.
+Called when subscription is complete.
 
 **Type:** () =&gt; void
 
@@ -106,7 +106,7 @@ Callback invoked when subscription is complete.
 onConsume?:(data: SubscribeCallbackData) => void
 ```
 
-Information about the notification received.
+Called when a new notification is received.
 
 **Type:** (data: SubscribeCallbackData) =&gt; void
 
@@ -124,7 +124,7 @@ Information about the notification received.
 onDestroy?:() => void
 ```
 
-Callback to be invoked when the service is disconnected.
+Called when the service is disconnected.
 
 **Type:** () =&gt; void
 
@@ -142,7 +142,7 @@ Callback to be invoked when the service is disconnected.
 onDisconnect?:() => void
 ```
 
-Callback invoked when unsubscription is complete.
+Called when unsubscription is complete.
 
 **Type:** () =&gt; void
 
@@ -160,7 +160,7 @@ Callback invoked when unsubscription is complete.
 onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void
 ```
 
-Callback used to return DND time setting updates.
+Called when the DND time settings are changed.
 
 **Type:** (mode: notificationManager.DoNotDisturbDate) =&gt; void
 
@@ -178,7 +178,7 @@ Callback used to return DND time setting updates.
 onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void
 ```
 
-Callback used to return DND time setting updates.
+Called when the DND time settings are changed.
 
 **Type:** (mode: notification.DoNotDisturbDate) =&gt; void
 
@@ -200,7 +200,7 @@ Callback used to return DND time setting updates.
 onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) => void
 ```
 
-Callback used to return the listened application information.
+Listens for the notification enabled state changes.
 
 **Type:** (callbackData: EnabledNotificationCallbackData) =&gt; void
 
@@ -218,7 +218,7 @@ Callback used to return the listened application information.
 onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByBundleCallbackData) => void
 ```
 
-Callback used to return the result.
+Called when the enabling state of the application priority notification changes.
 
 **Type:** (callbackData: EnabledPriorityNotificationByBundleCallbackData) =&gt; void
 
@@ -236,7 +236,7 @@ Callback used to return the result.
 onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackData) => void
 ```
 
-Callback used to return the result.
+Called when the enabling state of the priority notification changes.
 
 **Type:** (callbackData: EnabledPriorityNotificationCallbackData) =&gt; void
 
@@ -274,7 +274,7 @@ Returns the changes of the enabling state of the application's silent reminder.
 onNotificationSwitchChanged?: NotificationSwitchChangedCallback
 ```
 
-Returns the notification switch state change set by the interface of [notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch).
+Returns the changes of the notification switch status set by [notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch).
 
 **Type:** NotificationSwitchChangedCallback
 
@@ -314,7 +314,7 @@ Returns notification information containing the system property value.
 onUpdate?:(data: NotificationSortingMap) => void
 ```
 
-Latest notification sorting list.
+Called when notification sorting is updated. Not supported currently.
 
 **Type:** (data: NotificationSortingMap) =&gt; void
 

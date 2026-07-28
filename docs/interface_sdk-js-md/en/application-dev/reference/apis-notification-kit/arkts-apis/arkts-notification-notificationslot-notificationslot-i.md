@@ -68,7 +68,7 @@ Description of the notification channel. The size cannot exceed 243 bytes, and t
 readonly enabled?: boolean
 ```
 
-Whether to allow notifications to be published from this notification channel.
+Whether to allow notifications of this slot type to be published.
 
 - **true**: yes.  
 - **false**: no.
@@ -89,7 +89,7 @@ level?: notification.SlotLevel
 
 Notification level.
 
-This attribute is supported since API version 7 and deprecated since API version 20. You are advised to use **notificationLevel** instead.
+This parameter is supported since API version 7 and deprecated since API version 20. It is recommended to use **notificationLevel** instead.
 
 **Type:** notification.SlotLevel
 
@@ -160,7 +160,7 @@ Mode for displaying the notification on the lock screen. This is a reserved capa
 notificationLevel?: notificationManager.SlotLevel
 ```
 
-Notification level.
+Notification level, which is used to describe the display priority and alert intensity of notifications of this channel type.
 
 **Type:** notificationManager.SlotLevel
 
@@ -176,7 +176,7 @@ Notification level.
 notificationType?: notificationManager.SlotType
 ```
 
-Notification slot type.
+Slot type. Different slot types have different notification reminder types.
 
 **Type:** notificationManager.SlotType
 
@@ -210,7 +210,7 @@ type?: notification.SlotType
 
 Channel type.
 
-This attribute is supported since API version 7 and deprecated since API version 11. It is recommended to use **notificationType** instead.
+This parameter is supported since API version 7 and deprecated since API version 11. It is recommended to use **notificationType** instead.
 
 **Type:** notification.SlotType
 

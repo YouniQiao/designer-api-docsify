@@ -104,7 +104,7 @@ onReceiveMessage(notificationInfo: NotificationInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | 是 | 通知订阅扩展能力中onReceiveMessage回调的通知信息。 |
+| notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | 是 | 通知订阅扩展能力中收到通知的回调信息。 |
 
 **示例：**
 

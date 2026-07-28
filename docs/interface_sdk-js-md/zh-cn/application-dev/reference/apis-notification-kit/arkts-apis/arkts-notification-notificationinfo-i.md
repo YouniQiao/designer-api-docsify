@@ -17,7 +17,7 @@
 readonly appIndex: number
 ```
 
-创建通知的应用包的分身索引标识，仅在分身应用中生效。
+创建通知的应用的分身索引标识，仅在分身应用中生效。
 
 **类型：** number
 
@@ -33,7 +33,7 @@ readonly appIndex: number
 readonly appName?: string
 ```
 
-创建通知的应用程序名称。
+创建通知的应用名称。
 
 **类型：** string
 
@@ -49,7 +49,7 @@ readonly appName?: string
 readonly bundleName: string
 ```
 
-创建通知的包名。
+创建通知的应用包名。
 
 **类型：** string
 
@@ -65,7 +65,7 @@ readonly bundleName: string
 readonly content: NotificationExtensionContent
 ```
 
-通知内容。
+通知内容。包含通知的标题和正文。
 
 **类型：** NotificationExtensionContent
 
@@ -81,7 +81,7 @@ readonly content: NotificationExtensionContent
 readonly deliveryTime?: number
 ```
 
-通知发布的时间戳（毫秒数）。
+通知发布的时间戳。数据格式：时间戳。单位：毫秒。
 
 **类型：** number
 
@@ -97,7 +97,7 @@ readonly deliveryTime?: number
 readonly groupName?: string
 ```
 
-通知组名称。默认情况下此参数为空。
+通知组名称。
 
 **类型：** string
 
@@ -129,7 +129,7 @@ readonly hashCode: string
 readonly notificationSlotType: notificationManager.SlotType
 ```
 
-通知渠道类型。
+通知渠道类型，标识通知所属的渠道分类（如社交通讯、服务提醒等）。不同渠道类型对应不同的提醒方式。
 
 **类型：** notificationManager.SlotType
 

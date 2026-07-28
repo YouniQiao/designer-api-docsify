@@ -9,7 +9,7 @@
 | --- | --- |
 | [BadgeEnabledChangedCallback](arkts-notification-notificationsubscriber-badgeenabledchangedcallback-i-sys.md) | Defines a callback function to listen for the enabling state changes of the application badge.type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void |
 | [BadgeNumberCallbackData](arkts-notification-notificationsubscriber-badgenumbercallbackdata-i-sys.md) | Returns the changes of the application badge number. |
-| [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | Returns the changes of the application badge enabling state. |
+| [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | Returns the changes of the application enabling state. |
 | [EnabledPriorityNotificationByBundleCallbackData](arkts-notification-notificationsubscriber-enabledprioritynotificationbybundlecallbackdata-i-sys.md) | Returns the notification priority switch state. |
 | [EnabledPriorityNotificationCallbackData](arkts-notification-notificationsubscriber-enabledprioritynotificationcallbackdata-i-sys.md) | Returns the notification priority master switch state. |
 | [EnabledSilentReminderCallbackData](arkts-notification-notificationsubscriber-enabledsilentremindercallbackdata-i-sys.md) | Returns the application notification silent reminder switch state. |
@@ -26,7 +26,7 @@
 | Name | Description |
 | --- | --- |
 | [EnabledSilentReminderChangedCallback](arkts-notification-enabledsilentreminderchangedcallback-t-sys.md) | Defines a callback function to listen for the enabling state changes of the application's silent reminder.type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentReminderCallbackData) => void |
-| [NotificationSwitchChangedCallback](arkts-notification-notificationswitchchangedcallback-t-sys.md) | Register the callback function type for notification switch state changes set by the interface of [notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch). |
-| [SystemUpdateCallback](arkts-notification-systemupdatecallback-t-sys.md) | Defines the SystemUpdateCallback callback.type SystemUpdateCallback = (data: SubscribeCallbackData) => void |
+| [NotificationSwitchChangedCallback](arkts-notification-notificationswitchchangedcallback-t-sys.md) | Registers the callback for notification switch state changes set by [notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch) API. |
+| [SystemUpdateCallback](arkts-notification-systemupdatecallback-t-sys.md) | Returns the notification information carrying system property values.type SystemUpdateCallback = (data: SubscribeCallbackData) => void |
 <!--DelEnd-->
 

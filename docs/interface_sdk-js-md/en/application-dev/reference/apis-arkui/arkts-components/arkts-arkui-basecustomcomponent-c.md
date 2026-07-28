@@ -254,7 +254,7 @@ onMeasureSize?(selfLayoutInfo: GeometryInfo, children: Array<Measurable>, constr
 
 Invoked when the custom component needs to determine its size. Through this callback the component receives its layout information and size constraints from the ArkUI framework. State variables should not be changed in this callback.
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -347,7 +347,7 @@ onPlaceChildren?(selfLayoutInfo: GeometryInfo, children: Array<Layoutable>, cons
 
 Invoked when the custom component needs to determine the positions of its child components. Through this callback the component receives its child component size constraints from the ArkUI framework.State variables should not be changed in this callback.
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 

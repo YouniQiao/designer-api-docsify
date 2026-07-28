@@ -3,6 +3,9 @@
 The **notificationSubscribe** module provides APIs for notification subscription, notification unsubscription,subscription removal, and more. In general cases, only system applications can call these APIs.
 > **NOTE**  
 >  
+> The initial APIs of this module are supported since API version 9. Newly added APIs will be marked with a superscript  
+> to indicate their earliest API version.  
+>  
 > The APIs provided by this module are system APIs.
 
 **Since:** 9
@@ -53,8 +56,8 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 
 | Name | Description |
 | --- | --- |
-| [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | Notification key. |
-| [OperationInfo](arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | Cross-device operation information. |
+| [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | Defines the notification key value. |
+| [OperationInfo](arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | Defines cross-device collaborative operation information. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -62,7 +65,7 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 
 | Name | Description |
 | --- | --- |
-| [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Reason for removing the notification. |
+| [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Defines the reasons for notification removal. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -40,7 +40,7 @@
 - [Location Kit (169)](interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-app-ability-fenceextensionability.md)
 - [Mdm Kit (432)](interface_sdk-js-md/en/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-enterprise-enterpriseadminextensionability.md)
 - [Mechanic Kit (63)](interface_sdk-js-md/en/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-distributedhardware-mechanicmanager.md)
-- [Media Kit (237)](interface_sdk-js-md/en/application-dev/reference/apis-media-kit/arkts-apis/arkts-multimedia-media.md)
+- [Media Kit (243)](interface_sdk-js-md/en/application-dev/reference/apis-media-kit/arkts-apis/arkts-multimedia-media.md)
 - [Media Library Kit (303)](interface_sdk-js-md/en/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-file-albumpickercomponent.md)
 - [Mind Spore Lite Kit (39)](interface_sdk-js-md/en/application-dev/reference/apis-mind-spore-lite-kit/arkts-apis/arkts-ai-mindsporelite.md)
 - [Multimodal Awareness Kit (99)](interface_sdk-js-md/en/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-devicestatus.md)

@@ -33,7 +33,7 @@ Called by a system dialog box to obtain shared data, which is set by the target 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
@@ -70,7 +70,7 @@ Called by a system dialog box to obtain shared data, which is set by the target 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 

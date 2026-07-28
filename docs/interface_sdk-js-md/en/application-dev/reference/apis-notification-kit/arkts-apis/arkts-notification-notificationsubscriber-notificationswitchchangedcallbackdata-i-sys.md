@@ -56,7 +56,7 @@ Notification switch name. The value can be **DEAL** (aggregated switch for trans
 readonly userId: number
 ```
 
-User ID. The value range is all integers.
+User ID.
 
 **Type:** number
 

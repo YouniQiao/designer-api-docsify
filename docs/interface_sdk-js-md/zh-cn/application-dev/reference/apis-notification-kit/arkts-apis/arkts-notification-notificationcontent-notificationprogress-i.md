@@ -17,7 +17,7 @@
 currentValue?: number
 ```
 
-进度当前值。取值范围为全体非负整数。
+进度当前值。
 
 **类型：** number
 
@@ -52,7 +52,7 @@ isPercentage?: boolean
 maxValue?: number
 ```
 
-进度最大值。取值范围为全体非负整数。
+进度最大值。
 
 **类型：** number
 

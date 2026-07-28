@@ -28,7 +28,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| badgeNumber | number | Yes | Notification badge number to set. If **badgeNumber** is set to **0**, badges are cleared; if the value is greater than **99**, **99+** is displayed on the badge. |
+| badgeNumber | number | Yes | Notification badge number to set. If **badgeNumber** is set to a value less than or equal to **0**, badges are cleared; if the value is greater than **99**, **99+** is displayed on the badge. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -82,7 +82,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| badgeNumber | number | Yes | Notification badge number to set. If **badgeNumber** is set to **0**, badges are cleared; if the value is greater than **99**, **99+** is displayed on the badge. |
+| badgeNumber | number | Yes | Notification badge number to set. If **badgeNumber** is set to a value less than or equal to **0**, badges are cleared; if the value is greater than **99**, **99+** is displayed on the badge. |
 
 **Return value:**
 

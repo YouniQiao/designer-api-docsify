@@ -12,7 +12,9 @@ import { notificationManager } from '@kit.NotificationKit';
 function getActiveNotificationCount(callback: AsyncCallback<number>): void
 ```
 
-获取当前应用未删除的通知数。使用callback异步回调。
+获取当前应用的通知数量。使用callback异步回调。
+
+用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
 
 **起始版本：** 9
 
@@ -59,7 +61,9 @@ notificationManager.getActiveNotificationCount(getActiveNotificationCountCallbac
 function getActiveNotificationCount(): Promise<number>
 ```
 
-获取当前应用未删除的通知数。使用Promise异步回调。
+获取当前应用的通知数量。使用Promise异步回调。
+
+用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
 
 **起始版本：** 9
 
