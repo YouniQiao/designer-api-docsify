@@ -54,7 +54,7 @@ When this curve type is used, **param** in [WindowAnimationConfig](arkts-arkui-w
 CUBIC_BEZIER = 2
 ```
 
-Cubic B��zier curve.
+Cubic Bézier curve.
 
 When this curve type is used, **param** and **duration** in [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md) are mandatory.
 

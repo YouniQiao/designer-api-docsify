@@ -39,6 +39,7 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
 | [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
 | [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |
@@ -103,6 +104,7 @@ Publishes a reminder. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
 | [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-notification-disabled) | Notification is not enabled. |
 | [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-too-many-reminders) | The number of reminders exceeds the limit. |

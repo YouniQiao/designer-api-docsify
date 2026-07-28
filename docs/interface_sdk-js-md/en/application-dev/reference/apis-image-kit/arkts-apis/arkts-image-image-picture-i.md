@@ -286,6 +286,34 @@ Sets an auxiliary picture.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified.2.Incorrect parameter types. 3.Parameter verification failed. |
 
+## setMainPixelmap
+
+```TypeScript
+setMainPixelmap(pixelmap: PixelMap): void
+```
+
+Sets the PixelMap object of the picture.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Picture-setMainPixelmap(pixelmap: PixelMap): void--><!--Device-Picture-setMainPixelmap(pixelmap: PixelMap): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Parameter error. The pixelmap object is null or has been released. |
+
 ## setMetadata
 
 ```TypeScript

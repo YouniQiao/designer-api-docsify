@@ -11,8 +11,12 @@
 ## TYPE_INPUT_METHOD
 
 ```TypeScript
-TYPE_INPUT_METHOD = 2
+TYPE_INPUT_METHOD
 ```
+
+表示输入法窗口。
+
+**说明：** 从API version 9开始支持，从API version 13开始废弃，无替代窗口类型，输入法相关控制都请调用[输入法框架侧接口](../../../inputmethod/inputmethod-application-guide.md)执行。
 
 **起始版本：** 9
 
@@ -20,7 +24,7 @@ TYPE_INPUT_METHOD = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WindowType-TYPE_INPUT_METHOD = 2--><!--Device-WindowType-TYPE_INPUT_METHOD = 2-End-->
+<!--Device-WindowType-TYPE_INPUT_METHOD--><!--Device-WindowType-TYPE_INPUT_METHOD-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 

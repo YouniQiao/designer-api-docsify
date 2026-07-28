@@ -1,7 +1,5 @@
 # @ohos.window
 
-Window manager.
-
 ## 导入模块
 
 ```TypeScript
@@ -14,7 +12,7 @@ import { window } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [window](arkts-arkui-window-n.md) | Window manager. |
+| [window](arkts-arkui-window-n.md) |  |
 
 ### 接口
 
@@ -26,6 +24,6 @@ import { window } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md) | Defines the window animation curve param. |
-| [WindowEventListener](arkts-arkui-windoweventlistener-t.md) | 窗口事件的回调函数定义 |
+| [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md) | 动画曲线参数。 |
+| [WindowEventListener](arkts-arkui-windoweventlistener-t.md) | 窗口生命周期事件通知的回调函数。 |
 
