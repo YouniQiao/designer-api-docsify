@@ -51,9 +51,6 @@ updateTransition?(progress: number): void
 ```
 
 更新交互转场动画进度(不可交互动画不支持动画进度设置)。
-> **说明：**  
->  
-> 不建议在[aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear)中使用栈操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
 **起始版本：** 12
 
@@ -69,7 +66,7 @@ updateTransition?(progress: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| progress | number | 是 | 设置交互转场动画进度百分比。取值范围：[0, 1] |
+| progress | number | 是 | 设置交互转场动画进度值。取值范围：[0, 1] |
 
 ## from
 

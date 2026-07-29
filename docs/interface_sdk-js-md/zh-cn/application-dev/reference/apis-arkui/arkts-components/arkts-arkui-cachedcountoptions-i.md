@@ -14,7 +14,7 @@
 independent?: boolean
 ```
 
-[cachedCount](SwiperAttribute#cachedCount(count: number, options: CachedCountOptions))是否按组计算。
+[cachedCount](SwiperAttribute#cachedCount(count: number, options: CachedCountOptions))是否按实际子组件个数计算。
 
 设置为true时，cachedCount按实际子组件个数计算，不按组计算。
 

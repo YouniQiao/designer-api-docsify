@@ -164,7 +164,7 @@ cachedCount(count: number, options: CachedCountOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | count | number | 是 | 预加载子组件个数。<br/>。<br>取值范围：[0, +∞)。 |
-| options | [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md) | 是 | 预加载子组件的配置选项。 |
+| options | [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md) | 是 | 预加载子组件的配置选项。对象属性包括：isShown（预加载范围内的节点是否进行绘制）和independent（是否按实际子组件个数计算）。 |
 
 ## curve
 
@@ -225,7 +225,7 @@ customContentTransition(transition: SwiperContentAnimatedTransition)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transition | [SwiperContentAnimatedTransition](arkts-arkui-swipercontentanimatedtransition-i.md) | 是 | Swiper自定义切换动画相关信息。 |
+| transition | [SwiperContentAnimatedTransition](arkts-arkui-swipercontentanimatedtransition-i.md) | 是 | Swiper自定义切换动画相关信息。对象属性包括：timeout（超时时间）和transition（自定义切换动画具体内容回调）。 |
 
 ## disableSwipe
 
@@ -801,7 +801,8 @@ onChange(event: Callback<number>)
 
 Swiper组件结合LazyForEach使用时，不能在onChange事件里触发子页面UI的刷新。
 > **说明：**
-> 如果是动画引起的索引变化，回调在动画结束时触发。
+> - 如果是动画引起的索引变化，回调在动画结束时触发。  
+> - 与onSelected的区别：onSelected在选中状态改变时立即触发，onChange在动画结束后触发。
 
 **起始版本：** 7
 
@@ -849,7 +850,7 @@ onContentDidScroll(handler: ContentDidScrollCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md) | 是 | Swiper滑动时触发的回调。 |
+| handler | [ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md) | 是 | Swiper滑动时触发的回调，返回true表示允许滑动，false表示不允许滑动。 |
 
 ## onContentWillScroll
 

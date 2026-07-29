@@ -14,7 +14,7 @@ Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一
 changeIndex(value: number): void
 ```
 
-控制Tabs切换到指定页签。
+控制Tabs切换到指定页签。在需要通过按钮、下拉菜单或其他控件实现页签跳转功能时使用，例如点击“上一页”/“下一页”按钮切换页签。
 
 **起始版本：** 7
 
@@ -52,7 +52,7 @@ TabsController的构造函数。
 preloadItems(indices: Optional<Array<number>>): Promise<void>
 ```
 
-控制Tabs预加载指定子节点。调用该接口后会一次性加载所有指定的子节点，因此为了性能考虑，建议分批加载子节点。
+控制Tabs预加载指定子节点。调用该接口后会一次性加载所有指定的子节点，因此为了性能考虑，建议分批加载子节点。适用于需要提前加载某些页签以提高切换性能的场景，如某些页签内容较复杂或资源较多时，可预加载以优化用户体验。
 > **说明：**
 > - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的[onAppear](arkts-arkui-commonmethod-c.md#onappear)生命周期中去控制。  
 >  
@@ -95,7 +95,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 setTabBarOpacity(opacity: number): void
 ```
 
-设置TabBar的不透明度。
+设置TabBar的不透明度。适用于需要调整TabBar显示透明度的场景，如TabBar渐隐渐显效果、降低TabBar视觉干扰突出内容等。
 > **说明：**
 > 当使用  
 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)或  
@@ -117,7 +117,7 @@ setTabBarOpacity(opacity: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| opacity | number | 是 | 设置TabBar的不透明度，取值范围为[0.0, 1.0]，设置的值小于0.0时，按0.0处理，设置的值大于1.0时，按1.0处理。<br> 默认值：1.0。 |
+| opacity | number | 是 | 设置TabBar的不透明度，值为1.0表示完全不透明，值为0.0表示完全透明。取值范围为[0.0, 1.0]，设置的值小于0.0时，按0.0处理，设置的值大于1.0时，按1.0处理。<br> 默认值：1.0。 |
 
 ## setTabBarTranslate
 
@@ -125,7 +125,7 @@ setTabBarOpacity(opacity: number): void
 setTabBarTranslate(translate: TranslateOptions): void
 ```
 
-设置TabBar的平移距离。
+设置TabBar的平移距离。适用于需要实现TabBar动态位置调整的场景，如TabBar滑动隐藏显示效果、配合页面滚动实现沉浸式体验等。
 > **说明：**
 > 当使用  
 > [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)或  

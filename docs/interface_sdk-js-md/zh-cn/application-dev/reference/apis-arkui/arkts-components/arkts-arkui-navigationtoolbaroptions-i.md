@@ -14,7 +14,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式，不设置时关闭背景模糊效果。
+工具栏背景模糊样式，设置后，工具栏将应用指定的模糊样式；不设置时关闭背景模糊效果。
 
 **类型：** BlurStyle
 
@@ -34,7 +34,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-标题栏背景模糊选项。
+工具栏背景模糊选项。
 
 **说明：**
 
@@ -60,7 +60,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-标题栏背景颜色，不设置时为系统默认颜色。
+工具栏背景颜色，设置后，工具栏背景将显示为指定颜色；不设置时为系统默认颜色。
 
 **类型：** ResourceColor
 
@@ -80,7 +80,7 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-设置标题栏背景属性包括：模糊半径，亮度，饱和度，颜色等。
+设置工具栏背景属性包括：模糊半径，亮度，饱和度，颜色等。
 
 **说明：**
 

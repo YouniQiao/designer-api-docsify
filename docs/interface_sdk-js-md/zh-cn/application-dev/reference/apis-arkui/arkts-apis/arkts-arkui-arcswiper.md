@@ -38,5 +38,5 @@ import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDo
 | [AnimationStartHandler](arkts-arkui-animationstarthandler-t.md) | 切换动画开始时的回调。 |
 | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | 停止播放动画时，告知应用。 |
 | [GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md) | 在页面跟手滑动过程中，逐帧触发的回调。 |
-| [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md) | 当前显示元素的索引变化时，告知应用。 |
+| [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md) | 当前显示元素的索引变化时，告知应用。index序列从0开始。 |
 

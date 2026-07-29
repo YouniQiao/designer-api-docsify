@@ -12,7 +12,7 @@ import { uiAppearance } from '@kit.ArkUI';
 function getDarkMode(): DarkMode
 ```
 
-获取系统当前的深色模式配置。
+获取系统当前的深浅色模式配置。适用于需要根据系统外观模式动态适配应用UI主题的场景，例如应用内实现深色/浅色主题风格自动切换。
 
 <!--Del-->
 > **说明：**

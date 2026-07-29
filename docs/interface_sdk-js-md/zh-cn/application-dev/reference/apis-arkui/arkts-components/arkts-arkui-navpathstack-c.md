@@ -107,7 +107,7 @@ getAllPathName(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 返回栈中所有NavDestination页面的名称。 |
+| Array&lt;string&gt; | 返回栈中所有NavDestination页面的名称，数组元素按页面在栈中的索引从0开始顺序排列。 |
 
 ## getIndexByName
 
@@ -197,7 +197,7 @@ getParamByName(name: string): Array<unknown>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;unknown&gt; | 返回全部名为name的NavDestination页面的参数信息，unknown可以是用户自定义的类型。 |
+| Array&lt;unknown&gt; | 返回全部名为name的NavDestination页面的参数信息数组，数组元素按页面索引从小到大排序，每个元素为对应页面的参数信息，具体内容由开发者自定义。 |
 
 ## getParent
 
@@ -445,7 +445,7 @@ popToIndex(index: number, result: Object, animated?: boolean): void
 popToName(name: string, animated?: boolean): number
 ```
 
-回退路由栈到由栈底开始第一个名为name的NavDestination页面。
+回退路由栈到栈底第一个名为name的NavDestination页面。
 
 **起始版本：** 10
 
@@ -509,9 +509,6 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
 将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果。
-> **说明：**  
->  
-> 不建议在[aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear)中使用栈操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
 **起始版本：** 11
 
@@ -552,9 +549,6 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
 将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md)，来实现不同的行为。
-> **说明：**  
->  
-> 不建议在[aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear)中使用栈操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
 **起始版本：** 12
 
@@ -595,9 +589,6 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 ```
 
 将name指定的NavDestination页面信息入栈，传递的数据为param，使用Promise异步回调返回接口调用结果。
-> **说明：**  
->  
-> 不建议在[aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear)中使用栈操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
 **起始版本：** 11
 
@@ -639,9 +630,6 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 ```
 
 将name指定的NavDestination页面信息入栈，传递的数据为param，并且添加用于页面出栈时处理返回结果的onPop回调，使用Promise异步回调返回接口调用结果。
-> **说明：**  
->  
-> 不建议在[aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear)中使用栈操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
 
 **起始版本：** 11
 
@@ -1008,7 +996,7 @@ setInterception(interception: NavigationInterception): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| interception | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | 是 | 设置Navigation跳转拦截对象。 |
+| interception | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | 是 | 设置Navigation跳转拦截对象。设置后，可在页面跳转前/后执行自定义回调，允许操作栈或拦截跳转。 |
 
 ## setPathStack
 
@@ -1041,7 +1029,7 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathStack | Array&lt;NavPathInfo&gt; | 是 | 设置当前路由栈中的路由页面信息数组。<br/>**说明：**<br/>数组长度无限制。 |
+| pathStack | Array&lt;NavPathInfo&gt; | 是 | 设置当前路由栈中的路由页面信息数组。设置后，将当前路由栈更新为指定内容，并实现路由转场。开发者可在原有栈的基础上批量添加或删除页面。<br/>**说明：**<br/>数组长度无限制。 |
 | animated | boolean | 否 | 是否开启转场动画。<br/>true：开启转场动画；false：不开启转场动画。<br /> 默认值：true |
 
 ## size

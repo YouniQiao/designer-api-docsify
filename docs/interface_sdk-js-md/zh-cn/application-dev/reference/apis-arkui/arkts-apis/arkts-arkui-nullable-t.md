@@ -4,7 +4,7 @@
 declare type Nullable<T> = T | undefined
 ```
 
-A type which can be undefined
+在使用该类型时，其值可以使泛型参数T所指定的类型，也可以是undefined。
 
 **起始版本：** 12
 

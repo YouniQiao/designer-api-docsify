@@ -4,7 +4,7 @@
 declare type IndexChangedHandler = (index: number) => void
 ```
 
-当前显示元素的索引变化时，告知应用。
+当前显示元素的索引变化时，告知应用。index序列从0开始。
 
 **起始版本：** 18
 

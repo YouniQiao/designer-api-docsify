@@ -94,7 +94,7 @@ font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;Font&gt; | 是 | 字母索引条默认字体样式。<br/>默认值：<br/>{<br/>size:'13.0fp',<br/> style:FontStyle.Normal,<br/>weight:500,<br/> family:'HarmonyOS Sans'<br/>} |
+| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;Font&gt; | 是 | 字母索引条默认字体样式，用于设置索引条上所有字母的显示效果，包括文字大小、粗细、倾斜角度和字体族等。<br/>默认值：<br/>{<br/>size:'13.0fp',<br/> style:FontStyle.Normal,<br/>weight:500,<br/> family:'HarmonyOS Sans'<br/>} |
 
 **返回值：**
 
@@ -150,7 +150,7 @@ onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;OnSelectCallback&gt; | 是 | 回调函数，用于处理索引条选中事件。 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;OnSelectCallback&gt; | 是 | 回调函数，用于处理索引条选中事件。当用户点击或滑动索引条选中某项时触发，回调中返回当前选中项的索引值。 |
 
 **返回值：**
 
@@ -251,7 +251,7 @@ popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 ```
 
-设置提示弹窗字体样式。
+设置提示弹窗字体样式，用于设置提示弹窗中显示的当前选中字母的显示效果，包括文字大小、粗细、倾斜角度和字体族等。
 
 **起始版本：** 18
 

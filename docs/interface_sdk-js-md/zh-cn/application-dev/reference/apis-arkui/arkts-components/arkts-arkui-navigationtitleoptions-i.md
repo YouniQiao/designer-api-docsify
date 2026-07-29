@@ -14,7 +14,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式，不设置时关闭背景模糊效果。
+标题栏背景模糊样式，设置后，标题栏将应用指定的模糊样式；不设置时关闭背景模糊效果。
 
 **类型：** BlurStyle
 
@@ -60,7 +60,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-标题栏背景颜色，不设置时为系统默认颜色。
+标题栏背景颜色，设置后，标题栏背景将显示为指定颜色；不设置时为系统默认颜色。
 
 **类型：** ResourceColor
 

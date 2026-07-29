@@ -41,7 +41,7 @@ changeIndex(index: number, useAnimation?: boolean)
 changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 ```
 
-翻页至指定页面。
+翻页至指定页面。翻页带动效切换过程，时长通过Swiper的[duration](#duration)属性设置。
 > **说明：**
 > 该接口本身提供了不带动画跳转页面的能力（animationMode设置为false或者SwiperAnimationMode.NO_ANIMATION），不建议使用changeIndex接口启动动画后，直接使用  
 > finishAnimation接口打断来实现页面不带动画跳转。
@@ -63,7 +63,7 @@ changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | number | 是 | 指定页面在Swiper中的索引值。<br/>**说明：** <br/>设置的值小于0或大于最大页面索引时，取0。 |
-| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) \| boolean | 否 | 设置翻页至指定页面时的动效模式。<br/>默认值：SwiperAnimationMode.NO_ANIMATION<br/> **说明：** <br/>当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。 |
+| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) \| boolean | 否 | 设置翻页到指定页面的动效模式。<br/>默认值：SwiperAnimationMode.NO_ANIMATION<br/> **说明：** <br/>当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。 |
 
 ## constructor
 

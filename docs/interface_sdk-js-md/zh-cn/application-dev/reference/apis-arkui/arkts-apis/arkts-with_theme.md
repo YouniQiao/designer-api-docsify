@@ -18,7 +18,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [CustomTheme](arkts-arkui-customtheme-t.md) | 自定义配色。 |
+| [CustomTheme](arkts-arkui-customtheme-t.md) | 用于自定义WithTheme作用域内组件的配色方案，具体配色项通过CustomColors接口配置。 |
 | [WithThemeInterface](arkts-arkui-withthemeinterface-t.md) | Define the function of WithThemeInterface. |
 
 ### 常量

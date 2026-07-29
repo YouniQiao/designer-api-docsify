@@ -24,7 +24,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 | [DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md) | Represents a dynamic synchronization scene. |
 | [FocusController](arkts-arkui-arkui-uicontext-focuscontroller-c.md) | 提供控制焦点的能力，如清除、移动和激活焦点等功能。 |
 | [Font](arkts-arkui-arkui-uicontext-font-c.md) | class Font |
-| [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | 用于设置下一帧渲染时需要执行的任务。 |
+| [FrameCallback](arkts-arkui-arkui-uicontext-framecallback-c.md) | 用于定义帧回调任务，可在下一帧渲染阶段或帧渲染任务结束后的空闲阶段执行。 |
 | [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md) | 智慧手势处理结果声明类。 |
 | [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) | 提供控制放大镜的能力。 |
 | [MarqueeDynamicSyncScene](arkts-arkui-arkui-uicontext-marqueedynamicsyncscene-c.md) | Represents a dynamic synchronization scene of Marquee. |

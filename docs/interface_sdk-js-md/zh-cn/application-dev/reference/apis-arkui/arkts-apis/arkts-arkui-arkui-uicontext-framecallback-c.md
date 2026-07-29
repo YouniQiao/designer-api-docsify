@@ -1,6 +1,6 @@
 # FrameCallback
 
-用于设置下一帧渲染时需要执行的任务。
+用于定义帧回调任务，可在下一帧渲染阶段或帧渲染任务结束后的空闲阶段执行。
 > **说明：**  
 >  
 > - 以下API需要配合[UIContext](arkts-arkui-uicontext.md)中的[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)和  

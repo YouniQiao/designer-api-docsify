@@ -1,6 +1,6 @@
 # PixelRoundMode
 
-Pixel Round Mode
+像素取整模式
 
 **起始版本：** 18
 
@@ -14,7 +14,7 @@ Pixel Round Mode
 PIXEL_ROUND_ON_LAYOUT_FINISH = 0
 ```
 
-Do pixel round on layout finish.
+布局结束后像素取整
 
 **起始版本：** 18
 
@@ -34,7 +34,7 @@ Do pixel round on layout finish.
 PIXEL_ROUND_AFTER_MEASURE = 1
 ```
 
-Do pixel round after measure.
+计算大小后像素取整。
 
 **起始版本：** 18
 

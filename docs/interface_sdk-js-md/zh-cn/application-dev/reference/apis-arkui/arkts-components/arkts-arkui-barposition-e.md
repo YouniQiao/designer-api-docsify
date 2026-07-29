@@ -14,7 +14,7 @@ Tabs页签位置枚举。
 Start
 ```
 
-vertical属性方法设置为true时，页签位于容器左侧；vertical属性方法设置为false时，页签位于容器顶部。
+vertical属性设置为true时，页签位于容器左侧；vertical属性设置为false时，页签位于容器顶部。
 
 **起始版本：** 7
 
@@ -30,7 +30,7 @@ vertical属性方法设置为true时，页签位于容器左侧；vertical属性
 End
 ```
 
-vertical属性方法设置为true时，页签位于容器右侧；vertical属性方法设置为false时，页签位于容器底部。
+vertical属性设置为true时，页签位于容器右侧；vertical属性设置为false时，页签位于容器底部。
 
 **起始版本：** 7
 

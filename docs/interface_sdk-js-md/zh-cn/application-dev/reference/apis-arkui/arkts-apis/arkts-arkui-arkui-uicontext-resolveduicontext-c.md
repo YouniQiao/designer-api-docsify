@@ -5,8 +5,7 @@ ResolvedUIContext实例对象。
 >  
 > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。  
 >  
-> - ResolvedUIContext继承自[UIContext](arkts-arkui-uicontext.md)，该类对象包含[UIContext](arkts-arkui-uicontext.md)实例和  
-> [UIContext](arkts-arkui-uicontext.md)的解析策略。
+> - ResolvedUIContext继承自[UIContext](arkts-arkui-uicontext.md)，并新增strategy属性用于记录该UIContext实例的解析策略。
 
 **继承/实现关系：** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 

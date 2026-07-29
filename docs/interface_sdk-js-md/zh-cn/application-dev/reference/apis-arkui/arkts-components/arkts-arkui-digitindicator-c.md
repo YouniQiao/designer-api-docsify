@@ -45,7 +45,7 @@ DotIndicator的构造函数。
 digitFont(value: Font): DigitIndicator
 ```
 
-Swiper组件数字导航点的字体样式。
+Swiper组件数字导航点的字体样式。按组翻页时，数字导航点显示的子节点数量不包括占位节点。
 
 **起始版本：** 10
 

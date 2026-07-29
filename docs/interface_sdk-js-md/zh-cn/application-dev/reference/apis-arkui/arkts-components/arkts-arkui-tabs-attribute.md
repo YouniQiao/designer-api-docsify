@@ -661,7 +661,7 @@ Tab页签切换后触发的事件。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 当前显示的index索引，索引从0开始计算。<br>**起始版本：** 18 |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 当前显示页签的索引值，从0开始计算。<br>**起始版本：** 18 |
 
 ## onContentDidScroll
 
@@ -749,7 +749,7 @@ onGestureSwipe(handler: OnTabsGestureSwipeCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) | 是 | 在页面跟手滑动过程中，逐帧触发的回调。<br>**起始版本：** 18 |
+| handler | [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) | 是 | 在页面跟手滑动过程中，逐帧触发，用于监听当前显示页面的实时滑动状态。<br>**起始版本：** 18 |
 
 ## onSelected
 
@@ -809,7 +809,7 @@ Tab页签点击后触发的事件。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 被点击的index索引，索引从0开始计算。<br>**起始版本：** 18 |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 被点击页签的索引值，从0开始计算。<br>**起始版本：** 18 |
 
 ## onUnselected
 

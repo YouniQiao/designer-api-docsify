@@ -400,7 +400,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 >  
 > - 若组件扩展到非安全区域内，此时在非安全区域里触发的事件（例如：点击事件）等可能会被系统拦截，优先响应状态栏等系统组件。  
 >  
-> - 组件想要扩展到非安全区域内，需隐藏或者设置标题栏和工具栏为[STACK](arkts-arkui-barstyle-e.md)模式。
+> - 组件想要扩展到非安全区域内，需隐藏或者设置标题栏和工具栏为[STACK](arkts-arkui-barstyle-e.md)模式，否则无法扩展到非安全区域。
 
 **起始版本：** 12
 
@@ -425,7 +425,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 menus(value: Array<NavigationMenuItem> | CustomBuilder)
 ```
 
-设置页面右上角菜单。不设置时不显示菜单项。使用Array<[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
+设置页面右上角菜单。不设置时不显示菜单项。使用Array<[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
 
 **起始版本：** 8
 

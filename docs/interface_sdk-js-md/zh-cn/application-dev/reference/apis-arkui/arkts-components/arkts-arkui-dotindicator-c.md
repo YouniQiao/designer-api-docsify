@@ -187,7 +187,7 @@ mask(value: boolean): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 设置是否显示Swiper组件圆点导航指示器的蒙版样式。true为显示Swiper组件圆点导航指示器的蒙版样式，false为不显示。<br/>默认值：false |
+| value | boolean | 是 | 设置是否显示Swiper组件圆点导航指示器的蒙版样式。为true时显示Swiper组件圆点导航指示器的蒙版样式，为false时不显示。<br/>默认值：false |
 
 **返回值：**
 

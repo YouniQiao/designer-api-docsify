@@ -72,7 +72,7 @@ Navigation(pathInfos: NavPathStack)
 Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 ```
 
-绑定路由栈到Navigation组件，并且指定一个NavDestination作为Navigation的导航页（主页），适用于使用[NavPathStack]{@link NavPathStack}配合[navDestination]{@link NavigationAttribute#navDestination}属性或者系统路由表进行页面路由。使用示例参考[示例16（Navigation使用NavDestination作为导航页）](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例16navigation使用navdestination作为导航页)。
+绑定路由栈到Navigation组件，指定一个NavDestination作为Navigation的导航页（主页），适用于使用[NavPathStack]{@link NavPathStack}配合[navDestination]{@link NavigationAttribute#navDestination}属性或者系统路由表进行页面路由。使用示例参考[示例16（Navigation使用NavDestination作为导航页）](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例16navigation使用navdestination作为导航页)。
 
 **起始版本：** 20
 

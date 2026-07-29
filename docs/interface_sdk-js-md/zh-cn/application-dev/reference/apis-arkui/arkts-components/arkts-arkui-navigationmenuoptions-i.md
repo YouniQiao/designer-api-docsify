@@ -14,7 +14,7 @@
 moreButtonOptions?: MoreButtonOptions
 ```
 
-工具栏更多图标的菜单选项。
+页面右上角菜单选项。
 
 **类型：** MoreButtonOptions
 

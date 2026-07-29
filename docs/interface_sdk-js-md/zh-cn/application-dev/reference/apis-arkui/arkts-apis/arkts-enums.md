@@ -78,14 +78,14 @@
 | [OptionWidthMode](arkts-arkui-optionwidthmode-e.md) | Decide whether the width of select menu fit the trigger or content |
 | [PageFlipMode](arkts-arkui-pageflipmode-e.md) | Page flip mode of Swiper and Tabs on mouse wheel event. |
 | [PixelRoundCalcPolicy](arkts-arkui-pixelroundcalcpolicy-e.md) | Pixel Round Direction |
-| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Pixel Round Mode |
+| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 像素取整模式 |
 | [Placement](arkts-arkui-placement-e.md) | Placement enumeration description |
 | [PlayMode](arkts-arkui-playmode-e.md) | 动画播放模式。 |
 | [PresetFillType](arkts-arkui-presetfilltype-e.md) | Specify the number of columns for different responsive breakpoints. |
 | [RawInputEventType](arkts-arkui-rawinputeventtype-e.md) | 原始输入事件类型。 |
 | [RelateType](arkts-arkui-relatetype-e.md) | RelateType enumeration description |
 | [RenderFit](arkts-arkui-renderfit-e.md) | 表示宽高动画过程中组件内容的填充方式。 |
-| [RenderStrategy](arkts-arkui-renderstrategy-e.md) | Enumerates rendering strategies for drawing rounded corners. |
+| [RenderStrategy](arkts-arkui-renderstrategy-e.md) | RenderStrategy 的枚举。定义图形渲染策略。 |
 | [ResponseRegionSupportedTool](arkts-arkui-responseregionsupportedtool-e.md) | 触摸热区适用的输入工具类型。 |
 | [ResponseType](arkts-arkui-responsetype-e.md) | ResponseType for contextMenu |
 | [ScrollSource](arkts-arkui-scrollsource-e.md) | The possible source of scroll event |
@@ -106,7 +106,7 @@
 | [UIMaterialAnimationMode](arkts-arkui-uimaterialanimationmode-e.md) | Enumerates the component animation modes under the UI material effect. |
 | [VerticalAlign](arkts-arkui-verticalalign-e.md) | VerticalAlign enumeration description |
 | [Visibility](arkts-arkui-visibility-e.md) | 定义组件的可见性及布局占位状态。 |
-| [Week](arkts-arkui-week-e.md) | Set Weekend |
+| [Week](arkts-arkui-week-e.md) | 定义星期枚举值。 |
 | [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Type of window width breakpoint. |
 | [WordBreak](arkts-arkui-wordbreak-e.md) | Enum of word break |
 | [XComponentType](arkts-arkui-xcomponenttype-e.md) | The type of XComponent |
@@ -126,5 +126,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Nullable](arkts-arkui-nullable-t.md) | A type which can be undefined |
+| [Nullable](arkts-arkui-nullable-t.md) | 在使用该类型时，其值可以使泛型参数T所指定的类型，也可以是undefined。 |
 

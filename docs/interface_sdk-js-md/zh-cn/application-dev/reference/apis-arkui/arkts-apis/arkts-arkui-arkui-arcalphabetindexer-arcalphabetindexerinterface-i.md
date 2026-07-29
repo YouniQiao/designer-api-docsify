@@ -36,7 +36,7 @@ import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 是 | 定义弧形字母索引条的初始化参数。 |
+| info | [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | 是 | 定义弧形字母索引条的初始化参数，包含字母索引字符串数组和初始选中项索引值。 |
 
 **返回值：**
 

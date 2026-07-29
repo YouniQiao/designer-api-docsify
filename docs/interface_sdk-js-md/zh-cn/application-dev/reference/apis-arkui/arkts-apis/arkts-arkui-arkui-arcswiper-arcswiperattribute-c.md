@@ -38,7 +38,7 @@ customContentTransition(transition: Optional<SwiperContentAnimatedTransition>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transition | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;SwiperContentAnimatedTransition&gt; | 是 | ArcSwiper自定义切换动画相关信息。 |
+| transition | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;SwiperContentAnimatedTransition&gt; | 是 | ArcSwiper自定义切换动画相关信息，包含timeout和transition两个属性。 |
 
 **返回值：**
 
@@ -52,7 +52,7 @@ customContentTransition(transition: Optional<SwiperContentAnimatedTransition>): 
 digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcSwiperAttribute
 ```
 
-设置旋转表冠的灵敏度。
+设置旋转表冠的灵敏度。通过旋转表冠可以控制ArcSwiper组件的翻页，设置不同灵敏度级别可调整表冠滚动的响应速度，灵敏度越高，单位旋转角度对应的页面切换步进越大。
 
 **起始版本：** 18
 
@@ -108,7 +108,7 @@ disableSwipe(disabled: Optional<boolean>): ArcSwiperAttribute
 disableTransitionAnimation(disabled: Optional<boolean>): ArcSwiperAttribute
 ```
 
-是否关闭特殊动效效果。
+设置是否关闭特殊动效效果。
 
 **起始版本：** 18
 
@@ -150,7 +150,7 @@ duration(duration: Optional<number>): ArcSwiperAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| duration | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 子组件切换的动画时长。<br/>默认值：400<br/>单位：毫秒 |
+| duration | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 子组件切换的动画时长。<br/>默认值：400<br/>单位：毫秒。传入负数时按默认值处理。 |
 
 **返回值：**
 
@@ -192,7 +192,7 @@ effectMode(edgeEffect: Optional<EdgeEffect>): ArcSwiperAttribute
 index(index: Optional<number>): ArcSwiperAttribute
 ```
 
-设置当前在容器中显示的子组件的索引值。设置小于0或大于等于子组件数量时，按照默认值0处理。
+设置当前在容器中显示的子组件的索引值。当index值为undefined、小于0或大于等于子组件数量时，按照默认值0处理。
 
 **起始版本：** 18
 
@@ -250,7 +250,7 @@ onAnimationEnd(handler: Optional<AnimationEndHandler>): ArcSwiperAttribute
 
 切换动画结束时触发该回调。
 
-当ArcSwiper切换动效结束时触发，包括动画过程中手势中断，通过[SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md)调用finishAnimation。参数为动画结束后的index值，多列ArcSwiper时，index为最左侧组件的索引。
+当ArcSwiper切换动效结束时触发，包括动画过程中手势中断或通过[SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md)调用finishAnimation。参数为动画结束后的index值，多列ArcSwiper时，index为最左侧组件的索引。
 
 **起始版本：** 18
 

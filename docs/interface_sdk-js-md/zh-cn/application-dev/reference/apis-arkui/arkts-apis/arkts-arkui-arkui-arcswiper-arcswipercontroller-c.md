@@ -36,7 +36,7 @@ ArcSwiperController的构造函数。
 finishAnimation(handler?: FinishAnimationHandler)
 ```
 
-停止播放动画。
+停止播放动画。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
 
 **起始版本：** 18
 
@@ -58,7 +58,7 @@ finishAnimation(handler?: FinishAnimationHandler)
 showNext()
 ```
 
-翻至下一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。
+翻至下一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
 
 **起始版本：** 18
 
@@ -74,7 +74,7 @@ showNext()
 showPrevious()
 ```
 
-翻至上一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。
+翻至上一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
 
 **起始版本：** 18
 

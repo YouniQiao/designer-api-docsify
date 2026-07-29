@@ -20,6 +20,6 @@ declare type Optional<T> = T | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| T | The object can be of any custom type. |
-| undefined | The object can be **undefined**. |
+| T | 表示泛型T所指定的类型。 |
+| undefined | 表示该类型声明的对象是undefined。 |
 

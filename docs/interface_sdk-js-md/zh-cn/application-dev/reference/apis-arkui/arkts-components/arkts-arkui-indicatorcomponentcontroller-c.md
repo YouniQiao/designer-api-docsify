@@ -1,6 +1,6 @@
 # IndicatorComponentController
 
-Indicator组件的控制器，可以将此对象绑定至Indicator组件来控制翻页。
+Indicator组件的控制器，可以将此对象绑定至Indicator组件来控制翻页。通过将同一IndicatorComponentController实例传入IndicatorComponent的构造函数和Swiper组件的indicator属性，可实现Indicator与Swiper的绑定联动。
 
 **起始版本：** 15
 
@@ -14,7 +14,7 @@ Indicator组件的控制器，可以将此对象绑定至Indicator组件来控�
 changeIndex(index: number, useAnimation?: boolean):void
 ```
 
-翻至指定导航点。
+翻至指定导航点。适用于需要跳转到指定导航点的场景。
 
 **起始版本：** 15
 
@@ -61,7 +61,7 @@ IndicatorComponentController的构造函数。
 showNext():void
 ```
 
-跳转到下一导航点。
+跳转到下一导航点。当与Swiper组件绑定时，同时会控制Swiper切换至下一页面。适用于通过按钮或其他交互方式控制导航点切换的场景。
 
 **起始版本：** 15
 
@@ -81,7 +81,7 @@ showNext():void
 showPrevious():void
 ```
 
-跳转到上一导航点。
+跳转到上一导航点。当与Swiper组件绑定时，同时会控制Swiper切换至上一页面。适用于通过按钮等交互方式控制导航点切换的场景。
 
 **起始版本：** 15
 

@@ -1,6 +1,6 @@
 # MoreButtonOptions
 
-更多图标的菜单选项。
+更多图标的菜单选项。设置后，可自定义更多按钮的背景模糊样式、背景效果等。
 
 **起始版本：** 19
 
@@ -14,7 +14,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-更多图标的菜单背景模糊样式，不设置时关闭背景模糊效果。
+更多图标的菜单背景模糊样式，设置后，更多图标的菜单将应用指定的模糊样式；不设置时关闭背景模糊效果。
 
 **类型：** BlurStyle
 
@@ -34,7 +34,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-标题栏背景模糊选项。
+更多图标的菜单背景模糊选项。
 
 **说明：**
 
@@ -60,7 +60,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-设置标题栏背景属性包括：模糊半径，亮度，饱和度，颜色等。
+设置更多图标的菜单背景属性包括：模糊半径，亮度，饱和度，颜色等。
 
 **说明：**
 
