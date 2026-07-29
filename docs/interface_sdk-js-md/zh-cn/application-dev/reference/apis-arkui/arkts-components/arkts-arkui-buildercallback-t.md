@@ -1,7 +1,7 @@
 # BuilderCallback
 
 ```TypeScript
-declare type BuilderCallback = (...args: Args) => void
+declare type BuilderCallback<Args extends Object[] = any[]> = (...args: Args) => void
 ```
 
 `BuilderCallback`是全局`@Builder`函数的类型别名，作为`mutableBuilder`函数的入参类型，用于指定待封装的全局`@Builder`函数。
@@ -12,7 +12,7 @@ declare type BuilderCallback = (...args: Args) => void
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
-<!--Device-unnamed-declare type BuilderCallback = (...args: Args) => void--><!--Device-unnamed-declare type BuilderCallback = (...args: Args) => void-End-->
+<!--Device-unnamed-declare type BuilderCallback<Args extends Object[] = any[]> = (...args: Args) => void--><!--Device-unnamed-declare type BuilderCallback<Args extends Object[] = any[]> = (...args: Args) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -43,9 +43,9 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | --- | --- |
 | [getUserAuthWidgetMgr](arkts-userauthentication-userauth-getuserauthwidgetmgr-f-sys.md#getuserauthwidgetmgr) | 获取身份认证组件管理器对象。用于获取UserAuthWidgetMgr实例，通过该实例可将自定义身份认证控件注册到系统进行统一管理。 |
 | [queryReusableAuthResult](arkts-userauthentication-userauth-queryreusableauthresult-f-sys.md#queryreusableauthresult) | 查询是否有可复用的身份认证结果。该接口用于在发起认证前查询是否存在满足复用条件的认证结果，若存在则直接返回可复用的AuthToken，无需用户再次进行认证交互。 |
-| [registerRemoteAuthCallback](arkts-userauthentication-userauth-registerremoteauthcallback-f-sys.md#registerremoteauthcallback) | 注册远程认证回调。 |
+| [registerRemoteAuthCallback](arkts-userauthentication-userauth-registerremoteauthcallback-f-sys.md#registerremoteauthcallback) | 注册远程认证回调。该接口用于在远程认证场景下注册回调接口，注册后系统可通过回调获取远程认证所需的页面参数，并在认证完成后接收认证结果。不允许重复注册，在不使用时应调用[unregisterRemoteAuthCallback](arkts-userauthentication-userauth-registerremoteauthcallback-f-sys.md#registerremoteauthcallback)取消注册，避免回调无法释放。 |
 | [sendNotice](arkts-userauthentication-userauth-sendnotice-f-sys.md#sendnotice) | 发送来自身份认证组件的通知。在使用统一身份认证控件进行用户身份认证时，该接口用于接收来自统一身份认证组件的通知，并将通知发送给用户认证框架。 |
-| [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md#unregisterremoteauthcallback) | 取消注册远程身份验证的回调。 |
+| [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md#unregisterremoteauthcallback) | 注销远程认证回调。该接口用于注销已注册的远程认证回调，注销后系统不再接收远程认证的页面参数请求和认证结果通知。 |
 <!--DelEnd-->
 
 ### 类
@@ -82,8 +82,8 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | --- | --- |
 | [AuthParam](arkts-userauthentication-userauth-authparam-i-sys.md) | 用户认证相关参数。该接口用于配置用户认证的各项参数，包括挑战值、认证类型列表、认证信任等级、认证结果复用配置等。通过合理配置这些参数，可以满足不同业务场景下的认证需求。 |
 | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 身份认证组件回调接口。认证组件通过该回调接口获取用户认证框架发送的命令，并根据命令内容执行相应的认证操作。 |
-| [IRemoteAuthCallback](arkts-userauthentication-userauth-iremoteauthcallback-i-sys.md) | 提供远端认证场景下获取WigetParam的接口。 |
-| [UserAuthWidgetMgr](arkts-userauthentication-userauth-userauthwidgetmgr-i-sys.md) | 身份认证组件管理器。用于将自定义身份认证控件注册到UserAuthWidgetMgr中，由UserAuthWidgetMgr进行统一管理和调度。通过该接口，自定义身份认证控件可以接收来自用户认证框架的命令并执行相应操作。 |
+| [IRemoteAuthCallback](arkts-userauthentication-userauth-iremoteauthcallback-i-sys.md) | 远程认证回调接口。该接口用于远程认证场景，提供获取远程认证页面参数和返回认证结果的回调能力。 |
+| [UserAuthWidgetMgr](arkts-userauthentication-userauth-userauthwidgetmgr-i-sys.md) | 身份认证组件管理器。用于将自定义身份认证控件注册到UserAuthWidgetMgr中进行统一管理和调度。自定义身份认证控件可接收来自用户认证框架的命令并执行相应操作。 |
 | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i-sys.md) | 用户认证界面配置相关参数。该接口用于配置认证界面的显示样式和交互方式，包括标题、导航按钮文本、窗口模式等。通过合理配置这些参数，可以为用户提供清晰的认证引导和良好的交互体验。 |
 <!--DelEnd-->
 
@@ -109,7 +109,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 | [NoticeType](arkts-userauthentication-userauth-noticetype-e-sys.md) | 用户身份认证的通知类型枚举。该枚举定义了系统支持的通知类型，用于标识通知的来源。 |
 | [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e-sys.md) | 表示返回码的枚举。该枚举定义了用户认证操作可能返回的所有结果码，包括成功码和各类错误码。应用可根据返回码判断认证结果，并采取相应的处理措施。 |
 | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e-sys.md) | 表示身份认证的凭据类型枚举。该枚举定义了系统支持的认证类型，包括锁屏密码认证（PIN）、生物特征认证（人脸、指纹）等。应用在发起认证时需指定认证类型列表，用户可选择其中任意一种完成认证。不同认证类型具有不同的安全强度和用户体验特点，应用应根据业务场景选择合适的认证类型。 |
-| [WindowModeType](arkts-userauthentication-userauth-windowmodetype-e-sys.md) | 用户认证界面的显示类型枚举。该枚举定义了认证界面可使用的显示模式，用于控制系统身份认证组件的窗口样式 |
+| [WindowModeType](arkts-userauthentication-userauth-windowmodetype-e-sys.md) | 用户认证界面的显示类型枚举。该枚举定义了认证界面可使用的显示模式，用于控制系统身份认证组件的窗口样式。 |
 <!--DelEnd-->
 
 ### 类型
@@ -127,8 +127,8 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ResultCallback](arkts-userauthentication-userauth-resultcallback-t-sys.md) | 调用返回认证结果。如果鉴权成功。UserAuthResult中包含token信息。 |
-| [WidgetParamCallback](arkts-userauthentication-userauth-widgetparamcallback-t-sys.md) | 调用以获取远程身份验证的用户身份验证页面上显示的信息。 |
+| [ResultCallback](arkts-userauthentication-userauth-resultcallback-t-sys.md) | 返回远程认证结果的回调函数类型。该类型用于远程认证场景，在远程认证完成后，系统会调用此回调函数返回认证结果。 |
+| [WidgetParamCallback](arkts-userauthentication-userauth-widgetparamcallback-t-sys.md) | 获取远程认证页面参数的回调函数类型。该类型用于远程认证场景，在需要获取远程认证界面的配置参数时，系统会调用此回调函数。 |
 <!--DelEnd-->
 
 ### 常量

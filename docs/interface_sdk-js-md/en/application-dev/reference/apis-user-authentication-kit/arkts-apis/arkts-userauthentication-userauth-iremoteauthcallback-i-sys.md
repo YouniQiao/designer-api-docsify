@@ -1,6 +1,6 @@
 # IRemoteAuthCallback (System API)
 
-Provides APIs for getting WidgetParam in remote authentication scenarios.
+Defines the remote authentication callback API. This API is used in remote authentication scenarios and provides the callback capabilities for obtaining remote authentication widget parameters and returning authentication results.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 onGetRemoteAuthWidgetParam: WidgetParamCallback
 ```
 
-Called to get the information presented on the user authentication page for remote authentication.
+Callback for obtaining remote authentication widget parameters. When a remote device initiates an authentication request, the system invokes this callback to obtain the authentication widget configuration parameters.
 
 **Type:** WidgetParamCallback
 
@@ -42,7 +42,7 @@ Called to get the information presented on the user authentication page for remo
 onRemoteAuthResult: ResultCallback
 ```
 
-Called to return the authentication result. If the authentication is successful,UserAuthResult contains the token information.
+Callback for returning remote authentication results. After the remote authentication is complete, the system invokes this callback to return the authentication result to the initiator.
 
 **Type:** ResultCallback
 

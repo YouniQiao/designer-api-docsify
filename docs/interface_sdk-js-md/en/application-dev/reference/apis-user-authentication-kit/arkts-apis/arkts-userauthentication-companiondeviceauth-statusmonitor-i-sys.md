@@ -89,7 +89,7 @@ Unsubscribes from the events for status changes of companion devices that can be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is not specified, all callbacks corresponding to the event type are unsubscribed. |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is not specified,all callbacks corresponding to the event type are unsubscribed. |
 
 **Error codes:**
 
@@ -123,7 +123,7 @@ try {
 offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 ```
 
-Unsubscribes from the continuous authentication status change event of the companion device. After the unsubscription, the application will no longer receive notifications of continuous authentication status changes. This API uses an asynchronous callback to return the result.
+Unsubscribes from the continuous authentication status change event of the companion device. After the unsubscription, the application will no longer receive notifications of continuous authentication status changes.This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -141,7 +141,7 @@ Unsubscribes from the continuous authentication status change event of the compa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is passed,only the specified callback is unregistered. If this parameter is not passed, all callbacks registered with **onContinuousAuthChange** are unregistered. |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is passed, only the specified callback is unregistered. If this parameter is not passed, all callbacks registered with **onContinuousAuthChange** are unregistered. |
 
 **Error codes:**
 
@@ -202,7 +202,7 @@ Unsubscribes from template status change events. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is not specified,all callbacks corresponding to the event type are unsubscribed. |
+| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is not specified, all callbacks corresponding to the event type are unsubscribed. |
 
 **Error codes:**
 

@@ -22,7 +22,7 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 addedTime: Date
 ```
 
-模板添加时间。模板创建的时间戳，格式为Unix时间戳，即自1970年1月1日起经过的毫秒数。
+模板添加时间，类型为Date对象。
 
 **类型：** Date
 
@@ -122,7 +122,7 @@ isValid: boolean
 localUserId: number
 ```
 
-本地用户ID。主设备上与该模板关联的用户标识，为大于等于0的正整数。
+本地用户ID。主设备上与该模板关联的用户标识，为非负整数。
 
 **类型：** number
 

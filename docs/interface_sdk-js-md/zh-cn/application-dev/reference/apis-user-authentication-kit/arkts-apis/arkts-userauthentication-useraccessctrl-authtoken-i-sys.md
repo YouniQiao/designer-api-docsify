@@ -1,6 +1,6 @@
 # AuthToken（系统接口）
 
-认证令牌数据。表示校验通过后返回解析的AuthToken数据结果，包含认证的详细信息，如挑战值、认证信任等级、认证类型、用户ID等。
+认证令牌数据。表示校验通过后返回解析后的AuthToken数据，包含认证的详细信息，如挑战值、认证信任等级、认证类型、用户ID等。
 
 **起始版本：** 18
 
@@ -22,7 +22,7 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 authTrustLevel: userAuth.AuthTrustLevel
 ```
 
-认证信任等级。表示本次认证达到的安全强度等级，值为ATL1(10000)、ATL2(20000)、ATL3(30000)或ATL4(40000)。等级越高，表示活体检测能力越强、身份识别越精确。
+认证信任等级。表示本次认证达到的安全强度等级，值为ATL1（10000）、ATL2（20000）、ATL3（30000）或ATL4（40000）。等级越高，表示活体检测能力越强、身份识别越精确。
 
 **类型：** userAuth.AuthTrustLevel
 
@@ -40,7 +40,7 @@ authTrustLevel: userAuth.AuthTrustLevel
 authType: userAuth.UserAuthType
 ```
 
-身份认证的凭据类型。表示本次认证使用的认证方式，如PIN(1)、FACE(2)、FINGERPRINT(4)等。
+身份认证的凭据类型。表示本次认证使用的认证方式，如PIN（1）、FACE（2）、FINGERPRINT（4）等。
 
 **类型：** userAuth.UserAuthType
 
@@ -166,7 +166,7 @@ tokenType: AuthTokenType
 userId: number
 ```
 
-用户ID。表示完成认证的用户标识，为大于等于0的正整数。
+用户ID。表示完成认证的用户标识，取值为非负整数。
 
 **类型：** number
 

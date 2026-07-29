@@ -14,6 +14,8 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: number): Prom
 
 验证认证令牌。该接口用于校验AuthToken的有效性，包括完整性校验和时效性校验，校验通过后返回解析后的AuthToken详细信息。使用Promise异步回调。
 
+完整性校验通过验证AuthToken的数字签名确保令牌未被篡改；时效性校验通过比对AuthToken的签发时间与当前时间，并结合allowableDuration参数判断令牌是否在有效期内。
+
 **起始版本：** 18
 
 **需要权限：** ohos.permission.USE_USER_ACCESS_MANAGER
@@ -35,7 +37,7 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: number): Prom
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AuthToken&gt; | Promise对象，用于返回AuthToken。 |
+| Promise&lt;AuthToken&gt; | Promise对象，验证成功时返回解析后的AuthToken数据，包含挑战值、认证信任等级、认证类型、用户ID等详细信息；验证失败时抛出相应错误码。 |
 
 **错误码：**
 

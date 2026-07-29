@@ -20,7 +20,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 credentialIdList?: Uint8Array[]
 ```
 
-凭据ID列表。若凭据ID列表不为空，则会认证指定的凭据ID，而非用户的所有凭据。适用于需要精确控制认证凭据的场景。
+凭据ID列表，用于指定需要认证的凭据。当需要只认证特定凭据而非用户的所有凭据时传入此参数；若不传入或传入空数组，则默认认证该用户的所有凭据。
 
 **类型：** Uint8Array[]
 
@@ -40,7 +40,7 @@ credentialIdList?: Uint8Array[]
 userId?: number
 ```
 
-待认证的目标用户ID。值为非负整数，用于指定需要认证的用户。默认值为当前用户的ID。
+待认证的目标用户ID，用于指定需要认证的用户。当需要认证特定用户而非当前登录用户时传入此参数；若不传入则默认使用当前登录用户的ID。取值为非负整数。
 
 **类型：** number
 

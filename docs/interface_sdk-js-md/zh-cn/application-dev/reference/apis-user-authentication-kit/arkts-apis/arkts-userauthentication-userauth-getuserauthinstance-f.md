@@ -29,8 +29,8 @@ function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): Us
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authParam | [AuthParam](arkts-userauthentication-userauth-authparam-i.md) | 是 | 用户认证相关参数。包含挑战值、认证类型列表、认证可信等级、认证结果复用配置等。挑战值建议使用加密框架生成的随机数，认证类型可指定多种供用户选择，认证可信等级应根据业务场景安全需求选择。 |
-| widgetParam | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | 是 | 用户认证界面配置相关参数。包含界面标题、导航按钮文本、窗口模式（系统API）、模应用弹窗上下文等。标题建议设置为认证目的，导航按钮文本可用于自定义认证跳转。 |
+| authParam | [AuthParam](arkts-userauthentication-userauth-authparam-i.md) | 是 | 用户认证相关参数。包含挑战值、认证类型列表、认证可信等级、认证结果复用配置等。挑战值建议使用加解密算法库框架生成的随机数，认证类型可指定多种供用户选择，认证可信等级应根据业务场景安全需求选择。 |
+| widgetParam | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | 是 | 用户认证界面配置相关参数。包含界面标题、导航按钮文本、窗口模式、模应用弹窗上下文等。标题建议设置为认证目的，导航按钮文本可用于自定义认证跳转。 |
 
 **返回值：**
 

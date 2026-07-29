@@ -20,7 +20,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 appWindow?: window.Window
 ```
 
-是否在模应用模式下显示鉴权对话框。该模式仅适用于平板电脑和二合一设备。如果未使用此模式或使用其他类型的设备，则身份验证对话框以模系统模式显示。默认情况下，身份验证对话框以模系统方式显示。如果提供了uiContext，则该参数将被忽略。
+应用窗口对象。用于以模应用弹窗方式显示身份认证对话框，适用于需要通过窗口对象控制认证对话框显示的场景。如果已提供此参数，则uiContext将被忽略。
 
 **类型：** window.Window
 
@@ -42,7 +42,7 @@ appWindow?: window.Window
 windowMode?: WindowModeType
 ```
 
-用户认证界面的显示类型。用于控制系统身份认证组件的窗口样式，可选择对话框模式（DIALOG_BOX）或全屏模式（FULLSCREEN）。默认值为WindowModeType.DIALOG_BOX。
+用户认证界面的显示类型。DIALOG_BOX适用于大多数认证场景（用户体验较好），FULLSCREEN适用于需要沉浸式认证体验或认证信息较多的场景。不传入时默认为WindowModeType.DIALOG_BOX。
 
 **类型：** WindowModeType
 

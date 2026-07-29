@@ -20,7 +20,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 credentialIdList?: Uint8Array[]
 ```
 
-List of credential IDs. If the credential ID list is not empty, the specified credential IDs are authenticated,instead of all credentials of the user. This is applicable to scenarios where precise control over authentication credentials is required.
+List of IDs for credentials to be authenticated. This parameter is passed when only specific credentials, rather than all credentials of the user, need to be authenticated. If not passed or an empty array is passed, all credentials of the user are authenticated by default.
 
 **Type:** Uint8Array[]
 
@@ -40,7 +40,7 @@ List of credential IDs. If the credential ID list is not empty, the specified cr
 userId?: number
 ```
 
-Target user ID to be authenticated. The value is a non-negative integer, which specifies the user to be authenticated. The default value is the ID of the current user.
+ID of the target user to be authenticated. This parameter is passed when a specific user, rather than the currently logged-in user, needs to be authenticated. If not passed, the ID of the currently logged-in user is used by default. The value is a non-negative integer.
 
 **Type:** number
 

@@ -14,6 +14,8 @@ function getStatusMonitor(localUserId: number): StatusMonitor
 
 获取状态监听器。用于获取指定用户的状态监听器对象，通过该对象可查询和订阅伴随设备的模板状态、持续认证状态、可添加设备状态等信息。
 
+生命周期：订阅在系统服务侧按用户维护。使用完毕应调用对应的off方法取消订阅以释放资源；应用进程退出时已注册的订阅会自动清理。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.USE_USER_IDM
@@ -30,7 +32,7 @@ function getStatusMonitor(localUserId: number): StatusMonitor
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| localUserId | number | 是 | 本地用户ID。主设备上的用户标识，为大于等于0的正整数。用于获取该用户对应的伴随设备状态监听器。 |
+| localUserId | number | 是 | 本地用户ID。主设备上的用户标识，为非负整数，用于获取该用户对应的伴随设备状态监听器。传入不存在的用户ID时抛出异常，错误码为32600002。 |
 
 **返回值：**
 

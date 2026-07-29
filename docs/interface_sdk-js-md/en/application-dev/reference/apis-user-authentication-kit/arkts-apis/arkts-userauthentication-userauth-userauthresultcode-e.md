@@ -126,7 +126,7 @@ The authentication trust level is not supported. It indicates that the specified
 BUSY = 12500007
 ```
 
-The system does not respond. It indicates that the authentication service is busy processing other requests. You are advised to try again later.
+The system is busy. It indicates that the authentication service is busy processing other requests. You are advised to try again later.
 
 **Since:** 9
 

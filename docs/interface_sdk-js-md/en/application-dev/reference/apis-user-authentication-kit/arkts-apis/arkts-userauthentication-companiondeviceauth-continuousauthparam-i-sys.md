@@ -22,7 +22,7 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 templateId?: Uint8Array
 ```
 
-Template ID. It is used to specify the target template to be subscribed to. If this parameter is not specified, the continuous authentication status of all templates of the current user is subscribed to by default. If a specific template ID is specified, only the authentication status change of the template is subscribed to.
+Template ID. It is used to specify the target template to be subscribed to. If this parameter is not specified,the continuous authentication status of all templates of the current user is subscribed to by default. If a specific template ID is specified, only the authentication status change of the template is subscribed to.
 
 **Type:** Uint8Array
 

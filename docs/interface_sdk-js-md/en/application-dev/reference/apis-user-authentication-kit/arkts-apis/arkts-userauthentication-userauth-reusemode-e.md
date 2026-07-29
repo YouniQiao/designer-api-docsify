@@ -16,7 +16,7 @@ AUTH_TYPE_RELEVANT = 1
 
 The device unlock authentication result can be reused within the validity period if the authentication type matches any of the authentication types specified for this authentication.
 
-For example, after a user uses face authentication to unlock device, the authentication result can be reused within the validity period if the user initiates a service operation that requires face authentication. However,if the user initiates a service operation that requires fingerprint authentication, the authentication result cannot be reused.
+For example, after a user uses face authentication to unlock the device, the authentication result can be reused within the validity period if the user initiates a service operation that requires face authentication. However,if the user initiates a service operation that requires fingerprint authentication, the authentication result cannot be reused.
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # IRemoteAuthCallback（系统接口）
 
-提供远端认证场景下获取WigetParam的接口。
+远程认证回调接口。该接口用于远程认证场景，提供获取远程认证页面参数和返回认证结果的回调能力。
 
 **起始版本：** 26.0.0
 
@@ -22,7 +22,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 onGetRemoteAuthWidgetParam: WidgetParamCallback
 ```
 
-调用以获取远程身份验证的用户身份验证页面上显示的信息。
+获取远程认证页面参数的回调函数。在远程设备发起认证请求时，系统会调用此回调获取认证界面配置参数。
 
 **类型：** WidgetParamCallback
 
@@ -42,7 +42,7 @@ onGetRemoteAuthWidgetParam: WidgetParamCallback
 onRemoteAuthResult: ResultCallback
 ```
 
-调用返回认证结果。如果鉴权成功。UserAuthResult中包含token信息。
+返回远程认证结果的回调函数。在远程认证完成后，系统会调用此回调将认证结果返回给发起方。
 
 **类型：** ResultCallback
 

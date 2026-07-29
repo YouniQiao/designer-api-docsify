@@ -1,6 +1,6 @@
 # UserAuthWidgetMgr（系统接口）
 
-身份认证组件管理器。用于将自定义身份认证控件注册到UserAuthWidgetMgr中，由UserAuthWidgetMgr进行统一管理和调度。通过该接口，自定义身份认证控件可以接收来自用户认证框架的命令并执行相应操作。
+身份认证组件管理器。用于将自定义身份认证控件注册到UserAuthWidgetMgr中进行统一管理和调度。自定义身份认证控件可接收来自用户认证框架的命令并执行相应操作。
 
 **起始版本：** 10
 
@@ -37,7 +37,7 @@ off(type: 'command', callback?: IAuthWidgetCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'command' | 是 | 订阅事件类型。值为'command'，表明取消订阅用户认证框架向身份认证控件发送命令的事件。 |
-| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 否 | 回调函数。指定取消注册的回调函数，若不传入此参数，则取消所有已注册的回调。 |
+| callback | [IAuthWidgetCallback](arkts-userauthentication-userauth-iauthwidgetcallback-i-sys.md) | 否 | 回调函数。指定取消注册的回调函数，需与on方法注册时传入的回调一致；若不传入此参数，则取消所有已注册的回调。使用前需确保已通过[on](userAuth.UserAuthWidgetMgr.on(type: 'command', callback: IAuthWidgetCallback))方法注册过相应回调。 |
 
 **错误码：**
 

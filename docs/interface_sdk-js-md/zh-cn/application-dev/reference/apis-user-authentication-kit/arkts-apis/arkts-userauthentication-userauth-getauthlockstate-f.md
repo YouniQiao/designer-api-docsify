@@ -28,7 +28,7 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 | 认证类型。 |
+| authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 | 认证类型，用于指定查询的凭据类型。支持FACE（人脸）、FINGERPRINT（指纹）、PIN（密码）等。根据业务场景安全需求选择合适的认证类型。 |
 
 **返回值：**
 

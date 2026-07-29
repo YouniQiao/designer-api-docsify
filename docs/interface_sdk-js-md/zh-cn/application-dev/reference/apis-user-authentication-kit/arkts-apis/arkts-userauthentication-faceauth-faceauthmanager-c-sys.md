@@ -1,6 +1,6 @@
 # FaceAuthManager（系统接口）
 
-人脸认证管理器对象。用于提供人脸录入过程中的管理功能，包括设置人脸预览界面的Surface ID等。
+人脸认证管理器对象。用于提供人脸录入过程中的管理功能，目前支持设置人脸预览界面的Surface ID。
 
 **起始版本：** 9
 
@@ -63,7 +63,7 @@ setSurfaceId(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid) 持有 Surface 的 ID。用于在人脸录入过程中显示人脸预览画面，该ID需通过XComponentController的getXComponentSurfaceId方法获取。 |
+| surfaceId | string | 是 | [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i)持有Surface的ID。用于在人脸录入过程中显示人脸预览画面。<br>**说明**：需在XComponent完成初始化后，通过[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
 
 **错误码：**
 

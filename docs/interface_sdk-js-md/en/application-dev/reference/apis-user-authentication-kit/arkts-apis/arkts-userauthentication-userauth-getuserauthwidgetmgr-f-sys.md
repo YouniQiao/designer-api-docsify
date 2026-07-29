@@ -31,7 +31,7 @@ Obtains the authentication widget manager object. It is used to obtain the **Use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| version | number | Yes | Version number of the authentication widget. Currently, version 1 is supported. The widget version determines the communication protocol and supported features between the widget and the framework. |
+| version | number | Yes | Version number of the authentication widget. Currently, only version 1 is supported. The widget version determines the communication protocol and supported features between the widget and the framework. |
 
 **Return value:**
 

@@ -24,6 +24,10 @@ getTemplateStatus(): Promise<TemplateStatus[]>
 
 获取伴随设备模板状态。用于查询当前用户下所有已注册的伴随设备认证模板的状态信息，包括模板有效性、支持的业务范围、关联设备状态等。使用Promise异步回调。
 
+数据来源：返回系统服务（UserIAM）维护的模板状态内存快照，非实时跨设备查询。
+
+与onTemplateChange的区别：getTemplateStatus用于一次性获取当前模板状态快照，适合主动查询；onTemplateChange用于持续订阅模板状态变化，适合实时响应。仅需获取一次状态时使用getTemplateStatus，需要持续监听变化时使用onTemplateChange。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.USE_USER_IDM
@@ -71,7 +75,7 @@ statusMonitor.getTemplateStatus()
 offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 ```
 
-取消订阅可添加的伴随设备状态变化，使用callback异步回调。
+取消订阅可添加的伴随设备状态变化。callback参数用于指定要取消的回调函数，不传入则取消全部已注册的回调。
 
 **起始版本：** 23
 
@@ -89,7 +93,7 @@ offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | 否 | 需要取消的目标回调。不传入callback时默认移除当前应用注册的全部相关回调。 |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | 否 | 此前通过onAvailableDeviceChange注册的回调函数。指定该参数时，仅取消指定的这一个回调；省略该参数时，取消全部已注册的回调。 |
 
 **错误码：**
 
@@ -123,7 +127,7 @@ try {
 offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 ```
 
-取消订阅伴随设备的持续认证状态变化事件。取消后，应用将不再接收持续认证状态变化通知。使用callback异步回调。
+取消订阅伴随设备的持续认证状态变化事件。取消后，应用将不再接收持续认证状态变化通知。callback参数用于指定要取消的回调函数，不传入则取消全部已注册的回调。
 
 **起始版本：** 23
 
@@ -141,7 +145,7 @@ offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | 否 | 指定取消注册的回调函数。若传入此参数，仅取消该特定回调的注册；若不传入此参数，则取消onContinuousAuthChange注册的全部回调。 |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | 否 | 此前通过onContinuousAuthChange注册的回调函数。指定该参数时，仅取消指定的这一个回调；省略该参数时，取消全部已注册的回调。 |
 
 **错误码：**
 
@@ -184,7 +188,7 @@ try {
 offTemplateChange(callback?: TemplateStatusCallback): void
 ```
 
-取消订阅模板的状态变化。使用callback异步回调。
+取消订阅模板的状态变化。
 
 **起始版本：** 23
 
@@ -202,7 +206,7 @@ offTemplateChange(callback?: TemplateStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | 否 | 指定取消注册的回调函数。若不填此参数，则取消onTemplateChange注册的全部回调。 |
+| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | 否 | 回调函数，指定该参数时，仅取消指定的这一个回调；省略该参数时，取消全部已注册的回调。 |
 
 **错误码：**
 
@@ -238,6 +242,8 @@ onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 
 订阅可添加的伴随设备状态变化。使用callback异步回调。
 
+触发机制：当可添加的伴随设备列表发生变化（如新设备上线、设备离线、设备绑定关系变化等）时触发回调。订阅时立即推送一次当前列表。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.USE_USER_IDM
@@ -254,7 +260,7 @@ onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | 是 | 处理可选设备更新的回调函数。 |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | 是 | 处理可用设备状态变化的回调函数。当可添加设备列表变化（如新设备上线、设备离线等）时触发，回调参数为设备状态列表。 |
 
 **错误码：**
 
@@ -289,6 +295,8 @@ onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatu
 
 订阅伴随设备的持续认证状态。使用callback异步回调。
 
+持续认证：持续认证状态指伴随设备是否持有有效认证令牌。当令牌签发（认证通过）、令牌超时、关联设备离线或令牌被吊销时状态发生变化并触发回调。authTrustLevel为当前有效令牌中的最高认证可信等级。仅当认证可信等级变化时通知；订阅时立即推送一次当前状态。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.USE_USER_IDM
@@ -305,8 +313,8 @@ onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [ContinuousAuthParam](arkts-userauthentication-companiondeviceauth-continuousauthparam-i-sys.md) | 是 | 用于指定订阅的设备。 |
-| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | 是 | 订阅的设备持续认证状态发生变化时执行此回调。 |
+| param | [ContinuousAuthParam](arkts-userauthentication-companiondeviceauth-continuousauthparam-i-sys.md) | 是 | 用于指定订阅参数，可通过templateId字段指定目标模板。 |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | 是 | 回调函数。当持续认证状态变化时触发，回调参数为认证结果（isAuthPassed）和认证可信等级（authTrustLevel）。 |
 
 **错误码：**
 
@@ -351,6 +359,8 @@ onTemplateChange(callback: TemplateStatusCallback): void
 
 订阅模板的状态变化。使用callback异步回调。
 
+触发时机：模板状态变化时触发，包括启用业务ID变更、有效性变更、关联设备上下线/状态变更、模板加入或移除IDM等。订阅时立即推送一次当前状态快照；状态未变化时不重复通知。
+
 **起始版本：** 23
 
 **需要权限：** ohos.permission.USE_USER_IDM
@@ -367,7 +377,7 @@ onTemplateChange(callback: TemplateStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | 是 | 回调函数，用于接收模板状态。 |
+| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | 是 | 回调函数。当模板状态发生变化（如添加、删除、有效性变更等）时触发，回调参数为模板状态列表。 |
 
 **错误码：**
 

@@ -30,7 +30,7 @@ function registerDeviceSelectCallback(callback: DeviceSelectCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [DeviceSelectCallback](arkts-userauthentication-companiondeviceauth-deviceselectcallback-t-sys.md) | 是 | 伴随设备选择回调函数。系统调用时会传入选择目的（selectPurpose），应用需根据目的返回相应的DeviceSelectResult，包含用户选择的设备信息。 |
+| callback | [DeviceSelectCallback](arkts-userauthentication-companiondeviceauth-deviceselectcallback-t-sys.md) | 是 | 伴随设备选择回调函数。系统调用时会传入选择目的（selectPurpose），应用需根据selectPurpose返回包含对应设备信息的DeviceSelectResult。 |
 
 **错误码：**
 

@@ -12,7 +12,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function unregisterRemoteAuthCallback(): void
 ```
 
-取消注册远程身份验证的回调。
+注销远程认证回调。该接口用于注销已注册的远程认证回调，注销后系统不再接收远程认证的页面参数请求和认证结果通知。
 
 **起始版本：** 26.0.0
 

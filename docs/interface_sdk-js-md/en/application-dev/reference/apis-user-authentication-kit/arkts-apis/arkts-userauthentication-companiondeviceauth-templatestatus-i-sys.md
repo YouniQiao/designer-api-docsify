@@ -1,6 +1,6 @@
 # TemplateStatus (System API)
 
-Describes the complete status information about a registered companion device authentication template, including the template ID, data confirmation status, validity, user ID, time when the template is added, supported services, and associated device status.
+Describes the complete status information about a registered companion device authentication template, including the template ID, data confirmation status, validity, user ID, time when the template is added, supported services,and associated device status.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ Template adding time. Timestamp when the template is created. The value is a Uni
 deviceStatus: DeviceStatus
 ```
 
-Device status information. It specifies the current status of the companion device associated with the template, including the online status and device name.
+Device status information. It specifies the current status of the companion device associated with the template,including the online status and device name.
 
 **Type:** DeviceStatus
 
@@ -102,7 +102,7 @@ Data confirmation status. The value **true** indicates that the data is real-tim
 isValid: boolean
 ```
 
-Template validity. The value **true** indicates that the template is valid and can be used for authentication. The value **false** indicates that the template is invalid, may have been deleted or expired,and cannot be used for authentication.
+Template validity. The value **true** indicates that the template is valid and can be used for authentication.The value **false** indicates that the template is invalid, may have been deleted or expired, and cannot be used for authentication.
 
 **Type:** boolean
 

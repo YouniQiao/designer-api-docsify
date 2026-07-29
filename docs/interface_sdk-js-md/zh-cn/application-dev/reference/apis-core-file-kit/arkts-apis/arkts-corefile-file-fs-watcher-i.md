@@ -33,6 +33,7 @@ start(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900002 | No such file or directory |
+| 13900005 | I/O error |
 | 13900008 | Bad file descriptor |
 | 13900011 | Out of memory |
 | 13900012 | Permission denied |
@@ -75,6 +76,7 @@ stop(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900002 | No such file or directory |
+| 13900005 | I/O error |
 | 13900008 | Bad file descriptor |
 | 13900011 | Out of memory |
 | 13900012 | Permission denied |

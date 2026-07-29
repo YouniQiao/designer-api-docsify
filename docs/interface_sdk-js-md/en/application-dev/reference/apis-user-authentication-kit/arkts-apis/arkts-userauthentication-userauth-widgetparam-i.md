@@ -20,7 +20,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 navigationButtonText?: string
 ```
 
-Text on the navigation button. It cannot exceed 60 characters. Tapping this button triggers a custom application operation, such as jumping to the custom authentication page or canceling authentication. It is supported in single fingerprint or face authentication before API version 18. Since API version 18, it is also supported in combined face and fingerprint authentication. By default, the custom navigation button is not displayed.
+Description text of the navigation button, with a maximum length of 60 characters. Tapping this button triggers custom application operations, such as navigating to a custom authentication page or canceling authentication.This parameter is supported in single-fingerprint and single-face authentication scenarios. Since API version 18,it is also supported in combined face-and-fingerprint authentication. By default, the custom navigation button is not displayed.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Text on the navigation button. It cannot exceed 60 characters. Tapping this butt
 title: string
 ```
 
-Title of the user authentication page, which cannot be empty or exceed 500 characters. You are advised to set it to the authentication purpose, such as payment or application login. The title is displayed on the authentication screen to help users understand the purpose of the current authentication, improving user trust and cooperation.
+Title of the user authentication page, which cannot be empty or exceed 500 characters in length. You are advised to set it to the authentication purpose, such as payment or application login. The title is displayed on the authentication screen to help users understand the purpose of the current authentication, improving user trust and cooperation.
 
 **Type:** string
 
@@ -56,9 +56,9 @@ Title of the user authentication page, which cannot be empty or exceed 500 chara
 uiContext?: Context
 ```
 
-Used to display an application modal dialog for authentication. This parameter can be used only on 2-in-1devices. After a valid uiContext is passed, the authentication dialog box is displayed as an application modal dialog. After the authentication result is returned, the application needs to obtain the widget release message (subscribe to [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) and wait for the **WIDGET_RELEASED** state) before displaying other windows. If this parameter is not specified or the device is of another type, the authentication dialog box is displayed as a system modal dialog. In this case,the application can directly perform the follow-up procedure after the widget is released.
+Used to display an application modal dialog for authentication. Since API version 18, this parameter is supported on 2-in-1 devices. When a valid **uiContext** is passed, the authentication dialog box is displayed as an application modal dialog. After the authentication result is returned, the application must first obtain the widget release message (subscribe to [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) and wait for the callback where **authTipInfo.tipCode** is **WIDGET_RELEASED**) before displaying other windows. If this parameter is not provided or if the device is of another type, the authentication dialog box is displayed as a system modal dialog. In this case, the application can directly perform follow-up procedures after the widget is released.
 
-**Default value**: The authentication dialog box is displayed as a system modal dialog.
+**Default value:** The authentication dialog box is displayed as a system modal dialog.
 
 **Type:** Context
 

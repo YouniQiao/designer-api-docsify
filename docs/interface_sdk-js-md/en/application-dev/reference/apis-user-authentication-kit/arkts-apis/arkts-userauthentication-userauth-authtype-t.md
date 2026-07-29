@@ -18,6 +18,6 @@ Enumerates the authentication types.
 
 | Type | Description |
 | --- | --- |
-| 'ALL' | reserved and not supported by the current version. |
-| 'FACE_ONLY' | facial authentication. |
+| 'ALL' | Reserved parameter. Authentication of the **ALL** type is not supported in the current version. |
+| 'FACE_ONLY' | Face authentication. |
 

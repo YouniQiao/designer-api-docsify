@@ -1,6 +1,6 @@
 # @ohos.userIAM.faceAuth
 
-The **faceAuth** module is an important part of the OpenHarmony user identity and access management (UserIAM) and is used to manage face enrollment. This module provides core APIs for face authentication management, enabling developers to enroll and manage face information within their applications.
+The **faceAuth** module is an important part of the OpenHarmony user identity and access management (UserIAM) and is used to manage face enrollment. This module provides core APIs for face authentication management, allowing developers to enroll and manage face information within the application.
 
 This module applies to the following scenarios:
 

@@ -144,7 +144,7 @@ The authentication trust level is not supported.
 BUSY = 7
 ```
 
-Indicates the busy state.
+The system is busy.
 
 **Since:** 8
 

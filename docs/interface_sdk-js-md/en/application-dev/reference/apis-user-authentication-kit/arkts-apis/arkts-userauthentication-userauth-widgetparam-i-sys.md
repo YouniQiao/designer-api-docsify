@@ -20,7 +20,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 appWindow?: window.Window
 ```
 
-This parameter is also provided to display the authentication dialog box in modal application mode.If uiContext has been provided, this parameter would be ignored.
+Application window object. It is used to display the identity authentication dialog box as an application modal dialog. It is suitable for scenarios where the authentication dialog box needs to be controlled through a window object. If this parameter is provided, **uiContext** will be ignored.
 
 **Type:** window.Window
 
@@ -42,7 +42,7 @@ This parameter is also provided to display the authentication dialog box in moda
 windowMode?: WindowModeType
 ```
 
-Enumerates the window types of the authentication widget. This parameter is used to control the window style of the system authentication widget. You can select the dialog box mode (**DIALOG_BOX**) or full-screen mode (**FULLSCREEN**). The default value is **WindowModeType.DIALOG_BOX**.
+Window type of the user authentication screen. **DIALOG_BOX** is suitable for most authentication scenarios (with better user experience), and **FULLSCREEN** is suitable for scenarios that require an immersive authentication experience or involve more authentication information. If not specified, the default value is **WindowModeType.DIALOG_BOX**.
 
 **Type:** WindowModeType
 

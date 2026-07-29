@@ -34,7 +34,7 @@ Unified device ID. It is a system-defined device service ID type, used for unifi
 VENDOR_BEGIN = 10000
 ```
 
-Start value of the vendor-defined device ID type. The vendor can extend device ID types based on this value.The actual value must be greater than or equal to 10000 to avoid conflicts with the reserved system values [1-9999].
+Start value of the vendor-defined device ID type. The vendor can extend device ID types based on this value. The actual value must be greater than or equal to 10000 to avoid conflicts with the reserved system values [1-9999].
 
 **Since:** 23
 

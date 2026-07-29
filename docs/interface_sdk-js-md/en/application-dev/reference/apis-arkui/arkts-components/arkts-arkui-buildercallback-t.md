@@ -1,7 +1,7 @@
 # BuilderCallback
 
 ```TypeScript
-declare type BuilderCallback = (...args: Args) => void
+declare type BuilderCallback<Args extends Object[] = any[]> = (...args: Args) => void
 ```
 
 Defines the callback type used in mutableBuilder.
@@ -12,7 +12,7 @@ Defines the callback type used in mutableBuilder.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-unnamed-declare type BuilderCallback = (...args: Args) => void--><!--Device-unnamed-declare type BuilderCallback = (...args: Args) => void-End-->
+<!--Device-unnamed-declare type BuilderCallback<Args extends Object[] = any[]> = (...args: Args) => void--><!--Device-unnamed-declare type BuilderCallback<Args extends Object[] = any[]> = (...args: Args) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

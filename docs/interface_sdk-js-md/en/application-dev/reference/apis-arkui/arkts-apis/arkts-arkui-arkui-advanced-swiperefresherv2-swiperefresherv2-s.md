@@ -19,12 +19,12 @@ import { SwipeRefresherV2 } from '@kit.ArkUI';
 ## content
 
 ```TypeScript
-content?: string
+content?: ResourceStr
 ```
 
 Sets the content when loading.
 
-**Type:** string
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Sets the content when loading.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-SwipeRefresherV2-content?: string--><!--Device-SwipeRefresherV2-content?: string-End-->
+<!--Device-SwipeRefresherV2-content?: ResourceStr--><!--Device-SwipeRefresherV2-content?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

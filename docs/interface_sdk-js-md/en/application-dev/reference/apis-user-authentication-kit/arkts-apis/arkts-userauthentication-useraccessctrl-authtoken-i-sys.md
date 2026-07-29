@@ -1,6 +1,6 @@
 # AuthToken (System API)
 
-Authentication token data. It indicates the parsed **AuthToken** data returned after the verification is successful, including detailed authentication information such as the challenge value, authentication trust level,authentication type, and user ID.
+Defines the authentication token data. It indicates the parsed **AuthToken** data returned after the verification is successful, including detailed authentication information such as the challenge value, authentication trust level, authentication type, and user ID.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 authTrustLevel: userAuth.AuthTrustLevel
 ```
 
-Authentication trust level. It indicates the security strength level of the current authentication. The value can be **ATL1(10000)**, **ATL2(20000)**, **ATL3(30000)**, or **ATL4(40000)**. A higher level indicates a stronger liveness detection capability and more accurate identity recognition.
+Authentication trust level. It indicates the security strength level of the current authentication. The value can be **ATL1 (10000)**, **ATL2 (20000)**, **ATL3 (30000)**, or **ATL4 (40000)**. A higher level indicates a stronger liveness detection capability and more accurate identity recognition.
 
 **Type:** userAuth.AuthTrustLevel
 
@@ -40,7 +40,7 @@ Authentication trust level. It indicates the security strength level of the curr
 authType: userAuth.UserAuthType
 ```
 
-Credential type for the identity authentication. It indicates the authentication mode used for the current authentication, such as **PIN(1)**, **FACE(2)**, and **FINGERPRINT(4)**.
+Credential type for the identity authentication. It indicates the authentication mode used for the current authentication, such as **PIN (1)**, **FACE (2)**, and **FINGERPRINT (4)**.
 
 **Type:** userAuth.UserAuthType
 
@@ -148,7 +148,7 @@ Time elapsed since the **AuthToken** was issued, in milliseconds.
 tokenType: AuthTokenType
 ```
 
-Enumerates the authentication token types. It identifies the source of the token, such as local authentication,reuse authentication, or collaborative authentication.
+Authentication token type. It identifies the source of the token, such as local authentication, reuse authentication, or collaborative authentication.
 
 **Type:** AuthTokenType
 
@@ -166,7 +166,7 @@ Enumerates the authentication token types. It identifies the source of the token
 userId: number
 ```
 
-User ID. It indicates the ID of the user who has completed authentication. The value is a positive integer greater than or equal to 0.
+User ID. It indicates the ID of the user who has completed authentication. The value is a non-negative integer.
 
 **Type:** number
 

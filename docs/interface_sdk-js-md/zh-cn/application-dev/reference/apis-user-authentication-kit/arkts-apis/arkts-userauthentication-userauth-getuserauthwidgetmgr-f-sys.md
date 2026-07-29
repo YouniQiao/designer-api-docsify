@@ -31,7 +31,7 @@ function getUserAuthWidgetMgr(version: number): UserAuthWidgetMgr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| version | number | 是 | 身份认证组件的版本号。用于指定组件的版本，目前支持版本1。组件版本决定了组件与框架之间的通信协议和功能支持范围。 |
+| version | number | 是 | 身份认证组件的版本号。取值原则：目前仅支持版本1。组件版本决定了组件与框架之间的通信协议和功能支持范围。 |
 
 **返回值：**
 

@@ -20,7 +20,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 navigationButtonText?: string
 ```
 
-导航按键的说明文本，最大长度为60字符。点击该按钮可触发应用自定义的操作，如跳转到自定义认证页面或取消认证等。在单指纹、单人脸场景下支持，从API 18开始，增加支持人脸+指纹组合认证场景。默认为不展示自定义导航按键。
+导航按键的说明文本，最大长度为60字符。点击该按钮可触发应用自定义的操作，如跳转到自定义认证页面或取消认证等。在单指纹、单人脸场景下支持，从API版本18开始，增加支持人脸+指纹组合认证场景。默认为不展示自定义导航按键。
 
 **类型：** string
 
@@ -56,7 +56,7 @@ title: string
 uiContext?: Context
 ```
 
-以模应用弹窗方式显示身份认证对话框，仅支持在2in1设备上使用。传入有效的uiContext后，认证对话框将以模应用弹窗方式显示，认证结果返回后应用需先获取控件释放消息（订阅[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))并等待WIDGET_RELEASED状态）才能弹出其他窗口。如果没有此参数或其他类型的设备，身份认证对话框将以模系统弹窗方式显示，此时控件释放后应用可直接进行后续操作。
+以模应用弹窗方式显示身份认证对话框，从API版本18开始，支持在2in1设备上使用。传入有效的uiContext后，认证对话框将以模应用弹窗方式显示，认证结果返回后应用需先获取控件释放消息（订阅[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))并等待收到authTipInfo.tipCode为WIDGET_RELEASED的回调）才能弹出其他窗口。如果没有此参数或其他类型的设备，身份认证对话框将以模系统弹窗方式显示，此时控件释放后应用可直接进行后续操作。
 
 **默认值：** 以模系统弹窗方式显示身份认证对话框。
 

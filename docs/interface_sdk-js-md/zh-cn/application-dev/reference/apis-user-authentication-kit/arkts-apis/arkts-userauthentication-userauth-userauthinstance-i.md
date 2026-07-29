@@ -25,7 +25,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 cancel(): void
 ```
 
-取消认证。
+取消认证。该接口常用于以下场景：应用因业务逻辑变化需要中止认证；超时或异常情况下中止认证操作。
 > **说明：**  
 >  
 > 此时UserAuthInstance必须是正在进行认证的对象。
@@ -98,7 +98,7 @@ try {
 off(type: 'result', callback?: IAuthCallback): void
 ```
 
-取消订阅用户身份认证的结果。
+取消订阅用户身份认证的结果。该接口常用于以下场景：页面销毁或组件卸载时取消订阅；不再需要监听认证结果时释放资源。
 > **说明：**  
 >  
 > 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
@@ -176,7 +176,7 @@ try {
 off(type: 'authTip', callback?: AuthTipCallback): void
 ```
 
-取消订阅用户身份认证中间状态。
+取消订阅用户身份认证中间状态。该接口常用于以下场景：认证完成后清理订阅监听释放资源；不再需要监听认证过程中的提示信息时取消订阅；页面销毁或组件卸载时取消订阅。
 > **说明：**  
 >  
 > 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
@@ -193,8 +193,8 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'authTip' | 是 | 取消订阅的事件类型，支持的事件为'authTip'，当[start()](arkts-userauthentication-userauth-userauthinstance-i.md#start)调用完成，发起身份认证并调用[on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#on)订阅该事件后，调用该方法可取消订阅，不会再触发该事件。 |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 否 | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用[on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#on)接口时传递的参数值。 |
+| type | 'authTip' | 是 | 取消订阅的事件类型，支持的事件为'authTip'，当[start()](arkts-userauthentication-userauth-userauthinstance-i.md#start)调用完成，发起身份认证并调用[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))订阅该事件后，调用该方法可取消订阅，不会再触发该事件。 |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 否 | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口时传递的参数值。 |
 
 **错误码：**
 
@@ -271,7 +271,7 @@ on(type: 'result', callback: IAuthCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'result' | 是 | 订阅事件类型，表明该事件用来返回认证结果。 |
+| type | 'result' | 是 | 订阅事件类型，表明该事件用来返回认证结果，当[start()](arkts-userauthentication-userauth-userauthinstance-i.md#start)调用完成，发起身份认证并完成认证交互后，触发该事件。 |
 | callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | 是 | 认证接口的回调函数，用于返回认证结果。 |
 
 **错误码：**
@@ -368,7 +368,7 @@ try {
 start(): void
 ```
 
-开始认证。
+开始认证。该接口常用于以下业务场景：用户点击支付按钮时发起身份认证；用户登录应用时进行身份验证；用户访问敏感数据或执行敏感操作时进行身份确认。
 > **说明：**  
 >  
 > 每个UserAuthInstance只能进行一次认证，需要再次认证时，必须重新获取UserAuthInstance。

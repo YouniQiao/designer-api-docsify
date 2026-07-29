@@ -14,7 +14,7 @@ Enumerates the identity authentication types. This enum defines the authenticati
 PRIVATE_PIN = 16
 ```
 
-Privacy PIN. It is a special PIN authentication type, which is generally used for secondary access control after the screen is unlocked. For example, a user can use the privacy password protection application lock to prevent family members who know the lock screen password from accessing some of their applications.
+Privacy PIN. It is a special PIN authentication type, which is generally used for secondary access control after the screen is unlocked (that is, the user must be authenticated again before accessing a specific application or content after the device is unlocked). For example, a user can use a privacy password to protect the application lock (a feature that performs secondary authentication on application startup to prevent others from opening the user's applications) to prevent family members who know the lock screen password from accessing some of their applications.
 
 **Since:** 14
 
