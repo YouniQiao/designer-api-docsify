@@ -4,7 +4,7 @@
 export type PhotoBrowserZoomCallback = (scale: number) => void
 ```
 
-The callback of onPhotoBrowserZoom event
+Callback to be invoked when the large image is zoomed in or out after the large image is entered through the **PhotoPickerComponent**.
 
 **Since:** 26.0.0
 
@@ -20,5 +20,5 @@ The callback of onPhotoBrowserZoom event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number | Yes |  |
+| scale | number | Yes | Scale of the image compared with the original image.  |
 

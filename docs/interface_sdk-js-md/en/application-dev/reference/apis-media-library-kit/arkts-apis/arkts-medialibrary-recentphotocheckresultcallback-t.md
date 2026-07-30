@@ -4,7 +4,7 @@
 export type RecentPhotoCheckResultCallback = (recentPhotoExists: boolean) => void
 ```
 
-The callback of onRecentPhotoCheckResult event
+Called to return the query result of the recent image or video.
 
 **Since:** 12
 
@@ -18,5 +18,5 @@ The callback of onRecentPhotoCheckResult event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recentPhotoExists | boolean | Yes | Does the recent photo exist?  |
+| recentPhotoExists | boolean | Yes | Whether the recent image or video exists. **true** if it exists, **false** otherwise. The default value is **true**.  |
 

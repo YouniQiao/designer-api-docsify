@@ -5,7 +5,7 @@ export type MovingPhotoBadgeStateChangedCallback =
   (uri: string, state: photoAccessHelper.MovingPhotoBadgeStateType) => void
 ```
 
-The callback of onMovingPhotoBadgeStateChanged event
+Callback to be invoked when the moving photo effect of the **PhotoPickerComponent** is enabled or disabled.
 
 **Since:** 22
 
@@ -19,6 +19,6 @@ The callback of onMovingPhotoBadgeStateChanged event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes |  |
-| state | photoAccessHelper.MovingPhotoBadgeStateType | Yes |  |
+| uri | string | Yes | URI of the moving photo.  |
+| state | photoAccessHelper.MovingPhotoBadgeStateType | Yes | State of the moving photo badge.  |
 

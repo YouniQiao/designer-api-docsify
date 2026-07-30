@@ -1,10 +1,10 @@
-# PreselectedInfo
+# RecoveryResult
 
-Describes the information about the preselected files and their corresponding **PhotoPickerComponent** index.
+RecoveryResult
 
-**Since:** 21
+**Since:** 26.1.0
 
-<!--Device-unnamed-export declare class PreselectedInfo--><!--Device-unnamed-export declare class PreselectedInfo-End-->
+<!--Device-unnamed-export declare class RecoveryResult--><!--Device-unnamed-export declare class RecoveryResult-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -14,39 +14,43 @@ Describes the information about the preselected files and their corresponding **
 import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from '@kit.MediaLibraryKit';
 ```
 
-## preselectablePickerIndex
+## albumName
 
 ```TypeScript
-preselectablePickerIndex?: number
+albumName: string
 ```
 
-Index of the **PhotoPickerComponent** that can be used in automatic selection. The default value is **-1**, which allows automatic selection in any **PhotoPickerComponent**.
-
-**Type:** number
-
-**Since:** 21
-
-**Atomic service API:** This API can be used in atomic services since API version 21.
-
-<!--Device-PreselectedInfo-preselectablePickerIndex?: number--><!--Device-PreselectedInfo-preselectablePickerIndex?: number-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## uri
-
-```TypeScript
-uri: string
-```
-
-URI of the preselected media file.
+Name of the restored album.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PreselectedInfo-uri: string--><!--Device-PreselectedInfo-uri: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-RecoveryResult-albumName: string--><!--Device-RecoveryResult-albumName: string-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## albumUri
+
+```TypeScript
+albumUri: string
+```
+
+URI of the restored album.
+
+**Type:** string
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-RecoveryResult-albumUri: string--><!--Device-RecoveryResult-albumUri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

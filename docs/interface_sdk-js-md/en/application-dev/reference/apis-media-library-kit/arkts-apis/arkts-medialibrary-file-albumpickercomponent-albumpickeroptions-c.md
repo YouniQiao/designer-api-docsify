@@ -1,6 +1,6 @@
 # AlbumPickerOptions
 
-AlbumPickerOptions Object
+Represents the **AlbumPicker** configuration.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOpt
 filterType?: photoAccessHelper.PhotoViewMIMETypes
 ```
 
-The type of the content displayed in the album
+Type of the filter. You can use it to display images, videos, or both. If this parameter is not specified, images and videos are displayed in a specific album.
 
 **Type:** photoAccessHelper.PhotoViewMIMETypes
 
@@ -38,7 +38,7 @@ The type of the content displayed in the album
 fontSize?: number | string
 ```
 
-The size of the font displayed in the album. When `fontSize` is a number type, must use 'fp' unit
+Font size. For details about the value range, see [fontSize](TextAttribute#fontSize).
 
 **Type:** number \| string
 
@@ -56,7 +56,7 @@ The size of the font displayed in the album. When `fontSize` is a number type, m
 themeColorMode?: PickerColorMode
 ```
 
-AlbumPickerComponent theme color
+Theme color of the album page. The options are **AUTO**, **Light**, and **Dark**. The default value is **AUTO**.
 
 **Type:** PickerColorMode
 

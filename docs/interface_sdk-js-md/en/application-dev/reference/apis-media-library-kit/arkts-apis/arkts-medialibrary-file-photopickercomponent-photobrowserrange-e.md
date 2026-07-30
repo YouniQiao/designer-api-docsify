@@ -1,6 +1,6 @@
 # PhotoBrowserRange
 
-PhotoBrowserRange. include ALL and SELECTED_ONLY
+Enumerates the view range on the photo browser page.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ PhotoBrowserRange. include ALL and SELECTED_ONLY
 ALL = 0
 ```
 
-ALL. all photos or vedios
+View all images and videos.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ ALL. all photos or vedios
 SELECTED_ONLY = 1
 ```
 
-SELECTED_ONLY. only selected photos or vedios
+View selected images and videos only.
 
 **Since:** 12
 

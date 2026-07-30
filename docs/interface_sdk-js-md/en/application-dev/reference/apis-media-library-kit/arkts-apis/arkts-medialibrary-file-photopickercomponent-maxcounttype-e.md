@@ -1,6 +1,6 @@
 # MaxCountType
 
-MaxCountType. include TOTAL_MAX_COUNT, PHOTO_MAX_COUNT and VIDEO_MAX_COUNT
+Enumerates the types of the maximum count.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ MaxCountType. include TOTAL_MAX_COUNT, PHOTO_MAX_COUNT and VIDEO_MAX_COUNT
 TOTAL_MAX_COUNT = 0
 ```
 
-TOTAL_MAX_COUNT. total max count
+Total number of media assets (images and videos) that can be selected.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ TOTAL_MAX_COUNT. total max count
 PHOTO_MAX_COUNT = 1
 ```
 
-PHOTO_MAX_COUNT. photo max count
+Total number of images that can be selected. The value cannot be greater than **Total_MAX_Count**.
 
 **Since:** 12
 
@@ -46,7 +46,7 @@ PHOTO_MAX_COUNT. photo max count
 VIDEO_MAX_COUNT = 2
 ```
 
-VIDEO_MAX_COUNT. video max count
+Total number of videos that can be selected. The value cannot be greater than **Total_MAX_Count**.
 
 **Since:** 12
 

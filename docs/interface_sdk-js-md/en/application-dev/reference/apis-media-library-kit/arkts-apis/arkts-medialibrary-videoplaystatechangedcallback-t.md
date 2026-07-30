@@ -4,7 +4,7 @@
 export type videoPlayStateChangedCallback = (state: VideoPlayerState) => void
 ```
 
-The callback of onVideoPlayStateChanged event
+Callback to be invoked when the video playback state on a photo browser page changes.
 
 **Since:** 14
 
@@ -18,5 +18,5 @@ The callback of onVideoPlayStateChanged event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [VideoPlayerState](arkts-medialibrary-file-photopickercomponent-videoplayerstate-e.md) | Yes |  |
+| state | [VideoPlayerState](arkts-medialibrary-file-photopickercomponent-videoplayerstate-e.md) | Yes | Enumerates the video playback states.  |
 

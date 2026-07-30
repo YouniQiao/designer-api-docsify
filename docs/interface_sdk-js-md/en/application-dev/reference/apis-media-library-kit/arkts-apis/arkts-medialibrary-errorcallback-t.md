@@ -4,7 +4,7 @@
 export type ErrorCallback = (pickerError: PickerError) => void
 ```
 
-The callback of onError event
+Callback to be invoked when an error occurs in the **PhotoPickerComponent**.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ The callback of onError event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerError | [PickerError](arkts-medialibrary-file-photopickercomponent-pickererror-c.md) | Yes |  |
+| pickerError | [PickerError](arkts-medialibrary-file-photopickercomponent-pickererror-c.md) | Yes | Basic information about the error.  |
 

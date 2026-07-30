@@ -1,6 +1,6 @@
 # SaveMode
 
-Enumeration type of save mode.
+Enumerates the modes for saving images or videos.
 
 **Since:** 15
 
@@ -14,7 +14,7 @@ Enumeration type of save mode.
 SAVE_AS = 0
 ```
 
-Save as a new photo/video.
+Saves the image or video as a new one.
 
 **Since:** 15
 
@@ -30,7 +30,7 @@ Save as a new photo/video.
 OVERWRITE = 1
 ```
 
-Overwrite and save.
+Replaces the original image or video. After the replacements, you can roll back the saved content in Gallery to restore the original image or video.
 
 **Since:** 15
 

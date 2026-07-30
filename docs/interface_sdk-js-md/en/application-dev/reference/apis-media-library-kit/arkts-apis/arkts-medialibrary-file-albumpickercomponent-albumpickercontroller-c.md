@@ -1,6 +1,6 @@
 # AlbumPickerController
 
-The class for AlbumPickerController
+A controller that enables applications to send data to the **AlbumPickerComponent**.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOpt
 setFontSize(fontSize: number | string): void
 ```
 
-Set font size to album picker component
+Sets the font size of the album list.
 
 **Since:** 20
 
@@ -36,5 +36,5 @@ Set font size to album picker component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontSize | number \| string | Yes | font size of album picker component |
+| fontSize | number \| string | Yes | Font size. For details about the value range, see [fontSize](TextAttribute#fontSize). |
 

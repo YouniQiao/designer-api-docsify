@@ -4,7 +4,7 @@
 export type ScrollStopAtEndCallback = () => void
 ```
 
-The callback of onScrollStopAtEnd event
+Callback to be invoked when the user stops scrolling and is positioned at the end of the grid content in the **PhotoPickerComponent**.
 
 **Since:** 23
 

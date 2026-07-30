@@ -4,7 +4,7 @@
 export type PhotoBrowserChangeStartCallback = (targetPhotoInfo: BaseItemInfo) => void
 ```
 
-The callback of onPhotoBrowserChangeStart event
+Callback to be invoked when a grid view switches to the photo browser page or the photo browser page is switched.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ The callback of onPhotoBrowserChangeStart event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetPhotoInfo | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes |  |
+| targetPhotoInfo | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes | Basic information about the selected items.  |
 

@@ -1,6 +1,6 @@
 # ClickResult
 
-ClickResult
+Sets whether the asset with the specified URI is selected.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 isSelected: boolean
 ```
 
-Indicates whether the media file is selected.
+Sets whether the specified media asset is selected. The value **true** indicates that the asset is selected, and **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ Indicates whether the media file is selected.
 uri: string
 ```
 
-Uri of the media file.
+URI of the media asset.
 
 **Type:** string
 

@@ -1,6 +1,16 @@
 # PhotoPickerComponent
 
-Declare struct PhotoPickerComponent
+PhotoPickerComponent({ pickerOptions?: PickerOptions, onSelect?: (uri: string) => void, onDeselect?: (uri: string) =>void, onItemClicked?: (itemInfo: ItemInfo, clickType: ClickType) => boolean, onItemClickedNotify?:ItemClickedNotifyCallback, onEnterPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean, onExitPhotoBrowser?: (photoBrowserInfo: PhotoBrowserInfo) => boolean, onPickerControllerReady?: () => void, onPhotoBrowserChanged?: (browserItemInfo: BaseItemInfo) => boolean, onSelectedItemsDeleted?: ItemsDeletedCallback, onExceedMaxSelected?:ExceedMaxSelectedCallback, onCurrentAlbumDeleted?: CurrentAlbumDeletedCallback, onVideoPlayStateChanged?:videoPlayStateChangedCallback, pickerController: PickerController })
+
+Allows the application to access images or videos in the user directory without any permission.
+> **NOTE**  
+>  
+> If the **PhotoPickerComponent** is used with the **Tabs** component, the swipe gestures of the **Tabs** component  
+> conflict with those of the photo browser page.  
+>  
+> To prevent this problem, you can disable the swipe operation for the **Tabs** component in  
+> **onEnterPhotoBrowser()** and enable it in **onExitPhotoBrowser()**. This conflict will be resolved in later  
+> versions.
 
 **Since:** 12
 
@@ -276,6 +286,26 @@ Callback when pickerController is ready.Set data to picker component by pickerCo
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## onPickerRecovery
+
+```TypeScript
+onPickerRecovery?: PickerRecoveryCallback
+```
+
+Callback when the photo picker restores the previously grid state.
+
+**Type:** PickerRecoveryCallback
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-PhotoPickerComponent-onPickerRecovery?: PickerRecoveryCallback--><!--Device-PhotoPickerComponent-onPickerRecovery?: PickerRecoveryCallback-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## onPinchGridSwitched
 
 ```TypeScript
@@ -369,6 +399,26 @@ Callback when selected items are deleted
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-PhotoPickerComponent-onSelectedItemsDeleted?: ItemsDeletedCallback--><!--Device-PhotoPickerComponent-onSelectedItemsDeleted?: ItemsDeletedCallback-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## onUnselectableItemClicked
+
+```TypeScript
+onUnselectableItemClicked?: UnselectableItemClickedCallback
+```
+
+Callback when an unselectable item is clicked.
+
+**Type:** UnselectableItemClickedCallback
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-PhotoPickerComponent-onUnselectableItemClicked?: UnselectableItemClickedCallback--><!--Device-PhotoPickerComponent-onUnselectableItemClicked?: UnselectableItemClickedCallback-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

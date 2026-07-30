@@ -1,6 +1,6 @@
 # PickerOptions
 
-PickerOptions Object
+Describes the configuration of a Picker. It inherits from [photoAccessHelper.BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md).
 
 **Inheritance/Implementation:** PickerOptions extends [photoAccessHelper.BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)
 
@@ -22,7 +22,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 appAlbumFilters?: Array<string>
 ```
 
-Only display album contents corresponding to the specified applications.Use the bundle name to identify the application.
+Used to display only the album content corresponding to the specified bundle name.
 
 **Type:** Array&lt;string&gt;
 
@@ -42,7 +42,7 @@ Only display album contents corresponding to the specified applications.Use the 
 backgroundColor?: string
 ```
 
-Support set backgroundColor
+Background color of the Picker grid page. The value is an 8-digit hexadecimal color code.
 
 **Type:** string
 
@@ -60,7 +60,7 @@ Support set backgroundColor
 backgroundOpacity?: number
 ```
 
-Support setting background opacity.
+Background opacity of the picker. The value range is [0, 1]. **0** indicates completely transparent, and **1** indicates completely opaque.
 
 **Type:** number
 
@@ -80,7 +80,7 @@ Support setting background opacity.
 badgeConfig?: BadgeConfig
 ```
 
-Support to config special badge display.The picker component supports only one type of badge
+Badge configuration. Currently, the **PhotoPickerComponent** supports only one type of badge. For details, see [BadgeType](arkts-medialibrary-file-photopickercomponent-badgetype-e.md).
 
 **Type:** BadgeConfig
 
@@ -98,7 +98,11 @@ Support to config special badge display.The picker component supports only one t
 checkBoxColor?: string
 ```
 
-Support set checkBox color
+Background color of the check box.
+
+The value is an 8-digit hexadecimal color code. The first two digits indicate the transparency, and the last six digits indicate the RGB color value.
+
+For example, '#FFFFFFFF' indicates a white opaque background, and '#80FF0000' indicates a semi-transparent red background.
 
 **Type:** string
 
@@ -116,7 +120,7 @@ Support set checkBox color
 checkboxTextColor?: string
 ```
 
-Support to set checkbox text color
+Text color in the check box. The value is an 8-digit hexadecimal color code. (This parameter is supported since API version 19. In earlier versions, the system defaults to white.)
 
 **Type:** string
 
@@ -134,7 +138,7 @@ Support to set checkbox text color
 contextRecoveryInfo?: photoAccessHelper.ContextRecoveryInfo
 ```
 
-Context recovery information for restoring the last selection session.
+Information for restoring the PhotoPicker's state from the last exit.
 
 **Type:** photoAccessHelper.ContextRecoveryInfo
 
@@ -154,7 +158,9 @@ Context recovery information for restoring the last selection session.
 edgeEffect?: EdgeEffect
 ```
 
-Grid edge slide effect.
+Scrolling effect when the Picker grid page reaches the edge.
+
+The default value is [EdgeEffect.Spring](../../apis-arkui/arkts-apis/arkts-arkui-edgeeffect-e.md).
 
 **Type:** EdgeEffect
 
@@ -174,7 +180,7 @@ Grid edge slide effect.
 gridEndOffset?: number
 ```
 
-Support to set offset between last grid item and the bottom of grid
+Space between the bottom of the component and the last row of the grid thumbnail. The default value is **0**, in vp.
 
 **Type:** number
 
@@ -192,7 +198,7 @@ Support to set offset between last grid item and the bottom of grid
 gridMargin?: Margin
 ```
 
-Support set gridMargin
+Margin of the component on a grid page.
 
 **Type:** Margin
 
@@ -210,7 +216,7 @@ Support set gridMargin
 gridStartOffset?: number
 ```
 
-Support to set offset between first grid item and the top of grid
+Space between the top of the component and the first row of the grid thumbnail. The default value is **0**, in vp.
 
 **Type:** number
 
@@ -228,7 +234,7 @@ Support to set offset between first grid item and the top of grid
 isRepeatSelectSupported?: boolean
 ```
 
-Support repeat select
+Whether a single image can be repeatedly selected. **true** if supported, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
@@ -246,7 +252,7 @@ Support repeat select
 isSlidingSelectionSupported?: boolean
 ```
 
-Support to set sliding selection
+Whether to support multiple selections by sliding. **true**: yes; **false**: no. The default value is **false**.This parameter is not available for repeat selection.
 
 **Type:** boolean
 
@@ -264,7 +270,9 @@ Support to set sliding selection
 isSlidingSupported?: boolean
 ```
 
-Support setting grid sliding.
+Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true** means that scrolling is not blocked and the component responds to user scroll gestures. The value **false** means that scrolling is blocked and the component does not respond to user scroll gestures.
+
+The default value is **true**.
 
 **Type:** boolean
 
@@ -284,7 +292,7 @@ Support setting grid sliding.
 maxPhotoSelectNumber?: number
 ```
 
-Support to set max photo select number
+Maximum number of images that can be selected. The maximum value is **500**, which is limited by **MaxSelected**.The default value is **500**.
 
 **Type:** number
 
@@ -304,7 +312,7 @@ Support to set max photo select number
 maxSelectedReminderMode?: ReminderMode
 ```
 
-Support to set max select number remind mode.
+Mode of the reminder when the number of selected items reaches the maximum. The options are **NONE**, **TOAST**,and **MASK**. The default value **TOAST**.
 
 **Type:** ReminderMode
 
@@ -322,7 +330,7 @@ Support to set max select number remind mode.
 maxVideoSelectNumber?: number
 ```
 
-Support to set max video select number
+Maximum number of videos that can be selected. The maximum value is **500**, and it is restricted by the maximum number of media files that can be selected in the system. The default value is **500**.
 
 **Type:** number
 
@@ -342,7 +350,7 @@ Support to set max video select number
 orientation?: PickerOrientation
 ```
 
-Support to set display orientation
+Sliding preview direction of the grid page. The options are **HORIZONTAL** and **VERTICAL**. The default value is **VERTICAL**. (This parameter is supported since API version 20. In earlier versions, the system defaults to vertical.)
 
 **Type:** PickerOrientation
 
@@ -360,7 +368,7 @@ Support to set display orientation
 photoBrowserBackgroundColorMode?: PickerColorMode
 ```
 
-Support to set photo browser background color mode
+Background color of the photo browser page. The options are **AUTO**, **LIGHT**, and **DARK**. The default value is **AUTO**.
 
 **Type:** PickerColorMode
 
@@ -378,7 +386,7 @@ Support to set photo browser background color mode
 photoBrowserCheckboxPosition?: [number, number]
 ```
 
-Support to set photo browser checkbox position
+Position of the check box on the photo browser page. The first parameter specifies the offset in the X direction,and the second parameter specifies the offset in the Y direction. The value range is [0, 1], which indicates the offset (from 0% to 100%) to the upper-left corner of the component. The default value is [0, 0].
 
 **Type:** [number, number]
 
@@ -396,7 +404,7 @@ Support to set photo browser checkbox position
 photoBrowserMargin?: Margin
 ```
 
-Support set photoBrowserMargin
+Margin of the component on a photo browser page.
 
 **Type:** Margin
 
@@ -414,7 +422,7 @@ Support set photoBrowserMargin
 pickerIndex?: number
 ```
 
-Support to set a serial number to distinguish different picker components. Default value is -1.
+Unique serial number used to distinguish different picker components. The default value is **-1**, indicating that no distinction is made.
 
 **Type:** number
 
@@ -432,7 +440,7 @@ Support to set a serial number to distinguish different picker components. Defau
 preselectedInfos?: Array<PreselectedInfo>
 ```
 
-Support automatically selecting the user-selected image/video on the PhotoPickerComponent at the specified picker index.
+Array of information previously selected by the user, so that the PhotoPickerComponent identified by **pickerIndex** can display the information.
 
 **Type:** Array&lt;PreselectedInfo&gt;
 
@@ -450,7 +458,7 @@ Support automatically selecting the user-selected image/video on the PhotoPicker
 selectMode?: SelectMode
 ```
 
-Support to set select mode
+Select mode, which can be **SINGLE_SELECT** or **MULTI_SELECT**. The default value is **MULTI_SELECT**.
 
 **Type:** SelectMode
 
@@ -468,7 +476,7 @@ Support to set select mode
 singleLineConfig?: SingleLineConfig
 ```
 
-Single-line display mode for the PhotoPickerComponent.
+Single-line display mode of a grid page. In single-line mode, the component does not provide functions for viewing a larger image. The component does not support callbacks related to large images, and the PickerController does not support APIs related to large images, making API calls ineffective.
 
 **Type:** SingleLineConfig
 
@@ -486,7 +494,9 @@ Single-line display mode for the PhotoPickerComponent.
 uiComponentColorMode?: PickerColorMode
 ```
 
-Support to set UIComponent color mode.
+Picker color mode. Dark/Light color mode (excluding the background color) of other components on the Picker grid page, including the search box, camera entry, safety tips for using Gallery, and recommendation bubble. This attribute is usually used together with **backgroundColor**. The default value is **PickerColorMode.AUTO**, which follows the system's dark/light color mode.
+
+When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark backgroundColor, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light backgroundColor for the same reason.
 
 **Type:** PickerColorMode
 

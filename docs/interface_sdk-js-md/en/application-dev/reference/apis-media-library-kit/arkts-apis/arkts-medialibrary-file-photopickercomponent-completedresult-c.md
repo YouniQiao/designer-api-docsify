@@ -1,6 +1,6 @@
 # CompletedResult
 
-CompletedResult
+Defines the information about the Picker's state from the last exit.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 contextRecoveryInfo: photoAccessHelper.ContextRecoveryInfo
 ```
 
-Contextual information about the PhotoPicker's exit state.
+Context information of the PhotoPicker exit status.
 
 **Type:** photoAccessHelper.ContextRecoveryInfo
 
@@ -40,7 +40,7 @@ Contextual information about the PhotoPicker's exit state.
 movingPhotoBadgeStates: Array<photoAccessHelper.MovingPhotoBadgeStateType>
 ```
 
-M​oving photo badge states for the selected media files in the gallery.When isMovingPhotoBadgeShown is true, movingPhotoBadgeStates contains the moving photo states;otherwise, it is empty.
+Moving photo badge states of the selected media files. When **isMovingPhotoBadgeShown** is set to **true**,**movingPhotoBadgeStates** contains the moving photo status. Otherwise, the value is empty.
 
 **Type:** Array&lt;photoAccessHelper.MovingPhotoBadgeStateType&gt;
 
@@ -60,7 +60,7 @@ M​oving photo badge states for the selected media files in the gallery.When is
 photoUris: Array<string>
 ```
 
-URIs of the images or videos selected. The URI array can be used only by calling photoAccessHelper.getAssets with temporary authorization. For details about how to use the media file URI, see Using a Media File URI.
+URI of the selected image or video. The URI array can be used only by calling **photoAccessHelper.getAssets** in temporary authorization mode.
 
 **Type:** Array&lt;string&gt;
 

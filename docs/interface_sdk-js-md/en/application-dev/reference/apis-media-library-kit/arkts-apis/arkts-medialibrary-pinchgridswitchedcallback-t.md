@@ -4,7 +4,7 @@
 export type PinchGridSwitchedCallback = (gridLevel: photoAccessHelper.GridLevel) => void
 ```
 
-The callback of onPinchGridSwitched event
+Callback to be invoked when a user pinches a grid component.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ The callback of onPinchGridSwitched event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gridLevel | photoAccessHelper.GridLevel | Yes |  |
+| gridLevel | photoAccessHelper.GridLevel | Yes | Number of columns in the grid.  |
 

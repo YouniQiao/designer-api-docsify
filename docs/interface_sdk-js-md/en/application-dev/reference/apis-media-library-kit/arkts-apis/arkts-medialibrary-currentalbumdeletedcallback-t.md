@@ -4,7 +4,7 @@
 export type CurrentAlbumDeletedCallback = () => void
 ```
 
-The callback of onCurrentAlbumDeleted event
+Called when the current album is deleted.
 
 **Since:** 13
 

@@ -4,7 +4,7 @@
 export type RecentPhotoCheckInfoCallback = (recentPhotoExists: boolean, info: RecentPhotoInfo) => void
 ```
 
-The callback of onRecentPhotoCheckInfo event
+Called to return whether the recent image or video exists and the information about it.
 
 **Since:** 13
 
@@ -18,6 +18,6 @@ The callback of onRecentPhotoCheckInfo event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recentPhotoExists | boolean | Yes | Does the recent photo exist?  |
-| info | [RecentPhotoInfo](arkts-medialibrary-file-recentphotocomponent-recentphotoinfo-c.md) | Yes | the recent photo info  |
+| recentPhotoExists | boolean | Yes | Whether the recent image or video exists. **true** if it exists, **false** otherwise. The default value is **true**.  |
+| info | [RecentPhotoInfo](arkts-medialibrary-file-recentphotocomponent-recentphotoinfo-c.md) | Yes | Information about the recent image or video.  |
 

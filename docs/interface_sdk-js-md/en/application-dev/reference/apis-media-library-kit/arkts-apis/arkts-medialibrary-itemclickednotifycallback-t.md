@@ -4,7 +4,7 @@
 export type ItemClickedNotifyCallback = (itemInfo: ItemInfo, clickType: ClickType) => void
 ```
 
-The callback of onItemClickedNotify event
+Callback to be invoked when an item in a **PhotoPickerComponent** is clicked.
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ The callback of onItemClickedNotify event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemInfo | [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | Yes |  |
-| clickType | [ClickType](arkts-medialibrary-file-photopickercomponent-clicktype-e.md) | Yes |  |
+| itemInfo | [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | Yes | Type of the clicked item, which can be a thumbnail item or a camera item.  |
+| clickType | [ClickType](arkts-medialibrary-file-photopickercomponent-clicktype-e.md) | Yes | Enumerates the click operation types.  |
 

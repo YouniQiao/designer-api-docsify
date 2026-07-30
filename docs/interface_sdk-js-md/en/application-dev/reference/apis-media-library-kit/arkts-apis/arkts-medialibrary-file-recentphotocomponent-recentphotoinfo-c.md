@@ -1,6 +1,6 @@
 # RecentPhotoInfo
 
-Recent photo info
+Represents information about the recent image or video.
 
 **Since:** 13
 
@@ -20,7 +20,7 @@ import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckI
 dateTaken?: number
 ```
 
-The dateTaken of photos or videos
+Time when the recent image or video is taken, in ms. The value is the number of milliseconds elapsed since the Unix epoch (00:00:00 UTC on January 1, 1970).
 
 **Type:** number
 
@@ -38,7 +38,7 @@ The dateTaken of photos or videos
 identifier?: string
 ```
 
-The identifier of photos or videos
+Hash value of the name of the recent image or video, which is used to help the application determine whether the image or video to be displayed is the same as the one displayed before.
 
 **Type:** string
 

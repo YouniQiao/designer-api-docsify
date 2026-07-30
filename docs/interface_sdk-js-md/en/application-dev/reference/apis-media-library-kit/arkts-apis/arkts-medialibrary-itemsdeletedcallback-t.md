@@ -4,7 +4,7 @@
 export type ItemsDeletedCallback = (baseItemInfos: Array<BaseItemInfo>) => void
 ```
 
-The callback of onSelectedItemsDeleted event
+Called when the selected items are deleted.
 
 **Since:** 13
 
@@ -18,5 +18,5 @@ The callback of onSelectedItemsDeleted event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| baseItemInfos | Array&lt;BaseItemInfo&gt; | Yes |  |
+| baseItemInfos | Array&lt;BaseItemInfo&gt; | Yes | Basic information about the selected items.  |
 

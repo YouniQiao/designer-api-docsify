@@ -4,7 +4,7 @@
 export type EmptyAreaClickCallback = () => void
 ```
 
-The callback of onEmptyAreaClick event
+Called when the blank area of the **AlbumPickerComponent** is tapped.
 
 **Since:** 13
 

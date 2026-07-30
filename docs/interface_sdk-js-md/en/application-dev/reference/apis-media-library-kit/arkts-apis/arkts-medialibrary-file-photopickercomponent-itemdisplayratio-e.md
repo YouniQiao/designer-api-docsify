@@ -1,6 +1,6 @@
 # ItemDisplayRatio
 
-Enumerates the aspect ratios of the grid item display, including 1:1 and the original image's aspect ratio.
+Enumerates the aspect ratios for grid display in single-line display mode.
 
 **Since:** 20
 
@@ -14,7 +14,7 @@ Enumerates the aspect ratios of the grid item display, including 1:1 and the ori
 SQUARE_RATIO = 0
 ```
 
-Square ratio item
+1:1 ratio.
 
 **Since:** 20
 
@@ -30,7 +30,7 @@ Square ratio item
 ORIGINAL_SIZE_RATIO = 1
 ```
 
-original size ratio item
+Original image aspect ratio.
 
 **Since:** 20
 

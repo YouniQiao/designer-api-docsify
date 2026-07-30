@@ -1,6 +1,6 @@
 # PhotoBrowserInfo
 
-PhotoBrowserInfo
+Represents information about the photo browser page.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 animatorParams?: AnimatorParams
 ```
 
-AnimatorParams. include duration and curve
+Animation for entering or exiting the photo browser page.
 
 **Type:** AnimatorParams
 

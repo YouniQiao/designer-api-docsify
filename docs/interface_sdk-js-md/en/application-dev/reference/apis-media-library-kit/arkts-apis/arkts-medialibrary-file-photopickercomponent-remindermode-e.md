@@ -1,6 +1,6 @@
 # ReminderMode
 
-ReminderMode, include NONE, TOAST and MASK
+Enumerates the types of the reminder when the number of selected items reaches the maximum.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ ReminderMode, include NONE, TOAST and MASK
 NONE = 0
 ```
 
-NONE. no need to remind
+No reminder.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ NONE. no need to remind
 TOAST = 1
 ```
 
-TOAST. remind by toast
+Toast message.
 
 **Since:** 12
 
@@ -46,7 +46,7 @@ TOAST. remind by toast
 MASK = 2
 ```
 
-MASK. remind by mask
+Grayed-out hint.
 
 **Since:** 12
 

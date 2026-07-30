@@ -1,6 +1,6 @@
 # VideoPlayerState
 
-VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH
+Enumerates the video playback states.
 
 **Since:** 14
 
@@ -14,7 +14,7 @@ VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH
 PLAYING = 0
 ```
 
-PLAYING. video is playing
+The video is being played.
 
 **Since:** 14
 
@@ -30,7 +30,7 @@ PLAYING. video is playing
 PAUSED = 1
 ```
 
-PAUSED. video is paused
+Video playback is paused.
 
 **Since:** 14
 
@@ -46,7 +46,7 @@ PAUSED. video is paused
 STOPPED = 2
 ```
 
-STOPPED. video is stopped
+Video playback is stopped.
 
 **Since:** 14
 
@@ -62,7 +62,7 @@ STOPPED. video is stopped
 SEEK_START = 3
 ```
 
-SEEK_START. seek drag is start
+Started dragging the progress bar.
 
 **Since:** 14
 
@@ -78,7 +78,7 @@ SEEK_START. seek drag is start
 SEEK_FINISH = 4
 ```
 
-SEEK_FINISH. seek drag is finish
+Finished dragging the progress bar.
 
 **Since:** 14
 

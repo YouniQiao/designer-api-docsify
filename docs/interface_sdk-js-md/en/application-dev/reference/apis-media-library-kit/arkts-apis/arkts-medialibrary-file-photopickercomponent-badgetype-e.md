@@ -1,6 +1,6 @@
 # BadgeType
 
-BadgeType.
+Enumerates the badge types.
 
 **Since:** 21
 
@@ -14,7 +14,7 @@ BadgeType.
 BADGE_UPLOADED = 0
 ```
 
-BADGE_UPLOADED. Asset uploaded.
+Uploaded.
 
 **Since:** 21
 

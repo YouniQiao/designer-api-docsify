@@ -1,6 +1,6 @@
 # AnimatorParams
 
-AnimatorParams
+Defines animation parameters for entering or exiting the photo browser page.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 curve?: Curve | ICurve | string
 ```
 
-Animate curve
+Animation curve.
 
 **Type:** Curve \| ICurve \| string
 
@@ -38,7 +38,7 @@ Animate curve
 duration?: number
 ```
 
-Animate duration
+Animation duration, in ms.
 
 **Type:** number
 

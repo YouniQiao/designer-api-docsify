@@ -1,6 +1,6 @@
 # PhotoBrowserUIElement
 
-PhotoBrowserUIElement. include CHECKBOX and BACK_BUTTON
+Represents other UI elements except the image preview component on the photo browser page.
 
 **Since:** 13
 
@@ -14,7 +14,7 @@ PhotoBrowserUIElement. include CHECKBOX and BACK_BUTTON
 CHECKBOX = 0
 ```
 
-CHECKBOX. checkbox
+Check box on the photo browser page.
 
 **Since:** 13
 
@@ -30,7 +30,7 @@ CHECKBOX. checkbox
 BACK_BUTTON = 1
 ```
 
-BACK_BUTTON. back button
+**Back** button on the photo browser page.
 
 **Since:** 13
 

@@ -1,6 +1,6 @@
 # MaxSelected
 
-MaxSelected
+Represents the maximum number of media assets that can be selected at a time.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 data?: Map<MaxCountType, number>
 ```
 
-data. support to set max_total_count, max_photo_count and max_video_count.
+Maximum number of media assets (images, videos, or both) that can be selected at a time.
 
 **Type:** Map&lt;MaxCountType, number&gt;
 

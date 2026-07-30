@@ -1805,7 +1805,7 @@ Reads the **Parcelable** object from this **MessageSequence** object to the spec
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.The number of parameters is incorrect. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
-| [1900012](../errorcode-rpc.md#1900012-js-callback-failed) | Failed to call the JS callback function. |
+| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
 
 **Example**
 
@@ -1873,7 +1873,7 @@ Reads the **Parcelable** array from this **MessageSequence** object.
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.The parameter is an empty array;2.The number of parameters is incorrect;3.The parameter type does not match;4.The length of the array passed when reading is not equal to the length passed when writing to the array;5.The element does not exist in the array. |
 | [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
-| [1900012](../errorcode-rpc.md#1900012-js-callback-failed) | Failed to call the JS callback function. |
+| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
 
 **Example**
 

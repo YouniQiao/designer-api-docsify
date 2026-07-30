@@ -1,6 +1,6 @@
 # PickerColorMode
 
-PickerColorMode. include AUTO, LIGHT and DARK
+Enumerates the Picker color modes.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ PickerColorMode. include AUTO, LIGHT and DARK
 AUTO = 0
 ```
 
-AUTO. follow system color
+Same with the system.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ AUTO. follow system color
 LIGHT = 1
 ```
 
-LIGHT. light color
+Light mode.
 
 **Since:** 12
 
@@ -46,7 +46,7 @@ LIGHT. light color
 DARK = 2
 ```
 
-DARK. dark color
+Dark mode.
 
 **Since:** 12
 

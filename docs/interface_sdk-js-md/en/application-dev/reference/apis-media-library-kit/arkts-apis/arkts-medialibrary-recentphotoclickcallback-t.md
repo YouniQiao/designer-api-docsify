@@ -4,7 +4,7 @@
 export type RecentPhotoClickCallback = (recentPhotoInfo: BaseItemInfo) => boolean
 ```
 
-The callback of onRecentPhotoClick event
+Called when the recent image or video is selected. No special processing is performed on the return value.
 
 **Since:** 12
 
@@ -18,11 +18,11 @@ The callback of onRecentPhotoClick event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recentPhotoInfo | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes | The item information of recent photo  |
+| recentPhotoInfo | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md) | Yes | Information about the recent image or video.  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | - |
+| boolean | Processing result of the recent image or video. The value **true** means that the processing is complete.  |
 

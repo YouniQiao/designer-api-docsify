@@ -1,6 +1,6 @@
 # BadgeConfig
 
-BadgeConfig
+Describes the badge configuration.
 
 **Since:** 21
 
@@ -20,7 +20,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 badgeType?: BadgeType
 ```
 
-The type of the special badge.
+Badge type.
 
 **Type:** BadgeType
 
@@ -38,7 +38,7 @@ The type of the special badge.
 uris?: Array<string>
 ```
 
-The uri data of the asset that displays the badge.
+URIs of the assets for the badge.
 
 **Type:** Array&lt;string&gt;
 

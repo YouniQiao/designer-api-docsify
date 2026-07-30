@@ -1,6 +1,8 @@
 # ItemInfo
 
-ItemInfo
+It inherits from [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md), adding the parameter **itemType**.
+
+Represents basic image and video information.
 
 **Inheritance/Implementation:** ItemInfo extends [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md)
 
@@ -22,7 +24,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 itemType?: ItemType
 ```
 
-itemType. include CAMERA and THUMBNAIL.
+Type of the item, which can be **THUMBNAIL** or **CAMERA**.
 
 **Type:** ItemType
 

@@ -14,7 +14,7 @@ function getBundleInstallStatus(bundleName: string): BundleInstallStatus
 
 Obtains the installation status of a specified application under a given user.
 
-**Since:** 23
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -41,7 +41,7 @@ Obtains the installation status of a specified application under a given user.
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API.<br>**Applicable version:** 23 - 25 |
 
 **Example**
 

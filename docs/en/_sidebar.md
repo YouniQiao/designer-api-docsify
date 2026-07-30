@@ -41,7 +41,7 @@
 - [Mdm Kit (432)](interface_sdk-js-md/en/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-enterprise-enterpriseadminextensionability.md)
 - [Mechanic Kit (63)](interface_sdk-js-md/en/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-distributedhardware-mechanicmanager.md)
 - [Media Kit (243)](interface_sdk-js-md/en/application-dev/reference/apis-media-kit/arkts-apis/arkts-multimedia-media.md)
-- [Media Library Kit (303)](interface_sdk-js-md/en/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-file-albumpickercomponent.md)
+- [Media Library Kit (307)](interface_sdk-js-md/en/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-file-albumpickercomponent.md)
 - [Mind Spore Lite Kit (39)](interface_sdk-js-md/en/application-dev/reference/apis-mind-spore-lite-kit/arkts-apis/arkts-ai-mindsporelite.md)
 - [Multimodal Awareness Kit (99)](interface_sdk-js-md/en/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-devicestatus.md)
 - [Na (217)](interface_sdk-js-md/en/application-dev/reference/apis-na/arkts-apis/arkts-lib-es2015-collection.md)

@@ -1,6 +1,6 @@
 # ItemType
 
-ItemType. include CAMERA and THUMBNAIL
+Enumerates the types of the item clicked.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ ItemType. include CAMERA and THUMBNAIL
 THUMBNAIL = 0
 ```
 
-THUMBNAIL. photos or videos item
+Image or video (thumbnail).
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ THUMBNAIL. photos or videos item
 CAMERA = 1
 ```
 
-CAMERA. camera item
+Camera item.
 
 **Since:** 12
 

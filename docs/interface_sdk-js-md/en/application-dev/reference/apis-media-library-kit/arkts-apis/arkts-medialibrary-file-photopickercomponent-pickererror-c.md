@@ -1,6 +1,6 @@
 # PickerError
 
-PickerError
+Describes the function name, error code, and message of the error returned when an error occurs during the use of the **PhotoPickerComponent** component.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 errorCode: number
 ```
 
-Code of the error.
+Error code.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ Code of the error.
 functionName: string
 ```
 
-Name of function.
+Function name of the error.
 
 **Type:** string
 
@@ -60,7 +60,7 @@ Name of function.
 message: string
 ```
 
-Message of the error.
+Error message.
 
 **Type:** string
 

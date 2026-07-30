@@ -300,7 +300,7 @@ Obtains the **LocalInterface** object of an interface token.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | check param failed |
-| [1900006](../errorcode-rpc.md#1900006-operation-allowed-only-for-the-remote-object) | Operation allowed only for the remote object. |
+| [1900006](../errorcode-rpc.md#1900006-ipc-object-permission-error) | Operation allowed only for the remote object. |
 
 **Example**
 

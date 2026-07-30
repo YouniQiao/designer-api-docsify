@@ -1,6 +1,6 @@
 # SelectMode
 
-SelectMode. include SINGLE_SELECT and MULTI_SELECT
+Enumerates the selection modes.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ SelectMode. include SINGLE_SELECT and MULTI_SELECT
 SINGLE_SELECT = 0
 ```
 
-SINGLE_SELECT. single select
+Select a single option.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ SINGLE_SELECT. single select
 MULTI_SELECT = 1
 ```
 
-MULTI_SELECT. multi select
+Select multiple options.
 
 **Since:** 12
 

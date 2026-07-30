@@ -1,6 +1,6 @@
 # PhotoSource
 
-Enumeration of PhotoSource type
+Enumerates the sources of the image or video data.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Enumeration of PhotoSource type
 ALL = 0
 ```
 
-all resource
+Image or video from all sources.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ all resource
 CAMERA = 1
 ```
 
-camera resource
+Image or video taken by the camera.
 
 **Since:** 12
 
@@ -46,7 +46,7 @@ camera resource
 SCREENSHOT = 2
 ```
 
-screenshot resource
+Screenshot or screen capture video.
 
 **Since:** 12
 

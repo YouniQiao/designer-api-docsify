@@ -1,6 +1,6 @@
 # DataType
 
-DataType represents the type of the data set to picker component
+Enumerates the types of data sent from **PickerController** to the **PhotoPickerComponent**.
 
 **Since:** 12
 
@@ -14,7 +14,9 @@ DataType represents the type of the data set to picker component
 SET_SELECTED_URIS = 1
 ```
 
-DataType: set selected uris to picker component, the data should be a array of uri
+Sends a list of selected items to instruct the **PhotoPickerComponent** to refresh the selection status. A string array needs to be passed in.
+
+For example, after an image is deleted from an application's page, the application calls **setData()** to notify the **PhotoPickerComponent** of the remaining selected items. Then, the **PhotoPickerComponent** refreshes the check box status.
 
 **Since:** 12
 
@@ -30,7 +32,9 @@ DataType: set selected uris to picker component, the data should be a array of u
 SET_ALBUM_URI = 2
 ```
 
-SET_ALBUM_URI. set selected album uri to picker component
+Sends the selected album to instruct the **PhotoPickerComponent** to refresh the album data. A string array needs to be passed in.
+
+For example, after an album is selected from an application's page, the application calls **setData** to notify the **PhotoPickerComponent** of the URI of the selected album. Then, the **PhotoPickerComponent** refreshes the album data.
 
 **Since:** 12
 
@@ -46,7 +50,7 @@ SET_ALBUM_URI. set selected album uri to picker component
 SET_SELECTED_INFO = 3
 ```
 
-SET_SELECTED_INFO. Set selected information to picker component.
+Sends the URI of the selected file and the index of the selected **PhotoPickerComponent**. If the index of a **PhotoPickerComponent** matches the one provided in the parameter, the selected file is automatically highlighted in that **PhotoPickerComponent**.
 
 **Since:** 21
 
@@ -62,7 +66,7 @@ SET_SELECTED_INFO. Set selected information to picker component.
 SET_BADGE_CONFIGS = 4
 ```
 
-SET_BADGE_CONFIGS. Set badge configs to picker component.
+Sends the badge configurations, which are of the [badgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md) type and include a list of data with badge types and corresponding file URIs. Once configured, the badge of the configured type is displayed in the specified file.
 
 **Since:** 21
 
@@ -78,7 +82,7 @@ SET_BADGE_CONFIGS. Set badge configs to picker component.
 SET_ITEM_CLICK_RESULT = 5
 ```
 
-SET_ITEM_CLICK_RESULT. Set click result to picker component.
+Result of the click, which is of the [ClickResult](arkts-medialibrary-file-photopickercomponent-clickresult-c.md) type.
 
 **Since:** 23
 

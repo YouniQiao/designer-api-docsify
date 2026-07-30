@@ -1,6 +1,8 @@
 # AlbumPickerComponent
 
-AlbumPickerComponent: can select a certain album and display the images in that album through PhotoPickerComponent
+AlbumPickerComponent( {albumPickerOptions?: AlbumPickerOptions, onAlbumClick?: (albumInfo: AlbumInfo) => boolean,onEmptyAreaClick?: EmptyAreaClickCallback, albumPickerController?: AlbumPickerController })
+
+The **AlbumPickerComponent** embedded in the UI of an application allows the application to access the albums in the user directory without any permission.
 
 **Since:** 12
 

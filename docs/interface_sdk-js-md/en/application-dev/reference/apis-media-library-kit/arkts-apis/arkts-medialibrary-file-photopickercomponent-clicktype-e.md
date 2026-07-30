@@ -1,6 +1,6 @@
 # ClickType
 
-ClickType. include SELECTED and DESELECTED
+Enumerates the click operation types.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ ClickType. include SELECTED and DESELECTED
 SELECTED = 0
 ```
 
-SELECTED. click to select photos or videos, if click camera item, the clickType is SELECTED.
+Select (select an image or click a camera item).
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ SELECTED. click to select photos or videos, if click camera item, the clickType 
 DESELECTED = 1
 ```
 
-DESELECTED. click to deselect photos or videos
+Deselect (deselect an image).
 
 **Since:** 12
 

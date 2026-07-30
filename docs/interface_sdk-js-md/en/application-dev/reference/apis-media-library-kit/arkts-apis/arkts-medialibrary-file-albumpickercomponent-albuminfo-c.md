@@ -1,6 +1,6 @@
 # AlbumInfo
 
-AlbumInfo: include album uri
+Represents album information.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@ import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOpt
 albumName?: string
 ```
 
-Album name
+Album name.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ Album name
 uri?: string
 ```
 
-Album uri
+Album URI.
 
 **Type:** string
 

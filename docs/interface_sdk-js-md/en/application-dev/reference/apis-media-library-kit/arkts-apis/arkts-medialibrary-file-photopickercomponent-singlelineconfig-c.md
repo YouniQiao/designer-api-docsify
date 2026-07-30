@@ -1,6 +1,6 @@
 # SingleLineConfig
 
-Single-line display mode.
+Represents the single-line display mode. In single-line mode, the component does not provide functions for viewing a larger image. The component does not support callbacks related to large images, and the PickerController does not support APIs related to large images, making API calls ineffective.
 
 **Since:** 20
 
@@ -20,7 +20,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-Rounded corner radius of grid items.
+Rounded corner radius for grid items.
 
 **Type:** Length \| BorderRadiuses \| LocalizedBorderRadiuses
 
@@ -38,7 +38,7 @@ Rounded corner radius of grid items.
 itemDisplayRatio?: ItemDisplayRatio
 ```
 
-item display ratio
+Aspect ratio for grid display. Both 1:1 and the original image aspect ratio are supported. The default value is 1:1.
 
 **Type:** ItemDisplayRatio
 
@@ -56,7 +56,7 @@ item display ratio
 itemGap?: Length
 ```
 
-item gap
+Spacing between grid items.
 
 **Type:** Length
 
