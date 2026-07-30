@@ -20,7 +20,8 @@ This API obtains an **OnlineUpdater** object through the system service interfac
 
 **Constraints**
 
-- The upgrade package management server deployed by the vendor is required for checking for new versions and downloading update packages.
+- The upgrade package management server deployed by the vendor is required for checking for new versions and  
+downloading update packages.
 
 **Since:** 9
 

@@ -27,17 +27,10 @@ import { unifiedDataChannel } from '@kit.ArkData';
 | [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata-1) | Inserts data to the UDMF public data channel. This API uses a promise to return the unique identifier of the data inserted. |
 | [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#querydata) | Queries data in the UDMF public data channel. This API uses an asynchronous callback to return the result. |
 | [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#querydata-1) | Queries data in the UDMF public data channel. This API uses a promise to return the result. |
+| [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f.md#removeappshareoptions) | Removes the data control information set by [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md#setappshareoptions). |
+| [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md#setappshareoptions) | Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) for the application data. Currently, only the drag-and-drop data channel is supported. |
 | [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updatedata) | Updates the data in the UDMF public data channel. This API uses an asynchronous callback to return the result. |
 | [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updatedata-1) | Updates the data in the UDMF public data channel. This API uses a promise to return the result. |
-
-<!--Del-->
-### Functions（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f-sys.md#removeappshareoptions) | Removes the data control information set by [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md#setappshareoptions). |
-| [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md#setappshareoptions) | Sets the [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) for the application data. Currently, only the drag-and-drop data channel is supported. |
-<!--DelEnd-->
 
 ### Classes
 
@@ -83,14 +76,6 @@ import { unifiedDataChannel } from '@kit.ArkData';
 | [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) | Enumerates the options for using **UnifiedData** in a device. |
 | [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md) | Defines URI permissions for drag intention. |
 | [Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md) | Enumerates the data visibility levels. |
-
-<!--Del-->
-### Enums（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [Intention](arkts-arkdata-unifieddatachannel-intention-e-sys.md) | Enumerates the data channel types supported by the UDMF. It is used to identify different service scenarios, to which the UDMF data channels apply. |
-<!--DelEnd-->
 
 ### Types
 

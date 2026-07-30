@@ -231,7 +231,7 @@ Called when automatic or manual saving is initiated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
-| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md) | Yes | Data to be saved. |
+| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md) | Yes | Data to be saved. |
 | callback | [SaveRequestCallback](arkts-ability-autofillmanager-saverequestcallback-t-sys.md) | Yes | Callback used for the saving request. |
 
 **Example**

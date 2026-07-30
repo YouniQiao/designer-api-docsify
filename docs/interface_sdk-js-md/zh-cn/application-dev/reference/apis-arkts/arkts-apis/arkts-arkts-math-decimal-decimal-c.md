@@ -745,7 +745,8 @@ comparedTo(n: Value): number
 ```
 
 Decimal的比较方法。1 如果此Decimal大于n的值，  
--1 如果此Decimal小于n的值，0 如果两者的值相等，NaN 如果两者中任一Decimal的值为NaN。
+-1 如果此Decimal小于n的值，  
+0 如果两者的值相等，NaN 如果两者中任一Decimal的值为NaN。
 
 **起始版本：** 12
 
@@ -2186,8 +2187,10 @@ static sign(n: Value): number
 ```
 
 根据参数n的值返回对应的符号：1 如果 n > 0，  
--1 如果 n < 0，0 如果 n 为 0，  
--0 如果 n 为 -0，NaN 其他情况
+-1 如果 n < 0，  
+0 如果 n 为 0，  
+-0 如果 n 为 -0，  
+NaN 其他情况
 
 **起始版本：** 12
 

@@ -20,6 +20,9 @@ import { connection } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
+| [connectAllowedProfiles](arkts-connectivity-connection-connectallowedprofiles-f.md#connectallowedprofiles) | Connects all allowed bluetooth profiles between the local and remote device. |
+| [connectAllowedProfiles](arkts-connectivity-connection-connectallowedprofiles-f.md#connectallowedprofiles-1) | Connects all allowed bluetooth profiles between the local and remote device. |
+| [disconnectAllowedProfiles](arkts-connectivity-connection-disconnectallowedprofiles-f.md#disconnectallowedprofiles-1) | Disconnects all allowed bluetooth profiles between the local and remote device. |
 | [getBluetoothScanMode](arkts-connectivity-connection-getbluetoothscanmode-f.md#getbluetoothscanmode) | Obtains the Bluetooth scanning mode of a device. |
 | [getLastConnectionTime](arkts-connectivity-connection-getlastconnectiontime-f.md#getlastconnectiontime) | Get latest connection time of device. |
 | [getLocalName](arkts-connectivity-connection-getlocalname-f.md#getlocalname) | Obtains the Bluetooth local name of a device. |
@@ -31,15 +34,19 @@ import { connection } from '@kit.ConnectivityKit';
 | [getRemoteDeviceName](arkts-connectivity-connection-getremotedevicename-f.md#getremotedevicename) | Obtains the name of a peer Bluetooth device. |
 | [getRemoteDeviceName](arkts-connectivity-connection-getremotedevicename-f.md#getremotedevicename-1) | Obtains the name or alias of the Bluetooth peer device. |
 | [getRemoteDeviceTransport](arkts-connectivity-connection-getremotedevicetransport-f.md#getremotedevicetransport) | Get the transport of the bluetooth device. |
+| [getRemoteProfileUuids](arkts-connectivity-connection-getremoteprofileuuids-f.md#getremoteprofileuuids) | Obtains the profile UUIDs supported by the remote device. |
+| [getRemoteProfileUuids](arkts-connectivity-connection-getremoteprofileuuids-f.md#getremoteprofileuuids-1) | Obtains the profile UUIDs supported by the remote device. |
 | [getVirtualAddressByHash](arkts-connectivity-connection-getvirtualaddressbyhash-f.md#getvirtualaddressbyhash) | Obtain the virtual address of the corresponding device based on the hash value of the real address. |
 | [isBluetoothDiscovering](arkts-connectivity-connection-isbluetoothdiscovering-f.md#isbluetoothdiscovering) | Check if bluetooth is discovering. |
 | [off](arkts-connectivity-connection-off-f.md#off) | Unsubscribe the event reported when a remote Bluetooth device is discovered. |
+| [off](arkts-connectivity-connection-off-f.md#off-1) | Unsubscribe the event reported when a remote Bluetooth device is discovered. |
 | [off](arkts-connectivity-connection-off-f.md#off-2) | Unsubscribe the event reported when a remote Bluetooth device is bonded. |
 | [off](arkts-connectivity-connection-off-f.md#off-3) | Unsubscribe the event of a pairing request from a remote Bluetooth device. |
 | [off](arkts-connectivity-connection-off-f.md#off-4) | Unsubscribe the event of battery state changed from a remote device. |
 | [offAclStateChange](arkts-connectivity-connection-offaclstatechange-f.md#offaclstatechange) | Unsubscribe the event of acl state changed from a remote device.If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real.Otherwise, the type of the peer device address is virtual. |
 | [offScanModeChange](arkts-connectivity-connection-offscanmodechange-f.md#offscanmodechange) | Unsubscribe to an event indicating that the scanning mode of the local device has changed. |
 | [on](arkts-connectivity-connection-on-f.md#on) | Subscribe the event reported when a remote Bluetooth device is discovered.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real.Otherwise, the type of the peer device address is virtual. |
+| [on](arkts-connectivity-connection-on-f.md#on-1) | Subscribe the event reported when a remote Bluetooth device is discovered.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real.Otherwise, the type of the peer device address is virtual. |
 | [on](arkts-connectivity-connection-on-f.md#on-2) | Subscribe the event reported when a remote Bluetooth device is bonded.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real.Otherwise, the type of the peer device address is virtual. |
 | [on](arkts-connectivity-connection-on-f.md#on-3) | Subscribe the event of a pairing request from a remote Bluetooth device.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real.Otherwise, the type of the peer device address is virtual. |
 | [on](arkts-connectivity-connection-on-f.md#on-4) | Subscribe the event of battery state changed from a remote device. |
@@ -66,21 +73,14 @@ import { connection } from '@kit.ConnectivityKit';
 | [cancelPairedDevice](arkts-connectivity-connection-cancelpaireddevice-f-sys.md#cancelpaireddevice-1) | Remove a paired remote device. |
 | [cancelPairingDevice](arkts-connectivity-connection-cancelpairingdevice-f-sys.md#cancelpairingdevice) | Remove a pairing remote device. |
 | [cancelPairingDevice](arkts-connectivity-connection-cancelpairingdevice-f-sys.md#cancelpairingdevice-1) | Remove a pairing remote device. |
-| [connectAllowedProfiles](arkts-connectivity-connection-connectallowedprofiles-f-sys.md#connectallowedprofiles) | Connects all allowed bluetooth profiles between the local and remote device. |
-| [connectAllowedProfiles](arkts-connectivity-connection-connectallowedprofiles-f-sys.md#connectallowedprofiles-1) | Connects all allowed bluetooth profiles between the local and remote device. |
 | [controlDeviceAction](arkts-connectivity-connection-controldeviceaction-f-sys.md#controldeviceaction) | Controls the actions of Bluetooth peripherals. |
 | [disconnectAllowedProfiles](arkts-connectivity-connection-disconnectallowedprofiles-f-sys.md#disconnectallowedprofiles) | Disconnects all allowed bluetooth profiles between the local and remote device. |
-| [disconnectAllowedProfiles](arkts-connectivity-connection-disconnectallowedprofiles-f-sys.md#disconnectallowedprofiles-1) | Disconnects all allowed bluetooth profiles between the local and remote device. |
 | [generateLocalOobData](arkts-connectivity-connection-generatelocaloobdata-f-sys.md#generatelocaloobdata) | Generate out-of-band data of the local device. |
 | [getCarKeyDfxData](arkts-connectivity-connection-getcarkeydfxdata-f-sys.md#getcarkeydfxdata) | Get the dfx data of car key. |
 | [getLocalProfileUuids](arkts-connectivity-connection-getlocalprofileuuids-f-sys.md#getlocalprofileuuids) | Obtains the profile UUIDs supported by the local device. |
 | [getLocalProfileUuids](arkts-connectivity-connection-getlocalprofileuuids-f-sys.md#getlocalprofileuuids-1) | Obtains the profile UUIDs supported by the local device. |
 | [getRemoteDeviceType](arkts-connectivity-connection-getremotedevicetype-f-sys.md#getremotedevicetype) | Get remote device custom type. |
 | [getRemoteProductId](arkts-connectivity-connection-getremoteproductid-f-sys.md#getremoteproductid) | Obtains the product ID of a remote device. |
-| [getRemoteProfileUuids](arkts-connectivity-connection-getremoteprofileuuids-f-sys.md#getremoteprofileuuids) | Obtains the profile UUIDs supported by the remote device. |
-| [getRemoteProfileUuids](arkts-connectivity-connection-getremoteprofileuuids-f-sys.md#getremoteprofileuuids-1) | Obtains the profile UUIDs supported by the remote device. |
-| [off](arkts-connectivity-connection-off-f-sys.md#off-1) | Unsubscribe the event reported when a remote Bluetooth device is discovered. |
-| [on](arkts-connectivity-connection-on-f-sys.md#on-1) | Subscribe the event reported when a remote Bluetooth device is discovered.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real.Otherwise, the type of the peer device address is virtual. |
 | [pairCredibleDevice](arkts-connectivity-connection-paircredibledevice-f-sys.md#paircredibledevice) | Starts pairing with a credible remote Bluetooth device with transport.This interface does not trigger a dialog box and does not require user authorization.Only specific system application can use this function. |
 | [pairCredibleDevice](arkts-connectivity-connection-paircredibledevice-f-sys.md#paircredibledevice-1) | Starts pairing with a credible remote Bluetooth device with transport.This interface does not trigger a dialog box and does not require user authorization.Only specific system application can use this function. |
 | [pairDeviceOutOfBand](arkts-connectivity-connection-pairdeviceoutofband-f-sys.md#pairdeviceoutofband) | Starts pairing with a remote Bluetooth device using the Out Of Band mechanism.This function is asynchronous, and the pairing status is obtained by listening to the bondStateChange event.If both p192Data and p256Data are null, the function call will fail.If both p192Data and p256Data are used simultaneously, p256Data takes effect. |
@@ -98,6 +98,7 @@ import { connection } from '@kit.ConnectivityKit';
 | [BatteryInfo](arkts-connectivity-connection-batteryinfo-i.md) | Describes the contents of the battery information. |
 | [BondStateParam](arkts-connectivity-connection-bondstateparam-i.md) | Describes the class of a bluetooth device. |
 | [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | Describes the class of a bluetooth device. |
+| [DiscoveryResult](arkts-connectivity-connection-discoveryresult-i.md) | Describes the contents of the discovery results |
 | [PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i.md) | Describes the bond key param. |
 
 <!--Del-->
@@ -107,7 +108,6 @@ import { connection } from '@kit.ConnectivityKit';
 | --- | --- |
 | [BatteryInfo](arkts-connectivity-connection-batteryinfo-i-sys.md) | Describes the contents of the battery information. |
 | [ControlDeviceActionParams](arkts-connectivity-connection-controldeviceactionparams-i-sys.md) | Describes information about controlling the Bluetooth peripheral. |
-| [DiscoveryResult](arkts-connectivity-connection-discoveryresult-i-sys.md) | Describes the contents of the discovery results |
 | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) | Out Of Band data used in Bluetooth device pairing. |
 | [PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i-sys.md) | Describes the bond key param. |
 | [TrustedPairedDevice](arkts-connectivity-connection-trustedpaireddevice-i-sys.md) | Describes device of cloud pair. |
@@ -149,12 +149,5 @@ import { connection } from '@kit.ConnectivityKit';
 | [MajorMinorClass](arkts-connectivity-connection-majorminorclass-t.md) | Indicate the major minor class of a bluetooth device. |
 | [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md) | Indicate the profile connection state. |
 | [ProfileId](arkts-connectivity-connection-profileid-t.md) | Indicate the profile id. |
-
-<!--Del-->
-### Types（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [ProfileUuids](arkts-connectivity-connection-profileuuids-t-sys.md) | Indicate the profile uuid. |
-<!--DelEnd-->
+| [ProfileUuids](arkts-connectivity-connection-profileuuids-t.md) | Indicate the profile uuid. |
 

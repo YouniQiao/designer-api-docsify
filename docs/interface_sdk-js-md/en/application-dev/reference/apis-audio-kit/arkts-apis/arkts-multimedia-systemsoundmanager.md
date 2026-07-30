@@ -8,8 +8,6 @@ This module provides basic capabilities for managing system sound effects, inclu
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

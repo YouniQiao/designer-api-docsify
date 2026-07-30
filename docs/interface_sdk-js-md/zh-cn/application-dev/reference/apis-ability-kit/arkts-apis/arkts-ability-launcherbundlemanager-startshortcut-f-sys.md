@@ -12,7 +12,7 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise<void>
 ```
 
-拉起指定[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md)中的ability。使用Promise异步回调。
+拉起指定[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)中的ability。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -28,7 +28,7 @@ function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) | 是 | 应用的快捷方式信息。 |
+| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | 是 | 应用的快捷方式信息。 |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 否 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
 
 **返回值：**

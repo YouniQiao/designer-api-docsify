@@ -33,7 +33,8 @@ LIVE = 2
 ```
 
 Hot upgrade, which takes effect without requiring restarting the device. This mode applies to scenarios where app  
--layer components need to be upgraded or the device needs to keep running. For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
+-layer components need to be upgraded or the device needs to keep running. For details, see  
+[Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
 
 **Since:** 9
 

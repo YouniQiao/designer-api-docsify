@@ -19,7 +19,7 @@ function createSubWindowAndBindParent(name: string, parentId: number, ctx: BaseC
 
 建议在父窗销毁后主动销毁创建的子窗。
 
-**起始版本：** 24
+**起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

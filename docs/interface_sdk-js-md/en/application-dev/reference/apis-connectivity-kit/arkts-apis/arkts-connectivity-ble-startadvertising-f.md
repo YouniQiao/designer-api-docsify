@@ -14,10 +14,14 @@ function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, adv
 
 Starts BLE advertising.
 
-- If only {@link AdvertiseData#includeDeviceName} is set to true,the local name will be carried in the broadcast packet.  
-- If only {@link AdvertiseData#advertiseName} is set,its value will be used as a custom name and carried in the broadcast packet.  
-- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,the {@link AdvertiseData#advertiseName} property will take effect.  
-- To set {@link AdvertiseData#advertiseName},ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+- If only {@link AdvertiseData#includeDeviceName} is set to true,  
+the local name will be carried in the broadcast packet.  
+- If only {@link AdvertiseData#advertiseName} is set,  
+its value will be used as a custom name and carried in the broadcast packet.  
+- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,  
+the {@link AdvertiseData#advertiseName} property will take effect.  
+- To set {@link AdvertiseData#advertiseName},  
+ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 10
 
@@ -112,10 +116,14 @@ function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncC
 
 Starts BLE advertising.The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API {@link enableAdvertising} or {@link disableAdvertising}.To completely stop the advertising corresponding to the ID, invoke the API {@link stopAdvertising} with ID.
 
-- If only {@link AdvertiseData#includeDeviceName} is set to true,the local name will be carried in the broadcast packet.  
-- If only {@link AdvertiseData#advertiseName} is set,its value will be used as a custom name and carried in the broadcast packet.  
-- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,the {@link AdvertiseData#advertiseName} property will take effect.  
-- To set {@link AdvertiseData#advertiseName},ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+- If only {@link AdvertiseData#includeDeviceName} is set to true,  
+the local name will be carried in the broadcast packet.  
+- If only {@link AdvertiseData#advertiseName} is set,  
+its value will be used as a custom name and carried in the broadcast packet.  
+- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,  
+the {@link AdvertiseData#advertiseName} property will take effect.  
+- To set {@link AdvertiseData#advertiseName},  
+ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 11
 
@@ -221,10 +229,14 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 
 Starts BLE advertising.The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API {@link enableAdvertising} or {@link disableAdvertising}.To completely stop the advertising corresponding to the ID, invoke the API {@link stopAdvertising} with ID.
 
-- If only {@link AdvertiseData#includeDeviceName} is set to true,the local name will be carried in the broadcast packet.  
-- If only {@link AdvertiseData#advertiseName} is set,its value will be used as a custom name and carried in the broadcast packet.  
-- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,the {@link AdvertiseData#advertiseName} property will take effect.  
-- To set {@link AdvertiseData#advertiseName},ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
+- If only {@link AdvertiseData#includeDeviceName} is set to true,  
+the local name will be carried in the broadcast packet.  
+- If only {@link AdvertiseData#advertiseName} is set,  
+its value will be used as a custom name and carried in the broadcast packet.  
+- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,  
+the {@link AdvertiseData#advertiseName} property will take effect.  
+- To set {@link AdvertiseData#advertiseName},  
+ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 11
 

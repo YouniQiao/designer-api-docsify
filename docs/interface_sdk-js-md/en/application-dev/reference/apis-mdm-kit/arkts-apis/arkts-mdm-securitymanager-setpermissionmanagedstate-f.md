@@ -60,17 +60,17 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 let appInstanceTemp: securityManager.ApplicationInstance = {
-      // Replace with actual values.
-      appIdentifier: '736498586',
-      appIndex: 0,
-      accountId: 100
+  // Replace with actual values.
+  appIdentifier: '736498586',
+  appIndex: 0,
+  accountId: 100
 };
 let permissionsTemp: Array<string> = ['ohos.permission.CAMERA', 'ohos.permission.LOCATION'];
 try {
-    securityManager.setPermissionManagedState(wantTemp, appInstanceTemp, permissionsTemp, securityManager.PermissionManagedState.GRANTED);
-    console.info('Succeeded in setting permission managed state.');
+  securityManager.setPermissionManagedState(wantTemp, appInstanceTemp, permissionsTemp, securityManager.PermissionManagedState.GRANTED);
+  console.info('Succeeded in setting permission managed state.');
 } catch(err) {
-    console.error(`Failed to set permission managed state.  Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to set permission managed state.  Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

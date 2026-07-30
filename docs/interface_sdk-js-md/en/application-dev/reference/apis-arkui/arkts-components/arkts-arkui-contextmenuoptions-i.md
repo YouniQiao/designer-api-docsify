@@ -848,7 +848,8 @@ Default value: **MenuPreviewMode.NONE**, indicating no preview.
 
 - This parameter has no effect when **responseType** is set to **ResponseType.RightClick**.  
 - If **preview** is set to **MenuPreviewMode.NONE** or is not set, the **enableArrow** parameter is effective.  
-- If **preview** is set to **MenuPreviewMode.IMAGE** or **CustomBuilder**, no arrow will be displayed even when **enableArrow** is **true**.
+- If **preview** is set to **MenuPreviewMode.IMAGE** or **CustomBuilder**, no arrow will be displayed even when  
+**enableArrow** is **true**.
 
 **Type:** MenuPreviewMode \| CustomBuilder
 
@@ -971,6 +972,26 @@ Defines the scroll bar state of menu.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextMenuOptions-scrollBar?: BarState--><!--Device-ContextMenuOptions-scrollBar?: BarState-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## systemMaterial
+
+```TypeScript
+systemMaterial?: SystemUiMaterial
+```
+
+Set system-styled materials for menu. The material effect behaves differently on devices with different level of computing powers. On devices with lower computing power, it affects attributes such as the backgroundColor, borderWidth, borderColor, shadow. On devices with higher computing power, it adds a filter effect at the system material layer, which can produce an effect similar to glass.
+
+**Type:** SystemUiMaterial
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ContextMenuOptions-systemMaterial?: SystemUiMaterial--><!--Device-ContextMenuOptions-systemMaterial?: SystemUiMaterial-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,8 +4,10 @@ Defines a tool class for restoring factory settings, such as clearing data in th
 > **Factory reset**
 
 - Call **getRestorer** to obtain a **Restorer** object.  
-- Select a factory reset mode as required:1. **factoryReset**: Common factory reset. Only data in the user partition is cleared in this mode.2. **forceFactoryReset**: Forcible factory reset. Both data in the user partition and file keys are cleared in this mode.3. **deepFactoryReset**: Deep factory reset. Data in the scope specified by **scope** is cleared in this mode.**DATA**: Clear data in the user partition only; **DATA_AND_OS**: Clear data in both the user partition and OS partition.  
-- After corresponding factory reset method is called, the device will clear data and restore to its factory settings.
+- Select a factory reset mode as required:  
+1. **factoryReset**: Common factory reset. Only data in the user partition is cleared in this mode.2. **forceFactoryReset**: Forcible factory reset. Both data in the user partition and file keys are cleared in this mode.3. **deepFactoryReset**: Deep factory reset. Data in the scope specified by **scope** is cleared in this mode.**DATA**: Clear data in the user partition only; **DATA_AND_OS**: Clear data in both the user partition and OS partition.  
+- After corresponding factory reset method is called, the device will clear data and restore to its factory  
+settings.
 
 You are advised to select **factoryReset** for routine maintenance, **forceFactoryReset** when sensitive data or device handover is involved, and **deepFactoryReset** when devices are scrapped or data needs to be physically destroyed.
 
@@ -43,15 +45,21 @@ This method provides data clearance of the highest security level. Unlike **fact
 
 **Constraints**
 
-- Data destruction is irreversible and cannot be restored by any technical means. Explicit authorization from the user must be obtained before performing this operation.  
+- Data destruction is irreversible and cannot be restored by any technical means. Explicit authorization from the  
+user must be obtained before performing this operation.  
 - The system permission **ohos.permission.FACTORY_RESET** is required.  
-- Deep data clearance takes a long time, which may last for hours. Ensure that the device has sufficient battery power. It is recommended the battery level be above 50%.  
+- Deep data clearance takes a long time, which may last for hours. Ensure that the device has sufficient battery  
+power. It is recommended the battery level be above 50%.  
 - The APIs of this module can be used only in the stage model.  
-- This method is applicable to extreme scenarios such as device scrapping and complete data destruction with high security requirements. It is not recommended for common factory reset scenarios.  
-- Before performing the operation, you must clearly inform the user of the consequences and obtain the user's confirmation.  
+- This method is applicable to extreme scenarios such as device scrapping and complete data destruction with high  
+security requirements. It is not recommended for common factory reset scenarios.  
+- Before performing the operation, you must clearly inform the user of the consequences and obtain the user's  
+confirmation.  
 - You are advised to perform factory reset only after the user explicitly confirms the operation.  
-- You must call **getDeepFactoryResetInfo** to obtain the estimated time required for the operation and inform the user of the waiting time. Ensure that the device has sufficient battery power before performing the deep factory reset.  
-- After the operation is complete, the device automatically restarts and restores to its factory settings. The app status needs to be saved in advance.
+- You must call **getDeepFactoryResetInfo** to obtain the estimated time required for the operation and inform  
+the user of the waiting time. Ensure that the device has sufficient battery power before performing the deep factory reset.  
+- After the operation is complete, the device automatically restarts and restores to its factory settings. The  
+app status needs to be saved in advance.
 
 **Since:** 26.0.0
 
@@ -261,11 +269,13 @@ The difference between this method and **factoryReset** is that this method clea
 
 **Constraints**
 
-- The operation is irreversible and will permanently delete all user data and encryption keys. Therefore, remind users to back up important data in advance.  
+- The operation is irreversible and will permanently delete all user data and encryption keys. Therefore, remind  
+users to back up important data in advance.  
 - The system permission **ohos.permission.FORCE_FACTORY_RESET** is required.  
 - Before calling this method, remind users to back up important data and confirm the operation.  
 - You are advised to perform factory reset only after the user explicitly confirms the operation.  
-- This method is applicable to scenarios with high security requirements, such as destruction of sensitive data and device handover.  
+- This method is applicable to scenarios with high security requirements, such as destruction of sensitive data  
+and device handover.  
 - During the operation, the device automatically restarts. The app status needs to be saved.
 
 **Since:** 23
@@ -331,7 +341,8 @@ This method calculates the time required by analyzing the data clearance scope a
 - The APIs of this module can be used only in the stage model.  
 - The system permission **ohos.permission.FACTORY_RESET** is required.  
 - The returned time is an estimated value. The actual time required may vary depending on the device status.  
-- It is recommended that the device power be higher than 50%. When the device power is lower than that level, do not perform the deep factory reset. Otherwise, the operation may fail due to power-off.  
+- It is recommended that the device power be higher than 50%. When the device power is lower than that level, do  
+not perform the deep factory reset. Otherwise, the operation may fail due to power-off.  
 - This API must be called before **deepFactoryReset** is called to help users prepare for time and power.
 
 **Since:** 26.0.0

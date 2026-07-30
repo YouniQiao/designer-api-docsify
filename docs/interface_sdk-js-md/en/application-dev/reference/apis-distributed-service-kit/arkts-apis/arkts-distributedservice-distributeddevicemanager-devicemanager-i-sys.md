@@ -339,6 +339,47 @@ try {
 
 ```
 
+## getOsTypeByNetworkId
+
+```TypeScript
+getOsTypeByNetworkId(networkId: string): number
+```
+
+Query the device operating system type by device network ID.
+
+**Since:** 26.1.0
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DeviceManager-getOsTypeByNetworkId(networkId: string): int--><!--Device-DeviceManager-getOsTypeByNetworkId(networkId: string): int-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| networkId | string | Yes | The device's network ID |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | - Returns the device operating system type.   Possible return:1. 10: Operating system based on OpenHarmony2. 11: Operating system not based on OpenHarmony3. -1: Unknown |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | User permission verify failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-failed-to-obtain-the-service) | Failed to obtain service. |
+| 11600110 | Invalid network ID. |
+
 ## off('replyResult')
 
 ```TypeScript

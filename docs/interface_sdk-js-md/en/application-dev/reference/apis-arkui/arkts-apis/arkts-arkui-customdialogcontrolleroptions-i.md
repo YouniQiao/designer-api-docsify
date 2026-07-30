@@ -479,7 +479,8 @@ Height of the dialog box.
 **NOTE**
 
 - Default maximum height of the dialog box: 0.9 x (Window height – Safe area)  
-- When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
+- When this parameter is set to a percentage, the reference height of the dialog box is the height of the window  
+where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
 
 **Type:** Dimension
 
@@ -999,7 +1000,8 @@ Width of the dialog box.
 **NOTE**
 
 - Default maximum width of the dialog box: 400 vp  
-- When this parameter is set to a percentage, the reference width of the dialog box is the width of the window where the dialog box is located. You can decrease or increase the width as needed.
+- When this parameter is set to a percentage, the reference width of the dialog box is the width of the window  
+where the dialog box is located. You can decrease or increase the width as needed.
 
 **Type:** Dimension
 

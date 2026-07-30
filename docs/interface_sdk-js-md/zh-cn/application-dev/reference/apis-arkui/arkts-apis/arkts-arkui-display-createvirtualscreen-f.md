@@ -48,16 +48,7 @@ function createVirtualScreen(config: VirtualScreenConfig): Promise<number>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class VirtualScreenConfig {
-  name : string = '';
-  width : number = 0;
-  height : number = 0;
-  density : number = 0;
-  surfaceId : string = '';
-  supportsFocus ?: boolean = true;
-}
-
-let config: VirtualScreenConfig = {
+let config: display.VirtualScreenConfig = {
   name: 'screen01',
   width: 1080,
   height: 2340,

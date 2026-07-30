@@ -46,28 +46,6 @@ Queries whether a user is not allowed to add an account.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
-
-```TypeScript
-import { accountManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace parameters with actual values.
-  let isDisallowed: boolean = accountManager.isOsAccountAdditionDisallowed(wantTemp, 100);
-  console.info(`Succeeded in querying the os account addition or not: ${isDisallowed}`);
-} catch (err) {
-  console.error(`Failed to query the os account addition or not. Code: ${err.code}, message: ${err.message}`);
-}
-
-```
-
 
 ## isOsAccountAdditionDisallowed
 
@@ -108,4 +86,26 @@ Queries whether a user is not allowed to add an account.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Example**
+
+```TypeScript
+import { accountManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace parameters with actual values.
+  let isDisallowed: boolean = accountManager.isOsAccountAdditionDisallowed(wantTemp, 100);
+  console.info(`Succeeded in querying the os account addition or not: ${isDisallowed}`);
+} catch (err) {
+  console.error(`Failed to query the os account addition or not. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
 

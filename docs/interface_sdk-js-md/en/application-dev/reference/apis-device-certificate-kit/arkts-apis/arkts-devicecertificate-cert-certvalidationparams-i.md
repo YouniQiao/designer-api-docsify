@@ -21,8 +21,10 @@ allowDownloadIntermediateCa?: boolean
 ```
 
 Whether to allow intermediate CA certificates to be downloaded from the network. The default value is **false**.  
-- **true**: attempts to use the issuer address in the certificate AIA extension to download the issuer certificate when an intermediate certificate is missing in the certificate chain, resolving the incomplete certificate chain issue;  
-- **false**: intermediate CA certificates cannot be downloaded from the network.<br>The download address is obtained from the certificate AIA extension. Only HTTP is supported. To use the network for download, you need to request the **ohos.permission.INTERNET** permission. For details about the permission configuration, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
+- **true**: attempts to use the issuer address in the certificate AIA extension to download the issuer  
+certificate when an intermediate certificate is missing in the certificate chain, resolving the incomplete certificate chain issue;  
+- **false**: intermediate CA certificates cannot be downloaded from the network.  
+<br>The download address is obtained from the certificate AIA extension. Only HTTP is supported. To use the network for download, you need to request the **ohos.permission.INTERNET** permission. For details about the permission configuration, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
 
 **Type:** boolean
 
@@ -145,7 +147,8 @@ partialChain?: boolean
 ```
 
 Whether to allow partial chain validation. The default value is **false**.  
-- **true**: any certificate in the trusted certificates can be used as the trust anchor instead of the root certificate;  
+- **true**: any certificate in the trusted certificates can be used as the trust anchor instead of the root  
+certificate;  
 - **false**: the root certificate must be traced during certificate chain construction.
 
 **Type:** boolean

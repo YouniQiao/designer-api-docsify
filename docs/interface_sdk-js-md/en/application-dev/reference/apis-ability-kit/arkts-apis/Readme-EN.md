@@ -421,31 +421,26 @@
   - [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md)
   <!--Del-->
   - [AutoFillPopupConfig(system api)](arkts-ability-autofillmanager-autofillpopupconfig-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AutoFillRect(system api)](arkts-ability-autofillmanager-autofillrect-t-sys.md)<!--DelEnd-->
+  - [AutoFillRect](arkts-ability-autofillmanager-autofillrect-t.md)
   <!--Del-->
   - [CustomData(system api)](arkts-ability-autofillmanager-customdata-t-sys.md)<!--DelEnd-->
   - [FillFailureResult](arkts-ability-autofillmanager-fillfailureresult-t.md)
-  <!--Del-->
-  - [FillRequest(system api)](arkts-ability-autofillmanager-fillrequest-t-sys.md)<!--DelEnd-->
+  - [FillRequest](arkts-ability-autofillmanager-fillrequest-t.md)
   <!--Del-->
   - [FillRequestCallback(system api)](arkts-ability-autofillmanager-fillrequestcallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FillResponse(system api)](arkts-ability-autofillmanager-fillresponse-t-sys.md)<!--DelEnd-->
   - [OnFillFailureFn](arkts-ability-autofillmanager-onfillfailurefn-t.md)
   - [OnFillSuccessFn](arkts-ability-autofillmanager-onfillsuccessfn-t.md)
-  <!--Del-->
-  - [PageNodeInfo(system api)](arkts-ability-autofillmanager-pagenodeinfo-t-sys.md)<!--DelEnd-->
+  - [PageNodeInfo](arkts-ability-autofillmanager-pagenodeinfo-t.md)
   <!--Del-->
   - [PopupSize(system api)](arkts-ability-autofillmanager-popupsize-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [SaveRequest(system api)](arkts-ability-autofillmanager-saverequest-t-sys.md)<!--DelEnd-->
+  - [SaveRequest](arkts-ability-autofillmanager-saverequest-t.md)
   <!--Del-->
   - [SaveRequestCallback(system api)](arkts-ability-autofillmanager-saverequestcallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpdateRequest(system api)](arkts-ability-autofillmanager-updaterequest-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ViewData(system api)](arkts-ability-autofillmanager-viewdata-t-sys.md)<!--DelEnd-->
+  - [ViewData](arkts-ability-autofillmanager-viewdata-t.md)
 - [@ohos.app.ability.autoStartupManager](arkts-app-ability-autostartupmanager.md)
   <!--Del-->
   - [cancelApplicationAutoStartup(system api)](arkts-ability-autostartupmanager-cancelapplicationautostartup-f-sys.md)<!--DelEnd-->
@@ -1094,8 +1089,7 @@
   - [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)
   - [getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md)
   - [getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)
-  <!--Del-->
-  - [getBundleInstallStatus(system api)](arkts-ability-bundlemanager-getbundleinstallstatus-f-sys.md)<!--DelEnd-->
+  - [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md)
   - [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md)
   - [getBundleNameByUidSync](arkts-ability-bundlemanager-getbundlenamebyuidsync-f.md)
   <!--Del-->
@@ -1112,8 +1106,7 @@
   - [getLaunchWant](arkts-ability-bundlemanager-getlaunchwant-f.md)
   <!--Del-->
   - [getLaunchWantForBundle(system api)](arkts-ability-bundlemanager-getlaunchwantforbundle-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getLaunchWantForBundleSync(system api)](arkts-ability-bundlemanager-getlaunchwantforbundlesync-f-sys.md)<!--DelEnd-->
+  - [getLaunchWantForBundleSync](arkts-ability-bundlemanager-getlaunchwantforbundlesync-f.md)
   <!--Del-->
   - [getPermissionDef(system api)](arkts-ability-bundlemanager-getpermissiondef-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1217,8 +1210,7 @@
   <!--Del-->
   - [Validity(system api)](arkts-ability-bundlemanager-validity-t-sys.md)<!--DelEnd-->
   - [WindowSize](arkts-ability-bundlemanager-windowsize-t.md)
-  <!--Del-->
-  - [AbilityFlag(system api)](arkts-ability-bundlemanager-abilityflag-e-sys.md)<!--DelEnd-->
+  - [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md)
   - [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)
   <!--Del-->
   - [AppClonePreferenceMode(system api)](arkts-ability-bundlemanager-appclonepreferencemode-e-sys.md)<!--DelEnd-->
@@ -1231,8 +1223,7 @@
   - [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
   <!--Del-->
   - [BundleFlag(system api)](arkts-ability-bundlemanager-bundleflag-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [BundleInstallStatus(system api)](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md)<!--DelEnd-->
+  - [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e.md)
   - [BundleType](arkts-ability-bundlemanager-bundletype-e.md)
   - [CompatiblePolicy](arkts-ability-bundlemanager-compatiblepolicy-e.md)
   - [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
@@ -1394,12 +1385,9 @@
   <!--Del-->
   - [startShortcutWithReason(system api)](arkts-ability-launcherbundlemanager-startshortcutwithreason-f-sys.md)<!--DelEnd-->
   - [LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)
-  <!--Del-->
-  - [ParameterItem(system api)](arkts-ability-launcherbundlemanager-parameteritem-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ShortcutInfo(system api)](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ShortcutWant(system api)](arkts-ability-launcherbundlemanager-shortcutwant-t-sys.md)<!--DelEnd-->
+  - [ParameterItem](arkts-ability-launcherbundlemanager-parameteritem-t.md)
+  - [ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)
+  - [ShortcutWant](arkts-ability-launcherbundlemanager-shortcutwant-t.md)
 - [@ohos.bundle.overlay](arkts-bundle-overlay.md)
   - [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md)
   <!--Del-->
@@ -1437,12 +1425,9 @@
   - [setShortcutVisibleForSelf](arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md)
   <!--Del-->
   - [updateDesktopShortcutInfo(system api)](arkts-ability-shortcutmanager-updatedesktopshortcutinfo-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ParameterItem(system api)](arkts-ability-shortcutmanager-parameteritem-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ShortcutInfo(system api)](arkts-ability-shortcutmanager-shortcutinfo-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ShortcutWant(system api)](arkts-ability-shortcutmanager-shortcutwant-t-sys.md)<!--DelEnd-->
+  - [ParameterItem](arkts-ability-shortcutmanager-parameteritem-t.md)
+  - [ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md)
+  - [ShortcutWant](arkts-ability-shortcutmanager-shortcutwant-t.md)
 - [@ohos.bundle.skillManager](arkts-bundle-skillmanager.md)
   - [getAllSkillInfos](arkts-ability-skillmanager-getallskillinfos-f.md)
   - [getSkillInfo](arkts-ability-skillmanager-getskillinfo-f.md)
@@ -1644,26 +1629,25 @@
     <!--Del-->
     - [PopupPlacement(system api)](arkts-ability-autofillpopupconfig-popupplacement-e-sys.md)<!--DelEnd-->
   - [AutoFillRect](arkts-autofillrect.md)
-    <!--Del-->
-    - [AutoFillRect(system api)](arkts-ability-autofillrect-i-sys.md)<!--DelEnd-->
+    - [AutoFillRect](arkts-ability-autofillrect-i.md)
   - [AutoFillRequest](arkts-autofillrequest.md)
     - [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md)
+    - [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md)
     <!--Del-->
     - [FillRequest(system api)](arkts-ability-autofillrequest-fillrequest-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [FillRequestCallback(system api)](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [FillResponse(system api)](arkts-ability-autofillrequest-fillresponse-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [SaveRequest(system api)](arkts-ability-autofillrequest-saverequest-i-sys.md)<!--DelEnd-->
+    - [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md)
     <!--Del-->
     - [SaveRequestCallback(system api)](arkts-ability-autofillrequest-saverequestcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [UpdateRequest(system api)](arkts-ability-autofillrequest-updaterequest-i-sys.md)<!--DelEnd-->
   - [AutoFillTriggerType](arkts-autofilltriggertype.md)
-    <!--Del-->
-    - [AutoFillTriggerType(system api)](arkts-ability-autofilltriggertype-e-sys.md)<!--DelEnd-->
+    - [AutoFillTriggerType](arkts-ability-autofilltriggertype-e.md)
   - [AutoFillType](arkts-autofilltype.md)
+    - [AutoFillType](arkts-ability-autofilltype-e.md)
     <!--Del-->
     - [AutoFillType(system api)](arkts-ability-autofilltype-e-sys.md)<!--DelEnd-->
   - [AutoStartupCallback](arkts-autostartupcallback.md)
@@ -1752,6 +1736,7 @@
     <!--Del-->
     - [MultiAppMode(system api)](arkts-ability-multiappmode-e-sys.md)<!--DelEnd-->
   - [PageNodeInfo](arkts-pagenodeinfo.md)
+    - [PageNodeInfo](arkts-ability-pagenodeinfo-i.md)
     <!--Del-->
     - [PageNodeInfo(system api)](arkts-ability-pagenodeinfo-i-sys.md)<!--DelEnd-->
   - [PhotoEditorExtensionContext](arkts-photoeditorextensioncontext.md)
@@ -1807,6 +1792,7 @@
   - [UIServiceProxy](arkts-uiserviceproxy.md)
     - [UIServiceProxy](arkts-ability-uiserviceproxy-i.md)
   - [ViewData](arkts-viewdata.md)
+    - [ViewData](arkts-ability-viewdata-i.md)
     <!--Del-->
     - [ViewData(system api)](arkts-ability-viewdata-i-sys.md)<!--DelEnd-->
   - [abilityDelegatorArgs](arkts-abilitydelegatorargs.md)
@@ -1897,10 +1883,8 @@
     <!--Del-->
     - [PermissionDef(system api)](arkts-ability-permissiondef-i-sys.md)<!--DelEnd-->
   - [PluginBundleInfo](arkts-pluginbundleinfo.md)
-    <!--Del-->
-    - [PluginBundleInfo(system api)](arkts-ability-pluginbundleinfo-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [PluginModuleInfo(system api)](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i-sys.md)<!--DelEnd-->
+    - [PluginBundleInfo](arkts-ability-pluginbundleinfo-i.md)
+    - [PluginModuleInfo](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i.md)
   - [RecoverableApplicationInfo](arkts-recoverableapplicationinfo.md)
     <!--Del-->
     - [RecoverableApplicationInfo(system api)](arkts-ability-recoverableapplicationinfo-i-sys.md)<!--DelEnd-->
@@ -1913,13 +1897,9 @@
     <!--Del-->
     - [SharedModuleInfo(system api)](arkts-ability-sharedbundleinfo-sharedmoduleinfo-i-sys.md)<!--DelEnd-->
   - [ShortcutInfo](arkts-shortcutinfo.md)
-    <!--Del-->
-    - [ParameterItem(system api)](arkts-ability-shortcutinfo-parameteritem-i-sys.md)<!--DelEnd-->
+    - [ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)
     - [ShortcutInfo](arkts-ability-shortcutinfo-i.md)
-    <!--Del-->
-    - [ShortcutInfo(system api)](arkts-ability-shortcutinfo-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [ShortcutWant(system api)](arkts-ability-shortcutinfo-shortcutwant-i-sys.md)<!--DelEnd-->
+    - [ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-i.md)
   - [Skill](arkts-skill.md)
     - [Skill](arkts-ability-skill-i.md)
     - [SkillUri](arkts-ability-skill-skilluri-i.md)

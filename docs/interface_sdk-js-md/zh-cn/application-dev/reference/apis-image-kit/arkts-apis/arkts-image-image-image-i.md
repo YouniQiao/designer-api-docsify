@@ -244,7 +244,7 @@ readonly size: Size
 
 如果Image对象所存储的是相机拍照流数据（JPEG图像数据），由于已是编码后的文件，size中的宽等于JPEG文件大小，高等于1。
 
-Image对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId通过[createPreviewOutput](@ohos.multimedia.camera:camera.CameraManager.createPreviewOutput(profile: Profile, surfaceId: string))接口还是[createPhotoOutput](@ohos.multimedia.camera:camera.CameraManager.createPhotoOutput(profile: Profile, surfaceId: string))接口传给相机。
+Image对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId通过[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput)接口还是[createPhotoOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createphotooutput)接口传给相机。
 
 相机预览与拍照最佳实践请参考[双路预览(ArkTS)](../../../media/camera/camera-dual-channel-preview.md)与[拍照实践(ArkTS)](../../../media/camera/camera-shooting-case.md)。
 

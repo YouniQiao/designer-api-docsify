@@ -1,4 +1,4 @@
-# SubscribedAbstractProperty (System API)
+# SubscribedAbstractProperty
 
 Represents a synchronized property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
@@ -8,15 +8,13 @@ Represents a synchronized property from [AppStorage](../../../ui/state-managemen
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**System API:** This is a system API.
-
 ## aboutToBeDeleted
 
 ```TypeScript
 abstract aboutToBeDeleted(): void
 ```
 
-Cancels the synchronization relationship between the [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c-sys.md)instance and [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md), whether it is a one-way or two-way binding.After **aboutToBeDeleted** is called, the **SubscribedAbstractProperty** instance is invalidated, meaning it can no longer be used to call the [set](arkts-arkui-localstorage-c.md#set) or [get](arkts-arkui-localstorage-c.md#get) API.
+Cancels the synchronization relationship between the [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)instance and [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md), whether it is a one-way or two-way binding.After **aboutToBeDeleted** is called, the **SubscribedAbstractProperty** instance is invalidated, meaning it can no longer be used to call the [set](arkts-arkui-localstorage-c.md#set) or [get](arkts-arkui-localstorage-c.md#get) API.
 
 **Since:** 10
 

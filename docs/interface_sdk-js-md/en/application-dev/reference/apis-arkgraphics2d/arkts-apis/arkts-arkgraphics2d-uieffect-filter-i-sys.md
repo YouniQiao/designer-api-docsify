@@ -591,54 +591,6 @@ filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP)
 
 ```
 
-## hdrBrightnessRatio
-
-```TypeScript
-hdrBrightnessRatio(ratio: number): Filter
-```
-
-Applies a high dynamic range (HDR) brightness enhancement filter to the component.
-
-**Since:** 24
-
-**Required permissions:** 
-- API version 24+: ohos.permission.HDR_BRIGHTNESS
-
-<!--Device-Filter-hdrBrightnessRatio(ratio: double): Filter--><!--Device-Filter-hdrBrightnessRatio(ratio: double): Filter-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| ratio | number | Yes | The brightness multiplier ratio (1.0 = original, >1.0 = brighter). |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | - Returns hdr brightness Filter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 23 |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API.<br>**Applicable version:** 24 and later |
-
-**Example**
-
-```TypeScript
-// Create a Filter instance
-let filter: uiEffect.Filter = uiEffect.createFilter();
-// Set the HDR brightness ratio to 2.0
-filter.hdrBrightnessRatio(2.0);
-
-```
-
 ## heatDistortion
 
 ```TypeScript

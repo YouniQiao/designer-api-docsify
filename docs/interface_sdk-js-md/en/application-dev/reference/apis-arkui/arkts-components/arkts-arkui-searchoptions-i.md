@@ -44,7 +44,8 @@ Path to the search icon. By default, the system search icon is used.
 The icon data source supports both [relative paths](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#example-25-displaying-an-image-using-a-relative-path)and network images.
 
 - The supported formats include PNG, JPG, BMP, SVG, GIF, pixelmap, and HEIF.  
-- The Base64 string is supported in the following format: data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data],where *[base64 data]* is a Base64 string.
+- The Base64 string is supported in the following format: data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data],  
+where *[base64 data]* is a Base64 string.
 
 If this attribute and the **searchIcon** attribute are both set, the **searchIcon** attribute takes precedence.
 

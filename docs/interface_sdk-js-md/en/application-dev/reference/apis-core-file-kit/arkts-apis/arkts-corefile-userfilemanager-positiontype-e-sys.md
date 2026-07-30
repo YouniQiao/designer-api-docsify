@@ -6,7 +6,7 @@ Enumerates the file location.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md)
+**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md)
 
 <!--Device-userFileManager-enum PositionType--><!--Device-userFileManager-enum PositionType-End-->
 
@@ -26,7 +26,7 @@ Stored only on a local device.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md#local)
+**Substitutes:** [LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#local)
 
 <!--Device-PositionType-LOCAL = 1--><!--Device-PositionType-LOCAL = 1-End-->
 
@@ -46,7 +46,7 @@ Stored only on the cloud.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md#cloud)
+**Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#cloud)
 
 <!--Device-PositionType-CLOUD--><!--Device-PositionType-CLOUD-End-->
 

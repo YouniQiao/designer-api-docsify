@@ -53,8 +53,8 @@ let wantTemp: Want = {
 };
 try {
   let usbDeviceIds: Array<usbManager.UsbDeviceId> = [{
-      vendorId: 1,
-      productId: 1
+    vendorId: 1,
+    productId: 1
   }];
   usbManager.removeAllowedUsbDevices(wantTemp, usbDeviceIds);
   console.info(`Succeeded in removing allowed USB devices.`);

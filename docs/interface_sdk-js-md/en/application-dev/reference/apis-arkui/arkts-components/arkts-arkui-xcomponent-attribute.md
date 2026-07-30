@@ -67,6 +67,30 @@ Sets whether to enable the secure surface to protect the content rendered within
 ## hdrBrightness
 
 ```TypeScript
+hdrBrightness(brightness: number)
+```
+
+Sets the brightness of HDR video playback for the component.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-XComponentAttribute-hdrBrightness(brightness: number): XComponentAttribute--><!--Device-XComponentAttribute-hdrBrightness(brightness: number): XComponentAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| brightness | number | Yes | Brightness of HDR video playback.<br>Value range: 0.0 to 1.0. Values less than 0.0are equivalent to 0.0, and values greater than 1.0 are equivalent to 1.0. **0.0** indicates the brightness of the SDR video, and **1.0** indicates the brightness of the HDR video.<br>Default value: **1.0**. |
+
+## hdrBrightness
+
+```TypeScript
 hdrBrightness(brightness: number, type?: HdrType)
 ```
 

@@ -46,7 +46,8 @@ allowOcspCheckOnline?: boolean
 ```
 
 Indicates whether to allow online OCSP check. The default value is false.  
-- **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the certificate and send a request to obtain a response;  
+- **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the  
+certificate and send a request to obtain a response;  
 - **false**: does not perform online OCSP check.
 > **NOTE**  
 >  

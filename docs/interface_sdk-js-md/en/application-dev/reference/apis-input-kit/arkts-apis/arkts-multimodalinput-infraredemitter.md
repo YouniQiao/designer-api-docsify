@@ -20,22 +20,13 @@ import { infraredEmitter } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
+| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md#getinfraredfrequencies) | Queries the frequency range of IR signals supported by the device. |
 | [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md#hasiremitter) | Checks whether the device has an infrared transmitter. This API uses a promise to return the result. |
+| [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md#transmitinfrared) | Generates IR signals at the specified frequency and level. |
 
-<!--Del-->
-### Functions（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f-sys.md#getinfraredfrequencies) | Queries the frequency range of IR signals supported by the device. |
-| [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f-sys.md#transmitinfrared) | Generates IR signals at the specified frequency and level. |
-<!--DelEnd-->
-
-<!--Del-->
-### Interfaces（系统接口）
+### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i-sys.md) | Defines the frequency range of IR signals. |
-<!--DelEnd-->
+| [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md) | Defines the frequency range of IR signals. |
 

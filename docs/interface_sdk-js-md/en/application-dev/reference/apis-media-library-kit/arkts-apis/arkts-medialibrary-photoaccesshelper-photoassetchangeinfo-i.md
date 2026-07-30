@@ -30,6 +30,22 @@ URI of the album that the media asset belongs to.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## isFavorite
+
+```TypeScript
+isFavorite: boolean
+```
+
+Whether the media asset is marked as a favorite. **true** if marked, **false** otherwise.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+<!--Device-PhotoAssetChangeInfo-isFavorite: boolean--><!--Device-PhotoAssetChangeInfo-isFavorite: boolean-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## mediaType
 
 ```TypeScript

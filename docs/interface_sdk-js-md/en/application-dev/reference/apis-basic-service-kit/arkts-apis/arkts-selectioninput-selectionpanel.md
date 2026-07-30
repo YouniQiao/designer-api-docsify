@@ -8,19 +8,15 @@ import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 
 ## Summary
 
-<!--Del-->
-### Interfaces（系统接口）
+### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | Describes the properties of the word selection panel. |
-<!--DelEnd-->
+| [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Describes the properties of the word selection panel. |
 
-<!--Del-->
-### Enums（系统接口）
+### Enums
 
 | Name | Description |
 | --- | --- |
-| [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md) | Enumerates the word selection panel types. |
-<!--DelEnd-->
+| [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | Enumerates the word selection panel types. |
 

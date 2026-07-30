@@ -38,6 +38,27 @@ function getBundleInfo(bundleName: string,
 | options | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | 是 | 包含userid。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | 是 | 程序启动作为入参的回调函数，返回包信息。 |
 
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+let options: bundle.BundleOptions = {
+  "userId": 100
+};
+
+bundle.getBundleInfo(bundleName, bundleFlags, options, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+
+```
+
 
 ## getBundleInfo
 
@@ -68,6 +89,24 @@ function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncC
 | bundleName | string | 是 | 需要查询的应用Bundle名称。 |
 | bundleFlags | number | 是 | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中包信息相关flag。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | 是 | 程序启动作为入参的回调函数，返回包信息。 |
+
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+
+bundle.getBundleInfo(bundleName, bundleFlags, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+
+```
 
 
 ## getBundleInfo
@@ -105,4 +144,25 @@ function getBundleInfo(bundleName: string, bundleFlags: number, options?: Bundle
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;BundleInfo&gt; | Promise对象，获取成功时返回包信息。 |
+
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let bundleFlags: number = 1;
+let options: bundle.BundleOptions = {
+  "userId": 100
+};
+
+bundle.getBundleInfo(bundleName, bundleFlags, options)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+
+```
 

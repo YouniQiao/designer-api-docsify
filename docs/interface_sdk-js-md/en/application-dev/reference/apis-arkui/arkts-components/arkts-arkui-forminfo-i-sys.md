@@ -154,8 +154,10 @@ renderingMode?: FormRenderingMode
 
 Widget rendering mode. Default value: **FULL_COLOR**. The options are as follows:
 
-- **FULL_COLOR**: full color mode, where the widget framework does not change the widget effect, which means that the widget is displayed in the effect as you set it.  
-- **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In this mode you need to set the widget style based on the best practices.
+- **FULL_COLOR**: full color mode, where the widget framework does not change the widget effect, which means that  
+the widget is displayed in the effect as you set it.  
+- **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In  
+this mode you need to set the widget style based on the best practices.
 
 **NOTE**
 

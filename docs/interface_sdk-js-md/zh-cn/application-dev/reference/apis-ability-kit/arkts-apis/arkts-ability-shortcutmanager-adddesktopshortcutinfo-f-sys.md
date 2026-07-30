@@ -28,7 +28,7 @@ function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) | 是 | 快捷方式信息。 |
+| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | 是 | 快捷方式信息。 |
 | userId | number | 是 | 用户id。可以通过[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。 |
 
 **返回值：**

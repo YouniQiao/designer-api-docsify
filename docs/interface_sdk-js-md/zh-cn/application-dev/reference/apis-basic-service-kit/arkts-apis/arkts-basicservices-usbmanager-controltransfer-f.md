@@ -51,7 +51,7 @@ import {BusinessError} from '@kit.BasicServicesKit';
 let param: usbManager.USBControlParams = {
   request: 0x06,
   reqType: 0x80,
-  target:0,
+  target: 0,
   value: 0x01 << 8 | 0,
   index: 0,
   data: new Uint8Array(18)
@@ -69,17 +69,17 @@ async function controlTransfer() {
     console.error(`request right failed`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
-  if (devicepipe == undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
+  if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
-  usbManager.controlTransfer(devicepipe, param).then((ret: number) => {
+  usbManager.controlTransfer(devicePipe, param).then((ret: number) => {
     console.info(`controlTransfer = ${ret}`);
   }).catch((error: BusinessError) => {
     console.error(`Failed to transfer. Code: ${error.code}, message: ${error.message}`);
   }).finally(() => {
-    usbManager.closePipe(devicepipe);
+    usbManager.closePipe(devicePipe);
   });
 }
 

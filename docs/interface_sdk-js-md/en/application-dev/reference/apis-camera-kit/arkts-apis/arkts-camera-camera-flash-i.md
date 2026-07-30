@@ -1,6 +1,8 @@
 # Flash
 
-Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)Provides APIs related to the flash.
+**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md).
+
+It provides APIs related to the flash.
 
 **Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
@@ -50,7 +52,7 @@ Obtains the flash mode in use.
 offFlashStateChange(callback?: Callback<FlashState>): void
 ```
 
-Unsubscribes flash state change event callback.
+Unsubscribes from flash light status change events.
 
 **Since:** 24
 
@@ -66,7 +68,7 @@ Unsubscribes flash state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;FlashState&gt; | No | Callback used to get the flash state change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;FlashState&gt; | No | Callback used to return the result. If this parameter is specified,the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## onFlashStateChange
 
@@ -74,7 +76,7 @@ Unsubscribes flash state change event callback.
 onFlashStateChange(callback: Callback<FlashState>): void
 ```
 
-Subscribes flash state change event callback.
+Subscribes to flash light status change events.
 
 **Since:** 24
 
@@ -90,7 +92,7 @@ Subscribes flash state change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;FlashState&gt; | Yes | Callback used to get the flash state change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;FlashState&gt; | Yes | Callback used to return the flash light status. |
 
 ## setFlashMode
 

@@ -153,7 +153,8 @@ The ability exits due to improper use of system resources. The specific error ca
 - **IO Manage Control**: An I/O management and control operation is carried out.  
 - **App Memory Deterioration**: The application memory usage exceeds the threshold.  
 - **Temperature Control**: The temperature is too high or too low.  
-- **Memory Pressure**: The system is low on memory, triggering process termination in ascending order of priority.
+- **Memory Pressure**: The system is low on memory, triggering process termination in ascending order of  
+priority.
 
 **Since:** 10
 

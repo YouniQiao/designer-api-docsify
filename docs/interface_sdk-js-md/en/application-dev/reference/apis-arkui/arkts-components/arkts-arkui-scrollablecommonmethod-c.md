@@ -800,7 +800,7 @@ Sets the scrollbar state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: <em>BarState.Auto</em> for the <em>List</em>, <em   >Grid</em>,and <em>Scroll</em> components and <em>BarState.Off</em> for the <em>WaterFlow</em> component |
+| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>Default value: <em>BarState.Auto</em> for the <em>List</em>, <em   >Grid</em>,   and <em>Scroll</em> components and <em>BarState.Off</em> for the <em>WaterFlow</em> component |
 
 **Return value:**
 

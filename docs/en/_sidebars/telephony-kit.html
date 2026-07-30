@@ -1,10 +1,11 @@
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">ArkTS API <span class="tree-count">(442)</span></summary>
+    <summary class="tree-section-label">ArkTS API <span class="tree-count">(446)</span></summary>
     <ul class="tree-l1">
 <li class="has-children"><details>
 <summary>@ohos.telephony.call <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-answercall-f.md">answerCall</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-answercall-f-sys.md">answerCall(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-cancelcallupgrade-f-sys.md">cancelCallUpgrade(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-cancelmuted-f-sys.md">cancelMuted(system api)</a></li>
@@ -28,6 +29,7 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-getmaincallid-f-sys.md">getMainCallId(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-getsubcallidlist-f-sys.md">getSubCallIdList(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-getvonrstate-f-sys.md">getVoNRState(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-hangupcall-f.md">hangUpCall</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-hangupcall-f-sys.md">hangUpCall(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-hascall-f.md">hasCall</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-hascallsync-f.md">hasCallSync</a></li>
@@ -55,6 +57,7 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-onrttmodifyind-f-sys.md">onRttModifyInd(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-postdialproceed-f-sys.md">postDialProceed(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-preloadcallui-f-sys.md">preloadCallUI(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-rejectcall-f.md">rejectCall</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-rejectcall-f-sys.md">rejectCall(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-removemissedincomingcallnotification-f-sys.md">removeMissedIncomingCallNotification(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-sendcalluievent-f-sys.md">sendCallUiEvent(system api)</a></li>
@@ -87,6 +90,7 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-callrestrictioninfo-i-sys.md">CallRestrictionInfo(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-callsessionevent-i-sys.md">CallSessionEvent(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-calltransferinfo-i-sys.md">CallTransferInfo(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-calltransferresult-i.md">CallTransferResult</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-calltransferresult-i-sys.md">CallTransferResult(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-cameracapabilities-i-sys.md">CameraCapabilities(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-dialcalloptions-i-sys.md">DialCallOptions(system api)</a></li>
@@ -112,7 +116,7 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-callsessioneventid-e-sys.md">CallSessionEventId(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-callstate-e.md">CallState</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-calltransfersettingtype-e-sys.md">CallTransferSettingType(system api)</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-calltransfertype-e-sys.md">CallTransferType(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-calltransfertype-e.md">CallTransferType</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-calltype-e-sys.md">CallType(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-callwaitingstatus-e-sys.md">CallWaitingStatus(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-ccallstate-e.md">CCallState</a></li>
@@ -129,7 +133,7 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-restrictionstatus-e-sys.md">RestrictionStatus(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-rttstate-e-sys.md">RttState(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-telcallstate-e.md">TelCallState</a></li>
-<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-transferstatus-e-sys.md">TransferStatus(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-transferstatus-e.md">TransferStatus</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-videorequestresulttype-e-sys.md">VideoRequestResultType(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-videostatetype-e-sys.md">VideoStateType(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-call-vonrstate-e-sys.md">VoNRState(system api)</a></li>

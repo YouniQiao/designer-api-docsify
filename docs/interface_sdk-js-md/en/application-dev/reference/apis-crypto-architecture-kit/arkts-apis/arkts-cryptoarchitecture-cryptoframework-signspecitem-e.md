@@ -81,8 +81,10 @@ Length of the salt in bytes used with the PSS padding mode in RSA.
 - For verify, automatically calculate the salt length.
 
 <br>Special values:  
-- For sign, you can also set the value to -1 to use the digest length as the salt length, and -2 or -3 to automatically calculate the maximum salt length. The recommended value is -1.  
-- For verify, you can also set the value to -1 to use the digest length as the salt length, -2 to automatically calculate the salt length, or -3 to use the maximum salt length. The recommended value is -2.
+- For sign, you can also set the value to -1 to use the digest length as the salt length, and -2 or -3 to  
+automatically calculate the maximum salt length. The recommended value is -1.  
+- For verify, you can also set the value to -1 to use the digest length as the salt length, -2 to automatically  
+calculate the salt length, or -3 to use the maximum salt length. The recommended value is -2.
 
 **Since:** 10
 

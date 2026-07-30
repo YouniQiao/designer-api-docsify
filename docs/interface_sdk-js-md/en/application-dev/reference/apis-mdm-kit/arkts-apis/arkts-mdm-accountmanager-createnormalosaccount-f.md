@@ -50,3 +50,26 @@ Adds a normal OS account using the name.
 | [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:1. The operation is restricted by the OS-account constraint.2. The required privilege for the operation has not been granted. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 
+**Example**
+
+```TypeScript
+import { accountManager } from '@kit.MDMKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Create a normal system account. The account name needs to be passed.
+accountManager.createNormalOsAccount(wantTemp, "TestAccountName").then((accountInfo: osAccount.OsAccountInfo) => {
+  console.info('Succeeded in creating normal os account, accountInfo: ' + JSON.stringify(accountInfo));
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create normal os account: code is ${err.code}, message is ${err.message}`);
+});
+
+```
+

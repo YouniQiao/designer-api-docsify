@@ -51,7 +51,8 @@ onResult: (result: number, extraInfo: AuthResult) => void
 Called to return the authentication result.
 
 - **result**: Authentication result. For details, see [ResultCode](arkts-userauthentication-userauth-resultcode-e.md).  
-- **extraInfo**: Extended information, which varies depending on the authentication result. If the authentication is successful, the user authentication token will be returned in **extraInfo**. If the authentication fails, the remaining number of authentication times will be returned in **extraInfo**. If the authentication executor is locked, the freeze time will be returned in **extraInfo**.
+- **extraInfo**: Extended information, which varies depending on the authentication result. If the authentication  
+is successful, the user authentication token will be returned in **extraInfo**. If the authentication fails, the remaining number of authentication times will be returned in **extraInfo**. If the authentication executor is locked, the freeze time will be returned in **extraInfo**.
 
 **Type:** (result: number, extraInfo: AuthResult) =&gt; void
 

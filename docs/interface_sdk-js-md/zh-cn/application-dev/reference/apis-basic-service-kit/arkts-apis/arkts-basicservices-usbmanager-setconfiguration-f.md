@@ -56,15 +56,15 @@ async function setConfiguration() {
     console.error(`request right failed`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
-  if (devicepipe == undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
   let config: usbManager.USBConfiguration = device.configs?.[0];
-  let ret: number = usbManager.setConfiguration(devicepipe, config);
+  let ret: number = usbManager.setConfiguration(devicePipe, config);
   console.info(`setConfiguration = ${ret}`);
-  usbManager.closePipe(devicepipe);
+  usbManager.closePipe(devicePipe);
 }
 
 ```

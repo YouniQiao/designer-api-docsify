@@ -1577,7 +1577,7 @@ Returns a flag indicating whether the current FrameNode was obtained through dyn
 
 | Type | Description |
 | --- | --- |
-| boolean | - Returns true if the FrameNode was converted between dynamic and static states,otherwise, returns false. |
+| boolean | - Returns true if the FrameNode was converted between dynamic and static states,   otherwise, returns false. |
 
 ## isVisible
 

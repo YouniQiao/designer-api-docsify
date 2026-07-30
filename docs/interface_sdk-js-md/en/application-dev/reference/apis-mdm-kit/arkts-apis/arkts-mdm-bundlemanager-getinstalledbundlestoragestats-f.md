@@ -47,3 +47,39 @@ Get the storage statistics of installed bundles on the device.
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
+**Example**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleNames: Array<string> = ['com.example.app1', 'com.example.app2'];
+let accountId: number = 100;
+bundleManager.getInstalledBundleStorageStats(wantTemp, bundleNames, accountId).then((result) => {
+  console.info('Succeeded in getting installed bundle storage stats.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get installed bundle storage stats. Code is ${err.code}, message is ${err.message}`);
+});
+
+```
+
+```TypeScript
+// Return value example.
+[
+  {
+    "bundleName": "com.example.edmtest",
+    "appSize": 38185408,
+    "dataSize": 1216566
+  },
+  // ...
+]
+
+```
+

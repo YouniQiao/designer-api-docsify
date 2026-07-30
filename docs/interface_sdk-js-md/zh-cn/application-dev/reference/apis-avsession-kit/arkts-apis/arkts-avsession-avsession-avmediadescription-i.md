@@ -226,8 +226,10 @@ extras?: {[key: string]: Object}
 
 - 非DLNA投播场景不生效。  
 - 非字符串类型不生效。  
-- 非XML格式会触发[on('castControlIoError')](avSession.AVCastController.on(type: 'castControlIoError', callback: ErrorCallback))回调并返回错误码6612000。错误码的详细介绍请参见[媒体会话管理错误码](../../../reference/apis-avsession-kit/errorcode-avsession.md)。  
-- 通过extras字段，在[ExtraKey](arkts-avsession-avsession-extrakey-e.md)中通过DLNA_CURRENT_URI_METADATA和DLNA_DIDL_LITE键传入的字符串总长度需小于40960字节。
+- 非XML格式会触发  
+[on('castControlIoError')](avSession.AVCastController.on(type: 'castControlIoError', callback: ErrorCallback))回调并返回错误码6612000。错误码的详细介绍请参见[媒体会话管理错误码](../../../reference/apis-avsession-kit/errorcode-avsession.md)。  
+- 通过extras字段，在[ExtraKey](arkts-avsession-avsession-extrakey-e.md)中通过DLNA_CURRENT_URI_METADATA和DLNA_DIDL_LITE键传入的字符串总长度需小于40960字  
+节。
 
 **类型：** {[key: string]: Object}
 

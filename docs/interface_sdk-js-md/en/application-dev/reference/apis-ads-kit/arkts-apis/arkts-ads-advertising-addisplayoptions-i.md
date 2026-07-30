@@ -25,7 +25,8 @@ Scenario type for obtaining audio focus during video playback.
 - 0: Obtain focus during both muted and non-muted video playback.  
 - 1: Do not obtain focus during muted video playback.  
 - 2: Do not obtain focus during either muted or non-muted video playback.  
-- The related features that this API depends on are currently not supported for use,so the default value is temporarily uncertain.
+- The related features that this API depends on are currently not supported for use,  
+so the default value is temporarily uncertain.
 
 **Type:** number
 
@@ -63,7 +64,8 @@ Media custom data. Used for the server to notify the media server that a user sh
 
 Custom parameter.
 
-- refreshTime: An optional custom parameter for the AutoAdComponent,used to control the ad rotation interval. Type number, unit: ms, value range [30000, 120000].If not set or the value is non-numeric or less than or equal to 0, no rotation occurs,and only the first ad content in the ad response is displayed. Values less than 30000 are set to 30000,and values greater than 120000 are set to 120000.
+- refreshTime: An optional custom parameter for the AutoAdComponent,  
+used to control the ad rotation interval. Type number, unit: ms, value range [30000, 120000].If not set or the value is non-numeric or less than or equal to 0, no rotation occurs,and only the first ad content in the ad response is displayed. Values less than 30000 are set to 30000,and values greater than 120000 are set to 120000.
 
 <!--RP3--><!--RP3End-->
 
@@ -110,7 +112,8 @@ Whether to display a pop-up notification to the user when using mobile data to p
 
 - true: Display pop-up notification.  
 - false: Do not display pop-up notification.  
-- This parameter depends on the traffic pop-up feature,which currently does not support full functionality,so the default value is temporarily uncertain.
+- This parameter depends on the traffic pop-up feature,  
+which currently does not support full functionality,so the default value is temporarily uncertain.
 
 **Type:** boolean
 

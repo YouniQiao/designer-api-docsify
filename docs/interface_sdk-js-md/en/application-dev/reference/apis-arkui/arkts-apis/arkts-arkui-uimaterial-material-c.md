@@ -1,4 +1,4 @@
-# Material (System API)
+# Material
 
 System material object on the UI.
 
@@ -7,8 +7,6 @@ System material object on the UI.
 <!--Device-uiMaterial-class Material--><!--Device-uiMaterial-class Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
 
 ## Modules to Import
 

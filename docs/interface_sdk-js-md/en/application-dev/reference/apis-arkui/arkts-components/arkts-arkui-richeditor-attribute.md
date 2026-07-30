@@ -185,8 +185,10 @@ Specifies whether copy and paste is allowed for text content.
 
 Since API version 20, copied or cut text from the **RichEditor** component includes HTML-formatted content in the pasteboard.
 
-- Only TextSpan and ImageSpan can add HTML content to the pasteboard. Other span types (such as BuilderSpan,SymbolSpan, and CustomSpan) cannot add HTML content to the pasteboard.  
-- For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.
+- Only TextSpan and ImageSpan can add HTML content to the pasteboard. Other span types (such as BuilderSpan,  
+SymbolSpan, and CustomSpan) cannot add HTML content to the pasteboard.  
+- For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion  
+scope.
 
 If copyOptions is not set to CopyOptions.None, a text selection menu will be displayed when you long-press the component content. If a custom context menu is defined through **bindSelectionMenu** or other approaches, it will be displayed.
 

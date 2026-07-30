@@ -43,7 +43,8 @@ begins?: number
 
 File start point of the task, in bytes. It is usually used for resumable transfers. The default value is **0**.The value is a closed interval.
 
-- For the download task, the value is obtained by sending an HTTP range request to read the start position when the server starts to download files.  
+- For the download task, the value is obtained by sending an HTTP range request to read the start position when  
+the server starts to download files.  
 - For the upload task, the value is obtained at the start position of the upload.
 
 **Type:** number
@@ -62,8 +63,10 @@ File start point of the task, in bytes. It is usually used for resumable transfe
 data?: string | Array<FormItem>
 ```
 
-- For the download task, the value is a string, typically in JSON format (an object will be converted to a JSON string); the default value is null.  
-- For the upload task, the value is Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;. Since API version 15, a maximum of 100 files can be uploaded in a single task. This parameter is left empty by default.
+- For the download task, the value is a string, typically in JSON format (an object will be converted to a JSON  
+string); the default value is null.  
+- For the upload task, the value is Array&lt;  
+[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;. Since API version 15, a maximum of 100 files can be uploaded in a single task. This parameter is left empty by default.
 
 **Type:** string \| Array&lt;FormItem&gt;
 
@@ -101,7 +104,8 @@ ends?: number
 
 File end point of the task, in bytes. It is usually used for resumable transfers. The default value is **-1**.The value is a closed interval.
 
-- For the download task, the value is obtained by sending an HTTP range request to read the end position when the server starts to download files.  
+- For the download task, the value is obtained by sending an HTTP range request to read the end position when  
+the server starts to download files.  
 - For the upload task, the value is obtained at the end position of the upload.
 
 **Type:** number
@@ -140,7 +144,8 @@ gauge?: boolean
 
 Whether to send progress notifications. This parameter applies only to background tasks. The default value is **false**.
 
-- **false**: Progress notifications are not sent. This means that a notification is sent only to indicate the result of the total task.  
+- **false**: Progress notifications are not sent. This means that a notification is sent only to indicate the  
+result of the total task.  
 - **true**: Progress notifications are sent to indicate the result of each file.
 
 **Type:** boolean
@@ -480,10 +485,14 @@ saveas?: string
 
 Path for storing downloaded files. The options are as follows:
 
-- Relative path, which is in the cache directory of the caller, for example, **./xxx/yyy/zzz.html** or **xxx/yyy/zzz.html**.  
-- Internal protocol path, which can be **internal://** or its subdirectory. **internal** indicates the cache directory of the caller (that is, the input **context**), and **internal://cache** corresponds to **context.cacheDir**, for example, **internal://cache/path/to/file.txt**.  
-- Application sandbox path. Only the **base** directory and its subdirectories are supported, for example,**./data/storage/el1/base/path/to/file.txt**.  
-- File protocol path, which can be the path of an application file or a user file. For the application file,the application bundle name must be matched and only the **base** directory and its subdirectories are supported, for example, **file://com.example.test/data/storage/el2/base/file.txt**. For the user file, its path must be the user file URI created by the caller.
+- Relative path, which is in the cache directory of the caller, for example, **./xxx/yyy/zzz.html** or  
+**xxx/yyy/zzz.html**.  
+- Internal protocol path, which can be **internal://** or its subdirectory. **internal** indicates the cache  
+directory of the caller (that is, the input **context**), and **internal://cache** corresponds to **context.cacheDir**, for example, **internal://cache/path/to/file.txt**.  
+- Application sandbox path. Only the **base** directory and its subdirectories are supported, for example,  
+**./data/storage/el1/base/path/to/file.txt**.  
+- File protocol path, which can be the path of an application file or a user file. For the application file,  
+the application bundle name must be matched and only the **base** directory and its subdirectories are supported, for example, **file://com.example.test/data/storage/el2/base/file.txt**. For the user file, its path must be the user file URI created by the caller.
 
 Since API version 20, the default file path can be the cache path of the caller (that is, the passed context),except for [downloading network resource files to the user file](../../../basic-services/request/app-file-upload-download.md#downloading-network-resource-files-to-the-user-file). The default file name is the part truncated from the last slash (/) in the URL.
 

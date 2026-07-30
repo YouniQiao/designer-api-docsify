@@ -1571,7 +1571,7 @@ isTransferred(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | - 返回FrameNode是否通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>true：FrameNode通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>false：FrameNode不通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
+| boolean | - 返回FrameNode是否通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>true：FrameNode通过   transfer.transferStatic或transfer.transferDynamic方法创建。<br/>false：FrameNode不通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
 
 ## isVisible
 

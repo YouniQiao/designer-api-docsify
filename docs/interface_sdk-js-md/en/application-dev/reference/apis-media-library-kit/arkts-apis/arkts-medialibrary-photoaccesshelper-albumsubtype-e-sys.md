@@ -72,22 +72,6 @@ Album for images and videos taken by the camera.
 
 **System API:** This is a system API.
 
-## IMAGE
-
-```TypeScript
-IMAGE = 1031
-```
-
-Photo album.
-
-**Since:** 12
-
-<!--Device-AlbumSubtype-IMAGE = 1031--><!--Device-AlbumSubtype-IMAGE = 1031-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
 ## CLOUD_ENHANCEMENT
 
 ```TypeScript
@@ -115,22 +99,6 @@ LIVEPHOTO_4D = 1033
 **Since:** 26.0.0
 
 <!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033--><!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-## SOURCE_GENERIC
-
-```TypeScript
-SOURCE_GENERIC = 2049
-```
-
-Source album.
-
-**Since:** 23
-
-<!--Device-AlbumSubtype-SOURCE_GENERIC = 2049--><!--Device-AlbumSubtype-SOURCE_GENERIC = 2049-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -2,11 +2,15 @@
 
 The **distributedKVStore** module implements collaboration between databases for different devices that form a Super Device. You can use the APIs provided by this module to save application data to a distributed key-value (KV) store and perform operations, such as adding, deleting, modifying, and querying data, and synchronizing data across devices.The **distributedKVStore** module provides the following functionalities:
 
-- [KVManager](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md): provides a **KVManager** instance to obtain KV store information.  
-- [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md): provides APIs for accessing the results obtained from a KV store.  
+- [KVManager](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md): provides a **KVManager** instance to obtain KV store  
+information.  
+- [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md): provides APIs for accessing the results obtained  
+from a KV store.  
 - [Query](arkts-arkdata-distributedkvstore-query-c.md): provides APIs for setting predicates for data query.  
-- [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md): provides APIs for querying data in single KV stores and synchronizing data across devices. The single KV stores manage data without distinguishing devices.  
-- [DeviceKVStore](arkts-arkdata-distributedkvstore-devicekvstore-i.md): provides APIs for querying data in device KV stores and synchronizing data across devices. This class inherits from [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md).The device KV stores manage data by device.
+- [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md): provides APIs for querying data in single KV stores and  
+synchronizing data across devices. The single KV stores manage data without distinguishing devices.  
+- [DeviceKVStore](arkts-arkdata-distributedkvstore-devicekvstore-i.md): provides APIs for querying data in device KV stores and  
+synchronizing data across devices. This class inherits from [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md).The device KV stores manage data by device.
 
 **Since:** 9
 

@@ -34,6 +34,24 @@ function getAbilityInfo(bundleName: string, abilityName: string, callback: Async
 | abilityName | string | 是 | Ability名称。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AbilityInfo&gt; | 是 | 程序启动作为入参的回调函数，返回Ability信息。 |
 
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+
+```
+
 
 ## getAbilityInfo
 
@@ -67,4 +85,22 @@ function getAbilityInfo(bundleName: string, abilityName: string): Promise<Abilit
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;AbilityInfo&gt; | Promise形式返回Ability信息。 |
+
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+
+```
 

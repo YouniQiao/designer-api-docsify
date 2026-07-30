@@ -40,7 +40,7 @@ Rotation angle of the device around the z-axis, in degrees. The value ranges fro
 beta: number
 ```
 
-Rotation angle of the device around the x-axis, in degrees. The value ranges from 0 to ��180.
+Rotation angle of the device around the x-axis, in degrees. The value ranges from 0 to ±180.
 
 **Type:** number
 
@@ -58,7 +58,7 @@ Rotation angle of the device around the x-axis, in degrees. The value ranges fro
 gamma: number
 ```
 
-Rotation angle of the device around the y-axis, in degrees. The value ranges from 0 to ��90.
+Rotation angle of the device around the y-axis, in degrees. The value ranges from 0 to ±90.
 
 **Type:** number
 

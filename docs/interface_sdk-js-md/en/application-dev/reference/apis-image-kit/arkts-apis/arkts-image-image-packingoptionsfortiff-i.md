@@ -22,7 +22,8 @@ compression?: number
 
 Compression algorithm type: 3 (CCITT G3), 4 (CCITT G4), 5 (LZW).  
 - For binary image: must be 3 (G3) or 4 (G4), automatically uses 4 (G4).  
-- For Y8/RGB_888 format: automatically uses LZW (5), user setting is ignored.The value should be an integer, Currently, only 3, 4, and 5 are supported.
+- For Y8/RGB_888 format: automatically uses LZW (5), user setting is ignored.  
+The value should be an integer, Currently, only 3, 4, and 5 are supported.
 
 **Type:** number
 

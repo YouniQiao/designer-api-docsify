@@ -54,6 +54,28 @@ Callback invoked when the selected item changes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## backgroundSystemMaterial
+
+```TypeScript
+readonly backgroundSystemMaterial?: uiMaterial.Material
+```
+
+Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
+
+**Type:** uiMaterial.Material
+
+**Since:** 26.0.0
+
+**Decorator:** @Param
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TabSegmentButtonV2-readonly backgroundSystemMaterial?: uiMaterial.Material--><!--Device-TabSegmentButtonV2-readonly backgroundSystemMaterial?: uiMaterial.Material-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## buttonBackgroundBlurStyle
 
 ```TypeScript

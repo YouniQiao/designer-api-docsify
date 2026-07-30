@@ -134,7 +134,8 @@ NOTE
 
 - If more than half of an option's area enters the selected item area, the option becomes the selected item.
 
-- The selected item area can be identified by setting [selectionIndicator](UIPickerComponentAttribute#selectionIndicator). If the selected item indicator is set to the background, the background area is the selected item area. If the selected item indicator is set to the divider, the area between the center lines of the upper and lower dividers is the selected item area.
+- The selected item area can be identified by setting  
+[selectionIndicator](UIPickerComponentAttribute#selectionIndicator). If the selected item indicator is set to the background, the background area is the selected item area. If the selected item indicator is set to the divider, the area between the center lines of the upper and lower dividers is the selected item area.
 
 **Since:** 22
 

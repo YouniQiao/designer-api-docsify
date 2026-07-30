@@ -102,3 +102,24 @@ Restricting users from changing specified settings item on the device.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 
+**Example**
+
+```TypeScript
+import { restrictions } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  restrictions.setUserRestriction(wantTemp, restrictions.SettingsForDevice.SET_APN, true);
+  console.info('Succeeded in restricting from setting apn');
+} catch (err) {
+  console.error(`Failed to restrict from setting apn. Code is ${err.code}, message is ${err.message}`);
+}
+
+```
+

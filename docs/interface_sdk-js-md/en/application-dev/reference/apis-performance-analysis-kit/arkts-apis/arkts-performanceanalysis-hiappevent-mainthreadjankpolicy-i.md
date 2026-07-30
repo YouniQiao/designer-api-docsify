@@ -72,7 +72,8 @@ Type of logs to collect. Default value: **0**
 
 **NOTE**
 
-- When **logType** is set to **0**, you only need to set **autoStopSampling**. Default values are used for other parameters.  
+- When **logType** is set to **0**, you only need to set **autoStopSampling**. Default values are used for other  
+parameters.  
 - When **logType** is set to **2**, other parameters do not take effect and do not need to be set.
 
 **Type:** number
@@ -121,8 +122,10 @@ value is 1. The maximum value is calculated using the following formula:
 
 **NOTE**
 
-- The value **2500** (ms) indicates the maximum time allowed for a main thread jank event to be reported after being detected. Therefore, the value of **sampleCount** cannot be greater than the maximum value calculated based on the formula.  
-- The value **4** indicates the number of check intervals, that is, the first check interval, the twice second check intervals, and the interval for collecting and reporting stack information.  
+- The value **2500** (ms) indicates the maximum time allowed for a main thread jank event to be reported after  
+being detected. Therefore, the value of **sampleCount** cannot be greater than the maximum value calculated based on the formula.  
+- The value **4** indicates the number of check intervals, that is, the first check interval, the twice second  
+check intervals, and the interval for collecting and reporting stack information.  
 - You need to set the parameters as required.
 
 **Type:** number

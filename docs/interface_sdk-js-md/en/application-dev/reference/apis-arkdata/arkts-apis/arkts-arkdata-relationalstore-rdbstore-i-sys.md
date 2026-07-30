@@ -428,7 +428,7 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | -The promise returned by the function.{@link ResultSet} is query result. |
+| Promise&lt;ResultSet&gt; | -The promise returned by the function.   {@link ResultSet} is query result. |
 
 **Error codes:**
 

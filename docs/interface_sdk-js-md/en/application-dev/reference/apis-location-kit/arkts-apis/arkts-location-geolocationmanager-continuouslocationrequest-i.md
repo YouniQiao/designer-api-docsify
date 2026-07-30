@@ -68,3 +68,21 @@ Indicates whether to obtain POI information near the current location.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## sportsType
+
+```TypeScript
+sportsType?: SportsType
+```
+
+Indicates the type of sports.This parameter is valid only when locationScenario is set to UserActivityScenario.SPORT.
+
+**Type:** SportsType
+
+**Since:** 26.0.0
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContinuousLocationRequest-sportsType?: SportsType--><!--Device-ContinuousLocationRequest-sportsType?: SportsType-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+

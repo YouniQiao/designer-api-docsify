@@ -42,8 +42,10 @@ isMessageResent: boolean
 
 Whether a message is sent repeatedly.
 
-- **false**: The message is sent for the first time. Applicable scenarios: The application is running when the user taps a button on the agent-powered reminder notification; the application is not running when the user taps the button, and the application registers a new callback function afterward.  
-- **true**: The message is sent repeatedly. Applicable scenario: The application is running and registers a new callback function after the user taps a button on the agent-powered reminder notification.
+- **false**: The message is sent for the first time. Applicable scenarios: The application is running when the  
+user taps a button on the agent-powered reminder notification; the application is not running when the user taps the button, and the application registers a new callback function afterward.  
+- **true**: The message is sent repeatedly. Applicable scenario: The application is running and registers a new  
+callback function after the user taps a button on the agent-powered reminder notification.
 
 **Type:** boolean
 

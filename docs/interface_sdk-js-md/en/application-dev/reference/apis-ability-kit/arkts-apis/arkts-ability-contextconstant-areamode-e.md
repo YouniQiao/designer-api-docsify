@@ -53,8 +53,10 @@ EL3 = 2
 User-level encryption. The file permissions vary according to their scenarios.
 
 - An open file is always readable and writable regardless of whether the screen is locked.  
-- When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such a file can be opened, read, and written.  
-- When the screen is locked, a file can be created and then opened and written but not read. When the screen is unlocked, a file can be created and then opened, read, and written.
+- When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such  
+a file can be opened, read, and written.  
+- When the screen is locked, a file can be created and then opened and written but not read. When the screen is  
+unlocked, a file can be created and then opened, read, and written.
 
 **Since:** 11
 
@@ -74,9 +76,12 @@ EL4 = 3
 
 User-level encryption. The file permissions vary according to their scenarios.
 
-- When the screen is locked, an open file is not readable or writable. When the screen is unlocked, such a file is readable and writable.  
-- When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such a file can be opened, read, and written.  
-- When the screen is locked, a file cannot be created. When the screen is unlocked, a file can be created and then opened, read, and written.
+- When the screen is locked, an open file is not readable or writable. When the screen is unlocked, such a file  
+is readable and writable.  
+- When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such  
+a file can be opened, read, and written.  
+- When the screen is locked, a file cannot be created. When the screen is unlocked, a file can be created and  
+then opened, read, and written.
 
 **Since:** 11
 

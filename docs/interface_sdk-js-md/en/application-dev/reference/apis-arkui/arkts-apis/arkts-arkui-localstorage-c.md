@@ -98,7 +98,7 @@ The property subscribers include the following:
 
 1. Variables decorated by [\@LocalStorageLink](../../../ui/state-management/arkts-localstorage.md#localstoragelink) or [\@LocalStorageProp](../../../ui/state-management/arkts-localstorage.md#localstorageprop)
 
-2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c-sys.md)returned by [link](arkts-arkui-localstorage-c.md#link), [prop](arkts-arkui-localstorage-c.md#prop),[setAndLink](arkts-arkui-localstorage-c.md#setandlink), or [setAndProp](arkts-arkui-localstorage-c.md#setandprop)
+2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)returned by [link](arkts-arkui-localstorage-c.md#link), [prop](arkts-arkui-localstorage-c.md#prop),[setAndLink](arkts-arkui-localstorage-c.md#setandlink), or [setAndProp](arkts-arkui-localstorage-c.md#setandprop)
 
 To delete these subscribers:
 

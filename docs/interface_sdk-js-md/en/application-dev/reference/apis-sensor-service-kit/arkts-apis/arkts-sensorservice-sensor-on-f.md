@@ -791,7 +791,7 @@ Subscribes to data of the orientation sensor.
 > **NOTE**  
 >  
 > Applications or services invoking this API can prompt users to use figure-8 calibration to improve the accuracy  
-> of the direction sensor. The sensor has a theoretical error of ��5 degrees, but the specific precision may vary  
+> of the direction sensor. The sensor has a theoretical error of ±5 degrees, but the specific precision may vary  
 > depending on different driver implementations and algorithmic designs.
 
 **Since:** 9

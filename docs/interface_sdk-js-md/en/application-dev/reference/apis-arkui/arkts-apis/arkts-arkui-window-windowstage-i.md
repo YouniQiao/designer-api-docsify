@@ -745,6 +745,41 @@ Release the content of this window in the current project.This API uses a promis
 | --- | --- |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
 
+## removeImageForRecent
+
+```TypeScript
+removeImageForRecent(): Promise<void>
+```
+
+Removes the image that the application has set to be displayed in the multitasking view and on dock hover. The change will be effective the next time you check the application widget in the multitasking view. This API uses a promise to return the result.
+
+**Since:** 26.0.0
+
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.MANAGE_RECENT_SNAPSHOT
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowStage-removeImageForRecent(): Promise<void>--><!--Device-WindowStage-removeImageForRecent(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 22 - 24 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
 ## removeStartingWindow
 
 ```TypeScript
@@ -883,6 +918,56 @@ When the default density is not used, if [setCustomDensity()](arkts-arkui-window
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The main window is not created or destroyed. |
 | [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.Possible cause: The window stage is not created or destroyed. |
+
+## setImageForRecent
+
+```TypeScript
+setImageForRecent(imageResource: number | image.PixelMap, value: ImageFit): Promise<void>
+```
+
+Sets the image displayed in the multitasking view and on dock hover. This API uses a promise to return the result.
+> **NOTE**  
+>  
+> Before calling this API, you are advised to complete page loading via  
+> [loadContent](arkts-arkui-window-window-i.md#loadcontent) or  
+> [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If this API is called before the application  
+> completes page loading, the intended functionality does not take effect. As a result, only the application's  
+> launch page is displayed in the multitasking view.
+
+**Since:** 26.0.0
+
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.MANAGE_RECENT_SNAPSHOT
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowStage-setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promise<void>--><!--Device-WindowStage-setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promise<void>-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| imageResource | number \| image.PixelMap | Yes | imageResourceId or pixelMap for recent image.imageResourceId Value Range: [0x1000000, 0xffffffff]. |
+| value | [ImageFit](arkts-arkui-imagefit-e.md) | Yes | Sets the zoom type of an image. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 22 - 24 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause:1. The window is not created or destroyed.2. The WindowStage is running in the background.3. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause:1. Invalid parameter range. 2. Invalid parameter length. |
 
 ## setSupportedWindowModes
 

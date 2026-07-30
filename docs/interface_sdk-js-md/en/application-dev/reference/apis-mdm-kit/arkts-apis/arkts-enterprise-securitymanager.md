@@ -14,8 +14,6 @@ The **securityManager** module provides device security management capabilities,
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

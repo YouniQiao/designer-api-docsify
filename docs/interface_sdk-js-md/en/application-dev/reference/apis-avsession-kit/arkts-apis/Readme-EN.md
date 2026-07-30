@@ -110,8 +110,10 @@
   <!--Del-->
   - [castAudio(system api)](arkts-avsession-avsession-castaudio-f-sys.md)<!--DelEnd-->
   - [createAVSession](arkts-avsession-avsession-createavsession-f.md)
+  - [createController](arkts-avsession-avsession-createcontroller-f.md)
   <!--Del-->
   - [createController(system api)](arkts-avsession-avsession-createcontroller-f-sys.md)<!--DelEnd-->
+  - [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f.md)
   <!--Del-->
   - [getAllSessionDescriptors(system api)](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -183,6 +185,7 @@
   - [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)
   - [AVSession](arkts-avsession-avsession-avsession-i.md)
   - [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)
+  - [AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md)
   <!--Del-->
   - [AVSessionDescriptor(system api)](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)<!--DelEnd-->
   - [CallMetadata](arkts-avsession-avsession-callmetadata-i.md)

@@ -14,13 +14,10 @@
   <!--Del-->
   - [TouchGestureAction(system api)](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md)<!--DelEnd-->
 - [@ohos.multimodalInput.infraredEmitter](arkts-multimodalinput-infraredemitter.md)
-  <!--Del-->
-  - [getInfraredFrequencies(system api)](arkts-input-infraredemitter-getinfraredfrequencies-f-sys.md)<!--DelEnd-->
+  - [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md)
   - [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md)
-  <!--Del-->
-  - [transmitInfrared(system api)](arkts-input-infraredemitter-transmitinfrared-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [InfraredFrequency(system api)](arkts-input-infraredemitter-infraredfrequency-i-sys.md)<!--DelEnd-->
+  - [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md)
+  - [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md)
 - [@ohos.multimodalInput.inputConsumer](arkts-multimodalinput-inputconsumer.md)
   - [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md)
   <!--Del-->

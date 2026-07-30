@@ -32,7 +32,7 @@ Writes event information to the event file. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Promise used to return the result. Depending on whether event writing is successful, you can use the **then()** or **catch()** method to process the callback. |
+| Promise&lt;void&gt; | - Promise used to return the result. Depending on whether event writing is successful, you   can use the **then()** or **catch()** method to process the callback. |
 
 **Error codes:**
 

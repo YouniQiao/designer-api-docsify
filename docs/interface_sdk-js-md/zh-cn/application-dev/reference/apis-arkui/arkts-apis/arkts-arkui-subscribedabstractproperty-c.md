@@ -1,4 +1,4 @@
-# SubscribedAbstractProperty（系统接口）
+# SubscribedAbstractProperty
 
 SubscribedAbstractProperty是[AppStorage](../../../ui/state-management/arkts-appstorage.md)/[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中属性的单/双向同步绑定对象，用于与AppStorage/LocalStorage中的属性建立数据同步关系。SubscribedAbstractProperty实例需要通过[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted)接口手动释放，以取消同步关系并无效化实例。
 > **说明：**  
@@ -11,15 +11,13 @@ SubscribedAbstractProperty是[AppStorage](../../../ui/state-management/arkts-app
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**系统接口：** 此接口为系统接口。
-
 ## aboutToBeDeleted
 
 ```TypeScript
 abstract aboutToBeDeleted(): void
 ```
 
-取消[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c-sys.md)实例对[AppStorage](../../../ui/state-management/arkts-appstorage.md)/[LocalStorage](../../../ui/state-management/arkts-localstorage.md)的单向或双向同步关系，并无效化SubscribedAbstractProperty实例。即调用aboutToBeDeleted方法之后，不能再使用SubscribedAbstractProperty实例调用[set](arkts-arkui-localstorage-c.md#set)或[get](arkts-arkui-localstorage-c.md#get)方法。
+取消[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)实例对[AppStorage](../../../ui/state-management/arkts-appstorage.md)/[LocalStorage](../../../ui/state-management/arkts-localstorage.md)的单向或双向同步关系，并无效化SubscribedAbstractProperty实例。即调用aboutToBeDeleted方法之后，不能再使用SubscribedAbstractProperty实例调用[set](arkts-arkui-localstorage-c.md#set)或[get](arkts-arkui-localstorage-c.md#get)方法。
 
 **起始版本：** 10
 

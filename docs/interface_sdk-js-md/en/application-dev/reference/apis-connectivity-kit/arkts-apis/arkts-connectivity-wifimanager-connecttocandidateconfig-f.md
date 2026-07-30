@@ -86,7 +86,7 @@ Connect to the specified candidate hotspot using connect settings.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | - Returns the promise object that used to return the operation result.If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | - Returns the promise object that used to return the operation result.   If the operation fails, an error message is returned. |
 
 **Error codes:**
 

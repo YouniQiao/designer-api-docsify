@@ -8,22 +8,6 @@ Enumerates the album types,
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-## SOURCE
-
-```TypeScript
-SOURCE = 2048
-```
-
-Album created by an application.
-
-**Since:** 23
-
-<!--Device-AlbumType-SOURCE = 2048--><!--Device-AlbumType-SOURCE = 2048-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
 ## SMART
 
 ```TypeScript

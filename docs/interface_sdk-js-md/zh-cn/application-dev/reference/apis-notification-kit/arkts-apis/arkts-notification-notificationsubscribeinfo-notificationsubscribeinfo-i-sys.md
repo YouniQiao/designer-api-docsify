@@ -82,8 +82,10 @@ filterLimit?: number
 通知过滤范围。默认值为0。取值范围包括：
 
 - 0：不进行任何过滤，订阅全部通知。  
-- 1：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)为空的通知过滤掉。  
-- 2：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)不为空的通知过滤掉。
+- 1：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且  
+[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)为空的通知过滤掉。  
+- 2：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且  
+[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)不为空的通知过滤掉。
 
 **类型：** number
 
@@ -103,7 +105,8 @@ needSilentReplayOnSubscribe?: boolean
 
 是否启用订阅时的静默重放。  
 - true：表示启用。  
-- false：表示禁用。默认值为false。启用后，首次订阅时会以静默方式重新推送历史通知，不会出现响铃和振动提醒。
+- false：表示禁用。默认值为false。  
+启用后，首次订阅时会以静默方式重新推送历史通知，不会出现响铃和振动提醒。
 
 **类型：** boolean
 

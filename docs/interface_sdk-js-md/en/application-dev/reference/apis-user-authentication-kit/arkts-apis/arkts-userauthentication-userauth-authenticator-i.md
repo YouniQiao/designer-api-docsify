@@ -52,7 +52,7 @@ Starts user authentication. This API uses an asynchronous callback to return the
 import { userAuth } from '@kit.UserAuthenticationKit';
 
 let authenticator = userAuth.getAuthenticator();
-authenticator.execute('FACE_ONLY', 'S2', (error, code)=>{
+authenticator.execute('FACE_ONLY', 'S2', (error, code) => {
   if (code === userAuth.ResultCode.SUCCESS) {
     console.info('auth successfully.');
     return;
@@ -102,11 +102,11 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 try {
   let authenticator = userAuth.getAuthenticator();
-  authenticator.execute('FACE_ONLY', 'S2').then((code)=>{
+  authenticator.execute('FACE_ONLY', 'S2').then((code) => {
     console.info('auth successfully.');
   })
 } catch (error) {
-  console.error(`auth failed, code = ${error}`);
+  console.error(`auth failed, Code: ${error?.code}, message: ${error?.message}`);
 }
 
 ```

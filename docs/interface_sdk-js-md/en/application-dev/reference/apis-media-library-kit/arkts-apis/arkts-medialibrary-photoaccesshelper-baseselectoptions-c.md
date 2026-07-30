@@ -107,8 +107,10 @@ A string array of filter criteria, supporting combinations of various types.
 The string format is as follows: **photoType | photoSubType1,photoSubType2, ... | mimeType1,mimeType2, ...**
 
 - The first part specifies a single **photoType**, which is fixed at **image** or **video**.  
-- The second part lists 1 to *N* photoSubTypes, separated by commas, with an OR relationship. Currently, the maximum value of *N* is **1**. Options include **movingPhoto** or "*" (ignore).  
-- The third part lists 1 to *N* mimeTypes, separated by commas, with an OR relationship. Currently, the maximum value of *N* is **10**. The format is similar to [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md).
+- The second part lists 1 to *N* photoSubTypes, separated by commas, with an OR relationship. Currently, the  
+maximum value of *N* is **1**. Options include **movingPhoto** or "*" (ignore).  
+- The third part lists 1 to *N* mimeTypes, separated by commas, with an OR relationship. Currently, the maximum  
+value of *N* is **10**. The format is similar to [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md).
 
 Filters are combined using intersection logic.
 

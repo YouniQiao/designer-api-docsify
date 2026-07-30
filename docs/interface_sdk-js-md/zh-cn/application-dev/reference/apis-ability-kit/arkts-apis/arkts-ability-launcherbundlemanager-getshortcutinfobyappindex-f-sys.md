@@ -12,7 +12,7 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function getShortcutInfoByAppIndex(bundleName: string, appIndex: number): Array<ShortcutInfo>
 ```
 
-查询当前用户下指定分身应用的快捷方式信息[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md)。
+查询当前用户下指定分身应用的快捷方式信息[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)。
 
 调用方获取自己的信息时不需要权限。
 
@@ -37,7 +37,7 @@ function getShortcutInfoByAppIndex(bundleName: string, appIndex: number): Array<
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array形式返回当前用户下指定分身应用的[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md)。 |
+| Array&lt;ShortcutInfo&gt; | Array形式返回当前用户下指定分身应用的[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)。 |
 
 **错误码：**
 

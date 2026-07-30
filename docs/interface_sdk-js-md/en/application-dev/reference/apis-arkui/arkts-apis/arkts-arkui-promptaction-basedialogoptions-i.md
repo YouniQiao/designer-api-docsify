@@ -441,7 +441,8 @@ onDidAppear?: () => void
 ```
 
 Event callback after the dialog box appears.<br>**NOTE**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)  
-> onWillDisappear > onDidDisappear.<br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.The settings take effect next time the dialog box appears.<br>3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.<br>4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
+> onWillDisappear > onDidDisappear.  
+<br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.The settings take effect next time the dialog box appears.<br>3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.<br>4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
 
 **Type:** () =&gt; void
 
@@ -462,7 +463,8 @@ onDidDisappear?: () => void
 ```
 
 Event callback after the dialog box disappears.<br>**NOTE**<br>The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)  
-> onWillDisappear > onDidDisappear.<br>This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
+> onWillDisappear > onDidDisappear.  
+<br>This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
 
 **Type:** () =&gt; void
 
@@ -483,7 +485,8 @@ onWillAppear?: () => void
 ```
 
 Event callback when the dialog box is about to appear.<br>**NOTE**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)  
-> onWillDisappear > onDidDisappear.<br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.The settings take effect next time the dialog box appears.
+> onWillDisappear > onDidDisappear.  
+<br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**.The settings take effect next time the dialog box appears.
 
 **Type:** () =&gt; void
 
@@ -504,7 +507,8 @@ onWillDisappear?: () => void
 ```
 
 Event callback when the dialog box is about to disappear.<br>**NOTE**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)  
-> onWillDisappear > onDidDisappear.<br>2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
+> onWillDisappear > onDidDisappear.  
+<br>2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
 
 **Type:** () =&gt; void
 

@@ -16,7 +16,8 @@
 - [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)：数据库中用来代表数据实体的性质、特征或者数据实体之间关系的谓词，主要用来定义数据库的操作条件。  
 - [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)：提供管理关系数据库（RDB）方法的接口。  
 - [ResultSet](arkts-arkdata-relationalstore-resultset-i.md)：提供用户调用关系型数据库查询接口之后返回的结果集合。  
-- [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)：提供用户调用关系型数据库[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount)、[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount)等查询接口之后返回的结果集合。与[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)相比，LiteResultSet不包含查询结果的总行数信息。  
+- [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)：提供用户调用关系型数据库  
+[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount)、[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount)等查询接口之后返回的结果集合。与[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)相比，LiteResultSet不包含查询结果的总行数信息。  
 - [Transaction](arkts-arkdata-relationalstore-transaction-i.md)：提供管理事务对象的接口。
 
 **起始版本：** 9

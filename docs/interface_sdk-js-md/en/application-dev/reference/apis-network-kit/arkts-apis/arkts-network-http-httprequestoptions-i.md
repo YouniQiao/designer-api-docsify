@@ -406,8 +406,10 @@ queryParams?: string | QueryParamObject
 ```
 
 Query parameters to append to the request URL.Supports two input forms:  
-- `string`: a pre-encoded query string provided by the caller. It is appended to the URL as-is and is not encoded again by the system.  
-- `QueryParamObject`: a key-value object. The system encodes keys and values and serializes them into the URL query string automatically.
+- `string`: a pre-encoded query string provided by the caller. It is appended  
+to the URL as-is and is not encoded again by the system.  
+- `QueryParamObject`: a key-value object. The system encodes keys and values  
+and serializes them into the URL query string automatically.
 
 Notes:1. For `string`, do not include the leading `?`(for example, use `"key=value"`, not `"?key=value"`).2. For `string`, the caller is responsible for encoding special characters.3. For `string`, use `&` to separate multiple parameters.
 

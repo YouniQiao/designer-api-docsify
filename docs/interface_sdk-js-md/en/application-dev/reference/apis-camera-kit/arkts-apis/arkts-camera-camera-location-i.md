@@ -38,7 +38,7 @@ Altitude, in meters.
 latitude: number
 ```
 
-Latitude, in degrees, within the range [-90, 90].
+Latitude, in degrees, within the range [–90, 90].
 
 **Type:** number
 
@@ -56,7 +56,7 @@ Latitude, in degrees, within the range [-90, 90].
 longitude: number
 ```
 
-Longitude, in degrees, within the range [-180, 180].
+Longitude, in degrees, within the range [–180, 180].
 
 **Type:** number
 

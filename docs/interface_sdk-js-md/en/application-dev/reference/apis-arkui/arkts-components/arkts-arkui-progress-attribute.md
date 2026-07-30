@@ -38,7 +38,7 @@ Since API version 23, [LinearGradient](arkts-arkui-lineargradient-i.md) can be u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient | Yes | Foreground color of the progress indicator.<br>Default value:<br>   - Capsule:<br>   API version 9 or earlier: **'#ff007dff'**<br>   API version 10: **'#33006cde'**<br>   API version 11 or later: **'#33007dff'**<br>- Ring:<br>   API version 9 or earlier: **'#ff007dff'**<br>   API version 10 or later: start: **'#ff86c1ff'**, end: **'#ff254ff7'**<br>- Other styles: **'#ff007dff'** |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient | Yes | Foreground color of the progress indicator.<br>Default value:<br>   - Capsule:<br>   API version 9 or earlier: **'#ff007dff'**<br>   API version 10: **'#33006cde'**<br>   API   version 11 or later: **'#33007dff'**<br>- Ring:<br>   API version 9 or earlier: **'#ff007dff'**<br>   API version 10 or later: start: **'#ff86c1ff'**, end: **'#ff254ff7'**<br>- Other styles: **'#ff007dff'** |
 
 ## contentModifier
 

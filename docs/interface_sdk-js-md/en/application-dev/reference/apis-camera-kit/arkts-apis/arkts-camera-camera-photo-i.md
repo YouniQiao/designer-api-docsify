@@ -1,6 +1,6 @@
 # Photo
 
-Defines a higher-resolution image object.
+Photo defines a full-quality image object.
 
 **Since:** 11
 

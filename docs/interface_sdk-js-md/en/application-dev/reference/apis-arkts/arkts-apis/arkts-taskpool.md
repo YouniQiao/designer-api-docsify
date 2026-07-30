@@ -5,7 +5,8 @@ TaskPool provides a multi-thread running environment for applications. It helps 
 - Task group task: task in a [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md).  
 - Serial queue task: task in a [SequenceRunner](arkts-arkts-taskpool-sequencerunner-c.md).  
 - Asynchronous queue task: task in an [AsyncRunner](arkts-arkts-taskpool-asyncrunner-c.md).  
-- Periodic task: task executed by calling [executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically).
+- Periodic task: task executed by calling  
+[executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically).
 
 **Since:** 9
 

@@ -25,7 +25,8 @@ Template data.
 
 - **title**: Download title. Mandatory field, with the value being a string type.  
 - **fileName**: Download file name. Mandatory field, with the value being a string type.  
-- **progressValue**: Download progress, with the value being a numeric type. The recommended value range is 0to 100, representing the percentage progress. When **progressValue** is less than or equal to 0, the progress is0; when it is greater than or equal to 100, the progress ring disappears, indicating that the download is complete.
+- **progressValue**: Download progress, with the value being a numeric type. The recommended value range is 0  
+to 100, representing the percentage progress. When **progressValue** is less than or equal to 0, the progress is0; when it is greater than or equal to 100, the progress ring disappears, indicating that the download is complete.
 
 **Type:** Record&lt;string, Object&gt;
 

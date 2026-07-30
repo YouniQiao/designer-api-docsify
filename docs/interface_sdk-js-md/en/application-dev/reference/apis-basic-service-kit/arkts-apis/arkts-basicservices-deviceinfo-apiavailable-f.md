@@ -39,7 +39,7 @@ Checks whether a specified API version is available on the current device.This A
 ```TypeScript
 import { deviceInfo } from '@kit.BasicServicesKit';
 
-// Check API 26.0.0 (String format for API 26.0.0+ represents both OpenHarmony and Distribution OS)
+// Check whether the API version is 26.0.0 or later. If true is returned, the API version of the current device meets the requirements.
 if (deviceInfo.apiAvailable("26.0.0")) {
    // Method that requires version isolation
 }

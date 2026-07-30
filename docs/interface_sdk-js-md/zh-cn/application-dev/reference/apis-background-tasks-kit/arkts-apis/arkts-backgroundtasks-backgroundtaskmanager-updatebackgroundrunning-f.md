@@ -63,8 +63,8 @@ export default class EntryAbility extends UIAbility {
     try {
       // 必须先执行startBackgroundRunning，才能调用updateBackgroundRunning，这里假设已经申请过
       let list: Array<string> = ['audioPlayback'];
-      backgroundTaskManager.updateBackgroundRunning(this.context, list).then(() => {
-        console.info('Operation updateBackgroundRunning succeeded');
+      backgroundTaskManager.updateBackgroundRunning(this.context, list).then((res: backgroundTaskManager.ContinuousTaskNotification) => {
+        console.info('Operation updateBackgroundRunning succeeded. Data: ' + JSON.stringify(res));
       }).catch((error: BusinessError) => {
         console.error(`Operation updateBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
       });
@@ -160,6 +160,7 @@ export default class EntryAbility extends UIAbility {
           // 必须先执行startBackgroundRunning，才能调用updateBackgroundRunning，请开发者提前申请长时任务
           let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_LOCATION];
           let subModeList: Array<number> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_NORMAL_NOTIFICATION];
+          // 创建长时任务请求对象
           let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
           continuousTaskRequest.backgroundTaskModes = modeList;
           continuousTaskRequest.backgroundTaskSubmodes = subModeList;
@@ -167,7 +168,7 @@ export default class EntryAbility extends UIAbility {
           continuousTaskRequest.combinedTaskNotification = false;
           continuousTaskRequest.continuousTaskId = this.continuousTaskId; // 对于更新接口，长时任务ID必须要传且为存在的ID，否则更新失败
           backgroundTaskManager.updateBackgroundRunning(this.context, continuousTaskRequest).then((res: backgroundTaskManager.ContinuousTaskNotification) => {
-            console.info('Operation updateBackgroundRunning succeeded');
+            console.info('Operation updateBackgroundRunning succeeded. Data: ' + JSON.stringify(res));
             this.notificationId = res.notificationId;
           }).catch((error: BusinessError) => {
             console.error(`Operation updateBackgroundRunning failed. code is ${error.code} message is ${error.message}`);

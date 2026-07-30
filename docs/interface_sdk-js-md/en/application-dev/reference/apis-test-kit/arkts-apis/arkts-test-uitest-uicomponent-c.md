@@ -312,7 +312,7 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is clickable. The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component is clickable. The value **true** indicates   that the component is clickable, and **false** indicates the opposite. |
 
 **Example**
 
@@ -354,7 +354,7 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is enabled. The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component is enabled. The value **true** indicates   that the component is enabled, and **false** indicates the opposite. |
 
 **Example**
 
@@ -397,7 +397,7 @@ Obtains the focused status of this component. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component is focused. The value **true** indicates   that the component is focused, and **false** indicates the opposite. |
 
 **Example**
 
@@ -439,7 +439,7 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component is scrollable. The value **true** indicates   that the component is scrollable, and **false** indicates the opposite. |
 
 **Example**
 
@@ -481,7 +481,7 @@ Obtains the selected status of this component. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is selected. The value **true** indicates that the component is selected, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component is selected. The value **true** indicates   that the component is selected, and **false** indicates the opposite. |
 
 **Example**
 

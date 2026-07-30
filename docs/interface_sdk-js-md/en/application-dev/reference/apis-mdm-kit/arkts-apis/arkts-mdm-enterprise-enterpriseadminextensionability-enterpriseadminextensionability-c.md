@@ -44,13 +44,28 @@ Called when a system account is added. You should register the **MANAGED_EVENT_A
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_ACCOUNT_ADDED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onAccountAdded(accountId: number) {
     console.info(`Succeeded in calling onAccountAdded callback, added accountId: ${accountId}`);
   }
-};
+}
 
 ```
 
@@ -79,13 +94,28 @@ Called when the system account is removed. You should register the **MANAGED_EVE
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_ACCOUNT_REMOVED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onAccountRemoved(accountId: number) {
     console.info(`Succeeded in calling onAccountRemoved callback, removed accountId: ${accountId}`);
   }
-};
+}
 
 ```
 
@@ -114,13 +144,28 @@ Called when the system account is switched. You should register the **MANAGED_EV
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_ACCOUNT_SWITCHED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onAccountSwitched(accountId: number) {
     console.info(`Succeeded in calling onAccountSwitched callback, switched accountId: ${accountId}`);
   }
-};
+}
 
 ```
 
@@ -147,8 +192,9 @@ import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onAdminDisabled() {
+    console.info(`Succeeded in calling onAdminDisabled callback.`);
   }
-};
+}
 
 ```
 
@@ -175,8 +221,9 @@ import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onAdminEnabled() {
+    console.info(`Succeeded in calling onAdminEnabled callback.`);
   }
-};
+}
 
 ```
 
@@ -201,6 +248,35 @@ Called back when the policy changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | common.PolicyChangedEvent | Yes | event indicates the information about the policy change. |
+
+**Example**
+
+```TypeScript
+import { EnterpriseAdminExtensionAbility, adminManager, common } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_POLICIES_CHANGED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
+
+export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
+  onAdminPolicyChanged(event: common.PolicyChangedEvent) {
+    //For example, when the MDM application calls the setPasswordPolicy API to set a password policy, the output is as follows: Policy changed, bundleName : com.example.test, functionName: setPasswordPolicy, parameters: {"policy":{"complexityRegex":"^(?=.*[a-zA-Z])(?=.*\\d).{8},$","validityPeriod":1808309786000,"additionalDescription":"Must contain at least 8 characters, including digits and letters."}}, time: 1776773305379.
+    console.info(`Policy changed, bundleName : ${event.bundleName}, functionName: ${event.functionName}, parameters: ${event.parameters}, time: ${event.time}.`);
+  }
+}
+
+```
 
 ## onAppStart
 
@@ -227,13 +303,28 @@ Called when an application is started. You should register the **MANAGED_EVENT_A
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_APP_START];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onAppStart(bundleName: string) {
     console.info(`Succeeded in calling onAppStart callback, started bundle name : ${bundleName}`);
   }
-};
+}
 
 ```
 
@@ -262,13 +353,28 @@ Called when an application is stopped. You should register the **MANAGED_EVENT_A
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_APP_STOP];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onAppStop(bundleName: string) {
     console.info(`Succeeded in calling onAppStop callback, stopped bundle name : ${bundleName}`);
   }
-};
+}
 
 ```
 
@@ -297,13 +403,28 @@ Called when applications are installed. The application bundle name is included.
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_ADDED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onBundleAdded(bundleName: string) {
     console.info(`Succeeded in calling onBundleAdded callback, added bundle name : ${bundleName}`);
   }
-};
+}
 
 ```
 
@@ -333,14 +454,29 @@ Called when applications are installed. The application bundle name and account 
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_ADDED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   // Since there is another callback method with the same name onBundleAdded(bundleName: string) that does not have the accountId parameter, accountId must be marked as optional in actual invocations. Please refer to the sample code for the proper syntax. Removing the question mark (?) following accountId will cause a compilation error.
   onBundleAdded(bundleName: string, accountId?: number) {
     console.info(`Succeeded in calling onBundleAdded callback, added bundle name : ${bundleName}, accountId: ${accountId}`);
   }
-};
+}
 
 ```
 
@@ -369,13 +505,28 @@ Called when applications are uninstalled. The application bundle name is include
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_REMOVED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onBundleRemoved(bundleName: string) {
     console.info(`Succeeded in calling onBundleRemoved callback, removed bundle name : ${bundleName}`);
   }
-};
+}
 
 ```
 
@@ -405,14 +556,29 @@ Called when applications are uninstalled. The application bundle name and accoun
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_REMOVED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   // Since there is another callback method with the same name onBundleRemoved(bundleName: string) that does not have the accountId parameter, accountId must be marked as optional in actual invocations. Please refer to the sample code for the proper syntax. Removing the question mark (?) following accountId will cause a compilation error.
   onBundleRemoved(bundleName: string, accountId?: number) {
     console.info(`Succeeded in calling onBundleRemoved callback, removed bundle name : ${bundleName}, accountId: ${accountId}`);
   }
-};
+}
 
 ```
 
@@ -442,13 +608,28 @@ Callback for application update events. The callback contains the application pa
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BUNDLE_UPDATED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onBundleUpdated(bundleName: string, accountId: number) {
     console.info(`Succeeded in calling onBundleUpdated callback, update bundle name : ${bundleName}, accountId: ${accountId}`);
   }
-};
+}
 
 ```
 
@@ -482,7 +663,7 @@ import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onDeviceAdminDisabled(bundleName: string) {
   }
-};
+}
 
 ```
 
@@ -516,7 +697,7 @@ import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onDeviceAdminEnabled(bundleName: string) {
   }
-};
+}
 
 ```
 
@@ -539,13 +720,28 @@ Callback for the device startup completion event. You can receive this callback 
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_BOOT_COMPLETED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onDeviceBootCompleted() {
     console.info("EnterpriseAdminExtensionAbility onDeviceBootCompleted");
   }
-};
+}
 
 ```
 
@@ -673,7 +869,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
   onKeyEvent(keyEvent: systemManager.KeyEvent): void {
     console.info(`Succeeded in calling onKeyEvent callback, key event:${JSON.stringify(keyEvent)}`);
   }
-};
+}
 
 ```
 
@@ -711,7 +907,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
   onKioskModeEntering(bundleName: string, accountId: number): void {
     console.info(`Succeeded in calling onKioskModeEntering callback, bundleName:${bundleName}, accountId:${accountId}`);
   }
-};
+}
 
 ```
 
@@ -747,7 +943,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
   onKioskModeExiting(bundleName: string, accountId: number): void {
     console.info(`Succeeded in calling onKioskModeExiting callback, bundleName:${bundleName}, accountId:${accountId}`);
   }
-};
+}
 
 ```
 
@@ -800,26 +996,26 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
       // Replace the app sandbox path with the actual one.
       let targetPath = this.context.tempDir;
       try {
-          let files: string[] = fs.listFileSync(filesDir);
-          // Obtain logs from the /data/edm/log sandbox directory.
-          files.forEach(value => {
-             fs.copyFileSync(filesDir + '/' + value, targetPath + '/' + value);
-          });
-          let wantTemp: Want = {
-              // Replace with actual values.
-              bundleName: 'com.example.myapplication',
-              abilityName: 'EnterpriseAdminAbility'
-          };
-          systemManager.finishLogCollected(wantTemp);
+        let files: string[] = fs.listFileSync(filesDir);
+        // Obtain logs from the /data/edm/log sandbox directory.
+        files.forEach(value => {
+          fs.copyFileSync(filesDir + '/' + value, targetPath + '/' + value);
+        });
+        let wantTemp: Want = {
+          // Replace with actual values.
+          bundleName: 'com.example.myapplication',
+          abilityName: 'EnterpriseAdminAbility'
+        };
+        systemManager.finishLogCollected(wantTemp);
       } catch (error) {
-          console.info("onLogCollected", "error: " + JSON.stringify(error))
+        console.info("onLogCollected", "error: " + JSON.stringify(error))
       }
     }
     if (result === common.Result.FAIL) {
       console.error("onLogCollected", "Failed to collect log.")
     }
   }
-};
+}
 
 ```
 
@@ -855,7 +1051,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
   onMarketAppInstallResult(bundleName: string, result: common.InstallationResult): void {
     console.info(`Succeeded in calling onMarketAppInstallResult callback, bundleName:${bundleName}, result:${result}`);
   }
-};
+}
 
 ```
 
@@ -884,7 +1080,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
   onStart() {
     console.info(`Succeeded in calling onStart callback.`);
   }
-};
+}
 
 ```
 
@@ -913,7 +1109,22 @@ Callback for the startup wizard completion event. You can receive this callback 
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility, common } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager, common } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_STARTUP_GUIDE_COMPLETED];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onStartupGuideCompleted(scene: common.StartupScene) {
@@ -925,7 +1136,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
       console.info('onStartupGuideCompleted scene is DEVICE_PROVISION');
     }
   }
-};
+}
 
 ```
 
@@ -954,14 +1165,28 @@ Called to report a system update event. You should register the **MANAGED_EVENT_
 **Example**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
-import { systemManager } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, adminManager, systemManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let events: Array<adminManager.ManagedEvent> = [adminManager.ManagedEvent.MANAGED_EVENT_SYSTEM_UPDATE];
+try {
+  adminManager.subscribeManagedEventSync(wantTemp, events);
+  console.info('Succeeded in subscribing managed event.');
+} catch (err) {
+  console.error(`Failed to subscribe managed event. Code: ${err.code}, message: ${err.message}`);
+}
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
   onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo) {
     console.info(`Succeeded in calling onSystemUpdate callback, version name  : ${systemUpdateInfo.versionName}`);
   }
-};
+}
 
 ```
 

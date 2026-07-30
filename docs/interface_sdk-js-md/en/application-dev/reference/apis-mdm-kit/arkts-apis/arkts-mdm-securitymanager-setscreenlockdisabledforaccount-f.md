@@ -41,3 +41,23 @@ Sets the screen lock disabled for current account.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 
+**Example**
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  securityManager.setScreenLockDisabledForAccount(wantTemp, true);
+  console.info(`Succeeded in setting screen lock disabled for account.`);
+} catch(err) {
+  console.error(`Failed to set screen lock disabled for account. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

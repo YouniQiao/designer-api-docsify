@@ -88,7 +88,7 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 // sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
-let sessionId = 101;
+let sessionId = 100;
 abilityConnectionManager.off("disconnect", sessionId);
 
 

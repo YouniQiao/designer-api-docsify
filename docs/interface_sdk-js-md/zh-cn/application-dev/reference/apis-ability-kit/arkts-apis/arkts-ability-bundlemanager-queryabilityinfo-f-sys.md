@@ -31,7 +31,7 @@ function queryAbilityInfo(want: Want, abilityFlags: number, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 表示包含要查询的应用Bundle名称的Want。 |
-| abilityFlags | number | 是 | 指定返回的AbilityInfo所包含的信息，具体取值及不同含义参考[AbilityFlag](arkts-ability-bundlemanager-abilityflag-e-sys.md)。 |
+| abilityFlags | number | 是 | 指定返回的AbilityInfo所包含的信息，具体取值及不同含义参考[AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md)。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array<AbilityInfo>；否则为错误对象。 |
 
 **错误码：**
@@ -101,7 +101,7 @@ function queryAbilityInfo(want: Want, abilityFlags: number, userId: number, call
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 表示包含要查询的应用Bundle名称的Want。 |
-| abilityFlags | number | 是 | 指定返回的AbilityInfo所包含的信息，具体取值及不同含义参考[AbilityFlag](arkts-ability-bundlemanager-abilityflag-e-sys.md)。 |
+| abilityFlags | number | 是 | 指定返回的AbilityInfo所包含的信息，具体取值及不同含义参考[AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md)。 |
 | userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityInfo&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的Array<AbilityInfo>；否则为错误对象。 |
 
@@ -174,7 +174,7 @@ function queryAbilityInfo(want: Want, abilityFlags: number, userId?: number): Pr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 表示包含要查询的应用Bundle名称的Want。 |
-| abilityFlags | number | 是 | 表示指定返回的AbilityInfo所包含的信息，具体取值及不同含义参考[AbilityFlag](arkts-ability-bundlemanager-abilityflag-e-sys.md)。 |
+| abilityFlags | number | 是 | 表示指定返回的AbilityInfo所包含的信息，具体取值及不同含义参考[AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md)。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **返回值：**
@@ -275,7 +275,7 @@ function queryAbilityInfo(wants: Array<Want>, abilityFlags: number, userId?: num
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | wants | Array&lt;Want&gt; | 是 | 表示包含要查询的应用Bundle名称的Want集合。 |
-| abilityFlags | number | 是 | 表示指定返回的AbilityInfo所包含的信息，具体取值及不同含义参考[AbilityFlag](arkts-ability-bundlemanager-abilityflag-e-sys.md)。 |
+| abilityFlags | number | 是 | 表示指定返回的AbilityInfo所包含的信息，具体取值及不同含义参考[AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md)。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **返回值：**

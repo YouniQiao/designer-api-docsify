@@ -1,6 +1,8 @@
 # Focus
 
-Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)Provides APIs to obtain and set the camera focus mode and focus position.
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md).
+
+It provides APIs related to focus operations.
 
 **Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
 

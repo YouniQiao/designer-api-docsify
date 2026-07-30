@@ -12,7 +12,7 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability based on the specified [shortcut information](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md). This API uses a promise to return the result.
+Starts an ability based on the specified [shortcut information](arkts-ability-launcherbundlemanager-shortcutinfo-t.md). This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ Starts an ability based on the specified [shortcut information](arkts-ability-la
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) | Yes | Shortcut information of the application. |
+| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | Yes | Shortcut information of the application. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
 
 **Return value:**

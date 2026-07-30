@@ -211,7 +211,7 @@ Generates a stronger immersion color that merges with the background color and i
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | - returns the stronger immersion color that both blends with the background and appears deeper than the background. |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | - returns the stronger immersion color that both blends with the background   and appears deeper than the background. |
 
 **Example**
 
@@ -549,7 +549,7 @@ Get top proportion colors and percentages of an image
 
 | Type | Description |
 | --- | --- |
-| Map&lt;Color \| null, number \| null&gt; | Map of colors and percentages, sorted by proportion.   - If the number of colors obtained is less than the value of colorCount, the map size is the actual number obtained.   - If the colors fail to be obtained or the number of colors obtained is less than 1, Map() is returned.   - If the value of colorCount is greater than 10, a map holding the first 10 colors with the top proportions is returned. |
+| Map&lt;Color \| null, number \| null&gt; | Map of colors and percentages, sorted by proportion.   - If the number of colors obtained is less than the value of colorCount, the map size is   the actual number obtained.   - If the colors fail to be obtained or the number of colors obtained is less than 1, Map() is returned.   - If the value of colorCount is greater than 10, a map holding the first 10 colors with   the top proportions is returned. |
 
 **Error codes:**
 

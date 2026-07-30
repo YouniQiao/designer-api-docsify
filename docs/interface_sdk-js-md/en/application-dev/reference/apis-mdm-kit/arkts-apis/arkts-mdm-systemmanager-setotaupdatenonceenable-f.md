@@ -41,3 +41,25 @@ Sets the OTA update nonce enable.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200016](../errorcode-enterpriseDeviceManager.md#9200016-service-timeout) | Service timeout. |
 
+**Example**
+
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let isEnable: boolean = true;
+try {
+  systemManager.setOtaUpdateNonceEnable(wantTemp, isEnable);
+  console.info('Succeeded in setting OTA update Nonce enable.');
+} catch (err) {
+  console.error(`Failed to set OTA update Nonce enable. Code is ${err.code}, message is ${err.message}`);
+}
+
+```
+

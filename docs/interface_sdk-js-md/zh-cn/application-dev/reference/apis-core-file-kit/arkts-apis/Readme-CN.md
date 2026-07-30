@@ -369,11 +369,8 @@
   - [getFreeInodes](arkts-corefile-storagestatistics-getfreeinodes-f.md)
   - [getFreeSize](arkts-corefile-storagestatistics-getfreesize-f.md)
   <!--Del-->
-  - [getFreeSize(系统接口)](arkts-corefile-storagestatistics-getfreesize-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [getFreeSizeOfVolume(系统接口)](arkts-corefile-storagestatistics-getfreesizeofvolume-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getFreeSizeSync(系统接口)](arkts-corefile-storagestatistics-getfreesizesync-f-sys.md)<!--DelEnd-->
+  - [getFreeSizeSync](arkts-corefile-storagestatistics-getfreesizesync-f.md)
   <!--Del-->
   - [getSystemDataSize(系统接口)](arkts-corefile-storagestatistics-getsystemdatasize-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -381,11 +378,8 @@
   - [getTotalInodes](arkts-corefile-storagestatistics-gettotalinodes-f.md)
   - [getTotalSize](arkts-corefile-storagestatistics-gettotalsize-f.md)
   <!--Del-->
-  - [getTotalSize(系统接口)](arkts-corefile-storagestatistics-gettotalsize-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [getTotalSizeOfVolume(系统接口)](arkts-corefile-storagestatistics-gettotalsizeofvolume-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getTotalSizeSync(系统接口)](arkts-corefile-storagestatistics-gettotalsizesync-f-sys.md)<!--DelEnd-->
+  - [getTotalSizeSync](arkts-corefile-storagestatistics-gettotalsizesync-f.md)
   <!--Del-->
   - [getUserStorageStats(系统接口)](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md)<!--DelEnd-->
   <!--Del-->

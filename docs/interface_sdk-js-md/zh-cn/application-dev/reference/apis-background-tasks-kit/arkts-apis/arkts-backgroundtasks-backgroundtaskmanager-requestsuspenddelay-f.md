@@ -54,6 +54,7 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 import { BusinessError } from '@kit.BasicServicesKit';
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 
+// 申请短时任务的原因
 let delayReason = 'test requestSuspendDelay';
 try {
   let delayInfo = backgroundTaskManager.requestSuspendDelay(delayReason, () => {

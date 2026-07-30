@@ -53,7 +53,7 @@ Asserts that a component that matches the given attributes exists on the current
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | if the input parameters are invalid. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000003](../errorcode-uitest.md#17000003-assertion-failure) | if the assertion failed. |
 
 **Example**
@@ -435,7 +435,7 @@ Captures the current screen of this **UiDriver** object and saves it as a PNG im
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the screenshot operation is successful. The value **true* The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the screenshot operation is successful. The value **true*   The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
 
 **Example**
 

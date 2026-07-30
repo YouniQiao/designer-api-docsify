@@ -65,7 +65,7 @@ userAuth.getAuthLockState(queryType)
     console.info('get auth lock state successfully.');
   })
   .catch((err: BusinessError) => {
-    console.info(`get auth lock state failed, err code is : ${err?.code}, err message is : ${err?.message}`);
+    console.error(`get auth lock state failed, err code is : ${err?.code}, err message is : ${err?.message}`);
   })
 
 ```

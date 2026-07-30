@@ -1,4 +1,4 @@
-# ManualExposureQuery (System API)
+# ManualExposureQuery
 
 Provides APIs to obtain the manual exposure range supported.
 
@@ -7,8 +7,6 @@ Provides APIs to obtain the manual exposure range supported.
 <!--Device-camera-interface ManualExposureQuery--><!--Device-camera-interface ManualExposureQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 

@@ -27,7 +27,7 @@ Obtains visible windows at the specified coordinates within the current applicat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | ID of the display where the windows are located. The value must be an integer. If a non   -integer is passed, the decimal part is ignored. The value can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md). |
+| displayId | number | Yes | ID of the display where the windows are located. The value must be an integer. If a non   -integer is passed, the decimal part is ignored. The value can be obtained from   [WindowProperties](arkts-arkui-window-windowproperties-i.md). |
 | windowNumber | number | No | Number of windows to obtain. The value must be an integer greater than 0. If a non-integer is passed, the decimal part is ignored. If this parameter is not set or is less than or equal to 0, all windows that meet the conditions are returned. |
 | x | number | No | X coordinate, with the top-left corner of the screen used as the origin. The value must be a non-negative integer. If a non-integer is passed, the decimal part is ignored. If this parameter is not set or is less than 0, all visible windows are returned. |
 | y | number | No | Y coordinate, with the top-left corner of the screen used as the origin. The value must be a non-negative integer. If a non-integer is passed, the decimal part is ignored. If this parameter is not set or is less than 0, all visible windows are returned. |

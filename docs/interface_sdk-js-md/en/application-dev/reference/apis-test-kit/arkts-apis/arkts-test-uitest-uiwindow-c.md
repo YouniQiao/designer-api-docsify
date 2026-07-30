@@ -40,8 +40,8 @@ Closes a window. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 **Example**
@@ -84,8 +84,8 @@ Focuses a window. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -127,8 +127,8 @@ Obtains the bounds information of a window. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -170,8 +170,8 @@ Obtains the bundle name of the application to which a window belongs. This API u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -213,8 +213,8 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -256,8 +256,8 @@ Obtains the window title. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -299,8 +299,8 @@ Obtains the window mode. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -336,14 +336,14 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the window is active. The value **true** indicates that   the window is active, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -381,14 +381,14 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the window is active. The value **true** indicates that   the window is active, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -424,14 +424,14 @@ Checks whether a window is focused. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the window is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the window is focused. The value **true** indicates that   the component is focused, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -473,8 +473,8 @@ Maximizes a window. This API uses a promise to return the result. This API is ap
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 **Example**
@@ -517,8 +517,8 @@ Minimizes a window. This API uses a promise to return the result. This API is ap
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 **Example**
@@ -569,8 +569,8 @@ Moves a window to the target point. This API uses a promise to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 **Example**
@@ -622,8 +622,8 @@ Resizes a window based on the specified width, height, and direction. This API u
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## resume
@@ -652,8 +652,8 @@ Resumes a window to its previous mode. This API uses a promise to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 **Example**
@@ -696,8 +696,8 @@ Switches to the split-screen mode. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 **Example**

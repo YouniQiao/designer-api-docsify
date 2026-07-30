@@ -320,6 +320,44 @@ disableLandscapeMultiWindow(): Promise<void>
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | 该窗口状态异常。可能原因：窗口未创建或已销毁。 |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | 窗口管理器服务运行异常。可能原因：内部错误。 |
 
+## enableDrag
+
+```TypeScript
+enableDrag(enable: boolean): Promise<void>
+```
+
+使能/禁止拖拽窗口，仅对系统窗口、应用子窗口、全局悬浮窗和模态窗口生效。使用Promise异步回调。
+
+使能后，将允许通过鼠标操作或触摸对窗口进行拉伸操作。
+
+**起始版本：** 20
+
+<!--Device-Window-enableDrag(enable: boolean): Promise<void>--><!--Device-Window-enableDrag(enable: boolean): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 是否允许拖拽。<br>true表示允许，false表示不允许。</br> |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 14 - 19 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
+
 ## enableLandscapeMultiWindow
 
 ```TypeScript
@@ -361,14 +399,16 @@ getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 
 主窗口/子窗口：
 
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
+仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
 全局悬浮窗、模态窗或系统窗口：
 
-- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
+- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
 > **说明：**  
 >  
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea)替代。
@@ -400,14 +440,16 @@ getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 
 主窗口/子窗口：
 
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
+仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
 全局悬浮窗、模态窗或系统窗口：
 
-- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
+- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
 > **说明：**  
 >  
 > 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea)替代。
@@ -827,7 +869,8 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 
 主窗口/子窗口：
 
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
 - 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
@@ -838,7 +881,8 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 
 该接口一般适用于两种场景：
 
-- 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)方法中，获取应用启动时的初始布局避让区域时可调用该接口。  
+- 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)方法中，获取应用启动时的初始布局避让区域时可  
+调用该接口。  
 - 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
 
 **起始版本：** 9
@@ -878,13 +922,15 @@ getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 
 主窗口/子窗口：
 
-- 主窗口在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+- 主窗口在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
 全局悬浮窗、模态窗或系统窗口：
 
-- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
+- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+为空。
 
 **起始版本：** 22
 
@@ -2207,7 +2253,8 @@ minimize(callback: AsyncCallback<void>): void
 此接口根据调用对象不同，实现不同的功能：
 
 - 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](arkts-arkui-window-window-i.md#restore)进行还原。  
-- 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行还原。
+- 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用  
+[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行还原。
 
 该接口仅支持主窗口、子窗口或全局悬浮窗，其它窗口调用返回1300002错误码，使用callback异步回调。
 
@@ -2242,7 +2289,8 @@ minimize(): Promise<void>
 此接口根据调用对象不同，实现不同的功能：
 
 - 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](arkts-arkui-window-window-i.md#restore)进行还原。  
-- 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行还原。
+- 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用  
+[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行还原。
 
 该接口仅支持主窗口、子窗口或全局悬浮窗，其它窗口调用返回1300002错误码，使用Promise异步回调。
 
@@ -3680,7 +3728,8 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 
 开启窗口可见性状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：
 
-- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled)和[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
+- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled)和  
+[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
 - 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。  
 - 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
 
@@ -3774,14 +3823,16 @@ on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 
 主窗口/子窗口：
 
-- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
+- [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
 - 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
 - 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。  
 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。
 
 全局悬浮窗、模态窗或系统窗口：
 
-- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避让区域。
+- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避  
+让区域。
 
 <!--RP7-->常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。<!--RP7End-->
 
@@ -4031,7 +4082,8 @@ on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 
 开启本窗口可见状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：
 
-- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled)和[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
+- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled)和  
+[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
 - 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。  
 - 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
 
@@ -7011,6 +7063,47 @@ setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 | isTouchable | boolean | 是 | 窗口是否为可触状态。true表示可触；false表示不可触。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
+## setTouchableAreas
+
+```TypeScript
+setTouchableAreas(rects: Array<Rect>): Promise<void>
+```
+
+实现设置窗口可触摸区域；不设置时默认整个窗口区域可触摸；设置窗口可触摸区域后，区域外触摸事件将被透传；如果窗口区域发生变化需要重新设置。
+
+**起始版本：** 26.0.0
+
+**需要权限：** 
+- API版本26.0.0+：ohos.permission.SET_WINDOW_TOUCH_AREAS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>--><!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| rects | Array&lt;Rect&gt; | 是 | 窗口可触摸区域。可触摸区域最大个数不能超过10个，且范围不能超出窗口区域。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 24 |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid parameter range. |
+
 ## setUIContent
 
 ```TypeScript
@@ -7294,6 +7387,42 @@ setWindowContainerColor(activeColor: string, inactiveColor: string): void
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
+
+## setWindowContainerModalColor
+
+```TypeScript
+setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
+```
+
+设置主窗口容器在焦点态和非焦点态时的背景色。该接口需在调用[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)后使用。
+
+窗口容器背景色覆盖整个窗口区域，包括标题栏和内容区域。内容区域背景色默认跟随系统深浅色，当同时使用该接口和[setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
+
+**起始版本：** 26.0.0
+
+**需要权限：** 
+- API版本26.0.0+：ohos.permission.SET_WINDOW_ALPHA
+
+<!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void--><!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| activeColor | string | 是 | 窗口容器处于焦点态时的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。 |
+| inactiveColor | string | 是 | 窗口容器处于非焦点态时的背景色，为十六进制RGB颜色或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 20 - 24 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
 | [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
 ## setWindowCornerRadius

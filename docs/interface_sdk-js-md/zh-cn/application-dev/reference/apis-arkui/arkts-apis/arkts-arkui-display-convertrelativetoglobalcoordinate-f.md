@@ -56,7 +56,7 @@ let relativePosition: display.RelativePosition = {
 try {
    // 将相对坐标转换为全局坐标
   let position: display.Position = display.convertRelativeToGlobalCoordinate(relativePosition);
-  console.info(`The global coordinate is ${position.x}, ${position.y}`)
+  console.info(`The global coordinate is ${position.x}, ${position.y}`);
 } catch (exception) {
   console.error(`Failed to convert the relative coordinate to the global coordinate. Code: ${exception.code}, message: ${exception.message}`);
 }

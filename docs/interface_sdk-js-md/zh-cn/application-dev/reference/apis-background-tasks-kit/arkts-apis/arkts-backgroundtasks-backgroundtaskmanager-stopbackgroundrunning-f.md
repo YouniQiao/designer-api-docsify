@@ -158,7 +158,7 @@ function stopBackgroundRunning(context: Context, continuousTaskId: number): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用运行的上下文。<br><br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
-| continuousTaskId | number | 是 | 长时任务ID。<br>取值限定为整数。   - 长时任务ID。<br>**说明：** 可以通过[startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)接口的返回值获取当前申请的长时任务ID，或者通过[getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getallcontinuoustasks)接口获取所有长时任务信息。 |
+| continuousTaskId | number | 是 | 长时任务ID。<br>取值限定为整数。   - 长时任务ID。<br>**说明：** 可以通过   [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)接口的返回值获取当前申请的长时任务ID，或者通过[getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getallcontinuoustasks)接口获取所有长时任务信息。 |
 
 **返回值：**
 

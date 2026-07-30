@@ -46,7 +46,7 @@ Portrait blur effect.
 AUTO_FRAMING = 2
 ```
 
-Automatic composition.
+Auto focus.
 
 **Since:** 24
 
@@ -62,7 +62,7 @@ Automatic composition.
 COLOR_EFFECT = 3
 ```
 
-Color effect.
+Color effect
 
 **Since:** 26.0.0
 

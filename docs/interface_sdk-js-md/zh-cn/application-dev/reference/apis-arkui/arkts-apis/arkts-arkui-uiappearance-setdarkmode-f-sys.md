@@ -28,7 +28,7 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [DarkMode](arkts-arkui-uiappearance-darkmode-e-sys.md) | 是 | indicates the dark-mode to set |
+| mode | [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) | 是 | indicates the dark-mode to set |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | the callback of setDarkMode |
 
 **错误码：**
@@ -83,7 +83,7 @@ function setDarkMode(mode: DarkMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [DarkMode](arkts-arkui-uiappearance-darkmode-e-sys.md) | 是 | indicates the dark-mode to set |
+| mode | [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) | 是 | indicates the dark-mode to set |
 
 **返回值：**
 

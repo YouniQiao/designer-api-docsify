@@ -143,7 +143,8 @@ export function bindController(node: FrameNode, controller: TextInputController,
 ```
 
 Binds the [TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md) to the [TextInput](arkts-arkui-typenode-textinput-t.md) node. Cross  
--language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API  
+supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 

@@ -499,7 +499,7 @@ Minimum width of the navigation bar content area (effective in split-column mode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Minimum width of the content area on the navigation page.<br>Default value: **360**<br   >Unit: vp<br>**undefined**: No action is taken, and the minimum width of the navigation page remains consistent with the default value.<br>Breakpoint calculation in Auto mode: default 600 vp = minNavBarWidth (240 vp) +minContentWidth (360 vp) |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Minimum width of the content area on the navigation page.<br>Default value: **360**<br   >Unit: vp<br>**undefined**: No action is taken, and the minimum width of the navigation page remains consistent   with the default value.<br>Breakpoint calculation in Auto mode: default 600 vp = minNavBarWidth (240 vp) +minContentWidth (360 vp) |
 
 ## mode
 

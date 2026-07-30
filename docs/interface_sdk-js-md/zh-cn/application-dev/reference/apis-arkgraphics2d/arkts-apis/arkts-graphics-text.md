@@ -10,7 +10,8 @@
 - [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)：段落样式，控制整个段落的断行策略、断词策略等属性。  
 - [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)：段落生成器，控制生成不同的段落对象。  
 - [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md)：段落，由ParagraphBuilder类调用[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口构建而成。  
-- [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md)：行排版器，由ParagraphBuilder类调用[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset)接口构建而成。  
+- [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md)：行排版器，由ParagraphBuilder类调用  
+[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset)接口构建而成。  
 - [TextLine](arkts-arkgraphics2d-text-textline-c.md)：以行为单位的段落文本的载体，由Paragraph类调用[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines)接口获取。  
 - [Run](arkts-arkgraphics2d-text-runmetrics-i.md)：文本排版单元，由TextLine类调用[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取。
 

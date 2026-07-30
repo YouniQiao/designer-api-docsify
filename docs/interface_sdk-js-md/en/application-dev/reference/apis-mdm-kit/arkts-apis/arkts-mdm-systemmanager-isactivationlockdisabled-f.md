@@ -50,6 +50,7 @@ Checks whether the device activation lock is disabled.
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 import { systemManager } from '@kit.MDMKit';
 
 let wantTemp: Want = {

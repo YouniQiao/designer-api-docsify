@@ -43,7 +43,7 @@ Callbacks are stored in the application process. A maximum of 10 callbacks can b
 
 | Type | Description |
 | --- | --- |
-| number | Callback registration status.   >= 0: The registration is successful. The callback index for deregistration is returned. The index ranges from 0 to 9.**-1**: The maximum number of callbacks has been reached.**-2**: Invalid parameter. The parameter is not of the **TraceEventListener** type. |
+| number | Callback registration status.   >= 0: The registration is successful. The callback index for deregistration is returned. The index ranges   from 0 to 9.**-1**: The maximum number of callbacks has been reached.**-2**: Invalid parameter. The parameter is not of the **TraceEventListener** type. |
 
 **Example**
 

@@ -50,3 +50,31 @@ Activates a specified OS account by ID.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 
+**Example**
+
+```TypeScript
+import { accountManager } from '@kit.MDMKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Create a normal system account.
+accountManager.createNormalOsAccount(wantTemp, "TestAccountName").then((accountInfo: osAccount.OsAccountInfo) => {
+  console.info('Succeeded in creating normal os account, accountInfo: ' + JSON.stringify(accountInfo));
+  // Switch the account based on the system account ID.
+  let accountId: number = accountInfo.localId;
+  return accountManager.activateOsAccount(wantTemp, accountId);
+}).then(() => {
+  console.info('Succeeded in activating os account');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create and activate normal os account: code is ${err.code}, message is ${err.message}`);
+});
+
+```
+

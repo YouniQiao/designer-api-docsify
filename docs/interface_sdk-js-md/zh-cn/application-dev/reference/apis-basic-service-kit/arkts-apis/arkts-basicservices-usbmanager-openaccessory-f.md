@@ -50,19 +50,19 @@ function openAccessory(accessory: USBAccessory): USBAccessoryHandle
 import { fileIo } from '@kit.CoreFileKit';
 async function openAccessory() {
   try {
-    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-    let flag = await usbManager.requestAccessoryRight(accList?.[0])
+    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+    let flag = await usbManager.requestAccessoryRight(accList?.[0]);
     if (!flag) {
-      return
+      return;
     }
-    let handle = usbManager.openAccessory(accList?.[0])
-    console.info(`openAccessory success`)
+    let handle = usbManager.openAccessory(accList?.[0]);
+    console.info(`openAccessory success`);
     let arrayBuffer = new ArrayBuffer(4096);
     let readLength = fileIo.readSync(handle.accessoryFd, arrayBuffer, {offset: 0, length: 4096});
     console.info('readSync ret: ' + readLength.toString(10));
-    usbManager.closeAccessory(handle)
+    usbManager.closeAccessory(handle);
   } catch (error) {
-    console.error(`openAccessory error ${error.code}, message is ${error.message}`)
+    console.error(`openAccessory error ${error.code}, message is ${error.message}`);
   }
 }
 

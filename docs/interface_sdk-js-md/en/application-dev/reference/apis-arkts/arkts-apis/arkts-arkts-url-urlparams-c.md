@@ -101,7 +101,7 @@ A constructor used to create a URLParams instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| URLParams | No | Input parameter objects, which include the following:   - string[][]: two-dimensional string array.   - Record&lt;string, string&gt;: list of objects.   - string: string.   - URLParams: object.The default value is null. |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| URLParams | No | Input parameter objects, which include the following:   - string[][]: two-dimensional string array.   - Record&lt;string, string&gt;: list of objects.   - string: string.   - URLParams: object.   The default value is null. |
 
 **Example**
 

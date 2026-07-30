@@ -116,7 +116,7 @@ getErrorDescription(): string | null
 
 | 类型 | 说明 |
 | --- | --- |
-| string | - If an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of2048 will be truncated; otherwise, return null. |
+| string | - If an exception occurs, or the returned type is object, return the   serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of2048 will be truncated; otherwise, return null. |
 
 ## getNumber
 

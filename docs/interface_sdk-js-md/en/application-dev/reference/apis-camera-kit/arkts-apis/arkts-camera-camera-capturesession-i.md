@@ -1,6 +1,6 @@
 # CaptureSession
 
-Implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to complete shooting or video recording.
+**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
@@ -518,7 +518,7 @@ Checks whether the camera device has flash.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the camera device has flash. **true** if it has flash, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for whether the camera device has flash. **true** if it has flash, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)is returned. |
 
 **Error codes:**
 
@@ -554,7 +554,7 @@ Checks whether an exposure mode is supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the exposure mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Check result for the support of the exposure mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)is returned. |
 
 **Error codes:**
 
@@ -904,7 +904,9 @@ Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance from th
 setExposureBias(exposureBias: number): void
 ```
 
-Sets an exposure compensation value (EV).Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-camera-capturesession-i.md#getexposurebiasrange) to obtain the supported values.
+Sets an exposure compensation value (EV).
+
+Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-camera-capturesession-i.md#getexposurebiasrange) to obtain the supported values.
 
 **Since:** 10
 
@@ -920,7 +922,7 @@ Sets an exposure compensation value (EV).Before the setting, you are advised to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange). If the value passed is not within the supported range, the nearest critical point is used. There is a step for EV.For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. If the input parameter is null or undefined, the EV is set to 0. |
+| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange). If the value passed is not within the supported range, the nearest critical point is used. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. If the input parameter is null or undefined, the EV is set to 0. |
 
 **Error codes:**
 
@@ -964,7 +966,9 @@ Sets an exposure mode. Before the setting, call [isExposureModeSupported](arkts-
 setFlashMode(flashMode: FlashMode): void
 ```
 
-Sets a flash mode.Before the setting, do the following checks:
+Sets a flash mode.
+
+Before the setting, do the following checks:
 
 1. Use [hasFlash](arkts-camera-camera-capturesession-i.md#hasflash) to check whether the camera device has flash.2. Use [isFlashModeSupported](arkts-camera-camera-capturesession-i.md#isflashmodesupported) to check whether the camera device supports the flash mode.
 
@@ -996,7 +1000,9 @@ Sets a flash mode.Before the setting, do the following checks:
 setFocusMode(afMode: FocusMode): void
 ```
 
-Sets a focus mode.Before the setting, call [isFocusModeSupported](arkts-camera-camera-capturesession-i.md#isfocusmodesupported) to check whether the focus mode is supported.
+Sets a focus mode.
+
+Before the setting, call [isFocusModeSupported](arkts-camera-camera-capturesession-i.md#isfocusmodesupported) to check whether the focus mode is supported.
 
 **Since:** 10
 

@@ -748,7 +748,7 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cloneList | Object[] \| ArrayBuffer[] | Yes | - The type of the passed-in array must be [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types) or ArrayBuffer.<br>- All [Sendable class](../../../arkts-utils/arkts-sendable.md#sendable-class) instances or ArrayBuffer objects passed in to **cloneList** are transferred in copy mode between threads. This means that any modification to the destination objects does not affect the original objects. |
+| cloneList | Object[] \| ArrayBuffer[] | Yes | - The type of the passed-in array must be   [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types) or ArrayBuffer.<br>- All [Sendable class](../../../arkts-utils/arkts-sendable.md#sendable-class) instances or ArrayBuffer objects passed in to **cloneList** are transferred in copy mode between threads. This means that any modification to the destination objects does not affect the original objects. |
 
 **Error codes:**
 

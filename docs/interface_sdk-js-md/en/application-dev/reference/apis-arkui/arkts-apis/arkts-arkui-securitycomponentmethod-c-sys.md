@@ -3,18 +3,23 @@
 The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
 
 This module is mainly used in the following scenarios:  
-- Set layout, size, text, icon, color, border, and interaction-related attributes for security components such as [PasteButton](../arkts-components/arkts-arkui-pastebutton.md) and [SaveButton](../arkts-components/arkts-arkui-savebutton.md).  
-- Adjust the display effect and interaction experience of security components while ensuring compliance with the security component specifications. For specific constraints,see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints).  
+- Set layout, size, text, icon, color, border, and interaction-related attributes for security components  
+such as [PasteButton](../arkts-components/arkts-arkui-pastebutton.md) and [SaveButton](../arkts-components/arkts-arkui-savebutton.md).  
+- Adjust the display effect and interaction experience of security components while ensuring compliance with  
+the security component specifications. For specific constraints,see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints).  
 - Reuse the universal attribute capabilities of security components through chained calls.
 
 ## Key Enums
 
-- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md): Enumeration of icon and text layout directions for the security component. Specifies horizontal or vertical layout.  
-- [ButtonType](../arkts-components/arkts-arkui-buttontype-e.md): Enumeration of button styles for the security component.Specifies capsule, circle, rounded rectangle, or normal button style.
+- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md): Enumeration of icon and text  
+layout directions for the security component. Specifies horizontal or vertical layout.  
+- [ButtonType](../arkts-components/arkts-arkui-buttontype-e.md): Enumeration of button styles for the security component.  
+Specifies capsule, circle, rounded rectangle, or normal button style.
 
 ## Key APIs
 
-- [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md): A collection of universal attribute methods for security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
+- [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md): A collection of universal attribute methods for  
+security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
 
 ## Child Components
 

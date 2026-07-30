@@ -468,14 +468,10 @@
   - [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)
   - [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md)
   - [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
-  <!--Del-->
-  - [SegmentButtonOptions(system api)](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c-sys.md)<!--DelEnd-->
   - [SegmentButton](arkts-arkui-arkui-advanced-segmentbutton-segmentbutton-s.md)
   - [CapsuleSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonconstructionoptions-i.md)
   - [CapsuleSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-capsulesegmentbuttonoptions-i.md)
   - [CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)
-  <!--Del-->
-  - [CommonSegmentButtonOptions(system api)](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i-sys.md)<!--DelEnd-->
   - [SegmentButtonIconItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttoniconitem-i.md)
   - [SegmentButtonIconTextItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonicontextitem-i.md)
   - [SegmentButtonItemOptionsConstructorOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsconstructoroptions-i.md)
@@ -491,12 +487,8 @@
   - [SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md)
   - [SegmentButtonV2Items](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
   - [CapsuleSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-capsulesegmentbuttonv2-s.md)
-  <!--Del-->
-  - [CapsuleSegmentButtonV2(system api)](arkts-arkui-arkui-advanced-segmentbuttonv2-capsulesegmentbuttonv2-s-sys.md)<!--DelEnd-->
   - [MultiCapsuleSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-multicapsulesegmentbuttonv2-s.md)
   - [TabSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-tabsegmentbuttonv2-s.md)
-  <!--Del-->
-  - [TabSegmentButtonV2(system api)](arkts-arkui-arkui-advanced-segmentbuttonv2-tabsegmentbuttonv2-s-sys.md)<!--DelEnd-->
   - [SegmentButtonV2ItemOptions](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2itemoptions-i.md)
   - [OnSelectedIndexChange](arkts-arkui-onselectedindexchange-t.md)
   - [OnSelectedIndexesChange](arkts-arkui-onselectedindexeschange-t.md)
@@ -1171,20 +1163,16 @@
   <!--Del-->
   - [DisplayIntentType(system api)](arkts-arkui-screenshot-displayintenttype-e-sys.md)<!--DelEnd-->
 - [@ohos.uiAppearance](arkts-uiappearance.md)
-  <!--Del-->
-  - [getDarkMode(system api)](arkts-arkui-uiappearance-getdarkmode-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getFontScale(system api)](arkts-arkui-uiappearance-getfontscale-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getFontWeightScale(system api)](arkts-arkui-uiappearance-getfontweightscale-f-sys.md)<!--DelEnd-->
+  - [getDarkMode](arkts-arkui-uiappearance-getdarkmode-f.md)
+  - [getFontScale](arkts-arkui-uiappearance-getfontscale-f.md)
+  - [getFontWeightScale](arkts-arkui-uiappearance-getfontweightscale-f.md)
   <!--Del-->
   - [setDarkMode(system api)](arkts-arkui-uiappearance-setdarkmode-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setFontScale(system api)](arkts-arkui-uiappearance-setfontscale-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setFontWeightScale(system api)](arkts-arkui-uiappearance-setfontweightscale-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DarkMode(system api)](arkts-arkui-uiappearance-darkmode-e-sys.md)<!--DelEnd-->
+  - [DarkMode](arkts-arkui-uiappearance-darkmode-e.md)
 - [@ohos.uiExtensionHost](arkts-uiextensionhost.md)
   <!--Del-->
   - [UIExtensionHostWindowProxy(system api)](arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md)<!--DelEnd-->
@@ -1208,8 +1196,7 @@
     <!--Del-->
     - [getTopNavDestinationName(system api)](arkts-arkui-window-gettopnavdestinationname-f-sys.md)<!--DelEnd-->
     - [getTopWindow](arkts-arkui-window-gettopwindow-f.md)
-    <!--Del-->
-    - [getVisibleWindowInfo(system api)](arkts-arkui-window-getvisiblewindowinfo-f-sys.md)<!--DelEnd-->
+    - [getVisibleWindowInfo](arkts-arkui-window-getvisiblewindowinfo-f.md)
     - [getWindowsByCoordinate](arkts-arkui-window-getwindowsbycoordinate-f.md)
     <!--Del-->
     - [minimizeAll(system api)](arkts-arkui-window-minimizeall-f-sys.md)<!--DelEnd-->
@@ -1309,8 +1296,6 @@
     - [WindowCreateParams(system api)](arkts-arkui-window-windowcreateparams-i-sys.md)<!--DelEnd-->
     - [WindowDensityInfo](arkts-arkui-window-windowdensityinfo-i.md)
     - [WindowInfo](arkts-arkui-window-windowinfo-i.md)
-    <!--Del-->
-    - [WindowInfo(system api)](arkts-arkui-window-windowinfo-i-sys.md)<!--DelEnd-->
     - [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md)
     - [WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md)
     - [WindowLimits](arkts-arkui-window-windowlimits-i.md)

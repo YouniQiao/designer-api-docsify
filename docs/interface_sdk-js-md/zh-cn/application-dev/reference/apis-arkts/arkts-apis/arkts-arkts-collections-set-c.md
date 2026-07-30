@@ -6,7 +6,8 @@
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。  
 > 本节使用以下标识来表示泛型的使用：
 
-- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。**装饰器类型：** \@Sendable
+- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。  
+**装饰器类型：** \@Sendable
 
 **起始版本：** 12
 

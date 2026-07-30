@@ -28,7 +28,7 @@ function requestPrintPreview(jobInfo: PrintJob, callback: Callback<number>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i-sys.md) | 是 | 打印任务信息。 |
+| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i.md) | 是 | 打印任务信息。 |
 | callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;number&gt; | 是 | 请求预览打印数据之后的回调。 |
 
 **错误码：**
@@ -91,7 +91,7 @@ function requestPrintPreview(jobInfo: PrintJob): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i-sys.md) | 是 | 打印任务信息。 |
+| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i.md) | 是 | 打印任务信息。 |
 
 **返回值：**
 

@@ -88,7 +88,8 @@ icon?: ResourceStr
 Icon of the intent. It is displayed in the AI entry point.
 
 - If the value is a string, the icon is read from a network resource.  
-- If the value is a [resource](../../reference/apis-localization-kit/js-apis-resource-manager.md), the icon is read from a local resource.
+- If the value is a [resource](../../reference/apis-localization-kit/js-apis-resource-manager.md), the icon is read  
+from a local resource.
 
 **Type:** ResourceStr
 

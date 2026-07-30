@@ -1,6 +1,6 @@
 # PhotoOutput
 
-Implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
+PhotoOutput implements output information used in a photo session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -147,7 +147,7 @@ Captures a photo with the specified photo capture parameters. This API uses a pr
 enableAutoExtendedGainmapDelivery(enabled: boolean): void
 ```
 
-Enable auto extended gainmap delivery.
+Enables or disables automatic extended gain map delivery.
 
 **Since:** 26.0.0
 
@@ -163,7 +163,7 @@ Enable auto extended gainmap delivery.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | enable auto extended gainmap delivery if TRUE. |
+| enabled | boolean | Yes | Whether to enable automatic extended gain map delivery. The value **true** indicates it is enabled, and the value **false** indicates it is disabled. |
 
 **Error codes:**
 
@@ -179,7 +179,9 @@ Enable auto extended gainmap delivery.
 enableMirror(enabled: boolean): void
 ```
 
-Enables or disables mirroring photo capture.Before calling this API, check whether moving photo capture is supported by calling [isMovingPhotoSupported](arkts-camera-camera-photooutput-i.md#ismovingphotosupported) and whether mirroring is supported by calling [isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported).
+Enables or disables dynamic photo capture.
+
+Before calling this API, check whether moving photo capture is supported by calling [isMovingPhotoSupported](arkts-camera-camera-photooutput-i.md#ismovingphotosupported) and whether mirroring is supported by calling [isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported).
 
 **Since:** 13
 
@@ -193,7 +195,7 @@ Enables or disables mirroring photo capture.Before calling this API, check wheth
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable mirroring photo capture. **true** to enable, **false** otherwise. |
+| enabled | boolean | Yes | Enables or disables dynamic photo capture. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
@@ -225,7 +227,7 @@ Enables or disables the feature of taking moving photos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the feature of taking moving photos. **true** to enable, **false** otherwise. |
+| enabled | boolean | Yes | Enables or disables the feature of taking moving photos. **true** to enable,**false** otherwise. |
 
 **Error codes:**
 
@@ -271,8 +273,10 @@ getPhotoRotation(deviceDegree?: number): ImageRotation
 
 Obtains the photo rotation angle.
 
-- Device's natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward.  
-- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode.Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
+- Device' natural orientation: the default orientation for using a device. For example, the default orientation  
+of the bar-type phone is in portrait mode, with the charging port facing downward.  
+- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's  
+natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode.Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
 
 **Since:** 12
 
@@ -337,7 +341,7 @@ Obtains the supported video codec types of moving photos.
 isAutoExtendedGainmapDeliverySupported(): boolean
 ```
 
-Confirm if auto extended gainmap delivery supported.
+Checks whether automatic extended gain map delivery is supported.
 
 **Since:** 26.0.0
 
@@ -353,7 +357,7 @@ Confirm if auto extended gainmap delivery supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | TRUE if the auto extended gainmap delivery is supported. |
+| boolean | Whether automatic extended gain map delivery is supported. The value **true** indicates it is supported, and the value **false** indicates it is not supported. |
 
 ## isMirrorSupported
 
@@ -459,7 +463,7 @@ Unsubscribes from the events of returning available photos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'photoAvailable' | Yes | Event type. The value is fixed at **'photoAvailable'**. The event can be listened for when a photoOutput instance is created. |
+| type | 'photoAvailable' | Yes | Event type. The value is fixed at **'photoAvailable'**. The event can be listened for when a **photoOutput** instance is created. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | No | Callback used to return the result. If this parameter is specified,the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('photoAssetAvailable')
@@ -680,7 +684,7 @@ Unsubscribes from PhotoOutput error events.
 offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void
 ```
 
-Unsubscribes photo available event callback, which supports delivery of uncompressed photo.
+Unsubscribes from the events of returning full-quality images and uncompressed images. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -696,7 +700,7 @@ Unsubscribes photo available event callback, which supports delivery of uncompre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;CapturePhoto&gt; | No | Callback used to get the CapturePhoto. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;CapturePhoto&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## on('photoAvailable')
 
@@ -722,7 +726,7 @@ Subscribes to the events of returning available photos. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'photoAvailable' | Yes | Event type. The value is fixed at **'photoAvailable'**. The event can be listened for when a **photoOutput** instance is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | Yes | Callback used to listen for the events of returning available photos. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | Yes | Callback used to listen for the event of returning available photos. |
 
 ## on('photoAssetAvailable')
 
@@ -784,7 +788,7 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): void
 ```
 
-Subscribes to capture start events. This API uses an asynchronous callback to return the result.
+Subscribes to capture start events. This API uses an asynchronous callback to return the [capture start ID](arkts-camera-camera-capturestartinfo-i.md).
 > **NOTE**  
 >  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
@@ -963,7 +967,14 @@ Subscribes to PhotoOutput error events. This API uses an asynchronous callback t
 onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 ```
 
-Subscribes photo available event callback, which supports delivery of uncompressed photo.
+Subscribes to the events of returning full-quality images and uncompressed images. This API uses an asynchronous callback to return the result.
+> **NOTE**  
+>  
+> - You cannot call  
+> [offCapturePhotoAvailable](camera.PhotoOutput.offCapturePhotoAvailable(callback?: Callback<CapturePhoto>))  
+> to unregister the callback in the callback listened by this API.  
+>  
+> - This API can be used to register listeners only when uncompressed images in the YUV format are captured.
 
 **Since:** 23
 
@@ -979,7 +990,7 @@ Subscribes photo available event callback, which supports delivery of uncompress
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;CapturePhoto&gt; | Yes | Callback used to get the CapturePhoto. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;CapturePhoto&gt; | Yes | Callback used to listen for the event of returning full-quality images and uncompressed images. |
 
 ## setMovingPhotoVideoCodecType
 
@@ -1001,7 +1012,7 @@ Sets a video codec type for moving photos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| codecType | [VideoCodecType](arkts-camera-camera-videocodectype-e.md) | Yes | Video codec type. |
+| codecType | [VideoCodecType](arkts-camera-camera-videocodectype-e.md) | Yes | Video codec type.<br>If the value is not within the enumerated value range, this parameter does not take effect. |
 
 **Error codes:**
 
@@ -1015,7 +1026,9 @@ Sets a video codec type for moving photos.
 setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization): void
 ```
 
-Sets the photo quality prioritization strategy.Before setting the strategy, you can call [isPhotoQualityPrioritizationSupported](arkts-camera-camera-photooutput-i.md#isphotoqualityprioritizationsupported) to check whether the device supports the specified photo quality prioritization strategy.
+Sets the photo quality prioritization strategy.
+
+Before setting the strategy, you can call [isPhotoQualityPrioritizationSupported](arkts-camera-camera-photooutput-i.md#isphotoqualityprioritizationsupported) to check whether the device supports the specified photo quality prioritization strategy.
 
 **Since:** 21
 

@@ -8,8 +8,6 @@ This module provides the application's management capabilities for shortcuts, in
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript
@@ -41,13 +39,11 @@ import { shortcutManager } from '@kit.AbilityKit';
 | [updateDesktopShortcutInfo](arkts-ability-shortcutmanager-updatedesktopshortcutinfo-f-sys.md#updatedesktopshortcutinfo) | Updates a shortcut for the given user. This API uses a promise to return the result. |
 <!--DelEnd-->
 
-<!--Del-->
-### Types（系统接口）
+### Types
 
 | Name | Description |
 | --- | --- |
-| [ParameterItem](arkts-ability-shortcutmanager-parameteritem-t-sys.md) | Defines the custom data in the shortcut configuration. |
-| [ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t-sys.md) | Defines the shortcut information defined in the [module.json5](../../../quick-start/module-configuration-file.md#shortcuts) file of the application. |
-| [ShortcutWant](arkts-ability-shortcutmanager-shortcutwant-t-sys.md) | Defines the target [wants](../../../quick-start/module-configuration-file.md#wants) defined in the shortcut configuration. |
-<!--DelEnd-->
+| [ParameterItem](arkts-ability-shortcutmanager-parameteritem-t.md) | Defines the custom data in the shortcut configuration. |
+| [ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md) | Defines the shortcut information defined in the [module.json5](../../../quick-start/module-configuration-file.md#shortcuts) file of the application. |
+| [ShortcutWant](arkts-ability-shortcutmanager-shortcutwant-t.md) | Defines the target [wants](../../../quick-start/module-configuration-file.md#wants) defined in the shortcut configuration. |
 

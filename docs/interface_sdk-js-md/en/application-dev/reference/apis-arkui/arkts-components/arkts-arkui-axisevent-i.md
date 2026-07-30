@@ -32,7 +32,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | - return the coordinates of the top-left corner of the current component based on its real-time position. |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | - return the coordinates of the top-left corner of the current component based on its   real-time position. |
 
 ## getHorizontalAxisValue
 

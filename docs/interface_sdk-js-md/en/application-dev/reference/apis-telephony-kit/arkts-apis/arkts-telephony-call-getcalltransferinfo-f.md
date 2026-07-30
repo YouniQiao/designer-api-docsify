@@ -26,7 +26,7 @@ Obtains call transfer information with the phone number.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [CallTransferType](arkts-telephony-call-calltransfertype-e-sys.md) | Yes | Type of call transfer to be obtained. |
+| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Yes | Type of call transfer to be obtained. |
 | number | string | Yes | Phone number whose call transfer status is to be obtained.Whether the SIM card exists will be checked. |
 
 **Return value:**

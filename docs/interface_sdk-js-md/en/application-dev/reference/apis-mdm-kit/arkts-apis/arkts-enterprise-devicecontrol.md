@@ -14,8 +14,6 @@ The **deviceControl** module provides APIs for device control.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

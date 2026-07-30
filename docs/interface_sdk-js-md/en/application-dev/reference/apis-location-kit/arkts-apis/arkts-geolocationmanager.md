@@ -44,7 +44,7 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [getGeofenceSupportedCoordTypes](arkts-location-geolocationmanager-getgeofencesupportedcoordtypes-f.md#getgeofencesupportedcoordtypes) | Obtains the coordinate system types supported by geofence. |
 | [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getlastlocation) | Obtain last known location. |
 | [getPoiInfo](arkts-location-geolocationmanager-getpoiinfo-f.md#getpoiinfo) | Obtaining POI Information. |
-| [getPostProcessingTrack](arkts-location-geolocationmanager-getpostprocessingtrack-f.md#getpostprocessingtrack) | Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently.  Before calling this API, you need to call [on('locationChange')](geoLocationManager.on('locationChange')) and set the input parameter [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i-sys.md#sportstype) to the specific sport mode to start tracking.  Returns data within 24 hours since tracking started; Subsequent calls return only new records. |
+| [getPostProcessingTrack](arkts-location-geolocationmanager-getpostprocessingtrack-f.md#getpostprocessingtrack) | Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently.  Before calling this API, you need to call [on('locationChange')](geoLocationManager.on('locationChange')) and set the input parameter [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i.md#sportstype) to the specific sport mode to start tracking.  Returns data within 24 hours since tracking started; Subsequent calls return only new records. |
 | [isBeaconFenceSupported](arkts-location-geolocationmanager-isbeaconfencesupported-f.md#isbeaconfencesupported) | Check whether the BeaconFence service is supported. |
 | [isCachedGnssServiceSupported](arkts-location-geolocationmanager-iscachedgnssservicesupported-f.md#iscachedgnssservicesupported) | Check whether the cached GNSS service is supported. |
 | [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isgeocoderavailable) | Obtain geocoding service status. |
@@ -151,14 +151,12 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [BluetoothScanInfo](arkts-location-geolocationmanager-bluetoothscaninfo-i-sys.md) | Describes the contents of the Bluetooth scan results. |
 | [CellFence](arkts-location-geolocationmanager-cellfence-i-sys.md) | Indicates CELL fence information. |
 | [CellInfo](arkts-location-geolocationmanager-cellinfo-i-sys.md) | Cell information. |
-| [ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i-sys.md) | Configuring parameters in continuous location requests. |
 | [FusionFenceRequestParams](arkts-location-geolocationmanager-fusionfencerequestparams-i-sys.md) | Indicates fusion fence request params. |
 | [FusionFenceTransition](arkts-location-geolocationmanager-fusionfencetransition-i-sys.md) | Indicates fusion fence transition information. |
 | [GeoAddress](arkts-location-geolocationmanager-geoaddress-i-sys.md) | Data struct describes geographic locations. |
 | [GnssFence](arkts-location-geolocationmanager-gnssfence-i-sys.md) | Indicates GNSS fence information. |
 | [LocatingRequiredData](arkts-location-geolocationmanager-locatingrequireddata-i-sys.md) | Describes the structure of the data required for locating. |
 | [LocatingRequiredDataConfig](arkts-location-geolocationmanager-locatingrequireddataconfig-i-sys.md) | Describes the request parameters for obtaining the data required for locating. |
-| [Location](arkts-location-geolocationmanager-location-i-sys.md) | Provides information about geographic locations. |
 | [LocationMockConfig](arkts-location-geolocationmanager-locationmockconfig-i-sys.md) | Parameters for configuring the location simulation function. |
 | [ReverseGeocodingMockInfo](arkts-location-geolocationmanager-reversegeocodingmockinfo-i-sys.md) | Configuration parameters for simulating reverse geocoding. |
 | [WifiFence](arkts-location-geolocationmanager-wififence-i-sys.md) | Indicates Wi-Fi fence information. |

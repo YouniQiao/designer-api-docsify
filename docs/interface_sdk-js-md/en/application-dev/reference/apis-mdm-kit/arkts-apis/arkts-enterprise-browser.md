@@ -16,8 +16,6 @@ Browser policies are a collection of rules and settings that govern how a browse
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

@@ -102,3 +102,18 @@ function getPermissionUsedRecordToggleStatus(subProfileId: number): Promise<bool
 | [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The specified subProfileId does not exist for the current user. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
+**示例：**
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+privacyManager.getPermissionUsedRecordToggleStatus(subProfileId).then((status: boolean) => {
+  console.info(`getPermissionUsedRecordToggleStatus success, status: ${status}`);
+}).catch((err: BusinessError): void => {
+  console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+
+```
+

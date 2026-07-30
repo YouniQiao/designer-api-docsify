@@ -188,7 +188,8 @@ copyOptions(value: CopyOptions)
 
 从API version 20开始，RichEditor组件在执行复制或剪切操作时，会将HTML格式的内容添加到剪贴板中。
 
-- 仅支持[TextSpan](arkts-arkui-richeditortextspanoptions-i.md)和[ImageSpan](arkts-arkui-richeditorimagespanoptions-i.md)向剪贴板中添加HTML内容，其他Span类型（如[BuilderSpan](arkts-arkui-richeditorbuilderspanoptions-i.md)、[SymbolSpan](arkts-arkui-richeditorsymbolspanoptions-i.md)、[CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md)）则不能添加。  
+- 仅支持[TextSpan](arkts-arkui-richeditortextspanoptions-i.md)和[ImageSpan](arkts-arkui-richeditorimagespanoptions-i.md)向剪贴板中添加HTML内容，其他Span类  
+型（如[BuilderSpan](arkts-arkui-richeditorbuilderspanoptions-i.md)、[SymbolSpan](arkts-arkui-richeditorsymbolspanoptions-i.md)、[CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md)）则不能添加。  
 - 设置RichEditor组件的属性字符串时，请参考属性字符串[toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml)接口文档，以了解支持转换为HTML的范围。
 
 copyOptions不为CopyOptions.None时，长按组件内容，会弹出文本选择菜单。如果通过[bindSelectionMenu](RichEditorAttribute#bindSelectionMenu)等方式自定义文本选择菜单，则会弹出自定义的菜单。

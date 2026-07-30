@@ -44,7 +44,8 @@ landscapeAvoidY?: number
 Distance between the avoid line and the top of the panel in landscape mode, in px. The default value is **0**.
 
 - Other system components in the application avoid the input method panel area below the avoid line.  
-- When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of the screen height.
+- When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of  
+the screen height.
 
 **Type:** number
 
@@ -102,7 +103,8 @@ portraitAvoidY?: number
 Distance between the avoid line and the top of the panel in portrait mode, in px. The default value is **0**.
 
 - Other system components in the application avoid the input method panel area below the avoid line.  
-- When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of the screen height.
+- When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of  
+the screen height.
 
 **Type:** number
 

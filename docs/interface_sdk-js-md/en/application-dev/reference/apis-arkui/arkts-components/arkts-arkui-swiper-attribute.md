@@ -177,7 +177,7 @@ Sets the number of child components to be prloaded and configuration options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | number | Yes | - Number of child components to be preloaded (cached).<br>The value range is [0, +∞). If the value is less than 0, the value **1** is used. |
+| count | number | Yes | - Number of child components to be preloaded (cached).<br>The value range is   [0, +∞). If the value is less than 0, the value **1** is used. |
 | options | [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md) | Yes | Configuration options for child components to be preloaded. |
 
 ## curve

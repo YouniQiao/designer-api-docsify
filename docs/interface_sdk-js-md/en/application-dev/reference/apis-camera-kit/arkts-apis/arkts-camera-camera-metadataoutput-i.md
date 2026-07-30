@@ -1,6 +1,6 @@
 # MetadataOutput
 
-Implements metadata streams. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
+MetadataOutput implements metadata streams. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** MetadataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -16,13 +16,44 @@ Implements metadata streams. It inherits from [CameraOutput](arkts-camera-camera
 import { camera } from '@kit.CameraKit';
 ```
 
+## addMetadataObjectTypes
+
+```TypeScript
+addMetadataObjectTypes(types: Array<MetadataObjectType>): void
+```
+
+Adds the types of metadata objects to be detected.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-MetadataOutput-addMetadataObjectTypes(types: Array<MetadataObjectType>): void--><!--Device-MetadataOutput-addMetadataObjectTypes(types: Array<MetadataObjectType>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| types | Array&lt;MetadataObjectType&gt; | Yes | Metadata object types, which are obtained through **getSupportedOutputCapability**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 13 - 22 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
 ## isLockMetadataObjectTrackingSupported
 
 ```TypeScript
 isLockMetadataObjectTrackingSupported(): boolean
 ```
 
-Confirm if lock metadata object tracking supported.
+Checks whether the device supports the function of locking a metadata object (such as a cat or dog face) for tracking.
 
 **Since:** 26.0.0
 
@@ -38,7 +69,7 @@ Confirm if lock metadata object tracking supported.
 
 | Type | Description |
 | --- | --- |
-| boolean | TRUE if the lock metadata object tracking is supported. |
+| boolean | Whether the device supports the function of locking a metadata object for tracking. **true** if supported; **false** otherwise. |
 
 ## lockMetadataObjectTracking
 
@@ -46,7 +77,14 @@ Confirm if lock metadata object tracking supported.
 lockMetadataObjectTracking(point: Point): void
 ```
 
-Lock metadata object tracking.
+Locks a metadata object (such as a cat or dog face) for tracking.
+> **NOTE**  
+>  
+> - This function tracks the object pointed to by **point**. If such object does not exist, this function does  
+> not take effect.  
+>  
+> - Locking for tracking is automatically canceled when the tracked object has left the viewfinder range for more  
+> than three seconds or the object is unlocked.
 
 **Since:** 26.0.0
 
@@ -62,7 +100,7 @@ Lock metadata object tracking.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes | lock metadata object tracking point. |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes | Point used to lock the metadata object for tracking. |
 
 **Error codes:**
 
@@ -100,7 +138,7 @@ Unsubscribes from events indicating available metadata objects.
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from metadata error events.
+Unsubscribes from VideoOutput error events.
 
 **Since:** 10
 
@@ -114,7 +152,7 @@ Unsubscribes from metadata error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a metadataOutput instance is created. |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a photoOutput instance is created. |
 | callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## on('metadataObjectsAvailable')
@@ -168,6 +206,37 @@ Subscribes to metadata error events. This API uses an asynchronous callback to r
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a metadataOutput instance is created. This event is triggered and the corresponding error message is returned when an error occurs during the use of a metadata-related API such as [start](arkts-camera-camera-metadataoutput-i.md#start) or [CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release). |
 | callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+
+## removeMetadataObjectTypes
+
+```TypeScript
+removeMetadataObjectTypes(types: Array<MetadataObjectType>): void
+```
+
+Removes the types of metadata objects to be detected.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-MetadataOutput-removeMetadataObjectTypes(types: Array<MetadataObjectType>): void--><!--Device-MetadataOutput-removeMetadataObjectTypes(types: Array<MetadataObjectType>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| types | Array&lt;MetadataObjectType&gt; | Yes | Metadata object types, which are obtained through **getSupportedOutputCapability**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 13 - 22 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## start
 
@@ -277,7 +346,7 @@ Stops outputting metadata. This API uses a promise to return the result.
 unlockMetadataObjectTracking(): void
 ```
 
-Unlock metadata object tracking.
+Unlocks the metadata object (such as a cat or dog face) for tracking.
 
 **Since:** 26.0.0
 

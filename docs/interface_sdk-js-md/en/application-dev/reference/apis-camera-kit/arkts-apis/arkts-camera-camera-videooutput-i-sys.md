@@ -1,6 +1,6 @@
 # VideoOutput
 
-**VideoOutput** implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
+VideoOutput implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -104,41 +104,6 @@ Enable auto frame rate for video capture.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-
-## enableMirror
-
-```TypeScript
-enableMirror(enabled: boolean): void
-```
-
-Enables or disables mirror recording.
-
-- Before calling this API, check whether mirror recording is supported by using [isMirrorSupported](arkts-camera-camera-videooutput-i-sys.md#ismirrorsupported).  
-- After enabling or disabling mirror recording, call [getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation) to obtain the rotation angle and [updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md#updaterotation) to update the rotation angle.
-
-**Since:** 15
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoOutput-enableMirror(enabled: boolean): void--><!--Device-VideoOutput-enableMirror(enabled: boolean): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable mirror recording. **true** to enable, **false** otherwise. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getSupportedRotations
@@ -283,36 +248,6 @@ Determine whether auto frame rate is supported.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
-
-## isMirrorSupported
-
-```TypeScript
-isMirrorSupported(): boolean
-```
-
-Checks whether mirror recording is supported.
-
-**Since:** 15
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoOutput-isMirrorSupported(): boolean--><!--Device-VideoOutput-isMirrorSupported(): boolean-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Check result for the support of mirror recording. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
 
 ## isRotationSupported
 

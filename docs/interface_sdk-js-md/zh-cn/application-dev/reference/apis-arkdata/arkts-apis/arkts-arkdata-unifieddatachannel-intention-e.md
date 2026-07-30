@@ -28,6 +28,24 @@ DATA_HUB = 'DataHub'
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## DRAG
+
+```TypeScript
+DRAG = 'Drag'
+```
+
+拖拽类型数据通道。
+
+**适用场景：** 适用于在拖拽场景下使用UDMF来跨应用数据共享。
+
+**起始版本：** 14
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Intention-DRAG = 'Drag'--><!--Device-Intention-DRAG = 'Drag'-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
 ## SYSTEM_SHARE
 
 ```TypeScript

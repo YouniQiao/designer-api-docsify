@@ -38,7 +38,7 @@ ID of this capture action.
 timestamp: number
 ```
 
-Timestamp of the shutter, in milliseconds.
+Timestamp when the frame shutter event is triggered, in milliseconds.
 
 **Type:** number
 

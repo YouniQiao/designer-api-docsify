@@ -59,8 +59,8 @@ let wantTemp: Want = {
 };
 try {
   let usbDeviceIds: Array<usbManager.UsbDeviceId> = [{
-      vendorId: 1,
-      productId: 1
+    vendorId: 1,
+    productId: 1
   }];
   usbManager.addAllowedUsbDevices(wantTemp, usbDeviceIds);
   console.info(`Succeeded in adding allowed USB devices.`);

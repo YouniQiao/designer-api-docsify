@@ -1241,13 +1241,17 @@ fillStyle: string | number | CanvasGradient | CanvasPattern
 
 Sets the fill color for rendering. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned.
 
-- When the type is string, this attribute indicates the color of the fill area. For details about the color format, see the description for the string type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md).
+- When the type is string, this attribute indicates the color of the fill area. For details about  
+the color format, see the description for the string type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md).
 
-- When the type is number, this attribute indicates the color of the fill area. Fully transparent colors are not supported. For details about the color format, see the description for the number type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md).
+- When the type is number, this attribute indicates the color of the fill area. Fully transparent  
+colors are not supported. For details about the color format, see the description for the number type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md).
 
-- When the type is **CanvasGradient**, this attribute indicates a gradient object, which is created via the [createLinearGradient](#createlineargradient) API.
+- When the type is **CanvasGradient**, this attribute indicates a gradient object, which is created  
+via the [createLinearGradient](#createlineargradient) API.
 
-- When the type is **CanvasPattern**, this attribute indicates a pattern, which is created via the [createPattern](#createpattern) API.
+- When the type is **CanvasPattern**, this attribute indicates a pattern, which is created via the  
+[createPattern](#createpattern) API.
 
 Default value: **'#000000'** (black)
 
@@ -1285,15 +1289,24 @@ Sets the filter for an image. Any number of filters can be combined. This attrib
 Available values are as follows:
 
 - **'none'**: no filter effect.  
-- **'blur(`<length>`)'**: applies the Gaussian blur to the image. The value must be greater than or equal to 0. The unit can be px, vp, or rem. The default value is **blur(0px)**.  
-- **'brightness([`<number>`\|`<percentage>`])'**: applies a linear multiplier to the image to adjust its brightness. The value can be a number or a percentage, and must be greater than or equal to 0. The default value is **brightness(1)**.  
-- **'contrast([`<number>`\|`<percentage>`])'**: adjusts the contrast of the image. The value can be a number or a percentage, and must be greater than or equal to 0. The default value is **contrast(1)**.  
-- **'grayscale([`<number>`\|`<percentage>`])'**: converts the image to grayscale. The value can be a number or a percentage, and must be within the range of [0, 1]. The default value is **grayscale(0)**.  
-- **'hue-rotate(`<angle>`)'**: applies hue rotation to the image. The value ranges from **0deg** to **360deg**. The default value is **hue-rotate(0deg)**.  
-- **'invert([`<number>`\|`<percentage>`])'**: inverts the input image. The value can be a number or a percentage, and must be within the range of [0, 1]. The default value is **invert(0)**.  
-- **'opacity([`<number>`\|`<percentage>`])'**: adjusts the opacity of the image. The value can be a number or a percentage, and must be within the range of [0, 1]. The default value is **opacity(1)**.  
-- **'saturate([`<number>`\|`<percentage>`])'**: adjusts the saturation of the image. The value can be a number or a percentage, and must be greater than or equal to 0. The default value is **saturate(1)**.  
-- **'sepia([`<number>`\|`<percentage>`])'**: converts the image to sepia. The value can be a number or a percentage, and must be within the range of [0, 1]. The default value is **sepia(0)**.
+- **'blur(`<length>`)'**: applies the Gaussian blur to the image. The value must be greater  
+than or equal to 0. The unit can be px, vp, or rem. The default value is **blur(0px)**.  
+- **'brightness([`<number>`\|`<percentage>`])'**: applies a linear multiplier to the image to  
+adjust its brightness. The value can be a number or a percentage, and must be greater than or equal to 0. The default value is **brightness(1)**.  
+- **'contrast([`<number>`\|`<percentage>`])'**: adjusts the contrast of the image. The value  
+can be a number or a percentage, and must be greater than or equal to 0. The default value is **contrast(1)**.  
+- **'grayscale([`<number>`\|`<percentage>`])'**: converts the image to grayscale. The value can  
+be a number or a percentage, and must be within the range of [0, 1]. The default value is **grayscale(0)**.  
+- **'hue-rotate(`<angle>`)'**: applies hue rotation to the image. The value ranges from  
+**0deg** to **360deg**. The default value is **hue-rotate(0deg)**.  
+- **'invert([`<number>`\|`<percentage>`])'**: inverts the input image. The value can be a number  
+or a percentage, and must be within the range of [0, 1]. The default value is **invert(0)**.  
+- **'opacity([`<number>`\|`<percentage>`])'**: adjusts the opacity of the image. The value can be  
+a number or a percentage, and must be within the range of [0, 1]. The default value is **opacity(1)**.  
+- **'saturate([`<number>`\|`<percentage>`])'**: adjusts the saturation of the image. The value  
+can be a number or a percentage, and must be greater than or equal to 0. The default value is **saturate(1)**.  
+- **'sepia([`<number>`\|`<percentage>`])'**: converts the image to sepia. The value can be a  
+number or a percentage, and must be within the range of [0, 1]. The default value is **sepia(0)**.
 
 **Type:** string
 
@@ -1321,11 +1334,14 @@ Syntax: ctx.font = 'font-style font-weight font-size font-family'
 
 - (Optional) **font-style**: font style. Available values are **normal** and **italic**.
 
-- (Optional) **font-weight**: font weight. Available values are as follows: **normal**,**bold**, **bolder**, **lighter**, **100**, **200**, **300**, **400**, **500**, **600**,**700**, **800**, **900**.
+- (Optional) **font-weight**: font weight. Available values are as follows: **normal**,  
+**bold**, **bolder**, **lighter**, **100**, **200**, **300**, **400**, **500**, **600**,**700**, **800**, **900**.
 
-- (Optional) **font-size**: font size and line height. The unit can be px or vp and must be specified.
+- (Optional) **font-size**: font size and line height. The unit can be px or vp and must  
+be specified.
 
-- (Optional) **font-family**: font family. Available values are **sans-serif**,**serif**, and **monospace**.
+- (Optional) **font-family**: font family. Available values are **sans-serif**,  
+**serif**, and **monospace**.
 
 Starting from API version 20, this API is used to set registered custom fonts (the DevEco Studio Previewer does not support custom fonts). You can register a custom font in either of the following ways:
 
@@ -1768,13 +1784,17 @@ strokeStyle: string | number | CanvasGradient | CanvasPattern
 
 Sets the stroke color. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation.If you attempt to read its current value, **undefined** will be returned.
 
-- When the type is string, this attribute indicates the stroke color. For details about the color format, see the description for the string type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md).
+- When the type is string, this attribute indicates the stroke color. For details about  
+the color format, see the description for the string type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md).
 
-- When the type is number, this attribute indicates the stroke color. Fully transparent colors are not supported. For details about the color format, see the description for the number type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md).
+- When the type is number, this attribute indicates the stroke color. Fully transparent  
+colors are not supported. For details about the color format, see the description for the number type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md).
 
-- When the type is **CanvasGradient**, this attribute indicates a gradient object, which is created via the [createLinearGradient](#createlineargradient) API.
+- When the type is **CanvasGradient**, this attribute indicates a gradient object, which is  
+created via the [createLinearGradient](#createlineargradient) API.
 
-- When the type is **CanvasPattern**, this attribute indicates a pattern, which is created via the [createPattern](CanvasRenderingContext2D#createPattern) API.
+- When the type is **CanvasPattern**, this attribute indicates a pattern, which is created  
+via the [createPattern](CanvasRenderingContext2D#createPattern) API.
 
 Default value: **'#000000'** (black)
 

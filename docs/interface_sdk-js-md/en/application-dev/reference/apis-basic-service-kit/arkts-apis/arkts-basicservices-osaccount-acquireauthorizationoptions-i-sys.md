@@ -47,7 +47,8 @@ interactionContext?: Context
 User interaction context configuration. The default value is **undefined**.
 
 - If no context is specified, the authorization dialog box is displayed in modal system mode.  
-- If [UIAbilityContext](../apis-ability-kit/js-apis-inner-application-uiAbilityContext.md) or [UIExtensionContext](../apis-ability-kit/js-apis-inner-application-uiExtensionContext.md) is specified, the authorization dialog box is displayed in modal application mode.  
+- If [UIAbilityContext](../apis-ability-kit/js-apis-inner-application-uiAbilityContext.md) or  
+[UIExtensionContext](../apis-ability-kit/js-apis-inner-application-uiExtensionContext.md) is specified, the authorization dialog box is displayed in modal application mode.  
 - If no valid context is provided, the authorization dialog box cannot be displayed.
 
 Note: This parameter is valid only when **isInteractionAllowed** is set to **true**.

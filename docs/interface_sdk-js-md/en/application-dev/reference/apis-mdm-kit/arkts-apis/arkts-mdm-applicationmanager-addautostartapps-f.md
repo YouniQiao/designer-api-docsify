@@ -138,7 +138,7 @@ let autoStartApps: Array<Want> = [
 
 try {
   applicationManager.addAutoStartApps(wantTemp, autoStartApps, 100, true);
-  console.info('Succeeded in adding auto start applications and set disllowModify.');
+  console.info('Succeeded in adding auto start applications and set disallowModify.');
 } catch(err) {
   console.error(`Failed to add auto start applications and set disallowModify. Code: ${err.code}, message: ${err.message}`);
 }

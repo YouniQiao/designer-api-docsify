@@ -7,7 +7,8 @@ A non-linear data structure.
 > This section uses the following to identify the use of generics:
 
 - K: key.  
-- V: value.The K and V types must be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types).**Decorator**: \@Sendable
+- V: value.  
+The K and V types must be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types).**Decorator**: \@Sendable
 
 **Since:** 12
 

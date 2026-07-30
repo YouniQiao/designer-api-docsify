@@ -46,11 +46,11 @@ function hasAccessoryRight(accessory: USBAccessory): boolean
 
 ```TypeScript
 try {
-  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-  let flag = usbManager.hasAccessoryRight(accList?.[0])
-  console.info(`hasAccessoryRight success, ret:${flag}`)
+  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+  let flag = usbManager.hasAccessoryRight(accList?.[0]);
+  console.info(`hasAccessoryRight success, ret:${flag}`);
 } catch (error) {
-  console.error(`hasAccessoryRight error ${error.code}, message is ${error.message}`)
+  console.error(`hasAccessoryRight error ${error.code}, message is ${error.message}`);
 }
 
 ```

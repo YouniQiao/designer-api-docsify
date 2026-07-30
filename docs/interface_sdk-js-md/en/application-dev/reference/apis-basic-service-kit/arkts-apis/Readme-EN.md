@@ -364,8 +364,6 @@
   - [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md)
   - [ProgressInfo](arkts-basicservices-pasteboard-progressinfo-i.md)
   - [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md)
-  <!--Del-->
-  - [SystemPasteboard(system api)](arkts-basicservices-pasteboard-systempasteboard-i-sys.md)<!--DelEnd-->
   - [ProgressListener](arkts-basicservices-pasteboard-progresslistener-t.md)
   - [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md)
   - [ValueType](arkts-basicservices-pasteboard-valuetype-t.md)
@@ -425,8 +423,7 @@
   - [cancelPrintJob(system api)](arkts-basicservices-print-cancelprintjob-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [checkPreferencesConflicts(system api)](arkts-basicservices-print-checkpreferencesconflicts-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [connectPrinter(system api)](arkts-basicservices-print-connectprinter-f-sys.md)<!--DelEnd-->
+  - [connectPrinter](arkts-basicservices-print-connectprinter-f.md)
   <!--Del-->
   - [connectPrinterByIdAndPpd(system api)](arkts-basicservices-print-connectprinterbyidandppd-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -495,53 +492,41 @@
   - [setDefaultPrinter(system api)](arkts-basicservices-print-setdefaultprinter-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setPrinterPreferences(system api)](arkts-basicservices-print-setprinterpreferences-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [startDiscoverPrinter(system api)](arkts-basicservices-print-startdiscoverprinter-f-sys.md)<!--DelEnd-->
+  - [startDiscoverPrinter](arkts-basicservices-print-startdiscoverprinter-f.md)
   <!--Del-->
   - [startGettingPrintFile(system api)](arkts-basicservices-print-startgettingprintfile-f-sys.md)<!--DelEnd-->
   - [startPrint](arkts-basicservices-print-startprint-f.md)
   <!--Del-->
   - [startPrintJob(system api)](arkts-basicservices-print-startprintjob-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [stopDiscoverPrinter(system api)](arkts-basicservices-print-stopdiscoverprinter-f-sys.md)<!--DelEnd-->
+  - [stopDiscoverPrinter](arkts-basicservices-print-stopdiscoverprinter-f.md)
   - [unregisterWatermarkCallback](arkts-basicservices-print-unregisterwatermarkcallback-f.md)
   <!--Del-->
   - [updateExtensionInfo(system api)](arkts-basicservices-print-updateextensioninfo-f-sys.md)<!--DelEnd-->
   - [updatePrinterInDiscovery](arkts-basicservices-print-updateprinterindiscovery-f.md)
-  <!--Del-->
-  - [updatePrinterInformation(system api)](arkts-basicservices-print-updateprinterinformation-f-sys.md)<!--DelEnd-->
+  - [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md)
   <!--Del-->
   - [updatePrinters(system api)](arkts-basicservices-print-updateprinters-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updatePrinterState(system api)](arkts-basicservices-print-updateprinterstate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [updatePrintJobState(system api)](arkts-basicservices-print-updateprintjobstate-f-sys.md)<!--DelEnd-->
+  - [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md)
   - [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)
-  <!--Del-->
-  - [PreviewAttribute(system api)](arkts-basicservices-print-previewattribute-i-sys.md)<!--DelEnd-->
+  - [PreviewAttribute](arkts-basicservices-print-previewattribute-i.md)
   - [PrintAttributes](arkts-basicservices-print-printattributes-i.md)
   - [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md)
   - [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md)
-  <!--Del-->
-  - [PrinterCapability(system api)](arkts-basicservices-print-printercapability-i-sys.md)<!--DelEnd-->
+  - [PrinterCapability](arkts-basicservices-print-printercapability-i.md)
   <!--Del-->
   - [PrinterExtensionInfo(system api)](arkts-basicservices-print-printerextensioninfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PrinterInfo(system api)](arkts-basicservices-print-printerinfo-i-sys.md)<!--DelEnd-->
+  - [PrinterInfo](arkts-basicservices-print-printerinfo-i.md)
   - [PrinterInformation](arkts-basicservices-print-printerinformation-i.md)
   - [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)
-  <!--Del-->
-  - [PrinterRange(system api)](arkts-basicservices-print-printerrange-i-sys.md)<!--DelEnd-->
+  - [PrinterRange](arkts-basicservices-print-printerrange-i.md)
   - [PrintJob](arkts-basicservices-print-printjob-i.md)
-  <!--Del-->
-  - [PrintJob(system api)](arkts-basicservices-print-printjob-i-sys.md)<!--DelEnd-->
   - [PrintJobData](arkts-basicservices-print-printjobdata-i.md)
-  <!--Del-->
-  - [PrintMargin(system api)](arkts-basicservices-print-printmargin-i-sys.md)<!--DelEnd-->
+  - [PrintMargin](arkts-basicservices-print-printmargin-i.md)
   - [PrintPageRange](arkts-basicservices-print-printpagerange-i.md)
   - [PrintPageSize](arkts-basicservices-print-printpagesize-i.md)
-  <!--Del-->
-  - [PrintResolution(system api)](arkts-basicservices-print-printresolution-i-sys.md)<!--DelEnd-->
+  - [PrintResolution](arkts-basicservices-print-printresolution-i.md)
   - [PrintTask](arkts-basicservices-print-printtask-i.md)
   - [SharedHost](arkts-basicservices-print-sharedhost-i.md)
   - [PrinterChangeCallback](arkts-basicservices-print-printerchangecallback-t.md)
@@ -736,34 +721,23 @@
   <!--Del-->
   - [UnlockPolicy(system api)](arkts-basicservices-screenlock-unlockpolicy-e-sys.md)<!--DelEnd-->
 - [@ohos.selectionInput.SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md)
-  <!--Del-->
-  - [SelectionExtensionAbility(system api)](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)<!--DelEnd-->
+  - [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)
 - [@ohos.selectionInput.SelectionExtensionContext](arkts-selectioninput-selectionextensioncontext.md)
-  <!--Del-->
-  - [SelectionExtensionContext(system api)](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c-sys.md)<!--DelEnd-->
+  - [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md)
 - [@ohos.selectionInput.SelectionPanel](arkts-selectioninput-selectionpanel.md)
-  <!--Del-->
-  - [PanelInfo(system api)](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PanelType(system api)](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md)<!--DelEnd-->
+  - [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md)
+  - [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
 - [@ohos.selectionInput.selectionManager](arkts-selectioninput-selectionmanager.md)
-  <!--Del-->
-  - [createPanel(system api)](arkts-basicservices-selectionmanager-createpanel-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [destroyPanel(system api)](arkts-basicservices-selectionmanager-destroypanel-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getSelectionContent(system api)](arkts-basicservices-selectionmanager-getselectioncontent-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off(system api)](arkts-basicservices-selectionmanager-off-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on(system api)](arkts-basicservices-selectionmanager-on-f-sys.md)<!--DelEnd-->
+  - [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)
+  - [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)
+  - [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md)
+  - [off](arkts-basicservices-selectionmanager-off-f.md)
+  - [on](arkts-basicservices-selectionmanager-on-f.md)
   - [Panel](arkts-basicservices-selectionmanager-panel-i.md)
   <!--Del-->
   - [Panel(system api)](arkts-basicservices-selectionmanager-panel-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [SelectionInfo(system api)](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [SelectionType(system api)](arkts-basicservices-selectionmanager-selectiontype-e-sys.md)<!--DelEnd-->
+  - [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)
+  - [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md)
 - [@ohos.settings](arkts-settings.md)
   - [settings](arkts-basicservices-settings-n.md)
     - [date](arkts-basicservices-settings-date-n.md)

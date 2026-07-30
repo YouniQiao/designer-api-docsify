@@ -49,7 +49,7 @@ Creates a truncated text line object.
 **Example**
 
 ```TypeScript
-import { drawing, text, common2D } from '@kit.ArkGraphics2D'
+import { drawing, text } from '@kit.ArkGraphics2D'
 import { image } from '@kit.ImageKit'
 
 function textFunc(pixelmap: PixelMap) {
@@ -105,11 +105,10 @@ Enumerates the offset and index of each character in a text line.
 **Example**
 
 ```TypeScript
-function callback(offset: number, index: number, leadingEdge: boolean): boolean {
+lines[0].enumerateCaretOffsets((offset: number, index: number, leadingEdge: boolean): boolean => {
   console.info('textLine: offset: ' + offset + ', index: ' + index + ', leadingEdge: ' + leadingEdge);
   return index > 50;
-}
-lines[0].enumerateCaretOffsets(callback);
+});
 
 ```
 
@@ -443,8 +442,6 @@ Paints this text line on the canvas with the coordinate point (x, y) as the uppe
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
-import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
 import { image } from '@kit.ImageKit'
 
 function textFunc(pixelmap: PixelMap) {

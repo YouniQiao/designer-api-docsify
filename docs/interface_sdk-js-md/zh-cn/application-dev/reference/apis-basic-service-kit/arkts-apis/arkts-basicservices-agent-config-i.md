@@ -63,7 +63,8 @@ data?: string | Array<FormItem>
 ```
 
 - 下载时，data为字符串类型，通常情况下使用json格式（object将被转换为json文本），默认为空。  
-- 上传时，data是表单项数组Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;。从API version15开始，创建单个任务可以上传最多100个文件。默认为空。
+- 上传时，data是表单项数组Array&lt;  
+[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;。从API version15开始，创建单个任务可以上传最多100个文件。默认为空。
 
 **类型：** string \| Array&lt;FormItem&gt;
 
@@ -479,9 +480,11 @@ saveas?: string
 保存下载文件的路径，包括如下几种：
 
 - 相对路径，位于调用方的缓存路径下，如"./xxx/yyy/zzz.html"、"xxx/yyy/zzz.html"。  
-- internal协议路径，支持"internal://"及其子路径，internal为调用方（传入的context）对应路径，"internal://cache"对应context.cacheDir。如"internal://cache/path/to/file.txt"。  
+- internal协议路径，支持"internal://"及其子路径，internal为调用方（传入的context）对应路径，"internal://cache"对应context.cacheDir。如"  
+internal://cache/path/to/file.txt"。  
 - 应用沙箱目录，只支持到base及其子目录下，如"/data/storage/el1/base/path/to/file.txt"。  
-- file协议路径，支持应用文件和用户文件，应用文件必须匹配应用包名，只支持到base及其子目录下，如"file://com.example.test/data/storage/el2/base/file.txt"。用户文件必须为调用方创建好的用户文件uri。
+- file协议路径，支持应用文件和用户文件，应用文件必须匹配应用包名，只支持到base及其子目录下，如"file://com.example.test/data/storage/el2/base/file.txt"。用户  
+文件必须为调用方创建好的用户文件uri。
 
 从API version 20开始，除[下载网络资源文件至用户文件](../../../basic-services/request/app-file-upload-download.md#下载网络资源文件至用户文件)外，其他可默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。
 

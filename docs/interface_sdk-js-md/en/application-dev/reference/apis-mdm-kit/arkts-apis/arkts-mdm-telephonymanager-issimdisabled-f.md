@@ -58,7 +58,9 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // Set the ID of the slot to be queried.
   let slotId: number = 0;
+  // Check whether the SIM card in the specified slot is disabled.
   let result: boolean = telephonyManager.isSimDisabled(wantTemp, slotId);
   console.info(`Succeeded in querying slotId: ${slotId} is disabled or not, result: ${result}`);
 } catch (err) {

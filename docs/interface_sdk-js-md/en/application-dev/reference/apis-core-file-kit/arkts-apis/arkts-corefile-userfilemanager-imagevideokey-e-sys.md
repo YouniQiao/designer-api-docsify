@@ -266,7 +266,7 @@ File location type.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [POSITION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#position)
+**Substitutes:** [POSITION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#position)
 
 <!--Device-ImageVideoKey-POSITION--><!--Device-ImageVideoKey-POSITION-End-->
 

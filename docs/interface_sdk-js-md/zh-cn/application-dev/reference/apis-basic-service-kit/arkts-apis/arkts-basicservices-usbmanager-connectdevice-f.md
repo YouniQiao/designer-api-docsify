@@ -60,13 +60,13 @@ async function connectDevice() {
     console.error(`request right failed`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
-  if (devicepipe == undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
-  console.info(`devicepipe = ${devicepipe}`);
-  usbManager.closePipe(devicepipe);
+  console.info(`devicePipe = ${devicePipe}`);
+  usbManager.closePipe(devicePipe);
 }
 
 ```

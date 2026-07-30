@@ -8,29 +8,6 @@ Enumerates the album keys.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-## ALBUM_LPATH
-
-```TypeScript
-ALBUM_LPATH = 'lpath'
-```
-
-Virtual path of the album.
-
-Albums and their virtual path values:
-
-- Camera application album: '/DCIM/Camera'  
-- Screenshot application album: '/Pictures/Screenshots'  
-- Screen recording application album: '/Pictures/Screenrecords'  
-- User-created album: '/Pictures/Users/{Custom album name}'
-
-**Since:** 23
-
-<!--Device-AlbumKeys-ALBUM_LPATH = 'lpath'--><!--Device-AlbumKeys-ALBUM_LPATH = 'lpath'-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
 ## BUNDLE_NAME
 
 ```TypeScript

@@ -26,10 +26,13 @@ The policy for RESOURCE_OVERLIMIT event **event**: No heap snapshot is transferr
 
 **NOTE**
 
-- Only the preceding two values are supported. If other values are passed in, the method fails to be called and takes no effect.  
-- If the parameter value is **event_rawheap**, the heap snapshot file may fail to be generated. This is because the application may exit in advance due to a freeze event triggered by a performance problem.
+- Only the preceding two values are supported. If other values are passed in, the method fails to be called and  
+takes no effect.  
+- If the parameter value is **event_rawheap**, the heap snapshot file may fail to be generated. This is because  
+the application may exit in advance due to a freeze event triggered by a performance problem.
 
--The enabling behavior of an application takes effect only in its current lifecycle. In the same lifecycle, the enabling status of the last successful call is used. After the application restarts, you need to set the enabling status again.
+-The enabling behavior of an application takes effect only in its current lifecycle. In the same lifecycle, the  
+enabling status of the last successful call is used. After the application restarts, you need to set the enabling status again.
 
 **Type:** string
 

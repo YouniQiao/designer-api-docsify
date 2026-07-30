@@ -121,7 +121,7 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 
 | Type | Description |
 | --- | --- |
-| [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) | - Returns a **CanvasRenderingContext2D** object that is bound to the same **Canvas** component as the input **DrawingRenderingContext**. |
+| [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) | - Returns a **CanvasRenderingContext2D** object that is   bound to the same **Canvas** component as the input **DrawingRenderingContext**. |
 
 **Error codes:**
 

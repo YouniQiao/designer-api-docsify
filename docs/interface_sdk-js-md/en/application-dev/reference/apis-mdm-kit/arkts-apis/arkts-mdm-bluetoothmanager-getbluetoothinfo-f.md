@@ -51,6 +51,7 @@ Obtains device Bluetooth information.
 import { bluetoothManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
 
+// Create an EnterpriseAdminExtensionAbility component.
 let wantTemp: Want = {
   // Replace it as required.
   bundleName: 'com.example.myapplication',
@@ -58,10 +59,11 @@ let wantTemp: Want = {
 };
 
 try {
-    let result: bluetoothManager.BluetoothInfo = bluetoothManager.getBluetoothInfo(wantTemp);
-    console.info(`Succeeded in getting bluetooth info: ${JSON.stringify(result)}`);
+  // Obtain Bluetooth information.
+  let result: bluetoothManager.BluetoothInfo = bluetoothManager.getBluetoothInfo(wantTemp);
+  console.info(`Succeeded in getting bluetooth info: ${JSON.stringify(result)}`);
 } catch(err) {
-    console.error(`Failed to get bluetooth info. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to get bluetooth info. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

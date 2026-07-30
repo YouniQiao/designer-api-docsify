@@ -15,7 +15,8 @@ max?: number
 ```
 
 - When set to a value greater than 0, this parameter indicates the maximum value in the **values** list.  
-- When set to a value equal to or smaller than 0, this parameter indicates the sum of values in the **values** list, and the values are displayed proportionally based on their relative sizes.
+- When set to a value equal to or smaller than 0, this parameter indicates the sum of values in the **values**  
+list, and the values are displayed proportionally based on their relative sizes.
 
 Default value: **100**
 

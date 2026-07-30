@@ -452,9 +452,11 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<Abilit
 
 启动一个独立窗口的原子化服务。使用Promise异步回调。仅支持在主线程调用。原子化服务被启动后，有如下情况：
 
-- 正常情况下原子化服务可以通过[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身，并且返回结果给调用方。  
+- 正常情况下原子化服务可以通过  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身，并且返回结果给调用方。  
 - 异常情况下比如杀死原子化服务会返回异常结果给调用方，异常结果的resultCode为-1。  
-- 如果不同应用多次调用该接口启动同一个原子化服务，当这个原子化服务调用[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方, 其它调用方返回异常结果，异常结果中resultCode为-1。
+- 如果不同应用多次调用该接口启动同一个原子化服务，当这个原子化服务调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方, 其它调用方返回异常结果，异常结果中resultCode为-1。
 > **说明：**  
 >  
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
@@ -507,7 +509,8 @@ openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<Abili
 
 - "actions"列表中包含"ohos.want.action.viewData"。  
 - "entities"列表中包含"entity.system.browsable"。  
-- "uris"列表中包含"scheme"为"https"且"domainVerify"为true的元素。如果希望获取被拉起方终止后的结果，可以设置callback参数，此参数的使用可参照[startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult)接口。传入的参数不合法时，如未设置必选参数或link字符串不是标准格式的URL，接口会直接抛出异常。参数校验通过，拉起目标方时出现的错误通过promise返回错误信息。
+- "uris"列表中包含"scheme"为"https"且"domainVerify"为true的元素。  
+如果希望获取被拉起方终止后的结果，可以设置callback参数，此参数的使用可参照[startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult)接口。传入的参数不合法时，如未设置必选参数或link字符串不是标准格式的URL，接口会直接抛出异常。参数校验通过，拉起目标方时出现的错误通过promise返回错误信息。
 > **说明：**  
 >  
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
@@ -1503,9 +1506,11 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 启动一个UIAbility，并通过回调函数接收被拉起的UIAbility退出时的返回结果。使用callback异步回调。仅支持在主线程调用。UIAbility被启动后，有如下情况：
 
-- 正常情况下可以通过调用[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身，并将结果返回给调用方。  
+- 正常情况下可以通过调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身，并将结果返回给调用方。  
 - 异常情况下比如杀死UIAbility会将异常结果返回给调用方，异常结果中resultCode为-1。  
-- 如果被启动的UIAbility是[单实例模式](../../../application-models/uiability-launch-type.md#singleton启动模式)，且这个UIAbility被不同应用多次调用该接口启动，当这个UIAbility调用[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
+- 如果被启动的UIAbility是[单实例模式](../../../application-models/uiability-launch-type.md#singleton启动模式)，且这个UIAbility被不同应用多次调  
+用该接口启动，当这个UIAbility调用[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
 > **说明：**  
 >  
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
@@ -1567,9 +1572,11 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 
 启动一个UIAbility，并通过回调函数接收被拉起的UIAbility退出时的返回结果。使用callback异步回调。仅支持在主线程调用。UIAbility被启动后，有如下情况：
 
-- 正常情况下可以通过调用[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身，并将结果返回给调用方。  
+- 正常情况下可以通过调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身，并将结果返回给调用方。  
 - 异常情况下比如杀死UIAbility会将异常结果返回给调用方，异常结果中resultCode为-1。  
-- 如果被启动的UIAbility是[单实例模式](../../../application-models/uiability-launch-type.md#singleton启动模式)，且这个UIAbility被不同应用多次调用该接口启动，当这个UIAbility调用[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
+- 如果被启动的UIAbility是[单实例模式](../../../application-models/uiability-launch-type.md#singleton启动模式)，且这个UIAbility被不同应用多次调  
+用该接口启动，当这个UIAbility调用[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
 > **说明：**  
 >  
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
@@ -1632,9 +1639,11 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 启动一个UIAbility，并通过回调函数接收被拉起的UIAbility退出时的返回结果。使用Promise异步回调。仅支持在主线程调用。UIAbility被启动后，有如下情况：
 
-- 正常情况下可以通过调用[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身，并将结果返回给调用方。  
+- 正常情况下可以通过调用  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身，并将结果返回给调用方。  
 - 异常情况下比如杀死UIAbility会将异常结果返回给调用方，异常结果中resultCode为-1。  
-- 如果被启动的UIAbility是[单实例模式](../../../application-models/uiability-launch-type.md#singleton启动模式)，且这个UIAbility被不同应用多次调用该接口启动，当这个UIAbility调用[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
+- 如果被启动的UIAbility是[单实例模式](../../../application-models/uiability-launch-type.md#singleton启动模式)，且这个UIAbility被不同应用多次调  
+用该接口启动，当这个UIAbility调用[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
 > **说明：**  
 >  
 > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
@@ -1783,7 +1792,7 @@ startSelfUIAbilityInCurrentProcess(want: Want, specifiedFlag: string, options?: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 启动Ability的必要信息。只支持[显式启动](../../../application-models/explicit-implicit-want-mappings.md#显式want匹配原理)，不支持[隐式启动](../../../application-models/explicit-implicit-want-mappings.md#隐式want匹配原理)。 |
-| specifiedFlag | string | 是 | UIAbility的ID。此ID不得与任何已运行的ID重复   - 开发者自定义的UIAbility标识。该标识不能与已启动的UIAbility标识相同，否则将返回错误。 <br>**说明：**<br>当通过该接口拉起启动模式为[specified](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility时，将不会触发[onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant)回调。 |
+| specifiedFlag | string | 是 | UIAbility的ID。此ID不得与任何已运行的ID重复   - 开发者自定义的UIAbility标识。该标识不能与已启动的UIAbility标识相同，否则将返回错误。 <br>**说明：**<br>当通过该接口拉起启动模式为   [specified](../../../application-models/uiability-launch-type.md#specified启动模式)的UIAbility时，将不会触发[onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant)回调。 |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动Ability所携带的参数。 |
 
 **返回值：**

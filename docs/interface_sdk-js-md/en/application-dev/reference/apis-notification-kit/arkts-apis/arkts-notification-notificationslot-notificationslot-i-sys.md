@@ -42,7 +42,8 @@ Reminder mode of the notification.
 - Bit 2: banner. The value **0** means to enable the feature, and **1** means the opposite.  
 - Bit 3: turning on the screen. The value **0** means to enable the feature, and **1** means the opposite.  
 - Bit 4: vibration. The value **0** means to enable the feature, and **1** means the opposite.  
-- Bit 5: notification icon in the status bar. The value **0** means to enable the feature, and **1** means the opposite.
+- Bit 5: notification icon in the status bar. The value **0** means to enable the feature, and **1** means the  
+opposite.
 
 **Type:** number
 

@@ -53,10 +53,10 @@ let wantTemp: Want = {
 };
 try {
   let usbDevices: Array<usbManager.UsbDeviceType> = [{
-      baseClass: 8,
-      subClass: 0,
-      protocol: 0,
-      descriptor: usbManager.Descriptor.INTERFACE
+    baseClass: 8,
+    subClass: 0,
+    protocol: 0,
+    descriptor: usbManager.Descriptor.INTERFACE
   }];
   usbManager.removeDisallowedUsbDevices(wantTemp, usbDevices);
   console.info(`Succeeded in removing disallowed USB devices.`);

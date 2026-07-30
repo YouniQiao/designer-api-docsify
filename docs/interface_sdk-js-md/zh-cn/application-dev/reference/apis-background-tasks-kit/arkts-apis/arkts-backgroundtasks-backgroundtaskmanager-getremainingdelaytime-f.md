@@ -45,6 +45,7 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 import { BusinessError } from '@kit.BasicServicesKit';
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 
+// 短时任务的请求ID，用于查询剩余时间
 let requestId = 1;
 backgroundTaskManager.getRemainingDelayTime(requestId, (error: BusinessError, res: number) => {
   if(error) {

@@ -42,6 +42,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md) | Provides APIs for managing the media album change request. |
 | [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) | Represents a media asset change request. |
 | [MediaAssetManager](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md) | The MediaAssetManager class is used for manipulating the read and write operations of media assets. |
+| [MediaAssetsChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c.md) | Represents a request for changing multiple assets. |
 | [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md) | Describes the configuration for file type filtering. |
 | [OperationItem](arkts-medialibrary-photoaccesshelper-operationitem-c.md) | Describes the settings for filtering media files. |
 | [PhotoSelectOptions](arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md) | Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is used to start the picker of the corresponding user ID space. |
@@ -133,7 +134,6 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [ContextMap](arkts-medialibrary-photoaccesshelper-contextmap-i-sys.md) | Provides APIs for input Context Map. |
 | [DeepOptimizeSpaceProgress](arkts-medialibrary-photoaccesshelper-deepoptimizespaceprogress-i-sys.md) | Defines the DeepOptimizeSpaceProgress data structure. |
 | [Entity](arkts-medialibrary-photoaccesshelper-entity-i-sys.md) | Provides APIs for output Entity. |
-| [FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i-sys.md) | FetchResult provides APIs to manage the file retrieval result. |
 | [FormInfo](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md) | Defines the Gallery widget information. |
 | [FusionAssetsInfo](arkts-medialibrary-photoaccesshelper-fusionassetsinfo-i-sys.md) | Fusion assets information. |
 | [GalleryFormInfo](arkts-medialibrary-photoaccesshelper-galleryforminfo-i-sys.md) | Defines the Gallery widget information. |
@@ -234,7 +234,6 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [PhotoPermissionType](arkts-medialibrary-photoaccesshelper-photopermissiontype-e-sys.md) | Enumerates the types of permissions for accessing media assets.  The permissions include temporary read permission and persistent read permission. The temporary read permission will be removed when the application is dead, while the persistent read permission will not.  For the same media asset and application, the persistent read permission overwrites the temporary read permission.The temporary read permission does not overwrite the persistent read permission. |
 | [PhotoRiskStatus](arkts-medialibrary-photoaccesshelper-photoriskstatus-e-sys.md) | Enumerates the risk types of images. |
 | [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e-sys.md) | Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) types. |
-| [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md) | Enumerates the file locations. |
 | [RankingMethod](arkts-medialibrary-photoaccesshelper-rankingmethod-e-sys.md) | Enumerates related entity Ranking Method |
 | [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e-sys.md) | Enumerates the types of recommended images. |
 | [RequestPhotoType](arkts-medialibrary-photoaccesshelper-requestphototype-e-sys.md) | Enumerates the types of the operation for obtaining image or video thumbnails. |

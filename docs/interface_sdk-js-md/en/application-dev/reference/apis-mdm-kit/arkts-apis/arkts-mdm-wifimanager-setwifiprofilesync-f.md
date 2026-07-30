@@ -47,7 +47,6 @@ Scenario 1: public Wi-Fi development
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -71,12 +70,11 @@ try {
 
 ```
 
-Multiple Wi-Fi networks with the same name but different BSSIDs
+Scenario 2: Multiple Wi-Fi networks with the same name but different BSSIDs
 
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -106,7 +104,6 @@ Scenario 3: old industrial devices with low security
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -136,7 +133,6 @@ Scenario 4: home networks, small offices, and consumer routers
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -165,7 +161,6 @@ Scenario 5: modern IoT device networks
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -194,7 +189,6 @@ Scenario 6: company networks and university campus networks
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -239,7 +233,6 @@ try {
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -284,7 +277,6 @@ try {
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -329,7 +321,6 @@ try {
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.
@@ -376,7 +367,6 @@ Scenario 7: fixed IP address for client access
 ```TypeScript
 import { wifiManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 let wantTemp: Want = {
   // Replace with actual values.

@@ -26,33 +26,6 @@ Implements a **UIContext** instance.
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-## animateToImmediately
-
-```TypeScript
-animateToImmediately(param: AnimateParam, processor: Callback<void>): void
-```
-
-Specifies a clear animation host instance context via the UIContext object and triggers the explicit animation to be dispatched immediately. This avoids issues where animations are not executed or animation end callbacks are not triggered due to inability to locate the instance or using an incorrect instance. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void--><!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | Animation settings. |
-| processor | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback function. It specifies the closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
-
 ## clearResourceCache
 
 ```TypeScript

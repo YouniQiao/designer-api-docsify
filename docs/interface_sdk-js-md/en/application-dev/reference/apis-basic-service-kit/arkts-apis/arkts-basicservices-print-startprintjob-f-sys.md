@@ -28,7 +28,7 @@ Starts the specified print job. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i-sys.md) | Yes | Information about the print job. |
+| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Information about the print job. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -95,7 +95,7 @@ Starts the specified print job. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i-sys.md) | Yes | Information about the print job. |
+| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Information about the print job. |
 
 **Return value:**
 

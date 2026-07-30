@@ -12,7 +12,7 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>
 ```
 
-查询当前用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md)，只支持查询主应用的ShortcutInfo，查询分身应用请使用[getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex)。
+查询当前用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)，只支持查询主应用的ShortcutInfo，查询分身应用请使用[getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex)。
 
 获取调用方自身的信息时不需要权限。
 
@@ -36,7 +36,7 @@ function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array形式返回当前用户下指定应用的[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md)。 |
+| Array&lt;ShortcutInfo&gt; | Array形式返回当前用户下指定应用的[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)。 |
 
 **错误码：**
 
@@ -73,7 +73,7 @@ try {
 function getShortcutInfoSync(bundleName: string, userId: number): Array<ShortcutInfo>
 ```
 
-查询指定用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md)，只支持查询主应用的ShortcutInfo，查询分身应用请使用[getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex)。
+查询指定用户下指定应用的快捷方式信息[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)，只支持查询主应用的ShortcutInfo，查询分身应用请使用[getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex)。
 
 获取调用方自身的信息时不需要权限。
 
@@ -98,7 +98,7 @@ function getShortcutInfoSync(bundleName: string, userId: number): Array<Shortcut
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ShortcutInfo&gt; | Array形式返回指定用户下指定应用的[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md)。 |
+| Array&lt;ShortcutInfo&gt; | Array形式返回指定用户下指定应用的[ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)。 |
 
 **错误码：**
 

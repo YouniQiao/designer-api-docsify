@@ -1,6 +1,7 @@
 # ArkTS API<!--arkts-telephonykit-->
 
 - [@ohos.telephony.call](arkts-telephony-call.md)
+  - [answerCall](arkts-telephony-call-answercall-f.md)
   <!--Del-->
   - [answerCall(system api)](arkts-telephony-call-answercall-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -41,6 +42,7 @@
   - [getSubCallIdList(system api)](arkts-telephony-call-getsubcallidlist-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getVoNRState(system api)](arkts-telephony-call-getvonrstate-f-sys.md)<!--DelEnd-->
+  - [hangUpCall](arkts-telephony-call-hangupcall-f.md)
   <!--Del-->
   - [hangUpCall(system api)](arkts-telephony-call-hangupcall-f-sys.md)<!--DelEnd-->
   - [hasCall](arkts-telephony-call-hascall-f.md)
@@ -89,6 +91,7 @@
   - [postDialProceed(system api)](arkts-telephony-call-postdialproceed-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [preloadCallUI(system api)](arkts-telephony-call-preloadcallui-f-sys.md)<!--DelEnd-->
+  - [rejectCall](arkts-telephony-call-rejectcall-f.md)
   <!--Del-->
   - [rejectCall(system api)](arkts-telephony-call-rejectcall-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -153,6 +156,7 @@
   - [CallSessionEvent(system api)](arkts-telephony-call-callsessionevent-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CallTransferInfo(system api)](arkts-telephony-call-calltransferinfo-i-sys.md)<!--DelEnd-->
+  - [CallTransferResult](arkts-telephony-call-calltransferresult-i.md)
   <!--Del-->
   - [CallTransferResult(system api)](arkts-telephony-call-calltransferresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -198,8 +202,7 @@
   - [CallState](arkts-telephony-call-callstate-e.md)
   <!--Del-->
   - [CallTransferSettingType(system api)](arkts-telephony-call-calltransfersettingtype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [CallTransferType(system api)](arkts-telephony-call-calltransfertype-e-sys.md)<!--DelEnd-->
+  - [CallTransferType](arkts-telephony-call-calltransfertype-e.md)
   <!--Del-->
   - [CallType(system api)](arkts-telephony-call-calltype-e-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -230,8 +233,7 @@
   <!--Del-->
   - [RttState(system api)](arkts-telephony-call-rttstate-e-sys.md)<!--DelEnd-->
   - [TelCallState](arkts-telephony-call-telcallstate-e.md)
-  <!--Del-->
-  - [TransferStatus(system api)](arkts-telephony-call-transferstatus-e-sys.md)<!--DelEnd-->
+  - [TransferStatus](arkts-telephony-call-transferstatus-e.md)
   <!--Del-->
   - [VideoRequestResultType(system api)](arkts-telephony-call-videorequestresulttype-e-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -122,7 +122,7 @@ static getDefaultRenderContext(): RenderContext | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | -- 默认RenderContext实例@static |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | -- 默认RenderContext实例   @static |
 
 ## getNodeByPath
 

@@ -106,7 +106,7 @@ Sets the check mark style of the check box. Compared with [mark](CheckboxAttribu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;MarkStyle&gt; | Yes | Check mark style of the check box. If **indicatorBuilder** is set, the style is determined by **indicatorBuilder**.<br>If **style** is set to **undefined**, the default value is used: {<br   >strokeColor : `$r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth:`$r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;MarkStyle&gt; | Yes | Check mark style of the check box. If **indicatorBuilder** is set, the style is determined by **indicatorBuilder**.<br>If **style** is set to **undefined**, the default value is used: {<br   >strokeColor : `$r('sys.color.ohos_id_color_foreground_contrary')`,<br>strokeWidth:   `$r('sys.float.ohos_id_checkbox_stroke_width')`,<br>size: '20vp'<br>} |
 
 ## onChange
 

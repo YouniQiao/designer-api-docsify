@@ -44,8 +44,10 @@ If the directory size exceeds the specified quota when application event logging
 
 The quota value must meet the following requirements:
 
-- The quota value consists of only digits and a unit (including b|k|kb|m|mb|g|gb|t|tb, which are case-insensitive).  
-- The quota value must start with a digit. You can determine whether to pass the unit. If the unit is left empty,**b** (that is, byte) is used by default.
+- The quota value consists of only digits and a unit (including b|k|kb|m|mb|g|gb|t|tb, which are case-insensitive  
+).  
+- The quota value must start with a digit. You can determine whether to pass the unit. If the unit is left empty,  
+**b** (that is, byte) is used by default.
 
 **Type:** string
 

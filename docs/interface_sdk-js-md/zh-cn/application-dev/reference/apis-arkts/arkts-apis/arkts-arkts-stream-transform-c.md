@@ -35,7 +35,7 @@ constructor()
 **示例：**
 
 ```TypeScript
-let transform = new stream.Transform();
+let transformStream = new stream.Transform();
 
 ```
 
@@ -78,9 +78,9 @@ class TestTransform extends stream.Transform {
   }
 }
 
-let transform = new TestTransform();
-transform.end("my test");
-transform.on("data", (data) => {
+let transformStream = new TestTransform();
+transformStream.end("my test");
+transformStream.on("data", (data) => {
   console.info("data is", data.data); // data is test
 });
 
@@ -126,8 +126,8 @@ class TestTransform extends stream.Transform {
   }
 }
 
-let tr = new TestTransform();
-tr.write("hello");
+let transformStream = new TestTransform();
+transformStream.write("hello");
 
 ```
 

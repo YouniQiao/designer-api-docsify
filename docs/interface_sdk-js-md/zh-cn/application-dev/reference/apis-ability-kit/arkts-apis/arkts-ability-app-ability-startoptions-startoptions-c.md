@@ -305,7 +305,8 @@ supportWindowModes?: Array<bundleManager.SupportWindowMode>
 
 - FULL_SCREEN：支持全屏模式。  
 - FLOATING：支持悬浮窗模式。  
-- SPLIT：支持分屏模式。通常需要配合FULL_SCREEN或FLOATING一起使用，不建议只配置SPLIT。当仅配置SPLIT时，2in1设备上的窗口默认为悬浮窗模式，支持进入分屏模式；Tablet设备上的窗口默认为全屏模式，支持进入分屏模式。
+- SPLIT：支持分屏模式。通常需要配合FULL_SCREEN或FLOATING一起使用，不建议只配置SPLIT。当仅配置SPLIT时，2in1设备上的窗口默认为悬浮窗模式，支持进入分屏模式；Tablet设备上的窗口默认为全屏模  
+式，支持进入分屏模式。
 
 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下同时配置FULL_SCREEN和SPLIT时，如果应用的[targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)小于15，窗口将以悬浮窗模式启动；如果应用的[targetAPIVersion](../../../quick-start/app-configuration-file.md#配置文件标签)大于等于15，窗口将以全屏模式启动。
 

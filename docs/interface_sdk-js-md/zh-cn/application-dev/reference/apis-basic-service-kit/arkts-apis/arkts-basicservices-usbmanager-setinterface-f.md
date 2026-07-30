@@ -63,21 +63,23 @@ async function setInterface() {
     console.error(`request right failed`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
-  if (devicepipe == undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
   let interfaces: usbManager.USBInterface = device.configs?.[0]?.interfaces?.[0];
-  let ret: number = usbManager.claimInterface(devicepipe, interfaces);
+  let ret: number = usbManager.claimInterface(devicePipe, interfaces);
   if (ret !== 0) {
     console.error(`claim interface failed`);
-    usbManager.closePipe(devicepipe);
+    usbManager.closePipe(devicePipe);
     return;
   }
-  ret = usbManager.setInterface(devicepipe, interfaces);
+  ret = usbManager.setInterface(devicePipe, interfaces);
   console.info(`setInterface = ${ret}`);
-  usbManager.closePipe(devicepipe);
+  ret = usbManager.releaseInterface(devicePipe, interfaces);
+  console.info(`releaseInterface = ${ret}`);
+  usbManager.closePipe(devicePipe);
 }
 
 ```

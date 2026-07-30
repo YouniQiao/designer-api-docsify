@@ -57,10 +57,10 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 systemManager.getUpdateAuthData(wantTemp).then((result: string) => {
-    console.info(`Succeeded in getting update auth data: ${JSON.stringify(result)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Get update auth data failed. Code is ${error.code},message is ${error.message}`);
-  });
+  console.info(`Succeeded in getting update auth data: ${JSON.stringify(result)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Get update auth data failed. Code is ${error.code},message is ${error.message}`);
+});
 
 ```
 

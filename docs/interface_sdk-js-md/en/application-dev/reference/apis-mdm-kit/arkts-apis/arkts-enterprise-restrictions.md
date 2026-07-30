@@ -14,8 +14,6 @@ This **restrictions** module provides APIs for disallowing general features of d
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

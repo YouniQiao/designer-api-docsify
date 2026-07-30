@@ -62,8 +62,8 @@ async function usbCancelTransfer() {
     console.error(`request right failed`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
-  if (devicepipe === undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  if (devicePipe === undefined) {
     console.info(`connect device fail`);
     return;
   }
@@ -75,15 +75,15 @@ async function usbCancelTransfer() {
     console.info(`invalid endpoint`);
     return;
   }
-  // 获取设备的第一个id。
-  let ret: number = usbManager.claimInterface(devicepipe, device.configs?.[0]?.interfaces?.[0], true);
+  // 声明接口控制权，force参数为true表示强制获取。
+  let ret: number = usbManager.claimInterface(devicePipe, device.configs?.[0]?.interfaces?.[0], true);
   if (ret !== 0) {
     console.error(`claim interface failed`);
-    usbManager.closePipe(devicepipe);
+    usbManager.closePipe(devicePipe);
     return;
   }
   let transferParams: usbManager.UsbDataTransferParams = {
-    devPipe: devicepipe,
+    devPipe: devicePipe,
     flags: usbManager.UsbTransferFlags.USB_TRANSFER_SHORT_NOT_OK,
     endpoint: 1,
     type: usbManager.UsbEndpointTransferType.TRANSFER_TYPE_BULK,
@@ -95,17 +95,19 @@ async function usbCancelTransfer() {
     isoPacketCount: 0,
   };
   try {
-    transferParams.endpoint=endpoint?.address as number;
-    transferParams.callback=(err, callBackData: usbManager.SubmitTransferCallback)=>{
-      console.info('callBackData =' +JSON.stringify(callBackData));
-    }
+    transferParams.endpoint = endpoint?.address as number;
+    transferParams.callback = (err, callbackData: usbManager.SubmitTransferCallback)=>{
+      console.info('callbackData =' + JSON.stringify(callbackData));
+    };
     usbManager.usbSubmitTransfer(transferParams);
     usbManager.usbCancelTransfer(transferParams);
     console.info('USB transfer request submitted.');
   } catch (error) {
-    console.error('USB transfer failed:', error);
+    console.error(`USB transfer failed. Code: ${error.code}, message: ${error.message}`);
   }
-  usbManager.closePipe(devicepipe);
+  ret = usbManager.releaseInterface(devicePipe, interfaces);
+  console.info(`releaseInterface = ${ret}`);
+  usbManager.closePipe(devicePipe);
 }
 
 ```

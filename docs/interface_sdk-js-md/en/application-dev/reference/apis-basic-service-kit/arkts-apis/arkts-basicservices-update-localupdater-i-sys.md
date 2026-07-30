@@ -12,9 +12,12 @@ This upgrade mode applies to offline system upgrade or upgrade with poor network
 
 **Implementation mechanism**
 
-- Verification mechanism: Verify that the upgrade package is officially released and has not been tampered with by checking the signature, integrity, and version compatibility.  
-- Installation mechanism: Decompress the upgrade package and and write its content to the system partition. Prepare for the device restart to apply the new version.  
-- Security assurance: The upgrade package must be verified first to ensure that the source is trusted before installation.
+- Verification mechanism: Verify that the upgrade package is officially released and has not been tampered with by  
+checking the signature, integrity, and version compatibility.  
+- Installation mechanism: Decompress the upgrade package and and write its content to the system partition. Prepare  
+for the device restart to apply the new version.  
+- Security assurance: The upgrade package must be verified first to ensure that the source is trusted before  
+installation.
 
 **Since:** 9
 
@@ -44,9 +47,12 @@ The process is as follows: Read the upgrade package. Decompress the upgrade pack
 
 **Calling sequence**
 
-- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling this method to install the upgrade package.  
-- You must call **verifyUpgradePackage** to verify the upgrade package first. Failing to do so may cause installation failure or system damage.  
-- After the API is successfully called, the system decompresses the upgrade package, writes its content to the system partition, and prepares for device restart to apply the new version. An event listener can be registered to track the installation progress.  
+- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling  
+this method to install the upgrade package.  
+- You must call **verifyUpgradePackage** to verify the upgrade package first. Failing to do so may cause  
+installation failure or system damage.  
+- After the API is successfully called, the system decompresses the upgrade package, writes its content to the  
+system partition, and prepares for device restart to apply the new version. An event listener can be registered to track the installation progress.  
 - You can install the upgrade package to update the system version.
 
 Use scenarios: This method is used to upgrade the system from a local storage device (such as an SD card).
@@ -118,9 +124,12 @@ The process is as follows: Read the upgrade package. Decompress the upgrade pack
 
 **Calling sequence**
 
-- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling this method to install the upgrade package.  
-- You must call **verifyUpgradePackage** to verify the upgrade package first. Failing to do so may cause installation failure or system damage.  
-- After the API is successfully called, the system decompresses the upgrade package, writes its content to the system partition, and prepares for device restart to apply the new version. An event listener can be registered to track the installation progress.  
+- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling  
+this method to install the upgrade package.  
+- You must call **verifyUpgradePackage** to verify the upgrade package first. Failing to do so may cause  
+installation failure or system damage.  
+- After the API is successfully called, the system decompresses the upgrade package, writes its content to the  
+system partition, and prepares for device restart to apply the new version. An event listener can be registered to track the installation progress.  
 - You can install the upgrade package to update the system version.
 
 Use scenarios: This method is used to upgrade the system from a local storage device (such as an SD card).
@@ -199,7 +208,8 @@ The process is as follows: Confirm the event type based on **eventClassifyInfo**
 
 - This API must be used in pairs with **on()** to unregister a registered event listener.  
 - This API can be called only after a listener is registered using **on()**.  
-- You are advised to call this method after the upgrade process is complete or when the page is destroyed to release resources in a timely manner.
+- You are advised to call this method after the upgrade process is complete or when the page is destroyed to  
+release resources in a timely manner.
 
 **Since:** 9
 
@@ -261,7 +271,8 @@ This method registers a local upgrade event listener. The process is as follows:
 
 **API called in pairs**
 
-- After a listener is registered by calling **on()**, you are advised to call **off()** to unregister the listener when it is no longer needed.  
+- After a listener is registered by calling **on()**, you are advised to call **off()** to unregister the  
+listener when it is no longer needed.  
 - If **off()** is not called to unregister the listener, memory leak occurs, affecting system performance.  
 - You are advised to call **off()** after the upgrade process is complete or when the page is destroyed.
 
@@ -330,14 +341,18 @@ The process is as follows: Read the upgrade package and certificate file. Use th
 
 **Calling sequence**
 
-- The upgrade package must be downloaded from the official website of the vendor or from an official channel to ensure that the source is trusted. Using update packages downloaded from non-official channels may pose security risks.  
-- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling **applyNewVersion** to install the upgrade package.  
-- If you call **applyNewVersion** without verifying the upgrade package first, the installation may fail and the system may be damaged.  
+- The upgrade package must be downloaded from the official website of the vendor or from an official channel to  
+ensure that the source is trusted. Using update packages downloaded from non-official channels may pose security risks.  
+- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling  
+**applyNewVersion** to install the upgrade package.  
+- If you call **applyNewVersion** without verifying the upgrade package first, the installation may fail and the  
+system may be damaged.  
 - The upgrade package that passes the verification can be used in the subsequent installation process.
 
 **Related methods**
 
-- **applyNewVersion()**: installs the upgrade package. This method can be called after the verification is successful.
+- **applyNewVersion()**: installs the upgrade package. This method can be called after the verification is  
+successful.
 
 **Since:** 9
 
@@ -412,9 +427,12 @@ The process is as follows: Read the upgrade package and certificate file. Use th
 
 **Calling sequence**
 
-- The upgrade package must be downloaded from the official website of the vendor or from an official channel to ensure that the source is trusted. Using update packages downloaded from non-official channels may pose security risks.  
-- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling **applyNewVersion** to install the upgrade package.  
-- If you call **applyNewVersion** without verifying the upgrade package first, the installation may fail and the system may be damaged.  
+- The upgrade package must be downloaded from the official website of the vendor or from an official channel to  
+ensure that the source is trusted. Using update packages downloaded from non-official channels may pose security risks.  
+- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling  
+**applyNewVersion** to install the upgrade package.  
+- If you call **applyNewVersion** without verifying the upgrade package first, the installation may fail and the  
+system may be damaged.  
 - The upgrade package that passes the verification can be used in the subsequent installation process.
 
 **Since:** 9

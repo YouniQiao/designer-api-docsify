@@ -70,8 +70,10 @@ Particle configuration.
 
 1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md).2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md).
 
-- **count**: number of particles. The value is greater than or equal to -1. The value **-1** indicates that the number of particles is infinite.  
-- **lifetime**: lifetime of a single particle. The default value is **1000** (that is, 1000 ms, 1s). The value is greater than or equal to -1. The value **-1** indicates that the lifetime of the particle is infinite. If the value specified is less than **-1**, the default value is used.
+- **count**: number of particles. The value is greater than or equal to -1. The value **-1** indicates that the  
+number of particles is infinite.  
+- **lifetime**: lifetime of a single particle. The default value is **1000** (that is, 1000 ms, 1s). The value is  
+greater than or equal to -1. The value **-1** indicates that the lifetime of the particle is infinite. If the value specified is less than **-1**, the default value is used.
 
 Note: If you do not want the animation to keep playing, you are advised not to set the lifetime to –1, which may greatly affect the performance.
 

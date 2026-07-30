@@ -939,8 +939,7 @@
   - [getLaunchWant](arkts-ability-bundlemanager-getlaunchwant-f.md)
   <!--Del-->
   - [getLaunchWantForBundle(系统接口)](arkts-ability-bundlemanager-getlaunchwantforbundle-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getLaunchWantForBundleSync(系统接口)](arkts-ability-bundlemanager-getlaunchwantforbundlesync-f-sys.md)<!--DelEnd-->
+  - [getLaunchWantForBundleSync](arkts-ability-bundlemanager-getlaunchwantforbundlesync-f.md)
   <!--Del-->
   - [getPermissionDef(系统接口)](arkts-ability-bundlemanager-getpermissiondef-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1040,8 +1039,7 @@
   <!--Del-->
   - [Validity(系统接口)](arkts-ability-bundlemanager-validity-t-sys.md)<!--DelEnd-->
   - [WindowSize](arkts-ability-bundlemanager-windowsize-t.md)
-  <!--Del-->
-  - [AbilityFlag(系统接口)](arkts-ability-bundlemanager-abilityflag-e-sys.md)<!--DelEnd-->
+  - [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md)
   - [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md)
   <!--Del-->
   - [AppDistributionType(系统接口)](arkts-ability-bundlemanager-appdistributiontype-e-sys.md)<!--DelEnd-->
@@ -1215,12 +1213,9 @@
   <!--Del-->
   - [startShortcutWithReason(系统接口)](arkts-ability-launcherbundlemanager-startshortcutwithreason-f-sys.md)<!--DelEnd-->
   - [LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md)
-  <!--Del-->
-  - [ParameterItem(系统接口)](arkts-ability-launcherbundlemanager-parameteritem-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ShortcutInfo(系统接口)](arkts-ability-launcherbundlemanager-shortcutinfo-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ShortcutWant(系统接口)](arkts-ability-launcherbundlemanager-shortcutwant-t-sys.md)<!--DelEnd-->
+  - [ParameterItem](arkts-ability-launcherbundlemanager-parameteritem-t.md)
+  - [ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md)
+  - [ShortcutWant](arkts-ability-launcherbundlemanager-shortcutwant-t.md)
 - [@ohos.bundle.overlay](arkts-bundle-overlay.md)
   - [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md)
   <!--Del-->
@@ -1250,12 +1245,9 @@
   <!--Del-->
   - [setShortcutsEnabled(系统接口)](arkts-ability-shortcutmanager-setshortcutsenabled-f-sys.md)<!--DelEnd-->
   - [setShortcutVisibleForSelf](arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md)
-  <!--Del-->
-  - [ParameterItem(系统接口)](arkts-ability-shortcutmanager-parameteritem-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ShortcutInfo(系统接口)](arkts-ability-shortcutmanager-shortcutinfo-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ShortcutWant(系统接口)](arkts-ability-shortcutmanager-shortcutwant-t-sys.md)<!--DelEnd-->
+  - [ParameterItem](arkts-ability-shortcutmanager-parameteritem-t.md)
+  - [ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md)
+  - [ShortcutWant](arkts-ability-shortcutmanager-shortcutwant-t.md)
 - [@ohos.continuation.continuationManager](arkts-continuation-continuationmanager.md)
   - [off](arkts-ability-continuationmanager-off-f.md)
   - [on](arkts-ability-continuationmanager-on-f.md)
@@ -1548,6 +1540,7 @@
   - [UIServiceProxy](arkts-uiserviceproxy.md)
     - [UIServiceProxy](arkts-ability-uiserviceproxy-i.md)
   - [ViewData](arkts-viewdata.md)
+    - [ViewData](arkts-ability-viewdata-i.md)
     <!--Del-->
     - [ViewData(系统接口)](arkts-ability-viewdata-i-sys.md)<!--DelEnd-->
   - [abilityDelegatorArgs](arkts-abilitydelegatorargs.md)
@@ -1634,10 +1627,8 @@
     <!--Del-->
     - [PermissionDef(系统接口)](arkts-ability-permissiondef-i-sys.md)<!--DelEnd-->
   - [PluginBundleInfo](arkts-pluginbundleinfo.md)
-    <!--Del-->
-    - [PluginBundleInfo(系统接口)](arkts-ability-pluginbundleinfo-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [PluginModuleInfo(系统接口)](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i-sys.md)<!--DelEnd-->
+    - [PluginBundleInfo](arkts-ability-pluginbundleinfo-i.md)
+    - [PluginModuleInfo](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i.md)
   - [RecoverableApplicationInfo](arkts-recoverableapplicationinfo.md)
     <!--Del-->
     - [RecoverableApplicationInfo(系统接口)](arkts-ability-recoverableapplicationinfo-i-sys.md)<!--DelEnd-->
@@ -1650,13 +1641,9 @@
     <!--Del-->
     - [SharedModuleInfo(系统接口)](arkts-ability-sharedbundleinfo-sharedmoduleinfo-i-sys.md)<!--DelEnd-->
   - [ShortcutInfo](arkts-shortcutinfo.md)
-    <!--Del-->
-    - [ParameterItem(系统接口)](arkts-ability-shortcutinfo-parameteritem-i-sys.md)<!--DelEnd-->
+    - [ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)
     - [ShortcutInfo](arkts-ability-shortcutinfo-i.md)
-    <!--Del-->
-    - [ShortcutInfo(系统接口)](arkts-ability-shortcutinfo-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [ShortcutWant(系统接口)](arkts-ability-shortcutinfo-shortcutwant-i-sys.md)<!--DelEnd-->
+    - [ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-i.md)
   - [Skill](arkts-skill.md)
     - [Skill](arkts-ability-skill-i.md)
     - [SkillUri](arkts-ability-skill-skilluri-i.md)

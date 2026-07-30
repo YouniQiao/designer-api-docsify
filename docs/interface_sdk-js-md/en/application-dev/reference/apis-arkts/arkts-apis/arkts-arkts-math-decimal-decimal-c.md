@@ -745,7 +745,8 @@ comparedTo(n: Value): number
 ```
 
 Return1 if the value of this Decimal is greater than the value of `n`,  
--1 if the value of this Decimal is less than the value of `n`,0 if they have the same value,NaN if the value of either Decimal is NaN.
+-1 if the value of this Decimal is less than the value of `n`,  
+0 if they have the same value,NaN if the value of either Decimal is NaN.
 
 **Since:** 12
 
@@ -2186,8 +2187,10 @@ static sign(n: Value): number
 ```
 
 Return the sign of the passed value to the method.1 if x > 0,  
--1 if x < 0,0 if x is 0,  
--0 if x is -0,NaN otherwise
+-1 if x < 0,  
+0 if x is 0,  
+-0 if x is -0,  
+NaN otherwise
 
 **Since:** 12
 

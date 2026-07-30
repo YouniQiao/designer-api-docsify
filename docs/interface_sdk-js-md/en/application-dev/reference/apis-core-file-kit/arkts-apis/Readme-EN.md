@@ -149,25 +149,6 @@
   - [TransferState(system api)](arkts-corefile-cloudsyncmanager-transferstate-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TransferStopReason(system api)](arkts-corefile-cloudsyncmanager-transferstopreason-e-sys.md)<!--DelEnd-->
-- [@ohos.file.encryptedVolumeManager](arkts-file-encryptedvolumemanager.md)
-  <!--Del-->
-  - [bindRecoverKeyToPasswd(system api)](arkts-corefile-encryptedvolumemanager-bindrecoverkeytopasswd-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [decrypt(system api)](arkts-corefile-encryptedvolumemanager-decrypt-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [encrypt(system api)](arkts-corefile-encryptedvolumemanager-encrypt-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getCryptProgressById(system api)](arkts-corefile-encryptedvolumemanager-getcryptprogressbyid-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getCryptUuidById(system api)](arkts-corefile-encryptedvolumemanager-getcryptuuidbyid-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [resetCryptPasswd(system api)](arkts-corefile-encryptedvolumemanager-resetcryptpasswd-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [unlock(system api)](arkts-corefile-encryptedvolumemanager-unlock-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [updateCryptPasswd(system api)](arkts-corefile-encryptedvolumemanager-updatecryptpasswd-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [verifyCryptPasswd(system api)](arkts-corefile-encryptedvolumemanager-verifycryptpasswd-f-sys.md)<!--DelEnd-->
 - [@ohos.file.environment](arkts-file-environment.md)
   <!--Del-->
   - [getExternalStorageDir(system api)](arkts-corefile-environment-getexternalstoragedir-f-sys.md)<!--DelEnd-->
@@ -388,11 +369,8 @@
   - [getFreeInodes](arkts-corefile-storagestatistics-getfreeinodes-f.md)
   - [getFreeSize](arkts-corefile-storagestatistics-getfreesize-f.md)
   <!--Del-->
-  - [getFreeSize(system api)](arkts-corefile-storagestatistics-getfreesize-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [getFreeSizeOfVolume(system api)](arkts-corefile-storagestatistics-getfreesizeofvolume-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getFreeSizeSync(system api)](arkts-corefile-storagestatistics-getfreesizesync-f-sys.md)<!--DelEnd-->
+  - [getFreeSizeSync](arkts-corefile-storagestatistics-getfreesizesync-f.md)
   <!--Del-->
   - [getSystemDataSize(system api)](arkts-corefile-storagestatistics-getsystemdatasize-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -400,11 +378,8 @@
   - [getTotalInodes](arkts-corefile-storagestatistics-gettotalinodes-f.md)
   - [getTotalSize](arkts-corefile-storagestatistics-gettotalsize-f.md)
   <!--Del-->
-  - [getTotalSize(system api)](arkts-corefile-storagestatistics-gettotalsize-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [getTotalSizeOfVolume(system api)](arkts-corefile-storagestatistics-gettotalsizeofvolume-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getTotalSizeSync(system api)](arkts-corefile-storagestatistics-gettotalsizesync-f-sys.md)<!--DelEnd-->
+  - [getTotalSizeSync](arkts-corefile-storagestatistics-gettotalsizesync-f.md)
   <!--Del-->
   - [getUserStorageStats(system api)](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md)<!--DelEnd-->
   <!--Del-->

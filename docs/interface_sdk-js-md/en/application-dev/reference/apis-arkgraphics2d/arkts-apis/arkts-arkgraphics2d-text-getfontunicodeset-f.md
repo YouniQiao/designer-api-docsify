@@ -48,7 +48,7 @@ struct GetFontUnicodeSetTest {
   build() {
     Column({ space: 10 }) {
       Button("get fontUnicode")
-        .onClick(async () => {
+        .onClick(() => {
           let promise = text.getFontUnicodeSet("file:///system/fonts/HMSymbolVF.ttf", 0)
           promise.then((unicodeSet) => {
             for (let index = 0; index < unicodeSet.length; index++) {

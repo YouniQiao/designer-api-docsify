@@ -28,6 +28,7 @@ import { formInfo } from '@kit.FormKit';
 | [FormStateInfo](arkts-form-forminfo-formstateinfo-i.md) | Provides state information about a form. |
 | [OverflowInfo](arkts-form-forminfo-overflowinfo-i.md) | Provides OverflowInfo about funInteraction or sceneAnimation form |
 | [Rect](arkts-form-forminfo-rect-i.md) | Indicates rectangle, unit is vp. |
+| [RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md) | The class of a running form information. |
 
 <!--Del-->
 ### Interfaces（系统接口）

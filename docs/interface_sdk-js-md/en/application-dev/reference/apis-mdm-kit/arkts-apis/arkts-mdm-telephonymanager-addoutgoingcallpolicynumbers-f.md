@@ -56,16 +56,19 @@ import { telephonyManager } from '@kit.MDMKit';
 import { adminManager } from '@kit.MDMKit';
 
 let wantTemp: Want = {
-  // Replace the value as required.
+  // Replace the values as required.
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // Set the policy type to blocklist.
   let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
+  // Set the call numbers to be added to the blocklist.
   let numbers: Array<string> = [
     // Replace the value as required.
     "13112345678"
   ];
+  // Add the outgoing call blocklist.
   telephonyManager.addOutgoingCallPolicyNumbers(wantTemp, policy, numbers);
   console.info('Succeeded in adding outgoing call policy.');
 } catch (err) {

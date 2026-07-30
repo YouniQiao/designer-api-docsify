@@ -44,26 +44,6 @@ Obtains disallowed Bluetooth devices.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
-**Example**
-
-```TypeScript
-import { bluetoothManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-    let result: Array<string> = bluetoothManager.getDisallowedBluetoothDevices(wantTemp);
-    console.info(`Succeeded in getting disallowed bluetooth devices. Result: ${JSON.stringify(result)}`);
-} catch(err) {
-    console.error(`Failed to get disallowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
-}
-
-```
-
 
 ## getDisallowedBluetoothDevices
 
@@ -102,4 +82,26 @@ Obtains disallowed Bluetooth devices.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+
+**Example**
+
+```TypeScript
+import { bluetoothManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+// Create an EnterpriseAdminExtensionAbility component.
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  // Obtain Bluetooth device blocklist.
+  let result: Array<string> = bluetoothManager.getDisallowedBluetoothDevices(wantTemp);
+  console.info(`Succeeded in getting disallowed bluetooth devices. Result: ${JSON.stringify(result)}`);
+} catch(err) {
+  console.error(`Failed to get disallowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
 

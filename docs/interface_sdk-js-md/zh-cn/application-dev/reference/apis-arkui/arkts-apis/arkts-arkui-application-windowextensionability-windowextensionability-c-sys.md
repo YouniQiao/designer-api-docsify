@@ -1,6 +1,6 @@
 # WindowExtensionAbility（系统接口）
 
-class of window extension ability.
+WindowExtensionAbility类。
 
 **起始版本：** 9
 
@@ -24,7 +24,7 @@ import { WindowExtensionContext } from '@kit.ArkUI';
 onConnect(want: Want): void
 ```
 
-Called back when a window extension is first connected to an ability.
+当窗口扩展组件第一次连接ability时回调。
 
 **起始版本：** 9
 
@@ -42,7 +42,7 @@ Called back when a window extension is first connected to an ability.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-arkui-want-t-sys.md) | 是 | Indicates connection information about the Window ability. |
+| want | [Want](arkts-arkui-want-t-sys.md) | 是 | 当前ability的Want类型信息，包括ability名称、bundle名称等。 |
 
 **示例：**
 
@@ -64,7 +64,7 @@ export default class MyWindowExtensionAbility extends WindowExtensionAbility {
 onDisconnect(want: Want): void
 ```
 
-Called back when all abilities connected to a window extension are disconnected.
+当所有连接到窗口扩展组件的ability断开连接时回调。
 
 **起始版本：** 9
 
@@ -82,7 +82,7 @@ Called back when all abilities connected to a window extension are disconnected.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-arkui-want-t-sys.md) | 是 | Indicates disconnection information about the window extension. |
+| want | [Want](arkts-arkui-want-t-sys.md) | 是 | 当前Ability的Want类型信息，包括ability名称、bundle名称等。 |
 
 **示例：**
 
@@ -104,7 +104,7 @@ export default class MyWindowExtensionAbility extends WindowExtensionAbility {
 onWindowReady(window: window.Window): void
 ```
 
-Called back when window is created.
+当窗口被创建时回调。
 
 **起始版本：** 9
 
@@ -122,7 +122,7 @@ Called back when window is created.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| window | window.Window | 是 | Current Window instance. |
+| window | window.Window | 是 | 当前窗口实例。 |
 
 **示例：**
 

@@ -12,8 +12,6 @@ The **adminManager** module provides administrator permission management capabil
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

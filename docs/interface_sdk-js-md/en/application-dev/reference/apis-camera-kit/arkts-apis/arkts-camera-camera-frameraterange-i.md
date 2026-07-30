@@ -20,7 +20,7 @@ import { camera } from '@kit.CameraKit';
 readonly max: number
 ```
 
-Maximum frame rate, in fps.
+Maximum frame rate. Unit: FPS
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Maximum frame rate, in fps.
 readonly min: number
 ```
 
-Minimum frame rate, in fps.
+Minimum frame rate. Unit: FPS
 
 **Type:** number
 

@@ -23,11 +23,16 @@ custdata: string
 ```
 
 Data carried during device discovery Data must be in the following format:|type|value|type|value|..value'len for each specific type is predefined length The following table lists the supported types and versions.  
------------------------------------------------------------------type | value | value len |api level  
------------------------------------------------------------------0x01 | 3-axis gravity sensor value | 3Byte |26.0.0  
------------------------------------------------------------------0x02 | 1st byte offset of the MAC address | 1Byte |26.0.0  
------------------------------------------------------------------0x03 | Pairing broadcast | 1Byte |26.0.0  
------------------------------------------------------------------0x04 | Target device identifer | 4Byte |26.0.0  
+-----------------------------------------------------------------  
+type | value | value len |api level  
+-----------------------------------------------------------------  
+0x01 | 3-axis gravity sensor value | 3Byte |26.0.0  
+-----------------------------------------------------------------  
+0x02 | 1st byte offset of the MAC address | 1Byte |26.0.0  
+-----------------------------------------------------------------  
+0x03 | Pairing broadcast | 1Byte |26.0.0  
+-----------------------------------------------------------------  
+0x04 | Target device identifer | 4Byte |26.0.0  
 -----------------------------------------------------------------.
 
 **Type:** string

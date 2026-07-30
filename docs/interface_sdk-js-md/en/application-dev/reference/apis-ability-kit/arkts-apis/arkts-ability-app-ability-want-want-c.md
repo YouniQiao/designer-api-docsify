@@ -179,16 +179,20 @@ List of parameters in the Want object.
 - **ohos.aafwk.param.callerPid**: PID of the caller. The value is a string.  
 - **ohos.aafwk.param.callerBundleName**: bundle name of the caller. The value is a string.  
 - **ohos.aafwk.param.callerAbilityName**: ability name of the caller. The value is a string.  
-- **ohos.aafwk.param.callerNativeName**: process name of the caller when the native method is called. The value is a string.  
+- **ohos.aafwk.param.callerNativeName**: process name of the caller when the native method is called. The value is  
+a string.  
 - **ohos.aafwk.param.callerAppId**: appId of the caller. The value is a string.  
 - **ohos.aafwk.param.callerAppIdentifier**: appIdentifier of the caller. The value is a string.  
 - **ohos.aafwk.param.callerToken**: token of the caller. The value is a string.  
-- **ohos.aafwk.param.callerUid**: UID in [BundleInfo](arkts-ability-bundleinfo-i.md), that is,the application's UID in the bundle information. The value is a number.  
+- **ohos.aafwk.param.callerUid**: UID in [BundleInfo](arkts-ability-bundleinfo-i.md), that is,  
+the application's UID in the bundle information. The value is a number.  
 - **ohos.param.callerAppCloneIndex**: clone index of the caller. The value is of the numeric type.  
 - **component.startup.newRules**: enabled status of the new control rule. The value is of the Boolean type.  
 - **moduleName**: module name of the caller. The value is a string.  
-- **ohos.ability.params.abilityRecoveryRestart**: support for ability restart upon fault recovery. The value is of the Boolean type.  
-- **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of [wantConstant.ShowMode](arkts-ability-wantconstant-showmode-e.md).
+- **ohos.ability.params.abilityRecoveryRestart**: support for ability restart upon fault recovery. The value is of  
+the Boolean type.  
+- **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of  
+[wantConstant.ShowMode](arkts-ability-wantconstant-showmode-e.md).
 
 **NOTE**
 

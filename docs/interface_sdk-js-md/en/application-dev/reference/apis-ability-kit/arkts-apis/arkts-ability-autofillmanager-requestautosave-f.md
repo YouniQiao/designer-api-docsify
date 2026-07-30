@@ -147,7 +147,7 @@ Trigger an auto save request.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIContext](../../apis-arkui/arkts-components/arkts-arkui-uicontext-t.md) | Yes | Indicates the ui context where the save operation will be performed. |
-| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md) | Yes | Indicates the struct of automatic save request. |
+| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md) | Yes | Indicates the struct of automatic save request. |
 | callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | No | Indicates the callback that used to receive the result. |
 
 **Error codes:**

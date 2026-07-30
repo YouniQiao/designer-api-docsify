@@ -12,10 +12,13 @@ Users can obtain system updates in a timely manner, improving upgrade efficiency
 
 **Implementation mechanism**
 
-- Version check: Query requests about the new version information can be sent to the upgrade package management server.  
+- Version check: Query requests about the new version information can be sent to the upgrade package management  
+server.  
 - Download management: Network type selection, pause/resume download, and resumable transfer are supported.  
-- Installation mechanism: After the upgrade package is downloaded, it is unzipped and written to the system partition to prepare for restarting the app.  
-- Status management: Maintain the upgrade task status, including querying task information, clearing abnormal status, and terminating the upgrade.
+- Installation mechanism: After the upgrade package is downloaded, it is unzipped and written to the system  
+partition to prepare for restarting the app.  
+- Status management: Maintain the upgrade task status, including querying task information, clearing abnormal  
+status, and terminating the upgrade.
 
 **Since:** 9
 
@@ -59,7 +62,8 @@ The check process is as follows: The developer constructs request parameters. Th
 
 **Constraints**
 
-- This method depends on the upgrade package management server deployed by the vendor. Ensure that the server is properly deployed and accessible.
+- This method depends on the upgrade package management server deployed by the vendor. Ensure that the server is  
+properly deployed and accessible.
 
 **Since:** 9
 
@@ -145,7 +149,8 @@ The check process is as follows: The developer constructs request parameters. Th
 
 **Constraints**
 
-- This method depends on the upgrade package management server deployed by the vendor. Ensure that the server is properly deployed and accessible.
+- This method depends on the upgrade package management server deployed by the vendor. Ensure that the server is  
+properly deployed and accessible.
 
 **Since:** 9
 
@@ -218,7 +223,8 @@ The process is as follows: Verify the **clearOptions** parameter, and ensure tha
 
 **Constraints**
 
-- If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call **clearError** to clear the abnormal status.  
+- If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call **clearError** to clear the  
+abnormal status.  
 - If **clearError** is not called to clear errors, the upgrade process cannot be restarted.  
 - After errors are cleared, you can restart the upgrade process from the step of **checkNewVersion**.
 
@@ -312,7 +318,8 @@ The process is as follows: Verify the **clearOptions** parameter, and ensure tha
 
 **Constraints**
 
-- If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call **clearError** to clear the abnormal status.  
+- If the **upgrade** method fails (the status is **UPGRADE_FAIL**), you must call **clearError** to clear the  
+abnormal status.  
 - If **clearError** is not called to clear errors, the upgrade process cannot be restarted.  
 - After errors are cleared, you can restart the upgrade process from the step of **checkNewVersion**.
 
@@ -413,9 +420,12 @@ Resumable transfer is supported. The number of bytes that have been downloaded a
 
 **Calling sequence**
 
-- You must call **checkNewVersion** to check whether a new version is available and obtain the version digest information.  
-- You must first call **checkNewVersion** to check whether a new version is available. This API can be called to download the upgrade package only when **isExistNewVersion** is **true**.  
-- If the value of **isExistNewVersion** is **false**, no new version is available. If this method is called, a message will be returned, indicating that the current version is the latest version.
+- You must call **checkNewVersion** to check whether a new version is available and obtain the version digest  
+information.  
+- You must first call **checkNewVersion** to check whether a new version is available. This API can be called to  
+download the upgrade package only when **isExistNewVersion** is **true**.  
+- If the value of **isExistNewVersion** is **false**, no new version is available. If this method is called, a  
+message will be returned, indicating that the current version is the latest version.
 
 **Related methods**
 
@@ -514,9 +524,12 @@ Resumable transfer is supported. The number of bytes that have been downloaded a
 
 **Calling sequence**
 
-- You must call **checkNewVersion** to check whether a new version is available and obtain the version digest information.  
-- This method can be called to download the upgrade package only when the value of **isExistNewVersion** is **true** by calling **checkNewVersion**.  
-- If the value of **isExistNewVersion** is **false**, no new version is available. If this method is called, a message will be returned, indicating that the current version is the latest version.
+- You must call **checkNewVersion** to check whether a new version is available and obtain the version digest  
+information.  
+- This method can be called to download the upgrade package only when the value of **isExistNewVersion** is  
+**true** by calling **checkNewVersion**.  
+- If the value of **isExistNewVersion** is **false**, no new version is available. If this method is called, a  
+message will be returned, indicating that the current version is the latest version.
 
 **Related methods**
 
@@ -617,9 +630,12 @@ The description includes the function description and version features of each c
 
 **Related methods**
 
-- **getCurrentVersionInfo()**: obtains the current version information such as the version number and device name. This method can be called independently.  
-- **getCurrentVersionDescription()**: obtains the description of the current version, which can be displayed to users.  
-- The two methods can be used together. You can call **getCurrentVersionInfo** to obtain basic information and then call this method to obtain the detailed description for display.
+- **getCurrentVersionInfo()**: obtains the current version information such as the version number and device  
+name. This method can be called independently.  
+- **getCurrentVersionDescription()**: obtains the description of the current version, which can be displayed to  
+users.  
+- The two methods can be used together. You can call **getCurrentVersionInfo** to obtain basic information and  
+then call this method to obtain the detailed description for display.
 
 **Since:** 9
 
@@ -698,9 +714,12 @@ This API obtains the description of each component of the current version from t
 
 **Related methods**
 
-- **getCurrentVersionInfo()**: obtains the current version information such as the version number and device name. This method can be called independently.  
-- **getCurrentVersionDescription()**: obtains the description of the current version, which can be displayed to users.  
-- The two methods can be used together. You can call **getCurrentVersionInfo** to obtain basic information and then call this method to obtain the detailed description for display.
+- **getCurrentVersionInfo()**: obtains the current version information such as the version number and device  
+name. This method can be called independently.  
+- **getCurrentVersionDescription()**: obtains the description of the current version, which can be displayed to  
+users.  
+- The two methods can be used together. You can call **getCurrentVersionInfo** to obtain basic information and  
+then call this method to obtain the detailed description for display.
 
 **Since:** 9
 
@@ -925,8 +944,10 @@ This API sends requests to the upgrade package management server to query the ve
 
 **Calling sequence**
 
-- You need to call **checkNewVersion** to check whether a new version is available and obtain the version digest information.  
-- The value of **versionDigestInfo** is obtained from the result returned by calling **checkNewVersion**.**checkNewVersion** must be called first.
+- You need to call **checkNewVersion** to check whether a new version is available and obtain the version digest  
+information.  
+- The value of **versionDigestInfo** is obtained from the result returned by calling **checkNewVersion**.  
+**checkNewVersion** must be called first.
 
 **Since:** 9
 
@@ -1015,7 +1036,8 @@ This API sends requests to the upgrade package management server to query the ve
 
 **Calling sequence**
 
-- You need to call **checkNewVersion** to check whether a new version is available and obtain the version digest information.  
+- You need to call **checkNewVersion** to check whether a new version is available and obtain the version digest  
+information.  
 - The value of **versionDigestInfo** is obtained from the result returned by calling **checkNewVersion**.
 
 **Since:** 9
@@ -1116,14 +1138,18 @@ This API sends requests to the upgrade package management server to query the co
 **Related methods**
 
 - **checkNewVersion()**: checks whether a new version is available (prerequisite method).  
-- **getNewVersionInfo()**: obtains the technical information (version number and component details) of the new version, which is applicable to version management and diagnosis scenarios.  
-- **getNewVersionDescription()**: obtains the description of the new version, which is used to display the updated content to users.  
+- **getNewVersionInfo()**: obtains the technical information (version number and component details) of the new  
+version, which is applicable to version management and diagnosis scenarios.  
+- **getNewVersionDescription()**: obtains the description of the new version, which is used to display the  
+updated content to users.  
 - **download()**: downloads the upgrade package (subsequent method).
 
 **Constraints**
 
-- This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor.  
-- You must first call **checkNewVersion** to check whether a new version is available. This API can be called only when **isExistNewVersion** is **true**.
+- This method provides the online upgrade function, which depends on the upgrade package management server  
+deployed by the vendor.  
+- You must first call **checkNewVersion** to check whether a new version is available. This API can be called  
+only when **isExistNewVersion** is **true**.
 
 **Since:** 9
 
@@ -1198,19 +1224,24 @@ This API sends requests to the upgrade package management server to query the co
 **Calling sequence**
 
 - You must first call **checkNewVersion** to check whether a new version is available.  
-- This API can be called to obtain details about the new version only when the value of **isExistNewVersion** is **true** by calling **checkNewVersion**.
+- This API can be called to obtain details about the new version only when the value of **isExistNewVersion** is  
+**true** by calling **checkNewVersion**.
 
 **Related methods**
 
 - **checkNewVersion()**: checks whether a new version is available (prerequisite method).  
-- **getNewVersionInfo()**: obtains the technical information (version number and component details) of the new version, which is applicable to version management and diagnosis scenarios.  
-- **getNewVersionDescription()**: obtains the description of the new version, which is used to display the updated content to users.  
+- **getNewVersionInfo()**: obtains the technical information (version number and component details) of the new  
+version, which is applicable to version management and diagnosis scenarios.  
+- **getNewVersionDescription()**: obtains the description of the new version, which is used to display the  
+updated content to users.  
 - **download()**: downloads the upgrade package (subsequent method).
 
 **Constraints**
 
-- This method provides the online upgrade function, which depends on the upgrade package management server deployed by the vendor.  
-- You must first call **checkNewVersion** to check whether a new version is available. This API can be called only when **isExistNewVersion** is **true**.
+- This method provides the online upgrade function, which depends on the upgrade package management server  
+deployed by the vendor.  
+- You must first call **checkNewVersion** to check whether a new version is available. This API can be called  
+only when **isExistNewVersion** is **true**.
 
 **Since:** 9
 
@@ -1280,16 +1311,23 @@ This method queries the status of the current upgrade task from the system upgra
 
 **Related methods**
 
-- **download()**: downloads the upgrade package. (You can call **getTaskInfo** to query the download progress and status during download.)  
-- **upgrade()**: installs the upgrade package. (You can call **getTaskInfo** to query the installation progress and status during installation.)  
-- **pauseDownload()**: pauses download. (You can call **getTaskInfo** to query the pause status after download is paused.)  
-- **terminateUpgrade()**: terminates upgrade. (You can call **getTaskInfo** to query the task cancellation status after upgrade is terminated.)
+- **download()**: downloads the upgrade package. (You can call **getTaskInfo** to query the download progress and  
+status during download.)  
+- **upgrade()**: installs the upgrade package. (You can call **getTaskInfo** to query the installation progress  
+and status during installation.)  
+- **pauseDownload()**: pauses download. (You can call **getTaskInfo** to query the pause status after download is  
+paused.)  
+- **terminateUpgrade()**: terminates upgrade. (You can call **getTaskInfo** to query the task cancellation status  
+after upgrade is terminated.)
 
 **When to Call:**
 
-- You are advised to call **getTaskInfo** to query the task progress as required after calling **download** or **upgrade** to start the upgrade task.  
-- During upgrade, you can obtain the progress in real time using an event listener registered by **on** or use **getTaskInfo** to query the current status.  
-- In the case of an exception or interruption, you can call **getTaskInfo** to confirm the task status and determine the follow-up procedure.
+- You are advised to call **getTaskInfo** to query the task progress as required after calling **download** or  
+**upgrade** to start the upgrade task.  
+- During upgrade, you can obtain the progress in real time using an event listener registered by **on** or use  
+**getTaskInfo** to query the current status.  
+- In the case of an exception or interruption, you can call **getTaskInfo** to confirm the task status and  
+determine the follow-up procedure.
 
 **Since:** 9
 
@@ -1362,16 +1400,23 @@ This method queries the status of the current upgrade task from the system upgra
 
 **Related methods**
 
-- **download()**: downloads the upgrade package. (You can call **getTaskInfo** to query the download progress and status during download.)  
-- **upgrade()**: installs the upgrade package. (You can call **getTaskInfo** to query the installation progress and status during installation.)  
-- **pauseDownload()**: pauses download. (You can call **getTaskInfo** to query the pause status after download is paused.)  
-- **terminateUpgrade()**: terminates upgrade. (You can call **getTaskInfo** to query the task cancellation status after upgrade is terminated.)
+- **download()**: downloads the upgrade package. (You can call **getTaskInfo** to query the download progress and  
+status during download.)  
+- **upgrade()**: installs the upgrade package. (You can call **getTaskInfo** to query the installation progress  
+and status during installation.)  
+- **pauseDownload()**: pauses download. (You can call **getTaskInfo** to query the pause status after download is  
+paused.)  
+- **terminateUpgrade()**: terminates upgrade. (You can call **getTaskInfo** to query the task cancellation status  
+after upgrade is terminated.)
 
 **When to Call:**
 
-- You are advised to call **getTaskInfo** to query the task progress periodically after calling **download** or **upgrade** to start the upgrade task.  
-- During upgrade, you can obtain the progress in real time using an event listener registered by **on** or use **getTaskInfo** to query the current status.  
-- In the case of an exception or interruption, you can call **getTaskInfo** to confirm the task status and determine the follow-up procedure.
+- You are advised to call **getTaskInfo** to query the task progress periodically after calling **download** or  
+**upgrade** to start the upgrade task.  
+- During upgrade, you can obtain the progress in real time using an event listener registered by **on** or use  
+**getTaskInfo** to query the current status.  
+- In the case of an exception or interruption, you can call **getTaskInfo** to confirm the task status and  
+determine the follow-up procedure.
 
 **Since:** 9
 
@@ -1578,7 +1623,8 @@ The process is as follows: Confirm the event type based on **eventClassifyInfo**
 
 - This API must be used in pairs with **on()** to unregister a registered event listener.  
 - This API can be called only after a listener is registered using **on()**.  
-- You are advised to call this method after the upgrade process is complete or when the page is destroyed to release resources in a timely manner.
+- You are advised to call this method after the upgrade process is complete or when the page is destroyed to  
+release resources in a timely manner.
 
 **Since:** 9
 
@@ -1645,14 +1691,16 @@ This method registers an upgrade event listener. The process is as follows: Cons
 
 **API called in pairs**
 
-- After a listener is registered by calling **on()**, you are advised to call **off()** to unregister the listener when it is no longer needed.  
+- After a listener is registered by calling **on()**, you are advised to call **off()** to unregister the  
+listener when it is no longer needed.  
 - If **off()** is not called to unregister the listener, memory leak occurs, affecting system performance.  
 - You are advised to call **off()** after the upgrade process is complete or when the page is destroyed.
 
 **Suggestions**
 
 - Register a listener before performing long-time operations such as calling **download** or **upgrade**.  
-- Unregister the listener after the operation is complete or the final event (such as **EVENT_DOWNLOAD_SUCCESS** or **EVENT_UPGRADE_SUCCESS**) is received.
+- Unregister the listener after the operation is complete or the final event (such as **EVENT_DOWNLOAD_SUCCESS**  
+or **EVENT_UPGRADE_SUCCESS**) is received.
 
 **Related methods**
 
@@ -1727,13 +1775,15 @@ The process is as follows: Disconnect from the network. Save the progress status
 
 **API called in pairs**
 
-- This API must be used in pairs with **resumeDownload()** to pause and resume the download process. After the download is paused, call **resumeDownload()** to resume the download.
+- This API must be used in pairs with **resumeDownload()** to pause and resume the download process. After the  
+download is paused, call **resumeDownload()** to resume the download.
 
 **State transition description**
 
 - After the download is paused, you can call **resumeDownload()** to resume the download.  
 - After the download is paused, you can call **getTaskInfo()** to query the current task status.  
-- After the download is paused, you cannot directly call **upgrade()** to install the upgrade package. You must resume the download and complete the installation first.
+- After the download is paused, you cannot directly call **upgrade()** to install the upgrade package. You must  
+resume the download and complete the installation first.
 
 **Since:** 9
 
@@ -1819,13 +1869,15 @@ The process is as follows: Disconnect from the network. Save the progress status
 
 **API called in pairs**
 
-- This API must be used in pairs with **resumeDownload()** to pause and resume the download process. After the download is paused, call **resumeDownload()** to resume the download.
+- This API must be used in pairs with **resumeDownload()** to pause and resume the download process. After the  
+download is paused, call **resumeDownload()** to resume the download.
 
 **State transition description**
 
 - After the download is paused, you can call **resumeDownload()** to resume the download.  
 - After the download is paused, you can call **getTaskInfo()** to query the current task status.  
-- After the download is paused, you cannot directly call **upgrade()** to install the upgrade package. You must resume the download and complete the installation first.
+- After the download is paused, you cannot directly call **upgrade()** to install the upgrade package. You must  
+resume the download and complete the installation first.
 
 **Since:** 9
 
@@ -2252,7 +2304,8 @@ The process is as follows: Check the current task status, and only download or i
 - This method can be called to terminate the upgrade only during the download or installation process.  
 - After the task is terminated, the task status changes to canceled.  
 - After the task is terminated, you can call **getTaskInfo** to query the current task status.  
-- If you need to perform the upgrade again after the upgrade is terminated, you are advised to call **clearError** to clear errors and restart the upgrade.
+- If you need to perform the upgrade again after the upgrade is terminated, you are advised to call  
+**clearError** to clear errors and restart the upgrade.
 
 **Related methods**
 
@@ -2332,7 +2385,8 @@ The process is as follows: Check the current task status, and only download or i
 - This method can be called to terminate the upgrade only during the download or installation process.  
 - After the task is terminated, the task status changes to canceled.  
 - After the task is terminated, you can call **getTaskInfo** to query the current task status.  
-- If you need to perform the upgrade again after the upgrade is terminated, you are advised to call **clearError** to clear errors and restart the upgrade.
+- If you need to perform the upgrade again after the upgrade is terminated, you are advised to call  
+**clearError** to clear errors and restart the upgrade.
 
 **Related methods**
 
@@ -2411,7 +2465,8 @@ This method is called in the installation phase of the online upgrade process. T
 
 **Calling sequence**
 
-- Before calling this method to perform upgrade, you must call **checkNewVersion** to check whether a new version is available first and then call **download** to download the upgrade package.
+- Before calling this method to perform upgrade, you must call **checkNewVersion** to check whether a new version  
+is available first and then call **download** to download the upgrade package.
 
 **State transition description**
 

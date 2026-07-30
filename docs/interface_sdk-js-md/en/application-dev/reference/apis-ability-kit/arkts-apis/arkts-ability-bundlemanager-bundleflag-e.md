@@ -112,10 +112,14 @@ GET_BUNDLE_INFO_WITH_METADATA = 0x00000020
 
 Used to obtain the metadata contained in the application, module, ability, or ExtensionAbility information. It must be used together with **GET_BUNDLE_INFO_WITH_APPLICATION**, **GET_BUNDLE_INFO_WITH_HAP_MODULE**,**GET_BUNDLE_INFO_WITH_ABILITY**, and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY**.
 
-- To obtain the metadata contained in the application information, it must be used together with **GET_BUNDLE_INFO_WITH_APPLICATION**.  
-- To obtain the metadata contained in the module information, it must be used together with **GET_BUNDLE_INFO_WITH_HAP_MODULE**.  
-- To obtain the metadata contained in the ability information, it must be used together with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY**.  
-- To obtain the metadata contained in the ExtensionAbility information, it must be used together with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY**.
+- To obtain the metadata contained in the application information, it must be used together with  
+**GET_BUNDLE_INFO_WITH_APPLICATION**.  
+- To obtain the metadata contained in the module information, it must be used together with  
+**GET_BUNDLE_INFO_WITH_HAP_MODULE**.  
+- To obtain the metadata contained in the ability information, it must be used together with  
+**GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY**.  
+- To obtain the metadata contained in the ExtensionAbility information, it must be used together with  
+**GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY**.
 
 **Since:** 9
 

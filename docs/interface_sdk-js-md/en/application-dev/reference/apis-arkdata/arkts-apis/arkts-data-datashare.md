@@ -8,8 +8,6 @@ The **DataShare** module allows an application to manage its own data and share 
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript
@@ -32,8 +30,8 @@ import { dataShare } from '@kit.ArkData';
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper) | Creates a **DataShareHelper** instance. This API uses an asynchronous callback to return the result. |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper-1) | Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses an asynchronous callback to return the result. |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper-2) | Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses a promise to return the result. |
-| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md#disablesilentproxy) | Disables silent access. This API uses a promise to return the result.  Observe the following when using this API:  - The data provider calls this API to disable silent access.  - Whether silent access is disabled is determined based on the return value of this API and the **isSilentProxyEnable** field in the [data_share_config.json](../../../database/share-data-by-datashareextensionability-sys.md) file together.  - If silent access is disabled for a URI using this API, the setting takes effect when the related **datashareHelper** API is called. Otherwise, the setting of **isSilentProxyEnable** in the **data_share_config.json** file is used to determine whether to disable silent access. |
-| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md#enablesilentproxy) | Enables silent access. This API uses a promise to return the result.  Observe the following when using this API:  - The data provider calls this API to enable silent access.  - Whether silent access is enabled is determined based on the return value of this API and the **isSilentProxyEnable** field in the [data_share_config.json](../../../database/share-data-by-datashareextensionability-sys.md) file together.  - If silent access is enabled for a URI using this API, the setting takes effect when the related **datashareHelper** API is called. Otherwise, the setting of **isSilentProxyEnable** in the **data_share_config.json** file is used to determine whether to enable silent access. |
+| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md#disablesilentproxy) | Disables silent access. This API uses a promise to return the result.  Observe the following when using this API:  - The data provider calls this API to disable silent access.  - Whether silent access is disabled is determined based on the return value of this API and the  **isSilentProxyEnable** field in the [data_share_config.json](../../../database/share-data-by-datashareextensionability-sys.md) file together.  - If silent access is disabled for a URI using this API, the setting takes effect when the related  **datashareHelper** API is called. Otherwise, the setting of **isSilentProxyEnable** in the **data_share_config.json** file is used to determine whether to disable silent access. |
+| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md#enablesilentproxy) | Enables silent access. This API uses a promise to return the result.  Observe the following when using this API:  - The data provider calls this API to enable silent access.  - Whether silent access is enabled is determined based on the return value of this API and the  **isSilentProxyEnable** field in the [data_share_config.json](../../../database/share-data-by-datashareextensionability-sys.md) file together.  - If silent access is enabled for a URI using this API, the setting takes effect when the related  **datashareHelper** API is called. Otherwise, the setting of **isSilentProxyEnable** in the **data_share_config.json** file is used to determine whether to enable silent access. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -68,6 +66,7 @@ import { dataShare } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
+| [ChangeType](arkts-arkdata-datashare-changetype-e.md) | Enumerates the data change types. |
 | [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md) | Enumerates the status code returned by the batch operations of shared configuration. |
 | [DataProxyMaxValueLength](arkts-arkdata-datashare-dataproxymaxvaluelength-e.md) | The maximum length of {@link ProxyData#value}, {@link DataProxyChangeInfo#value}, {@link DataProxyGetResult#value}. |
 | [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md) | Enumerates the data proxy types. |
@@ -77,7 +76,6 @@ import { dataShare } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [ChangeType](arkts-arkdata-datashare-changetype-e-sys.md) | Enumerates the data change types. |
 | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Enumerates the data subscription types. |
 <!--DelEnd-->
 

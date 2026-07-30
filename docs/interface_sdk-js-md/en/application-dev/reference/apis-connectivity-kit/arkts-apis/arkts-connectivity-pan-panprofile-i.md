@@ -44,3 +44,48 @@ Determine whether the local device supports PAN.
 | --- | --- |
 | 2900099 | Operation failed. |
 
+## isTetheringOn
+
+```TypeScript
+isTetheringOn(): boolean
+```
+
+Obtains the tethering enable or disable.
+
+**Since:** 26.0.0
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanProfile-isTetheringOn(): boolean--><!--Device-PanProfile-isTetheringOn(): boolean-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns the value {@code true} is tethering is on, returns {@code false} otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs.<br>**Applicable version:** 10 - 24 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Only can be called on phone, tablet, and 2in1 devices.Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let panProfile: pan.PanProfile = pan.createPanProfile();
+    panProfile.isTetheringOn();
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+
+```
+

@@ -40,3 +40,26 @@ Removes disallowed USB devices via an array of {@link PermissiveUsbDeviceType}.
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
+**Example**
+
+```TypeScript
+import { usbManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  let usbDevices: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 8
+  }];
+  usbManager.removeDisallowedPermissiveUsbDevices(wantTemp, usbDevices);
+  console.info(`Succeeded in removing disallowed permissive USB devices.`);
+} catch (err) {
+  console.error(`Failed to remove disallowed permissive USB devices. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

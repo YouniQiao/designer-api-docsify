@@ -39,16 +39,16 @@ function closeAccessory(accessoryHandle: USBAccessoryHandle): void
 ```TypeScript
 async function closeAccessory() {
   try {
-    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-    let flag = await usbManager.requestAccessoryRight(accList?.[0])
+    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+    let flag = await usbManager.requestAccessoryRight(accList?.[0]);
     if (!flag) {
-      return
+      return;
     }
-    let handle = usbManager.openAccessory(accList?.[0])
-    usbManager.closeAccessory(handle)
-    console.info(`closeAccessory success`)
+    let handle = usbManager.openAccessory(accList?.[0]);
+    usbManager.closeAccessory(handle);
+    console.info(`closeAccessory success`);
   } catch (error) {
-    console.error(`closeAccessory error ${error.code}, message is ${error.message}`)
+    console.error(`closeAccessory error ${error.code}, message is ${error.message}`);
   }
 }
 

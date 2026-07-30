@@ -3,9 +3,12 @@
 This module provides APIs to publish, subscribe to, and unsubscribe from common events. This module provides a system-level event notification mechanism that allows an app to send notifications to other apps that have subscribed to the event when the system status changes (such as power-on completion, battery level change, and screen on/off) or a custom service event occurs. This mechanism enables transferring information across components and apps.
 
 The key concepts involved in this module are as follows:  
-- Unordered common events: common events that CES forwards regardless of whether subscribers receive the events and when they subscribe to the events.  
-- Ordered common events: common events that CES forwards based on the subscriber priority. CES preferentially forwards an ordered common event to the subscriber with higher priority, waits until the subscriber receives the event, and then forwards the events to the subscriber with lower priority. Subscribers with the same priority receive common events in a random order.  
-- Sticky common events: common events that can be sent to a subscriber before or after they initiate a subscription. Only system apps or services can send sticky common events.
+- Unordered common events: common events that CES forwards regardless of whether subscribers receive the events and  
+when they subscribe to the events.  
+- Ordered common events: common events that CES forwards based on the subscriber priority. CES preferentially  
+forwards an ordered common event to the subscriber with higher priority, waits until the subscriber receives the event, and then forwards the events to the subscriber with lower priority. Subscribers with the same priority receive common events in a random order.  
+- Sticky common events: common events that can be sent to a subscriber before or after they initiate a  
+subscription. Only system apps or services can send sticky common events.
 
 **APIs used in combination**
 

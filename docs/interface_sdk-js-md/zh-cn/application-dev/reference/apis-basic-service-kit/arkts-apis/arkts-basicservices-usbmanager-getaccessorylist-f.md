@@ -37,10 +37,10 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 
 ```TypeScript
 try {
-  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-  console.info(`getAccessoryList success, accList: ${JSON.stringify(accList)}`)
+  let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+  console.info(`getAccessoryList success, accList: ${JSON.stringify(accList)}`);
 } catch (error) {
-  console.error(`getAccessoryList error ${error.code}, message is ${error.message}`)
+  console.error(`getAccessoryList error ${error.code}, message is ${error.message}`);
 }
 
 ```

@@ -1,6 +1,6 @@
 # VideoOutput
 
-**VideoOutput** implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
+VideoOutput implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -16,13 +16,50 @@
 import { camera } from '@kit.CameraKit';
 ```
 
+## enableMirror
+
+```TypeScript
+enableMirror(enabled: boolean): void
+```
+
+Enables or disables mirror recording.
+
+- Before calling this API, check whether mirror recording is supported by using  
+[isMirrorSupported](arkts-camera-camera-videooutput-i.md#ismirrorsupported).  
+- After enabling or disabling mirror recording, call  
+[getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation) to obtain the rotation angle and [updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md#updaterotation) to update the rotation angle.
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-enableMirror(enabled: boolean): void--><!--Device-VideoOutput-enableMirror(enabled: boolean): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether to enable mirror recording. **true** to enable, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
 ## getActiveFrameRate
 
 ```TypeScript
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range.This API is valid only after [setFrameRate](arkts-camera-camera-previewoutput-i.md#setframerate) is called to set a frame rate range for preview streams.
+Obtains the configured frame rate range.
+
+This API is valid only after [setFrameRate](arkts-camera-camera-videooutput-i.md#setframerate) is called to set a frame rate range for video streams.
 
 **Since:** 12
 
@@ -96,8 +133,10 @@ getVideoRotation(deviceDegree?: number): ImageRotation
 
 Obtains the video rotation angle.
 
-- Device's natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward.  
-- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode.Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
+- Device' natural orientation: the default orientation for using a device. For example, the default orientation  
+of the bar-type phone is in portrait mode, with the charging port facing downward.  
+- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's  
+natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode.Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
 
 **Since:** 12
 
@@ -113,7 +152,7 @@ Obtains the video rotation angle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDegree | number | No | Device rotation angle, measured in degrees, within the range of [0, 360].<br>Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
+| deviceDegree | number | No | Device rotation angle, measured in degrees, within the range of [0, 360].<br> Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -128,13 +167,44 @@ Obtains the video rotation angle.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
+## isMirrorSupported
+
+```TypeScript
+isMirrorSupported(): boolean
+```
+
+Checks whether mirror recording is supported.
+
+**Since:** 15
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-isMirrorSupported(): boolean--><!--Device-VideoOutput-isMirrorSupported(): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for the support of mirror recording. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
+
 ## off('frameStart')
 
 ```TypeScript
 off(type: 'frameStart', callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from preview frame start events.
+Unsubscribes from video recording start events.
+> **NOTE**  
+>  
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -148,7 +218,7 @@ Unsubscribes from preview frame start events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a previewOutput instance is created. |
+| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a videoOutput instance is created. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('frameEnd')
@@ -157,7 +227,7 @@ Unsubscribes from preview frame start events.
 off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from preview frame end events.
+Unsubscribes from video recording stop events.
 
 **Since:** 10
 
@@ -171,7 +241,7 @@ Unsubscribes from preview frame end events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a previewOutput instance is created. |
+| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a videoOutput instance is created. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('error')
@@ -180,7 +250,7 @@ Unsubscribes from preview frame end events.
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-Unsubscribes from metadata error events.
+Unsubscribes from VideoOutput error events.
 
 **Since:** 10
 
@@ -194,7 +264,7 @@ Unsubscribes from metadata error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a metadataOutput instance is created. |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a photoOutput instance is created. |
 | callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## on('frameStart')
@@ -203,7 +273,7 @@ Unsubscribes from metadata error events.
 on(type: 'frameStart', callback: AsyncCallback<void>): void
 ```
 
-Subscribes to preview frame start events. This API uses an asynchronous callback to return the result.
+Subscribes to video recording start events. This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
@@ -220,8 +290,8 @@ Subscribes to preview frame start events. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a previewOutput instance is created. This event is triggered and returned when the bottom layer starts exposure for the first time. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The preview starts as long as this event is returned. |
+| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a videoOutput instance is created. The event is triggered and the corresponding information is returned when the bottom layer starts exposure for the first time. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The recording starts as long as this event is returned. |
 
 ## on('frameEnd')
 
@@ -229,10 +299,7 @@ Subscribes to preview frame start events. This API uses an asynchronous callback
 on(type: 'frameEnd', callback: AsyncCallback<void>): void
 ```
 
-Subscribes to preview frame end events. This API uses an asynchronous callback to return the result.
-> **NOTE**  
->  
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to video recording stop events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -246,8 +313,8 @@ Subscribes to preview frame end events. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a previewOutput instance is created. This event is triggered and returned when the last frame of preview ends. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The preview ends as long as this event is returned. |
+| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a videoOutput instance is created. This event is triggered and returned when the last frame of recording is complete. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The recording ends as long as this event is returned. |
 
 ## on('error')
 
@@ -255,7 +322,7 @@ Subscribes to preview frame end events. This API uses an asynchronous callback t
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to metadata error events. This API uses an asynchronous callback to return the result.
+Subscribes to VideoOutput error events. This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
 > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
@@ -272,7 +339,7 @@ Subscribes to metadata error events. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a metadataOutput instance is created. This event is triggered and the corresponding error message is returned when an error occurs during the use of a metadata-related API such as [start](arkts-camera-camera-metadataoutput-i.md#start) or [CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release). |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a videoOutput instance is created. This event is triggered and the corresponding error message is returned when an error occurs during the use of a recording-related API such as [start](arkts-camera-camera-videooutput-i.md#start)or [CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release). |
 | callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 ## setFrameRate
@@ -281,11 +348,17 @@ Subscribes to metadata error events. This API uses an asynchronous callback to r
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](arkts-camera-camera-previewoutput-i.md#getsupportedframerates).
+Sets a frame rate range for video streams. The range must be within the supported frame rate range,
+
+which can be obtained by calling [getSupportedFrameRates](arkts-camera-camera-videooutput-i.md#getsupportedframerates).
 > **NOTE**  
 >  
 > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or  
-> [VideoSession](arkts-camera-camera-videosession-i.md) mode.
+> [VideoSession](arkts-camera-camera-videosession-i.md) mode.  
+>  
+> Before calling this API, call [getActiveFrameRate](arkts-camera-camera-videooutput-i.md#getactiveframerate) to obtain the  
+> current frame rate of the video session. If the delivered frame rate matches the current frame rate, the  
+> delivered frame rate is not applied.
 
 **Since:** 12
 

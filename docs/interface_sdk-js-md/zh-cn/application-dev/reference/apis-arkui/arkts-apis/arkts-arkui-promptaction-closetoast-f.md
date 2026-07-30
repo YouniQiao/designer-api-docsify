@@ -15,7 +15,8 @@ function closeToast(toastId: number): void
 关闭即时反馈。
 > **说明：**  
 >  
-> 直接使用closeToast可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的getPromptAction方法获取  
+> 直接使用closeToast可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用  
+UIContext中的getPromptAction方法获取  
 > 到PromptAction对象，再通过该对象调用  
 > [closeToast](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#closetoast18)实现。
 

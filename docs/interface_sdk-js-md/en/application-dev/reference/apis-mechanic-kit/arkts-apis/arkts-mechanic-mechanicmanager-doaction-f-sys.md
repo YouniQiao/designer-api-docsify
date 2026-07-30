@@ -27,7 +27,7 @@ Execute an action sequence.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mechId | number | Yes | ID of the mechanical device.<br>The value should be an integer. |
-| actionType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | Yes | Type of action sequence. |
+| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes | Type of action sequence. |
 
 **Return value:**
 

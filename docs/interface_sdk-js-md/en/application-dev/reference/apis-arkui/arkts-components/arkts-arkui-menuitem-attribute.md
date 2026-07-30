@@ -148,7 +148,7 @@ Sets whether to display the selected icon when the menu item is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| ResourceStr \| SymbolGlyphModifier | Yes | Whether to display the selected icon when the menu item is selected.<br>**true**: Display the default check mark icon. **false**: Hide the selected state icon.<br   >**ResourceStr**: Display the specified custom icon resource.<br>**SymbolGlyphModifier**: Display the specified HMSymbol icon.<br>Default value: **false**.<br>**Since:** 12 |
+| value | boolean \| ResourceStr \| SymbolGlyphModifier | Yes | Whether to display the selected icon when the menu item is selected.<br>**true**: Display the default check mark icon. **false**: Hide the selected state icon.<br   >**ResourceStr**: Display the specified custom icon resource.<br>**SymbolGlyphModifier**: Display the specified   HMSymbol icon.<br>Default value: **false**.<br>**Since:** 12 |
 
 ## selected
 

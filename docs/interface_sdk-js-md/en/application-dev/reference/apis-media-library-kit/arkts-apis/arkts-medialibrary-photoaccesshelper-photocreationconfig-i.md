@@ -56,7 +56,7 @@ Type of the file to create, which can be **IMAGE** or **VIDEO**. See [PhotoType]
 subtype?: PhotoSubtype
 ```
 
-Image or video file subtype. The default value is **DEFAULT**. See [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e-sys.md).
+Image or video file subtype. The default value is **DEFAULT**. See [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md).
 
 **Type:** PhotoSubtype
 
@@ -77,7 +77,8 @@ title?: string
 Title of the image or video. If this parameter is not passed, the system generates a title. The title must meet the following requirements:
 
 - It must not contain a file name extension.  
-- The total length of the file name, which is in the format of title+file name extension, must be between 1 and 255 characters.  
+- The total length of the file name, which is in the format of title+file name extension, must be between 1 and 2  
+55 characters.  
 - It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Type:** string

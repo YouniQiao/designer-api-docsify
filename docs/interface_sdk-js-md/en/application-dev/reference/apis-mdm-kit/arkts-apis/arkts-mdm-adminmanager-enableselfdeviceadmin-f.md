@@ -43,3 +43,28 @@ Enables self as a device administrator.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 
+**Example**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { adminManager } from '@kit.MDMKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace with actual values.
+let credential: string = '{"enterpriseId": "123456", "appIdentifier": "123456", "type": "SDA", "sign": "", "certs": []}';
+
+try {
+  adminManager.enableSelfDeviceAdmin(wantTemp, credential);
+  console.info(`succeed in enable self device admin.`);
+} catch (err) {
+  console.error(`Failed to enable self device admin. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

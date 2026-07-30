@@ -7,7 +7,7 @@
 >  
 > - 本Interface首批API从API version 9开始支持。  
 >  
-> - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-camera-i.md)。
+> - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)。
 
 **起始版本：** 9
 
@@ -892,6 +892,37 @@ resume(): Promise<void>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+
+## setMetadata
+
+```TypeScript
+setMetadata(metadata: Record<string, string>): void
+```
+
+设置录制的元数据信息。如果这些信息的键相同，会覆盖config.metadata.customInfo（参考[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))和[AVRecorderConfig](@ohos.multimedia.media:media.AVRecorderConfig)）中的值。
+
+该方法只能在[prepare()](media.AVRecorder.prepare(config: AVRecorderConfig))事件成功触发后，且必须在[stop()](media.AVRecorder.stop(callback: AsyncCallback<void>))之前调用。
+
+**起始版本：** 26.0.0
+
+<!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void--><!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| metadata | Record&lt;string, string&gt; | 是 | 录制的元数据信息。<br>格式为字符串键值对，其中，键需要以`com.openharmony.`开头，且值的长度不能超过256个字节。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.<br>**适用版本：** 19 - 24 |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory.<br>**适用版本：** 26.0.0+ |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed.<br>**适用版本：** 26.0.0+ |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
 ## setWillMuteWhenInterrupted
 

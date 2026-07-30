@@ -22,7 +22,8 @@ allowDownloadIntermediateCa?: boolean
 
 是否允许从网络下载中间CA证书。默认值为false。  
 - true：当构建证书链缺失中间证书时，尝试使用证书AIA扩展中颁发者地址下载颁发者证书，解决证书链不完整的问题；  
-- false：不允许从网络下载中间的CA证书。<br>下载地址从证书的AIA扩展中获取，仅支持HTTP。若要使用网络进行下载，需要申请ohos.permission.INTERNET权限。关于权限配置的详细信息，请参见声明权限[Declaring Permissions](../../../security/AccessToken/declare-permissions.md).。
+- false：不允许从网络下载中间的CA证书。  
+<br>下载地址从证书的AIA扩展中获取，仅支持HTTP。若要使用网络进行下载，需要申请ohos.permission.INTERNET权限。关于权限配置的详细信息，请参见声明权限[Declaring Permissions](../../../security/AccessToken/declare-permissions.md).。
 
 **类型：** boolean
 

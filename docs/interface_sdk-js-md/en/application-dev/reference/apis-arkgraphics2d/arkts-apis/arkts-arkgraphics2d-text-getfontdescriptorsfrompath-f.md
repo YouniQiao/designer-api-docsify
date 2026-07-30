@@ -54,7 +54,7 @@ struct GetFontDescriptorsFromPathTest {
   build() {
     Column({ space: 10 }) {
       Button("get fontDescriptors")
-        .onClick(async () => {
+        .onClick(() => {
           let promise = text.getFontDescriptorsFromPath("file:///system/fonts/NotoSansCJK-Regular.ttc")
           promise.then((fontFullDescriptors) => {
             for (let index = 0; index < fontFullDescriptors.length; index++) {

@@ -62,18 +62,18 @@ async function resetUsbDevice() {
     console.error(`request right failed`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  if (devicepipe == undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
   try {
-    let ret: boolean = usbManager.resetUsbDevice(devicepipe);
+    let ret: boolean = usbManager.resetUsbDevice(devicePipe);
     console.info(`resetUsbDevice  = ${ret}`);
-  } catch (err: BusinessError) {
+  } catch (err) {
     console.error(`Failed to reset USB device. Code: ${err.code}, message: ${err.message}`);
   }
-  usbManager.closePipe(devicepipe);
+  usbManager.closePipe(devicePipe);
 }
 
 ```

@@ -396,10 +396,12 @@ Note: The following values are in octal format. The return values are in decimal
 - **0o100**: The user has the permission to execute a regular file or search for the specified path in a directory.  
 - **0o040**: The user group has the read permission on a regular file or a directory entry.  
 - **0o020**: The user group has the permission to write a regular file or create and delete a directory entry.  
-- **0o010**: The user group has the permission to execute a regular file or search for the specified path in a directory.  
+- **0o010**: The user group has the permission to execute a regular file or search for the specified path in a  
+directory.  
 - **0o004**: Other users have the permission to read a regular file or read a directory entry.  
 - **0o002**: Other users have the permission to write a regular file or create and delete a directory entry.  
-- **0o001**: Other users have the permission to execute a regular file or search for the specified path in a directory.
+- **0o001**: Other users have the permission to execute a regular file or search for the specified path in a  
+directory.
 
 **Type:** number
 

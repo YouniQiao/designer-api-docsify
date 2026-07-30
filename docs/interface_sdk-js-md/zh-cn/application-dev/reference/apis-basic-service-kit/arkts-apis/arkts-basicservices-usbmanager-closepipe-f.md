@@ -56,12 +56,12 @@ async function closePipe() {
     console.error(`request right failed`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  if (devicepipe == undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
-  let ret: number = usbManager.closePipe(devicepipe);
+  let ret: number = usbManager.closePipe(devicePipe);
   console.info(`closePipe = ${ret}`);
 }
 

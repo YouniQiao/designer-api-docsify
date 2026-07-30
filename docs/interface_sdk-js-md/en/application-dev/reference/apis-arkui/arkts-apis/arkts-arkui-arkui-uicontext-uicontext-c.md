@@ -130,6 +130,31 @@ Adds transition animations for state changes in closure code.
 | value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | Animation settings. |
 | event | () =&gt; void | Yes | Closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
 
+## animateToImmediately
+
+```TypeScript
+animateToImmediately(param: AnimateParam, processor: Callback<void>): void
+```
+
+Specifies a clear animation host instance context via the UIContext object and triggers the explicit animation to be dispatched immediately. This avoids issues where animations are not executed or animation end callbacks are not triggered due to inability to locate the instance or using an incorrect instance. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void--><!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | Animation settings. |
+| processor | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback function. It specifies the closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
+
 ## bindTabsToNestedScrollable
 
 ```TypeScript
@@ -1162,7 +1187,7 @@ Get navigation information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| observer.NavigationInfo | - The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| observer.NavigationInfo | - The navigation information of the frameNode with the   target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 ## getOverlayManager
 
@@ -1240,7 +1265,7 @@ Get page information of the frameNode with uniqueId.
 
 | Type | Description |
 | --- | --- |
-| [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | - The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
+| [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | - The page information of the frameNode with the target uniqueId, includes   navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
 
 ## getPageRootNode
 

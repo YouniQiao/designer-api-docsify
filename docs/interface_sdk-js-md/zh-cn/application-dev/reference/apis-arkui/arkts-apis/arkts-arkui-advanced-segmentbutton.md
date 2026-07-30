@@ -16,14 +16,6 @@ import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions,
 | [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | 用于保存按钮信息的数组。 |
 | [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) |  |
 
-<!--Del-->
-### 类（系统接口）
-
-| 名称 | 说明 |
-| --- | --- |
-| [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c-sys.md) |  |
-<!--DelEnd-->
-
 ### 结构体
 
 | 名称 | 说明 |
@@ -43,14 +35,6 @@ import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions,
 | [SegmentButtonTextItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) | 文本按钮信息。 |
 | [TabSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md) | 构建页签类的SegmentButtonOptions对象。  继承[CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md)。 |
 | [TabSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) | 页签类分段按钮选项。继承自[TabSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md)。 |
-
-<!--Del-->
-### 接口（系统接口）
-
-| 名称 | 说明 |
-| --- | --- |
-| [CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i-sys.md) | 定义分段按钮组件的可自定义的属性。 |
-<!--DelEnd-->
 
 ### 枚举
 

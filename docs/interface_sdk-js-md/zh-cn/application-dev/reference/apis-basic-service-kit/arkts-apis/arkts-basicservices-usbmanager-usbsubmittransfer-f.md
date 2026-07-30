@@ -64,25 +64,25 @@ async function usbSubmitTransfer() {
     console.info(`request right fail`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
-  if (devicepipe == undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
+  if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
   // 获取endpoint端点地址
   let endpoint = device.configs?.[0]?.interfaces?.[0]?.endpoints.find((value) => {
-    return value.direction === 0 && value.type === 2
-  })
-  // 获取设备的第一个id。
-  let ret: number = usbManager.claimInterface(devicepipe, device.configs?.[0]?.interfaces?.[0], true);
+    return value.direction === 0 && value.type === 2;
+  });
+  // 声明接口控制权，force参数为true表示强制获取
+  let ret: number = usbManager.claimInterface(devicePipe, device.configs?.[0]?.interfaces?.[0], true);
   if (ret !== 0) {
     console.error(`claim interface failed`);
-    usbManager.closePipe(devicepipe);
+    usbManager.closePipe(devicePipe);
     return;
   }
 
   let transferParams: usbManager.UsbDataTransferParams = {
-    devPipe: devicepipe,
+    devPipe: devicePipe,
     flags: usbManager.UsbTransferFlags.USB_TRANSFER_SHORT_NOT_OK,
     endpoint: 1,
     type: usbManager.UsbEndpointTransferType.TRANSFER_TYPE_BULK,
@@ -94,20 +94,22 @@ async function usbSubmitTransfer() {
     isoPacketCount: 0,
   };
   try {
-    transferParams.endpoint=endpoint?.address as number;
-    transferParams.callback=(err, callbackData: usbManager.SubmitTransferCallback)=>{
+    transferParams.endpoint = endpoint?.address as number;
+    transferParams.callback = (err, callbackData: usbManager.SubmitTransferCallback)=>{
+      let relIntfRet: number = usbManager.releaseInterface(devicePipe, interfaces);
+      console.info(`releaseInterface = ${relIntfRet}`);
+      usbManager.closePipe(devicePipe);
       if (err) {
-        console.error('USB transfer failed:', err);
+        console.error(`USB transfer failed. Code: ${err.code}, message: ${err.message}`);
         return;
       }
-      console.info('callbackData =' +JSON.stringify(callbackData));
-    }
+      console.info('callbackData =' + JSON.stringify(callbackData));
+    };
     usbManager.usbSubmitTransfer(transferParams); 
     console.info('USB transfer request submitted.');
   } catch (error) {
-    console.error('USB transfer failed:', error);
+    console.error(`USB transfer failed. Code: ${error.code}, message: ${error.message}`);
   }
-  usbManager.closePipe(devicepipe);
 }
 
 ```

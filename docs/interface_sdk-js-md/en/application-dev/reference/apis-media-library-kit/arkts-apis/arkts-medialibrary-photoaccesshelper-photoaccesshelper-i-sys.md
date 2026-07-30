@@ -41,7 +41,7 @@ Start medialibrary database backup and wait for returning with backup informatio
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Map&lt;string, string&gt;&gt; | - The returning with backup information,which includes FILE_FD, FILE_NAME and FILE_SIZE. |
+| Promise&lt;Map&lt;string, string&gt;&gt; | - The returning with backup information,   which includes FILE_FD, FILE_NAME and FILE_SIZE. |
 
 **Error codes:**
 

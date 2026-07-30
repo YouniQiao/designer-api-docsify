@@ -59,14 +59,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while(retryCount < 3){
+  while (retryCount < 3) {
     randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
+    if (randData) {
       break;
     }
     retryCount++;
   }
-  if(!randData){
+  if (!randData) {
     return;
   }
   const authParam : userAuth.AuthParam = {
@@ -136,14 +136,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while(retryCount < 3){
+  while (retryCount < 3) {
     randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
+    if (randData) {
       break;
     }
     retryCount++;
   }
-  if(!randData){
+  if (!randData) {
     return;
   }
   const authParam: userAuth.AuthParam = {
@@ -157,7 +157,7 @@ try {
   const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
   console.info('get userAuth instance successfully.');
   userAuthInstance.off('result', {
-    onResult (result) {
+    onResult: (result) => {
       console.info(`auth off result = ${result.result}`);
     }
   });
@@ -213,14 +213,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while(retryCount < 3){
+  while (retryCount < 3) {
     randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
+    if (randData) {
       break;
     }
     retryCount++;
   }
-  if(!randData){
+  if (!randData) {
     return;
   }
   const authParam: userAuth.AuthParam = {
@@ -329,14 +329,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while(retryCount < 3){
+  while (retryCount < 3) {
     randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
+    if (randData) {
       break;
     }
     retryCount++;
   }
-  if(!randData){
+  if (!randData) {
     return;
   }
   const authParam: userAuth.AuthParam = {
@@ -416,14 +416,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while(retryCount < 3){
+  while (retryCount < 3) {
     randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
+    if (randData) {
       break;
     }
     retryCount++;
   }
-  if(!randData){
+  if (!randData) {
     return;
   }
   const authParam: userAuth.AuthParam = {

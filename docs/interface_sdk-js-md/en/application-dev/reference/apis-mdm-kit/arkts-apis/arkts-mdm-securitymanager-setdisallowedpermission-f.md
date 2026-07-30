@@ -43,3 +43,27 @@ Sets the permissions that are disallowed to be granted for an account.
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [9201045](../errorcode-enterpriseDeviceManager.md#9201045-specified-permission-cannot-be-disabled) | This permission cannot be disallowed. |
 
+**Example**
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let permission: string = 'ohos.permission.CAMERA';
+let disallow: boolean = true;
+let accountId: number = 100;
+try {
+  securityManager.setDisallowedPermission(wantTemp, permission, disallow, accountId);
+  console.info(`Succeeded in setting disallowed permission.`);
+} catch(err) {
+  console.error(`Failed to set disallowed permission. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

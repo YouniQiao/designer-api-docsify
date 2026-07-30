@@ -45,7 +45,7 @@ Creates an input method panel. This API can be called only by the input method a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-basecontext-t.md) | Yes | Current context of the input method. |
-| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | Yes | Information about the input method panel. |
+| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful,the created input method panel is returned. |
 
 **Error codes:**
@@ -116,7 +116,7 @@ Creates an input method panel. This API can be called only by the input method a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-basecontext-t.md) | Yes | Current context of the input method. |
-| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | Yes | Information about the input method panel. |
+| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
 
 **Return value:**
 

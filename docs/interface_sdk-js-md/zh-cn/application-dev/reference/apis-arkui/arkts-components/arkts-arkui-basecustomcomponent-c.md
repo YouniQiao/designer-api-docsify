@@ -309,7 +309,8 @@ onPageHide?(): void
 router路由页面（即[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的自定义组件）每次隐藏时触发一次，包括路由跳转、应用进入后台等场景。  
 > **说明：**  
 > 在该回调函数内，建议避免执行高耗时操作阻塞主线程造成卡顿。对于高耗时操作例如相机资源释放，推荐使用异步方案替代。最佳实践请参考  
->[优化应用时延问题-延迟执行资源释放操作](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-application-latency-optimization-cases#section8783201923819)。
+>  
+[优化应用时延问题-延迟执行资源释放操作](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-application-latency-optimization-cases#section8783201923819)。
 
 It is triggered once each time the page is hidden, including scenarios such as the routing process and the application entering the background
 
@@ -451,7 +452,7 @@ queryNavDestinationInfo(isInner: Optional<boolean>): NavDestinationInfo | undefi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isInner | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | -true：向内查询最近的，且在栈内的NavDestinationInfo的详细信息。<br/>false：向外查询最近的，且在栈内的NavDestinationInfo的详细信息。 |
+| isInner | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | -   true：向内查询最近的，且在栈内的NavDestinationInfo的详细信息。<br/>false：向外查询最近的，且在栈内的NavDestinationInfo的详细信息。 |
 
 **返回值：**
 

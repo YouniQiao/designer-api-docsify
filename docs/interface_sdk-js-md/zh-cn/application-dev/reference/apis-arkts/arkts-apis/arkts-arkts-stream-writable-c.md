@@ -356,11 +356,11 @@ class TestWritable extends stream.Writable {
 }
 
 let callbackCalled = false;
-let writable = new TestWritable();
-writable.on('error', () => {
+let writableStream = new TestWritable();
+writableStream.on("error", () => {
   console.info("Writable event test", callbackCalled.toString()); // Writable event test false
 });
-writable.write("hello", "utf8", () => {
+writableStream.write("hello", "utf8", () => {
 });
 
 ```

@@ -493,6 +493,66 @@ Obtains the text style of this run.
 | --- | --- |
 | [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | Text style of this run. |
 
+**Example**
+
+```TypeScript
+// Index.ets
+import { text } from "@kit.ArkGraphics2D"
+import { common2D } from '@kit.ArkGraphics2D'
+import { JSON } from "@kit.ArkTS";
+
+function textFunc() {
+  let textStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let paragraphStyle: text.ParagraphStyle = {
+    textStyle: textStyle,
+    align: text.TextAlign.END,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+  paragraphBuilder.addText("Hello World");
+  let paragraph = paragraphBuilder.build();
+  paragraph.layoutSync(50);
+  let lines = paragraph.getTextLines();
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    let runs = line.getGlyphRuns();
+    for (let j = 0; j < runs.length; j++) {
+      const run = runs[j];
+      const runStyle = run.getTextStyle();
+      console.info(`print line [${i}] run [${j}] textStyle: ${JSON.stringify(runStyle)}`);
+      if (runStyle?.color != undefined && typeof runStyle?.color == 'number') {
+        let textColor: common2D.Color = numberToRGBA(runStyle?.color);
+        console.info(`Print text color ARGB: ${textColor.alpha}, ${textColor.red}, ${textColor.green}, ${textColor.blue}`);
+      }
+    }
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("Click").onClick((e: ClickEvent) => {
+        textFunc();
+      })
+    }
+  }
+}
+
+function numberToRGBA(colorNum: number): common2D.Color {
+  const alpha = (colorNum >>> 24) & 0xFF;
+  const red = (colorNum >>> 16) & 0xFF;
+  const green = (colorNum >>> 8) & 0xFF;
+  const blue = colorNum & 0xFF;
+  return { alpha: alpha, red: red, green: green, blue: blue };
+}
+
+```
+
 ## getTypographicBounds
 
 ```TypeScript
@@ -561,7 +621,6 @@ Paints this run on the canvas with the coordinate point (x, y) as the upper left
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
 import { image } from '@kit.ImageKit'
 
 function textFunc(pixelmap: PixelMap) {

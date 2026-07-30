@@ -155,7 +155,7 @@ Returns a flag indicating whether the current ReactiveComponentContent was obtai
 
 | Type | Description |
 | --- | --- |
-| boolean | - Returns true if the ReactiveComponentContent was converted between dynamic and static states, otherwise, returns false. |
+| boolean | - Returns true if the ReactiveComponentContent was converted between dynamic and static   states, otherwise, returns false. |
 
 ## recycle
 

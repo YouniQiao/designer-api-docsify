@@ -23,7 +23,8 @@ authTrustLevel: AuthTrustLevel
 Authentication trust level. The authentication trust level determines the security strength of authentication.Select a proper level based on the security requirements of the service scenario:
 
 - **ATL1**: Applies to low-security scenarios such as service risk control and common personal data query.  
-- **ATL2**: Applies to medium-security scenarios such as application login and maintaining the screen-unlocked state of a device.  
+- **ATL2**: Applies to medium-security scenarios such as application login and maintaining the screen-unlocked  
+state of a device.  
 - **ATL3**: Applies to high-security scenarios such as device unlocking.  
 - **ATL4**: Applies to high-security scenarios such as small-amount payment.
 
@@ -101,8 +102,10 @@ skipLockedBiometricAuth?: boolean
 
 Whether to skip the frozen authentication mode and automatically switch to another mode. If no alternative authentication mode is available, the widget is closed and an authentication freeze error code is returned.
 
-- **true**: When biometric authentication is locked, the countdown UI is skipped and the system directly switches to another authentication mode (for example, switching from a locked fingerprint to PIN). This is suitable for scenarios where quick authentication is desired.  
-- **false** (default): The countdown is not skipped. The user must wait for the lock countdown to end before retrying the authentication mode or manually switching.
+- **true**: When biometric authentication is locked, the countdown UI is skipped and the system directly switches  
+to another authentication mode (for example, switching from a locked fingerprint to PIN). This is suitable for scenarios where quick authentication is desired.  
+- **false** (default): The countdown is not skipped. The user must wait for the lock countdown to end before  
+retrying the authentication mode or manually switching.
 
 **Type:** boolean
 

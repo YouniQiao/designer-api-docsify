@@ -1,4 +1,4 @@
-# MaterialType (System API)
+# MaterialType
 
 Enumerates system material types.
 
@@ -7,8 +7,6 @@ Enumerates system material types.
 <!--Device-uiMaterial-enum MaterialType--><!--Device-uiMaterial-enum MaterialType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
 
 ## NONE
 

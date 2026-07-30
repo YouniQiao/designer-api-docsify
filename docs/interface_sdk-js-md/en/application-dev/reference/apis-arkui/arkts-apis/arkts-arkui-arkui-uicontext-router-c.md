@@ -287,7 +287,7 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,**error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,   **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -361,7 +361,7 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Page routing parameters. |
 | mode | router.RouterMode | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,**error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,   **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -435,7 +435,7 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,**error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,   **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -509,7 +509,7 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Page routing parameters. |
 | mode | router.RouterMode | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,**error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,   **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -583,7 +583,7 @@ Replaces the current page with another one using the named route and destroys th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Description of the new page. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,**error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,   **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -655,7 +655,7 @@ Replaces the current page with another one using the named route and destroys th
 | --- | --- | --- | --- |
 | options | router.NamedRouterOptions | Yes | Description of the new page. |
 | mode | router.RouterMode | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,**error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,   **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -727,7 +727,7 @@ Replaces the current page with another one in the application and destroys the c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Description of the new page. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,**error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,   **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -799,7 +799,7 @@ Replaces the current page with another one in the application and destroys the c
 | --- | --- | --- | --- |
 | options | router.RouterOptions | Yes | Description of the new page. |
 | mode | router.RouterMode | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,**error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | - Callback for the router navigation result.<br>If the navigation succeeds,   **error** is **undefined**. If the navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 

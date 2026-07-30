@@ -40,7 +40,8 @@ isAlertOnce?: boolean
 
 Whether to send a notification alert only once when a notification is published or updated. The default value is **false**. For details, see [NotificationRequest.isAlertOnce](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md).
 
-- **true**: An alert is sent only when the notification is published for the first time. For subsequent update,the alert mode is changed to [LEVEL_LOW](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-slotlevel-e.md).  
+- **true**: An alert is sent only when the notification is published for the first time. For subsequent update,  
+the alert mode is changed to [LEVEL_LOW](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-slotlevel-e.md).  
 - **false**: The alert is sent in the configured alert mode.
 
 **Type:** boolean

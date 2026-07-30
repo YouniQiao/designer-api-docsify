@@ -40,3 +40,33 @@ Registers a remote authentication callback. This API is used in remote authentic
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let remoteAuthCallback: userAuth.IRemoteAuthCallback = {
+  onGetRemoteAuthWidgetParam(challenge: Uint8Array): userAuth.WidgetParam {
+    console.info('Received challenge for remote auth, length: ' + challenge.length);
+    return {
+      title: 'Remote Authentication',
+      navigationButtonText: 'Cancel'
+    } as userAuth.WidgetParam;
+  },
+  onRemoteAuthResult(challenge: Uint8Array, result: userAuth.UserAuthResult): void {
+    console.info('remote auth result, result: ' + result.result + ', authType: ' + result.authType);
+  }
+};
+
+try {
+  userAuth.unregisterRemoteAuthCallback();
+  userAuth.registerRemoteAuthCallback(remoteAuthCallback);
+  console.info('Remote auth callback registered successfully');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`failed to register remote auth callback. Code is ${err?.code}, message is ${err?.message}`);
+}
+
+```
+

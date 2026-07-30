@@ -17,8 +17,6 @@ The **bluetoothManager** module provides Bluetooth management capabilities, incl
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

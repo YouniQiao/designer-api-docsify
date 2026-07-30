@@ -46,28 +46,6 @@ Obtains the trustlist or blocklist for outgoing calls.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
-**Example**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-import { adminManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace the values as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
-  let numbers: Array<string> = telephonyManager.getOutgoingCallPolicyNumbers(wantTemp, policy);
-  console.info(`Succeeded in getting outgoing call policy. result: ${JSON.stringify(numbers)}`);
-} catch (err) {
-  console.error(`Failed to get outgoing call policy. Code: ${err.code}, message: ${err.message}`);
-}
-
-```
-
 
 ## getOutgoingCallPolicyNumbers
 
@@ -108,4 +86,28 @@ Obtains the trustlist or blocklist for outgoing calls.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+
+**Example**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { telephonyManager } from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace the values as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  // Set the policy type to blocklist.
+  let policy: adminManager.Policy = adminManager.Policy.BLOCK_LIST;
+  // Obtain the outgoing call blocklist.
+  let numbers: Array<string> = telephonyManager.getOutgoingCallPolicyNumbers(wantTemp, policy);
+  console.info(`Succeeded in getting outgoing call policy. result: ${JSON.stringify(numbers)}`);
+} catch (err) {
+  console.error(`Failed to get outgoing call policy. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
 

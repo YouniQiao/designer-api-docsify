@@ -22,11 +22,14 @@ This API obtains a **LocalUpdater** object and encapsulates the capabilities of 
 
 **Constraints**
 
-- The upgrade package must be downloaded from the official website of the vendor or from an official channel to ensure that the source is trusted.  
-- Before the installation, you must verify the upgrade package by calling **verifyUpgradePackage**. An unverified package may damage the system.  
+- The upgrade package must be downloaded from the official website of the vendor or from an official channel to  
+ensure that the source is trusted.  
+- Before the installation, you must verify the upgrade package by calling **verifyUpgradePackage**. An unverified  
+package may damage the system.  
 - During the upgrade, the device automatically restarts. The app status needs to be saved.  
 - The **ohos.permission.UPDATE_SYSTEM** permission is required for calling **getLocalUpdater** APIs.  
-- The upgrade package file path contains a maximum of 255 characters. If the value contains more than 255characters, an exception is thrown.
+- The upgrade package file path contains a maximum of 255 characters. If the value contains more than 255  
+characters, an exception is thrown.
 
 **Since:** 9
 

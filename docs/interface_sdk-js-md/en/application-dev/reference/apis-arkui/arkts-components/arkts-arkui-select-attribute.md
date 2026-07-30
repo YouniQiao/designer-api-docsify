@@ -225,7 +225,7 @@ Sets the text style of the drop-down button. When **size** is set to **0**, the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the drop-down list button.<br>For API versions 11 and earlier, the default value is as follows:<br>{<br>size: `$r('sys.float.ohos_id_text_size_button1')`,<br>weight: FontWeight.Medium<br   >} <br>Since API version 12: The default value of **size** is **$r('sys.float.ohos_id_text_size_button2')** in the case of **controlSize.SMALL** and **$r('sys.float.ohos_id_text_size_button1')** in other cases. |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the drop-down list button.<br>For API versions 11 and earlier, the default value is as follows:<br>{<br>size: `$r('sys.float.ohos_id_text_size_button1')`,<br>weight: FontWeight.Medium<br   >} <br>Since API version 12: The default value of **size** is **$r('sys.float.ohos_id_text_size_button2')** in   the case of **controlSize.SMALL** and **$r('sys.float.ohos_id_text_size_button1')** in other cases. |
 
 ## font
 
@@ -598,6 +598,32 @@ Sets the outline style for the drop-down menu.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | outline | [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Yes | Outline style of the drop-down menu. |
+
+## menuSystemMaterial
+
+```TypeScript
+menuSystemMaterial(material: Optional<SystemUiMaterial>)
+```
+
+Set system-styled materials for select's menu. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of select's menu.
+
+Device Behavior Differences:The effect of the same material may vary across different devices depending on their computing power.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-SelectAttribute-menuSystemMaterial(material: Optional<SystemUiMaterial>): SelectAttribute--><!--Device-SelectAttribute-menuSystemMaterial(material: Optional<SystemUiMaterial>): SelectAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| material | [Optional](arkts-arkui-optional-t.md)&lt;SystemUiMaterial&gt; | Yes | The select's menu material, undefined means retaining the original visual style of the select's menu. |
 
 ## minKeyboardAvoidDistance
 

@@ -1,6 +1,8 @@
 # CameraInput
 
-Defines the camera input object.It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
+**CameraInput** defines the camera input object.
+
+It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
 
 **Since:** 10
 
@@ -90,7 +92,7 @@ Obtains the physical camera orientation in the current fold state of the device.
 
 | Type | Description |
 | --- | --- |
-| number | Physical camera orientation. The unit is degree. The value range is [0, 360]. |
+| number | Physical camera orientation.<br>The value ranges from 0 to 360, in degrees. |
 
 ## isPhysicalCameraOrientationVariable
 
@@ -112,7 +114,7 @@ Checks whether the physical camera orientation is adjustable in different fold s
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the physical camera orientation is adjustable. **true** if adjustable, **false** otherwise. If the API call fails, undefined is returned. |
+| boolean | Checks whether the physical camera orientation is adjustable in different fold states of the device. **true** if adjustable, **false** otherwise. If the API call fails, undefined is returned. |
 
 ## off('error')
 
@@ -137,6 +139,35 @@ Unsubscribes from CameraInput error events.
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a CameraInput instance is created. This event is triggered and the result is returned when an error occurs on the camera device. For example, if the camera device is unavailable or a conflict occurs, the error information is returned. |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
 | callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | No | Callback used to return the result. If this parameter is specified, only the corresponding callback will be unregistered (the callback object cannot be an anonymous function); otherwise,all registered callbacks will be unregistered. |
+
+## off('cameraOcclusionDetection')
+
+```TypeScript
+off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void
+```
+
+Unsubscribes from **CameraInput** occlusion events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CameraInput-off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'cameraOcclusionDetection' | Yes | Event type. The value is fixed at **'cameraOcclusionDetection'**.The event can be listened for when a **CameraInput** instance is created. It is triggered when the occlusion status of the camera lens changes, and the occlusion status is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraOcclusionDetectionResult&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 22 |
 
 ## on('error')
 
@@ -164,6 +195,38 @@ Subscribes to CameraInput error events. This API uses an asynchronous callback t
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a CameraInput instance is created. This event is triggered and the result is returned when an error occurs on the camera device. For example, if the camera device is unavailable or a conflict occurs, the error information is returned. |
 | camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes | Camera device. |
 | callback | [ErrorCallback](../../apis-arkui/arkts-components/arkts-arkui-errorcallback-t-sys.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
+
+## on('cameraOcclusionDetection')
+
+```TypeScript
+on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void
+```
+
+Subscribes to **CameraInput** occlusion events. This API uses an asynchronous callback to return the result.
+> **NOTE**  
+>  
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+
+**Since:** 23
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-CameraInput-on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void--><!--Device-CameraInput-on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDetectionResult>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'cameraOcclusionDetection' | Yes | Event type. The value is fixed at **'cameraOcclusionDetection'**.The event can be listened for when a **CameraInput** instance is created. It is triggered when the occlusion status of the camera lens changes, and the occlusion status is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraOcclusionDetectionResult&gt; | Yes | Callback used to return the occlusion status. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 22 |
 
 ## open
 
@@ -319,7 +382,7 @@ Enables or disables the use of the physical camera orientation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isUsed | boolean | Yes | Whether to enable the use of the physical camera orientation. **true** to enable,**false** otherwise. |
+| isUsed | boolean | Yes | Enables or disables the use of the physical camera orientation. **true** to enable,**false** otherwise. |
 
 **Error codes:**
 

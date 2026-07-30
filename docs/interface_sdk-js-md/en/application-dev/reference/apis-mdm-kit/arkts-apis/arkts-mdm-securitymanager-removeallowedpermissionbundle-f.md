@@ -42,3 +42,30 @@ Removes the application from the list of applications allowed to grant the permi
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [9201044](../errorcode-enterpriseDeviceManager.md#9201044-specified-permission-not-disabled) | This permission is not disallowed.Applications cannot be added to or removed from the trustlist. |
 
+**Example**
+
+```TypeScript
+import { securityManager, common } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let permission: string = 'ohos.permission.CAMERA';
+let appInstance: common.ApplicationInstance = {
+  appIdentifier: '736498586',
+  appIndex: 0,
+  accountId: 100
+};
+try {
+  securityManager.removeAllowedPermissionBundle(wantTemp, permission, appInstance);
+  console.info(`Succeeded in removing allowed permission bundle.`);
+} catch(err) {
+  console.error(`Failed to remove allowed permission bundle. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

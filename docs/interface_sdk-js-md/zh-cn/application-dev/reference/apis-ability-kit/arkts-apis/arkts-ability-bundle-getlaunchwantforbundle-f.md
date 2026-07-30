@@ -31,6 +31,23 @@ function getLaunchWantForBundle(bundleName: string, callback: AsyncCallback<Want
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Want&gt; | 是 | 程序启动作为入参的回调函数，返回拉起指定应用的want对象。 |
 
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+
+bundle.getLaunchWantForBundle(bundleName, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+
+```
+
 
 ## getLaunchWantForBundle
 
@@ -61,4 +78,21 @@ function getLaunchWantForBundle(bundleName: string): Promise<Want>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;Want&gt; | Returns the Want for starting the application's main ability if any. |
+
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+
+bundle.getLaunchWantForBundle(bundleName)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+
+```
 

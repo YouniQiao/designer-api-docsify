@@ -115,6 +115,31 @@ animateTo(value: AnimateParam, event: () => void): void
 | value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 | 设置动画效果相关参数。 |
 | event | () =&gt; void | 是 | 指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
 
+## animateToImmediately
+
+```TypeScript
+animateToImmediately(param: AnimateParam, processor: Callback<void>): void
+```
+
+通过UIContext对象指定明确的动画主实例上下文，并触发显式动画立即下发。避免由于找不到实例或实例不对，导致的动画不执行或动画结束回调不执行问题。使用callback异步回调。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void--><!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 | 设置动画效果相关参数。 |
+| processor | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 回调函数。指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
+
 ## bindTabsToNestedScrollable
 
 ```TypeScript
@@ -886,7 +911,8 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 
 1. 当uniqueId对应的是系统组件时，返回组件所对应的FrameNode；2. 当uniqueId对应的是自定义组件时：  
 - 若其有渲染内容，且没有被[@Reusable装饰器](../../../ui/state-management/arkts-reusable.md)修饰时，返回该自定义组件的根节点，类型为__Common__。  
-- 若其无渲染内容，或者被[@Reusable装饰器](../../../ui/state-management/arkts-reusable.md)修饰时，在该自定义组件的子组件创建完成前调用此接口，将返回null；在该自定义组件的子组件创建完成后调用，返回其第一个子组件的FrameNode。3. 当uniqueId无对应的组件时，返回null。
+- 若其无渲染内容，或者被[@Reusable装饰器](../../../ui/state-management/arkts-reusable.md)修饰时，在该自定义组件的子组件创建完成前调用此接口，将返回null；在该自定义组件的子组件创建完成后调用，返回其第一个子组件的FrameNode。  
+3. 当uniqueId无对应的组件时，返回null。
 
 **起始版本：** 12
 
@@ -1154,7 +1180,7 @@ Get navigation information of the frameNode with uniqueId.
 
 | 类型 | 说明 |
 | --- | --- |
-| observer.NavigationInfo | - The navigation information of the frameNode with the target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
+| observer.NavigationInfo | - The navigation information of the frameNode with the   target uniqueId, or undefined if the frameNode is not existed or does not have navigation information. |
 
 ## getOverlayManager
 
@@ -1232,7 +1258,7 @@ getPageInfoByUniqueId(id: number): PageInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | - The page information of the frameNode with the target uniqueId, includes navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
+| [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | - The page information of the frameNode with the target uniqueId, includes   navDestination and router page information. If the frame node does not have navDestination and router page information, it will return an empty object. |
 
 ## getPageRootNode
 
@@ -2105,11 +2131,13 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 控制虚拟键盘抬起时页面的避让模式。
 > **说明：**  
 >  
->KeyboardAvoidMode.RESIZE模式会压缩页面大小，页面中设置百分比宽高的组件会跟随页面压缩，而直接设置宽高的组件会按设置的固定大小布局。设置KeyboardAvoidMode的RESIZE模式时，expandSa feArea([SafeAreaType.KEYBOARD],[SafeAreaEdge.BOTTOM])不生效。  
+>  
+KeyboardAvoidMode.RESIZE模式会压缩页面大小，页面中设置百分比宽高的组件会跟随页面压缩，而直接设置宽高的组件会按设置的固定大小布局。设置KeyboardAvoidMode的RESIZE模式时，expandSa feArea([SafeAreaType.KEYBOARD],[SafeAreaEdge.BOTTOM])不生效。  
 >  
 > KeyboardAvoidMode.NONE模式配置页面不避让键盘，页面会被抬起的键盘遮盖。  
 >  
->setKeyboardAvoidMode针对页面生效，对于弹窗类组件不生效，比如Dialog、Popup、Menu、BindSheet、BindContentCover、Toast、OverlayManager。弹窗类组件的避让模式可以参考CustomDialogControllerOptions对象说明。
+>  
+setKeyboardAvoidMode针对页面生效，对于弹窗类组件不生效，比如Dialog、Popup、Menu、BindSheet、BindContentCover、Toast、OverlayManager。弹窗类组件的避让模式可以参考CustomDialogControllerOptions对象说明。
 
 **起始版本：** 11
 

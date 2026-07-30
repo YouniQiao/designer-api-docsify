@@ -1728,7 +1728,7 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | Whether to display the full-screen modal.<br>- **true**: Display the modal.<br>-**false**: Hide the modal.<br>Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).<br>Since API version 18, this attribute supports two   -way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
+| isShow | boolean | Yes | Whether to display the full-screen modal.<br>- **true**: Display the modal.<br>-**false**: Hide the modal.<br>Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).<br>Since API version 18, this attribute supports two   -way binding through   [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the modal. The root node in **builder** must be unique. |
 | type | [ModalTransition](arkts-arkui-modaltransition-e.md) | No | System transition mode of the modal.<br> Default value:**ModalTransition.DEFAULT**.<br>**NOTE**<br> This property has no effect when it is set together with **transition**. |
 
@@ -1760,7 +1760,7 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | Whether to display the full-screen modal.<br>- **true**: Display the modal.<br>-**false**: Hide the modal.<br>Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).<br>Since API version 18, this attribute supports two   -way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
+| isShow | boolean | Yes | Whether to display the full-screen modal.<br>- **true**: Display the modal.<br>-**false**: Hide the modal.<br>Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).<br>Since API version 18, this attribute supports two   -way binding through   [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
 | builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the modal. |
 | options | [ContentCoverOptions](arkts-arkui-contentcoveroptions-i.md) | No | Optional attributes of the modal. |
 
@@ -2302,7 +2302,7 @@ Sets the border. When neither color nor radius is specified, set borderColor and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BorderOptions](../arkts-apis/arkts-arkui-borderoptions-i.md) | Yes | - Unified border style.<br>The default value is **0**, indicating that no border is displayed.<br>Since API version 9, the parent node's border is displayed above child node content. |
+| value | [BorderOptions](../arkts-apis/arkts-arkui-borderoptions-i.md) | Yes | - Unified border style.<br>The default value is **0**, indicating that no border is   displayed.<br>Since API version 9, the parent node's border is displayed above child node content. |
 
 **Return value:**
 
@@ -3450,7 +3450,8 @@ Expands the safe area.
 > **NOTE**  
 >  
 > - When using **expandSafeArea** to expand the drawing of a component, avoid setting fixed width and height values  
-> (except percentages). If fixed width and height values are set (including **'auto'**), the edges for expanding the  
+> (except percentages). If fixed width and height values are set (including **'auto'**), the edges for expanding  
+the  
 > safe area can only be **[SafeAreaEdge.TOP, SafeAreaEdge.START]**, and the size of the component remains unchanged  
 > after safe area expansion.  
 >  
@@ -3467,7 +3468,8 @@ Expands the safe area.
 > 1. When **type** is set to **SafeAreaType.KEYBOARD**, the settings take effect by default. This behaves as the  
 > component not avoiding the virtual keyboard.  
 > 2. When **type** is set to any other value, the settings take effect only if its boundaries overlap with the  
-> safe area. For example, if the height of the status bar is 100, the absolute position of the component on the  
+> safe area. For example, if the height of the status bar is 100, the absolute position of the component on  
+the  
 > screen must be 0 <= y <= 100 for the settings to take effect.  
 >  
 > - When a component extends into a non-safe area, events in the non-safe area (such as click events) may be  
@@ -3482,9 +3484,11 @@ Expands the safe area.
 > - The **expandSafeArea** attribute only affects the current component and does not propagate to parent or child  
 > components. Therefore, all relevant components must be configured individually.  
 >  
-> - When both **expandSafeArea** and **position** attributes are set, the **position** attribute takes effect first,  
+> - When both **expandSafeArea** and **position** attributes are set, the **position** attribute takes effect  
+first,  
 > followed by the **expandSafeArea** attribute. For components that do not have **position**, **offset**, or other  
-> rendering attributes set, such as dialog boxes and sheets, the **expandSafeArea** attribute will not take effect if  
+> rendering attributes set, such as dialog boxes and sheets, the **expandSafeArea** attribute will not take effect  
+if  
 > their boundaries do not overlap with the non-safe area.  
 >  
 > - In scenarios where the **expandSafeArea** attribute is ineffective, and you need to place a component in the  
@@ -4219,7 +4223,7 @@ Applies a grayscale effect to the component. The grayscale rendering of the uppe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Grayscale conversion ratio of the component. If the value is **1.0**, the component is completely converted to grayscale. If the value is **0.0**, the component remains unchanged. Between **0** and **1**, the value applies a linear multiplier on the grayscale effect.<br>Value range: [0.0, 1.0]<br>**NOTE**<br   >A value less than **0.0** evaluates to the value **0.0**. A value greater than **1.0** evaluates to the value **1.0**. |
+| value | number | Yes | Grayscale conversion ratio of the component. If the value is **1.0**, the component is completely converted to grayscale. If the value is **0.0**, the component remains unchanged. Between **0** and **1**, the value applies a linear multiplier on the grayscale effect.<br>Value range: [0.0, 1.0]<br>**NOTE**<br   >A value less than **0.0** evaluates to the value **0.0**. A value greater than **1.0** evaluates to the value   **1.0**. |
 
 **Return value:**
 
@@ -4373,7 +4377,7 @@ Sets the height of the component. By default, the height required to fully hold 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the component to set.<br>Unit: vp   > **NOTE**   >   > In the [Row](Row), [Column](Column), and [RelativeContainer](RelativeContainer)components, setting **width** and **height** to **auto** means that the size adapts to the size of their child components. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the component to set.<br>Unit: vp   > **NOTE**   >   > In the [Row](Row), [Column](Column), and [RelativeContainer](RelativeContainer)   components, setting **width** and **height** to **auto** means that the size adapts to the size of their child components. |
 
 **Return value:**
 
@@ -6281,7 +6285,8 @@ onDrop(eventCallback: OnDragEventCallback, dropOptions?: DropOptions): T
 
 Triggered when a dragged item is dropped on a valid drop target. If you do not explicitly call event.[setResult](arkts-arkui-dragevent-i.md#setresult)() in **onDrop** to set the result of the drag reception, the system handles it as follows:
 
-- If the component being dragged is one that supports drop actions by default, the system's actual data processing result is used.  
+- If the component being dragged is one that supports drop actions by default, the system's actual data processing  
+result is used.  
 - For other components, the system assumes that the data is received successfully.
 
 **Since:** 15
@@ -7255,7 +7260,7 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Optional](arkts-arkui-optional-t.md)&lt;Dimension \| OutlineRadiuses&gt; | Yes | Radius of the outline corners. Percentage values are not supported.<br>Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth<br   >If **radius** is **undefined**, the component reverts to its original style with the outline corner radius of0. |
+| radius | [Optional](arkts-arkui-optional-t.md)&lt;Dimension \| OutlineRadiuses&gt; | Yes | Radius of the outline corners. Percentage values are not supported.<br>Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth<br   >If **radius** is **undefined**, the component reverts to its original style with the outline corner radius of   0. |
 
 **Return value:**
 
@@ -7511,9 +7516,12 @@ Sets the pixel rounding policy for the current component in the specified direct
 
 In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width.For ease of description, these two sets of directions are referred to as top-left and bottom-right.
 
-- Calculate the top-left coordinates of the current component: offset of the top-left corner relative to the parent container.  
-- Calculate the bottom-right coordinates of the current component: offset of the top-left corner relative to the parent container plus the size of the component itself.  
-- Recalculate the size of the current component: bottom-right corner rounded value minus the top-left corner rounded value.
+- Calculate the top-left coordinates of the current component: offset of the top-left corner relative to the  
+parent container.  
+- Calculate the bottom-right coordinates of the current component: offset of the top-left corner relative to the  
+parent container plus the size of the component itself.  
+- Recalculate the size of the current component: bottom-right corner rounded value minus the top-left corner  
+rounded value.
 
 **Since:** 11
 
@@ -7609,11 +7617,15 @@ Sets the absolute positioning, which determines the position of a child componen
 
 **NOTE**  
 - This API takes effect after the component's size measurement is complete.  
-- When the parent container is [Row](Row),[Column](Column), or [Flex](Flex), the child component with **position** set does not occupy any space.  
-- The [Position](arkts-arkui-commonmethod-c.md#position) type uses the upper left corner of the parent's content area as the reference point. The [Edges](../arkts-apis/arkts-arkui-graphics-edges-i.md) type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type provides the same functionality as Edges while supporting layout mirroring.  
-- This attribute is applicable to scenarios where the component's position in the parent container is fixed, for example, where it is pinned to top or floating on the UI.  
+- When the parent container is [Row](Row),  
+[Column](Column), or [Flex](Flex), the child component with **position** set does not occupy any space.  
+- The [Position](arkts-arkui-commonmethod-c.md#position) type uses the upper left corner of the parent's content area as the  
+reference point. The [Edges](../arkts-apis/arkts-arkui-graphics-edges-i.md) type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type provides the same functionality as Edges while supporting layout mirroring.  
+- This attribute is applicable to scenarios where the component's position in the parent container is fixed, for  
+example, where it is pinned to top or floating on the UI.  
 - This attribute is unavailable for a layout container whose width and height are zero.  
-- In [RelativeContainer](../../../reference/apis-arkui/arkui-ts/ts-container-relativecontainer.md), if the child component has [alignRules](arkts-arkui-commonmethod-c.md#alignrules) set, the **position** attribute will not take effect
+- In [RelativeContainer](../../../reference/apis-arkui/arkui-ts/ts-container-relativecontainer.md), if the child  
+component has [alignRules](arkts-arkui-commonmethod-c.md#alignrules) set, the **position** attribute will not take effect
 
 **Since:** 7
 
@@ -8269,7 +8281,7 @@ Scales the component. Compared with [scale](arkts-arkui-commonmethod-c.md#scale)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;ScaleOptions&gt; | Yes | Scale ratio along the x-, y-, and z-axis. The default value is **1**.**centerX** and **centerY** are used to set the scale center point.<br>Default value:<br>{<br>x: 1,<br>y: 1,<br   >z: 1,<br>centerX:'50%',<br>centerY:'50%'<br>}<br>If **options** is **undefined**, the component reverts to its original state with no scaling. |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;ScaleOptions&gt; | Yes | Scale ratio along the x-, y-, and z-axis. The default value is **1**.**centerX** and **centerY** are used to set the scale center point.<br>Default value:<br>{<br>x: 1,<br>y: 1,<br   >z: 1,<br>centerX:'50%',<br>centerY:'50%'<br>}<br>If **options** is **undefined**, the component reverts to its   original state with no scaling. |
 
 **Return value:**
 
@@ -8730,6 +8742,38 @@ Applies a system bar effect to the component, which means to invert colors based
 | Type | Description |
 | --- | --- |
 | T | return the component attribute. |
+
+## systemMaterial
+
+```TypeScript
+systemMaterial(material: SystemUiMaterial | undefined): T
+```
+
+Sets the system material for a component. Different system materials have different attribute effects. This API affects the background color ([backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)), border color ([borderColor](arkts-arkui-commonmethod-c.md#bordercolor)), border width ([borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)), and shadow ([shadow](arkts-arkui-commonmethod-c.md#shadow)). You are advised not to use this API together with the aforementioned APIs. For details about the example, see [Setting the System Material](../../../reference/apis-arkui/arkts-apis-uimaterial-sys.md#example-1-setting-the-system-material).
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-CommonMethod-systemMaterial(material: SystemUiMaterial | undefined): T--><!--Device-CommonMethod-systemMaterial(material: SystemUiMaterial | undefined): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| material | [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md) \| undefined | Yes | System material object of the component. Setting it to **undefined** will make the component return to the no-material effect. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
 
 ## tabIndex
 

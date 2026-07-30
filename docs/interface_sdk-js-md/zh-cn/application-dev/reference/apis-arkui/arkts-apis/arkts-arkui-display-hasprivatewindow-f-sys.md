@@ -59,7 +59,7 @@ try {
   } catch (exception) {
     console.error(`Failed to check has privateWindow or not. Code: ${exception.code}, message: ${exception.message}`);
   }
-  if (ret == undefined) {
+  if (ret === undefined) {
     console.error('Failed to check has privateWindow or not.');
   }
   if (ret) {

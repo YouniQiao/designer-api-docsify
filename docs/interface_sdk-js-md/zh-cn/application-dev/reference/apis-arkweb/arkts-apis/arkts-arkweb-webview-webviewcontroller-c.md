@@ -700,7 +700,7 @@ static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: bool
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | schemes | Array&lt;WebCustomScheme&gt; | 是 | 自定义协议配置，最多支持同时配置10个自定义协议。 |
-| lazyInitWebEngine | boolean | 是 | 为true时：接口内部跳过初始化WebEngine。临时存储注册的方案，当它实际被传递给WebEngine时，这些方案将被传递给WebEngine初始化。当false时：接口内部自动进行WebEngine初始化   - 表示接口内部是否跳过初始化WebEngine。<br>true表示接口内部跳过初始化WebEngine，并将注册的Schemes暂存，当它真正初始化时，这些Schemes将传递给WebEngine。false表示接口内部自动进行WebEngine初始化。 |
+| lazyInitWebEngine | boolean | 是 | 为true时：接口内部跳过初始化WebEngine。临时存储注册的方案，当它实际被传递给WebEngine时，这些方案将被传递给WebEngine初始化。当false时：接口内部自动进行WebEngine初始化   - 表示接口内部是否跳过初始化WebEngine。<br>true表示接口内部跳过初始化WebEngine，并将注册的Schemes暂存，当它真正初始化   时，这些Schemes将传递给WebEngine。false表示接口内部自动进行WebEngine初始化。 |
 
 **错误码：**
 
@@ -2573,7 +2573,8 @@ Prefetch the resources required by the page, but will not execute js or render t
 > **说明：**  
 >  
 > - 下载的页面资源会缓存五分钟左右，超过这段时间Web组件会自动释放。  
-> - prefetchPage对302重定向页面同样正常预取。?> - prefetchPage默认不缓存Cache-Control: no-store的资源，并且只允许在500ms内进行一次预取。  
+> - prefetchPage对302重定向页面同样正常预取。  
+?> - prefetchPage默认不缓存Cache-Control: no-store的资源，并且只允许在500ms内进行一次预取。  
 > - 可以通过prefetchOptions自定义预取行为，包括忽略Cache-Control: no-store和调整节流间隔。
 
 **起始版本：** 21

@@ -20,6 +20,7 @@ import { call } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
+| [answerCall](arkts-telephony-call-answercall-f.md#answercall-2) | Answers the incoming call without callId. |
 | [dial](arkts-telephony-call-dial-f.md#dial) | Makes a call. |
 | [dial](arkts-telephony-call-dial-f.md#dial-1) | Makes a call. |
 | [dial](arkts-telephony-call-dial-f.md#dial-2) | Makes a call. |
@@ -32,6 +33,7 @@ import { call } from '@kit.TelephonyKit';
 | [getCallState](arkts-telephony-call-getcallstate-f.md#getcallstate-1) | Obtains the call state.  If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}.In other cases, the system returns {@code CallState#CALL_STATE_IDLE}. |
 | [getCallStateSync](arkts-telephony-call-getcallstatesync-f.md#getcallstatesync) | Obtains the call state.  If an incoming call is ringing or waiting, the system returns {@code CallState#CALL_STATE_RINGING}.If at least one call is in the active, hold, or dialing state, the system returns{@code CallState#CALL_STATE_OFFHOOK}. In other cases, the system returns {@code CallState#CALL_STATE_IDLE}. |
 | [getCallTransferInfo](arkts-telephony-call-getcalltransferinfo-f.md#getcalltransferinfo) | Obtains call transfer information with the phone number. |
+| [hangUpCall](arkts-telephony-call-hangupcall-f.md#hangupcall-2) | Hang up the foreground call without callId. |
 | [hasCall](arkts-telephony-call-hascall-f.md#hascall) | Checks whether a call is ongoing. |
 | [hasCall](arkts-telephony-call-hascall-f.md#hascall-1) | Checks whether a call is ongoing. |
 | [hasCallSync](arkts-telephony-call-hascallsync-f.md#hascallsync) | Checks whether a call is ongoing. |
@@ -44,6 +46,7 @@ import { call } from '@kit.TelephonyKit';
 | [makeCall](arkts-telephony-call-makecall-f.md#makecall-2) | Go to the dial screen and the called number is displayed. |
 | [makeCall](arkts-telephony-call-makecall-f.md#makecall-3) | Go to the dial screen and the called number is displayed. |
 | [makeCallWithToken](arkts-telephony-call-makecallwithtoken-f.md#makecallwithtoken) | Go to the dial screen and the called number is displayed.The authentication challenge value is returned. |
+| [rejectCall](arkts-telephony-call-rejectcall-f.md#rejectcall-3) | Reject the incoming call without callId. |
 
 <!--Del-->
 ### Functions（系统接口）
@@ -52,7 +55,6 @@ import { call } from '@kit.TelephonyKit';
 | --- | --- |
 | [answerCall](arkts-telephony-call-answercall-f-sys.md#answercall) | Answers the incoming call. |
 | [answerCall](arkts-telephony-call-answercall-f-sys.md#answercall-1) | Answers the incoming call. |
-| [answerCall](arkts-telephony-call-answercall-f-sys.md#answercall-2) | Answers the incoming call without callId. |
 | [answerCall](arkts-telephony-call-answercall-f-sys.md#answercall-3) | Answers the incoming video call |
 | [answerCall](arkts-telephony-call-answercall-f-sys.md#answercall-4) | Answers the incoming rtt |
 | [canSetCallTransferTime](arkts-telephony-call-cansetcalltransfertime-f-sys.md#cansetcalltransfertime) | Checks whether can set call transfer time.  The system checks whether IP multimedia subsystem domain (IMS) can set call transfer time. |
@@ -88,7 +90,6 @@ import { call } from '@kit.TelephonyKit';
 | [getVoNRState](arkts-telephony-call-getvonrstate-f-sys.md#getvonrstate-1) | Get switch state for voice over NR. |
 | [hangUpCall](arkts-telephony-call-hangupcall-f-sys.md#hangupcall) | Hang up the foreground call. |
 | [hangUpCall](arkts-telephony-call-hangupcall-f-sys.md#hangupcall-1) | Hang up the foreground call. |
-| [hangUpCall](arkts-telephony-call-hangupcall-f-sys.md#hangupcall-2) | Hang up the foreground call without callId. |
 | [holdCall](arkts-telephony-call-holdcall-f-sys.md#holdcall) | Keep a call on hold. |
 | [holdCall](arkts-telephony-call-holdcall-f-sys.md#holdcall-1) | Keep a call on hold. |
 | [inputDialerSpecialCode](arkts-telephony-call-inputdialerspecialcode-f-sys.md#inputdialerspecialcode) | Enters the special code on the keypad. |
@@ -140,7 +141,6 @@ import { call } from '@kit.TelephonyKit';
 | [rejectCall](arkts-telephony-call-rejectcall-f-sys.md#rejectcall) | Reject the incoming call. |
 | [rejectCall](arkts-telephony-call-rejectcall-f-sys.md#rejectcall-1) | Reject the incoming call. |
 | [rejectCall](arkts-telephony-call-rejectcall-f-sys.md#rejectcall-2) | Reject the incoming call. |
-| [rejectCall](arkts-telephony-call-rejectcall-f-sys.md#rejectcall-3) | Reject the incoming call without callId. |
 | [rejectCall](arkts-telephony-call-rejectcall-f-sys.md#rejectcall-4) | Reject the incoming call without callId. |
 | [removeMissedIncomingCallNotification](arkts-telephony-call-removemissedincomingcallnotification-f-sys.md#removemissedincomingcallnotification) | Remove missed incoming call notification. |
 | [removeMissedIncomingCallNotification](arkts-telephony-call-removemissedincomingcallnotification-f-sys.md#removemissedincomingcallnotification-1) | Remove missed incoming call notification. |
@@ -186,6 +186,7 @@ import { call } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
+| [CallTransferResult](arkts-telephony-call-calltransferresult-i.md) | Indicates the result of call transfer. |
 | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Indicates the options of placing a call. |
 | [EmergencyNumberOptions](arkts-telephony-call-emergencynumberoptions-i.md) | Indicates the option for determining if a number is an emergency number for specified slot. |
 | [MakeCallOptions](arkts-telephony-call-makecalloptions-i.md) | Indicates the options of make call. |
@@ -225,7 +226,9 @@ import { call } from '@kit.TelephonyKit';
 | --- | --- |
 | [CCallState](arkts-telephony-call-ccallstate-e.md) | Indicates the states of Carrier Call. |
 | [CallState](arkts-telephony-call-callstate-e.md) | Indicates the states of call. |
+| [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Indicates the type of call transfer. |
 | [TelCallState](arkts-telephony-call-telcallstate-e.md) | Indicates the states of telCall. |
+| [TransferStatus](arkts-telephony-call-transferstatus-e.md) | Indicates the status of call transfer. |
 
 <!--Del-->
 ### Enums（系统接口）
@@ -238,7 +241,6 @@ import { call } from '@kit.TelephonyKit';
 | [CallRestrictionType](arkts-telephony-call-callrestrictiontype-e-sys.md) | Indicates the type of call restriction. |
 | [CallSessionEventId](arkts-telephony-call-callsessioneventid-e-sys.md) | Indicates the type of video call event. |
 | [CallTransferSettingType](arkts-telephony-call-calltransfersettingtype-e-sys.md) | Indicates the type of call transfer setting. |
-| [CallTransferType](arkts-telephony-call-calltransfertype-e-sys.md) | Indicates the type of call transfer. |
 | [CallType](arkts-telephony-call-calltype-e-sys.md) | Indicates the type of call. |
 | [CallWaitingStatus](arkts-telephony-call-callwaitingstatus-e-sys.md) | Indicates the status of call waiting. |
 | [ConferenceState](arkts-telephony-call-conferencestate-e-sys.md) | Indicates the state of conference call. |
@@ -253,7 +255,6 @@ import { call } from '@kit.TelephonyKit';
 | [MmiCodeResult](arkts-telephony-call-mmicoderesult-e-sys.md) | Indicates the MMI code result. |
 | [RestrictionStatus](arkts-telephony-call-restrictionstatus-e-sys.md) | Indicates the status of call restriction. |
 | [RttState](arkts-telephony-call-rttstate-e-sys.md) | Indicates the state of the rtt. |
-| [TransferStatus](arkts-telephony-call-transferstatus-e-sys.md) | Indicates the status of call transfer. |
 | [VideoRequestResultType](arkts-telephony-call-videorequestresulttype-e-sys.md) | Indicates the type of video request result. |
 | [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md) | Indicates the type of video state. |
 | [VoNRState](arkts-telephony-call-vonrstate-e-sys.md) | Indicates the VoNR state. |

@@ -45,16 +45,18 @@ Enables Bluetooth. After Bluetooth is enabled, the user can manually disable it.
 import { Want } from '@kit.AbilityKit';
 import { bluetoothManager } from '@kit.MDMKit';
 
+// Create an EnterpriseAdminExtensionAbility component.
 let wantTemp: Want = {
   // Replace it as required.
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
-    bluetoothManager.turnOnBluetooth(wantTemp);
-    console.info(`Succeeded in turning on bluetooth.`);
+  // Enable Bluetooth.
+  bluetoothManager.turnOnBluetooth(wantTemp);
+  console.info(`Succeeded in turning on bluetooth.`);
 } catch(err) {
-    console.error(`Failed to turn on bluetooth. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to turn on bluetooth. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

@@ -1,6 +1,6 @@
 # SyncedPropertyTwoWay（系统接口）
 
-继承自[SubscribedAbstractProperty\&lt;T\&gt;](arkts-arkui-subscribedabstractproperty-c-sys.md)。用于实现父子组件之间的双向状态数据同步。
+继承自[SubscribedAbstractProperty\&lt;T\&gt;](arkts-arkui-subscribedabstractproperty-c.md)。用于实现父子组件之间的双向状态数据同步。
 
 **继承/实现关系：** SyncedPropertyTwoWay extends [SubscribedAbstractProperty<T>](SubscribedAbstractProperty<T>) implements [ISinglePropertyChangeSubscriber<T>](ISinglePropertyChangeSubscriber<T>)
 

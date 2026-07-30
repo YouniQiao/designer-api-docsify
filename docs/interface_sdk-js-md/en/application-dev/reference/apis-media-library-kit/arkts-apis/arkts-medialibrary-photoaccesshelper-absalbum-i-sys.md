@@ -91,31 +91,6 @@ Whether the album is hidden. **true** if hidden, **false** otherwise.
 
 **System API:** This is a system API.
 
-## lpath
-
-```TypeScript
-readonly lpath?: string
-```
-
-Virtual path of the album.
-
-Albums and their virtual path values:
-
-- Camera application album: '/DCIM/Camera'  
-- Screenshot application album: '/Pictures/Screenshots'  
-- Screen recording application album: '/Pictures/Screenrecords'  
-- User-created album: '/Pictures/Users/{Custom album name}'
-
-**Type:** string
-
-**Since:** 23
-
-<!--Device-AbsAlbum-readonly lpath?: string--><!--Device-AbsAlbum-readonly lpath?: string-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
 ## uploadStatus
 
 ```TypeScript

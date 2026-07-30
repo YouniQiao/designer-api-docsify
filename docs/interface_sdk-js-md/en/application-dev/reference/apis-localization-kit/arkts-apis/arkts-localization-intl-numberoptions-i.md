@@ -354,11 +354,16 @@ Rounding mode. The value can be:
 - **floor**: rounding down.  
 - **expand**: rounding away from 0.  
 - **trunc**: rounding toward 0.  
-- **halfCeil**: half-rounding up; that is, rounding up when the decimal number is greater than or equal to half of the increment, and rounding down otherwise.  
-- **halfFloor**: half-rounding down; that is, rounding up when the decimal number is greater than half of the increment, and rounding down otherwise.  
-- **halfExpand**: half-rounding away from 0; that is, rounding away from 0 when the decimal number is greater than or equal to half of the increment, and rounding toward 0 otherwise.  
-- **halfTrunc**: half-rounding toward 0; that is, rounding away from 0 when the decimal number is greater than half of the increment, and rounding toward 0 otherwise.  
-- "halfEven": half-rounding to the nearest even number; that is, rounding away from 0 when the decimal number is greater than half of the increment, rounding toward 0 when the decimal number is less than half of the increment,and rounding to the nearest even number when the decimal number is exactly half of the increment.
+- **halfCeil**: half-rounding up; that is, rounding up when the decimal number is greater than or equal to half  
+of the increment, and rounding down otherwise.  
+- **halfFloor**: half-rounding down; that is, rounding up when the decimal number is greater than half of the  
+increment, and rounding down otherwise.  
+- **halfExpand**: half-rounding away from 0; that is, rounding away from 0 when the decimal number is greater  
+than or equal to half of the increment, and rounding toward 0 otherwise.  
+- **halfTrunc**: half-rounding toward 0; that is, rounding away from 0 when the decimal number is greater than  
+half of the increment, and rounding toward 0 otherwise.  
+- "halfEven": half-rounding to the nearest even number; that is, rounding away from 0 when the decimal number is  
+greater than half of the increment, rounding toward 0 when the decimal number is less than half of the increment,and rounding to the nearest even number when the decimal number is exactly half of the increment.
 
 The default value is **halfExpand**.
 
@@ -498,7 +503,8 @@ unitUsage?: string
 ```
 
 Application scenario of units. The value can be any of the following: **default**, **area-land-agricult**, **area-land-commercl**, **area-land-residntl**, **length-person**, **length-person-small**, **length-rainfall**, ** length-road**, **length-road-small**, **length-snowfall**, **length-vehicle**, **length-visiblty**, **length-visiblty-small**, **length-person-informal**, **length-person-small-informal**, **length-road-informal**, **speed  
--road-travel**, **speed-wind**, **temperature-person**, **temperature-weather**, **volume-vehicle-fuel**, ** elapsed-time-second**, **size-file-byte**, or **size-shortfile-byte**.
+-road-travel**, **speed-wind**, **temperature-person**, **temperature-weather**, **volume-vehicle-fuel**, **  
+elapsed-time-second**, **size-file-byte**, or **size-shortfile-byte**.
 
 The default value is **default**.
 

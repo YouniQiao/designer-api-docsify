@@ -102,7 +102,8 @@ File path.
 
 Example: **./xxx/yyy/zzz.html** or **xxx/yyy/zzz.html**
 
-- Internal protocol path, which can be **internal://** or its subdirectory. **internal** indicates the cache directory of the caller (that is, the input **context**), and **internal://cache** corresponds to **context.cacheDir**.
+- Internal protocol path, which can be **internal://** or its subdirectory. **internal** indicates the cache  
+directory of the caller (that is, the input **context**), and **internal://cache** corresponds to **context.cacheDir**.
 
 Example: **internal://cache/path/to/file.txt**
 
@@ -110,7 +111,8 @@ Example: **internal://cache/path/to/file.txt**
 
 Example: **./data/storage/el1/base/path/to/file.txt**
 
-- File protocol path, which must match the application bundle name. Only the **base** directory and its subdirectories are supported.
+- File protocol path, which must match the application bundle name. Only the **base** directory and its  
+subdirectories are supported.
 
 Example: **file://com.example.test/data/storage/el2/base/file.txt**
 

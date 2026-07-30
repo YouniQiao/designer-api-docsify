@@ -1,4 +1,4 @@
-# RunningFormInfo (System API)
+# RunningFormInfo
 
 The class of a running form information.
 
@@ -8,79 +8,11 @@ The class of a running form information.
 
 **System capability:** SystemCapability.Ability.Form
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript
 import { formInfo } from '@kit.FormKit';
 ```
-
-## abilityName
-
-```TypeScript
-readonly abilityName: string
-```
-
-Obtains the class name of the ability to which this form belongs.
-
-**Type:** string
-
-**Default:** -
-
-**Since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-RunningFormInfo-readonly abilityName: string--><!--Device-RunningFormInfo-readonly abilityName: string-End-->
-
-**System capability:** SystemCapability.Ability.Form
-
-**System API:** This is a system API.
-
-## bundleName
-
-```TypeScript
-readonly bundleName: string
-```
-
-Obtains the bundle name of the application to which this form belongs.
-
-**Type:** string
-
-**Default:** -
-
-**Since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-RunningFormInfo-readonly bundleName: string--><!--Device-RunningFormInfo-readonly bundleName: string-End-->
-
-**System capability:** SystemCapability.Ability.Form
-
-**System API:** This is a system API.
-
-## dimension
-
-```TypeScript
-readonly dimension: number
-```
-
-Obtains the grid style of this form.The value must be a positive integer, refer to {@link formInfo.FormDimension}.
-
-**Type:** number
-
-**Default:** -
-
-**Since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-RunningFormInfo-readonly dimension: int--><!--Device-RunningFormInfo-readonly dimension: int-End-->
-
-**System capability:** SystemCapability.Ability.Form
-
-**System API:** This is a system API.
 
 ## extraData
 
@@ -115,72 +47,6 @@ Obtains the description of this form.
 **Since:** 11
 
 <!--Device-RunningFormInfo-readonly formDescription: string--><!--Device-RunningFormInfo-readonly formDescription: string-End-->
-
-**System capability:** SystemCapability.Ability.Form
-
-**System API:** This is a system API.
-
-## formId
-
-```TypeScript
-readonly formId: string
-```
-
-Obtains the id of the this form.
-
-**Type:** string
-
-**Default:** -
-
-**Since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-RunningFormInfo-readonly formId: string--><!--Device-RunningFormInfo-readonly formId: string-End-->
-
-**System capability:** SystemCapability.Ability.Form
-
-**System API:** This is a system API.
-
-## formLocation
-
-```TypeScript
-readonly formLocation: FormLocation
-```
-
-The location of this form.
-
-**Type:** FormLocation
-
-**Default:** -
-
-**Since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-RunningFormInfo-readonly formLocation: FormLocation--><!--Device-RunningFormInfo-readonly formLocation: FormLocation-End-->
-
-**System capability:** SystemCapability.Ability.Form
-
-**System API:** This is a system API.
-
-## formName
-
-```TypeScript
-readonly formName: string
-```
-
-Obtains the name of this form.
-
-**Type:** string
-
-**Default:** -
-
-**Since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-RunningFormInfo-readonly formName: string--><!--Device-RunningFormInfo-readonly formName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -221,28 +87,6 @@ Obtains the bundle name of the form host application.
 **Since:** 10
 
 <!--Device-RunningFormInfo-readonly hostBundleName: string--><!--Device-RunningFormInfo-readonly hostBundleName: string-End-->
-
-**System capability:** SystemCapability.Ability.Form
-
-**System API:** This is a system API.
-
-## moduleName
-
-```TypeScript
-readonly moduleName: string
-```
-
-Obtains the name of the application module to which this form belongs.
-
-**Type:** string
-
-**Default:** -
-
-**Since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-RunningFormInfo-readonly moduleName: string--><!--Device-RunningFormInfo-readonly moduleName: string-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

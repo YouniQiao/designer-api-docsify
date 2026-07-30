@@ -1,6 +1,6 @@
-# MetadataCatBodyObject (System API)
+# MetadataCatBodyObject
 
-Implements the cat body metadata object used for camera detection. It inherits from [MetadataObject](arkts-camera-camera-metadataobjecttype-e.md) and is the data source of the camera information in [CameraInput](arkts-camera-camera-camerainput-i.md). It is obtained by calling metadataOutput.[on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;)).
+Cat body metadata detected by the camera, which is extended from [MetadataObject](arkts-camera-camera-metadataobject-i.md). It serves as the data source of the camera information in [CameraInput](arkts-camera-camera-camerainput-i.md). It is obtained by calling metadataOutput.[on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;)).
 
 **Inheritance/Implementation:** MetadataCatBodyObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
 
@@ -11,8 +11,6 @@ Implements the cat body metadata object used for camera detection. It inherits f
 <!--Device-camera-interface MetadataCatBodyObject extends MetadataObject--><!--Device-camera-interface MetadataCatBodyObject extends MetadataObject-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 

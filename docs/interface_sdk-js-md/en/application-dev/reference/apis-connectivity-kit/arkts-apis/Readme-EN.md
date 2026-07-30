@@ -257,10 +257,10 @@
   - [cancelPairedDevice(system api)](arkts-connectivity-connection-cancelpaireddevice-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [cancelPairingDevice(system api)](arkts-connectivity-connection-cancelpairingdevice-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [connectAllowedProfiles(system api)](arkts-connectivity-connection-connectallowedprofiles-f-sys.md)<!--DelEnd-->
+  - [connectAllowedProfiles](arkts-connectivity-connection-connectallowedprofiles-f.md)
   <!--Del-->
   - [controlDeviceAction(system api)](arkts-connectivity-connection-controldeviceaction-f-sys.md)<!--DelEnd-->
+  - [disconnectAllowedProfiles](arkts-connectivity-connection-disconnectallowedprofiles-f.md)
   <!--Del-->
   - [disconnectAllowedProfiles(system api)](arkts-connectivity-connection-disconnectallowedprofiles-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -283,18 +283,13 @@
   - [getRemoteDeviceType(system api)](arkts-connectivity-connection-getremotedevicetype-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getRemoteProductId(system api)](arkts-connectivity-connection-getremoteproductid-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getRemoteProfileUuids(system api)](arkts-connectivity-connection-getremoteprofileuuids-f-sys.md)<!--DelEnd-->
+  - [getRemoteProfileUuids](arkts-connectivity-connection-getremoteprofileuuids-f.md)
   - [getVirtualAddressByHash](arkts-connectivity-connection-getvirtualaddressbyhash-f.md)
   - [isBluetoothDiscovering](arkts-connectivity-connection-isbluetoothdiscovering-f.md)
   - [off](arkts-connectivity-connection-off-f.md)
-  <!--Del-->
-  - [off(system api)](arkts-connectivity-connection-off-f-sys.md)<!--DelEnd-->
   - [offAclStateChange](arkts-connectivity-connection-offaclstatechange-f.md)
   - [offScanModeChange](arkts-connectivity-connection-offscanmodechange-f.md)
   - [on](arkts-connectivity-connection-on-f.md)
-  <!--Del-->
-  - [on(system api)](arkts-connectivity-connection-on-f-sys.md)<!--DelEnd-->
   - [onAclStateChange](arkts-connectivity-connection-onaclstatechange-f.md)
   - [onScanModeChange](arkts-connectivity-connection-onscanmodechange-f.md)
   <!--Del-->
@@ -325,8 +320,7 @@
   <!--Del-->
   - [ControlDeviceActionParams(system api)](arkts-connectivity-connection-controldeviceactionparams-i-sys.md)<!--DelEnd-->
   - [DeviceClass](arkts-connectivity-connection-deviceclass-i.md)
-  <!--Del-->
-  - [DiscoveryResult(system api)](arkts-connectivity-connection-discoveryresult-i-sys.md)<!--DelEnd-->
+  - [DiscoveryResult](arkts-connectivity-connection-discoveryresult-i.md)
   <!--Del-->
   - [OobData(system api)](arkts-connectivity-connection-oobdata-i-sys.md)<!--DelEnd-->
   - [PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i.md)
@@ -341,8 +335,7 @@
   - [MajorMinorClass](arkts-connectivity-connection-majorminorclass-t.md)
   - [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md)
   - [ProfileId](arkts-connectivity-connection-profileid-t.md)
-  <!--Del-->
-  - [ProfileUuids(system api)](arkts-connectivity-connection-profileuuids-t-sys.md)<!--DelEnd-->
+  - [ProfileUuids](arkts-connectivity-connection-profileuuids-t.md)
   - [AclState](arkts-connectivity-connection-aclstate-e.md)
   - [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)
   - [BondState](arkts-connectivity-connection-bondstate-e.md)
@@ -371,8 +364,7 @@
   - [MajorMinorClass](arkts-connectivity-constant-majorminorclass-e.md)
   - [ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md)
   - [ProfileId](arkts-connectivity-constant-profileid-e.md)
-  <!--Del-->
-  - [ProfileUuids(system api)](arkts-connectivity-constant-profileuuids-e-sys.md)<!--DelEnd-->
+  - [ProfileUuids](arkts-connectivity-constant-profileuuids-e.md)
 - [@ohos.bluetooth.hfp](arkts-bluetooth-hfp.md)
   - [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md)
   - [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md)

@@ -8,8 +8,6 @@ The **inputEventClient** module provides the capability of injecting key, mouse/
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

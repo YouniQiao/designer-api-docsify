@@ -92,6 +92,7 @@
   <!--Del-->
   - [MediaAssetEditData(system api)](arkts-medialibrary-photoaccesshelper-mediaasseteditdata-c-sys.md)<!--DelEnd-->
   - [MediaAssetManager](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md)
+  - [MediaAssetsChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c.md)
   <!--Del-->
   - [MediaAssetsChangeRequest(system api)](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -166,8 +167,6 @@
   - [Entity(system api)](arkts-medialibrary-photoaccesshelper-entity-i-sys.md)<!--DelEnd-->
   - [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md)
   - [FetchResult](arkts-medialibrary-photoaccesshelper-fetchresult-i.md)
-  <!--Del-->
-  - [FetchResult(system api)](arkts-medialibrary-photoaccesshelper-fetchresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FormInfo(system api)](arkts-medialibrary-photoaccesshelper-forminfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -333,8 +332,6 @@
   - [PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
   - [PlayMode](arkts-medialibrary-photoaccesshelper-playmode-e.md)
   - [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
-  <!--Del-->
-  - [PositionType(system api)](arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md)<!--DelEnd-->
   - [PreferredCompatibleMode](arkts-medialibrary-photoaccesshelper-preferredcompatiblemode-e.md)
   <!--Del-->
   - [RankingMethod(system api)](arkts-medialibrary-photoaccesshelper-rankingmethod-e-sys.md)<!--DelEnd-->

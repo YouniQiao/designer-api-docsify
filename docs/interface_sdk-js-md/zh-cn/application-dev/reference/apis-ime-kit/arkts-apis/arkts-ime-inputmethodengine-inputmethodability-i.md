@@ -35,7 +35,7 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-basecontext-t.md) | 是 | 当前输入法应用上下文信息。 |
-| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | 是 | 输入法面板信息。 |
+| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 | 输入法面板信息。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | 是 | 回调函数。当输入法面板创建成功，返回当前创建的输入法面板对象。 |
 
 **错误码：**
@@ -97,7 +97,7 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-basecontext-t.md) | 是 | 当前输入法应用上下文信息。 |
-| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | 是 | 输入法面板信息。 |
+| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 | 输入法面板信息。 |
 
 **返回值：**
 

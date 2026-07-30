@@ -30,7 +30,7 @@ Sets the system color mode. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [DarkMode](arkts-arkui-uiappearance-darkmode-e-sys.md) | Yes | indicates the dark-mode to set |
+| mode | [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setDarkMode |
 
 **Error codes:**
@@ -87,7 +87,7 @@ Sets the system color mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [DarkMode](arkts-arkui-uiappearance-darkmode-e-sys.md) | Yes | indicates the dark-mode to set |
+| mode | [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
 
 **Return value:**
 

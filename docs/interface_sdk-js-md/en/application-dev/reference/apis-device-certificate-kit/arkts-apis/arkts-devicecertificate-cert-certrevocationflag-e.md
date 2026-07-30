@@ -16,8 +16,10 @@ CERT_REVOCATION_PREFER_OCSP = 0
 
 OCSP check is preferred. This flag is valid only when CERT_REVOCATION_CRL_CHECK and CERT_REVOCATION_OCSP_CHECK are both set.
 
-- If this flag is set, OCSP check is performed first, and CRL check is performed if no OCSP response is found or a timeout occurs;  
-- If this flag is not set, CRL check is performed first, and OCSP check is performed if no CRL is found or a timeout occurs.
+- If this flag is set, OCSP check is performed first, and CRL check is performed if no OCSP response is found or  
+a timeout occurs;  
+- If this flag is not set, CRL check is performed first, and OCSP check is performed if no CRL is found or a  
+timeout occurs.
 
 **Since:** 26.0.0
 
@@ -82,8 +84,10 @@ CERT_REVOCATION_CHECK_ALL_CERT = 3
 
 Checks the revocation status of all certificates.
 
-- If this flag is set, revocation check is performed on all certificates in the certificate chain(skips self-signed certificates);  
-- If this flag is not set, only the end-entity certificate (the first certificate in the certificate chain) is checked.
+- If this flag is set, revocation check is performed on all certificates in the certificate chain  
+(skips self-signed certificates);  
+- If this flag is not set, only the end-entity certificate (the first certificate in the certificate chain) is  
+checked.
 
 **Since:** 26.0.0
 

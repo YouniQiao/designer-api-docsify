@@ -5,7 +5,8 @@ This module primarily provides privacy management APIs such as permission usage 
 This module is mainly used in the following scenarios:
 
 - Adding/querying the sensitive permission access records of a specified application.  
-- Subscribing to permission usage status change events, sensing changes in permission usage from unused to foreground use and background use, and linking with business logic.  
+- Subscribing to permission usage status change events, sensing changes in permission usage from unused to  
+foreground use and background use, and linking with business logic.  
 - Controlling the permission access record toggle for the current user.  
 - Querying whether a certain permission is currently being used.
 

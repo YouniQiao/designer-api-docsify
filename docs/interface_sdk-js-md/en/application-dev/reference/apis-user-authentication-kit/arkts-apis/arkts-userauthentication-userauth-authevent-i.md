@@ -61,7 +61,7 @@ try {
   auth.start();
   console.info('auth start successfully.');
 } catch (error) {
-  console.error(`auth failed, error = ${error}`);
+  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
   // do error.
 }
 // Obtain the authentication tip information via a callback.
@@ -84,7 +84,7 @@ try {
   auth.start();
   console.info('auth start successfully.');
 } catch (error) {
-  console.error(`auth failed, error = ${error}`);
+  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
   // do error.
 }
 

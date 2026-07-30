@@ -123,7 +123,7 @@ Obtains the CTS signal status. This API returns the result asynchronously throug
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return the CTS signal status, indicating whether data can be sent. |
+| Promise&lt;boolean&gt; | - Promise used to return the CTS signal status, indicating whether data can be   sent. |
 
 **Error codes:**
 

@@ -146,7 +146,8 @@ Embed场景下，增大组件尺寸时仅增大内容区的尺寸。
 
 当缩小侧边栏的尺寸至minSideBarWidth后，继续缩小组件尺寸时，
 
-- 如果[autoHide](SideBarContainerAttribute#autoHide)属性为false，则会保持侧边栏宽度[minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number))和内容区宽度minContentWidth不变，但内容区会被截断显示；  
+- 如果[autoHide](SideBarContainerAttribute#autoHide)属性为false，则会保持侧边栏宽度  
+[minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number))和内容区宽度minContentWidth不变，但内容区会被截断显示；  
 - 如果autoHide属性为true，则会优先隐藏侧边栏，然后继续缩小至内容区宽度minContentWidth后，内容区宽度保持不变，但内容区会被截断显示。
 
 minContentWidth优先于侧边栏的[maxSideBarWidth](SideBarContainerAttribute#maxSideBarWidth(value: number))与sideBarWidth属性，minContentWidth未设置时默认值优先级低于设置的minSideBarWidth与maxSideBarWidth属性。

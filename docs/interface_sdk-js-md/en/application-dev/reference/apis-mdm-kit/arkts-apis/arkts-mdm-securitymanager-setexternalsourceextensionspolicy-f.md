@@ -64,10 +64,10 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
-    securityManager.setExternalSourceExtensionsPolicy(wantTemp, common.ManagedPolicy.FORCE_OPEN);
-    console.info(`Succeeded in setting managed policy.`);
+  securityManager.setExternalSourceExtensionsPolicy(wantTemp, common.ManagedPolicy.FORCE_OPEN);
+  console.info(`Succeeded in setting managed policy.`);
 } catch(err) {
-    console.error(`Failed to set managed policy. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to set managed policy. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

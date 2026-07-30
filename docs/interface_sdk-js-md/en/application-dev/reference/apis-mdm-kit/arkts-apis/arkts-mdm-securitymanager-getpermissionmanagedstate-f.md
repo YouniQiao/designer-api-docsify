@@ -63,17 +63,17 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 let appInstanceTemp: securityManager.ApplicationInstance = {
-      // Replace with actual values.
-      appIdentifier: '736498586',
-      appIndex: 0,
-      accountId: 100
+  // Replace with actual values.
+  appIdentifier: '736498586',
+  appIndex: 0,
+  accountId: 100
 };
 let permissionTemp: string = 'ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION';
 try {
-    let result: securityManager.PermissionManagedState = securityManager.getPermissionManagedState(wantTemp, appInstanceTemp, permissionTemp);
-    console.info(`Succeeded in getting permission managed state, result : ${result}`);
+  let result: securityManager.PermissionManagedState = securityManager.getPermissionManagedState(wantTemp, appInstanceTemp, permissionTemp);
+  console.info(`Succeeded in getting permission managed state, result : ${result}`);
 } catch(err) {
-    console.error(`Failed to get permission managed state. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to get permission managed state. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

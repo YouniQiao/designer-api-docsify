@@ -8,8 +8,6 @@ autoStartupManager模块提供获取自身应用的开机自启状态。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**系统接口：** 此接口为系统接口。
-
 ## 导入模块
 
 ```TypeScript

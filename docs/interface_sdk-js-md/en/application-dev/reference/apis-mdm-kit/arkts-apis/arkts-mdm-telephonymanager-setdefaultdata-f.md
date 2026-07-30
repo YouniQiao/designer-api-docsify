@@ -43,3 +43,26 @@ Sets the default data traffic card.
 | [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 
+**Example**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { telephonyManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace the values as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Set the slot ID of the SIM card to be used as the default data SIM card.
+let slotId: number = 0;
+try {
+  // Sets the specified slot as the default data SIM.
+  telephonyManager.setDefaultData(wantTemp, slotId);
+  console.info(`success to set default data SIM ID`);
+} catch (err) {
+  console.error(`Failed to set default data. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

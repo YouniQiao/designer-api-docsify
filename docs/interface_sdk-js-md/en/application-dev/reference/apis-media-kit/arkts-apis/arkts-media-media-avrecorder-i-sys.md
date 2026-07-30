@@ -95,39 +95,6 @@ avRecorder.isWatermarkSupported().then((isWatermarkSupported: boolean) => {
 
 ```
 
-## setMetadata
-
-```TypeScript
-setMetadata(metadata: Record<string, string>): void
-```
-
-Set metadata (key-value pairs) for the recording file of the recorder.This metadata overwrites the value in config.metadata.customInfo (see {prepare()} and {AVRecorderConfig})if they have same key.
-
-This API can be called only after the prepare() event is successfully triggered and before the stop() API is called.
-
-**Since:** 26.0.0
-
-<!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void--><!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVRecorder
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| metadata | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt; | Yes | Tag and value of the metadata in key-value pairs.<br>- The first string is the key.<br>- The second string is the value.<br> The key string should start with "com.openharmony.", the length of value can't be more than 256 bytes. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 19 - 24 |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory.<br>**Applicable version:** 26.0.0 and later |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed.<br>**Applicable version:** 26.0.0 and later |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
-
 ## setWatermark
 
 ```TypeScript

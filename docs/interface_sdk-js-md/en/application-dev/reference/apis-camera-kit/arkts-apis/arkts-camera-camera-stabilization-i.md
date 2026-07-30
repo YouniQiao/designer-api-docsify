@@ -1,6 +1,10 @@
 # Stabilization
 
-**Stabilization** inherits from [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md).It provides APIs to set video stabilization.Video stabilization can be set only when the session has a recording stream ([VideoOutput](arkts-camera-camera-videooutput-i.md)). Among the enums of [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md), the **HIGH** mode only takes effect when the resolution set in [Profile](arkts-camera-camera-profile-i.md) is 1920×1080.
+**Stabilization** inherits from [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md).
+
+It provides APIs to set video stabilization.
+
+You can set video stabilization only when a [VideoOutput](arkts-camera-camera-videooutput-i.md) stream exists in the session.
 
 **Inheritance/Implementation:** Stabilization extends [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md)
 
@@ -50,7 +54,7 @@ Obtains the video stabilization mode in use.
 setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
-Sets a video stabilization mode. Before the setting, call [isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isvideostabilizationmodesupported)to check whether the target video stabilization mode is supported. It is recommended that you set the video stabilization mode between [commitConfig](arkts-camera-camera-session-i.md#commitconfig) and [Start](arkts-camera-camera-session-i.md#start).
+Sets a video stabilization mode. Before the setting, call [isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isvideostabilizationmodesupported) to check whether the target video stabilization mode is supported. It is recommended that you set the video stabilization mode between [commitConfig](arkts-camera-camera-session-i.md#commitconfig) and [Start](arkts-camera-camera-session-i.md#start).
 
 **Since:** 11
 

@@ -51,18 +51,20 @@ A policy conflict is reported when this API is called in the following scenarios
 import { bluetoothManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
 
+// Create an EnterpriseAdminExtensionAbility component.
 let wantTemp: Want = {
   // Replace it as required.
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
-// Replace it as required.
+// Define the array of Bluetooth device MAC addresses. (Replace it as required.)
 let deviceIds: Array<string> = ["00:1A:2B:3C:4D:5E","AA:BB:CC:DD:EE:FF"];
 try {
-    bluetoothManager.addAllowedBluetoothDevices(wantTemp,deviceIds);
-    console.info(`Succeeded in adding allowed bluetooth devices.`);
+  // Add Bluetooth devices to the trustlist.
+  bluetoothManager.addAllowedBluetoothDevices(wantTemp,deviceIds);
+  console.info(`Succeeded in adding allowed bluetooth devices.`);
 } catch(err) {
-    console.error(`Failed to add allowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to add allowed bluetooth devices. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

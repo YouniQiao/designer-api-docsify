@@ -43,3 +43,26 @@ Activates the sim card.
 | [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 
+**Example**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { telephonyManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace the values as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Set the ID of the slot to be activated.
+let slotId: number = 0;
+try {
+  // Activate the SIM card in the specified slot.
+  telephonyManager.activeSim(wantTemp, slotId);
+  console.info(`success to active SIM`);
+} catch (err) {
+  console.error(`Failed to active SIM. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

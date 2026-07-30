@@ -122,7 +122,7 @@ Get default render context
 
 | Type | Description |
 | --- | --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | -- The default RenderContext instance@static |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | -- The default RenderContext instance   @static |
 
 ## getNodeByPath
 

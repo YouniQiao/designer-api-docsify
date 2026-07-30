@@ -235,7 +235,8 @@ RESIZE_CONTAIN_TOP_LEFT = 11
 ```
 
 While maintaining its aspect ratio in the final state, the component's content is scaled to fit within the component's content box. When there is remaining space in the width direction of the component, the content is left  
--aligned with the component. When there is remaining space in the height direction of the component, the content is top-aligned with the component.
+-aligned with the component. When there is remaining space in the height direction of the component, the content is  
+top-aligned with the component.
 
 **Since:** 10
 

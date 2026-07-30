@@ -22,7 +22,8 @@ When an application protected by a permission is called by another service or ap
 
 The permission usage record includes the application identity of the caller, the name of the application permission,and the number of successful and failed accesses to this application by the caller.
 > **NOTE**  
-> The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus). When the toggle is off, calling this API will not generate a permission usage record.
+> The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus). When the toggle is off, calling this API will not generate a  
+permission usage record.
 
 **Since:** 9
 

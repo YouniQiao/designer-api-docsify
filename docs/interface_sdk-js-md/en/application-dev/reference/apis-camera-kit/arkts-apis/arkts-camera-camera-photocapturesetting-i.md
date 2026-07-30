@@ -58,7 +58,7 @@ Geolocation information of the image (depending on the device hardware informati
 mirror?: boolean
 ```
 
-Whether mirror photography is enabled (disabled by default). Before using this enumerated value, call [isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported) to check whether mirror photography is supported. **true** if enabled, **false** otherwise.
+Whether mirror photography is enabled (disabled by default). Before using this enumerated value, call [isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported) to check whether mirror photography is supported.**true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
@@ -76,7 +76,7 @@ Whether mirror photography is enabled (disabled by default). Before using this e
 quality?: QualityLevel
 ```
 
-Image quality (low by default).
+Image quality (high by default).
 
 **Type:** QualityLevel
 

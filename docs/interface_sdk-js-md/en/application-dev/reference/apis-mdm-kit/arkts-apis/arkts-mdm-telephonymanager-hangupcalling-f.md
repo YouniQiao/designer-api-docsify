@@ -51,6 +51,7 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // Hang up the current call.
   telephonyManager.hangupCalling(wantTemp);
 } catch (err) {
   console.error(`Failed to hang up calling. Code: ${err.code}, message: ${err.message}`);

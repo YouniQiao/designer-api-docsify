@@ -59,10 +59,10 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 systemManager.getUpdateResult(wantTemp, "1.0").then((result:systemManager.UpdateResult) => {
-    console.info(`Succeeded in getting update result: ${JSON.stringify(result)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`Get update result failed. Code is ${error.code},message is ${error.message}`);
-  });
+  console.info(`Succeeded in getting update result: ${JSON.stringify(result)}`);
+}).catch((error: BusinessError) => {
+  console.error(`Get update result failed. Code is ${error.code},message is ${error.message}`);
+});
 
 ```
 

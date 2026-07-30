@@ -47,3 +47,27 @@ Gets the window states of the application.
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
+**Example**
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Bundle name of the application to be queried. Replace it as required.
+let bundleName: string = 'com.example.myapplication';
+// Clone index of the queried application. Replace it as required.
+let appIndex: number = 0;
+try {
+  let result: Array<applicationManager.WindowStateInfo> = applicationManager.getApplicationWindowStates(wantTemp, bundleName, appIndex);
+  console.info(`Succeeded in getting application window states, result: ${JSON.stringify(result)}`);
+} catch(err) {
+  console.error(`Failed to get application window states. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

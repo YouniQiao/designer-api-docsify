@@ -23,15 +23,6 @@ import { OnSelectedIndexesChange, TabSegmentButtonV2, SegmentButtonV2Items, Mult
 | [MultiCapsuleSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-multicapsulesegmentbuttonv2-s.md) | Defines the segmented button with multi capsule style. |
 | [TabSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-tabsegmentbuttonv2-s.md) | Defines segmented button with tab style. |
 
-<!--Del-->
-### Structs（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [CapsuleSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-capsulesegmentbuttonv2-s-sys.md) | Defines the segmented button with capsule style. |
-| [TabSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-tabsegmentbuttonv2-s-sys.md) | Defines segmented button with tab style. |
-<!--DelEnd-->
-
 ### Interfaces
 
 | Name | Description |

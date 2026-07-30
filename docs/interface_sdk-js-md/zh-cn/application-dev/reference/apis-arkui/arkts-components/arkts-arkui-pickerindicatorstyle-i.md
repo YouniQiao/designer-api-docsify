@@ -99,7 +99,8 @@ endMargin?: LengthMetrics
 分割线与UIPickerComponent容器侧边结束端的距离。
 > 默认值：0
 > 单位：与LengthMetrics一致。
-> 取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
+> 取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过  
+UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
 > **说明：**  
 >  
 > 当type为PickerIndicatorType.DIVIDER时生效。
@@ -127,7 +128,8 @@ startMargin?: LengthMetrics
 分割线与UIPickerComponent容器侧边起始端的距离。
 > 默认值：0
 > 单位：与LengthMetrics一致。
-> 取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
+> 取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过  
+UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
 > **说明：**  
 >  
 > 当type为PickerIndicatorType.DIVIDER时生效。

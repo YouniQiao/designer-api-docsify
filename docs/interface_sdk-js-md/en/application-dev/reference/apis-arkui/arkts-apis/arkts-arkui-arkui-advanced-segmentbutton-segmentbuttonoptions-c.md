@@ -180,6 +180,26 @@ If the value is **undefined**, the background color is $r('sys.color.ohos_id_col
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## backgroundSystemMaterial
+
+```TypeScript
+backgroundSystemMaterial?: uiMaterial.Material
+```
+
+Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
+
+**Type:** uiMaterial.Material
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SegmentButtonOptions-backgroundSystemMaterial?: uiMaterial.Material--><!--Device-SegmentButtonOptions-backgroundSystemMaterial?: uiMaterial.Material-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## borderRadiusMode
 
 ```TypeScript

@@ -21,7 +21,8 @@ responseHeaders: Array<WebHeader>
 ```
 
 Array of response headers from the server when a JavaScript file is requested. They include information such as E  
--Tag or Last-Modified to identify the file version and determine whether the bytecode cache needs to be refreshed.
+-Tag or Last-Modified to identify the file version and determine whether the bytecode cache needs to be  
+refreshed.
 
 **Type:** Array&lt;WebHeader&gt;
 

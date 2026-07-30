@@ -1798,7 +1798,7 @@ Unsubscribes from constraint change events associated with the specified callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;ConstraintChangeInfo&gt; | No | Callback for receiving constraint change information.   - Callback used to listen for the constraint change events.<br>The default value is **undefined**, indicating that all subscription records are unsubscribed.<br>If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;ConstraintChangeInfo&gt; | No | Callback for receiving constraint change information.   - Callback used to listen for the constraint change events.<br>The   default value is **undefined**, indicating that all subscription records are unsubscribed.<br>If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
 
 **Error codes:**
 

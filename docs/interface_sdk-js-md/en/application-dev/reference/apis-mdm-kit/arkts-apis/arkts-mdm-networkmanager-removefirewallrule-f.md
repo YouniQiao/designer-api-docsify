@@ -80,7 +80,7 @@ try {
   console.error(`Failed to remove firewall rule. Code: ${err.code}, message: ${err.message}`);
 }
 
-// Remove all firewall rules.
+// Clears all IPv4 rules.
 try {
   networkManager.removeFirewallRule(wantTemp);
   console.info('Succeeded in removing all firewall rule.');

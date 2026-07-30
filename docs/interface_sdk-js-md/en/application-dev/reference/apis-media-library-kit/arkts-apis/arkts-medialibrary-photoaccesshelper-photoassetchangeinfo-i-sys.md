@@ -202,24 +202,6 @@ The hidden time of asset.<br>Unit:milliseconds.
 
 **System API:** This is a system API.
 
-## isFavorite
-
-```TypeScript
-isFavorite: boolean
-```
-
-Whether the media asset is marked as a favorite. **true** if marked, **false** otherwise.
-
-**Type:** boolean
-
-**Since:** 26.0.0
-
-<!--Device-PhotoAssetChangeInfo-isFavorite: boolean--><!--Device-PhotoAssetChangeInfo-isFavorite: boolean-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
 ## isHidden
 
 ```TypeScript

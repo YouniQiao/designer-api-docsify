@@ -62,7 +62,8 @@ FLAG_INSTALL_ON_DEMAND = 0x00000800
 
 Enables on-demand installation when launching an atomic service.
 
-- If enabled, the system automatically installs the atomic service if it is not already installed before proceeding with the launch.  
+- If enabled, the system automatically installs the atomic service if it is not already installed before  
+proceeding with the launch.  
 - If disabled, the launch fails if the atomic service is not installed.
 
 **Since:** 9

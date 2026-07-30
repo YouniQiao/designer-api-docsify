@@ -30,7 +30,7 @@ Updates a shortcut for the given user. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i-sys.md) | Yes | Shortcut information. |
+| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | Yes | Shortcut information. |
 | userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 
 **Return value:**

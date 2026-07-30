@@ -63,10 +63,10 @@ let bundleName: string = 'com.example.myapplication';
 let source: string = '/data/storage/el1/base/test.png';
 let accountId: number = 100;
 try {
-    securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId);
-    console.info(`Succeeded in setting set watermarkImage policy.`);
+  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId);
+  console.info(`Succeeded in setting watermarkImage policy.`);
 } catch(err) {
-    console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```
@@ -108,4 +108,87 @@ Sets the watermark image displayed during the application running.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+
+**Example**
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+let source: string = '/data/storage/el1/base/test.png';
+let accountId: number = 100;
+// Set them with actual values. In the sample code, the number of rows and the number of columns are both set to 1 for the watermark, and a single watermark image is displayed in the center.
+let properties: securityManager.WatermarkProperties = {
+  intervalsRow: 1,
+  intervalsCol: 1
+}
+try {
+  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
+  console.info(`Succeeded in setting watermarkImage policy.`);
+} catch(err) {
+  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+let source: string = '/data/storage/el1/base/test.png';
+let accountId: number = 100;
+// Set them with actual values. The device screen size is 1260 × 2720, and the watermark image size is 100 × 100. In this example, the watermark properties are set to 27 rows and 12 columns, displaying 27 × 12 watermark images in a 27-row by 12-column grid layout.
+let properties: securityManager.WatermarkProperties = {
+  intervalsRow: 27,
+  intervalsCol: 12
+}
+try {
+  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
+  console.info(`Succeeded in setting watermarkImage policy.`);
+} catch(err) {
+  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+let source: string = '/data/storage/el1/base/test.png';
+let accountId: number = 100;
+// Set them with actual values. The device screen size is 1260 × 2720, and the watermark image size is 100 × 100. In this example, the watermark properties are set to 28 rows and 12 columns. Since 28 × 100 > 2720, the grid layout cannot fit within the window. As a result, the watermark will be repeatedly tiled across the entire application window, starting from the top-left corner. Any watermark image that exceeds the right or bottom edges of the window will be clipped.
+let properties: securityManager.WatermarkProperties = {
+  intervalsRow: 28,
+  intervalsCol: 12
+}
+try {
+  securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
+  console.info(`Succeeded in setting watermarkImage policy.`);
+} catch(err) {
+  console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
 

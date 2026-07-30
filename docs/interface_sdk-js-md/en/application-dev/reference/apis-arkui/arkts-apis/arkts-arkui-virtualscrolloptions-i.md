@@ -18,12 +18,17 @@ onLazyLoading?(index: number): void
 
 The **onLazyLoading** method must be used in lazy loading scenarios. You can implement a custom method to write data to a specified index in the data source. The processing rules for **onLazyLoading** are as follows:
 
-- Before reading the data corresponding to an index in the data source, the **Repeat** component checks whether data exists at the index.  
+- Before reading the data corresponding to an index in the data source, the **Repeat** component checks whether  
+data exists at the index.  
 - If no data exists but the **onLazyLoading** method is implemented, **Repeat** calls this method.  
-- In the **onLazyLoading** method, you need to write data to the index specified by **Repeat** in the following format: arr[index] =..., where **arr** indicates the array passed to **Repeat**. Array operations except **[]** are not allowed, and elements except the specified index cannot be written. Otherwise, the system throws an exception.  
-- After the **onLazyLoading** method is executed, if no data exists in the specified index, the components corresponding to the current index and subsequent indexes cannot be loaded.  
-- The precise lazy loading capability is optional. If **onLazyLoading** is not specified and the return value of **totalCount** or **onTotalCount** is greater than the data source length, **Repeat** does not render the list scrolling to the bottom.  
-- Avoid using the **onLazyLoading** method to execute time-consuming operations. If data loading takes a long time,you are advised to create a placeholder for the data in the **onLazyLoading** method and then create an asynchronous task to load the data.
+- In the **onLazyLoading** method, you need to write data to the index specified by **Repeat** in the following  
+format: arr[index] =..., where **arr** indicates the array passed to **Repeat**. Array operations except **[]** are not allowed, and elements except the specified index cannot be written. Otherwise, the system throws an exception.  
+- After the **onLazyLoading** method is executed, if no data exists in the specified index, the components  
+corresponding to the current index and subsequent indexes cannot be loaded.  
+- The precise lazy loading capability is optional. If **onLazyLoading** is not specified and the return value of  
+**totalCount** or **onTotalCount** is greater than the data source length, **Repeat** does not render the list scrolling to the bottom.  
+- Avoid using the **onLazyLoading** method to execute time-consuming operations. If data loading takes a long time,  
+you are advised to create a placeholder for the data in the **onLazyLoading** method and then create an asynchronous task to load the data.
 
 **Since:** 19
 
@@ -54,9 +59,12 @@ Both the return values of [totalCount](arkts-arkui-virtualscrolloptions-i.md) an
 The data loading rules for different return values of **onTotalCount()** are the same as those for **totalCount**.The details are as follows:
 
 - If the return value of **onTotalCount()** is **0**, no data is loaded.  
-- If the return value of **onTotalCount()** is in the range (0, Data source length], only data in the index range [0, Return value – 1] is loaded.  
-- If the return value of **onTotalCount()** is greater than the data source length, the **Repeat** component expects to load data in the index range [0, Return value – 1]. The scrollbar style of the container component changes according to the value of **totalCount**. During the scrolling of the container component, the application must ensure that subsequent data is requested before the list is about to reach the end of the data source. You need to handle error scenarios (such as network delays) for data requests until all data sources are loaded;otherwise, scrolling exceptions may occur during list scrolling. You are advised to use [onLazyLoading](arkts-arkui-virtualscrolloptions-i.md#onlazyloading) to implement lazy loading.  
-- If the return value of **onTotalCount()** is not a natural number, the data source length will be used as the return value.
+- If the return value of **onTotalCount()** is in the range (0, Data source length], only data in the index range  
+[0, Return value – 1] is loaded.  
+- If the return value of **onTotalCount()** is greater than the data source length, the **Repeat** component  
+expects to load data in the index range [0, Return value – 1]. The scrollbar style of the container component changes according to the value of **totalCount**. During the scrolling of the container component, the application must ensure that subsequent data is requested before the list is about to reach the end of the data source. You need to handle error scenarios (such as network delays) for data requests until all data sources are loaded;otherwise, scrolling exceptions may occur during list scrolling. You are advised to use [onLazyLoading](arkts-arkui-virtualscrolloptions-i.md#onlazyloading) to implement lazy loading.  
+- If the return value of **onTotalCount()** is not a natural number, the data source length will be used as the  
+return value.
 
 **Since:** 19
 

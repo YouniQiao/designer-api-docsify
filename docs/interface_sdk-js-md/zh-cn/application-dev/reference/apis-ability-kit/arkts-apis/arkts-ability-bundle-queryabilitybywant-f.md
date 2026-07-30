@@ -36,6 +36,29 @@ function queryAbilityByWant(want: Want,
 | userId | number | 是 | 用户ID。取值范围：大于等于0。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityInfo&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回Ability信息。 |
 
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import Want from '@ohos.app.ability.Want';
+
+let bundleFlags: number = 0;
+let userId: number = 100;
+let want: Want = {
+  bundleName: "com.example.myapplication",
+  abilityName: "EntryAbility"
+};
+
+bundle.queryAbilityByWant(want, bundleFlags, userId, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+
+```
+
 
 ## queryAbilityByWant
 
@@ -64,6 +87,28 @@ function queryAbilityByWant(want: Want, bundleFlags: number, callback: AsyncCall
 | want | [Want](../../apis-arkui/arkts-apis/arkts-arkui-want-t-sys.md) | 是 | 指示包含要查询的应用Bundle名称的意图。 |
 | bundleFlags | number | 是 | 用于指定返回abilityInfo信息。取值范围：参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中Ability信息相关flag。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AbilityInfo&gt;&gt; | 是 | 程序启动作为入参的回调函数，返回Ability信息。 |
+
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import Want from '@ohos.app.ability.Want';
+
+let bundleFlags: number = 0;
+let want: Want = {
+  bundleName: "com.example.myapplication",
+  abilityName: "EntryAbility"
+};
+
+bundle.queryAbilityByWant(want, bundleFlags, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+
+```
 
 
 ## queryAbilityByWant
@@ -99,4 +144,27 @@ function queryAbilityByWant(want: Want, bundleFlags: number, userId?: number): P
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise形式返回Ability信息。 |
+
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+import Want from '@ohos.app.ability.Want';
+
+let bundleFlags: number = 0;
+let userId: number = 100;
+let want: Want = {
+  bundleName: "com.example.myapplication",
+  abilityName: "EntryAbility"
+};
+
+bundle.queryAbilityByWant(want, bundleFlags, userId)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+
+```
 

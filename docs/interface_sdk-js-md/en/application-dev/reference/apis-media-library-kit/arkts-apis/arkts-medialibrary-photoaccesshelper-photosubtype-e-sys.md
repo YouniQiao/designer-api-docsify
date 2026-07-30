@@ -1,4 +1,4 @@
-# PhotoSubtype (System API)
+# PhotoSubtype
 
 Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md) types.
 
@@ -7,26 +7,6 @@ Enumerates the [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md
 <!--Device-photoAccessHelper-export enum PhotoSubtype--><!--Device-photoAccessHelper-export enum PhotoSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-## DEFAULT
-
-```TypeScript
-DEFAULT = 0
-```
-
-Photo, which is the default type.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PhotoSubtype-DEFAULT = 0--><!--Device-PhotoSubtype-DEFAULT = 0-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
 
 ## SCREENSHOT
 

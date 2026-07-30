@@ -8,8 +8,6 @@ The autoStartupManager module provides APIs for an application to query whether 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

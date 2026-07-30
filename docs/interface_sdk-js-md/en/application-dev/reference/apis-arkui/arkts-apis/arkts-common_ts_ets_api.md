@@ -21,8 +21,8 @@
 | [PersistentStorage](arkts-arkui-persistentstorage-c-sys.md) | For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md). |
 | [SubscribaleAbstract](arkts-arkui-subscribaleabstract-c-sys.md) | Defines the Subscribale base class. |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c-sys.md) | Represents a synchronized property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md). |
-| [SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md) | Inherits from [SubscribedAbstractProperty<T>](arkts-arkui-subscribedabstractproperty-c-sys.md). Represents a property with one-way synchronization. |
-| [SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md) | Inherits from [SubscribedAbstractProperty<T>](arkts-arkui-subscribedabstractproperty-c-sys.md). Represents a property with two-way synchronization. |
+| [SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md) | Inherits from [SubscribedAbstractProperty<T>](arkts-arkui-subscribedabstractproperty-c.md). Represents a property with one-way synchronization. |
+| [SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md) | Inherits from [SubscribedAbstractProperty<T>](arkts-arkui-subscribedabstractproperty-c.md). Represents a property with two-way synchronization. |
 <!--DelEnd-->
 
 ### Interfaces

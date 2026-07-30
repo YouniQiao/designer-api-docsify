@@ -183,12 +183,14 @@ parameters?: Record<string, Object>
 - ohos.aafwk.param.callerAppId：表示拉起应用的AppId信息，值为字符串类型。  
 - ohos.aafwk.param.callerAppIdentifier：表示拉起应用的AppIdentifier信息，值为字符串类型。  
 - ohos.aafwk.param.callerToken：表示拉起方的token，值为字符串类型。  
-- ohos.aafwk.param.callerUid：表示[BundleInfo](arkts-ability-bundleinfo-i.md)中的uid，应用包里应用程序的uid，值为数值类型。  
+- ohos.aafwk.param.callerUid：表示[BundleInfo](arkts-ability-bundleinfo-i.md)中的uid，应用包里应用程序的uid，值为数  
+值类型。  
 - ohos.param.callerAppCloneIndex：表示拉起方应用的分身索引，值为数值类型。  
 - component.startup.newRules：表示是否启用新的管控规则，值为布尔类型。  
 - moduleName：表示被拉起方的moduleName，值为字符串类型。  
 - ohos.ability.params.abilityRecoveryRestart：表示当前Ability是否发生了故障恢复重启，值为布尔类型。  
-- ohos.extra.param.key.showMode：表示拉起原子化服务的展示模式，值为枚举类型[wantConstant.ShowMode](arkts-ability-wantconstant-showmode-e.md)。
+- ohos.extra.param.key.showMode：表示拉起原子化服务的展示模式，值为枚举类型  
+[wantConstant.ShowMode](arkts-ability-wantconstant-showmode-e.md)。
 
 **说明**：
 

@@ -8,8 +8,10 @@ This module provides capabilities about the float view, including determining wh
 
 A float view is applicable to scenarios where application content needs to be continuously displayed in an independent small window or shortcut operations need to be provided. Examples:
 
-- Application for stock market tracking: When browsing other applications, users can use a float view to view real-time stock market changes without frequently switching between applications.  
-- Live streaming application on a mobile phone: During live streaming, hosts can use a float view to display a custom interaction panel or control UI, facilitating real-time operations and interactions.
+- Application for stock market tracking: When browsing other applications, users can use a float view to view real-  
+time stock market changes without frequently switching between applications.  
+- Live streaming application on a mobile phone: During live streaming, hosts can use a float view to display a custom  
+interaction panel or control UI, facilitating real-time operations and interactions.
 
 **Linkage with the floating ball**:
 
@@ -17,11 +19,14 @@ This module can be used together with [@ohos.window.floatingBall](arkts-window-f
 
 **Comparison between the global floating window and float view**:
 
-- Similarities: Both the global floating window and float view are special types of application auxiliary windows that can remain displayed on the foreground even after the application's main window and corresponding ability transition to the background. They can be used to continue displaying the UI after the application transitions to the background.  
+- Similarities: Both the global floating window and float view are special types of application auxiliary windows  
+that can remain displayed on the foreground even after the application's main window and corresponding ability transition to the background. They can be used to continue displaying the UI after the application transitions to the background.  
 - Differences:  
 - The global floating window is managed and its UI is drawn by developers, without a unified UI or animation effect.  
-- The float view is managed by the system and its UI is drawn in a unified manner, offering a more sophisticated and refined animation effect.  
-- The float view can be bound to the [floating ball](arkts-window-floatingball.md) for joint use,enabling more complex scenarios.
+- The float view is managed by the system and its UI is drawn in a unified manner, offering a more sophisticated and  
+refined animation effect.  
+- The float view can be bound to the [floating ball](arkts-window-floatingball.md) for joint use,  
+enabling more complex scenarios.
 
 **Start version**: 26.0.0
 > **NOTE**  

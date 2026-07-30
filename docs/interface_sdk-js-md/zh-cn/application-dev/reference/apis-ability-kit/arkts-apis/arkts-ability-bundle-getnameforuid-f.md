@@ -29,6 +29,23 @@ function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 | uid | number | 是 | @param { AsyncCallback<string> } callback |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |  |
 
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let uid: number = 20010005;
+
+bundle.getNameForUid(uid, (err, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. Data:' + JSON.stringify(data));
+})
+
+```
+
 
 ## getNameForUid
 
@@ -59,4 +76,21 @@ function getNameForUid(uid: number): Promise<string>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;string&gt; | Returns the bundle name. |
+
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let uid: number = 20010005;
+
+bundle.getNameForUid(uid)
+  .then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+
+```
 

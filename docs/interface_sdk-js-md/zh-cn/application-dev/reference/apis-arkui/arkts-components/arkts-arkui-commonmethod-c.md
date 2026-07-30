@@ -3390,7 +3390,8 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 控制组件扩展其安全区域。
 > **说明：**  
 >  
-> - 设置expandSafeArea属性进行组件绘制扩展时，建议组件尺寸不要设置固定宽高（百分比除外），当设置固定宽高（包括设置'auto'）时，扩展安全区域的方向只支持[SafeAreaEdge.TOP,SafeAreaEdge.START]，扩展后的组件尺寸保持不变。  
+> - 设置expandSafeArea属性进行组件绘制扩展时，建议组件尺寸不要设置固定宽高（百分比除外），当设置固定宽高（包括设置'auto'）时，扩展安全区域的方向只支持[SafeAreaEdge.TOP,  
+SafeAreaEdge.START]，扩展后的组件尺寸保持不变。  
 >  
 > - 安全区域不会限制内部组件的布局和大小，不会裁剪内部组件。  
 >  
@@ -3404,11 +3405,13 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 >  
 > - 组件延伸到避让区时，在避让区的事件如点击事件等可能会被系统拦截，优先给状态栏等系统组件响应。  
 >  
-> -滚动类容器内的组件不建议设置expandSafeArea属性，如果设置，需要按照组件嵌套关系，将当前节点到滚动类祖先容器间所有直接节点设置expandSafeArea属性，否则expandSafeArea属性在滚动后可能会失效，写法参考[示例7](#示例7滚动类容器扩展安全区)。  
+> -  
+滚动类容器内的组件不建议设置expandSafeArea属性，如果设置，需要按照组件嵌套关系，将当前节点到滚动类祖先容器间所有直接节点设置expandSafeArea属性，否则expandSafeArea属性在滚动后可能会失效，写法参考[示例7](#示例7滚动类容器扩展安全区)。  
 >  
 > - expandSafeArea属性仅作用于当前组件，不会向父组件或子组件传递，因此使用过程中，所有相关组件均需配置。  
 >  
-> -同时设置expandSafeArea和position属性时，position属性会优先生效，expandSafeArea属性会后生效。对于未设置position、offset等绘制属性的组件，如果其边界未与避让区重叠，设置exp andSafeArea属性将不生效，如弹窗和半模态组件。  
+> -  
+同时设置expandSafeArea和position属性时，position属性会优先生效，expandSafeArea属性会后生效。对于未设置position、offset等绘制属性的组件，如果其边界未与避让区重叠，设置exp andSafeArea属性将不生效，如弹窗和半模态组件。  
 >  
 > - 对于expandSafeArea属性无法生效的场景，若要将组件部署在避让区，需要手动调整组件的坐标。
 
@@ -4271,7 +4274,7 @@ height(value: Length): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 要设置的组件高度。   > **说明：**   >   > 在[Row](Row)、 [Column](Column)、[RelativeContainer](RelativeContainer)组件中，width、height设置auto表示自适应子组件。<br>单位为： vp。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 要设置的组件高度。   > **说明：**   >   > 在[Row](Row)、 [Column](Column)、[RelativeContainer](RelativeContainer)组件中，width、height设置auto表示自适应子组件。   <br>单位为： vp。 |
 
 **返回值：**
 
@@ -4466,7 +4469,8 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 扩展组件布局时的安全区。
 > **说明：**  
 >  
->忽略布局安全区边缘的组件，如果其宽度或高度设置了 [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent)，其大小和位置都会改变，否则仅改变其位置。  
+>  
+忽略布局安全区边缘的组件，如果其宽度或高度设置了 [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent)，其大小和位置都会改变，否则仅改变其位置。  
 >  
 > 依据safeAreaPadding累积功能，组件可扩展其安全区边缘到所有能感知的连续安全区域。  
 >  
@@ -7331,9 +7335,11 @@ pixelRound(value: PixelRoundPolicy): T
 指定当前组件在指定方向上的像素取整对齐方式，某方向不设置时默认在该方向进行四舍五入取整。
 > **说明：**  
 >  
-> - 在API version 11，本接口采用半像素对齐方式（即0\~0.25取0，0.25\~0.75取0.5，0.75\~1.0取1）。从API version12开始，本接口采用四舍五入的取整方式，并支持组件级关闭像素取整的能力。  
+> - 在API version 11，本接口采用半像素对齐方式（即0\~0.25取0，0.25\~0.75取0.5，0.75\~1.0取1）。从API version  
+12开始，本接口采用四舍五入的取整方式，并支持组件级关闭像素取整的能力。  
 >  
-> - 从API version12开始，该接口支持在[attributeModifier](ts-universal-attributes-attribute-modifier.md#attributemodifier)中调用。
+> - 从API version  
+12开始，该接口支持在[attributeModifier](ts-universal-attributes-attribute-modifier.md#attributemodifier)中调用。
 
 正常计算时，上下方向与组件高度相对应，左右方向（镜像的起始方向称为左）与宽度相对应。为方便描述将两组方向称为左上和右下。
 
@@ -7385,7 +7391,7 @@ pixelStretchEffect(options: PixelStretchEffectOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PixelStretchEffectOptions](arkts-arkui-pixelstretcheffectoptions-i.md) | 是 | 设置组件的图像边缘像素扩展距离。<br/>参数`options`包括上下左右四个方向的边缘像素扩展距离。<br/>**说明：**<br/   >1. 如果距离为正值，表示向外扩展，放大原来图像大小。上下左右四个方向分别用边缘像素填充，填充的距离即为设置的边缘扩展的距离。<br/>2. 如果距离为负值，表示内缩，但是最终图像大小不变。<br/>内缩方式：<br/>图像根据`options`的设置缩小，缩小大小为四个方向边缘扩展距离的绝对值。<br/>图像用边缘像素扩展到原来大小。<br/>3. 对`options`的输入约束：<br/>上下左右四个方向的扩展统一为非正值或者非负值。即四个边同时向外扩或者内缩，方向一致。<br/>所有方向的输入均为百分比或者具体值，不支持百分比和具体值混用。<br/>所有异常情况下，显示为{0, 0, 0, 0}效果，即跟原图保持一致。 |
+| options | [PixelStretchEffectOptions](arkts-arkui-pixelstretcheffectoptions-i.md) | 是 | 设置组件的图像边缘像素扩展距离。<br/>参数`options`包括上下左右四个方向的边缘像素扩展距离。<br/>**说明：**<br/   >1. 如果距离为正值，表示向外扩展，放大原来图像大小。上下左右四个方向分别用边缘像素填充，填充的距离即为设置的边缘扩展的距离。<br/>2. 如果距离为负值，表示内缩，但是最终图像大小不变。<br/>内缩方式：<br/>   图像根据`options`的设置缩小，缩小大小为四个方向边缘扩展距离的绝对值。<br/>图像用边缘像素扩展到原来大小。<br/>3. 对`options`的输入约束：<br/>上下左右四个方向的扩展统一为非正值或者非负值。即四个边同时向外扩或者内缩，方向一致。<br/>所有方向的输入均为百分比或者具体值，不支持百分比和具体值混用。<br/>所有异常情况下，显示为{0, 0, 0, 0}效果，即跟原图保持一致。 |
 
 **返回值：**
 
@@ -7413,7 +7419,7 @@ pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;PixelStretchEffectOptions&gt; | 是 | 设置组件的图像边缘像素扩展距离。<br/>参数`options`包括上下左右四个方向的边缘像素扩展距离。<br/>**说明：**<br/>1. 如果距离为正值，表示向外扩展，放大原来图像大小。上下左右四个方向分别用边缘像素填充，填充的距离即为设置的边缘扩展的距离。<br/>2. 如果距离为负值，表示内缩，但是最终图像大小不变。<br/   >内缩方式：<br/>图像根据`options`的设置缩小，缩小大小为四个方向边缘扩展距离的绝对值。<br/>图像用边缘像素扩展到原来大小。<br/>3. 对`options`的输入约束：<br/>上下左右四个方向的扩展统一为非正值或者非负值。即四个边同时向外扩或者内缩，方向一致。<br/>所有方向的输入均为百分比或者具体值，不支持百分比和具体值混用。<br/>所有异常情况下，显示为{0, 0, 0, 0}效果，即跟原图保持一致。<br/>当options的值为undefined时，恢复为无像素扩展效果。 |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;PixelStretchEffectOptions&gt; | 是 | 设置组件的图像边缘像素扩展距离。<br/>参数`options`包括上下左右四个方向的边缘像素扩展距离。<br/>**说明：**<br/>1. 如果距离为正值，表示向外扩展，放大原来图像大小。上下左右四个方向分别用边缘像素填充，填充的距离即为设置的边缘扩展的距离。<br/>2. 如果距离为负值，表示内缩，但是最终图像大小不变。<br/   >内缩方式：<br/>图像根据`options`的设置缩小，缩小大小为四个方向边缘扩展距离的绝对值。<br/>图像用边缘像素扩展到原来大小。<br/>3. 对`options`的输入约束：<br/>上下左右四个方向的扩展统   一为非正值或者非负值。即四个边同时向外扩或者内缩，方向一致。<br/>所有方向的输入均为百分比或者具体值，不支持百分比和具体值混用。<br/>所有异常情况下，显示为{0, 0, 0, 0}效果，即跟原图保持一致。<br/>当options的值为undefined时，恢复为无像素扩展效果。 |
 
 **返回值：**
 
@@ -7432,7 +7438,8 @@ position(value: Position | Edges | LocalizedEdges): T
 >  
 > - position对位置的影响作用在组件的尺寸测量完成之后。  
 > - 当父组件为[Row](Row)、[Column](Column)或[Flex](Flex)时，设置position的子组件不占位。在上述场景中，如果父组件包含的所有子组件均设置了position，此时父组件尺寸无法通过其他子组件确定，将基于尺寸(0, 0)进行布局测算。  
-> -Position类型基于父组件内容区左上角确定位置；Edges类型基于父组件内容区四边确定位置，top/left/right/bottom分别为组件各边距离父组件内容区相应边的边距，通过边距来确定组件相对于父组件内容区的位置；Lo calizedEdges类型基于父组件内容区四边确定位置，支持镜像模式。  
+> -  
+Position类型基于父组件内容区左上角确定位置；Edges类型基于父组件内容区四边确定位置，top/left/right/bottom分别为组件各边距离父组件内容区相应边的边距，通过边距来确定组件相对于父组件内容区的位置；Lo calizedEdges类型基于父组件内容区四边确定位置，支持镜像模式。  
 > - 本属性适用于置顶显示、悬浮按钮等组件在父组件中位置固定的场景。  
 > - 本属性不支持在宽高为零的布局组件上设置。  
 > - 当父组件为[RelativeContainer](RelativeContainer)，且子组件设置了alignRules属性时，子组件的position属性不生效。  
@@ -7935,7 +7942,8 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 设置安全区边距属性。允许容器向自身添加组件级安全区域，供子组件延伸，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。
 > **说明**  
 >  
->当父辈和祖先容器设置了组件级安全区域时，子组件可以感知并利用该区域，称该区域为累计安全区延伸（accumulatedSafeAreaExpand，下文简称SAE），表示子组件在四个方向上各可延伸的长度。当祖辈与更上一级祖辈的saf eAreaPadding相邻接（即未被margin、border、padding分隔）时，SAE将递归地向外累积，直至不存在相邻的更外层safeAreaPadding或递归至页面容器外。系统级避让区域（如状态栏、导航条、挖孔区等，详情参见安全区域中的说明）可视为页面容器特有的safeAreaPadding，同样参与该延伸范围的计算。  
+>  
+当父辈和祖先容器设置了组件级安全区域时，子组件可以感知并利用该区域，称该区域为累计安全区延伸（accumulatedSafeAreaExpand，下文简称SAE），表示子组件在四个方向上各可延伸的长度。当祖辈与更上一级祖辈的saf eAreaPadding相邻接（即未被margin、border、padding分隔）时，SAE将递归地向外累积，直至不存在相邻的更外层safeAreaPadding或递归至页面容器外。系统级避让区域（如状态栏、导航条、挖孔区等，详情参见安全区域中的说明）可视为页面容器特有的safeAreaPadding，同样参与该延伸范围的计算。  
 >  
 > 通过与其他属性配合使用，可对上述计算得到的组件级安全区区域加以利用。例如，对子组件设置[ignoreLayoutSafeArea](arkts-arkui-commonmethod-c.md#ignorelayoutsafearea)属性，即可利用SAE延伸组件的布局范围。
 
@@ -9159,7 +9167,7 @@ width(value: Length): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 要设置的组件宽度   > **说明：**   >   > - 在{@link TextInput}组件中，width设置auto表示自适应文本宽度。   >   > - 在 [AlphabetIndexer](AlphabetIndexer)组件中，width设置auto表示自适应宽度最大索引项的宽度<br>单位为： vp。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 要设置的组件宽度   > **说明：**   >   > - 在{@link TextInput}组件中，width设置auto表示自适应文本宽度。   >   > - 在 [AlphabetIndexer](AlphabetIndexer)组件中，width设置auto表示自适应宽度最大索引项的宽度   <br>单位为： vp。 |
 
 **返回值：**
 

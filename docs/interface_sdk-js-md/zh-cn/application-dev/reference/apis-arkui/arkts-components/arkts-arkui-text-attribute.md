@@ -792,9 +792,12 @@ heightAdaptivePolicy(value: TextHeightAdaptivePolicy)
 
 规则如下：
 
-- MAX_LINES_FIRST模式：优先使用[maxLines](TextAttribute#maxLines)属性来调整文本高度。如果使用maxLines属性的布局大小超过了布局约束，则尝试在[minFontSize](TextAttribute#minFontSize)和[maxFontSize](TextAttribute#maxFontSize)的范围内缩小字体以显示更多文本。  
-- MIN_FONT_SIZE_FIRST模式：优先使用minFontSize属性来调整文本高度。如果使用minFontSize属性可以将文本布局在一行中，则尝试在minFontSize和maxFontSize的范围内增大字体并使用最大限度的字体大小在一行内显示，否则按minFontSize显示。  
-- LAYOUT_CONSTRAINT_FIRST模式：优先使用布局约束来调整文本高度。如果布局大小超过布局约束，则尝试在minFontSize和maxFontSize的范围内缩小字体以满足布局约束。如果将字体大小缩小到minFontSize后，布局大小仍然超过布局约束，则删除超过布局约束的行。
+- MAX_LINES_FIRST模式：优先使用[maxLines](TextAttribute#maxLines)属性来调整文本高度。如果使用maxLines属性的布局大小超过了布局约束，则尝试在  
+[minFontSize](TextAttribute#minFontSize)和[maxFontSize](TextAttribute#maxFontSize)的范围内缩小字体以显示更多文本。  
+- MIN_FONT_SIZE_FIRST模式：优先使用minFontSize属性来调整文本高度。如果使用minFontSize属性可以将文本布局在一行中，则尝试在minFontSize和maxFontSize的范围内增大字体并使  
+用最大限度的字体大小在一行内显示，否则按minFontSize显示。  
+- LAYOUT_CONSTRAINT_FIRST模式：优先使用布局约束来调整文本高度。如果布局大小超过布局约束，则尝试在minFontSize和maxFontSize的范围内缩小字体以满足布局约束。如果将字体大小缩小到  
+minFontSize后，布局大小仍然超过布局约束，则删除超过布局约束的行。
 
 **起始版本：** 10
 
@@ -1763,9 +1766,12 @@ textOverflow(options: TextOverflowOptions)
 - 设置为TextOverflow.None、TextOverflow.Clip，文本超长时按最大行截断显示。  
 - 设置为TextOverflow.Ellipsis，文本超长时显示不下的文本用省略号代替。  
 - 需配合[maxLines](TextAttribute#maxLines)使用，单独设置不生效。  
-- 断行规则参考[wordBreak](TextAttribute#wordBreak)。默认情况下参考WordBreak.BREAK_WORD的截断方式，文本截断按字进行。例如，英文以单词为最小单位进行截断。若需要以字母为单位进行截断，可设置wordBreak属性为WordBreak.BREAK_ALL。  
-- 折行规则参考[lineBreakStrategy](TextAttribute#lineBreakStrategy)。该属性在[wordBreak](TextAttribute#wordBreak)不等于WordBreak.BREAK_ALL的时候生效，不支持连词符。  
-- 从API version 11开始，建议优先组合[textOverflow](TextAttribute#textOverflow)和[wordBreak](TextAttribute#wordBreak)属性来设置截断方式，具体详见[示例4（设置文本断行及折行）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例4设置文本断行及折行)<!--RP1--><!--RP1End-->。
+- 断行规则参考[wordBreak](TextAttribute#wordBreak)。默认情况下参考WordBreak.BREAK_WORD的截断方式，文本截断按字进行。例如，英文以单词为最小单位进行截断。若需要以  
+字母为单位进行截断，可设置wordBreak属性为WordBreak.BREAK_ALL。  
+- 折行规则参考[lineBreakStrategy](TextAttribute#lineBreakStrategy)。该属性在[wordBreak](TextAttribute#wordBreak)不等  
+于WordBreak.BREAK_ALL的时候生效，不支持连词符。  
+- 从API version 11开始，建议优先组合[textOverflow](TextAttribute#textOverflow)和  
+[wordBreak](TextAttribute#wordBreak)属性来设置截断方式，具体详见[示例4（设置文本断行及折行）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例4设置文本断行及折行)<!--RP1--><!--RP1End-->。
 
 当TextOverflowOptions设置为TextOverflow.MARQUEE时：
 

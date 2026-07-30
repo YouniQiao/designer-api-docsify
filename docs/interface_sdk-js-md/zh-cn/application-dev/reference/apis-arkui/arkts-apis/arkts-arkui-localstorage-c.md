@@ -104,7 +104,7 @@ delete(propName: string): boolean
 
 1. [@LocalStorageLink](../../../ui/state-management/arkts-localstorage.md#localstoragelink)、[@LocalStorageProp](../../../ui/state-management/arkts-localstorage.md#localstorageprop)装饰的变量。
 
-2. 通过[link](arkts-arkui-localstorage-c.md#link)、[prop](arkts-arkui-localstorage-c.md#prop)、[setAndLink](arkts-arkui-localstorage-c.md#setandlink)、[setAndProp](arkts-arkui-localstorage-c.md#setandprop)接口返回的[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c-sys.md)的实例。
+2. 通过[link](arkts-arkui-localstorage-c.md#link)、[prop](arkts-arkui-localstorage-c.md#prop)、[setAndLink](arkts-arkui-localstorage-c.md#setandlink)、[setAndProp](arkts-arkui-localstorage-c.md#setandprop)接口返回的[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)的实例。
 
 如需删除这些订阅者，可通过以下方式：
 

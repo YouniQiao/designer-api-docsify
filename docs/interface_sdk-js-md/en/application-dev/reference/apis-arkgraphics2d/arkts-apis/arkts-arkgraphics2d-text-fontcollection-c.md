@@ -482,7 +482,8 @@ All layout objects that use the font alias must be destroyed and recreated.
 
 - Unloading a non-existent font alias does not produce any effect and does not throw an error.  
 - This operation only affects future font usage.  
-- Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs).
+- Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or  
+missing glyphs).
 
 **Since:** 20
 
@@ -553,7 +554,8 @@ All layout objects that use the font alias must be destroyed and recreated.
 
 - Unloading a non-existent font alias does not produce any effect and does not throw an error.  
 - This operation only affects future font usage.  
-- Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs).
+- Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or  
+missing glyphs).
 
 **Since:** 20
 

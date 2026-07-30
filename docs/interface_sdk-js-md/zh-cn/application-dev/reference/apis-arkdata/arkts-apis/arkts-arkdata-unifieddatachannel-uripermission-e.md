@@ -19,7 +19,8 @@
 
 拖拽授权策略应用规则（按优先级从高到低）：
 
-- 单个数据级别：FileUri、HTML两个统一数据结构（UDS）以及File、Image、Video、Audio、Folder、HTML六个统一数据内容（UDC）数据结构支持配置授权策略参数，仅对单个record单次生效，优先级最高。  
+- 单个数据级别：FileUri、HTML两个统一数据结构（UDS）以及File、Image、Video、Audio、Folder、HTML六个统一数据内容（UDC）数据结构支持配置授权策略参数，仅对单个record单次生效，优先  
+级最高。  
 - UnifiedData级别：UnifiedDataProperties中提供的授权参数对单次拖拽有效。若某个数据中配置了授权策略，则优先按照该数据的配置进行，优先级次之。  
 - 默认级别：若单个数据和UnifiedDataProperties均未配置授权策略，则按照拖拽默认逻辑进行代理授权。默认逻辑如下：
 

@@ -60,7 +60,7 @@ class SourceObject {
 
 let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
-// 删除数据变更回调changeCallback
+// 删除数据变更回调
 g_object.off('change', (sessionId: string, fields: Array<string>) => {
     console.info('change' + sessionId);
     if (fields != null && fields != undefined) {
@@ -119,7 +119,7 @@ class SourceObject {
 
 let source: SourceObject = new SourceObject('jack', 18, false);
 let g_object: distributedDataObject.DistributedObject = distributedDataObject.createDistributedObject(source);
-// 删除上下线回调changeCallback
+// 删除上下线回调
 g_object.off('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
     console.info('status changed ' + sessionId + ' ' + status + ' ' + networkId);
 });

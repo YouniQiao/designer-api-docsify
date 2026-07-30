@@ -419,7 +419,8 @@ fdDst: number
 
 **说明：**
 
-- 将资源句柄（fd）传递给AVTranscoder实例之后，请不要通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator/AVTranscoder。  
+- 将资源句柄（fd）传递给AVTranscoder实例之后，请不要通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator  
+/AVTranscoder。  
 - 同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致视频转码数据获取异常。
 
 **类型：** number
@@ -446,7 +447,8 @@ fdSrc: AVFileDescriptor
 
 **说明：**
 
-- 将资源句柄（fd）传递给AVTranscoder实例之后，请不要通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator/AVTranscoder。  
+- 将资源句柄（fd）传递给AVTranscoder实例之后，请不要通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator  
+/AVTranscoder。  
 - 同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致视频转码数据获取异常。
 
 **类型：** AVFileDescriptor

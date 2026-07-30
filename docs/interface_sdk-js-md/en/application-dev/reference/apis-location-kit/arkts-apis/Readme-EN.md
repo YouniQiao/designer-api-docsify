@@ -95,8 +95,6 @@
   <!--Del-->
   - [CellInfo(system api)](arkts-location-geolocationmanager-cellinfo-i-sys.md)<!--DelEnd-->
   - [ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i.md)
-  <!--Del-->
-  - [ContinuousLocationRequest(system api)](arkts-location-geolocationmanager-continuouslocationrequest-i-sys.md)<!--DelEnd-->
   - [CountryCode](arkts-location-geolocationmanager-countrycode-i.md)
   - [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md)
   - [DistrictInfo](arkts-location-geolocationmanager-districtinfo-i.md)
@@ -120,8 +118,6 @@
   <!--Del-->
   - [LocatingRequiredDataConfig(system api)](arkts-location-geolocationmanager-locatingrequireddataconfig-i-sys.md)<!--DelEnd-->
   - [Location](arkts-location-geolocationmanager-location-i.md)
-  <!--Del-->
-  - [Location(system api)](arkts-location-geolocationmanager-location-i-sys.md)<!--DelEnd-->
   - [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md)
   <!--Del-->
   - [LocationMockConfig(system api)](arkts-location-geolocationmanager-locationmockconfig-i-sys.md)<!--DelEnd-->

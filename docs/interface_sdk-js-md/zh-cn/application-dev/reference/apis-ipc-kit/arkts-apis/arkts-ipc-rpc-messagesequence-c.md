@@ -1223,7 +1223,8 @@ readException(): void
 - 在每次IPC/RPC调用后优先调用此方法。  
 - 如有异常立即处理并终止后续数据读取，异常处理后建议调用reclaim()释放MessageSequence对象。  
 - 此方法与[writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception)方法配对使用。  
-- 调用顺序：服务端处理请求 → [writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception) → 客户端收到响应 →[readException](arkts-ipc-rpc-messagesequence-c.md#readexception) - 如果服务端未调用[writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception)，调用此方法会失败。
+- 调用顺序：服务端处理请求 → [writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception) → 客户端收到响应 →  
+[readException](arkts-ipc-rpc-messagesequence-c.md#readexception) - 如果服务端未调用[writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception)，调用此方法会失败。
 
 **起始版本：** 9
 
@@ -2897,12 +2898,14 @@ writeAshmem(ashmem: Ashmem): void
 将指定的匿名共享对象写入此MessageSequence。
 
 - 创建Ashmem对象：Ashmem.create()。  
-- 映射内存并写入数据：[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) +[writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)。  
+- 映射内存并写入数据：[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) +  
+[writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)。  
 - 将Ashmem写入MessageSequence：writeAshmem()。  
 - 接收端读取Ashmem：[readAshmem](arkts-ipc-rpc-messagesequence-c.md#readashmem)。  
 - 接收端映射内存并读取数据：mapReadWriteAshmem() + readDataFromAshmem()。  
 - 此方法与readAshmem()方法配对使用。  
-- 调用顺序：writeAshmem() → 传输MessageSequence → [readAshmem](arkts-ipc-rpc-messagesequence-c.md#readashmem) →[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) →[readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)。  
+- 调用顺序：writeAshmem() → 传输MessageSequence → [readAshmem](arkts-ipc-rpc-messagesequence-c.md#readashmem) →  
+[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) →[readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)。  
 - 使用前需先创建Ashmem对象并写入数据。
 
 **起始版本：** 9
@@ -3063,7 +3066,8 @@ writeByte(val: number): void
 - 数据对齐方式为字节对齐。  
 - 数值必须在字节范围内，超出范围可能导致数据截断。  
 - 读取时必须使用[readByte](arkts-ipc-rpc-messagesequence-c.md#readbyte)方法配对读取。  
-- 不适合传输大范围数值，大范围数值建议使用[writeInt](arkts-ipc-rpc-messagesequence-c.md#writeint)/[writeLong](arkts-ipc-rpc-messagesequence-c.md#writelong)等。
+- 不适合传输大范围数值，大范围数值建议使用[writeInt](arkts-ipc-rpc-messagesequence-c.md#writeint)/  
+[writeLong](arkts-ipc-rpc-messagesequence-c.md#writelong)等。
 
 **起始版本：** 9
 

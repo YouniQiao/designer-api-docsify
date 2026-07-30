@@ -145,8 +145,8 @@ class TestReadable extends stream.Readable {
   }
 }
 
-let readable = new TestReadable();
-readable.on("data", () => {
+let readableStream = new TestReadable();
+readableStream.on("data", () => {
 });
 
 ```
@@ -227,16 +227,16 @@ class TestReadable extends stream.Readable {
   }
 }
 
-let readable = new TestReadable();
+let readableStream = new TestReadable();
 
 function read() {
   console.info("read() called");
 }
 
-readable.setEncoding("utf8");
-readable.on("readable", read);
-readable.off("readable");
-readable.push("test");
+readableStream.setEncoding("utf8");
+readableStream.on("readable", read);
+readableStream.off("readable");
+readableStream.push("test");
 // off注销对readable事件的监听后，read函数不会被调用，"read() called"也不会被打印
 
 ```
@@ -273,14 +273,14 @@ class TestReadable extends stream.Readable {
   }
 
   doRead(size: number) {
-    throw new Error('Simulated error');
+    throw new Error("Simulated error");
   }
 }
 
-let readable = new TestReadable();
-readable.push("test");
-readable.on("error", () => {
-  console.info("error event called"); // error event called
+let readableStream = new TestReadable();
+readableStream.push("test");
+readableStream.on("error", () => {
+  console.error("error event called"); // error event called
 });
 
 ```
@@ -379,9 +379,9 @@ class TestWritable extends stream.Writable {
   }
 }
 
-let readable = new TestReadable();
-let writable = new TestWritable();
-readable.pipe(writable);
+let readableStream = new TestReadable();
+let writableStream = new TestWritable();
+readableStream.pipe(writableStream);
 
 ```
 
@@ -426,10 +426,10 @@ class TestReadable extends stream.Readable {
   }
 }
 
-let readable = new TestReadable();
+let readableStream = new TestReadable();
 let testData = "Hello world";
-readable.push(testData);
-console.info("Readable push test", readable.readableLength); // Readable push test 11
+readableStream.push(testData);
+console.info("Readable push test", readableStream.readableLength); // Readable push test 11
 
 ```
 
@@ -625,11 +625,11 @@ class TestWritable extends stream.Writable {
   }
 }
 
-let readable = new TestReadable();
-let writable = new TestWritable();
-readable.pipe(writable);
-readable.unpipe(writable);
-readable.on("data", () => {
+let readableStream = new TestReadable();
+let writableStream = new TestWritable();
+readableStream.pipe(writableStream);
+readableStream.unpipe(writableStream);
+readableStream.on("data", () => {
   console.info("Readable test unpipe data event triggered");
 });
 // unpipe成功断开连接之后，data事件将不会触发，不会打印"Readable test unpipe data event triggered"

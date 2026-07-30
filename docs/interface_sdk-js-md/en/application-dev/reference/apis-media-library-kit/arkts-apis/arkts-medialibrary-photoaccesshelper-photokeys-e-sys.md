@@ -8,24 +8,6 @@ Defines the key information about an image or video file.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-## POSITION
-
-```TypeScript
-POSITION = 'position'
-```
-
-File location type.
-
-**Since:** 16
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-PhotoKeys-POSITION = 'position'--><!--Device-PhotoKeys-POSITION = 'position'-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
 ## DATE_TRASHED
 
 ```TypeScript
@@ -263,22 +245,6 @@ Whether automatic cloud enhancement is supported.
 **Since:** 18
 
 <!--Device-PhotoKeys-IS_CE_AUTO = 'is_auto'--><!--Device-PhotoKeys-IS_CE_AUTO = 'is_auto'-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-## OWNER_ALBUM_ID
-
-```TypeScript
-OWNER_ALBUM_ID = 'owner_album_id'
-```
-
-ID of the album to which the photo belongs.
-
-**Since:** 22
-
-<!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'--><!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

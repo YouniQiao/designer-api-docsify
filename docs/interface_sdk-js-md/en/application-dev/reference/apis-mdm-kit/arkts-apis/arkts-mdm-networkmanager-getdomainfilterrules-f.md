@@ -63,7 +63,7 @@ let wantTemp: Want = {
 let domainFilterRule: Array<networkManager.DomainFilterRule>;
 try {
   domainFilterRule = networkManager.getDomainFilterRules(wantTemp);
-  console.info('Succeeded in getting  domain filter rules');
+  console.info('Succeeded in getting domain filter rules');
 } catch (err) {
   console.error(`Failed to get domain filter rules. Code: ${err.code}, message: ${err.message}`);
 }

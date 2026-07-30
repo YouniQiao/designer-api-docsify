@@ -228,24 +228,6 @@ Notification mode control. The default value is **0**. This API can be used to r
 
 **System API:** This is a system API.
 
-## overlayIcon
-
-```TypeScript
-overlayIcon?: image.PixelMap
-```
-
-Notification overlay icon. This parameter is left empty by default. The total bytes of the icon pixels cannot exceed 192 KB.
-
-**Type:** image.PixelMap
-
-**Since:** 23
-
-<!--Device-NotificationRequest-overlayIcon?: image.PixelMap--><!--Device-NotificationRequest-overlayIcon?: image.PixelMap-End-->
-
-**System capability:** SystemCapability.Notification.Notification
-
-**System API:** This is a system API.
-
 ## representativeBundle
 
 ```TypeScript

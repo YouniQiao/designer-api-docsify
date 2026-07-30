@@ -33,7 +33,8 @@ readonly appDistributionType: string
 ```
 
 Distribution type of the application signing certificate. The options are as follows:<li>**app_gallery**:application installed from AppGallery. <!--RP1--><!--RP1End--><li>**enterprise**: enterprise internal application.These are applications developed by an enterprise for its internal use by employees only. They are not distributed through public channels like AppGallery but are distributed internally via the enterprise's own channels. <!--RP2--  
-><!--RP2End--><li>**enterprise_mdm**: enterprise [Mobile Device Management (MDM) application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application). <!--Del-->To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md#enableadmin). <!--DelEnd--><!--RP3--><!--RP3End--><li>**enterprise_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise [MDM application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application) and offline installer. <!--RP4--><!--RP4End--><li>**os_integration**: pre-installed application. They are not available for third-party applications. <li>crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. <li>**internaltesting**: application under internal testing of AppGallery. <!--RP5--><!--RP5End--><li>none: others.
+><!--RP2End--><li>**enterprise_mdm**: enterprise  
+[Mobile Device Management (MDM) application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application). <!--Del-->To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md#enableadmin). <!--DelEnd--><!--RP3--><!--RP3End--><li>**enterprise_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise [MDM application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application) and offline installer. <!--RP4--><!--RP4End--><li>**os_integration**: pre-installed application. They are not available for third-party applications. <li>crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. <li>**internaltesting**: application under internal testing of AppGallery. <!--RP5--><!--RP5End--><li>none: others.
 
 **Type:** string
 
@@ -324,7 +325,8 @@ Installation source of an application. The options are as follows:
 - **pre-installed**: pre-installed application installed during the first boot.  
 - **ota**: pre-installed application added during system upgrade.  
 - **recovery**: pre-installed application manually restored by the user after uninstallation.  
-- **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a variable, subject to the actual value.  
+- **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a  
+variable, subject to the actual value.  
 - **unknown**: unknown application installation source.
 
 **Type:** string

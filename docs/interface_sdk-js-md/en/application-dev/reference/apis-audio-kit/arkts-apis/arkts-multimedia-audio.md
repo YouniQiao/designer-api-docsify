@@ -5,7 +5,8 @@ The module provides basic audio control capabilities, including volume adjustmen
 This module provides the following common audio-related functions:
 
 - [AudioManager](arkts-multimedia-audio.md): audio manager.  
-- [AudioRenderer](arkts-multimedia-audio.md): audio renderer, used to play Pulse Code Modulation (PCM) audio data.  
+- [AudioRenderer](arkts-multimedia-audio.md): audio renderer, used to play Pulse Code Modulation (PCM) audio  
+data.  
 - [AudioCapturer](arkts-multimedia-audio.md): audio capturer, used to record PCM audio data.
 
 **Since:** 7

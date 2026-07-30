@@ -46,28 +46,6 @@ Obtains the device clipboard policy.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let tokenId: number = 586874394;
-try {
-    let result: string = securityManager.getAppClipboardPolicy(wantTemp, tokenId);
-    console.info(`Succeeded in getting password policy, result : ${result}`);
-} catch(err) {
-    console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-
-```
-
 
 ## getAppClipboardPolicy
 
@@ -108,6 +86,28 @@ Obtains the device clipboard policy.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Example**
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let tokenId: number = 586874394;
+try {
+  let result: string = securityManager.getAppClipboardPolicy(wantTemp, tokenId);
+  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
+} catch(err) {
+  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
 
 
 ## getAppClipboardPolicy
@@ -150,29 +150,6 @@ Obtains the device clipboard policy of a specified application for a specified u
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
-**Example**
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let bundleName: string = 'com.example.myapplication';
-let accountId: number = 100;
-try {
-    let result: string = securityManager.getAppClipboardPolicy(wantTemp, bundleName, accountId);
-    console.info(`Succeeded in getting password policy, result : ${result}`);
-} catch(err) {
-    console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
-}
-
-```
-
 
 ## getAppClipboardPolicy
 
@@ -213,4 +190,27 @@ Obtains the device clipboard policy of a specified application for a specified u
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+
+**Example**
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let bundleName: string = 'com.example.myapplication';
+let accountId: number = 100;
+try {
+  let result: string = securityManager.getAppClipboardPolicy(wantTemp, bundleName, accountId);
+  console.info(`Succeeded in getting clipboard policy, result : ${result}`);
+} catch(err) {
+  console.error(`Failed to get clipboard policy. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
 

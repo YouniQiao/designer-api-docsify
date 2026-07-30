@@ -46,3 +46,25 @@ Gets the bundle names of the applications that have been set watermark.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 
+**Example**
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace with actual values.
+let accountId: number = 100;
+try {
+  let result: Array<string> = securityManager.getWatermarkImageApps(wantTemp, accountId);
+  console.info(`Succeeded in getting watermark image apps, result : ${JSON.stringify(result)}`);
+} catch(err) {
+  console.error(`Failed to get watermark image apps. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

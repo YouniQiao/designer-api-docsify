@@ -329,8 +329,7 @@
   - [cancelPrintJob(系统接口)](arkts-basicservices-print-cancelprintjob-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [checkPreferencesConflicts(系统接口)](arkts-basicservices-print-checkpreferencesconflicts-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [connectPrinter(系统接口)](arkts-basicservices-print-connectprinter-f-sys.md)<!--DelEnd-->
+  - [connectPrinter](arkts-basicservices-print-connectprinter-f.md)
   <!--Del-->
   - [connectPrinterByIdAndPpd(系统接口)](arkts-basicservices-print-connectprinterbyidandppd-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -399,52 +398,41 @@
   - [setDefaultPrinter(系统接口)](arkts-basicservices-print-setdefaultprinter-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setPrinterPreferences(系统接口)](arkts-basicservices-print-setprinterpreferences-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [startDiscoverPrinter(系统接口)](arkts-basicservices-print-startdiscoverprinter-f-sys.md)<!--DelEnd-->
+  - [startDiscoverPrinter](arkts-basicservices-print-startdiscoverprinter-f.md)
   <!--Del-->
   - [startGettingPrintFile(系统接口)](arkts-basicservices-print-startgettingprintfile-f-sys.md)<!--DelEnd-->
   - [startPrint](arkts-basicservices-print-startprint-f.md)
   <!--Del-->
   - [startPrintJob(系统接口)](arkts-basicservices-print-startprintjob-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [stopDiscoverPrinter(系统接口)](arkts-basicservices-print-stopdiscoverprinter-f-sys.md)<!--DelEnd-->
+  - [stopDiscoverPrinter](arkts-basicservices-print-stopdiscoverprinter-f.md)
   - [unregisterWatermarkCallback](arkts-basicservices-print-unregisterwatermarkcallback-f.md)
   <!--Del-->
   - [updateExtensionInfo(系统接口)](arkts-basicservices-print-updateextensioninfo-f-sys.md)<!--DelEnd-->
   - [updatePrinterInDiscovery](arkts-basicservices-print-updateprinterindiscovery-f.md)
-  <!--Del-->
-  - [updatePrinterInformation(系统接口)](arkts-basicservices-print-updateprinterinformation-f-sys.md)<!--DelEnd-->
+  - [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md)
   <!--Del-->
   - [updatePrinters(系统接口)](arkts-basicservices-print-updateprinters-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updatePrinterState(系统接口)](arkts-basicservices-print-updateprinterstate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [updatePrintJobState(系统接口)](arkts-basicservices-print-updateprintjobstate-f-sys.md)<!--DelEnd-->
+  - [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md)
   - [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)
-  <!--Del-->
-  - [PreviewAttribute(系统接口)](arkts-basicservices-print-previewattribute-i-sys.md)<!--DelEnd-->
+  - [PreviewAttribute](arkts-basicservices-print-previewattribute-i.md)
   - [PrintAttributes](arkts-basicservices-print-printattributes-i.md)
   - [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md)
   - [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md)
-  <!--Del-->
-  - [PrinterCapability(系统接口)](arkts-basicservices-print-printercapability-i-sys.md)<!--DelEnd-->
+  - [PrinterCapability](arkts-basicservices-print-printercapability-i.md)
   <!--Del-->
   - [PrinterExtensionInfo(系统接口)](arkts-basicservices-print-printerextensioninfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PrinterInfo(系统接口)](arkts-basicservices-print-printerinfo-i-sys.md)<!--DelEnd-->
+  - [PrinterInfo](arkts-basicservices-print-printerinfo-i.md)
   - [PrinterInformation](arkts-basicservices-print-printerinformation-i.md)
   - [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)
-  <!--Del-->
-  - [PrinterRange(系统接口)](arkts-basicservices-print-printerrange-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PrintJob(系统接口)](arkts-basicservices-print-printjob-i-sys.md)<!--DelEnd-->
+  - [PrinterRange](arkts-basicservices-print-printerrange-i.md)
+  - [PrintJob](arkts-basicservices-print-printjob-i.md)
   - [PrintJobData](arkts-basicservices-print-printjobdata-i.md)
-  <!--Del-->
-  - [PrintMargin(系统接口)](arkts-basicservices-print-printmargin-i-sys.md)<!--DelEnd-->
+  - [PrintMargin](arkts-basicservices-print-printmargin-i.md)
   - [PrintPageRange](arkts-basicservices-print-printpagerange-i.md)
   - [PrintPageSize](arkts-basicservices-print-printpagesize-i.md)
-  <!--Del-->
-  - [PrintResolution(系统接口)](arkts-basicservices-print-printresolution-i-sys.md)<!--DelEnd-->
+  - [PrintResolution](arkts-basicservices-print-printresolution-i.md)
   - [PrintTask](arkts-basicservices-print-printtask-i.md)
   - [SharedHost](arkts-basicservices-print-sharedhost-i.md)
   - [PrinterChangeCallback](arkts-basicservices-print-printerchangecallback-t.md)
@@ -599,34 +587,23 @@
   - [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md)
   - [ScannerSyncMode](arkts-basicservices-scan-scannersyncmode-e.md)
 - [@ohos.selectionInput.SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md)
-  <!--Del-->
-  - [SelectionExtensionAbility(系统接口)](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)<!--DelEnd-->
+  - [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)
 - [@ohos.selectionInput.SelectionExtensionContext](arkts-selectioninput-selectionextensioncontext.md)
-  <!--Del-->
-  - [SelectionExtensionContext(系统接口)](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c-sys.md)<!--DelEnd-->
+  - [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md)
 - [@ohos.selectionInput.SelectionPanel](arkts-selectioninput-selectionpanel.md)
-  <!--Del-->
-  - [PanelInfo(系统接口)](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PanelType(系统接口)](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md)<!--DelEnd-->
+  - [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md)
+  - [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
 - [@ohos.selectionInput.selectionManager](arkts-selectioninput-selectionmanager.md)
-  <!--Del-->
-  - [createPanel(系统接口)](arkts-basicservices-selectionmanager-createpanel-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [destroyPanel(系统接口)](arkts-basicservices-selectionmanager-destroypanel-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getSelectionContent(系统接口)](arkts-basicservices-selectionmanager-getselectioncontent-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [off(系统接口)](arkts-basicservices-selectionmanager-off-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [on(系统接口)](arkts-basicservices-selectionmanager-on-f-sys.md)<!--DelEnd-->
+  - [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)
+  - [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)
+  - [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md)
+  - [off](arkts-basicservices-selectionmanager-off-f.md)
+  - [on](arkts-basicservices-selectionmanager-on-f.md)
   - [Panel](arkts-basicservices-selectionmanager-panel-i.md)
   <!--Del-->
   - [Panel(系统接口)](arkts-basicservices-selectionmanager-panel-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [SelectionInfo(系统接口)](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [SelectionType(系统接口)](arkts-basicservices-selectionmanager-selectiontype-e-sys.md)<!--DelEnd-->
+  - [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)
+  - [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md)
 - [@ohos.systemDateTime](arkts-systemdatetime.md)
   - [getAutoTimeStatus](arkts-basicservices-systemdatetime-getautotimestatus-f.md)
   - [getCurrentTime](arkts-basicservices-systemdatetime-getcurrenttime-f.md)

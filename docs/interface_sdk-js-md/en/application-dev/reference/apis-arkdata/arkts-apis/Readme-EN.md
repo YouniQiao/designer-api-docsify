@@ -179,8 +179,7 @@
   - [TemplateId(system api)](arkts-arkdata-datashare-templateid-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpdateOperation(system api)](arkts-arkdata-datashare-updateoperation-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ChangeType(system api)](arkts-arkdata-datashare-changetype-e-sys.md)<!--DelEnd-->
+  - [ChangeType](arkts-arkdata-datashare-changetype-e.md)
   - [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md)
   - [DataProxyMaxValueLength](arkts-arkdata-datashare-dataproxymaxvaluelength-e.md)
   - [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md)
@@ -409,10 +408,8 @@
   - [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md)
   - [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md)
   - [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md)
-  <!--Del-->
-  - [removeAppShareOptions(system api)](arkts-arkdata-unifieddatachannel-removeappshareoptions-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setAppShareOptions(system api)](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md)<!--DelEnd-->
+  - [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f.md)
+  - [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md)
   - [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md)
   - [ApplicationDefinedRecord](arkts-arkdata-unifieddatachannel-applicationdefinedrecord-c.md)
   - [Audio](arkts-arkdata-unifieddatachannel-audio-c.md)
@@ -444,8 +441,6 @@
   - [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md)
   - [FileConflictOptions](arkts-arkdata-unifieddatachannel-fileconflictoptions-e.md)
   - [Intention](arkts-arkdata-unifieddatachannel-intention-e.md)
-  <!--Del-->
-  - [Intention(system api)](arkts-arkdata-unifieddatachannel-intention-e-sys.md)<!--DelEnd-->
   - [ListenerStatus](arkts-arkdata-unifieddatachannel-listenerstatus-e.md)
   - [ProgressIndicator](arkts-arkdata-unifieddatachannel-progressindicator-e.md)
   - [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)

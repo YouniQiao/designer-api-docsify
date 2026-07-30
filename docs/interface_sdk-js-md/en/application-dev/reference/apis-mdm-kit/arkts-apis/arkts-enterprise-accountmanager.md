@@ -14,8 +14,6 @@ The **accountManager** module provides APIs for account management of enterprise
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

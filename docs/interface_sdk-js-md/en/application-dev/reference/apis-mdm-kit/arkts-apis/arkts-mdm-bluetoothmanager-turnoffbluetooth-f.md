@@ -45,16 +45,18 @@ Disables Bluetooth. After Bluetooth is disabled, the user can manually enable it
 import { Want } from '@kit.AbilityKit';
 import { bluetoothManager } from '@kit.MDMKit';
 
+// Create an EnterpriseAdminExtensionAbility component.
 let wantTemp: Want = {
   // Replace it as required.
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
-    bluetoothManager.turnOffBluetooth(wantTemp);
-    console.info('Succeeded in turning off bluetooth.');
+  // Disable Bluetooth.
+  bluetoothManager.turnOffBluetooth(wantTemp);
+  console.info('Succeeded in turning off bluetooth.');
 } catch(err) {
-    console.error(`Failed to turn off bluetooth. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to turn off bluetooth. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

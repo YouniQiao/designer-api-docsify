@@ -84,8 +84,10 @@ filterLimit?: number
 Notification filtering range. The default value is **0**. The options are as follows:
 
 - **0**: All notifications are included in the subscription.  
-- **1**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is empty.  
-- **2**: Filter out notifications whose slot type is [SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is not empty.
+- **1**: Filter out notifications whose slot type is  
+[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is empty.  
+- **2**: Filter out notifications whose slot type is  
+[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and [userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is not empty.
 
 **Type:** number
 

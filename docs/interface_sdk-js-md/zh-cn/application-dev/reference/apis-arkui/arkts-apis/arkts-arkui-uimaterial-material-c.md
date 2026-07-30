@@ -1,4 +1,4 @@
-# Material（系统接口）
+# Material
 
 系统材质对象基类。
 
@@ -7,8 +7,6 @@
 <!--Device-uiMaterial-class Material--><!--Device-uiMaterial-class Material-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**系统接口：** 此接口为系统接口。
 
 ## 导入模块
 

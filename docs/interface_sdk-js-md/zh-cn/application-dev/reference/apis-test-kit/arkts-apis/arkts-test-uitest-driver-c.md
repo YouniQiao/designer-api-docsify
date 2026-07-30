@@ -3593,7 +3593,8 @@ Trigger pen key operation.
 Supported combinations:
 
 - HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation.  
-- AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options),HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation.Other combinations will result in a BusinessError 17000007.
+- AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options),  
+HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation.Other combinations will result in a BusinessError 17000007.
 
 **起始版本：** 26.0.0
 

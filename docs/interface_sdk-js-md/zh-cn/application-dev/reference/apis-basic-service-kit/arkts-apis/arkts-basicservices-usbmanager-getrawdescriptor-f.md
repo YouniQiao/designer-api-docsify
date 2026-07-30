@@ -56,13 +56,13 @@ async function getRawDescriptor() {
     console.error(`request right failed`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  if (devicepipe == undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
-  usbManager.getRawDescriptor(devicepipe);
-  usbManager.closePipe(devicepipe);
+  usbManager.getRawDescriptor(devicePipe);
+  usbManager.closePipe(devicePipe);
 }
 
 ```

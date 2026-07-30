@@ -1,6 +1,8 @@
 # AutoExposure
 
-AutoExposure inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md).It provides APIs related to auto exposure.
+**AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md).
+
+It provides APIs related to auto exposure.
 
 **Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)
 
@@ -15,6 +17,36 @@ AutoExposure inherits from [AutoExposureQuery](arkts-camera-camera-autoexposureq
 ```TypeScript
 import { camera } from '@kit.CameraKit';
 ```
+
+## getExposureMeteringMode
+
+```TypeScript
+getExposureMeteringMode(): ExposureMeteringMode
+```
+
+Obtains the exposure metering mode in use.
+
+**Since:** 24
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-AutoExposure-getExposureMeteringMode(): ExposureMeteringMode--><!--Device-AutoExposure-getExposureMeteringMode(): ExposureMeteringMode-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e.md) | Exposure metering mode obtained. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 23 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
 
 ## getExposureMode
 
@@ -110,7 +142,7 @@ Obtains the metering point of the camera device.
 offExposureStateChange(callback?: Callback<ExposureState>): void
 ```
 
-Unregisters the callback used to listen for exposure state changes.
+Unregisters the listener for exposure state change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -126,7 +158,7 @@ Unregisters the callback used to listen for exposure state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;ExposureState&gt; | No | Callback used to get the exposure state change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;ExposureState&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. If the callback object is null or an anonymous function, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## onExposureStateChange
 
@@ -134,7 +166,7 @@ Unregisters the callback used to listen for exposure state changes.
 onExposureStateChange(callback: Callback<ExposureState>): void
 ```
 
-Registers a callback to listen for exposure state changes.
+Listens to exposure state change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -150,7 +182,7 @@ Registers a callback to listen for exposure state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;ExposureState&gt; | Yes | Callback used to get the exposure state change. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;ExposureState&gt; | Yes | Callback used to return the exposure state. |
 
 ## setExposureBias
 
@@ -158,7 +190,9 @@ Registers a callback to listen for exposure state changes.
 setExposureBias(exposureBias: number): void
 ```
 
-Sets an exposure compensation value (EV).Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) to obtain the supported values.
+Sets an exposure compensation value (EV).
+
+Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) to obtain the supported values.
 
 **Since:** 11
 
@@ -180,6 +214,37 @@ Sets an exposure compensation value (EV).Before the setting, you are advised to 
 | --- | --- |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+
+## setExposureMeteringMode
+
+```TypeScript
+setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void
+```
+
+Sets exposure metering mode.
+
+**Since:** 24
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-AutoExposure-setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void--><!--Device-AutoExposure-setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| aeMeteringMode | [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e.md) | Yes | Exposure metering mode. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 23 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 23 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
 
 ## setExposureMode
 

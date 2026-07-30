@@ -40,8 +40,8 @@ Clears the text information of a component. This API takes effect only for edita
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -83,8 +83,8 @@ Clicks this component. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -126,8 +126,8 @@ Double-clicks this component. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -176,8 +176,8 @@ Drags a component to the target component. This API uses a promise to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -220,8 +220,8 @@ Obtains the bounds information of this component. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -263,8 +263,8 @@ Obtains the center point of the area occupied by this component. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -306,8 +306,8 @@ Obtains the description of this component. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -349,8 +349,8 @@ Obtains the ID of the display to which the component belongs. This API uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -392,8 +392,8 @@ Obtains the hint text of a component. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -435,8 +435,8 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -478,8 +478,8 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -527,8 +527,8 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -570,8 +570,8 @@ Obtains the type of this component. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -620,8 +620,8 @@ Clears the original text in a component and inputs the specified text. This API 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -672,8 +672,8 @@ Inputs text to a component in a specified text input mode. This API takes effect
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to limited device capabilities. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -709,14 +709,14 @@ Obtains the checkable status of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component object is checkable.The value **true** indicates indicates that the component is checkable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component object is checkable.   The value **true** indicates indicates that the component is checkable, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -756,14 +756,14 @@ Obtains the checked status of this component. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return the checked status of the component object.The value **true** indicates indicates that the component is checked, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return the checked status of the component object.   The value **true** indicates indicates that the component is checked, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -803,14 +803,14 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component object is clickable.The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component object is clickable.   The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -850,14 +850,14 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is enabled.The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component is enabled.   The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -897,14 +897,14 @@ Checks whether a component is focused. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is focused.The value **true** indicates that the component is focused, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component is focused.   The value **true** indicates that the component is focused, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -944,14 +944,14 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component object is clickable.The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component object is clickable.   The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -991,14 +991,14 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component object is scrollable.The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component object is scrollable.   The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -1038,14 +1038,14 @@ Obtains the selected status of this component. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the component is selected.The value **true** indicates that the component is selected, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the component is selected.   The value **true** indicates that the component is selected, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -1091,8 +1091,8 @@ Long-clicks this component. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -1141,8 +1141,8 @@ Pinches in a component at the specified scale. This API uses a promise to return
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -1191,8 +1191,8 @@ Pinches out a component at the specified scale. This API uses a promise to retur
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -1241,8 +1241,8 @@ Scrolls on this component to search for the target component. This API is applic
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -1293,8 +1293,8 @@ Scrolls on this component to search for the target component. This API is applic
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -1343,8 +1343,8 @@ Scrolls to the bottom of this component. This API is applicable to components th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 
@@ -1393,8 +1393,8 @@ Scrolls to the top of this component. This API is applicable to components that 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-lost) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 **Example**
 

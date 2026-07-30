@@ -330,5 +330,5 @@ Called when the slidable panel type is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md) | Yes |  |
+| value | [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | Yes |  |
 

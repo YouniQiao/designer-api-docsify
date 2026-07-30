@@ -59,7 +59,8 @@ Rotation of the component during transition, which is the value of the start poi
 - **x**: X-component of the rotation vector.  
 - **y**: Y-component of the rotation vector.  
 - **z**: Z-component of the rotation vector.  
-- **centerX** and **centerY**: rotation center point. The default values are both **"50%"**, indicating the center point of the page.  
+- **centerX** and **centerY**: rotation center point. The default values are both **"50%"**, indicating the center  
+point of the page.  
 - If the center point is (0, 0), it refers to the upper left corner of the component.
 
 **Type:** RotateOptions
@@ -85,7 +86,8 @@ Scaling of the component during transition, which is the value of the start poin
 - **x**: scale factor along the x-axis.  
 - **y**: scale factor along the y-axis.  
 - **z**: scale factor along the z-axis (not effective for the current 2D graphics).  
-- **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center point of the page.  
+- **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center  
+point of the page.  
 - If the center point is (0, 0), it refers to the upper left corner of the component.
 
 **NOTE**

@@ -56,7 +56,9 @@ let wantTemp: Want = {
 
 // Replace the value of appId with the specified application ID of the browser.
 let appId: string = 'com.example.******_******/******5t5CoBM=';
+// Browser policy name.
 let policyName: string = 'InsecurePrivateNetworkRequestsAllowed';
+// Browser policy value.
 let policyValue: string = '{"level":"mandatory","scope":"machine","source":"platform","value":true}';
 
 try {

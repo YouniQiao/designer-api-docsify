@@ -370,15 +370,18 @@ File type and permissions. The first four bits indicate the file type, and the l
 - **0o0700**: mask used to obtain the owner permissions.  
 - **0o0400**: The owner has the permission to read a regular file or a directory entry.  
 - **0o0200**: The owner has the permission to write a regular file or create and delete a directory entry.  
-- **0o0100**: The owner has the permission to execute a regular file or search for the specified path in a directory.  
+- **0o0100**: The owner has the permission to execute a regular file or search for the specified path in a  
+directory.  
 - **0o0070**: mask used to obtain the user group permissions.  
 - **0o0040**: The user group has the permission to read a regular file or a directory entry.  
 - **0o0020**: The user group has the permission to write a regular file or create and delete a directory entry.  
-- **0o0010**: The user group has the permission to execute a regular file or search for the specified path in a directory.  
+- **0o0010**: The user group has the permission to execute a regular file or search for the specified path in a  
+directory.  
 - **0o0007**: mask used to obtain the permissions of other users.  
 - **0o0004**: Other users have the permission to read a regular file or a directory entry.  
 - **0o0002**: Other users have the permission to write a regular file or create and delete a directory entry.  
-- **0o0001**: Other users have the permission to execute a regular file or search for the specified path in a directory.
+- **0o0001**: Other users have the permission to execute a regular file or search for the specified path in a  
+directory.
 
 **Type:** number
 

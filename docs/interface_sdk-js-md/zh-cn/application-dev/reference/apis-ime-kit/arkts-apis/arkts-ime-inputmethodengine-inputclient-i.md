@@ -2,13 +2,20 @@
 
 InputClient是输入法客户端对象，代表当前绑定到输入法应用的编辑框客户端。InputClient实例通过InputMethodAbility的[on('inputStart')](inputMethodEngine.InputMethodAbility.on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void))事件回调获取，每个绑定事件对应一个InputClient实例，输入法应用通过该实例与编辑框进行文本交互。**核心功能概述：**
 
-- **文本获取**：通过[getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)/[getForwardSync](arkts-ime-inputmethodengine-inputclient-i.md#getforwardsync)获取光标前的文本，通过[getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)/[getBackwardSync](arkts-ime-inputmethodengine-inputclient-i.md#getbackwardsync)获取光标后的文本，用于分析已输入内容并提供智能补全。  
-- **文本编辑**：通过[insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)/[insertTextSync](arkts-ime-inputmethodengine-inputclient-i.md#inserttextsync)插入文本，通过[deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)/[deleteForwardSync](arkts-ime-inputmethodengine-inputclient-i.md#deleteforwardsync)删除光标前的文本，通过[deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)/[deleteBackwardSync](arkts-ime-inputmethodengine-inputclient-i.md#deletebackwardsync)删除光标后的文本。  
-- **功能键与光标**：通过[sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)发送功能键（如回车键），通过[moveCursor](arkts-ime-inputmethodengine-inputclient-i.md#movecursor)/[moveCursorSync](arkts-ime-inputmethodengine-inputclient-i.md#movecursorsync)移动光标。  
-- **选区操作**：通过[selectByRange](arkts-ime-inputmethodengine-inputclient-i.md#selectbyrange)/[selectByRangeSync](arkts-ime-inputmethodengine-inputclient-i.md#selectbyrangesync)按范围选中文本，通过[selectByMovement](arkts-ime-inputmethodengine-inputclient-i.md#selectbymovement)/[selectByMovementSync](arkts-ime-inputmethodengine-inputclient-i.md#selectbymovementsync)按方向选中文本。  
-- **编辑框属性**：通过[getEditorAttribute](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)/[getEditorAttributeSync](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattributesync)获取编辑框属性信息（输入类型、回车键类型等），据此调整键盘布局。  
-- **文本预览**：通过[setPreviewText](arkts-ime-inputmethodengine-inputclient-i.md#setpreviewtext)/[setPreviewTextSync](arkts-ime-inputmethodengine-inputclient-i.md#setpreviewtextsync)设置预览文本，通过[finishTextPreview](arkts-ime-inputmethodengine-inputclient-i.md#finishtextpreview)/[finishTextPreviewSync](arkts-ime-inputmethodengine-inputclient-i.md#finishtextpreviewsync)结束文本预览。  
-- **私有通信**：通过[sendPrivateCommand](arkts-ime-inputmethodengine-inputclient-i.md#sendprivatecommand)向应用发送私有命令，通过[sendMessage](arkts-ime-inputmethodengine-inputclient-i.md#sendmessage)/[recvMessage](arkts-ime-inputmethodengine-inputclient-i.md#recvmessage)进行消息通信。
+- **文本获取**：通过  
+[getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)/[getForwardSync](arkts-ime-inputmethodengine-inputclient-i.md#getforwardsync)获取光标前的文本，通过[getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)/[getBackwardSync](arkts-ime-inputmethodengine-inputclient-i.md#getbackwardsync)获取光标后的文本，用于分析已输入内容并提供智能补全。  
+- **文本编辑**：通过  
+[insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)/[insertTextSync](arkts-ime-inputmethodengine-inputclient-i.md#inserttextsync)插入文本，通过[deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)/[deleteForwardSync](arkts-ime-inputmethodengine-inputclient-i.md#deleteforwardsync)删除光标前的文本，通过[deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)/[deleteBackwardSync](arkts-ime-inputmethodengine-inputclient-i.md#deletebackwardsync)删除光标后的文本。  
+- **功能键与光标**：通过  
+[sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)发送功能键（如回车键），通过[moveCursor](arkts-ime-inputmethodengine-inputclient-i.md#movecursor)/[moveCursorSync](arkts-ime-inputmethodengine-inputclient-i.md#movecursorsync)移动光标。  
+- **选区操作**：通过  
+[selectByRange](arkts-ime-inputmethodengine-inputclient-i.md#selectbyrange)/[selectByRangeSync](arkts-ime-inputmethodengine-inputclient-i.md#selectbyrangesync)按范围选中文本，通过[selectByMovement](arkts-ime-inputmethodengine-inputclient-i.md#selectbymovement)/[selectByMovementSync](arkts-ime-inputmethodengine-inputclient-i.md#selectbymovementsync)按方向选中文本。  
+- **编辑框属性**：通过  
+[getEditorAttribute](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)/[getEditorAttributeSync](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattributesync)获取编辑框属性信息（输入类型、回车键类型等），据此调整键盘布局。  
+- **文本预览**：通过[setPreviewText](arkts-ime-inputmethodengine-inputclient-i.md#setpreviewtext)/  
+[setPreviewTextSync](arkts-ime-inputmethodengine-inputclient-i.md#setpreviewtextsync)设置预览文本，通过[finishTextPreview](arkts-ime-inputmethodengine-inputclient-i.md#finishtextpreview)/[finishTextPreviewSync](arkts-ime-inputmethodengine-inputclient-i.md#finishtextpreviewsync)结束文本预览。  
+- **私有通信**：通过[sendPrivateCommand](arkts-ime-inputmethodengine-inputclient-i.md#sendprivatecommand)向应用发送私有命令，通过  
+[sendMessage](arkts-ime-inputmethodengine-inputclient-i.md#sendmessage)/[recvMessage](arkts-ime-inputmethodengine-inputclient-i.md#recvmessage)进行消息通信。
 
 下列API均需使用[on('inputStart')](inputMethodEngine.InputMethodAbility.on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void))获取到InputClient实例后，通过实例调用。
 

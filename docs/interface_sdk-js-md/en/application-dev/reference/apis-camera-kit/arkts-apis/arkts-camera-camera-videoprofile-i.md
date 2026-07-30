@@ -22,7 +22,7 @@ import { camera } from '@kit.CameraKit';
 readonly frameRateRange: FrameRateRange
 ```
 
-Frame rate range, in units of frames per second (FPS).
+Describes the frame rate range. Unit: FPS
 
 **Type:** FrameRateRange
 

@@ -3182,9 +3182,11 @@ Supported audio formats: M4A, AAC, MP3, OGG, WAV, FLAC, AMR, and APE.
 
 **NOTE**
 
-- To set the playback URL, you need to declare the [ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet)permission. The related error code is [201 Permission Denied](../../../reference/errorcode-universal.md#201-permission-denied).  
+- To set the playback URL, you need to declare the  
+[ohos.permission.INTERNET](../../../security/AccessToken/permissions-for-all.md#ohospermissioninternet)permission. The related error code is [201 Permission Denied](../../../reference/errorcode-universal.md#201-permission-denied).  
 - WebM is no longer supported since API version 11.  
-- After the resource handle (FD) is transferred to an AVPlayer instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVPlayers use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
+- After the resource handle (FD) is transferred to an AVPlayer instance, do not use the resource handle to  
+perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVPlayers use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** string
 

@@ -37,9 +37,14 @@ import { autoFillManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
+| [AutoFillRect](arkts-ability-autofillmanager-autofillrect-t.md) | Defines the rectangle used for auto-fill. |
 | [FillFailureResult](arkts-ability-autofillmanager-fillfailureresult-t.md) | The interface of filling failure result. |
+| [FillRequest](arkts-ability-autofillmanager-fillrequest-t.md) | Defines the information about an auto-fill request. |
 | [OnFillFailureFn](arkts-ability-autofillmanager-onfillfailurefn-t.md) | Called when auto fill request is failed to be handled. |
 | [OnFillSuccessFn](arkts-ability-autofillmanager-onfillsuccessfn-t.md) | Called when auto fill request is successfully handled. |
+| [PageNodeInfo](arkts-ability-autofillmanager-pagenodeinfo-t.md) | Defines the page node information used for auto-fill. |
+| [SaveRequest](arkts-ability-autofillmanager-saverequest-t.md) | Defines the information about an auto-save request. |
+| [ViewData](arkts-ability-autofillmanager-viewdata-t.md) | Defines the view data used for auto-fill. |
 
 <!--Del-->
 ### Types（系统接口）
@@ -47,16 +52,11 @@ import { autoFillManager } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [AutoFillPopupConfig](arkts-ability-autofillmanager-autofillpopupconfig-t-sys.md) | Defines the size and position information of an auto-fill pop-up. |
-| [AutoFillRect](arkts-ability-autofillmanager-autofillrect-t-sys.md) | Defines the rectangle used for auto-fill. |
 | [CustomData](arkts-ability-autofillmanager-customdata-t-sys.md) | Defines the custom data. |
-| [FillRequest](arkts-ability-autofillmanager-fillrequest-t-sys.md) | Defines the information about an auto-fill request. |
 | [FillRequestCallback](arkts-ability-autofillmanager-fillrequestcallback-t-sys.md) | Defines the callback for an auto-fill request, which is used to automatically fill in or generate a password. The callback can be used to notify the client of the success or failure of the request. |
 | [FillResponse](arkts-ability-autofillmanager-fillresponse-t-sys.md) | Defines the information about the response to an auto-fill request. |
-| [PageNodeInfo](arkts-ability-autofillmanager-pagenodeinfo-t-sys.md) | Defines the page node information used for auto-fill. |
 | [PopupSize](arkts-ability-autofillmanager-popupsize-t-sys.md) | Defines the width and height of an auto-fill pop-up. |
-| [SaveRequest](arkts-ability-autofillmanager-saverequest-t-sys.md) | Defines the information about an auto-save request. |
 | [SaveRequestCallback](arkts-ability-autofillmanager-saverequestcallback-t-sys.md) | Defines the callback for an automatic or a manual saving request. |
 | [UpdateRequest](arkts-ability-autofillmanager-updaterequest-t-sys.md) | Defines the information about an auto-update request. |
-| [ViewData](arkts-ability-autofillmanager-viewdata-t-sys.md) | Defines the view data used for auto-fill. |
 <!--DelEnd-->
 

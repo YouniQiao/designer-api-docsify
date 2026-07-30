@@ -46,6 +46,15 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
 
+**示例：**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioRecordingManager.offSystemRecordControllerEnabledChange();
+
+```
+
 ## onSystemRecordControllerEnabledChange
 
 ```TypeScript
@@ -78,4 +87,15 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 | [6800102](../errorcode-audio.md#6800102-分配内存失败) | Memory allocation failed. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio service error occurs like service died. |
+
+**示例：**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioRecordingManager.onSystemRecordControllerEnabledChange((changeInfo: audio.SystemRecordControllerChangeInfo) => {
+  console.info(`System record controller enabled state changed: ${changeInfo.enabled}, uid: ${changeInfo.uid}, sourceType: ${changeInfo.sourceType}`);
+});
+
+```
 

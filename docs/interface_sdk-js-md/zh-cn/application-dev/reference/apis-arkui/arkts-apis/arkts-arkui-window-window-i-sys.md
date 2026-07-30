@@ -535,46 +535,6 @@ export default class EntryAbility extends UIAbility {
 
 ```
 
-## enableDrag
-
-```TypeScript
-enableDrag(enable: boolean): Promise<void>
-```
-
-使能/禁止拖拽窗口，仅对系统窗口、应用子窗口、全局悬浮窗和模态窗口生效。使用Promise异步回调。
-
-使能后，将允许通过鼠标操作或触摸对窗口进行拉伸操作。
-
-**起始版本：** 20
-
-<!--Device-Window-enableDrag(enable: boolean): Promise<void>--><!--Device-Window-enableDrag(enable: boolean): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| enable | boolean | 是 | 是否允许拖拽。<br>true表示允许，false表示不允许。</br> |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 14 - 19 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
-
 ## getRotationLocked
 
 ```TypeScript
@@ -1344,9 +1304,9 @@ export default class EntryAbility extends UIAbility {
           let targetWindow: window.Window = windowClass;
           let properties = targetWindow.getWindowProperties();
           let targetId = properties.id;
-          windowClass.raiseAboveTarget(targetId).then(()=> {
+          windowClass.raiseAboveTarget(targetId).then(() => {
             console.info('Succeeded in raising the subWindow to target subWindow top.');
-          }).catch((err: BusinessError)=>{
+          }).catch((err: BusinessError) => {
             console.error(`Failed to raise the subWindow to target subWindow top. Cause code: ${err.code}, message: ${err.message}`);
           });
         });
@@ -2688,49 +2648,6 @@ export default class EntryAbility extends UIAbility {
 
 ```
 
-## setTouchableAreas
-
-```TypeScript
-setTouchableAreas(rects: Array<Rect>): Promise<void>
-```
-
-实现设置窗口可触摸区域；不设置时默认整个窗口区域可触摸；设置窗口可触摸区域后，区域外触摸事件将被透传；如果窗口区域发生变化需要重新设置。
-
-**起始版本：** 26.0.0
-
-**需要权限：** 
-- API版本26.0.0+：ohos.permission.SET_WINDOW_TOUCH_AREAS
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>--><!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| rects | Array&lt;Rect&gt; | 是 | 窗口可触摸区域。可触摸区域最大个数不能超过10个，且范围不能超出窗口区域。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 24 |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid parameter range. |
-
 ## setWakeUpScreen
 
 ```TypeScript
@@ -2884,44 +2801,6 @@ try {
 }
 
 ```
-
-## setWindowContainerModalColor
-
-```TypeScript
-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
-```
-
-设置主窗口容器在焦点态和非焦点态时的背景色。该接口需在调用[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)后使用。
-
-窗口容器背景色覆盖整个窗口区域，包括标题栏和内容区域。内容区域背景色默认跟随系统深浅色，当同时使用该接口和[setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
-
-**起始版本：** 26.0.0
-
-**需要权限：** 
-- API版本26.0.0+：ohos.permission.SET_WINDOW_ALPHA
-
-<!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void--><!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| activeColor | string | 是 | 窗口容器处于焦点态时的背景色，为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。 |
-| inactiveColor | string | 是 | 窗口容器处于非焦点态时的背景色，为十六进制RGB颜色或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**适用版本：** 26.0.0+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 20 - 24 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
-| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. |
 
 ## setWindowMode
 

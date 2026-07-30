@@ -78,7 +78,7 @@ Query whether the assets exist and whether the invoker has read permission on th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Map&lt;string, MediaAssetPermissionState&gt;&gt; | - Returns whether the assets exist and whether the invoker has read permission on the assets without permission. |
+| Promise&lt;Map&lt;string, MediaAssetPermissionState&gt;&gt; | - Returns   whether the assets exist and whether the invoker has read permission on the assets without permission. |
 
 **Error codes:**
 

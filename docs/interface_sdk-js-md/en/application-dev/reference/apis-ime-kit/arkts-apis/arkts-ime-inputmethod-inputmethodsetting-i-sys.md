@@ -375,7 +375,7 @@ Checks whether the input method panel of a specified type is shown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panelInfo | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | Yes | Information about the input method panel. |
+| panelInfo | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
 
 **Return value:**
 
@@ -428,7 +428,7 @@ Checks whether the input method panel of a specified type is shown on a specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panelInfo | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | Yes | Information about the input method panel. |
+| panelInfo | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
 | displayId | number | Yes | Display ID. |
 
 **Return value:**

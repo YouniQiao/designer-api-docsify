@@ -457,9 +457,12 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<Abilit
 
 Opens an atomic service in an independent window. This API uses a promise to return the result. It can be called only on the main thread.After an atomic service is started, the following situations may occur:
 
-- Normally, the atomic service can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate itself. The result is returned to the caller.  
-- If an exception occurs, for example, the atomic service is killed, an exception result, in which **resultCode** is **-1**, is returned to the caller.  
-- If the atomic service is started multiple times by different applications calling this API, when the atomic service calls [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
+- Normally, the atomic service can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate itself. The result is returned to the caller.  
+- If an exception occurs, for example, the atomic service is killed, an exception result, in which **resultCode**  
+is **-1**, is returned to the caller.  
+- If the atomic service is started multiple times by different applications calling this API, when the atomic  
+service calls [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
 > **NOTE**  
 >  
 > For details about the startup rules for the components in the stage model, see  
@@ -510,11 +513,13 @@ openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<Abili
 ```
 
 Starts a UIAbility by using <!--RP2-->[App Linking](../../../application-models/app-linking-startup.md)&lt;!--RP2End-  
--&gt; or [Deep Linking](../../../application-models/deep-linking-startup.md), and returns the exit result of the launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread.A URL in the standard format is passed in to the **link** field to start the target UIAbility based on the implicit Want matching rules. The target UIAbility must have the following filter characteristics to process links of App Linking:
+-&gt; or [Deep Linking](../../../application-models/deep-linking-startup.md), and returns the exit result of the  
+launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread.A URL in the standard format is passed in to the **link** field to start the target UIAbility based on the implicit Want matching rules. The target UIAbility must have the following filter characteristics to process links of App Linking:
 
 - The **actions** field must contain **ohos.want.action.viewData**.  
 - The **entities** field must contain **entity.system.browsable**.  
-- The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**.If you want to obtain the result after the started UIAbility is terminated, set the **callback** parameter. For details about how to use this parameter, see [startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult).If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise.
+- The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**.  
+If you want to obtain the result after the started UIAbility is terminated, set the **callback** parameter. For details about how to use this parameter, see [startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult).If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise.
 > **NOTE**  
 >  
 > For details about the startup rules for the components in the stage model, see  
@@ -1566,9 +1571,12 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread.The following situations may be possible for a started UIAbility:
 
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate the UIAbility and return the result to the caller.  
-- If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-1**, is returned to the caller.  
-- If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate the UIAbility and return the result to the caller.  
+- If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
+1**, is returned to the caller.  
+- If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
+UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
 > **NOTE**  
 >  
 > For details about the startup rules for the components in the stage model, see  
@@ -1631,9 +1639,12 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 
 Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread.The following situations may be possible for a started UIAbility:
 
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate the UIAbility and return the result to the caller.  
-- If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-1**, is returned to the caller.  
-- If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate the UIAbility and return the result to the caller.  
+- If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
+1**, is returned to the caller.  
+- If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
+UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
 > **NOTE**  
 >  
 > For details about the startup rules for the components in the stage model, see  
@@ -1697,9 +1708,12 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread.The following situations may be possible for a started UIAbility:
 
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate the UIAbility and return the result to the caller.  
-- If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-1**, is returned to the caller.  
-- If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
+- Normally, you can call  
+[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate the UIAbility and return the result to the caller.  
+- If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
+1**, is returned to the caller.  
+- If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
+UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
 > **NOTE**  
 >  
 > For details about the startup rules for the components in the stage model, see  

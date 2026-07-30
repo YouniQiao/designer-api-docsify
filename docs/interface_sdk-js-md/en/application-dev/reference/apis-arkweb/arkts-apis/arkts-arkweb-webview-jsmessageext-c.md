@@ -116,7 +116,7 @@ Get the object or exception of the the JavaScript code execution result and seri
 
 | Type | Description |
 | --- | --- |
-| string | - If an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of2048 will be truncated; otherwise, return null. |
+| string | - If an exception occurs, or the returned type is object, return the   serialized string in the format of "Not support type: &lt;{exception\|object}&gt;", Parts exceeding a length of2048 will be truncated; otherwise, return null. |
 
 ## getNumber
 

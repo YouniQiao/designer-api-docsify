@@ -95,7 +95,7 @@ function stopBackgroundRunning(context: Context): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | - 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md)。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | - 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md)。<br>Stage模型的应用Context定义见   [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md)。 |
 
 **返回值：**
 

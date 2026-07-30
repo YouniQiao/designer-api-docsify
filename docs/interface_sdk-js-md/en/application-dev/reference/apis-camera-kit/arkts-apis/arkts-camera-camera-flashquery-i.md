@@ -1,6 +1,12 @@
 # FlashQuery
 
-Provides APIs to obtain the flash information of a camera device, including whether the LCD flash is supported.
+FlashQuery provides APIs to query the flash status and mode of a camera device.
+> **NOTE**  
+>  
+> - This interface was first introduced in API version 12. In this version, a compatibility change was made that  
+> preserved the initial version information of inner elements. As a result, you might see outer element's @since  
+> version number being higher than that of the inner elements. However, this discrepancy does not affect the  
+> functionality of the interface.
 
 **Since:** 12
 
@@ -34,7 +40,7 @@ Checks whether the camera device has flash.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the camera device has flash. **true** if it has flash, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| boolean | Whether the camera has flash. **true** if it has, **false** otherwise.<br>If **false** is returned, [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported),[setFlashMode](arkts-camera-camera-flash-i.md#setflashmode), and [getFlashMode](arkts-camera-camera-flash-i.md#getflashmode) do not take effect.<br>If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 

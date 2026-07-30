@@ -19,7 +19,8 @@ Subscribes to permission usage status change events for a specified permission l
 Multiple callback functions are allowed to be subscribed for the same permissionList.
 > **NOTE**  
 > It is not allowed to subscribe the same callback function using two permissionLists that have an intersection.  
-> That is, if two permissionLists contain the same permission name, the same callback function cannot be used for subscription.  
+> That is, if two permissionLists contain the same permission name, the same callback function cannot be used for  
+subscription.  
 > This API is typically used in conjunction with [off](privacyManager.off).  
 > When listening is no longer needed, off should be called to unsubscribe.
 

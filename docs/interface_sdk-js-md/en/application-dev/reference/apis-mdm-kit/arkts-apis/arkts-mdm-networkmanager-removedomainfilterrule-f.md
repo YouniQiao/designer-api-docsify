@@ -75,7 +75,7 @@ try {
   console.error(`Failed to remove domain filter rules. Code: ${err.code}, message: ${err.message}`);
 }
 
-// Remove all firewall rules.
+// Clears all IPv4 rules.
 try {
   networkManager.removeDomainFilterRule(wantTemp);
   console.info('Succeeded in removing all domain filter rules');

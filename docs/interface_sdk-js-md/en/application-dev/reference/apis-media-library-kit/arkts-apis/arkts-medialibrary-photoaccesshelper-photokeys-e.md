@@ -224,6 +224,22 @@ Title of the file.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## POSITION
+
+```TypeScript
+POSITION = 'position'
+```
+
+File location type.
+
+**Since:** 16
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-POSITION = 'position'--><!--Device-PhotoKeys-POSITION = 'position'-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## DATE_ADDED_MS
 
 ```TypeScript
@@ -389,6 +405,20 @@ Unix timestamp when the image was captured, in milliseconds.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DATE_TAKEN_MS = 'date_taken_ms'--><!--Device-PhotoKeys-DATE_TAKEN_MS = 'date_taken_ms'-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## OWNER_ALBUM_ID
+
+```TypeScript
+OWNER_ALBUM_ID = 'owner_album_id'
+```
+
+ID of the album to which the photo belongs.
+
+**Since:** 22
+
+<!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'--><!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

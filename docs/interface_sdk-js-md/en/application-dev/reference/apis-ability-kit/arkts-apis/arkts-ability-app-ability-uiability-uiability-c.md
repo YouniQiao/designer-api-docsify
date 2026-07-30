@@ -24,8 +24,10 @@ onBackPressed(): boolean
 
 Called when an operation of going back to the previous page is triggered on this UIAbility. The return value determines whether to destroy the UIAbility instance.
 
-- When the target SDK version is earlier than 12, the default return value is **false**, indicating that the UIAbility will be destroyed.  
-- When the target SDK version is 12 or later, the default return value is **true**, indicating that the UIAbility will be moved to the background and will not be destroyed.
+- When the target SDK version is earlier than 12, the default return value is **false**, indicating that the  
+UIAbility will be destroyed.  
+- When the target SDK version is 12 or later, the default return value is **true**, indicating that the UIAbility  
+will be moved to the background and will not be destroyed.
 
 **Since:** 10
 

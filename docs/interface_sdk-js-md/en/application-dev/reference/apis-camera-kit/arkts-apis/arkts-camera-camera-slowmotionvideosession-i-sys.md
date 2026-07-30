@@ -1,8 +1,6 @@
 # SlowMotionVideoSession (System API)
 
 SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect Implements a slow-motion video session, which sets the parameters of the slow-motion video mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md)instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md).
-> **NOTE**  
-> > In slow-motion video mode, only preview streams and video streams can be added.
 
 **Inheritance/Implementation:** SlowMotionVideoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
 
@@ -27,9 +25,6 @@ isSlowMotionDetectionSupported(): boolean
 ```
 
 Checks whether the device supports slow-motion detection.
-> **NOTE**  
-> > This API must be called after [commitConfig](arkts-camera-camera-session-i.md#commitconfig) is  
-> called.
 
 **Since:** 12
 
@@ -418,12 +413,6 @@ setSlowMotionDetectionArea(area: Rect): void
 ```
 
 Sets an area for slow-motion detection.
-> **NOTE**  
-> > Before the setting, call  
-> [isSlowMotionDetectionSupported](arkts-camera-camera-slowmotionvideosession-i-sys.md#isslowmotiondetectionsupported) to check  
-> whether the device supports slow-motion detection.  
-> This API must be called after [commitConfig](arkts-camera-camera-session-i.md#commitconfig) is  
-> called.
 
 **Since:** 12
 

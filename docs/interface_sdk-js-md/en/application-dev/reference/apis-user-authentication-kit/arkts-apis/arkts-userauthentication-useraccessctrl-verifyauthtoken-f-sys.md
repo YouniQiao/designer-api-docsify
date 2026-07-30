@@ -64,14 +64,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while(retryCount < 3){
+  while (retryCount < 3) {
     randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
+    if (randData) {
       break;
     }
     retryCount++;
   }
-  if(!randData){
+  if (!randData) {
     return;
   }
   const authParam: userAuth.AuthParam = {
@@ -87,7 +87,7 @@ try {
   console.info('get userAuth instance successfully.');
   // The authentication result is returned by onResult() only after the authentication is started by start() of UserAuthInstance.
   userAuthInstance.on('result', {
-    onResult (result) {
+    onResult: (result) => {
         if (!result.token) {
             console.error('userAuthInstance callback result.token is null');
             return;

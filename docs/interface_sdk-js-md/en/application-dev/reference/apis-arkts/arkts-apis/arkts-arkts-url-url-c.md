@@ -76,7 +76,7 @@ Parses a URL.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | A string representing an absolute or a relative URL.In the case of a relative URL, you must specify base to parse the final URL.In the case of an absolute URL, the passed base will be ignored. |
-| base | string \| URL | No | Either a string or an object. The default value is undefined.   - string: string.   - URL: URL object.This parameter is used when url is a relative URL. |
+| base | string \| URL | No | Either a string or an object. The default value is undefined.   - string: string.   - URL: URL object.   This parameter is used when url is a relative URL. |
 
 **Return value:**
 

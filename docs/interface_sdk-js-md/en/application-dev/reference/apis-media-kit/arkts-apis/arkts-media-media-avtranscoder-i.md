@@ -416,8 +416,10 @@ Destination media file descriptor, which specifies the data source. After creati
 
 **NOTE**
 
-- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance.  
-- Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
+- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to  
+perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance.  
+- Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same  
+time, resulting in errors in obtaining data.
 
 **Type:** number
 
@@ -441,8 +443,10 @@ There is a media file that stores continuous assets, the address offset is 0, an
 
 **NOTE**
 
-- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance.  
-- Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
+- After the resource handle (FD) is transferred to an AVTranscoder instance, do not use the resource handle to  
+perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance.  
+- Competition occurs when multiple AVTranscoders use the same resource handle to read and write files at the same  
+time, resulting in errors in obtaining data.
 
 **Type:** AVFileDescriptor
 

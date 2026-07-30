@@ -41,3 +41,45 @@ Adds disallowed USB devices via an array of {@link PermissiveUsbDeviceType}.
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
+**Example**
+
+```TypeScript
+import { usbManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  // Disable USB storage devices (use the actual USB device type parameter).
+  let usbDevices1: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 8
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices1);
+
+  // Disable USB wired headsets (use the actual USB device type parameter).
+  let usbDevices2: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 0,
+    subClass: 0,
+    protocol: 0,
+    descriptor: usbManager.Descriptor.DEVICE
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices2);
+
+  // Disable USB wired keyboard input (use the actual USB device type parameter).
+  let usbDevices3: Array<usbManager.PermissiveUsbDeviceType> = [{
+    baseClass: 3,
+    subClass: 1,
+    protocol: 1,
+    descriptor: usbManager.Descriptor.INTERFACE
+  }];
+  usbManager.addDisallowedPermissiveUsbDevices(wantTemp, usbDevices3);
+  console.info(`Succeeded in adding disallowed permissive USB devices.`);
+} catch (err) {
+  console.error(`Failed to add disallowed permissive USB devices. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

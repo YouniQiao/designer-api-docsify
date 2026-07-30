@@ -197,7 +197,7 @@ Returns a flag indicating whether the current ComponentContent was obtained thro
 
 | Type | Description |
 | --- | --- |
-| boolean | - Returns true if the ComponentContent was converted between dynamic and static states,otherwise, returns false. |
+| boolean | - Returns true if the ComponentContent was converted between dynamic and static states,   otherwise, returns false. |
 
 ## recycle
 
@@ -205,8 +205,10 @@ Returns a flag indicating whether the current ComponentContent was obtained thro
 recycle(): void
 ```
 
-- Triggers recycling of custom components under this **ComponentContent**. Component recycling is part of the component reuse mechanism. For details, see [@Reusable Decorator: Reusing V1 Components](../../../ui/state-management/arkts-reusable.md).  
-- **ComponentContent** completes the reuse event transfer between internal and external custom components through **reuse** and **recycle**. For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).Since API version 26.0.0, custom components in **ComponentContent** support V2 component reuse. For details, see [@ReusableV2 Decorator: Reusing Components](../../../ui/state-management/arkts-new-reusableV2.md).
+- Triggers recycling of custom components under this **ComponentContent**. Component recycling is part of the  
+component reuse mechanism. For details, see [@Reusable Decorator: Reusing V1 Components](../../../ui/state-management/arkts-reusable.md).  
+- **ComponentContent** completes the reuse event transfer between internal and external custom components through  
+**reuse** and **recycle**. For specific usage scenarios, see [Implementing Node Reuse with the BuilderNode reuse and recycle APIs](../../../ui/arkts-user-defined-arktsNode-builderNode.md#implementing-node-reuse-with-the-buildernode-reuse-and-recycle-apis).Since API version 26.0.0, custom components in **ComponentContent** support V2 component reuse. For details, see [@ReusableV2 Decorator: Reusing Components](../../../ui/state-management/arkts-new-reusableV2.md).
 
 **Since:** 12
 

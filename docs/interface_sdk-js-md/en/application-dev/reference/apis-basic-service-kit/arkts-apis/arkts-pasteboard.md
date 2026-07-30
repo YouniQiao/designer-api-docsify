@@ -50,14 +50,6 @@ import { pasteboard } from '@kit.BasicServicesKit';
 | [ProgressInfo](arkts-basicservices-pasteboard-progressinfo-i.md) | Defines the progress information. This information is reported only when [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**. |
 | [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md) | Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard). |
 
-<!--Del-->
-### Interfaces（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i-sys.md) | Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard). |
-<!--DelEnd-->
-
 ### Enums
 
 | Name | Description |

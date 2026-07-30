@@ -54,14 +54,14 @@ async function getFileDescriptor() {
     console.error(`request right failed`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  if (devicepipe == undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
-  let ret: number = usbManager.getFileDescriptor(devicepipe);
+  let ret: number = usbManager.getFileDescriptor(devicePipe);
   console.info(`getFileDescriptor = ${ret}`);
-  let closeRet: number = usbManager.closePipe(devicepipe);
+  let closeRet: number = usbManager.closePipe(devicePipe);
   console.info(`closePipe = ${closeRet}`);
 }
 

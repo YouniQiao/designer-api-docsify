@@ -20,7 +20,7 @@ import { camera } from '@kit.CameraKit';
 duration: number
 ```
 
-Total duration of smooth zoom, in ms.
+Total duration of smooth zoom, in milliseconds.
 
 **Type:** number
 

@@ -390,6 +390,23 @@ getPermissionRequestToggleStatus(
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 | [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. A database error occurs. |
 
+**示例：**
+
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let permission: Permissions = 'ohos.permission.CAMERA';
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+atManager.getPermissionRequestToggleStatus(permission, subProfileId).then((status: abilityAccessCtrl.PermissionRequestToggleStatus) => {
+  console.info(`getPermissionRequestToggleStatus success, status: ${status}`);
+}).catch((err: BusinessError): void => {
+  console.error(`getPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+
+```
+
 ## getPermissionsStatus
 
 ```TypeScript
@@ -1381,4 +1398,21 @@ setPermissionRequestToggleStatus(
 | [12100006](../errorcode-access-token.md#12100006-指定操作不允许) | Operation not allowed. The toggle status of the specified permission has already been set by [setPermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#setpermissionrequesttogglestatus). |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 | [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. A database error occurs. |
+
+**示例：**
+
+```TypeScript
+import { abilityAccessCtrl, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+let permission: Permissions = 'ohos.permission.CAMERA';
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.PermissionRequestToggleStatus.CLOSED, subProfileId).then(() => {
+  console.info('setPermissionRequestToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionRequestToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+
+```
 

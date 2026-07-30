@@ -428,7 +428,7 @@ LIVE_FORM = 30
 SELECTION = 31
 ```
 
-[SelectionExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)：为开发者提供划词弹窗能力的ExtensionAbility。
+[SelectionExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)：为开发者提供划词弹窗能力的ExtensionAbility。
 
 **模型约束**：此接口仅可在Stage模型下使用。
 

@@ -46,7 +46,7 @@ A maximum of 100 contacts can be imported at a time.
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The specified SystemCapability name was not found. |
 | [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 | [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
-| 16700004 | The number of contacts exceeds the limit. |
+| [16700004](../errorcode-contacts.md#16700004-number-of-contacts-exceeds-the-limit) | The number of contacts exceeds the limit. |
 | [16700103](../errorcode-contacts.md#16700103-operation-canceled) | User cancel. |
 
 **Example**

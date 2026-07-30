@@ -226,7 +226,8 @@ Background color of the window for the UIAbility of the current application upon
 
 - This property does not take effect for the UIAbility of another application.  
 - This property takes effect only on 2-in-1 devices and tablets.  
-- This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
+- This property takes effect only in  
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 
 **Type:** string
 
@@ -250,7 +251,8 @@ Icon displayed on the starting window for the UIAbility of the current applicati
 
 - This property does not take effect for the UIAbility of another application.  
 - This property takes effect only on 2-in-1 devices and tablets.  
-- This property takes effect only in [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).  
+- This property takes effect only in  
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).  
 - The maximum size of an image used as the startup icon is 600 MB.
 
 **Type:** image.PixelMap
@@ -295,7 +297,8 @@ Window mode supported by the UIAbility when it is started. The supported window 
 
 - **FULL_SCREEN**: full-screen mode.  
 - **FLOATING**: floating window mode.  
-- **SPLIT**: split-screen mode. Generally, **FULL_SCREEN** or **FLOATING** must be used together. You are not advised to configure only **SPLIT**. If only **SPLIT** is configured, the window on 2-in-1 devices is in floating window mode by default and can transition to the split-screen mode, and the window on tablets is in full-screen mode by default and can transition to the split-screen mode.
+- **SPLIT**: split-screen mode. Generally, **FULL_SCREEN** or **FLOATING** must be used together. You are not  
+advised to configure only **SPLIT**. If only **SPLIT** is configured, the window on 2-in-1 devices is in floating window mode by default and can transition to the split-screen mode, and the window on tablets is in full-screen mode by default and can transition to the split-screen mode.
 
 When **FULL_SCREEN** and **SPLIT** are both configured for a [freeform window](../../../windowmanager/window-terminology.md#freeform-window), the window will be started in floating window mode if the value of [targetAPIVersion](../../../quick-start/app-configuration-file.md#tags-in-the-configuration-file) is less than 15, and in full-screen mode if the value is greater than or equal to 15.
 

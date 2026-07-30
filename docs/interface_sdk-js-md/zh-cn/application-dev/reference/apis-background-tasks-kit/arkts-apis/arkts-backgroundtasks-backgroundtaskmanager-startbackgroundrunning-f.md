@@ -422,6 +422,7 @@ export default class EntryAbility extends UIAbility {
           // 申请主类型为MODE_LOCATION的长时任务
           let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_LOCATION];
           let subModeList: Array<number> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_NORMAL_NOTIFICATION];
+          // 创建长时任务请求对象
           let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
           continuousTaskRequest.backgroundTaskModes =  modeList;
           continuousTaskRequest.backgroundTaskSubmodes = subModeList;

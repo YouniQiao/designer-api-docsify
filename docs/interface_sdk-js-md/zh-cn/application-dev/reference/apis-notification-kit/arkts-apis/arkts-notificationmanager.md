@@ -62,6 +62,8 @@ import { notificationManager } from '@kit.NotificationKit';
 | [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md#isdistributedenabled) | 查询设备是否支持跨设备协同通知。使用callback异步回调。 |
 | [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md#isdistributedenabled-1) | 查询设备是否支持跨设备协同通知。使用Promise异步回调。 |
 | [isGeofenceEnabled](arkts-notification-notificationmanager-isgeofenceenabled-f.md#isgeofenceenabled) | 检查地理围栏功能是否已启用。使用Promise异步回调。 |
+| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled-2) | 查询当前应用通知授权状态。使用callback异步回调。  用于在发布通知前检查当前应用是否被允许发送通知，避免在通知授权关闭时发布导致失败。 |
+| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled-3) | 查询当前应用通知授权状态。使用Promise异步回调。  用于在发布通知前检查当前应用是否被允许发送通知，避免在通知使能关闭时发布导致失败。 |
 | [isNotificationEnabledSync](arkts-notification-notificationmanager-isnotificationenabledsync-f.md#isnotificationenabledsync) | 同步查询当前应用通知授权状态。  用于在发布通知前快速检查当前应用是否被允许发送通知。此接口为同步接口，调用后立即返回结果，适用于需要在同步代码流程中获取使能状态的场景。 |
 | [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#issupporttemplate) | 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。 |
 | [isSupportTemplate](arkts-notification-notificationmanager-issupporttemplate-f.md#issupporttemplate-1) | 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。 |
@@ -139,8 +141,6 @@ import { notificationManager } from '@kit.NotificationKit';
 | [isDistributedEnabledBySlot](arkts-notification-notificationmanager-isdistributedenabledbyslot-f-sys.md#isdistributedenabledbyslot) | 查询指定渠道的通知是否支持通知跨设备协同至指定类型设备。使用Promise异步回调。 |
 | [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isnotificationenabled) | 获取指定应用的通知使能状态。使用callback异步回调。 |
 | [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isnotificationenabled-1) | 获取指定应用的通知使能状态。使用Promise异步回调。 |
-| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isnotificationenabled-2) | 查询当前应用通知授权状态。使用callback异步回调。  用于在发布通知前检查当前应用是否被允许发送通知，避免在通知授权关闭时发布导致失败。 |
-| [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isnotificationenabled-3) | 查询当前应用通知授权状态。使用Promise异步回调。  用于在发布通知前检查当前应用是否被允许发送通知，避免在通知使能关闭时发布导致失败。 |
 | [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isnotificationenabled-4) | 获取指定用户ID下的通知使能状态。使用callback异步回调。 |
 | [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md#isnotificationenabled-5) | 获取指定用户下的通知使能状态。使用Promise异步回调。 |
 | [isNotificationSlotEnabled](arkts-notification-notificationmanager-isnotificationslotenabled-f-sys.md#isnotificationslotenabled) | 获取指定应用的指定渠道类型的使能状态。使用callback异步回调。 |

@@ -46,7 +46,7 @@ function usbControlTransfer(pipe: USBDevicePipe, requestparam: USBDeviceRequestP
 ```TypeScript
 import {BusinessError} from '@kit.BasicServicesKit';
 // 控制传输参数：根据USB协议规范、设备描述符或设备规格文档设置各字段值
-// bmRequestType：请求控制类型，常见取值0x00(标准设备请求)、0x01(类请求)、0x02(厂商请求)
+// bmRequestType：请求控制类型，常见取值示例：0x00（标准请求，主机向设备）、0x20（类请求，主机向设备）、0x40（厂商请求，主机向设备）、0x80（标准请求，设备向主机）
 // bRequest：具体控制请求命令（如获取描述符、设置地址等）
 // wValue：请求参数内容
 // wIndex：请求参数的索引值
@@ -73,17 +73,17 @@ async function usbControlTransfer() {
     console.error(`request right failed`);
     return;
   }
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
-  if (devicepipe == undefined) {
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
-  usbManager.usbControlTransfer(devicepipe, param).then((ret: number) => {
+  usbManager.usbControlTransfer(devicePipe, param).then((ret: number) => {
     console.info(`usbControlTransfer = ${ret}`);
   }).catch((error: BusinessError) => {
     console.error(`usbControlTransfer failed: ${error.code}, message: ${error.message}`);
   }).finally(() => {
-    usbManager.closePipe(devicepipe);
+    usbManager.closePipe(devicePipe);
   });
 }
 

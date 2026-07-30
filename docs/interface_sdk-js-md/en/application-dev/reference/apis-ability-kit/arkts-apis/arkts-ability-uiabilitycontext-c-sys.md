@@ -611,10 +611,14 @@ startAbilityByCallWithAccount(want: Want, accountId: number): Promise<Caller>
 
 Starts a UIAbility with the account ID specified and obtains the caller object for communicating with the UIAbility. This API can be called only on the main thread. This API uses a promise to return the result.This API cannot be used to start the UIAbility with the launch type set to [specified](../../../application-models/uiability-launch-type.md#specified).Observe the following when using this API:
 
-- If an application needs to call this API to start a UIAbility that belongs to another user, it must have the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.  
-- If an application running in the background needs to call this API to start a UIAbility, it must have the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission.  
-- If **exported** of the target UIAbility is **false** in cross-application scenarios, the caller must have the ohos.permission.START_INVISIBLE_ABILITY permission.  
-- The rules for using this API in the same-device and cross-device scenarios are different. For details, see [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+- If an application needs to call this API to start a UIAbility that belongs to another user, it must have the  
+ohos.permission.ABILITY_BACKGROUND_COMMUNICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.  
+- If an application running in the background needs to call this API to start a UIAbility, it must have the  
+ohos.permission.START_ABILITIES_FROM_BACKGROUND permission.  
+- If **exported** of the target UIAbility is **false** in cross-application scenarios, the caller must have the  
+ohos.permission.START_INVISIBLE_ABILITY permission.  
+- The rules for using this API in the same-device and cross-device scenarios are different. For details, see  
+[Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 10
 

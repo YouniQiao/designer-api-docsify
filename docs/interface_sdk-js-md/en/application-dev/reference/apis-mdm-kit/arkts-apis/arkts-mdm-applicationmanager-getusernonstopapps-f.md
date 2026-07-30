@@ -44,27 +44,6 @@ Obtains the non-stoppable application list of all users on the current device.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
-**Example**
-
-```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: Array<common.ApplicationInstance> = applicationManager.getUserNonStopApps(wantTemp);
-  console.info(`Succeeded in getting UserNonStop applications, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to get UserNonStop applications. Code: ${err.code}, message: ${err.message}`);
-}
-
-```
-
 
 ## getUserNonStopApps
 
@@ -103,4 +82,25 @@ Obtains the non-stoppable application list of all users on the current device.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+
+**Example**
+
+```TypeScript
+import { applicationManager, common } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  let result: Array<common.ApplicationInstance> = applicationManager.getUserNonStopApps(wantTemp);
+  console.info(`Succeeded in getting UserNonStop applications, result : ${JSON.stringify(result)}`);
+} catch(err) {
+  console.error(`Failed to get UserNonStop applications. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
 

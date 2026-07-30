@@ -39,10 +39,7 @@ Inserts a placeholder into the paragraph being built.
 **Example**
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
 
 function textFunc() {
   let myParagraphStyle: text.ParagraphStyle = {
@@ -157,10 +154,7 @@ Inserts a text string into the paragraph being built.
 **Example**
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
 
 function textFunc() {
   let myTextStyle: text.TextStyle = {
@@ -216,8 +210,7 @@ Creates a paragraph object that can be used for subsequent layout and rendering.
 **Example**
 
 ```TypeScript
-import { drawing, text, common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
+import { text } from '@kit.ArkGraphics2D'
 
 function textFunc() {
   let myTextStyle: text.TextStyle = {
@@ -376,10 +369,7 @@ Restores the previous text style.
 **Example**
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
 
 function textFunc() {
   let myTextStyle: text.TextStyle = {
@@ -439,10 +429,7 @@ Applies a new style to the current text blob.
 **Example**
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
-import { common2D } from '@kit.ArkGraphics2D'
-import { image } from '@kit.ImageKit'
 
 function textFunc() {
   let myTextStyle: text.TextStyle = {

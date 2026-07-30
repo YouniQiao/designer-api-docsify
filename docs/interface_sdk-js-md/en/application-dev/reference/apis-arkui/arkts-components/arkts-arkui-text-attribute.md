@@ -171,14 +171,16 @@ Sets whether copy and paste operations are allowed.
 
 Since API version 20, copied text from the **Text** component includes HTML-formatted content in the pasteboard.
 
-- When the **Text** component contains child elements, only [Span](arkts-arkui-span.md) and [ImageSpan](arkts-arkui-imagespan.md)support HTML-formatted pasteboard content.  
+- When the **Text** component contains child elements, only [Span](arkts-arkui-span.md) and [ImageSpan](arkts-arkui-imagespan.md)  
+support HTML-formatted pasteboard content.  
 - For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.
 
 When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**:
 
 - A long press on the text will display a menu that offers the copy and select-all options.  
 - By default, selected text is draggable. To disable dragging, set **draggable** to **false**.  
-- To support **Ctrl+C** copying, also set [textSelectable](TextAttribute#textSelectable) to **TextSelectableMode.SELECTABLE_FOCUSABLE**.
+- To support **Ctrl+C** copying, also set [textSelectable](TextAttribute#textSelectable) to  
+**TextSelectableMode.SELECTABLE_FOCUSABLE**.
 
 The **Text** component listens for **onClick**, which is a non-bubbling event. To allow parent components to respond to clicks within the **Text** area, use [parallelGesture](arkts-arkui-commonmethod-c.md#parallelgesture) on the parent. For implementation guidance, see [Example 7: Setting Text Recognition](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-7-setting-text-recognition).
 
@@ -803,9 +805,12 @@ Sets the font size adjustment strategy for adaptive text layout.
 
 The available modes are as follows:
 
-- **MAX_LINES_FIRST**: prioritizes using the [maxLines](TextAttribute#maxLines) attribute to control text height. If the **maxLines** setting results in a layout beyond the layout constraints, the text will shrink to a font size between [minFontSize](TextAttribute#minFontSize) and [maxFontSize](TextAttribute#maxFontSize)to allow for more content to be shown.  
-- **MIN_FONT_SIZE_FIRST**: prioritizes using the **minFontSize** attribute to control text height. If the text fits on one line at **minFontSize**, the system attempts to increase the font size between **minFontSize** and **maxFontSize** to fill the line with the largest available font size. If the text cannot fit on a single line even at **minFontSize**, it sticks with **minFontSize**.  
-- **LAYOUT_CONSTRAINT_FIRST**: prioritizes using layout constraints to control text height. If the resultant layout is beyond the layout constraints, the text will shrink to a font size between **minFontSize** and **maxFontSize** to respect the layout constraints. If the text still extends beyond the layout constraints after shrinking to **minFontSize**, the lines that exceed the constraints are deleted.
+- **MAX_LINES_FIRST**: prioritizes using the [maxLines](TextAttribute#maxLines) attribute to control text  
+height. If the **maxLines** setting results in a layout beyond the layout constraints, the text will shrink to a font size between [minFontSize](TextAttribute#minFontSize) and [maxFontSize](TextAttribute#maxFontSize)to allow for more content to be shown.  
+- **MIN_FONT_SIZE_FIRST**: prioritizes using the **minFontSize** attribute to control text height. If the text fits  
+on one line at **minFontSize**, the system attempts to increase the font size between **minFontSize** and **maxFontSize** to fill the line with the largest available font size. If the text cannot fit on a single line even at **minFontSize**, it sticks with **minFontSize**.  
+- **LAYOUT_CONSTRAINT_FIRST**: prioritizes using layout constraints to control text height. If the resultant layout  
+is beyond the layout constraints, the text will shrink to a font size between **minFontSize** and **maxFontSize** to respect the layout constraints. If the text still extends beyond the layout constraints after shrinking to **minFontSize**, the lines that exceed the constraints are deleted.
 
 **Since:** 10
 
@@ -1782,9 +1787,12 @@ When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) is set to **Tex
 - **TextOverflow.None** or **TextOverflow.Clip**: Text is truncated when it exceeds the maximum number of lines.  
 - **TextOverflow.Ellipsis**: Overflowing text is replaced with an ellipsis (...).  
 - This must be used with [maxLines](TextAttribute#maxLines) for the settings to take effect.  
-- Line breaking behavior is controlled by [wordBreak](TextAttribute#wordBreak). By default, it uses **WordBreak.BREAK_WORD**, which breaks text by word (for example, English text is broken at word boundaries). To break text by character, set **wordBreak** to **WordBreak.BREAK_ALL**.  
-- Line wrapping behavior is governed by [lineBreakStrategy](TextAttribute#lineBreakStrategy) which takes effect only when [wordBreak](TextAttribute#wordBreak) is not **WordBreak.BREAK_ALL**. Hyphens are not supported.  
-- Since API version 11, it is recommended that you configure both [textOverflow](TextAttribute#textOverflow)and [wordBreak](TextAttribute#wordBreak) to control truncation behavior. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking)<!--RP1--><!--RP1End-->.
+- Line breaking behavior is controlled by [wordBreak](TextAttribute#wordBreak). By default, it uses  
+**WordBreak.BREAK_WORD**, which breaks text by word (for example, English text is broken at word boundaries). To break text by character, set **wordBreak** to **WordBreak.BREAK_ALL**.  
+- Line wrapping behavior is governed by [lineBreakStrategy](TextAttribute#lineBreakStrategy) which takes  
+effect only when [wordBreak](TextAttribute#wordBreak) is not **WordBreak.BREAK_ALL**. Hyphens are not supported.  
+- Since API version 11, it is recommended that you configure both [textOverflow](TextAttribute#textOverflow)  
+and [wordBreak](TextAttribute#wordBreak) to control truncation behavior. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking)<!--RP1--><!--RP1End-->.
 
 When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**:
 
@@ -1792,8 +1800,10 @@ When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**:
 - [maxLines](TextAttribute#maxLines) and[copyOption](TextAttribute#copyOption) are ignored.  
 - The [clip](arkts-arkui-commonmethod-c.md#clip) attribute of the **Text** component defaults to **true**.  
 - [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md) is not supported in marquee mode.  
-- Behavior of [textAlign](TextAttribute#textAlign): If the text does not scroll, **textAlign** applies; if the text scrolls, **textAlign** is ignored.  
-- Since API version 12, **TextOverflow.MARQUEE** is available for the **ImageSpan** component, where the text and images are allowed to scroll within a single line.
+- Behavior of [textAlign](TextAttribute#textAlign): If the text does not scroll, **textAlign** applies; if  
+the text scrolls, **textAlign** is ignored.  
+- Since API version 12, **TextOverflow.MARQUEE** is available for the **ImageSpan** component, where the text and  
+images are allowed to scroll within a single line.
 
 **Since:** 7
 

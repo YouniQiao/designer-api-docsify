@@ -45,26 +45,6 @@ Checks whether the device is automatically unlocked upon reboot.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
-**Example**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-try {
-  systemManager.getAutoUnlockAfterReboot(wantTemp);
-  console.info('Succeeded in getting auto unlock after reboot.');
-} catch (err) {
-  console.error(`Failed to get auto unlock after reboot. Code is ${err.code}, message is ${err.message}`);
-}
-
-```
-
 
 ## getAutoUnlockAfterReboot
 
@@ -104,4 +84,24 @@ Checks whether the device is automatically unlocked upon reboot.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+
+**Example**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { systemManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+  systemManager.getAutoUnlockAfterReboot(wantTemp);
+  console.info('Succeeded in getting auto unlock after reboot.');
+} catch (err) {
+  console.error(`Failed to get auto unlock after reboot. Code is ${err.code}, message is ${err.message}`);
+}
+
+```
 

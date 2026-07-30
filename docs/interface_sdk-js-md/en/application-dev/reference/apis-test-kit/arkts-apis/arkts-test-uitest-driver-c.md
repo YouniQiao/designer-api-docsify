@@ -47,7 +47,7 @@ Asserts whether a component matches the specified attributes exists on the curre
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000003](../errorcode-uitest.md#17000003-assertion-failure) | Assertion failed. |
 
 **Example**
@@ -97,7 +97,7 @@ Clicks the target coordinate point. This API uses a promise to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -144,7 +144,7 @@ Clicks the target coordinate point. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -193,7 +193,7 @@ Click on the specified location on the screen, with optional touch options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## create
@@ -262,7 +262,7 @@ Creates a UI event listener {@link UIEventObserver}.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -311,7 +311,7 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -363,7 +363,7 @@ Delays execution for the specified duration. This API uses a promise to return t
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -412,7 +412,7 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -459,7 +459,7 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -512,7 +512,7 @@ Drags from the start coordinate point to the target coordinate point. This API u
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -562,7 +562,7 @@ Drags from the start point to the target point. You can specify the drag speed a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -612,7 +612,7 @@ Drag on the screen between the specified points with optional settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## dumpLayout
@@ -648,7 +648,7 @@ Get the current layout information and save as file with json format.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -698,7 +698,7 @@ Searches for the target component based on the specified attributes. This API us
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -746,7 +746,7 @@ Searches for all matched components based on the specified attributes and saves 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -794,7 +794,7 @@ Searches for a window based on the specified attributes. This API uses a promise
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -845,7 +845,7 @@ Simulates a fling operation. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -894,7 +894,7 @@ Simulates a fling operation with the specified direction and speed. This API use
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -944,7 +944,7 @@ Simulates a fling operation on a specified display with the specified direction 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -985,7 +985,7 @@ Obtains the display density of the current device. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -1032,7 +1032,7 @@ Obtains the density of the specified display of the current device. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -1074,7 +1074,7 @@ Obtains the display rotation of the current device. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -1121,7 +1121,7 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -1157,13 +1157,13 @@ Obtains the display size of the current device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; | - Promise used to return the **Point** object.The size of the current device screen is **Point.x * Point.y**. |
+| Promise&lt;Point&gt; | - Promise used to return the **Point** object.   The size of the current device screen is **Point.x * Point.y**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -1210,7 +1210,7 @@ Obtains the size of the specified display on the current device. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -1262,7 +1262,7 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
@@ -1314,14 +1314,14 @@ Injects a multi-finger operation into a device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the operation is successful.The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the operation is successful.   The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -1382,7 +1382,7 @@ Simulates a continuous multi-point pen injection operation. This API uses a prom
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |  |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -1435,7 +1435,7 @@ Inputs text at a specified coordinate without clearing the original text in the 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -1488,7 +1488,7 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |  |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -1543,13 +1543,13 @@ Drags from the start point to the end point and checks whether the target compon
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the target component exists during the dragging operation. The value **true** indicates that the target component exists, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the target component exists during the dragging   operation. The value **true** indicates that the target component exists, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -1593,13 +1593,13 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the target component exists during a long-click operation. The value **true** indicates that the target component exists, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the target component exists during a long-click   operation. The value **true** indicates that the target component exists, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -1644,13 +1644,13 @@ Swipes from the start point to the end point and checks whether the target compo
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the target component exists during the swiping operation.The value **true** indicates that the target component exists, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the target component exists during the swiping   operation.The value **true** indicates that the target component exists, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -1702,7 +1702,7 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
@@ -1755,7 +1755,7 @@ Long-clicks the target coordinate point. This API uses a promise to return the r
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -1803,7 +1803,7 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -1852,7 +1852,7 @@ LongClick on the specified location on the screen, with optional touch settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## mouseClick
@@ -1891,7 +1891,7 @@ Injects a mouse click action at the specified coordinates, with the optional key
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -1942,7 +1942,7 @@ Injects a double-click action at the specified coordinates, with the optional ke
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -1992,7 +1992,7 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2043,7 +2043,7 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2093,7 +2093,7 @@ Hold down the left mouse button and drag on the screen between the specified poi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## mouseLongClick
@@ -2132,7 +2132,7 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2184,7 +2184,7 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2232,7 +2232,7 @@ Moves the mouse cursor to the target point. This API uses a promise to return th
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2282,7 +2282,7 @@ Moves the mouse pointer from the start point to the end point. This API uses a p
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2334,7 +2334,7 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2387,7 +2387,7 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2435,7 +2435,7 @@ Simulates a pen click operation. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |  |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2483,7 +2483,7 @@ Simulates a pen double-click operation. This API uses a promise to return the re
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |  |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2532,7 +2532,7 @@ Simulates a pen long-click operation. This API uses a promise to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |  |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2583,7 +2583,7 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |  |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2624,7 +2624,7 @@ Presses the Back button. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2671,7 +2671,7 @@ Presses the Back button on the specified screen. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -2713,7 +2713,7 @@ Injects an operation of returning to the home screen on the device. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2760,7 +2760,7 @@ Injects an operation of returning to the home screen on the specified display. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -2802,14 +2802,14 @@ Captures the current screen and saves it as a PNG image to the given save path. 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the screenshot operation is successful.The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the screenshot operation is successful.   The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2858,7 +2858,7 @@ Captures the specified screen and saves it as a PNG image to the given save path
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2900,14 +2900,14 @@ Captures the specified area of the current screen and saves the captured screens
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether the screenshot operation is successful.The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether the screenshot operation is successful.   The value **true** indicates the screenshot operation is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -2960,7 +2960,7 @@ Sets the display rotation of the current scene. This API uses a promise to retur
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -3008,7 +3008,7 @@ Enables or disables display rotation. This API uses a promise to return the resu
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -3060,7 +3060,7 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -3109,7 +3109,7 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 **Example**
@@ -3159,7 +3159,7 @@ Swipe on the screen between the specified points with optional touch options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## touchPadMultiFingerSwipe
@@ -3197,7 +3197,7 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |  |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |  |
 
 **Example**
@@ -3248,7 +3248,7 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
@@ -3300,7 +3300,7 @@ Triggers a combination key event based on the specified key values. This API use
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -3351,7 +3351,7 @@ Triggers a combination key event based on the specified key values on the specif
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -3399,7 +3399,7 @@ Triggers a key event by passing the key value. This API uses a promise to return
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -3449,7 +3449,7 @@ Triggers a key event by passing the key value on the specified screen. This API 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -3476,7 +3476,8 @@ Trigger pen key operation.
 Supported combinations:
 
 - HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation.  
-- AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options),HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation.Other combinations will result in a BusinessError 17000007.
+- AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options),  
+HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation.Other combinations will result in a BusinessError 17000007.
 
 **Since:** 26.0.0
 
@@ -3505,7 +3506,7 @@ Supported combinations:
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 | [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 | [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. Unsupported key, mode, and operation combination. |
 
@@ -3561,7 +3562,7 @@ Searches for the target component based on the attributes within a specified tim
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -3603,14 +3604,14 @@ Checks whether all components on the current UI are idle. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | - Promise used to return whether all components on the current UI are idle. The value true indicates that all components on the current UI are idle, and false indicates the opposite. |
+| Promise&lt;boolean&gt; | - Promise used to return whether all components on the current UI are idle. The value true   indicates that all components on the current UI are idle, and false indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 
@@ -3651,7 +3652,7 @@ Wakes up the current display. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-unable-to-call-the-api) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 **Example**
 

@@ -75,7 +75,7 @@ auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
         // Add the logic to be executed when the authentication fails.
       }
     } catch (error) {
-      console.error(`auth onResult failed, error = ${error}`);
+      console.error(`auth onResult failed. Code: ${error?.code}, message: ${error?.message}`);
     }
   }
 });

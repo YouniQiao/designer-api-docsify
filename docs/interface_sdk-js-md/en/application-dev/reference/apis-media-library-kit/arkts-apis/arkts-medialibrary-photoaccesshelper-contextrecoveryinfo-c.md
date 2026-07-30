@@ -23,7 +23,8 @@ albumUri: string
 URI of the album in the media library when the user selects an image and exits.
 
 - If the user selects from all images, **albumUri** is a fixed **"allPhotos"** string.  
-- If the user exits after selecting from search results, text recommendations, or avatar recommendations, the next restoration is not supported, and the returned **albumUri** is an empty string.
+- If the user exits after selecting from search results, text recommendations, or avatar recommendations, the  
+next restoration is not supported, and the returned **albumUri** is an empty string.
 
 The default value is an empty string.
 

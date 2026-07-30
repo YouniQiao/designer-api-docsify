@@ -47,11 +47,11 @@ function requestAccessoryRight(accessory: USBAccessory): Promise<boolean>
 ```TypeScript
 async function requestAccessoryRight() {
   try {
-    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-    let flag = await usbManager.requestAccessoryRight(accList?.[0])
-    console.info(`requestAccessoryRight success, ret:${flag}`)
+    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+    let flag = await usbManager.requestAccessoryRight(accList?.[0]);
+    console.info(`requestAccessoryRight success, ret:${flag}`);
   } catch (error) {
-    console.error(`requestAccessoryRight error ${error.code}, message is ${error.message}`)
+    console.error(`requestAccessoryRight error ${error.code}, message is ${error.message}`);
   }
 }
 

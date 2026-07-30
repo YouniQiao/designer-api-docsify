@@ -1,6 +1,6 @@
 # PreviewOutput
 
-Implements preview output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
+PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -15,37 +15,6 @@ Implements preview output. It inherits from [CameraOutput](arkts-camera-camera-c
 ```TypeScript
 import { camera } from '@kit.CameraKit';
 ```
-
-## addDeferredSurface
-
-```TypeScript
-addDeferredSurface(surfaceId: string): void
-```
-
-Adds a deferred surface.
-
-**Since:** 24
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void--><!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface object id used in camera photo output. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 - 23 |
 
 ## attachSketchSurface
 

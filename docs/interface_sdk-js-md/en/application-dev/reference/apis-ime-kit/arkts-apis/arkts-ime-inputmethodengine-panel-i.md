@@ -815,14 +815,18 @@ setImmersiveEffect(effect: ImmersiveEffect): void
 
 Sets the immersive effect of the input method application.
 
-- Gradient mode and fluid light mode can be used only when the [immersive mode](arkts-ime-inputmethodengine-panel-i.md#setimmersivemode) is enabled.  
+- Gradient mode and fluid light mode can be used only when the  
+[immersive mode](arkts-ime-inputmethodengine-panel-i.md#setimmersivemode) is enabled.  
 - The fluid light mode can be used only when the gradient mode is enabled.  
 - If the gradient mode is disabled, the gradient height must be 0 px.  
 - Only system applications can set the fluid light mode.  
 - The current API can be called only after any of the following APIs is called:  
-- [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) (available since API version 12)  
-- [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) (available since API version 15)  
-- [resize](arkts-ime-inputmethodengine-panel-i.md#resize) (available since API version 10)
+- [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) (available  
+since API version 12)  
+- [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) (  
+available since API version 15)  
+- [resize](arkts-ime-inputmethodengine-panel-i.md#resize) (  
+available since API version 10)
 
 **Since:** 20
 

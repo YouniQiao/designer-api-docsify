@@ -20,7 +20,9 @@ import { avSession } from '@kit.AVSessionKit';
 | --- | --- |
 | [createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession) | Create an AVSession instance. An ability can only create one AVSession |
 | [createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession-1) | Create an AVSession instance. An ability can only create one AVSession |
+| [createController](arkts-avsession-avsession-createcontroller-f.md#createcontroller-1) | Create an avsession controller |
 | [getAVSession](arkts-avsession-avsession-getavsession-f.md#getavsession) | Get an AVSession instance if already created. |
+| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f.md#getallsessiondescriptors-1) | Get all avsession descriptors which can be shown on system entrance. |
 | [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md#isdesktoplyricsupported) | Whether desktop lyric feature is supported. |
 | [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md#offsessioncreate) | Unregister session create callback |
 | [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md#offsessiondestroy) | Unregister session destroy callback |
@@ -37,11 +39,9 @@ import { avSession } from '@kit.AVSessionKit';
 | [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio) | Cast Audio to the remote devices or cast back local device |
 | [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio-1) | Cast Audio to the remote devices or cast back local device |
 | [createController](arkts-avsession-avsession-createcontroller-f-sys.md#createcontroller) | Create an avsession controller |
-| [createController](arkts-avsession-avsession-createcontroller-f-sys.md#createcontroller-1) | Create an avsession controller |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller) | Register a callback to retrieve an avsession cast controller.This function can be used at both side to get the same controller to do the playback control. |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller-1) | Get the current session's remote controller client.If the avsession is not under casting state, the controller will return null. |
 | [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md#getallsessiondescriptors) | Get all avsession descriptors of the system |
-| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md#getallsessiondescriptors-1) | Get all avsession descriptors which can be shown on system entrance. |
 | [getDistributedSessionController](arkts-avsession-avsession-getdistributedsessioncontroller-f-sys.md#getdistributedsessioncontroller) | Get distributed avsession controller |
 | [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md#gethistoricalavqueueinfos) | Get history play list information records. |
 | [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md#gethistoricalavqueueinfos-1) | Get history play list information records. |
@@ -113,6 +113,7 @@ import { avSession } from '@kit.AVSessionKit';
 | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | The item in the playlist of the session |
 | [AVSession](arkts-avsession-avsession-avsession-i.md) | AVSession object. |
 | [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md) | Session controller,used to control media playback and get media information |
+| [AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md) | The description of the session |
 | [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md) | Audio capabilities. |
 | [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) | The metadata of the current call. |
 | [CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md) | Define the information for extended display screen. |

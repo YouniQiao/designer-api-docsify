@@ -2,7 +2,7 @@
 
 Control center session object.
 
-**Inheritance/Implementation:** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md), [Aperture](arkts-camera-camera-aperture-i-sys.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
+**Inheritance/Implementation:** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md), [Aperture](arkts-camera-camera-aperture-i.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
 
 **Since:** 20
 

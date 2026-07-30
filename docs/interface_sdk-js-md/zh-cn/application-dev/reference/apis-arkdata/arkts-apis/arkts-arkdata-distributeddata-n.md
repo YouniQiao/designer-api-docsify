@@ -6,8 +6,10 @@
 - [KvStoreResultSet<sup>8+</sup>](arkts-arkdata-distributeddata-kvstoreresultset-i.md)：提供获取KVStore数据库结果集的相关方法，包括查询和移动数据读取位置等。  
 - [Query<sup>8+</sup>](arkts-arkdata-distributeddata-query-c.md)：使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。  
 - [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)：KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。  
-- [SingleKVStore](arkts-arkdata-distributeddata-singlekvstore-i.md)：单版本分布式数据库，继承自[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)，不对数据所属设备进行区分，提供查询数据和同步数据的方法。  
-- [DeviceKVStore<sup>8+</sup>](arkts-arkdata-distributeddata-devicekvstore-i.md)：设备协同数据库，继承自[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)，以设备维度对数据进行区分，提供查询数据和同步数据的方法。
+- [SingleKVStore](arkts-arkdata-distributeddata-singlekvstore-i.md)：单版本分布式数据库，继承自[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)，不对数据  
+所属设备进行区分，提供查询数据和同步数据的方法。  
+- [DeviceKVStore<sup>8+</sup>](arkts-arkdata-distributeddata-devicekvstore-i.md)：设备协同数据库，继承自  
+[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)，以设备维度对数据进行区分，提供查询数据和同步数据的方法。
 > **说明：**
 > - 从API Version 9开始，该接口不再维护，推荐使用新接口  
 > [`@ohos.data.distributedKVStore`](arkts-data-distributedkvstore.md)。

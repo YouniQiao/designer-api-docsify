@@ -29,6 +29,26 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 | info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 | Ability的配置信息。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，返回boolean代表是否启用。 |
 
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
+  bundle.isAbilityEnabled(abilityInfo, (err, data) => {
+    if (err) {
+      console.error('Operation failed. Cause: ' + JSON.stringify(err));
+      return;
+    }
+    console.info('Operation successful. Data:' + JSON.stringify(data));
+  })
+})
+
+```
+
 
 ## isAbilityEnabled
 
@@ -57,4 +77,23 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise形式返回boolean代表是否启用。 |
+
+**示例：**
+
+```TypeScript
+import bundle from '@ohos.bundle';
+import { BusinessError } from '@ohos.base';
+
+let bundleName: string = "com.example.myapplication";
+let abilityName: string = "EntryAbility";
+
+bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
+  bundle.isAbilityEnabled(abilityInfo).then((data) => {
+    console.info('Operation successful. Data: ' + JSON.stringify(data));
+  }).catch((error: BusinessError) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  })
+})
+
+```
 

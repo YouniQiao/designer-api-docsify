@@ -59,7 +59,7 @@ let height: number = 1080;
 screen.resizeVirtualScreen(screenId, width, height).then(() => {
   console.info(`Succeeded in resizing virtual screen: screenId=${screenId}, width=${width}, height=${height}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to set screen area mirroring. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to resize virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 
 ```

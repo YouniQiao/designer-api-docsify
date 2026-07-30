@@ -354,7 +354,8 @@ Extended attributes, which are used to define the attributes of specific compone
 - **Row**: row where a focused item is located in **Grid**.  
 - **Column**: column where a focused item is located in **Grid**.  
 - **ListItemIndex**: row where a focused item is located in **List**.  
-- **SideBarContainerStates**: expansion state of the expandable components (such as **SideBarContainer** and **Select**). The options are as follows:
+- **SideBarContainerStates**: expansion state of the expandable components (such as **SideBarContainer** and  
+**Select**). The options are as follows:
 
 **0**: collapsed
 
@@ -376,9 +377,11 @@ Extended attributes, which are used to define the attributes of specific compone
 
 **2**: low
 
-- **hasRegisteredHover**: whether the component has registered the **onAccessibilityHover** event callback. The value **1** indicates that the component has registered the event callback; otherwise, this field is not used.  
+- **hasRegisteredHover**: whether the component has registered the **onAccessibilityHover** event callback. The  
+value **1** indicates that the component has registered the event callback; otherwise, this field is not used.  
 - **direction**: layout direction of the **List** component. The value can be **vertical** or **horizontal**.  
-- **expandedState**: expanded state of list items in the **List** component. The value can be **expanded** or **collapsed**.  
+- **expandedState**: expanded state of list items in the **List** component. The value can be **expanded** or  
+**collapsed**.  
 - **componentTypeDescription**: detailed information about the component type.
 
 **Type:** string

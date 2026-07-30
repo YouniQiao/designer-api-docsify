@@ -80,27 +80,3 @@ edgeLightMode?: EdgeLightMode
 
 **系统接口：** 此接口为系统接口。
 
-## systemMaterial
-
-```TypeScript
-systemMaterial?: SystemUiMaterial
-```
-
-设置菜单的系统材质。不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。材质设置为非法值、undefined时，按照不设置系统材质处理。
-
-默认值： undefined
-
-**类型：** SystemUiMaterial
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ContextMenuOptions-systemMaterial?: SystemUiMaterial--><!--Device-ContextMenuOptions-systemMaterial?: SystemUiMaterial-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**系统接口：** 此接口为系统接口。
-

@@ -14,8 +14,10 @@ function bindDevice(deviceAddress: PartnerDeviceAddress, deviceCapability: Devic
 ```
 
 Bind the partner device.After successfully binding the device, if the device meets the discovery requirements,the {@link PartnerAgentExtensionAbility} of the application will be launched.  
-- If the {@link DeviceCapability.supportBR} in the capability variable is set to true,the application's ability will be launched when the device is connected via Bluetooth.  
-- If the {@link DeviceCapability.supportBleAdvertiser} in the capability variable is set to true,the application's ability will be launched when the device is detected via Bluetooth scanning.
+- If the {@link DeviceCapability.supportBR} in the capability variable is set to true,  
+the application's ability will be launched when the device is connected via Bluetooth.  
+- If the {@link DeviceCapability.supportBleAdvertiser} in the capability variable is set to true,  
+the application's ability will be launched when the device is detected via Bluetooth scanning.
 
 Note: The device must be paired first.
 

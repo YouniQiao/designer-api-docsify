@@ -54,8 +54,11 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 // Replace with actual values.
+// Browser application bundle name.
 let bundleName: string = 'com.example.testbrowser';
+// Browser policy name.
 let policyName: string = 'InsecurePrivateNetworkRequestsAllowed';
+// Browser policy value.
 let policyValue: string = '{"level":"mandatory","scope":"machine","source":"platform","value":true}';
 
 try {

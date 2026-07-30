@@ -53,10 +53,10 @@ let mainScreenId: number = 0; // 主屏ID
 let mirrorScreenIds: Array<number> = [1, 2, 3]; // 镜像屏ID集合
 // 主屏创建镜像的矩形区域
 let mainScreenRegion: screen.Rect = {
-  left : 0,
-  top : 0,
-  width : 1920,
-  height : 1080
+  left: 0,
+  top: 0,
+  width: 1920,
+  height: 1080
 };
 // 将屏幕的某一矩形区域设置为镜像模式
 screen.makeMirrorWithRegion(mainScreenId, mirrorScreenIds, mainScreenRegion).then((data: number) => {

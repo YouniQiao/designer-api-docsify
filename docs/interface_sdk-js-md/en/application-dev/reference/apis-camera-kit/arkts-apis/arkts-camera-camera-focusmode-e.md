@@ -46,7 +46,7 @@ Continuous auto focus. The focal point cannot be set.
 FOCUS_MODE_AUTO = 2
 ```
 
-The flash mode is auto, indicating that the flash fires automatically depending on the photo capture conditions.
+Auto focus. The focal point can be set by calling [Focus.setFocusPoint](arkts-camera-camera-focus-i.md#setfocuspoint), and auto focus is performed once based on the focal point.
 
 **Since:** 10
 

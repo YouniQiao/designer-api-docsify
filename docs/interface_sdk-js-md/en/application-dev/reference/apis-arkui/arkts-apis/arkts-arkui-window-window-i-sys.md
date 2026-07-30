@@ -539,46 +539,6 @@ export default class EntryAbility extends UIAbility {
 
 ```
 
-## enableDrag
-
-```TypeScript
-enableDrag(enable: boolean): Promise<void>
-```
-
-Enables or disables window dragging. This API takes effect only for system windows, application child windows,global floating windows, and modal windows. This API uses a promise to return the result.
-
-After window dragging is enabled, the window can be resized using the mouse or touch operations.
-
-**Since:** 20
-
-<!--Device-Window-enableDrag(enable: boolean): Promise<void>--><!--Device-Window-enableDrag(enable: boolean): Promise<void>-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enable | boolean | Yes | The value true means to enable window dragging, and false means the opposite. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 14 - 19 |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
-
 ## getRotationLocked
 
 ```TypeScript
@@ -1375,8 +1335,10 @@ This API can be called only by the main window of a system application.
 
 You need to pass the ID of the target main window. Both the calling window and the target window must be in the same application process, displayed on the same physical screen, below the lock screen layer, not topmost, not modal, and have no application-modal child windows.
 
-- If the application's main window or its child windows currently have focus, calling this API to lower the layer will cause the window to lose focus automatically, and the highest-layered application window will gain focus.  
-- If the main window calls this API to move above the current focused window, the highest-layered window among the raised main window and its child windows will gain focus. If the main window calls this API without moving above the current focused window, the focus remains unchanged.
+- If the application's main window or its child windows currently have focus, calling this API to lower the layer  
+will cause the window to lose focus automatically, and the highest-layered application window will gain focus.  
+- If the main window calls this API to move above the current focused window, the highest-layered window among  
+the raised main window and its child windows will gain focus. If the main window calls this API without moving above the current focused window, the focus remains unchanged.
 
 **Since:** 20
 
@@ -2699,49 +2661,6 @@ export default class EntryAbility extends UIAbility {
 
 ```
 
-## setTouchableAreas
-
-```TypeScript
-setTouchableAreas(rects: Array<Rect>): Promise<void>
-```
-
-Sets the touchable areas for this window. By default, the entire window is touchable. If a touchable area is set,touch events outside this area are transparently transmitted. The setting becomes invalid after the window rectangle changes.
-
-**Since:** 26.0.0
-
-**Required permissions:** 
-- API version 26.0.0+: ohos.permission.SET_WINDOW_TOUCH_AREAS
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>--><!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| rects | Array&lt;Rect&gt; | Yes | Touchable areas. The maximum number of touchable areas cannot exceed 10, and each touchable area cannot exceed the window area. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 - 24 |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
-
 ## setWakeUpScreen
 
 ```TypeScript
@@ -2895,44 +2814,6 @@ try {
 }
 
 ```
-
-## setWindowContainerModalColor
-
-```TypeScript
-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
-```
-
-Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).
-
-The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
-
-**Since:** 26.0.0
-
-**Required permissions:** 
-- API version 26.0.0+: ohos.permission.SET_WINDOW_ALPHA
-
-<!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void--><!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| activeColor | string | Yes | window container color in active. |
-| inactiveColor | string | Yes | window container color in inactive. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 24 |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation.Possible cause: Invalid window type. Only main windows are supported. |
 
 ## setWindowMode
 

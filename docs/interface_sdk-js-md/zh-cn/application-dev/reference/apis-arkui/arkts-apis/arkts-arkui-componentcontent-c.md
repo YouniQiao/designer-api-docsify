@@ -194,7 +194,7 @@ isTransferred(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | - 返回ComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>true：ComponentContent通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>false：ComponentContent不通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
+| boolean | - 返回ComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>true：   ComponentContent通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>false：ComponentContent不通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
 
 ## recycle
 
@@ -202,8 +202,10 @@ isTransferred(): boolean
 recycle(): void
 ```
 
-- 触发ComponentContent中自定义组件的回收。自定义组件的回收是组件复用机制中的环节，具体信息请参见[@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。  
-- ComponentContent通过reuse和recycle完成其内外自定义组件之间的复用事件传递，具体使用场景请参见[BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。从API版本26.0.0开始，ComponentContent中的自定义组件支持V2组件复用，请参见[@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。
+- 触发ComponentContent中自定义组件的回收。自定义组件的回收是组件复用机制中的环节，具体信息请参见  
+[@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。  
+- ComponentContent通过reuse和recycle完成其内外自定义组件之间的复用事件传递，具体使用场景请参见  
+[BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。从API版本26.0.0开始，ComponentContent中的自定义组件支持V2组件复用，请参见[@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。
 
 **起始版本：** 12
 

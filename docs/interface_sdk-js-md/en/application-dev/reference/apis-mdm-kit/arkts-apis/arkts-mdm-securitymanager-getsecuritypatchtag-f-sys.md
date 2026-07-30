@@ -65,10 +65,10 @@ let wantTemp: Want = {
 };
 
 try {
-    let res: string = securityManager.getSecurityPatchTag(wantTemp);
-    console.info(`Succeeded in getting security patch tag. tag: ${res}`);
+  let res: string = securityManager.getSecurityPatchTag(wantTemp);
+  console.info(`Succeeded in getting security patch tag. tag: ${res}`);
 } catch(err) {
-    console.error(`Failed to get security patch tag. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to get security patch tag. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

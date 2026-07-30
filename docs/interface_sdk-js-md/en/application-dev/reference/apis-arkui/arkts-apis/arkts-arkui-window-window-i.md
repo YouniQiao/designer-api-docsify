@@ -314,6 +314,44 @@ This API takes effect only for the main window of the application. In addition, 
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause:The window is not created or destroyed. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause:Internal task error. |
 
+## enableDrag
+
+```TypeScript
+enableDrag(enable: boolean): Promise<void>
+```
+
+Enables or disables window dragging. This API takes effect only for system windows, application child windows,global floating windows, and modal windows. This API uses a promise to return the result.
+
+After window dragging is enabled, the window can be resized using the mouse or touch operations.
+
+**Since:** 20
+
+<!--Device-Window-enableDrag(enable: boolean): Promise<void>--><!--Device-Window-enableDrag(enable: boolean): Promise<void>-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | The value true means to enable window dragging, and false means the opposite. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 14 - 19 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. |
+
 ## enableLandscapeMultiWindow
 
 ```TypeScript
@@ -355,14 +393,19 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 Main window/Child window:
 
-- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
-- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
-- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
-- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
+- In the free-floating window mode under the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
+of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
+not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
+- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
+to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
 
 Global floating window, modal window, or system window:
 
-- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+- This API can be called to obtain the avoidance area only after  
+[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
 
@@ -391,14 +434,19 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 Main window/Child window:
 
-- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
-- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
-- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
-- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
+- In the free-floating window mode under the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
+of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
+not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
+- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
+to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
 
 Global floating window, modal window, or system window:
 
-- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+- This API can be called to obtain the avoidance area only after  
+[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
 
@@ -803,19 +851,26 @@ Obtains the avoid area of this window.
 
 Main window/Child window:
 
-- In the free-floating window mode under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
-- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
-- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
-- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
+- In the free-floating window mode under the  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+- In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
+of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
+not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
+- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
+to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
 
 Global floating window, modal window, or system window:
 
-- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+- This API can be called to obtain the avoidance area only after  
+[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 This API is generally applicable to the following scenarios:
 
-- In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback, this API is used to obtain the initial layout avoid area when the application starts.  
-- This API is used when a child window needs to temporarily display content and requires layout adjustments to avoid certain areas.
+- In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback, this  
+API is used to obtain the initial layout avoid area when the application starts.  
+- This API is used when a child window needs to temporarily display content and requires layout adjustments to  
+avoid certain areas.
 
 **Since:** 9
 
@@ -854,13 +909,17 @@ Obtains the avoid area of this application window, even if the avoid area is inv
 
 Main window/Child window:
 
-- When the main window is in the free-floating window mode under a non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
-- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
-- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
+- When the main window is in the free-floating window mode under a non-  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+- In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
+not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
+- For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
+to obtain the calculated avoidance area only when the position and size of the child window are the same as those of the main window. Otherwise, the obtained avoidance area is empty.
 
 Global floating window, modal window, or system window:
 
-- This API can be called to obtain the avoidance area only after [setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+- This API can be called to obtain the avoidance area only after  
+[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 22
 
@@ -2166,8 +2225,10 @@ minimize(callback: AsyncCallback<void>): void
 
 The behavior of this API varies based on the caller:
 
-- Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar.For 2-in-1 devices, it can be restored by calling [restore()](arkts-arkui-window-window-i.md#restore).  
-- Hides the child window or global floating window if the caller is a child window. The child window or floating window cannot be restored in the dock bar. It can be made visible again by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow).
+- Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar.  
+For 2-in-1 devices, it can be restored by calling [restore()](arkts-arkui-window-window-i.md#restore).  
+- Hides the child window or global floating window if the caller is a child window. The child window or floating  
+window cannot be restored in the dock bar. It can be made visible again by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow).
 
 This API can be called only by the main window, child window, or global floating window. If it is called by other windows, error code 1300002 is thrown. This API uses an asynchronous callback to return the result.
 
@@ -2201,8 +2262,10 @@ minimize(): Promise<void>
 
 The behavior of this API varies based on the caller:
 
-- Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar.For 2-in-1 devices, it can be restored by calling [restore()](arkts-arkui-window-window-i.md#restore).  
-- Hides the child window or global floating window if the caller is a child window. The child window or floating window cannot be restored in the dock bar. It can be made visible again by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow).
+- Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar.  
+For 2-in-1 devices, it can be restored by calling [restore()](arkts-arkui-window-window-i.md#restore).  
+- Hides the child window or global floating window if the caller is a child window. The child window or floating  
+window cannot be restored in the dock bar. It can be made visible again by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow).
 
 This API can be called only by the main window, child window, or global floating window. If it is called by other windows, error code 1300002 is thrown. This API uses a promise to return the result.
 
@@ -3673,9 +3736,12 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 
 Subscribes to the visibility status change event of the window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
 
-- If the shadow area of a non-main window ([setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled) and [setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
-- If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible.  
-- Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
+- If the shadow area of a non-main window (  
+[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled) and [setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
+- If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
+opaque degree), the lower-layer window will not be blocked and is visible.  
+- Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
+window on a mobile phone, the lower-layer window returned remains visible.
 
 **Since:** 22
 
@@ -3762,14 +3828,19 @@ Subscribes to the event indicating changes to the area where this window cannot 
 
 Main window/Child window:
 
-- When the callback is triggered in the free-floating window mode (the window mode is **window.WindowStatusType.FLOATING**) under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**)is available.  
-- When the callback is triggered in the free-floating window mode of the main window in the non-freeform window state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)is **TYPE_SYSTEM**) is available.  
-- When the callback is triggered in the other scenarios of the main window, the calculated avoidance area can be returned only when the window is not in the free-floating window mode or the device type is phone or tablet.Otherwise, an empty avoidance area is returned.  
-- When the callback is triggered for the child window in the non-freeform window state or non-free-floating window mode, the calculated avoidance area of the child window is returned only when the position and size of the child window are the same as those of the main window. Otherwise, an empty avoidance area is returned.
+- When the callback is triggered in the free-floating window mode (the window mode is  
+**window.WindowStatusType.FLOATING**) under the [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**)is available.  
+- When the callback is triggered in the free-floating window mode of the main window in the non-freeform window  
+state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)is **TYPE_SYSTEM**) is available.  
+- When the callback is triggered in the other scenarios of the main window, the calculated avoidance area can be  
+returned only when the window is not in the free-floating window mode or the device type is phone or tablet.Otherwise, an empty avoidance area is returned.  
+- When the callback is triggered for the child window in the non-freeform window state or non-free-floating  
+window mode, the calculated avoidance area of the child window is returned only when the position and size of the child window are the same as those of the main window. Otherwise, an empty avoidance area is returned.
 
 Global floating window, modal window, or system window:
 
-- The calculated avoidance area is returned only when the callback is triggered after [setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, an empty avoidance area is returned.
+- The calculated avoidance area is returned only when the callback is triggered after  
+[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, an empty avoidance area is returned.
 
 <!--RP7-->Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.<!--RP7End-->
 
@@ -4019,9 +4090,12 @@ on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 
 Subscribes to the visibility status change event of this window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
 
-- If the shadow area of a non-main window ([setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled) and [setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
-- If the upper-layer window has a transparency effect (including all transparency degrees except the completely opaque degree), the lower-layer window will not be blocked and is visible.  
-- Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating window on a mobile phone, the lower-layer window returned remains visible.
+- If the shadow area of a non-main window (  
+[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled) and [setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
+- If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
+opaque degree), the lower-layer window will not be blocked and is visible.  
+- Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
+window on a mobile phone, the lower-layer window returned remains visible.
 
 **Since:** 11
 
@@ -6455,8 +6529,10 @@ When the event separation state is supported:
 
 When the event separation state is not supported (the value of **enabled** is **false**):
 
-- If the first finger taps the window, keeps hitting the window, and does not lift up, the events generated by subsequent taps of other fingers are distributed to the window, regardless of whether the taps of other fingers hit the window.  
-- If the first finger taps the window and does not keep hitting the window, the events generated by subsequent taps of other fingers are not distributed to the window and are discarded by the system, even if the taps of other fingers hit the window.
+- If the first finger taps the window, keeps hitting the window, and does not lift up, the events generated by  
+subsequent taps of other fingers are distributed to the window, regardless of whether the taps of other fingers hit the window.  
+- If the first finger taps the window and does not keep hitting the window, the events generated by subsequent  
+taps of other fingers are not distributed to the window and are discarded by the system, even if the taps of other fingers hit the window.
 
 **Since:** 23
 
@@ -6983,6 +7059,47 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 | isTouchable | boolean | Yes | Whether the window is touchable. **true** if touchable, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
+## setTouchableAreas
+
+```TypeScript
+setTouchableAreas(rects: Array<Rect>): Promise<void>
+```
+
+Sets the touchable areas for this window. By default, the entire window is touchable. If a touchable area is set,touch events outside this area are transparently transmitted. The setting becomes invalid after the window rectangle changes.
+
+**Since:** 26.0.0
+
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.SET_WINDOW_TOUCH_AREAS
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>--><!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rects | Array&lt;Rect&gt; | Yes | Touchable areas. The maximum number of touchable areas cannot exceed 10, and each touchable area cannot exceed the window area. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 - 24 |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid parameter range. |
+
 ## setUIContent
 
 ```TypeScript
@@ -7257,6 +7374,42 @@ The background color you set here covers the entire window, including both the t
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation.Possible cause: Invalid window type. Only main windows are supported. |
+
+## setWindowContainerModalColor
+
+```TypeScript
+setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
+```
+
+Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).
+
+The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
+
+**Since:** 26.0.0
+
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.SET_WINDOW_ALPHA
+
+<!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void--><!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| activeColor | string | Yes | window container color in active. |
+| inactiveColor | string | Yes | window container color in inactive. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 24 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.Possible cause: The window is not created or destroyed. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation.Possible cause: Invalid window type. Only main windows are supported. |
 

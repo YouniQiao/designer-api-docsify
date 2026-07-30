@@ -1,6 +1,6 @@
 # PreviewOutput
 
-Implements preview output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
+PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -16,18 +16,49 @@ Implements preview output. It inherits from [CameraOutput](arkts-camera-camera-c
 import { camera } from '@kit.CameraKit';
 ```
 
+## addDeferredSurface
+
+```TypeScript
+addDeferredSurface(surfaceId: string): void
+```
+
+Adds a surface for delayed preview. This API can run after [commitConfig](arkts-camera-camera-session-i.md#commitconfig) or [start](arkts-camera-camera-session-i.md#start) is called.
+
+**Since:** 24
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void--><!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent](XComponent). |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 - 23 |
+
 ## enableBandwidthCompression
 
 ```TypeScript
 enableBandwidthCompression(enabled: boolean): void
 ```
 
-Enables preview bandwidth compression.Before enabling this feature, you can call [isBandwidthCompressionSupported](arkts-camera-camera-previewoutput-i.md#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression.
+Enables preview bandwidth compression.
+
+Before enabling this feature, you can call [isBandwidthCompressionSupported](arkts-camera-camera-previewoutput-i.md#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression.
 > **NOTE**  
 >  
 > This function must be called prior to  
-> [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig).  
-> Otherwise, the preview output stream format will be affected.
+> [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the  
+> preview output stream format will be affected.
 
 **Since:** 23
 
@@ -57,7 +88,9 @@ Enables preview bandwidth compression.Before enabling this feature, you can call
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range.This API is valid only after [setFrameRate](arkts-camera-camera-previewoutput-i.md#setframerate) is called to set a frame rate range for preview streams.
+Obtains the configured frame rate range.
+
+This API is valid only after [setFrameRate](arkts-camera-camera-previewoutput-i.md#setframerate) is called to set a frame rate range for preview streams.
 
 **Since:** 12
 
@@ -109,9 +142,12 @@ getPreviewRotation(displayRotation?: number): ImageRotation
 
 Obtains the preview rotation angle.
 
-- Device's natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward.  
-- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode.Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.  
-- [Screen rotation](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-multi-device-window-direction#section15598121101615): indicates the clockwise rotation angle of the device screen.
+- Device' natural orientation: the default orientation for using a device. For example, the default orientation  
+of the bar-type phone is in portrait mode, with the charging port facing downward.  
+- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's  
+natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode.Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.  
+-  
+[Screen Rotation](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-multi-device-window-direction):indicates the clockwise rotation angle of the device screen.
 
 **Since:** 12
 
@@ -127,7 +163,7 @@ Obtains the preview rotation angle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayRotation | number | No | Screen rotation angle of the display. It is obtained by calling [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync).<br> Since API version 23,the input parameter **displayRotation** is optional. If no parameter is passed, the system obtains the **displayRotation** value to calculate rotation angle of a video.<br>**Since:** 23 |
+| displayRotation | number | No | Screen rotation angle of the display. It is obtained by calling [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync).<br> Since API version 23, the input parameter **displayRotation** is optional. If no parameter is passed,the system obtains the **displayRotation** value to calculate rotation angle of a video.<br> The value ranges from 0 to 360, in degrees.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -363,7 +399,9 @@ Subscribes to PreviewOutput error events. This API uses an asynchronous callback
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](arkts-camera-camera-previewoutput-i.md#getsupportedframerates).
+Sets a frame rate range for preview streams. The range must be within the supported frame rate range,
+
+which can be obtained by calling [getSupportedFrameRates](arkts-camera-camera-previewoutput-i.md#getsupportedframerates).
 > **NOTE**  
 >  
 > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or  

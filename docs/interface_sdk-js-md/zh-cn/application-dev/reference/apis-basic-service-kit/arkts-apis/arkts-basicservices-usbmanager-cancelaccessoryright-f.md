@@ -41,15 +41,15 @@ function cancelAccessoryRight(accessory: USBAccessory): void
 ```TypeScript
 async function cancelAccessoryRight() {
   try {
-    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
-    let flag = await usbManager.requestAccessoryRight(accList?.[0])
+    let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList();
+    let flag = await usbManager.requestAccessoryRight(accList?.[0]);
     if (!flag) {
-      return
+      return;
     }
-    usbManager.cancelAccessoryRight(accList?.[0])
-    console.info(`cancelAccessoryRight success`)
+    usbManager.cancelAccessoryRight(accList?.[0]);
+    console.info(`cancelAccessoryRight success`);
   } catch (error) {
-    console.error(`cancelAccessoryRight error ${error.code}, message is ${error.message}`)
+    console.error(`cancelAccessoryRight error ${error.code}, message is ${error.message}`);
   }
 }
 

@@ -1579,7 +1579,7 @@ setCustomElements(actionType: ActionType, customType: CustomType,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| actionType | [ActionType](arkts-avsession-avmusictemplate-actiontype-t.md) | 是 | 操作类型 |
+| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 | 操作类型 |
 | customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | 是 | 自定义数据的类型 |
 | customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | 是 | 自定义数据 |
 

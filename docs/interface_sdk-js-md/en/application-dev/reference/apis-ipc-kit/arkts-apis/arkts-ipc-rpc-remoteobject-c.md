@@ -461,7 +461,7 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 
 | Type | Description |
 | --- | --- |
-| boolean | - If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean | - If the request is processed synchronously in   **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Example**
 
@@ -590,7 +590,7 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 
 | Type | Description |
 | --- | --- |
-| boolean | - If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean | - If the request is processed synchronously in   **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Example**
 

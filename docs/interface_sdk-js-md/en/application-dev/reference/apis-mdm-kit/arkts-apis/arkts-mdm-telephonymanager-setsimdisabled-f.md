@@ -52,7 +52,9 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
+  // Set the ID of the slot to be disabled.
   let slotId: number = 0;
+  // Disable the SIM card in the specified slot.
   telephonyManager.setSimDisabled(wantTemp, slotId);
   console.info(`Succeeded in setting slotId: ${slotId} disabled.`);
 } catch (err) {

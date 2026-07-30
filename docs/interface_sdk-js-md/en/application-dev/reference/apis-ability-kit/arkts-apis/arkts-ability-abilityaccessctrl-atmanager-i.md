@@ -264,13 +264,16 @@ on(
 
 Subscribes to permission authorization status change events for a specified permission list of this app,using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior.When monitoring is no longer needed, call [off](abilityAccessCtrl.AtManager.off) to unsubscribe.
 
-- When this subscription API is called for multiple times, if the subscribed permission lists are the same but the callbacks are different, the subscription is successful.  
-- When this subscription API is called for multiple times, if the subscribed permission lists contain the same subset and the callbacks are the same, the subscription fails.
+- When this subscription API is called for multiple times, if the subscribed permission lists are the same but  
+the callbacks are different, the subscription is successful.  
+- When this subscription API is called for multiple times, if the subscribed permission lists contain the same  
+subset and the callbacks are the same, the subscription fails.
 
 There are two possible scenarios when the permission status changes from "authorized" to "unauthorized":
 
 - User actively revokes: The system will terminate the corresponding app process.  
-- System actively reclaims: The app process will not be terminated. A typical scenario is the one-time authorization of a security component, which is automatically reclaimed by the system after the authorization period ends.
+- System actively reclaims: The app process will not be terminated. A typical scenario is the one-time  
+authorization of a security component, which is automatically reclaimed by the system after the authorization period ends.
 
 This API is usually used in conjunction with [off](abilityAccessCtrl.AtManager.off).When monitoring is no longer needed, call off to unsubscribe.
 

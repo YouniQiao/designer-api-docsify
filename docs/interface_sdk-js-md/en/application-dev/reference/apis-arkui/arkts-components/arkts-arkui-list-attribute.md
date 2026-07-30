@@ -571,9 +571,12 @@ Sets the number of columns or rows in the **List** component. (When the **List**
 The following example describes how to set the number of columns:
 
 - If **value** is a number, the number of columns is specified based on the number.  
-- If **value** is of the **LengthConstrain** type, **minLength** in **LengthConstrain** indicates the minimum column width. The **List** component calculates the maximum number of columns based on its minimum column width. In addition, **LengthConstrain** is passed to the child components of the **List** component as the maximum and minimum layout width constraints. These constraints take effect when the child components do not have a specified width.  
-- Each list item group occupies one row in multi-column mode. Its child list items are arranged based on the **lanes** attribute of the list.  
-- If **value** is of the **LengthConstrain** type, the number of columns in **ListItemGroup** is calculated based on the width of **ListItemGroup**. Therefore, when the width of **ListItemGroup** is different from that of the **List** component, the number of columns in **ListItemGroup** may be different from that in the **List** component.
+- If **value** is of the **LengthConstrain** type, **minLength** in **LengthConstrain** indicates the minimum  
+column width. The **List** component calculates the maximum number of columns based on its minimum column width. In addition, **LengthConstrain** is passed to the child components of the **List** component as the maximum and minimum layout width constraints. These constraints take effect when the child components do not have a specified width.  
+- Each list item group occupies one row in multi-column mode. Its child list items are arranged based on the  
+**lanes** attribute of the list.  
+- If **value** is of the **LengthConstrain** type, the number of columns in **ListItemGroup** is calculated based  
+on the width of **ListItemGroup**. Therefore, when the width of **ListItemGroup** is different from that of the **List** component, the number of columns in **ListItemGroup** may be different from that in the **List** component.
 
 **Since:** 9
 

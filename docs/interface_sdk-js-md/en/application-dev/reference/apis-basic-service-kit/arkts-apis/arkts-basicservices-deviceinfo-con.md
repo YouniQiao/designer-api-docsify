@@ -524,8 +524,10 @@ const osReleaseType: string
 
 OS release type. The options are as follows:
 
-- **Canary**: Preliminary release open only to specific developers. This release does not promise API stability and may require tolerance of instability.  
-- **Beta**: Release open to all developers. This release does not promise API stability and may require tolerance of instability.  
+- **Canary**: Preliminary release open only to specific developers. This release does not promise API stability  
+and may require tolerance of instability.  
+- **Beta**: Release open to all developers. This release does not promise API stability and may require tolerance  
+of instability.  
 - **Release**: Official release open to all developers. This release promises that all APIs are stable.
 
 Example: <!--RP9-->Canary/Beta/Release<!--RP9End-->

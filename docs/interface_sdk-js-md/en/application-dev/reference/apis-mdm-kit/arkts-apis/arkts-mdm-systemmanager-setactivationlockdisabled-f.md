@@ -55,6 +55,7 @@ Enables or disables the device activation lock. After the device activation lock
 
 ```TypeScript
 import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 import { systemManager } from '@kit.MDMKit';
 
 let wantTemp: Want = {

@@ -80,25 +80,3 @@ Sets the edgeLight animation Mode of the menu.
 
 **System API:** This is a system API.
 
-## systemMaterial
-
-```TypeScript
-systemMaterial?: SystemUiMaterial
-```
-
-Set system-styled materials for menu. The material effect behaves differently on devices with different level of computing powers. On devices with lower computing power, it affects attributes such as the backgroundColor, borderWidth, borderColor, shadow. On devices with higher computing power, it adds a filter effect at the system material layer, which can produce an effect similar to glass.
-
-**Type:** SystemUiMaterial
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-ContextMenuOptions-systemMaterial?: SystemUiMaterial--><!--Device-ContextMenuOptions-systemMaterial?: SystemUiMaterial-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-

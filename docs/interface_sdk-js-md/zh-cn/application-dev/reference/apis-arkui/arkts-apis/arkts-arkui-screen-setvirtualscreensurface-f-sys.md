@@ -53,7 +53,7 @@ struct Index {
   xComponentController: XComponentController = new XComponentController();
 
   setVirtualScreenSurface = () => {
-    let screenId: number = 1;
+    let screenId: number = 1;// 屏幕ID需通过getAllScreens()获取或从createVirtualScreen()返回值获取
     let surfaceId = this.xComponentController.getXComponentSurfaceId();
     // 设置虚拟屏幕的surface
     screen.setVirtualScreenSurface(screenId, surfaceId, (err: BusinessError) => {
@@ -137,7 +137,7 @@ struct Index {
   xComponentController: XComponentController = new XComponentController();
 
   setVirtualScreenSurface = () => {
-    let screenId: number = 1;
+    let screenId: number = 1;// 屏幕ID需通过getAllScreens()获取或从createVirtualScreen()返回值获取
     let surfaceId = this.xComponentController.getXComponentSurfaceId();
     // 设置虚拟屏幕的surface
     screen.setVirtualScreenSurface(screenId, surfaceId).then(() => {

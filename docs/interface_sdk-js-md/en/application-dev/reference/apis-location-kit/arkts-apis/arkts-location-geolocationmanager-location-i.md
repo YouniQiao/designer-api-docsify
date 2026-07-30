@@ -158,6 +158,24 @@ Indicates direction accuracy in degrees.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## isFromMock
+
+```TypeScript
+isFromMock?: boolean
+```
+
+Indicates whether the location is mocked.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Location-isFromMock?: boolean--><!--Device-Location-isFromMock?: boolean-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
 ## latitude
 
 ```TypeScript

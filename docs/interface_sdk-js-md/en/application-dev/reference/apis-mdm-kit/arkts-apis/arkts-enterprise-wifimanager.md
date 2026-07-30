@@ -17,8 +17,6 @@ The **wifiManager** module provides Wi-Fi management capabilities for enterprise
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

@@ -14,8 +14,6 @@ The **deviceSettings** module provides APIs for setting enterprise devices, incl
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

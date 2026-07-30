@@ -34,7 +34,7 @@ function getMainWindowSnapshot(windowId: Array<number>, config: WindowSnapshotCo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;image.PixelMap \| undefined&gt;&gt; | Promise used to return an array of PixelMap objects of the screenshots, representing the screenshots, in the order of the provided window ID array. If a window ID is valid but the corresponding main window cannot be found, undefined is returned. |
+| Promise&lt;Array&lt;image.PixelMap \| undefined&gt;&gt; | Promise对象。截图的PixelMap列表，按传入的窗口ID数组的顺序排列。当窗口ID合法但无法找到对应的主窗口时，返回undefined。 |
 
 **错误码：**
 

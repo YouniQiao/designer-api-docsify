@@ -6,8 +6,10 @@ Encryption and decryption interface, defining methods for symmetric and asymmetr
 
 <br>A complete symmetric encryption/decryption process is slightly different from the asymmetric encryption/decryption process.
 
-- Symmetric encryption and decryption: **init()** and **doFinal()** are mandatory. **update()** is optional and can be called multiple times to encrypt or decrypt big data. After **doFinal()** is called to complete an encryption or decryption operation, **init()** can be called to start a new encryption or decryption operation.  
-- RSA or SM2 asymmetric encryption and decryption: **init()** and **doFinal()** are mandatory, and **update()** is not supported. **doFinal()** can be called multiple times to encrypt or decrypt big data. **init()** cannot be called repeatedly. If the encryption/decryption mode or padding mode is changed, a new **Cipher** object must be created.
+- Symmetric encryption and decryption: **init()** and **doFinal()** are mandatory. **update()** is optional and can  
+be called multiple times to encrypt or decrypt big data. After **doFinal()** is called to complete an encryption or decryption operation, **init()** can be called to start a new encryption or decryption operation.  
+- RSA or SM2 asymmetric encryption and decryption: **init()** and **doFinal()** are mandatory, and **update()** is  
+not supported. **doFinal()** can be called multiple times to encrypt or decrypt big data. **init()** cannot be called repeatedly. If the encryption/decryption mode or padding mode is changed, a new **Cipher** object must be created.
 
 **Since:** 9
 
@@ -68,8 +70,10 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 
 <br>(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in all the data without using **update()**. If all the data has been passed in by [update()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update), you can pass in **null** in **data** of **doFinal()**. The output of **doFinal()** varies with the symmetric block cipher mode in use. This API uses an asynchronous callback to return the result.
 
-- In a single encryption process with GCM or CCM mode, concatenating the results of each **update()** and **doFinal()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** passed to **doFinal()** is **null**, the **doFinal()** result is only the **authTag**. During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.  
-- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.
+- In a single encryption process with GCM or CCM mode, concatenating the results of each **update()** and  
+**doFinal()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** passed to **doFinal()** is **null**, the **doFinal()** result is only the **authTag**. During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.  
+- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results  
+of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.
 
 (2) Encrypts or decrypts the data passed in this time in RSA and SM2 asymmetric encryption or decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a large amount of data needs to be encrypted/decrypted, call **doFinal()** multiple times and concatenate the result of each **doFinal()** to obtain the complete plaintext/ciphertext.
 > **NOTE**  
@@ -227,11 +231,13 @@ If a small amount of data needs to be encrypted or decrypted, you can use **doFi
 
 The output of **doFinal()** varies with the symmetric encryption/decryption mode in use.
 
-- Symmetric encryption in GCM and CCM mode: The result consists of the ciphertext and **authTag** (the last 16bytes for GCM and the last 12 bytes for CCM). If **data** in **doFinal** is null, the result of **doFinal** is **authTag**.
+- Symmetric encryption in GCM and CCM mode: The result consists of the ciphertext and **authTag** (the last 16  
+bytes for GCM and the last 12 bytes for CCM). If **data** in **doFinal** is null, the result of **doFinal** is **authTag**.
 
 During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.
 
-- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.
+- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results  
+of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.
 
 (2) Encrypts or decrypts the data passed in RSA and SM2 asymmetric encryption or decryption. This API uses a promise to return the encrypted or decrypted data. If a large amount of data is to be processed, call **doFinal()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
 > **NOTE**  
@@ -349,9 +355,12 @@ If a small amount of data is to be processed, you can pass in all the data at a 
 
 The output of **doFinalSync()** varies with the symmetric block cipher mode in use.
 
-- In a single encryption process with GCM or CCM mode, concatenating the results of each **updateSync()** and **doFinalSync()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** in **doFinalSync()** is **null**, the result of **doFinalSync()** is **authTag**.  
-- During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.  
-- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results of **updateSync()** and **doFinalSync()** throughout the process will yield the complete plaintext or ciphertext.
+- In a single encryption process with GCM or CCM mode, concatenating the results of each **updateSync()** and  
+**doFinalSync()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** in **doFinalSync()** is **null**, the result of **doFinalSync()** is **authTag**.  
+- During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or  
+[CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.  
+- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results  
+of **updateSync()** and **doFinalSync()** throughout the process will yield the complete plaintext or ciphertext.
 
 (2) Encrypts or decrypts the input data for RSA or SM2 asymmetric encryption/decryption. This API returns the encrypted or decrypted data synchronously. If a large amount of data is to be processed, call **doFinalSync()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
 

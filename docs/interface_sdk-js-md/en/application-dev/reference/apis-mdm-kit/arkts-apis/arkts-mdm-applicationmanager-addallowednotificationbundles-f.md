@@ -42,3 +42,26 @@ Adds applications that are allowed to send notifications.
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
+**Example**
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+let bundleNames: Array<string> = ['com.example.notificationapp'];
+
+try {
+  applicationManager.addAllowedNotificationBundles(wantTemp, bundleNames, 100);
+  console.info('Succeeded in adding allowed notification bundles.');
+} catch (err) {
+  console.error(`Failed to add allowed notification bundles. Code is ${err.code}, message is ${err.message}`);
+}
+
+```
+

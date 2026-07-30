@@ -69,6 +69,54 @@ Whether to force reuse the rasterization result.
 | --- | --- | --- | --- |
 | isForce | boolean | Yes | Whether to force reuse the rasterization result.True means to force reuse of the rasterization result.False means to allow updates to the rasterization result.The default value is false. |
 
+**Example**
+
+```TypeScript
+// Index.ets
+import { text, drawing } from '@kit.ArkGraphics2D'
+import { image } from '@kit.ImageKit'
+ 
+function textFunc(pixelmap: PixelMap) {
+  let canvas = new drawing.Canvas(pixelmap);
+  let textData = "Hello World";
+  let myTextStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let myParagraphStyle: text.ParagraphStyle = {
+    textStyle: myTextStyle
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+  paragraphBuilder.addText(textData);
+  let paragraph = paragraphBuilder.build();
+  paragraph.layoutSync(200);
+  paragraph.forceReuseRasterResult(true);
+  paragraph.paint(canvas, 0, 0);
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: PixelMap = undefined;
+  fun: Function = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button("Click").onClick(() => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+
+```
+
 ## getActualTextRange
 
 ```TypeScript
@@ -785,6 +833,7 @@ Obtains the style configuration of a paragraph.
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
 
 @Entry
 @Component
@@ -809,10 +858,22 @@ struct Index {
           let paragraphStyle = paragraph.getParagraphStyle();
           if (paragraphStyle.textStyle != undefined) {
             console.info("Print fontSize: " + paragraphStyle.textStyle?.fontSize);
+            if (paragraphStyle.textStyle?.color != undefined && typeof paragraphStyle.textStyle?.color == 'number') {
+              let textColor: common2D.Color = numberToRGBA(paragraphStyle.textStyle?.color);
+              console.info(`Print text color ARGB: ${textColor.alpha}, ${textColor.red}, ${textColor.green}, ${textColor.blue}`);
+            }
           }
         })
     }
   }
+}
+
+function numberToRGBA(colorNum: number): common2D.Color {
+  const a = (colorNum >>> 24) & 0xFF;
+  const r = (colorNum >>> 16) & 0xFF;
+  const g = (colorNum >>> 8) & 0xFF;
+  const b = colorNum & 0xFF;
+  return { alpha: a, red: r, green: g, blue: b };
 }
 
 ```
@@ -1171,13 +1232,14 @@ struct Index {
   @State pixelmap?: PixelMap = undefined;
   fun: Function = textFunc;
 
-  async prepareLayoutPromise() {
-    // Calculate the layout of the paragraph object.
-    paragraph.layout(200).then((data) => {
-      console.info(`Succeeded in doing layout,  ${JSON.stringify(data)}`);
-    }).catch((error: Error) => {
-      console.error(`Failed to do layout, error: ${JSON.stringify(error)} message: ${error.message}`);
-    });
+async prepareLayoutPromise() {
+    try {
+      await paragraph.layout(200);
+      console.info('Succeeded in doing layout');
+    } catch (error) {
+      let e: Error = error as Error;
+      console.error(`Failed to do layout, error: ${JSON.stringify(e)} message: ${e.message}`);
+    }
   }
 
   aboutToAppear() {

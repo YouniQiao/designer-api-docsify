@@ -79,7 +79,7 @@ Sets the surface ID of the face preview page during face enrollment. This API mu
 import { faceAuth } from '@kit.UserAuthenticationKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// The surfaceId is obtained from the XComponent control. The surfaceId here is only an example.
+// Obtain this surfaceId through the XComponentController.getXComponentSurfaceId() method from the XComponent component. This is only an example.
 let surfaceId = '123456';
 let manager = new faceAuth.FaceAuthManager();
 try {

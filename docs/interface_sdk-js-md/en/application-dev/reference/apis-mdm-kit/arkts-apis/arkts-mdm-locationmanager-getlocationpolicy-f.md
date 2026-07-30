@@ -45,27 +45,6 @@ Queries the location service policy.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
-
-```TypeScript
-import { locationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-    let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(wantTemp);
-    console.info(`Succeeded in getting location policy. policy: ${result}`);
-} catch(err) {
-    console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);
-}
-
-```
-
 
 ## getLocationPolicy
 
@@ -105,4 +84,25 @@ Queries the location service policy.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Example**
+
+```TypeScript
+import { locationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(wantTemp);
+  console.info(`Succeeded in getting location policy. policy: ${result}`);
+} catch(err) {
+  console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
 

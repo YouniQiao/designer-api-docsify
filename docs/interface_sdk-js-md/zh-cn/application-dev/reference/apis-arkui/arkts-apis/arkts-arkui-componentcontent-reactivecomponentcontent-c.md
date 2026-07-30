@@ -152,7 +152,7 @@ isTransferred(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | - 返回ReactiveComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>true：ReactiveComponentContent通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>false：ReactiveComponentContent不通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
+| boolean | - 返回ReactiveComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>true：   ReactiveComponentContent通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>false：ReactiveComponentContent不通过transfer.transferStatic或transfer.transferDynamic方法创建。 |
 
 ## recycle
 

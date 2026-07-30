@@ -42,30 +42,6 @@ Obtains the browser policy by app ID.
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
 
-**Example**
-
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// Replace the value of appId with the specified application ID of the browser.
-let appId: string = 'com.example.******_******/******5t5CoBM=';
-
-try {
-  let result: string = browser.getPoliciesSync(wantTemp, appId);
-  console.info(`Succeeded in getting browser policies, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to get browser policies. Code is ${err.code}, message is ${err.message}`);
-}
-
-```
-
 
 ## getPoliciesSync
 
@@ -102,4 +78,28 @@ Obtains the browser policy by app ID.
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Example**
+
+```TypeScript
+import { browser } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Replace the value of appId with the specified application ID of the browser.
+let appId: string = 'com.example.******_******/******5t5CoBM=';
+
+try {
+  let result: string = browser.getPoliciesSync(wantTemp, appId);
+  console.info(`Succeeded in getting browser policies, result : ${JSON.stringify(result)}`);
+} catch(err) {
+  console.error(`Failed to get browser policies. Code is ${err.code}, message is ${err.message}`);
+}
+
+```
 

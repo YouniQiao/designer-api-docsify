@@ -59,7 +59,8 @@ readonly data?: string | Array<FormItem>
 
 Task value.
 
-- Use [request.agent.show](arkts-basicservices-agent-show-f.md#show)and [request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)to query the value.
+- Use [request.agent.show](arkts-basicservices-agent-show-f.md#show)  
+and [request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)to query the value.
 
 **Type:** string \| Array&lt;FormItem&gt;
 
@@ -125,7 +126,8 @@ readonly gauge: boolean
 
 Whether to send progress notifications. This parameter applies only to background tasks.
 
-- **false**: Progress notifications are not sent. This means that a notification is sent only to indicate the result of the total task.  
+- **false**: Progress notifications are not sent. This means that a notification is sent only to indicate the  
+result of the total task.  
 - **true**: Progress notifications are sent to indicate the result of each file.
 
 **Type:** boolean
@@ -328,7 +330,8 @@ readonly url?: string
 
 Task URL.
 
-- Use [request.agent.show](arkts-basicservices-agent-show-f.md#show)and [request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)to query the value.
+- Use [request.agent.show](arkts-basicservices-agent-show-f.md#show)  
+and [request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)to query the value.
 
 **Type:** string
 

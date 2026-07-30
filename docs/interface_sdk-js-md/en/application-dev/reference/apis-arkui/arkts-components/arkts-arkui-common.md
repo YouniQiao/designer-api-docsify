@@ -231,7 +231,7 @@ Constructor
 - [SpringLoadingContext](arkts-arkui-common-springloadingcontext-t.md)
 - [Summary](arkts-arkui-common-summary-t.md)
 - [SymbolGlyphModifier](arkts-arkui-common-symbolglyphmodifier-t.md)
-- [SystemUiMaterial](arkts-arkui-common-systemuimaterial-t-sys.md)
+- [SystemUiMaterial](arkts-arkui-common-systemuimaterial-t.md)
 - [Theme](arkts-arkui-common-theme-t.md)
 - [TipsMessageType](arkts-arkui-common-tipsmessagetype-t.md)
 - [TouchTestDoneCallback](arkts-arkui-common-touchtestdonecallback-t.md)

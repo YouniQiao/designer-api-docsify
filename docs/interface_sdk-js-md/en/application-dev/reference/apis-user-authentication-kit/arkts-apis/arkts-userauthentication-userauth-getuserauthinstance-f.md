@@ -60,14 +60,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while(retryCount < 3){
+  while (retryCount < 3) {
     randData = rand?.generateRandomSync(len)?.data;
-    if(randData){
+    if (randData) {
       break;
     }
     retryCount++;
   }
-  if(!randData){
+  if (!randData) {
     return;
   }
   const authParam: userAuth.AuthParam = {

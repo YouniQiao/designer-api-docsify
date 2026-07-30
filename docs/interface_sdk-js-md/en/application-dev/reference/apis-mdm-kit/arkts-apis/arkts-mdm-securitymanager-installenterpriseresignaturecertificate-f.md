@@ -70,7 +70,7 @@ let wantTemp: Want = {
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
-// The test.cer certificate file must be placed in the app sandbox and be a valid enterprise re-signing certificate.
+// The test.cer certificate file must be placed in the application sandbox and be a valid enterprise application re-signing certificate.
 // Replace with actual values.
 const filePath = '/test.cer';
 // Replace with actual values.

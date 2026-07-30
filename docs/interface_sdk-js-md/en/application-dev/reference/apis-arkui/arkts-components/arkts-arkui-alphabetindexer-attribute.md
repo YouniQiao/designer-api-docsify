@@ -161,7 +161,7 @@ Sets the radius of the index background border corners in the alphabetic index b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | <br>Unit: vp.   - Radius of the index background border corners in the alphabetic index bar.<br>Default value: **8vp**<br>This parameter cannot be set in percentage. If the value specified is less than **0**, **0** is used.<br>The radius of the index background border corners in the alphabetic index bar is automatically adaptive (radius of the index corners + 4 vp). |
+| value | number | Yes | <br>Unit: vp.   - Radius of the index background border corners in the alphabetic index bar.<br>Default   value: **8vp**<br>This parameter cannot be set in percentage. If the value specified is less than **0**, **0** is used.<br>The radius of the index background border corners in the alphabetic index bar is automatically adaptive (radius of the index corners + 4 vp). |
 
 ## itemSize
 

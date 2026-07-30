@@ -34,11 +34,13 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md#getbundleinfoforselfsync) | Obtains the bundle information of the current application based on the given bundle flags. This API returns the result synchronously. |
 | [getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync) | Obtains the bundle information based on the given bundle name, bundle flags, and user ID. This API returns the result synchronously.  No permission is required for obtaining the caller's own information. |
 | [getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync-1) | Obtains the bundle information for the caller's user based on the given bundle name and bundle flags. This API returns the result synchronously.  No permission is required for obtaining the caller's own information. |
+| [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md#getbundleinstallstatus) | Obtains the installation status of a specified application under a given user. |
 | [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md#getbundlenamebyuid) | Obtains the bundle name based on the given UID. This API uses an asynchronous callback to return the result. |
 | [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md#getbundlenamebyuid-1) | Obtains the bundle name based on the given UID. This API uses a promise to return the result. |
 | [getBundleNameByUidSync](arkts-ability-bundlemanager-getbundlenamebyuidsync-f.md#getbundlenamebyuidsync) | Obtains the bundle name based on the given UID. This API returns the result synchronously. |
 | [getInstalledBundleList](arkts-ability-bundlemanager-getinstalledbundlelist-f.md#getinstalledbundlelist) | Obtains all the bundle information in the system based on the given bundle flags.This API uses a promise to return the result. |
 | [getLaunchWant](arkts-ability-bundlemanager-getlaunchwant-f.md#getlaunchwant) | Obtains the **Want** parameters of the [entry UIAbility](../../../quick-start/application-package-glossary.md#uiability) of the current application. |
+| [getLaunchWantForBundleSync](arkts-ability-bundlemanager-getlaunchwantforbundlesync-f.md#getlaunchwantforbundlesync) | Obtains the Want used to launch the bundle based on the given bundle name and user ID. This API returns the result synchronously. |
 | [getPluginBundlePathForSelf](arkts-ability-bundlemanager-getpluginbundlepathforself-f.md#getpluginbundlepathforself) | Obtains the installation path of a specified plugin in the current [application sandbox](../../../file-management/app-sandbox-directory.md). |
 | [getProfileByAbility](arkts-ability-bundlemanager-getprofilebyability-f.md#getprofilebyability) | Obtains the JSON string array of the current application's configuration file based on the given module name,ability name, and metadata name (name configured under **metadata** in [abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses an asynchronous callback to return the result. > NOTE  >  > If the profile uses the resource reference format, the return value retains this format (for example,  > **$string:res_id**). You can obtain the referenced resources through related APIs of the  > [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md). |
 | [getProfileByAbility](arkts-ability-bundlemanager-getprofilebyability-f.md#getprofilebyability-1) | Obtains the JSON string array of the current application's configuration file based on the given module name,ability name, and metadata name (name configured under **metadata** in [abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses a promise to return the result. > NOTE  >  > If the profile uses the resource reference format, the return value retains this format (for example,  > **$string:res_id**). You can obtain the referenced resources through related APIs of the  > [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md). |
@@ -101,7 +103,6 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md#getbundlearchiveinfo) | Obtains the bundle information based on the given HAP file path and bundle flags. This API uses an asynchronous callback to return the result. |
 | [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md#getbundlearchiveinfo-1) | Obtains the bundle information based on the given HAP file path and bundle flags. This API uses a promise to return the result. |
 | [getBundleArchiveInfoSync](arkts-ability-bundlemanager-getbundlearchiveinfosync-f-sys.md#getbundlearchiveinfosync) | Obtains the bundle information based on the given HAP file path and bundle flags. This API returns the result synchronously. |
-| [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f-sys.md#getbundleinstallstatus) | Obtains the installation status of a specified application under a given user. |
 | [getDeveloperIds](arkts-ability-bundlemanager-getdeveloperids-f-sys.md#getdeveloperids) | Obtains all the developer IDs of the current user based on the given application [distribution type](arkts-ability-bundlemanager-appdistributiontype-e-sys.md). |
 | [getDynamicIcon](arkts-ability-bundlemanager-getdynamicicon-f-sys.md#getdynamicicon) | Obtains the module name corresponding to the dynamic icon based on the specified bundle name. This API uses a promise to return the result. |
 | [getDynamicIconInfo](arkts-ability-bundlemanager-getdynamiciconinfo-f-sys.md#getdynamiciconinfo) | Obtains the dynamic icon information of all users and all application clones based on the given bundle name. This API uses a promise to return the result. |
@@ -110,7 +111,6 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getLaunchWantForBundle](arkts-ability-bundlemanager-getlaunchwantforbundle-f-sys.md#getlaunchwantforbundle) | Obtains the Want used to launch the bundle based on the given bundle name and user ID. This API uses an asynchronous callback to return the result. |
 | [getLaunchWantForBundle](arkts-ability-bundlemanager-getlaunchwantforbundle-f-sys.md#getlaunchwantforbundle-1) | Obtains the Want used to launch the bundle based on the given bundle name. This API uses an asynchronous callback to return the result. |
 | [getLaunchWantForBundle](arkts-ability-bundlemanager-getlaunchwantforbundle-f-sys.md#getlaunchwantforbundle-2) | Obtains the Want used to launch the bundle based on the given bundle name and user ID. This API uses a promise to return the result. |
-| [getLaunchWantForBundleSync](arkts-ability-bundlemanager-getlaunchwantforbundlesync-f-sys.md#getlaunchwantforbundlesync) | Obtains the Want used to launch the bundle based on the given bundle name and user ID. This API returns the result synchronously. |
 | [getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getpermissiondef) | Obtains the PermissionDef struct based on the given permission name. This API uses an asynchronous callback to return the result. |
 | [getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getpermissiondef-1) | Obtains the PermissionDef struct based on the given permission name. This API uses a promise to return the result. |
 | [getPermissionDefSync](arkts-ability-bundlemanager-getpermissiondefsync-f-sys.md#getpermissiondefsync) | Obtains the **PermissionDef** struct based on the given permission name. This API returns the result synchronously. |
@@ -165,8 +165,10 @@ import { bundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
+| [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md) | Enumerates the ability flags, which indicate the type of ability information to obtain. |
 | [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md) | Enumerates the types of ability components. |
 | [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md) | Enumerates the bundle flags, which indicate the type of bundle information to obtain. |
+| [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e.md) | Enumerates the application installation statuses. |
 | [BundleType](arkts-ability-bundlemanager-bundletype-e.md) | Enumerates the bundle types. |
 | [CompatiblePolicy](arkts-ability-bundlemanager-compatiblepolicy-e.md) | Defines the version compatibility type of the dynamic shared library. |
 | [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md) | Enumerates the display orientations of the ability. It is applicable only to [PageAbility](../../../application-models/pageability-overview.md) in the FA model. |
@@ -182,13 +184,11 @@ import { bundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e-sys.md) | Enumerates the ability flags, which indicate the type of ability information to obtain. |
 | [AppClonePreferenceMode](arkts-ability-bundlemanager-appclonepreferencemode-e-sys.md) | Enumerates the application clone preference modes. |
 | [AppDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md) | Enumerates the application [distribution types](../../../security/app-provision-structure.md). |
 | [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md) | Enumerates the application flags, which indicate the type of application information to obtain. |
 | [ApplicationInfoFlag](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md) | Enumerates the application information flag, which describes the status between an application and user. |
 | [BundleFlag](arkts-ability-bundlemanager-bundleflag-e-sys.md) | Enumerates the bundle flags, which indicate the type of bundle information to obtain. |
-| [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md) | Enumerates the application installation statuses. |
 | [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md) | Enumerates the ExtensionAbility flags, which indicate the type of ExtensionAbility information to obtain. |
 | [ProfileType](arkts-ability-bundlemanager-profiletype-e-sys.md) | Enumerates the types of profiles (also called application files). |
 <!--DelEnd-->

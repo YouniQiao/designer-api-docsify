@@ -209,7 +209,7 @@ To enable haptic feedback, you must declare the following permission under **req
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable haptic feedback.<br>- **true**: Enable haptic feedback.   - **false**: Disable haptic feedback.<br>Default value: **true**.<br>If the value of **enable** is **undefined**, the default value is used.<br>Whether this parameter takes effect after being set to **true** depends on hardware support. |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable haptic feedback.<br>- **true**: Enable haptic feedback.   - **false**: Disable haptic feedback.<br>Default value: **true**.<br>If the value of **enable** is   **undefined**, the default value is used.<br>Whether this parameter takes effect after being set to **true** depends on hardware support. |
 
 ## loop
 

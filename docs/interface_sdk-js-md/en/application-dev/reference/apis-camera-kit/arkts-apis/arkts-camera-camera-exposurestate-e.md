@@ -14,7 +14,7 @@ Enumerates the exposure states.
 EXPOSURE_STATE_SCAN = 0
 ```
 
-Exposure is being scanned.
+Focusing.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Exposure is being scanned.
 EXPOSURE_STATE_CONVERGED = 1
 ```
 
-Exposure is converged.
+Exposure converged.
 
 **Since:** 26.0.0
 

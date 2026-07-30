@@ -31,17 +31,10 @@ import { unifiedDataChannel } from '@kit.ArkData';
 | [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata-1) | 将数据写入UDMF的公共数据通路中，并生成数据的唯一标识符，使用Promise异步回调。 |
 | [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#querydata) | 查询UDMF公共数据通路的数据，使用callback异步回调。 |
 | [queryData](arkts-arkdata-unifieddatachannel-querydata-f.md#querydata-1) | 查询UDMF公共数据通路的数据，使用Promise异步回调。 |
+| [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f.md#removeappshareoptions) | 清除[setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md#setappshareoptions)设置的管控信息。调用成功后，setAppShareOptions设置的管控信息被清除，应用内拖拽通道数据恢复到默认使用范围。 |
+| [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f.md#setappshareoptions) | 设置应用内拖拽通道数据可使用的范围[ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)，目前仅支持DRAG类型数据通道的管控设置。调用成功后，应用内拖拽通道数据的使用范围被设置为指定的ShareOptions值。 |
 | [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updatedata) | 更新已写入UDMF的公共数据通路的数据，使用callback异步回调。 |
 | [updateData](arkts-arkdata-unifieddatachannel-updatedata-f.md#updatedata-1) | 更新已写入UDMF的公共数据通路的数据，使用Promise异步回调。 |
-
-<!--Del-->
-### 函数（系统接口）
-
-| 名称 | 说明 |
-| --- | --- |
-| [removeAppShareOptions](arkts-arkdata-unifieddatachannel-removeappshareoptions-f-sys.md#removeappshareoptions) | 清除[setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md#setappshareoptions)设置的管控信息。调用成功后，setAppShareOptions设置的管控信息被清除，应用内拖拽通道数据恢复到默认使用范围。 |
-| [setAppShareOptions](arkts-arkdata-unifieddatachannel-setappshareoptions-f-sys.md#setappshareoptions) | 设置应用内拖拽通道数据可使用的范围[ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)，目前仅支持DRAG类型数据通道的管控设置。调用成功后，应用内拖拽通道数据的使用范围被设置为指定的ShareOptions值。 |
-<!--DelEnd-->
 
 ### 类
 
@@ -87,14 +80,6 @@ import { unifiedDataChannel } from '@kit.ArkData';
 | [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md) | UDMF支持的设备内使用范围类型枚举。 |
 | [UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md) | 拖拽场景下的URI授权策略。 |
 | [Visibility](arkts-arkdata-unifieddatachannel-visibility-e.md) | 表示数据的可见性等级枚举。 |
-
-<!--Del-->
-### 枚举（系统接口）
-
-| 名称 | 说明 |
-| --- | --- |
-| [Intention](arkts-arkdata-unifieddatachannel-intention-e-sys.md) | UDMF已经支持的数据通路枚举类型。其主要用途是标识各种UDMF数据通路所面向的不同业务场景。 |
-<!--DelEnd-->
 
 ### 类型
 

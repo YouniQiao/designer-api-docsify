@@ -1,6 +1,8 @@
 # Focus
 
-Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)Provides APIs to obtain and set the camera focus mode and focus position.
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md).
+
+It provides APIs related to focus operations.
 
 **Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
 
@@ -36,7 +38,7 @@ Obtains the focal length in use.
 
 | Type | Description |
 | --- | --- |
-| number | Focal length, in units of mm. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+| number | Focal length, in mm. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
 
 **Error codes:**
 
@@ -137,7 +139,9 @@ Lock focus tracking.
 setFocusMode(afMode: FocusMode): void
 ```
 
-Sets a focus mode.Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported) to check whether the focus mode is supported.
+Sets a focus mode.
+
+Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported) to check whether the focus mode is supported.
 
 **Since:** 11
 

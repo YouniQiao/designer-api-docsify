@@ -75,8 +75,10 @@ Icon size. This parameter cannot be set in percentage.
 
 Default value:
 
-- When **ChipSize.SMALL** is used:**{width: $r('sys.float.chip_small_icon_size'), height: $r('sys.float.chip_small_icon_size')}**.  
-- When **ChipSize.NORMAL** is used:**{width: $r('sys.float.chip_normal_icon_size'), height: $r('sys.float.chip_normal_icon_size')}**.
+- When **ChipSize.SMALL** is used:  
+**{width: $r('sys.float.chip_small_icon_size'), height: $r('sys.float.chip_small_icon_size')}**.  
+- When **ChipSize.NORMAL** is used:  
+**{width: $r('sys.float.chip_normal_icon_size'), height: $r('sys.float.chip_normal_icon_size')}**.
 
 Unit: vp.
 

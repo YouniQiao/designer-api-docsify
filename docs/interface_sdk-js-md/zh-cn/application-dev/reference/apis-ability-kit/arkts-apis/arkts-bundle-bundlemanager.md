@@ -39,6 +39,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getBundleNameByUidSync](arkts-ability-bundlemanager-getbundlenamebyuidsync-f.md#getbundlenamebyuidsync) | 以同步方法根据给定的uid获取对应应用的bundleName。 |
 | [getInstalledBundleList](arkts-ability-bundlemanager-getinstalledbundlelist-f.md#getinstalledbundlelist) | 根据给定的bundleFlags获取系统中所有的BundleInfo。使用Promise异步回调。 |
 | [getLaunchWant](arkts-ability-bundlemanager-getlaunchwant-f.md#getlaunchwant) | 获取本应用[入口UIAbility](../../../quick-start/application-package-glossary.md#uiability)的Want参数。 |
+| [getLaunchWantForBundleSync](arkts-ability-bundlemanager-getlaunchwantforbundlesync-f.md#getlaunchwantforbundlesync) | 根据给定的包名和用户ID，获取用于启动应用程序的Want参数。 |
 | [getPluginBundlePathForSelf](arkts-ability-bundlemanager-getpluginbundlepathforself-f.md#getpluginbundlepathforself) | 获取指定插件在当前[应用沙箱](../../../file-management/app-sandbox-directory.md)内的安装路径。 |
 | [getProfileByAbility](arkts-ability-bundlemanager-getprofilebyability-f.md#getprofilebyability) | 根据给定的moduleName、abilityName和metadataName（module.json5中[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串。使用callback异步回调。 > 说明：  > > 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 $string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相  > 关接口，来获取引用的资源。 |
 | [getProfileByAbility](arkts-ability-bundlemanager-getprofilebyability-f.md#getprofilebyability-1) | 根据给定的moduleName、abilityName和metadataName（module.json5中[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串。使用Promise异步回调。 > 说明：  > > 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 $string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md)的相  > 关接口，来获取引用的资源。 |
@@ -109,7 +110,6 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getLaunchWantForBundle](arkts-ability-bundlemanager-getlaunchwantforbundle-f-sys.md#getlaunchwantforbundle) | 根据给定的bundleName和userId获取用于启动应用程序的Want参数。使用callback异步回调。 |
 | [getLaunchWantForBundle](arkts-ability-bundlemanager-getlaunchwantforbundle-f-sys.md#getlaunchwantforbundle-1) | 根据给定的bundleName获取用于启动应用程序的Want参数。使用callback异步回调。 |
 | [getLaunchWantForBundle](arkts-ability-bundlemanager-getlaunchwantforbundle-f-sys.md#getlaunchwantforbundle-2) | 根据给定的bundleName和userId获取用于启动应用程序的Want参数。使用Promise异步回调。 |
-| [getLaunchWantForBundleSync](arkts-ability-bundlemanager-getlaunchwantforbundlesync-f-sys.md#getlaunchwantforbundlesync) | 根据给定的包名和用户ID，获取用于启动应用程序的Want参数。 |
 | [getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getpermissiondef) | 根据给定的permissionName获取权限定义结构体PermissionDef信息。使用callback异步回调。 |
 | [getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getpermissiondef-1) | 根据给定的permissionName获取权限定义结构体PermissionDef信息。使用Promise异步回调。 |
 | [getPermissionDefSync](arkts-ability-bundlemanager-getpermissiondefsync-f-sys.md#getpermissiondefsync) | 以同步方法根据给定的permissionName获取权限定义结构体PermissionDef信息。 |
@@ -163,6 +163,7 @@ import { bundleManager } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md) | Ability组件信息标志，指示需要获取的Ability组件信息的内容。 |
 | [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md) | 标识Ability组件的类型。 |
 | [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md) | 包信息标志，指示需要获取的包信息的内容。 |
 | [BundleType](arkts-ability-bundlemanager-bundletype-e.md) | 标识应用的类型。 |
@@ -180,7 +181,6 @@ import { bundleManager } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e-sys.md) | Ability组件信息标志，指示需要获取的Ability组件信息的内容。 |
 | [AppDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md) | 标识应用[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)。 |
 | [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md) | 应用信息标志，指示需要获取的应用信息的内容。 |
 | [ApplicationInfoFlag](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md) | 标识应用和用户之间的各种状态类型。 |

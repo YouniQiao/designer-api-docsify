@@ -133,7 +133,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | - 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md)。<br>Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md)。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | - 应用运行的上下文。<br>FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md)。<br>Stage模型的应用Context定义见   [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md)。 |
 | bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md) | 是 | 向系统申请的后台模式。 |
 | wantAgent | [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md) | 是 | 通知参数，用于指定长时任务通知点击跳转的界面。 |
 

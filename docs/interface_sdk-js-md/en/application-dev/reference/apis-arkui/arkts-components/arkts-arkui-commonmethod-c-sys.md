@@ -168,40 +168,6 @@ Applies a spatial effect to component.
 | --- | --- |
 | T | @syscap SystemCapability.ArkUI.ArkUI.Full@systemapi@stagemodelonly@atomicservice |
 
-## systemMaterial
-
-```TypeScript
-systemMaterial(material: SystemUiMaterial | undefined): T
-```
-
-Sets the system material for a component. Different system materials have different attribute effects. This API affects the background color ([backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)), border color ([borderColor](arkts-arkui-commonmethod-c.md#bordercolor)), border width ([borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)), and shadow ([shadow](arkts-arkui-commonmethod-c.md#shadow)). You are advised not to use this API together with the aforementioned APIs. For details about the example, see [Setting the System Material](../../../reference/apis-arkui/arkts-apis-uimaterial-sys.md#example-1-setting-the-system-material).
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 23.
-
-<!--Device-CommonMethod-systemMaterial(material: SystemUiMaterial | undefined): T--><!--Device-CommonMethod-systemMaterial(material: SystemUiMaterial | undefined): T-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| material | [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md) \| undefined | Yes | System material object of the component. Setting it to **undefined** will make the component return to the no-material effect. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| T | Current component. |
-
 ## useUnionEffect
 
 ```TypeScript

@@ -1,6 +1,12 @@
 # ZoomQuery
 
-Provides the API to obtain the equivalent focal length information list in the current mode.
+ZoomQuery provides APIs to query the zoom feature of a device camera, including the API to obtain the supported zoom ratio range.
+> **NOTE**  
+>  
+> - This interface was first introduced in API version 12. In this version, a compatibility change was made that  
+> preserved the initial version information of inner elements. As a result, you might see outer element's @since  
+> version number being higher than that of the inner elements. However, this discrepancy does not affect the  
+> functionality of the interface.
 
 **Since:** 12
 
@@ -20,7 +26,7 @@ import { camera } from '@kit.CameraKit';
 getRAWCaptureZoomRatioRange(): Array<number>
 ```
 
-Gets supported zoom ratio range during raw-capture.
+Obtains the supported zoom ratio range during shooting in RAW format.
 
 **Since:** 24
 
@@ -36,7 +42,7 @@ Gets supported zoom ratio range during raw-capture.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | The zoom ratio range. |
+| Array&lt;number&gt; | Zoom ratio range. |
 
 **Error codes:**
 
@@ -44,6 +50,35 @@ Gets supported zoom ratio range during raw-capture.
 | --- | --- |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
 | [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+## getZoomPointInfos
+
+```TypeScript
+getZoomPointInfos(): Array<ZoomPointInfo>
+```
+
+Obtains the equivalent focal length information list in the current mode.
+
+**Since:** 26.0.0
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ZoomQuery-getZoomPointInfos(): Array<ZoomPointInfo>--><!--Device-ZoomQuery-getZoomPointInfos(): Array<ZoomPointInfo>-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;ZoomPointInfo&gt; | Equivalent focal length information list in the current mode. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 24 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
 ## getZoomRatioRange
 
@@ -65,7 +100,7 @@ Obtains the supported zoom ratio range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails,undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is thrown. |
+| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails,undefined is returned and an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is thrown.If the device does not support zoom, **undefined** is returned when this API is called. |
 
 **Error codes:**
 

@@ -112,3 +112,18 @@ status为true时，[addPermissionUsedRecord](arkts-ability-privacymanager-addper
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 | [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. Possible causes: 1. Database error. 2. Failed to query all applications under the user. |
 
+**示例：**
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileId: number = 100001; // 请替换为当前用户子身份资料的有效id。
+privacyManager.setPermissionUsedRecordToggleStatus(true, subProfileId).then(() => {
+  console.info('setPermissionUsedRecordToggleStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`setPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+
+```
+

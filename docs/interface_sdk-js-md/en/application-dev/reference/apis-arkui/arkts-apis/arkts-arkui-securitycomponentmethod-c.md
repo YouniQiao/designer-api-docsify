@@ -3,18 +3,23 @@
 The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
 
 This module is mainly used in the following scenarios:  
-- Set layout, size, text, icon, color, border, and interaction-related attributes for security components such as [PasteButton](../arkts-components/arkts-arkui-pastebutton.md) and [SaveButton](../arkts-components/arkts-arkui-savebutton.md).  
-- Adjust the display effect and interaction experience of security components while ensuring compliance with the security component specifications. For specific constraints,see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints).  
+- Set layout, size, text, icon, color, border, and interaction-related attributes for security components  
+such as [PasteButton](../arkts-components/arkts-arkui-pastebutton.md) and [SaveButton](../arkts-components/arkts-arkui-savebutton.md).  
+- Adjust the display effect and interaction experience of security components while ensuring compliance with  
+the security component specifications. For specific constraints,see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints).  
 - Reuse the universal attribute capabilities of security components through chained calls.
 
 ## Key Enums
 
-- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md): Enumeration of icon and text layout directions for the security component. Specifies horizontal or vertical layout.  
-- [ButtonType](../arkts-components/arkts-arkui-buttontype-e.md): Enumeration of button styles for the security component.Specifies capsule, circle, rounded rectangle, or normal button style.
+- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md): Enumeration of icon and text  
+layout directions for the security component. Specifies horizontal or vertical layout.  
+- [ButtonType](../arkts-components/arkts-arkui-buttontype-e.md): Enumeration of button styles for the security component.  
+Specifies capsule, circle, rounded rectangle, or normal button style.
 
 ## Key APIs
 
-- [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md): A collection of universal attribute methods for security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
+- [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md): A collection of universal attribute methods for  
+security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
 
 ## Child Components
 
@@ -977,10 +982,13 @@ maxFontSize(maxSize: number | string | Resource): T
 
 Sets the maximum font size for text display.
 
-- When used in conjunction with [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize) and [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
-- **maxFontSize** must be greater than **minFontSize**. If **maxFontSize** is less than **minFontSize**,**minFontSize** will be treated as **maxFontSize**.  
+- When used in conjunction with [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize) and  
+[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
+- **maxFontSize** must be greater than **minFontSize**. If **maxFontSize** is less than **minFontSize**,  
+**minFontSize** will be treated as **maxFontSize**.  
 - When adaptive font size is effective, the **fontSize** setting does not take effect.  
-- If the security component text is not fully displayed, clicking does not trigger authorization. The **maxFontSize** setting affects text visibility, which in turn affects authorization behavior.
+- If the security component text is not fully displayed, clicking does not trigger authorization. The  
+**maxFontSize** setting affects text visibility, which in turn affects authorization behavior.
 
 **Since:** 18
 
@@ -1074,11 +1082,14 @@ minFontSize(minSize: number | string | Resource): T
 
 Sets the minimum font size for text display.
 
-- When used in conjunction with [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize) and [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
-- **minFontSize** must be smaller than **maxFontSize**. If the set value is greater than **maxFontSize**,**maxFontSize** is used instead.  
+- When used in conjunction with [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize) and  
+[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
+- **minFontSize** must be smaller than **maxFontSize**. If the set value is greater than **maxFontSize**,  
+**maxFontSize** is used instead.  
 - When **minFontSize** is less than or equal to 0, adaptive font size does not take effect.  
 - When adaptive font size is effective, the **fontSize** setting does not take effect.  
-- If the security component text is not fully displayed, clicking does not trigger authorization. The **minFontSize** setting affects text visibility, which in turn affects authorization behavior.
+- If the security component text is not fully displayed, clicking does not trigger authorization. The  
+**minFontSize** setting affects text visibility, which in turn affects authorization behavior.
 
 **Since:** 18
 

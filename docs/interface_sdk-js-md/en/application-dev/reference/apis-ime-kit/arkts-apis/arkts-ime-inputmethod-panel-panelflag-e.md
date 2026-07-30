@@ -48,7 +48,8 @@ FLAG_CANDIDATE
 Candidate state type.
 
 - When in the candidate state type, the input method panel is a window displaying candidates based on user input.  
-- The input method service does not proactively control the visibility of the candidate panel. You need to control the visibility on your own.
+- The input method service does not proactively control the visibility of the candidate panel. You need to control  
+the visibility on your own.
 
 **Since:** 11
 

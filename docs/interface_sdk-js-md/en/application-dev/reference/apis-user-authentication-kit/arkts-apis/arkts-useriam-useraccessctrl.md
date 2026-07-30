@@ -5,8 +5,10 @@ The **userAccessCtrl** module is a core component of the OpenHarmony user identi
 This module applies to the following scenarios:
 
 - System-level applications need to verify the validity of user authentication tokens to ensure access security.  
-- Detailed information about the authentication token needs to be obtained, such as the authentication type, trust level, and user ID, for precise user identity identification.  
-- Access control decisions need to be made based on the authentication result to implement fine-grained permission management.
+- Detailed information about the authentication token needs to be obtained, such as the authentication type, trust  
+level, and user ID, for precise user identity identification.  
+- Access control decisions need to be made based on the authentication result to implement fine-grained permission  
+management.
 
 **Since:** 18
 

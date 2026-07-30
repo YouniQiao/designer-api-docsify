@@ -38,3 +38,23 @@ Cancels the watermark image displayed on the screen.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
+**Example**
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+try {
+    securityManager.cancelScreenWatermarkImage(wantTemp);
+    console.info(`Succeeded in canceling screen watermark image.`);
+} catch(err) {
+    console.error(`Failed to cancel screen watermark image. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
+

@@ -16,19 +16,11 @@ import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions,
 | [SegmentButtonItemOptionsArray](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptionsarray-c.md) | Represents an array for storing button information. |
 | [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) |  |
 
-<!--Del-->
-### Classes（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c-sys.md) |  |
-<!--DelEnd-->
-
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [SegmentButton](arkts-arkui-arkui-advanced-segmentbutton-segmentbutton-s.md) | **SegmentButton** is a versatile component that organizes related options into visually grouped buttons. It supports three variants: tab-style, capsule-style single-select, and capsule-style multi-select. >@Prop are optional. They are required during construction only when used together with the @Require decorator. |
+| [SegmentButton](arkts-arkui-arkui-advanced-segmentbutton-segmentbutton-s.md) | **SegmentButton** is a versatile component that organizes related options into visually grouped buttons. It supports three variants: tab-style, capsule-style single-select, and capsule-style multi-select. >@Prop are optional. They are required during construction only when used together with  the @Require decorator. |
 
 ### Interfaces
 
@@ -43,14 +35,6 @@ import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions,
 | [SegmentButtonTextItem](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttontextitem-i.md) | Text button information. |
 | [TabSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md) | Creates a SegmentButtonOptions object of the tab type.  Inherits from [CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md). |
 | [TabSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonoptions-i.md) | Provides configuration options for tab-style segmented buttons. Inherits from [TabSegmentButtonConstructionOptions](arkts-arkui-arkui-advanced-segmentbutton-tabsegmentbuttonconstructionoptions-i.md). |
-
-<!--Del-->
-### Interfaces（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i-sys.md) | Defines the customizable attributes of a segment button component. |
-<!--DelEnd-->
 
 ### Enums
 

@@ -93,6 +93,7 @@ class EntryAbility extends UIAbility {
     g_object.bindAssetStore('attachment', bindInfo, (err: BusinessError) => {
       if (err) {
         console.error(`Failed to bind asset store. Code: ${err.code}, message: ${err.message}`);
+        return;
       }
       console.info('bindAssetStore success.');
     });
@@ -222,7 +223,7 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 **示例：**
 
 ```TypeScript
-// 删除数据变更回调changeCallback
+// 删除数据变更回调
 g_object.off('change', (sessionId: string, fields: Array<string>) => {
     console.info('change' + sessionId);
     if (g_object != null && fields != null && fields != undefined) {
@@ -269,7 +270,7 @@ off(
 **示例：**
 
 ```TypeScript
-// 删除上下线回调changeCallback
+// 删除上下线回调
 g_object.off('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
     console.info('status changed ' + sessionId + ' ' + status + ' ' + networkId);
 });
@@ -659,6 +660,7 @@ g_object.setSessionId('123456');
 g_object.save('local', (err: BusinessError, result: distributedDataObject.SaveSuccessResponse) => {
     if (err) {
         console.error(`Failed to save. Code: ${err.code}, message: ${err.message}`);
+        return;
     }
     console.info('save callback');
     console.info('save sessionId: ' + result.sessionId);

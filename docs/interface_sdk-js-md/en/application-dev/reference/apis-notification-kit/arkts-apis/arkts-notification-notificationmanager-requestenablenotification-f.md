@@ -15,7 +15,8 @@ function requestEnableNotification(callback: AsyncCallback<void>): void
 Requests notification to be enabled for this application. This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
-> This API is supported since API version 9 and deprecated since API version 12. You are advised to use [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)with context instead.
+> This API is supported since API version 9 and deprecated since API version 12. You are advised to use  
+[requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)with context instead.
 
 **Since:** 9
 
@@ -146,7 +147,8 @@ function requestEnableNotification(): Promise<void>
 Requests notification to be enabled for this application. This API uses a promise to return the result.
 > **NOTE**  
 >  
-> This API is supported since API version 9 and deprecated since API version 12. You are advised to use [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)with context instead.
+> This API is supported since API version 9 and deprecated since API version 12. You are advised to use  
+[requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification)with context instead.
 
 **Since:** 9
 

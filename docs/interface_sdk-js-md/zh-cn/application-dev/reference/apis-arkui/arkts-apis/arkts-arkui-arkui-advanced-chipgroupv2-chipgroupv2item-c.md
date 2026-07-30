@@ -136,7 +136,8 @@ public closeIcon?: ChipV2CloseConfig
 
 默认值：
 
-- fontSize默认值：size为ChipV2Size.SMALL时，默认值为`$r('sys.float.chip_small_font_size')`；其他情况默认值为`$r('sys.float.chip_normal_font_size')`。  
+- fontSize默认值：size为ChipV2Size.SMALL时，默认值为`$r('sys.float.chip_small_font_size')`；其他情况默认值为  
+`$r('sys.float.chip_normal_font_size')`。  
 - 无障碍默认值：无无障碍描述。
 
 值为undefined时，按默认值处理。

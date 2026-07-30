@@ -2,8 +2,10 @@
 
 InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能：
 
-- **输入法变化订阅**：通过[on('imeChange')](inputMethod.InputMethodSetting.on( type: 'imeChange', callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void ))订阅输入法及子类型变化事件，当用户切换输入法时收到通知。  
-- **输入法列表查询**：通过[getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)查询已激活/未激活输入法列表，通过[getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getallinputmethods)查询所有已安装输入法列表，通过[listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listinputmethodsubtype)查询指定输入法的子类型列表。  
+- **输入法变化订阅**：通过  
+[on('imeChange')](inputMethod.InputMethodSetting.on( type: 'imeChange', callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void ))订阅输入法及子类型变化事件，当用户切换输入法时收到通知。  
+- **输入法列表查询**：通过  
+[getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)查询已激活/未激活输入法列表，通过[getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getallinputmethods)查询所有已安装输入法列表，通过[listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listinputmethodsubtype)查询指定输入法的子类型列表。  
 - **面板可见性查询**：通过isPanelShown查询输入法面板是否显示。  
 - **输入法选择对话框**：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。
 
@@ -391,7 +393,7 @@ isPanelShown(panelInfo: PanelInfo): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| panelInfo | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | 是 | 输入法面板的属性。 |
+| panelInfo | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 | 输入法面板的属性。 |
 
 **返回值：**
 
@@ -448,7 +450,7 @@ isPanelShown(panelInfo: PanelInfo, displayId: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| panelInfo | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | 是 | 输入法面板的属性。 |
+| panelInfo | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 | 输入法面板的属性。 |
 | displayId | number | 是 | 屏幕ID。 |
 
 **返回值：**

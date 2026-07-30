@@ -128,8 +128,10 @@ public size?: SizeT<LengthMetrics>
 
 默认值：
 
-- 当ChipV2Options.size为ChipV2Size.SMALL时，默认值为：{width: $r('sys.float.chip_small_icon_size'), height: $r('sys.float.chip_small_icon_size')}。  
-- 当ChipV2Options.size为ChipV2Size.NORMAL时，默认值为：{width: $r('sys.float.chip_normal_icon_size'), height: $r('sys.float.chip_normal_icon_size')}。
+- 当ChipV2Options.size为ChipV2Size.SMALL时，默认值为：{width: $r('sys.float.chip_small_icon_size'), height: $r('  
+sys.float.chip_small_icon_size')}。  
+- 当ChipV2Options.size为ChipV2Size.NORMAL时，默认值为：{width: $r('sys.float.chip_normal_icon_size'), height: $r('  
+sys.float.chip_normal_icon_size')}。
 
 单位：vp
 

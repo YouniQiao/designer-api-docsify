@@ -168,9 +168,12 @@ sensitivity?: string
 Differences in the strings that lead to non-zero return values. The options are as follows:
 
 - **base**: Different letters are considered unequal, for example, 'a' ≠ 'b', 'a' = 'á', 'a' = 'A'.  
-- **accent**: Different letters or same letters with different pronunciations are considered unequal, for example, 'a' ≠ 'b', 'a' ≠ 'á', 'a' = 'A'.  
-- **case**: Different letters or same letters with different cases are considered unequal, for example, 'a' ≠ 'b', 'a' = 'á', 'a' ≠ 'A'.  
-- **variant**: Different letters, pronunciations, other distinguishing marks, or cases are all considered unequal, for example, 'a' ≠ 'b', 'a' ≠ 'á', 'a' ≠ 'A'.
+- **accent**: Different letters or same letters with different pronunciations are considered unequal, for example  
+, 'a' ≠ 'b', 'a' ≠ 'á', 'a' = 'A'.  
+- **case**: Different letters or same letters with different cases are considered unequal, for example, 'a' ≠ 'b'  
+, 'a' = 'á', 'a' ≠ 'A'.  
+- **variant**: Different letters, pronunciations, other distinguishing marks, or cases are all considered unequal  
+, for example, 'a' ≠ 'b', 'a' ≠ 'á', 'a' ≠ 'A'.
 
 The default value is **variant**.
 

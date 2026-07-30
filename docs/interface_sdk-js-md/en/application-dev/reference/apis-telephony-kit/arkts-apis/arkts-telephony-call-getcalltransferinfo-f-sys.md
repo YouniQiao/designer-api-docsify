@@ -29,7 +29,7 @@ Get call forwarding information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | [CallTransferType](arkts-telephony-call-calltransfertype-e-sys.md) | Yes | Indicates which type of call forwarding to obtain. |
+| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Yes | Indicates which type of call forwarding to obtain. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallTransferResult&gt; | Yes | Indicates the callback for getting the call forwarding status. |
 
 **Error codes:**
@@ -83,7 +83,7 @@ Get call forwarding information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | number | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slot index number supported by the device. |
-| type | [CallTransferType](arkts-telephony-call-calltransfertype-e-sys.md) | Yes | Indicates which type of call forwarding to obtain. |
+| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Yes | Indicates which type of call forwarding to obtain. |
 
 **Return value:**
 

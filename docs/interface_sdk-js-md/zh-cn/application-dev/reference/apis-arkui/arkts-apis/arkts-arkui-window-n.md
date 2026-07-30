@@ -36,6 +36,7 @@ import { window } from '@kit.ArkUI';
 | [shiftAppWindowFocus](arkts-arkui-window-shiftappwindowfocus-f.md#shiftappwindowfocus) | 在同应用内将窗口焦点从源窗口转移到目标窗口，仅支持应用主窗、子窗范围内的焦点转移。使用Promise异步回调。  目标窗口需确保具有获得焦点的能力（可通过[setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)设置），并确保调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)成功且执行完毕。 |
 | [shiftAppWindowPointerEvent](arkts-arkui-window-shiftappwindowpointerevent-f.md#shiftappwindowpointerevent) | 主窗口和子窗口可正常调用，用于将鼠标输入事件从源窗口转移到目标窗口。使用Promise异步回调。  源窗口仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#ontouch)事件（事件类型必须为TouchType.Down）的回调方法中调用此接口才会有鼠标输入事件转移效果，成功调用此接口后，系统会向源窗口补发鼠标按键抬起（TouchType.Up）事件，并且向目标窗口补发鼠标按键按下（TouchType.Down）事件。 |
 | [shiftAppWindowTouchEvent](arkts-arkui-window-shiftappwindowtouchevent-f.md#shiftappwindowtouchevent) | 主窗口和子窗口可正常调用，用于将触屏输入事件从源窗口转移到目标窗口。使用Promise异步回调。  源窗口仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#ontouch)事件（事件类型必须为TouchType.Down）的回调方法中调用此接口才会有触屏输入事件转移效果，成功调用此接口后，系统会向源窗口补发触屏抬起（TouchType.Up）事件，并且向目标窗口补发触屏按下（TouchType.Down）事件。 |
+| [getVisibleWindowInfo](arkts-arkui-window-getvisiblewindowinfo-f.md#getvisiblewindowinfo) | 获取当前屏幕的可见主窗口（未退至后台的主窗口）信息。使用Promise异步回调。 |
 | [getWindowsByCoordinate](arkts-arkui-window-getwindowsbycoordinate-f.md#getwindowsbycoordinate) | 查询本应用指定坐标下的可见窗口数组，按当前窗口层级排列，层级最高的窗口对应数组下标为0，使用Promise异步回调。 |
 | [getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md#getallwindowlayoutinfo) | 获取指定屏幕上可见的窗口布局信息数组，其中返回的每个Rect的宽、高是已经过缩放计算后的值，按当前窗口层级排列，层级最高的对应数组index为0，使用Promise异步回调。 |
 | [getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md#getallwindowlayoutinfo-1) | 根据option指定的过滤条件获取指定屏幕上可见的窗口布局信息数组，其中返回的每个Rect的宽、高是已经过缩放计算后的值，按当前窗口层级排列，层级最高的对应数组index为0，使用Promise异步回调。当未传入option或其中的字段都为默认值时，当前接口与[getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md#getallwindowlayoutinfo)等价。 |
@@ -66,7 +67,6 @@ import { window } from '@kit.ArkUI';
 | [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage-1) | 设置屏幕水印图片的显示状态，并设定水印的优先级。使用Promise异步回调。当priority等于0时，当前接口与[setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage)等价。 |
 | [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage-2) | 设置屏幕水印图片显示状态。使用callback异步回调。 |
 | [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md#setspecificsystemwindowzindex) | 设置系统窗口的窗口层级。使用Promise异步回调。  将所有该类型系统窗口zIndex调整为所设置的值，调整前后，该类型窗口之间相对层级保持不变，焦点窗口不发生变化。当应用关闭之后该类型窗口层级恢复默认值。  推荐不同类型窗口设置不同的zIndex，如果已经存在相同zIndex的窗口，设置前后，窗口之间的相对层级保持不变。 |
-| [getVisibleWindowInfo](arkts-arkui-window-getvisiblewindowinfo-f-sys.md#getvisiblewindowinfo) | 获取当前屏幕的可见主窗口（未退至后台的主窗口）信息。使用Promise异步回调。 |
 | [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md#gettopnavdestinationname) | 获取指定的前台窗口当前栈顶[Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i)中的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)名称，使用Promise异步回调。 |
 | [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md#getsnapshot) | 获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。 |
 | [on](arkts-arkui-window-on-f-sys.md#on) | 开启状态栏、导航栏属性变化的监听。 |
@@ -76,7 +76,7 @@ import { window } from '@kit.ArkUI';
 | [on](arkts-arkui-window-on-f-sys.md#on-2) | 添加水印启用状态变化的监听。 |
 | [off](arkts-arkui-window-off-f-sys.md#off-2) | 移除水印启用状态变化的监听。 |
 | [notifyScreenshotEvent](arkts-arkui-window-notifyscreenshotevent-f-sys.md#notifyscreenshotevent) | 通知屏幕截屏的事件类型，使用Promise异步回调。 |
-| [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md#movemainwindowtotargetdisplay) | 将指定的主窗口迁移到指定的屏幕上。使用Promise异步回调。  - 对于[主屏](../../../displaymanager/display-terminology.md#主屏)/[扩展屏](../../../displaymanager/display-terminology.md#扩展屏)与[虚拟屏](../../../displaymanager/display-terminology.md#虚拟屏)之间以及虚拟屏与虚拟屏之间的窗口迁移，仅主窗及其子窗会一起被迁移到对应屏幕上且被抬升，如果存在子窗，最上层可获焦子窗会获取焦点，否则主窗口获焦。  - 对于主屏与扩展屏之间的窗口迁移，只会将主窗口迁移到对应屏幕，抬升并获取焦点。  <!--RP3--><!--RP3End--> |
+| [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md#movemainwindowtotargetdisplay) | 将指定的主窗口迁移到指定的屏幕上。使用Promise异步回调。  - 对于[主屏](../../../displaymanager/display-terminology.md#主屏)/  [扩展屏](../../../displaymanager/display-terminology.md#扩展屏)与[虚拟屏](../../../displaymanager/display-terminology.md#虚拟屏)之间以及虚拟屏与虚拟屏之间的窗口迁移，仅主窗及其子窗会一起被迁移到对应屏幕上且被抬升，如果存在子窗，最上层可获焦子窗会获取焦点，否则主窗口获焦。  - 对于主屏与扩展屏之间的窗口迁移，只会将主窗口迁移到对应屏幕，抬升并获取焦点。  <!--RP3--><!--RP3End--> |
 <!--DelEnd-->
 
 ### 接口
@@ -135,7 +135,6 @@ import { window } from '@kit.ArkUI';
 | [SystemBarTintState](arkts-arkui-window-systembartintstate-i-sys.md) | 当前系统栏回调信息集合。 |
 | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) | 一级子窗与主窗保持相对位置的窗口锚点参数信息。 |
 | [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md) | 子窗与主窗保持相对位置不变时的参数。 |
-| [WindowInfo](arkts-arkui-window-windowinfo-i-sys.md) | 当前窗口的详细信息。 |
 | [ScaleOptions](arkts-arkui-window-scaleoptions-i-sys.md) | 缩放参数。 |
 | [RotateOptions](arkts-arkui-window-rotateoptions-i-sys.md) | 旋转参数。 |
 | [TranslateOptions](arkts-arkui-window-translateoptions-i-sys.md) | 平移参数。 |

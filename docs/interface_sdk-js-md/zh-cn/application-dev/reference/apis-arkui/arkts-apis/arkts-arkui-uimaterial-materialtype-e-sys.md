@@ -1,4 +1,4 @@
-# MaterialType（系统接口）
+# MaterialType
 
 系统材质类型枚举。
 
@@ -7,8 +7,6 @@
 <!--Device-uiMaterial-enum MaterialType--><!--Device-uiMaterial-enum MaterialType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**系统接口：** 此接口为系统接口。
 
 ## NONE
 

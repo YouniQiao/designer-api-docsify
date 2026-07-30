@@ -307,7 +307,8 @@ mimeTypeFilter?: photoAccessHelper.MimeTypeFilter
 Configuration for file type filtering. Multiple types can be specified.
 
 - When this parameter is set, the **mimeType** configuration automatically becomes invalid.  
-- When this parameter is set, only media files of the configured filter type are displayed. You are advised to notify users that only images or videos of the specified type can be selected.
+- When this parameter is set, only media files of the configured filter type are displayed. You are advised to  
+notify users that only images or videos of the specified type can be selected.
 
 **Type:** photoAccessHelper.MimeTypeFilter
 

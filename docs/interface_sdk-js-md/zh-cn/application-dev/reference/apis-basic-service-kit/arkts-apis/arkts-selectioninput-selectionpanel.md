@@ -8,19 +8,15 @@ import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 
 ## 汇总
 
-<!--Del-->
-### 接口（系统接口）
+### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md) | 划词面板属性信息。 |
-<!--DelEnd-->
+| [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 划词面板属性信息。 |
 
-<!--Del-->
-### 枚举（系统接口）
+### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md) | 划词面板类型枚举。 |
-<!--DelEnd-->
+| [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | 划词面板类型枚举。 |
 

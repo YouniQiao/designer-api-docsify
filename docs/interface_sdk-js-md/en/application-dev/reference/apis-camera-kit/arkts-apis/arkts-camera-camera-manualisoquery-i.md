@@ -1,4 +1,4 @@
-# ManualIsoQuery (System API)
+# ManualIsoQuery
 
 Provides APIs to check whether a camera device supports manual ISO setting and obtain the ISO range supported by the device.
 
@@ -7,8 +7,6 @@ Provides APIs to check whether a camera device supports manual ISO setting and o
 <!--Device-camera-interface ManualIsoQuery--><!--Device-camera-interface ManualIsoQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 

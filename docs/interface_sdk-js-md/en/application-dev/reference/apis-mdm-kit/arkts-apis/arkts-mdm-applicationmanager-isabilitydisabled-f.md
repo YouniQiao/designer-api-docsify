@@ -48,31 +48,6 @@ Checks whether the Ability component of a specified application (system applicat
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 
-**Example**
-
-```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Replace it as required.
-  let bundleName: string = "com.example.exampleapplication";
-  let accountId: number = 100;
-  let abilityName: string = "EntryAbility";
-  let isDisabled: boolean = applicationManager.isAbilityDisabled(wantTemp, bundleName, accountId, abilityName);
-  console.info(`Succeeded in querying whether the ability is disabled, isDisabled: ${isDisabled}`);
-} catch(err) {
-  console.error(`Failed to query whether the ability is disabled. Code: ${err.code}, message: ${err.message}`);
-}
-
-```
-
 
 ## isAbilityDisabled
 
@@ -115,4 +90,29 @@ Checks whether the Ability component of a specified application (system applicat
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+
+**Example**
+
+```TypeScript
+import { applicationManager, common } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+try {
+  // Replace it as required.
+  let bundleName: string = "com.example.exampleapplication";
+  let accountId: number = 100;
+  let abilityName: string = "EntryAbility";
+  let isDisabled: boolean = applicationManager.isAbilityDisabled(wantTemp, bundleName, accountId, abilityName);
+  console.info(`Succeeded in querying whether the ability is disabled, isDisabled: ${isDisabled}`);
+} catch(err) {
+  console.error(`Failed to query whether the ability is disabled. Code: ${err.code}, message: ${err.message}`);
+}
+
+```
 

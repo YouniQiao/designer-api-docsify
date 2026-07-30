@@ -130,6 +130,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  // Create a MessageSequence object to encapsulate request and response data in IPC/RPC communication.
   let data = rpc.MessageSequence.create();
   hilog.info(0x0000, 'testTag', 'data is ' + data);
 
@@ -823,6 +824,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let data = rpc.MessageSequence.create();
   let ByteArrayVar = [1, 2, 3, 4, 5];
+  // Write the byte array to the MessageSequence Object
   data.writeByteArray(ByteArrayVar);
   let array: Array<number> = new Array(5);
   data.readByteArray(array);
@@ -871,6 +873,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let data = rpc.MessageSequence.create();
   let ByteArrayVar = [1, 2, 3, 4, 5];
+  // Write the byte array to the MessageSequence Object
   data.writeByteArray(ByteArrayVar);
   let array = data.readByteArray();
   hilog.info(0x0000, 'testTag', 'readByteArray is  ' + array);
@@ -1248,7 +1251,7 @@ try {
         }
       }).catch((e: Error) => {
         hilog.error(0x0000, 'testTag', 'sendMessageRequest got exception: ' + JSON.stringify(e));
-      }).finally (() => {
+      }).finally(() => {
         hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
         data.reclaim();
         reply.reclaim();
@@ -1482,6 +1485,7 @@ Reads the integer from this **MessageSequence** object.
 **Example**
 
 ```TypeScript
+// In atomic services, this example is used only to describe how to use the readInt() API. However, rpc.MessageSequence.create() is currently not supported for use in atomic services.
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2384,6 +2388,7 @@ Reads the string from this **MessageSequence** object.
 **Example**
 
 ```TypeScript
+// In atomic services, this example is used only to describe how to use the readString() API. However, rpc.MessageSequence.create() is currently not supported for use in atomic services.
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3000,7 +3005,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let data = rpc.MessageSequence.create();
-  let ByteArrayVar = [1, 2, 3, 4, 5];
+  let byteArrayVar = [1, 2, 3, 4, 5];
+  // Write the byte array to the MessageSequence Object
   data.writeByteArray(ByteArrayVar);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -3360,6 +3366,7 @@ Writes an integer to this **MessageSequence** object.
 **Example**
 
 ```TypeScript
+// In atomic services, this example is used only to describe how to use the writeInt() API. However, rpc.MessageSequence.create() is currently not supported for use in atomic services.
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3456,6 +3463,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let data = rpc.MessageSequence.create();
+  // Write the interface token to this MessageSequence object.
   data.writeInterfaceToken("aaa");
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -3644,7 +3652,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 class MyParcelable implements rpc.Parcelable {
   num: number = 0;
   str: string = '';
-  constructor( num: number, str: string) {
+  constructor(num: number, str: string) {
     this.num = num;
     this.str = str;
   }
@@ -3904,6 +3912,7 @@ class TestRemoteObject extends rpc.RemoteObject {
 try {
   let data = rpc.MessageSequence.create();
   let testRemoteObject = new TestRemoteObject("testObject");
+  // Write the remote object to the MessageSequence object.
   data.writeRemoteObject(testRemoteObject);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -4092,6 +4101,7 @@ Writes a string to this **MessageSequence** object.
 **Example**
 
 ```TypeScript
+// In atomic services, this example is used only to describe how to use the writeString() API. However, rpc.MessageSequence.create() is currently not supported for use in atomic services.
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';

@@ -60,7 +60,7 @@ If this API is not set, the maximum pull-down distance is **undefined**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distance | number \| Resource \| undefined | Yes | Maximum pull-down distance.<br>Default value: **undefined**.<br   >Unit: vp<br>Value range:[0, +∞). If the value is less than 0, **0** is used.If this value is less than the [refreshOffset](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#refreshoffset12),the refresh action will not be triggered when the pull-down gesture is released.<br>If this parameter is set to **undefined** or **null**,it is considered that this attribute is not set, meaning there is no limit on the maximum pull-down distance. |
+| distance | number \| Resource \| undefined | Yes | Maximum pull-down distance.<br>Default value: **undefined**.<br   >Unit: vp<br>Value range:   [0, +∞). If the value is less than 0, **0** is used.If this value is less than the [refreshOffset](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#refreshoffset12),the refresh action will not be triggered when the pull-down gesture is released.<br>If this parameter is set to **undefined** or **null**,it is considered that this attribute is not set, meaning there is no limit on the maximum pull-down distance. |
 
 ## onOffsetChange
 

@@ -336,7 +336,7 @@ getOsTypeByNetworkId(networkId: string): number
 
 通过设备网络ID查询设备操作系统类型。
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM
 
@@ -358,7 +358,7 @@ getOsTypeByNetworkId(networkId: string): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | - Returns the device operating system type.Possible return:1. 10: Operating system based on OpenHarmony2. 11: Operating system not based on OpenHarmony3. -1: Unknown |
+| number | - Returns the device operating system type.   Possible return:1. 10: Operating system based on OpenHarmony2. 11: Operating system not based on OpenHarmony3. -1: Unknown |
 
 **错误码：**
 

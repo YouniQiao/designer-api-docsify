@@ -19,7 +19,7 @@ The report custom elements change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | [ActionType](arkts-avsession-avmusictemplate-actiontype-t.md) | Yes | action type  |
+| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes | action type  |
 | customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | Yes | custom type  |
 | customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | Yes | custom element  |
 

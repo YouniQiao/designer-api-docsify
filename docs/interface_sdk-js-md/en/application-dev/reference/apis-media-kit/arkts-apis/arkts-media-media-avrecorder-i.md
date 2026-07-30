@@ -779,7 +779,8 @@ reset(callback: AsyncCallback<void>): void
 Resets audio and video recording. This API uses an asynchronous callback to return the result.
 
 For audio-only recording, you can call [prepare()](arkts-media-media-avrecorder-i.md#prepare) again for re  
--recording. For video-only recording or audio and video recording, you can call [prepare()](arkts-media-media-avrecorder-i.md#prepare) and [getInputSurface()](arkts-media-media-avrecorder-i.md#getinputsurface) again for re-recording.
+-recording. For video-only recording or audio and video recording, you can call  
+[prepare()](arkts-media-media-avrecorder-i.md#prepare) and [getInputSurface()](arkts-media-media-avrecorder-i.md#getinputsurface) again for re-recording.
 
 **Since:** 9
 
@@ -891,6 +892,37 @@ This API can be called only after the [pause()](arkts-media-media-avrecorder-i.m
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
+## setMetadata
+
+```TypeScript
+setMetadata(metadata: Record<string, string>): void
+```
+
+Set metadata (key-value pairs) for the recording file of the recorder.This metadata overwrites the value in config.metadata.customInfo (see {prepare()} and {AVRecorderConfig})if they have same key.
+
+This API can be called only after the prepare() event is successfully triggered and before the stop() API is called.
+
+**Since:** 26.0.0
+
+<!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void--><!--Device-AVRecorder-setMetadata(metadata: Record<string, string>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVRecorder
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| metadata | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt; | Yes | Tag and value of the metadata in key-value pairs.<br>- The first string is the key.<br>- The second string is the value.<br> The key string should start with "com.openharmony.", the length of value can't be more than 256 bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 19 - 24 |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory.<br>**Applicable version:** 26.0.0 and later |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed.<br>**Applicable version:** 26.0.0 and later |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
+
 ## setWillMuteWhenInterrupted
 
 ```TypeScript
@@ -997,7 +1029,8 @@ Stops video recording. This API uses an asynchronous callback to return the resu
 This API can be called only after the [start()](arkts-media-media-avrecorder-i.md#start) or [pause()](arkts-media-media-avrecorder-i.md#pause) API is called.
 
 For audio-only recording, you can call [prepare()](arkts-media-media-avrecorder-i.md#prepare) again for re  
--recording. For video-only recording or audio and video recording, you can call [prepare()](arkts-media-media-avrecorder-i.md#prepare) and [getInputSurface()](arkts-media-media-avrecorder-i.md#getinputsurface) again for re-recording.
+-recording. For video-only recording or audio and video recording, you can call  
+[prepare()](arkts-media-media-avrecorder-i.md#prepare) and [getInputSurface()](arkts-media-media-avrecorder-i.md#getinputsurface) again for re-recording.
 
 **Since:** 9
 

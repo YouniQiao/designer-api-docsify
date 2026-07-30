@@ -34,3 +34,19 @@ Unregisters the remote authentication callback. This API is used to unregister a
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  userAuth.unregisterRemoteAuthCallback();
+  console.info('Remote auth callback unregistered successfully');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`failed to unregister remote auth callback. Code is ${err?.code}, message is ${err?.message}`);
+}
+
+```
+

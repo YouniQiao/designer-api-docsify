@@ -15,8 +15,10 @@ function setDownloadInfoListSize(size: number): void
 Sets the size of the download information list.
 
 - The download information list is used to store pre-downloaded information.  
-- Each pre-download generates a piece of download information with a unique URL. Only the latest download information is saved for the same URL.  
-- If the list size is increased using this API, the original information in the list remains unchanged; if the list size is decreased, the LRU mode is used by default to clear excess cached data in the list.
+- Each pre-download generates a piece of download information with a unique URL. Only the latest download  
+information is saved for the same URL.  
+- If the list size is increased using this API, the original information in the list remains unchanged; if the  
+list size is decreased, the LRU mode is used by default to clear excess cached data in the list.
 
 **Since:** 20
 

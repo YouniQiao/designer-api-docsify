@@ -7,7 +7,8 @@
 > 本节使用以下标识符来表示泛型的使用：
 
 - K：键。  
-- V：值。K和V类型都需为[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。**装饰器类型**：\@Sendable
+- V：值。  
+K和V类型都需为[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。**装饰器类型**：\@Sendable
 
 **起始版本：** 12
 

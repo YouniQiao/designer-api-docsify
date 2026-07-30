@@ -7,7 +7,8 @@
 >  
 > - 本Class首批接口从API version 10开始支持。  
 >  
-> - 以下API需先使用UIContext中的[getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到PromptAction对象，再通过该对象调用对应方法。
+> - 以下API需先使用UIContext中的[getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到  
+PromptAction对象，再通过该对象调用对应方法。
 
 **起始版本：** 10
 
@@ -380,9 +381,11 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 >  
 > - 由于[updateMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#updatemenu)和[closeMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#closemenu)依赖content去更新或者关闭指定的menu弹窗，开发者需自行维护传入的content。  
 >  
-> - 如果在wrapBuilder中包含其他组件（例如：[Popup](arkts-arkui-advanced-popup.md)、[Chip](arkts-arkui-advanced-chip.md)组件），则[ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。  
+> - 如果在wrapBuilder中包含其他组件（例如：[Popup](arkts-arkui-advanced-popup.md)、  
+[Chip](arkts-arkui-advanced-chip.md)组件），则[ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。  
 >  
-> - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#openmenu)设置了showInSubWindow为true时，则不能再弹出另一个设置了showInSubWindow为true的弹窗。
+> - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#openmenu)设置了showInSubWindow为true时，则不能再弹出另一个设置了  
+showInSubWindow为true的弹窗。
 
 **起始版本：** 18
 

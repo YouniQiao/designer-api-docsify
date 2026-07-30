@@ -125,7 +125,7 @@ Sets the drag distance of drag simulation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | The drag distance to simulate the drag. <br/> A positive number indicates that the layout is dragged to the start point. A negative number indicates dragging towards the end point of the layout.<br>Unit: vp.   - Drag distance of drag simulation.<br>A positive number indicates dragging towards the start point of the layout, and a negative number indicates dragging towards the end point of the layout. |
+| offset | number | Yes | The drag distance to simulate the drag. <br/> A positive number indicates that the layout is dragged to the start point. A negative number indicates dragging towards the end point of the layout.<br>Unit: vp.   - Drag distance of drag simulation.<br>A positive number indicates dragging towards the   start point of the layout, and a negative number indicates dragging towards the end point of the layout. |
 
 **Return value:**
 

@@ -57,12 +57,13 @@ let policy: securityManager.PasswordPolicy = {
   complexityRegex: '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*])[a-zA-Z\\d!@#$%^&*]{8,}$',
   validityPeriod: 1,
   additionalDescription: 'The password must contain at least eight characters, including at least one uppercase letter, one lowercase letter, one digit, and one special character.',
+  passwordAlgs: securityManager.PasswordAlgs.SCRYPT_HKDF_SM4,
 };
 try {
-    securityManager.setPasswordPolicy(wantTemp, policy);
-    console.info(`Succeeded in setting password policy.`);
+  securityManager.setPasswordPolicy(wantTemp, policy);
+  console.info(`Succeeded in setting password policy.`);
 } catch(err) {
-    console.error(`Failed to set password policy. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to set password policy. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

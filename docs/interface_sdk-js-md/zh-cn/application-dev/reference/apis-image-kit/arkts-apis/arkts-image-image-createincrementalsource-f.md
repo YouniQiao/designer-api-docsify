@@ -18,11 +18,15 @@ function CreateIncrementalSource(buf: ArrayBuffer): ImageSource
 
 以增量方式创建的ImageSource实例，仅支持使用以下功能，同步、异步callback、异步Promise均支持。
 
-- 获取图片信息：指定序号-[getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo)、直接获取-[getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo)  
-- 获取图片中给定索引处图像的指定属性键的值：[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)  
+- 获取图片信息：指定序号-[getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo)、  
+直接获取-[getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo)  
+- 获取图片中给定索引处图像的指定属性键的值：  
+[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)  
 - 批量获取图片中的指定属性键的值：[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties)  
-- 更新增量数据：[updateData](arkts-image-image-imagesource-i.md#updatedata)  
-- 创建PixelMap对象：通过图片解码参数创建-[createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap)、通过默认参数创建-[createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap) 、通过图片解码参数-[createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap)  
+- 更新增量数据：  
+[updateData](arkts-image-image-imagesource-i.md#updatedata)  
+- 创建PixelMap对象：通过图片解码参数创建-[createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap)、通过默认参数创建-  
+[createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap) 、通过图片解码参数-[createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap)  
 - 释放ImageSource实例：[release](arkts-image-image-imagesource-i.md#release)
 
 **起始版本：** 9

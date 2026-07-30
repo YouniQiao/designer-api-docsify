@@ -51,18 +51,20 @@ Obtains the disallowed Bluetooth protocols of a specified user.
 import { Want } from '@kit.AbilityKit';
 import { bluetoothManager } from '@kit.MDMKit';
 
+// Create an EnterpriseAdminExtensionAbility component.
 let wantTemp: Want = {
   // Replace it as required.
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
-// Replace it as required.
+// Define the user ID. (Replace it as required.)
 let accountId: number = 100;
-try{
-    let result: Array<bluetoothManager.Protocol> = bluetoothManager.getDisallowedBluetoothProtocols(wantTemp, accountId);
-    console.info(`Succeeded in getting disallowed bluetooth protocols. Result: ${JSON.stringify(result)}`);
+try {
+  // Obtains the Bluetooth protocol blocklist of a specified user.
+  let result: Array<bluetoothManager.Protocol> = bluetoothManager.getDisallowedBluetoothProtocols(wantTemp, accountId);
+  console.info(`Succeeded in getting disallowed bluetooth protocols. Result: ${JSON.stringify(result)}`);
 } catch (err) {
-    console.error(`Failed to get disallowed bluetooth protocols. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to get disallowed bluetooth protocols. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```
@@ -108,4 +110,30 @@ Gets protocols from the list of bluetooth server that are disallowed to use.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+
+**Example**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { bluetoothManager } from '@kit.MDMKit';
+
+// Create an EnterpriseAdminExtensionAbility component.
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Define the user ID.
+let accountId: number = 100;
+
+try {
+  // Obtain the list of disallowed Bluetooth protocols for a specified user under a specified transfer policy.
+  let result: Array<bluetoothManager.Protocol> = bluetoothManager.getDisallowedBluetoothProtocols(wantTemp, accountId, bluetoothManager.TransferPolicy.RECEIVE_SEND);
+  console.info(`Succeeded in getting disallowed bluetooth protocols, result : ${JSON.stringify(result)}`);
+} catch (err) {
+  console.error(`Failed to get disallowed bluetooth protocols. Code is ${err.code}, message is ${err.message}`);
+}
+
+```
 

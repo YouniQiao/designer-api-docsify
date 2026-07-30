@@ -328,5 +328,5 @@ type(value: PanelType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e-sys.md) | 是 | 设置可滑动面板的类型。 |
+| value | [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | 是 | 设置可滑动面板的类型。 |
 

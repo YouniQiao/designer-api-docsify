@@ -50,6 +50,34 @@ Video album.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## IMAGE
+
+```TypeScript
+IMAGE = 1031
+```
+
+Photo album.
+
+**Since:** 12
+
+<!--Device-AlbumSubtype-IMAGE = 1031--><!--Device-AlbumSubtype-IMAGE = 1031-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## SOURCE_GENERIC
+
+```TypeScript
+SOURCE_GENERIC = 2049
+```
+
+Source album.
+
+**Since:** 23
+
+<!--Device-AlbumSubtype-SOURCE_GENERIC = 2049--><!--Device-AlbumSubtype-SOURCE_GENERIC = 2049-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## SOURCE_GENERIC_FROM_FILE_MANAGER
 
 ```TypeScript

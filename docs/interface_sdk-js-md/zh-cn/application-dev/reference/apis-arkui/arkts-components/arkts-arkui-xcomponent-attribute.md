@@ -69,6 +69,32 @@ enableSecure(isSecure: boolean)
 ## hdrBrightness
 
 ```TypeScript
+hdrBrightness(brightness: number)
+```
+
+用于调整组件播放HDR视频的亮度。
+
+**说明：**仅XComponent构造参数中的type为**XComponentType**.SURFACE时该接口生效，否则该接口不生效。
+
+**起始版本：** 20
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-XComponentAttribute-hdrBrightness(brightness: number): XComponentAttribute--><!--Device-XComponentAttribute-hdrBrightness(brightness: number): XComponentAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| brightness | number | 是 | HDR视频的亮度。<br/>取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。<br/>**0.0**表示视频按照SDR亮度显示，**1.0**表示视频按照当前允许的最高HDR亮度显示。<br/>默认值：**1.0**。 |
+
+## hdrBrightness
+
+```TypeScript
 hdrBrightness(brightness: number, type?: HdrType)
 ```
 

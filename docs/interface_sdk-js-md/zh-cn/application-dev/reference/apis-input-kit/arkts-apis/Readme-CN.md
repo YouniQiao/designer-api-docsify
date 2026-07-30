@@ -14,13 +14,10 @@
   <!--Del-->
   - [TouchGestureAction(系统接口)](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md)<!--DelEnd-->
 - [@ohos.multimodalInput.infraredEmitter](arkts-multimodalinput-infraredemitter.md)
-  <!--Del-->
-  - [getInfraredFrequencies(系统接口)](arkts-input-infraredemitter-getinfraredfrequencies-f-sys.md)<!--DelEnd-->
+  - [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md)
   - [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md)
-  <!--Del-->
-  - [transmitInfrared(系统接口)](arkts-input-infraredemitter-transmitinfrared-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [InfraredFrequency(系统接口)](arkts-input-infraredemitter-infraredfrequency-i-sys.md)<!--DelEnd-->
+  - [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md)
+  - [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md)
 - [@ohos.multimodalInput.inputConsumer](arkts-multimodalinput-inputconsumer.md)
   - [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md)
   <!--Del-->

@@ -4,7 +4,8 @@
 > **恢复出厂设置流程**：
 
 - 开发者调用getRestorer方法获取Restorer对象。  
-- 开发者根据需求选择恢复出厂方式：1. factoryReset：普通恢复出厂，仅清除用户数据分区。2. forceFactoryReset：强制恢复出厂，清除用户数据分区并同步清除文件密钥。3. deepFactoryReset：深度恢复出厂，可通过scope参数指定清除范围：DATA仅清除用户数据分区，DATA_AND_OS同时清除用户数据和操作系统分区。  
+- 开发者根据需求选择恢复出厂方式：  
+1. factoryReset：普通恢复出厂，仅清除用户数据分区。2. forceFactoryReset：强制恢复出厂，清除用户数据分区并同步清除文件密钥。3. deepFactoryReset：深度恢复出厂，可通过scope参数指定清除范围：DATA仅清除用户数据分区，DATA_AND_OS同时清除用户数据和操作系统分区。  
 - 开发者调用相应的恢复出厂方法执行恢复出厂操作，设备将清除数据并恢复到出厂状态。
 
 选取建议：日常维护场景优先选择factoryReset；涉及敏感数据或设备交接场景选择forceFactoryReset；设备报废或需要物理销毁数据场景选择deepFactoryReset。

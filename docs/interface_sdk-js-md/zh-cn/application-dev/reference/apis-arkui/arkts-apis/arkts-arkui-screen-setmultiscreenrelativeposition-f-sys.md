@@ -52,15 +52,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // 屏幕ID需通过getAllScreens()获取
 let mainScreenOptions: screen.MultiScreenPositionOptions = {
-  id : 0,  // 主屏ID
-  startX : 0,
-  startY : 0
+  id: 0,  // 主屏ID
+  startX: 0,
+  startY: 0
 }; // 主屏的位置信息
 
 let secondaryScreenOptions: screen.MultiScreenPositionOptions = {
-  id : 12,  // 扩展屏ID
-  startX : 1000,
-  startY : 1000
+  id: 12,  // 扩展屏ID
+  startX: 1000,
+  startY: 1000
 }; // 扩展屏幕的位置信息
 
 // 设置主屏和扩展屏幕的位置信息

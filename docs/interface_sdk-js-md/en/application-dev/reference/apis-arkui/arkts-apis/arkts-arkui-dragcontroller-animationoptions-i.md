@@ -49,7 +49,8 @@ Default value: **1000**
 **NOTE**
 
 - If this parameter is set to a value less than 0, the value **0** is used.  
-- Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.
+- Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be  
+used.
 
 **Type:** number
 

@@ -1702,7 +1702,7 @@ Get whether default error page feature is enabled for subframes.
 
 | Type | Description |
 | --- | --- |
-| boolean | - True if the default error page function of the subframe is enabled; Otherwise, the value is false. |
+| boolean | - True if the default error page function of the subframe   is enabled; Otherwise, the value is false. |
 
 **Error codes:**
 
@@ -2594,7 +2594,7 @@ The API determines whether to update the existing bytecode cache based on the pr
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | - Promise used to return the error code for generating the bytecode cache. The value **0** indicates no error, and the value **-1** indicates an internal error. |
+| Promise&lt;number&gt; | - Promise used to return the error code for generating the bytecode cache. The value   **0** indicates no error, and the value **-1** indicates an internal error. |
 
 **Error codes:**
 

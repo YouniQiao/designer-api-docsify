@@ -983,7 +983,8 @@ maxFontSize(maxSize: number | string | Resource): T
 
 设置文本最大显示字号。
 
-- 配合[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)以及[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)或布局大小限制使用，可实现自适应字号，单独设置不生效。  
+- 配合[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)以及[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)或布局  
+大小限制使用，可实现自适应字号，单独设置不生效。  
 - maxFontSize应大于minFontSize，若maxFontSize小于minFontSize，minFontSize将按maxFontSize处理。  
 - 当自适应字号生效时，设置的fontSize将不生效。  
 - 安全控件文本未完全显示时，点击不授权。maxFontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。
@@ -1080,7 +1081,8 @@ minFontSize(minSize: number | string | Resource): T
 
 设置文本最小显示字号。
 
-- 配合[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)以及[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)或布局大小限制使用，可实现自适应字号，单独设置不生效。  
+- 配合[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)以及[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)或布局  
+大小限制使用，可实现自适应字号，单独设置不生效。  
 - minFontSize应小于maxFontSize，若设置值大于maxFontSize，将按maxFontSize处理。  
 - minFontSize小于或等于0时，自适应字号不生效。  
 - 自适应字号生效时，fontSize设置不生效。  

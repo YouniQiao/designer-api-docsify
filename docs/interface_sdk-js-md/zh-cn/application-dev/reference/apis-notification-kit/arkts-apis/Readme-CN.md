@@ -180,6 +180,7 @@
   <!--Del-->
   - [isDistributedEnabledBySlot(系统接口)](arkts-notification-notificationmanager-isdistributedenabledbyslot-f-sys.md)<!--DelEnd-->
   - [isGeofenceEnabled](arkts-notification-notificationmanager-isgeofenceenabled-f.md)
+  - [isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md)
   <!--Del-->
   - [isNotificationEnabled(系统接口)](arkts-notification-notificationmanager-isnotificationenabled-f-sys.md)<!--DelEnd-->
   - [isNotificationEnabledSync](arkts-notification-notificationmanager-isnotificationenabledsync-f.md)
@@ -483,8 +484,7 @@
     - [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
     <!--Del-->
     - [NotificationFlags(系统接口)](arkts-notification-notificationflags-notificationflags-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [NotificationFlagStatus(系统接口)](arkts-notification-notificationflags-notificationflagstatus-e-sys.md)<!--DelEnd-->
+    - [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
   - [notificationRequest](arkts-notificationrequest.md)
     - [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i.md)
     <!--Del-->

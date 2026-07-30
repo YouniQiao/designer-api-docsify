@@ -102,7 +102,7 @@ function queryApn(admin: Want, apnId: string): Record<string, string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Record&lt;string, string&gt; | 指定APN ID的APN参数信息。<br/>- apnName：APN配置的名称标识符。<br/>- mcc：3位数字的移动国家代码。<br/>- mnc：2   -3位数字的移动网络代码。<br/>- apn：接入点名称。<br/>- type：APN的服务类型。<br/>- user：APN身份验证的用户名。<br/>- proxy：普通数据连接的代理服务器地址。<br/>-mmsproxy：彩信服务的专用代理地址。<br/>- authType：APN的认证协议类型。 |
+| Record&lt;string, string&gt; | 指定APN ID的APN参数信息。<br/>- apnName：APN配置的名称标识符。<br/>- mcc：3位数字的移动国家代码。<br/>- mnc：2   -3位数字的移动网络代码。<br/>- apn：接入点名称。<br/>- type：APN的服务类型。<br/>- user：APN身份验证的用户名。<br/>- proxy：普通数据连接的代理服务器地址。<br/>-   mmsproxy：彩信服务的专用代理地址。<br/>- authType：APN的认证协议类型。 |
 
 **错误码：**
 

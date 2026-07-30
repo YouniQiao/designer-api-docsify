@@ -26,6 +26,24 @@ Public data channel.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
+## DRAG
+
+```TypeScript
+DRAG = 'Drag'
+```
+
+Channel in which data can be dragged and dropped.
+
+**Use scenario**: This API is used to share data across applications in drag-and-drop scenarios.
+
+**Since:** 14
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Intention-DRAG = 'Drag'--><!--Device-Intention-DRAG = 'Drag'-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
 ## SYSTEM_SHARE
 
 ```TypeScript

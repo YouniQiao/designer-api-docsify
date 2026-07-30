@@ -554,7 +554,7 @@ Triggered when the navigation destination page is hidden. Starting from API vers
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VisibilityChangeReason&gt; | Yes | Triggered when the navigation destination page is hidden.<br   >In versions earlier than API version 21, the callback is a basic callback without parameters.<br>Since API version 21, the callback includes a **VisibilityChangeReason** parameter describing the trigger cause.<br>**Since:** 21 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VisibilityChangeReason&gt; | Yes | Triggered when the navigation destination page is hidden.<br   >In versions earlier than API version 21, the callback is a basic callback without parameters.<br>Since API   version 21, the callback includes a **VisibilityChangeReason** parameter describing the trigger cause.<br>**Since:** 21 |
 
 ## onInactive
 

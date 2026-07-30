@@ -1,6 +1,6 @@
 # CameraManager
 
-Implements camera management. Before calling any API in CameraManager, you must use [getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager) to obtain a CameraManager instance.
+**CameraManager** implements camera management. Before calling any API in **CameraManager**, you must use [getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager) to obtain a **CameraManager** instance.
 
 **Since:** 10
 
@@ -20,7 +20,9 @@ import { camera } from '@kit.CameraKit';
 createCameraInput(camera: CameraDevice): CameraInput
 ```
 
-Creates a **CameraInput** instance with the specified **CameraDevice** instance. This API returns the result synchronously.Before calling this API, call [getSupportedCameras](arkts-camera-camera-cameramanager-i.md#getsupportedcameras) to obtain the list of supported camera devices, select the camera device that meets the requirements based on the actual usage scenario, and then create the **CameraInput** instance.
+Creates a **CameraInput** instance with the specified **CameraDevice** instance. This API returns the result synchronously.
+
+Before calling this API, call [getSupportedCameras](arkts-camera-camera-cameramanager-i.md#getsupportedcameras) to obtain the list of supported camera devices, select the camera device that meets the requirements based on the actual usage scenario, and then create the **CameraInput** instance.
 
 **Since:** 10
 
@@ -58,7 +60,9 @@ Creates a **CameraInput** instance with the specified **CameraDevice** instance.
 createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 ```
 
-Creates a **CameraInput** instance with the specified camera position and type. This API returns the result synchronously.Before calling this API, specify the camera position and type based on the usage scenario. For example, open the front camera for the selfie feature
+Creates a **CameraInput** instance with the specified camera position and type. This API returns the result synchronously.
+
+Before calling this API, specify the camera position and type based on the usage scenario. For example, open the front camera for the selfie feature
 
 **Since:** 10
 
@@ -120,6 +124,42 @@ Creates a **CaptureSession** instance. This API returns the result synchronously
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
+## createDeferredPreviewOutput
+
+```TypeScript
+createDeferredPreviewOutput(profile: Profile): PreviewOutput
+```
+
+Creates a deferred **PreviewOutput** instance and adds it, instead of a common **PreviewOutput** instance, to the data stream during stream configuration.
+
+**Since:** 24
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput--><!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability). |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | **PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 23 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 24 and later |
 
 ## createMetadataOutput
 
@@ -343,7 +383,10 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 ```
 
-Creates a **VideoOutput** instance. This API returns the result synchronously.In video recording mode, if SDR or HDR VIVID is enabled, the camera format and color space must be configured according to the relationships specified in the table below. Configurations that do not match the table will cause issues such as preview exceptions.  
+Creates a **VideoOutput** instance. This API returns the result synchronously.
+
+In video recording mode, if SDR or HDR VIVID is enabled, the camera format and color space must be configured according to the relationships specified in the table below. Configurations that do not match the table will cause issues such as preview exceptions.
+
 | SDR/HDR Photo Capture | CameraFormat | ColorSpace |  
 |--------------------|--------------------------|------------------|  
 | SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT |  
@@ -362,7 +405,7 @@ Creates a **VideoOutput** instance. This API returns the result synchronously.In
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | profile | [VideoProfile](arkts-camera-camera-videoprofile-i.md) | Yes | Supported video profile, which is obtained through [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability). |
-| surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md). |
+| surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md). |
 
 **Return value:**
 
@@ -397,7 +440,7 @@ Creates a **VideoOutput** instance without configuration. This API returns the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md). |
+| surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md). |
 
 **Return value:**
 
@@ -452,7 +495,9 @@ Obtains the concurrency information of the specified cameras. If the return valu
 getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 ```
 
-Obtains the specified camera based on the camera position and type.Obtains the camera lens of the specified [CameraPosition](arkts-camera-camera-cameraposition-e.md)and [CameraType](arkts-camera-camera-cameratype-e.md). If the returned result is undefined, the camera lens is not found on the current device.
+Obtains the specified camera based on the camera position and type.
+
+Obtains the camera lens of the specified [CameraPosition](arkts-camera-camera-cameraposition-e.md) and [CameraType](arkts-camera-camera-cameratype-e.md). If the returned result is undefined, the camera lens is not found on the current device.
 
 **Since:** 18
 
@@ -523,7 +568,9 @@ Obtains the list of cameras that meet the search criteria based on the camera po
 getSupportedCameras(): Array<CameraDevice>
 ```
 
-Obtains the supported camera devices. This API returns the result synchronously.
+Obtains the supported cameras (such as the default camera whose **CameraType** is **CAMERA_TYPE_DEFAULT**). This API returns the result synchronously.
+
+Other cameras (such as the telephoto camera whose **CameraType** is **CAMERA_TYPE_TELEPHOTO**) can be obtained using [getCameraDevices](arkts-camera-camera-cameramanager-i.md#getcameradevices) API.
 
 **Since:** 10
 
@@ -545,7 +592,7 @@ Obtains the supported camera devices. This API returns the result synchronously.
 getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability
 ```
 
-Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV, HEIF, and HDR.
+Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV,HEIF, and HDR.
 > **NOTE**  
 >  
 > Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output  
@@ -705,6 +752,36 @@ Checks whether this camera is muted.
 | --- | --- |
 | boolean | Check result for whether the camera is muted. **true** if muted, **false** otherwise. |
 
+## isTorchLevelControlSupported
+
+```TypeScript
+isTorchLevelControlSupported(): boolean
+```
+
+Checks whether the device supports flashlight brightness control.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CameraManager-isTorchLevelControlSupported(): boolean--><!--Device-CameraManager-isTorchLevelControlSupported(): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Whether the device supports flashlight brightness control. Returns **true** if supported,**false** if not. If the API call fails, undefined is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 23 - 24 |
+
 ## isTorchModeSupported
 
 ```TypeScript
@@ -753,7 +830,7 @@ Checks whether the camera device supports the flashlight.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for the support of the flashlight. **true** if supported, **false** otherwise.If the API call fails, undefined is returned. |
+| boolean | Whether the device supports the flashlight. **true** if supported, **false** otherwise.<br>If **false** is returned, [isTorchModeSupported](arkts-camera-camera-cameramanager-i.md#istorchmodesupported),[getTorchMode](arkts-camera-camera-cameramanager-i.md#gettorchmode),[setTorchMode](arkts-camera-camera-cameramanager-i.md#settorchmode),[isTorchLevelControlSupported](arkts-camera-camera-cameramanager-i.md#istorchlevelcontrolsupported), and [setTorchModeOnWithLevel](../../../reference/apis-camera-kit/arkts-apis-camera-CameraManager.md#settorchmodeonwithlevel)do not take effect.<br>If the API call fails, undefined is returned. |
 
 ## off('cameraStatus')
 
@@ -931,4 +1008,36 @@ Sets the flashlight mode.
 | [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 11 - 17 |
 | [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+
+## setTorchModeOnWithLevel
+
+```TypeScript
+setTorchModeOnWithLevel(torchLevel: number): void
+```
+
+Sets the torch mode to {@link camera.TorchMode.ON} with the specified torch level.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void--><!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| torchLevel | number | Yes | the specified torch level, the value range is [0.0, 1.0] |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 23 - 24 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 

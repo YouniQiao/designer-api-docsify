@@ -334,7 +334,7 @@ Obtains a given number of colors with the top proportions in the image. This API
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Color \| null&gt; | Array of colors, sorted by proportion.   - If the number of colors obtained is less than the value of colorCount, the array size is the actual number obtained.   - If the colors fail to be obtained or the number of colors obtained is less than 1, [null] is returned.   - If the value of colorCount is greater than 10, an array holding the first 10 colors with the top proportions is returned. |
+| Array&lt;Color \| null&gt; | Array of colors, sorted by proportion.   - If the number of colors obtained is less than the value of colorCount, the array size is the actual number   obtained.   - If the colors fail to be obtained or the number of colors obtained is less than 1, [null] is returned.   - If the value of colorCount is greater than 10, an array holding the first 10 colors with the top   proportions is returned. |
 
 **Example**
 

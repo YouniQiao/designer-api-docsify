@@ -4,7 +4,8 @@ The relational database (RDB) manages data based on relational models. With the 
 
 This module provides the following RDB-related functions:
 
-- [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md): provides APIs for creating predicates. The predicates represent the properties, characteristics, or relationships between data entities in an RDB store and are used to define data operation conditions.  
+- [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md): provides APIs for creating predicates. The predicates represent the  
+properties, characteristics, or relationships between data entities in an RDB store and are used to define data operation conditions.  
 - [RdbStore](arkts-arkdata-rdb-rdbstore-i.md): provides APIs for managing data in an RDB store.
 
 **Since:** 7

@@ -217,8 +217,8 @@ class TestDuplex extends stream.Duplex {
   }
 
   doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
-  console.info("Duplex chunk is", chunk); // Duplex chunk is test
-  callback();
+    console.info("Duplex chunk is", chunk); // Duplex chunk is test
+    callback();
   }
 }
 

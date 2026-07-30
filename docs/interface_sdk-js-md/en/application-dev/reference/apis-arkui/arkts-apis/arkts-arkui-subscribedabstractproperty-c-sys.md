@@ -1,4 +1,4 @@
-# SubscribedAbstractProperty (System API)
+# SubscribedAbstractProperty
 
 Represents a synchronized property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or [LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
@@ -7,8 +7,6 @@ Represents a synchronized property from [AppStorage](../../../ui/state-managemen
 <!--Device-unnamed-declare abstract class SubscribedAbstractProperty<T>--><!--Device-unnamed-declare abstract class SubscribedAbstractProperty<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
 
 ## constructor
 

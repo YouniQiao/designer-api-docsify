@@ -45,27 +45,6 @@ Obtains the key event handling policy.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 
-**Example**
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { systemManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-let result: Array<systemManager.KeyEventPolicy> = [];
-try {
-  result = systemManager.getKeyEventPolicies(wantTemp);
-  console.info('Succeeded in getting key event policies.');
-} catch (err) {
-  console.error(`Failed to get key event policies. Code is ${err.code}, message is ${err.message}`);
-}
-
-```
-
 
 ## getKeyEventPolicies
 
@@ -105,4 +84,25 @@ Obtains the key event handling policy.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
+
+**Example**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { systemManager } from '@kit.MDMKit';
+
+let wantTemp: Want = {
+  // Replace with actual values.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+let result: Array<systemManager.KeyEventPolicy> = [];
+try {
+  result = systemManager.getKeyEventPolicies(wantTemp);
+  console.info('Succeeded in getting key event policies.');
+} catch (err) {
+  console.error(`Failed to get key event policies. Code is ${err.code}, message is ${err.message}`);
+}
+
+```
 

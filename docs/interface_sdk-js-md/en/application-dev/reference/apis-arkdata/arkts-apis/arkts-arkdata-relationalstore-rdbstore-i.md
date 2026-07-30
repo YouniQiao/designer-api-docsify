@@ -1826,7 +1826,7 @@ Obtains the modify time of rows corresponding to the primary keys.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ModifyTime&gt; | -The promise returned by the function. ModifyTime indicates the modify time of current row.If this table does not support cloud, the {@link ModifyTime} will be empty. |
+| Promise&lt;ModifyTime&gt; | -   The promise returned by the function. ModifyTime indicates the modify time of current row.If this table does not support cloud, the {@link ModifyTime} will be empty. |
 
 **Error codes:**
 

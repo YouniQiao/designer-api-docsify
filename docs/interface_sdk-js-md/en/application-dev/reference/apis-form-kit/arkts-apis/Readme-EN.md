@@ -127,6 +127,7 @@
   <!--Del-->
   - [PublishFormResult(system api)](arkts-form-forminfo-publishformresult-i-sys.md)<!--DelEnd-->
   - [Rect](arkts-form-forminfo-rect-i.md)
+  - [RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md)
   <!--Del-->
   - [RunningFormInfo(system api)](arkts-form-forminfo-runningforminfo-i-sys.md)<!--DelEnd-->
   <!--Del-->

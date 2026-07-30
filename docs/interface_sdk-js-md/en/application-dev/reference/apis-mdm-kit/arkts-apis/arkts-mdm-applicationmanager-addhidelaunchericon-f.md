@@ -41,3 +41,25 @@ Adds applications that hide launcher icons.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Failed to call the API due to limited device capabilities. |
 
+**Example**
+
+```TypeScript
+import { applicationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// Replace it as required.
+let bundleNames: Array<string> = ['com.example.test'];
+try {
+  applicationManager.addHideLauncherIcon(wantTemp, bundleNames);
+  console.info('Succeeded in adding hide launcher icon.');
+} catch (err) {
+  console.error(`Failed to add hide launcher icon. Code is ${err.code}, message is ${err.message}`);
+}
+
+```
+

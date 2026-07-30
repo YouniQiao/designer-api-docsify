@@ -428,7 +428,7 @@ The property subscribers include the following:
 
 1. Variables decorated by [\@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink) or [\@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)
 
-2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c-sys.md) returned by [link](arkts-arkui-appstorage-c.md#link), [prop](arkts-arkui-appstorage-c.md#prop), [setAndLink](arkts-arkui-appstorage-c.md#setandlink),or [setAndProp](arkts-arkui-appstorage-c.md#setandprop)
+2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md) returned by [link](arkts-arkui-appstorage-c.md#link), [prop](arkts-arkui-appstorage-c.md#prop), [setAndLink](arkts-arkui-appstorage-c.md#setandlink),or [setAndProp](arkts-arkui-appstorage-c.md#setandprop)
 
 To delete these subscribers:
 

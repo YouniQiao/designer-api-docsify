@@ -286,7 +286,8 @@ closeIcon?: ChipV2CloseIcon
 
 默认值：
 
-- 尺寸默认值：size为ChipV2Size.SMALL时，默认值为`$r('sys.float.chip_small_font_size')`；其他情况默认值为`$r('sys.float.chip_normal_font_size')`。  
+- 尺寸默认值：size为ChipV2Size.SMALL时，默认值为`$r('sys.float.chip_small_font_size')`；其他情况默认值为  
+`$r('sys.float.chip_normal_font_size')`。  
 - 无障碍默认值：无无障碍描述。
 
 值为undefined时，按默认值处理。
@@ -522,13 +523,17 @@ ChipV2的内边距。
 
 默认值：
 
-- size为ChipV2Size.SMALL并且activated为true时，默认值：`{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`。
+- size为ChipV2Size.SMALL并且activated为true时，默认值：  
+`{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`。
 
-- size为ChipV2Size.SMALL并且activated为false时，默认值：`{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`。
+- size为ChipV2Size.SMALL并且activated为false时，默认值：  
+`{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'), end: LengthMetrics.resource('sys.float.chip_small_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`。
 
-- size不为ChipV2Size.SMALL并且activated为true时，默认值：`{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`。
+- size不为ChipV2Size.SMALL并且activated为true时，默认值：  
+`{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`。
 
-- size不为ChipV2Size.SMALL并且activated为false时，默认值：`{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`。
+- size不为ChipV2Size.SMALL并且activated为false时，默认值：  
+`{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'), end: LengthMetrics.resource('sys.float.chip_normal_text_padding'), top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}`。
 
 值为undefined时，按默认值处理。
 

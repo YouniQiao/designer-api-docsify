@@ -46,19 +46,22 @@ Removes disallowed Bluetooth protocols. After removing some protocols, the user 
 import { Want } from '@kit.AbilityKit';
 import { bluetoothManager } from '@kit.MDMKit';
 
+// Create an EnterpriseAdminExtensionAbility component.
 let wantTemp: Want = {
   // Replace it as required.
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
-// Replace it as required.
+// Define the user ID. (Replace it as required.)
 let accountId: number = 100;
+// Define the array of Bluetooth protocols. (Replace it as required.)
 let protocols: Array<bluetoothManager.Protocol> = [bluetoothManager.Protocol.GATT, bluetoothManager.Protocol.SPP];
-try{
-    bluetoothManager.removeDisallowedBluetoothProtocols(wantTemp, accountId, protocols);
-    console.info('Succeeded in removing disallowed bluetooth protocols policy.');
+try {
+  // Remove Bluetooth protocols from the blocklist.
+  bluetoothManager.removeDisallowedBluetoothProtocols(wantTemp, accountId, protocols);
+  console.info('Succeeded in removing disallowed bluetooth protocols policy.');
 } catch (err) {
-    console.error(`Failed to remove disallowed bluetooth protocols. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to remove disallowed bluetooth protocols. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```
@@ -99,4 +102,36 @@ Removes protocol from the list of bluetooth server that are disallowed to use.
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+
+**Example**
+
+```TypeScript
+import { Want } from '@kit.AbilityKit';
+import { bluetoothManager } from '@kit.MDMKit';
+
+// Create an EnterpriseAdminExtensionAbility component.
+let wantTemp: Want = {
+  // Replace it as required.
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+
+// Define the user ID.
+let accountId: number = 100;
+// Define the Bluetooth protocol array.
+let protocols: Array<bluetoothManager.Protocol> = [
+  bluetoothManager.Protocol.GATT,
+  bluetoothManager.Protocol.SPP,
+  bluetoothManager.Protocol.OPP
+];
+
+try {
+  // Remove Bluetooth protocols from the blocklist and specify the transfer policy as disabling sending and receiving.
+  bluetoothManager.removeDisallowedBluetoothProtocols(wantTemp, accountId, protocols, bluetoothManager.TransferPolicy.RECEIVE_SEND);
+  console.info('Succeeded in removing disallowed bluetooth protocols.');
+} catch (err) {
+  console.error(`Failed to remove disallowed bluetooth protocols. Code is ${err.code}, message is ${err.message}`);
+}
+
+```
 

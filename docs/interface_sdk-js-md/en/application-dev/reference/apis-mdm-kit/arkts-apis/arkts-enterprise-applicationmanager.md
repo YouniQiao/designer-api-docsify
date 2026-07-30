@@ -16,8 +16,6 @@ The **applicationManager** module provides application management capabilities, 
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

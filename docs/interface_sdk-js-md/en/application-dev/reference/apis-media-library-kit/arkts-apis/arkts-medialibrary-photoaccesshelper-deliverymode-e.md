@@ -50,8 +50,10 @@ BALANCE_MODE = 2
 
 Balance mode.
 
-- For segmented photo delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version, starts a task to generate a high-quality version, and returns the callback for the high-quality version once that version is ready.  
-- For segmented video delivery, if a high-quality version is available, it quickly returns the callback for that high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version right away.
+- For segmented photo delivery, if a high-quality version is available, it quickly returns the callback for that  
+high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version, starts a task to generate a high-quality version, and returns the callback for the high-quality version once that version is ready.  
+- For segmented video delivery, if a high-quality version is available, it quickly returns the callback for that  
+high-quality version. If only a low-quality version is available, it returns the callback for the low-quality version right away.
 
 **Since:** 11
 

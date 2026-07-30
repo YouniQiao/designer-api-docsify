@@ -1,6 +1,6 @@
 # CameraManager
 
-Implements camera management. Before calling any API in CameraManager, you must use [getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager) to obtain a CameraManager instance.
+**CameraManager** implements camera management. Before calling any API in **CameraManager**, you must use [getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager) to obtain a **CameraManager** instance.
 
 **Since:** 10
 
@@ -89,44 +89,6 @@ Create a ControlCenterSession instance.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-## createDeferredPreviewOutput
-
-```TypeScript
-createDeferredPreviewOutput(profile: Profile): PreviewOutput
-```
-
-Creates a deferred PreviewOutput instance.
-
-**Since:** 24
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput--><!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Preview output profile. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i-sys.md) | the PreviewOutput instance. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 23 |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 24 and later |
-
 ## createDepthDataOutput
 
 ```TypeScript
@@ -147,7 +109,7 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [DepthProfile](arkts-camera-camera-depthprofile-i-sys.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability). |
+| profile | [DepthProfile](arkts-camera-camera-depthprofile-i-sys.md) | Yes | Supported preview profile, which is obtained through * [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability). |
 
 **Return value:**
 
@@ -301,38 +263,6 @@ function isPreLaunchSupported(context: common.BaseContext): boolean {
 }
 
 ```
-
-## isTorchLevelControlSupported
-
-```TypeScript
-isTorchLevelControlSupported(): boolean
-```
-
-Checks whether the device supports flashlight brightness control.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CameraManager-isTorchLevelControlSupported(): boolean--><!--Device-CameraManager-isTorchLevelControlSupported(): boolean-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Whether the device supports flashlight brightness control. Returns **true** if supported,**false** if not. If the API call fails, undefined is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 23 - 24 |
 
 ## muteCamera
 
@@ -709,38 +639,4 @@ function setPrelaunchConfig(context: common.BaseContext): void {
 }
 
 ```
-
-## setTorchModeOnWithLevel
-
-```TypeScript
-setTorchModeOnWithLevel(torchLevel: number): void
-```
-
-Sets the torch mode to {@link camera.TorchMode.ON} with the specified torch level.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void--><!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| torchLevel | number | Yes | the specified torch level, the value range is [0.0, 1.0] |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 23 - 24 |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 

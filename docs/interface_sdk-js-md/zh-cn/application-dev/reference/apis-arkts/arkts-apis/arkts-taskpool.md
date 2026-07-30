@@ -5,7 +5,8 @@
 - 任务组任务：对应为[TaskGroup](arkts-arkts-taskpool-taskgroup-c.md)任务。  
 - 串行队列任务：对应为[SequenceRunner](arkts-arkts-taskpool-sequencerunner-c.md)任务。  
 - 异步队列任务：对应为[AsyncRunner](arkts-arkts-taskpool-asyncrunner-c.md)任务。  
-- 周期任务：由[executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically)执行的任务。
+- 周期任务：由  
+[executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically)执行的任务。
 
 **起始版本：** 9
 

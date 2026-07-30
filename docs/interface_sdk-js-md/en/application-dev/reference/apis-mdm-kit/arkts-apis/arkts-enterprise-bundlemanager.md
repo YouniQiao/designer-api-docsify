@@ -14,8 +14,6 @@ The **bundleManager** module provides APIs for bundle management, including addi
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript

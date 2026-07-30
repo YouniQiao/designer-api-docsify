@@ -373,8 +373,10 @@ The priority of **fontSize** is lower than the **fontSize** property in **prefix
 
 Default value:
 
-- When **size** is **ChipSize.SMALL**: **$r('sys.float.chip_small_font_size')** for text and **$r('sys.float.chip_small_icon_size')** for icons.  
-- Other cases: **$r('sys.float.chip_normal_font_size')** for text and **$r('sys.float.chip_normal_icon_size')** for icons.
+- When **size** is **ChipSize.SMALL**: **$r('sys.float.chip_small_font_size')** for text and  
+**$r('sys.float.chip_small_icon_size')** for icons.  
+- Other cases: **$r('sys.float.chip_normal_font_size')** for text and **$r('sys.float.chip_normal_icon_size')** for  
+icons.
 
 If the value is **undefined**, the default value is used.
 
@@ -504,10 +506,14 @@ Padding of the chip.
 
 Default value:
 
-- When **size** is **ChipSize.SMALL** and **activated** is **true**:**{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'),end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
-- When **size** is **ChipSize.SMALL** and **activated** is **false**:**{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'),end: LengthMetrics.resource('sys.float.chip_small_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
-- When **size** is not **ChipSize.SMALL** and **activated** is **true**:**{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'),end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
-- When **size** is not **ChipSize.SMALL** and **activated** is **false**:**{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'),end: LengthMetrics.resource('sys.float.chip_normal_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.
+- When **size** is **ChipSize.SMALL** and **activated** is **true**:  
+**{ start: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'),end: LengthMetrics.resource('sys.float.chip_activated_small_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
+- When **size** is **ChipSize.SMALL** and **activated** is **false**:  
+**{ start: LengthMetrics.resource('sys.float.chip_small_text_padding'),end: LengthMetrics.resource('sys.float.chip_small_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
+- When **size** is not **ChipSize.SMALL** and **activated** is **true**:  
+**{ start: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'),end: LengthMetrics.resource('sys.float.chip_activated_normal_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.  
+- When **size** is not **ChipSize.SMALL** and **activated** is **false**:  
+**{ start: LengthMetrics.resource('sys.float.chip_normal_text_padding'),end: LengthMetrics.resource('sys.float.chip_normal_text_padding'),top: LengthMetrics.vp(4), bottom: LengthMetrics.vp(4)}**.
 
 If the value is **undefined**, the default value is used.
 

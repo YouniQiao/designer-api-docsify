@@ -1554,7 +1554,7 @@ Favorites or unfavorites this file asset. This API uses an asynchronous callback
 
 **Deprecated since:** 11
 
-**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setfavorite)
+**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setfavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1620,7 +1620,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 **Deprecated since:** 11
 
-**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setfavorite)
+**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setfavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 

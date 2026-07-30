@@ -62,10 +62,10 @@ let wantTemp: Want = {
 // Replace with actual values.
 let bundleNames: Array<string> = [ 'com.huaweicloud.m' ];
 try {
-    bundleManager.installMarketApps(wantTemp, bundleNames);
-    console.info(`Succeeded in installing market apps.`);
+  bundleManager.installMarketApps(wantTemp, bundleNames);
+  console.info(`Succeeded in installing market apps.`);
 } catch(err) {
-    console.error(`Failed to install market apps. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to install market apps. Code: ${err.code}, message: ${err.message}`);
 }
 
 ```

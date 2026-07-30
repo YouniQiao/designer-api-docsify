@@ -16,11 +16,9 @@
 | [NotificationFlags](arkts-notification-notificationflags-notificationflags-i-sys.md) | Defines the notification flags. |
 <!--DelEnd-->
 
-<!--Del-->
-### Enums（系统接口）
+### Enums
 
 | Name | Description |
 | --- | --- |
-| [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e-sys.md) | Enumerates the notification flag states. |
-<!--DelEnd-->
+| [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md) | Enumerates the notification flag states. |
 
