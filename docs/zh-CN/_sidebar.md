@@ -12,7 +12,7 @@
 - [Audio Kit (213)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-audio-kit/arkts-apis/arkts-multimedia-audio.md)
 - [Avcodec Kit (62)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-avcodec-kit/c-apis/capi-media-types-h.md)
 - [Avsession Kit (200)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-avsession-kit/arkts-apis/arkts-app-ability-mediacontrolextensionability.md)
-- [Background Tasks Kit (190)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-background-tasks-kit/arkts-apis/arkts-workschedulerextensionability.md)
+- [Background Tasks Kit (193)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-background-tasks-kit/arkts-apis/arkts-workschedulerextensionability.md)
 - [Basic Service Kit (739)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-basic-service-kit/arkts-apis/arkts-wallpaperextensionability.md)
 - [Basic Services Kit (40)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-basic-services-kit/c-apis/capi-syscap-ndk-h.md)
 - [Calendar Kit (19)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-calendar-kit/arkts-apis/arkts-calendarmanager.md)

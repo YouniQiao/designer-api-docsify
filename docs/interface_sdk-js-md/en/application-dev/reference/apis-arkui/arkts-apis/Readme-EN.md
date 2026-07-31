@@ -881,7 +881,15 @@
   - [springMotion](arkts-arkui-curves-springmotion-f.md)
   - [steps](arkts-arkui-curves-steps-f.md)
   - [stepsCurve](arkts-arkui-curves-stepscurve-f.md)
+  <!--Del-->
+  - [trailOptimizedInterpolatingSpring(system api)](arkts-arkui-curves-trailoptimizedinterpolatingspring-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [trailOptimizedResponsiveSpringMotion(system api)](arkts-arkui-curves-trailoptimizedresponsivespringmotion-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [trailOptimizedSpringMotion(system api)](arkts-arkui-curves-trailoptimizedspringmotion-f-sys.md)<!--DelEnd-->
   - [ICurve](arkts-arkui-curves-icurve-i.md)
+  <!--Del-->
+  - [TrailOptimization(system api)](arkts-arkui-curves-trailoptimization-i-sys.md)<!--DelEnd-->
   - [Curve](arkts-arkui-curves-curve-e.md)
 - [@ohos.deviceStatus.dragInteraction](arkts-devicestatus-draginteraction.md)
   <!--Del-->

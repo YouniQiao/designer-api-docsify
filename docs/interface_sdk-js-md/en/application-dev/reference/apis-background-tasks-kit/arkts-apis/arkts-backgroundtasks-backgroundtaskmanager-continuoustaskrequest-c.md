@@ -409,6 +409,24 @@ You can call the [getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskman
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## progressInfo
+
+```TypeScript
+progressInfo?: ProgressInfo
+```
+
+Notify progress data.
+
+**Type:** ProgressInfo
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ContinuousTaskRequest-progressInfo?: ProgressInfo--><!--Device-ContinuousTaskRequest-progressInfo?: ProgressInfo-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
 ## wantAgent
 
 ```TypeScript

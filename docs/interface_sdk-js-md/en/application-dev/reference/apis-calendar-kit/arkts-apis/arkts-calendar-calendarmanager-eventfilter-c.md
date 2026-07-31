@@ -34,7 +34,7 @@ Defines a filter based on the event ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | number[] | Yes |  |
+| ids | number[] | Yes | An array of event IDs, where each event ID must be an integer. |
 
 **Return value:**
 

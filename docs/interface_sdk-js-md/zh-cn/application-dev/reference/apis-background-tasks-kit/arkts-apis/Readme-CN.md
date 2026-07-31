@@ -128,6 +128,7 @@
   <!--Del-->
   - [unsubscribeContinuousTaskState(系统接口)](arkts-backgroundtasks-backgroundtaskmanager-unsubscribecontinuoustaskstate-f-sys.md)<!--DelEnd-->
   - [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md)
+  - [updateDataTransferProgress](arkts-backgroundtasks-backgroundtaskmanager-updatedatatransferprogress-f.md)
   - [ContinuousTaskRequest](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md)
   <!--Del-->
   - [BackgroundTaskStateInfo(系统接口)](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskstateinfo-i-sys.md)<!--DelEnd-->
@@ -138,11 +139,13 @@
   - [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md)
   - [ContinuousTaskNotification](arkts-backgroundtasks-backgroundtaskmanager-continuoustasknotification-i.md)
   - [ContinuousTaskSuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustasksuspendinfo-i.md)
+  - [DataTransferProgress](arkts-backgroundtasks-backgroundtaskmanager-datatransferprogress-i.md)
   - [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md)
   <!--Del-->
   - [EfficiencyResourcesInfo(系统接口)](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [EfficiencyResourcesRequest(系统接口)](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesrequest-i-sys.md)<!--DelEnd-->
+  - [ProgressInfo](arkts-backgroundtasks-backgroundtaskmanager-progressinfo-i.md)
   - [SuspendMessage](arkts-backgroundtasks-backgroundtaskmanager-suspendmessage-i.md)
   - [TransientTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-transienttaskinfo-i.md)
   - [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md)

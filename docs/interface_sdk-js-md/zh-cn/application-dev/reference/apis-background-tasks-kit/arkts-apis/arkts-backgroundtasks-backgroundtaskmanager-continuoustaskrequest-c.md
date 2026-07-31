@@ -414,6 +414,24 @@ continuousTaskId?: number
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
+## progressInfo
+
+```TypeScript
+progressInfo?: ProgressInfo
+```
+
+通知进度信息。
+
+**类型：** ProgressInfo
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ContinuousTaskRequest-progressInfo?: ProgressInfo--><!--Device-ContinuousTaskRequest-progressInfo?: ProgressInfo-End-->
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
 ## wantAgent
 
 ```TypeScript

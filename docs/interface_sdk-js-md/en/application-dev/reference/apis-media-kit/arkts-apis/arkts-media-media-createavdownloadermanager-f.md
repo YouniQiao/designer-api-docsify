@@ -9,7 +9,7 @@ import { media } from '@kit.MediaKit';
 ## createAVDownloaderManager
 
 ```TypeScript
-function createAVDownloaderManager( ): Promise<AVDownloaderManager>
+function createAVDownloaderManager(): Promise<AVDownloaderManager>
 ```
 
 Creating a Streaming Resource Download Task Manager
@@ -18,7 +18,7 @@ Creating a Streaming Resource Download Task Manager
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-media-function createAVDownloaderManager( ): Promise<AVDownloaderManager>--><!--Device-media-function createAVDownloaderManager( ): Promise<AVDownloaderManager>-End-->
+<!--Device-media-function createAVDownloaderManager(): Promise<AVDownloaderManager>--><!--Device-media-function createAVDownloaderManager(): Promise<AVDownloaderManager>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -26,5 +26,5 @@ Creating a Streaming Resource Download Task Manager
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVDownloaderManager&gt; | Returns an instance of the Offline Download Manager |
+| Promise&lt;AVDownloaderManager&gt; | Promise used to return AVDownloaderManager. |
 

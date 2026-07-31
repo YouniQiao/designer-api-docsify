@@ -33,11 +33,29 @@ import { curves } from '@kit.ArkUI';
 | [steps](arkts-arkui-curves-steps-f.md#steps) | Creates a step curve. |
 | [stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve) | Creates a step curve. |
 
+<!--Del-->
+### Functions（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [trailOptimizedInterpolatingSpring](arkts-arkui-curves-trailoptimizedinterpolatingspring-f-sys.md#trailoptimizedinterpolatingspring) | Creates an interpolating spring curve animated from 0 to 1. The actual animation value is calculated based on the curve. The animation duration is subject to the curve parameters, rather than the **duration** parameter in **animation** or **animateTo**. |
+| [trailOptimizedResponsiveSpringMotion](arkts-arkui-curves-trailoptimizedresponsivespringmotion-f-sys.md#trailoptimizedresponsivespringmotion) | Creates a responsive spring animation curve. It is a special case of [springMotion](arkts-arkui-curves-springmotion-f.md#springmotion),with the only difference in the default values. It can be used together with **springMotion**. |
+| [trailOptimizedSpringMotion](arkts-arkui-curves-trailoptimizedspringmotion-f-sys.md#trailoptimizedspringmotion) | Creates a spring animation curve. If multiple spring animations are applied to the same attribute of an object,each animation replaces their predecessor and inherits the velocity. |
+<!--DelEnd-->
+
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
 | [ICurve](arkts-arkui-curves-icurve-i.md) | Represents a curve object. Different types of curve objects can be created using APIs in this module, including [curves.cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md#cubicbeziercurve) and [curves.interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring). The curve object provides interpolation functionality through its member method [interpolate](arkts-arkui-curves-icurve-i.md#interpolate). |
+
+<!--Del-->
+### Interfaces（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [TrailOptimization](arkts-arkui-curves-trailoptimization-i-sys.md) | Trail optimization configuration for spring animations. |
+<!--DelEnd-->
 
 ### Enums
 

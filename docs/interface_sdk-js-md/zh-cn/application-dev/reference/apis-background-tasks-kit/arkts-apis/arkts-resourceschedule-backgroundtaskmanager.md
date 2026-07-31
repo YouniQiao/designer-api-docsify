@@ -42,6 +42,7 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 | [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning-2) | 取消指定Id的长时任务，使用Promise异步回调。也可以通过[stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)取消当前UIAbility下所有长时任务。 |
 | [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning) | 更新长时任务类型，使用Promise异步回调。长时任务更新成功后，会有通知栏消息，没有提示音。</br>更新长时任务前，可以通过[getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getallcontinuoustasks)接口获取当前所有长时任务信息，如果当前没有已经存在的长时任务，会更新失败。</br>该接口仅支持更新如下三个接口申请的长时任务：</br>[startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback:AsyncCallback&lt;void&gt;): void](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)</br>[startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise&lt;void&gt;](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)</br>[startBackgroundRunning(context: Context, bgModes: string[], wantAgent: WantAgent):Promise&lt;ContinuousTaskNotification&gt;]{@link backgroundTaskManager.startBackgroundRunning(context: Context,bgModes: string[], wantAgent: WantAgent)} |
 | [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning-1) | 更新长时任务，使用Promise异步回调。长时任务更新成功后，会有通知栏消息，没有提示音。  更新长时任务还存在如下约束限制：  1. 本接口仅支持更新如下接口申请的长时任务：[startBackgroundRunning(context: Context, request: ContinuousTaskRequest):Promise&lt;ContinuousTaskNotification&gt;](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)。2. 已经合并的长时任务，且后台任务主类型和子类型均相同，仅支持更新ContinuousTaskRequest.wantAgent中的wants信息（abilityName等），如果类型不同，更新失败。3. 如果待更新的长时任务或指定的更新类型中包含数据传输类型，直接返回失败。 |
+| [updateDataTransferProgress](arkts-backgroundtasks-backgroundtaskmanager-updatedatatransferprogress-f.md#updatedatatransferprogress) | 更新通知。仅支持数据传输类型长时任务。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -73,7 +74,9 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 | [ContinuousTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskinfo-i.md) | 长时任务信息。 |
 | [ContinuousTaskNotification](arkts-backgroundtasks-backgroundtaskmanager-continuoustasknotification-i.md) | 长时任务通知信息。 |
 | [ContinuousTaskSuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-continuoustasksuspendinfo-i.md) | 长时任务暂停信息。 |
+| [DataTransferProgress](arkts-backgroundtasks-backgroundtaskmanager-datatransferprogress-i.md) | 长时任务通知进度信息。 |
 | [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) | 短时任务信息。 |
+| [ProgressInfo](arkts-backgroundtasks-backgroundtaskmanager-progressinfo-i.md) | 通知进度信息。 |
 | [SuspendMessage](arkts-backgroundtasks-backgroundtaskmanager-suspendmessage-i.md) | 长时任务暂停原因。 |
 | [TransientTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-transienttaskinfo-i.md) | 所有短时任务信息。 |
 

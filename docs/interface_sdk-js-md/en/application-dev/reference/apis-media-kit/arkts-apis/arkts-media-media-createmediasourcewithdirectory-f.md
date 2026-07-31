@@ -26,17 +26,17 @@ Create a MediaSource object from the given directory.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Buffer path information for creating a media source |
+| path | string | Yes | Buffer path information for creating a media source. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt; MediaSource \| undefined&gt; | If success, an MediaSource is returned. Otherwise returns null. |
+| Promise&lt; MediaSource \| undefined&gt; | If success, a MediaSource is returned. Otherwise returns null. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5411007](../errorcode-media.md#5411007-no-resource-available) | The directory specified by the path parameter does not exist or unaccessed. |
+| [5411007](../errorcode-media.md#5411007-no-resource-available) | The directory specified by the path parameter does not exist or inaccessible. |
 

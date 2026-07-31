@@ -126,7 +126,7 @@ Obtains the offline download cache directory of a specified task.
 getTaskProgress(taskId: string): number
 ```
 
-Remove a download task from the offline download manager
+Obtains the progress of a specified offline download task.
 
 **Since:** 26.0.0
 
@@ -146,7 +146,7 @@ Remove a download task from the offline download manager
 
 | Type | Description |
 | --- | --- |
-| number | Returns the approximate ratio of the download progress of a specified task.Value range: [0.0-1.0)If the returned value range is -1, the resource size is unknown. |
+| number | Returns the approximate ratio of the download progress of a specified task.Value range: [0.0-1.0] If the returned value range is -1, the resource size is unknown. |
 
 **Error codes:**
 
@@ -381,7 +381,7 @@ Resuming Offline download of a Specified Task
 ## setRequestTimeout
 
 ```TypeScript
-setRequestTimeout(expired: number): void
+setRequestTimeout(timeout: number): void
 ```
 
 Sets the network timeout interval for HTTP requests. If the timeout interval is exceeded, the download fails.
@@ -390,7 +390,7 @@ Sets the network timeout interval for HTTP requests. If the timeout interval is 
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVDownloaderManager-setRequestTimeout(expired: int): void--><!--Device-AVDownloaderManager-setRequestTimeout(expired: int): void-End-->
+<!--Device-AVDownloaderManager-setRequestTimeout(timeout: int): void--><!--Device-AVDownloaderManager-setRequestTimeout(timeout: int): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -398,5 +398,5 @@ Sets the network timeout interval for HTTP requests. If the timeout interval is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| expired | number | Yes | Timeout duration, in ms. If is not set, the default timeout duration is used.The value should be an interager.<br>**Description**</br><ul><li>If the value is less than 0, there is no timeout duration.</li></ul>. |
+| timeout | number | Yes | Timeout duration, in ms. If is not set, the default timeout duration is used.The value should be an integer.<br>**Description**</br><ul><li>If the value is less than 0, there is no timeout duration.</li></ul>. |
 
