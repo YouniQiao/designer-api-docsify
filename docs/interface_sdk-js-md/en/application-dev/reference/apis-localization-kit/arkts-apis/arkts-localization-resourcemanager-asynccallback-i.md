@@ -1,6 +1,6 @@
 # AsyncCallback
 
-The ResourceManager callback.
+Asynchronous callback interface.
 
 **Since:** 6
 

@@ -12,7 +12,7 @@ import { sendableResourceManager } from '@kit.LocalizationKit';
 export function sendableResourceToResource(resource: SendableResource): Resource
 ```
 
-将SendableResource对象转换为Resource对象。
+将跨线程传输的SendableResource对象转换为Resource对象。
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ export function sendableResourceToResource(resource: SendableResource): Resource
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types;2.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types;2.Parameter verification failed. |
 
 **示例：**
 

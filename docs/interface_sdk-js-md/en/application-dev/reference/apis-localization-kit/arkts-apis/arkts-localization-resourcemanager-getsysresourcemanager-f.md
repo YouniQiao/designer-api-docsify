@@ -12,7 +12,7 @@ import { resourceManager } from '@kit.LocalizationKit';
 export function getSysResourceManager(): ResourceManager
 ```
 
-Obtains a system **ResourceManager** object.
+Obtains a system resource management object for accessing preset system resources.
 
 **Since:** 20
 

@@ -2,6 +2,10 @@
 
 用于表示当前设备类型。
 
+<!--RP1-->
+
+<!--RP1End-->
+
 **起始版本：** 6
 
 <!--Device-resourceManager-export enum DeviceType--><!--Device-resourceManager-export enum DeviceType-End-->
@@ -62,8 +66,6 @@ DEVICE_TYPE_CAR = 0x02
 DEVICE_TYPE_PC = 0x03
 ```
 
-Indicates a PC.
-
 **起始版本：** 6
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -109,8 +111,6 @@ DEVICE_TYPE_WEARABLE = 0x06
 ```TypeScript
 DEVICE_TYPE_2IN1 = 0x07
 ```
-
-PC/2in1。
 
 **起始版本：** 11
 

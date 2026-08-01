@@ -4,7 +4,7 @@
 export type SendableResource = _SendableResource
 ```
 
-Defines a SendableResource object.
+Represents Sendable resource-related information for cross-thread transmission, including the application bundle name, application module name, resource ID, resource type, and other resource parameters.
 
 **Since:** 12
 

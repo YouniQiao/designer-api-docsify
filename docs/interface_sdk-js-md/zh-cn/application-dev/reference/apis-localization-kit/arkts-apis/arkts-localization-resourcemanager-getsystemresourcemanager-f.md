@@ -12,11 +12,11 @@ import { resourceManager } from '@kit.LocalizationKit';
 export function getSystemResourceManager(): ResourceManager
 ```
 
-获取系统资源管理ResourceManager对象。
+获取系统资源管理对象，用于访问系统预置的资源。
 > **说明**  
 >  
-> 当前接口获取到的系统资源管理ResourceManager对象中的Configuration为默认值。默认值如下：  
-> {"locale": "", "direction": -1, "deviceType": -1, "screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}。
+> 该接口获取到的系统资源管理ResourceManager对象中的Configuration为默认值。默认值如下：{"locale": "", "direction": -1, "deviceType": -1, "  
+> screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}。
 
 **起始版本：** 10
 

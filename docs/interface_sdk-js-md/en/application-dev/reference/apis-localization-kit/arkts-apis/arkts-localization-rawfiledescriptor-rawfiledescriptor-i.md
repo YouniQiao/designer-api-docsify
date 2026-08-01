@@ -1,6 +1,6 @@
 # RawFileDescriptor
 
-Provides the descriptor of the HAP where the rawfile is located.
+This module provides file descriptor information of the HAP where the `rawfile` file is located, including the file descriptor, start offset, and file length.
 
 **Since:** 8
 
@@ -14,7 +14,7 @@ Provides the descriptor of the HAP where the rawfile is located.
 fd: number
 ```
 
-Pointer to the file descriptor.
+File descriptor.
 
 **Type:** number
 
@@ -32,7 +32,7 @@ Pointer to the file descriptor.
 length: number
 ```
 
-File length.
+File length, indicating the size of the `rawfile` file. The unit is bytes.
 
 **Type:** number
 
@@ -50,7 +50,7 @@ File length.
 offset: number
 ```
 
-Start offset.
+Start offset, indicating the start position of the `rawfile` file in the HAP. The unit is bytes.
 
 **Type:** number
 

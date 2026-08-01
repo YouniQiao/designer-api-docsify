@@ -12,7 +12,7 @@ import { resourceManager } from '@kit.LocalizationKit';
 export function getSysResourceManager(): ResourceManager
 ```
 
-获取系统资源管理对象。
+获取系统资源管理对象，用于访问系统预置的资源。
 
 **起始版本：** 20
 

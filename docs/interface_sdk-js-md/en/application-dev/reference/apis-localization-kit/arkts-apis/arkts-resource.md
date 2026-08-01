@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [Resource](arkts-localization-resource-resource-i.md) | Provides resource information, such as the application bundle name, application module name, and resource ID. |
+| [Resource](arkts-localization-resource-resource-i.md) | This module provides resource-related information, including the application package name, application module name,and resource ID. |
 

@@ -4,7 +4,7 @@
 export type Resource = _Resource
 ```
 
-Resource information, including the resource ID, application package name, and module name. Generally, you can use $r to obtain the resource information.
+Describes the resource information, including the application package name, application module name, resource ID,resource type, and formatting parameters.
 
 **Since:** 9
 

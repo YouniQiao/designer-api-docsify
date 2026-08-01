@@ -12,7 +12,7 @@ import { fontManager } from '@kit.LocalizationKit';
 function dataMigration(callback: DataMigrationCallback): number
 ```
 
-Starts a migration task during device upgrade.
+Data migration API used during device upgrades to start a migration task, providing real-time feedback on migration progress and results through a callback function.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Starts a migration task during device upgrade.
 
 | Type | Description |
 | --- | --- |
-| number | Result of starting the data migration task. The value **0** indicates that the process is started successfully. Otherwise, the process fails to be started. |
+| number | Result of the migration task startup.<br>- **0**: The migration task is started successfully. The migration task will be executed in the background and the progress and result will be notified through the callback.<br>- Other values: The migration task failed to start. Troubleshoot based on the error code. |
 
 **Error codes:**
 

@@ -12,7 +12,7 @@ import { fontManager } from '@kit.LocalizationKit';
 function installFont(path: string): Promise<number>
 ```
 
-安装指定路径下的字体，使用promise异步回调。
+将指定路径下的字体文件安装到系统字体库中。使用Promise异步回调。安装成功后，应用可以通过字体名称使用该字体。
 
 **起始版本：** 19
 
@@ -28,13 +28,13 @@ function installFont(path: string): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 安装字体文件路径。 |
+| path | string | 是 | 待安装的字体文件路径，仅支持.ttf和.ttc格式的字体文件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 返回安装结果。返回为0表示安装成功，否则安装失败。 |
+| Promise&lt;number&gt; | Promise对象，返回安装结果。<br>- 返回0：安装成功，字体已添加到系统字体库。<br>- 返回其他值：安装失败，请根据错误码排查原因。 |
 
 **错误码：**
 

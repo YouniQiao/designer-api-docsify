@@ -12,7 +12,7 @@ import { fontManager } from '@kit.LocalizationKit';
 function installFont(path: string): Promise<number>
 ```
 
-Installs a font in the specified path. This API uses a promise to return the result.
+Installs a font file from a specified path into the system font library. This API uses a promise to return the result.After successful installation, applications can use the font by its font name.
 
 **Since:** 19
 
@@ -28,13 +28,13 @@ Installs a font in the specified path. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the font file to be installed. |
+| path | string | Yes | Path to the font file to be installed. Only .ttf and .ttc font files are supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise used to return the result. The value **0** indicates that the installation is successful, and any other value indicates that the installation has failed. |
+| Promise&lt;number&gt; | Promise used to return the installation result.<br>- The value **0** indicates that the installation is successful and the font has been added to the system font library.<br>- Any other value indicates that the installation failed. Troubleshoot based on the error code. |
 
 **Error codes:**
 

@@ -12,7 +12,7 @@ import { sendableResourceManager } from '@kit.LocalizationKit';
 export function sendableResourceToResource(resource: SendableResource): Resource
 ```
 
-Converts a **SendableResource** object to a **Resource** object.
+Converts a `SendableResource` object transmitted across threads to a `Resource` object.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ Converts a **SendableResource** object to a **Resource** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types;2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types;2.Parameter verification failed. |
 
 **Example**
 

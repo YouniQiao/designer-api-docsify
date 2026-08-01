@@ -1,6 +1,6 @@
 # AsyncCallback
 
-The ResourceManager callback.
+异步回调接口
 
 **起始版本：** 6
 

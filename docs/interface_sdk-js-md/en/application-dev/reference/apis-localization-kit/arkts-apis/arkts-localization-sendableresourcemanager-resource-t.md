@@ -4,7 +4,7 @@
 export type Resource = _Resource
 ```
 
-Defines a Resource object.
+Represents resource-related information, including the application bundle name, application module name, resource ID, resource type, and other resource parameters.
 
 **Since:** 12
 

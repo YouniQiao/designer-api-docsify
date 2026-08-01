@@ -32,6 +32,30 @@ In Navigation split mode, when enabled, navigaiton triggered from the primary si
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## recyclePagesOnLowMemory
+
+```TypeScript
+recyclePagesOnLowMemory?: boolean
+```
+
+Whether to recycle invisible pages when a low memory signal is received.
+
+When enabled, Navigation recycles invisible NavDestination page instance after receiving low memory pressure notifications. NavPathInfo is preserved, and the page can be reconstructed later.
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-NavigationConfiguration-recyclePagesOnLowMemory?: boolean--><!--Device-NavigationConfiguration-recyclePagesOnLowMemory?: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## stackSizeLimit
 
 ```TypeScript

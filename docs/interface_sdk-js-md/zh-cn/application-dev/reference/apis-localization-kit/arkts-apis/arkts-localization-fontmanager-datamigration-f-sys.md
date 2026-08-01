@@ -12,7 +12,7 @@ import { fontManager } from '@kit.LocalizationKit';
 function dataMigration(callback: DataMigrationCallback): number
 ```
 
-设备升级时使用的数据迁移接口，用于拉起迁移任务。
+设备升级时使用的数据迁移接口，用于启动迁移任务，通过回调函数实时反馈迁移进度和结果。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ function dataMigration(callback: DataMigrationCallback): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回拉起数据迁移任务结果。返回为0表示拉起成功，否则拉起失败。 |
+| number | 迁移任务启动结果。<br>- 0：迁移任务启动成功，迁移任务将在后台执行并通过回调通知进度和结果。<br>- 其他值：迁移任务启动失败，请根据错误码排查原因。 |
 
 **错误码：**
 

@@ -1,6 +1,6 @@
 # RawFileDescriptor
 
-本模块提供rawfile文件所在hap的descriptor信息。
+本模块提供rawfile文件所在HAP包的文件描述符信息，包括文件描述符、rawfile文件的起始偏移和文件长度。
 
 **起始版本：** 8
 
@@ -32,7 +32,7 @@ fd: number
 length: number
 ```
 
-文件长度。
+文件长度，表示rawfile文件的大小。单位为Byte。
 
 **类型：** number
 
@@ -50,7 +50,7 @@ length: number
 offset: number
 ```
 
-起始偏移量。
+起始偏移量，表示rawfile文件在HAP包中的起始位置。单位为Byte。
 
 **类型：** number
 

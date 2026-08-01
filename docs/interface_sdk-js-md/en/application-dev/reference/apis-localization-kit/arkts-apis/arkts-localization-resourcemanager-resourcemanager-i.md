@@ -1,31 +1,27 @@
 # ResourceManager
 
-Provides APIs for accessing application resources and system resources.
+Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources.
 > **NOTE**  
 >  
-> - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative development  
-> paradigm.  
+> - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative  
+> development paradigm.  
 >  
 > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such  
 > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.  
-> **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through `$r(  
-> *resource-address*).id`, for example, `$r('app.string.test').id`.  
+> **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through  
+> `$r(*resource-address*).id`, for example, `$r('app.string.test').id`.  
 >  
 > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with  
 > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are  
 > in different HAPs or HSPs, you first need to use  
-> [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createmodulecontext)  
-> to create the context of the corresponding module and then call the API with **resName** or **resId** specified.  
-> For details, see  
-> [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).  
+> [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createmodulecontext) to create the context  
+> of the corresponding module and then call the API with **resName** or **resId** specified. For more information,  
+> see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).  
 >  
 > - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code  
-> HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the  
-> intermediate-code HAR or bytecode HAR can properly access resources through resource ID-related APIs.  
-> For details, see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).  
->  
-> - For details about the content of the test files used in the sample code, see  
-> [Appendix](../../../reference/apis-localization-kit/js-apis-resource-manager.md#appendix).
+> HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate-  
+> code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see  
+> [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 
 **Since:** 6
 
@@ -45,7 +41,7 @@ import { resourceManager } from '@kit.LocalizationKit';
 addResource(path: string) : void
 ```
 
-Loads resources from the specified path.
+Loads the specified overlay resource during application runtime to implement theme switching or resource overriding.
 > **NOTE**  
 >  
 > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
@@ -62,13 +58,13 @@ Loads resources from the specified path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Resource path. |
+| path | string | Yes | Absolute path of the HSP or HAP resource package to be loaded. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001010](../errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
 
 **Example**
@@ -99,7 +95,7 @@ export default class EntryAbility extends UIAbility {
 closeRawFd(path: string, callback: _AsyncCallback<void>): void
 ```
 
-Closes the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result.
+Closes the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -113,14 +109,14 @@ Closes the fd of the HAP where a specific rawfile in the **resources/rawfile** d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 | callback | _AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -158,7 +154,7 @@ export default class EntryAbility extends UIAbility {
 closeRawFd(path: string): Promise<void>
 ```
 
-Closes the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result.
+Closes the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -172,7 +168,7 @@ Closes the fd of the HAP where a specific rawfile in the **resources/rawfile** d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 
 **Return value:**
 
@@ -184,7 +180,7 @@ Closes the fd of the HAP where a specific rawfile in the **resources/rawfile** d
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -231,13 +227,13 @@ Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -271,7 +267,7 @@ export default class EntryAbility extends UIAbility {
 closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
 ```
 
-Closes the fd of the rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
+Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -287,7 +283,7 @@ Closes the fd of the rawfile in the **resources/rawfile** directory. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Example**
@@ -311,7 +307,7 @@ resourceManager.getResourceManager((error, mgr) => {
 closeRawFileDescriptor(path: string): Promise<void>
 ```
 
-Closes the fd of the rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
+Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -327,7 +323,7 @@ Closes the fd of the rawfile in the **resources/rawfile** directory. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 
 **Return value:**
 
@@ -457,7 +453,7 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -530,7 +526,7 @@ Obtains a Boolean value based on the specified resource name. This API returns t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -577,7 +573,7 @@ export default class EntryAbility extends UIAbility {
 getColor(resId: number, callback: _AsyncCallback<number>): void
 ```
 
-Obtains a color value based on the specified resource ID. This API uses an asynchronous callback to return the result.
+Obtains the color value corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -609,7 +605,7 @@ Obtains a color value based on the specified resource ID. This API uses an async
 getColor(resId: number): Promise<number>
 ```
 
-Obtains a color value based on the specified resource ID. This API uses a promise to return the result.
+Obtains the color value corresponding to the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -681,7 +677,7 @@ export default class EntryAbility extends UIAbility {
 getColor(resource: Resource, callback: _AsyncCallback<number>): void
 ```
 
-Obtains a color value based on the specified resource object. This API uses an asynchronous callback to return the result.
+Obtains the color value corresponding to the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -708,7 +704,7 @@ Obtains a color value based on the specified resource object. This API uses an a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -754,7 +750,7 @@ this.context.resourceManager.getColor(resource, (error: BusinessError, value: nu
 getColor(resource: Resource): Promise<number>
 ```
 
-Obtains a color value based on the specified resource object. This API uses a promise to return the result.
+Obtains the color value corresponding to the specified resource object. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -786,7 +782,7 @@ Obtains a color value based on the specified resource object. This API uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -832,7 +828,7 @@ this.context.resourceManager.getColor(resource)
 getColorByName(resName: string, callback: _AsyncCallback<number>): void
 ```
 
-Obtains a color value based on the specified resource name. This API uses an asynchronous callback to return the result.
+Obtains the color value corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -899,7 +895,7 @@ export default class EntryAbility extends UIAbility {
 getColorByName(resName: string): Promise<number>
 ```
 
-Obtains a color value based on the specified resource name. This API uses a promise to return the result.
+Obtains the color value corresponding to the specified resource name. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1149,7 +1145,7 @@ Obtains a color value based on the specified resource object. This API returns t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -1196,7 +1192,7 @@ try {
 getConfiguration(callback: _AsyncCallback<Configuration>): void
 ```
 
-Obtains the device configuration. This API uses an asynchronous callback to return the result.
+Obtains the configuration of a device. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -1244,7 +1240,7 @@ export default class EntryAbility extends UIAbility {
 getConfiguration(): Promise<Configuration>
 ```
 
-Obtains the device configuration. This API uses a promise to return the result.
+Obtains the configuration of a device. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -1331,7 +1327,7 @@ export default class EntryAbility extends UIAbility {
 getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void
 ```
 
-Obtains the device capability. This API uses an asynchronous callback to return the result.
+Obtains the device capabilities of a device. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -1379,7 +1375,7 @@ export default class EntryAbility extends UIAbility {
 getDeviceCapability(): Promise<DeviceCapability>
 ```
 
-Obtains the device capability. This API uses a promise to return the result.
+Obtains the device capabilities of a device. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -1466,7 +1462,7 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.md) string based on the specified resource name and formats the string based on the **args** parameter. This API returns the result synchronously.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 > **NOTE**  
 >  
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -1489,7 +1485,7 @@ Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.m
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>**NOTE**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`.<br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses`args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1559,7 +1555,7 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.md) string based on the specified resource ID and formats the string based on the **args** parameter. This API returns the result synchronously.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 > **NOTE**  
 >  
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -1582,7 +1578,7 @@ Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.m
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>**NOTE**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`.<br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses`args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1652,7 +1648,7 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.md) string based on the specified resource object and formats the string based on the **args** parameter. This API returns the result synchronously.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 > **NOTE**  
 >  
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -1678,7 +1674,7 @@ Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.m
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>**NOTE**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`.<br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses`args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1749,7 +1745,7 @@ try {
 getDrawableDescriptor(resId: number, density?: number, type?: number): DrawableDescriptor
 ```
 
-Obtains a **DrawableDescriptor** object for icon display based on the specified resource ID. This API returns the result synchronously.
+Obtains the **DrawableDescriptor** object for icon display corresponding to the specified resource ID. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -1764,8 +1760,8 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
-| type | number | No | Icon type. The Default value is **0**.<br>**0**: Icon resource of the application.<br>**1**: Layered icon resource of the application in the theme resource package. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density.For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| type | number | No | Icon type. The default value is **0**.<br>**0**: Icon resource of the application.<br>**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
 
@@ -1846,8 +1842,8 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
-| type | number | No | Icon type. The Default value is **0**.<br>**0**: Icon resource of the application.<br>**1**: Layered icon resource of the application in the theme resource package. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| type | number | No | Icon type. The default value is **0**.<br>**0**: Icon resource of the application.<br>**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
 
@@ -1859,7 +1855,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -1905,7 +1901,7 @@ try {
 getDrawableDescriptorByName(resName: string, density?: number, type?: number): DrawableDescriptor
 ```
 
-Obtains a **DrawableDescriptor** object for icon display based on the specified resource name. This API returns the result synchronously.
+Obtains the **DrawableDescriptor** object for icon display corresponding to the specified resource name. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -1920,8 +1916,8 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
-| type | number | No | Icon type. The Default value is **0**.<br>**0**: Icon resource of the application.<br>**1**: Layered icon resource of the application in the theme resource package. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density.For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| type | number | No | Icon type. The default value is **0**.<br>**0**: Icon resource of the application.<br>**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
 
@@ -1981,7 +1977,7 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.md) string based on the specified resource name and formats the string based on the **args** parameter. This API returns the result synchronously.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 > **NOTE**  
 >  
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -2004,7 +2000,7 @@ Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.m
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>**NOTE**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`.<br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses`args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2074,7 +2070,7 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.md) string based on the specified resource ID and formats the string based on the **args** parameter. This API returns the result synchronously.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 > **NOTE**  
 >  
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -2097,7 +2093,7 @@ Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.m
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>**NOTE**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`.<br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses`args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2167,7 +2163,7 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.md) string based on the specified resource object and formats the string based on the **args** parameter. This API returns the result synchronously.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
 > **NOTE**  
 >  
 > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -2193,7 +2189,7 @@ Obtains a [singular/plural](../../../internationalization/l10n-singular-plural.m
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>**NOTE**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`.<br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses`args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2290,7 +2286,7 @@ Obtains the language list of an application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 
 **Example**
 
@@ -2335,7 +2331,7 @@ export default class EntryAbility extends UIAbility {
 getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void
 ```
 
-Obtains media file content based on the specified resource ID. This API uses an asynchronous callback to return the result.
+Obtains the content of the media file corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -2375,7 +2371,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getMedia(resId: number): Promise<Uint8Array>
 ```
 
-Obtains media file content based on the specified resource ID. This API uses a promise to return the result.
+Obtains the content of the media file corresponding to the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -2420,7 +2416,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getMediaBase64(resId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code based on the specified resource ID. This API uses an asynchronous callback to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -2437,7 +2433,7 @@ Obtains an image's Base64 code based on the specified resource ID. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Example**
 
@@ -2460,7 +2456,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getMediaBase64(resId: number): Promise<string>
 ```
 
-Obtains an image's Base64 code based on the specified resource ID. This API uses a promise to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -2482,7 +2478,7 @@ Obtains an image's Base64 code based on the specified resource ID. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Example**
 
@@ -2505,7 +2501,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code based on the specified resource name. This API uses an asynchronous callback to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -2520,13 +2516,13 @@ Obtains an image's Base64 code based on the specified resource name. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
@@ -2563,7 +2559,7 @@ export default class EntryAbility extends UIAbility {
 getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource name. This API uses an asynchronous callback to return the result.
+Obtains the Base64 encoding of the image resource for the specified screen density corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -2578,8 +2574,8 @@ Obtains an image's Base64 code for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -2622,7 +2618,7 @@ export default class EntryAbility extends UIAbility {
 getMediaBase64ByName(resName: string): Promise<string>
 ```
 
-Obtains an image's Base64 code based on the specified resource name. This API uses a promise to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource name. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -2642,13 +2638,13 @@ Obtains an image's Base64 code based on the specified resource name. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
@@ -2683,7 +2679,7 @@ export default class EntryAbility extends UIAbility {
 getMediaBase64ByName(resName: string, density: number): Promise<string>
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource name. This API uses a promise to return the result.
+Obtains the Base64 encoding of the image resource for the specified screen density corresponding to the specified resource name. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -2698,13 +2694,13 @@ Obtains an image's Base64 code for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -2745,7 +2741,7 @@ export default class EntryAbility extends UIAbility {
 getMediaBase64ByNameSync(resName: string, density?: number): string
 ```
 
-Obtains an image's Base64 code for the default or specified screen density based on the specified resource name.This API returns the result synchronously.
+Obtains an image's Base64 encoding for the default or specified screen density based on the specified resource name. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -2760,13 +2756,13 @@ Obtains an image's Base64 code for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density.For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Base64 code of the image corresponding to the specified resource name. |
+| string | Base64 encoding of the image corresponding to the specified resource name. |
 
 **Error codes:**
 
@@ -2812,7 +2808,7 @@ export default class EntryAbility extends UIAbility {
 getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains media file content based on the specified resource name. This API uses an asynchronous callback to return the result.
+Obtains the content of the media file corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -2833,7 +2829,7 @@ Obtains media file content based on the specified resource name. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
@@ -2885,7 +2881,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
@@ -2929,7 +2925,7 @@ export default class EntryAbility extends UIAbility {
 getMediaByName(resName: string): Promise<Uint8Array>
 ```
 
-Obtains media file content based on the specified resource name. This API uses a promise to return the result.
+Obtains the content of the media file corresponding to the specified resource name. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -2955,7 +2951,7 @@ Obtains media file content based on the specified resource name. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
@@ -3005,7 +3001,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -3067,7 +3063,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density.For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -3119,7 +3115,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains media file content based on the specified resource object. This API uses an asynchronous callback to return the result.
+Obtains the content of the media file corresponding to the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3146,7 +3142,7 @@ Obtains media file content based on the specified resource object. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -3183,7 +3179,7 @@ try {
 getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains media file content for the specified screen density based on the specified resource object. This API uses an asynchronous callback to return the result.
+Obtains the media file content for the specified screen density based on the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -3204,14 +3200,14 @@ Obtains media file content for the specified screen density based on the specifi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -3248,7 +3244,7 @@ try {
 getMediaContent(resource: Resource): Promise<Uint8Array>
 ```
 
-Obtains media file content based on the specified resource object. This API uses a promise to return the result.
+Obtains the content of the media file corresponding to the specified resource object. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3280,7 +3276,7 @@ Obtains media file content based on the specified resource object. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -3315,7 +3311,7 @@ try {
 getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 ```
 
-Obtains media file content for the specified screen density based on the specified resource object. This API uses a promise to return the result.
+Obtains the media file content for the specified screen density based on the specified resource object. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -3336,7 +3332,7 @@ Obtains media file content for the specified screen density based on the specifi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -3348,7 +3344,7 @@ Obtains media file content for the specified screen density based on the specifi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -3383,7 +3379,7 @@ try {
 getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains media file content based on the specified resource ID. This API uses an asynchronous callback to return the result.
+Obtains the content of the media file corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3457,7 +3453,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
@@ -3501,7 +3497,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContent(resId: number): Promise<Uint8Array>
 ```
 
-Obtains media file content based on the specified resource ID. This API uses a promise to return the result.
+Obtains the content of the media file corresponding to the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3577,7 +3573,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -3624,7 +3620,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code based on the specified resource object. This API uses an asynchronous callback to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3645,13 +3641,13 @@ Obtains an image's Base64 code based on the specified resource object. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -3688,7 +3684,7 @@ try {
 getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource object. This API uses an asynchronous callback to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource object and the specified screen density. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -3709,14 +3705,14 @@ Obtains an image's Base64 code for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -3753,7 +3749,7 @@ try {
 getMediaContentBase64(resource: Resource): Promise<string>
 ```
 
-Obtains an image's Base64 code based on the specified resource object. This API uses a promise to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource object. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3779,13 +3775,13 @@ Obtains an image's Base64 code based on the specified resource object. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -3820,7 +3816,7 @@ try {
 getMediaContentBase64(resource: Resource, density: number): Promise<string>
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource object. This API uses a promise to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource object and the specified screen density. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -3841,19 +3837,19 @@ Obtains an image's Base64 code for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -3888,7 +3884,7 @@ try {
 getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code based on the specified resource ID. This API uses an asynchronous callback to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3903,7 +3899,7 @@ Obtains an image's Base64 code based on the specified resource ID. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3946,7 +3942,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource ID. This API uses an asynchronous callback to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource ID and the specified screen density. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -3961,8 +3957,8 @@ Obtains an image's Base64 code for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
-| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 code of the image. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -4005,7 +4001,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64(resId: number): Promise<string>
 ```
 
-Obtains an image's Base64 code based on the specified resource ID. This API uses a promise to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -4025,7 +4021,7 @@ Obtains an image's Base64 code based on the specified resource ID. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -4066,7 +4062,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64(resId: number, density: number): Promise<string>
 ```
 
-Obtains an image's Base64 code for the specified screen density based on the specified resource ID. This API uses a promise to return the result.
+Obtains the Base64 encoding of the image resource corresponding to the specified resource ID and the specified screen density. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -4081,13 +4077,13 @@ Obtains an image's Base64 code for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the Base64 code of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -4128,7 +4124,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64Sync(resId: number, density?: number): string
 ```
 
-Obtains an image's Base64 code for the default or specified screen density based on the specified resource ID.This API returns the result synchronously.
+Obtains an image's Base64 encoding for the default or specified screen density based on the specified resource ID. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -4143,13 +4139,13 @@ Obtains an image's Base64 code for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density.For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Base64 code of the image corresponding to the specified resource ID. |
+| string | Base64 encoding of the image corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -4195,7 +4191,7 @@ export default class EntryAbility extends UIAbility {
 getMediaContentBase64Sync(resource: Resource, density?: number): string
 ```
 
-Obtains an image's Base64 code for the default or specified screen density based on the specified resource object. This API returns the result synchronously.
+Obtains an image's Base64 encoding for the default or specified screen density based on the specified resource object. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -4216,19 +4212,19 @@ Obtains an image's Base64 code for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Base64 code of the image corresponding to the specified resource object. |
+| string | Base64 encoding of the image corresponding to the specified resource object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -4282,7 +4278,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density.For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -4355,7 +4351,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
@@ -4367,7 +4363,7 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
@@ -4426,7 +4422,7 @@ Obtains an integer or float number based on the specified resource ID. This API 
 
 | Type | Description |
 | --- | --- |
-| number | Integer or float value corresponding to the specified resource ID.An integer indicates the original value, and a float number without a unit indicates the original value and a float number with the unit of vp or fp indicates the px value. For details, see the sample code. |
+| number | Integer or float value corresponding to the specified resource ID.<br>For resources of the integer type, the original value defined in the resource file is returned.<br>For resources of the float type, the original value defined in the resource file is returned if no unit is specified. If the unit is vp or fp, the converted pixel (px) value is returned. The conversion formula is:Pixel value = Original value × `densityPixels`. |
 
 **Error codes:**
 
@@ -4532,13 +4528,13 @@ Obtains an integer or float number based on the specified resource object. This 
 
 | Type | Description |
 | --- | --- |
-| number | Integer or float number.An integer indicates the original value, and a float number without a unit indicates the original value and a float number with the unit of vp or fp indicates the px value. |
+| number | Integer or float number.<br>For resources of the integer type, the original value defined in the resource file is returned.<br>For resources of the float type, the original value defined in the resource file is returned if no unit is specified. If the unit is vp or fp, the converted pixel (px) value is returned. The conversion formula is:Pixel value = Original value × `densityPixels`. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -4606,7 +4602,7 @@ Obtains an integer or float number based on the specified resource name. This AP
 
 | Type | Description |
 | --- | --- |
-| number | Integer or float value corresponding to the specified resource name.An integer indicates the original value, and a float number without a unit indicates the original value and a float number with the unit of vp or fp indicates the px value. |
+| number | Integer or float value corresponding to the specified resource name.<br>For resources of the integer type, the original value defined in the resource file is returned.<br>For resources of the float type, the original value defined in the resource file is returned if no unit is specified. If the unit is vp or fp, the converted pixel (px) value is returned. The conversion formula is:Pixel value = Original value × `densityPixels`. |
 
 **Error codes:**
 
@@ -4686,7 +4682,9 @@ export default class EntryAbility extends UIAbility {
 getOverrideConfiguration(): Configuration
 ```
 
-Obtains the configuration of differentiated resources. This API returns the result synchronously. This API allows a common **ResourceManager** object and a **ResourceManager** object obtained through [getOverrideResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md#getoverrideresourcemanager) to obtain the configuration of differentiated resources.
+Obtains the configuration of differentiated resources. This API returns the result synchronously.
+
+For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md#getoverrideresourcemanager) API,this API returns the same configuration information.
 
 **Since:** 12
 
@@ -4732,7 +4730,9 @@ export default class EntryAbility extends UIAbility {
 getOverrideResourceManager(configuration?: Configuration): ResourceManager
 ```
 
-Obtains a **ResourceManager** object for loading differentiated resources. This API returns the result synchronously.The resource configuration (including the language, color mode, resolution, and orientation) obtained by a common **ResourceManager** object is determined by the system. With this API, an application can obtain resources of the specified configuration (that is, differentiated resources), for example, dark color resources in light color mode.
+Obtains a **ResourceManager** object for loading differentiated resources. This API returns the result synchronously.
+
+The resource configuration (including the language, color mode, resolution, and orientation) obtained by a common **ResourceManager** object is determined by the system. With this API, an application can obtain resources of the specified configuration (that is, differentiated resources), for example, dark color resources in light color mode.
 
 **Since:** 12
 
@@ -4758,7 +4758,7 @@ Obtains a **ResourceManager** object for loading differentiated resources. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 
 **Example**
 
@@ -4790,7 +4790,7 @@ export default class EntryAbility extends UIAbility {
 getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource ID. This API uses an asynchronous callback to return the result.
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -4811,7 +4811,7 @@ Obtains singular/plural strings based on the specified quantity and resource ID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Example**
@@ -4837,7 +4837,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralString(resId: number, num: number): Promise<string>
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource ID. This API uses a promise to return the result.
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result.
 > **NOTE**  
 >  
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -4858,7 +4858,7 @@ Obtains singular/plural strings based on the specified quantity and resource ID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
@@ -4887,7 +4887,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource name. This API uses an asynchronous callback to return the result.
+Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -4910,14 +4910,14 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -4968,7 +4968,7 @@ this.context.resourceManager.getPluralStringByName("test", 1, (error: BusinessEr
 getPluralStringByName(resName: string, num: number): Promise<string>
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource name. This API uses a promise to return the result.
+Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses a promise to return the result.
 > **NOTE**  
 >  
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -4991,7 +4991,7 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
@@ -5003,7 +5003,7 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -5077,7 +5077,7 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
@@ -5089,7 +5089,7 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -5141,7 +5141,7 @@ try {
 getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource object. This API uses an asynchronous callback to return the result.
+Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -5166,14 +5166,14 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -5231,7 +5231,7 @@ this.context.resourceManager.getPluralStringValue(resource, 1,
 getPluralStringValue(resource: Resource, num: number): Promise<string>
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource object. This API uses a promise to return the result.
+Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses a promise to return the result.
 > **NOTE**  
 >  
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -5256,7 +5256,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
@@ -5268,7 +5268,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -5325,7 +5325,7 @@ this.context.resourceManager.getPluralStringValue(resource, 1)
 getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource ID. This API uses an asynchronous callback to return the result.
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -5348,14 +5348,14 @@ Obtains singular/plural strings based on the specified quantity and resource ID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -5407,7 +5407,7 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1,
 getPluralStringValue(resId: number, num: number): Promise<string>
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource ID. This API uses a promise to return the result.
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result.
 > **NOTE**  
 >  
 > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see  
@@ -5430,7 +5430,7 @@ Obtains singular/plural strings based on the specified quantity and resource ID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
@@ -5442,7 +5442,7 @@ Obtains singular/plural strings based on the specified quantity and resource ID.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -5516,7 +5516,7 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
@@ -5528,7 +5528,7 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -5605,7 +5605,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| num | number | Yes | Quantity value, which is used to obtain the corresponding string representation based on the current language's plural rules. For details about the plural rules of a language, see [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
+| num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
@@ -5675,12 +5675,12 @@ try {
 getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 ```
 
-Obtains the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result.
+Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
 > To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfdsync) or  
-> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd) to  
-> close the fd after use.
+> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)  
+> to close the fd after use.
 
 **Since:** 9
 
@@ -5694,14 +5694,14 @@ Obtains the fd of the HAP where a specific rawfile in the **resources/rawfile** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 | callback | _AsyncCallback&lt;RawFileDescriptor&gt; | Yes | Callback used to return the fd of the HAP. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -5740,12 +5740,12 @@ export default class EntryAbility extends UIAbility {
 getRawFd(path: string): Promise<RawFileDescriptor>
 ```
 
-Obtains the fd of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result.
+Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result.
 > **NOTE**  
 >  
 > To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfdsync) or  
-> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd) to  
-> close the fd after use.
+> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)  
+> to close the fd after use.
 
 **Since:** 9
 
@@ -5759,7 +5759,7 @@ Obtains the fd of the HAP where a specific rawfile in the **resources/rawfile** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 
 **Return value:**
 
@@ -5771,7 +5771,7 @@ Obtains the fd of the HAP where a specific rawfile in the **resources/rawfile** 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -5812,8 +5812,8 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 > **NOTE**  
 >  
 > To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfdsync) or  
-> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd) to  
-> close the fd after use.
+> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)  
+> to close the fd after use.
 
 **Since:** 10
 
@@ -5827,7 +5827,7 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 
 **Return value:**
 
@@ -5839,7 +5839,7 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -5869,7 +5869,7 @@ export default class EntryAbility extends UIAbility {
 getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void
 ```
 
-Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
+Obtain the content of a rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -5885,7 +5885,7 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the rawfile content. |
 
 **Example**
@@ -5911,7 +5911,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFile(path: string): Promise<Uint8Array>
 ```
 
-Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
+Obtain the content of a rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -5927,7 +5927,7 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 
 **Return value:**
 
@@ -5956,7 +5956,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 ```
 
-Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
+Obtain the content of a rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -5970,14 +5970,14 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the content of the rawfile. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -6013,7 +6013,7 @@ export default class EntryAbility extends UIAbility {
 getRawFileContent(path: string): Promise<Uint8Array>
 ```
 
-Obtains the content of a rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
+Obtain the content of a rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -6027,7 +6027,7 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 
 **Return value:**
 
@@ -6039,7 +6039,7 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -6087,7 +6087,7 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 
 **Return value:**
 
@@ -6099,7 +6099,7 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -6129,7 +6129,7 @@ export default class EntryAbility extends UIAbility {
 getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void
 ```
 
-Obtains the fd of the rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
+Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -6145,7 +6145,7 @@ Obtains the fd of the rawfile in the **resources/rawfile** directory. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RawFileDescriptor&gt; | Yes | Callback used to return the obtained fd. |
 
 **Example**
@@ -6173,7 +6173,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 ```
 
-Obtains the fd of the rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
+Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -6189,7 +6189,7 @@ Obtains the fd of the rawfile in the **resources/rawfile** directory. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of the rawfile. |
+| path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
 
 **Return value:**
 
@@ -6220,7 +6220,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 ```
 
-Obtains the list of folders and files in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
+Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses an asynchronous callback to return the result.
 > **NOTE**  
 >  
 > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the  
@@ -6238,14 +6238,14 @@ Obtains the list of folders and files in the **resources/rawfile** directory. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | **rawfile** directory. |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the list of folders and files. |
+| path | string | Yes | rawfile subdirectory path relative to the **resources/rawfile** directory, such as **subdir**. The path must not start with a slash (/).<br>An empty string **""** indicates that the list of directories and files in the **rawfile** root directory is obtained. |
+| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the list of directories and files in a rawfile subdirectory. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -6277,7 +6277,7 @@ export default class EntryAbility extends UIAbility {
 getRawFileList(path: string): Promise<Array<string>>
 ```
 
-Obtains the list of folders and files in the **resources/rawfile** directory. This API uses a promise to return the result.
+Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses a promise to return the result.
 > **NOTE**  
 >  
 > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the  
@@ -6295,19 +6295,19 @@ Obtains the list of folders and files in the **resources/rawfile** directory. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | **rawfile** directory. |
+| path | string | Yes | rawfile subdirectory path relative to the **resources/rawfile** directory, such as **subdir**. The path must not start with a slash (/).<br>An empty string **""** indicates that the list of directories and files in the **rawfile** root directory is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of folders and files. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of directories and files in a rawfile subdirectory. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -6339,7 +6339,7 @@ export default class EntryAbility extends UIAbility {
 getRawFileListSync(path: string): Array<string>
 ```
 
-Obtains the list of folders and files in the **resources/rawfile** directory. This API returns the result synchronously.
+Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API returns the result synchronously.
 > **NOTE**  
 >  
 > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the  
@@ -6357,7 +6357,7 @@ Obtains the list of folders and files in the **resources/rawfile** directory. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | **rawfile** directory. |
+| path | string | Yes | rawfile subdirectory path relative to the **resources/rawfile** directory, such as **subdir**. The path must not start with a slash (/).<br>An empty string **""** indicates that the list of directories and files in the **rawfile** root directory is obtained. |
 
 **Return value:**
 
@@ -6369,7 +6369,7 @@ Obtains the list of folders and files in the **resources/rawfile** directory. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -6402,7 +6402,7 @@ export default class EntryAbility extends UIAbility {
 getResourceName(resId: number): string
 ```
 
-Obtains the resource name based on the specified resource ID.
+Obtains the resource name corresponding to the specified resource ID.
 
 **Since:** 26.0.0
 
@@ -6424,7 +6424,7 @@ Obtains the resource name based on the specified resource ID.
 
 | Type | Description |
 | --- | --- |
-| string | Resource name based on the specified resource ID |
+| string | Resource name corresponding to the resource ID. |
 
 **Error codes:**
 
@@ -6474,7 +6474,7 @@ export default class EntryAbility extends UIAbility {
 getString(resId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains a string based on the specified resource ID. This API uses an asynchronous callback to return the result.
+Obtains the string corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -6514,7 +6514,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getString(resId: number): Promise<string>
 ```
 
-Obtains a string based on the specified resource ID. This API uses a promise to return the result.
+Obtains the string corresponding to the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -6559,7 +6559,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains a string array based on the specified resource ID. This API uses an asynchronous callback to return the result.
+Obtains the string array corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -6599,7 +6599,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getStringArray(resId: number): Promise<Array<string>>
 ```
 
-Obtains a string array based on the specified resource ID. This API uses a promise to return the result.
+Obtains the string array corresponding to the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -6644,7 +6644,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void
 ```
 
-Obtains a string array based on the specified resource name. This API uses an asynchronous callback to return the result.
+Obtains the string array corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -6665,7 +6665,7 @@ Obtains a string array based on the specified resource name. This API uses an as
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -6716,7 +6716,7 @@ export default class EntryAbility extends UIAbility {
 getStringArrayByName(resName: string): Promise<Array<string>>
 ```
 
-Obtains a string array based on the specified resource name. This API uses a promise to return the result.
+Obtains the string array corresponding to the specified resource name. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -6742,7 +6742,7 @@ Obtains a string array based on the specified resource name. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -6792,7 +6792,7 @@ export default class EntryAbility extends UIAbility {
 getStringArrayByNameSync(resName: string): Array<string>
 ```
 
-Obtains a string array based on the specified resource name. This API returns the result synchronously.
+Obtains the string array corresponding to the specified resource name. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -6818,7 +6818,7 @@ Obtains a string array based on the specified resource name. This API returns th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -6869,7 +6869,7 @@ export default class EntryAbility extends UIAbility {
 getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>): void
 ```
 
-Obtains a string array based on the specified resource object. This API uses an asynchronous callback to return the result.
+Obtains the string array corresponding to the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -6896,7 +6896,7 @@ Obtains a string array based on the specified resource object. This API uses an 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -6946,7 +6946,7 @@ this.context.resourceManager.getStringArrayValue(resource, (error: BusinessError
 getStringArrayValue(resource: Resource): Promise<Array<string>>
 ```
 
-Obtains a string array based on the specified resource object. This API uses a promise to return the result.
+Obtains the string array corresponding to the specified resource object. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -6978,7 +6978,7 @@ Obtains a string array based on the specified resource object. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -7028,7 +7028,7 @@ this.context.resourceManager.getStringArrayValue(resource)
 getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): void
 ```
 
-Obtains a string array based on the specified resource ID. This API uses an asynchronous callback to return the result.
+Obtains the string array corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -7100,7 +7100,7 @@ export default class EntryAbility extends UIAbility {
 getStringArrayValue(resId: number): Promise<Array<string>>
 ```
 
-Obtains a string array based on the specified resource ID. This API uses a promise to return the result.
+Obtains the string array corresponding to the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -7176,7 +7176,7 @@ export default class EntryAbility extends UIAbility {
 getStringArrayValueSync(resId: number): Array<string>
 ```
 
-Obtains a string array based on the specified resource ID. This API returns the result synchronously.
+Obtains the string array corresponding to the specified resource ID. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -7285,7 +7285,7 @@ Obtains a string array based on the specified resource object. This API returns 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -7336,7 +7336,7 @@ try {
 getStringByName(resName: string, callback: _AsyncCallback<string>): void
 ```
 
-Obtains a string based on the specified resource name. This API uses an asynchronous callback to return the result.
+Obtains the string corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -7357,7 +7357,7 @@ Obtains a string based on the specified resource name. This API uses an asynchro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -7403,7 +7403,7 @@ export default class EntryAbility extends UIAbility {
 getStringByName(resName: string): Promise<string>
 ```
 
-Obtains a string based on the specified resource name. This API uses a promise to return the result.
+Obtains the string corresponding to the specified resource name. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -7429,7 +7429,7 @@ Obtains a string based on the specified resource name. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -7473,7 +7473,7 @@ export default class EntryAbility extends UIAbility {
 getStringByNameSync(resName: string): string
 ```
 
-Obtains a string based on the specified resource name. This API returns the result synchronously.
+Obtains the string corresponding to the specified resource name. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -7499,7 +7499,7 @@ Obtains a string based on the specified resource name. This API returns the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -7546,7 +7546,7 @@ export default class EntryAbility extends UIAbility {
 getStringByNameSync(resName: string, ...args: Array<string | number>): string
 ```
 
-Obtains a string based on the specified resource name and formats the string based on **args**. This API returns the result synchronously.
+Obtains the string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameter. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -7561,7 +7561,7 @@ Obtains a string based on the specified resource name and formats the string bas
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>**NOTE**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`.<br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses`args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7573,11 +7573,11 @@ Obtains a string based on the specified resource name and formats the string bas
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
 | [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource Name. |
+| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 **Example**
 
@@ -7621,7 +7621,7 @@ export default class EntryAbility extends UIAbility {
 getStringSync(resId: number): string
 ```
 
-Obtains a string based on the specified resource ID. This API returns the result synchronously.
+Obtains the string corresponding to the specified resource ID. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -7694,7 +7694,7 @@ export default class EntryAbility extends UIAbility {
 getStringSync(resId: number, ...args: Array<string | number>): string
 ```
 
-Obtains a string based on the specified resource ID and formats the string based on **args**. This API returns the result synchronously.
+Obtains the string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameter. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -7709,7 +7709,7 @@ Obtains a string based on the specified resource ID and formats the string based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>**NOTE**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`.<br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses`args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7721,7 +7721,7 @@ Obtains a string based on the specified resource ID and formats the string based
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -7801,7 +7801,7 @@ Obtains a string based on the specified resource object. This API returns the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -7848,7 +7848,7 @@ try {
 getStringSync(resource: Resource, ...args: Array<string | number>): string
 ```
 
-Obtains a string based on the specified resource object and formats the string based on **args**. This API returns the result synchronously.
+Obtains the string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameter. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -7869,7 +7869,7 @@ Obtains a string based on the specified resource object and formats the string b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| args | Array&lt;string \| number&gt; | Yes | Arguments for formatting strings.<br>Supported value types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>Note: `%%` is converted to `%`. **number** in `%number$d` indicates the sequence number of the parameter in **args**.<br>For example, `%%d` is converted to `%d` after formatting, and `%1$d` indicates that the first parameter is used. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number$d`, `%number$f`, and `%number$s`.<br>**NOTE**<br>- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`.<br>- In `%number$d`, `number` indicates the parameter index, starting from `1`. For example, `%1$d` uses`args[0]` for formatting, `%2$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7881,7 +7881,7 @@ Obtains a string based on the specified resource object and formats the string b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -7929,7 +7929,7 @@ try {
 getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
 ```
 
-Obtains a string based on the specified resource object. This API uses an asynchronous callback to return the result.
+Obtains the string corresponding to the specified resource object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -7956,7 +7956,7 @@ Obtains a string based on the specified resource object. This API uses an asynch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -8002,7 +8002,7 @@ this.context.resourceManager.getStringValue(resource, (error: BusinessError, val
 getStringValue(resource: Resource): Promise<string>
 ```
 
-Obtains a string based on the specified resource object. This API uses a promise to return the result.
+Obtains the string corresponding to the specified resource object. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -8034,7 +8034,7 @@ Obtains a string based on the specified resource object. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -8067,7 +8067,7 @@ this.context.resourceManager.getStringValue(resource, (error: BusinessError, val
 getStringValue(resId: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains a string based on the specified resource ID. This API uses an asynchronous callback to return the result.
+Obtains the string corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -8099,7 +8099,7 @@ Obtains a string based on the specified resource ID. This API uses an asynchrono
 getStringValue(resId: number): Promise<string>
 ```
 
-Obtains a string based on the specified resource ID. This API uses a promise to return the result.
+Obtains the string corresponding to the specified resource ID. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -8261,7 +8261,7 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 | [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 | [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
@@ -8369,19 +8369,19 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Path of a rawfile. |
+| path | string | Yes | rawfile or subdirectory path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir**. The path must not start with a slash (/). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the path is a subdirectory in the **rawfile** directory.   - **true**: The path is a subdirectory in the **rawfile** directory.   - **false**: The path is not a subdirectory in the **rawfile** directory. |
+| boolean | Whether the path is a subdirectory in the **rawfile** directory.<br> - **true**: The path is a subdirectory in the **rawfile** directory.<br> - **false**: The path is not a subdirectory in the **rawfile** directory. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 **Example**
@@ -8420,7 +8420,7 @@ export default class EntryAbility extends UIAbility {
 release()
 ```
 
-Releases a **ResourceManager** object. This API is not supported currently.
+Releases an **resourceManager **object. This API is not supported currently. Calling this API does not have any effect.
 
 **Since:** 7
 
@@ -8449,7 +8449,7 @@ try {
 removeResource(path: string) : void
 ```
 
-Removes the resources loaded from the specified path to restore the original resources.
+Removes the specified overlay resource during application runtime and restores the original resource before the override.
 > **NOTE**  
 >  
 > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
@@ -8466,13 +8466,13 @@ Removes the resources loaded from the specified path to restore the original res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Resource path. |
+| path | string | Yes | Absolute path of the HSP or HAP resource package to be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 | [9001010](../errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
 
 **Example**
@@ -8503,7 +8503,9 @@ export default class EntryAbility extends UIAbility {
 updateOverrideConfiguration(configuration: Configuration): void
 ```
 
-Updated configuration of differentiated resources. This API allows a common **ResourceManager** object and a **ResourceManager** object obtained through [getOverrideResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md#getoverrideresourcemanager) to update the configuration of differentiated resources.
+Updates the configuration of a differentiated resource management object.
+
+This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via [getOverrideResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md#getoverrideresourcemanager).
 
 **Since:** 12
 
@@ -8523,7 +8525,7 @@ Updated configuration of differentiated resources. This API allows a common **Re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 
 **Example**
 

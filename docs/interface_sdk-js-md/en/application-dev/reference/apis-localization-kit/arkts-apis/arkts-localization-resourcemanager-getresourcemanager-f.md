@@ -12,7 +12,7 @@ import { resourceManager } from '@kit.LocalizationKit';
 export function getResourceManager(callback: AsyncCallback<ResourceManager>): void
 ```
 
-Obtains the **ResourceManager** object of this application. This API uses an asynchronous callback to return the result.
+Obtains the **ResourceManager** object of the current application. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -117,7 +117,7 @@ export default {
 export function getResourceManager(): Promise<ResourceManager>
 ```
 
-Obtains the **ResourceManager** object of this application. This API uses a promise to return the result.
+Obtains the **ResourceManager** object of the current application. This API uses a promise to return the result.
 
 **Since:** 6
 
