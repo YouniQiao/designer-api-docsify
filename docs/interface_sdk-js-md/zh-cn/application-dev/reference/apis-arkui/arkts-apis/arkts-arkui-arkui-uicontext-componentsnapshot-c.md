@@ -62,8 +62,8 @@ createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The builder is not a valid build function. |
 | [160001](../errorcode-snapshot.md#160001-图像加载错误) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| [160003](../errorcode-snapshot.md#160003-截图选项不支持的色彩空间或动态范围模式) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
-| [160004](../errorcode-snapshot.md#160004-离屏节点截图不支持色彩空间或动态范围模式的isauto参数设置为true) | isAuto(true) is not supported for offscreen node snapshots.<br>**适用版本：** 23+ |
+| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
+| [160004](../errorcode-snapshot.md#160004-离屏节点截图不支持将色彩空间或动态范围模式对应的isauto参数设置为true) | isAuto(true) is not supported for offscreen node snapshots.<br>**适用版本：** 23+ |
 
 ## createFromBuilder
 
@@ -111,8 +111,8 @@ createFromBuilder(builder: CustomBuilder, delay?: number,
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The builder is not a valid build function. |
 | [160001](../errorcode-snapshot.md#160001-图像加载错误) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| [160003](../errorcode-snapshot.md#160003-截图选项不支持的色彩空间或动态范围模式) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
-| [160004](../errorcode-snapshot.md#160004-离屏节点截图不支持色彩空间或动态范围模式的isauto参数设置为true) | isAuto(true) is not supported for offscreen node snapshots.<br>**适用版本：** 23+ |
+| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
+| [160004](../errorcode-snapshot.md#160004-离屏节点截图不支持将色彩空间或动态范围模式对应的isauto参数设置为true) | isAuto(true) is not supported for offscreen node snapshots.<br>**适用版本：** 23+ |
 
 ## createFromComponent
 
@@ -155,8 +155,8 @@ createFromComponent<T extends Object>(content: ComponentContent<T>, delay?: numb
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The builder is not a valid build function. |
 | [160001](../errorcode-snapshot.md#160001-图像加载错误) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| [160003](../errorcode-snapshot.md#160003-截图选项不支持的色彩空间或动态范围模式) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
-| [160004](../errorcode-snapshot.md#160004-离屏节点截图不支持色彩空间或动态范围模式的isauto参数设置为true) | isAuto(true) is not supported for offscreen node snapshots.<br>**适用版本：** 23+ |
+| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
+| [160004](../errorcode-snapshot.md#160004-离屏节点截图不支持将色彩空间或动态范围模式对应的isauto参数设置为true) | isAuto(true) is not supported for offscreen node snapshots.<br>**适用版本：** 23+ |
 
 ## get
 
@@ -193,7 +193,7 @@ get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnap
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
-| [160003](../errorcode-snapshot.md#160003-截图选项不支持的色彩空间或动态范围模式) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
+| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
 
 ## get
 
@@ -235,7 +235,7 @@ get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.Pixe
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
-| [160003](../errorcode-snapshot.md#160003-截图选项不支持的色彩空间或动态范围模式) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
+| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
 
 ## getSizeLimitation
 
@@ -302,7 +302,7 @@ getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
 | [160002](../errorcode-snapshot.md#160002-截图超时) | Timeout. |
-| [160003](../errorcode-snapshot.md#160003-截图选项不支持的色彩空间或动态范围模式) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
+| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
 
 ## getSyncWithUniqueId
 
@@ -345,7 +345,7 @@ getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOption
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
 | [160002](../errorcode-snapshot.md#160002-截图超时) | Timeout. |
-| [160003](../errorcode-snapshot.md#160003-截图选项不支持的色彩空间或动态范围模式) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
+| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
 
 ## getWithUniqueId
 
@@ -387,5 +387,5 @@ getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): 
 | --- | --- |
 | [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameters types.<br> 3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
-| [160003](../errorcode-snapshot.md#160003-截图选项不支持的色彩空间或动态范围模式) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
+| [160003](../errorcode-snapshot.md#160003-截图选项中设置的色彩空间或动态范围模式不受支持) | Unsupported color space or dynamic range mode in snapshot options.<br>**适用版本：** 23+ |
 
