@@ -14,7 +14,7 @@
 Default
 ```
 
-Default style.
+默认加载样式。
 
 **起始版本：** 8
 
@@ -32,7 +32,7 @@ Default style.
 Circular
 ```
 
-Announcement style.
+环形加载样式。
 
 **起始版本：** 8
 
@@ -50,7 +50,7 @@ Announcement style.
 Orbital
 ```
 
-The style of the track.
+彗星形加载样式。
 
 **起始版本：** 8
 

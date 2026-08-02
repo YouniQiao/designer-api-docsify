@@ -9,8 +9,8 @@ This component supports only one child component.
 > **NOTE**  
 >  
 > - Allowed child component types: built-in and custom components, including rendering control types (  
-> [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach]{@link for_each}, and  
-> [LazyForEach]{@link lazy_for_each}).  
+> [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach]{@link ./for_each}, and  
+> [LazyForEach]{@link ./lazy_for_each}).  
 >  
 > - A custom component defaults to a width and height of 0. You must explicitly set its width and height; otherwise,  
 > the **Badge** component will not be displayed.  

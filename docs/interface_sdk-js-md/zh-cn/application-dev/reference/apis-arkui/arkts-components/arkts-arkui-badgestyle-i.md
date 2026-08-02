@@ -1,10 +1,10 @@
 # BadgeStyle
 
-Badge的样式。包括文本颜色、尺寸、字重、圆点颜色和尺寸等。
+Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大小。
 > **说明：**  
 >  
-> - 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边  
-> 线。如需实现相关场景，建议使用[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)组件设置[outline](arkts-arkui-commonmethod-c.md#outline)代替Badge组件。
+> 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边线。如  
+> 需实现相关场景，建议使用[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)组件设置[outline](arkts-arkui-commonmethod-c.md#outline)代替Badge组件。
 
 **起始版本：** 7
 
@@ -42,7 +42,7 @@ Badge的颜色。
 badgeSize?: number | ResourceStr
 ```
 
-Badge的大小。string类型仅支持number类型取值的字符串形式，可以附带单位，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"16"、"16fp"，不附带单位时默认单位为"fp"。
+Badge的大小。string类型支持number类型取值的字符串形式，可以附带单位，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"16"、"16fp"，不附带单位时默认单位为"fp"。
 
 默认值：16vp
 
@@ -152,7 +152,7 @@ color?: ResourceColor
 enableAutoAvoidance?: boolean
 ```
 
-增加角标文本延伸显示时是否避让。
+角标文本延伸显示时是否避让。
 
 true表示避让，false表示不避让。
 

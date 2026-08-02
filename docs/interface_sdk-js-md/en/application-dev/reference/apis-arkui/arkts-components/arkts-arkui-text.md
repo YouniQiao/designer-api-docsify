@@ -4,7 +4,7 @@ The **Text** component is used to display a piece of textual information.
 
 ## Child Components
 
-This component can contain the [Span]{@link span}, [ImageSpan]{@link image_span}, [SymbolSpan]{@link symbol_span},and [ContainerSpan]{@link container_span} child components.
+This component can contain the [Span]{@link ./span}, [ImageSpan]{@link ./image_span},[SymbolSpan]{@link ./symbol_span}, and [ContainerSpan]{@link ./container_span} child components.
 > **NOTE**  
 >  
 > Use [child components](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-text.md#child-components) to  
@@ -32,7 +32,7 @@ Defines the constructor of Text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string \| Resource | No | Plain text. This parameter takes effect when the child component [Span]{@link span} is not included and [styled string]{@link styled_string} is not set.<br>Default value: **' '**<br>**NOTE**<br>Priority of displayed content: Styled string > Content of the **Span** component > Text content of the **Text** component.  |
+| content | string \| Resource | No | Plain text. This parameter takes effect when the child component [Span]{@link ./span} is not included and [styled string]{@link ./styled_string} is not set.<br>Default value: **' '**<br>**NOTE**<br>Priority of displayed content: Styled string > Content of the **Span** component > Text content of the **Text** component.  |
 | value | [TextOptions](arkts-arkui-textoptions-i.md) | No | Initialization options of the component. |
 
 ## Summary

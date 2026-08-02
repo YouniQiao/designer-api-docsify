@@ -1,8 +1,8 @@
 # SymbolGlyph properties/events
 
-The [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are supported. For text attributes, only the following attributes are supported.
+The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are supported.For text attributes, only the following attributes are supported.
 
-The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) are supported.
+The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** SymbolGlyphAttribute extends [CommonMethod<SymbolGlyphAttribute>](CommonMethod<SymbolGlyphAttribute>)
 

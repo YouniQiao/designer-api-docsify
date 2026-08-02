@@ -33,5 +33,5 @@ UserDataSpan | BackgroundColorStyle | LineSpacingStyle
 | CustomSpan | 自定义绘制Span样式。 |
 | UserDataSpan | UserDataSpan样式。 |
 | BackgroundColorStyle | 文本背景颜色样式。 [since 14] |
-| LineSpacingStyle | 文本行间距。 [since 26.0.0] |
+| LineSpacingStyle | 文本行间距样式。 [since 26.0.0] |
 

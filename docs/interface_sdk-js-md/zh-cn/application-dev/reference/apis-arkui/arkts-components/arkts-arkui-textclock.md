@@ -1,6 +1,7 @@
 # TextClock
 
-TextClock组件通过文本将当前系统时间显示在设备上。支持不同时区的时间显示，最高精度到秒级。
+TextClock组件通过文本将当前系统时间显示在设备上，支持不同时区的时间显示和时间格式自定义，最高精度到秒级。适用于需要在应用界面上实时展示系统时间、支持多时区显示的场景，可帮助开发者快速实现时间文本展示功能，无需手动计算和更新时
+间。
 
 组件不可见时，时间变动将停止。组件的可见状态基于
 [onVisibleAreaChange]{@link CommonMethod#onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback)}
@@ -32,7 +33,7 @@ TextClock(options?: TextClockOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextClockOptions](arkts-arkui-textclockoptions-i.md) | 否 | 通过文本显示当前系统时间的组件参数。 |
+| options | [TextClockOptions](arkts-arkui-textclockoptions-i.md) | 否 | 通过文本显示当前系统时间的组件参数。不传入时使用默认配置，各属性默认值详见TextClockOptions。 |
 
 ## 汇总
 

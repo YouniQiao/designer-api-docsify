@@ -11,7 +11,7 @@
 ## Normal
 
 ```TypeScript
-Normal = 0
+Normal
 ```
 
 基本输入模式，无特殊限制。
@@ -22,14 +22,14 @@ Normal = 0
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-InputType-Normal = 0--><!--Device-InputType-Normal = 0-End-->
+<!--Device-InputType-Normal--><!--Device-InputType-Normal-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Number
 
 ```TypeScript
-Number = 1
+Number
 ```
 
 纯数字输入模式。
@@ -40,14 +40,14 @@ Number = 1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-InputType-Number = 1--><!--Device-InputType-Number = 1-End-->
+<!--Device-InputType-Number--><!--Device-InputType-Number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## PhoneNumber
 
 ```TypeScript
-PhoneNumber = 2
+PhoneNumber
 ```
 
 电话号码输入模式。
@@ -58,14 +58,14 @@ PhoneNumber = 2
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-InputType-PhoneNumber = 2--><!--Device-InputType-PhoneNumber = 2-End-->
+<!--Device-InputType-PhoneNumber--><!--Device-InputType-PhoneNumber-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Email
 
 ```TypeScript
-Email = 3
+Email
 ```
 
 邮箱地址输入模式。
@@ -76,14 +76,14 @@ Email = 3
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-InputType-Email = 3--><!--Device-InputType-Email = 3-End-->
+<!--Device-InputType-Email--><!--Device-InputType-Email-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Password
 
 ```TypeScript
-Password = 4
+Password
 ```
 
 密码输入模式。
@@ -100,7 +100,7 @@ TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-InputType-Password = 4--><!--Device-InputType-Password = 4-End-->
+<!--Device-InputType-Password--><!--Device-InputType-Password-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,7 +116,7 @@ NUMBER_PASSWORD = 8
 
 TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。
 
-密码输入模式不支持下划线样式。在已启用密码保险箱的情况下，支持用户名、密码的自动保存和自动填充。
+密码输入模式中，[decoration](TextInputAttribute#decoration)、[showUnderline](TextInputAttribute#showUnderline)、[lineHeight](TextInputAttribute#lineHeight)、[fontFeature](TextInputAttribute#fontFeature)不生效。在已启用密码保险箱的情况下，支持用户名、密码的自动保存和自动填充。
 
 **起始版本：** 11
 
@@ -136,7 +136,7 @@ USER_NAME = 10
 
 用户名输入模式，无特殊限制。
 
-在已启用密码保险箱的情况下，支持用户名、密码的自动保存和自动填充。
+在已启用密码保险箱的情况下，支持用户名的自动保存和自动填充，用于配合[InputType.Password](arkts-arkui-inputtype-e.md)、[InputType.NUMBER_PASSWORD](arkts-arkui-inputtype-e.md)、[InputType.NEW_PASSWORD](arkts-arkui-inputtype-e.md)完成用户名密码配对填充。
 
 **起始版本：** 11
 
@@ -154,13 +154,13 @@ USER_NAME = 10
 NEW_PASSWORD = 11
 ```
 
-新密码输入模式，无特殊限制。
+新密码输入模式。
 
 默认输入文字短暂显示后变成圆点。从API version 12开始，PC/2in1设备上输入文字直接显示为圆点。
 
 TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。
 
-在已启用密码保险箱的情况下，支持自动生成新密码。
+密码输入模式中，[decoration](TextInputAttribute#decoration)、[showUnderline](TextInputAttribute#showUnderline)、[lineHeight](TextInputAttribute#lineHeight)、[fontFeature](TextInputAttribute#fontFeature)不生效。在已启用密码保险箱的情况下，支持自动生成新密码。
 
 **起始版本：** 11
 
@@ -180,7 +180,7 @@ NUMBER_DECIMAL = 12
 
 带小数点的数字输入模式。
 
-支持数字，小数点（只能存在一个小数点）。不支持负数小数，负数小数的数字输入模式请使用inputFilter实现。
+支持数字，小数点（只能存在一个小数点）。不支持负数（包括负数整数和负数小数）。若需支持负数输入，请使用[inputFilter](TextInputAttribute#inputFilter)属性实现负数过滤。
 
 **起始版本：** 11
 

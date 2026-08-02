@@ -30,7 +30,7 @@ constructor(value?: TextStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | 否 | 字体样式设置项。 |
+| value | [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | 否 | 字体样式设置项。<br>默认值：不传入时继承TextStyleInterface各属性的默认值。 |
 
 ## fontColor
 
@@ -168,9 +168,11 @@ readonly fontWeight?: number
 
 获取属性字符串的文本字体粗细。
 
+默认值：400
+
 **说明：**
 
-实际返回是字符串，具体返回值和设置值关系参见下方表格。
+返回值为string类型，具体返回值和设置值关系参见下方表格。
 
 **类型：** number
 

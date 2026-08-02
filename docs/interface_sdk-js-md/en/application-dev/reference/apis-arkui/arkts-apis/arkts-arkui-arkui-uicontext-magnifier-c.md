@@ -28,6 +28,9 @@ bind(id: string): void
 ```
 
 Binds the magnifier to the component with the specified ID.
+> **NOTE**  
+>  
+> Obtain the Magnifier instance by using the getMagnifier() method in UIContext.
 
 **Since:** 22
 

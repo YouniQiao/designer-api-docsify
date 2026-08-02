@@ -1,6 +1,6 @@
 # TextStyleInterface
 
-TextStyleInterface
+文本字体样式。
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ fontColor?: ResourceColor
 fontConfigs?: FontConfigs
 ```
 
-字体配置。默认值继承[FontConfigs](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#fontconfigs24对象说明)。
+字体配置。默认值继承[FontConfigs](arkts-arkui-fontconfigs-i.md)。
 
 **类型：** FontConfigs
 
@@ -152,7 +152,9 @@ fontWeight?: number | FontWeight | string
 
 字体粗细。
 
-number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
+number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。
+
+默认值：FontWeight.Normal
 
 **类型：** number \| FontWeight \| string
 
@@ -194,7 +196,7 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-文本描边拐角样式。
+文本描边拐角样式。具体枚举及说明请参考StrokeJoinStyle。
 
 默认值：StrokeJoinStyle.MITER_JOIN。
 

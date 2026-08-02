@@ -62,6 +62,8 @@ maxWidth?: number
 
 自定义span所在父组件的内容区的最大宽度约束。
 
+默认值：使用自身宽度。
+
 单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** number

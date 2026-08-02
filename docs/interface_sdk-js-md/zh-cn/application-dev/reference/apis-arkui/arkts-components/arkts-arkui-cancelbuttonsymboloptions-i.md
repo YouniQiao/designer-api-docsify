@@ -14,7 +14,7 @@
 icon?: SymbolGlyphModifier
 ```
 
-右侧清除按钮Symbol图标。
+右侧清除按钮Symbol图标。不传入时使用默认清除图标样式。
 
 **类型：** SymbolGlyphModifier
 
@@ -34,7 +34,7 @@ icon?: SymbolGlyphModifier
 style?: CancelButtonStyle
 ```
 
-右侧清除按钮显示状态。
+右侧清除按钮显示状态。默认值：CancelButtonStyle.INPUT。
 
 **类型：** CancelButtonStyle
 

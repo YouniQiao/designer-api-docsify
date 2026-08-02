@@ -5,12 +5,12 @@ once a finger is pressed against it, and exits the input state and completes the
 screen.
 
 > **NOTE**
-
+>
 > - If you require additional features, use
 > [custom components](docroot://ui/state-management/arkts-create-custom-components.md). For example, the custom
 > component<!--RP1-->
 > [CustomPatternLock](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/UI/CustomPatternLock)
-> <!--RP1End--> implements the pattern lock function using the [Canvas]{@link canvas} component. You can extend its
+> <!--RP1End--> implements the pattern lock function using the [Canvas]{@link ./canvas} component. You can extend its
 > functionality as required.
 
 ## Child Components

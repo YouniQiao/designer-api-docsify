@@ -11,7 +11,7 @@
 ## LOADING
 
 ```TypeScript
-LOADING = 0
+LOADING
 ```
 
 加载中。
@@ -22,7 +22,7 @@ LOADING = 0
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-ProgressStatus-LOADING = 0--><!--Device-ProgressStatus-LOADING = 0-End-->
+<!--Device-ProgressStatus-LOADING--><!--Device-ProgressStatus-LOADING-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,7 +32,7 @@ LOADING = 0
 PROGRESSING
 ```
 
-Processing status.
+进度更新中。
 
 **起始版本：** 10
 

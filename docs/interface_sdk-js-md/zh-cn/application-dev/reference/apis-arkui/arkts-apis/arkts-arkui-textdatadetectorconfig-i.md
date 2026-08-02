@@ -16,7 +16,7 @@ color?: ResourceColor
 
 设置文本识别成功后的实体颜色。
 
-默认值：'#ff0a59f7'
+默认值：'#ff0a59f7'，表示蓝色（不透明度为100%）
 
 **类型：** ResourceColor
 
@@ -74,7 +74,7 @@ enablePreviewMenu?: boolean
 
 当[copyOptions](RichEditorAttribute#copyOptions)设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
 
-该参数在Phone、Tablet中可正常调用，在PC/2in1、TV和Wearable等其他设备类型中无效果。
+本接口实际支持的设备类型范围（Phone、Tablet）小于其所属系统能力支持的设备类型范围（Phone、PC/2in1、Tablet、TV、Car、Wearable）。因硬件形态限制，该接口在PC/2in1、TV、Car、Wearable设备中调用功能不生效。
 
 **类型：** boolean
 
@@ -95,6 +95,8 @@ onDetectResultUpdate?: Callback<string>
 ```
 
 文本识别成功后，触发onDetectResultUpdate回调。
+
+默认值：undefined，不触发回调。
 
 **类型：** Callback&lt;string&gt;
 

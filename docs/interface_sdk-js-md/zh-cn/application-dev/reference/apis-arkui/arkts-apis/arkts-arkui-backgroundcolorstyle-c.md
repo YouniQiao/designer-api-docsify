@@ -14,7 +14,7 @@
 constructor(textBackgroundStyle: TextBackgroundStyle)
 ```
 
-文本背景颜色的构造函数。
+文本背景颜色的构造函数。未通过该接口设置时，默认背景颜色为Color.Transparent，圆角为0。
 
 **起始版本：** 14
 
@@ -30,7 +30,7 @@ constructor(textBackgroundStyle: TextBackgroundStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textBackgroundStyle | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) | 是 | 文本背景色设置项。<br />默认值：<br />{<br /> color: Color.Transparent,<br/> radius: 0<br />} |
+| textBackgroundStyle | [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md) | 是 | 文本背景色设置项。 |
 
 ## textBackgroundStyle
 

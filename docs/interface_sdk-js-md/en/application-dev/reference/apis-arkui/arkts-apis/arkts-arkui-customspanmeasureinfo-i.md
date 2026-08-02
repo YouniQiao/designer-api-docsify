@@ -42,8 +42,6 @@ Width layout policy of the parent component of the custom span.
 
 When the value is **null** or **undefined**, the parent component does not have a width layout policy set.
 
-**Since**: 26.0.0
-
 **Type:** LayoutPolicy
 
 **Since:** 26.0.0
@@ -65,8 +63,6 @@ maxWidth?: number
 Maximum width constraint of the custom span within the parent component's content area.
 
 Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)
-
-**Since**: 26.0.0
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # StyleOptions
 
-StyleOptions
+属性字符串样式。
 
 **起始版本：** 12
 
@@ -78,7 +78,7 @@ styledKey: StyledStringKey
 styledValue: StyledStringValue
 ```
 
-样式对象。
+用于设置属性字符串样式的样式对象。
 
 **类型：** StyledStringValue
 

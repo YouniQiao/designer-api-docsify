@@ -18,11 +18,11 @@ total: number
 
 进度总长。
 
-默认值：100
+取值范围：(0, +∞)
 
 **说明：**
 
-total是负数时，按照100处理。
+total小于等于0时，按照100处理。
 
 **类型：** number
 
@@ -47,6 +47,8 @@ value: number
 默认值：0
 
 取值范围：[0, total]
+
+**说明：** 当Ring类型进度条的status设置为ProgressStatus.LOADING时，设置进度值不生效。
 
 **类型：** number
 

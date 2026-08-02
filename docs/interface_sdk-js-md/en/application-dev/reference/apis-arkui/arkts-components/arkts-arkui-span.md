@@ -1,7 +1,7 @@
 # Span
 
-As a child of the [Text]{@link text} and [ContainerSpan]{@link container_span} components, the **Span** component is
-used to display inline text.
+As a child of the [Text]{@link ./text} and [ContainerSpan]{@link ./container_span} components, the **Span** component
+is used to display inline text.
 
 > **NOTE**
 >
@@ -10,11 +10,12 @@ used to display inline text.
 > attribute from its parent component. Only the following attributes can be inherited: **fontColor**, **fontSize**,
 > **fontStyle**, **fontWeight**, **decoration**, **letterSpacing**, **textCase**, **fontFamily**, and **textShadow**.
 >
-> The [universal attributes]{@link common} are not supported. To set universal attributes, use [Text]{@link text} for
-> configuration or use [CustomSpan]{@link CustomSpan} in the [Styled String]{@link styled_string} for custom drawing.
+> The [universal attributes](docroot://reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are not
+> supported. To set universal attributes, use [Text]{@link ./text} for configuration or use
+> [CustomSpan]{@link CustomSpan} in the [Styled String]{@link ./styled_string} for custom drawing.
 >
-> Among [universal events]{@link common}, only
-> [onClick]{@link CommonMethod#onClick(event: Callback<ClickEvent>, distanceThreshold: number)} click events and
+> Among [universal events](docroot://reference/apis-arkui/arkui-ts/ts-component-general-events.md), only
+> [onClick]{@link CommonMethod#onClick(event: (event: ClickEvent) => void)} click events and
 > [onHover]{@link CommonMethod#onHover} hover events are supported.
 
 ## Child Components

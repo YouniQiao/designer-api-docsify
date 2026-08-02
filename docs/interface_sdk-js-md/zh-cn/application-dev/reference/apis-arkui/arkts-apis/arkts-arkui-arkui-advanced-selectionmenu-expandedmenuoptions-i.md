@@ -2,7 +2,7 @@
 
 扩展下拉菜单。
 
-继承于[MenuItemOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-menuitem.md#menuitemoptions对象说明)。
+继承自[MenuItemOptions](../arkts-components/arkts-arkui-menuitemoptions-i.md)。
 
 **继承/实现关系：** ExpandedMenuOptions extends [MenuItemOptions](../arkts-components/arkts-arkui-menuitemoptions-i.md)
 
@@ -24,7 +24,7 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 action?: () => void
 ```
 
-点击菜单项的事件回调。
+点击菜单项的事件回调。同时配置builder和action时，点击图标会同时响应。不设置时点击无响应。
 
 **类型：** () =&gt; void
 

@@ -14,7 +14,7 @@
 constructor(colorStops: ColorStop[])
 ```
 
-创建线性渐变颜色对象。
+线性渐变颜色描述。
 
 **起始版本：** 10
 

@@ -18,7 +18,7 @@
 alt(value: PixelMap)
 ```
 
-设置图片加载过程中显示的占位图。
+设置图片加载过程中显示的占位图。未通过该接口设置时，默认为null，不显示占位图。
 
 **起始版本：** 12
 
@@ -34,7 +34,7 @@ alt(value: PixelMap)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 设置图片加载过程中显示的占位图，支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型。<br/>默认值：null |
+| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 设置图片加载过程中显示的占位图，支持[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)类型。 |
 
 ## colorFilter
 
@@ -58,7 +58,7 @@ colorFilter(filter: ColorFilter | DrawingColorFilter)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) \| DrawingColorFilter | 是 | 1. 给图像设置颜色滤镜效果，入参为一个4x5的RGBA转换矩阵。<br/>矩阵第一行表示R（红色）的向量值，第二行表示G（绿色）的向量值，第三行表示B（蓝色）的向量值，第四行表示A（透明度）的向量值，4行分别代表不同的RGBA的向量值。<br/>当矩阵对角线值为1，其余值为0时，保持图片原有色彩。<br/> **计算规则：**<br/>如果输入的滤镜矩阵为：<br/>![image-matrix-1](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_1.png)<br/>像素点为[R, G, B, A]，色值的范围[0, 255]<br/>则过滤后的颜色为 [R’, G’, B’, A’]<br/>![image-matrix-2](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_2.png)<br/>2. 支持@ohos.graphics.drawing的ColorFilter类型作为入参。<br/>**说明：** <br/>该接口中的DrawingColorFilter类型支持在原子化服务中使用。其中，svg类型的图源只对stroke属性生效。*@ohos.graphics.drawing** can be used as the input parameter.<br>**NOTE**<br>The DrawingColorfilter type can be used in atomic services. The SVG image source takes effect only for the stroke attribute. |
+| filter | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) \| DrawingColorFilter | 是 | 1. 给图像设置颜色滤镜效果，入参为一个4x5的RGBA转换矩阵。<br>矩阵第一行用于计算R'（新的红色分量），第二行用于计算G'（新的绿色分量），第三行用于计算B'（新的蓝色分量），第四行用于计算A'（新的透明度分量），4行分别代表不同的RGBA的分量。<br>当矩阵对角线值为1，其余值为0时，保持图片原有色彩。<br> **计算规则：**<br>如果输入的滤镜矩阵为：<br>![image-matrix-1](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_1.png)<br>像素点为[R, G, B, A]，色值的范围[0, 255]<br>则过滤后的颜色为 [R’, G’, B’, A’]<br>![image-matrix-2](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_2.png)<br>2. 支持@ohos.graphics.drawing的ColorFilter类型作为入参。<br>**说明：**<br>该接口中的DrawingColorFilter类型支持在原子化服务中使用。其中，svg类型的图源只对stroke属性生效。*@ohos.graphics.drawing** can be used as the input parameter.<br>**NOTE**<br>The DrawingColorfilter type can be used in atomic services. The SVG image source takes effect only for the stroke attribute. |
 
 ## objectFit
 
@@ -66,7 +66,7 @@ colorFilter(filter: ColorFilter | DrawingColorFilter)
 objectFit(value: ImageFit)
 ```
 
-设置图片的缩放类型。
+设置图片的缩放类型。适用于控制图片在容器中显示方式的场景。未通过该接口设置时，默认缩放类型为ImageFit.Cover。
 
 **起始版本：** 10
 
@@ -82,7 +82,7 @@ objectFit(value: ImageFit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | 是 | 图片的缩放类型。<br/>默认值：ImageFit.Cover |
+| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | 是 | 图片的缩放类型。 |
 
 ## onComplete
 
@@ -138,7 +138,7 @@ onError(callback: ImageErrorCallback)
 supportSvg2(enable: Optional<boolean>)
 ```
 
-开启或关闭[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)，开启后相关SVG图片显示效果会有变化。
+开启或关闭[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)，开启后支持SVG解析新能力，适用于需要使用SVG新特性的场景；关闭则保持原有SVG解析能力，适用于兼容旧版本SVG图片显示的场景。未通过该接口设置时，默认保持原有SVG解析能力。
 
 ImageSpan组件创建后，不支持动态修改该属性的值。
 
@@ -156,7 +156,7 @@ ImageSpan组件创建后，不支持动态修改该属性的值。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 控制是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。<br>true：支持SVG解析新能力；false：保持原有SVG解析能力。<br>默认值：false |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 控制是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。<br>true：支持SVG解析新能力；false：保持原有SVG解析能力。 |
 
 ## verticalAlign
 
@@ -164,7 +164,7 @@ ImageSpan组件创建后，不支持动态修改该属性的值。
 verticalAlign(value: ImageSpanAlignment)
 ```
 
-设置图片基于行高的对齐方式。
+设置图片基于行高的对齐方式。适用于图文混排场景中调整图片与文字的垂直对齐效果。未通过该接口设置时，默认对齐方式为ImageSpanAlignment.BOTTOM。
 
 **起始版本：** 10
 
@@ -180,5 +180,5 @@ verticalAlign(value: ImageSpanAlignment)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageSpanAlignment](../arkts-apis/arkts-arkui-imagespanalignment-e.md) | 是 | 图片基于行高的对齐方式。<br />默认值：ImageSpanAlignment.BOTTOM |
+| value | [ImageSpanAlignment](../arkts-apis/arkts-arkui-imagespanalignment-e.md) | 是 | 图片基于行高的对齐方式。 |
 

@@ -32,7 +32,7 @@ constructor(url: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | 超链接设置项。 |
+| url | string | 是 | 超链接URL设置项。需为有效的URL地址。 |
 
 ## url
 

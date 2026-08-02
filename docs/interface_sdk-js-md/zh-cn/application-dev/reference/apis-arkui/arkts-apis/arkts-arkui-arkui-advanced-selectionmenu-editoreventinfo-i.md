@@ -20,7 +20,7 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 content?: RichEditorSelection
 ```
 
-选中内容信息。
+选中的内容信息，包含选中的文本或图片片段（spans）及选择范围（selection）。
 
 **类型：** RichEditorSelection
 

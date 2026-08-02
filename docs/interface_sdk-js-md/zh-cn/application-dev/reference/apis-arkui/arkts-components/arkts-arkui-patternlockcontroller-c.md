@@ -1,11 +1,11 @@
 # PatternLockController
 
-PatternLock组件的控制器，用于重置组件状态和设置图案密码的正确或错误状态。
+PatternLock组件的控制器，用于重置组件状态和设置图案密码状态。
 
 ## 导入对象
 
 ```ts
-patternLockController: PatternLockController = new PatternLockController()
+patternLockController: PatternLockController = new PatternLockController();
 ```
 
 **起始版本：** 9
@@ -36,7 +36,7 @@ PatternLockController的构造函数。
 reset()
 ```
 
-重置组件状态。
+重置组件状态。需要在PatternLock组件构造时传入对应的controller参数才可生效，未传入时调用不生效。
 
 **起始版本：** 9
 
@@ -52,7 +52,7 @@ reset()
 setChallengeResult(result: PatternLockChallengeResult): void
 ```
 
-设置图案密码的正确或错误状态。
+设置图案密码的正确或错误状态。需要在PatternLock组件构造时传入对应的controller参数才可生效，未传入时调用不生效。
 
 **起始版本：** 11
 

@@ -14,7 +14,7 @@
 deleteOffset: number
 ```
 
-删除的值的位置信息。
+删除的值的位置索引，从0开始。
 
 **类型：** number
 

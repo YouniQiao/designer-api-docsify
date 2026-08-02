@@ -1,8 +1,8 @@
 # ContainerSpan
 
-As a child of the [Text]{@link text} component, the **ContainerSpan** component is used to manage the background
-colors and rounded corners of multiple [Span]{@link span} and [ImageSpan]{@link image_span} components in a unified
-manner.
+As a child of the [Text]{@link ./text} component, the **ContainerSpan** component is used to manage the background
+colors and rounded corners of multiple [Span]{@link ./span} and [ImageSpan]{@link ./image_span} components in a
+unified manner.
 
 
 ## ContainerSpan

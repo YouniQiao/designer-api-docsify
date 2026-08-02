@@ -22,7 +22,7 @@ color(value: ResourceColor | LinearGradient)
 
 从API version 10开始支持利用[LinearGradient](arkts-arkui-lineargradient-i.md)设置Ring样式的渐变色。Ring类型不建议设置透明度，如需设置透明度，建议使用[DataPanel](arkts-arkui-datapanel.md)。
 
-从API version 23开始支持利用[LinearGradient](arkts-arkui-lineargradient-i.md)设置Linear样式和Capsule样式的渐变色。API version 22及之前版本利用LinearGradient设置Linear样式和Capsule样式的渐变色时，会以默认主题色显示。
+从API version 23开始支持利用LinearGradient设置Linear样式和Capsule样式的渐变色。API version 22及之前版本使用该方式设置时，会以默认主题色显示。
 
 **起始版本：** 7
 
@@ -38,7 +38,7 @@ color(value: ResourceColor | LinearGradient)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient | 是 | 进度条前景色。<br/>默认值：<br/>- Capsule：<br/>   API version 9及以下：'#ff007dff'<br/>   API version 10：'#33006cde'<br/>   API version 11及以上：'#33007dff'<br/>- Ring：<br/>   API version 9及以下：'#ff007dff'<br/>   API version 10及以上：起始端：'#ff86c1ff'，结束端：'#ff254ff7'<br/>- 其他样式：'#ff007dff' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient | 是 | 进度条前景色。<br>从API version 10开始支持利用LinearGradient设置Ring样式的渐变色，从API version 23开始支持利用LinearGradient设置Linear样式和Capsule样式的渐变色。<br>默认值：<br>- Capsule：<br>   API version 9及以下：'#ff007dff'<br>   API version 10：'#33006cde'<br>   API version 11及以上：'#33007dff'<br>- Ring：<br>   API version 9及以下：'#ff007dff'<br>   API version 10及以上：起始端：'#ff86c1ff'，结束端：'#ff254ff7'<br>- 其他样式：'#ff007dff' |
 
 ## contentModifier
 
@@ -91,7 +91,7 @@ privacySensitive(isPrivacySensitiveMode: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 设置隐私敏感，隐私模式下进度清零，文字将被遮罩。true：打开隐私敏感；false：关闭隐私敏感。<br/>。<br>默认值：false。 |
+| isPrivacySensitiveMode | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 设置隐私敏感，隐私模式下进度清零，文字将被遮罩。true：打开隐私敏感；false：关闭隐私敏感。<br> 默认值：false<br>**说明：**<br>设置null表示不敏感。<!--Del--><br>需要在卡片中使用Progress，并用[FormComponent](./form_component)组件设置[隐私遮罩](arkts-arkui-commonmethod-c.md#obscured)属性，显示卡片时才有隐私遮罩效果。<!--DelEnd--> |
 
 ## style
 
@@ -115,7 +115,7 @@ style(value: Style)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Style | 是 | 组件的样式。<br/>- CapsuleStyleOptions：设置Capsule的样式。<br/>- RingStyleOptions：设置Ring的样式。<br/>-LinearStyleOptions：设置Linear的样式。<br/>- ScaleRingStyleOptions：设置ScaleRing的样式。<br/>- EclipseStyleOptions：设置Eclipse的样式。<br/>- ProgressStyleOptions：仅可设置各类型进度条的strokeWidth、scaleCount、scaleWidth，仅对支持这些样式设置的进度条生效。 |
+| value | Style | 是 | 组件的样式。<br>**说明：** 不同的type需分别对应相应的style属性设置，详细映射关系参考[ProgressStyleMap](../../../reference/apis-arkui/arkui-ts/ts-basic-components-progress.md#progressstylemap10)。<br>- CapsuleStyleOptions：设置Capsule的样式。<br>- RingStyleOptions：设置Ring的样式。<br>- LinearStyleOptions：设置Linear的样式。<br>- ScaleRingStyleOptions：设置ScaleRing的样式。<br>- EclipseStyleOptions：设置Eclipse的样式。<br>- ProgressStyleOptions：仅可设置各类型进度条的strokeWidth、scaleCount、scaleWidth，仅对支持这些样式设置的进度条生效。 |
 
 ## value
 
@@ -123,7 +123,7 @@ style(value: Style)
 value(value: number)
 ```
 
-设置当前进度值。设置小于0的数值时置为0，设置大于total的数值时置为total。非法数值不生效。
+设置当前进度值。设置小于0的数值时置为0，设置大于total的数值时置为total。设置非法值时按默认值处理。当Ring样式的status属性设置为ProgressStatus.LOADING时，设置进度值不生效。
 
 **起始版本：** 7
 
@@ -139,5 +139,5 @@ value(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 当前进度值。<br/> 默认值：0 |
+| value | number | 是 | 当前进度值。<br>默认值：0<br>取值范围：[0, total]，设置小于0的数值时置为0，设置大于total的数值时置为total，设置非法值时按默认值处理。<br>**说明：** 当Ring类型进度条的status设置为ProgressStatus.LOADING时，设置进度值不生效。 |
 

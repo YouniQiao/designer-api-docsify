@@ -30,13 +30,13 @@ equals(id: TextMenuItemId): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | 是 | TextMenuItemId的id。 |
+| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | 是 | 需要比较的TextMenuItemId对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 两个TextMenuItemId是否相等。<br/>true表示相等，false表示不相等。 |
+| boolean | 两个TextMenuItemId是否相等。<br>true表示相等，false表示不相等。 |
 
 ## of
 
@@ -60,13 +60,13 @@ static of(id: ResourceStr): TextMenuItemId
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 菜单的id。 |
+| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 菜单项标识，用于创建TextMenuItemId对象以识别菜单选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | TextMenuItemId的对象。 |
+| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | 根据传入id创建的菜单项标识对象，用于识别菜单选项。 |
 
 ## AI_WRITER
 
@@ -294,7 +294,7 @@ static readonly address: TextMenuItemId
 static readonly askAI: TextMenuItemId
 ```
 
-<!--RP2--><!--RP2End-->对选中的文本提供AI问询能力，为一级菜单项。
+<!--RP2--><!--RP2End-->对选中的文本提供AI问询能力，为一级菜单项。该菜单项依赖大模型能力，否则不生效。
 
 **类型：** TextMenuItemId
 
@@ -394,7 +394,7 @@ static readonly passwordVault: TextMenuItemId
 static readonly phoneNumber: TextMenuItemId
 ```
 
-呼叫，为一级菜单项。对选中的电话号码跳转服务，拉起电话拨号页面。
+呼叫，为一级菜单项。对选中的电话号码提供跳转服务，拉起电话拨号页面。
 
 **类型：** TextMenuItemId
 

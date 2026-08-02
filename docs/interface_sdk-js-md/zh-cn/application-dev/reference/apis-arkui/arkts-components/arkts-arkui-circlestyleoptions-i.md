@@ -16,7 +16,7 @@ color?: ResourceColor
 
 背景圆环颜色。
 
-默认值：'#33182431'。
+默认值：'#33182431'（深灰色，20%不透明度）。
 
 **类型：** ResourceColor
 
@@ -86,7 +86,9 @@ radius?: LengthMetrics
 
 背景圆环的半径。
 
-默认值：[circleRadius](PatternLockAttribute#circleRadius)的1.833倍（即11/6）。
+默认值：[circleRadius](PatternLockAttribute#circleRadius)的约1.833倍（即11/6）。
+
+取值范围：大于0。
 
 **类型：** LengthMetrics
 

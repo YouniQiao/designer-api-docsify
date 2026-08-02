@@ -16,6 +16,8 @@ delay?: number
 
 设置每次滚动的时间间隔。
 
+取值范围：[0, +∞)。设置负数时按默认值处理。
+
 默认值：0
 
 单位：毫秒
@@ -156,7 +158,7 @@ marqueeUpdatePolicy?: MarqueeUpdatePolicy
 spacing?: LengthMetrics
 ```
 
-两轮跑马灯之间的间距。如果LengthMetrics的unit值是PERCENT，当前设置不生效，按默认值处理。
+两轮跑马灯之间的间距。单位：vp。如果LengthMetrics的unit值是PERCENT，当前设置不生效，按默认值处理。
 
 默认值：48.0vp
 
@@ -201,6 +203,10 @@ step?: number
 ```
 
 滚动动画文本滚动步长。
+
+单位：vp
+
+取值范围：(0, 文本宽度]。设置小于等于0的值时按默认值处理。
 
 默认值：4.0vp
 

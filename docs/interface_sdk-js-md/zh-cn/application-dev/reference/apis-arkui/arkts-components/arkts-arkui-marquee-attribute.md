@@ -1,6 +1,8 @@
 # Marquee属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)外，还支持以下属性。
+
+除支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)外，还支持以下事件。
 
 **继承/实现关系：** MarqueeAttribute extends [CommonMethod<MarqueeAttribute>](CommonMethod<MarqueeAttribute>)
 
@@ -16,7 +18,7 @@
 allowScale(value: boolean)
 ```
 
-设置是否允许文本缩放。
+设置是否允许文本缩放。未通过该接口设置时，默认不允许文本缩放。
 
 **起始版本：** 8
 
@@ -32,7 +34,7 @@ allowScale(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否允许文本缩放。<br/>true：允许文本缩放；false：不允许文本缩放。<br/>默认值：false<br/>**说明：**<br/>仅当[fontSize](MarqueeAttribute#fontSize)为fp单位时生效。 |
+| value | boolean | 是 | 是否允许文本缩放。<br>true：允许文本缩放；false：不允许文本缩放。<br>**说明：**<br>仅当[fontSize](MarqueeAttribute#fontSize)为fp单位时生效。 |
 
 ## fontColor
 
@@ -40,7 +42,7 @@ allowScale(value: boolean)
 fontColor(value: ResourceColor)
 ```
 
-设置字体颜色。
+设置字体颜色。未通过该接口设置时，默认字体颜色为'#e6182431'，表示深灰色（不透明度约为90%），Wearable设备上默认字体颜色为'#c5ffffff'，表示白色（不透明度约为77%）。
 
 **起始版本：** 8
 
@@ -56,7 +58,7 @@ fontColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 字体颜色。<br />Wearable设备上默认值为：'#c5ffffff'，显示为淡蓝色，其他设备默认值为：'e6182431'，显示为黑色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 字体颜色。 |
 
 ## fontFamily
 
@@ -104,7 +106,7 @@ fontSize(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 字体大小。fontSize为number类型时，使用fp单位。字体默认大小16fp。不支持设置百分比字符串。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 字体大小。fontSize为number类型时，使用fp单位。字体默认大小16fp。不支持设置百分比字符串。<br>Wearable设备上默认值：15fp<br>**说明：**<br>配合[allowScale](MarqueeAttribute#allowScale)属性使用时，需设置为fp单位。 |
 
 ## fontWeight
 
@@ -112,7 +114,7 @@ fontSize(value: Length)
 fontWeight(value: number | FontWeight | string)
 ```
 
-设置文本的字体粗细，设置过大可能会在不同字体下有截断。
+设置文本的字体粗细，设置过大可能会在不同字体下有截断。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对应数值400）。
 
 **起始版本：** 8
 
@@ -128,7 +130,7 @@ fontWeight(value: number | FontWeight | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | 是 | 文本的字体粗细，number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。<br/>默认值：FontWeight.Normal |
+| value | number \| FontWeight \| string | 是 | 文本的字体粗细<br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。<br>传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 |
 
 ## marqueeUpdateStrategy
 
@@ -136,7 +138,12 @@ fontWeight(value: number | FontWeight | string)
 marqueeUpdateStrategy(value: MarqueeUpdateStrategy)
 ```
 
-跑马灯组件属性更新后，跑马灯的滚动策略。(当跑马灯为播放状态，且文本内容宽度超过跑马灯组件宽度时，该属性生效。)
+跑马灯组件属性更新后，跑马灯的滚动策略。(当跑马灯为播放状态，且文本内容宽度大于等于跑马灯组件宽度时，该属性生效。)未通过该接口设置时，默认使用MarqueeUpdateStrategy.DEFAULT。
+
+使用场景：
+
+- MarqueeUpdateStrategy.DEFAULT：适用于内容更新后希望以默认策略重新开始滚动展示的场景。  
+- MarqueeUpdateStrategy.PRESERVE_POSITION：适用于内容动态更新时希望保持当前滚动位置继续滚动的场景，如实时时钟、股价等动态内容展示。
 
 **起始版本：** 12
 
@@ -152,7 +159,7 @@ marqueeUpdateStrategy(value: MarqueeUpdateStrategy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [MarqueeUpdateStrategy](../arkts-apis/arkts-arkui-marqueeupdatestrategy-e.md) | 是 | 跑马灯组件属性更新后，跑马灯的滚动策略。<br/>默认值: MarqueeUpdateStrategy.DEFAULT |
+| value | [MarqueeUpdateStrategy](../arkts-apis/arkts-arkui-marqueeupdatestrategy-e.md) | 是 | 跑马灯组件属性更新后，跑马灯的滚动策略。 |
 
 ## onBounce
 
@@ -160,7 +167,7 @@ marqueeUpdateStrategy(value: MarqueeUpdateStrategy)
 onBounce(event: () => void)
 ```
 
-完成一次滚动时触发，若循环次数不为1，则该事件会多次触发。
+完成一次完整滚动时触发，若循环次数不为1，则该事件会多次触发。
 
 **起始版本：** 8
 
@@ -176,7 +183,7 @@ onBounce(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () =&gt; void | 是 | 完成一次滚动时触发的回调。 |
+| event | () =&gt; void | 是 | 完成一次完整滚动时触发的回调。 |
 
 ## onFinish
 

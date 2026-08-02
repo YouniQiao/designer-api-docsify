@@ -14,7 +14,7 @@
 affinity: Affinity
 ```
 
-位置亲和度。
+位置亲和度，表示光标位置在字形边界处的倾向性，具体取值请参见Affinity枚举。
 
 **类型：** Affinity
 

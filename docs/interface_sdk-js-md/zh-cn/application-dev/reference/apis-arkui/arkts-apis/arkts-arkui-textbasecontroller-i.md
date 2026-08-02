@@ -48,7 +48,7 @@ getLayoutManager(): LayoutManager
 
 | 类型 | 说明 |
 | --- | --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | 布局管理器对象。 |
+| [LayoutManager](arkts-arkui-layoutmanager-i.md) | 布局管理器对象，用于获取文本布局信息，如行数、行度量、字形位置等。 |
 
 ## setSelection
 
@@ -62,7 +62,7 @@ selectionStart和selectionEnd均为-1时表示全选。
 
 未获焦时调用该接口不产生选中效果。
 
-从API version 12开始，在2in1设备中，无论options取何值，调用setSelection接口都不会弹出菜单，此外，如果组件中已经存在菜单，调用setSelection接口会关闭菜单。
+从API version 12开始，在PC/2in1设备中，无论options取何值，调用setSelection接口都不会弹出菜单，此外，如果组件中已经存在菜单，调用setSelection接口会关闭菜单。
 
 在非2in1设备中，options取值为MenuPolicy.DEFAULT时，遵循以下规则：
 
@@ -82,7 +82,7 @@ selectionStart和selectionEnd均为-1时表示全选。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectionStart | number | 是 | 选中开始位置。<br/>取值小于0时，按0处理。 |
-| selectionEnd | number | 是 | 选中结束位置。<br/>取值大于文本长度时，按当前文本长度处理。 |
+| selectionStart | number | 是 | 选中开始位置。<br>取值小于0时，按0处理。取值大于文本长度时，按当前文本长度处理。<br>特殊取值效果：当selectionStart和selectionEnd均为-1时，表示全选。 |
+| selectionEnd | number | 是 | 选中结束位置。<br>取值小于0时，按0处理。取值大于文本长度时，按当前文本长度处理。<br>特殊取值效果：当selectionStart和selectionEnd均为-1时，表示全选。 |
 | options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | 否 | 选择项配置。 默认值继承[SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md)。 |
 

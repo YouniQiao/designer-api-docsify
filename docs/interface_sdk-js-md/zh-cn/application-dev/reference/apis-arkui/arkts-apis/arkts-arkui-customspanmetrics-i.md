@@ -16,6 +16,8 @@ height?: number
 
 自定义绘制Span的高。
 
+默认值：不传入时默认取Text组件的fontSize值作为CustomSpan的高度。
+
 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** number

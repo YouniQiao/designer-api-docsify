@@ -46,7 +46,7 @@ borderRadius?: LengthMetrics
 
 Capsule进度条圆角半径（不支持百分比设置）。
 
-取值范围：[0, min(width, height)/2]。默认值：min(width, height)/2。
+取值范围：[0, 组件高度/2]。默认值：组件高度 / 2。
 
 设置非法数值时，按照默认值处理。
 
@@ -70,9 +70,13 @@ Capsule进度条圆角半径（不支持百分比设置）。
 borderWidth?: Length
 ```
 
-内描边宽度（不支持百分比设置）。
+内描边宽度。
 
 默认值：1vp
+
+取值范围：大于等于0的数值，不支持百分比设置。
+
+超出取值范围或设置非法值时按默认值处理。
 
 **类型：** Length
 
@@ -93,6 +97,8 @@ content?: ResourceStr
 ```
 
 文本内容，应用可自定义。
+
+当需要在Capsule进度条上显示自定义文本时传入此参数；不传入时不显示文本内容（若需显示百分比文本，可设置showDefaultPercentage为true）。
 
 从API version 20开始，支持Resource类型。
 

@@ -5,7 +5,7 @@ TextClock容器组件的控制器，可以将该控制器绑定到TextClock组�
 ## 导入对象
 
 ```ts
-controller: TextClockController = new TextClockController()
+controller: TextClockController = new TextClockController();
 ```
 
 **起始版本：** 8
@@ -38,7 +38,7 @@ TextClockController的构造函数。
 start()
 ```
 
-启动文本时钟。
+启动文本时钟。使用前需先将TextClockController绑定到TextClock组件。
 
 **起始版本：** 8
 
@@ -56,7 +56,7 @@ start()
 stop()
 ```
 
-停止文本时钟。
+停止文本时钟。使用前需先将TextClockController绑定到TextClock组件。
 
 **起始版本：** 8
 

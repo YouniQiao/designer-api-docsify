@@ -16,7 +16,7 @@
 constructor(color: ResourceColor)
 ```
 
-用于创建ResourceColor对象的构造函数。
+用于创建ColorShaderStyle对象的构造函数。
 
 **起始版本：** 20
 

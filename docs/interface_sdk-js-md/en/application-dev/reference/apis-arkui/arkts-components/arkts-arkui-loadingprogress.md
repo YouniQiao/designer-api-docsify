@@ -8,8 +8,8 @@ value of **ratios** in the
 event callback: If the value is greater than 0, the component is visible.
 
 > **NOTE**
-
-> - This component supports [WithTheme]{@link with_theme} since API version 26.0.0.
+>
+> - This component supports [WithTheme]{@link ./with_theme} since API version 26.0.0.
 
 ## Child Components
 

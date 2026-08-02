@@ -34,7 +34,7 @@ colorFilter?: ColorFilterType
 layoutStyle?: ImageAttachmentLayoutStyle
 ```
 
-设置图片布局。
+设置图片布局。不传入时使用默认布局（外边距、内边距和圆角均为0）。
 
 **类型：** ImageAttachmentLayoutStyle
 
@@ -54,7 +54,7 @@ layoutStyle?: ImageAttachmentLayoutStyle
 objectFit?: ImageFit
 ```
 
-设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。
+设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。具体枚举及说明请参考ImageFit。
 
 默认值：ImageFit.Cover
 

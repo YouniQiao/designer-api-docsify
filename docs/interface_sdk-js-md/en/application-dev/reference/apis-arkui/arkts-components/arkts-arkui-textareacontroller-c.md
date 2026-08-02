@@ -2,6 +2,12 @@
 
 The controller for the **TextArea** component inherits from [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md). The APIs involved are as follows:<!--Del--> system API [getText](arkts-arkui-textcontentcontrollerbase-c-sys.md#gettext) and other APIs like<!--DelEnd-->[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentrect),[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentlinecount),[getCaretOffset](arkts-arkui-textcontentcontrollerbase-c.md#getcaretoffset), [addText](arkts-arkui-textcontentcontrollerbase-c.md#addtext),[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deletetext),[getSelection](arkts-arkui-textcontentcontrollerbase-c.md#getselection),[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearpreviewtext),[setStyledPlaceholder](arkts-arkui-textcontentcontrollerbase-c.md#setstyledplaceholder), and [deleteBackward](arkts-arkui-textcontentcontrollerbase-c.md#deletebackward).
 
+## Objects to Import
+
+```ts
+controller: TextAreaController = new TextAreaController();
+```
+
 **Inheritance/Implementation:** TextAreaController extends [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)
 
 **Since:** 8

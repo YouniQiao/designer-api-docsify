@@ -1,6 +1,6 @@
 # ScaleSymbolEffect
 
-定义ScaleSymbolEffect类，继承自父类SymbolEffect。
+ScaleSymbolEffect继承自父类SymbolEffect。
 
 **继承/实现关系：** ScaleSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
@@ -34,8 +34,8 @@ ScaleSymbolEffect的构造函数，缩放动效。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | 动效范围。<br/>默认值：EffectScope.LAYER |
-| direction | [EffectDirection](arkts-arkui-effectdirection-e.md) | 否 | 动效方向。<br/>默认值：EffectDirection.DOWN |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | 否 | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。<br>默认值：EffectScope.LAYER |
+| direction | [EffectDirection](arkts-arkui-effectdirection-e.md) | 否 | 动效方向。具体枚举值及说明请参考EffectDirection枚举说明。<br>默认值：EffectDirection.DOWN |
 
 ## direction
 
@@ -43,7 +43,7 @@ ScaleSymbolEffect的构造函数，缩放动效。
 direction?: EffectDirection
 ```
 
-动效方向。
+动效方向。具体枚举值及说明请参考EffectDirection枚举说明。
 
 默认值：EffectDirection.DOWN
 
@@ -67,7 +67,7 @@ direction?: EffectDirection
 scope?: EffectScope
 ```
 
-动效范围。
+动效范围。具体枚举值及说明请参考EffectScope枚举说明。
 
 默认值：EffectScope.LAYER
 

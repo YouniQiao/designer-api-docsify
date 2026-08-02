@@ -12,7 +12,7 @@ content width is greater than or equal to the component's width.
 > For the scenario where the frame rate of the **Marquee** component is dynamic, you can use the
 > [MarqueeDynamicSyncScene]{@link @ohos.arkui.UIContext} API.
 >
-> If the text width is less than the **Marquee** component width, use the [property animation]{@link common} to
+> If the text width is less than the **Marquee** component width, use the [property animation]{@link ./common} to
 > implement scrolling.
 
 ## Child Components

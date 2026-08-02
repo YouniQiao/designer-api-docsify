@@ -1,10 +1,7 @@
 # SymbolGlyph
 
-显示图标小符号的组件。<!--RP1--><!--RP1End-->
-
-> **说明：**
-
-> - 本模块接口仅可在Stage模型下使用。
+SymbolGlyph组件用于显示系统预置的图标小符号，支持设置颜色、大小、粗细、渲染策略、动效策略等样式属性，适用于需要在应用中展示系统图标的场景，如导航栏图标、按钮图标、状态指示图标等。相比使用图片资源，SymbolGlyph具有
+体积小、可动态着色、支持动效等优势。<!--RP1--><!--RP1End-->
 
 ## 子组件
 
@@ -34,7 +31,7 @@ SymbolGlyph(value?: Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 | SymbolGlyph组件的资源名，如 $r('sys.symbol.ohos_wifi')。  |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 | SymbolGlyph组件的资源名，如 $r('sys.symbol.ohos_wifi')。不传入时不显示图标。  |
 
 ## 汇总
 

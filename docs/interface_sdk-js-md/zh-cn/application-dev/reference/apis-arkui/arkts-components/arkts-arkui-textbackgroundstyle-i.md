@@ -14,7 +14,7 @@
 color?: ResourceColor
 ```
 
-文本背景色。
+文本背景色。默认为透明，无背景色。
 
 **类型：** ResourceColor
 
@@ -34,7 +34,7 @@ color?: ResourceColor
 radius?: Dimension | BorderRadiuses
 ```
 
-文本背景圆角。
+文本背景圆角。默认无圆角。
 
 **类型：** Dimension \| BorderRadiuses
 

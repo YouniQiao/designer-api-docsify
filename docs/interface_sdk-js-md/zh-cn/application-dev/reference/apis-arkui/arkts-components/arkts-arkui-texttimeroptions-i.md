@@ -14,7 +14,7 @@
 controller?: TextTimerController
 ```
 
-TextTimer控制器。
+TextTimer控制器，用于通过编程方式控制计时器的启动、暂停和重置。不传入时，计时器仍可正常显示但无法通过代码控制其状态。
 
 **类型：** TextTimerController
 
@@ -34,9 +34,11 @@ TextTimer控制器。
 count?: number
 ```
 
-计时器时间（isCountDown为true时生效），单位为毫秒。最长不超过86400000毫秒（24小时）。 0<count<86400000时，count值为计时器初始值。否则，使用默认值为计时器初始值。
+计时器初始时间，单位为毫秒，isCountDown为true时生效。
 
 默认值：60000
+
+取值范围为(0, 86400000)，即不超过24小时。超出取值范围时置为默认值。
 
 **类型：** number
 
@@ -83,6 +85,8 @@ startTime?: number
 ```
 
 计时器正向计时模式下的初始时间，仅当isCountDown为false时该参数设置生效。
+
+取值范围：[−2147483648, 2147483647]。
 
 默认值：0
 

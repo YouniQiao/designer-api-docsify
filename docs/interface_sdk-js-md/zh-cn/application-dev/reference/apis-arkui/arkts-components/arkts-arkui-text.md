@@ -1,10 +1,10 @@
 # Text
 
-显示一段文本的组件。
+Text组件用于显示文本内容，支持设置字体样式、文本对齐、行高、装饰线等属性，支持图文混排、文本选择、文本识别等功能，适用于需要展示文本信息的各类应用场景。
 
 ## 子组件
 
-可以包含[Span]{@link span}、[ImageSpan]{@link image_span}、[SymbolSpan]{@link symbol_span}和[ContainerSpan]{@link container_span}子组件。
+可以包含[Span]{@link ./span}、[ImageSpan]{@link ./image_span}、[SymbolSpan]{@link ./symbol_span}和[ContainerSpan]{@link ./container_span}子组件。
 > **说明：**  
 >  
 > 使用[子组件](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-text.md#子组件)实现  
@@ -32,8 +32,8 @@ Text(content?: string | Resource, value?: TextOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | string \| Resource | 否 | 文本内容。当不包含子组件[Span]{@link span}和未设置[属性字符串]{@link styled_string}时该参数生效。<br/>默认 值：' '<br/>**说明：** <br/>显示内容的优先级：属性字符串>Span>Text的文本内容。  |
-| value | [TextOptions](arkts-arkui-textoptions-i.md) | 否 | 文本组件初始化选项。<br/> |
+| content | string \| Resource | 否 | 文本内容。当需要直接显示文本内容时传入此参数。包含子组件[Span]{@link ./span}或设置了 [属性字符串]{@link ./styled_string}时，该参数不生效。 <br>默认值：' ' <br>**说明：** <br>显示内容的优先级：属性字符串>Span>Text的文本内容。  |
+| value | [TextOptions](arkts-arkui-textoptions-i.md) | 否 | 文本组件初始化选项，用于配置文本控制器。当需要使用TextController的功能控制文本内容和选择时，传入此参数。 <br>默认值：不设置时，不使用文本控制器。 <br> |
 
 ## 汇总
 

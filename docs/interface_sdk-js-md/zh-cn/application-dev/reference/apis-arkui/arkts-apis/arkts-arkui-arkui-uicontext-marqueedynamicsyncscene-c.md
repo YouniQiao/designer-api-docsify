@@ -1,6 +1,6 @@
 # MarqueeDynamicSyncScene
 
-Represents a dynamic synchronization scene of Marquee.
+提供Marquee组件动态帧率的配置能力，支持在Marquee组件运行动画时动态调节帧率，优化性能和功耗，适用于需要在跑马灯场景中平衡动画流畅度和系统资源消耗的场景。
 
 **继承/实现关系：** MarqueeDynamicSyncScene extends [DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)
 
@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 readonly type: MarqueeDynamicSyncSceneType
 ```
 
-Type of the MarqueeDynamicSyncSceneType.
+Marquee的动态帧率场景类型。用于指定Marquee组件的动态帧率场景模式，不同场景类型对应不同的帧率调节策略，详见MarqueeDynamicSyncSceneType。
 
 **类型：** MarqueeDynamicSyncSceneType
 

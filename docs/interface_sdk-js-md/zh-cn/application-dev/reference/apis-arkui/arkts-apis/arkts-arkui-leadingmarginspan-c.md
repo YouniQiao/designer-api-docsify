@@ -1,6 +1,6 @@
 # LeadingMarginSpan
 
-文本段落的自定义缩进，仅提供基类，具体实现由开发者定义。
+文本段落的自定义缩进，仅提供基类，具体实现由开发者定义。适用于需要在段落首行或各行开头绘制自定义标记、图标等内容的场景，例如列表项前的自定义符号、段落首行装饰图案等。
 
 **起始版本：** 22
 
@@ -30,7 +30,7 @@ abstract getLeadingMargin(): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 文本段落的缩进。不支持百分比。<br/>默认值：0<br/> |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 文本段落的缩进。不支持百分比。<br>默认值：0 |
 
 ## onDraw
 
@@ -54,6 +54,6 @@ abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。<br/>DrawContext的canvas方法获取的是组件的画布，绘制时不会超出组件的范围。 |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。<br>DrawContext的canvas方法获取的是组件的画布，绘制时不会超出组件的范围。 |
 | drawInfo | [LeadingMarginSpanDrawInfo](arkts-arkui-leadingmarginspandrawinfo-i.md) | 是 | 自定义绘制信息。 |
 

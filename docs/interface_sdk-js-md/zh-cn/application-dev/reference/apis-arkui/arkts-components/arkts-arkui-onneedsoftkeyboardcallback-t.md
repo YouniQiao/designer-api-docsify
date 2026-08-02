@@ -4,7 +4,7 @@
 declare type OnNeedSoftkeyboardCallback = () => boolean
 ```
 
-定义了在onNeedSoftkeyboard中被使用的回调函数类型。组件获焦时回调函数被调用，返回值表示是否需要拉起键盘。
+当绑定该方法的组件判断是否需要键盘时，将触发此回调。前提条件：组件需可获焦，否则本接口不生效。
 
 **起始版本：** 24
 

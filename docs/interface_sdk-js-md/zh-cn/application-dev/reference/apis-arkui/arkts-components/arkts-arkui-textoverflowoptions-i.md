@@ -17,7 +17,9 @@
 overflow: TextOverflow
 ```
 
-Text overflow option.
+文本超长时的显示方式。
+
+默认值：TextOverflow.Clip
 
 **类型：** TextOverflow
 

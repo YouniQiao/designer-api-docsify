@@ -79,7 +79,7 @@ Disables specified system service menu items in the text selection menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | Array&lt;TextMenuItemId&gt; | Yes | List of menu items to disable.<br>Default value: [].<br>By default, no menu item is disabled. |
+| items | Array&lt;TextMenuItemId&gt; | Yes | List of menu items to disable. |
 
 ## disableSystemServiceMenuItems
 
@@ -134,7 +134,7 @@ Disables all system service menu items in the text selection menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disable | boolean | Yes | Whether to disable system service menu items. The value **true** means to disable system service menu items, and **false** means the opposite.<br>Default value: false. |
+| disable | boolean | Yes | Whether to disable system service menu items. The value **true** means to disable system service menu items, and **false** means the opposite. |
 
 ## setMenuOptions
 
@@ -142,7 +142,7 @@ Disables all system service menu items in the text selection menu.
 setMenuOptions(options: TextMenuOptions): void
 ```
 
-Set menu options.
+Sets menu options.
 
 **Since:** 16
 

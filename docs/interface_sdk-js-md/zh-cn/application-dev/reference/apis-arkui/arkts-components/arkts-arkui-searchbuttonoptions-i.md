@@ -60,7 +60,9 @@ fontColor?: ResourceColor
 fontSize?: Length
 ```
 
-文本按钮字体大小，不支持百分比。
+文本按钮字体大小，不传入单位时默认单位为vp，不支持百分比。传入百分比时，不生效。
+
+默认值：跟随主题。
 
 **类型：** Length
 

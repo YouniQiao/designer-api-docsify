@@ -14,7 +14,7 @@ TextArea初始化参数。
 controller?: TextAreaController
 ```
 
-设置TextArea控制器。
+设置TextArea控制器。不设置时，组件使用内部默认控制器，但无法调用控制器相关方法。
 
 **类型：** TextAreaController
 
@@ -36,6 +36,8 @@ placeholder?: ResourceStr
 
 仅设置placeholder属性时，手柄依然跟随拖动，手柄松开后光标停留在文字开头位置。
 
+默认值：空字符串，不设置时不显示提示文本。
+
 **类型：** ResourceStr
 
 **起始版本：** 7
@@ -49,18 +51,26 @@ placeholder?: ResourceStr
 ## text
 
 ```TypeScript
-text?: ResourceStr | Bindable<ResourceStr> | Bindable<Resource> | Bindable<string>
+text?: ResourceStr
 ```
 
-Sets the current value of TextArea.
+设置输入框当前的文本内容。默认值：空字符串。
 
-**类型：** ResourceStr \| Bindable&lt;ResourceStr&gt; \| Bindable&lt;Resource&gt; \| Bindable&lt;string&gt;
+建议通过onChange事件将状态变量与文本实时绑定，
 
-**起始版本：** 20
+避免组件刷新时TextArea中的文本内容异常。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+从API version 10开始，该参数支持[$$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
-<!--Device-TextAreaOptions-text?: ResourceStr | Bindable<ResourceStr> | Bindable<Resource> | Bindable<string>--><!--Device-TextAreaOptions-text?: ResourceStr | Bindable<ResourceStr> | Bindable<Resource> | Bindable<string>-End-->
+从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+
+**类型：** ResourceStr
+
+**起始版本：** 7
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-TextAreaOptions-text?: ResourceStr--><!--Device-TextAreaOptions-text?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

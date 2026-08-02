@@ -20,6 +20,8 @@ value: ResourceStr
 
 **说明：**
 
+value为空字符串时不显示文本，仅显示圆点标记。
+
 从API version 20开始，支持ResourceStr类型。
 
 **类型：** ResourceStr

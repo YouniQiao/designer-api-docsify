@@ -1,6 +1,6 @@
 # PulseSymbolEffect
 
-定义PulseSymbolEffect类，继承自父类SymbolEffect，脉冲动效。
+PulseSymbolEffect继承自父类SymbolEffect，脉冲动效。
 
 **继承/实现关系：** PulseSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 

@@ -1,8 +1,8 @@
 # LoadingProgress属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)外，还支持以下属性。
+除支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)外，还支持以下属性。
 
-支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)。
 
 **继承/实现关系：** LoadingProgressAttribute extends [CommonMethod<LoadingProgressAttribute>](CommonMethod<LoadingProgressAttribute>)
 
@@ -34,7 +34,7 @@ color(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 加载进度条的前景色。<br/>默认值：<br/>API version 10及以下：'#99666666'<br/>API version 11及以上：'#ff666666' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 加载进度条的前景色。<br>默认值：<br>API version 10及以下：'#99666666'<br>API version 11及以上：'#ff666666' |
 
 ## contentModifier
 
@@ -58,7 +58,7 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;LoadingProgressConfiguration&gt; | 是 | 在LoadingProgress组件上，定制内容区的方法。<br/>modifier： 内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;LoadingProgressConfiguration&gt; | 是 | 在LoadingProgress组件上，定制内容区的方法。<br>modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## enableLoading
 
@@ -82,5 +82,5 @@ enableLoading(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | LoadingProgress动画是否显示。<br/>默认值：true，true表示显示LoadingProgress动画，false表示不显示LoadingProgress动画。 |
+| value | boolean | 是 | LoadingProgress动画是否显示。<br>默认值：true，true表示显示LoadingProgress动画，false表示不显示LoadingProgress动画。 |
 

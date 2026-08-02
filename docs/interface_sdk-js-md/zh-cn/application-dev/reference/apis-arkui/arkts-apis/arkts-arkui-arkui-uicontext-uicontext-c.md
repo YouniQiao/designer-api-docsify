@@ -853,7 +853,7 @@ getFocusController(): FocusController
 getFont(): Font
 ```
 
-get object font.
+获取Font对象。
 
 **起始版本：** 10
 
@@ -869,7 +869,7 @@ get object font.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Font](arkts-arkui-arkui-uicontext-font-c.md) | object Font. |
+| [Font](arkts-arkui-arkui-uicontext-font-c.md) | Font实例对象。 |
 
 ## getFrameNodeById
 
@@ -1062,7 +1062,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 getMagnifier(): Magnifier
 ```
 
-获取[Magnifier](arkts-arkui-uicontext.md)对象，可控制放大镜显示和隐藏。
+获取[Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md)对象，可控制放大镜显示和隐藏。
 
 **起始版本：** 22
 
@@ -1110,7 +1110,7 @@ Get the max font scale.
 getMeasureUtils(): MeasureUtils
 ```
 
-Get MeasureUtils.
+允许用户通过UIContext对象，获取MeasureUtils对象进行文本计算。
 
 **起始版本：** 12
 
@@ -1126,7 +1126,7 @@ Get MeasureUtils.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MeasureUtils](arkts-arkui-arkui-uicontext-measureutils-c.md) | the MeasureUtils |
+| [MeasureUtils](arkts-arkui-arkui-uicontext-measureutils-c.md) | 提供文本宽度、高度等相关计算。 |
 
 ## getMediaQuery
 
@@ -1414,7 +1414,7 @@ getSmartGestureController(): SmartGestureController
 getTextMenuController(): TextMenuController
 ```
 
-Get object text menu controller.
+获取[TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md)对象，可通过该对象控制文本选择菜单。
 
 **起始版本：** 16
 
@@ -1430,7 +1430,7 @@ Get object text menu controller.
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | object text menu controller. |
+| [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) | TextMenuController对象。 |
 
 ## getUIInspector
 

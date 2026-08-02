@@ -22,6 +22,8 @@ strokeRadius?: PX | VP | LPX | Resource
 
 取值范围[0, strokeWidth / 2]。默认值：strokeWidth / 2。
 
+超出取值范围时按默认值处理。
+
 **类型：** PX \| VP \| LPX \| Resource
 
 **默认值：** strokeWidth / 2
@@ -42,9 +44,13 @@ strokeRadius?: PX | VP | LPX | Resource
 strokeWidth?: Length
 ```
 
-设置进度条宽度（不支持百分比设置）。当宽度大于等于半径时，宽度默认修改为半径值的二分之一。
+设置进度条宽度。
 
 默认值：4.0vp
+
+取值范围：大于0的数值，不支持百分比设置。
+
+超出取值范围或设置非法值时按默认值处理。
 
 **类型：** Length
 

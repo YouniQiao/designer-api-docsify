@@ -2,6 +2,12 @@
 
 Defines the controller of the **Text** component.
 
+## Objects to Import
+
+```ts
+controller: TextController = new TextController()
+```
+
 **Since:** 11
 
 <!--Device-unnamed-declare class TextController--><!--Device-unnamed-declare class TextController-End-->

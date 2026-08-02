@@ -1,6 +1,7 @@
 # Badge
 
-信息标记组件，可以附加在单个组件上用于信息提醒的容器组件。
+信息标记容器组件，可以附加在单个组件上用于信息提醒。支持数字、字符串和圆点三种标记形式，可自定义标记样式（文本颜色、大小、标记颜色和大小）和显示位置。适用于需要提示用户有新消息或未读消息的场景，例如未读消息计数、新功能提示等，帮助用户
+快速识别和关注重要信息，提升用户体验。
 
 ## 子组件
 
@@ -8,11 +9,11 @@
 > **说明：**  
 >  
 > - 子组件类型：系统组件和自定义组件，支持渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、  
-> [ForEach]{@link for_each}和[LazyForEach]{@link lazy_for_each}）。  
+> [ForEach]{@link ./for_each}和[LazyForEach]{@link ./lazy_for_each}）。  
 >  
 > - 自定义组件宽高默认为0，需要给其设置宽高，否则标记组件将不显示。  
 >  
-> - 当存在多个子组件时，只有最后一个子组件会在界面上显示，但其余子组件的状态更新仍会使Badge及其子组件重新布局渲染。  
+> - 当存在多个子组件时，只有最后一个子组件会在界面上显示，但其余子组件的状态更新仍会触发Badge及其包含的所有子组件重新布局渲染。  
 >  
 > - 不影响子组件布局，即不会主动规避子组件内容。
 
@@ -38,7 +39,7 @@ Badge(value: BadgeParamWithNumber)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | 是 | 数字标记组件参数。  |
+| value | [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | 是 | 数字标记组件参数，用于配置根据数字创建的Badge组件，包含消息数、显示位置和样式等属性。  |
 
 ## Badge
 

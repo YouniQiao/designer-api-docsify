@@ -1,8 +1,8 @@
 # Badge属性/事件
 
-支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)。
 
-支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)。
 
 **继承/实现关系：** BadgeAttribute extends [CommonMethod<BadgeAttribute>](CommonMethod<BadgeAttribute>)
 

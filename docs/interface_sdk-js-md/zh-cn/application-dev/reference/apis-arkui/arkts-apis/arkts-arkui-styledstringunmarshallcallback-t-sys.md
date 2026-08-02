@@ -26,5 +26,5 @@ declare type StyledStringUnmarshallCallback = (buf: ArrayBuffer) => StyledString
 
 | 类型 | 说明 |
 | --- | --- |
-| [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | 反序列化得到的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) 。  |
+| [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | 反序列化得到的自定义数据片段对象，用于恢复用户自定义的样式数据。  |
 

@@ -11,7 +11,7 @@
 ## Default
 
 ```TypeScript
-Default = 0
+Default
 ```
 
 默认风格，光标宽1.5vp，光标高度与文本选中底板高度和字体大小相关。
@@ -20,14 +20,14 @@ Default = 0
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TextInputStyle-Default = 0--><!--Device-TextInputStyle-Default = 0-End-->
+<!--Device-TextInputStyle-Default--><!--Device-TextInputStyle-Default-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## Inline
 
 ```TypeScript
-Inline = 1
+Inline
 ```
 
 内联输入风格。文本选中底板高度与输入框高度相同。
@@ -42,7 +42,7 @@ Inline = 1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TextInputStyle-Inline = 1--><!--Device-TextInputStyle-Inline = 1-End-->
+<!--Device-TextInputStyle-Inline--><!--Device-TextInputStyle-Inline-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

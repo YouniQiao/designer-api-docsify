@@ -17,7 +17,13 @@ Marquee初始化参数。
 delay?: number
 ```
 
-两轮跑马灯之间的等待时间。
+设置两轮滚动之间的延迟时间。
+
+默认值：0
+
+取值范围：[0, +∞)，设置的值小于0时等价于设置0。
+
+单位：毫秒
 
 **类型：** number
 
@@ -39,7 +45,11 @@ delay?: number
 fromStart?: boolean
 ```
 
-Set text to scroll from the beginning or backward.
+设置文本的滚动方向。
+
+true：表示文本从头部位置开始正向滚动；false：表示文本反向滚动。
+
+默认值：true
 
 **类型：** boolean
 
@@ -61,7 +71,13 @@ Set text to scroll from the beginning or backward.
 loop?: number
 ```
 
-Set the number of times the scroll is repeated, infinite loop if it is less than or equal to zero.
+设置重复滚动的次数，小于等于零时无限循环。
+
+默认值：-1
+
+**说明：**
+
+ArkTS卡片上该参数设置任意值都仅在可见时滚动一次。当设置为大于0的有限次数且播放完毕后，不可以通过改变start参数重置滚动次数重新开始播放。
 
 **类型：** number
 
@@ -83,9 +99,9 @@ Set the number of times the scroll is repeated, infinite loop if it is less than
 spacing?: LengthMetrics
 ```
 
-两轮跑马灯的间距。
+两轮跑马灯之间的间距。如果LengthMetrics的unit值是PERCENT，当前设置不生效，按默认值处理。
 
-默认值为跑马灯宽度。
+默认值：跑马灯组件宽度。
 
 **类型：** LengthMetrics
 
@@ -107,7 +123,7 @@ spacing?: LengthMetrics
 src: string
 ```
 
-Text that needs scrolling.
+需要滚动的文本。
 
 **类型：** string
 
@@ -127,7 +143,13 @@ Text that needs scrolling.
 start: boolean
 ```
 
-Control whether the running lamp enters the playing state.
+控制跑马灯是否进入播放状态。
+
+true：播放；false：不播放。
+
+**说明：**
+
+当loop参数设置为大于0的有限次数且播放完毕后，不可以通过改变start参数重置滚动次数重新开始播放。
 
 **类型：** boolean
 
@@ -147,7 +169,13 @@ Control whether the running lamp enters the playing state.
 step?: number
 ```
 
-Scroll animation text scroll step, when step is larger than the text width of Marquee, take the default value.
+滚动动画的文本步长。
+
+取值范围：[0, 文本宽度]，当step大于Marquee的文本宽度时，取默认值。
+
+默认值：6
+
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** number
 

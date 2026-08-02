@@ -14,13 +14,13 @@
 position?: BadgePosition | Position
 ```
 
-设置提示点显示位置。
+设置标记显示位置。
 
 默认值：BadgePosition.RightTop
 
 **说明：**
 
-Position作为入参，不支持设置百分比；设置为非法值时，默认(0,0)处理。(0,0)为组件左上角位置。
+Position作为入参，不支持设置百分比；设置为非法值时，按(0,0)处理，(0,0)为组件左上角位置。
 
 BadgePosition作为入参时，会跟随[Direction](../arkts-apis/arkts-arkui-direction-e.md)属性控制镜像显示。
 
@@ -44,7 +44,7 @@ BadgePosition作为入参时，会跟随[Direction](../arkts-apis/arkts-arkui-di
 style: BadgeStyle
 ```
 
-Badge组件可设置样式，支持设置文本颜色、尺寸、圆点颜色和尺寸。
+Badge组件可设置样式，支持设置文本颜色、大小、标记颜色和标记大小。
 
 **类型：** BadgeStyle
 

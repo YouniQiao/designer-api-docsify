@@ -38,6 +38,8 @@ icon?: ResourceStr
 
 不支持网络图片。
 
+默认值：undefined，不显示菜单图标。
+
 **类型：** ResourceStr
 
 **起始版本：** 12
@@ -79,6 +81,8 @@ labelInfo?: ResourceStr
 快捷键提示。
 
 该字段仅2in1设备支持。
+
+默认值：undefined，不显示快捷键提示。
 
 **类型：** ResourceStr
 

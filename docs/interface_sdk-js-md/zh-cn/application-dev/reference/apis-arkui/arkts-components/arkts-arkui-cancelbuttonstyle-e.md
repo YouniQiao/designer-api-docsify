@@ -11,7 +11,7 @@
 ## CONSTANT
 
 ```TypeScript
-CONSTANT = 0
+CONSTANT
 ```
 
 清除按钮常显样式。
@@ -22,14 +22,14 @@ CONSTANT = 0
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CancelButtonStyle-CONSTANT = 0--><!--Device-CancelButtonStyle-CONSTANT = 0-End-->
+<!--Device-CancelButtonStyle-CONSTANT--><!--Device-CancelButtonStyle-CONSTANT-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## INVISIBLE
 
 ```TypeScript
-INVISIBLE = 1
+INVISIBLE
 ```
 
 清除按钮常隐样式。
@@ -40,14 +40,14 @@ INVISIBLE = 1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CancelButtonStyle-INVISIBLE = 1--><!--Device-CancelButtonStyle-INVISIBLE = 1-End-->
+<!--Device-CancelButtonStyle-INVISIBLE--><!--Device-CancelButtonStyle-INVISIBLE-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## INPUT
 
 ```TypeScript
-INPUT = 2
+INPUT
 ```
 
 清除按钮输入样式。
@@ -58,7 +58,7 @@ INPUT = 2
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-CancelButtonStyle-INPUT = 2--><!--Device-CancelButtonStyle-INPUT = 2-End-->
+<!--Device-CancelButtonStyle-INPUT--><!--Device-CancelButtonStyle-INPUT-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -220,7 +220,7 @@ Sets the width of the path stroke. If this attribute is set to **0** or a negati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes | Width of the path stroke.<br>Value constraint: (0, sideLength/3]. Default value: 12vp.<br>Unit: vp. |
+| value | number \| string | Yes | Width of the path stroke.<br>Value constraint: (0, sideLength/3]. Default value: 12.<br>Unit: vp. |
 
 ## regularColor
 

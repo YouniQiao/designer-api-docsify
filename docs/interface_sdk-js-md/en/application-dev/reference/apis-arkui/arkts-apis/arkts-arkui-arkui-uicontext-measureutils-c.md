@@ -102,6 +102,11 @@ measureTextSize(options: MeasureOptions): SizeOptions
 ```
 
 Measures the width and height of the given single-line text.
+> **NOTE**  
+>  
+> When calling this MPI, do not use [ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setfontsizescale) to set the font size scaling ratio. To  
+> ensure the correctness of the time sequence, you are advised to monitor the font scaling changes by yourself to  
+> ensure the accuracy of the calculation result.
 
 **Since:** 12
 

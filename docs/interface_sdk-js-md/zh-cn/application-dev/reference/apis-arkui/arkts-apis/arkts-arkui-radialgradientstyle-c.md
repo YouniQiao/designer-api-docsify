@@ -16,7 +16,7 @@
 constructor(options: RadialGradientOptions)
 ```
 
-用于创建RadialGradientOptions对象的构造函数。
+用于创建RadialGradientStyle对象的构造函数。
 
 **起始版本：** 20
 

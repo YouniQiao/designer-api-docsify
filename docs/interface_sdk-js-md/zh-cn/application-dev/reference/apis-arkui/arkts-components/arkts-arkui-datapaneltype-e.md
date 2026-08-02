@@ -11,7 +11,7 @@
 ## Line
 
 ```TypeScript
-Line = 0
+Line
 ```
 
 线型数据面板。
@@ -22,7 +22,7 @@ Line = 0
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-DataPanelType-Line = 0--><!--Device-DataPanelType-Line = 0-End-->
+<!--Device-DataPanelType-Line--><!--Device-DataPanelType-Line-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

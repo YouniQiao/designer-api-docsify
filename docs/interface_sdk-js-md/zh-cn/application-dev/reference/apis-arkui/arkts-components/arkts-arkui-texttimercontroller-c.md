@@ -5,7 +5,7 @@ TextTimer组件的控制器，用于控制文本计时器。一个TextTimer组�
 ## 导入对象
 
 ```ts
-textTimerController: TextTimerController = new TextTimerController()
+textTimerController: TextTimerController = new TextTimerController();
 ```
 
 **起始版本：** 8
@@ -38,7 +38,7 @@ TextTimerController的构造函数。
 pause()
 ```
 
-计时暂停。
+计时暂停。需在组件创建完成后调用。
 
 **起始版本：** 8
 
@@ -56,7 +56,7 @@ pause()
 reset()
 ```
 
-重置计时器。
+重置计时器。需在组件创建完成后调用。
 
 **起始版本：** 8
 
@@ -74,7 +74,7 @@ reset()
 start()
 ```
 
-计时开始。
+计时开始。需在TextTimer组件创建完成并绑定控制器后调用。
 
 **起始版本：** 8
 

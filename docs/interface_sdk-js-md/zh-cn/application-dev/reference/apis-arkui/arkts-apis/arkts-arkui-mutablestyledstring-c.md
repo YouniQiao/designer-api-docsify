@@ -82,7 +82,7 @@ insertString(start: number, other: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | start | number | 是 | 插入位置的下标。 |
-| other | string | 是 | 插入的新文本内容。<br/>**说明：** <br/>插入的字符串使用的是start-1位置字符的样式。若start-1位置字符未设置样式，则使用start位置字符样式。 |
+| other | string | 是 | 插入的新文本内容。<br>**说明：**<br>插入的字符串使用的是start-1位置字符的样式。若start-1位置字符未设置样式，则使用start位置字符样式。 |
 
 **错误码：**
 
@@ -249,7 +249,7 @@ replaceString(start: number, length: number, other: string): void
 | --- | --- | --- | --- |
 | start | number | 是 | 指定范围的下标。 |
 | length | number | 是 | 指定范围的长度。 |
-| other | string | 是 | 替换的新文本内容。<br/>**说明：** <br/>替换的字符串使用的是start位置字符的样式。 |
+| other | string | 是 | 替换的新文本内容。<br>**说明：**<br>替换的字符串使用的是start位置字符的样式。 |
 
 **错误码：**
 
@@ -279,7 +279,7 @@ replaceStyle(spanStyle: SpanStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 | 样式对象。<br/>**说明：** <br/>默认清空原有样式，替换为新样式。<br/>当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
+| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 | 样式对象。<br>**说明：**<br>默认清空原有样式，替换为新样式。<br>当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
 
 **错误码：**
 
@@ -341,7 +341,7 @@ setStyle(spanStyle: SpanStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 | 样式对象。<br/>默认不清空原有样式，叠加新样式。如果StyledStringValue类型相同，则新样式将覆盖旧样式。<br/>当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
+| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 | 样式对象。<br>默认不清空原有样式，叠加新样式。如果StyledStringValue类型相同，则新样式将覆盖旧样式。<br>当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
 
 **错误码：**
 

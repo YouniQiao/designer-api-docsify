@@ -18,7 +18,7 @@ enableVariableFontWeight?: boolean
 
 默认值：false
 
-true：启用可变字重调节。此时如果weight取值为[100, 900]范围内任意整数，字重取值为weight。
+true：启用可变字重调节。此时如果weight取值为[100, 900]范围内任意整数，字重取值为weight，否则取默认值400。
 
 false：禁用可变字重调节。此时如果weight取值为[100, 900]范围内的整百数值，字重取值为weight；weight是非整百数值时，字重取默认值400。
 

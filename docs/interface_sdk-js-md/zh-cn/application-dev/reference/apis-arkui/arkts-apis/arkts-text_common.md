@@ -40,7 +40,7 @@
 | [StyledStringChangedListener](arkts-arkui-styledstringchangedlistener-i.md) | 属性字符串的文本内容变化监听器。 |
 | [StyledStringController](arkts-arkui-styledstringcontroller-i.md) | 定义StyledString控制器。 |
 | [TextBaseController](arkts-arkui-textbasecontroller-i.md) | 文本选择控制器。 |
-| [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | 变化前的文本信息，以及变化后的选区范围。 |
+| [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | 文本变化相关信息，包括变化前后的选区范围、变化前的文本内容等。 |
 | [TextDataDetectorConfig](arkts-arkui-textdatadetectorconfig-i.md) | 该配置只支持[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md)组件和[RichEditor](../arkts-components/arkts-arkui-richeditor.md)组件。 |
 | [TextEditControllerEx](arkts-arkui-texteditcontrollerex-i.md) | 文本扩展编辑控制器。  继承自[TextBaseController](arkts-arkui-textbasecontroller-i.md)。 |
 | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | 文本布局选项。 |
@@ -61,7 +61,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AutoCapitalizationMode](arkts-arkui-autocapitalizationmode-e.md) | 自动大小写模式类型，只提供接口能力，具体实现以输入法应用为主。 |
+| [AutoCapitalizationMode](arkts-arkui-autocapitalizationmode-e.md) | 自动大小写模式类型，只提供接口能力，具体实现由输入法应用决定。 |
 | [FlipDirection](arkts-arkui-flipdirection-e.md) | 翻牌方向。默认值为DOWN。 |
 | [IncrementalUpdatePolicy](arkts-arkui-incrementalupdatepolicy-e.md) | 文本渲染的增量更新策略。 |
 | [KeyboardAppearance](arkts-arkui-keyboardappearance-e.md) | 键盘外观。 |

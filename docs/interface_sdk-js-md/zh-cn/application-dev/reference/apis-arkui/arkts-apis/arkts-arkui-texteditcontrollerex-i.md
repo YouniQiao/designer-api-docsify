@@ -58,7 +58,7 @@ getPreviewText?(): PreviewText
 
 | 类型 | 说明 |
 | --- | --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) | 预上屏信息。 |
+| [PreviewText](arkts-arkui-previewtext-i.md) | 预上屏信息，包含预上屏起始位置索引和预上屏文本内容。 |
 
 ## isEditing
 
@@ -106,13 +106,13 @@ setCaretOffset(offset: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 是 | 光标偏移位置。超出所有内容范围时，设置失败。 |
+| offset | number | 是 | 光标偏移位置，取值范围[0, 文本长度]。超出所有内容范围时，设置失败。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 光标是否设置成功。<br/>true表示光标设置成功，false表示设置失败。 |
+| boolean | 光标是否设置成功。<br>true表示光标设置成功，false表示设置失败。 |
 
 ## stopEditing
 

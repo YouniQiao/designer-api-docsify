@@ -34,7 +34,7 @@ contentModifier(modifier: ContentModifier<TextClockConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;TextClockConfiguration&gt; | 是 | 在TextClock组件上，定制内容区的方法。<br/>modifier： 内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;TextClockConfiguration&gt; | 是 | 在TextClock组件上，定制内容区的方法。<br>modifier： 内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## dateTimeOptions
 
@@ -60,7 +60,7 @@ dateTimeOptions(dateTimeOptions: Optional<DateTimeOptions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dateTimeOptions | [Optional](arkts-arkui-optional-t.md)&lt;DateTimeOptions&gt; | 是 | 设置小时是否显示前导0，只支持设置hour参数，参数值为{hour: "2-digit"}时表示显示前导0，参数值为{hour: "numeric"}时表示不显示前导0。<br/>默认值：undefined，默认状态下，24小时制显示前导0，12小时制不显示前导0。 |
+| dateTimeOptions | [Optional](arkts-arkui-optional-t.md)&lt;DateTimeOptions&gt; | 是 | 设置小时是否显示前导0，只支持设置hour参数，参数值为{hour: "2-digit"}时表示显示前导0，参数值为{hour: "numeric"}时表示不显示前导0。<br>默认值：undefined，默认状态下，24小时制显示前导0，12小时制不显示前导0。 |
 
 ## fontColor
 
@@ -84,7 +84,7 @@ fontColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 字体颜色。<br/>Wearable设备上默认值：'#c5ffffff'，其他设备默认值：'e6182431' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 字体颜色。<br>Wearable设备上默认值：'#c5ffffff'，其他设备默认值：'#e6182431' |
 
 ## fontFamily
 
@@ -142,7 +142,7 @@ fontFeature(value: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 文字特性效果。 |
+| value | string | 是 | 文字特性效果，用于设置文字的OpenType特性。格式为：normal \| &lt;feature-tag-value&gt;，其中&lt;feature-tag-value&gt;格式为：<string> [ <integer> \| on \| off ]。可设置多个特性，中间用','隔开。例如，使用等宽时钟数字的格式为：'"ss01" on'。 |
 
 ## fontSize
 
@@ -166,7 +166,7 @@ fontSize(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 字体大小。fontSize为number类型时，使用fp单位。字体默认大小16fp。不支持设置百分比字符串。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 字体大小。fontSize为number类型时，使用fp单位。<br>字体默认大小16fp。不支持设置百分比字符串，传入百分比字符串时使用默认值。 |
 
 ## fontStyle
 
@@ -190,7 +190,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | 是 | 字体样式。<br/>默认值：FontStyle.Normal，表示标准的字体样式（非斜体）。 |
+| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | 是 | 字体样式。<br>默认值：FontStyle.Normal，表示标准的字体样式（非斜体）。 |
 
 ## fontWeight
 
@@ -214,7 +214,7 @@ fontWeight(value: number | FontWeight | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | 是 | 文本的字体粗细，number类型取值范围为[100, 900]，取值间隔为100，取值越大，字体越粗。number类型取值范围外的默认值为400。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。<br/>默认值：FontWeight.Normal |
+| value | number \| FontWeight \| string | 是 | 文本的字体粗细，number类型取值范围为[100, 900]，取值间隔为100，取值越大，字体越粗。number类型取值范围外的默认值为400。string类型支持：number类型取值的字符串形式（如400），以及枚举值'lighter'（对应300）、'regular'（对应400）、'medium'（对应500）、'bold'（对应700）、'bolder'（对应900），分别对应FontWeight中相应的枚举值。<br>默认值：FontWeight.Normal |
 
 ## format
 
@@ -232,7 +232,9 @@ d：日（若想使用01日则使用dd）
 
 E：星期（若想使用星期六则使用EEEE，若想使用周六则使用E、EE、EEE）
 
-H：小时（24小时制） h：小时（12小时制）
+H：小时（24小时制）
+
+h：小时（12小时制）
 
 m：分钟
 
@@ -256,7 +258,7 @@ a：上午/下午（当设置小时制式为H时，该参数不生效）
 
 卡片中默认值：12小时制：hh:mm，24小时制：HH:mm 。
 
-卡片中使用时，最小时间单位为分钟。如果设置格式中有秒或厘秒按默认值处理。
+卡片中使用时，最小时间单位为分钟。如果设置格式中有秒或厘秒，则按默认值处理。
 
 以下是format输入的格式样式及对应的显示效果：
 
@@ -314,6 +316,8 @@ a：上午/下午（当设置小时制式为H时，该参数不生效）
 onDateChange(event: (value: number) => void)
 ```
 
+提供时间变化回调，该事件回调间隔为秒。
+
 组件不可见时不回调。
 
 非卡片中使用时，该事件回调间隔为秒。
@@ -334,7 +338,7 @@ onDateChange(event: (value: number) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (value: number) =&gt; void | 是 | Unix Time Stamp，即自1970年1月1日（UTC）起经过的秒数。 |
+| event | (value: number) =&gt; void | 是 | Unix time stamp, which is the number of seconds that have elapsed since the Unix epoch. |
 
 ## textShadow
 
@@ -342,7 +346,7 @@ onDateChange(event: (value: number) => void)
 textShadow(value: ShadowOptions | Array<ShadowOptions>)
 ```
 
-设置文字阴影效果。该接口支持以数组形式入参，实现多重文字阴影。不支持fill字段, 不支持智能取色模式。
+设置文字阴影效果。该接口支持以数组形式入参，实现多重文字阴影。不支持fill字段和智能取色模式。
 
 **起始版本：** 11
 
@@ -360,5 +364,5 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt; | 是 | 文字的字体阴影效果。 |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt; | 是 | 文字阴影效果。支持单个阴影对象或阴影数组实现多重阴影效果。ShadowOptions对象包含radius（模糊半径）、color（阴影颜色）、offsetX（X轴偏移）、offsetY（Y轴偏移）等属性。<br>不支持fill字段，不支持智能取色模式。具体属性说明请参考[ShadowOptions对象说明](arkts-arkui-shadowoptions-i.md)。 |
 

@@ -50,6 +50,10 @@ clearPreviewText(): void
 ```
 
 Notifies the input method to clear the current preview text.
+> **NOTE**  
+>  
+> When the controller is not bound to any component or the component bound to the controller is released, this  
+interface does not take effect.
 
 **Since:** 17
 
@@ -70,6 +74,10 @@ deleteBackward(): void
 Deletes the character before the text cursor in the text box bound to the basic controller. If some text has been selected using the mouse or keyboard before this function is called, the selected text will be deleted.
 
 This API is not supported in preview display scenarios.
+> **NOTE**  
+>  
+> When the controller is not bound to any component or the component bound to the controller is released, this  
+interface does not take effect.
 
 **Since:** 23
 
@@ -229,6 +237,9 @@ scrollToVisible(range?: TextRange): void
 ```
 
 Passes the start and end indexes to the bound text box components (**TextInput**, **TextArea**, and **Search**),and scrolls the text within the range to the visible area.
+> **NOTE**  
+> When the controller is not bound to any component or the component bound to the controller is released, this  
+interface does not take effect.
 
 **Since:** 23
 
@@ -253,6 +264,10 @@ setStyledPlaceholder(styledString: StyledString): void
 ```
 
 Binds or updates the styled placeholder string.
+> **NOTE**  
+>  
+> When the controller is not bound to any component or the component bound to the controller is released, this  
+interface does not take effect.
 
 **Since:** 22
 

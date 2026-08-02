@@ -4,7 +4,7 @@
 type ImageCompleteCallback = (result: ImageLoadResult) => void
 ```
 
-图片加载成功和解码成功时触发的回调。
+图片加载成功和解码成功时均触发的回调。
 
 **起始版本：** 12
 

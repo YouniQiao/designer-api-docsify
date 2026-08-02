@@ -41,9 +41,9 @@ color?: ResourceColor
 style?: TextDecorationStyle
 ```
 
-装饰线样式。
+装饰线样式。具体枚举及说明请参考TextDecorationStyle。
 
-默认值：TextDecorationStyle.SOLID
+默认值：TextDecorationStyle.SOLID。
 
 **类型：** TextDecorationStyle
 
@@ -89,9 +89,9 @@ thicknessScale?: number
 type: TextDecorationType
 ```
 
-装饰线类型。
+装饰线类型。具体枚举及说明请参考TextDecorationType。
 
-默认值：TextDecorationType.None
+默认值：TextDecorationType.None。
 
 **类型：** TextDecorationType
 

@@ -16,7 +16,7 @@ color?: ResourceColor
 
 光标颜色。
 
-默认值：'#ff007dff'
+默认值：'#ff007dff'，表示蓝色。
 
 **类型：** ResourceColor
 

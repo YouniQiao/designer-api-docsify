@@ -1,8 +1,8 @@
 # SymbolSpan属性/事件
 
-不支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，支持以下属性：
+不支持[通用属性](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md)，支持以下属性。
 
-不支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+不支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)。
 
 **继承/实现关系：** SymbolSpanAttribute extends [CommonMethod<SymbolSpanAttribute>](CommonMethod<SymbolSpanAttribute>)
 
@@ -42,7 +42,11 @@ attributeModifier(modifier: AttributeModifier<SymbolSpanAttribute>)
 effectStrategy(value: SymbolEffectStrategy)
 ```
 
-设置SymbolSpan动效策略。
+设置SymbolSpan动效策略。未通过该接口设置时，默认动效策略为SymbolEffectStrategy.NONE。
+
+NONE表示无动效，适用于静态展示场景；SCALE表示整体缩放动效，适用于需要吸引用户注意力的场景，如按钮点击反馈；HIERARCHICAL表示层级动效，适用于需要突出图标层次感的场景。
+
+不同动效策略效果可以参考[示例1（设置渲染和动效策略）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolSpan.md#示例1设置渲染和动效策略)。
 > **说明：**  
 >  
 > 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
@@ -63,7 +67,7 @@ effectStrategy(value: SymbolEffectStrategy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | 是 | SymbolSpan动效策略。<br/>默认值：SymbolEffectStrategy.NONE |
+| value | [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | 是 | SymbolSpan动效策略。 |
 
 ## fontColor
 
@@ -71,7 +75,7 @@ effectStrategy(value: SymbolEffectStrategy)
 fontColor(value: Array<ResourceColor>)
 ```
 
-设置SymbolSpan组件颜色。
+设置SymbolSpan组件颜色。未通过该接口设置时，默认颜色随[renderingStrategy](SymbolSpanAttribute#renderingStrategy)变化，单色渲染策略（SINGLE）下默认为单色；多色渲染策略（MULTIPLE_COLOR）和分层渲染策略（MULTIPLE_OPACITY）下默认取图标资源预设的多色配置。具体说明请参考[SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)。
 > **说明：**  
 >  
 > 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
@@ -92,7 +96,7 @@ fontColor(value: Array<ResourceColor>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;ResourceColor&gt; | 是 | SymbolSpan组件颜色。<br/> 默认值：不同渲染策略下默认值不同。 |
+| value | Array&lt;ResourceColor&gt; | 是 | SymbolSpan组件颜色。具体颜色渲染模式及其说明请参考[SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)。 |
 
 ## fontSize
 
@@ -100,7 +104,7 @@ fontColor(value: Array<ResourceColor>)
 fontSize(value: number | string | Resource)
 ```
 
-设置SymbolSpan组件大小。设置string类型时，支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。
+设置SymbolSpan组件大小。设置string类型时，支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。未通过该接口设置时，默认组件大小为16fp。
 > **说明：**  
 >  
 > 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
@@ -121,7 +125,7 @@ fontSize(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | SymbolSpan组件大小。<br/>默认值：16fp<br/>单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| value | number \| string \| Resource | 是 | SymbolSpan组件大小。<br>取值范围：[0, +∞)<br>单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
 
 ## fontWeight
 
@@ -129,7 +133,7 @@ fontSize(value: number | string | Resource)
 fontWeight(value: number | FontWeight | string)
 ```
 
-设置SymbolSpan组件粗细。number类型取值[100,900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular” 、“medium”分别对应FontWeight中相应的枚举值。
+设置SymbolSpan组件字体粗细。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对应数值400）。
 
 sys.symbol.ohos_lungs图标不支持设置fontWeight。
 > **说明：**  
@@ -152,7 +156,7 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | 是 | SymbolSpan组件粗细。<br/>默认值：FontWeight.Normal |
+| value | number \| FontWeight \| string | 是 | SymbolSpan组件字体粗细。<br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。 |
 
 ## fontWeight
 
@@ -160,7 +164,9 @@ sys.symbol.ohos_lungs图标不支持设置fontWeight。
 fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWeightConfigs)
 ```
 
-设置SymbolSpan组件图标小符号的粗细，支持通过FontWeightConfigs配置是否开启可变字重调节、是否开启随设备的字体粗细级别自动更新字重。
+设置SymbolSpan组件字体粗细，支持通过FontWeightConfigs配置是否开启可变字重调节、是否开启随设备的字体粗细级别自动更新字重。未通过该接口设置时，默认字体粗细为FontWeight.Normal（正常粗细，对应数值400）。
+
+sys.symbol.ohos_lungs图标不支持设置fontWeight。
 
 **起始版本：** 26.0.0
 
@@ -178,8 +184,8 @@ fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWei
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| ResourceStr | 是 | SymbolSpan组件图标小符号的粗细。<br/>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。<br/>ResourceStr类型仅支持number类型取值的字符串形式，例如“400"，以及“bold”、“bolder”、“lighter”、“regular”、“medium”分别对应FontWeight中相应的枚举值。<br/>默认值：FontWeight.Normal |
-| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 | 字体粗细配置。<br/>默认值继承[FontWeightConfigs](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#fontweightconfigs24对象说明)。 |
+| value | number \| FontWeight \| ResourceStr | 是 | SymbolSpan组件字体粗细。<br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。<br>传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 |
+| fontWeightConfigs | [FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md) | 否 | 字体粗细配置。当需要启用可变字重调节（设置非100整数倍的精细字重值如220、660）或跟随设备字体粗细级别自动更新字重时传入此参数。默认值继承[FontWeightConfigs](../arkts-apis/arkts-arkui-fontweightconfigs-i.md)。 |
 
 ## renderingStrategy
 
@@ -187,7 +193,9 @@ fontWeight(value: number | FontWeight | ResourceStr, fontWeightConfigs?: FontWei
 renderingStrategy(value: SymbolRenderingStrategy)
 ```
 
-设置SymbolSpan渲染策略。
+设置SymbolSpan渲染策略。未通过该接口设置时，默认渲染策略为SymbolRenderingStrategy.SINGLE。
+
+SINGLE表示单色渲染，适用于需要统一颜色的图标显示场景；MULTIPLE_COLOR表示多色渲染，适用于需要展示图标多层不同颜色的场景；MULTIPLE_OPACITY表示分层渲染，适用于需要展示图标层次效果的场景。
 > **说明：**  
 >  
 > 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
@@ -208,5 +216,5 @@ renderingStrategy(value: SymbolRenderingStrategy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | 是 | SymbolSpan渲染策略。<br/>默认值：SymbolRenderingStrategy.SINGLE |
+| value | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | 是 | SymbolSpan渲染策略。 |
 

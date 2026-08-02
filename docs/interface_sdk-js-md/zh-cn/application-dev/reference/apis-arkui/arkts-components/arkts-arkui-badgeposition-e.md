@@ -1,6 +1,6 @@
 # BadgePosition
 
-提示点显示位置。
+标记显示位置。
 
 **起始版本：** 7
 
@@ -11,7 +11,7 @@
 ## RightTop
 
 ```TypeScript
-RightTop = 0
+RightTop
 ```
 
 圆点显示在右上角。
@@ -22,7 +22,7 @@ RightTop = 0
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-BadgePosition-RightTop = 0--><!--Device-BadgePosition-RightTop = 0-End-->
+<!--Device-BadgePosition-RightTop--><!--Device-BadgePosition-RightTop-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

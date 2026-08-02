@@ -1,6 +1,6 @@
 # SelectionMenuOptions
 
-SelectionMenuOptions定义SelectionMenu的可选菜单类型项及其具体配置参数。
+SelectionMenuOptions定义SelectionMenu的可选菜单类型项及其配置参数。
 
 **起始版本：** 11
 
@@ -20,7 +20,7 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-菜单的背景板的系统材质。不同系统材质包含不同的属性影响效果。默认值：undefined，无材质效果。
+菜单背景板使用的系统材质，用于实现菜单背景的视觉效果（如模糊、透明度等）。不同系统材质包含不同的属性，影响最终的显示效果。具体材质类型及属性请参考[uiMaterial.Material](../../../reference/apis-arkui/arkts-apis-uimaterial.md#material)。默认值：undefined，无材质效果。
 
 **类型：** uiMaterial.Material
 
@@ -45,6 +45,8 @@ controller?: RichEditorController
 expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。
 
 expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。
+
+controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
 
 **类型：** RichEditorController
 
@@ -95,6 +97,8 @@ expandedMenuOptions?: Array<ExpandedMenuOptions>
 expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。
 
 expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。
+
+controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
 
 **类型：** Array&lt;ExpandedMenuOptions&gt;
 

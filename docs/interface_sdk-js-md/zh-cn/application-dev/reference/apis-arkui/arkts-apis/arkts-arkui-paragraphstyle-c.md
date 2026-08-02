@@ -36,7 +36,7 @@ constructor(value?: ParagraphStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | 否 | 段落样式设置项。 |
+| value | [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | 否 | 段落样式设置项。<br>默认值：不传入时继承ParagraphStyleInterface各属性的默认值。 |
 
 ## leadingMargin
 
@@ -88,6 +88,8 @@ readonly maxLines?: number
 
 获取属性字符串文本段落的最大行数。
 
+取值范围：[0, INT32_MAX]，传入负数时不限制。
+
 **类型：** number
 
 **起始版本：** 12
@@ -107,6 +109,10 @@ readonly overflow?: TextOverflow
 ```
 
 获取属性字符串文本段落超长时的显示方式。
+
+默认值：TextOverflow.None。
+
+需配合maxLines使用，单独设置不生效。不支持TextOverflow.MARQUEE。
 
 **类型：** TextOverflow
 
@@ -128,7 +134,7 @@ readonly paragraphSpacing?: number
 
 获取属性字符串文本段落的段落间距。
 
-单位：vp
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** number
 
@@ -150,6 +156,8 @@ readonly shaderStyle?: ShaderStyle
 
 获取文本着色器效果。
 
+**说明：** 该接口与[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)中的fontColor。
+
 **类型：** ShaderStyle
 
 **起始版本：** 26.0.0
@@ -168,7 +176,15 @@ readonly shaderStyle?: ShaderStyle
 readonly tailIndents?: Array<number>
 ```
 
-获取StyledString的尾部缩进。单位为vp。
+获取属性字符串文本段落的文本尾部缩进距离。
+
+单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+
+取值范围：[0, INT32_MAX]
+
+值为0时不做尾部缩进。
+
+**说明：** tailIndents数组在同一段落内的每一行按数组索引依次取值做缩进；新的段落首行重新从tailIndents数组索引0位置开始取值做缩进。
 
 **类型：** Array&lt;number&gt;
 
@@ -189,6 +205,8 @@ readonly textAlign?: TextAlign
 ```
 
 获取属性字符串文本段落在水平方向的对齐方式。
+
+**说明：** textAlign只能调整文本整体的布局，不影响字符的显示顺序。
 
 **类型：** TextAlign
 
@@ -228,7 +246,7 @@ readonly textDirection?: TextDirection
 readonly textIndent?: number
 ```
 
-获取属性字符串文本段落的首行文本缩进。单位VP
+获取属性字符串文本段落的首行文本缩进。单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** number
 

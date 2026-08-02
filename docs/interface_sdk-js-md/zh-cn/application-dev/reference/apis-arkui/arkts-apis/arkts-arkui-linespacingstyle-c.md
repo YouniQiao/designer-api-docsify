@@ -1,6 +1,6 @@
 # LineSpacingStyle
 
-文本行间距对象说明。
+文本行间距对象说明。适用于需要调整段落内各行间距的场景，例如提升文本阅读舒适度、调整文档排版密度等。
 
 **起始版本：** 26.0.0
 
@@ -14,7 +14,7 @@
 constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 ```
 
-文本行间距的构造函数。
+文本行间距的构造函数。未通过该接口设置时，默认行间距为0.0。LengthMetrics的value值小于0时，取默认值0.0。当与[LineHeightStyle](arkts-arkui-lineheightstyle-c.md)的lineHeightMultiple同时设置且lineHeightMultiple生效时，该参数不生效。
 
 **起始版本：** 26.0.0
 
@@ -30,8 +30,8 @@ constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 | 文本的行间距。<br/>默认值：0.0<br/>取值范围：[0, +∞) <br/>**说明：** LengthMetrics的value值小于0时，取默认值0.0。 |
-| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | 否 | 行间距的配置项。<br/>默认值：{ onlyBetweenLines: false } |
+| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 | 文本的行间距。<br>取值范围：[0, +∞) |
+| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | 否 | 行间距的配置项。 |
 
 ## lineSpacing
 

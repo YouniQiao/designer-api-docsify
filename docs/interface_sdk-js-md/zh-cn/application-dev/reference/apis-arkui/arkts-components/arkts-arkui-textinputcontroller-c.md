@@ -1,6 +1,12 @@
 # TextInputController
 
-TextInput组件的控制器继承自[TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)，涉及的接口有[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentrect)、[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentlinecount)、[getCaretOffset](arkts-arkui-textcontentcontrollerbase-c.md#getcaretoffset)、[addText](arkts-arkui-textcontentcontrollerbase-c.md#addtext)、[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deletetext)、[getSelection](arkts-arkui-textcontentcontrollerbase-c.md#getselection)、[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearpreviewtext)、[setStyledPlaceholder](arkts-arkui-textcontentcontrollerbase-c.md#setstyledplaceholder)、[deleteBackward](arkts-arkui-textcontentcontrollerbase-c.md#deletebackward)<!--Del-->以及系统接口[getText](arkts-arkui-textcontentcontrollerbase-c-sys.md#gettext)<!--DelEnd-->。
+TextInput组件的控制器继承自[TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)，涉及的接口有[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentrect)、[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentlinecount)、[getCaretOffset](arkts-arkui-textcontentcontrollerbase-c.md#getcaretoffset)、[addText](arkts-arkui-textcontentcontrollerbase-c.md#addtext)、[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deletetext)、[getSelection](arkts-arkui-textcontentcontrollerbase-c.md#getselection)、[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearpreviewtext)、[setStyledPlaceholder](arkts-arkui-textcontentcontrollerbase-c.md#setstyledplaceholder)、[deleteBackward](arkts-arkui-textcontentcontrollerbase-c.md#deletebackward)、[scrollToVisible](arkts-arkui-textcontentcontrollerbase-c.md#scrolltovisible)<!--Del-->以及系统接口[getText](arkts-arkui-textcontentcontrollerbase-c-sys.md#gettext)<!--DelEnd-->。
+
+## 导入对象
+
+```ts
+controller: TextInputController = new TextInputController();
+```
 
 **继承/实现关系：** TextInputController extends [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)
 
@@ -71,9 +77,9 @@ setTextSelection(selectionStart: number, selectionEnd: number, options?: Selecti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectionStart | number | 是 | 文本选择区域起始位置，文本框中文字的起始位置为0。 |
+| selectionStart | number | 是 | 文本选择区域起始位置，文本框中文字的起始位置为0。当selectionStart<0时，按照0处理；当selectionStart大于文本长度时，按照文本长度处理。 |
 | selectionEnd | number | 是 | 文本选择区域结束位置。当selectionEnd<0时，按照0处理；当selectionEnd大于文本长度时，按照文本长度处理。 |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | 选中文字时的配置。<br />默认值：MenuPolicy.DEFAULT<br/>从API version 12开始，该接口中的options参数支持在原子化服务中使用。<br>**起始版本：** 12 |
+| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | 选中文字时的配置，用于控制文本选择菜单的显示策略。<br>配置项包括menuPolicy，用于指定菜单显示方式：MenuPolicy.DEFAULT表示按系统默认行为显示菜单；MenuPolicy.SHOW表示强制显示菜单；MenuPolicy.HIDE表示强制隐藏菜单。<br>默认值MenuPolicy.DEFAULT<br>从API version 12开始，该接口中的options参数支持在原子化服务中使用。<br>**起始版本：** 12 |
 
 ## stopEditing
 

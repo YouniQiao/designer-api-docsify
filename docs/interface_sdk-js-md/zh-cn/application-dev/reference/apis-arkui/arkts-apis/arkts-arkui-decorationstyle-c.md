@@ -14,7 +14,7 @@
 constructor(value: DecorationStyleInterface)
 ```
 
-文本装饰线样式的构造函数。
+文本装饰线样式的构造函数。未通过该接口设置时，默认装饰线类型为TextDecorationType.None，颜色为Color.Black，样式为TextDecorationStyle.SOLID。
 
 **起始版本：** 12
 
@@ -30,7 +30,7 @@ constructor(value: DecorationStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。<br/>默认值：<br/>{<br/> type: TextDecorationType.None,<br/> color: Color.Black,<br/> style: TextDecorationStyle.SOLID <br/>} |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。 |
 
 ## constructor
 
@@ -38,7 +38,7 @@ constructor(value: DecorationStyleInterface)
 constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 ```
 
-文本装饰线样式的构造函数，包含额外配置选项。
+文本装饰线样式的构造函数，包含额外配置选项。未通过该接口设置时，默认装饰线类型为TextDecorationType.None，颜色为Color.Black，样式为TextDecorationStyle.SOLID，粗细缩放为1.0。
 
 **起始版本：** 20
 
@@ -54,8 +54,8 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。<br/>默认值：<br/>{<br/> type: TextDecorationType.None,<br/> color: Color.Black,<br/> style: TextDecorationStyle.SOLID, <br/> thicknessScale: 1.0<br/>} |
-| options | [DecorationOptions](arkts-arkui-decorationoptions-i.md) | 否 | 文本装饰线额外配置选项。<br/>默认值：<br/>{<br/> enableMultiType: undefined<br/>} |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。 |
+| options | [DecorationOptions](arkts-arkui-decorationoptions-i.md) | 否 | 文本装饰线额外配置选项。 |
 
 ## color
 

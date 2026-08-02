@@ -1,10 +1,8 @@
 # Text properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
 
-**Layout and Alignment**
-
-In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md), the following events are supported.
+In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
 
 **Inheritance/Implementation:** TextAttribute extends [CommonMethod<TextAttribute>](CommonMethod<TextAttribute>)
 
@@ -171,8 +169,8 @@ Sets whether copy and paste operations are allowed.
 
 Since API version 20, copied text from the **Text** component includes HTML-formatted content in the pasteboard.
 
-- When the **Text** component contains child elements, only [Span](arkts-arkui-span.md) and [ImageSpan](arkts-arkui-imagespan.md)  
-support HTML-formatted pasteboard content.  
+- When the **Text** component contains child elements, only [Span](arkts-arkui-span.md) and  
+[ImageSpan](arkts-arkui-imagespan.md) support HTML-formatted pasteboard content.  
 - For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.
 
 When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**:
@@ -1532,7 +1530,7 @@ Sets the background color of the selected text. If the opacity is not set, a 20%
 selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 ```
 
-Sets the drag preview style for selected text.
+Applies a transition animation to text content. Supports numeric flip animation via [NumericTextTransition](../arkts-apis/arkts-arkui-numerictexttransition-c.md).
 
 **Since:** 23
 

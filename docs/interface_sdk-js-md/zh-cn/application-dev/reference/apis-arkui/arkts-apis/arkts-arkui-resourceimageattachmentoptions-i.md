@@ -54,9 +54,9 @@ layoutStyle?: ImageAttachmentLayoutStyle
 objectFit?: ImageFit
 ```
 
-设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。
+设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。具体枚举及说明请参考ImageFit。
 
-默认值：ImageFit.Cover
+默认值：ImageFit.Cover。
 
 **类型：** ImageFit
 
@@ -96,7 +96,9 @@ resourceValue: Optional<ResourceStr>
 size?: SizeOptions
 ```
 
-设置图片大小。
+设置图片大小，不支持百分比。
+
+size的默认值与objectFit的值有关，不同的objectFit的值对应size的默认值不同。
 
 **类型：** SizeOptions
 
@@ -164,9 +166,9 @@ true：同步加载；false：异步加载。
 verticalAlign?: ImageSpanAlignment
 ```
 
-设置图片基于文本的对齐方式。
+设置图片基于文本的对齐方式。具体枚举及说明请参考ImageSpanAlignment。
 
-默认值：ImageSpanAlignment.BOTTOM
+默认值：ImageSpanAlignment.BOTTOM。
 
 **类型：** ImageSpanAlignment
 

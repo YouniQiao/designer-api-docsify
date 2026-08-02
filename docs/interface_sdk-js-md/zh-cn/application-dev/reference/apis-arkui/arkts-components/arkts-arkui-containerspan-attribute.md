@@ -2,7 +2,7 @@
 
 仅支持以下属性：
 
-不支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
+不支持[通用事件](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md)。
 
 **起始版本：** 11
 
@@ -32,7 +32,7 @@ attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;ContainerSpanAttribute&gt; | 是 | 动态设置组件的属性。 |
+| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;ContainerSpanAttribute&gt; | 是 | 动态设置组件的属性。开发者需自定义类继承AttributeModifier接口，在applyNormalAttribute方法中接收ContainerSpanAttribute实例并动态修改ContainerSpan的属性值。 |
 
 ## textBackgroundStyle
 
@@ -40,7 +40,10 @@ attributeModifier(modifier: AttributeModifier<ContainerSpanAttribute>)
 textBackgroundStyle(style: TextBackgroundStyle)
 ```
 
-Span的背景样式
+设置文本背景样式。子组件在不设置该属性时，将继承此属性值。未通过该接口设置时，默认背景颜色为Color.Transparent，圆角弧度为0。
+> **说明：**  
+>  
+> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
 
 **起始版本：** 11
 
@@ -56,5 +59,5 @@ Span的背景样式
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | 是 | The background style of span. |
+| style | [TextBackgroundStyle](arkts-arkui-textbackgroundstyle-i.md) | 是 | 文本背景样式，用于设置ContainerSpan组件内Span和ImageSpan的文本背景颜色和圆角弧度。子组件不设置该属性时将继承此样式。 |
 

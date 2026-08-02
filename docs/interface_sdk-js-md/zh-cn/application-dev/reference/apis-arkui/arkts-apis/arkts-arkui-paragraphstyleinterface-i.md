@@ -1,6 +1,6 @@
 # ParagraphStyleInterface
 
-ParagraphStyleInterface
+文本段落样式。
 
 **起始版本：** 12
 
@@ -58,7 +58,13 @@ leadingMarginSpan?: LeadingMarginSpan
 maxLines?: number
 ```
 
-设置文本段落的最大行数，默认不限制。
+设置文本段落的最大行数。
+
+**说明：** 仅在Text中生效，建议在组件侧设置。
+
+默认不限制。
+
+取值范围：[0, INT32_MAX]，传入负数时不限制。
 
 **类型：** number
 
@@ -79,6 +85,8 @@ overflow?: TextOverflow
 ```
 
 设置文本段落超长时的显示方式。
+
+**说明：** 仅在Text中生效，建议在组件侧设置。
 
 默认值：TextOverflow.None
 
@@ -126,6 +134,8 @@ shaderStyle?: ShaderStyle
 
 设置文本着色器效果。
 
+**默认效果：** 不传入时不应用着色器效果，使用fontColor设置的颜色。
+
 该接口与[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)中的fontColor。
 
 **类型：** ShaderStyle
@@ -146,7 +156,7 @@ shaderStyle?: ShaderStyle
 tailIndents?: LengthMetrics | Array<LengthMetrics>
 ```
 
-指定段落中每行的尾部缩进。<p><strong>说明</strong>：当提供单个LengthMetrics值时，所有行共享相同的尾部缩进当提供数组时，第i个元素指定第i行的尾部缩进。如果文本行数超过数组长度，则使用数组中的最后一个元素应用至其余的行。<br>负值被视为0。</p>。
+设置文本段落的文本尾部缩进。不支持百分比。当提供一个单独的LengthMetrics值时，所有行共享相同的尾部缩进；当提供一个数组时，第i个元素指定第i行的尾部缩进；如果文本行数超过数组长度，则数组中的最后一个元素将用于剩余的行。默认值：0
 
 **类型：** LengthMetrics \| Array&lt;LengthMetrics&gt;
 
