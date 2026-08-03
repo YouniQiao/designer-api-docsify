@@ -41,7 +41,7 @@ Define toolbarV2 activate item index, default is -1.
 ## dividerModifier
 
 ```TypeScript
-@Param dividerModifier?: DividerModifier
+dividerModifier?: DividerModifier
 ```
 
 Define divider Modifier.
@@ -56,7 +56,7 @@ Define divider Modifier.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2-@Param dividerModifier?: DividerModifier--><!--Device-ToolBarV2-@Param dividerModifier?: DividerModifier-End-->
+<!--Device-ToolBarV2-dividerModifier?: DividerModifier--><!--Device-ToolBarV2-dividerModifier?: DividerModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,7 +85,7 @@ Define toolbarV2 item list.
 ## toolBarModifier
 
 ```TypeScript
-@Param toolBarModifier?: ToolBarV2Modifier
+toolBarModifier?: ToolBarV2Modifier
 ```
 
 Define toolbarV2 modifier.
@@ -100,7 +100,7 @@ Define toolbarV2 modifier.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2-@Param toolBarModifier?: ToolBarV2Modifier--><!--Device-ToolBarV2-@Param toolBarModifier?: ToolBarV2Modifier-End-->
+<!--Device-ToolBarV2-toolBarModifier?: ToolBarV2Modifier--><!--Device-ToolBarV2-toolBarModifier?: ToolBarV2Modifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

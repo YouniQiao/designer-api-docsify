@@ -1,8 +1,18 @@
 # SubHeader
 
-Declare struct SubHeader
+The **SubHeader** component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.
+> **NOTE**  
+>  
+> - This component can be used only in the stage model.  
+>  
+> - If the **SubHeader** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and  
+> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically  
+> generates an additional **__Common__** node and mounts the universal attributes and universal events on this node  
+> rather than the **SubHeader** component itself. As a result, the configured universal attributes and universal  
+> events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events  
+> with the **SubHeader** component.
 
-**Since:** 18
+**Since:** 10
 
 **Decorator:** @Component
 
@@ -19,35 +29,51 @@ import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions
 ## contentMargin
 
 ```TypeScript
-@Prop contentMargin?: LocalizedMargin
+contentMargin?: LocalizedMargin
 ```
 
-Set the content margin.
+Margin of the content. Negative numbers are not supported.
+
+Default value:
+
+`{start: LengthMetrics.resource(`
+
+`$r('sys.float.margin_left'))`,
+
+`end: LengthMetrics.resource(`
+
+`$r('sys.float.margin_right'))}`
 
 **Type:** LocalizedMargin
 
 **Default:** {start: LengthMetrics.resource($r('sys.float.margin_left')),
 <br> end: LengthMetrics.resource($r('sys.float.margin_right'))}
 
-**Since:** 18
+**Since:** 12
 
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SubHeader-@Prop contentMargin?: LocalizedMargin--><!--Device-SubHeader-@Prop contentMargin?: LocalizedMargin-End-->
+<!--Device-SubHeader-contentMargin?: LocalizedMargin--><!--Device-SubHeader-contentMargin?: LocalizedMargin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentPadding
 
 ```TypeScript
-@Prop contentPadding?: LocalizedPadding
+contentPadding?: LocalizedPadding
 ```
 
-Set the content padding.
+Padding of the content.
+
+Default value:
+
+If a secondary title, with or without an icon, is displayed on the left:
+
+{start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)}
 
 **Type:** LocalizedPadding
 
@@ -55,37 +81,41 @@ Set the content padding.
 <br> When the left area is secondaryTitle or the group of secondaryTitle and icon,
 <br> the default value is {start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)};
 
-**Since:** 18
+**Since:** 12
 
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SubHeader-@Prop contentPadding?: LocalizedPadding--><!--Device-SubHeader-@Prop contentPadding?: LocalizedPadding-End-->
+<!--Device-SubHeader-contentPadding?: LocalizedPadding--><!--Device-SubHeader-contentPadding?: LocalizedPadding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## icon
 
 ```TypeScript
-@Prop icon?: ResourceStr
+icon?: ResourceStr
 ```
 
-Icon resource of content area.
+Icon.
+
+Default value: **undefined**, indicating that no icon is displayed.
+
+The **icon** attribute takes effect only when the **secondaryTitle** attribute is used.
 
 **Type:** ResourceStr
 
-**Since:** 18
+**Since:** 10
 
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SubHeader-@Prop icon?: ResourceStr--><!--Device-SubHeader-@Prop icon?: ResourceStr-End-->
+<!--Device-SubHeader-icon?: ResourceStr--><!--Device-SubHeader-icon?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -95,15 +125,17 @@ Icon resource of content area.
 iconSymbolOptions?: SymbolOptions
 ```
 
-Attributes of Symbol icon.
+Icon symbol options. This parameter is available when **icon** is set to a [symbol glyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i).
+
+Default value: **undefined**, indicating that no icon is displayed.
 
 **Type:** SymbolOptions
 
-**Since:** 18
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SubHeader-iconSymbolOptions?: SymbolOptions--><!--Device-SubHeader-iconSymbolOptions?: SymbolOptions-End-->
 
@@ -115,15 +147,17 @@ Attributes of Symbol icon.
 operationItem?: Array<OperationOption>
 ```
 
-operation item.
+Items in the operation area (right).
+
+Default value: **undefined**, indicating that the operation area is not displayed.
 
 **Type:** Array&lt;OperationOption&gt;
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SubHeader-operationItem?: Array<OperationOption>--><!--Device-SubHeader-operationItem?: Array<OperationOption>-End-->
 
@@ -135,15 +169,19 @@ operation item.
 operationSymbolOptions?: Array<SymbolOptions>
 ```
 
-Attributes of Symbol icons in operation area.
+Icon symbol options.
+
+This parameter is available when **operationType** is set to **OperationType.ICON_GROUP** and **operationItem** is set to an array of [symbol glyphs](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i).
+
+Default value: **undefined**, indicating that no symbol icon is set.
 
 **Type:** Array&lt;SymbolOptions&gt;
 
-**Since:** 18
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SubHeader-operationSymbolOptions?: Array<SymbolOptions>--><!--Device-SubHeader-operationSymbolOptions?: Array<SymbolOptions>-End-->
 
@@ -152,44 +190,50 @@ Attributes of Symbol icons in operation area.
 ## operationType
 
 ```TypeScript
-@Prop operationType?: OperationType
+operationType?: OperationType
 ```
 
-Operation style of SubHeader.
+Style of elements in the operation area (right).
+
+Default value: **OperationType.BUTTON**
 
 **Type:** OperationType
 
-**Since:** 18
+**Since:** 10
 
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SubHeader-@Prop operationType?: OperationType--><!--Device-SubHeader-@Prop operationType?: OperationType-End-->
+<!--Device-SubHeader-operationType?: OperationType--><!--Device-SubHeader-operationType?: OperationType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitle
 
 ```TypeScript
-@Prop primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
-The first line text of content area.
+Primary title.
+
+Default value: **undefined**, indicating that no primary title is displayed.
+
+When the **primaryTitle**, **secondaryTitle**, and **icon** attributes are used simultaneously, the **primaryTitle** attribute will not take effect.
 
 **Type:** ResourceStr
 
-**Since:** 18
+**Since:** 10
 
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SubHeader-@Prop primaryTitle?: ResourceStr--><!--Device-SubHeader-@Prop primaryTitle?: ResourceStr-End-->
+<!--Device-SubHeader-primaryTitle?: ResourceStr--><!--Device-SubHeader-primaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -199,15 +243,17 @@ The first line text of content area.
 primaryTitleModifier?: TextModifier
 ```
 
-Text modifier for primary title.
+Text attributes of the primary title, such as the font color, font size, and font weight.
+
+Default value: **undefined**, indicating that the default style is used.
 
 **Type:** TextModifier
 
-**Since:** 18
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SubHeader-primaryTitleModifier?: TextModifier--><!--Device-SubHeader-primaryTitleModifier?: TextModifier-End-->
 
@@ -216,22 +262,24 @@ Text modifier for primary title.
 ## secondaryTitle
 
 ```TypeScript
-@Prop secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
-The secondary line text of content area.
+Secondary title.
+
+Default value: **undefined**, indicating that no secondary title is displayed.
 
 **Type:** ResourceStr
 
-**Since:** 18
+**Since:** 10
 
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SubHeader-@Prop secondaryTitle?: ResourceStr--><!--Device-SubHeader-@Prop secondaryTitle?: ResourceStr-End-->
+<!--Device-SubHeader-secondaryTitle?: ResourceStr--><!--Device-SubHeader-secondaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -241,15 +289,17 @@ The secondary line text of content area.
 secondaryTitleModifier?: TextModifier
 ```
 
-Text modifier for secondary title.
+Text attributes of the secondary title, such as the font color, font size, and font weight.
+
+Default value: **undefined**, indicating that the default style is used.
 
 **Type:** TextModifier
 
-**Since:** 18
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SubHeader-secondaryTitleModifier?: TextModifier--><!--Device-SubHeader-secondaryTitleModifier?: TextModifier-End-->
 
@@ -261,15 +311,17 @@ Text modifier for secondary title.
 select?: SelectOptions
 ```
 
-Select option of content area.
+Content and events for selection.
+
+Default value: **undefined**, indicating that no drop-down list is displayed.
 
 **Type:** SelectOptions
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SubHeader-select?: SelectOptions--><!--Device-SubHeader-select?: SelectOptions-End-->
 
@@ -278,10 +330,14 @@ Select option of content area.
 ## titleAccessibilityText
 
 ```TypeScript
-@Prop titleAccessibilityText?: ResourceStr
+titleAccessibilityText?: ResourceStr
 ```
 
-Set the ability to customize the broadcast of the title.
+Customized content to be read in the title.
+
+Default value: **undefined**.
+
+If the value is **undefined**, the title content displayed by the component is read by default.
 
 **Type:** ResourceStr
 
@@ -293,29 +349,31 @@ Set the ability to customize the broadcast of the title.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-SubHeader-@Prop titleAccessibilityText?: ResourceStr--><!--Device-SubHeader-@Prop titleAccessibilityText?: ResourceStr-End-->
+<!--Device-SubHeader-titleAccessibilityText?: ResourceStr--><!--Device-SubHeader-titleAccessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleBuilder
 
 ```TypeScript
-@BuilderParam titleBuilder?: () => void
+titleBuilder?: () => void
 ```
 
-Set the title content.
+Content of the custom title area.
+
+Default value: **undefined**, indicating that no custom title is used.
 
 **Type:** () =&gt; void
 
-**Since:** 18
+**Since:** 12
 
 **Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SubHeader-@BuilderParam titleBuilder?: () => void--><!--Device-SubHeader-@BuilderParam titleBuilder?: () => void-End-->
+<!--Device-SubHeader-titleBuilder?: () => void--><!--Device-SubHeader-titleBuilder?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

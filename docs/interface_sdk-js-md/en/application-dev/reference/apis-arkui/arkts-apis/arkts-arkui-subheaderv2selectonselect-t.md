@@ -4,7 +4,7 @@
 export type SubHeaderV2SelectOnSelect = (selectedIndex: number, selectedContent?: string) => void
 ```
 
-The callback function that will be invoked when the selectedIndex of the SubHeaderV2Select is selected.
+Defines the callback invoked when an item in the drop-down list box is selected.
 
 **Since:** 18
 
@@ -20,6 +20,6 @@ The callback function that will be invoked when the selectedIndex of the SubHead
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedIndex | number | Yes | the index of selected item  |
-| selectedContent | string | No | the content of selected item  |
+| selectedIndex | number | Yes | Index of the selected drop-down menu option.  |
+| selectedContent | string | No | Content of the selected drop-down menu option.  |
 

@@ -2,7 +2,7 @@
 
 Declare type OperationOption
 
-**Since:** 18
+**Since:** 10
 
 <!--Device-unnamed-export declare class OperationOption--><!--Device-unnamed-export declare class OperationOption-End-->
 
@@ -20,7 +20,9 @@ import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions
 accessibilityDescription?: ResourceStr
 ```
 
-The accessibilityDescription of this text or icon.
+Accessible description. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.
+
+Default value: "Loading" when the operation type is **LOADING** and **"Double-tap to activate"** otherwise.
 
 **Type:** ResourceStr
 
@@ -40,7 +42,19 @@ The accessibilityDescription of this text or icon.
 accessibilityLevel?: string
 ```
 
-The accessibilityLevel of this text or icon.
+Accessibility level. It determines whether the component can be recognized by accessibility services.
+
+The options are as follows:
+
+**"auto"**: This option is treated as "yes" by the system for this component.
+
+**"yes"**: The component can be recognized by accessibility services.
+
+**"no"**: The component cannot be recognized by accessibility services.
+
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
+
+Default value: **"auto"**
 
 **Type:** string
 
@@ -62,7 +76,9 @@ The accessibilityLevel of this text or icon.
 accessibilityText?: ResourceStr
 ```
 
-Accessible label name for the icon on the right side of the subheader.
+Accessibility text, that is, accessible label name. If a component does not contain text information, it will not be announced by the screen reader when selected. In this case, the screen reader user cannot know which component is selected. To solve this problem, you can set accessibility text for components without text information. When such a component is selected, the screen reader announces the specified accessibility text, informing the user which component is selected.
+
+Default value: value of the **value** property if the operation type is **TEXT_ARROW** or **BUTTON** and an empty string otherwise.
 
 **Type:** ResourceStr
 
@@ -82,15 +98,15 @@ Accessible label name for the icon on the right side of the subheader.
 action?: () => void
 ```
 
-callback function when operate the text or icon.
+Right-side button click event.
 
 **Type:** () =&gt; void
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-OperationOption-action?: () => void--><!--Device-OperationOption-action?: () => void-End-->
 
@@ -102,7 +118,13 @@ callback function when operate the text or icon.
 defaultFocus?: boolean
 ```
 
-Sets the default focus state of the text or icon.
+Whether to receive default focus.
+
+**true**: Receive default focus.
+
+**false**: Do not receive default focus.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -144,15 +166,15 @@ Set the id for the operation.
 value: ResourceStr
 ```
 
-The content of text or the address of icon.
+Text content.
 
 **Type:** ResourceStr
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-OperationOption-value: ResourceStr--><!--Device-OperationOption-value: ResourceStr-End-->
 

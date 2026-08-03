@@ -2,7 +2,7 @@
 
 Declaration of the tab item.
 
-**Since:** 22
+**Since:** 10
 
 <!--Device-unnamed-export declare class TabTitleBarTabItem--><!--Device-unnamed-export declare class TabTitleBarTabItem-End-->
 
@@ -20,15 +20,15 @@ import { TabTitleBar, TabTitleBarTabItem, TabTitleBarMenuItem } from '@kit.ArkUI
 icon?: ResourceStr
 ```
 
-Icon resource for this tab item.
+Icon of the tab.
 
 **Type:** ResourceStr
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TabTitleBarTabItem-icon?: ResourceStr--><!--Device-TabTitleBarTabItem-icon?: ResourceStr-End-->
 
@@ -40,15 +40,15 @@ Icon resource for this tab item.
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol resource for this tab item.
+Symbol icon of the tab, which has higher priority than **icon**.
 
 **Type:** SymbolGlyphModifier
 
-**Since:** 22
+**Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-TabTitleBarTabItem-symbolStyle?: SymbolGlyphModifier--><!--Device-TabTitleBarTabItem-symbolStyle?: SymbolGlyphModifier-End-->
 
@@ -60,15 +60,15 @@ Symbol resource for this tab item.
 title: ResourceStr
 ```
 
-Text description for this tab item.
+Text of the tab.
 
 **Type:** ResourceStr
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TabTitleBarTabItem-title: ResourceStr--><!--Device-TabTitleBarTabItem-title: ResourceStr-End-->
 

@@ -1,8 +1,8 @@
 # OperationType
 
-Control style of operation element
+Defines the style of elements in the subheader operation area.
 
-**Since:** 18
+**Since:** 10
 
 <!--Device-unnamed-export declare enum OperationType--><!--Device-unnamed-export declare enum OperationType-End-->
 
@@ -14,13 +14,13 @@ Control style of operation element
 TEXT_ARROW = 0
 ```
 
-The TextArrow style.
+Text button with a right arrow.
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-OperationType-TEXT_ARROW = 0--><!--Device-OperationType-TEXT_ARROW = 0-End-->
 
@@ -32,13 +32,13 @@ The TextArrow style.
 BUTTON = 1
 ```
 
-The Button style.
+Text button without a right arrow.
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-OperationType-BUTTON = 1--><!--Device-OperationType-BUTTON = 1-End-->
 
@@ -50,13 +50,13 @@ The Button style.
 ICON_GROUP = 2
 ```
 
-The IconGroup style.
+Icon-attached button (A maximum of three icons can be configured.)
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-OperationType-ICON_GROUP = 2--><!--Device-OperationType-ICON_GROUP = 2-End-->
 
@@ -68,13 +68,13 @@ The IconGroup style.
 LOADING = 3
 ```
 
-The LoadingProgress style.
+Loading animation.
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-OperationType-LOADING = 3--><!--Device-OperationType-LOADING = 3-End-->
 

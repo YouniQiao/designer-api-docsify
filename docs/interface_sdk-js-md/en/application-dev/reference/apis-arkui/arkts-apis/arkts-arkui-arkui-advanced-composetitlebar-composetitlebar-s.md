@@ -1,8 +1,18 @@
 # ComposeTitleBar
 
-Declaration of the composable title bar.
+**ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture (optional). It can come with a Back button for switching between pages of different levels.
+> **NOTE**  
+>  
+> - This component can be used only in the stage model.  
+>  
+> - If the **ComposeTitleBar** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and  
+> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically  
+> generates an additional **__Common__** node and mounts the universal attributes and universal events on this node  
+> rather than the **ComposeTitleBar** component itself. As a result, the configured universal attributes and  
+> universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes  
+> and events with the **ComposeTitleBar** component.
 
-**Since:** 20
+**Since:** 10
 
 **Decorator:** @Component
 
@@ -22,15 +32,15 @@ import { ComposeTitleBar, ComposeTitleBarMenuItem } from '@kit.ArkUI';
 item?: ComposeTitleBarMenuItem
 ```
 
-Avatar resource and event callback of this title bar.
+A single menu item for the profile picture on the left.
 
 **Type:** ComposeTitleBarMenuItem
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ComposeTitleBar-item?: ComposeTitleBarMenuItem--><!--Device-ComposeTitleBar-item?: ComposeTitleBarMenuItem-End-->
 
@@ -42,15 +52,15 @@ Avatar resource and event callback of this title bar.
 menuItems?: Array<ComposeTitleBarMenuItem>
 ```
 
-Menu items on the right side.
+List of menu items on the right.
 
 **Type:** Array&lt;ComposeTitleBarMenuItem&gt;
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ComposeTitleBar-menuItems?: Array<ComposeTitleBarMenuItem>--><!--Device-ComposeTitleBar-menuItems?: Array<ComposeTitleBarMenuItem>-End-->
 
@@ -62,15 +72,15 @@ Menu items on the right side.
 subtitle?: ResourceStr
 ```
 
-Sub-title of this title bar.
+Subtitle.
 
 **Type:** ResourceStr
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ComposeTitleBar-subtitle?: ResourceStr--><!--Device-ComposeTitleBar-subtitle?: ResourceStr-End-->
 
@@ -82,15 +92,15 @@ Sub-title of this title bar.
 title: ResourceStr
 ```
 
-Title of this title bar.
+Title.
 
 **Type:** ResourceStr
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ComposeTitleBar-title: ResourceStr--><!--Device-ComposeTitleBar-title: ResourceStr-End-->
 

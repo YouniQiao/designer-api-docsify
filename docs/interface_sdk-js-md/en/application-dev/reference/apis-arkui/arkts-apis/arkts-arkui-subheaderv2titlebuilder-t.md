@@ -4,7 +4,7 @@
 export type SubHeaderV2TitleBuilder = () => void
 ```
 
-The callback function that will be invoked when the title build.
+Defines the callback used to customize the content of the title area.
 
 **Since:** 18
 

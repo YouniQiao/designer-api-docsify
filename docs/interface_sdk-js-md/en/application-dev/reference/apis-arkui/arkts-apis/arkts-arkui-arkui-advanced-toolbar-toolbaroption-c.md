@@ -1,8 +1,8 @@
 # ToolBarOption
 
-Declare type ToolBarOption
+Defines the content and attributes of a toolbar.
 
-**Since:** 18
+**Since:** 10
 
 **Decorator:** @Observed
 
@@ -22,7 +22,9 @@ import { ToolBarOption, ItemState, ToolBar, ToolBarOptions, ToolBarModifier } fr
 accessibilityDescription?: ResourceStr
 ```
 
-The accessibilityDescription of item.
+Accessible description of the toolbar item. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.
+
+Default value: **"Double-tap to activate"**
 
 **Type:** ResourceStr
 
@@ -42,7 +44,19 @@ The accessibilityDescription of item.
 accessibilityLevel?: string
 ```
 
-The accessibilityLevel of item.
+Accessibility level of the toolbar item. It determines whether the component can be recognized by accessibility services.
+
+The options are as follows:
+
+**"auto"**: This option is treated as "yes" by the system for this component.
+
+**"yes"**: The component can be recognized by accessibility services.
+
+**"no"**: The component cannot be recognized by accessibility services.
+
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
+
+Default value: **"auto"**
 
 **Type:** string
 
@@ -64,7 +78,9 @@ The accessibilityLevel of item.
 accessibilityText?: ResourceStr
 ```
 
-The accessibilityText of item.
+Accessibility text, that is, accessible label name, of the toolbar item. If a component does not contain text information, it will not be announced by the screen reader when selected. In this case, the screen reader user cannot know which component is selected. To solve this problem, you can set accessibility text for components without text information. When such a component is selected, the screen reader announces the specified accessibility text, informing the user which component is selected.
+
+Default value: value of **content**
 
 **Type:** ResourceStr
 
@@ -84,15 +100,15 @@ The accessibilityText of item.
 action?: () => void
 ```
 
-Define the action event.
+Click event of the toolbar item.
 
 **Type:** () =&gt; void
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ToolBarOption-action?: () => void--><!--Device-ToolBarOption-action?: () => void-End-->
 
@@ -104,15 +120,17 @@ Define the action event.
 activatedIconColor?: ResourceColor
 ```
 
-Icon fillColor when the item is activated.
+Icon fill color of the toolbar option in the activated state.
+
+Default value: **$r('sys.color.icon_emphasize')**
 
 **Type:** ResourceColor
 
-**Since:** 18
+**Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-ToolBarOption-activatedIconColor?: ResourceColor--><!--Device-ToolBarOption-activatedIconColor?: ResourceColor-End-->
 
@@ -124,15 +142,17 @@ Icon fillColor when the item is activated.
 activatedTextColor?: ResourceColor
 ```
 
-Text fontColor when the item is activated.
+Font color of the toolbar item in the activated state.
+
+Default value: **$r('sys.color.font_emphasize')**
 
 **Type:** ResourceColor
 
-**Since:** 18
+**Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-ToolBarOption-activatedTextColor?: ResourceColor--><!--Device-ToolBarOption-activatedTextColor?: ResourceColor-End-->
 
@@ -144,15 +164,15 @@ Text fontColor when the item is activated.
 content: ResourceStr
 ```
 
-Define text content.
+Text of the toolbar item.
 
 **Type:** ResourceStr
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ToolBarOption-content: ResourceStr--><!--Device-ToolBarOption-content: ResourceStr-End-->
 
@@ -164,15 +184,19 @@ Define text content.
 icon?: Resource
 ```
 
-Define icon resource.
+Icon of the toolbar item.
+
+If this parameter is not set or is set to **undefined**, the icon is not displayed.
+
+If **toolBarSymbolOptions** has input parameters, **icon** is ineffective.
 
 **Type:** Resource
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ToolBarOption-icon?: Resource--><!--Device-ToolBarOption-icon?: Resource-End-->
 
@@ -184,15 +208,17 @@ Define icon resource.
 iconColor?: ResourceColor
 ```
 
-Define icon fillColor.
+Icon fill color of the toolbar item.
+
+Default value: **$r('sys.color.icon_primary')**
 
 **Type:** ResourceColor
 
-**Since:** 18
+**Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-ToolBarOption-iconColor?: ResourceColor--><!--Device-ToolBarOption-iconColor?: ResourceColor-End-->
 
@@ -204,15 +230,17 @@ Define icon fillColor.
 state?: ItemState
 ```
 
-Define item type.
+State of the toolbar item.
+
+Default value: **ItemState.ENABLE**
 
 **Type:** ItemState
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ToolBarOption-state?: ItemState--><!--Device-ToolBarOption-state?: ItemState-End-->
 
@@ -224,15 +252,17 @@ Define item type.
 textColor?: ResourceColor
 ```
 
-Define text fontColor.
+Font color of the toolbar item.
+
+Default value: **$r('sys.color.font_primary')**
 
 **Type:** ResourceColor
 
-**Since:** 18
+**Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-ToolBarOption-textColor?: ResourceColor--><!--Device-ToolBarOption-textColor?: ResourceColor-End-->
 
@@ -244,15 +274,15 @@ Define text fontColor.
 toolBarSymbolOptions?: ToolBarSymbolGlyphOptions
 ```
 
-Item symbol icon.
+Icon symbol options of the toolbar item.
 
 **Type:** ToolBarSymbolGlyphOptions
 
-**Since:** 18
+**Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-ToolBarOption-toolBarSymbolOptions?: ToolBarSymbolGlyphOptions--><!--Device-ToolBarOption-toolBarSymbolOptions?: ToolBarSymbolGlyphOptions-End-->
 

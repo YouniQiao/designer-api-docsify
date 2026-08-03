@@ -94,9 +94,9 @@ tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 ```
 
-设置TabBar上显示内容。底部样式没有下划线效果。icon异常时显示灰色图块。
+设置TabBar上显示内容。底部样式没有下划线效果。当图标资源加载失败或不存在时，显示灰色图块。
 
-如果icon采用svg格式图源，需删除svg图源内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。
+如果icon采用svg格式图源，需删除其内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。
 
 设置的内容超出TabBar页签时进行裁切。
 > **说明：**
@@ -118,7 +118,7 @@ tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| BottomTabBarStyle | 是 | TabBar上显示内容。<br/>SubTabBarStyle：?子页签样式。<br/>BottomTabBarStyle：?底部页签和侧边页签样式，底部样式没有下划线效果。 |
+| value | [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) \| BottomTabBarStyle | 是 | TabBar上显示的内容，支持子页签样式或底部页签样式。<br/>SubTabBarStyle：?子页签样式。<br/>BottomTabBarStyle：?底部页签和侧边页签样式，底部样式没有下划线效果。 |
 
 ## tabBar
 
@@ -129,7 +129,7 @@ tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string |
 
 设置TabBar上显示内容。
 
-使用BottomTabBarStyle或TabBarOptions类型作为入参并设置icon，icon异常时显示灰色图块。如果icon采用svg格式图源，需删除svg图源内置的宽高属性属性。否则，icon大小将使用svg图源内置的宽高属性值。
+使用BottomTabBarStyle或TabBarOptions类型作为入参并设置icon，当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。
 
 设置的内容超出TabBar页签时进行裁切。
 

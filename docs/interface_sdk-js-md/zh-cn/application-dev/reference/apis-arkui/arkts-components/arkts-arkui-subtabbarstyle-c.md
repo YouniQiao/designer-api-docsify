@@ -30,7 +30,7 @@ board(value: BoardStyle): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BoardStyle](arkts-arkui-boardstyle-i.md) | 是 | 选中子页签的背板风格对象。 |
+| value | [BoardStyle](arkts-arkui-boardstyle-i.md) | 是 | 选中子页签的背板风格对象，用于设置背板的圆角半径等样式。 |
 
 **返回值：**
 
@@ -90,7 +90,7 @@ SubTabBarStyle的构造函数。支持ComponentContent设置自定义内容。
 id(value: string): SubTabBarStyle
 ```
 
-设置子页签的id。
+设置子页签的id。可用于通过TabsController查找或控制指定页签，以及在状态管理和事件处理中标识不同的页签。
 
 **起始版本：** 11
 
@@ -106,7 +106,7 @@ id(value: string): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 子页签的id。 |
+| value | string | 是 | 子页签的id，用于标识和区分不同的页签。当需要通过代码控制特定页签的显示、隐藏或进行其他操作时，可设置此参数。id值需在同一Tabs组件内保持唯一。 |
 
 **返回值：**
 
@@ -136,7 +136,7 @@ indicator(value: IndicatorStyle): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | 是 | 选中子页签的下划线风格对象。 |
+| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | 是 | 选中子页签的下划线风格对象，用于设置下划线的颜色、高度、宽度、圆角半径等样式。 |
 
 **返回值：**
 
@@ -196,7 +196,7 @@ labelStyle(value: LabelStyle): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | 是 | 子页签的label文本和字体的样式对象。 |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | 是 | 子页签的label文本和字体的样式对象，用于设置文字的颜色、大小、字体、行数等属性。 |
 
 **返回值：**
 
@@ -286,7 +286,7 @@ padding(value: Padding | Dimension): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Padding](../arkts-apis/arkts-arkui-padding-t.md) \| Dimension | 是 | 子页签的内边距属性（不支持百分比设置）。<br/>取值范围：[0, +∞]<br/>异常值时取默认值。<br />默认值：{left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp}<br/>**说明：**<br/>从API version 12开始，参数支持[LocalizedPadding](ts-types.md#localizedpadding12)类型，支持镜像能力。 |
+| value | [Padding](../arkts-apis/arkts-arkui-padding-t.md) \| Dimension | 是 | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离。<br/>取值范围：[0, +∞]<br/>异常值时取默认值。<br />默认值：{left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp}<br/>**说明：**<br/>从API version 12开始，参数支持[LocalizedPadding](ts-types.md#localizedpadding12)类型，支持镜像能力。 |
 
 **返回值：**
 
@@ -316,7 +316,7 @@ padding(padding: LocalizedPadding): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| padding | [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 子页签的内边距属性。<br/>取值范围：[0, +∞]<br/>异常值时取默认值。<br />默认值：{start:LengthMetrics.vp(8),end:LengthMetrics.vp(8),<br/>top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
+| padding | [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离，支持镜像能力。<br/>取值范围：[0, +∞]<br/>异常值时取默认值。<br />默认值：{start:LengthMetrics.vp(8),end:LengthMetrics.vp(8),<br/>top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
 
 **返回值：**
 

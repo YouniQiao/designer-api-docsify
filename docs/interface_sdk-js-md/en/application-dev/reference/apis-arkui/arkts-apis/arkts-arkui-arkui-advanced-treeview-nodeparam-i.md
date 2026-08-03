@@ -2,7 +2,7 @@
 
 Declare NodeParam
 
-**Since:** 22
+**Since:** 10
 
 <!--Device-unnamed-export interface NodeParam--><!--Device-unnamed-export interface NodeParam-End-->
 
@@ -20,15 +20,17 @@ import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeC
 container?: () => void
 ```
 
-set subcomponent binded on tree item.
+Right-click child component bound to the node. The child component is decorated with @Builder.
+
+Default value: **() => void**.
 
 **Type:** () =&gt; void
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NodeParam-container?: () => void--><!--Device-NodeParam-container?: () => void-End-->
 
@@ -40,15 +42,21 @@ set subcomponent binded on tree item.
 currentNodeId?: number
 ```
 
-Set currentNodeId.
+Current child node ID.
+
+The value must be greater than or equal to -1.
+
+The value cannot be the root node ID or null. Otherwise, an exception is thrown. In addition, duplicate **currentNodeId** values are not allowed.
+
+Default value: **-1**
 
 **Type:** number
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NodeParam-currentNodeId?: number--><!--Device-NodeParam-currentNodeId?: number-End-->
 
@@ -60,15 +68,17 @@ Set currentNodeId.
 editIcon?: ResourceStr
 ```
 
-Set edit icon resource.
+Edit icon.
+
+The default value is an empty string.
 
 **Type:** ResourceStr
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NodeParam-editIcon?: ResourceStr--><!--Device-NodeParam-editIcon?: ResourceStr-End-->
 
@@ -80,15 +90,17 @@ Set edit icon resource.
 icon?: ResourceStr
 ```
 
-Set the icon resource.
+Icon.
+
+The default value is an empty string.
 
 **Type:** ResourceStr
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NodeParam-icon?: ResourceStr--><!--Device-NodeParam-icon?: ResourceStr-End-->
 
@@ -100,15 +112,19 @@ Set the icon resource.
 isFolder?: boolean
 ```
 
-Set catalog whether is folder.
+Whether the node is a directory.
+
+Default value: **false**.
+
+**true**: The node is a directory. **false**: The node is not a directory.
 
 **Type:** boolean
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NodeParam-isFolder?: boolean--><!--Device-NodeParam-isFolder?: boolean-End-->
 
@@ -120,15 +136,19 @@ Set catalog whether is folder.
 parentNodeId?: number
 ```
 
-Set the parentNodeId.
+ID of the parent node.
+
+The value must be greater than or equal to -1.
+
+Default value: -1. The root node ID is -1. If the value is less than -1, the setting does not take effect.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NodeParam-parentNodeId?: number--><!--Device-NodeParam-parentNodeId?: number-End-->
 
@@ -140,15 +160,17 @@ Set the parentNodeId.
 primaryTitle?: ResourceStr
 ```
 
-Set primary title content.
+Primary title.
+
+The default value is an empty string.
 
 **Type:** ResourceStr
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NodeParam-primaryTitle?: ResourceStr--><!--Device-NodeParam-primaryTitle?: ResourceStr-End-->
 
@@ -160,15 +182,17 @@ Set primary title content.
 secondaryTitle?: ResourceStr
 ```
 
-Set secondary title content.
+Secondary title.
+
+The default value is an empty string.
 
 **Type:** ResourceStr
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NodeParam-secondaryTitle?: ResourceStr--><!--Device-NodeParam-secondaryTitle?: ResourceStr-End-->
 
@@ -180,15 +204,17 @@ Set secondary title content.
 selectedIcon?: ResourceStr
 ```
 
-Set selected icon resource.
+Icon of the selected node.
+
+The default value is an empty string.
 
 **Type:** ResourceStr
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NodeParam-selectedIcon?: ResourceStr--><!--Device-NodeParam-selectedIcon?: ResourceStr-End-->
 
@@ -200,15 +226,17 @@ Set selected icon resource.
 symbolEditIconStyle?: SymbolGlyphModifier
 ```
 
-Set edit symbol resource.
+Symbol edit icon, which has a higher priority than **editIcon**.
+
+Default value: **undefined**
 
 **Type:** SymbolGlyphModifier
 
-**Since:** 22
+**Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-NodeParam-symbolEditIconStyle?: SymbolGlyphModifier--><!--Device-NodeParam-symbolEditIconStyle?: SymbolGlyphModifier-End-->
 
@@ -220,15 +248,17 @@ Set edit symbol resource.
 symbolIconStyle?: SymbolGlyphModifier
 ```
 
-Set the symbol resource.
+Symbol icon, which has higher priority than **icon**.
+
+Default value: **undefined**
 
 **Type:** SymbolGlyphModifier
 
-**Since:** 22
+**Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-NodeParam-symbolIconStyle?: SymbolGlyphModifier--><!--Device-NodeParam-symbolIconStyle?: SymbolGlyphModifier-End-->
 
@@ -240,15 +270,17 @@ Set the symbol resource.
 symbolSelectedIconStyle?: SymbolGlyphModifier
 ```
 
-Set selected symbol resource.
+Symbol icon of the selected node., which has higher priority than **selectedIcon**.
+
+Default value: **undefined**
 
 **Type:** SymbolGlyphModifier
 
-**Since:** 22
+**Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-NodeParam-symbolSelectedIconStyle?: SymbolGlyphModifier--><!--Device-NodeParam-symbolSelectedIconStyle?: SymbolGlyphModifier-End-->
 

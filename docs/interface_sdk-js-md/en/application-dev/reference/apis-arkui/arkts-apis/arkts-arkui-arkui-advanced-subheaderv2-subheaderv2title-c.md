@@ -1,6 +1,6 @@
 # SubHeaderV2Title
 
-Declare the SubHeaderV2Title
+Defines the title settings for the subheader.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2Operati
 constructor(options: SubHeaderV2TitleOptions)
 ```
 
-The constructor of SubHeaderV2Title
+A constructor used to create a **SubHeaderV2Title** object.
 
 **Since:** 18
 
@@ -38,7 +38,7 @@ The constructor of SubHeaderV2Title
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2TitleOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | Yes |  |
+| options | [SubHeaderV2TitleOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2titleoptions-i.md) | Yes | Options for initializing the title. |
 
 ## id
 
@@ -63,7 +63,7 @@ Set the id of the title.
 ## primaryTitle
 
 ```TypeScript
-@Trace primaryTitle?: ResourceStr
+primaryTitle?: ResourceStr
 ```
 
 The first line text of content area.
@@ -76,14 +76,14 @@ The first line text of content area.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Title-@Trace primaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-@Trace primaryTitle?: ResourceStr-End-->
+<!--Device-SubHeaderV2Title-primaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-primaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitleModifier
 
 ```TypeScript
-@Trace primaryTitleModifier?: TextModifier
+primaryTitleModifier?: TextModifier
 ```
 
 Text modifier for primary title.
@@ -96,14 +96,14 @@ Text modifier for primary title.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Title-@Trace primaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-@Trace primaryTitleModifier?: TextModifier-End-->
+<!--Device-SubHeaderV2Title-primaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-primaryTitleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitle
 
 ```TypeScript
-@Trace secondaryTitle?: ResourceStr
+secondaryTitle?: ResourceStr
 ```
 
 The secondary line text of content area.
@@ -116,14 +116,14 @@ The secondary line text of content area.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Title-@Trace secondaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-@Trace secondaryTitle?: ResourceStr-End-->
+<!--Device-SubHeaderV2Title-secondaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-secondaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitleModifier
 
 ```TypeScript
-@Trace secondaryTitleModifier?: TextModifier
+secondaryTitleModifier?: TextModifier
 ```
 
 Text modifier for secondary title.
@@ -136,17 +136,23 @@ Text modifier for secondary title.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Title-@Trace secondaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-@Trace secondaryTitleModifier?: TextModifier-End-->
+<!--Device-SubHeaderV2Title-secondaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-secondaryTitleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleAccessibilityText
 
 ```TypeScript
-@Trace titleAccessibilityText?: ResourceStr
+titleAccessibilityText?: ResourceStr
 ```
 
-The accessibility text for broadcasting the title.
+Customized content to be read in the title.
+
+Default value: **undefined**
+
+If the value is **undefined**, the title content displayed by the component is read by default.
+
+Decorator: @Trace
 
 **Type:** ResourceStr
 
@@ -156,7 +162,7 @@ The accessibility text for broadcasting the title.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-SubHeaderV2Title-@Trace titleAccessibilityText?: ResourceStr--><!--Device-SubHeaderV2Title-@Trace titleAccessibilityText?: ResourceStr-End-->
+<!--Device-SubHeaderV2Title-titleAccessibilityText?: ResourceStr--><!--Device-SubHeaderV2Title-titleAccessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

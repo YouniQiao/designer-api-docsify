@@ -1,6 +1,6 @@
 # SubHeaderV2SelectOptions
 
-Defines the SubHeaderV2SelectOptions.
+Defines the options for initializing a **SubHeaderV2Select** object.
 
 **Since:** 18
 
@@ -20,7 +20,13 @@ import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2Operati
 defaultFocus?: boolean
 ```
 
-Sets the default focus state of SubHeaderV2SelectOptions.
+Whether the drop-down button is the default focus.
+
+**true**: The drop-down button is the default focus.
+
+**false**: The drop-down button is not the default focus.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -42,7 +48,7 @@ Sets the default focus state of SubHeaderV2SelectOptions.
 id?: string
 ```
 
-Set the id for the SubHeaderV2SelectOptions.
+Set the id for the SubHeaderV2Select.
 
 **Type:** string
 
@@ -62,7 +68,9 @@ Set the id for the SubHeaderV2SelectOptions.
 onSelect?: SubHeaderV2SelectOnSelect
 ```
 
-Sets the onSelect of the SubHeaderV2SelectOptions.
+Callback invoked when an item in the drop-down list box is selected.
+
+Default value: **undefined**
 
 **Type:** SubHeaderV2SelectOnSelect
 
@@ -82,7 +90,7 @@ Sets the onSelect of the SubHeaderV2SelectOptions.
 options: SelectOption[]
 ```
 
-Sets the options of the SubHeaderV2SelectOptions.
+Options for the drop-down list box.
 
 **Type:** SelectOption[]
 
@@ -102,15 +110,15 @@ Sets the options of the SubHeaderV2SelectOptions.
 selectedContent?: ResourceStr
 ```
 
-Sets the selected content of the SubHeaderV2SelectOptions.
+Text content of the drop-down button. Default value: **''**. The Resource type is supported since API version 20.
 
 **Type:** ResourceStr
 
-**Since:** 20
+**Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SubHeaderV2SelectOptions-selectedContent?: ResourceStr--><!--Device-SubHeaderV2SelectOptions-selectedContent?: ResourceStr-End-->
 
@@ -122,7 +130,11 @@ Sets the selected content of the SubHeaderV2SelectOptions.
 selectedIndex?: number
 ```
 
-Sets the selected index of the SubHeaderV2SelectOptions.
+Index of the initially selected item in the drop-down list box.
+
+The index of the first item is 0.
+
+If this property is not set, the default value **-1** is used, indicating that no item is selected.
 
 **Type:** number
 

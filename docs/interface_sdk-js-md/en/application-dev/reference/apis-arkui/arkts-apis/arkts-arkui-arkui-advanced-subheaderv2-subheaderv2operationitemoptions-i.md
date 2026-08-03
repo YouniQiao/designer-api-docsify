@@ -1,6 +1,6 @@
 # SubHeaderV2OperationItemOptions
 
-Defines the SubHeaderV2OperationItemOptions.
+Defines the options for initializing a **SubHeaderV2OperationItem** object.
 
 **Since:** 18
 
@@ -20,7 +20,9 @@ import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2Operati
 accessibilityDescription?: ResourceStr
 ```
 
-The accessibilityDescription of this text or icon.
+Accessibility description.
+
+Default value: **"Double-tap to activate"**
 
 **Type:** ResourceStr
 
@@ -40,7 +42,19 @@ The accessibilityDescription of this text or icon.
 accessibilityLevel?: string
 ```
 
-The accessibilityLevel of this text or icon.
+Accessibility level of the icon on the right side of the subheader.
+
+The options are as follows:
+
+**"auto"**: The icon's recognizability by accessibility services is determined by the accessibility grouping service and ArkUI.
+
+**"yes"**: The icon can be recognized by accessibility services.
+
+**"no"**: The icon cannot be recognized by accessibility services.
+
+**"no-hide-descendants"**: Neither the icon nor its child components can be recognized by accessibility services.
+
+Default value: **"yes"**
 
 **Type:** string
 
@@ -67,7 +81,9 @@ for the accessibility service.
 accessibilityText?: ResourceStr
 ```
 
-The accessibilityText of this text or icon.
+Accessibility text of the icon on the right side of the subheader.
+
+Default value: **undefined**
 
 **Type:** ResourceStr
 
@@ -87,7 +103,7 @@ The accessibilityText of this text or icon.
 action?: SubHeaderV2OperationItemAction
 ```
 
-callback function when operate the text or icon.
+Event triggered when the item is operated. Default value: **() => void**.
 
 **Type:** SubHeaderV2OperationItemAction
 
@@ -107,7 +123,7 @@ callback function when operate the text or icon.
 content: SubHeaderV2OperationItemType
 ```
 
-The content of text or the address of icon.
+Content of the item in the operation area.
 
 **Type:** SubHeaderV2OperationItemType
 
@@ -127,7 +143,13 @@ The content of text or the address of icon.
 defaultFocus?: boolean
 ```
 
-Sets the default focus state of the text or icon.
+Whether to receive default focus.
+
+**true**: Receive default focus.
+
+**false**: Do not receive default focus.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -149,7 +171,7 @@ Sets the default focus state of the text or icon.
 id?: string
 ```
 
-Set the id for SubHeaderV2OperationItemOptions.
+Set the id for SubHeaderV2OperationItem.
 
 **Type:** string
 

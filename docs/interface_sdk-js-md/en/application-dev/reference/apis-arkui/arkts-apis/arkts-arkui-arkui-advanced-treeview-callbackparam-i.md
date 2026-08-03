@@ -2,7 +2,7 @@
 
 Declare CallbackParam
 
-**Since:** 22
+**Since:** 10
 
 <!--Device-unnamed-export interface CallbackParam--><!--Device-unnamed-export interface CallbackParam-End-->
 
@@ -20,15 +20,19 @@ import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeC
 childIndex?: number
 ```
 
-Get the childIndex.
+Child index.
+
+The value must be greater than or equal to -1.
+
+Default value: **-1**
 
 **Type:** number
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CallbackParam-childIndex?: number--><!--Device-CallbackParam-childIndex?: number-End-->
 
@@ -40,15 +44,17 @@ Get the childIndex.
 currentNodeId: number
 ```
 
-Get the currentNodeId.
+ID of the current child node.
+
+The value must be greater than or equal to 0.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CallbackParam-currentNodeId: number--><!--Device-CallbackParam-currentNodeId: number-End-->
 
@@ -60,15 +66,19 @@ Get the currentNodeId.
 parentNodeId?: number
 ```
 
-Get the parentNodeId.
+ID of the current parent node.
+
+The value must be greater than or equal to -1.
+
+Default value: **-1**
 
 **Type:** number
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CallbackParam-parentNodeId?: number--><!--Device-CallbackParam-parentNodeId?: number-End-->
 

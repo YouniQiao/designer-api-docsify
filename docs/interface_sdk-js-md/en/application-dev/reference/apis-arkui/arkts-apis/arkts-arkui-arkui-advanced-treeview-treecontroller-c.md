@@ -1,8 +1,8 @@
 # TreeController
 
-Declare TreeController
+Implements a **TreeController** object, which can be bound to a tree view component to control the node information of the component. One **TreeController** object can be bound to only one tree view component.
 
-**Since:** 22
+**Since:** 10
 
 <!--Device-unnamed-export declare class TreeController--><!--Device-unnamed-export declare class TreeController-End-->
 
@@ -20,15 +20,13 @@ import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeC
 addNode(nodeParam?: NodeParam): TreeController
 ```
 
-Initialize the interface of the tree view. This interface is used to generate ListNodeDataSource data.addNode is only designed for initialization. It can only be invoked during initialization.
+Adds a child node to the selected node.
 
-A maximum of 50 directory levels can be added.
-
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeController-addNode(nodeParam?: NodeParam): TreeController--><!--Device-TreeController-addNode(nodeParam?: NodeParam): TreeController-End-->
 
@@ -38,13 +36,13 @@ A maximum of 50 directory levels can be added.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nodeParam | [NodeParam](arkts-arkui-arkui-advanced-treeview-nodeparam-i.md) | No |  |
+| nodeParam | [NodeParam](arkts-arkui-arkui-advanced-treeview-nodeparam-i.md) | No | Node information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TreeController](arkts-arkui-arkui-advanced-treeview-treecontroller-c.md) |  |
+| [TreeController](arkts-arkui-arkui-advanced-treeview-treecontroller-c.md) | Controller of the **TreeView** component. |
 
 ## buildDone
 
@@ -52,15 +50,13 @@ A maximum of 50 directory levels can be added.
 buildDone(): void
 ```
 
-After the initialization is complete by calling the addNode interface,call this interface to complete initialization.
+Builds a tree view. After a node is added, this API must be called to save the tree information.
 
-This interface must be called when you finish initializing the ListTreeView by addNode.
-
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeController-buildDone(): void--><!--Device-TreeController-buildDone(): void-End-->
 
@@ -72,13 +68,13 @@ This interface must be called when you finish initializing the ListTreeView by a
 modifyNode(): void
 ```
 
-Modify the node name.Register an ON_ITEM_MODIFY callback to obtain the ID, parent node ID, and node name of the modified node.
+Modifies the selected node.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeController-modifyNode(): void--><!--Device-TreeController-modifyNode(): void-End-->
 
@@ -90,13 +86,13 @@ Modify the node name.Register an ON_ITEM_MODIFY callback to obtain the ID, paren
 refreshNode(parentId: number, parentSubTitle: ResourceStr, currentSubtitle: ResourceStr): void
 ```
 
-This interface is called when a secondaryTitle needs to be updated
+Refreshes the tree view. You can call this API to update the information about the current node.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeController-refreshNode(parentId: number, parentSubTitle: ResourceStr, currentSubtitle: ResourceStr): void--><!--Device-TreeController-refreshNode(parentId: number, parentSubTitle: ResourceStr, currentSubtitle: ResourceStr): void-End-->
 
@@ -106,9 +102,9 @@ This interface is called when a secondaryTitle needs to be updated
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parentId | number | Yes |  |
-| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |  |
-| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |  |
+| parentId | number | Yes | ID of the parent node.<br>The value must be greater than or equal to -1. |
+| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Secondary text of the parent node. |
+| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Secondary text of the current node. |
 
 ## removeNode
 
@@ -116,13 +112,13 @@ This interface is called when a secondaryTitle needs to be updated
 removeNode(): void
 ```
 
-Delete a node.Register an ON_ITEM_DELETE callback through the ListTreeListener mechanism to obtain the IDs of all deleted nodes.
+Removes the selected node.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeController-removeNode(): void--><!--Device-TreeController-removeNode(): void-End-->
 

@@ -2,7 +2,7 @@
 
 Declaration of the menu item on the right side.
 
-**Since:** 20
+**Since:** 10
 
 <!--Device-unnamed-export declare class SelectTitleBarMenuItem--><!--Device-unnamed-export declare class SelectTitleBarMenuItem-End-->
 
@@ -20,15 +20,17 @@ import { SelectTitleBarMenuItem, SelectTitleBar } from '@kit.ArkUI';
 accessibilityDescription?: ResourceStr
 ```
 
-The accessibilityDescription of this menu item.
+Accessible description. You can provide comprehensive text explanations to help users understand the operation they are about to perform and its potential consequences, especially when these cannot be inferred from the component's attributes and accessibility text alone. If a component contains both text information and the accessible description, the text is announced first and then the accessible description, when the component is selected.
+
+Default value: **"Double-tap to activate"**
 
 **Type:** ResourceStr
 
-**Since:** 20
+**Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectTitleBarMenuItem-accessibilityDescription?: ResourceStr--><!--Device-SelectTitleBarMenuItem-accessibilityDescription?: ResourceStr-End-->
 
@@ -40,17 +42,29 @@ The accessibilityDescription of this menu item.
 accessibilityLevel?: string
 ```
 
-The accessibilityLevel of this menu item.
+Accessibility level. It determines whether the component can be recognized by accessibility services.
+
+The options are as follows:
+
+**"auto"**: It is treated as "yes" by the system.
+
+**"yes"**: The component can be recognized by accessibility services.
+
+**"no"**: The component cannot be recognized by accessibility services.
+
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
+
+Default value: **"auto"**
 
 **Type:** string
 
 **Default:** "auto"
 
-**Since:** 20
+**Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectTitleBarMenuItem-accessibilityLevel?: string--><!--Device-SelectTitleBarMenuItem-accessibilityLevel?: string-End-->
 
@@ -62,15 +76,17 @@ The accessibilityLevel of this menu item.
 accessibilityText?: ResourceStr
 ```
 
-The accessibilityText of this menu item.
+Accessibility text, that is, accessible label name. If a component does not contain text information, it will not be announced by the screen reader when selected. In this case, the screen reader user cannot know which component is selected. To solve this problem, you can set accessibility text for components without text information. When such a component is selected, the screen reader announces the specified accessibility text, informing the user which component is selected.
+
+Default value: value of the **label** property if it is set and an empty string otherwise.
 
 **Type:** ResourceStr
 
-**Since:** 20
+**Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectTitleBarMenuItem-accessibilityText?: ResourceStr--><!--Device-SelectTitleBarMenuItem-accessibilityText?: ResourceStr-End-->
 
@@ -82,15 +98,15 @@ The accessibilityText of this menu item.
 action?: () => void
 ```
 
-Callback function when click on this menu item.
+Action to perform.
 
 **Type:** () =&gt; void
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectTitleBarMenuItem-action?: () => void--><!--Device-SelectTitleBarMenuItem-action?: () => void-End-->
 
@@ -102,15 +118,17 @@ Callback function when click on this menu item.
 isEnabled?: boolean
 ```
 
-Whether to enable this menu item.
+Whether to enable the item.
+
+Default value: **false**. **true** to enable, **false** to disable.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectTitleBarMenuItem-isEnabled?: boolean--><!--Device-SelectTitleBarMenuItem-isEnabled?: boolean-End-->
 
@@ -122,15 +140,15 @@ Whether to enable this menu item.
 label?: ResourceStr
 ```
 
-Icon label for this menu item.
+Icon label.
 
 **Type:** ResourceStr
 
-**Since:** 20
+**Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-SelectTitleBarMenuItem-label?: ResourceStr--><!--Device-SelectTitleBarMenuItem-label?: ResourceStr-End-->
 
@@ -142,15 +160,15 @@ Icon label for this menu item.
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol resource for this menu item.
+Symbol icon resource, which has higher priority than **value**.
 
 **Type:** SymbolGlyphModifier
 
-**Since:** 20
+**Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SelectTitleBarMenuItem-symbolStyle?: SymbolGlyphModifier--><!--Device-SelectTitleBarMenuItem-symbolStyle?: SymbolGlyphModifier-End-->
 
@@ -162,15 +180,15 @@ Symbol resource for this menu item.
 value: ResourceStr
 ```
 
-Icon resource for this menu item.
+Icon resource.
 
 **Type:** ResourceStr
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectTitleBarMenuItem-value: ResourceStr--><!--Device-SelectTitleBarMenuItem-value: ResourceStr-End-->
 

@@ -1,8 +1,8 @@
 # TreeListener
 
-Declare class TreeListener
+Listener of the tree view component. You can bind it to the **TreeView** component and use it to listen for changes of tree nodes. One listener can be bound to only one **TreeView** component.
 
-**Since:** 22
+**Since:** 10
 
 <!--Device-unnamed-export declare class TreeListener--><!--Device-unnamed-export declare class TreeListener-End-->
 
@@ -20,13 +20,13 @@ import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeC
 off(type: TreeListenType, callback?: (callbackParam: CallbackParam) => void): void
 ```
 
-Destroy event.
+Registers a one-off listener.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeListener-off(type: TreeListenType, callback?: (callbackParam: CallbackParam) => void): void--><!--Device-TreeListener-off(type: TreeListenType, callback?: (callbackParam: CallbackParam) => void): void-End-->
 
@@ -36,8 +36,8 @@ Destroy event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes |  |
-| callback | (callbackParam: CallbackParam) =&gt; void | No |  |
+| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes | Listening type. |
+| callback | (callbackParam: CallbackParam) =&gt; void | No | Node information. |
 
 ## on
 
@@ -45,13 +45,13 @@ Destroy event.
 on(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void
 ```
 
-Event registration and processing.The event will not be destroyed after being processed.
+Declare class TreeListener
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeListener-on(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void--><!--Device-TreeListener-on(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void-End-->
 
@@ -61,8 +61,8 @@ Event registration and processing.The event will not be destroyed after being pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes |  |
-| callback | (callbackParam: CallbackParam) =&gt; void | Yes |  |
+| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes | Listening type. |
+| callback | (callbackParam: CallbackParam) =&gt; void | Yes | Node information. |
 
 ## once
 
@@ -70,13 +70,13 @@ Event registration and processing.The event will not be destroyed after being pr
 once(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void
 ```
 
-Event registration and processing.After the event is processed once, it will be destroyed.
+Declare class TreeListener
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeListener-once(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void--><!--Device-TreeListener-once(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void-End-->
 
@@ -86,6 +86,6 @@ Event registration and processing.After the event is processed once, it will be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes |  |
-| callback | (callbackParam: CallbackParam) =&gt; void | Yes |  |
+| type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes | Listening type. |
+| callback | (callbackParam: CallbackParam) =&gt; void | Yes | Node information. |
 

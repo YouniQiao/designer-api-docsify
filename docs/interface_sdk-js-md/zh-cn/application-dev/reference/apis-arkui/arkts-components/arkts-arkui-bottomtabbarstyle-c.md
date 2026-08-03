@@ -28,7 +28,7 @@ BottomTabBarStyle的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | 是 | 页签内的图片内容。异常时显示灰色图块。如果icon采用svg格式图源，需删除svg图源内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 9 - 11 |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 9 - 11 |
 | text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
 
 ## iconStyle
@@ -53,13 +53,13 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | 是 | 底部页签的label图标的样式。 |
+| style | [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | 是 | 底部页签的label图标的样式，用于设置图标的选中态和未选中态颜色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## id
 
@@ -67,7 +67,7 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 id(value: string): BottomTabBarStyle
 ```
 
-设置底部页签的id。
+底部页签的id。
 
 **起始版本：** 11
 
@@ -83,13 +83,13 @@ id(value: string): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 设置底部页签的id。 |
+| value | string | 是 | 底部页签的id。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## labelStyle
 
@@ -113,13 +113,13 @@ labelStyle(value: LabelStyle): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | 是 | 底部页签的label文本和字体的样式。 |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | 是 | 底部页签的label文本和字体的样式，用于设置文字的颜色、大小、字体、行数等属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## layoutMode
 
@@ -149,7 +149,7 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## of
 
@@ -173,14 +173,14 @@ BottomTabBarStyle的静态构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | 是 | 页签内的图片内容。 异常时显示灰色图块。如果icon采用svg格式图源，需删除svg图源内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 10 - 11 |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 10 - 11 |
 | text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回创建的BottomTabBarStyle对象。 |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回创建的BottomTabBarStyle对象，用于设置底部页签和侧边页签样式。 |
 
 ## padding
 
@@ -210,7 +210,7 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 
 ## symmetricExtensible
 
@@ -270,5 +270,5 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身，用于链式调用。 |
 

@@ -1,6 +1,6 @@
 # SubHeaderV2OperationItem
 
-Declare the SubHeaderV2OperationItem
+Represents an item in the operation area.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2Operati
 constructor(options: SubHeaderV2OperationItemOptions)
 ```
 
-The constructor of SubHeaderV2OperationItem
+Constructor of **SubHeaderV2OperationItem**.
 
 **Since:** 18
 
@@ -38,12 +38,12 @@ The constructor of SubHeaderV2OperationItem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2OperationItemOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | Yes |  |
+| options | [SubHeaderV2OperationItemOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitemoptions-i.md) | Yes | Operation item configuration information. Defines the options for initializing a **SubHeaderV2OperationItem** object. |
 
 ## accessibilityDescription
 
 ```TypeScript
-@Trace accessibilityDescription?: ResourceStr
+accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of this text or icon.
@@ -56,14 +56,14 @@ The accessibilityDescription of this text or icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2OperationItem-@Trace accessibilityDescription?: ResourceStr--><!--Device-SubHeaderV2OperationItem-@Trace accessibilityDescription?: ResourceStr-End-->
+<!--Device-SubHeaderV2OperationItem-accessibilityDescription?: ResourceStr--><!--Device-SubHeaderV2OperationItem-accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-@Trace accessibilityLevel?: string
+accessibilityLevel?: string
 ```
 
 The accessibilityLevel of this text or icon.
@@ -83,14 +83,14 @@ for the accessibility service.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2OperationItem-@Trace accessibilityLevel?: string--><!--Device-SubHeaderV2OperationItem-@Trace accessibilityLevel?: string-End-->
+<!--Device-SubHeaderV2OperationItem-accessibilityLevel?: string--><!--Device-SubHeaderV2OperationItem-accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
 
 ```TypeScript
-@Trace accessibilityText?: ResourceStr
+accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of this text or icon.
@@ -103,14 +103,14 @@ The accessibilityText of this text or icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2OperationItem-@Trace accessibilityText?: ResourceStr--><!--Device-SubHeaderV2OperationItem-@Trace accessibilityText?: ResourceStr-End-->
+<!--Device-SubHeaderV2OperationItem-accessibilityText?: ResourceStr--><!--Device-SubHeaderV2OperationItem-accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## action
 
 ```TypeScript
-@Trace action?: SubHeaderV2OperationItemAction
+action?: SubHeaderV2OperationItemAction
 ```
 
 callback function when operate the text or icon.
@@ -123,14 +123,14 @@ callback function when operate the text or icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2OperationItem-@Trace action?: SubHeaderV2OperationItemAction--><!--Device-SubHeaderV2OperationItem-@Trace action?: SubHeaderV2OperationItemAction-End-->
+<!--Device-SubHeaderV2OperationItem-action?: SubHeaderV2OperationItemAction--><!--Device-SubHeaderV2OperationItem-action?: SubHeaderV2OperationItemAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
 
 ```TypeScript
-@Trace content: SubHeaderV2OperationItemType
+content: SubHeaderV2OperationItemType
 ```
 
 The content of text or the address of icon.
@@ -143,14 +143,14 @@ The content of text or the address of icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2OperationItem-@Trace content: SubHeaderV2OperationItemType--><!--Device-SubHeaderV2OperationItem-@Trace content: SubHeaderV2OperationItemType-End-->
+<!--Device-SubHeaderV2OperationItem-content: SubHeaderV2OperationItemType--><!--Device-SubHeaderV2OperationItem-content: SubHeaderV2OperationItemType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## defaultFocus
 
 ```TypeScript
-@Trace defaultFocus?: boolean
+defaultFocus?: boolean
 ```
 
 Sets the default focus state of the text or icon.
@@ -165,7 +165,7 @@ Sets the default focus state of the text or icon.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2OperationItem-@Trace defaultFocus?: boolean--><!--Device-SubHeaderV2OperationItem-@Trace defaultFocus?: boolean-End-->
+<!--Device-SubHeaderV2OperationItem-defaultFocus?: boolean--><!--Device-SubHeaderV2OperationItem-defaultFocus?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

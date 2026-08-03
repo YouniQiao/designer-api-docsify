@@ -22,7 +22,7 @@ import { PiPWindow } from '@kit.ArkUI';
 isPiPSupported(): boolean
 ```
 
-Returns a Boolean value that indicates whether picture-in-picture is supported
+判断当前设备是否支持画中画功能。
 
 **起始版本：** 18
 
@@ -36,7 +36,7 @@ Returns a Boolean value that indicates whether picture-in-picture is supported
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | - True if picture-in-picture is supported, otherwise false |
+| boolean | - 当前设备是否支持画中画功能。true表示支持，false表示不支持。 |
 
 **错误码：**
 

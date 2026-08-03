@@ -1,6 +1,6 @@
 # SubHeaderV2TitleOptions
 
-Defines the SubHeaderV2TitleOptions.
+Defines the options for initializing a **SubHeaderV2Title** object.
 
 **Since:** 18
 
@@ -40,7 +40,9 @@ Set the id of the title.
 primaryTitle?: ResourceStr
 ```
 
-The first line text of content area.
+Primary title.
+
+Default value: **undefined**
 
 **Type:** ResourceStr
 
@@ -60,7 +62,9 @@ The first line text of content area.
 primaryTitleModifier?: TextModifier
 ```
 
-Text modifier for primary title.
+Text attributes of the primary title, such as the font color, font size, and font weight.
+
+Default value: **undefined**
 
 **Type:** TextModifier
 
@@ -80,7 +84,9 @@ Text modifier for primary title.
 secondaryTitle?: ResourceStr
 ```
 
-The secondary line text of content area.
+Secondary title.
+
+Default value: **undefined**
 
 **Type:** ResourceStr
 
@@ -100,7 +106,9 @@ The secondary line text of content area.
 secondaryTitleModifier?: TextModifier
 ```
 
-Text modifier for secondary title.
+Text attributes of the secondary title, such as the font color, font size, and font weight.
+
+Default value: **undefined**
 
 **Type:** TextModifier
 
@@ -120,7 +128,11 @@ Text modifier for secondary title.
 titleAccessibilityText?: ResourceStr
 ```
 
-The accessibility text for broadcasting the title.
+Customized content to be read in the title.
+
+Default value: **undefined**
+
+If the value is **undefined**, the title content displayed by the component is read by default.
 
 **Type:** ResourceStr
 

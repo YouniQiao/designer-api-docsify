@@ -2,7 +2,7 @@
 
 Declare type SelectOption
 
-**Since:** 18
+**Since:** 10
 
 <!--Device-unnamed-export declare class SelectOptions--><!--Device-unnamed-export declare class SelectOptions-End-->
 
@@ -20,7 +20,13 @@ import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions
 defaultFocus?: boolean
 ```
 
-Sets the default focus state of select.
+Whether the drop-down button is the default focus.
+
+**true**: The drop-down button is the default focus.
+
+**false**: The drop-down button is not the default focus.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -62,15 +68,18 @@ Set the id for the select.
 onSelect?: (index: number, value?: string) => void
 ```
 
-Callback when the select is selected.
+Callback invoked when an item in the drop-down list box is selected.
+
+- **index**: index of the selected option.  
+- **value**: value of the selected option.
 
 **Type:** (index: number, value?: string) =&gt; void
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectOptions-onSelect?: (index: number, value?: string) => void--><!--Device-SelectOptions-onSelect?: (index: number, value?: string) => void-End-->
 
@@ -82,15 +91,15 @@ Callback when the select is selected.
 options: Array<SelectOption>
 ```
 
-SubOption array of the select.
+Options of an item in the drop-down list box.
 
 **Type:** Array&lt;SelectOption&gt;
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectOptions-options: Array<SelectOption>--><!--Device-SelectOptions-options: Array<SelectOption>-End-->
 
@@ -102,15 +111,23 @@ SubOption array of the select.
 selected?: number
 ```
 
-The default selected index.
+Index of the initially selected item in the drop-down list box.
+
+The value must be greater than or equal to -1.
+
+The index of the first item is 0.
+
+If this attribute is not set, the default value **-1** is used, indicating that the option is not selected.
+
+Values less than -1 are treated as no selection.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectOptions-selected?: number--><!--Device-SelectOptions-selected?: number-End-->
 
@@ -122,15 +139,19 @@ The default selected index.
 value?: ResourceStr
 ```
 
-The default text value.
+Text content of the drop-down list button itself.
+
+The default value is an empty string.
+
+Note: If the text length exceeds the column width, it will be truncated. The Resource type is supported since API version 20.
 
 **Type:** ResourceStr
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectOptions-value?: ResourceStr--><!--Device-SelectOptions-value?: ResourceStr-End-->
 

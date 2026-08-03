@@ -2,7 +2,7 @@
 
 Declaration of the left icon type.
 
-**Since:** 22
+**Since:** 10
 
 <!--Device-unnamed-export declare enum EditableLeftIconType--><!--Device-unnamed-export declare enum EditableLeftIconType-End-->
 
@@ -14,13 +14,13 @@ Declaration of the left icon type.
 Back = 0
 ```
 
-The back type.
+Back.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EditableLeftIconType-Back = 0--><!--Device-EditableLeftIconType-Back = 0-End-->
 
@@ -32,13 +32,13 @@ The back type.
 Cancel = 1
 ```
 
-The cancel type.
+Cancel.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EditableLeftIconType-Cancel = 1--><!--Device-EditableLeftIconType-Cancel = 1-End-->
 

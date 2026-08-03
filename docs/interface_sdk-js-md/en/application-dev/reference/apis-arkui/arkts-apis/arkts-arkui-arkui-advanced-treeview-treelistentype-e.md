@@ -1,8 +1,8 @@
 # TreeListenType
 
-Control style of operation element
+Enumerates the listening types of tree view nodes.
 
-**Since:** 22
+**Since:** 10
 
 <!--Device-unnamed-export declare enum TreeListenType--><!--Device-unnamed-export declare enum TreeListenType-End-->
 
@@ -14,13 +14,13 @@ Control style of operation element
 NODE_CLICK = "NodeClick"
 ```
 
-register listener after a node is clicked.
+Listens for click events of nodes.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeListenType-NODE_CLICK = "NodeClick"--><!--Device-TreeListenType-NODE_CLICK = "NodeClick"-End-->
 
@@ -32,13 +32,13 @@ register listener after a node is clicked.
 NODE_ADD = "NodeAdd"
 ```
 
-register listener after a node is add.
+Listens for add events of nodes.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeListenType-NODE_ADD = "NodeAdd"--><!--Device-TreeListenType-NODE_ADD = "NodeAdd"-End-->
 
@@ -50,13 +50,13 @@ register listener after a node is add.
 NODE_DELETE = "NodeDelete"
 ```
 
-register listener after a node is deleted.
+Listens for delete events of nodes.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeListenType-NODE_DELETE = "NodeDelete"--><!--Device-TreeListenType-NODE_DELETE = "NodeDelete"-End-->
 
@@ -68,13 +68,13 @@ register listener after a node is deleted.
 NODE_MODIFY = "NodeModify"
 ```
 
-register listener after a node is modified.
+Listens for modify events of nodes.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeListenType-NODE_MODIFY = "NodeModify"--><!--Device-TreeListenType-NODE_MODIFY = "NodeModify"-End-->
 
@@ -86,13 +86,13 @@ register listener after a node is modified.
 NODE_MOVE = "NodeMove"
 ```
 
-register listener after a node is moved.
+Listens for move events of nodes.
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeListenType-NODE_MOVE = "NodeMove"--><!--Device-TreeListenType-NODE_MOVE = "NodeMove"-End-->
 

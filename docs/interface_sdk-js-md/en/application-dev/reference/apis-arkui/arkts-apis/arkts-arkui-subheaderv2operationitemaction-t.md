@@ -4,7 +4,7 @@
 export type SubHeaderV2OperationItemAction = () => void
 ```
 
-Defines the action callback of the SubHeaderV2OperationItem.
+Defines the callback for items in the operation area.
 
 **Since:** 18
 

@@ -1,8 +1,18 @@
 # ToolBar
 
-Declare Component ToolBar
+The **Toolbar** component is designed to present a set of action options related to the current screen, displayed at the bottom of the screen. It can display up to five child components. If there are six or more child components, the first four are shown directly, and the additional ones are grouped under a **More** item on the rightmost side of the toolbar.
+> **NOTE**  
+>  
+> - This component can be used only in the stage model.  
+>  
+> - If the **ToolBar** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and  
+> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically  
+> generates an additional **__Common__** node and mounts the universal attributes and universal events on this node  
+> rather than the **ToolBar** component itself. As a result, the configured universal attributes and universal events  
+> may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events with  
+> the **ToolBar** component.
 
-**Since:** 18
+**Since:** 10
 
 **Decorator:** @Component
 
@@ -19,22 +29,26 @@ import { ToolBarOption, ItemState, ToolBar, ToolBarOptions, ToolBarModifier } fr
 ## activateIndex
 
 ```TypeScript
-@Prop activateIndex?: number
+activateIndex?: number
 ```
 
-Define toolbar activate item index, default is -1.
+Index of the active item.
+
+The value must be greater than or equal to -1.
+
+The default value is **-1**, indicating that there is no active item. Values less than -1 are treated as no active item.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 10
 
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ToolBar-@Prop activateIndex?: number--><!--Device-ToolBar-@Prop activateIndex?: number-End-->
+<!--Device-ToolBar-activateIndex?: number--><!--Device-ToolBar-activateIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,15 +58,15 @@ Define toolbar activate item index, default is -1.
 controller: TabsController
 ```
 
-Define toolbar controller.
+Toolbar controller, which cannot be used for controlling individual toolbar items.
 
 **Type:** TabsController
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ToolBar-controller: TabsController--><!--Device-ToolBar-controller: TabsController-End-->
 
@@ -61,66 +75,78 @@ Define toolbar controller.
 ## dividerModifier
 
 ```TypeScript
-@Prop dividerModifier?: DividerModifier
+dividerModifier?: DividerModifier
 ```
 
-Define divider Modifier.
+Modifier for the toolbar header divider, which can be used to customize the divider's height, color, and other attributes.
+
+Default value: system default value
 
 **Type:** DividerModifier
 
-**Since:** 18
+**Since:** 13
 
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
-<!--Device-ToolBar-@Prop dividerModifier?: DividerModifier--><!--Device-ToolBar-@Prop dividerModifier?: DividerModifier-End-->
+<!--Device-ToolBar-dividerModifier?: DividerModifier--><!--Device-ToolBar-dividerModifier?: DividerModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toolBarList
 
 ```TypeScript
-@ObjectLink toolBarList: ToolBarOptions
+toolBarList: ToolBarOptions
 ```
 
-Define toolbar list array.
+Toolbar list.
 
 **Type:** ToolBarOptions
 
-**Since:** 18
+**Since:** 10
 
 **Decorator:** @ObjectLink
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ToolBar-@ObjectLink toolBarList: ToolBarOptions--><!--Device-ToolBar-@ObjectLink toolBarList: ToolBarOptions-End-->
+<!--Device-ToolBar-toolBarList: ToolBarOptions--><!--Device-ToolBar-toolBarList: ToolBarOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## toolBarModifier
 
 ```TypeScript
-@Prop toolBarModifier?: ToolBarModifier
+toolBarModifier?: ToolBarModifier
 ```
 
-Define toolbar modifier.
+Modifier for the toolbar, which can be used to set the toolbar's height, background color, padding (which only takes effect when there are fewer than five toolbar items), and whether to display the pressed state.
+
+Default value:
+
+Height of the toolbar: **56vp**
+
+Background color: **ohos_id_toolbar_bg**
+
+Padding: **24vp**
+
+Whether to display the pressed state: yes
 
 **Type:** ToolBarModifier
 
-**Since:** 18
+**Since:** 13
 
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
-<!--Device-ToolBar-@Prop toolBarModifier?: ToolBarModifier--><!--Device-ToolBar-@Prop toolBarModifier?: ToolBarModifier-End-->
+<!--Device-ToolBar-toolBarModifier?: ToolBarModifier--><!--Device-ToolBar-toolBarModifier?: ToolBarModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

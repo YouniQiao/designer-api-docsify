@@ -1,8 +1,18 @@
 # SelectTitleBar
 
-Declaration of the selectable title bar.
+The **SelectTitleBar** component represents a drop-down menu title bar used for switching between pages of different levels (configured with the **Back** button).
+> **NOTE**  
+>  
+> - This component can be used only in the stage model.  
+>  
+> - If the **SelectTitleBar** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and  
+> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically  
+> generates an additional **__Common__** node and mounts the universal attributes and universal events on this node  
+> rather than the **SelectTitleBar** component itself. As a result, the configured universal attributes and universal  
+> events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events  
+> with the **SelectTitleBar** component.
 
-**Since:** 20
+**Since:** 10
 
 **Decorator:** @Component
 
@@ -22,15 +32,21 @@ import { SelectTitleBarMenuItem, SelectTitleBar } from '@kit.ArkUI';
 badgeValue?: number
 ```
 
-The number displayed in a badge.
+Value for the badge.
+
+Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
+
+Note: The badge will not be displayed if the value is less than or equal to 0.
+
+The maximum number of messages is 99. If this limit is exceeded, only **99+** is displayed. Extremely large values are considered exceptional and will result in the badge not being displayed.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectTitleBar-badgeValue?: number--><!--Device-SelectTitleBar-badgeValue?: number-End-->
 
@@ -42,15 +58,17 @@ The number displayed in a badge.
 hidesBackButton?: boolean
 ```
 
-Whether to hide the back arrow at the left side.
+Whether to hide the back arrow on the left.
+
+Default value: **false**. **true** to hide, **false** to show.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectTitleBar-hidesBackButton?: boolean--><!--Device-SelectTitleBar-hidesBackButton?: boolean-End-->
 
@@ -62,15 +80,15 @@ Whether to hide the back arrow at the left side.
 menuItems?: Array<SelectTitleBarMenuItem>
 ```
 
-Menu items on the right side.
+List of menu items on the right side of the title bar. This parameter is passed to add a list of menu items to the right side of the title bar. If this parameter is not specified, the menu area on the right is not displayed.
 
 **Type:** Array&lt;SelectTitleBarMenuItem&gt;
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectTitleBar-menuItems?: Array<SelectTitleBarMenuItem>--><!--Device-SelectTitleBar-menuItems?: Array<SelectTitleBarMenuItem>-End-->
 
@@ -82,15 +100,15 @@ Menu items on the right side.
 onSelected?: ((index: number) => void)
 ```
 
-Callback function when an option is selected
+Callback invoked when an option in the drop-down menu is selected. The index of the selected option is passed in.This parameter is passed to handle specific service logic after an option in the drop-down menu is selected. This parameter can be omitted when there is no specific service logic.
 
 **Type:** ((index: number) =&gt; void)
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectTitleBar-onSelected?: ((index: number) => void)--><!--Device-SelectTitleBar-onSelected?: ((index: number) => void)-End-->
 
@@ -102,15 +120,15 @@ Callback function when an option is selected
 options: Array<SelectOption>
 ```
 
-Options inside the drop-down list.
+Options in the drop-down menu.
 
 **Type:** Array&lt;SelectOption&gt;
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectTitleBar-options: Array<SelectOption>--><!--Device-SelectTitleBar-options: Array<SelectOption>-End-->
 
@@ -119,22 +137,24 @@ Options inside the drop-down list.
 ## selected
 
 ```TypeScript
-@Prop selected: number
+selected: number
 ```
 
-Selected index of the initial options in the drop-down menu. The index of the first item is 0.If this attribute is not set, the default value is -1. Which means, no menu item is selected.
+Index of the currently selected item.
+
+The index of the first item is 0. If this attribute is not set, the default value **0** will be used.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 10
 
 **Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SelectTitleBar-@Prop selected: number--><!--Device-SelectTitleBar-@Prop selected: number-End-->
+<!--Device-SelectTitleBar-selected: number--><!--Device-SelectTitleBar-selected: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -144,15 +164,15 @@ Selected index of the initial options in the drop-down menu. The index of the fi
 subtitle?: ResourceStr
 ```
 
-Sub-title of this title bar.
+Subtitle, used to display supplementary information. This parameter is passed to show the subtitle. If this parameter is not specified, the subtitle area is not displayed.
 
 **Type:** ResourceStr
 
-**Since:** 20
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SelectTitleBar-subtitle?: ResourceStr--><!--Device-SelectTitleBar-subtitle?: ResourceStr-End-->
 

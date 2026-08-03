@@ -20,7 +20,9 @@ import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style.
+Background blur style of the title bar.
+
+Default value: **BlurStyle.NONE**
 
 **Type:** BlurStyle
 
@@ -40,7 +42,9 @@ Background blur style.
 backgroundColor?: ResourceColor
 ```
 
-Background color.
+Background color of the title bar.
+
+Default value: **'#00000000'**
 
 **Type:** ResourceColor
 
@@ -60,7 +64,9 @@ Background color.
 safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-Indicates the edges of the safe area.
+Edges for expanding the safe area.
+
+Default value: **[SafeAreaEdge.TOP]**
 
 **Type:** Array&lt;SafeAreaEdge&gt;
 
@@ -80,7 +86,9 @@ Indicates the edges of the safe area.
 safeAreaTypes?: Array<SafeAreaType>
 ```
 
-Indicates the types of the safe area.
+Types of the expanded safe areas.
+
+Default value: **[SafeAreaType.SYSTEM]**
 
 **Type:** Array&lt;SafeAreaType&gt;
 

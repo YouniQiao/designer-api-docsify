@@ -1,8 +1,8 @@
 # ToolBarSymbolGlyphOptions
 
-Defines toolBar symbolGlyph options.
+Defines the icon symbol options.
 
-**Since:** 18
+**Since:** 13
 
 <!--Device-unnamed-export interface ToolBarSymbolGlyphOptions--><!--Device-unnamed-export interface ToolBarSymbolGlyphOptions-End-->
 
@@ -20,15 +20,17 @@ import { ToolBarOption, ItemState, ToolBar, ToolBarOptions, ToolBarModifier } fr
 activated?: SymbolGlyphModifier
 ```
 
-Modifier of toolbar's activated symbol.
+Icon symbol of the toolbar item in activated state.
+
+Default value: **fontColor: $r('sys.color.icon_emphasize'), fontSize: 24vp**
 
 **Type:** SymbolGlyphModifier
 
-**Since:** 18
+**Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-ToolBarSymbolGlyphOptions-activated?: SymbolGlyphModifier--><!--Device-ToolBarSymbolGlyphOptions-activated?: SymbolGlyphModifier-End-->
 
@@ -40,15 +42,17 @@ Modifier of toolbar's activated symbol.
 normal?: SymbolGlyphModifier
 ```
 
-Modifier of toolbar's normal symbol.
+Icon symbol of the toolbar item in normal state.
+
+Default value: **fontColor: $r('sys.color.icon_primary'), fontSize: 24vp**
 
 **Type:** SymbolGlyphModifier
 
-**Since:** 18
+**Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-ToolBarSymbolGlyphOptions-normal?: SymbolGlyphModifier--><!--Device-ToolBarSymbolGlyphOptions-normal?: SymbolGlyphModifier-End-->
 

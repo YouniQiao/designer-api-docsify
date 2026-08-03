@@ -1,8 +1,18 @@
 # EditableTitleBar
 
-Declaration of the editable title bar.
+The editable title bar is a title bar that comes with button icons, typically **Cancel** on the left and **Confirm** on the right, on a multi-select or editing page.
+> **NOTE**  
+>  
+> - This component can be used only in the stage model.  
+>  
+> - If the **EditableTitleBar** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and  
+> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically  
+> generates an additional **__Common__** node and mounts the universal attributes and universal events on this node  
+> rather than the **EditableTitleBar** component itself. As a result, the configured universal attributes and  
+> universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes  
+> and events with the **EditableTitleBar** component.
 
-**Since:** 22
+**Since:** 10
 
 **Decorator:** @Component
 
@@ -19,10 +29,14 @@ import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem
 ## contentMargin
 
 ```TypeScript
-@Prop contentMargin?: LocalizedMargin
+contentMargin?: LocalizedMargin
 ```
 
-Sets the content margins.
+Content margin. Negative numbers are not supported.
+
+Default value:
+
+{start: LengthMetrics.resource(*$r('sys.float.margin_left')*), end: LengthMetrics.resource(*$r('sys.float.margin_right')*)}
 
 **Type:** LocalizedMargin
 
@@ -37,7 +51,7 @@ Sets the content margins.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-EditableTitleBar-@Prop contentMargin?: LocalizedMargin--><!--Device-EditableTitleBar-@Prop contentMargin?: LocalizedMargin-End-->
+<!--Device-EditableTitleBar-contentMargin?: LocalizedMargin--><!--Device-EditableTitleBar-contentMargin?: LocalizedMargin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -47,7 +61,11 @@ Sets the content margins.
 imageItem?: EditableTitleBarItem
 ```
 
-Image item between the left icon and the title.
+A single menu item for the profile picture on the left. This parameter is required to display a profile picture on the left side of the title bar. If this parameter is not passed, the default value is used and no profile picture is displayed.
+
+Default value: **undefined**
+
+Note: Accessibility properties are not supported.
 
 **Type:** EditableTitleBarItem
 
@@ -67,7 +85,13 @@ Image item between the left icon and the title.
 isSaveIconRequired: boolean
 ```
 
-Whether to require the save icon.
+Whether the save button on the right is required.
+
+Default value: **true**, indicating that the save button on the right is required.
+
+**NOTE**
+
+If not decorated by @Require, this parameter is not subject to mandatory validation during construction.
 
 **Type:** boolean
 
@@ -89,7 +113,9 @@ Whether to require the save icon.
 leftIconDefaultFocus?: boolean
 ```
 
-Sets the default focus state of left icon.
+Whether the left icon is the default focus.
+
+Default value: **false**, indicating that the left icon is not the default focus.
 
 **Type:** boolean
 
@@ -111,15 +137,17 @@ Sets the default focus state of left icon.
 leftIconStyle: EditableLeftIconType
 ```
 
-Style of the left icon.
+Type of the icon on the left.
+
+Default value: **EditableLeftIconType.Back**
 
 **Type:** EditableLeftIconType
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EditableTitleBar-leftIconStyle: EditableLeftIconType--><!--Device-EditableTitleBar-leftIconStyle: EditableLeftIconType-End-->
 
@@ -131,15 +159,17 @@ Style of the left icon.
 menuItems?: Array<EditableTitleBarMenuItem>
 ```
 
-Menu items on the right side.
+List of menu items on the right. This parameter is required to display custom buttons on the right of the title bar. If this parameter is not passed, the default value is used, and no menu item list is displayed on the right.
+
+Default value: **undefined**
 
 **Type:** Array&lt;EditableTitleBarMenuItem&gt;
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EditableTitleBar-menuItems?: Array<EditableTitleBarMenuItem>--><!--Device-EditableTitleBar-menuItems?: Array<EditableTitleBarMenuItem>-End-->
 
@@ -151,15 +181,19 @@ Menu items on the right side.
 onCancel?: () => void
 ```
 
-Callback function when click on the cancel icon at the left side.
+Cancel action event, which is triggered when the left button is of the Cancel type. This parameter is required to customize the return or cancel operation logic. If this parameter is not specified, clicking the button on the left does not respond.
+
+Default value: **() => void**
+
+Back action event, which is triggered when the button on the left side is of the Back type, since API version 12.
 
 **Type:** () =&gt; void
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EditableTitleBar-onCancel?: () => void--><!--Device-EditableTitleBar-onCancel?: () => void-End-->
 
@@ -171,15 +205,17 @@ Callback function when click on the cancel icon at the left side.
 onSave?: () => void
 ```
 
-Callback function when click on the save icon at the right side.
+Save button click event. This parameter is required to customize the save operation logic. If this parameter is not specified, clicking the button does not respond.
+
+Default value: **() => void**
 
 **Type:** () =&gt; void
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EditableTitleBar-onSave?: () => void--><!--Device-EditableTitleBar-onSave?: () => void-End-->
 
@@ -191,7 +227,23 @@ Callback function when click on the save icon at the right side.
 options: EditableTitleBarOptions
 ```
 
-Indicates the options of the title bar.
+Title style.
+
+Default value:
+
+{
+
+safeAreaTypes: [SafeAreaType.SYSTEM],
+
+safeAreaEdges: [SafeAreaEdge.TOP],
+
+backgroundColor: '#00000000'
+
+}
+
+**NOTE**
+
+If not decorated by @Require, this parameter is not subject to mandatory validation during construction.
 
 **Type:** EditableTitleBarOptions
 
@@ -213,7 +265,9 @@ Indicates the options of the title bar.
 saveIconDefaultFocus?: boolean
 ```
 
-Sets the default focus state of save icon.
+Whether the save icon is the default focus.
+
+Default value: **false**, indicating that the save icon is not the default focus.
 
 **Type:** boolean
 
@@ -235,7 +289,9 @@ Sets the default focus state of save icon.
 subtitle?: ResourceStr
 ```
 
-Sub-Title of this title bar.
+Subtitle. This parameter is required to display a subtitle below the title bar. If this parameter is not passed,the default value is used and no subtitle is displayed.
+
+Default value: **''**, indicating that the subtitle is empty.
 
 **Type:** ResourceStr
 
@@ -255,15 +311,17 @@ Sub-Title of this title bar.
 title: ResourceStr
 ```
 
-Title of this title bar.
+Title.
+
+Default value: **''**, indicating that the title is empty.
 
 **Type:** ResourceStr
 
-**Since:** 22
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EditableTitleBar-title: ResourceStr--><!--Device-EditableTitleBar-title: ResourceStr-End-->
 

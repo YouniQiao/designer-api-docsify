@@ -1,6 +1,6 @@
 # SubHeaderV2Select
 
-Declare the SubHeaderV2Select
+Defines the content and events for selection.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2Operati
 constructor(options: SubHeaderV2SelectOptions)
 ```
 
-The constructor of SubHeaderV2Select
+A constructor used to create a **SubHeaderV2SelectOptions** object.
 
 **Since:** 18
 
@@ -38,15 +38,23 @@ The constructor of SubHeaderV2Select
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubHeaderV2SelectOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | Yes |  |
+| options | [SubHeaderV2SelectOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | Yes | Options of the drop-down list box. |
 
 ## defaultFocus
 
 ```TypeScript
-@Trace defaultFocus?: boolean
+defaultFocus?: boolean
 ```
 
-Sets the default focus state of SubHeaderV2SelectOptions.
+Whether the drop-down button is the default focus.
+
+**true**: The drop-down button is the default focus.
+
+**false**: The drop-down button is not the default focus.
+
+Default value: **false**
+
+Decorator: @Trace
 
 **Type:** boolean
 
@@ -58,7 +66,7 @@ Sets the default focus state of SubHeaderV2SelectOptions.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Select-@Trace defaultFocus?: boolean--><!--Device-SubHeaderV2Select-@Trace defaultFocus?: boolean-End-->
+<!--Device-SubHeaderV2Select-defaultFocus?: boolean--><!--Device-SubHeaderV2Select-defaultFocus?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -85,7 +93,7 @@ Set the id for the SubHeaderV2Select.
 ## onSelect
 
 ```TypeScript
-@Trace onSelect?: SubHeaderV2SelectOnSelect
+onSelect?: SubHeaderV2SelectOnSelect
 ```
 
 Sets the onSelect of the SubHeaderV2SelectOptions.
@@ -98,14 +106,14 @@ Sets the onSelect of the SubHeaderV2SelectOptions.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Select-@Trace onSelect?: SubHeaderV2SelectOnSelect--><!--Device-SubHeaderV2Select-@Trace onSelect?: SubHeaderV2SelectOnSelect-End-->
+<!--Device-SubHeaderV2Select-onSelect?: SubHeaderV2SelectOnSelect--><!--Device-SubHeaderV2Select-onSelect?: SubHeaderV2SelectOnSelect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
 
 ```TypeScript
-@Trace options: SelectOption[]
+options: SelectOption[]
 ```
 
 Sets the options of the SubHeaderV2SelectOptions.
@@ -118,34 +126,34 @@ Sets the options of the SubHeaderV2SelectOptions.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Select-@Trace options: SelectOption[]--><!--Device-SubHeaderV2Select-@Trace options: SelectOption[]-End-->
+<!--Device-SubHeaderV2Select-options: SelectOption[]--><!--Device-SubHeaderV2Select-options: SelectOption[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedContent
 
 ```TypeScript
-@Trace selectedContent?: ResourceStr
+selectedContent?: ResourceStr
 ```
 
 Sets the selected content of the SubHeaderV2SelectOptions.
 
 **Type:** ResourceStr
 
-**Since:** 20
+**Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Select-@Trace selectedContent?: ResourceStr--><!--Device-SubHeaderV2Select-@Trace selectedContent?: ResourceStr-End-->
+<!--Device-SubHeaderV2Select-selectedContent?: ResourceStr--><!--Device-SubHeaderV2Select-selectedContent?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedIndex
 
 ```TypeScript
-@Trace selectedIndex?: number
+selectedIndex?: number
 ```
 
 Sets the selected index of the SubHeaderV2SelectOptions.
@@ -158,7 +166,7 @@ Sets the selected index of the SubHeaderV2SelectOptions.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Select-@Trace selectedIndex?: number--><!--Device-SubHeaderV2Select-@Trace selectedIndex?: number-End-->
+<!--Device-SubHeaderV2Select-selectedIndex?: number--><!--Device-SubHeaderV2Select-selectedIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

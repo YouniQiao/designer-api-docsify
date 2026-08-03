@@ -1,6 +1,18 @@
 # SubHeaderV2
 
-Defines struct SubHeaderV2.
+The component is positioned at the top of list items or content sections, organizing lists or content into distinct groups. The subheader text summarizes the content within each respective section.
+
+This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage subheader data and states with greater flexibility, leading to faster UI updates.
+> **NOTE**  
+>  
+> - This component can be used only in the stage model.  
+>  
+> - If the **SubHeaderV2** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and  
+> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically  
+> generates an additional **__Common__** node and mounts the universal attributes and universal events on this node  
+> rather than the **SubHeaderV2** component itself. As a result, the configured universal attributes and universal  
+> events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events  
+> with the **SubHeaderV2** component.
 
 **Since:** 18
 
@@ -22,7 +34,11 @@ import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2Operati
 readonly icon?: SubHeaderV2IconType
 ```
 
-Sets the icon of the SubHeaderV2.
+Icon.
+
+Default value: **undefined**
+
+**icon** takes effect only when **secondaryTitle** is used for **title**.
 
 **Type:** SubHeaderV2IconType
 
@@ -44,7 +60,9 @@ Sets the icon of the SubHeaderV2.
 readonly operationItems?: SubHeaderV2OperationItem[]
 ```
 
-Sets the operationItems of the SubHeaderV2.
+Items in the operation area.
+
+Default value: **undefined**
 
 **Type:** SubHeaderV2OperationItem[]
 
@@ -66,7 +84,9 @@ Sets the operationItems of the SubHeaderV2.
 readonly operationType?: SubHeaderV2OperationType
 ```
 
-Sets the operationType of the SubHeaderV2.
+Style of elements in the operation area.
+
+Default value: **SubHeaderV2OperationType.BUTTON**
 
 **Type:** SubHeaderV2OperationType
 
@@ -88,7 +108,9 @@ Sets the operationType of the SubHeaderV2.
 readonly select?: SubHeaderV2Select
 ```
 
-Sets the select of the SubHeaderV2.
+Content and events for selection.
+
+Default value: **undefined**
 
 **Type:** SubHeaderV2Select
 
@@ -110,7 +132,9 @@ Sets the select of the SubHeaderV2.
 readonly title?: SubHeaderV2Title
 ```
 
-Sets the title of the SubHeaderV2.
+Title of the subheader.
+
+Default value: **undefined**
 
 **Type:** SubHeaderV2Title
 
@@ -132,7 +156,9 @@ Sets the title of the SubHeaderV2.
 titleBuilder?: SubHeaderV2TitleBuilder
 ```
 
-Set the title content.
+Custom content for the title area.
+
+Default value: **() => void**
 
 **Type:** SubHeaderV2TitleBuilder
 

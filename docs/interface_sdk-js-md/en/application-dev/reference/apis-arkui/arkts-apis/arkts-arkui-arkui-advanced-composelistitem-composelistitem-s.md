@@ -29,7 +29,7 @@ import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, Cont
 ## contentItem
 
 ```TypeScript
-@Prop contentItem?: ContentItem
+contentItem?: ContentItem
 ```
 
 Elements on the left and in the center.
@@ -44,14 +44,14 @@ Elements on the left and in the center.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ComposeListItem-@Prop contentItem?: ContentItem--><!--Device-ComposeListItem-@Prop contentItem?: ContentItem-End-->
+<!--Device-ComposeListItem-contentItem?: ContentItem--><!--Device-ComposeListItem-contentItem?: ContentItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## operateItem
 
 ```TypeScript
-@Prop operateItem?: OperateItem
+operateItem?: OperateItem
 ```
 
 Element on the right.
@@ -66,7 +66,7 @@ Element on the right.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ComposeListItem-@Prop operateItem?: OperateItem--><!--Device-ComposeListItem-@Prop operateItem?: OperateItem-End-->
+<!--Device-ComposeListItem-operateItem?: OperateItem--><!--Device-ComposeListItem-operateItem?: OperateItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

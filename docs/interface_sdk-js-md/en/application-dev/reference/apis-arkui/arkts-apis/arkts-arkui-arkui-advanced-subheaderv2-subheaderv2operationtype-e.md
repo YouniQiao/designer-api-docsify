@@ -1,6 +1,6 @@
 # SubHeaderV2OperationType
 
-Control style of operation element
+Defines the style of elements in the operation area.
 
 **Since:** 18
 
@@ -14,7 +14,7 @@ Control style of operation element
 TEXT_ARROW = 0
 ```
 
-The TextArrow style.
+Text button with a right arrow.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ The TextArrow style.
 BUTTON = 1
 ```
 
-The Button style.
+Text button without a right arrow.
 
 **Since:** 18
 
@@ -50,7 +50,7 @@ The Button style.
 ICON_GROUP = 2
 ```
 
-The IconGroup style.
+Icon-attached button (A maximum of three icons can be configured.)
 
 **Since:** 18
 
@@ -68,7 +68,7 @@ The IconGroup style.
 LOADING = 3
 ```
 
-The LoadingProgress style.
+Loading animation.
 
 **Since:** 18
 
