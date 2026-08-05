@@ -6,13 +6,13 @@ typedef struct ArkUI_GridItemSize {...} ArkUI_GridItemSize
 
 ## 概述
 
-Defines the return value structure for the <b>onGetIrregularSizeByIndex</b> callbackin <b>Grid</b> layout options.
+定义Grid布局选项[OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback](capi-node-grid-h.md#oh_arkui_gridlayoutoptions_registergetirregularsizebyindexcallback)回调返回值结构体，用于通过GridItem索引指定不规则GridItem占用的行数和列数。
 
 **起始版本：** 22
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**所在头文件：** [native_type.h](capi-native-type-h.md)
+**所在头文件：** [node_grid.h](capi-node-grid-h.md)
 
 ## 汇总
 
@@ -20,7 +20,7 @@ Defines the return value structure for the <b>onGetIrregularSizeByIndex</b> call
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t rowSpan | Number of rows occupied by the <b>GridItem</b> component. |
-| uint32_t columnSpan | Number of columns occupied by the <b>GridItem</b> component. |
+| uint32_t rowSpan | GridItem占用的行数，用于设置GridItem在行方向上的跨度。取值范围：[1, +∞)，设置为0时按1处理；Grid横向布局时，超过Grid实际行数的值按实际行数处理。 |
+| uint32_t columnSpan | GridItem占用的列数，用于设置GridItem在列方向上的跨度。取值范围：[1, +∞)，设置为0时按1处理；Grid纵向布局时，超过Grid实际列数的值按实际列数处理。 |
 
 

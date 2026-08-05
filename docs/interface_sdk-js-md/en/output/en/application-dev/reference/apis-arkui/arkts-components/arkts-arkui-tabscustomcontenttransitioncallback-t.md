@@ -1,0 +1,33 @@
+# TabsCustomContentTransitionCallback
+
+```TypeScript
+declare type TabsCustomContentTransitionCallback = (from: number, to: number) => TabContentAnimatedTransition | undefined
+```
+
+Defines the callback invoked when the custom tab transition animation starts.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-unnamed-declare type TabsCustomContentTransitionCallback = (from: number, to: number) => TabContentAnimatedTransition | undefined--><!--Device-unnamed-declare type TabsCustomContentTransitionCallback = (from: number, to: number) => TabContentAnimatedTransition | undefined-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| from | number | Yes | Index of the currently displayed tab before the animation starts. The index is zero-based.< br>Value range: [0, Index value — 1]. If the value exceeds the index value or is less than 0, no transition animation is displayed.  |
+| to | number | Yes | Index of the target tab before the animation starts. The index is zero-based.\_\_\_HTML\_TAG\_USD\_0\_\_\_Value range: [0, Index value — 1]. If the value exceeds the index value or is less than 0, no transition animation is displayed.  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ \| undefined | Information about the custom tab switching animation. |
+

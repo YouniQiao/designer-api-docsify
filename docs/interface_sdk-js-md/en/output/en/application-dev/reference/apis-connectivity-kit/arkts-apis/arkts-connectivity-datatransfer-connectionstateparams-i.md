@@ -1,0 +1,52 @@
+# ConnectionStateParams
+
+Describes the parameters required for obtaining the connection status.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-dataTransfer-interface ConnectionStateParams--><!--Device-dataTransfer-interface ConnectionStateParams-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+## address
+
+```TypeScript
+address: string
+```
+
+Indicates the connected device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionStateParams-address: string--><!--Device-ConnectionStateParams-address: string-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+## uuid
+
+```TypeScript
+uuid: string
+```
+
+Indicates the service uuid. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_NearLink standard UUIDs are not allowed.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionStateParams-uuid: string--><!--Device-ConnectionStateParams-uuid: string-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+

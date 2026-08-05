@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares the mutex interfaces in C.
+Declares the mutex interfaces in C, which provide mutual exclusion between concurrenttasks to protect shared resources from race conditions.
 
 **Library**: libffrt.z.so
 
@@ -18,15 +18,15 @@ Declares the mutex interfaces in C.
 
 | Name | Description |
 | -- | -- |
-| [FFRT_C_API int ffrt_mutexattr_init(ffrt_mutexattr_t* attr)](#ffrt_mutexattr_init) | Initializes a mutex attribute. |
-| [FFRT_C_API int ffrt_mutexattr_settype(ffrt_mutexattr_t* attr, int type)](#ffrt_mutexattr_settype) | Sets the type of a mutex attribute. |
-| [FFRT_C_API int ffrt_mutexattr_gettype(ffrt_mutexattr_t* attr, int* type)](#ffrt_mutexattr_gettype) | Gets the type of a mutex attribute. |
-| [FFRT_C_API int ffrt_mutexattr_destroy(ffrt_mutexattr_t* attr)](#ffrt_mutexattr_destroy) | Destroys a mutex attribute, the user needs to invoke this interface. |
-| [FFRT_C_API int ffrt_mutex_init(ffrt_mutex_t* mutex, const ffrt_mutexattr_t* attr)](#ffrt_mutex_init) | Initializes a mutex. |
-| [FFRT_C_API int ffrt_mutex_lock(ffrt_mutex_t* mutex)](#ffrt_mutex_lock) | Locks a mutex. |
-| [FFRT_C_API int ffrt_mutex_unlock(ffrt_mutex_t* mutex)](#ffrt_mutex_unlock) | Unlocks a mutex. |
-| [FFRT_C_API int ffrt_mutex_trylock(ffrt_mutex_t* mutex)](#ffrt_mutex_trylock) | Attempts to lock a mutex. |
-| [FFRT_C_API int ffrt_mutex_destroy(ffrt_mutex_t* mutex)](#ffrt_mutex_destroy) | Destroys a mutex, the user needs to invoke this interface. |
+| [FFRT_C_API int ffrt_mutexattr_init(ffrt_mutexattr_t* attr)](#ffrt_mutexattr_init) | Initializes a mutex attribute.After successful initialization, the mutex attribute is set to its default value.The mutex attribute must later be destroyed by [ffrt_mutexattr_destroy](capi-mutex-h.md#ffrt_mutexattr_destroy). |
+| [FFRT_C_API int ffrt_mutexattr_settype(ffrt_mutexattr_t* attr, int type)](#ffrt_mutexattr_settype) | Sets the type of a mutex attribute.The type can be `ffrt_mutex_normal` (a regular mutex) or `ffrt_mutex_recursive`(a recursive mutex that allows the same task to acquire the lock multiple times). |
+| [FFRT_C_API int ffrt_mutexattr_gettype(ffrt_mutexattr_t* attr, int* type)](#ffrt_mutexattr_gettype) | Gets the type of a mutex attribute.After a successful call, the type value is written to the out parameter `type`. |
+| [FFRT_C_API int ffrt_mutexattr_destroy(ffrt_mutexattr_t* attr)](#ffrt_mutexattr_destroy) | Destroys a mutex attribute.The mutex attribute must have been initialized by [ffrt_mutexattr_init](capi-mutex-h.md#ffrt_mutexattr_init). |
+| [FFRT_C_API int ffrt_mutex_init(ffrt_mutex_t* mutex, const ffrt_mutexattr_t* attr)](#ffrt_mutex_init) | Initializes a mutex.The mutex must later be destroyed by [ffrt_mutex_destroy](capi-mutex-h.md#ffrt_mutex_destroy). Use `attr` topass a configured mutex attribute, or a null pointer to use defaults. |
+| [FFRT_C_API int ffrt_mutex_lock(ffrt_mutex_t* mutex)](#ffrt_mutex_lock) | Locks a mutex.If the mutex is already held by another thread, blocks the callingthread until the mutex becomes available. On success, the calling threadholds the mutex until a matching call to [ffrt_mutex_unlock](capi-mutex-h.md#ffrt_mutex_unlock). |
+| [FFRT_C_API int ffrt_mutex_unlock(ffrt_mutex_t* mutex)](#ffrt_mutex_unlock) | Unlocks a mutex.The mutex must be held by the calling thread, having been previously locked by[ffrt_mutex_lock](capi-mutex-h.md#ffrt_mutex_lock) or [ffrt_mutex_trylock](capi-mutex-h.md#ffrt_mutex_trylock). |
+| [FFRT_C_API int ffrt_mutex_trylock(ffrt_mutex_t* mutex)](#ffrt_mutex_trylock) | Attempts to lock a mutex.This is a non-blocking operation: if the mutex is heldby another thread, the function returns immediately with an error code.On success, the calling thread holds the mutex until a matching call to[ffrt_mutex_unlock](capi-mutex-h.md#ffrt_mutex_unlock). |
+| [FFRT_C_API int ffrt_mutex_destroy(ffrt_mutex_t* mutex)](#ffrt_mutex_destroy) | Destroys a mutex.After a successful call, the resources occupied by the mutex arereleased and the mutex object can no longer be used. The mutex must havebeen initialized by [ffrt_mutex_init](capi-mutex-h.md#ffrt_mutex_init) and no thread may hold it on entry. |
 
 ## Function description
 
@@ -38,7 +38,7 @@ FFRT_C_API int ffrt_mutexattr_init(ffrt_mutexattr_t* attr)
 
 **Description**
 
-Initializes a mutex attribute.
+Initializes a mutex attribute.After successful initialization, the mutex attribute is set to its default value.The mutex attribute must later be destroyed by [ffrt_mutexattr_destroy](capi-mutex-h.md#ffrt_mutexattr_destroy).
 
 **Since**: 12
 
@@ -52,7 +52,7 @@ Initializes a mutex attribute.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the mutex attribute is initialized;<br>         <b>ffrt_error_inval</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex attribute is initialized;<br>         `ffrt_error_inval` otherwise. |
 
 ### ffrt_mutexattr_settype()
 
@@ -62,7 +62,7 @@ FFRT_C_API int ffrt_mutexattr_settype(ffrt_mutexattr_t* attr, int type)
 
 **Description**
 
-Sets the type of a mutex attribute.
+Sets the type of a mutex attribute.The type can be `ffrt_mutex_normal` (a regular mutex) or `ffrt_mutex_recursive`(a recursive mutex that allows the same task to acquire the lock multiple times).
 
 **Since**: 12
 
@@ -71,13 +71,18 @@ Sets the type of a mutex attribute.
 | Parameter | Description |
 | -- | -- |
 | [ffrt_mutexattr_t](capi-ffrt-ffrt-mutexattr-t.md)* attr | Indicates a pointer to the mutex attribute. |
-| int type | Indicates an int to the mutex type. |
+| int type | Indicates the mutex type, which can be `ffrt_mutex_normal`, `ffrt_mutex_recursive`,or `ffrt_mutex_default` (equivalent to `ffrt_mutex_normal`). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the mutex attribute type is set successfully;<br>         <b>ffrt_error_inval</b> if attr is a null pointer or<br>         the mutex attribute type is not ffrt_mutex_normal or ffrt_mutex_recursive. |
+| FFRT_C_API int | `ffrt_success` if the mutex attribute type is set successfully;<br>         `ffrt_error_inval` if attr is a null pointer or<br>         the mutex attribute type is not `ffrt_mutex_normal` or `ffrt_mutex_recursive`. |
+
+**Reference**:
+
+[ffrt_mutex_type](capi-type-def-h.md#ffrt_mutex_type)
+
 
 ### ffrt_mutexattr_gettype()
 
@@ -87,7 +92,7 @@ FFRT_C_API int ffrt_mutexattr_gettype(ffrt_mutexattr_t* attr, int* type)
 
 **Description**
 
-Gets the type of a mutex attribute.
+Gets the type of a mutex attribute.After a successful call, the type value is written to the out parameter `type`.
 
 **Since**: 12
 
@@ -96,13 +101,13 @@ Gets the type of a mutex attribute.
 | Parameter | Description |
 | -- | -- |
 | [ffrt_mutexattr_t](capi-ffrt-ffrt-mutexattr-t.md)* attr | Indicates a pointer to the mutex attribute. |
-| int* type | Indicates a pointer to the mutex type. |
+| int* type | Indicates a pointer to the mutex type, used to receive the retrievedtype value (`ffrt_mutex_normal` or `ffrt_mutex_recursive`). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the mutex attribute type is retrieved successfully;<br>         <b>ffrt_error_inval</b> if attr or type is a null pointer. |
+| FFRT_C_API int | `ffrt_success` if the mutex attribute type is retrieved successfully;<br>         `ffrt_error_inval` if attr or type is a null pointer. |
 
 ### ffrt_mutexattr_destroy()
 
@@ -112,7 +117,7 @@ FFRT_C_API int ffrt_mutexattr_destroy(ffrt_mutexattr_t* attr)
 
 **Description**
 
-Destroys a mutex attribute, the user needs to invoke this interface.
+Destroys a mutex attribute.The mutex attribute must have been initialized by [ffrt_mutexattr_init](capi-mutex-h.md#ffrt_mutexattr_init).
 
 **Since**: 12
 
@@ -126,7 +131,7 @@ Destroys a mutex attribute, the user needs to invoke this interface.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the mutex attribute is destroyed;<br>         <b>ffrt_error_inval</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex attribute is destroyed;<br>         `ffrt_error_inval` otherwise. |
 
 ### ffrt_mutex_init()
 
@@ -136,7 +141,7 @@ FFRT_C_API int ffrt_mutex_init(ffrt_mutex_t* mutex, const ffrt_mutexattr_t* attr
 
 **Description**
 
-Initializes a mutex.
+Initializes a mutex.The mutex must later be destroyed by [ffrt_mutex_destroy](capi-mutex-h.md#ffrt_mutex_destroy). Use `attr` topass a configured mutex attribute, or a null pointer to use defaults.
 
 **Since**: 10
 
@@ -145,13 +150,13 @@ Initializes a mutex.
 | Parameter | Description |
 | -- | -- |
 | [ffrt_mutex_t](capi-ffrt-ffrt-mutex-t.md)* mutex | Indicates a pointer to the mutex. |
-| [const ffrt_mutexattr_t](capi-ffrt-ffrt-mutexattr-t.md)* attr | Indicates a pointer to the mutex attribute. |
+| [const ffrt_mutexattr_t](capi-ffrt-ffrt-mutexattr-t.md)* attr | Indicates a pointer to the mutex attribute, or a null pointer to use defaults. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the mutex is initialized;<br>         <b>ffrt_error_inval</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex is initialized;<br>         `ffrt_error_inval` if `mutex` is null, or `attr` is non-null but does not specify<br>         a valid mutex type. |
 
 ### ffrt_mutex_lock()
 
@@ -161,7 +166,7 @@ FFRT_C_API int ffrt_mutex_lock(ffrt_mutex_t* mutex)
 
 **Description**
 
-Locks a mutex.
+Locks a mutex.If the mutex is already held by another thread, blocks the callingthread until the mutex becomes available. On success, the calling threadholds the mutex until a matching call to [ffrt_mutex_unlock](capi-mutex-h.md#ffrt_mutex_unlock).
 
 **Since**: 10
 
@@ -175,7 +180,12 @@ Locks a mutex.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the mutex is locked;<br>         <b>ffrt_error_inval</b> or blocks the calling thread otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex is locked;<br>         `ffrt_error_inval` otherwise. |
+
+**Reference**:
+
+[ffrt_mutex_trylock](capi-mutex-h.md#ffrt_mutex_trylock)
+
 
 ### ffrt_mutex_unlock()
 
@@ -185,7 +195,7 @@ FFRT_C_API int ffrt_mutex_unlock(ffrt_mutex_t* mutex)
 
 **Description**
 
-Unlocks a mutex.
+Unlocks a mutex.The mutex must be held by the calling thread, having been previously locked by[ffrt_mutex_lock](capi-mutex-h.md#ffrt_mutex_lock) or [ffrt_mutex_trylock](capi-mutex-h.md#ffrt_mutex_trylock).
 
 **Since**: 10
 
@@ -199,7 +209,7 @@ Unlocks a mutex.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the mutex is unlocked;<br>         <b>ffrt_error_inval</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex is unlocked;<br>         `ffrt_error_inval` otherwise. |
 
 ### ffrt_mutex_trylock()
 
@@ -209,7 +219,7 @@ FFRT_C_API int ffrt_mutex_trylock(ffrt_mutex_t* mutex)
 
 **Description**
 
-Attempts to lock a mutex.
+Attempts to lock a mutex.This is a non-blocking operation: if the mutex is heldby another thread, the function returns immediately with an error code.On success, the calling thread holds the mutex until a matching call to[ffrt_mutex_unlock](capi-mutex-h.md#ffrt_mutex_unlock).
 
 **Since**: 10
 
@@ -223,7 +233,12 @@ Attempts to lock a mutex.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the mutex is locked;<br>         <b>ffrt_error_inval</b> or <b>ffrt_error_busy</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex is locked;<br>         `ffrt_error_inval` or `ffrt_error_busy` otherwise. |
+
+**Reference**:
+
+[ffrt_mutex_lock](capi-mutex-h.md#ffrt_mutex_lock)
+
 
 ### ffrt_mutex_destroy()
 
@@ -233,7 +248,7 @@ FFRT_C_API int ffrt_mutex_destroy(ffrt_mutex_t* mutex)
 
 **Description**
 
-Destroys a mutex, the user needs to invoke this interface.
+Destroys a mutex.After a successful call, the resources occupied by the mutex arereleased and the mutex object can no longer be used. The mutex must havebeen initialized by [ffrt_mutex_init](capi-mutex-h.md#ffrt_mutex_init) and no thread may hold it on entry.
 
 **Since**: 10
 
@@ -247,6 +262,6 @@ Destroys a mutex, the user needs to invoke this interface.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the mutex is destroyed;<br>         <b>ffrt_error_inval</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the mutex is destroyed;<br>         `ffrt_error_inval` otherwise. |
 
 

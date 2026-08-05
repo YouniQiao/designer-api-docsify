@@ -1,0 +1,72 @@
+# AppEventFilter
+
+Defines parameters of subscription filtering conditions of a [Watcher]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. This API is used to set event filtering conditions in the event watcher to ensure that only the events that meet the filtering conditions are subscribed to. > **NOTE** > > The subscription specifications of system events vary according to application types. For details, see > \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-hiAppEvent-interface AppEventFilter--><!--Device-hiAppEvent-interface AppEventFilter-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiAppEvent
+
+## domain
+
+```TypeScript
+domain: string
+```
+
+Event domain, which can be the system event domain (**hiAppEvent.domain.OS**) or the event domain of the custom event information ([AppEventInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_) passed through the [Write]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ API.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppEventFilter-domain: string--><!--Device-AppEventFilter-domain: string-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiAppEvent
+
+## eventTypes
+
+```TypeScript
+eventTypes?: EventType[]
+```
+
+Event types. If this parameter is not set, events are not filtered by default.
+
+**Type:** EventType[]
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppEventFilter-eventTypes?: EventType[]--><!--Device-AppEventFilter-eventTypes?: EventType[]-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiAppEvent
+
+## names
+
+```TypeScript
+names?: string[]
+```
+
+Names of the events to be subscribed. If this parameter is not set, events are not filtered by default.
+
+**Type:** string[]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AppEventFilter-names?: string[]--><!--Device-AppEventFilter-names?: string[]-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiAppEvent
+

@@ -6,7 +6,7 @@ typedef struct ffrt_condattr_t {...} ffrt_condattr_t
 
 ## Overview
 
-Defines the condition variable attribute structure.
+Defines the condition variable attribute structure used to store condition variable attribute information.
 
 **Since**: 10
 
@@ -20,6 +20,6 @@ Defines the condition variable attribute structure.
 
 | Name | Description |
 | -- | -- |
-| long storage | A long integer used to store the condition variable attribute. |
+| long storage | Internal storage backing the condition variable attribute. Do not access directly. |
 
 

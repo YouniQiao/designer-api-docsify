@@ -1,0 +1,897 @@
+# AudioStreamManager
+
+This interface implements audio stream management. Before calling any API in AudioStreamManager, you must use [getStreamManager]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain an AudioStreamManager instance. > **NOTE** > > - The initial APIs of this interface are supported since API version 9.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-audio-interface AudioStreamManager--><!--Device-audio-interface AudioStreamManager-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+## getAudioEffectInfoArray
+
+```TypeScript
+getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void
+```
+
+Obtains information about the audio effect mode in use. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream usage. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioEffectInfoArray&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the information about the audio effect mode obtained;otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
+
+## getAudioEffectInfoArray
+
+```TypeScript
+getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
+```
+
+Obtains information about the audio effect mode in use. This API uses a promise to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream usage. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;AudioEffectInfoArray&gt; | Promise used to return the information about the audio effect mode |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
+
+## getAudioEffectInfoArraySync
+
+```TypeScript
+getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
+```
+
+Obtains information about the audio effect mode in use. This API returns the result synchronously.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray--><!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream usage. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Information about the audio effect mode. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## getCurrentAudioCapturerInfoArray
+
+```TypeScript
+getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void
+```
+
+Obtains the information about this audio capturer. This API uses an asynchronous callback to return the result. > **NOTE** > > The audio capturer information returned by this API may include internal audio recording streams, such as voice > wakeup and cellular calls.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerChangeInfoArray&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio capturer information obtained;otherwise, **err** is an error object. |
+
+## getCurrentAudioCapturerInfoArray
+
+```TypeScript
+getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
+```
+
+Obtains the information about this audio capturer. This API uses a promise to return the result. > **NOTE** > > The audio capturer information returned by this API may include internal audio recording streams, such as voice > wakeup and cellular calls.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;AudioCapturerChangeInfoArray&gt; | Promise used to return the audio capturer information. |
+
+## getCurrentAudioCapturerInfoArraySync
+
+```TypeScript
+getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
+```
+
+Obtains the information about this audio capturer. This API returns the result synchronously. > **NOTE** > > The audio capturer information returned by this API may include internal audio recording streams, such as voice > wakeup and cellular calls.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Audio capturer information. |
+
+## getCurrentAudioRendererInfoArray
+
+```TypeScript
+getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void
+```
+
+Obtains the information about this audio renderer. This API uses an asynchronous callback to return the result. > **NOTE** > > The audio renderer information returned by this API may include internal audio playback streams, such as > cellular calls and ultrasonic streams.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRendererChangeInfoArray&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained;otherwise, **err** is an error object. |
+
+## getCurrentAudioRendererInfoArray
+
+```TypeScript
+getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
+```
+
+Obtains the information about this audio renderer. This API uses a promise to return the result. > **NOTE** > > The audio renderer information returned by this API may include internal audio playback streams, such as > cellular calls and ultrasonic streams.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;AudioRendererChangeInfoArray&gt; | Promise used to return the audio renderer information. |
+
+## getCurrentAudioRendererInfoArraySync
+
+```TypeScript
+getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
+```
+
+Obtains the information about this audio renderer. This API returns the result synchronously. > **NOTE** > > The audio renderer information returned by this API may include internal audio playback streams, such as > cellular calls and ultrasonic streams.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Audio renderer information. |
+
+## isAcousticEchoCancelerSupported
+
+```TypeScript
+isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
+```
+
+Checks whether the specified audio source type supports echo cancellation.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio source type. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether echo cancellation is supported. **true** if supported, **false** |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## isActive
+
+```TypeScript
+isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
+```
+
+Checks whether a stream is active. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Deprecated since:** 20
+
+**Substitutes:** ohos.multimedia.audio.AudioStreamManager#isStreamActive
+
+<!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream types. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and **data** is **true** if the stream is active or **false** if not active;otherwise, **err** is an error object. |
+
+## isActive
+
+```TypeScript
+isActive(volumeType: AudioVolumeType): Promise<boolean>
+```
+
+Checks whether a stream is active. This API uses a promise to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Deprecated since:** 20
+
+**Substitutes:** ohos.multimedia.audio.AudioStreamManager#isStreamActive
+
+<!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream types. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is active. |
+
+## isActiveSync
+
+```TypeScript
+isActiveSync(volumeType: AudioVolumeType): boolean
+```
+
+Checks whether a stream is active. This API returns the result synchronously.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Deprecated since:** 20
+
+**Substitutes:** ohos.multimedia.audio.AudioStreamManager#isStreamActive
+
+<!--Device-AudioStreamManager-isActiveSync(volumeType: AudioVolumeType): boolean--><!--Device-AudioStreamManager-isActiveSync(volumeType: AudioVolumeType): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| volumeType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream types. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether the stream is active. **true** if active, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## isAudioLoopbackSupported
+
+```TypeScript
+isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
+```
+
+Checks whether the current system supports the specified audio loopback mode.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean--><!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio loopback mode. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether the audio loopback mode is supported. **true** if supported, |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## isDirectPlaybackSupported
+
+```TypeScript
+isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean
+```
+
+Return if direct playback is supported for the specific audio stream info and usage type in current device situation.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioStreamManager-isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| streamInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | reference of stream info structure to describe basic audio format. |
+| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | stream usage type used to decide the audio device and pipe type selection result. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | True if direct playback is supported in this situation. |
+
+## isFastPlaybackSupported
+
+```TypeScript
+isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean
+```
+
+Return if fast playback is supported for the specific audio stream info and usage type in current device situation.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioStreamManager-isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| streamInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | reference of stream info structure to describe basic audio format. |
+| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | stream usage type used to decide the audio device and pipe type selection result. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | True if fast playback is supported in this situation. |
+
+## isFastRecordingSupported
+
+```TypeScript
+isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean
+```
+
+Return if fast recording is supported for the specific audio stream info and usage type in current device situation.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioStreamManager-isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean--><!--Device-AudioStreamManager-isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| streamInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | reference of stream info structure to describe basic audio format. |
+| source | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | stream source type used to decide the audio device and pipe type selection result. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | True if fast recording is supported in this situation. |
+
+## isIntelligentNoiseReductionEnabledForCurrentDevice
+
+```TypeScript
+isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean
+```
+
+Checks whether the intelligent noise reduction feature is enabled for the audio stream of the specified source type.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sourceType | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio source type. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether the intelligent noise reduction feature is enabled. **true** if |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## isMultichannelPlaybackSupported
+
+```TypeScript
+isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean
+```
+
+Return if multichannel playback is supported for the specific audio stream info and usage type in current device situation.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioStreamManager-isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| streamInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | reference of stream info structure to describe basic audio format. |
+| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | stream usage type used to decide the audio device and pipe type selection result. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | True if multichannel playback is supported in this situation. |
+
+## isOffloadPlaybackSupported
+
+```TypeScript
+isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean
+```
+
+Return if offload playback is supported for the specific audio stream info and usage type in current device situation.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioStreamManager-isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| streamInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | reference of stream info structure to describe basic audio format. |
+| usage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | stream usage type used to decide the audio device and pipe type selection result. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | True if offload playback is supported in this situation. |
+
+## isRecordingAvailable
+
+```TypeScript
+isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
+```
+
+Checks whether recording can be started based on the audio source type in the audio capturer information.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean--><!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| capturerInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio capturer information. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether recording can be started. **true** if recording can be started, |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## isStreamActive
+
+```TypeScript
+isStreamActive(streamUsage: StreamUsage): boolean
+```
+
+Checks whether a stream is active. This API returns the result synchronously.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean--><!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| streamUsage | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Audio stream usage. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for whether the stream is active. **true** if active, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## off('audioRendererChange')
+
+```TypeScript
+off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Unsubscribes from the audio renderer change event. This API uses an asynchronous callback to return the result. > **NOTE** > > The audio renderer information returned by this API may include internal audio playback streams, such as > cellular calls and ultrasonic streams.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioRendererChange' | Yes | Event type. The event **'audioRendererChange'** is triggered when the audio playback stream status or device is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRendererChangeInfoArray&gt; | No | Callback used to return the audio renderer information.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## off('audioCapturerChange')
+
+```TypeScript
+off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void
+```
+
+Unsubscribes from the audio capturer change event. This API uses an asynchronous callback to return the result. > **NOTE** > > The audio capturer information returned by this API may include internal audio recording streams, such as voice > wakeup and cellular calls.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio capturer is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerChangeInfoArray&gt; | No | Callback used to return the audio capturer information.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 18 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## offAudioCapturerChange
+
+```TypeScript
+offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void
+```
+
+Unsubscribes to audio capturer change events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerChangeInfoArray&gt; | No | Callback invoked for the audio capturer change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## offAudioRendererChange
+
+```TypeScript
+offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Unsubscribes to audio renderer change events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRendererChangeInfoArray&gt; | No | Callback invoked for the audio renderer change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## on('audioRendererChange')
+
+```TypeScript
+on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Subscribes to the audio renderer change event, which is triggered when the audio playback stream status or device is changed. This API uses an asynchronous callback to return the result. > **NOTE** > > The audio renderer information returned by this API may include internal audio playback streams, such as > cellular calls and ultrasonic streams.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioRendererChange' | Yes | Event type. The event **'audioRendererChange'** is triggered when the audio playback stream status or device is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRendererChangeInfoArray&gt; | Yes | Callback used to return the audio renderer information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## on('audioCapturerChange')
+
+```TypeScript
+on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void
+```
+
+Subscribes to the audio capturer change event, which is triggered when the audio recording stream status or device is changed. This API uses an asynchronous callback to return the result. > **NOTE** > > The audio capturer information returned by this API may include internal audio recording streams, such as voice > wakeup and cellular calls.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio recording stream status or device is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerChangeInfoArray&gt; | Yes | Callback used to return the audio capturer information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onAudioCapturerChange
+
+```TypeScript
+onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void
+```
+
+Listens for audio capturer change events. When there is any audio capturer change, registered clients will receive the callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioCapturerChangeInfoArray&gt; | Yes | Callback invoked for the audio capturer change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onAudioRendererChange
+
+```TypeScript
+onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Listens for audio renderer change events. When there is any audio renderer change, registered clients will receive the callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioRendererChangeInfoArray&gt; | Yes | Callback invoked for the audio renderer change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+

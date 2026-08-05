@@ -1,0 +1,32 @@
+# CameraDevice
+
+Describes the camera device information.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-camera-interface CameraDevice--><!--Device-camera-interface CameraDevice-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## isRetractable
+
+```TypeScript
+readonly isRetractable?: boolean
+```
+
+Camera device retractable attribute
+
+**Type:** boolean
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-CameraDevice-readonly isRetractable?: boolean--><!--Device-CameraDevice-readonly isRetractable?: boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+

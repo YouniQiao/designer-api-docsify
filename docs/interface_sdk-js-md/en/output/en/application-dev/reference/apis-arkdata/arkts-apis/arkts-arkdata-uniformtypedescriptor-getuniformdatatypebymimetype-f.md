@@ -1,0 +1,67 @@
+# getUniformDataTypeByMIMEType
+
+## getUniformDataTypeByMIMEType
+
+```TypeScript
+function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): string
+```
+
+Obtains the uniform data type ID based on the given MIME type and data type. If there are multiple uniform data type IDs matching the conditions, the first one is returned.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-uniformTypeDescriptor-function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): string--><!--Device-uniformTypeDescriptor-function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mimeType | string | Yes | MIME type. |
+| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. This parameter has no default value. If it is not specified, the [uniform data type ID] is queried based on the MIME name. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | ID of the uniform data type that matches the specified MIME type and **belongsTo** (if |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2.Incorrect parameter types;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_3. Parameter verification failed. |
+
+**Example**
+
+```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let typeId = uniformTypeDescriptor.getUniformDataTypeByMIMEType('image/jpeg', 'general.image');
+    if(typeId) {
+        console.info('typeId is general.jpeg');
+    }
+} catch(e) {
+    let error: BusinessError = e as BusinessError;
+    console.error(`getUniformDataTypeByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
+}
+
+// If no uniform data type ID is found based on "image/myimage" and "general.image", the type generated based on the input parameters is returned.
+try {
+    let typeId = uniformTypeDescriptor.getUniformDataTypeByMIMEType('image/myimage', 'general.image');
+    if(typeId) {
+        console.info('typeId is flex.************');
+    }
+} catch(e) {
+    let error: BusinessError = e as BusinessError;
+    console.error(`getUniformDataTypeByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
+}
+```
+

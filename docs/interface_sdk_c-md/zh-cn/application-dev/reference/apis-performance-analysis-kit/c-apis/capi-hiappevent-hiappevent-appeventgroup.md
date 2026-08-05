@@ -6,7 +6,7 @@ typedef struct HiAppEvent_AppEventGroup {...} HiAppEvent_AppEventGroup
 
 ## 概述
 
-一组事件信息，包含事件组的名称，按名称分组的单个事件信息数组，事件数组的长度。
+一组事件信息，用于管理和组织具有相同名称的事件信息。该结构体包含事件组的名称，按名称分组的单个事件信息数组，事件数组的长度。
 
 **起始版本：** 12
 
@@ -20,8 +20,8 @@ typedef struct HiAppEvent_AppEventGroup {...} HiAppEvent_AppEventGroup
 
 | 名称 | 描述 |
 | -- | -- |
-| const char* name | 事件的名称。 |
-| const struct HiAppEvent_AppEventInfo* appEventInfos | 按名称分组的事件数组。 |
-| uint32_t infoLen | appEventInfos数组的长度。 |
+| const char* name | 事件数组中相同的事件名称。 |
+| const struct HiAppEvent_AppEventInfo* appEventInfos | 具有相同事件名称的事件数组。 |
+| uint32_t infoLen | 具有相同事件名称的事件数组的长度。 |
 
 

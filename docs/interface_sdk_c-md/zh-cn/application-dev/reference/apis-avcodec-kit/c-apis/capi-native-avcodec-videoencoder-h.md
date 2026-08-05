@@ -34,9 +34,9 @@
 | [OH_AVErrCode OH_VideoEncoder_CreatePrimaryWithPreproc(const char *mime, OH_AVCodec **codec)](#oh_videoencoder_createprimarywithpreproc) | - | 创建支持前处理的主视频编码器实例。<br> 该编码器支持以下能力：<br> 1. 前处理功能（降采样、裁剪、丢帧）。<br> 2. 从该主编码器创建副编码器实现一入二出双路编码。<br> 通过该接口创建的编码器仅支持Surface模式，不支持Buffer模式和同步模式。创建成功后需通过[OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy)销毁。<br> |
 | [OH_AVErrCode OH_VideoEncoder_CreateSecondaryFromPrimary(OH_AVCodec *primary, OH_AVCodec **codec)](#oh_videoencoder_createsecondaryfromprimary) | - | 从主编码器创建副视频编码器实例。<br> 副编码器具有以下特性：<br> 1. 与主编码器共享输入源。<br> 2. 可独立配置编码参数。<br> 3. 可使用不同的前处理参数。<br> 4. 可独立启动/停止（不依赖主编码器的启停状态）。<br> 5. 生命周期必须短于主编码器。<br> 6. 一个主编码器同时只能拥有一个副编码器。<br> 必须在主编码器创建成功之后才能创建。创建成功后需通过[OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy)销毁。销毁顺序建议先Destroy Secondary再Destroy Primary。<br> |
 | [OH_AVErrCode OH_VideoEncoder_Destroy(OH_AVCodec *codec)](#oh_videoencoder_destroy) | - | 清理编码器内部资源，销毁编码器实例。不能重复销毁。 |
-| [OH_AVErrCode OH_VideoEncoder_SetCallback(OH_AVCodec *codec, OH_AVCodecAsyncCallback callback, void *userData)](#oh_videoencoder_setcallback) | - | 设置OH_AVCodecCallback回调函数，让应用可以响应视频编码器生成的事件。在调用OH_VideoEncoder_Prepare接口之前，必须调用此接口。(API11废弃) |
+| [OH_AVErrCode OH_VideoEncoder_SetCallback(OH_AVCodec *codec, OH_AVCodecAsyncCallback callback, void *userData)](#oh_videoencoder_setcallback) | - | 设置OH_AVCodecAsyncCallback回调函数，让应用可以响应视频编码器生成的事件。在调用OH_VideoEncoder_Prepare接口之前，必须调用此接口。(API11废弃) |
 | [OH_AVErrCode OH_VideoEncoder_RegisterCallback(OH_AVCodec *codec, OH_AVCodecCallback callback, void *userData)](#oh_videoencoder_registercallback) | - | 注册OH_AVCodecCallback回调函数，让应用可以响应视频编码器生成的事件。在调用OH_VideoEncoder_Prepare接口之前，必须调用此接口。 |
-| [OH_AVErrCode OH_VideoEncoder_RegisterParameterCallback(OH_AVCodec *codec, OH_VideoEncoder_OnNeedInputParameter onInputParameter, void *userData)](#oh_videoencoder_registerparametercallback) | - | 注册OH_AVCodecCallback输入参数回调函数，让应用可以响应视频编码器生成的事件。编码Surface模式，需要设置随帧参数时，须使用该接口。<br> 如果使用该接口，必须在[OH_VideoEncoder_Configure](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_configure)之前调用该接口。 |
+| [OH_AVErrCode OH_VideoEncoder_RegisterParameterCallback(OH_AVCodec *codec, OH_VideoEncoder_OnNeedInputParameter onInputParameter, void *userData)](#oh_videoencoder_registerparametercallback) | - | 注册OH_VideoEncoder_OnNeedInputParameter输入参数回调函数，让应用可以响应视频编码器生成的事件。编码Surface模式，<br> 需要设置随帧参数时，须使用该接口。如果使用该接口，必须在[OH_VideoEncoder_Configure](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_configure)之前调用该接口。 |
 | [OH_AVErrCode OH_VideoEncoder_Configure(OH_AVCodec *codec, OH_AVFormat *format)](#oh_videoencoder_configure) | - | 配置视频编码器的编码参数，通常需要配置输入视频帧的描述信息，如帧的宽、高、像素格式等。必须在调用OH_VideoEncoder_Prepare接口之前，调用此接口。<br> 该接口对配置参数进行合法性校验，部分非法参数不会强校验，使用默认值或直接丢弃。部分非法参数会强校验，具体规则如下：<br> 以下参数的配置范围可通过[能力查询](../../media/avcodec/obtain-supported-codecs.md)获取，OH_MD_KEY_I_FRAME_INTERVAL暂不支持能力查询。<br> 设置OH_MD_KEY_VIDEO_ENCODER_ENABLE_TEMPORAL_SCALABILITY、OH_MD_KEY_VIDEO_ENCODER_LTR_FRAME_COUNT参数时，如果当前平台不支持这些功能，该接口不会报错，而是继续按照正常编码流程执行。参数校验：
 \| Key     \| 配置正常范围的值 \| 配置超出范围的值 \| 不配置该参数 \|
 \| ------- \| -------- \| -------- \| ------ \|
@@ -270,7 +270,7 @@ OH_AVErrCode OH_VideoEncoder_SetCallback(OH_AVCodec *codec, OH_AVCodecAsyncCallb
 
 **描述**
 
-设置OH_AVCodecCallback回调函数，让应用可以响应视频编码器生成的事件。在调用OH_VideoEncoder_Prepare接口之前，必须调用此接口。
+设置OH_AVCodecAsyncCallback回调函数，让应用可以响应视频编码器生成的事件。在调用OH_VideoEncoder_Prepare接口之前，必须调用此接口。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoEncoder
 
@@ -330,7 +330,7 @@ OH_AVErrCode OH_VideoEncoder_RegisterParameterCallback(OH_AVCodec *codec, OH_Vid
 
 **描述**
 
-注册OH_AVCodecCallback输入参数回调函数，让应用可以响应视频编码器生成的事件。编码Surface模式，需要设置随帧参数时，须使用该接口。<br> 如果使用该接口，必须在[OH_VideoEncoder_Configure](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_configure)之前调用该接口。
+注册OH_VideoEncoder_OnNeedInputParameter输入参数回调函数，让应用可以响应视频编码器生成的事件。编码Surface模式，<br> 需要设置随帧参数时，须使用该接口。如果使用该接口，必须在[OH_VideoEncoder_Configure](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_configure)之前调用该接口。
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoEncoder
 
@@ -756,7 +756,7 @@ Surface模式下，将index对应帧的编码参数送入编码器编码。
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) *codec | 指向视频编码实例的指针。 |
-| uint32_t index | 输入参数缓冲区对应的索引值。由[OH_AVCodecOnNeedInputBuffer](capi-native-avcodec-base-h.md#oh_avcodeconneedinputbuffer)给出。 |
+| uint32_t index | 输入参数缓冲区对应的索引值。由[OH_VideoEncoder_OnNeedInputParameter](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_onneedinputparameter)给出。 |
 
 **返回：**
 
@@ -783,7 +783,7 @@ OH_AVErrCode OH_VideoEncoder_FreeOutputBuffer(OH_AVCodec *codec, uint32_t index)
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) *codec | 指向视频编码实例的指针。 |
-| uint32_t index | 输出缓冲区对应的索引值。由[OH_AVCodecOnNeedInputBuffer](capi-native-avcodec-base-h.md#oh_avcodeconneedinputbuffer)给出。 |
+| uint32_t index | 输出缓冲区对应的索引值。由[OH_AVCodecOnNewOutputBuffer](capi-native-avcodec-base-h.md#oh_avcodeconnewoutputbuffer)给出。 |
 
 **返回：**
 

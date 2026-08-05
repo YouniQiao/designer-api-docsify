@@ -1,0 +1,48 @@
+# WebSocketMessage
+
+Info about the message received from a specific client.
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+<!--Device-webSocket-export interface WebSocketMessage--><!--Device-webSocket-export interface WebSocketMessage-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## clientConnection
+
+```TypeScript
+clientConnection: WebSocketConnection
+```
+
+The connection where the message comes from.
+
+**Type:** WebSocketConnection
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+<!--Device-WebSocketMessage-clientConnection: WebSocketConnection--><!--Device-WebSocketMessage-clientConnection: WebSocketConnection-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## data
+
+```TypeScript
+data: string | ArrayBuffer
+```
+
+Content of the message.
+
+**Type:** string \| ArrayBuffer
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+<!--Device-WebSocketMessage-data: string | ArrayBuffer--><!--Device-WebSocketMessage-data: string | ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+

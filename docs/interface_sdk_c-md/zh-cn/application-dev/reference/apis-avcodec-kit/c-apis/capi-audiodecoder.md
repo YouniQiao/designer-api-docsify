@@ -4,8 +4,6 @@
 
 AudioDecoder模块提供用于音频解码功能的函数。
 
-**系统能力：** SystemCapability.Multimedia.Media.AudioDecoder
-
 **起始版本：** 9
 ## 文件汇总
 

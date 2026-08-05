@@ -44,7 +44,7 @@ Defines an explicit animation.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_ContextHandle context | **UIContext** instance. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) context | **UIContext** instance. |
 |  [ArkUI_AnimateOption](capi-arkui-nativemodule-arkui-animateoption.md)* option | Defines the animation configuration. |
 |  [ArkUI_ContextCallback](capi-arkui-nativemodule-arkui-contextcallback.md)* update | Closure function for the animation. The system automatically inserts the transition animation ifthe state changes in the closure function.<br>Note: Make sure the component attributes to be set in the closure function have been set before. |
 | [ArkUI_AnimateCompleteCallback](capi-arkui-nativemodule-arkui-animatecompletecallback.md)* complete | Callback invoked when the animation playback is complete. |
@@ -69,7 +69,7 @@ Defines a keyframe animation.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_ContextHandle context | **UIContext** instance. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) context | **UIContext** instance. |
 |  [ArkUI_KeyframeAnimateOption](capi-arkui-nativemodule-arkui-keyframeanimateoption.md)* option | Keyframe animation parameter. |
 
 **Returns**:
@@ -92,7 +92,7 @@ Creates an animator object.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_ContextHandle context | **UIContext** instance. |
+| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) context | **UIContext** instance. |
 |  [ArkUI_AnimatorOption](capi-arkui-nativemodule-arkui-animatoroption.md)* option | Animator parameter. |
 
 **Returns**:

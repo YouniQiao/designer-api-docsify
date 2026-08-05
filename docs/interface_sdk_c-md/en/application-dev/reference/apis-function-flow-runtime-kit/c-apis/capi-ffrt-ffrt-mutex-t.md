@@ -6,7 +6,7 @@ typedef struct ffrt_mutex_t {...} ffrt_mutex_t
 
 ## Overview
 
-Defines the mutex structure.
+Defines the mutex structure used to store internal data of the mutex.
 
 **Since**: 10
 
@@ -20,7 +20,7 @@ Defines the mutex structure.
 
 | Name | Description |
 | -- | -- |
-| [uint32_t storage[(ffrt_mutex_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)]](#sizeof) | An array of uint32_t used to store the mutex. |
+| [uint32_t storage[(ffrt_mutex_storage_size + sizeof(uint32_t) - 1) / sizeof(uint32_t)]](#sizeof) | Internal storage backing the mutex. Do not access directly; use the `ffrt_mutex_*` APIs. |
 
 ## Member function description
 
@@ -32,6 +32,6 @@ uint32_t storage[(ffrt_mutex_storage_size + sizeof(uint32_t) - 1) / sizeof(uint3
 
 **Description**
 
-An array of uint32_t used to store the mutex.
+Internal storage backing the mutex. Do not access directly; use the `ffrt_mutex_*` APIs.
 
 

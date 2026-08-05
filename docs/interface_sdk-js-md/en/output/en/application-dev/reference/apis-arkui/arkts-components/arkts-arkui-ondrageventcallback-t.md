@@ -1,0 +1,27 @@
+# OnDragEventCallback
+
+```TypeScript
+declare type OnDragEventCallback = (event: DragEvent, extraParams?: string) => void
+```
+
+Defines a callback for drag events.
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-unnamed-declare type OnDragEventCallback = (event: DragEvent, extraParams?: string) => void--><!--Device-unnamed-declare type OnDragEventCallback = (event: DragEvent, extraParams?: string) => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **event**: drag event information, including the coordinates of the drag point.  |
+| extraParams | string | No | **extraParams**: additional information about the drag event. Its value must be parsed into JSON format.  |
+

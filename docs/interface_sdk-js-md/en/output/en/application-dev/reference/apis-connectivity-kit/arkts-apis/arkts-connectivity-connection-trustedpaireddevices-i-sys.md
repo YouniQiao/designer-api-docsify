@@ -1,0 +1,36 @@
+# TrustedPairedDevices (System API)
+
+Describes the cloud pair device.
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
+<!--Device-connection-interface TrustedPairedDevices--><!--Device-connection-interface TrustedPairedDevices-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**System API:** This is a system API.
+
+## trustedPairedDevices
+
+```TypeScript
+trustedPairedDevices: Array<TrustedPairedDevice>
+```
+
+The list of cloud pair devices.
+
+**Type:** Array&lt;TrustedPairedDevice&gt;
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TrustedPairedDevices-trustedPairedDevices: Array<TrustedPairedDevice>--><!--Device-TrustedPairedDevices-trustedPairedDevices: Array<TrustedPairedDevice>-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**System API:** This is a system API.
+

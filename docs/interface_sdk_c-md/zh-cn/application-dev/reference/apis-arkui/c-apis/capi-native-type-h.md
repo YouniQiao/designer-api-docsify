@@ -22,24 +22,14 @@ Defines the common types for the native module.
 | [ArkUI_GridItemRect](capi-arkui-nativemodule-arkui-griditemrect.md) | ArkUI_GridItemRect | Defines the return value structure for the <b>onGetRectByIndex</b> callback in <b>Grid</b> layout options. |
 | [ArkUI_PickerIndicatorBackground](capi-arkui-nativemodule-arkui-pickerindicatorbackground.md) | ArkUI_PickerIndicatorBackground | Style parameters of background indicator. |
 | [ArkUI_PickerIndicatorDivider](capi-arkui-nativemodule-arkui-pickerindicatordivider.md) | ArkUI_PickerIndicatorDivider | Style parameters of divider indicator. |
-| [ArkUI_ContextCallback](capi-arkui-nativemodule-arkui-contextcallback.md) | ArkUI_ContextCallback | Defines the event callback type. |
-| [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) | ArkUI_NumberValue | Provides the number types of ArkUI in the native code. |
 | [ARKUI_TextPickerRangeContent](capi-arkui-nativemodule-arkui-textpickerrangecontent.md) | ARKUI_TextPickerRangeContent | Defines the input structure of the single-column text picker with image resources. |
 | [ARKUI_TextPickerCascadeRangeContent](capi-arkui-nativemodule-arkui-textpickercascaderangecontent.md) | ARKUI_TextPickerCascadeRangeContent | Defines the input structure of the interconnected multi-column text picker. |
 | [ArkUI_ColorStop](capi-arkui-nativemodule-arkui-colorstop.md) | ArkUI_ColorStop | Defines the gradient color stop structure. |
-| [ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md) | ArkUI_Rect | Defines a mask area. |
-| [ArkUI_IntSize](capi-arkui-nativemodule-arkui-intsize.md) | ArkUI_IntSize | Describes the width and height of a component. |
-| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md) | ArkUI_IntOffset | Describes the position of a component. |
 | [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md) | ArkUI_Margin | Describes the margins of a component. |
 | [ArkUI_TranslationOptions](capi-arkui-nativemodule-arkui-translationoptions.md) | ArkUI_TranslationOptions | Defines the translation options for component transition. |
 | [ArkUI_ScaleOptions](capi-arkui-nativemodule-arkui-scaleoptions.md) | ArkUI_ScaleOptions | Defines the scaling options for component transition. |
 | [ArkUI_RotationOptions](capi-arkui-nativemodule-arkui-rotationoptions.md) | ArkUI_RotationOptions | Defines the rotation options for component transition. |
-| [ArkUI_Node](capi-arkui-nativemodule-arkui-node.md) | - | Defines the ArkUI native component object. |
-| [ArkUI_NodeContent*](capi-arkui-nativemodule-arkui-nodecontent8h.md) | ArkUI_NodeContentHandle | Defines the pointer type of the ArkUI node content |
 | [ArkUI_NativeDialog](capi-arkui-nativemodule-arkui-nativedialog.md) | - | Defines the custom dialog box controller of ArkUI on the native side. |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md) | ArkUI_LayoutConstraint | Sets the size constraints of a component during component layout. |
-| [ArkUI_DrawContext](capi-arkui-nativemodule-arkui-drawcontext.md) | ArkUI_DrawContext | Defines the structure of the component drawing context. |
-| [ArkUI_Node*](capi-arkui-nativemodule-arkui-node8h.md) | ArkUI_NodeHandle | Defines the pointer to the ArkUI native component object. |
 | [ArkUI_NativeDialog*](capi-arkui-nativemodule-arkui-nativedialog8h.md) | ArkUI_NativeDialogHandle | Defines the pointer to the custom dialog box controller of ArkUI on the native side. |
 | [ArkUI_GestureCollectInterceptInfo](capi-arkui-nativemodule-arkui-gesturecollectinterceptinfo.md) | ArkUI_GestureCollectInterceptInfo | Defines information about gesture collection interception. |
 | [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) | ArkUI_PickerIndicatorStyle | Definition of indicator style. |
@@ -47,7 +37,6 @@ Defines the common types for the native module.
 | [ArkUI_WaterFlowSectionOption](capi-arkui-nativemodule-arkui-waterflowsectionoption.md) | ArkUI_WaterFlowSectionOption | Defines the water flow section configuration. |
 | [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md) | ArkUI_ListItemSwipeActionItem | Define the configuration information of the Item within the ListitemSwipeActionOption method. |
 | [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md) | ArkUI_ListItemSwipeActionOption | Define the configuration information for the ListitemSwipeActionOption method. |
-| [ArkUI_Context](capi-arkui-nativemodule-arkui-context.md) | - | Defines the ArkUI native context object. |
 | [ArkUI_SwiperIndicator](capi-arkui-nativemodule-arkui-swiperindicator.md) | ArkUI_SwiperIndicator | Defines the navigation indicator style for the swiper. |
 | [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) | ArkUI_SwiperDigitIndicator | Defines the digital indicator style for the swiper. |
 | [ArkUI_SwiperArrowStyle](capi-arkui-nativemodule-arkui-swiperarrowstyle.md) | ArkUI_SwiperArrowStyle | Defines the arrow style for the swiper. |
@@ -55,30 +44,25 @@ Defines the common types for the native module.
 | [ArkUI_ImageAnimatorFrameInfo](capi-arkui-nativemodule-arkui-imageanimatorframeinfo.md) | ArkUI_ImageAnimatorFrameInfo | Defines the image frame. |
 | [ArkUI_AccessibilityState](capi-arkui-nativemodule-arkui-accessibilitystate.md) | ArkUI_AccessibilityState | Defines the accessibility state for the component. |
 | [ArkUI_AccessibilityValue](capi-arkui-nativemodule-arkui-accessibilityvalue.md) | ArkUI_AccessibilityValue | Defines the accessibility value for the component. |
-| [ArkUI_CustomProperty](capi-arkui-nativemodule-arkui-customproperty.md) | ArkUI_CustomProperty | Define the information of the Custom Property class for custom properties. |
+| [ArkUI_CustomProperty](capi-arkui-nativemodule-arkui-customproperty.md) | ArkUI_CustomProperty | 定义表示组件自定义属性的 ArkUI_CustomProperty 结构体。 通过相关接口，可以为 ArkUI 组件添加、移除和获取自定义属性，以及获取自定义属性的字符串值。 |
 | [ArkUI_HostWindowInfo](capi-arkui-nativemodule-arkui-hostwindowinfo.md) | ArkUI_HostWindowInfo | Define the information of the HostWindowInfo class for window properties. |
-| [ArkUI_ActiveChildrenInfo](capi-arkui-nativemodule-arkui-activechildreninfo.md) | ArkUI_ActiveChildrenInfo | Define ActiveChildenInfo class information. |
-| [ArkUI_CrossLanguageOption](capi-arkui-nativemodule-arkui-crosslanguageoption.md) | ArkUI_CrossLanguageOption | The cross-language option. |
+| [ArkUI_ActiveChildrenInfo](capi-arkui-nativemodule-arkui-activechildreninfo.md) | ArkUI_ActiveChildrenInfo | 定义ArkUI_ActiveChildrenInfo结构体，用于保存内部活跃状态为true的FrameNode子节点信 息，支持查询子节点数量和按下标获取子节点。 该结构体实例由OH_ArkUI_NodeUtils_GetActiveChildrenInfo生成，使用完毕后必须调用OH_ArkUI_ActiveChildrenInfo_Destroy销毁。 |
+| [ArkUI_CrossLanguageOption](capi-arkui-nativemodule-arkui-crosslanguageoption.md) | ArkUI_CrossLanguageOption | 定义跨语言配置 项，用于配置目标节点的跨语言访问能力，例如是否允许跨语言修改属性；从API version 26.0.0开始，还可配置节点树跨语言操作状态。 |
 | [AbilityBase_Want](capi-arkui-nativemodule-abilitybase-want.md) | AbilityBase_Want | Declares the Ability base want. |
 | [ArkUI_EmbeddedComponentOption](capi-arkui-nativemodule-arkui-embeddedcomponentoption.md) | ArkUI_EmbeddedComponentOption | Define the EmbeddedComponentOption for the EmbeddedComponent. |
 | [ArkUI_PositionEdges](capi-arkui-nativemodule-arkui-positionedges.md) | ArkUI_PositionEdges | Define the Edges describing the position of a component by distances to the container's four edges. |
 | [ArkUI_PixelRoundPolicy](capi-arkui-nativemodule-arkui-pixelroundpolicy.md) | ArkUI_PixelRoundPolicy | Defines the PixelRound policy of a component's four edges. |
 | [ArkUI_Matrix4](capi-arkui-nativemodule-arkui-matrix4.md) | ArkUI_Matrix4 | Defines the matrix4 object. |
-| [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md) | ArkUI_SelectedDragPreviewStyle | Defines the selected drag preview style configuration. |
-| [ArkUI_SystemFontStyleEvent](capi-arkui-nativemodule-arkui-systemfontstyleevent.md) | ArkUI_SystemFontStyleEvent | Defines parameter used by the system font style callback event. |
+| [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md) | ArkUI_SelectedDragPreviewStyle | 定义选中状态下文本拖拽预览样式，适用于需要在文本拖拽过程中展示选中状态预览效果的场景，可提升用户的拖拽交互体验。 |
+| [ArkUI_SystemFontStyleEvent](capi-arkui-nativemodule-arkui-systemfontstyleevent.md) | ArkUI_SystemFontStyleEvent | 系统字体样式变更事件定义，用于在系统字体大小或字体粗细发生变化时，向已注册的系统字体样式变更回调传递事件信息。 |
 | [ArkUI_ContentTransitionEffect](capi-arkui-nativemodule-arkui-contenttransitioneffect.md) | ArkUI_ContentTransitionEffect | Set the types and parameters related to content transition effects. |
-| [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md) | OH_ArkUI_TextEditorSelectionMenuOptions | 定义文本编辑器的文本选择菜单选项。 |
-| [OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md) | OH_ArkUI_TextEditorPlaceholderOptions | 定义文本编辑器无输入时的提示文本选项。 |
-| [OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md) | OH_ArkUI_TextEditorStyledStringController | 定义文本编辑器的属性字符串控制器。 |
-| [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) | OH_ArkUI_TextEditorParagraphStyle | 定义文本编辑器的段落样式。 |
 | [OH_ArkUI_ShadowOptions](capi-arkui-nativemodule-oh-arkui-shadowoptions.md) | OH_ArkUI_ShadowOptions | 定义阴影选项。 |
-| [OH_ArkUI_TextEditorTextStyle](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md) | OH_ArkUI_TextEditorTextStyle | 定义文本编辑器的文本样式。 |
 | [ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md) | ArkUI_MotionPathOptions | Defines the motion path options for path animation. |
 | [ArkUI_Matrix4ScaleOptions](capi-arkui-nativemodule-arkui-matrix4scaleoptions.md) | ArkUI_Matrix4ScaleOptions | Defines the scale options for matrix scaling. |
 | [ArkUI_Matrix4RotationOptions](capi-arkui-nativemodule-arkui-matrix4rotationoptions.md) | ArkUI_Matrix4RotationOptions | Defines the rotation options for matrix rotating. |
 | [ArkUI_Matrix4TranslationOptions](capi-arkui-nativemodule-arkui-matrix4translationoptions.md) | ArkUI_Matrix4TranslationOptions | Defines the translation options for matrix translating. |
-| [OH_ArkUI_LinearGradientOptions](capi-arkui-nativemodule-oh-arkui-lineargradientoptions.md) | OH_ArkUI_LinearGradientOptions | Defines linear gradient options. |
-| [OH_ArkUI_RadialGradientOptions](capi-arkui-nativemodule-oh-arkui-radialgradientoptions.md) | OH_ArkUI_RadialGradientOptions | Defines radial gradient options. |
+| [OH_ArkUI_LinearGradientOptions](capi-arkui-nativemodule-oh-arkui-lineargradientoptions.md) | OH_ArkUI_LinearGradientOptions | 定义线性渐变效果选项，用于描述UI组件的线性颜色渐变配置，支持设置渐变方向、角度和颜色配置，帮助开发者实现灵活的线性渐变效果，提升UI视觉呈现能力，适用于需要为组件应用线性渐变样式的场景。 |
+| [OH_ArkUI_RadialGradientOptions](capi-arkui-nativemodule-oh-arkui-radialgradientoptions.md) | OH_ArkUI_RadialGradientOptions | 定义径向渐变选项，适用于UI组件中实现径向渐变效果的场景，可帮助开发者丰富界面的视觉层次。 |
 
 ### 枚举
 
@@ -179,10 +163,6 @@ Defines the common types for the native module.
 | [ArkUI_LocalizedAlignment](#arkui_localizedalignment) | ArkUI_LocalizedAlignment | Enumerates the localizedAlignment modes. |
 | [ArkUI_RenderStrategy](#arkui_renderstrategy) | ArkUI_RenderStrategy | Enumerates the graphics rendering strategy. |
 | [ArkUI_LayoutPolicy](#arkui_layoutpolicy) | ArkUI_LayoutPolicy | Enumerates the LayoutPolicy. |
-| [OH_ArkUI_HapticFeedbackMode](#oh_arkui_hapticfeedbackmode) | OH_ArkUI_HapticFeedbackMode | 震动效果类型枚举。 |
-| [OH_ArkUI_TextEditorSpanType](#oh_arkui_texteditorspantype) | OH_ArkUI_TextEditorSpanType | 自定义文本选择菜单span类型枚举。 |
-| [OH_ArkUI_TextEditorResponseType](#oh_arkui_texteditorresponsetype) | OH_ArkUI_TextEditorResponseType | 自定义文本选择菜单响应类型枚举。 |
-| [OH_ArkUI_TextMenuType](#oh_arkui_textmenutype) | OH_ArkUI_TextMenuType | 文本菜单类型枚举。 |
 | [OH_ArkUI_CrossLanguageOperatingStatus](#oh_arkui_crosslanguageoperatingstatus) | OH_ArkUI_CrossLanguageOperatingStatus | Enumerates the tree operating status for the cross-language option. |
 | [OH_ArkUI_NodeMountPolicy](#oh_arkui_nodemountpolicy) | OH_ArkUI_NodeMountPolicy | Enumeration of the policy for mounting child node to the target node. |
 
@@ -411,9 +391,9 @@ Defines the common types for the native module.
 | [const char* OH_ArkUI_CustomProperty_GetStringValue(ArkUI_CustomProperty* handle)](#oh_arkui_customproperty_getstringvalue) | Get custom attribute value information. |
 | [const char* OH_ArkUI_HostWindowInfo_GetName(ArkUI_HostWindowInfo* info)](#oh_arkui_hostwindowinfo_getname) | Get window name from HostWindowInfo. |
 | [void OH_ArkUI_HostWindowInfo_Destroy(ArkUI_HostWindowInfo* info)](#oh_arkui_hostwindowinfo_destroy) | Destroy the instance of HostWindowInfo. |
-| [void OH_ArkUI_ActiveChildrenInfo_Destroy(ArkUI_ActiveChildrenInfo* handle)](#oh_arkui_activechildreninfo_destroy) | Destroy ActiveChildenInfo instance. |
+| [void OH_ArkUI_ActiveChildrenInfo_Destroy(ArkUI_ActiveChildrenInfo* handle)](#oh_arkui_activechildreninfo_destroy) | 销毁{@link OH_ArkUI_ActiveChildrenInfo}实例，释放获取活跃子节点信息时分配的资源。 |
 | [ArkUI_NodeHandle OH_ArkUI_ActiveChildrenInfo_GetNodeByIndex(ArkUI_ActiveChildrenInfo* handle, int32_t index)](#oh_arkui_activechildreninfo_getnodebyindex) | Retrieve the child nodes of ActiveChildenInfo with the structure index. |
-| [int32_t OH_ArkUI_ActiveChildrenInfo_GetCount(ArkUI_ActiveChildrenInfo* handle)](#oh_arkui_activechildreninfo_getcount) | Retrieve the number of nodes within the structure of ActiveChildenInfo. |
+| [int32_t OH_ArkUI_ActiveChildrenInfo_GetCount(ArkUI_ActiveChildrenInfo* handle)](#oh_arkui_activechildreninfo_getcount) | 获取{@link OH_ArkUI_ActiveChildrenInfo}结构体内的子节点数量，适用于遍历活跃子节点前确定数量。 |
 | [ArkUI_CrossLanguageOption* OH_ArkUI_CrossLanguageOption_Create(void)](#oh_arkui_crosslanguageoption_create) | Create a cross-language option instance. |
 | [void OH_ArkUI_CrossLanguageOption_Destroy(ArkUI_CrossLanguageOption* option)](#oh_arkui_crosslanguageoption_destroy) | Destroy the cross-language option instance. |
 | [void OH_ArkUI_CrossLanguageOption_SetAttributeSettingStatus(ArkUI_CrossLanguageOption* option, bool enabled)](#oh_arkui_crosslanguageoption_setattributesettingstatus) | Enable the attribute setting in the cross-language option. |
@@ -493,8 +473,8 @@ Defines the common types for the native module.
 | [ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetRotatable(const ArkUI_MotionPathOptions* options, bool* rotatable)](#oh_arkui_motionpathoptions_getrotatable) | Gets the rotatable parameter in the ArkUI_MotionPathOptions. |
 | [ArkUI_SelectedDragPreviewStyle* OH_ArkUI_SelectedDragPreviewStyle_Create()](#oh_arkui_selecteddragpreviewstyle_create) | Create a configuration object for selected drag preview style. |
 | [void OH_ArkUI_SelectedDragPreviewStyle_Dispose(ArkUI_SelectedDragPreviewStyle* config)](#oh_arkui_selecteddragpreviewstyle_dispose) | Dispose a configuration object for selected drag preview style. |
-| [void OH_ArkUI_SelectedDragPreviewStyle_SetColor(ArkUI_SelectedDragPreviewStyle* config, uint32_t color)](#oh_arkui_selecteddragpreviewstyle_setcolor) | Sets the color of background for selected drag preview style. |
-| [uint32_t OH_ArkUI_SelectedDragPreviewStyle_GetColor(ArkUI_SelectedDragPreviewStyle* config)](#oh_arkui_selecteddragpreviewstyle_getcolor) | Gets the color of background for selected drag preview style. |
+| [void OH_ArkUI_SelectedDragPreviewStyle_SetColor(ArkUI_SelectedDragPreviewStyle* config, uint32_t color)](#oh_arkui_selecteddragpreviewstyle_setcolor) | 设置选中态拖拽文本预览样式的背景色。 |
+| [uint32_t OH_ArkUI_SelectedDragPreviewStyle_GetColor(ArkUI_SelectedDragPreviewStyle* config)](#oh_arkui_selecteddragpreviewstyle_getcolor) | 获取选中态拖拽文本预览样式的背景色。 |
 | [ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_SetTextDecorationType(OH_ArkUI_DecorationStyleOptions* options, ArkUI_TextDecorationType type)](#oh_arkui_decorationstyleoptions_settextdecorationtype) | 设置装饰线样式的装饰类型。 |
 | [ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_GetTextDecorationType(OH_ArkUI_DecorationStyleOptions* options, ArkUI_TextDecorationType* type)](#oh_arkui_decorationstyleoptions_gettextdecorationtype) | 获取装饰线样式的装饰类型。 |
 | [ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_SetColor(OH_ArkUI_DecorationStyleOptions* options, uint32_t color)](#oh_arkui_decorationstyleoptions_setcolor) | 设置装饰线的颜色。 |
@@ -513,8 +493,6 @@ Defines the common types for the native module.
 | [ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetEnablePreviewMenu(OH_ArkUI_TextDataDetectorConfig* config, bool enablePreviewMenu)](#oh_arkui_textdatadetectorconfig_setenablepreviewmenu) | 设置长按识别内容时是否显示预览菜单。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetEnablePreviewMenu(OH_ArkUI_TextDataDetectorConfig* config, bool* enablePreviewMenu)](#oh_arkui_textdatadetectorconfig_getenablepreviewmenu) | 获取长按识别内容时是否显示预览菜单。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextController_SetStyledString(OH_ArkUI_TextController* controller, ArkUI_StyledString_Descriptor* descriptor)](#oh_arkui_textcontroller_setstyledstring) | Set the StyledString of the text. |
-| [OH_ArkUI_TextEditorPlaceholderOptions* OH_ArkUI_TextEditorPlaceholderOptions_Create()](#oh_arkui_texteditorplaceholderoptions_create) | 创建一个无输入时的提示文本的选项对象。当该对象不再使用时，请调用[OH_ArkUI_TextEditorPlaceholderOptions_Destroy](capi-native-type-h.md#oh_arkui_texteditorplaceholderoptions_destroy)销毁。 |
-| [void OH_ArkUI_TextEditorPlaceholderOptions_Destroy(OH_ArkUI_TextEditorPlaceholderOptions* options)](#oh_arkui_texteditorplaceholderoptions_destroy) | 销毁无输入时的提示文本的选项对象。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetValue(OH_ArkUI_TextEditorPlaceholderOptions* options, const char* value)](#oh_arkui_texteditorplaceholderoptions_setvalue) | 设置无输入时的提示文本选项的提示文字。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetValue(OH_ArkUI_TextEditorPlaceholderOptions* options, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_texteditorplaceholderoptions_getvalue) | 获取无输入时的提示文本选项的提示文字。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontSize(OH_ArkUI_TextEditorPlaceholderOptions* options, float fontSize)](#oh_arkui_texteditorplaceholderoptions_setfontsize) | 设置无输入时的提示文本选项的字体大小。 |
@@ -527,8 +505,6 @@ Defines the common types for the native module.
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontStyle(OH_ArkUI_TextEditorPlaceholderOptions* options, ArkUI_FontStyle* fontStyle)](#oh_arkui_texteditorplaceholderoptions_getfontstyle) | 获取无输入时的提示文本选项的字体样式。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontColor(OH_ArkUI_TextEditorPlaceholderOptions* options, uint32_t fontColor)](#oh_arkui_texteditorplaceholderoptions_setfontcolor) | 设置无输入时的提示文本选项的字体颜色。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontColor(OH_ArkUI_TextEditorPlaceholderOptions* options, uint32_t* fontColor)](#oh_arkui_texteditorplaceholderoptions_getfontcolor) | 获取无输入时的提示文本选项的字体颜色。 |
-| [OH_ArkUI_TextEditorStyledStringController* OH_ArkUI_TextEditorStyledStringController_Create()](#oh_arkui_texteditorstyledstringcontroller_create) | 为文本编辑器创建一个属性字符串控制器对象。当该对象不再使用时，请调用[OH_ArkUI_TextEditorStyledStringController_Destroy](capi-native-type-h.md#oh_arkui_texteditorstyledstringcontroller_destroy)销毁。 |
-| [void OH_ArkUI_TextEditorStyledStringController_Destroy(OH_ArkUI_TextEditorStyledStringController* controller)](#oh_arkui_texteditorstyledstringcontroller_destroy) | 销毁属性字符串控制器。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetCaretOffset(OH_ArkUI_TextEditorStyledStringController* controller, int32_t caretOffset)](#oh_arkui_texteditorstyledstringcontroller_setcaretoffset) | 通过属性字符串控制器设置光标偏移量。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetCaretOffset(OH_ArkUI_TextEditorStyledStringController* controller, int32_t* caretOffset)](#oh_arkui_texteditorstyledstringcontroller_getcaretoffset) | 通过属性字符串控制器获取光标索引位置。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetSelection(OH_ArkUI_TextEditorStyledStringController* controller, uint32_t start, uint32_t end, ArkUI_MenuPolicy menuPolicy)](#oh_arkui_texteditorstyledstringcontroller_setselection) | 通过属性字符串控制器设置选中区域。 |
@@ -537,8 +513,6 @@ Defines the common types for the native module.
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetPreviewText(OH_ArkUI_TextEditorStyledStringController* controller, uint32_t* offset, char* buffer, int32_t bufferSize, int32_t* writeLength)](#oh_arkui_texteditorstyledstringcontroller_getpreviewtext) | 通过属性字符串控制器获取预上屏文本内容。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetCaretRect(OH_ArkUI_TextEditorStyledStringController* controller, ArkUI_Rect* rect)](#oh_arkui_texteditorstyledstringcontroller_getcaretrect) | 通过属性字符串控制器获取光标矩形区域。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_DeleteBackward(OH_ArkUI_TextEditorStyledStringController* controller)](#oh_arkui_texteditorstyledstringcontroller_deletebackward) | 通过属性字符串控制器删除字符。没有内容被选中时，删除当前光标位置前的1个字符。有内容被选中时，删除选中内容。 |
-| [OH_ArkUI_TextEditorParagraphStyle* OH_ArkUI_TextEditorParagraphStyle_Create()](#oh_arkui_texteditorparagraphstyle_create) | 为文本编辑器创建一个段落样式对象。当该对象不再使用时，请调用[OH_ArkUI_TextEditorParagraphStyle_Destroy](capi-native-type-h.md#oh_arkui_texteditorparagraphstyle_destroy)销毁。 |
-| [void OH_ArkUI_TextEditorParagraphStyle_Destroy(OH_ArkUI_TextEditorParagraphStyle* style)](#oh_arkui_texteditorparagraphstyle_destroy) | 销毁段落样式对象。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetTextAlign(OH_ArkUI_TextEditorParagraphStyle* style, ArkUI_TextAlignment align)](#oh_arkui_texteditorparagraphstyle_settextalign) | 设置段落样式中的文本对齐方式。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetTextAlign(OH_ArkUI_TextEditorParagraphStyle* style, ArkUI_TextAlignment* align)](#oh_arkui_texteditorparagraphstyle_gettextalign) | 获取段落样式中的文本对齐方式。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginPixelMap(OH_ArkUI_TextEditorParagraphStyle* style, struct OH_PixelmapNative* pixelmap)](#oh_arkui_texteditorparagraphstyle_setleadingmarginpixelmap) | 设置段落样式中段落缩进的像素图。 |
@@ -572,8 +546,6 @@ Defines the common types for the native module.
 | [ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetOffsetY(OH_ArkUI_ShadowOptions* options, float* offsetY)](#oh_arkui_shadowoptions_getoffsety) | 获取阴影在y轴上的偏移量。 |
 | [ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetFill(OH_ArkUI_ShadowOptions* options, bool isFill)](#oh_arkui_shadowoptions_setfill) | 设置是否用阴影填充组件内部。 |
 | [ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetFill(OH_ArkUI_ShadowOptions* options, bool* isFill)](#oh_arkui_shadowoptions_getfill) | 获取是否用阴影填充组件内部。 |
-| [OH_ArkUI_TextEditorTextStyle* OH_ArkUI_TextEditorTextStyle_Create()](#oh_arkui_texteditortextstyle_create) | 创建一个文本样式对象。当该对象不再使用时，请调用[OH_ArkUI_TextEditorTextStyle_Destroy](capi-native-type-h.md#oh_arkui_texteditortextstyle_destroy)销毁。 |
-| [void OH_ArkUI_TextEditorTextStyle_Destroy(OH_ArkUI_TextEditorTextStyle* style)](#oh_arkui_texteditortextstyle_destroy) | 销毁文本样式对象。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontColor(OH_ArkUI_TextEditorTextStyle* style, uint32_t color)](#oh_arkui_texteditortextstyle_setfontcolor) | 设置文本样式的字体颜色。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontColor(OH_ArkUI_TextEditorTextStyle* style, uint32_t* color)](#oh_arkui_texteditortextstyle_getfontcolor) | 获取文本样式的字体颜色。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontSize(OH_ArkUI_TextEditorTextStyle* style, float size)](#oh_arkui_texteditortextstyle_setfontsize) | 设置文本样式的字体大小。 |
@@ -602,8 +574,6 @@ Defines the common types for the native module.
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundRadius(OH_ArkUI_TextEditorTextStyle* style, float* topLeft, float* topRight, float* bottomLeft, float* bottomRight)](#oh_arkui_texteditortextstyle_gettextbackgroundradius) | 获取文本样式中文本背景的圆角半径。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetTypingStyle(OH_ArkUI_TextEditorStyledStringController* controller, OH_ArkUI_TextEditorTextStyle* style)](#oh_arkui_texteditorstyledstringcontroller_settypingstyle) | 通过属性字符串控制器设置预设输入样式。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetTypingStyle(OH_ArkUI_TextEditorStyledStringController* controller, OH_ArkUI_TextEditorTextStyle* style)](#oh_arkui_texteditorstyledstringcontroller_gettypingstyle) | 通过属性字符串控制器获取预设输入样式。 |
-| [OH_ArkUI_TextEditorSelectionMenuOptions* OH_ArkUI_TextEditorSelectionMenuOptions_Create()](#oh_arkui_texteditorselectionmenuoptions_create) | 创建一个文本编辑器文本选择菜单选项对象。当该对象不再使用时，请调用[OH_ArkUI_TextEditorSelectionMenuOptions_Destroy](capi-native-type-h.md#oh_arkui_texteditorselectionmenuoptions_destroy)销毁。 |
-| [void OH_ArkUI_TextEditorSelectionMenuOptions_Destroy(OH_ArkUI_TextEditorSelectionMenuOptions* options)](#oh_arkui_texteditorselectionmenuoptions_destroy) | 销毁文本编辑器文本选择菜单选项对象。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetSpanType(OH_ArkUI_TextEditorSelectionMenuOptions* options, OH_ArkUI_TextEditorSpanType textEditorSpanType)](#oh_arkui_texteditorselectionmenuoptions_setspantype) | 设置文本编辑器中文本选择菜单的span的类型。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetSpanType(OH_ArkUI_TextEditorSelectionMenuOptions* options, OH_ArkUI_TextEditorSpanType* textEditorSpanType)](#oh_arkui_texteditorselectionmenuoptions_getspantype) | 获取文本编辑器中文本选择菜单的span的类型。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetContentNode(OH_ArkUI_TextEditorSelectionMenuOptions* options, ArkUI_NodeHandle node)](#oh_arkui_texteditorselectionmenuoptions_setcontentnode) | 设置文本编辑器中文本选择菜单的内容节点。 |
@@ -2589,80 +2559,6 @@ Enumerates the LayoutPolicy.
 | ARKUI_LAYOUTPOLICY_WRAPCONTENT | The component fills its content, which means its size is as large as its children but it is constrainedby its parent. |
 | ARKUI_LAYOUTPOLICY_FIXATIDEALSIZE | The component fills its content which means its size is as large as its children. |
 
-### OH_ArkUI_HapticFeedbackMode
-
-```c
-enum OH_ArkUI_HapticFeedbackMode
-```
-
-**描述**
-
-震动效果类型枚举。
-
-**起始版本：** 24
-
-| 枚举项 | 描述 |
-| -- | -- |
-| OH_ARKUI_HAPTIC_FEEDBACK_MODE_DISABLED = 0 |  |
-| OH_ARKUI_HAPTIC_FEEDBACK_MODE_ENABLED = 1 |  |
-| OH_ARKUI_HAPTIC_FEEDBACK_MODE_AUTO = 2 |  |
-
-### OH_ArkUI_TextEditorSpanType
-
-```c
-enum OH_ArkUI_TextEditorSpanType
-```
-
-**描述**
-
-自定义文本选择菜单span类型枚举。
-
-**起始版本：** 24
-
-| 枚举项 | 描述 |
-| -- | -- |
-| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_TEXT = 0 |  |
-| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_IMAGE = 1 |  |
-| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_MIXED = 2 |  |
-| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_BUILDER = 3 |  |
-| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_DEFAULT = 4 |  |
-
-### OH_ArkUI_TextEditorResponseType
-
-```c
-enum OH_ArkUI_TextEditorResponseType
-```
-
-**描述**
-
-自定义文本选择菜单响应类型枚举。
-
-**起始版本：** 24
-
-| 枚举项 | 描述 |
-| -- | -- |
-| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_RIGHT_CLICK = 0 |  |
-| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_LONG_PRESS = 1 |  |
-| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_SELECT = 2 |  |
-| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_DEFAULT = 3 |  |
-
-### OH_ArkUI_TextMenuType
-
-```c
-enum OH_ArkUI_TextMenuType
-```
-
-**描述**
-
-文本菜单类型枚举。
-
-**起始版本：** 24
-
-| 枚举项 | 描述 |
-| -- | -- |
-| OH_ARKUI_TEXT_EDITOR_SELECTION_MENU = 0 |  |
-| OH_ARKUI_TEXT_EDITOR_PREVIEW_MENU = 1 |  |
-
 ### OH_ArkUI_CrossLanguageOperatingStatus
 
 ```c
@@ -2729,13 +2625,13 @@ Creates a deep copy of a size constraint.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_LayoutConstraint*](capi-arkui-nativemodule-arkui-layoutconstraint.md) | Returns the pointer to the new size constraint. |
+| ArkUI_LayoutConstraint* | Returns the pointer to the new size constraint. |
 
 ### OH_ArkUI_LayoutConstraint_Dispose()
 
@@ -2753,7 +2649,7 @@ Destroys the pointer to a size constraint.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 ### OH_ArkUI_LayoutConstraint_GetMaxWidth()
 
@@ -2771,7 +2667,7 @@ Obtains the maximum width for a size constraint, in px.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **返回：**
 
@@ -2795,7 +2691,7 @@ Obtains the minimum width for a size constraint, in px.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **返回：**
 
@@ -2819,7 +2715,7 @@ Obtains the maximum height for a size constraint, in px.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **返回：**
 
@@ -2843,7 +2739,7 @@ Obtains the minimum height for a size constraint, in px.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **返回：**
 
@@ -2867,7 +2763,7 @@ Obtains the width percentage reference for a size constraint, in px.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **返回：**
 
@@ -2891,7 +2787,7 @@ Obtains the height percentage reference for a size constraint, in px.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **返回：**
 
@@ -2915,7 +2811,7 @@ Sets the maximum width.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the maximum width, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMinWidth()
@@ -2934,7 +2830,7 @@ Sets the minimum width.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the minimum width, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMaxHeight()
@@ -2953,7 +2849,7 @@ Sets the maximum height.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the maximum height, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMinHeight()
@@ -2972,7 +2868,7 @@ Sets the minimum height.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the minimum height, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetPercentReferenceWidth()
@@ -2991,7 +2887,7 @@ Sets the width percentage reference.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the width percentage reference, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetPercentReferenceHeight()
@@ -3010,7 +2906,7 @@ Sets the height percentage reference.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the height percentage reference, in px. |
 
 ### OH_ArkUI_DrawContext_GetCanvas()
@@ -3029,7 +2925,7 @@ Obtains the pointer to a canvas for drawing, which can be converted into the <b>
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_DrawContext](capi-arkui-nativemodule-arkui-drawcontext.md)* context | Indicates the pointer to the drawing context. |
+| ArkUI_DrawContext* context | Indicates the pointer to the drawing context. |
 
 **返回：**
 
@@ -3053,13 +2949,13 @@ Obtains the size of a drawing area.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_DrawContext](capi-arkui-nativemodule-arkui-drawcontext.md)* context | Indicates the pointer to the drawing context. |
+| ArkUI_DrawContext* context | Indicates the pointer to the drawing context. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_IntSize](capi-arkui-nativemodule-arkui-intsize.md) | Returns the size of the drawing area. |
+| ArkUI_IntSize | Returns the size of the drawing area. |
 
 ### OH_ArkUI_GridLayoutOptions_Create()
 
@@ -4566,7 +4462,7 @@ Sets the font weight of total count in the digital indicator.
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) *indicator | The pointer to the digital indicator. |
-| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) fontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
+| ArkUI_FontWeight fontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetFontWeight()
 
@@ -4590,7 +4486,7 @@ Gets the font weight of total count in the digital indicator.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
+| ArkUI_FontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
 
 ### OH_ArkUI_SwiperDigitIndicator_SetSelectedFontWeight()
 
@@ -4609,7 +4505,7 @@ Sets the font weight of selected index in the digital indicator.
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) *indicator | The pointer to the digital indicator. |
-| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) selectedFontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
+| ArkUI_FontWeight selectedFontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetSelectedFontWeight()
 
@@ -4633,7 +4529,7 @@ Gets the font weight of selected index in the digital indicator.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
+| ArkUI_FontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
 
 ### OH_ArkUI_SwiperDigitIndicator_Destroy()
 
@@ -6022,7 +5918,7 @@ Set the layout content of ListItem SwipeActionItem.
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md)* item | List Item SwipeActionItem instance. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Layout information. |
+| ArkUI_NodeHandle node | Layout information. |
 
 ### OH_ArkUI_ListItemSwipeActionItem_SetActionAreaDistance()
 
@@ -7436,7 +7332,7 @@ void OH_ArkUI_ActiveChildrenInfo_Destroy(ArkUI_ActiveChildrenInfo* handle)
 
 **描述**
 
-Destroy ActiveChildenInfo instance.
+销毁{@link OH_ArkUI_ActiveChildrenInfo}实例，释放获取活跃子节点信息时分配的资源。
 
 **起始版本：** 14
 
@@ -7469,7 +7365,7 @@ Retrieve the child nodes of ActiveChildenInfo with the structure index.
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | The child node pointer corresponding to the index. Return nullptr in case of exception. |
+| ArkUI_NodeHandle | The child node pointer corresponding to the index. Return nullptr in case of exception. |
 
 ### OH_ArkUI_ActiveChildrenInfo_GetCount()
 
@@ -7479,7 +7375,7 @@ int32_t OH_ArkUI_ActiveChildrenInfo_GetCount(ArkUI_ActiveChildrenInfo* handle)
 
 **描述**
 
-Retrieve the number of nodes within the structure of ActiveChildenInfo.
+获取{@link OH_ArkUI_ActiveChildrenInfo}结构体内的子节点数量，适用于遍历活跃子节点前确定数量。
 
 **起始版本：** 14
 
@@ -7848,7 +7744,7 @@ Expand the swipe action.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | List Item node. |
+| ArkUI_NodeHandle node | List Item node. |
 | [ArkUI_ListItemSwipeActionDirection](capi-native-type-h.md#arkui_listitemswipeactiondirection) direction | expand direction of swipeAction. |
 
 **返回：**
@@ -7873,7 +7769,7 @@ Collapse the swipe action.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | List Item node. |
+| ArkUI_NodeHandle node | List Item node. |
 
 **返回：**
 
@@ -8806,7 +8702,7 @@ Set custom text menu node of text.
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | The custom menu node. |
+| ArkUI_NodeHandle node | The custom menu node. |
 
 **返回：**
 
@@ -8831,7 +8727,7 @@ Get custom text menu node of text.
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | The custom menu node. |
+| ArkUI_NodeHandle* node | The custom menu node. |
 
 **返回：**
 
@@ -9302,7 +9198,7 @@ void OH_ArkUI_SelectedDragPreviewStyle_SetColor(ArkUI_SelectedDragPreviewStyle* 
 
 **描述**
 
-Sets the color of background for selected drag preview style.
+设置选中态拖拽文本预览样式的背景色。
 
 **起始版本：** 23
 
@@ -9310,8 +9206,8 @@ Sets the color of background for selected drag preview style.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md)* config | Pointer to the configuration object to be modified. |
-| uint32_t color | Background color. |
+| [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md)* config | 指向[ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md)对象的指针。 |
+| uint32_t color | 选中态拖拽文本预览样式的背景，格式为RGBA。 |
 
 ### OH_ArkUI_SelectedDragPreviewStyle_GetColor()
 
@@ -9321,7 +9217,7 @@ uint32_t OH_ArkUI_SelectedDragPreviewStyle_GetColor(ArkUI_SelectedDragPreviewSty
 
 **描述**
 
-Gets the color of background for selected drag preview style.
+获取选中态拖拽文本预览样式的背景色。
 
 **起始版本：** 23
 
@@ -9329,13 +9225,13 @@ Gets the color of background for selected drag preview style.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md)* config | Pointer to the configuration object. |
+| [ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md)* config | 指向[ArkUI_SelectedDragPreviewStyle](capi-arkui-nativemodule-arkui-selecteddragpreviewstyle.md)对象的指针。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| uint32_t | Returns the background color. |
+| uint32_t | 选中态拖拽文本预览样式的背景，格式为RGBA。 |
 
 ### OH_ArkUI_DecorationStyleOptions_SetTextDecorationType()
 
@@ -9553,8 +9449,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetTypes(OH_ArkUI_TextDataDetect
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
-| [const ArkUI_TextDataDetectorType](capi-text-h.md#arkui_textdatadetectortype)* types | 文本实体识别配置的类型，取值为[ArkUI_TextDataDetectorType](capi-text-h.md#arkui_textdatadetectortype)枚举。 |
+| OH_ArkUI_TextDataDetectorConfig* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
+| const ArkUI_TextDataDetectorType* types | 文本实体识别配置的类型，取值为[ArkUI_TextDataDetectorType](capi-text-h.md#arkui_textdatadetectortype)枚举。 |
 | int32_t length | 类型的数量。 |
 
 **返回：**
@@ -9579,8 +9475,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetTypes(OH_ArkUI_TextDataDetect
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
-| [ArkUI_TextDataDetectorType](capi-text-h.md#arkui_textdatadetectortype)* buffer | 指向类型数组的缓冲区指针。 |
+| OH_ArkUI_TextDataDetectorConfig* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
+| ArkUI_TextDataDetectorType* buffer | 指向类型数组的缓冲区指针。 |
 | int32_t bufferSize | 开发者为类型预留的缓冲区最多可以写入的类型的数量。 |
 | int32_t* writeLength | 实际写入缓冲区的类型的数量。 |
 
@@ -9606,7 +9502,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_RegisterOnDetectResultUpdateCall
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)\* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
+| OH_ArkUI_TextDataDetectorConfig\* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
 | void\* userData | 用户数据。 |
 | void (\*callback)(const char\* result | detect result update callback. |
 
@@ -9632,7 +9528,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetColor(OH_ArkUI_TextDataDetect
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
+| OH_ArkUI_TextDataDetectorConfig* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
 | uint32_t color | 识别内容的颜色，0xARGB格式。 |
 
 **返回：**
@@ -9657,7 +9553,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetColor(OH_ArkUI_TextDataDetect
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
+| OH_ArkUI_TextDataDetectorConfig* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
 | uint32_t* color | 识别内容的颜色，0xARGB格式。 |
 
 **返回：**
@@ -9682,7 +9578,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetDecorationStyleOptions(OH_Ark
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
+| OH_ArkUI_TextDataDetectorConfig* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
 | [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* decoration | 识别内容的装饰样式，取值为[OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)中的枚举。 |
 
 **返回：**
@@ -9707,7 +9603,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetDecorationStyleOptions(OH_Ark
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
+| OH_ArkUI_TextDataDetectorConfig* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
 | [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* decoration | 识别内容的装饰样式，取值为[OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)中的枚举。 |
 
 **返回：**
@@ -9732,7 +9628,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetEnablePreviewMenu(OH_ArkUI_Te
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
+| OH_ArkUI_TextDataDetectorConfig* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
 | bool enablePreviewMenu | 长按识别内容时是否显示预览菜单。true表示启用预览菜单，false表示不启用预览菜单。默认值为false。 |
 
 **返回：**
@@ -9757,7 +9653,7 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetEnablePreviewMenu(OH_ArkUI_Te
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
+| OH_ArkUI_TextDataDetectorConfig* config | 指向[OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)对象的指针。 |
 | bool* enablePreviewMenu | 长按识别内容时是否显示预览菜单。true表示显示预览菜单，false表示不显示预览菜单。 |
 
 **返回：**
@@ -9782,7 +9678,7 @@ Set the StyledString of the text.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [OH_ArkUI_TextController](capi-arkui-nativemodule-oh-arkui-textcontroller.md)* controller | the controller of the text. |
+| OH_ArkUI_TextController* controller | the controller of the text. |
 | [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object, which will be set to Text. |
 
 **返回：**
@@ -9790,42 +9686,6 @@ Set the StyledString of the text.
 | 类型 | 说明 |
 | -- | -- |
 | [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | Returns the result code.<br>         Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) if the operation is successful.<br>         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) if a parameter exception occurs. |
-
-### OH_ArkUI_TextEditorPlaceholderOptions_Create()
-
-```c
-OH_ArkUI_TextEditorPlaceholderOptions* OH_ArkUI_TextEditorPlaceholderOptions_Create()
-```
-
-**描述**
-
-创建一个无输入时的提示文本的选项对象。当该对象不再使用时，请调用[OH_ArkUI_TextEditorPlaceholderOptions_Destroy](capi-native-type-h.md#oh_arkui_texteditorplaceholderoptions_destroy)销毁。
-
-**起始版本：** 24
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [OH_ArkUI_TextEditorPlaceholderOptions*](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md) | 指向[OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md)对象的指针。 |
-
-### OH_ArkUI_TextEditorPlaceholderOptions_Destroy()
-
-```c
-void OH_ArkUI_TextEditorPlaceholderOptions_Destroy(OH_ArkUI_TextEditorPlaceholderOptions* options)
-```
-
-**描述**
-
-销毁无输入时的提示文本的选项对象。
-
-**起始版本：** 24
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md)* options | 指向[OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md)对象的指针。 |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetValue()
 
@@ -10048,7 +9908,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontStyle(OH_ArkUI_Text
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md)* options | 指向[OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md)对象的指针。 |
-| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle) fontStyle | 字体样式。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
+| ArkUI_FontStyle fontStyle | 字体样式。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
 
 **返回：**
 
@@ -10073,7 +9933,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontStyle(OH_ArkUI_Text
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md)* options | 指向[OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md)对象的指针。 |
-| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)* fontStyle | 字体样式。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
+| ArkUI_FontStyle* fontStyle | 字体样式。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
 
 **返回：**
 
@@ -10130,42 +9990,6 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontColor(OH_ArkUI_Text
 | 类型 | 说明 |
 | -- | -- |
 | [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 返回结果码。<br>     <br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>     <br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
-
-### OH_ArkUI_TextEditorStyledStringController_Create()
-
-```c
-OH_ArkUI_TextEditorStyledStringController* OH_ArkUI_TextEditorStyledStringController_Create()
-```
-
-**描述**
-
-为文本编辑器创建一个属性字符串控制器对象。当该对象不再使用时，请调用[OH_ArkUI_TextEditorStyledStringController_Destroy](capi-native-type-h.md#oh_arkui_texteditorstyledstringcontroller_destroy)销毁。
-
-**起始版本：** 24
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [OH_ArkUI_TextEditorStyledStringController*](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md) | 指向[OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md)对象的指针。 |
-
-### OH_ArkUI_TextEditorStyledStringController_Destroy()
-
-```c
-void OH_ArkUI_TextEditorStyledStringController_Destroy(OH_ArkUI_TextEditorStyledStringController* controller)
-```
-
-**描述**
-
-销毁属性字符串控制器。
-
-**起始版本：** 24
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md)* controller | 指向[OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md)对象的指针。 |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetCaretOffset()
 
@@ -10338,7 +10162,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetCaretRect(OH_ArkUI_
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md)* controller | 指向[OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md)对象的指针。 |
-| [ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md)* rect | 光标区域信息。取值为[ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md)中的枚举。 |
+| ArkUI_Rect* rect | 光标区域信息。取值为[ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md)中的枚举。 |
 
 **返回：**
 
@@ -10369,42 +10193,6 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_DeleteBackward(OH_ArkU
 | 类型 | 说明 |
 | -- | -- |
 | [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 返回结果码。<br>     <br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>     <br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
-
-### OH_ArkUI_TextEditorParagraphStyle_Create()
-
-```c
-OH_ArkUI_TextEditorParagraphStyle* OH_ArkUI_TextEditorParagraphStyle_Create()
-```
-
-**描述**
-
-为文本编辑器创建一个段落样式对象。当该对象不再使用时，请调用[OH_ArkUI_TextEditorParagraphStyle_Destroy](capi-native-type-h.md#oh_arkui_texteditorparagraphstyle_destroy)销毁。
-
-**起始版本：** 24
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [OH_ArkUI_TextEditorParagraphStyle*](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) | 指向[OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md)对象的指针。 |
-
-### OH_ArkUI_TextEditorParagraphStyle_Destroy()
-
-```c
-void OH_ArkUI_TextEditorParagraphStyle_Destroy(OH_ArkUI_TextEditorParagraphStyle* style)
-```
-
-**描述**
-
-销毁段落样式对象。
-
-**起始版本：** 24
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md)* style | 指向[OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md)对象的指针。 |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetTextAlign()
 
@@ -11217,42 +11005,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetFill(OH_ArkUI_ShadowOptions* options, 
 | -- | -- |
 | [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 返回结果码。<br>     <br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>     <br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
-### OH_ArkUI_TextEditorTextStyle_Create()
-
-```c
-OH_ArkUI_TextEditorTextStyle* OH_ArkUI_TextEditorTextStyle_Create()
-```
-
-**描述**
-
-创建一个文本样式对象。当该对象不再使用时，请调用[OH_ArkUI_TextEditorTextStyle_Destroy](capi-native-type-h.md#oh_arkui_texteditortextstyle_destroy)销毁。
-
-**起始版本：** 24
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [OH_ArkUI_TextEditorTextStyle*](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md) | 指向[OH_ArkUI_TextEditorTextStyle](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md)对象的指针。 |
-
-### OH_ArkUI_TextEditorTextStyle_Destroy()
-
-```c
-void OH_ArkUI_TextEditorTextStyle_Destroy(OH_ArkUI_TextEditorTextStyle* style)
-```
-
-**描述**
-
-销毁文本样式对象。
-
-**起始版本：** 24
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_ArkUI_TextEditorTextStyle](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md)* style | 指向[OH_ArkUI_TextEditorTextStyle](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md)对象的指针。 |
-
 ### OH_ArkUI_TextEditorTextStyle_SetFontColor()
 
 ```c
@@ -11370,7 +11122,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontStyle(OH_ArkUI_TextEditorTex
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorTextStyle](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md)* style | TextEditor组件文本样式。 |
-| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle) fontStyle | 字体样式。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
+| ArkUI_FontStyle fontStyle | 字体样式。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
 
 **返回：**
 
@@ -11395,7 +11147,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontStyle(OH_ArkUI_TextEditorTex
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorTextStyle](capi-arkui-nativemodule-oh-arkui-texteditortextstyle.md)* style | TextEditor组件文本样式。 |
-| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)* fontStyle | 字体样式。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
+| ArkUI_FontStyle* fontStyle | 字体样式。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
 
 **返回：**
 
@@ -11966,42 +11718,6 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetTypingStyle(OH_ArkU
 | -- | -- |
 | [ArkUI_ErrorCode](capi-native-type-h.md#arkui_errorcode) | 返回结果码。<br>     <br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>     <br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
-### OH_ArkUI_TextEditorSelectionMenuOptions_Create()
-
-```c
-OH_ArkUI_TextEditorSelectionMenuOptions* OH_ArkUI_TextEditorSelectionMenuOptions_Create()
-```
-
-**描述**
-
-创建一个文本编辑器文本选择菜单选项对象。当该对象不再使用时，请调用[OH_ArkUI_TextEditorSelectionMenuOptions_Destroy](capi-native-type-h.md#oh_arkui_texteditorselectionmenuoptions_destroy)销毁。
-
-**起始版本：** 24
-
-**返回：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [OH_ArkUI_TextEditorSelectionMenuOptions*](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md) | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-
-### OH_ArkUI_TextEditorSelectionMenuOptions_Destroy()
-
-```c
-void OH_ArkUI_TextEditorSelectionMenuOptions_Destroy(OH_ArkUI_TextEditorSelectionMenuOptions* options)
-```
-
-**描述**
-
-销毁文本编辑器文本选择菜单选项对象。
-
-**起始版本：** 24
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetSpanType()
 
 ```c
@@ -12019,7 +11735,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetSpanType(OH_ArkUI_Tex
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [OH_ArkUI_TextEditorSpanType](capi-native-type-h.md#oh_arkui_texteditorspantype) textEditorSpanType | span的类型。取值为[OH_ArkUI_TextEditorSpanType](capi-native-type-h.md#oh_arkui_texteditorspantype)中的枚举。 |
+| [OH_ArkUI_TextEditorSpanType](capi-rich-editor-h.md#oh_arkui_texteditorspantype) textEditorSpanType | span的类型。取值为[OH_ArkUI_TextEditorSpanType](capi-rich-editor-h.md#oh_arkui_texteditorspantype)中的枚举。 |
 
 **返回：**
 
@@ -12044,7 +11760,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetSpanType(OH_ArkUI_Tex
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [OH_ArkUI_TextEditorSpanType](capi-native-type-h.md#oh_arkui_texteditorspantype)* textEditorSpanType | span的类型。取值为[OH_ArkUI_TextEditorSpanType](capi-native-type-h.md#oh_arkui_texteditorspantype)中的枚举。 |
+| [OH_ArkUI_TextEditorSpanType](capi-rich-editor-h.md#oh_arkui_texteditorspantype)* textEditorSpanType | span的类型。取值为[OH_ArkUI_TextEditorSpanType](capi-rich-editor-h.md#oh_arkui_texteditorspantype)中的枚举。 |
 
 **返回：**
 
@@ -12069,7 +11785,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetContentNode(OH_ArkUI_
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | 内容节点。 |
+| ArkUI_NodeHandle node | 内容节点。 |
 
 **返回：**
 
@@ -12094,7 +11810,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetContentNode(OH_ArkUI_
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | 内容节点。 |
+| ArkUI_NodeHandle* node | 内容节点。 |
 
 **返回：**
 
@@ -12119,7 +11835,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetResponseType(OH_ArkUI
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [OH_ArkUI_TextEditorResponseType](capi-native-type-h.md#oh_arkui_texteditorresponsetype) responseType | 响应类型。取值为[OH_ArkUI_TextEditorResponseType](capi-native-type-h.md#oh_arkui_texteditorresponsetype)中的枚举。 |
+| [OH_ArkUI_TextEditorResponseType](capi-rich-editor-h.md#oh_arkui_texteditorresponsetype) responseType | 响应类型。取值为[OH_ArkUI_TextEditorResponseType](capi-rich-editor-h.md#oh_arkui_texteditorresponsetype)中的枚举。 |
 
 **返回：**
 
@@ -12144,7 +11860,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetResponseType(OH_ArkUI
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [OH_ArkUI_TextEditorResponseType](capi-native-type-h.md#oh_arkui_texteditorresponsetype)* responseType | 响应类型。取值为[OH_ArkUI_TextEditorResponseType](capi-native-type-h.md#oh_arkui_texteditorresponsetype)中的枚举。 |
+| [OH_ArkUI_TextEditorResponseType](capi-rich-editor-h.md#oh_arkui_texteditorresponsetype)* responseType | 响应类型。取值为[OH_ArkUI_TextEditorResponseType](capi-rich-editor-h.md#oh_arkui_texteditorresponsetype)中的枚举。 |
 
 **返回：**
 
@@ -12169,7 +11885,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetMenuType(OH_ArkUI_Tex
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [OH_ArkUI_TextMenuType](capi-native-type-h.md#oh_arkui_textmenutype) menuType | 菜单类型。取值为[OH_ArkUI_TextMenuType](capi-native-type-h.md#oh_arkui_textmenutype)中的枚举。 |
+| [OH_ArkUI_TextMenuType](capi-rich-editor-h.md#oh_arkui_textmenutype) menuType | 菜单类型。取值为[OH_ArkUI_TextMenuType](capi-rich-editor-h.md#oh_arkui_textmenutype)中的枚举。 |
 
 **返回：**
 
@@ -12194,7 +11910,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetMenuType(OH_ArkUI_Tex
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [OH_ArkUI_TextMenuType](capi-native-type-h.md#oh_arkui_textmenutype)* menuType | 菜单类型。取值为[OH_ArkUI_TextMenuType](capi-native-type-h.md#oh_arkui_textmenutype)中的枚举。 |
+| [OH_ArkUI_TextMenuType](capi-rich-editor-h.md#oh_arkui_textmenutype)* menuType | 菜单类型。取值为[OH_ArkUI_TextMenuType](capi-rich-editor-h.md#oh_arkui_textmenutype)中的枚举。 |
 
 **返回：**
 
@@ -12323,7 +12039,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetHapticFeedbackMode(OH
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [OH_ArkUI_HapticFeedbackMode](capi-native-type-h.md#oh_arkui_hapticfeedbackmode) mode | 触觉反馈模式。取值为[OH_ArkUI_HapticFeedbackMode](capi-native-type-h.md#oh_arkui_hapticfeedbackmode)中的枚举。 |
+| [OH_ArkUI_HapticFeedbackMode](capi-rich-editor-h.md#oh_arkui_hapticfeedbackmode) mode | 触觉反馈模式。取值为[OH_ArkUI_HapticFeedbackMode](capi-rich-editor-h.md#oh_arkui_hapticfeedbackmode)中的枚举。 |
 
 **返回：**
 
@@ -12348,7 +12064,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetHapticFeedbackMode(OH
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)* options | 指向[OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md)对象的指针。 |
-| [OH_ArkUI_HapticFeedbackMode](capi-native-type-h.md#oh_arkui_hapticfeedbackmode)* mode | 触觉反馈模式。取值为[OH_ArkUI_HapticFeedbackMode](capi-native-type-h.md#oh_arkui_hapticfeedbackmode)中的枚举。 |
+| [OH_ArkUI_HapticFeedbackMode](capi-rich-editor-h.md#oh_arkui_hapticfeedbackmode)* mode | 触觉反馈模式。取值为[OH_ArkUI_HapticFeedbackMode](capi-rich-editor-h.md#oh_arkui_hapticfeedbackmode)中的枚举。 |
 
 **返回：**
 

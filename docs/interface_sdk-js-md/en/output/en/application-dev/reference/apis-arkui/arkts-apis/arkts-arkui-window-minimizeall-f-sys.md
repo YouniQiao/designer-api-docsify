@@ -1,0 +1,122 @@
+# minimizeAll (System API)
+
+## minimizeAll
+
+```TypeScript
+function minimizeAll(id: long, callback: AsyncCallback<void>): void
+```
+
+Minimizes all main windows on a display.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-window-function minimizeAll(id: long, callback: AsyncCallback<void>): void--><!--Device-window-function minimizeAll(id: long, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the [display]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The value must be an integer. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+**Example**
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayClass: display.Display | null = null;
+displayClass = display.getDefaultDisplaySync();
+
+try {
+  if (!displayClass) {
+    console.error('displayClass is null');
+  } else {
+    window.minimizeAll(displayClass.id, (err: BusinessError) => {
+      const errCode: number = err?.code;
+      if (errCode) {
+        console.error(`Failed to minimize all windows. Cause code: ${err?.code}, message: ${err?.message}`);
+        return;
+      }
+      console.info('Succeeded in minimizing all windows.');
+    });
+  }
+} catch (exception) {
+  console.error(`Failed to minimize all windows. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+
+## minimizeAll
+
+```TypeScript
+function minimizeAll(id: long): Promise<void>
+```
+
+Minimizes all main windows on a display. This API uses a promise to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-window-function minimizeAll(id: long): Promise<void>--><!--Device-window-function minimizeAll(id: long): Promise<void>-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| id | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | ID of the [display]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. The value must be an integer. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+
+**Example**
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayClass: display.Display | null = null;
+displayClass = display.getDefaultDisplaySync();
+
+try {
+  let promise = window.minimizeAll(displayClass.id);
+  promise.then(() => {
+    console.info('Succeeded in minimizing all windows.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to minimize all windows. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  console.error(`Failed to minimize all windows. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+

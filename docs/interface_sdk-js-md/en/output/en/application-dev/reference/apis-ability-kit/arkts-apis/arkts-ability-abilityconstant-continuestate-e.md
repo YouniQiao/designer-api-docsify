@@ -1,0 +1,52 @@
+# ContinueState
+
+Enumerates the mission continuation states of the application. It is used in the [setMissionContinueState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ API of [UIAbilityContext]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-AbilityConstant-export enum ContinueState--><!--Device-AbilityConstant-export enum ContinueState-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## ACTIVE
+
+```TypeScript
+ACTIVE = 0
+```
+
+Mission continuation is activated for the current application.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContinueState-ACTIVE = 0--><!--Device-ContinueState-ACTIVE = 0-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## INACTIVE
+
+```TypeScript
+INACTIVE = 1
+```
+
+Mission continuation is not activated for the current application.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ContinueState-INACTIVE = 1--><!--Device-ContinueState-INACTIVE = 1-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+

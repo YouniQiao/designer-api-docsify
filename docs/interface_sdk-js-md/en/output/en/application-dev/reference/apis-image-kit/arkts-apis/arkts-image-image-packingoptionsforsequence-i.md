@@ -1,0 +1,84 @@
+# PackingOptionsForSequence
+
+Defines the options for encoding animated images.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-image-interface PackingOptionsForSequence--><!--Device-image-interface PackingOptionsForSequence-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImagePacker
+
+## delayTimeList
+
+```TypeScript
+delayTimeList: Array<int>
+```
+
+Delay time of each frame in GIF encoding. The value must be greater than 0. The unit is 10 milliseconds. For example, if this parameter is set to 10, the actual delay per frame is 100 ms. If the array length is less than **frameCount**, the last value in the array will be used for the remaining frames.
+
+**Type:** Array&lt;int&gt;
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-PackingOptionsForSequence-delayTimeList: Array<int>--><!--Device-PackingOptionsForSequence-delayTimeList: Array<int>-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImagePacker
+
+## disposalTypes
+
+```TypeScript
+disposalTypes?: Array<int>
+```
+
+Array that defines how each image frame transitions. If the array length is less than **frameCount**, the last value in the array will be used for the remaining frames. The values can be: - **0**: No operation is required. - **1**: Keeps the image unchanged. - **2**: Restores the background color. - **3**: Restores to the previous state.
+
+**Type:** Array&lt;int&gt;
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-PackingOptionsForSequence-disposalTypes?: Array<int>--><!--Device-PackingOptionsForSequence-disposalTypes?: Array<int>-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImagePacker
+
+## frameCount
+
+```TypeScript
+frameCount: int
+```
+
+Number of frames specified in GIF encoding.
+
+**Type:** int
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-PackingOptionsForSequence-frameCount: int--><!--Device-PackingOptionsForSequence-frameCount: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImagePacker
+
+## loopCount
+
+```TypeScript
+loopCount?: int
+```
+
+Number of times that the output image in GIF encoding loops. The value range is [0, 65535]. The value **0** means an infinite loop. If this field is not carried, loop playback is not performed.
+
+**Type:** int
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-PackingOptionsForSequence-loopCount?: int--><!--Device-PackingOptionsForSequence-loopCount?: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImagePacker
+

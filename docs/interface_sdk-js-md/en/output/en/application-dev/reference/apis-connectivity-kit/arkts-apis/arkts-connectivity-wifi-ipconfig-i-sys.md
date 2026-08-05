@@ -1,0 +1,114 @@
+# IpConfig (System API)
+
+Wi-Fi IP configuration information.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.wifiManager/wifiManager.IpConfig
+
+<!--Device-wifi-interface IpConfig--><!--Device-wifi-interface IpConfig-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**System API:** This is a system API.
+
+## dnsServers
+
+```TypeScript
+dnsServers: number[]
+```
+
+DNS servers.
+
+**Type:** number[]
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.wifiManager/wifiManager.IpConfig.dnsServers
+
+<!--Device-IpConfig-dnsServers: number[]--><!--Device-IpConfig-dnsServers: number[]-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**System API:** This is a system API.
+
+## domains
+
+```TypeScript
+domains: Array<string>
+```
+
+Domains.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.wifiManager/wifiManager.IpConfig.domains
+
+<!--Device-IpConfig-domains: Array<string>--><!--Device-IpConfig-domains: Array<string>-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**System API:** This is a system API.
+
+## gateway
+
+```TypeScript
+gateway: number
+```
+
+Gate way.
+
+**Type:** number
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.wifiManager/wifiManager.IpConfig.gateway
+
+<!--Device-IpConfig-gateway: number--><!--Device-IpConfig-gateway: number-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**System API:** This is a system API.
+
+## ipAddress
+
+```TypeScript
+ipAddress: number
+```
+
+IP address.
+
+**Type:** number
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.wifiManager/wifiManager.IpConfig.ipAddress
+
+<!--Device-IpConfig-ipAddress: number--><!--Device-IpConfig-ipAddress: number-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**System API:** This is a system API.
+

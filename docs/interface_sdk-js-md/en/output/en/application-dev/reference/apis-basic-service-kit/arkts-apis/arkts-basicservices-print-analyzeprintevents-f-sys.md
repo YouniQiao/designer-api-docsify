@@ -1,0 +1,44 @@
+# analyzePrintEvents (System API)
+
+## analyzePrintEvents
+
+```TypeScript
+function analyzePrintEvents(printerId: string, eventType: string): Promise<string>
+```
+
+Analyze print events.
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Required permissions:** ohos.permission.MANAGE_PRINT_JOB
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-print-function analyzePrintEvents(printerId: string, eventType: string): Promise<string>--><!--Device-print-function analyzePrintEvents(printerId: string, eventType: string): Promise<string>-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| printerId | string | Yes | Indicates the printer ID.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Printer ID to be analyzed. |
+| eventType | string | Yes | Indicates the avant type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Event types to be analyzed. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | the promise returned by the function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+

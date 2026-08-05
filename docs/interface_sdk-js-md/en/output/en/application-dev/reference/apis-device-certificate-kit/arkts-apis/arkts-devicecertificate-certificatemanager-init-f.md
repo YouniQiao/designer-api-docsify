@@ -1,0 +1,127 @@
+# init
+
+## init
+
+```TypeScript
+function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void
+```
+
+Indicates the initialization of signature and signature verification using credentials. This is the first step in the signature verification process. Later, the update and finish interfaces need to be invoked in sequence to complete the operations. Use Callback to return the result asynchronously.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void--><!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void-End-->
+
+**System capability:** SystemCapability.Security.CertificateManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| authUri | string | Yes | Unique identifier of the credential to be used. The value contains up to 256 bytes. |
+| spec | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters for the signing or signature verification operation. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;CMHandle&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **null** and **data** is the obtained **CMHandle**. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user.Please call [openAuthorizeDialog]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_method to request user authorization for the certificate or credential.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+
+let uri: string = 'test'; /* The service needs to use the unique identifier of the credential to initialize signing and signature verification, which is not elaborated here. */
+const req: certificateManager.CMSignatureSpec = {
+  purpose: certificateManager.CmKeyPurpose.CM_KEY_PURPOSE_SIGN,
+  padding: certificateManager.CmKeyPadding.CM_PADDING_PSS,
+  digest: certificateManager.CmKeyDigest.CM_DIGEST_SHA256
+}
+try {
+  certificateManager.init(uri, req, (err, cmHandle) => {
+    if (err != null) {
+      console.error(`Failed to init. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info('Succeeded in initiating.');
+    }
+  })
+} catch (error) {
+  console.error(`Failed to init. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+
+## init
+
+```TypeScript
+function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>
+```
+
+Initializes the signing or signature verification operation using the specified credential. This API uses a promise to return the result.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
+
+<!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>--><!--Device-certificateManager-function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>-End-->
+
+**System capability:** SystemCapability.Security.CertificateManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| authUri | string | Yes | Unique identifier of the credential to be used. The value contains up to 256 bytes. |
+| spec | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters for the signing or signature verification operation. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;CMHandle&gt; | Promise used to return the operation result, that is, the **CMHandle** object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Memory operation error; 3. File operation error. Please try again. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri: string = 'test'; /* The service needs to use the unique identifier of the credential to initialize signing and signature verification, which is not elaborated here. */
+const req: certificateManager.CMSignatureSpec = {
+  purpose: certificateManager.CmKeyPurpose.CM_KEY_PURPOSE_VERIFY,
+  padding: certificateManager.CmKeyPadding.CM_PADDING_PSS,
+  digest: certificateManager.CmKeyDigest.CM_DIGEST_MD5
+}
+try {
+  certificateManager.init(uri, req).then((handle) => {
+    console.info('Succeeded in initiating.');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to init. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (error) {
+  console.error(`Failed to init. Code: ${error.code}, message: ${error.message}`);
+}
+```
+

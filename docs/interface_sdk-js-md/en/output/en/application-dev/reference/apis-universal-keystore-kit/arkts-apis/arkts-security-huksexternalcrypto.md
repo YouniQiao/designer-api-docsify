@@ -1,0 +1,52 @@
+# @ohos.security.huksExternalCrypto
+
+Provides the functionalities such as registration and deregistration of external key management extension, PIN authentication, and acquisition of authentication state.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+<!--Device-unnamed-declare namespace huksExternalCrypto--><!--Device-unnamed-declare namespace huksExternalCrypto-End-->
+
+**System capability:** SystemCapability.Security.Huks.CryptoExtension
+
+## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [clearUkeyPinAuthState](arkts-universalkeystore-huksexternalcrypto-clearukeypinauthstate-f.md#clearukeypinauthstate) | Clear the PIN auth state of the specified resource ID. |
+| [closeResource](arkts-universalkeystore-huksexternalcrypto-closeresource-f.md#closeresource) | Close the resource with a specific resource ID. |
+| [getErrorInfo](arkts-universalkeystore-huksexternalcrypto-geterrorinfo-f.md#geterrorinfo) | Get the detailed error information. |
+| [getProperty](arkts-universalkeystore-huksexternalcrypto-getproperty-f.md#getproperty) | Obtains a property value. This API uses a promise to return the result. The **propertyId** indicates the ID of the property to be queried. Currently, only the SKF API names defined in GMT 0016-2023 can be used as property IDs. The supported IDs are as follows: - SKF\_\_\_ESCAPED\_UNDERSCORE\_\_\_EnumDev - SKF\_\_\_ESCAPED\_UNDERSCORE\_\_\_GetDevInfo - SKF\_\_\_ESCAPED\_UNDERSCORE\_\_\_EnumApplication - SKF\_\_\_ESCAPED\_UNDERSCORE\_\_\_EnumContainer |
+| [getResourceId](arkts-universalkeystore-huksexternalcrypto-getresourceid-f.md#getresourceid) | Obtain the resource ID of the provider. |
+| [getUkeyPinAuthState](arkts-universalkeystore-huksexternalcrypto-getukeypinauthstate-f.md#getukeypinauthstate) | Obtains the PIN authentication state. This API uses a promise to return the result. |
+| [openResource](arkts-universalkeystore-huksexternalcrypto-openresource-f.md#openresource) | Open resource by specific resource ID. NOTE: The opened resource must be closed using closeResource. |
+| [registerProvider](arkts-universalkeystore-huksexternalcrypto-registerprovider-f.md#registerprovider) | Registers a specified external Provider. This API uses a promise to return the result. |
+| [setProperty](arkts-universalkeystore-huksexternalcrypto-setproperty-f.md#setproperty) | The set-type operations of the external crypto extension support calling custom interfaces. However, the custom interface must be registered with the provider. |
+| [unregisterProvider](arkts-universalkeystore-huksexternalcrypto-unregisterprovider-f.md#unregisterprovider) | Unregisters a specified external Provider. This API uses a promise to return the result. |
+
+<!--Del-->
+### Functions（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [authUkeyPin](arkts-universalkeystore-huksexternalcrypto-authukeypin-f-sys.md#authukeypin) | Authenticates a UKey PIN. This API uses a promise to return the result. |
+<!--DelEnd-->
+
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md) | Defines the type of the param array used for calling the API. |
+| [HuksExternalErrorInfo](arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | Defines detailed error information. |
+
+### Enums
+
+| Name | Description |
+| --- | --- |
+| [HuksExternalCryptoTag](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotag-e.md) | Enumerates the tags used to invoke parameters. |
+| [HuksExternalCryptoTagType](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md) | Enumerates the external encrypted data types. |
+| [HuksExternalPinAuthState](arkts-universalkeystore-huksexternalcrypto-huksexternalpinauthstate-e.md) | Enumerates the Ukey PIN authentication states. |
+

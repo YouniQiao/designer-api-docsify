@@ -1,0 +1,26 @@
+# @ohos.ability.ability
+
+The module provides all level-2 module APIs for developers to export.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-declare namespace ability--><!--Device-unnamed-declare namespace ability-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## Summary
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [AbilityResult](arkts-ability-ability-abilityresult-t.md) | Defines the level-2 module AbilityResult. |
+| [ConnectOptions](arkts-ability-ability-connectoptions-t.md) | Defines the level-2 module ConnectOptions. |
+| [DataAbilityHelper](arkts-ability-ability-dataabilityhelper-t.md) | Defines the level-2 module DataAbilityHelper. |
+| [DataAbilityOperation](arkts-ability-ability-dataabilityoperation-t.md) | Defines the level-2 module DataAbilityOperation. |
+| [DataAbilityResult](arkts-ability-ability-dataabilityresult-t.md) | Defines the level-2 module DataAbilityResult. |
+| [PacMap](arkts-ability-ability-pacmap-t.md) | Defines the level-2 module PacMap. |
+| [StartAbilityParameter](arkts-ability-ability-startabilityparameter-t.md) | Defines the level-2 module StartAbilityParameter. |
+

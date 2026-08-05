@@ -1,0 +1,570 @@
+# AbilityInfo
+
+The module defines the ability information.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export interface AbilityInfo--><!--Device-unnamed-export interface AbilityInfo-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## appIndex
+
+```TypeScript
+readonly appIndex: int
+```
+
+Index of an application clone. It takes effect only for \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Type:** int
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-AbilityInfo-readonly appIndex: int--><!--Device-AbilityInfo-readonly appIndex: int-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## applicationInfo
+
+```TypeScript
+readonly applicationInfo: ApplicationInfo
+```
+
+Application configuration information \_\_\_MD\_COMMENT\_DESC\_USD\_4\_\_\_. The information can be obtained by passing in **GET\_ABILITY\_INFO\_WITH\_APPLICATION** to the **abilityFlags** parameter of [queryAbilityInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ \_\_\_MD\_COMMENT\_DESC\_USD\_5\_\_\_. This field is not returned when the [getBundleInfoForSelf]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ or [getBundleInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_3\_\_\_.appInfo object.
+
+**Type:** ApplicationInfo
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## bundleName
+
+```TypeScript
+readonly bundleName: string
+```
+
+Bundle name.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly bundleName: string--><!--Device-AbilityInfo-readonly bundleName: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## description
+
+```TypeScript
+readonly description: string
+```
+
+Ability description, which describes the content and functions of the current ability. It corresponds to the **description** field under **abilities** in the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly description: string--><!--Device-AbilityInfo-readonly description: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## descriptionId
+
+```TypeScript
+readonly descriptionId: long
+```
+
+Resource ID of the ability description. It is automatically generated during compilation and build based on the description configured in **abilities** of the application.
+
+**Type:** long
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly descriptionId: long--><!--Device-AbilityInfo-readonly descriptionId: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## deviceTypes
+
+```TypeScript
+readonly deviceTypes: Array<string>
+```
+
+Device types supported by the ability. The value is derived from that of \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ in the **module.json5** file.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly deviceTypes: Array<string>--><!--Device-AbilityInfo-readonly deviceTypes: Array<string>-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## enabled
+
+```TypeScript
+readonly enabled: boolean
+```
+
+Whether the ability is available, that is, whether it can be started or queried. **true** if available, **false** otherwise. If the ability is unavailable, you must call [getAbilityInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ with **AbilityFlag** set to **GET\_ABILITY\_INFO\_WITH\_DISABLE** to query the ability.
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly enabled: boolean--><!--Device-AbilityInfo-readonly enabled: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## excludeFromDock
+
+```TypeScript
+readonly excludeFromDock: boolean
+```
+
+Whether the ability icon can be hidden in the dock area. **true** if the ability icon can be hidden in the dock area, **false** otherwise. Note: This field does not take effect.
+
+**Type:** boolean
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AbilityInfo-readonly excludeFromDock: boolean--><!--Device-AbilityInfo-readonly excludeFromDock: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## exported
+
+```TypeScript
+readonly exported: boolean
+```
+
+Whether the ability can be launched by other applications. **true** if the ability can be launched by other applications, **false** otherwise.
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly exported: boolean--><!--Device-AbilityInfo-readonly exported: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## icon
+
+```TypeScript
+readonly icon: string
+```
+
+Resource descriptor of the ability icon. It corresponds to the **icon** field under **abilities** in the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly icon: string--><!--Device-AbilityInfo-readonly icon: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## iconId
+
+```TypeScript
+readonly iconId: long
+```
+
+Resource ID of the ability icon. It is automatically generated during compilation and build based on the icon configured in **abilities** of the application.
+
+**Type:** long
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly iconId: long--><!--Device-AbilityInfo-readonly iconId: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## label
+
+```TypeScript
+readonly label: string
+```
+
+Resource descriptor of the ability name visible to users. It corresponds to the **label** field under **abilities** in the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file. Note: Starting from API version 20, if [bundleManager.getAbilityInfo]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ is used to obtain ability information, this field is the ability name visible to users.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly label: string--><!--Device-AbilityInfo-readonly label: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## labelId
+
+```TypeScript
+readonly labelId: long
+```
+
+Resource ID of the ability label. It is automatically generated during compilation and build based on the label configured in **abilities** of the application.
+
+**Type:** long
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly labelId: long--><!--Device-AbilityInfo-readonly labelId: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## launchType
+
+```TypeScript
+readonly launchType: bundleManager.LaunchType
+```
+
+Ability launch mode, that is, whether it can be started in multiton mode. For details, see [LaunchType]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Type:** bundleManager.LaunchType
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly launchType: bundleManager.LaunchType--><!--Device-AbilityInfo-readonly launchType: bundleManager.LaunchType-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## metadata
+
+```TypeScript
+readonly metadata: Array<Metadata>
+```
+
+Metadata of the ability. You can configure the system-defined parameters to use the capabilities provided by the system, for example, \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ and \_\_\_MD\_LINK\_DESC\_USD\_1\_\_\_. You can also customize the parameters and call [getBundleInfoForSelf]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_ to obtain the parameters by passing **GET\_BUNDLE\_INFO\_WITH\_HAP\_MODULE**, **GET\_BUNDLE\_INFO\_WITH\_ABILITY**, and **GET\_BUNDLE\_INFO\_WITH\_METADATA** to **bundleFlags**.
+
+**Type:** Array&lt;Metadata&gt;
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly metadata: Array<Metadata>--><!--Device-AbilityInfo-readonly metadata: Array<Metadata>-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## moduleName
+
+```TypeScript
+readonly moduleName: string
+```
+
+Module name to which the ability belongs.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly moduleName: string--><!--Device-AbilityInfo-readonly moduleName: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## name
+
+```TypeScript
+readonly name: string
+```
+
+Ability name.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly name: string--><!--Device-AbilityInfo-readonly name: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## orientation
+
+```TypeScript
+readonly orientation: bundleManager.DisplayOrientation
+```
+
+Ability display orientation. It is derived from the **orientation** field under **abilities** in the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file. If **orientation** in the file is set to an enumerated value, this property is a non-zero value. For details about the available values, see [displayOrientation]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_. If **orientation** in the file is set to a resource index, the value of this property is **0**.
+
+**Type:** bundleManager.DisplayOrientation
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly orientation: bundleManager.DisplayOrientation--><!--Device-AbilityInfo-readonly orientation: bundleManager.DisplayOrientation-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## orientationId
+
+```TypeScript
+readonly orientationId: long
+```
+
+Resource ID of the ability display mode. It is derived from the **orientation** field under **abilities** in the \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ file. If the **orientation** field in the file is set to an enumerated value, **orientationId** is **0**. If the **orientation** field is set to a resource index, **orientationId** is a non-zero value, which is the resource ID generated during building. If **orientationId** is set to a value other than **0**, the current display mode is customized, and this ID must be used to obtain the corresponding resource from the resource manager module. If **orientationId** is set to **0**, no resource is configured.
+
+**Type:** long
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-AbilityInfo-readonly orientationId: long--><!--Device-AbilityInfo-readonly orientationId: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## permissions
+
+```TypeScript
+readonly permissions: Array<string>
+```
+
+Array of permissions that other applications must request to start or access this ability. The system checks whether the caller has these permissions only if the **exported** property in **AbilityInfo** is **true** (meaning that the ability allows itself to be started by other applications).
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly permissions: Array<string>--><!--Device-AbilityInfo-readonly permissions: Array<string>-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## process
+
+```TypeScript
+readonly process: string
+```
+
+Process name of the ability.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly process: string--><!--Device-AbilityInfo-readonly process: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## readPermission
+
+```TypeScript
+readonly readPermission: string
+```
+
+Permission required for reading the ability data. **Model restriction**: This API can be used only in the FA model.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityInfo-readonly readPermission: string--><!--Device-AbilityInfo-readonly readPermission: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## skills
+
+```TypeScript
+readonly skills: Array<Skill>
+```
+
+Skills information of the ability. It represents the feature set of \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ that can be received by the UIAbility or ExtensionAbility.
+
+**Type:** Array&lt;Skill&gt;
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AbilityInfo-readonly skills: Array<Skill>--><!--Device-AbilityInfo-readonly skills: Array<Skill>-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## supportWindowModes
+
+```TypeScript
+readonly supportWindowModes: Array<bundleManager.SupportWindowMode>
+```
+
+Window modes supported by the ability.
+
+**Type:** Array&lt;bundleManager.SupportWindowMode&gt;
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly supportWindowModes: Array<bundleManager.SupportWindowMode>--><!--Device-AbilityInfo-readonly supportWindowModes: Array<bundleManager.SupportWindowMode>-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## type
+
+```TypeScript
+readonly type: bundleManager.AbilityType
+```
+
+Ability type. **Model restriction**: This API can be used only in the FA model.
+
+**Type:** bundleManager.AbilityType
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityInfo-readonly type: bundleManager.AbilityType--><!--Device-AbilityInfo-readonly type: bundleManager.AbilityType-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## uri
+
+```TypeScript
+readonly uri: string
+```
+
+URI of the ability. **Model restriction**: This API can be used only in the FA model.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityInfo-readonly uri: string--><!--Device-AbilityInfo-readonly uri: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## windowSize
+
+```TypeScript
+readonly windowSize: WindowSize
+```
+
+Window size.
+
+**Type:** WindowSize
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AbilityInfo-readonly windowSize: WindowSize--><!--Device-AbilityInfo-readonly windowSize: WindowSize-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## writePermission
+
+```TypeScript
+readonly writePermission: string
+```
+
+Permission required for writing data to the ability. **Model restriction**: This API can be used only in the FA model.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityInfo-readonly writePermission: string--><!--Device-AbilityInfo-readonly writePermission: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+

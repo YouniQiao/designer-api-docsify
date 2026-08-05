@@ -1,0 +1,34 @@
+# RequestResult (System API)
+
+Defines the request result information.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-osAccount-interface RequestResult--><!--Device-osAccount-interface RequestResult-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+## credentialId
+
+```TypeScript
+credentialId?: Uint8Array
+```
+
+Credential ID, which is left blank by default.
+
+**Type:** Uint8Array
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-RequestResult-credentialId?: Uint8Array--><!--Device-RequestResult-credentialId?: Uint8Array-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+

@@ -1,0 +1,18 @@
+# MeasureResult
+
+Provides the measurement result of the component. This API inherits from [SizeResult]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Inheritance/Implementation:** MeasureResult extends [SizeResult](../../apis-na/arkts-apis/arkts-na-component/common-sizeresult-i.md)
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-unnamed-declare interface MeasureResult extends SizeResult--><!--Device-unnamed-declare interface MeasureResult extends SizeResult-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

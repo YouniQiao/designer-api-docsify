@@ -1,0 +1,50 @@
+# get5GChannelList (System API)
+
+## get5GChannelList
+
+```TypeScript
+function get5GChannelList(): Array<int>
+```
+
+Obtain the supported 5G channel list of the device.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
+
+<!--Device-wifiManager-function get5GChannelList(): Array<int>--><!--Device-wifiManager-function get5GChannelList(): Array<int>-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | Returns 5G channel list. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+
+**Example**
+
+```TypeScript
+import { wifiManager } from '@kit.ConnectivityKit';
+
+try {
+  let channelList = wifiManager.get5GChannelList();
+  console.info("channelList:" + JSON.stringify(channelList));    
+} catch (error) {
+  console.error("failed:" + JSON.stringify(error));
+}
+```
+

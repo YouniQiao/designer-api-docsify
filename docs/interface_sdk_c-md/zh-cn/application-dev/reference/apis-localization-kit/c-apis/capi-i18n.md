@@ -9,5 +9,5 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [errorcode.h](capi-errorcode-h.md) | i18n错误码。 |
-| [timezone.h](capi-timezone-h.md) | 提供获取时区信息的能力。 |
+| [errorcode.h](capi-errorcode-h.md) | 提供国际化接口返回的错误码。 |
+| [timezone.h](capi-timezone-h.md) | 完整的时区规则，包括起始时区规则、起始时间戳数组定义的时区规则和每年生效的时区规则，能够全面描述时区的历史和未来规则。 |

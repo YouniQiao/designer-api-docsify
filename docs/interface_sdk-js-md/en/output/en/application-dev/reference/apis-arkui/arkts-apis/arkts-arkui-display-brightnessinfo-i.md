@@ -1,0 +1,94 @@
+# BrightnessInfo
+
+Describes the screen brightness information. The information comes from the underlying screen data.
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+
+<!--Device-display-interface BrightnessInfo--><!--Device-display-interface BrightnessInfo-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## brightnessPosition
+
+```TypeScript
+readonly brightnessPosition?: double
+```
+
+Position of the brightness bar corresponding to the current screen brightness. Value range: [0.0,1.0]. Default value: 0.0.
+
+**Type:** double
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-BrightnessInfo-readonly brightnessPosition?: double--><!--Device-BrightnessInfo-readonly brightnessPosition?: double-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## currentHeadroom
+
+```TypeScript
+readonly currentHeadroom: double
+```
+
+Dynamic brightness headroom. The value is a floating-point number greater than 0. The default value is **1.0**.
+
+**Type:** double
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-BrightnessInfo-readonly currentHeadroom: double--><!--Device-BrightnessInfo-readonly currentHeadroom: double-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## maxHeadroom
+
+```TypeScript
+readonly maxHeadroom: double
+```
+
+Maximum brightness headroom. The value is a floating-point number greater than 0. The default value is **1.0**.
+
+**Type:** double
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-BrightnessInfo-readonly maxHeadroom: double--><!--Device-BrightnessInfo-readonly maxHeadroom: double-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## sdrNits
+
+```TypeScript
+readonly sdrNits: double
+```
+
+Screen brightness. The value is a floating-point number greater than 0. The default value is **500.0**.
+
+**Type:** double
+
+**Since:** 22
+
+**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-BrightnessInfo-readonly sdrNits: double--><!--Device-BrightnessInfo-readonly sdrNits: double-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+

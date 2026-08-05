@@ -1,0 +1,92 @@
+# PasswordPolicy
+
+Represents a device screen lock password policy.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-securityManager-export interface PasswordPolicy--><!--Device-securityManager-export interface PasswordPolicy-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## additionalDescription
+
+```TypeScript
+additionalDescription?: string
+```
+
+Password complexity description, for example, "The password must contain 8 to 30 characters consisting of letters, digits, and special characters".
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PasswordPolicy-additionalDescription?: string--><!--Device-PasswordPolicy-additionalDescription?: string-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## complexityRegex
+
+```TypeScript
+complexityRegex?: string
+```
+
+Regular expression for password complexity.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PasswordPolicy-complexityRegex?: string--><!--Device-PasswordPolicy-complexityRegex?: string-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## passwordAlgs
+
+```TypeScript
+passwordAlgs?: PasswordAlgs
+```
+
+Encryption algorithm used to process password data. After the setting, the encryption algorithm specified by this parameter is used to process the original password into a password credential on a PC/2-in-1 device. This parameter has no effect on other device types.
+
+**Type:** PasswordAlgs
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs--><!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## validityPeriod
+
+```TypeScript
+validityPeriod?: long
+```
+
+Password validity period, in ms.
+
+**Type:** long
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PasswordPolicy-validityPeriod?: long--><!--Device-PasswordPolicy-validityPeriod?: long-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+

@@ -6,7 +6,7 @@ typedef struct OH_SwapfsSwapOutRequest {...} OH_SwapfsSwapOutRequest
 
 ## 概述
 
-换出操作请求参数。
+换出操作的请求参数。用于在应用需要释放内存时，主动触发数据换出到交换分区的场景，例如内存紧张时将部分数据临时换出。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ typedef struct OH_SwapfsSwapOutRequest {...} OH_SwapfsSwapOutRequest
 
 | 名称 | 描述 |
 | -- | -- |
-| const void *buffer | 指向要换出的数据缓冲区的指针。不能为NULL。<br>**起始版本：** 26.0.0 |
-| uint64_t bufferSize | 数据缓冲区的大小，以字节为单位。必须大于0。<br>**起始版本：** 26.0.0 |
+| const void *buffer | 指向待换出数据缓冲区的指针。不可为空指针。传入空指针时返回错误码[SWAPFS_E_INVAL](capi-swapfs-errcode-h.md#oh_swapfs_errcode)。<br>**起始版本：** 26.0.0 |
+| uint64_t bufferSize | 待换出数据缓冲区的大小，单位：Byte。必须大于0。传入0时返回错误码[SWAPFS_E_INVAL](capi-swapfs-errcode-h.md#oh_swapfs_errcode)。<br>**起始版本：** 26.0.0 |
 
 

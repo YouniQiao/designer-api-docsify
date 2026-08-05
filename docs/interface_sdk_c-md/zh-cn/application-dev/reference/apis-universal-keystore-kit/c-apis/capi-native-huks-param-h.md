@@ -4,6 +4,8 @@
 
 提供参数集构造、使用和销毁的API。
 
+**引用文件：** <huks/native_huks_param.h>
+
 **库：** libhuks_ndk.z.so
 
 **系统能力：** SystemCapability.Security.Huks.Core
@@ -18,10 +20,10 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_initparamset) | 初始化参数集，无参数信息，分配参数集默认可用内存空间。初始化后的参数集需要通过[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset)释放。添加参数的参数集需要使用[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)添加参数并且必须使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。 |
-| [struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Param *params, uint32_t paramCnt)](#oh_huks_addparams) | 添加参数到参数集里面。 |
-| [struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_buildparamset) | 构造参数集，在初始化参数集和添加参数操作之后，序列化参数集，将blob类型的数据拷贝到paramSet结构尾部相邻内存区域。 |
-| [void OH_Huks_FreeParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_freeparamset) | 销毁参数集。 |
+| [struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_initparamset) | 初始化参数集，无参数信息，分配参数集默认可用内存空间。初始化后的参数集需要通过[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset)释放。添加参数的参数集需要使用[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)并且必须使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。 |
+| [struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Param *params, uint32_t paramCnt)](#oh_huks_addparams) | 添加参数到参数集里面。添加完成之后需要使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。 |
+| [struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_buildparamset) | 构造参数集，在调用[OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset)初始化参数集和[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)添加参数操作之后，序列化参数集，将blob类型的数据拷贝到paramSet结构尾部相邻内存区域。 |
+| [void OH_Huks_FreeParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_freeparamset) | 销毁参数集。销毁由[OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset)分配的内存空间。 |
 | [struct OH_Huks_Result OH_Huks_CopyParamSet(const struct OH_Huks_ParamSet *fromParamSet, uint32_t fromParamSetSize, struct OH_Huks_ParamSet **paramSet)](#oh_huks_copyparamset) | 复制参数集（深拷贝）。 |
 | [struct OH_Huks_Result OH_Huks_GetParam(const struct OH_Huks_ParamSet *paramSet, uint32_t tag, struct OH_Huks_Param **param)](#oh_huks_getparam) | 从参数集中获取参数。 |
 | [struct OH_Huks_Result OH_Huks_FreshParamSet(struct OH_Huks_ParamSet *paramSet, bool isCopy)](#oh_huks_freshparamset) | 刷新参数集内[OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md)类型的数据。 |
@@ -40,7 +42,7 @@ struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)
 
 **描述**
 
-初始化参数集，无参数信息，分配参数集默认可用内存空间。初始化后的参数集需要通过[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset)释放。添加参数的参数集需要使用[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)添加参数并且必须使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。
+初始化参数集，无参数信息，分配参数集默认可用内存空间。初始化后的参数集需要通过[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset)释放。添加参数的参数集需要使用[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)并且必须使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。
 
 **起始版本：** 9
 
@@ -54,7 +56,7 @@ struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)
 
 | 类型 | 说明 |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：初始化操作成功。<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014 ：内存不足。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401 ：参数paramSet无效。 |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：初始化操作成功。<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014 ：内存不足。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401：参数paramSet无效。 |
 
 ### OH_Huks_AddParams()
 
@@ -64,7 +66,7 @@ struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const
 
 **描述**
 
-添加参数到参数集里面。
+添加参数到参数集里面。添加完成之后需要使用[OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset)构造参数集。
 
 **起始版本：** 9
 
@@ -72,7 +74,7 @@ struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const
 
 | 参数项 | 描述 |
 | -- | -- |
-| [struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | 指向要被添加参数的参数集的指针。 |
+| [struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | 指向要被添加参数的参数集的指针，需要通过[OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset)初始化。 |
 | [const struct OH_Huks_Param](capi-hukstypeapi-oh-huks-param.md) *params | 指向要添加的参数数组的指针。 |
 | uint32_t paramCnt | 待添加参数数组的参数个数。 |
 
@@ -80,7 +82,7 @@ struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const
 
 | 类型 | 说明 |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：操作成功。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401 ：params为null或者paramSet无效。 |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：操作成功。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401：params为null或者paramSet无效。 |
 
 ### OH_Huks_BuildParamSet()
 
@@ -90,7 +92,7 @@ struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)
 
 **描述**
 
-构造参数集，在初始化参数集和添加参数操作之后，序列化参数集，将blob类型的数据拷贝到paramSet结构尾部相邻内存区域。
+构造参数集，在调用[OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset)初始化参数集和[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams)添加参数操作之后，序列化参数集，将blob类型的数据拷贝到paramSet结构尾部相邻内存区域。
 
 **起始版本：** 9
 
@@ -104,7 +106,7 @@ struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)
 
 | 类型 | 说明 |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：操作成功。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401 ：参数paramSet无效。<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014 ：内存不足。 |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：操作成功。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401：参数paramSet无效。<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014 ：内存不足。 |
 
 ### OH_Huks_FreeParamSet()
 
@@ -114,7 +116,7 @@ void OH_Huks_FreeParamSet(struct OH_Huks_ParamSet **paramSet)
 
 **描述**
 
-销毁参数集。
+销毁参数集。销毁由[OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset)分配的内存空间。
 
 **起始版本：** 9
 
@@ -141,14 +143,14 @@ struct OH_Huks_Result OH_Huks_CopyParamSet(const struct OH_Huks_ParamSet *fromPa
 | 参数项 | 描述 |
 | -- | -- |
 | [const struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *fromParamSet | 指向要被复制的参数集的指针。 |
-| uint32_t fromParamSetSize | 被复制的参数集占用内存的大小。 |
+| uint32_t fromParamSetSize | 被复制的参数集占用内存的大小，单位：Byte。 |
 | [struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) **paramSet | 指向生成新的参数集的指针地址。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：操作成功。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401 ：参数fromParamSet、fromParamSetSize、paramSet有一个无效。<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014 ：内存不足。 |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：操作成功。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401：参数fromParamSet、fromParamSetSize、paramSet有一个无效。<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014 ：内存不足。 |
 
 ### OH_Huks_GetParam()
 
@@ -174,7 +176,7 @@ struct OH_Huks_Result OH_Huks_GetParam(const struct OH_Huks_ParamSet *paramSet, 
 
 | 类型 | 说明 |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：操作成功。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401 ：参数paramSet或者param无效，或者参数param不在paramSet里面。 |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：操作成功。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401：参数paramSet或者param无效，或者参数param不在paramSet里面。 |
 
 ### OH_Huks_FreshParamSet()
 
@@ -199,7 +201,7 @@ struct OH_Huks_Result OH_Huks_FreshParamSet(struct OH_Huks_ParamSet *paramSet, b
 
 | 类型 | 说明 |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：操作成功。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401 ：参数paramSet无效。<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014 ：内存不足。 |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：操作成功。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401：参数paramSet无效。<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014 ：内存不足。 |
 
 ### OH_Huks_IsParamSetTagValid()
 
@@ -223,7 +225,7 @@ struct OH_Huks_Result OH_Huks_IsParamSetTagValid(const struct OH_Huks_ParamSet *
 
 | 类型 | 说明 |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：paramSet中的参数都有效。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401 ：参数paramSet无效或者参数集中有无效、重复、不正确的标签。 |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：paramSet中的参数都有效。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401：参数paramSet无效或者参数集中有无效、重复、不正确的标签。 |
 
 ### OH_Huks_IsParamSetValid()
 
@@ -242,13 +244,13 @@ struct OH_Huks_Result OH_Huks_IsParamSetValid(const struct OH_Huks_ParamSet *par
 | 参数项 | 描述 |
 | -- | -- |
 | [const struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | 指向参数集的指针。 |
-| uint32_t size | 参数集占用的内存大小。 |
+| uint32_t size | 参数集占用的内存大小，单位：Byte。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：参数集大小合法。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401 ：参数paramSet无效。 |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：参数集大小合法。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401：参数paramSet无效。 |
 
 ### OH_Huks_CheckParamMatch()
 
@@ -273,7 +275,7 @@ struct OH_Huks_Result OH_Huks_CheckParamMatch(const struct OH_Huks_Param *basePa
 
 | 类型 | 说明 |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：比较的两个参数相同。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401 ：其中一个参数集是无效的，或者参数不匹配，<br>     <br>或者内部有无效标签。 |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | 可能的返回码（errorCode）：<br>     <br>OH_HUKS_SUCCESS = 0 ：比较的两个参数相同。<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401：其中一个参数集是无效的，或者参数不匹配，<br>     <br>或者内部有无效标签。 |
 
 ### OH_Huks_FreeKeyAliasSet()
 

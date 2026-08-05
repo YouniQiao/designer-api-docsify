@@ -1,0 +1,118 @@
+# PanRecognizer
+
+Gesture recognizer object.
+
+**Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](arkts-arkui-component/gesture-gesturerecognizer-c.md)
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-unnamed-declare class PanRecognizer extends GestureRecognizer--><!--Device-unnamed-declare class PanRecognizer extends GestureRecognizer-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## getDirection
+
+```TypeScript
+getDirection(): PanDirection
+```
+
+Obtains the recognized direction of the current pan gesture recognizer.
+
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PanRecognizer-getDirection(): PanDirection--><!--Device-PanRecognizer-getDirection(): PanDirection-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Recognized direction of the current pan gesture recognizer. |
+
+## getDistance
+
+```TypeScript
+getDistance(): number
+```
+
+Obtains the minimum pan distance required to trigger this pan gesture recognizer.
+
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PanRecognizer-getDistance(): number--><!--Device-PanRecognizer-getDistance(): number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| number | Minimum swipe distance. Unit: vp. |
+
+## getDistanceMap
+
+```TypeScript
+getDistanceMap(): Map<SourceTool, number>
+```
+
+Obtains the minimum pan distances required for different input sources to trigger this pan gesture recognizer. > **NOTE** > > This API only returns thresholds for input sources that have been explicitly configured during pan gesture > initialization. The default threshold can be queried using the [SourceTool]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.Unknown type. > Thresholds for unconfigured device types are not available.
+
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PanRecognizer-getDistanceMap(): Map<SourceTool, number>--><!--Device-PanRecognizer-getDistanceMap(): Map<SourceTool, number>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Map&lt;SourceTool, number&gt; | Minimum pan distances required for different input sources to trigger the pan |
+
+## getPanGestureOptions
+
+```TypeScript
+getPanGestureOptions(): PanGestureOptions
+```
+
+Obtains the properties of this pan gesture recognizer.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PanRecognizer-getPanGestureOptions(): PanGestureOptions--><!--Device-PanRecognizer-getPanGestureOptions(): PanGestureOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Properties of the current pan gesture recognizer. |
+

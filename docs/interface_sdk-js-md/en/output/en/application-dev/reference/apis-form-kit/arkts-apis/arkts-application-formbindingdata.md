@@ -1,0 +1,30 @@
+# @ohos.application.formBindingData
+
+The **FormBindingData** module provides APIs for widget data binding. You can use the APIs to create a **FormBindingData** object and obtain related information.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.app.form.formBindingData:formBindingData](arkts-application-formbindingdata.md)
+
+<!--Device-unnamed-declare namespace formBindingData--><!--Device-unnamed-declare namespace formBindingData-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) | Creates a **FormBindingData** object. |
+
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md) | Describes a **FormBindingData** object. |
+

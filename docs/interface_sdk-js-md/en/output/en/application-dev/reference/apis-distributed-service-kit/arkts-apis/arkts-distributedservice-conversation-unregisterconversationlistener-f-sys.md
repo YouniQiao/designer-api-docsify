@@ -1,0 +1,41 @@
+# unregisterConversationListener (System API)
+
+## unregisterConversationListener
+
+```TypeScript
+function unregisterConversationListener(bundleName: string, abilityName: string): void
+```
+
+Unregisters the listener with the specified bundle name and ability name. This API must be used in pairs with [registerConversationListener]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to unregister a registered listener. When the listener is no longer needed, call this API to unregister the listener to release resources. If the listener is not unregistered, resources will be continuously occupied. Only one listener can be registered for the same bundle name and ability name. Duplicate registration will overwrite the previously registered listener. After the listener is unregistered, the listener that is currently in effect will be removed. After this API is called, the app will no longer receive session data of the specified bundle name and ability name. If no listener has been registered for the specified bundle name and ability name, this API returns a success message.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.sec.ACCESS_UDID
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-conversation-function unregisterConversationListener(bundleName: string, abilityName: string): void--><!--Device-conversation-function unregisterConversationListener(bundleName: string, abilityName: string): void-End-->
+
+**System capability:** SystemCapability.Communication.SoftBus.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| bundleName | string | Yes | Name of the bundle whose listener is to be unregistered. The value contains 1 to 127bytes and must be the same as the bundle name used during listener registration. If an invalid or empty value is passed, error code 401 is returned. |
+| abilityName | string | Yes | Name of the ability whose listener is to be unregistered. The value contains 1 to127 bytes and must be the same as the ability name used during listener registration. If an invalid or empty value is passed, error code 401 is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission to access distributed data. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. The bundleName or abilityName is invalid or empty. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-internal-error) | Internal error. |
+

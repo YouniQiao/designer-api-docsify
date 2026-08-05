@@ -1,0 +1,16 @@
+# @ohos.multimedia.avInputCastPicker
+
+## Summary
+
+### Structs
+
+| Name | Description |
+| --- | --- |
+| [AVInputCastPicker](arkts-avsession-multimedia-avinputcastpicker-avinputcastpicker-s.md) | Picker used to show available input devices. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md) | Callback for picker state |
+

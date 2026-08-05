@@ -1,0 +1,54 @@
+# IAuthCallback
+
+Provides callbacks to return the authentication result. This API defines the authentication result callback method, which is used to obtain the authentication result after the authentication is complete. By implementing the **onResult** method, the application can obtain the authentication token when the authentication is successful, or obtain the error code and related information when the authentication fails.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-userAuth-interface IAuthCallback--><!--Device-userAuth-interface IAuthCallback-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## onResult
+
+```TypeScript
+onResult(result: UserAuthResult): void
+```
+
+Called to return the authentication result. If the authentication is successful, you can obtain the token information through **UserAuthResult** for subsequent security operation verification. If the authentication fails, you can obtain the error code through the **result** field and take corresponding measures (for example, prompting the user to perform authentication again or guiding the user to register a credential).
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IAuthCallback-onResult(result: UserAuthResult): void--><!--Device-IAuthCallback-onResult(result: UserAuthResult): void-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| result | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Authentication result. It contains information such as the authentication result code, authentication token (when the authentication is successful), authentication type, and credential status. The application needs to check the **result.result** field to determine whether the authentication is successful.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If the value of **result.result** is **SUCCESS(12500000)**, the authentication is successful. In this case, you can use **result.token** to perform the subsequent operations.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- If the value of **result.result** is another value, the authentication fails. In this case, you need to handle the error based on the specific error code. |
+
+## onResult
+
+```TypeScript
+onResult: AuthCallbackOnResultFunc
+```
+
+Called to return the authentication result. If the authentication is successful, UserAuthResult contains the token information.
+
+**Type:** AuthCallbackOnResultFunc
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-IAuthCallback-onResult: AuthCallbackOnResultFunc--><!--Device-IAuthCallback-onResult: AuthCallbackOnResultFunc-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+

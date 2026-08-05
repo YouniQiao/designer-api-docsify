@@ -98,7 +98,7 @@ typedef void(* GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceE
 
 | 参数项 | 描述 |
 | -- | -- |
-| (const struct GameDevice_DeviceEvent\* deviceEvent | 输出参数。设备状态变化事件[GameDevice_DeviceEvent](capi-gamecontroller-gamedevice-deviceevent.md)。 |
+| (const struct GameDevice_DeviceEvent\* deviceEvent | 输入参数。设备状态变化事件[GameDevice_DeviceEvent](capi-gamecontroller-gamedevice-deviceevent.md)。 |
 
 ### OH_GameDevice_DeviceEvent_GetChangedType()
 
@@ -123,7 +123,7 @@ GameController_ErrorCode OH_GameDevice_DeviceEvent_GetChangedType(const struct G
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数deviceEvent为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数deviceEvent为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
 
 ### OH_GameDevice_DeviceEvent_GetDeviceInfo()
 
@@ -148,7 +148,7 @@ GameController_ErrorCode OH_GameDevice_DeviceEvent_GetDeviceInfo(const struct Ga
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数deviceEvent为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数deviceEvent为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
 
 ### OH_GameDevice_DestroyDeviceInfo()
 
@@ -172,7 +172,7 @@ GameController_ErrorCode OH_GameDevice_DestroyDeviceInfo(GameDevice_DeviceInfo**
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数deviceInfo为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数deviceInfo为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetDeviceId()
 
@@ -197,7 +197,7 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetDeviceId(const struct GameD
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数deviceInfo或deviceId为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果设备内存不足，返回[GAME_CONTROLLER_NO_MEMORY](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数deviceInfo或deviceId为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果设备内存不足，返回[GAME_CONTROLLER_NO_MEMORY](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetName()
 
@@ -222,7 +222,7 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetName(const struct GameDevic
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数deviceInfo或name为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果设备内存不足，返回[GAME_CONTROLLER_NO_MEMORY](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数deviceInfo或name为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果设备内存不足，返回[GAME_CONTROLLER_NO_MEMORY](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetProduct()
 
@@ -247,7 +247,7 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetProduct(const struct GameDe
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数deviceInfo为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数deviceInfo为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetVersion()
 
@@ -272,7 +272,7 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetVersion(const struct GameDe
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数deviceInfo为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数deviceInfo为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetPhysicalAddress()
 
@@ -297,7 +297,7 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetPhysicalAddress(const struc
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数deviceInfo或physicalAddress为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果设备内存不足，返回[GAME_CONTROLLER_NO_MEMORY](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数deviceInfo或physicalAddress为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果设备内存不足，返回[GAME_CONTROLLER_NO_MEMORY](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetDeviceType()
 
@@ -322,6 +322,6 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetDeviceType(const struct Gam
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数deviceInfo为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数deviceInfo为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
 
 

@@ -1,0 +1,415 @@
+# AudioLoopback
+
+This interface provides APIs for audio monitoring. Before calling any API in AudioLoopback, you must use [audio.createAudioLoopback]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create an AudioLoopback instance. When audio loopback is enabled, the system creates a low-latency renderer and capturer to implement low-latency in- ear monitoring. The audio captured is routed back to the renderer through an internal path. The renderer follows the audio focus strategy for [STREAM\_USAGE\_MUSIC]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_, whereas the capturer follows the strategy for [SOURCE\_TYPE\_MIC]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_. The system automatically chooses the input and output devices. If these devices do not support low latency, audio loopback does not work. If another audio stream takes over the audio focus or if the input or output device changes to the one that does not support low latency, the system disables audio loopback automatically. > **NOTE** > > - The initial APIs of this interface are supported since API version 20.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-audio-interface AudioLoopback--><!--Device-audio-interface AudioLoopback-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+## enable
+
+```TypeScript
+enable(enable: boolean): Promise<boolean>
+```
+
+Enable or disable audio loopback. When audio loopback is enabled, the system automatically creates fast playback and recording streams to implement low-latency in-ear monitoring. When audio loopback is disabled, the audio stream is destroyed. If enabling audio loopback fails, you can use \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to query the cause. After audio loopback is enabled, you can subscribe to the statusChange event to listen for audio loopback status changes.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.MICROPHONE
+
+<!--Device-AudioLoopback-enable(enable: boolean): Promise<boolean>--><!--Device-AudioLoopback-enable(enable: boolean): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to enable or disable audio loopback. **true** to enable, **false** otherwise. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the API call is successful. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## getEqualizerPreset
+
+```TypeScript
+getEqualizerPreset(): AudioLoopbackEqualizerPreset
+```
+
+Gets the current equalizer preset. The default equalizer preset of audio loopback is \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ if users do not modify the preset.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset--><!--Device-AudioLoopback-getEqualizerPreset(): AudioLoopbackEqualizerPreset-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Equalizer type. |
+
+## getPreferredDevicePair
+
+```TypeScript
+getPreferredDevicePair(): AudioDevicePair | null
+```
+
+Gets the preferred audio device pair in current device connection situation.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioLoopback-getPreferredDevicePair(): AudioDevicePair | null--><!--Device-AudioLoopback-getPreferredDevicePair(): AudioDevicePair | null-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | The preferred audio device pair in audio system, |
+
+## getReverbPreset
+
+```TypeScript
+getReverbPreset(): AudioLoopbackReverbPreset
+```
+
+Get the current reverberation. The default reverberation preset of audio loopback is \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ if users do not modify the preset.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset--><!--Device-AudioLoopback-getReverbPreset(): AudioLoopbackReverbPreset-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Reverb mode. |
+
+## getStatus
+
+```TypeScript
+getStatus(): Promise<AudioLoopbackStatus>
+```
+
+Obtains the audio loopback status. This API uses a promise to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>--><!--Device-AudioLoopback-getStatus(): Promise<AudioLoopbackStatus>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;AudioLoopbackStatus&gt; | Promise used to return the audio loopback status. |
+
+## getSupportedDevicePairs
+
+```TypeScript
+getSupportedDevicePairs(): Array<AudioDevicePair>
+```
+
+Gets supported audio device pairs in current device connection situation.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioLoopback-getSupportedDevicePairs(): Array<AudioDevicePair>--><!--Device-AudioLoopback-getSupportedDevicePairs(): Array<AudioDevicePair>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;AudioDevicePair&gt; | Audio device pairs that support loopback, |
+
+## getVolume
+
+ArkTS-Dyn:
+```TypeScript
+getVolume(): number
+```
+
+ArkTS-Sta:
+```TypeScript
+getVolume(): double
+```
+
+Gets the output volume for audio loopback.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioLoopback-getVolume(): double--><!--Device-AudioLoopback-getVolume(): double-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Current audio loopback output volume value. |
+
+## off('statusChange')
+
+```TypeScript
+off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
+```
+
+Unsubscribes from the audio loopback status event. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'statusChange' | Yes | Event type. The event **'statusChange'** is triggered when the status of the audio loopback is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioLoopbackStatus&gt; | No | Callback used to return the audio loopback status. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## offStatusChange
+
+```TypeScript
+offStatusChange(callback?: Callback<AudioLoopbackStatus>): void
+```
+
+Unsubscribes audio loopback status change event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-offStatusChange(callback?: Callback<AudioLoopbackStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioLoopbackStatus&gt; | No | Callback used to listen for the audio loopback status change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## on('statusChange')
+
+```TypeScript
+on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
+```
+
+Subscribes to the audio loopback status change event, which is triggered when the status of the audio loopback is changed. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'statusChange' | Yes | Event type. The event **'statusChange'** is triggered when the status of the audio loopback is changed. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioLoopbackStatus&gt; | Yes | Callback used to return the audio loopback status. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## onStatusChange
+
+```TypeScript
+onStatusChange(callback: Callback<AudioLoopbackStatus>): void
+```
+
+Subscribes to audio loopback status changes.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void--><!--Device-AudioLoopback-onStatusChange(callback: Callback<AudioLoopbackStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;AudioLoopbackStatus&gt; | Yes | Callback used to return the audio loopback status |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## setEqualizerPreset
+
+```TypeScript
+setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
+```
+
+Sets the equalizer preset of the audio loopback.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean--><!--Device-AudioLoopback-setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| preset | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Equalizer type. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Setting result. **true** if successful, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## setReverbPreset
+
+```TypeScript
+setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
+```
+
+Sets the reverberation of the audio loopback.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+
+<!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean--><!--Device-AudioLoopback-setReverbPreset(preset: AudioLoopbackReverbPreset): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| preset | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Reverb mode. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Setting result. **true** if successful, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## setVolume
+
+ArkTS-Dyn:
+```TypeScript
+setVolume(volume: number): Promise<void>
+```
+
+ArkTS-Sta:
+```TypeScript
+setVolume(volume: double): Promise<void>
+```
+
+Sets the volume for audio loopback. This volume does not affect other audio streams or the system volume.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+
+<!--Device-AudioLoopback-setVolume(volume: double): Promise<void>--><!--Device-AudioLoopback-setVolume(volume: double): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| volume | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Volume to set. The value type is float, ranging from 0.0 to 1.0. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, from 0.0 to 1.0. |
+

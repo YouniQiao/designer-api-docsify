@@ -87,7 +87,7 @@ Registers a callback for Left Shoulder button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_LeftShoulder_UnregisterButtonInputMonitor()
 
@@ -105,7 +105,7 @@ Unregisters the callback for Left Shoulder button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_RightShoulder_RegisterButtonInputMonitor()
 
@@ -129,7 +129,7 @@ Registers a callback for Right Shoulder button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_RightShoulder_UnregisterButtonInputMonitor()
 
@@ -147,7 +147,7 @@ Unregisters the callback for Right Shoulder button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_LeftTrigger_RegisterButtonInputMonitor()
 
@@ -171,7 +171,7 @@ Registers a callback for Left Trigger button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_LeftTrigger_UnregisterButtonInputMonitor()
 
@@ -189,7 +189,7 @@ Unregisters the callback for Left Trigger button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_LeftTrigger_RegisterAxisInputMonitor()
 
@@ -213,7 +213,7 @@ Registers a callback for Left Trigger axis events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>      <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_LeftTrigger_UnregisterAxisInputMonitor()
 
@@ -231,7 +231,7 @@ Unregisters the callback for Left Trigger axis events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_RightTrigger_RegisterButtonInputMonitor()
 
@@ -255,7 +255,7 @@ Registers a callback for Right Trigger button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>      <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_RightTrigger_UnregisterButtonInputMonitor()
 
@@ -273,7 +273,7 @@ Unregisters the callback for Right Trigger button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_RightTrigger_RegisterAxisInputMonitor()
 
@@ -297,7 +297,7 @@ Registers a callback for Right Trigger axis events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_RightTrigger_UnregisterAxisInputMonitor()
 
@@ -315,7 +315,7 @@ Unregisters the callback for Right Trigger axis events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_ButtonMenu_RegisterButtonInputMonitor()
 
@@ -339,7 +339,7 @@ Registers a callback for Menu button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_ButtonMenu_UnregisterButtonInputMonitor()
 
@@ -357,7 +357,7 @@ Unregisters the callback for Menu button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_ButtonHome_RegisterButtonInputMonitor()
 
@@ -381,7 +381,7 @@ Registers a callback for Home button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_ButtonHome_UnregisterButtonInputMonitor()
 
@@ -399,7 +399,7 @@ Unregisters the callback for Home button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_ButtonA_RegisterButtonInputMonitor()
 
@@ -423,7 +423,7 @@ Registers a callback for A button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_ButtonA_UnregisterButtonInputMonitor()
 
@@ -441,7 +441,7 @@ Unregisters the callback for A button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_ButtonB_RegisterButtonInputMonitor()
 
@@ -465,7 +465,7 @@ Registers a callback for B button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_ButtonB_UnregisterButtonInputMonitor()
 
@@ -483,7 +483,7 @@ Unregisters the callback for B button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_ButtonX_RegisterButtonInputMonitor()
 
@@ -507,7 +507,7 @@ Registers a callback for X button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_ButtonX_UnregisterButtonInputMonitor()
 
@@ -525,7 +525,7 @@ Unregisters the callback for X button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_ButtonY_RegisterButtonInputMonitor()
 
@@ -549,7 +549,7 @@ Registers a callback for Y button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_ButtonY_UnregisterButtonInputMonitor()
 
@@ -567,7 +567,7 @@ Unregisters the callback for Y button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_ButtonC_RegisterButtonInputMonitor()
 
@@ -591,7 +591,7 @@ Registers a callback for C button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_ButtonC_UnregisterButtonInputMonitor()
 
@@ -609,7 +609,7 @@ Unregisters the callback for C button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_Dpad_LeftButton_RegisterButtonInputMonitor()
 
@@ -633,7 +633,7 @@ Registers a callback for D-pad Left button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_Dpad_LeftButton_UnregisterButtonInputMonitor()
 
@@ -651,7 +651,7 @@ Unregisters the callback for D-pad Left button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_Dpad_RightButton_RegisterButtonInputMonitor()
 
@@ -675,7 +675,7 @@ Registers a callback for D-pad Right button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_Dpad_RightButton_UnregisterButtonInputMonitor()
 
@@ -693,7 +693,7 @@ Unregisters the callback for D-pad Right button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_Dpad_UpButton_RegisterButtonInputMonitor()
 
@@ -717,7 +717,7 @@ Registers a callback for D-pad Up button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_Dpad_UpButton_UnregisterButtonInputMonitor()
 
@@ -735,7 +735,7 @@ Unregisters the callback for D-pad Up button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_Dpad_DownButton_RegisterButtonInputMonitor()
 
@@ -759,7 +759,7 @@ Registers a callback for D-pad Down button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_Dpad_DownButton_UnregisterButtonInputMonitor()
 
@@ -777,7 +777,7 @@ Unregisters the callback for D-pad Down button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_Dpad_RegisterAxisInputMonitor()
 
@@ -801,7 +801,7 @@ Registers a callback for D-pad axis events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_Dpad_UnregisterAxisInputMonitor()
 
@@ -819,7 +819,7 @@ Unregisters the callback for D-pad axis events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_LeftThumbstick_RegisterButtonInputMonitor()
 
@@ -843,7 +843,7 @@ Registers a callback for Left Thumbstick button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_LeftThumbstick_UnregisterButtonInputMonitor()
 
@@ -861,7 +861,7 @@ Unregisters the callback for Left Thumbstick button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_LeftThumbstick_RegisterAxisInputMonitor()
 
@@ -885,7 +885,7 @@ Registers a callback for Left Thumbstick axis events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_LeftThumbstick_UnregisterAxisInputMonitor()
 
@@ -903,7 +903,7 @@ Unregisters the callback for Left Thumbstick axis events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_RightThumbstick_RegisterButtonInputMonitor()
 
@@ -927,7 +927,7 @@ Registers a callback for Right Thumbstick button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_RightThumbstick_UnregisterButtonInputMonitor()
 
@@ -945,7 +945,7 @@ Unregisters the callback for Right Thumbstick button events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 ### OH_GamePad_RightThumbstick_RegisterAxisInputMonitor()
 
@@ -969,7 +969,7 @@ Registers a callback for Right Thumbstick axis events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful.</li><br>     <li>Returns [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) if inputMonitorCallback is null.</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li>     <li>If <br>     inputMonitorCallback is null, [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned.</li></ul> |
 
 ### OH_GamePad_RightThumbstick_UnregisterAxisInputMonitor()
 
@@ -987,6 +987,6 @@ Unregisters the callback for Right Thumbstick axis events.
 
 | Type | Description |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | Returns [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) if the execution is successful. |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | If the operation is successful, [GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode) is returned. |
 
 

@@ -1,0 +1,54 @@
+# ModelRule (System API)
+
+Provides the ModelRule type.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-securityGuard-interface ModelRule--><!--Device-securityGuard-interface ModelRule-End-->
+
+**System capability:** SystemCapability.Security.SecurityGuard
+
+**System API:** This is a system API.
+
+## modelName
+
+```TypeScript
+modelName: string
+```
+
+The security model rule
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ModelRule-modelName: string--><!--Device-ModelRule-modelName: string-End-->
+
+**System capability:** SystemCapability.Security.SecurityGuard
+
+**System API:** This is a system API.
+
+## param
+
+```TypeScript
+param?: string
+```
+
+The model param.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ModelRule-param?: string--><!--Device-ModelRule-param?: string-End-->
+
+**System capability:** SystemCapability.Security.SecurityGuard
+
+**System API:** This is a system API.
+

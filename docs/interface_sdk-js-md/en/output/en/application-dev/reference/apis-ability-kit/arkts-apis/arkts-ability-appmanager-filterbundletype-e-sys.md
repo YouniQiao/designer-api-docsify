@@ -1,0 +1,50 @@
+# FilterBundleType (System API)
+
+Enumerates the types of applications to filter. It can be used with [AppStateFilter]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to filter the application types you want to listen for.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
+<!--Device-appManager-export enum FilterBundleType--><!--Device-appManager-export enum FilterBundleType-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+## APP
+
+```TypeScript
+APP = 1 << 0
+```
+
+Application.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
+<!--Device-FilterBundleType-APP = 1 << 0--><!--Device-FilterBundleType-APP = 1 << 0-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+## ATOMIC_SERVICE
+
+```TypeScript
+ATOMIC_SERVICE = 1 << 1
+```
+
+Atomic service.
+
+**Since:** 21
+
+**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+
+<!--Device-FilterBundleType-ATOMIC_SERVICE = 1 << 1--><!--Device-FilterBundleType-ATOMIC_SERVICE = 1 << 1-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+

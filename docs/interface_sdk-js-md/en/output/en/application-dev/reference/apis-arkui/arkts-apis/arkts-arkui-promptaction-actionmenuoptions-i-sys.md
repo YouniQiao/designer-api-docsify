@@ -1,0 +1,60 @@
+# ActionMenuOptions
+
+Describes the options for showing the action menu.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+<!--Device-promptAction-interface ActionMenuOptions--><!--Device-promptAction-interface ActionMenuOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## distortionMode
+
+```TypeScript
+distortionMode?: DistortionMode
+```
+
+Sets the distortion animation Mode of the dialog.
+
+**Type:** DistortionMode
+
+**Default:** DistortionMode.DISTORTION_AUTO
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ActionMenuOptions-distortionMode?: DistortionMode--><!--Device-ActionMenuOptions-distortionMode?: DistortionMode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## edgeLightMode
+
+```TypeScript
+edgeLightMode?: EdgeLightMode
+```
+
+Sets the edgeLight animation Mode of the dialog.
+
+**Type:** EdgeLightMode
+
+**Default:** EdgeLightMode.EDGELIGHT_AUTO
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ActionMenuOptions-edgeLightMode?: EdgeLightMode--><!--Device-ActionMenuOptions-edgeLightMode?: EdgeLightMode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+

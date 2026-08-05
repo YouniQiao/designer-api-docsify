@@ -1,0 +1,26 @@
+# isShortcutSupported
+
+## isShortcutSupported
+
+```TypeScript
+function isShortcutSupported(): boolean
+```
+
+Checks whether the current device supports shortcuts.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-shortcutManager-function isShortcutSupported(): boolean--><!--Device-shortcutManager-function isShortcutSupported(): boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Launcher
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Indicates whether the current device supports shortcuts. |
+

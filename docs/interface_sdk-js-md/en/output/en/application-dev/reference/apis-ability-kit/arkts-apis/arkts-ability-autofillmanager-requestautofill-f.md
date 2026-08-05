@@ -1,0 +1,36 @@
+# requestAutoFill
+
+## requestAutoFill
+
+```TypeScript
+export function requestAutoFill(context: UIContext, request: FillRequest, callback?: AutoFillCallback): void
+```
+
+Trigger an auto fill request.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-autoFillManager-export function requestAutoFill(context: UIContext, request: FillRequest, callback?: AutoFillCallback): void--><!--Device-autoFillManager-export function requestAutoFill(context: UIContext, request: FillRequest, callback?: AutoFillCallback): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the ui context where the filling operation will be performed. |
+| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the struct of automatic filling request. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the callback that used to receive the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+

@@ -1,0 +1,29 @@
+# request (System API)
+
+## request
+
+```TypeScript
+export function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void
+```
+
+Plugin component request method used to send a request for the information of the template it wants.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-pluginComponentManager-export function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void--><!--Device-pluginComponentManager-export function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Plugin component request parameters for stage. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;RequestCallbackParameters&gt; | Yes | Plugin component request event callback. |
+

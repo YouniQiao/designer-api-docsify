@@ -1,0 +1,32 @@
+# DesktopLyricState
+
+Desktop lyric state definition.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-avSession-interface DesktopLyricState--><!--Device-avSession-interface DesktopLyricState-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+## isLocked
+
+```TypeScript
+isLocked: boolean
+```
+
+Desktop lyric lock state.
+
+**Type:** boolean
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DesktopLyricState-isLocked: boolean--><!--Device-DesktopLyricState-isLocked: boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+

@@ -1,0 +1,28 @@
+# SetConstructor
+
+**ArkTS mode:** ArkTS-Dyn only
+
+<!--Device-unnamed-interface SetConstructor--><!--Device-unnamed-interface SetConstructor-End-->
+
+## constructor
+
+```TypeScript
+new <T>(iterable?: Iterable<T> | null): Set<T>
+```
+
+**ArkTS mode:** ArkTS-Dyn only
+
+<!--Device-SetConstructor-new <T>(iterable?: Iterable<T> | null): Set<T>--><!--Device-SetConstructor-new <T>(iterable?: Iterable<T> | null): Set<T>-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| iterable | Iterable&lt;T&gt; \| null | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Set&lt;T&gt; |  |
+

@@ -1,0 +1,54 @@
+# ExtraData (System API)
+
+Represents the transparently transmitted data, which contains information required for a data change notification.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-cloudData-interface ExtraData--><!--Device-cloudData-interface ExtraData-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
+
+**System API:** This is a system API.
+
+## eventId
+
+```TypeScript
+eventId: string
+```
+
+Event ID. The value **cloud\_data\_change** indicates cloud data changes.
+
+**Type:** string
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
+
+**System API:** This is a system API.
+
+## extraData
+
+```TypeScript
+extraData: string
+```
+
+Data to be transmitted transparently. **extraData** is a JSON string that must contain the **data** field. The **data** field contains information required for a change notification, including the account ID, application name, database name, database type, and database table name. All the fields cannot be empty.
+
+**Type:** string
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
+
+**System API:** This is a system API.
+

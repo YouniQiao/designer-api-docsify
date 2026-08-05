@@ -1,0 +1,39 @@
+# getSimSpnSync
+
+## getSimSpnSync
+
+```TypeScript
+function getSimSpnSync(slotId: int): string
+```
+
+Obtains the service provider name (SPN) of the SIM card in a specified slot. \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-sim-function getSimSpnSync(slotId: int): string--><!--Device-sim-function getSimSpnSync(slotId: int): string-End-->
+
+**System capability:** SystemCapability.Telephony.CoreService
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| slotId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the card slot index number,ranging from 0 to the maximum card slots supported by the device. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Returns the SPN; returns an empty string if no EFSPN file is configured for the SIM card. |
+
+**Example**
+
+```TypeScript
+import { sim } from '@kit.TelephonyKit';
+
+let spn: string = sim.getSimSpnSync(0);
+console.info(`the sim card spn is:` + spn);
+```
+

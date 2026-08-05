@@ -1,0 +1,72 @@
+# ListFileExtOptions
+
+Defines the options used in listFileExt().
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+<!--Device-unnamed-export interface ListFileExtOptions--><!--Device-unnamed-export interface ListFileExtOptions-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## fileFilter
+
+```TypeScript
+fileFilter?: FileFilter
+```
+
+File name filtering interface. This parameter is optional. Filtering rules can be defined based on file names.
+
+**Type:** FileFilter
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ListFileExtOptions-fileFilter?: FileFilter--><!--Device-ListFileExtOptions-fileFilter?: FileFilter-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## listNum
+
+```TypeScript
+listNum?: long
+```
+
+Number of file names to list. This parameter is optional. The default value is 0, which means to list all files.
+
+**Type:** long
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ListFileExtOptions-listNum?: long--><!--Device-ListFileExtOptions-listNum?: long-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## recursion
+
+```TypeScript
+recursion?: boolean
+```
+
+Whether to list all files in the subdirectories recursively. This parameter is optional. The default value is false. If recursion is false, the names of files and directories that meet the filtering requirements in the current directory are returned. If recursion is true, relative paths (starting with"/") of all files that meet the specified conditions in the current directory are returned.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ListFileExtOptions-recursion?: boolean--><!--Device-ListFileExtOptions-recursion?: boolean-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+

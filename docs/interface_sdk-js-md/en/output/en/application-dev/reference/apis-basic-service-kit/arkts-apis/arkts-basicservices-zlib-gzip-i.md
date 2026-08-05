@@ -1,0 +1,2077 @@
+# GZip
+
+Describes gzip-related APIs.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-zlib-interface GZip--><!--Device-zlib-interface GZip-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+## gzbuffer
+
+ArkTS-Dyn:
+```TypeScript
+gzbuffer(size: number): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzbuffer(size: long): Promise<int>
+```
+
+Sets the internal buffer size for the current library function. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzbuffer(size: long): Promise<int>--><!--Device-GZip-gzbuffer(size: long): Promise<int>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Size of the internal buffer to be set. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. If the operation is successful, **0** is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
+import { zlib } from '@kit.BasicServicesKit';
+
+async function gzbufferDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzbuffer");
+  let path = pathDir + "/gzbuffer/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let result = await gzip.gzbuffer(648);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzbufferDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzclearerr
+
+```TypeScript
+gzclearerr(): Promise<void>
+```
+
+Clears the errors and end-of-file flags of a file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzclearerr(): Promise<void>--><!--Device-GZip-gzclearerr(): Promise<void>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzclearerrDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzclearerr");
+  let path = pathDir + "/gzclearerr/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let writeBufferWithData = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(writeBufferWithData);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  let writeNum = await gzip.gzwrite(writeBufferWithData, 16)
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let readBufferWithData = new ArrayBuffer(20);
+  let readNum = await gzip.gzread(readBufferWithData);
+  let eofNum = await gzip.gzeof();
+  await gzip.gzclearerr();
+  let eofNumClear = await gzip.gzeof();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzclearerrDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzclose
+
+```TypeScript
+gzclose(): Promise<ReturnStatus>
+```
+
+Clears all pending output of the file. Closes the file and releases the decompression or compression state if necessary. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzclose(): Promise<ReturnStatus>--><!--Device-GZip-gzclose(): Promise<ReturnStatus>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzcloseDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzclose");
+  let path = pathDir + "/gzclose/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzcloseDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzcloser
+
+```TypeScript
+gzcloser(): Promise<ReturnStatus>
+```
+
+Implements the same functions as that of **gzclose()** for reading only. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzcloser(): Promise<ReturnStatus>--><!--Device-GZip-gzcloser(): Promise<ReturnStatus>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzcloserDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzcloser");
+  let path = pathDir + "/gzcloser/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  await gzip.gzcloser();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzcloserDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzclosew
+
+```TypeScript
+gzclosew(): Promise<ReturnStatus>
+```
+
+Implements the same functions as that of **gzclose()** for writing or appending. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzclosew(): Promise<ReturnStatus>--><!--Device-GZip-gzclosew(): Promise<ReturnStatus>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-memory-allocation-failure) | Memory allocation failed. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzclosewDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzclosew");
+  let path = pathDir + "/gzclosew/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclosew();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzclosewDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzdirect
+
+ArkTS-Dyn:
+```TypeScript
+gzdirect(): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzdirect(): Promise<int>
+```
+
+Checks whether the specified gzip file handle directly accesses the original uncompressed data and reallocates the buffer. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzdirect(): Promise<int>--><!--Device-GZip-gzdirect(): Promise<int>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. If the original uncompressed data is directly |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzdirectDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzdirect");
+  let path = pathDir + "/gzdirect/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let directNum = await gzip.gzdirect();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzdirectDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzdopen
+
+ArkTS-Dyn:
+```TypeScript
+gzdopen(fd: number, mode: string): Promise<void>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzdopen(fd: int, mode: string): Promise<void>
+```
+
+Associates gzip file with the file descriptor (fd) and opens the file for reading and decompressing, or compressing and writing. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>--><!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | File descriptor. Generally, the value is obtained by calling the **open** method or other methods. |
+| mode | string | Yes | Specifies the access mode. For details, see the description of [gzopen]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzdopenDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzdopen");
+  let path = pathDir + "/gzdopen/test.gz";
+  let file = fs.openSync(path, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+  let gzip = zlib.createGZipSync();
+  await gzip.gzdopen(file.fd, "wb");
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzdopenDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzeof
+
+ArkTS-Dyn:
+```TypeScript
+gzeof(): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzeof(): Promise<int>
+```
+
+Checks whether the position from which data is read has reached the end of the gzip file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzeof(): Promise<int>--><!--Device-GZip-gzeof(): Promise<int>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. If the end-of-file indicator is set while reading, |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzeofDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzeof");
+  let path = pathDir + "/gzeof/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let writeBufferWithData = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(writeBufferWithData);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  let writeNum = await gzip.gzwrite(writeBufferWithData, 16)
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let readBufferWithData = new ArrayBuffer(20);
+  let readNum = await gzip.gzread(readBufferWithData);
+  let eofNum = await gzip.gzeof();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzeofDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzerror
+
+```TypeScript
+gzerror(): Promise<GzErrorOutputInfo>
+```
+
+Describes the last error message that reported for the file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>--><!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;GzErrorOutputInfo&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzerrorDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzerror");
+  let path = pathDir + "/gzerror/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let writeBufferWithData = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(writeBufferWithData);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  try {
+    await gzip.gzwrite(writeBufferWithData, -1);
+  } catch (errData) {
+    await gzip.gzerror().then((GzErrorOutputInfo) => {
+      console.info('errCode', GzErrorOutputInfo.status);
+      console.info('errMsg', GzErrorOutputInfo.statusMsg);
+    })
+  }
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzerrorDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzflush
+
+```TypeScript
+gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
+```
+
+Flushes all pending output into a compressed file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| flush | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Controls the flushing mode. For details, see [CompressFlushMode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzflushDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzflush");
+  let path = pathDir + "/gzflush/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let flushNum = await gzip.gzflush(zlib.CompressFlushMode.NO_FLUSH);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzflushDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzfread
+
+ArkTS-Dyn:
+```TypeScript
+gzfread(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
+```
+
+Decompresses and reads data from a gzip file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | Yes | Destination buffer for storing read results. |
+| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Number of bytes in a single data block. |
+| nitems | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Number of data blocks to be written. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzfreadDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzfread");
+  let path = pathDir + "/gzfread/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let writeBuffer = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(writeBuffer);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  await gzip.gzfwrite(writeBuffer, 8, 2);
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let readBuffer = new ArrayBuffer(16);
+  let result = await gzip.gzfread(readBuffer, 8, 2);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzfreadDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzfwrite
+
+ArkTS-Dyn:
+```TypeScript
+gzfwrite(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
+```
+
+Compresses data blocks that are declared with size and nitems from the buffer and writes the data blocks to a file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | Yes | Buffer to which data is to be written. |
+| size | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Number of bytes in a single data block. |
+| nitems | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Number of data blocks to be written. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzfwriteDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzfwrite");
+  let path = pathDir + "/gzfwrite/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let bufferWithData = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(bufferWithData);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  let result = await gzip.gzfwrite(bufferWithData, 8, 2)
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzfwriteDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzgetc
+
+ArkTS-Dyn:
+```TypeScript
+gzgetc(): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzgetc(): Promise<int>
+```
+
+Reads and decompresses a byte from a file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzgetc(): Promise<int>--><!--Device-GZip-gzgetc(): Promise<int>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzgetcDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzgetc");
+  let path = pathDir + "/gzgetc/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzputc(1);
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let result = await gzip.gzgetc();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzgetcDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzgets
+
+```TypeScript
+gzgets(buf: ArrayBuffer): Promise<string>
+```
+
+Reads bytes from a compressed file until len-1 characters are read, a newline character is read and transferred to a buffer, or an end-of-file condition is encountered. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>--><!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | Yes | Stores the read row data. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | Promise used to return a string ended with **null**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzgetsDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzgets");
+  let path = pathDir + "/gzgets/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzputs("hello");
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let bufferWithData = new ArrayBuffer(16);
+  let result = await gzip.gzgets(bufferWithData);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzgetsDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzoffset
+
+ArkTS-Dyn:
+```TypeScript
+gzoffset(): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzoffset(): Promise<long>
+```
+
+Returns the current compressed read or write offset of the file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzoffset(): Promise<long>--><!--Device-GZip-gzoffset(): Promise<long>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzoffsetDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzoffset");
+  let path = pathDir + "/gzoffset/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzoffset();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzoffsetDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzopen
+
+```TypeScript
+gzopen(path: string, mode: string): Promise<void>
+```
+
+Opens the .gz file in the specified path for reading and decompressing, or compressing and writing. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzopen(path: string, mode: string): Promise<void>--><!--Device-GZip-gzopen(path: string, mode: string): Promise<void>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | string | Yes | Path of the file to be opened. |
+| mode | string | Yes | Specifies a mode for opening a file.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Basic modes (one of the following must be selected):\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"r"** or **"rb"**: read mode. The system automatically detects and decompresses the gzip file. If the file is not in gzip format, the original data is directly read.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"w"** or **"wb"**: write mode. The system creates a new file and compresses data.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_3\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"a"** or **"ab"**: append mode. The system appends a new gzip stream to the end of the existing file without verifying the format of the original file.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_4\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Optional function parameters (can be used together):\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_5\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Compression level: **0** (no compression) to **9** (maximum compression). The default compression level is **6**. This parameter must be used together with the write or append mode.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_6\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Compression strategy: **"f"** (filtering strategy), **"h"** (Huffman coding strategy), **"R"** (RLE compression strategy), or **"F"** (fixed encoding strategy). You can only select one of the strategies.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_7\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Transparent mode: **"T"**. In this mode, data is not compressed and no gzip header is generated during writing (a common file is generated). This parameter is mutually exclusive with the compression strategy parameter.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_8\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Exclusive creation: **"x"**. The file fails to be opened if it already exists. This parameter must be used together with the write or append mode.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_9\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- Close-on-exec flag:**"e"**. This parameter is used to set the **FD\_\_\_ESCAPED\_UNDERSCORE\_\_\_CLOEXEC** property of the file descriptor (system-dependent).\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_10\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Examples:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_11\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"r"**: read mode. Data is read in binary format.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_12\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"rb"**: read mode. Data is read in binary format.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_13\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"wb6"**: write mode. Data is written in binary format with the compression level of6.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_14\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"wb9f"**: write mode. Data is written in binary format with the maximum compression level and filtering strategy.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_15\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"wbT"**: write mode. Data is not compressed and a common file is generated.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_16\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-**"wbx"**: write mode. Data is written to the exclusively created file in binary format.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_17\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **"abx"**:append mode. Data is appended and written to the exclusively created file in binary format. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-incorrect-file-or-access-mode) | No such file or access mode error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzopenDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzopen");
+  let path = pathDir + "/gzopen/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzopenDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzprintf
+
+ArkTS-Dyn:
+```TypeScript
+gzprintf(format: string, ...args: Array<string | number>): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzprintf(format: string, ...args: Array<string | double>): Promise<int>
+```
+
+Converts and formats the parameters under the control of the string format and then compresses and writes them into a file, as shown in the **fprintf()**. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>--><!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| format | string | Yes | Format descriptors and plain text. |
+| args | ArkTS-Dyn: Array&lt;string \| number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;string \| double&gt; | Yes | List of variable parameters. If variable parameters are passed, for example, **gzprintf("name is %s, age is %d", "Tom", 23)**, the content **"name is Tom, age is 23"** is written. If no variable parameter is passed, for example, **gzprintf("name is %s, age is %d")**, the content **"name is %s, age is %d"** is written. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Return the number of uncompressed bytes actually written. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzprintfDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzprintf");
+  let path = pathDir + "/gzprintf/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzprintf("name is %s, age is %d", "Tom", 23);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzprintfDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzputc
+
+ArkTS-Dyn:
+```TypeScript
+gzputc(ch: number): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzputc(ch: int): Promise<int>
+```
+
+Compresses **char** converted to an unsigned character and writes it to a file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzputc(ch: int): Promise<int>--><!--Device-GZip-gzputc(ch: int): Promise<int>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ch | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Write character ASCII. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzputcDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzputc");
+  let path = pathDir + "/gzputc/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzputc(0);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzputcDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzputs
+
+ArkTS-Dyn:
+```TypeScript
+gzputs(str: string): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzputs(str: string): Promise<int>
+```
+
+Compresses the given null-terminated strings and writes them to the file, excluding the null operator. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzputs(str: string): Promise<int>--><!--Device-GZip-gzputs(str: string): Promise<int>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| str | string | Yes | Format descriptors and plain text. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzputsDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzputs");
+  let path = pathDir + "/gzputs/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzputs("hello");
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzputsDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzread
+
+ArkTS-Dyn:
+```TypeScript
+gzread(buf: ArrayBuffer): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzread(buf: ArrayBuffer): Promise<long>
+```
+
+Reads a maximum of **len** uncompressed bytes from a file and decompresses them into the buffer. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>--><!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | Yes | Target offset position. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzreadDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzread");
+  let path = pathDir + "/gzread/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let writeBuffer = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(writeBuffer);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  await gzip.gzwrite(writeBuffer, 16);
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let readBuffer = new ArrayBuffer(16);
+  let result = await gzip.gzread(readBuffer);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzreadDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzrewind
+
+```TypeScript
+gzrewind(): Promise<ReturnStatus>
+```
+
+Repositions the file pointer to the beginning of the file. This feature is applied only for reading. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzrewind(): Promise<ReturnStatus>--><!--Device-GZip-gzrewind(): Promise<ReturnStatus>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzrewindDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzrewind");
+  let path = pathDir + "/gzrewind/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  let result = await gzip.gzrewind();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzrewindDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzseek
+
+ArkTS-Dyn:
+```TypeScript
+gzseek(offset: number, whence: OffsetReferencePoint): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>
+```
+
+Sets the start position to the offset position relative to the next **gzread** or **gzwrite** in the file.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>--><!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Target offset position. |
+| whence | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Defines the reference point for the offset. For details, see [OffsetReferencePoint]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzseekDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzseek");
+  let path = pathDir + "/gzseek/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzseek(2, zlib.OffsetReferencePoint.SEEK_CUR);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzseekDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzsetparams
+
+```TypeScript
+gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>
+```
+
+Dynamically updates the compression level and compression strategy of a file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| level | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Compression level. For details, see [CompressLevel]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| strategy | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Compression strategy. For details, see [CompressStrategy]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzsetparamsDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzsetparams");
+  let path = pathDir + "/gzsetparams/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gzsetparams(zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION,
+    zlib.CompressStrategy.COMPRESS_STRATEGY_DEFAULT_STRATEGY);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzsetparamsDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gztell
+
+ArkTS-Dyn:
+```TypeScript
+gztell(): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gztell(): Promise<long>
+```
+
+Returns the start position of the next **gzread** or **gzwrite** in the file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gztell(): Promise<long>--><!--Device-GZip-gztell(): Promise<long>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gztellDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gztell");
+  let path = pathDir + "/gztell/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let result = await gzip.gztell();
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gztellDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzungetc
+
+ArkTS-Dyn:
+```TypeScript
+gzungetc(c: number): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzungetc(c: int): Promise<int>
+```
+
+Pushes **c** back into the input stream so that it will be read as the first character the next time the file is read. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzungetc(c: int): Promise<int>--><!--Device-GZip-gzungetc(c: int): Promise<int>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| c | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Characters before being pushed into the input stream. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzungetcDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzungetc");
+  let path = pathDir + "/gzungetc/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  await gzip.gzclose();
+  await gzip.gzopen(path, "rb");
+  await gzip.gzread(new ArrayBuffer(1));
+  let result = await gzip.gzungetc(1);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzungetcDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+## gzwrite
+
+ArkTS-Dyn:
+```TypeScript
+gzwrite(buf: ArrayBuffer, len: number): Promise<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+gzwrite(buf: ArrayBuffer, len: long): Promise<long>
+```
+
+Compresses the uncompressed bytes of the declared length in the buffer and writes them to the file. This API uses a promise to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>--><!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| buf | ArrayBuffer | Yes | Data buffer pointed by an object to be written. |
+| len | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Length of uncompressed bytes. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: Promise&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-internal-structure-error) | Internal structure error. |
+
+**Example**
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
+
+async function gzwriteDemo(pathDir: string) {
+  fs.mkdirSync(pathDir + "/gzwrite");
+  let path = pathDir + "/gzwrite/test.gz";
+  let gzip = zlib.createGZipSync();
+  await gzip.gzopen(path, "wb");
+  let bufferWithData = new ArrayBuffer(16);
+  let uint8View = new Uint8Array(bufferWithData);
+  for (let i = 0; i < uint8View.length; i++) {
+    uint8View[i] = i;
+  }
+  let result = await gzip.gzwrite(bufferWithData, 16);
+  await gzip.gzclose();
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('test gzip interface')
+          .type(ButtonType.Capsule)
+          .height(60)
+          .width(200)
+          .onClick(() => {
+            let pathDir = this.getUIContext()?.getHostContext()?.cacheDir;
+            if (typeof pathDir === 'string') {
+              gzwriteDemo(pathDir);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+

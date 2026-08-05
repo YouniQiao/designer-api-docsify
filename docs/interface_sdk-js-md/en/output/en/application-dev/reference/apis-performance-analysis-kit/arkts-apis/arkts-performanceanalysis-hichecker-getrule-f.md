@@ -1,0 +1,34 @@
+# getRule
+
+## getRule
+
+```TypeScript
+function getRule() : bigint
+```
+
+Obtains a collection of thread, process, and alarm rules that have been added.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-hichecker-function getRule() : bigint--><!--Device-hichecker-function getRule() : bigint-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiChecker
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| bigint | Collection of added rules. |
+
+**Example**
+
+```TypeScript
+// Add a rule.
+hichecker.addCheckRule(hichecker.RULE_CAUTION_PRINT_LOG);
+
+// Obtain the collection of added rules.
+hichecker.getRule();   // return 1n;
+```
+

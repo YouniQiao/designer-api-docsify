@@ -1,0 +1,94 @@
+# MoveParams (System API)
+
+Parameters for moving the target.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-mechanicManager-export interface MoveParams--><!--Device-mechanicManager-export interface MoveParams-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**System API:** This is a system API.
+
+## angle
+
+```TypeScript
+angle: double
+```
+
+Turning angle, unit degree.
+
+**Type:** double
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-MoveParams-angle: double--><!--Device-MoveParams-angle: double-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**System API:** This is a system API.
+
+## distance
+
+```TypeScript
+distance: int
+```
+
+Moving distance, unit cm. The value should be an integer.
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-MoveParams-distance: int--><!--Device-MoveParams-distance: int-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**System API:** This is a system API.
+
+## mode
+
+```TypeScript
+mode?: MarchingMode
+```
+
+Movement mode.
+
+**Type:** MarchingMode
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-MoveParams-mode?: MarchingMode--><!--Device-MoveParams-mode?: MarchingMode-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**System API:** This is a system API.
+
+## speedGear
+
+```TypeScript
+speedGear?: SpeedGear
+```
+
+Speed gear.
+
+**Type:** SpeedGear
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-MoveParams-speedGear?: SpeedGear--><!--Device-MoveParams-speedGear?: SpeedGear-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**System API:** This is a system API.
+

@@ -6,7 +6,7 @@ typedef struct OH_PixelmapNative* OH_PixelmapNativeHandle
 
 ## Overview
 
-Defines the pointer to OH_PixelmapNative.
+Defines a struct for the pointer to an **OH_PixelmapNative** object.
 
 **Since**: 12
 

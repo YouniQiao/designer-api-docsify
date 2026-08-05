@@ -1,0 +1,88 @@
+# ScreenCaptureHandler
+
+Implements the **ScreenCaptureHandler** object for accepting or rejecting a screen capture request. For details about the sample code, see \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_. > **NOTE** > > - The initial APIs of this component are supported since API version 8. > Updates will be marked with a superscript to indicate their earliest API version. > > - The initial APIs of this class are supported since API version 10. > > - The sample effect is subject to the actual device.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare class ScreenCaptureHandler--><!--Device-unnamed-export declare class ScreenCaptureHandler-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+Constructs a **ScreenCaptureHandler** object.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ScreenCaptureHandler-constructor()--><!--Device-ScreenCaptureHandler-constructor()-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## deny
+
+```TypeScript
+deny(): void
+```
+
+Rejects this screen capture request.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ScreenCaptureHandler-deny(): void--><!--Device-ScreenCaptureHandler-deny(): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## getOrigin
+
+```TypeScript
+getOrigin(): string
+```
+
+Obtains the origin of this web page.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ScreenCaptureHandler-getOrigin(): string--><!--Device-ScreenCaptureHandler-getOrigin(): string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Origin of the web page that requests the permission. |
+
+## grant
+
+```TypeScript
+grant(config: ScreenCaptureConfig): void
+```
+
+Grants the screen capture permission.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ScreenCaptureHandler-grant(config: ScreenCaptureConfig): void--><!--Device-ScreenCaptureHandler-grant(config: ScreenCaptureConfig): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| config | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Screen capture configuration. |
+

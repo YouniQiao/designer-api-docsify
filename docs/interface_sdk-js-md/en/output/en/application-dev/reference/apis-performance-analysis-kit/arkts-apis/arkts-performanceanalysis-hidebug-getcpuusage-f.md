@@ -1,0 +1,32 @@
+# getCpuUsage
+
+## getCpuUsage
+
+```TypeScript
+function getCpuUsage() : double
+```
+
+Obtains the CPU usage of a process. > **NOTE** > > This API involves cross-process communication and takes a long time. To avoid performance problems, you are > advised not to call this API in the main thread.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-hidebug-function getCpuUsage() : double--><!--Device-hidebug-function getCpuUsage() : double-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | CPU usage of a process. For example, if the CPU usage is **50%**, **0.5** is returned. |
+
+**Example**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let cpuUsage: number = hidebug.getCpuUsage();
+```
+

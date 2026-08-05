@@ -1,0 +1,48 @@
+# CertBlob
+
+Define the certificate content.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-networkSecurity-export interface CertBlob--><!--Device-networkSecurity-export interface CertBlob-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## data
+
+```TypeScript
+data: string | ArrayBuffer
+```
+
+Certificate data.
+
+**Type:** string \| ArrayBuffer
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-CertBlob-data: string | ArrayBuffer--><!--Device-CertBlob-data: string | ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## type
+
+```TypeScript
+type: CertType
+```
+
+Certificate type.
+
+**Type:** CertType
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-CertBlob-type: CertType--><!--Device-CertBlob-type: CertType-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+

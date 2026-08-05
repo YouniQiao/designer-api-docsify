@@ -6,7 +6,7 @@ typedef struct AnnualTimeZoneRule {...} AnnualTimeZoneRule
 
 ## Overview
 
-Defines a set of timezone rules by specifying the start year when the rules come into effect and end.
+Defines the time zone rule that takes effect annually.
 
 **Since**: 22
 
@@ -20,11 +20,11 @@ Defines a set of timezone rules by specifying the start year when the rules come
 
 | Name | Description |
 | -- | -- |
-| char* name | Indicates the timezone name. |
+| char* name | Indicates the name of the time zone rule. |
 | int32_t startYear | Indicates the start year when the rule takes effective. |
 | int32_t endYear | Indicates the end year when the rule takes effective. |
-| int32_t rawOffset | Indicates the raw offset of timezone. |
-| int32_t dstSavings | Indicates the dstSavings offset of timezone. |
-| [DateTimeRule](capi-i18n-datetimerule.md) dateTimeRule | Indicates DateTimeRule of the rule to specify the date and time. |
+| int32_t rawOffset | Indicates the raw offset of the time zone, in milliseconds. |
+| int32_t dstSavings | Indicates the daylight saving time offset, in milliseconds. |
+| [DateTimeRule](capi-i18n-datetimerule.md) dateTimeRule | Indicates the rule of time and date. |
 
 

@@ -1,0 +1,102 @@
+# OnDownloadCompleteOptions
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.request.agent.Task.on
+
+<!--Device-unnamed-export interface OnDownloadCompleteOptions--><!--Device-unnamed-export interface OnDownloadCompleteOptions-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+## complete
+
+```TypeScript
+complete?: () => void
+```
+
+Called when API call is complete.
+
+**Type:** () =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.request.agent.Task.on
+
+<!--Device-OnDownloadCompleteOptions-complete?: () => void--><!--Device-OnDownloadCompleteOptions-complete?: () => void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+## fail
+
+```TypeScript
+fail?: (data: any, code: number) => void
+```
+
+Called when API call has failed. Header information and HTTP status code returned when the upload task fails.
+
+**Type:** (data: any, code: number) =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.request.agent.Task.on
+
+<!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void--><!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+## success
+
+```TypeScript
+success?: (data: OnDownloadCompleteResponse) => void
+```
+
+Called when API call is successful.
+
+**Type:** (data: OnDownloadCompleteResponse) =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.request.agent.Task.on
+
+<!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void--><!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+## token
+
+```TypeScript
+token: string
+```
+
+Result token returned by the download API.
+
+**Type:** string
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.request.agent.Task.tid
+
+<!--Device-OnDownloadCompleteOptions-token: string--><!--Device-OnDownloadCompleteOptions-token: string-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+

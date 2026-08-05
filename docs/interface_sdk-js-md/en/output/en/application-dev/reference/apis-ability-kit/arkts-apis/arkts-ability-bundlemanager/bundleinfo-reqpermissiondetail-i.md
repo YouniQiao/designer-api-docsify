@@ -1,0 +1,112 @@
+# ReqPermissionDetail
+
+Provides the detailed information of the permissions to request from the system. > **NOTE** > > - If multiple packages of an application have requested the same permission but with different reasons, the system > returns only one reason based on a descending priority order: entry HAP > feature HAP > in-app HSP.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export interface ReqPermissionDetail--><!--Device-unnamed-export interface ReqPermissionDetail-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## moduleName
+
+```TypeScript
+moduleName: string
+```
+
+Name of the module that requests the permission.
+
+**Type:** string
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ReqPermissionDetail-moduleName: string--><!--Device-ReqPermissionDetail-moduleName: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## name
+
+```TypeScript
+name: string
+```
+
+\_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ to request.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ReqPermissionDetail-name: string--><!--Device-ReqPermissionDetail-name: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## reason
+
+```TypeScript
+reason: string
+```
+
+Reason for requesting the permission.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ReqPermissionDetail-reason: string--><!--Device-ReqPermissionDetail-reason: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## reasonId
+
+```TypeScript
+reasonId: long
+```
+
+ID of the reason for requesting the permission.
+
+**Type:** long
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ReqPermissionDetail-reasonId: long--><!--Device-ReqPermissionDetail-reasonId: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## usedScene
+
+```TypeScript
+usedScene: UsedScene
+```
+
+Use scenario and timing for using the permission.
+
+**Type:** UsedScene
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ReqPermissionDetail-usedScene: UsedScene--><!--Device-ReqPermissionDetail-usedScene: UsedScene-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+

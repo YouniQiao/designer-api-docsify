@@ -1,0 +1,3499 @@
+# Buffer
+
+The Buffer object is a method of handling buffers dedicated to binary data.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-buffer-class Buffer--><!--Device-buffer-class Buffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## compare
+
+```TypeScript
+compare(
+      target: Buffer | Uint8Array,
+      targetStart?: number,
+      targetEnd?: number,
+      sourceStart?: number,
+      sourceEnd?: number
+    ): -1 | 0 | 1
+```
+
+Compares this **Buffer** object with another object.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: number,      targetEnd?: number,      sourceStart?: number,      sourceEnd?: number    ): -1 | 0 | 1--><!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: number,      targetEnd?: number,      sourceStart?: number,      sourceEnd?: number    ): -1 | 0 | 1-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | Yes | Target **Buffer** object to compare. |
+| targetStart | number | No | Offset to the start of the data to compare in the target **Buffer** object. The default value is **0**. |
+| targetEnd | number | No | Offset to the end of the data to compare in the target **Buffer** object (not inclusive). The default value is the length of the target **Buffer** object. |
+| sourceStart | number | No | Offset to the start of the data to compare in this **Buffer** object. The default value is **0**. |
+| sourceEnd | number | No | Offset to the end of the data to compare in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| -1 | Comparison result. The value **0** is returned if the two **Buffer** objects are the same |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range.It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+let buf2 = buffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
+
+console.info(buf1.compare(buf2, 5, 9, 0, 4).toString());
+// Output: 0
+console.info(buf1.compare(buf2, 0, 6, 4).toString());
+// Output: -1
+console.info(buf1.compare(buf2, 5, 6, 5).toString());
+// Output: 1
+```
+
+## compare
+
+```TypeScript
+compare(
+      target: Buffer | Uint8Array,
+      targetStart?: int,
+      targetEnd?: int,
+      sourceStart?: int,
+      sourceEnd?: int
+    ): int
+```
+
+Compares buf with target and returns a number indicating whether buf comes before, after, or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each Buffer.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: int,      targetEnd?: int,      sourceStart?: int,      sourceEnd?: int    ): int--><!--Device-Buffer-compare(      target: Buffer | Uint8Array,      targetStart?: int,      targetEnd?: int,      sourceStart?: int,      sourceEnd?: int    ): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | Yes | The buffer to compare with this buffer |
+| targetStart | int | No | targetStart [targetStart = 0] The offset within target at which to begin comparison |
+| targetEnd | int | No | targetEnd [targetEnd = target.length] The offset within target at which to end comparison (not inclusive) |
+| sourceStart | int | No | sourceStart [sourceStart = 0] The offset within buf at which to begin comparison |
+| sourceEnd | int | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to end comparison(not inclusive) |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| int | number is returned if target is the same as buf |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range.It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+
+## copy
+
+ArkTS-Dyn:
+```TypeScript
+copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int
+```
+
+Copies data at the specified position in this **Buffer** object to the specified position in another **Buffer** object.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int--><!--Device-Buffer-copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| Uint8Array | Yes | **Buffer** or **Uint8Array** object to which data is copied. |
+| targetStart | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the start position in the target object where data is copied. The default value is **0**. |
+| sourceStart | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the start position in this **Buffer** object where data is copied. The default value is **0**. |
+| sourceEnd | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Total length of the data copied, in bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0.Received value is: [targetStart/sourceStart/sourceEnd] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.allocUninitializedFromPool(26);
+let buf2 = buffer.allocUninitializedFromPool(26).fill('!');
+
+for (let i = 0; i < 26; i++) {
+  buf1.writeInt8(i + 97, i);
+}
+
+buf1.copy(buf2, 8, 16, 20);
+console.info(buf2.toString('ascii', 0, 25));
+// Output: !!!!!!!!qrst!!!!!!!!!!!!!
+```
+
+## entries
+
+ArkTS-Dyn:
+```TypeScript
+entries(): IterableIterator<[number, number]>
+```
+
+ArkTS-Sta:
+```TypeScript
+entries(): IterableIterator<[int, long]>
+```
+
+Creates and returns an iterator that contains key-value pairs of this **Buffer** object.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-entries(): IterableIterator<[int, long]>--><!--Device-Buffer-entries(): IterableIterator<[int, long]>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are of |
+| ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;[number, number]&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;[int, long]&gt; | \_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from('buffer');
+let pair = buf.entries();
+let next: IteratorResult<Object[]> = pair.next();
+while (!next.done) {
+  console.info("buffer: " + next.value);
+  /*
+  Output: buffer: 0,98
+           buffer: 1,117
+           buffer: 2,102
+           buffer: 3,102
+           buffer: 4,101
+           buffer: 5,114
+  */
+  next = pair.next();
+}
+```
+
+## equals
+
+```TypeScript
+equals(otherBuffer: Uint8Array | Buffer): boolean
+```
+
+Checks whether this **Buffer** object is the same as another **Buffer** object.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean--><!--Device-Buffer-equals(otherBuffer: Uint8Array | Buffer): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| otherBuffer | Uint8Array \| Buffer | Yes | **Buffer** object to compare. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the two objects are the same; otherwise, |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from('ABC');
+let buf2 = buffer.from('414243', 'hex');
+let buf3 = buffer.from('ABCD');
+
+console.info(buf1.equals(buf2).toString());
+// Output: true
+console.info(buf1.equals(buf3).toString());
+// Output: false
+```
+
+## fill
+
+ArkTS-Dyn:
+```TypeScript
+fill(
+      value: string | Buffer | Uint8Array | number | number | number,
+      offset?: number,
+      end?: number,
+      encoding?: BufferEncoding
+    ): Buffer
+```
+
+ArkTS-Sta:
+```TypeScript
+fill(
+      value: string | Buffer | Uint8Array | int | double | long,
+      offset?: int,
+      end?: int,
+      encoding?: BufferEncoding
+    ): Buffer
+```
+
+Fills this **Buffer** object at the specified position. By default, data is filled cyclically.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-fill(      value: string | Buffer | Uint8Array | int | double | long,      offset?: int,      end?: int,      encoding?: BufferEncoding    ): Buffer--><!--Device-Buffer-fill(      value: string | Buffer | Uint8Array | int | double | long,      offset?: int,      end?: int,      encoding?: BufferEncoding    ): Buffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: string \| Buffer \| Uint8Array \| number \| number \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：string \| Buffer \| Uint8Array \| int \| double \| long | Yes | Value to fill.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the start position in this **Buffer** object where data is filled. The default value is **0**. |
+| end | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | **Buffer** object filled with the specified value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/end]" is out of range. It must be >= 0 and <=[right range]. Received value is: [offset/end] |
+
+## includes
+
+ArkTS-Dyn:
+```TypeScript
+includes(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): boolean
+```
+
+ArkTS-Sta:
+```TypeScript
+includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean
+```
+
+Checks whether this **Buffer** object contains the specified value.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean--><!--Device-Buffer-includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| byteOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
+| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the object contains the specified value; |
+
+## indexOf
+
+ArkTS-Dyn:
+```TypeScript
+indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
+```
+
+ArkTS-Sta:
+```TypeScript
+indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int
+```
+
+Obtains the index of the first occurrence of the specified value in this **Buffer** object. If no match is found, **-1** is returned.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int--><!--Device-Buffer-indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| byteOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
+| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Index obtained. |
+
+## keys
+
+ArkTS-Dyn:
+```TypeScript
+keys(): IterableIterator<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+keys(): IterableIterator<int>
+```
+
+Creates and returns an iterator that contains the keys of this **Buffer** object.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-keys(): IterableIterator<int>--><!--Device-Buffer-keys(): IterableIterator<int>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;int&gt; | Iterator created. |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from('buffer');
+let keys = buf.keys();
+for (const key of keys) {
+  console.info(key.toString());
+}
+/*
+Output: 0
+        1
+        2
+        3
+        4
+        5
+*/
+```
+
+## lastIndexOf
+
+ArkTS-Dyn:
+```TypeScript
+lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number
+```
+
+ArkTS-Sta:
+```TypeScript
+lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int
+```
+
+Obtains the index of the last occurrence of the specified value in this **Buffer** object. If no match is found, **-1** is returned.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int--><!--Device-Buffer-lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 11 |
+| byteOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is the length of this **Buffer** object. |
+| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Index obtained. |
+
+## readBigInt64BE
+
+ArkTS-Dyn:
+```TypeScript
+readBigInt64BE(offset?: number): bigint
+```
+
+ArkTS-Sta:
+```TypeScript
+readBigInt64BE(offset?: int): bigint
+```
+
+Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readBigInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigInt64BE(offset?: int): bigint-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| bigint | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x70,
+  0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78]);
+console.info(buf.readBigInt64BE(0).toString());
+// Output: 7161960797921896816
+
+let buf1 = buffer.allocUninitializedFromPool(8);
+let result = buf1.writeBigInt64BE(BigInt(0x0102030405060708), 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## readBigInt64LE
+
+ArkTS-Dyn:
+```TypeScript
+readBigInt64LE(offset?: number): bigint
+```
+
+ArkTS-Sta:
+```TypeScript
+readBigInt64LE(offset?: int): bigint
+```
+
+Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readBigInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigInt64LE(offset?: int): bigint-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| bigint | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x70,
+  0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78]);
+console.info(buf.readBigUInt64LE(0).toString());
+// Output: 8100120198111388771
+
+let buf1 = buffer.allocUninitializedFromPool(8);
+let result = buf1.writeBigUInt64BE(BigInt(0xdecafafecacefade), 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## readBigUInt64BE
+
+ArkTS-Dyn:
+```TypeScript
+readBigUInt64BE(offset?: number): bigint
+```
+
+ArkTS-Sta:
+```TypeScript
+readBigUInt64BE(offset?: int): bigint
+```
+
+Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readBigUInt64BE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64BE(offset?: int): bigint-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| bigint | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x70,
+  0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78]);
+console.info(buf.readBigUInt64BE(0).toString());
+// Output: 7161960797921896816
+let buf1 = buffer.allocUninitializedFromPool(8);
+let result = buf1.writeBigUInt64BE(BigInt(0xdecafafecacefade), 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## readBigUInt64LE
+
+ArkTS-Dyn:
+```TypeScript
+readBigUInt64LE(offset?: number): bigint
+```
+
+ArkTS-Sta:
+```TypeScript
+readBigUInt64LE(offset?: int): bigint
+```
+
+Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readBigUInt64LE(offset?: int): bigint--><!--Device-Buffer-readBigUInt64LE(offset?: int): bigint-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| bigint | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x70,
+  0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78]);
+console.info(buf.readBigUInt64LE(0).toString());
+// Output: 8100120198111388771
+
+let buf1 = buffer.allocUninitializedFromPool(8);
+let result = buf1.writeBigUInt64BE(BigInt(0xdecafafecacefade), 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## readDoubleBE
+
+ArkTS-Dyn:
+```TypeScript
+readDoubleBE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readDoubleBE(offset?: int): double
+```
+
+Reads a 64-bit, big-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readDoubleBE(offset?: int): double--><!--Device-Buffer-readDoubleBE(offset?: int): double-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([1, 2, 3, 4, 5, 6, 7, 8]);
+console.info(buf.readDoubleBE(0).toString());
+// Output: 8.20788039913184e-304
+let buf1 = buffer.allocUninitializedFromPool(8);
+let result = buf1.writeDoubleBE(123.456, 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## readDoubleLE
+
+ArkTS-Dyn:
+```TypeScript
+readDoubleLE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readDoubleLE(offset?: int): double
+```
+
+Reads a 64-bit, little-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readDoubleLE(offset?: int): double--><!--Device-Buffer-readDoubleLE(offset?: int): double-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([1, 2, 3, 4, 5, 6, 7, 8]);
+console.info(buf.readDoubleLE(0).toString());
+// Output: 5.447603722011605e-270
+let buf1 = buffer.allocUninitializedFromPool(8);
+let result = buf1.writeDoubleLE(123.456, 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## readFloatBE
+
+ArkTS-Dyn:
+```TypeScript
+readFloatBE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readFloatBE(offset?: int): double
+```
+
+Reads a 32-bit, big-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readFloatBE(offset?: int): double--><!--Device-Buffer-readFloatBE(offset?: int): double-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([1, 2, 3, 4, 5, 6, 7, 8]);
+console.info(buf.readFloatBE(0).toString());
+// Output: 2.387939260590663e-38
+let buf1 = buffer.allocUninitializedFromPool(4);
+let result = buf1.writeFloatBE(0xcabcbcbc, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## readFloatLE
+
+ArkTS-Dyn:
+```TypeScript
+readFloatLE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readFloatLE(offset?: int): double
+```
+
+Reads a 32-bit, little-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readFloatLE(offset?: int): double--><!--Device-Buffer-readFloatLE(offset?: int): double-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([1, 2, 3, 4, 5, 6, 7, 8]);
+console.info(buf.readFloatLE(0).toString());
+// Output: 1.539989614439558e-36
+let buf1 = buffer.allocUninitializedFromPool(4);
+let result = buf1.writeFloatLE(0xcabcbcbc, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## readInt16BE
+
+ArkTS-Dyn:
+```TypeScript
+readInt16BE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readInt16BE(offset?: int): long
+```
+
+Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readInt16BE(offset?: int): long--><!--Device-Buffer-readInt16BE(offset?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0, 5]);
+console.info(buf.readInt16BE(0).toString());
+// Output: 5
+let buf1 = buffer.alloc(2);
+let result = buf1.writeInt16BE(0x1234, 0);
+console.info("result = " + result);
+// Output: result = 2
+```
+
+## readInt16LE
+
+ArkTS-Dyn:
+```TypeScript
+readInt16LE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readInt16LE(offset?: int): long
+```
+
+Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readInt16LE(offset?: int): long--><!--Device-Buffer-readInt16LE(offset?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0, 5]);
+console.info(buf.readInt16LE(0).toString());
+// Output: 1280
+let buf1 = buffer.alloc(2);
+let result = buf1.writeInt16BE(0x1234, 0);
+console.info("result = " + result);
+// Output: result = 2
+```
+
+## readInt32BE
+
+ArkTS-Dyn:
+```TypeScript
+readInt32BE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readInt32BE(offset?: int): long
+```
+
+Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readInt32BE(offset?: int): long--><!--Device-Buffer-readInt32BE(offset?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0, 0, 0, 5]);
+console.info(buf.readInt32BE(0).toString());
+// Output: 5
+let buf1 = buffer.alloc(4);
+let result = buf1.writeInt32BE(0x12345678, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## readInt32LE
+
+ArkTS-Dyn:
+```TypeScript
+readInt32LE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readInt32LE(offset?: int): long
+```
+
+Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readInt32LE(offset?: int): long--><!--Device-Buffer-readInt32LE(offset?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0, 0, 0, 5]);
+console.info(buf.readInt32LE(0).toString());
+// Output: 83886080
+let buf1 = buffer.alloc(4);
+let result = buf1.writeInt32BE(0x12345678, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## readInt8
+
+ArkTS-Dyn:
+```TypeScript
+readInt8(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readInt8(offset?: int): long
+```
+
+Reads an 8-bit signed integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readInt8(offset?: int): long--><!--Device-Buffer-readInt8(offset?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([-1, 5]);
+console.info(buf.readInt8(0).toString());
+// Output: 0
+console.info(buf.readInt8(1).toString());
+// Output: 5
+let buf1 = buffer.allocUninitializedFromPool(2);
+let result = buf1.writeInt8(0x12);
+console.info("result = " + result);
+// Output: result = 1
+```
+
+## readIntBE
+
+ArkTS-Dyn:
+```TypeScript
+readIntBE(offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readIntBE(offset: int, byteLength: int): long
+```
+
+Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as a big-endian, two's complement signed value that supports up to 48 bits of precision.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readIntBE(offset: int, byteLength: int): long--><!--Device-Buffer-readIntBE(offset: int, byteLength: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length -byteLength |
+| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from("ab");
+let num = buf.readIntBE(0, 1);
+console.info(num.toString());
+// Output: 97
+let buf1 = buffer.allocUninitializedFromPool(6);
+let result = buf1.writeIntBE(0x123456789011, 0, 6);
+console.info("result = " + result);
+// Output: result = 6
+```
+
+## readIntLE
+
+ArkTS-Dyn:
+```TypeScript
+readIntLE(offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readIntLE(offset: int, byteLength: int): long
+```
+
+Reads the specified number of bytes from this **Buffer** object at the specified offset and interprets the result as a little-endian, two's complement signed value that supports up to 48 bits of precision.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readIntLE(offset: int, byteLength: int): long--><!--Device-Buffer-readIntLE(offset: int, byteLength: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length -byteLength |
+| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x12, 0x34, 0x56, 0x78, 0x90, 0xab]);
+console.info(buf.readIntLE(0, 6).toString(16));
+// Output: -546f87a9cbee
+let buf1 = buffer.allocUninitializedFromPool(6);
+let result = buf1.writeIntLE(0x123456789011, 0, 6);
+console.info("result = " + result);
+// Output: result = 6
+```
+
+## readUInt16BE
+
+ArkTS-Dyn:
+```TypeScript
+readUInt16BE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readUInt16BE(offset?: int): long
+```
+
+Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUInt16BE(offset?: int): long--><!--Device-Buffer-readUInt16BE(offset?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x12, 0x34, 0x56]);
+console.info(buf.readUInt16BE(0).toString(16));
+// Output: 1234
+console.info(buf.readUInt16BE(1).toString(16));
+// Output: 3456
+let buf1 = buffer.allocUninitializedFromPool(4);
+let result = buf1.writeUInt16BE(0x1234, 0);
+console.info("result = " + result);
+// Output: result = 2
+```
+
+## readUInt16LE
+
+ArkTS-Dyn:
+```TypeScript
+readUInt16LE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readUInt16LE(offset?: int): long
+```
+
+Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUInt16LE(offset?: int): long--><!--Device-Buffer-readUInt16LE(offset?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x12, 0x34, 0x56]);
+console.info(buf.readUInt16LE(0).toString(16));
+// Output: 3412
+console.info(buf.readUInt16LE(1).toString(16));
+// Output: 5634
+let buf1 = buffer.allocUninitializedFromPool(4);
+let result = buf1.writeUInt16LE(0x1234, 0);
+console.info("result = " + result);
+// Output: result = 2
+```
+
+## readUInt32BE
+
+ArkTS-Dyn:
+```TypeScript
+readUInt32BE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readUInt32BE(offset?: int): long
+```
+
+Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUInt32BE(offset?: int): long--><!--Device-Buffer-readUInt32BE(offset?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x12, 0x34, 0x56, 0x78]);
+console.info(buf.readUInt32BE(0).toString(16));
+// Output: 12345678
+let buf1 = buffer.allocUninitializedFromPool(4);
+let result = buf1.writeUInt32BE(0x12345678, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## readUInt32LE
+
+ArkTS-Dyn:
+```TypeScript
+readUInt32LE(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readUInt32LE(offset?: int): long
+```
+
+Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUInt32LE(offset?: int): long--><!--Device-Buffer-readUInt32LE(offset?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x12, 0x34, 0x56, 0x78]);
+console.info(buf.readUInt32LE(0).toString(16));
+// Output: 78563412
+let buf1 = buffer.allocUninitializedFromPool(4);
+let result = buf1.writeUInt32LE(0x12345678, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## readUInt8
+
+ArkTS-Dyn:
+```TypeScript
+readUInt8(offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readUInt8(offset?: int): long
+```
+
+Reads an 8-bit unsigned integer from this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUInt8(offset?: int): long--><!--Device-Buffer-readUInt8(offset?: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([1, -2]);
+console.info(buf.readUInt8(0).toString());
+// Output: 1
+console.info(buf.readUInt8(1).toString());
+// Output: 0
+let buf1 = buffer.allocUninitializedFromPool(4);
+let result = buf1.writeUInt8(0x42);
+console.info("result = " + result);
+// Output: result = 1
+```
+
+## readUIntBE
+
+ArkTS-Dyn:
+```TypeScript
+readUIntBE(offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readUIntBE(offset: int, byteLength: int): long
+```
+
+Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, big-endian integer that supports up to 48 bits of precision.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUIntBE(offset: int, byteLength: int): long--><!--Device-Buffer-readUIntBE(offset: int, byteLength: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length -byteLength |
+| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x12, 0x34, 0x56, 0x78, 0x90, 0xab]);
+console.info(buf.readUIntBE(0, 6).toString(16));
+// Output: 1234567890ab
+let buf1 = buffer.allocUninitializedFromPool(4);
+let result = buf1.writeUIntBE(0x13141516, 0, 4);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## readUIntLE
+
+ArkTS-Dyn:
+```TypeScript
+readUIntLE(offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+readUIntLE(offset: int, byteLength: int): long
+```
+
+Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, little-endian integer that supports up to 48 bits of precision.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-readUIntLE(offset: int, byteLength: int): long--><!--Device-Buffer-readUIntLE(offset: int, byteLength: int): long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length -byteLength |
+| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.from([0x12, 0x34, 0x56, 0x78, 0x90, 0xab]);
+console.info(buf.readUIntLE(0, 6).toString(16));
+// Output: ab9078563412
+let buf1 = buffer.allocUninitializedFromPool(4);
+let result = buf1.writeUIntLE(0x13141516, 0, 4);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## subarray
+
+ArkTS-Dyn:
+```TypeScript
+subarray(start?: number, end?: number): Buffer
+```
+
+ArkTS-Sta:
+```TypeScript
+subarray(start?: int, end?: int): Buffer
+```
+
+Truncates this **Buffer** object from the specified position to create a new **Buffer** object.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-subarray(start?: int, end?: int): Buffer--><!--Device-Buffer-subarray(start?: int, end?: int): Buffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| start | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the start position in this **Buffer** object where data is truncated. The default value is **0**. |
+| end | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | **Buffer** object created. When the value of **start** or **end** is less than **0**, an |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.allocUninitializedFromPool(26);
+
+for (let i = 0; i < 26; i++) {
+  buf1.writeInt8(i + 97, i);
+}
+const buf2 = buf1.subarray(0, 3);
+console.info(buf2.toString('ascii', 0, buf2.length));
+// Output: abc
+```
+
+## swap16
+
+```TypeScript
+swap16(): Buffer
+```
+
+Converts this **Buffer** object into an array of unsigned 16-bit integers and swaps the byte order in place.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-swap16(): Buffer--><!--Device-Buffer-swap16(): Buffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | **Buffer** object swapped. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 16-bits |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8]);
+console.info(buf1.toString('hex'));
+// Output: 0102030405060708
+buf1.swap16();
+console.info(buf1.toString('hex'));
+// Output: 0201040306050807
+```
+
+## swap32
+
+```TypeScript
+swap32(): Buffer
+```
+
+Converts this **Buffer** object into an array of unsigned 32-bit integers and swaps the byte order in place.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-swap32(): Buffer--><!--Device-Buffer-swap32(): Buffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | **Buffer** object swapped. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 32-bits |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8]);
+console.info(buf1.toString('hex'));
+// Output: 0102030405060708
+buf1.swap32();
+console.info(buf1.toString('hex'));
+// Output: 0403020108070605
+```
+
+## swap64
+
+```TypeScript
+swap64(): Buffer
+```
+
+Converts this **Buffer** object into an array of unsigned 64-bit integers and swaps the byte order in place.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-swap64(): Buffer--><!--Device-Buffer-swap64(): Buffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | **Buffer** object swapped. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 64-bits |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8]);
+console.info(buf1.toString('hex'));
+// Output: 0102030405060708
+buf1.swap64();
+console.info(buf1.toString('hex'));
+// Output: 0807060504030201
+```
+
+## toJSON
+
+```TypeScript
+toJSON(): Object
+```
+
+Converts this **Buffer** object into a JSON object.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-toJSON(): Object--><!--Device-Buffer-toJSON(): Object-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Object | JSON object. |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([0x1, 0x2, 0x3, 0x4, 0x5]);
+let obj = buf1.toJSON();
+console.info(JSON.stringify(obj));
+// Output: {"type":"Buffer","data":[1,2,3,4,5]}
+```
+
+## toJSON
+
+```TypeScript
+toJSON(): jsonx.JsonElement
+```
+
+Converts this Buffer instance into a JsonElement.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Buffer-toJSON(): jsonx.JsonElement--><!--Device-Buffer-toJSON(): jsonx.JsonElement-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| jsonx.JsonElement | A new JsonElement containing the Buffer |
+
+## toString
+
+```TypeScript
+toString(encoding?: string, start?: number, end?: number): string
+```
+
+Converts the data at the specified position in this **Buffer** object into a string in the specified encoding format.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-Buffer-toString(encoding?: string, start?: number, end?: number): string-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | string | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| start | number | No | Offset to the start position of the data to convert. The default value is **0**. |
+| end | number | No | Offset to the end position of data. The default value is the length of this **Buffer** object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | String. When the value of **start** is greater than or equal to **Buffer.length** or |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.allocUninitializedFromPool(26);
+for (let i = 0; i < 26; i++) {
+  buf1.writeInt8(i + 97, i);
+}
+console.info(buf1.toString('utf-8'));
+// Output: abcdefghijklmnopqrstuvwxyz
+```
+
+## toString
+
+```TypeScript
+toString(): string
+```
+
+Decodes buf to a string according to the specified character encoding in encoding
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-Buffer-toString(): string--><!--Device-Buffer-toString(): string-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string |  |
+
+## toString
+
+```TypeScript
+toString(encoding?: BufferEncoding, start?: int, end?: int): string
+```
+
+Decodes buf to a string according to the specified character encoding in encoding
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Buffer-toString(encoding?: BufferEncoding, start?: int, end?: int): string--><!--Device-Buffer-toString(encoding?: BufferEncoding, start?: int, end?: int): string-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| encoding | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | encoding [encoding='utf8'] The character encoding to use |
+| start | int | No | start [start = 0] The byte offset to start decoding at The value should be an integer. |
+| end | int | No | end [end = buf.length] The byte offset to stop decoding at (not inclusive)The value should be an integer. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string |  |
+
+## values
+
+ArkTS-Dyn:
+```TypeScript
+values(): IterableIterator<number>
+```
+
+ArkTS-Sta:
+```TypeScript
+values(): IterableIterator<long>
+```
+
+Creates and returns an iterator that contains the values of this **Buffer** object.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-values(): IterableIterator<long>--><!--Device-Buffer-values(): IterableIterator<long>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_2\_\_\_ArkTS-Sta：\_\_\_MD\_LINK\_USD\_1\_\_\_&lt;long&gt; | Iterator. |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from('buffer');
+let pair = buf1.values();
+let next:IteratorResult<number> = pair.next();
+while (!next.done) {
+  console.info(next.value.toString());
+  /*
+  Output: 98
+           117
+           102
+           102
+           101
+           114
+  */
+  next = pair.next();
+}
+```
+
+## write
+
+ArkTS-Dyn:
+```TypeScript
+write(str: string, offset?: number, length?: number, encoding?: string): number
+```
+
+ArkTS-Sta:
+```TypeScript
+write(str: string, offset?: int, length?: int, encoding?: string): int
+```
+
+Writes a string of the specified length to this **Buffer** object at the specified position in the given encoding format.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int--><!--Device-Buffer-write(str: string, offset?: int, length?: int, encoding?: string): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| str | string | Yes | String to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. |
+| length | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Maximum number of bytes to write. The default value is **Buffer.length** minus **offset**. |
+| encoding | string | No | Encoding format of the string. The default value is **'utf8'**. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Number of bytes written. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/length]" is out of range. It must be >= 0 and <=buf.length. Received value is: [offset/length] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.alloc(256);
+let len = buf.write('\u00bd + \u00bc = \u00be', 0);
+console.info(`${len} bytes: ${buf.toString('utf-8', 0, len)}`);
+// Output: 12 bytes: ½ + ¼ = ¾
+
+let buffer1 = buffer.alloc(10);
+let length = buffer1.write('abcd', 8);
+console.info("length = " + length);
+// Output: length = 2
+```
+
+## writeBigInt64BE
+
+ArkTS-Dyn:
+```TypeScript
+writeBigInt64BE(value: bigint, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeBigInt64BE(value: bigint, offset?: int): int
+```
+
+Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeBigInt64BE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigInt64BE(value: bigint, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | bigint | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(8);
+let result = buf.writeBigInt64BE(BigInt(0x0102030405060708), 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## writeBigInt64LE
+
+ArkTS-Dyn:
+```TypeScript
+writeBigInt64LE(value: bigint, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeBigInt64LE(value: bigint, offset?: int): int
+```
+
+Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeBigInt64LE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigInt64LE(value: bigint, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | bigint | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(8);
+let result = buf.writeBigInt64LE(BigInt(0x0102030405060708), 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## writeBigUInt64BE
+
+ArkTS-Dyn:
+```TypeScript
+writeBigUInt64BE(value: bigint, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeBigUInt64BE(value: bigint, offset?: int): int
+```
+
+Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeBigUInt64BE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigUInt64BE(value: bigint, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | bigint | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(8);
+let result = buf.writeBigUInt64BE(BigInt(0xdecafafecacefade), 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## writeBigUInt64LE
+
+ArkTS-Dyn:
+```TypeScript
+writeBigUInt64LE(value: bigint, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeBigUInt64LE(value: bigint, offset?: int): int
+```
+
+Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeBigUInt64LE(value: bigint, offset?: int): int--><!--Device-Buffer-writeBigUInt64LE(value: bigint, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | bigint | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(8);
+let result = buf.writeBigUInt64LE(BigInt(0xdecafafecacefade), 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## writeDoubleBE
+
+ArkTS-Dyn:
+```TypeScript
+writeDoubleBE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeDoubleBE(value: double, offset?: int): int
+```
+
+Writes a 64-bit, big-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeDoubleBE(value: double, offset?: int): int--><!--Device-Buffer-writeDoubleBE(value: double, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(8);
+let result = buf.writeDoubleBE(123.456, 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## writeDoubleLE
+
+ArkTS-Dyn:
+```TypeScript
+writeDoubleLE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeDoubleLE(value: double, offset?: int): int
+```
+
+Writes a 64-bit, little-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeDoubleLE(value: double, offset?: int): int--><!--Device-Buffer-writeDoubleLE(value: double, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(8);
+let result = buf.writeDoubleLE(123.456, 0);
+console.info("result = " + result);
+// Output: result = 8
+```
+
+## writeFloatBE
+
+ArkTS-Dyn:
+```TypeScript
+writeFloatBE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeFloatBE(value: double, offset?: int): int
+```
+
+Writes a 32-bit, big-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeFloatBE(value: double, offset?: int): int--><!--Device-Buffer-writeFloatBE(value: double, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(8);
+let result = buf.writeFloatBE(0xcafebabe, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## writeFloatLE
+
+ArkTS-Dyn:
+```TypeScript
+writeFloatLE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeFloatLE(value: double, offset?: int): int
+```
+
+Writes a 32-bit, little-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeFloatLE(value: double, offset?: int): int--><!--Device-Buffer-writeFloatLE(value: double, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(8);
+let result = buf.writeFloatLE(0xcafebabe, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## writeInt16BE
+
+ArkTS-Dyn:
+```TypeScript
+writeInt16BE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeInt16BE(value: long, offset?: int): int
+```
+
+Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeInt16BE(value: long, offset?: int): int--><!--Device-Buffer-writeInt16BE(value: long, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(2);
+let result = buf.writeInt16BE(0x0102, 0);
+console.info("result = " + result);
+// Output: result = 2
+```
+
+## writeInt16LE
+
+ArkTS-Dyn:
+```TypeScript
+writeInt16LE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeInt16LE(value: long, offset?: int): int
+```
+
+Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeInt16LE(value: long, offset?: int): int--><!--Device-Buffer-writeInt16LE(value: long, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(2);
+let result = buf.writeInt16LE(0x0304, 0);
+console.info("result = " + result);
+// Output: result = 2
+```
+
+## writeInt32BE
+
+ArkTS-Dyn:
+```TypeScript
+writeInt32BE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeInt32BE(value: long, offset?: int): int
+```
+
+Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeInt32BE(value: long, offset?: int): int--><!--Device-Buffer-writeInt32BE(value: long, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(4);
+let result = buf.writeInt32BE(0x01020304, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## writeInt32LE
+
+ArkTS-Dyn:
+```TypeScript
+writeInt32LE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeInt32LE(value: long, offset?: int): int
+```
+
+Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeInt32LE(value: long, offset?: int): int--><!--Device-Buffer-writeInt32LE(value: long, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(4);
+let result = buf.writeInt32LE(0x05060708, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## writeInt8
+
+ArkTS-Dyn:
+```TypeScript
+writeInt8(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeInt8(value: long, offset?: int): int
+```
+
+Writes an 8-bit signed integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeInt8(value: long, offset?: int): int--><!--Device-Buffer-writeInt8(value: long, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(2);
+let result = buf.writeInt8(2, 0);
+console.info("result = " + result);
+// Output: result = 1
+let result1 = buf.writeInt8(-2, 1);
+console.info("result1 = " + result1);
+// Output: result1 = 2
+```
+
+## writeIntBE
+
+ArkTS-Dyn:
+```TypeScript
+writeIntBE(value: number, offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeIntBE(value: long, offset: int, byteLength: int): int
+```
+
+Writes a big-endian signed value of the specified length to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeIntBE(value: long, offset: int, byteLength: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length -byteLength |
+| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to write. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(6);
+let result = buf.writeIntBE(0x1234567890ab, 0, 6);
+console.info("result = " + result);
+// Output: result = 6
+```
+
+## writeIntLE
+
+ArkTS-Dyn:
+```TypeScript
+writeIntLE(value: number, offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeIntLE(value: long, offset: int, byteLength: int): int
+```
+
+Writes a little-endian signed value of the specified length to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeIntLE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeIntLE(value: long, offset: int, byteLength: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length -byteLength |
+| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to write. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(6);
+let result = buf.writeIntLE(0x1234567890ab, 0, 6);
+console.info("result = " + result);
+// Output: result = 6
+```
+
+## writeUInt16BE
+
+ArkTS-Dyn:
+```TypeScript
+writeUInt16BE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeUInt16BE(value: long, offset?: int): int
+```
+
+Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeUInt16BE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt16BE(value: long, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(4);
+let result = buf.writeUInt16BE(0xdead, 0);
+console.info("result = " + result);
+// Output: result = 2
+let result1 = buf.writeUInt16BE(0xbeef, 2);
+console.info("result1 = " + result1);
+// Output: result1 = 4
+```
+
+## writeUInt16LE
+
+ArkTS-Dyn:
+```TypeScript
+writeUInt16LE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeUInt16LE(value: long, offset?: int): int
+```
+
+Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeUInt16LE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt16LE(value: long, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(4);
+let result = buf.writeUInt16LE(0xdead, 0);
+console.info("result = " + result);
+// Output: result = 2
+let result1 = buf.writeUInt16LE(0xbeef, 2);
+console.info("result1 = " + result1);
+// Output: result1 = 4
+```
+
+## writeUInt32BE
+
+ArkTS-Dyn:
+```TypeScript
+writeUInt32BE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeUInt32BE(value: long, offset?: int): int
+```
+
+Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeUInt32BE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt32BE(value: long, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(4);
+let result = buf.writeUInt32BE(0xfeedface, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## writeUInt32LE
+
+ArkTS-Dyn:
+```TypeScript
+writeUInt32LE(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeUInt32LE(value: long, offset?: int): int
+```
+
+Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeUInt32LE(value: long, offset?: int): int--><!--Device-Buffer-writeUInt32LE(value: long, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(4);
+let result = buf.writeUInt32LE(0xfeedface, 0);
+console.info("result = " + result);
+// Output: result = 4
+```
+
+## writeUInt8
+
+ArkTS-Dyn:
+```TypeScript
+writeUInt8(value: number, offset?: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeUInt8(value: long, offset?: int): int
+```
+
+Writes an 8-bit unsigned integer to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeUInt8(value: long, offset?: int): int--><!--Device-Buffer-writeUInt8(value: long, offset?: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(4);
+let result = buf.writeUInt8(0x3, 0);
+console.info("result = " + result);
+// Output: result = 1
+let result1 = buf.writeUInt8(0x4, 1);
+console.info("result1 = " + result1);
+// Output: result1 = 2
+let result2 = buf.writeUInt8(0x23, 2);
+console.info("result2 = " + result2);
+// Output: result2 = 3
+let result3 = buf.writeUInt8(0x42, 3);
+console.info("result3 = " + result3);
+// Output: result3 = 4
+```
+
+## writeUIntBE
+
+ArkTS-Dyn:
+```TypeScript
+writeUIntBE(value: number, offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeUIntBE(value: long, offset: int, byteLength: int): int
+```
+
+Writes an unsigned big-endian value of the specified length to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntBE(value: long, offset: int, byteLength: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length -byteLength |
+| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to write. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(6);
+let result = buf.writeUIntBE(0x1234567890ab, 0, 6);
+console.info("result = " + result);
+// Output: result = 6
+```
+
+## writeUIntLE
+
+ArkTS-Dyn:
+```TypeScript
+writeUIntLE(value: number, offset: number, byteLength: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+writeUIntLE(value: long, offset: int, byteLength: int): int
+```
+
+Writes an unsigned little-endian value of the specified length to this **Buffer** object at the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-writeUIntLE(value: long, offset: int, byteLength: int): int--><!--Device-Buffer-writeUIntLE(value: long, offset: int, byteLength: int): int-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length -byteLength |
+| byteLength | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of bytes to write. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Offset plus the number of written bytes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <=[right range]. Received value is: [param] |
+
+**Example**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf = buffer.allocUninitializedFromPool(6);
+let result = buf.writeUIntLE(0x1234567890ab, 0, 6);
+console.info("result = " + result);
+// Output: result = 6
+```
+
+## buffer
+
+```TypeScript
+buffer: ArrayBuffer
+```
+
+**ArrayBuffer** object.
+
+**Type:** ArrayBuffer
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-buffer: ArrayBuffer--><!--Device-Buffer-buffer: ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## byteOffset
+
+```TypeScript
+byteOffset: number
+```
+
+Offset of the **Buffer** object in the memory pool.
+
+**Type:** number
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-byteOffset: number--><!--Device-Buffer-byteOffset: number-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## index
+
+```TypeScript
+[index: int]: long
+```
+
+Returns the item at that index.
+
+**Type:** long
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Buffer-[index: int]: long--><!--Device-Buffer-[index: int]: long-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## length
+
+```TypeScript
+length: number
+```
+
+Length of the **Buffer** object, in bytes.
+
+**Type:** number
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Buffer-length: number--><!--Device-Buffer-length: number-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+

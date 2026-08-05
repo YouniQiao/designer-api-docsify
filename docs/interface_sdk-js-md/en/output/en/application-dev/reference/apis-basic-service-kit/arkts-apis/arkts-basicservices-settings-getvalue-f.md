@@ -1,0 +1,232 @@
+# getValue
+
+## getValue
+
+```TypeScript
+function getValue(dataAbilityHelper: DataAbilityHelper, name: string, callback: AsyncCallback<object>): void
+```
+
+Obtains the value of a specified character string in the database.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.settings#getValue
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-settings-function getValue(dataAbilityHelper: DataAbilityHelper, name: string, callback: AsyncCallback<object>): void--><!--Device-settings-function getValue(dataAbilityHelper: DataAbilityHelper, name: string, callback: AsyncCallback<object>): void-End-->
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataAbilityHelper | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to access the database. |
+| name | string | Yes | Indicates the name of the character string. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;object&gt; | Yes | The callback of getValue result. |
+
+**Example**
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let uri:string = settings.getUriSync(settings.display.SCREEN_BRIGHTNESS_STATUS);
+let helper = featureAbility.acquireDataAbilityHelper(uri);
+settings.getValue(helper, settings.display.SCREEN_BRIGHTNESS_STATUS, (err:Error, value:string) => {
+    if (err) {
+        console.error(`Failed to get the setting. ${err.message} `);
+        return;
+    }
+    console.info(`callback:value -> ${JSON.stringify(value)}`)
+});
+```
+
+
+## getValue
+
+```TypeScript
+function getValue(dataAbilityHelper: DataAbilityHelper, name: string): Promise<object>
+```
+
+Obtains the value of a specified character string in the database.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.settings#getValue
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-settings-function getValue(dataAbilityHelper: DataAbilityHelper, name: string): Promise<object>--><!--Device-settings-function getValue(dataAbilityHelper: DataAbilityHelper, name: string): Promise<object>-End-->
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dataAbilityHelper | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ used to access the database. |
+| name | string | Yes | Indicates the name of the character string. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;object&gt; | Returns the value of the character string in the domain if any is found; returns { |
+
+**Example**
+
+```TypeScript
+import featureAbility from '@ohos.ability.featureAbility';
+
+let uri:string = settings.getUriSync(settings.display.SCREEN_BRIGHTNESS_STATUS);
+let helper = featureAbility.acquireDataAbilityHelper(uri);
+settings.getValue(helper, settings.display.SCREEN_BRIGHTNESS_STATUS).then((value:string) => {
+    console.info(`promise:value -> ${JSON.stringify(value)}`)
+});
+```
+
+
+## getValue
+
+```TypeScript
+function getValue(context: Context, name: string, callback: AsyncCallback<string>): void
+```
+
+Get value from settingsdata
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-settings-function getValue(context: Context, name: string, callback: AsyncCallback<string>): void--><!--Device-settings-function getValue(context: Context, name: string, callback: AsyncCallback<string>): void-End-->
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| name | string | Yes | Indicates the name of the character string. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | The callback of getValue result. |
+
+**Example**
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, (err, value) => {
+  if (err) {
+    console.error(`Failed to get the setting. ${err.message} `);
+    return;
+  }
+  console.info(`callback:value -> ${value}`)
+});
+```
+
+
+## getValue
+
+```TypeScript
+function getValue(context: Context, name: string): Promise<string>
+```
+
+Get value from settingsdata
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-settings-function getValue(context: Context, name: string): Promise<string>--><!--Device-settings-function getValue(context: Context, name: string): Promise<string>-End-->
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| name | string | Yes | Indicates the name of the character string. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns { |
+
+**Example**
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS).then((value) => {
+  console.info(`promise:value -> ${value}`)
+});
+```
+
+
+## getValue
+
+```TypeScript
+function getValue(context: Context, name: string, domainName: string): Promise<string>
+```
+
+Get value from settingsdata [USER\_SECURE] domain need ohos.permission.MANAGE\_SECURE\_SETTINGS permission.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-settings-function getValue(context: Context, name: string, domainName: string): Promise<string>--><!--Device-settings-function getValue(context: Context, name: string, domainName: string): Promise<string>-End-->
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
+| name | string | Yes | Indicates the name of the character string. |
+| domainName | string | Yes | Indicates the name of the domain name to set. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | Returns the value of the character string in the domain if any is found; returns { |
+
+**Example**
+
+```TypeScript
+import { settings } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Update the value of SCREEN_BRIGHTNESS_STATUS. (As this data item exists in the database, the getValue API will update its value.)
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, settings.domainName.DEVICE_SHARED).then((value) => {
+  console.info(`Promise:value -> ${value}`);
+});
+```
+

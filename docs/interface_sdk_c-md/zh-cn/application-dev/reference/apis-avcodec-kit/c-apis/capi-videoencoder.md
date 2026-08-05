@@ -4,8 +4,6 @@
 
 VideoEncoder模块提供用于视频编码的接口。
 
-**系统能力：** SystemCapability.Multimedia.Media.VideoEncoder
-
 **起始版本：** 9
 ## 文件汇总
 

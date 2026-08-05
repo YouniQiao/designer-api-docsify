@@ -1,0 +1,152 @@
+# ConditionVariable
+
+Object used for thread synchronization.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Decorator:** @Sendable
+
+<!--Device-locks-class ConditionVariable--><!--Device-locks-class ConditionVariable-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+Default constructor.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConditionVariable-constructor()--><!--Device-ConditionVariable-constructor()-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## notifyAll
+
+```TypeScript
+notifyAll(): void
+```
+
+Notify all waiting promise.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConditionVariable-notifyAll(): void--><!--Device-ConditionVariable-notifyAll(): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## notifyOne
+
+```TypeScript
+notifyOne(): void
+```
+
+Notify one waiting promise.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConditionVariable-notifyOne(): void--><!--Device-ConditionVariable-notifyOne(): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## request
+
+```TypeScript
+static request(name: string): ConditionVariable
+```
+
+Find or create an instance of ConditionVariable using the specified name.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConditionVariable-static request(name: string): ConditionVariable--><!--Device-ConditionVariable-static request(name: string): ConditionVariable-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Name of the ConditionVariable to find or create. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns an instance of ConditionVariable. |
+
+## wait
+
+```TypeScript
+wait(): Promise<void>
+```
+
+Waits for the ConditionVariable to be notified.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConditionVariable-wait(): Promise<void>--><!--Device-ConditionVariable-wait(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | A promise will be resolved once the ConditionVariable is notified.. |
+
+## waitFor
+
+```TypeScript
+waitFor(timeout: number): Promise<void>
+```
+
+Waits for the ConditionVariable to be notified, or until the specified time limit is reached.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ConditionVariable-waitFor(timeout: number): Promise<void>--><!--Device-ConditionVariable-waitFor(timeout: number): Promise<void>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| timeout | number | Yes | The maximum time to wait.The value should be an integer.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_Unit: ms. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | A promise that will be resolved once the ConditionVariable is notified or |
+

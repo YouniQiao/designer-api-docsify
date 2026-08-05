@@ -20,7 +20,7 @@ Defines the initial rule of a timezone which has no clear start time.
 
 | Name | Description |
 | -- | -- |
-| int32_t rawOffset | Indicates the raw offset of a timezone. |
-| int32_t dstSavings | Indicates the dstSavings offset of a timezone. |
+| int32_t rawOffset | Indicates the raw offset of the time zone, in milliseconds. |
+| int32_t dstSavings | Indicates the daylight saving time offset, in milliseconds. |
 
 

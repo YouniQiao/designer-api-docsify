@@ -1,0 +1,18 @@
+# RouteInfo
+
+```TypeScript
+export type RouteInfo = connection.RouteInfo
+```
+
+Get network route information.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-vpn-export type RouteInfo = connection.RouteInfo--><!--Device-vpn-export type RouteInfo = connection.RouteInfo-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Core
+
+**Property type:** connection.RouteInfo
+

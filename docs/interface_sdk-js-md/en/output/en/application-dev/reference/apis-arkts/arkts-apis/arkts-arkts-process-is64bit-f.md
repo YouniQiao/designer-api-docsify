@@ -1,0 +1,32 @@
+# is64Bit
+
+## is64Bit
+
+```TypeScript
+function is64Bit(): boolean
+```
+
+Checks whether this process is running in a 64-bit environment.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-process-function is64Bit(): boolean--><!--Device-process-function is64Bit(): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the process is running in a 64-bit |
+
+**Example**
+
+```TypeScript
+let result = process.is64Bit();
+```
+

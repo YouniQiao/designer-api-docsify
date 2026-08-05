@@ -1,0 +1,32 @@
+# getNativeHeapSize
+
+## getNativeHeapSize
+
+```TypeScript
+function getNativeHeapSize() : bigint
+```
+
+Obtains the total number of bytes occupied by the total space (**uordblks** + **fordblks**, which are obtained from **mallinfo**) held by a process, which is measured by the memory allocator.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-hidebug-function getNativeHeapSize() : bigint--><!--Device-hidebug-function getNativeHeapSize() : bigint-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| bigint | Size of the memory occupied by the total space held by the process, in bytes. |
+
+**Example**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let nativeHeapSize: bigint = hidebug.getNativeHeapSize();
+```
+

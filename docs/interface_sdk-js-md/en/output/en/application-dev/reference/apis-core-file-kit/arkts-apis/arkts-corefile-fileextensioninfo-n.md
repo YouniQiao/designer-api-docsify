@@ -1,0 +1,33 @@
+# fileExtensionInfo
+
+The **fileExtensionInfo** module defines attributes in **RootInfo** and **FileInfo** of the user file access and management module.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 23
+
+<!--Device-unnamed-declare namespace fileExtensionInfo--><!--Device-unnamed-declare namespace fileExtensionInfo-End-->
+
+**System capability:** SystemCapability.FileManagement.UserFileService
+
+**System API:** This is a system API.
+
+## Summary
+
+### Namespaces
+
+| Name | Description |
+| --- | --- |
+| [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md) | Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is used to determine whether a capability is available through the AND operation. |
+| [DocumentFlag](arkts-corefile-fileextensioninfo-documentflag-n.md) | Defines the values of **mode** used in **FileInfo**. |
+
+<!--Del-->
+### Enums（系统接口）
+
+| Name | Description |
+| --- | --- |
+| [DeviceType](arkts-corefile-fileextensioninfo-devicetype-e-sys.md) | Defines the values of **deviceType** used in **RootInfo**. |
+<!--DelEnd-->
+

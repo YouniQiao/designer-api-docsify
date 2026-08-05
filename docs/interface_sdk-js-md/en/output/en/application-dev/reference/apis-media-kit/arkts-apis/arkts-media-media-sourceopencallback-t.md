@@ -1,0 +1,30 @@
+# SourceOpenCallback
+
+```TypeScript
+type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long
+```
+
+This callback function is implemented by applications to handle resource open requests and return a unique handle for the opened resource. > **NOTE** > > The client must return the handle immediately after processing the request.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-media-type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long--><!--Device-media-type SourceOpenCallback = (request: MediaSourceLoadingRequest) => long-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| request | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Parameters for the resource open request, including detailed information about the requested resource and the data push method.  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Handle for the current resource open request. A value greater than 0 means the request is |
+

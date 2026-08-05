@@ -176,7 +176,7 @@ Provides ArkUI event definitions on the native side.
 | [ArkUI_ErrorCode OH_ArkUI_PointerEvent_PostClonedEventWithStrategy(ArkUI_NodeHandle node, const ArkUI_UIInputEvent* event, ArkUI_CompetitionStrategy strategy)](#oh_arkui_pointerevent_postclonedeventwithstrategy) | 使用指定的竞争策略将克隆事件发送到特定节点。只有通过[OH_ArkUI_PointerEvent_CreateClonedPointerEvent](capi-ui-input-event-h.md#oh_arkui_pointerevent_createclonedpointerevent)和[OH_ArkUI_PointerEvent_CreatePointerEvent](capi-ui-input-event-h.md#oh_arkui_pointerevent_createpointerevent)接口创建的ArkUI_UIInputEvent对象才能使用此接口。 |
 | [int32_t OH_ArkUI_PointerEvent_PostClonedEvent(ArkUI_NodeHandle node, const ArkUI_UIInputEvent* event)](#oh_arkui_pointerevent_postclonedevent) | 转发克隆事件到特定节点。 |
 | [ArkUI_ErrorCode OH_ArkUI_UIInputEvent_GetLatestStatus()](#oh_arkui_uiinputevent_getlateststatus) | 调用该方法获取最近一次UIInput相关方法的执行情况。通常情况下不需要使用该方法，仅在返回值结果不确定是否异常时使用。 |
-| [ArkUI_CoastingAxisEvent* OH_ArkUI_UIInputEvent_GetCoastingAxisEvent(ArkUI_UIInputEvent* event)](#oh_arkui_uiinputevent_getcoastingaxisevent) | 从组件事件中获取惯性滚动轴事件，仅当用户在触摸板上使用双指滑动一定距离并快速抬手，且指针位置下存在注册了{@link NODE_ON_COASTING_AXIS_EVENT}事件的组件时，才能获取到有效事件。在从{@link ArkUI_NodeEvent}对象获取到[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)对象后调用此方法。 |
+| [ArkUI_CoastingAxisEvent* OH_ArkUI_UIInputEvent_GetCoastingAxisEvent(ArkUI_UIInputEvent* event)](#oh_arkui_uiinputevent_getcoastingaxisevent) | 从组件事件中获取惯性滚动轴事件，仅当用户在触摸板上使用双指滑动一定距离并快速抬手，且指针位置下存在注册了{@link NODE_ON_COASTING_AXIS_EVENT}事件的组件时，才能获取到有效事件。在从[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)对象获取到[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)对象后调用此方法。 |
 | [int64_t OH_ArkUI_CoastingAxisEvent_GetEventTime(ArkUI_CoastingAxisEvent* event)](#oh_arkui_coastingaxisevent_geteventtime) | 获取惯性滚动轴事件发生的时间。 |
 | [ArkUI_CoastingAxisEventPhase OH_ArkUI_CoastingAxisEvent_GetPhase(ArkUI_CoastingAxisEvent* event)](#oh_arkui_coastingaxisevent_getphase) | 获取惯性滚动轴事件发生时的滚动阶段。 |
 | [float OH_ArkUI_CoastingAxisEvent_GetDeltaX(ArkUI_CoastingAxisEvent* event)](#oh_arkui_coastingaxisevent_getdeltax) | 获取惯性滚动轴事件水平方向的增量值。单位为px，表示为单次滚动增量，非滚动总量。数值的正负代表方向，双指从左往右滑动时为负数，双指从右往左滑动时为正数。 |
@@ -3726,7 +3726,7 @@ ArkUI_CoastingAxisEvent* OH_ArkUI_UIInputEvent_GetCoastingAxisEvent(ArkUI_UIInpu
 
 **描述**
 
-从组件事件中获取惯性滚动轴事件，仅当用户在触摸板上使用双指滑动一定距离并快速抬手，且指针位置下存在注册了{@link NODE_ON_COASTING_AXIS_EVENT}事件的组件时，才能获取到有效事件。在从{@link ArkUI_NodeEvent}对象获取到[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)对象后调用此方法。
+从组件事件中获取惯性滚动轴事件，仅当用户在触摸板上使用双指滑动一定距离并快速抬手，且指针位置下存在注册了{@link NODE_ON_COASTING_AXIS_EVENT}事件的组件时，才能获取到有效事件。在从[ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)对象获取到[ArkUI_UIInputEvent](capi-arkui-eventmodule-arkui-uiinputevent.md)对象后调用此方法。
 
 **起始版本：** 22
 

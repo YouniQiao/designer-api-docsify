@@ -1,0 +1,140 @@
+# getMissionInfo (System API)
+
+## getMissionInfo
+
+```TypeScript
+function getMissionInfo(deviceId: string, missionId: int, callback: AsyncCallback<MissionInfo>): void
+```
+
+Obtains the mission information. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int, callback: AsyncCallback<MissionInfo>): void--><!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int, callback: AsyncCallback<MissionInfo>): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Mission
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| missionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Mission ID. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;MissionInfo&gt; | Yes | Callback used to return the mission information obtained. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Example**
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let testMissionId = 1;
+
+missionManager.getMissionInfos('', 10)
+  .then((allMissions: Array<missionManager.MissionInfo>) => {
+    try {
+      if (allMissions && allMissions.length > 0) {
+        testMissionId = allMissions[0].missionId;
+      }
+
+      missionManager.getMissionInfo('', testMissionId, (error: BusinessError, mission: missionManager.MissionInfo) => {
+        if (error) {
+          console.error(`getMissionInfo failed, error.code: ${error.code}, error.message: ${error.message}`);
+        } else {
+          console.info(`mission.missionId = ${mission.missionId}`);
+          console.info(`mission.runningState = ${mission.runningState}`);
+          console.info(`mission.lockedState = ${mission.lockedState}`);
+          console.info(`mission.timestamp = ${mission.timestamp}`);
+          console.info(`mission.label = ${mission.label}`);
+          console.info(`mission.iconPath = ${mission.iconPath}`);
+        }
+      });
+    } catch (paramError) {
+      let code = (paramError as BusinessError).code;
+      let message = (paramError as BusinessError).message;
+      console.error(`error: ${code}, ${message} `);
+    }
+  })
+  .catch((error: BusinessError) => {
+    console.error(`getMissionInfos failed, error code: ${error.code}, error msg: ${error.message}.`);
+  });
+```
+
+
+## getMissionInfo
+
+```TypeScript
+function getMissionInfo(deviceId: string, missionId: int): Promise<MissionInfo>
+```
+
+Obtains the mission information. This API uses a promise to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.MANAGE_MISSIONS
+
+<!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int): Promise<MissionInfo>--><!--Device-missionManager-function getMissionInfo(deviceId: string, missionId: int): Promise<MissionInfo>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Mission
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| missionId | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Mission ID. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;MissionInfo&gt; | Promise used to return the mission information obtained. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;2. Incorrect parameter types; 3. Parameter verification failed. |
+
+**Example**
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let testMissionId = 1;
+
+try {
+  missionManager.getMissionInfo('', testMissionId)
+    .then((data: missionManager.MissionInfo) => {
+      console.info(`getMissionInfo successfully. Data: ${JSON.stringify(data)}`);
+    })
+    .catch((error: BusinessError) => {
+      console.error(`getMissionInfo failed. Cause: ${error.message}`);
+    });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`getMissionInfo failed. Cause: ${err.message}`);
+}
+```
+

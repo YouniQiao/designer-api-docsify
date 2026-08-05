@@ -1,4 +1,4 @@
-# Hitrace
+# HiTrace
 
 ## Overview
 
@@ -9,4 +9,4 @@ hitraceChain provides APIs for cross-thread and cross-process distributed tracin
 
 | Name | Description |
 | -- | -- |
-| [trace.h](capi-trace-h.md) | Defines APIs of the **HiTraceMeter** and **HiTraceChain** modules for performance tracing and distributedtracing.The vertical bar (\|) is used as the separator in user-mode trace format. Therefore, the string parameters passed bythe HiTraceMeter APIs must exclude this character to avoid trace parsing exceptions.The maximum length of a user-mode trace is 512 characters. Excess characters will be truncated. |
+| [trace.h](capi-trace-h.md) | Defines APIs of the **HiTraceMeter** and **HiTraceChain** modules for performance tracing and distributedtracing.The vertical bar (\|) is used as the separator in user-mode trace format. Therefore, the string parameterspassed by the HiTraceMeter APIs must exclude this character to avoid trace parsing exceptions.The maximum length of a user-mode trace is 512 characters. Excess characters will be truncated. |

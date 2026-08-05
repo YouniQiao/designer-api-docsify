@@ -1,0 +1,76 @@
+# ArcSliderValueOptionsConstructorOptions
+
+Defines the constructor information for **ArcSliderValueOptions**.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+<!--Device-unnamed-interface ArcSliderValueOptionsConstructorOptions--><!--Device-unnamed-interface ArcSliderValueOptionsConstructorOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+## max
+
+```TypeScript
+max?: number
+```
+
+Maximum value. Default value: **100** **NOTE** If the value of **min** is greater than or equal to that of **max**, **min** is set to **0** and **max** **100**. If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
+
+**Type:** number
+
+**Default:** 100
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderValueOptionsConstructorOptions-max?: number--><!--Device-ArcSliderValueOptionsConstructorOptions-max?: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+## min
+
+```TypeScript
+min?: number
+```
+
+Minimum value. Default value: **0**.
+
+**Type:** number
+
+**Default:** 0
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderValueOptionsConstructorOptions-min?: number--><!--Device-ArcSliderValueOptionsConstructorOptions-min?: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+## progress
+
+```TypeScript
+progress?: number
+```
+
+Current progress. Default value: same as the value of **min**.
+
+**Type:** number
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderValueOptionsConstructorOptions-progress?: number--><!--Device-ArcSliderValueOptionsConstructorOptions-progress?: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+

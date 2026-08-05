@@ -1,0 +1,92 @@
+# BlanklessFrameInterpolationInfo
+
+Defines the frame interpolation state information in the scenario where the ArkWeb blankless loading optimization is enabled. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+<!--Device-webview-interface BlanklessFrameInterpolationInfo--><!--Device-webview-interface BlanklessFrameInterpolationInfo-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## key
+
+```TypeScript
+key: string
+```
+
+Key value that uniquely identifies the page. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlanklessFrameInterpolationInfo-key: string--><!--Device-BlanklessFrameInterpolationInfo-key: string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## reason
+
+```TypeScript
+reason: string
+```
+
+Reason for the frame interpolation failure. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlanklessFrameInterpolationInfo-reason: string--><!--Device-BlanklessFrameInterpolationInfo-reason: string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## state
+
+```TypeScript
+state: BlanklessFrameInterpolationState
+```
+
+Current frame interpolation state. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+
+**Type:** BlanklessFrameInterpolationState
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlanklessFrameInterpolationInfo-state: BlanklessFrameInterpolationState--><!--Device-BlanklessFrameInterpolationInfo-state: BlanklessFrameInterpolationState-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## timestamp
+
+```TypeScript
+timestamp: number
+```
+
+Time when a frame is interpolated or removed. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. The value must be an integer. \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Unit: ms.
+
+**Type:** number
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BlanklessFrameInterpolationInfo-timestamp: number--><!--Device-BlanklessFrameInterpolationInfo-timestamp: number-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+

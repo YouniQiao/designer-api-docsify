@@ -1,0 +1,49 @@
+# ChartElement
+
+The \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_ component displays line charts, gauge charts, and bar charts.
+
+**Inheritance/Implementation:** ChartElement extends [Element](viewmodel-element-i.md)
+
+**Since:** 4
+
+**ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+<!--Device-unnamed-export interface ChartElement extends Element--><!--Device-unnamed-export interface ChartElement extends Element-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## append
+
+```TypeScript
+append(params: {
+    /**
+     * Set the data subscript of the line chart to be updated.
+     *
+     *****/
+    serial: number;
+    /**
+     * Set the new data.
+     *
+     *****/
+    data: Array<number>;
+  }): void
+```
+
+Data is dynamiconlyally added to an existing data sequence. The target sequence is specified based on serial, which is the subscript of the datasets array and starts from 0. datasets[index].data is not updated. Only line charts support this attribute. The value is incremented by 1 based on the horizontal coordinate and is related to the xAxis min/max setting.
+
+**Since:** 4
+
+**ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-ChartElement-append(params: {    /**     * Set the data subscript of the line chart to be updated.     *     *****/    serial: number;    /**     * Set the new data.     *     *****/    data: Array<number>;  }): void--><!--Device-ChartElement-append(params: {    /**     * Set the data subscript of the line chart to be updated.     *     *****/    serial: number;    /**     * Set the new data.     *     *****/    data: Array<number>;  }): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| params | {     /**      * Set the data subscript of the line chart to be updated.      *      * @type { number }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     serial: number;     /**      * Set the new data.      *      * @type { Array&lt;number&gt; }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     data: Array&lt;number&gt;;   } | Yes |  |
+

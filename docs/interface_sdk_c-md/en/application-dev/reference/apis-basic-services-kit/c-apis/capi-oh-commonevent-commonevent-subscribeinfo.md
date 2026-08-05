@@ -6,7 +6,7 @@ typedef struct CommonEvent_SubscribeInfo CommonEvent_SubscribeInfo
 
 ## Overview
 
-Defines a struct for the subscriber information.
+Defines a struct for the subscriber information of a common event. This struct is usedto describe the configuration information of a subscriber. It is passed as a parameter whenthe API for creating a subscriber is called.
 
 **Since**: 12
 

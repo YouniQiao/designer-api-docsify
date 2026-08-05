@@ -1,0 +1,122 @@
+# ComposeTitleBarV2
+
+Declaration of the composable title bar. Composable title bar represents a common title bar that contains a title, subtitle (optional), and profile picture (optional). It can come with a Back button for switching between pages of different levels.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Decorator:** @ComponentV2
+
+<!--Device-unnamed-export declare struct ComposeTitleBarV2--><!--Device-unnamed-export declare struct ComposeTitleBarV2-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## build
+
+```TypeScript
+build(): void
+```
+
+The method to build component.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Decorator:** @Builder
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2-build(): void--><!--Device-ComposeTitleBarV2-build(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## item
+
+```TypeScript
+item?: ComposeTitleBarV2MenuItem
+```
+
+A single menu item for the profile picture on the left.
+
+**Type:** ComposeTitleBarV2MenuItem
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Decorator:** @Param
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2-item?: ComposeTitleBarV2MenuItem--><!--Device-ComposeTitleBarV2-item?: ComposeTitleBarV2MenuItem-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## menuItems
+
+```TypeScript
+menuItems?: Array<ComposeTitleBarV2MenuItem>
+```
+
+Menu items on the right side.
+
+**Type:** Array&lt;ComposeTitleBarV2MenuItem&gt;
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Decorator:** @Param
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2-menuItems?: Array<ComposeTitleBarV2MenuItem>--><!--Device-ComposeTitleBarV2-menuItems?: Array<ComposeTitleBarV2MenuItem>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## subtitle
+
+```TypeScript
+subtitle?: ResourceStr
+```
+
+Sub-title of this title bar.
+
+**Type:** ResourceStr
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Decorator:** @Param
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2-subtitle?: ResourceStr--><!--Device-ComposeTitleBarV2-subtitle?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## title
+
+```TypeScript
+title: ResourceStr
+```
+
+Title of this title bar.
+
+**Type:** ResourceStr
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Decorator:** @Param
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2-title: ResourceStr--><!--Device-ComposeTitleBarV2-title: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

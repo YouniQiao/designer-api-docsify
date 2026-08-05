@@ -1,0 +1,110 @@
+# PanRecognizer
+
+Defines the gesture recognizer.
+
+**Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](gesture-gesturerecognizer-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-unnamed-export declare class PanRecognizer extends GestureRecognizer--><!--Device-unnamed-export declare class PanRecognizer extends GestureRecognizer-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## getDirection
+
+```TypeScript
+getDirection(): PanDirection
+```
+
+Returns the pan recognizer's direction attribute.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanRecognizer-getDirection(): PanDirection--><!--Device-PanRecognizer-getDirection(): PanDirection-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | - Pan recognizer direction |
+
+## getDistance
+
+```TypeScript
+getDistance(): double
+```
+
+Returns the pan recognizer's distance. The unit is vp.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanRecognizer-getDistance(): double--><!--Device-PanRecognizer-getDistance(): double-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| double | - the distance of the pan recognizer. |
+
+## getDistanceMap
+
+```TypeScript
+getDistanceMap(): Map<SourceTool, double>
+```
+
+Returns the pan recognizer's distance map. The unit is vp.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanRecognizer-getDistanceMap(): Map<SourceTool, double>--><!--Device-PanRecognizer-getDistanceMap(): Map<SourceTool, double>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Map&lt;\_\_\_MD\_LINK\_USD\_0\_\_\_, double&gt; | - the distance map of the pan recognizer. |
+
+## getPanGestureOptions
+
+```TypeScript
+getPanGestureOptions(): PanGestureOptions
+```
+
+Returns the the pan gesture options of the recognizer.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PanRecognizer-getPanGestureOptions(): PanGestureOptions--><!--Device-PanRecognizer-getPanGestureOptions(): PanGestureOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | - Pan gesture options |
+

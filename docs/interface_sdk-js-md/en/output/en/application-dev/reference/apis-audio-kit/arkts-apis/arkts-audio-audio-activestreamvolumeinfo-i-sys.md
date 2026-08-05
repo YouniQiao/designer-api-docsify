@@ -1,0 +1,80 @@
+# ActiveStreamVolumeInfo (System API)
+
+Volume information for active audio streams.
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+<!--Device-audio-interface ActiveStreamVolumeInfo--><!--Device-audio-interface ActiveStreamVolumeInfo-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+## appVolume
+
+```TypeScript
+appVolume: int
+```
+
+Volume of the application.
+
+**Type:** int
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ActiveStreamVolumeInfo-appVolume: int--><!--Device-ActiveStreamVolumeInfo-appVolume: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+## clientUid
+
+```TypeScript
+clientUid: int
+```
+
+UID of the application.
+
+**Type:** int
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ActiveStreamVolumeInfo-clientUid: int--><!--Device-ActiveStreamVolumeInfo-clientUid: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+
+## volumeType
+
+```TypeScript
+volumeType: AudioVolumeType
+```
+
+Volume type of the current stream.
+
+**Type:** AudioVolumeType
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ActiveStreamVolumeInfo-volumeType: AudioVolumeType--><!--Device-ActiveStreamVolumeInfo-volumeType: AudioVolumeType-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**System API:** This is a system API.
+

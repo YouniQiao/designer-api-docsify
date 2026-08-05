@@ -2,12 +2,12 @@
 
 ## Overview
 
-Provides the APIs of common event service.
+This module provides APIs of the Common Event Service, which are implemented in C.It provides cross-process event communication capabilities for apps based on thepublication-subscription model. After a publisher publishes a common event, the systemdelivers the event to all subscribers who have subscribed to the event based on the eventname. In this way, decoupled communication between apps and between apps and the systemis implemented.
 
 **Since**: 12
 ## Files
 
 | Name | Description |
 | -- | -- |
-| [oh_commonevent.h](capi-oh-commonevent-h.md) | Defines the APIs for subscribing to and unsubscribing from common events and enumerates the error codes. |
+| [oh_commonevent.h](capi-oh-commonevent-h.md) | Defines key operation functions for publishing, subscribing to, and unsubscribing fromcommon events, event callback data access, and ordered event control, enumerates error codes,and defines core data types. |
 | [oh_commonevent_support.h](capi-oh-commonevent-support-h.md) | Provides common event constants defined by the system. |

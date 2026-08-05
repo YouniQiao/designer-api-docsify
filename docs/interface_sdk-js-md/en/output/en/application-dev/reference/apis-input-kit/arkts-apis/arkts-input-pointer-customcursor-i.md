@@ -1,0 +1,66 @@
+# CustomCursor
+
+Defines custom cursor resources.
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
+<!--Device-pointer-interface CustomCursor--><!--Device-pointer-interface CustomCursor-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## focusX
+
+```TypeScript
+focusX?: int
+```
+
+Horizontal coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size. The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is **0** when this parameter is omitted.
+
+**Type:** int
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
+<!--Device-CustomCursor-focusX?: int--><!--Device-CustomCursor-focusX?: int-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## focusY
+
+```TypeScript
+focusY?: int
+```
+
+Vertical coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size. The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is **0** when this parameter is omitted.
+
+**Type:** int
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
+<!--Device-CustomCursor-focusY?: int--><!--Device-CustomCursor-focusY?: int-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## pixelMap
+
+```TypeScript
+pixelMap: image.PixelMap
+```
+
+Pixel map. The minimum size is subject to the minimum limit of the image. The maximum size is 256 x 256 px.
+
+**Type:** image.PixelMap
+
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+
+<!--Device-CustomCursor-pixelMap: image.PixelMap--><!--Device-CustomCursor-pixelMap: image.PixelMap-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+

@@ -1,0 +1,27 @@
+# OnTabsAnimationEndCallback
+
+```TypeScript
+declare type OnTabsAnimationEndCallback = (index: number, extraInfo: TabsAnimationEvent) => void
+```
+
+Defines the callback triggered when the tab switching animation ends.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-unnamed-declare type OnTabsAnimationEndCallback = (index: number, extraInfo: TabsAnimationEvent) => void--><!--Device-unnamed-declare type OnTabsAnimationEndCallback = (index: number, extraInfo: TabsAnimationEvent) => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| index | number | Yes | Index of the currently displayed element. The index is zero-based.  |
+| extraInfo | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Extra information of the animation, which is the offset of the currently displayed element relative to the start position of the **Tabs** along the main axis.  |
+

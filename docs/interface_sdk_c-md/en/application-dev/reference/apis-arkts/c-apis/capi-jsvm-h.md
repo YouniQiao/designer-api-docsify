@@ -74,9 +74,9 @@ Provides the JSVM API define.Provides API to Provide independent, standard, and 
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateArray(JSVM_Env env, JSVM_Value* result)](#oh_jsvm_createarray) | This API returns a JSVM-API value corresponding to a JavaScript Array type. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateArrayWithLength(JSVM_Env env, size_t length, JSVM_Value* result)](#oh_jsvm_createarraywithlength) | This API returns a JSVM-API value corresponding to a JavaScript Array type. The Array's length propertyis set to the passed-in length parameter. However, the underlying buffer is not guaranteed to be pre-allocatedby the VM when the array is created. That behavior is left to the underlying VM implementation. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateArraybuffer(JSVM_Env env, size_t byteLength, void** data, JSVM_Value* result)](#oh_jsvm_createarraybuffer) | This API returns a JSVM-API value corresponding to a JavaScript ArrayBuffer. ArrayBuffers are used torepresent fixed-length binary data buffers. They are normally used as a backing-buffer for TypedArray objects.The ArrayBuffer allocated will have an underlying byte buffer whose size is determined by the length parameterthat's passed in. The underlying buffer is optionally returned back to the caller in case the caller wants todirectly manipulate the buffer. This buffer can only be written to directly from native code. To write to thisbuffer from JavaScript, a typed array or DataView object would need to be created. |
-| [JSVM_Status JSVM_CDECL OH_JSVM_AllocateArrayBufferBackingStoreData(size_t byteLength, JSVM_InitializedFlag initialized, void **data)](#oh_jsvm_allocatearraybufferbackingstoredata) | This API allocate the memory of array buffer backing store. |
-| [JSVM_Status JSVM_CDECL OH_JSVM_FreeArrayBufferBackingStoreData(void *data)](#oh_jsvm_freearraybufferbackingstoredata) | This API release the memory of an array buffer backing store. |
-| [JSVM_Status JSVM_CDECL OH_JSVM_CreateArrayBufferFromBackingStoreData(JSVM_Env env, void *data, size_t backingStoreSize, size_t offset, size_t arrayBufferSize, JSVM_Value *result)](#oh_jsvm_createarraybufferfrombackingstoredata) | This API create an array buffer using the backing store data. |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_AllocateArrayBufferBackingStoreData(size_t byteLength, JSVM_InitializedFlag initialized, void **data)](#oh_jsvm_allocatearraybufferbackingstoredata) | This API allocate the memory of array buffer backing store. |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_FreeArrayBufferBackingStoreData(void* data)](#oh_jsvm_freearraybufferbackingstoredata) | This API release the memory of an array buffer backing store. |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_CreateArrayBufferFromBackingStoreData(JSVM_Env env, void* data, size_t backingStoreSize, size_t offset, size_t arrayBufferSize, JSVM_Value* result)](#oh_jsvm_createarraybufferfrombackingstoredata) | This API create an array buffer using the backing store data. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateDate(JSVM_Env env, double time, JSVM_Value* result)](#oh_jsvm_createdate) | This API does not observe leap seconds; they are ignored, as ECMAScript aligns with POSIX time specification.This API allocates a JavaScript Date object. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateExternal(JSVM_Env env, void* data, JSVM_Finalize finalizeCb, void* finalizeHint, JSVM_Value* result)](#oh_jsvm_createexternal) | This API allocates a JavaScript value with external data attached to it. This is used to pass externaldata through JavaScript code, so it can be retrieved later by native code using OH_JSVM_GetValueExternal.The API adds a JSVM_Finalize callback which will be called when the JavaScript object just created has been garbagecollected.The created value is not an object, and therefore does not support additional properties. It is considereda distinct value type calling OH_JSVM_Typeof() with an external value yields JSVM_EXTERNAL. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateObject(JSVM_Env env, JSVM_Value* result)](#oh_jsvm_createobject) | This API allocates a default JavaScript Object. It is the equivalent of doing new Object() in JavaScript. |
@@ -199,15 +199,15 @@ Provides the JSVM API define.Provides API to Provide independent, standard, and 
 | [JSVM_EXTERN JSVM_Status OH_JSVM_IsFunction(JSVM_Env env, JSVM_Value value, bool* isFunction)](#oh_jsvm_isfunction) | This API checks if the value passed in is a function.This equals to `typeof value === 'function'` in JS. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_IsObject(JSVM_Env env, JSVM_Value value, bool* isObject)](#oh_jsvm_isobject) | This API checks if the value passed in is an object. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_IsBigInt(JSVM_Env env, JSVM_Value value, bool* isBigInt)](#oh_jsvm_isbigint) | This API checks if the value passed in is a bigInt.This equals to `typeof value === 'bigint'` in JS. |
-| [JSVM_Status JSVM_CDECL OH_JSVM_CreateMap(JSVM_Env env, JSVM_Value* result)](#oh_jsvm_createmap) | This API returns a JSVM-API value corresponding to a JavaScript Map type. |
-| [JSVM_Status JSVM_CDECL OH_JSVM_IsMap(JSVM_Env env, JSVM_Value value, bool* isMap)](#oh_jsvm_ismap) | This API checks if the value passed in is a Map. |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_CreateMap(JSVM_Env env, JSVM_Value* result)](#oh_jsvm_createmap) | This API returns a JSVM-API value corresponding to a JavaScript Map type. |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_IsMap(JSVM_Env env, JSVM_Value value, bool* isMap)](#oh_jsvm_ismap) | This API checks if the value passed in is a Map. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateSet(JSVM_Env env, JSVM_Value* result)](#oh_jsvm_createset) | This API returns a JSVM-API value corresponding to a JavaScript Set type. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_IsSet(JSVM_Env env, JSVM_Value value, bool* isSet)](#oh_jsvm_isset) | This API checks if the value passed in is a Set. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CompileScriptWithOptions(JSVM_Env env, JSVM_Value script, size_t optionCount, JSVM_CompileOptions options[], JSVM_Script* result)](#oh_jsvm_compilescriptwithoptions) | This function compiles a string of JavaScript code with the compile optionsand returns the compiled script. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CoerceToBigInt(JSVM_Env env, JSVM_Value value, JSVM_Value* result)](#oh_jsvm_coercetobigint) | This API implements the abstract operation ToBigInt(). |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_IsRegExp(JSVM_Env env, JSVM_Value value, bool* result)](#oh_jsvm_isregexp) | This API checks if the value passed in is a regExp.This equals to `value instanceof RegExp` in JS. |
-| [JSVM_Status JSVM_CDECL OH_JSVM_IsConstructor(JSVM_Env env, JSVM_Value value, bool* isConstructor)](#oh_jsvm_isconstructor) | This API checks if the value passed in is a constructor. |
-| [JSVM_Status JSVM_CDECL OH_JSVM_CreateRegExp(JSVM_Env env, JSVM_Value value, JSVM_RegExpFlags flags, JSVM_Value* result)](#oh_jsvm_createregexp) | This API returns the JavaScript value of the regular expressioncorresponding to the input.The interface may throw an exception. |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_IsConstructor(JSVM_Env env, JSVM_Value value, bool* isConstructor)](#oh_jsvm_isconstructor) | This API checks if the value passed in is a constructor. |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_CreateRegExp(JSVM_Env env, JSVM_Value value, JSVM_RegExpFlags flags, JSVM_Value* result)](#oh_jsvm_createregexp) | This API returns the JavaScript value of the regular expressioncorresponding to the input.The interface may throw an exception. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_ObjectGetPrototypeOf(JSVM_Env env, JSVM_Value object, JSVM_Value* result)](#oh_jsvm_objectgetprototypeof) | This API returns the Object prototype. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_ObjectSetPrototypeOf(JSVM_Env env, JSVM_Value object, JSVM_Value prototype)](#oh_jsvm_objectsetprototypeof) | This API set the prototype on the Object passed in. |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateFunctionWithScript(JSVM_Env env, const char* funcName, size_t length, size_t argc, const JSVM_Value* argv, JSVM_Value script, JSVM_Value* result)](#oh_jsvm_createfunctionwithscript) | Creates a function with a given script as its body. |
@@ -1487,7 +1487,7 @@ This API returns a JSVM-API value corresponding to a JavaScript ArrayBuffer. Arr
 ### OH_JSVM_AllocateArrayBufferBackingStoreData()
 
 ```c
-JSVM_Status JSVM_CDECL OH_JSVM_AllocateArrayBufferBackingStoreData(size_t byteLength, JSVM_InitializedFlag initialized, void **data)
+JSVM_EXTERN JSVM_Status OH_JSVM_AllocateArrayBufferBackingStoreData(size_t byteLength, JSVM_InitializedFlag initialized, void **data)
 ```
 
 **Description**
@@ -1508,12 +1508,12 @@ This API allocate the memory of array buffer backing store.
 
 | Type | Description |
 | -- | -- |
-| JSVM_Status JSVM_CDECL | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if allocation succeed.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if data is null pointer.<br>         Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if allocation failed. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if allocation succeed.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if data is null pointer.<br>         Returns [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) if allocation failed. |
 
 ### OH_JSVM_FreeArrayBufferBackingStoreData()
 
 ```c
-JSVM_Status JSVM_CDECL OH_JSVM_FreeArrayBufferBackingStoreData(void *data)
+JSVM_EXTERN JSVM_Status OH_JSVM_FreeArrayBufferBackingStoreData(void* data)
 ```
 
 **Description**
@@ -1526,18 +1526,18 @@ This API release the memory of an array buffer backing store.
 
 | Parameter | Description |
 | -- | -- |
-| void *data | pointer to the backing store memory. |
+| void* data | pointer to the backing store memory. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| JSVM_Status JSVM_CDECL | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if run succeed.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if data is null pointer. |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if run succeed.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if data is null pointer. |
 
 ### OH_JSVM_CreateArrayBufferFromBackingStoreData()
 
 ```c
-JSVM_Status JSVM_CDECL OH_JSVM_CreateArrayBufferFromBackingStoreData(JSVM_Env env, void *data, size_t backingStoreSize, size_t offset, size_t arrayBufferSize, JSVM_Value *result)
+JSVM_EXTERN JSVM_Status OH_JSVM_CreateArrayBufferFromBackingStoreData(JSVM_Env env, void* data, size_t backingStoreSize, size_t offset, size_t arrayBufferSize, JSVM_Value* result)
 ```
 
 **Description**
@@ -1551,17 +1551,17 @@ This API create an array buffer using the backing store data.
 | Parameter | Description |
 | -- | -- |
 | [JSVM_Env](capi-jsvm-jsvm-env--8h.md) env | The environment that the API is invoked under. |
-| void *data | pointer to the backing store memory. |
+| void* data | pointer to the backing store memory. |
 | size_t backingStoreSize | size of backing store memory. |
 | size_t offset | start position of the array buffer in the backing store memory. |
 | size_t arrayBufferSize | size of the array buffer. |
-| [JSVM_Value](capi-jsvm-jsvm-propertyhandlerconfigurationstruct.md#jsvm_value) *result | pointer that receive the array buffer. |
+| [JSVM_Value](capi-jsvm-jsvm-propertyhandlerconfigurationstruct.md#jsvm_value)* result | pointer that receive the array buffer. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| JSVM_Status JSVM_CDECL | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if creation succeed.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the following condition reached:<br>         1. offset + arrayBufferSize > backingStoreSize<br>         2. backingStoreSize or arrayBufferSize equals zero<br>         3. data or result is null pointer |
+| JSVM_EXTERN JSVM_Status | Returns JSVM funtions result code.<br>         Returns [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) if creation succeed.<br>         Returns [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) if any of the following condition reached:<br>         1. offset + arrayBufferSize > backingStoreSize<br>         2. backingStoreSize or arrayBufferSize equals zero<br>         3. data or result is null pointer |
 
 ### OH_JSVM_CreateDate()
 
@@ -4798,7 +4798,7 @@ This API checks if the value passed in is a bigInt.This equals to `typeof value 
 ### OH_JSVM_CreateMap()
 
 ```c
-JSVM_Status JSVM_CDECL OH_JSVM_CreateMap(JSVM_Env env, JSVM_Value* result)
+JSVM_EXTERN JSVM_Status OH_JSVM_CreateMap(JSVM_Env env, JSVM_Value* result)
 ```
 
 **Description**
@@ -4818,12 +4818,12 @@ This API returns a JSVM-API value corresponding to a JavaScript Map type.
 
 | Type | Description |
 | -- | -- |
-| JSVM_Status JSVM_CDECL | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
 
 ### OH_JSVM_IsMap()
 
 ```c
-JSVM_Status JSVM_CDECL OH_JSVM_IsMap(JSVM_Env env, JSVM_Value value, bool* isMap)
+JSVM_EXTERN JSVM_Status OH_JSVM_IsMap(JSVM_Env env, JSVM_Value value, bool* isMap)
 ```
 
 **Description**
@@ -4844,7 +4844,7 @@ This API checks if the value passed in is a Map.
 
 | Type | Description |
 | -- | -- |
-| JSVM_Status JSVM_CDECL | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
 
 ### OH_JSVM_CreateSet()
 
@@ -4980,7 +4980,7 @@ This API checks if the value passed in is a regExp.This equals to `value instanc
 ### OH_JSVM_IsConstructor()
 
 ```c
-JSVM_Status JSVM_CDECL OH_JSVM_IsConstructor(JSVM_Env env, JSVM_Value value, bool* isConstructor)
+JSVM_EXTERN JSVM_Status OH_JSVM_IsConstructor(JSVM_Env env, JSVM_Value value, bool* isConstructor)
 ```
 
 **Description**
@@ -5001,12 +5001,12 @@ This API checks if the value passed in is a constructor.
 
 | Type | Description |
 | -- | -- |
-| JSVM_Status JSVM_CDECL | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid. |
 
 ### OH_JSVM_CreateRegExp()
 
 ```c
-JSVM_Status JSVM_CDECL OH_JSVM_CreateRegExp(JSVM_Env env, JSVM_Value value, JSVM_RegExpFlags flags, JSVM_Value* result)
+JSVM_EXTERN JSVM_Status OH_JSVM_CreateRegExp(JSVM_Env env, JSVM_Value value, JSVM_RegExpFlags flags, JSVM_Value* result)
 ```
 
 **Description**
@@ -5028,7 +5028,7 @@ This API returns the JavaScript value of the regular expressioncorresponding to 
 
 | Type | Description |
 | -- | -- |
-| JSVM_Status JSVM_CDECL | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.<br>         [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If the value of 'value' is not a string.<br>         [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If create RegExp failed.<br>         [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) If the API throws an exception during runtime. |
+| JSVM_EXTERN JSVM_Status | Only returns JSVM function's result code.<br>         [JSVM_OK](capi-jsvm-types-h.md#jsvm_status) If the API succeeded.<br>         [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) If the input parameter is invalid.<br>         [JSVM_STRING_EXPECTED](capi-jsvm-types-h.md#jsvm_status) If the value of 'value' is not a string.<br>         [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) If create RegExp failed.<br>         [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) If the API throws an exception during runtime. |
 
 ### OH_JSVM_ObjectGetPrototypeOf()
 

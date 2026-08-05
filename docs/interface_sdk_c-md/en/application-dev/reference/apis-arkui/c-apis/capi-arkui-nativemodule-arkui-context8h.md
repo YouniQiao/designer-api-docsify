@@ -6,11 +6,11 @@ typedef struct ArkUI_Context* ArkUI_ContextHandle
 
 ## Overview
 
-Defines the pointer to the ArkUI native UI context.
+Defines the pointer to the context instance object of ArkUI on the native side.
 
 **Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**Header file**: [drag_and_drop.h](capi-drag-and-drop-h.md)
+**Header file**: [common_type.h](capi-common-type-h.md)
 

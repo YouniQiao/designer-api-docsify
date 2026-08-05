@@ -1,0 +1,56 @@
+# GrantStatus
+
+> **NOTE** > > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.PermissionGrantState]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ > instead. Enumerates the permission grant states.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.bundle.bundleManager:bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md)
+
+<!--Device-bundle-export enum GrantStatus--><!--Device-bundle-export enum GrantStatus-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+## PERMISSION_DENIED
+
+```TypeScript
+PERMISSION_DENIED = -1
+```
+
+Permission denied.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bundle.bundleManager/bundleManager.PermissionGrantState#PERMISSION_DENIED
+
+<!--Device-GrantStatus-PERMISSION_DENIED = -1--><!--Device-GrantStatus-PERMISSION_DENIED = -1-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+## PERMISSION_GRANTED
+
+```TypeScript
+PERMISSION_GRANTED = 0
+```
+
+Permission granted.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bundle.bundleManager/bundleManager.PermissionGrantState#PERMISSION_GRANTED
+
+<!--Device-GrantStatus-PERMISSION_GRANTED = 0--><!--Device-GrantStatus-PERMISSION_GRANTED = 0-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+

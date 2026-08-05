@@ -1,0 +1,107 @@
+# createFormBindingData
+
+## createFormBindingData
+
+```TypeScript
+function createFormBindingData(obj?: Object | string): FormBindingData
+```
+
+Creates a **FormBindingData** object.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData--><!--Device-formBindingData-function createFormBindingData(obj?: Object | string): FormBindingData-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | Object \| string | No | Data to be displayed on the widget. The value can be an object containing multiple key-value pairs or a JSON string. The image data is identified by **'formImages'**, and the content is multiple key-value pairs, each of which consists of an image identifier and image file descriptor. The final format is {'formImages': {'key1': fd1, 'key2': fd2}}.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_**NOTE**\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_During \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, when the widget UI receives widget data through @LocalStorageProp, the **FormBindingData** object is serialized, that is, the widget data is converted into the string type. Since API version 20, if the widget data is updated using shared memory, the total size of the updated data cannot exceed 10 MB, and the number of updated images cannot exceed 20. In API version 19 and earlier versions, the maximum number of image files is 5, and the maximum memory size of each image is 2 MB. Exceeding this2 MB limit for any image will result in abnormal display. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | **FormBindingData** object created based on the passed data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**Example**
+
+```TypeScript
+import { formBindingData } from '@kit.FormKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  content = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  pathDir: string = this.content.filesDir;
+
+  createFormBindingData() {
+    try {
+      let filePath = this.pathDir + "/form.png";
+      let file = fileIo.openSync(filePath);
+      let formImagesParam: Record<string, number> = {
+        'image': file.fd
+      };
+      let createFormBindingDataParam: Record<string, string | Record<string, number>> = {
+        'name': '21°',
+        'imgSrc': 'image',
+        'formImages': formImagesParam
+      };
+      formBindingData.createFormBindingData(createFormBindingDataParam);
+    } catch (error) {
+      console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
+    }
+  }
+
+  build() {
+    Button('createFormBindingData')
+      .onClick((event: ClickEvent) => {
+        this.createFormBindingData();
+      })
+  }
+}
+```
+
+
+## createFormBindingData
+
+```TypeScript
+function createFormBindingData(obj?: RecordData): FormBindingData
+```
+
+Create an FormBindingData instance.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-formBindingData-function createFormBindingData(obj?: RecordData): FormBindingData--><!--Device-formBindingData-function createFormBindingData(obj?: RecordData): FormBindingData-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| obj | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Indicates the FormBindingData instance data. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Returns the FormBindingData. |
+

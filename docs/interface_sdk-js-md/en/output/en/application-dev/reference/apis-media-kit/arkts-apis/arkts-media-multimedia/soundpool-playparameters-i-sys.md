@@ -1,0 +1,32 @@
+# PlayParameters
+
+Describes the playback parameters of the sound pool. These parameters are used to control the playback volume, number of loops, and priority.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export interface PlayParameters--><!--Device-unnamed-export interface PlayParameters-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+## parallelPlayFlag
+
+```TypeScript
+parallelPlayFlag?: boolean
+```
+
+Whether the sound can be played in parallel with other active audio streams, without preempting the audio focus. **true** if yes, **false** otherwise. The default value is **false**. This is a system API.
+
+**Type:** boolean
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-PlayParameters-parallelPlayFlag?: boolean--><!--Device-PlayParameters-parallelPlayFlag?: boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**System API:** This is a system API.
+

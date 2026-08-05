@@ -1,0 +1,152 @@
+# DialogInfo
+
+The definition of dialog information.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-avMusicTemplate-interface DialogInfo--><!--Device-avMusicTemplate-interface DialogInfo-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## buttons
+
+```TypeScript
+buttons?: DialogButtonInfo[]
+```
+
+Buttons of the dialog.
+
+**Type:** DialogButtonInfo[]
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogInfo-buttons?: DialogButtonInfo[]--><!--Device-DialogInfo-buttons?: DialogButtonInfo[]-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## description
+
+```TypeScript
+description?: string
+```
+
+Other message of the dialog.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogInfo-description?: string--><!--Device-DialogInfo-description?: string-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## dialogId
+
+```TypeScript
+dialogId: string
+```
+
+Unique id of the dialog.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogInfo-dialogId: string--><!--Device-DialogInfo-dialogId: string-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## dialogType
+
+```TypeScript
+dialogType: DialogType
+```
+
+Type of the dialog.
+
+**Type:** DialogType
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogInfo-dialogType: DialogType--><!--Device-DialogInfo-dialogType: DialogType-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## qrCodes
+
+```TypeScript
+qrCodes?: QrCodeInfo[]
+```
+
+QR code of the dialog. Once the QR code information is set, this pop-up will be recognized as a QR code pop-up and will display the QR code information with priority. A maximum of two can be set.
+
+**Type:** QrCodeInfo[]
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogInfo-qrCodes?: QrCodeInfo[]--><!--Device-DialogInfo-qrCodes?: QrCodeInfo[]-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## text
+
+```TypeScript
+text?: string
+```
+
+Text content of the dialog.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogInfo-text?: string--><!--Device-DialogInfo-text?: string-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## title
+
+```TypeScript
+title?: string
+```
+
+Title of the dialog.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogInfo-title?: string--><!--Device-DialogInfo-title?: string-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+

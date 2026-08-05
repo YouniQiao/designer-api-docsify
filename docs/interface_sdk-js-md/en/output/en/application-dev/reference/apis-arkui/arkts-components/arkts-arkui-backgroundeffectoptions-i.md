@@ -1,0 +1,203 @@
+# BackgroundEffectOptions
+
+Defines the options of BackgroundEffect
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+<!--Device-unnamed-declare interface BackgroundEffectOptions--><!--Device-unnamed-declare interface BackgroundEffectOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## adaptiveColor
+
+```TypeScript
+adaptiveColor?: AdaptiveColor
+```
+
+Adaptive color mode used for the background blur effect. Default value: **DEFAULT** . When set to **AVERAGE**, the adaptive color mode takes effect only when the color has transparency.
+
+**Type:** AdaptiveColor
+
+**Default:** AdaptiveColor.DEFAULT
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BackgroundEffectOptions-adaptiveColor?: AdaptiveColor--><!--Device-BackgroundEffectOptions-adaptiveColor?: AdaptiveColor-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## blurOptions
+
+```TypeScript
+blurOptions?: BlurOptions
+```
+
+Grayscale blur.
+
+**Type:** BlurOptions
+
+**Default:** { grayScale: [0,1] } [since 11 - 11]
+@default { grayScale: [0,0] } [since 12]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BackgroundEffectOptions-blurOptions?: BlurOptions--><!--Device-BackgroundEffectOptions-blurOptions?: BlurOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## brightness
+
+```TypeScript
+brightness?: number
+```
+
+Brightness. \_\_\_HTML\_TAG\_DESC\_USD\_0\_\_\_Value range: [0, +∞). \_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Default value: **1** Recommended value range: [0, 2].
+
+**Type:** number
+
+**Default:** 1
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BackgroundEffectOptions-brightness?: number--><!--Device-BackgroundEffectOptions-brightness?: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## color
+
+```TypeScript
+color?: ResourceColor
+```
+
+Color.
+
+**Type:** ResourceColor
+
+**Default:** Color.Transparent
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BackgroundEffectOptions-color?: ResourceColor--><!--Device-BackgroundEffectOptions-color?: ResourceColor-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## inactiveColor
+
+```TypeScript
+inactiveColor?: ResourceColor
+```
+
+Background color when the blur effect does not take effect. This parameter must be used together with the **policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
+
+**Type:** ResourceColor
+
+**Default:** Color.Transparent
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-BackgroundEffectOptions-inactiveColor?: ResourceColor--><!--Device-BackgroundEffectOptions-inactiveColor?: ResourceColor-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## policy
+
+```TypeScript
+policy?: BlurStyleActivePolicy
+```
+
+Blur activation policy.
+
+**Type:** BlurStyleActivePolicy
+
+**Default:** BlurStyleActivePolicy.ALWAYS_ACTIVE
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-BackgroundEffectOptions-policy?: BlurStyleActivePolicy--><!--Device-BackgroundEffectOptions-policy?: BlurStyleActivePolicy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## radius
+
+```TypeScript
+radius: number
+```
+
+Blur radius. Value range: [0, +∞). Default value: **0**.
+
+**Type:** number
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BackgroundEffectOptions-radius: number--><!--Device-BackgroundEffectOptions-radius: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## saturation
+
+```TypeScript
+saturation?: number
+```
+
+Saturation. Value range: [0, +∞). Recommended value range: [0, 50].
+
+**Type:** number
+
+**Default:** 1
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BackgroundEffectOptions-saturation?: number--><!--Device-BackgroundEffectOptions-saturation?: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

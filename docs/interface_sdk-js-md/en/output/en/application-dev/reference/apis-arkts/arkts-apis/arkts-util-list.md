@@ -1,0 +1,18 @@
+# @ohos.util.List
+
+## Summary
+
+### Classes
+
+| Name | Description |
+| --- | --- |
+| [List](arkts-arkts-util-list-list-c.md) | List is implemented based on the singly linked list. Each node has a reference pointing to the next element. When querying an element, the system traverses the list from the beginning. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md) | This type specifies the comparator of sort in comparation. |
+| [ListForEachCb](arkts-arkts-listforeachcb-t.md) | The type of List callback function. |
+| [ListReplaceCb](arkts-arkts-listreplacecb-t.md) | The type of List callback function. |
+

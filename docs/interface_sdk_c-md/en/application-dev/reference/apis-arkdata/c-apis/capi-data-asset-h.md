@@ -544,7 +544,7 @@ Destroy the [Data_Asset](capi-rdb-data-asset.md) object and reclaim the memory o
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,<br> while failure returns a specific error code.<br>     {@link RDB_OK} - success.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,<br>     <br>while failure returns a specific error code.<br>     <br>{@link RDB_OK} - success.<br>     <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 
@@ -603,7 +603,7 @@ Destroy the [Data_Asset](capi-rdb-data-asset.md) objects and reclaim the memory 
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. Successful execution returns RDB_OK,<br> while failure returns a specific error code.<br>     {@link RDB_OK} - success.<br> Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
+| int | Returns the status code of the execution. Successful execution returns RDB_OK,<br>     <br>while failure returns a specific error code.<br>     <br>{@link RDB_OK} - success.<br>     <br>Specific error codes can be referenced {@link OH_Rdb_ErrCode}. |
 
 **Reference**:
 

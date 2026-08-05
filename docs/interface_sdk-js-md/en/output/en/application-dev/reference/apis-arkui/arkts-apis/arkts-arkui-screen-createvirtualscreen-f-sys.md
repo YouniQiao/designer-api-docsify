@@ -1,0 +1,146 @@
+# createVirtualScreen (System API)
+
+## createVirtualScreen
+
+```TypeScript
+function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallback<Screen>): void
+```
+
+Creates a virtual screen. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.CAPTURE_SCREEN
+
+<!--Device-screen-function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallback<Screen>): void--><!--Device-screen-function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallback<Screen>): void-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Virtual screen parameters. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Screen&gt; | Yes | Callback used to return the created virtual screen. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let screenClass: screen.Screen | null = null;
+class VirtualScreenOption {
+  name : string = '';
+  width : number =  0;
+  height : number = 0;
+  density : number = 0;
+  surfaceId : string = '';
+  supportsFocus ?: boolean = true;
+}
+
+let option : VirtualScreenOption = { 
+  name: 'screen01',
+  width: 1080,
+  height: 2340,
+  density: 2,
+  surfaceId: '',
+  supportsFocus: false
+};
+screen.createVirtualScreen(option, (err: BusinessError, data: screen.Screen) => {
+  const errCode: number = err.code;
+  if (errCode) {
+    console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
+    return;
+  }
+  screenClass = data;
+  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
+});
+```
+
+
+## createVirtualScreen
+
+```TypeScript
+function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>
+```
+
+Creates a virtual screen. This API uses a promise to return the result.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.CAPTURE_SCREEN
+
+<!--Device-screen-function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>--><!--Device-screen-function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Virtual screen parameters. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;Screen&gt; | Promise used to return the created virtual screen. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let screenClass: screen.Screen | null = null;
+class VirtualScreenOption {
+  name : string = '';
+  width : number =  0;
+  height : number = 0;
+  density : number = 0;
+  surfaceId : string = '';
+  supportsFocus ?: boolean = true;
+}
+
+let option : VirtualScreenOption = { 
+  name: 'screen01',
+  width: 1080,
+  height: 2340,
+  density: 2,
+  surfaceId: '',
+  supportsFocus: false
+};
+
+screen.createVirtualScreen(option).then((data: screen.Screen) => {
+  screenClass = data;
+  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create the virtual screen. Code:${err.code}, message is ${err.message}`);
+});
+```
+

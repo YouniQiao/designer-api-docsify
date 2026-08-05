@@ -1,0 +1,34 @@
+# UpgradeOptions (System API)
+
+Defines the upgrade options, which are used to specify the upgrade operation type.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-update-export interface UpgradeOptions--><!--Device-update-export interface UpgradeOptions-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+
+## order
+
+```TypeScript
+order: Order
+```
+
+Upgrade command, which specifies the execution mode of the upgrade operation. The options are as follows: **DOWNLOAD**: download the upgrade package, which needs to be manually installed later; **INSTALL**: install the upgrade package that has been downloaded; **DOWNLOAD\_AND\_INSTALL**: download and install the upgrade package, which is the complete upgrade process; **APPLY**: apply the upgrade package that has been installed by restarting device; **INSTALL\_AND\_APPLY**: install the upgrade package and apply it immediately by restarting the device. Select a proper value based on the current upgrade status and service requirements.
+
+**Type:** Order
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-UpgradeOptions-order: Order--><!--Device-UpgradeOptions-order: Order-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+

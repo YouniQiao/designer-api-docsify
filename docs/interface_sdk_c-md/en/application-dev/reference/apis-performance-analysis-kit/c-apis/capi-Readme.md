@@ -9,7 +9,7 @@
     - [hiappevent_event.h](capi-hiappevent-event-h.md)
     - [hiappevent_param.h](capi-hiappevent-param-h.md)
 - Module
-    - [Hitrace](capi-hitrace.md)
+    - [HiTrace](capi-hitrace.md)
     - [HiCollie](capi-hicollie.md)
     - [HiLog](capi-hilog.md)
     - [HiDebug](capi-hidebug.md)

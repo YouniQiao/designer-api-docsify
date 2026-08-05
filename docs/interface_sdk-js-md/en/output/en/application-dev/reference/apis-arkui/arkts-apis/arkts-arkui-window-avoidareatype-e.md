@@ -1,0 +1,122 @@
+# AvoidAreaType
+
+Enumerates the types of areas to avoid for window content. When adapting window content for an \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_, you should adjust the content based on the corresponding [AvoidArea]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ specified by **AvoidAreaType**.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+<!--Device-window-enum AvoidAreaType--><!--Device-window-enum AvoidAreaType-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## TYPE_SYSTEM
+
+```TypeScript
+TYPE_SYSTEM = 0
+```
+
+Default area of the system. \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_It contains the status bar and three-button navigation bar.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AvoidAreaType-TYPE_SYSTEM = 0--><!--Device-AvoidAreaType-TYPE_SYSTEM = 0-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## TYPE_CUTOUT
+
+```TypeScript
+TYPE_CUTOUT = 1
+```
+
+Cutout area.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AvoidAreaType-TYPE_CUTOUT = 1--><!--Device-AvoidAreaType-TYPE_CUTOUT = 1-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## TYPE_SYSTEM_GESTURE
+
+```TypeScript
+TYPE_SYSTEM_GESTURE = 2
+```
+
+Side return gesture area. Currently, no devices support this type of avoid area.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2--><!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## TYPE_KEYBOARD
+
+```TypeScript
+TYPE_KEYBOARD = 3
+```
+
+Fixed soft keyboard area.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AvoidAreaType-TYPE_KEYBOARD = 3--><!--Device-AvoidAreaType-TYPE_KEYBOARD = 3-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## TYPE_NAVIGATION_INDICATOR
+
+```TypeScript
+TYPE_NAVIGATION_INDICATOR = 4
+```
+
+Bottom navigation bar. \_\_\_MD\_COMMENT\_DESC\_USD\_0\_\_\_OpenHarmony devices do not support this capability.\_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-AvoidAreaType-TYPE_NAVIGATION_INDICATOR = 4--><!--Device-AvoidAreaType-TYPE_NAVIGATION_INDICATOR = 4-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## TYPE_FLOAT_NAVIGATION
+
+```TypeScript
+TYPE_FLOAT_NAVIGATION = 5
+```
+
+Area for float navigation
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5--><!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+

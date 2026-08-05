@@ -1,0 +1,1919 @@
+# DownloadTask
+
+Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or from a callback through [request.downloadFile]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ .
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+
+<!--Device-request-interface DownloadTask--><!--Device-request-interface DownloadTask-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+## delete
+
+```TypeScript
+delete(callback: AsyncCallback<boolean>): void
+```
+
+Deletes the download task. This API uses an asynchronous callback to return the result. > **NOTE** > > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-delete(callback: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.delete((err: BusinessError, result: boolean) => {
+      if (err) {
+        console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in removing the download task.');
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## delete
+
+```TypeScript
+delete(): Promise<boolean>
+```
+
+Deletes the download task. This API uses a promise to return the result. > **NOTE** > > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-delete(): Promise<boolean>--><!--Device-DownloadTask-delete(): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    data.delete().then((result: boolean) => {
+      console.info('Succeeded in removing the download task.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## getTaskInfo
+
+```TypeScript
+getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
+```
+
+Obtains the information about this download task. This API uses an asynchronous callback to return the result. > **NOTE** > > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void--><!--Device-DownloadTask-getTaskInfo(callback: AsyncCallback<DownloadInfo>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.getTaskInfo((err: BusinessError, downloadInfo: request.DownloadInfo) => {
+      if (err) {
+        console.error(`Failed to query the download mimeType. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('Succeeded in querying the download mimeType');
+      }
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## getTaskInfo
+
+```TypeScript
+getTaskInfo(): Promise<DownloadInfo>
+```
+
+Obtains the information about this download task. This API uses a promise to return the result. > **NOTE** > > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>--><!--Device-DownloadTask-getTaskInfo(): Promise<DownloadInfo>-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;DownloadInfo&gt; | Promise used to return a **DownloadInfo** object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.getTaskInfo().then((downloadInfo: request.DownloadInfo) => {
+      console.info('Succeeded in querying the download task')
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## getTaskMimeType
+
+```TypeScript
+getTaskMimeType(callback: AsyncCallback<string>): void
+```
+
+Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an asynchronous callback to return the result. > **NOTE** > > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void--><!--Device-DownloadTask-getTaskMimeType(callback: AsyncCallback<string>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.getTaskMimeType((err: BusinessError, data: string) => {
+      if (err) {
+        console.error(`Failed to query the download mimeType. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('Succeeded in querying the download mimeType');
+      }
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## getTaskMimeType
+
+```TypeScript
+getTaskMimeType(): Promise<string>
+```
+
+Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to return the result. > **NOTE** > > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-getTaskMimeType(): Promise<string>--><!--Device-DownloadTask-getTaskMimeType(): Promise<string>-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | Promise used to return the MIME type of a download task. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.getTaskMimeType().then((data: string) => {
+      console.info('Succeeded in querying the download MimeType');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## off('progress')
+
+```TypeScript
+off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void
+```
+
+Unsubscribes from download progress events.
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+<!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'progress' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'progress'**: download progress. |
+| callback | (receivedSize: long, totalSize: long) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let progressCallback1 = (receivedSize: number, totalSize: number) => {
+      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
+    };
+    let progressCallback2 = (receivedSize: number, totalSize: number) => {
+      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
+    };
+    downloadTask.on('progress', progressCallback1);
+    downloadTask.on('progress', progressCallback2);
+    // Unsubscribe from progressCallback1.
+    downloadTask.off('progress', progressCallback1);
+    // Unsubscribe from all callbacks of download progress events.
+    downloadTask.off('progress');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## off('complete' | 'pause' | 'remove')
+
+```TypeScript
+off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
+```
+
+Unsubscribes from download events.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'complete'**: download task completion.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-**'pause'**: download task pause.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'remove'**: download task removal. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
+    };
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.on('complete', completeCallback1);
+    downloadTask.on('complete', completeCallback2);
+    // Unsubscribe from completeCallback1.
+    downloadTask.off('complete', completeCallback1);
+    // Unsubscribe from all callbacks of the download completion events.
+    downloadTask.off('complete');
+
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
+    };
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.on('pause', pauseCallback1);
+    downloadTask.on('pause', pauseCallback2);
+    // Unsubscribe from pauseCallback1.
+    downloadTask.off('pause', pauseCallback1);
+    // Unsubscribe from all callbacks of the download pause events.
+    downloadTask.off('pause');
+
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
+    };
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.on('remove', removeCallback1);
+    downloadTask.on('remove', removeCallback2);
+    // Unsubscribe from removeCallback1.
+    downloadTask.off('remove', removeCallback1);
+    // Unsubscribe from all callbacks of the download removal events.
+    downloadTask.off('remove');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## off('complete' | 'pause' | 'remove')
+
+```TypeScript
+off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
+```
+
+Unsubscribes from download events.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'complete'**: download task completion.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-**'pause'**: download task pause.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'remove'**: download task removal. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
+    };
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.on('complete', completeCallback1);
+    downloadTask.on('complete', completeCallback2);
+    // Unsubscribe from completeCallback1.
+    downloadTask.off('complete', completeCallback1);
+    // Unsubscribe from all callbacks of the download completion events.
+    downloadTask.off('complete');
+
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
+    };
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.on('pause', pauseCallback1);
+    downloadTask.on('pause', pauseCallback2);
+    // Unsubscribe from pauseCallback1.
+    downloadTask.off('pause', pauseCallback1);
+    // Unsubscribe from all callbacks of the download pause events.
+    downloadTask.off('pause');
+
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
+    };
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.on('remove', removeCallback1);
+    downloadTask.on('remove', removeCallback2);
+    // Unsubscribe from removeCallback1.
+    downloadTask.off('remove', removeCallback1);
+    // Unsubscribe from all callbacks of the download removal events.
+    downloadTask.off('remove');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## off('complete' | 'pause' | 'remove')
+
+```TypeScript
+off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
+```
+
+Unsubscribes from download events.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'complete'**: download task completion.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-**'pause'**: download task pause.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'remove'**: download task removal. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
+    };
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.on('complete', completeCallback1);
+    downloadTask.on('complete', completeCallback2);
+    // Unsubscribe from completeCallback1.
+    downloadTask.off('complete', completeCallback1);
+    // Unsubscribe from all callbacks of the download completion events.
+    downloadTask.off('complete');
+
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
+    };
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.on('pause', pauseCallback1);
+    downloadTask.on('pause', pauseCallback2);
+    // Unsubscribe from pauseCallback1.
+    downloadTask.off('pause', pauseCallback1);
+    // Unsubscribe from all callbacks of the download pause events.
+    downloadTask.off('pause');
+
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
+    };
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.on('remove', removeCallback1);
+    downloadTask.on('remove', removeCallback2);
+    // Unsubscribe from removeCallback1.
+    downloadTask.off('remove', removeCallback1);
+    // Unsubscribe from all callbacks of the download removal events.
+    downloadTask.off('remove');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## off('fail')
+
+```TypeScript
+off(type: 'fail', callback?: (err: int) => void): void
+```
+
+Unsubscribes from download failure events.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void--><!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'fail' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'fail'**: download task failure. |
+| callback | (err: int) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let failCallback1 = (err: number) => {
+      console.error(`Failed to download the task. Code: ${err}`);
+    };
+    let failCallback2 = (err: number) => {
+      console.error(`Failed to download the task. Code: ${err}`);
+    };
+    downloadTask.on('fail', failCallback1);
+    downloadTask.on('fail', failCallback2);
+    // Unsubscribe from failCallback1.
+    downloadTask.off('fail', failCallback1);
+    // Unsubscribe from all callbacks of the download failure events.
+    downloadTask.off('fail');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## offComplete
+
+```TypeScript
+offComplete(callback?: DownloadCompleteCallback): void
+```
+
+Called when the current download session complete.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void--><!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback function for the download complete event. |
+
+## offFail
+
+```TypeScript
+offFail(callback?: DownloadFailCallback): void
+```
+
+Called when the current download session fails.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void--><!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback function for the download fail event. |
+
+## offPause
+
+```TypeScript
+offPause(callback?: DownloadPauseCallback): void
+```
+
+Called when the current download session pause.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void--><!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback function for the download pause event. |
+
+## offProgress
+
+```TypeScript
+offProgress(callback?: DownloadProgressCallback): void
+```
+
+Called when the current download session is in process.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void--><!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback function for the download progress event. |
+
+## offRemove
+
+```TypeScript
+offRemove(callback?: DownloadRemoveCallback): void
+```
+
+Called when the current download session remove.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void--><!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | The callback function for the download remove event. |
+
+## on('progress')
+
+```TypeScript
+on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void
+```
+
+Subscribes to download progress events. This API uses an asynchronous callback to return the result. > **NOTE** > > To maintain a balance between power consumption and performance, this API cannot be called when the application > is running in the background.
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+<!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'progress' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'progress'**: download progress. |
+| callback | (receivedSize: long, totalSize: long) =&gt; void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **totalSize** is treated as **-1**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let progressCallback = (receivedSize: number, totalSize: number) => {
+      console.info("download receivedSize:" + receivedSize + " totalSize:" + totalSize);
+    };
+    downloadTask.on('progress', progressCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## on('complete' | 'pause' | 'remove')
+
+```TypeScript
+on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
+```
+
+Subscribes to download events. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'complete'**: download task completion.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-**'pause'**: download task pause.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'remove'**: download task removal. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.on('complete', completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.on('pause', pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.on('remove', removeCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## on('complete' | 'pause' | 'remove')
+
+```TypeScript
+on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
+```
+
+Subscribes to download events. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'complete'**: download task completion.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-**'pause'**: download task pause.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'remove'**: download task removal. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.on('complete', completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.on('pause', pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.on('remove', removeCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## on('complete' | 'pause' | 'remove')
+
+```TypeScript
+on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
+```
+
+Subscribes to download events. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'complete'**: download task completion.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_-**'pause'**: download task pause.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'remove'**: download task removal. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.on('complete', completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.on('pause', pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.on('remove', removeCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## on('fail')
+
+```TypeScript
+on(type: 'fail', callback: (err: int) => void): void
+```
+
+Subscribes to download failure events. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+<!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void--><!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'fail' | Yes | Event type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_- **'fail'**: download task failure. |
+| callback | (err: int) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes,see \_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_MD\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Missing mandatory parameters.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameter type.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let failCallback = (err: number) => {
+      console.error(`Failed to download the task. Code: ${err}`);
+    };
+    downloadTask.on('fail', failCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## onComplete
+
+```TypeScript
+onComplete(callback: DownloadCompleteCallback): void
+```
+
+Called when the current download session complete.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void--><!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback function for the download complete event. |
+
+## onFail
+
+```TypeScript
+onFail(callback: DownloadFailCallback): void
+```
+
+Called when the current download session fails.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void--><!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback function for the download fail event. |
+
+## onPause
+
+```TypeScript
+onPause(callback: DownloadPauseCallback): void
+```
+
+Called when the current download session pause.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void--><!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback function for the download pause event. |
+
+## onProgress
+
+```TypeScript
+onProgress(callback: DownloadProgressCallback): void
+```
+
+Called when the current download session is in process.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void--><!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback function for the download progress event. |
+
+## onRemove
+
+```TypeScript
+onRemove(callback: DownloadRemoveCallback): void
+```
+
+Called when the current download session remove.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void--><!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | The callback function for the download remove event. |
+
+## pause
+
+```TypeScript
+pause(callback: AsyncCallback<void>): void
+```
+
+Pauses this download task. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [request.DownloadTask.suspend](arkts-basicservices-request-downloadtask-i.md#suspend)(callback:
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-pause(callback: AsyncCallback<void>): void--><!--Device-DownloadTask-pause(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+downloadTask.pause((err: BusinessError) => {
+  if(err) {
+    console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in pausing the download task.');
+});
+```
+
+## pause
+
+```TypeScript
+pause(): Promise<void>
+```
+
+Pauses this download task. This API uses a promise to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [request.DownloadTask.suspend](arkts-basicservices-request-downloadtask-i.md#suspend)()
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-pause(): Promise<void>--><!--Device-DownloadTask-pause(): Promise<void>-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+downloadTask.pause().then(() => {    
+  console.info('Succeeded in pausing the download task.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## query
+
+```TypeScript
+query(callback: AsyncCallback<DownloadInfo>): void
+```
+
+Queries this download task. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [request.DownloadTask.getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)(callback:
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-query(callback: AsyncCallback<DownloadInfo>): void--><!--Device-DownloadTask-query(callback: AsyncCallback<DownloadInfo>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
+  if(err) {
+    console.error(`Failed to query the download mimeType. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in querying the download task.');
+  }
+});
+```
+
+## query
+
+```TypeScript
+query(): Promise<DownloadInfo>
+```
+
+Queries this download task. This API uses a promise to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [request.DownloadTask.getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)()
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-query(): Promise<DownloadInfo>--><!--Device-DownloadTask-query(): Promise<DownloadInfo>-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;DownloadInfo&gt; | Promise used to return the **DownloadInfo** object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+downloadTask.query().then((downloadInfo) => {    
+  console.info('Succeeded in querying the download task.')
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query the download task. Code: ${err.code}, message: ${err.message}`)
+});
+```
+
+## queryMimeType
+
+```TypeScript
+queryMimeType(callback: AsyncCallback<string>): void
+```
+
+Queries the MIME type of this download task. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [request.DownloadTask.getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)(callback:
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-queryMimeType(callback: AsyncCallback<string>): void--><!--Device-DownloadTask-queryMimeType(callback: AsyncCallback<string>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+downloadTask.queryMimeType((err: BusinessError, data: string)=>{
+  if(err) {
+    console.error(`Failed to query the download mimeType. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in querying the download mimeType.');
+  }
+});
+```
+
+## queryMimeType
+
+```TypeScript
+queryMimeType(): Promise<string>
+```
+
+Queries the MIME type of this download task. This API uses a promise to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [request.DownloadTask.getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)()
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-queryMimeType(): Promise<string>--><!--Device-DownloadTask-queryMimeType(): Promise<string>-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | Promise used to return the MIME type of a download task. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+downloadTask.queryMimeType().then((data: string) => {    
+  console.info('Succeeded in querying the download MimeType.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query the download MimeType. Code: ${err.code}, message: ${err.message}`)
+});
+```
+
+## remove
+
+```TypeScript
+remove(callback: AsyncCallback<boolean>): void
+```
+
+Deletes the download task. This API uses an asynchronous callback to return the result.
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** 9
+
+**Substitutes:** [request.UploadTask.delete](arkts-basicservices-request-uploadtask-i.md#delete)(callback:
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-remove(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-remove(callback: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+downloadTask.remove((err, result)=>{
+  if(err) {
+    console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in removing the download task.');
+});
+```
+
+## remove
+
+```TypeScript
+remove(): Promise<boolean>
+```
+
+Deletes the download task. This API uses a promise to return the result.
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** 9
+
+**Substitutes:** [request.UploadTask.delete](arkts-basicservices-request-uploadtask-i.md#delete)()
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-remove(): Promise<boolean>--><!--Device-DownloadTask-remove(): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+downloadTask.remove().then((result) => {
+  console.info('Succeeded in removing the download task.');
+}).catch ((err: BusinessError) => {
+  console.error(`Failed to remove the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## restore
+
+```TypeScript
+restore(callback: AsyncCallback<boolean>): void
+```
+
+Restores the download task. This API uses an asynchronous callback to return the result. > **NOTE** > > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-restore(callback: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.restore((err: BusinessError, result: boolean) => {
+      if (err) {
+        console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in resuming the download task.');
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## restore
+
+```TypeScript
+restore(): Promise<boolean>
+```
+
+Restores the download task. This API uses a promise to return the result. > **NOTE** > > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-restore(): Promise<boolean>--><!--Device-DownloadTask-restore(): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.restore().then((result: boolean) => {
+      console.info('Succeeded in resuming the download task.')
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## resume
+
+```TypeScript
+resume(callback: AsyncCallback<void>): void
+```
+
+Restores the download task. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [request.DownloadTask.restore](arkts-basicservices-request-downloadtask-i.md#restore)(callback:
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-resume(callback: AsyncCallback<void>): void--><!--Device-DownloadTask-resume(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful,**err** is **undefined**. Otherwise, **err** is an error object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+downloadTask.resume((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in resuming the download task.');
+});
+```
+
+## resume
+
+```TypeScript
+resume(): Promise<void>
+```
+
+Restores the download task. This API uses a promise to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [request.DownloadTask.restore](arkts-basicservices-request-downloadtask-i.md#restore)()
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-resume(): Promise<void>--><!--Device-DownloadTask-resume(): Promise<void>-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+downloadTask.resume().then(() => {
+  console.info('Succeeded in resuming the download task.')
+}).catch((err: BusinessError) => {
+  console.error(`Failed to resume the download task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## suspend
+
+```TypeScript
+suspend(callback: AsyncCallback<boolean>): void
+```
+
+Suspends this download task. You can use [restore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to restore the download. This API uses an asynchronous callback to return the result. > **NOTE** > > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void--><!--Device-DownloadTask-suspend(callback: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.suspend((err: BusinessError, result: boolean) => {
+      if (err) {
+        console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info('Succeeded in pausing the download task.');
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## suspend
+
+```TypeScript
+suspend(): Promise<boolean>
+```
+
+Suspends this download task. You can use [restore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to restore the download. This API uses a promise to return the result. > **NOTE** > > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.INTERNET
+
+<!--Device-DownloadTask-suspend(): Promise<boolean>--><!--Device-DownloadTask-suspend(): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    downloadTask.suspend().then((result: boolean) => {
+      console.info('Succeeded in pausing the download task.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to pause the download task. Code: ${err.code}, message: ${err.message}`);
+    });
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+

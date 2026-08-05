@@ -1,0 +1,532 @@
+# queryContacts
+
+## queryContacts
+
+```TypeScript
+function queryContacts(callback: AsyncCallback<Array<Contact>>): void
+```
+
+Queries all contacts. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 10
+
+**Substitutes:** [contact.queryContacts](arkts-contacts-contact-querycontacts-f.md#querycontacts)(context:
+
+**Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(callback: AsyncCallback<Array<Contact>>): void-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+contact.queryContacts((err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+
+## queryContacts
+
+```TypeScript
+function queryContacts(context: Context, callback: AsyncCallback<Array<Contact>>): void
+```
+
+Queries all contacts. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(context: Context, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(context: Context, callback: AsyncCallback<Array<Contact>>): void-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+**Example**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context within the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContacts(context, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+
+## queryContacts
+
+```TypeScript
+function queryContacts(holder: Holder, callback: AsyncCallback<Array<Contact>>): void
+```
+
+Queries all contacts based on the specified holder. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 10
+
+**Substitutes:** [contact.queryContacts](arkts-contacts-contact-querycontacts-f.md#querycontacts)(context:
+
+**Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(holder: Holder, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(holder: Holder, callback: AsyncCallback<Array<Contact>>): void-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+contact.queryContacts({
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+
+## queryContacts
+
+```TypeScript
+function queryContacts(context: Context, holder: Holder, callback: AsyncCallback<Array<Contact>>): void
+```
+
+Queries all contacts based on the specified holder. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(context: Context, holder: Holder, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(context: Context, holder: Holder, callback: AsyncCallback<Array<Contact>>): void-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
+| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+**Example**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context within the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContacts(context, {
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+
+## queryContacts
+
+```TypeScript
+function queryContacts(attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
+```
+
+Queries all contacts based on the specified attributes. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 10
+
+**Substitutes:** [contact.queryContacts](arkts-contacts-contact-querycontacts-f.md#querycontacts)(context:
+
+**Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+contact.queryContacts({
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+
+## queryContacts
+
+```TypeScript
+function queryContacts(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
+```
+
+Queries all contacts based on the specified attributes. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
+| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+**Example**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context within the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContacts(context, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+
+## queryContacts
+
+```TypeScript
+function queryContacts(holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
+```
+
+Queries all contacts based on the specified holder and attributes. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 10
+
+**Substitutes:** [contact.queryContacts](arkts-contacts-contact-querycontacts-f.md#querycontacts)(context:
+
+**Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+contact.queryContacts({
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+
+## queryContacts
+
+```TypeScript
+function queryContacts(context: Context, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
+```
+
+Queries all contacts based on the specified holder and attributes. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(context: Context, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function queryContacts(context: Context, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
+| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
+| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | List of contact attributes. If this parameter is empty, all attribute fields (including the name, phone number, and email address) of the contact are queried. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;Array&lt;Contact&gt;&gt; | Yes | Indicates the callback for getting the result of the call.Returns the contact list which user select; returns empty contact list if user not select. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+**Example**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context within the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+contact.queryContacts(context, {
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+}, (err: BusinessError, data) => {
+  if (err) {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+});
+```
+
+
+## queryContacts
+
+```TypeScript
+function queryContacts(holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
+```
+
+Queries all contacts based on the specified holder and attributes. This API uses a promise to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 10
+
+**Substitutes:** [contact.queryContacts](arkts-contacts-contact-querycontacts-f.md#querycontacts)(context:
+
+**Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContacts(holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Application information for a contact. If this parameter is not specified, the system contact application is used by default. |
+| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Contact attribute list. If this parameter is not specified, all contact attributes are queried by default. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of queried contacts. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+  let promise = contact.queryContacts({
+    holderId: 1,
+    bundleName: "",
+    displayName: ""
+  }, {
+    attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+  });
+  promise.then((data) => {
+    console.info(`Succeeded in querying Contacts. data->${JSON.stringify(data)}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+  });
+```
+
+
+## queryContacts
+
+```TypeScript
+function queryContacts(context: Context, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
+```
+
+Queries all contacts based on the specified holder and attributes. This API uses a promise to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Required permissions:** ohos.permission.READ_CONTACTS
+
+<!--Device-contact-function queryContacts(context: Context, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>--><!--Device-contact-function queryContacts(context: Context, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>-End-->
+
+**System capability:** SystemCapability.Applications.ContactsData
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the context of application or capability. |
+| holder | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Application information for a contact. If this parameter is not specified, the system contact application is used by default. |
+| attrs | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Contact attribute list. If this parameter is not specified, all contact attributes are queried by default. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;Contact&gt;&gt; | Promise used to return the result, which is an array of queried contacts. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+**Example**
+
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context within the component.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let promise = contact.queryContacts(context, {
+  holderId: 1,
+  bundleName: "",
+  displayName: ""
+}, {
+  attributes: [contact.Attribute.ATTR_NAME, contact.Attribute.ATTR_PHONE]
+});
+promise.then((data) => {
+  console.info(`Succeeded in querying Contacts. data: ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to query Contacts. Code: ${err.code}, message: ${err.message}`);
+});
+```
+

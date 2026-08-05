@@ -1,0 +1,54 @@
+# DescriptionInfo (System API)
+
+Represents information about the version description file.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-update-export interface DescriptionInfo--><!--Device-update-export interface DescriptionInfo-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+
+## content
+
+```TypeScript
+content: string
+```
+
+Content of the description file.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-DescriptionInfo-content: string--><!--Device-DescriptionInfo-content: string-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+
+## descriptionType
+
+```TypeScript
+descriptionType: DescriptionType
+```
+
+Description type. The value **CONTENT** indicates that the description is content, which is applicable to scenarios where the description content is short or needs to be displayed immediately. **URI** indicates that the description is a link, which is applicable to scenarios where the description content is long or needs to be obtained from external resources. Select a value based on the description length and display mode.
+
+**Type:** DescriptionType
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-DescriptionInfo-descriptionType: DescriptionType--><!--Device-DescriptionInfo-descriptionType: DescriptionType-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+

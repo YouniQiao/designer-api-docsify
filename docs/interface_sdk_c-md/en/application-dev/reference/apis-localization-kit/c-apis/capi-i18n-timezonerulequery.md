@@ -6,7 +6,7 @@ typedef struct TimeZoneRuleQuery {...} TimeZoneRuleQuery
 
 ## Overview
 
-Defines the query information and query result.
+Used to input the query information and receive the query result.
 
 **Since**: 22
 
@@ -20,10 +20,10 @@ Defines the query information and query result.
 
 | Name | Description |
 | -- | -- |
-| double base | Indicates the base time in a next start or previous start time query. |
-| int32_t prevRawOffset | Indicates the previous raw offset. |
-| int32_t prevDSTSavings | Indicates the previous dstSavings offset. |
-| bool inclusive | Indicates whether the base time is inclusive. |
-| double result | Indicates the query result. |
+| double base | Indicates the reference time for the query, in milliseconds. The value is Unix timestamp. |
+| int32_t prevRawOffset | Indicates the previous raw offset of the time zone, in milliseconds. |
+| int32_t prevDSTSavings | Indicates the previous daylight saving time offset, in milliseconds. |
+| bool inclusive | Indicates whether the query result contains the base time. The value **true** indicates that the queryresult contains the base time. The value **false** indicates the opposite. |
+| double result | Indicates the query result, in milliseconds. The value is Unix timestamp. |
 
 

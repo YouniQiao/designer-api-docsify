@@ -1,0 +1,72 @@
+# BinaryBufferInfo
+
+Describes binary buffer info.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-image-interface BinaryBufferInfo--><!--Device-image-interface BinaryBufferInfo-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImagePacker
+
+## bytesPerRow
+
+```TypeScript
+bytesPerRow?: int
+```
+
+Bytes per row.If it is not specified, it will be calculated as (width + 7) / 8. The value range is all integers.
+
+**Type:** int
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BinaryBufferInfo-bytesPerRow?: int--><!--Device-BinaryBufferInfo-bytesPerRow?: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImagePacker
+
+## data
+
+```TypeScript
+data: ArrayBuffer
+```
+
+Describes binary buffer.
+
+**Type:** ArrayBuffer
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BinaryBufferInfo-data: ArrayBuffer--><!--Device-BinaryBufferInfo-data: ArrayBuffer-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImagePacker
+
+## size
+
+```TypeScript
+size: Size
+```
+
+Describes binary buffer size.
+
+**Type:** Size
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BinaryBufferInfo-size: Size--><!--Device-BinaryBufferInfo-size: Size-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImagePacker
+

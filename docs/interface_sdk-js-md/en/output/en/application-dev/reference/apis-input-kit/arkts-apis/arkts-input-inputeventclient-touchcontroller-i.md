@@ -1,0 +1,133 @@
+# TouchController
+
+Provides the capability of simulating touch operations. The simulated touch operation sequence must meet the following requirements: 1. All touch points must share the same **displayId**. 2. Each touch point must begin with a **touchDown()** call, followed by zero or more **touchMove()** calls, and end with an **touchUp()** call.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-inputEventClient-interface TouchController--><!--Device-inputEventClient-interface TouchController-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
+
+## touchDown
+
+```TypeScript
+touchDown(touch: TouchPoint): Promise<void>
+```
+
+Presses down a touch point. This API uses a promise to return the result.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Required permissions:** ohos.permission.CONTROL_DEVICE
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TouchController-touchDown(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchDown(touch: TouchPoint): Promise<void>-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| touch | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the touch point that is in contact with the display. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. The touch point is touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| [4300002](../errorcode-inputeventclient.md#4300002-display-does-not-exist) | The display does not exist. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+
+## touchMove
+
+```TypeScript
+touchMove(touch: TouchPoint): Promise<void>
+```
+
+Moves a touch point. This API uses a promise to return the result.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Required permissions:** ohos.permission.CONTROL_DEVICE
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TouchController-touchMove(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchMove(touch: TouchPoint): Promise<void>-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| touch | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the touch point to be moved. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+
+## touchUp
+
+```TypeScript
+touchUp(touch: TouchPoint): Promise<void>
+```
+
+Releases a touch point. This API uses a promise to return the result.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Required permissions:** ohos.permission.CONTROL_DEVICE
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TouchController-touchUp(touch: TouchPoint): Promise<void>--><!--Device-TouchController-touchUp(touch: TouchPoint): Promise<void>-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| touch | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Information about the touch point to be released. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+

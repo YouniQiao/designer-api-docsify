@@ -1,0 +1,102 @@
+# DistanceMeasurementResponse (System API)
+
+Interface for distance measurement result
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-spatialAwareness-export interface DistanceMeasurementResponse--><!--Device-spatialAwareness-export interface DistanceMeasurementResponse-End-->
+
+**System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
+
+**System API:** This is a system API.
+
+## confidence
+
+```TypeScript
+confidence: float
+```
+
+indicates confidence of distance measurement
+
+**Type:** float
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistanceMeasurementResponse-confidence: float--><!--Device-DistanceMeasurementResponse-confidence: float-End-->
+
+**System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
+
+**System API:** This is a system API.
+
+## deviceId
+
+```TypeScript
+deviceId: string
+```
+
+indicates the ID of the remote ranging device
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistanceMeasurementResponse-deviceId: string--><!--Device-DistanceMeasurementResponse-deviceId: string-End-->
+
+**System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
+
+**System API:** This is a system API.
+
+## distance
+
+```TypeScript
+distance: float
+```
+
+indicates distance result
+
+**Type:** float
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistanceMeasurementResponse-distance: float--><!--Device-DistanceMeasurementResponse-distance: float-End-->
+
+**System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
+
+**System API:** This is a system API.
+
+## rank
+
+```TypeScript
+rank: DistanceRank
+```
+
+indicates distance rank
+
+**Type:** DistanceRank
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistanceMeasurementResponse-rank: DistanceRank--><!--Device-DistanceMeasurementResponse-rank: DistanceRank-End-->
+
+**System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
+
+**System API:** This is a system API.
+

@@ -1,0 +1,72 @@
+# ConnectResult
+
+Defines the connection result.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-abilityConnectionManager-interface ConnectResult--><!--Device-abilityConnectionManager-interface ConnectResult-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+## errorCode
+
+```TypeScript
+errorCode?: ConnectErrorCode
+```
+
+Connection error code.
+
+**Type:** ConnectErrorCode
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectResult-errorCode?: ConnectErrorCode--><!--Device-ConnectResult-errorCode?: ConnectErrorCode-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+## isConnected
+
+```TypeScript
+isConnected: boolean
+```
+
+Whether the connection is successful. The value **true** indicates that the connection is successful, and the value **false** indicates the opposite.
+
+**Type:** boolean
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectResult-isConnected: boolean--><!--Device-ConnectResult-isConnected: boolean-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+## reason
+
+```TypeScript
+reason?: string
+```
+
+Connection rejection reason.
+
+**Type:** string
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectResult-reason?: string--><!--Device-ConnectResult-reason?: string-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+

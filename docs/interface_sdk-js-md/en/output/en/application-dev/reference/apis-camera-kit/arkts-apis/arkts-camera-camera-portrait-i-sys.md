@@ -1,0 +1,105 @@
+# Portrait (System API)
+
+Portrait: inherits from [PortraitQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. Provides the APIs for portrait photo settings.
+
+**Inheritance/Implementation:** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md)
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-camera-interface Portrait extends PortraitQuery--><!--Device-camera-interface Portrait extends PortraitQuery-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+## getPortraitEffect
+
+```TypeScript
+getPortraitEffect(): PortraitEffect
+```
+
+Obtains the portrait effect in use.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-Portrait-getPortraitEffect(): PortraitEffect--><!--Device-Portrait-getPortraitEffect(): PortraitEffect-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Portrait effect. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+
+**Example**
+
+```TypeScript
+function getPortraitEffect(portraitPhotoSession: camera.PortraitPhotoSession): camera.PortraitEffect {
+  let portraitEffect: camera.PortraitEffect = portraitPhotoSession.getPortraitEffect();
+  return portraitEffect;
+}
+```
+
+## setPortraitEffect
+
+```TypeScript
+setPortraitEffect(effect: PortraitEffect): void
+```
+
+Sets a portrait effect. Before the setting, use [getSupportedPortraitEffects]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to obtain the supported portrait effects and check whether the target portrait effect is supported.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-Portrait-setPortraitEffect(effect: PortraitEffect): void--><!--Device-Portrait-setPortraitEffect(effect: PortraitEffect): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| effect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Effect Portrait effect to set. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 11 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setPortraitEffect(portraitPhotoSession: camera.PortraitPhotoSession, portraitEffects: Array<camera.PortraitEffect>): void {
+  if (portraitEffects === undefined || portraitEffects.length <= 0) {
+    return;
+  }
+  try {
+    portraitPhotoSession.setPortraitEffect(portraitEffects[0]);
+  } catch (error) {
+    let err = error as BusinessError;
+    console.error(`The setPortraitEffect call failed. error code: ${err.code}`);
+  }
+}
+```
+

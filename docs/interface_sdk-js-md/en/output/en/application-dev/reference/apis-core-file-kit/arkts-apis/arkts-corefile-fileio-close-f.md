@@ -1,0 +1,62 @@
+# close
+
+## close
+
+```TypeScript
+declare function close(fd: number): Promise<void>
+```
+
+Closes a file. This API uses a promise to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:close](arkts-corefile-fileio-close-f.md#close)
+
+<!--Device-unnamed-declare function close(fd: number): Promise<void>--><!--Device-unnamed-declare function close(fd: number): Promise<void>-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | File descriptor of the file to close. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+
+## close
+
+```TypeScript
+declare function close(fd: number, callback: AsyncCallback<void>): void
+```
+
+Closes a file. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:close](arkts-corefile-fileio-close-f.md#close)
+
+<!--Device-unnamed-declare function close(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function close(fd: number, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| fd | number | Yes | File descriptor of the file to close. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the file is closed asynchronously. |
+

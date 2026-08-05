@@ -1,0 +1,120 @@
+# WifiP2pDevice
+
+P2P device information.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-wifiManager-interface WifiP2pDevice--><!--Device-wifiManager-interface WifiP2pDevice-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## deviceAddress
+
+```TypeScript
+deviceAddress: string
+```
+
+Device mac address
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-WifiP2pDevice-deviceAddress: string--><!--Device-WifiP2pDevice-deviceAddress: string-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## deviceAddressType
+
+```TypeScript
+deviceAddressType?: DeviceAddressType
+```
+
+Device mac address type
+
+**Type:** DeviceAddressType
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-WifiP2pDevice-deviceAddressType?: DeviceAddressType--><!--Device-WifiP2pDevice-deviceAddressType?: DeviceAddressType-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## deviceName
+
+```TypeScript
+deviceName: string
+```
+
+Device name
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-WifiP2pDevice-deviceName: string--><!--Device-WifiP2pDevice-deviceName: string-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## deviceStatus
+
+```TypeScript
+deviceStatus: P2pDeviceStatus
+```
+
+Device status
+
+**Type:** P2pDeviceStatus
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus--><!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## groupCapabilities
+
+```TypeScript
+groupCapabilities: int
+```
+
+Device group capabilities
+
+**Type:** int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-WifiP2pDevice-groupCapabilities: int--><!--Device-WifiP2pDevice-groupCapabilities: int-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## primaryDeviceType
+
+```TypeScript
+primaryDeviceType: string
+```
+
+Primary device type
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-WifiP2pDevice-primaryDeviceType: string--><!--Device-WifiP2pDevice-primaryDeviceType: string-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+

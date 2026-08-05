@@ -1,0 +1,94 @@
+# HKDFSpec
+
+Defines the child class of [KdfSpec]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It is a parameter for HKDF key derivation. > **NOTE** > > **key** is the original key material entered by the user. An empty string can be passed in for **info** and > **salt** based on the mode. > > For example, if the mode is **EXTRACT\_AND\_EXPAND**, all parameter values must be passed in. If the mode is > **EXTRACT\_ONLY**, **info** can be empty. When **HKDFSpec** is constructed, pass in **null** to **info**. > > The default mode is **EXTRACT\_AND\_EXPAND**. The value **HKDF|SHA256|EXTRACT\_AND\_EXPAND** is equivalent to > **HKDF|SHA256**.
+
+**Inheritance/Implementation:** HKDFSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-cryptoFramework-interface HKDFSpec extends KdfSpec--><!--Device-cryptoFramework-interface HKDFSpec extends KdfSpec-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Kdf
+
+## info
+
+```TypeScript
+info: Uint8Array
+```
+
+Information used to expand the key.
+
+**Type:** Uint8Array
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HKDFSpec-info: Uint8Array--><!--Device-HKDFSpec-info: Uint8Array-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Kdf
+
+## key
+
+```TypeScript
+key: string | Uint8Array
+```
+
+Key material.
+
+**Type:** string \| Uint8Array
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HKDFSpec-key: string | Uint8Array--><!--Device-HKDFSpec-key: string | Uint8Array-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Kdf
+
+## keySize
+
+```TypeScript
+keySize: int
+```
+
+Length of the derived key, in bytes.
+
+**Type:** int
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HKDFSpec-keySize: int--><!--Device-HKDFSpec-keySize: int-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Kdf
+
+## salt
+
+```TypeScript
+salt: Uint8Array
+```
+
+Salt value.
+
+**Type:** Uint8Array
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-HKDFSpec-salt: Uint8Array--><!--Device-HKDFSpec-salt: Uint8Array-End-->
+
+**System capability:** SystemCapability.Security.CryptoFramework.Kdf
+

@@ -1,0 +1,711 @@
+# DataShareResultSet (System API)
+
+Provides APIs for accessing the result sets returned. The column or key names are returned as a string array, in which the strings are in the same order as the columns or keys in the result set.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-unnamed-export default interface DataShareResultSet--><!--Device-unnamed-export default interface DataShareResultSet-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+## close
+
+```TypeScript
+close(): void
+```
+
+Closes this result set. Calling this API will invalidate the result set and release all its resources.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-close(): void--><!--Device-DataShareResultSet-close(): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Example**
+
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as DataShareResultSet).close();
+}
+```
+
+## getBlob
+
+ArkTS-Dyn:
+```TypeScript
+getBlob(columnIndex: number): Uint8Array
+```
+
+ArkTS-Sta:
+```TypeScript
+getBlob(columnIndex: int): Uint8Array
+```
+
+Obtains the value in the form of a byte array based on the specified column and the current row. If the specified column or key is empty or the value is not of the Blob type, you need to determine whether to throw an exception.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getBlob(columnIndex: int): Uint8Array--><!--Device-DataShareResultSet-getBlob(columnIndex: int): Uint8Array-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Uint8Array | Value obtained. |
+
+**Example**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  if (!goToFirstRow) {
+    console.error("failed to go to first row");
+  } else {
+    let getBlob = (resultSet as DataShareResultSet).getBlob(columnIndex);
+    console.info('resultSet.getBlob: ' + getBlob);
+  }
+}
+```
+
+## getColumnIndex
+
+ArkTS-Dyn:
+```TypeScript
+getColumnIndex(columnName: string): number
+```
+
+ArkTS-Sta:
+```TypeScript
+getColumnIndex(columnName: string): int
+```
+
+Obtains the column index based on a column name. The column name is passed in as an input parameter.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getColumnIndex(columnName: string): int--><!--Device-DataShareResultSet-getColumnIndex(columnName: string): int-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnName | string | Yes | Column name. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Column index obtained. |
+
+**Example**
+
+```TypeScript
+let ColumnName = "name";
+if (resultSet != undefined) {
+  let getColumnIndex = (resultSet as DataShareResultSet).getColumnIndex(ColumnName);
+  console.info('resultSet.getColumnIndex: ' + getColumnIndex);
+}
+```
+
+## getColumnName
+
+ArkTS-Dyn:
+```TypeScript
+getColumnName(columnIndex: number): string
+```
+
+ArkTS-Sta:
+```TypeScript
+getColumnName(columnIndex: int): string
+```
+
+Obtains the column name based on a column index. The column index is passed in as an input parameter.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getColumnName(columnIndex: int): string--><!--Device-DataShareResultSet-getColumnName(columnIndex: int): string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Column index. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Column name obtained. |
+
+**Example**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let getColumnName = (resultSet as DataShareResultSet).getColumnName(columnIndex);
+  console.info('resultSet.getColumnName: ' + getColumnName);
+}
+```
+
+## getDataType
+
+ArkTS-Dyn:
+```TypeScript
+getDataType(columnIndex: number): DataType
+```
+
+ArkTS-Sta:
+```TypeScript
+getDataType(columnIndex: int): DataType
+```
+
+Obtains the data type based on the specified column index. If the specified column or key is empty or the value is not of the DataType type, you need to determine whether to throw an exception.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getDataType(columnIndex: int): DataType--><!--Device-DataShareResultSet-getDataType(columnIndex: int): DataType-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Column index. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Data type obtained. |
+
+**Example**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let getDataType = (resultSet as DataShareResultSet).getDataType(columnIndex);
+  console.info('resultSet.getDataType: ' + getDataType);
+}
+```
+
+## getDouble
+
+ArkTS-Dyn:
+```TypeScript
+getDouble(columnIndex: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+getDouble(columnIndex: int): double
+```
+
+Obtains the value in the form of a double-precision floating-point number based on the specified column and the current row. If the specified column or key is empty or the value is not of the double type, you need to determine whether to throw an exception.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getDouble(columnIndex: int): double--><!--Device-DataShareResultSet-getDouble(columnIndex: int): double-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Value obtained. |
+
+**Example**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  let getDouble = (resultSet as DataShareResultSet).getDouble(columnIndex);
+  console.info('resultSet.getDouble: ' + getDouble);
+}
+```
+
+## getLong
+
+ArkTS-Dyn:
+```TypeScript
+getLong(columnIndex: number): number
+```
+
+ArkTS-Sta:
+```TypeScript
+getLong(columnIndex: int): long
+```
+
+Obtains the value in the form of a long integer based on the specified column and the current row. If the specified column or key is empty or the value is not of the long type, you need to determine whether to throw an exception.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getLong(columnIndex: int): long--><!--Device-DataShareResultSet-getLong(columnIndex: int): long-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Value obtained. |
+
+**Example**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  let getLong = (resultSet as DataShareResultSet).getLong(columnIndex);
+  console.info('resultSet.getLong: ' + getLong);
+}
+```
+
+## getString
+
+ArkTS-Dyn:
+```TypeScript
+getString(columnIndex: number): string
+```
+
+ArkTS-Sta:
+```TypeScript
+getString(columnIndex: int): string
+```
+
+Obtains the value in the form of a string based on the specified column and the current row. If the specified column or key is empty or the value is not of the string type, you need to determine whether to throw an exception.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-getString(columnIndex: int): string--><!--Device-DataShareResultSet-getString(columnIndex: int): string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| columnIndex | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| string | Value obtained. |
+
+**Example**
+
+```TypeScript
+let columnIndex = 1;
+if (resultSet != undefined) {
+  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  let getString = (resultSet as DataShareResultSet).getString(columnIndex);
+  console.info('resultSet.getString: ' + getString);
+}
+```
+
+## goTo
+
+ArkTS-Dyn:
+```TypeScript
+goTo(offset: number): boolean
+```
+
+ArkTS-Sta:
+```TypeScript
+goTo(offset: int): boolean
+```
+
+Moves based on the specified offset.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-goTo(offset: int): boolean--><!--Device-DataShareResultSet-goTo(offset: int): boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| offset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Offset relative to the current position. A negative value means to move forward, and a positive value means to move backward. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Example**
+
+```TypeScript
+let goToNum = 1;
+if (resultSet != undefined) {
+  let isGoTo = (resultSet as DataShareResultSet).goTo(goToNum);
+  console.info('resultSet.goTo: ' + isGoTo);
+}
+```
+
+## goToFirstRow
+
+```TypeScript
+goToFirstRow(): boolean
+```
+
+Moves to the first row of the result set.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-goToFirstRow(): boolean--><!--Device-DataShareResultSet-goToFirstRow(): boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Example**
+
+```TypeScript
+// Create a resultSet object. For details, see Usage in this topic.
+if (resultSet != undefined) {
+  let isGoToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
+  console.info('resultSet.goToFirstRow: ' + isGoToFirstRow);
+}
+```
+
+## goToLastRow
+
+```TypeScript
+goToLastRow(): boolean
+```
+
+Moves to the last row of the result set.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-goToLastRow(): boolean--><!--Device-DataShareResultSet-goToLastRow(): boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Example**
+
+```TypeScript
+if (resultSet != undefined) {
+  let isGoToLastRow = (resultSet as DataShareResultSet).goToLastRow();
+  console.info('resultSet.goToLastRow: ' + isGoToLastRow);
+}
+```
+
+## goToNextRow
+
+```TypeScript
+goToNextRow(): boolean
+```
+
+Moves to the next row in the result set.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-goToNextRow(): boolean--><!--Device-DataShareResultSet-goToNextRow(): boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Example**
+
+```TypeScript
+if (resultSet != undefined) {
+  let isGoToNextRow = (resultSet as DataShareResultSet).goToNextRow();
+  console.info('resultSet.goToNextRow: ' + isGoToNextRow);
+}
+```
+
+## goToPreviousRow
+
+```TypeScript
+goToPreviousRow(): boolean
+```
+
+Moves to the previous row in the result set.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-goToPreviousRow(): boolean--><!--Device-DataShareResultSet-goToPreviousRow(): boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Example**
+
+```TypeScript
+if (resultSet != undefined) {
+  let isGoToPreviousRow = (resultSet as DataShareResultSet).goToPreviousRow();
+  console.info('resultSet.goToPreviousRow: ' + isGoToPreviousRow);
+}
+```
+
+## goToRow
+
+ArkTS-Dyn:
+```TypeScript
+goToRow(position: number): boolean
+```
+
+ArkTS-Sta:
+```TypeScript
+goToRow(position: int): boolean
+```
+
+Moves to the specified row in the result set.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-goToRow(position: int): boolean--><!--Device-DataShareResultSet-goToRow(position: int): boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| position | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Position to move to, starting from 0. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+**Example**
+
+```TypeScript
+let goToRowNum = 2;
+if (resultSet != undefined) {
+  let isGoToRow = (resultSet as DataShareResultSet).goToRow(goToRowNum);
+  console.info('resultSet.goToRow: ' + isGoToRow);
+}
+```
+
+## columnCount
+
+```TypeScript
+columnCount: int
+```
+
+Number of columns in the result set.
+
+**Type:** int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-columnCount: int--><!--Device-DataShareResultSet-columnCount: int-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+## columnNames
+
+```TypeScript
+columnNames: Array<string>
+```
+
+Names of all columns in the result set.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-columnNames: Array<string>--><!--Device-DataShareResultSet-columnNames: Array<string>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+## isClosed
+
+```TypeScript
+isClosed: boolean
+```
+
+Whether the result set is closed. The value **true** means the result set is closed; the value **false** means the opposite.
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-isClosed: boolean--><!--Device-DataShareResultSet-isClosed: boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+
+## rowCount
+
+```TypeScript
+rowCount: int
+```
+
+Number of rows in the result set.
+
+**Type:** int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareResultSet-rowCount: int--><!--Device-DataShareResultSet-rowCount: int-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**System API:** This is a system API.
+

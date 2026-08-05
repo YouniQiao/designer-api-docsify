@@ -4,6 +4,8 @@
 
 The file declares the native APIs used for audio and video multiplexing.
 
+**Include**: <multimedia/player_framework/native_avmuxer.h>
+
 **Library**: libnative_media_avmuxer.so
 
 **System capability**: SystemCapability.Multimedia.Media.Muxer
@@ -96,8 +98,6 @@ OH_AVErrCode OH_AVMuxer_SetFormat(OH_AVMuxer *muxer, OH_AVFormat *format)
 
 Set format to the muxer.
 
-**System capability**: SystemCapability.Multimedia.Media.Muxer
-
 **Since**: 14
 
 **Parameters**:
@@ -111,7 +111,7 @@ Set format to the muxer.
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Returns AV_ERR_OK if the execution is successful<br>         {@link AV_ERR_INVALID_VAL}, the muxer or format is invalid<br>         {@link AV_ERR_OPERATE_NOT_PERMIT}, not permit to call the interface, it was called in invalid state |
+| OH_AVErrCode | {@link AV_ERR_OK}: The operation is successful.<br>     <br>{@link AV_ERR_INVALID_VAL}: the muxer or format is invalid<br>     <br>{@link AV_ERR_OPERATE_NOT_PERMIT}: not permit to call the interface, it was called in invalid state |
 
 ### OH_AVMuxer_AddTrack()
 

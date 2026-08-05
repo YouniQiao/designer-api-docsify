@@ -1,0 +1,29 @@
+# ContentDidScrollCallback
+
+```TypeScript
+declare type ContentDidScrollCallback = (selectedIndex: number, index: number, position: number, mainAxisLength: number) => void
+```
+
+Triggered during the swipe action of the **Swiper** component. For details about the parameters, see [SwiperContentTransitionProxy]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-declare type ContentDidScrollCallback = (selectedIndex: number, index: number, position: number, mainAxisLength: number) => void--><!--Device-unnamed-declare type ContentDidScrollCallback = (selectedIndex: number, index: number, position: number, mainAxisLength: number) => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| selectedIndex | number | Yes | Index of the currently selected page.  |
+| index | number | Yes | Index of a page in the viewport.  |
+| position | number | Yes | Position of the page specified by **index** relative to the start position of the **Swiper** main axis (start position of the page corresponding to **selectedIndex**).  |
+| mainAxisLength | number | Yes | Length of the page specified by **index** along the main axis, in vp.  |
+

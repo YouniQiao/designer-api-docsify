@@ -24,6 +24,7 @@ Declares the APIs to intercept the request from ArkWeb.
 | [ArkWeb_ResourceRequest_](capi-web-arkweb-resourcerequest-.md) | ArkWeb_ResourceRequest | The info of the request.You can obtain the requested URL, method, post data, and other information through OH_ArkWeb_ResourceRequest.<br> |
 | [ArkWeb_RequestHeaderList_](capi-web-arkweb-requestheaderlist-.md) | ArkWeb_RequestHeaderList | The request headers of the request. |
 | [ArkWeb_HttpBodyStream_](capi-web-arkweb-httpbodystream-.md) | ArkWeb_HttpBodyStream | The http body of the request.Use OH_ArkWebHttpBodyStream_* interface to read the body.<br> |
+| [ArkWeb_ErrorInfo_](capi-web-arkweb-errorinfo-.md) | ArkWeb_ErrorInfo | The error info for setting response error details. |
 
 ### Enum
 
@@ -103,6 +104,17 @@ Declares the APIs to intercept the request from ArkWeb.
 | [int32_t OH_ArkWebResourceHandler_DidFinish(const ArkWeb_ResourceHandler* resourceHandler)](#oh_arkwebresourcehandler_didfinish) | - | Notify the ArkWeb that this request should be finished and there is no more data available. |
 | [int32_t OH_ArkWebResourceHandler_DidFailWithError(const ArkWeb_ResourceHandler* resourceHandler, ArkWeb_NetError errorCode)](#oh_arkwebresourcehandler_didfailwitherror) | - | Notify the ArkWeb that this request should be failed. |
 | [int32_t OH_ArkWebResourceHandler_DidFailWithErrorV2(const ArkWeb_ResourceHandler* resourceHandler, ArkWeb_NetError errorCode, bool completeIfNoResponse)](#oh_arkwebresourcehandler_didfailwitherrorv2) | - | Notify the ArkWeb that this request should be failed. |
+| [void OH_ArkWeb_CreateErrorInfo(ArkWeb_ErrorInfo** errorInfo)](#oh_arkweb_createerrorinfo) | - | Creates an ArkWeb_ErrorInfo object. |
+| [void OH_ArkWeb_DestroyErrorInfo(ArkWeb_ErrorInfo* errorInfo)](#oh_arkweb_destroyerrorinfo) | - | Destroys the ArkWeb_ErrorInfo. |
+| [int32_t OH_ArkWebErrorInfo_SetCompleteIfNoResponse(ArkWeb_ErrorInfo* errorInfo, bool completeIfNoResponse)](#oh_arkweberrorinfo_setcompleteifnoresponse) | - | Sets whether to automatically generate a response if no response has been received. |
+| [bool OH_ArkWebErrorInfo_GetCompleteIfNoResponse(const ArkWeb_ErrorInfo* errorInfo)](#oh_arkweberrorinfo_getcompleteifnoresponse) | - | Gets whether to automatically generate a response if no response has been received. |
+| [int32_t OH_ArkWebErrorInfo_SetCustomErrorCode(ArkWeb_ErrorInfo* errorInfo, int32_t errorCode)](#oh_arkweberrorinfo_setcustomerrorcode) | - | Sets the custom error code for ArkWeb_ErrorInfo. |
+| [int32_t OH_ArkWebErrorInfo_GetCustomErrorCode(const ArkWeb_ErrorInfo* errorInfo)](#oh_arkweberrorinfo_getcustomerrorcode) | - | Gets the custom error code from the ArkWeb_ErrorInfo. |
+| [int32_t OH_ArkWebErrorInfo_SetErrorCode(ArkWeb_ErrorInfo* errorInfo, ArkWeb_NetError errorCode)](#oh_arkweberrorinfo_seterrorcode) | - | Sets the error code for ArkWeb_ErrorInfo. |
+| [ArkWeb_NetError OH_ArkWebErrorInfo_GetErrorCode(const ArkWeb_ErrorInfo* errorInfo)](#oh_arkweberrorinfo_geterrorcode) | - | Gets the error code from the ArkWeb_ErrorInfo. Refer to arkweb_net_error_list.h. |
+| [int32_t OH_ArkWebResponse_SetErrorInfo(ArkWeb_Response* response, ArkWeb_ErrorInfo* errorInfo)](#oh_arkwebresponse_seterrorinfo) | - | Sets the error info for the ArkWeb_Response. |
+| [ArkWeb_ErrorInfo* OH_ArkWebResponse_GetErrorInfo(const ArkWeb_Response* response)](#oh_arkwebresponse_geterrorinfo) | - | Gets the error info from the ArkWeb_Response. |
+| [int32_t OH_ArkWebResourceHandler_DidFailWithErrorInfo(const ArkWeb_ResourceHandler* resourceHandler, const ArkWeb_ErrorInfo* errorInfo)](#oh_arkwebresourcehandler_didfailwitherrorinfo) | - | Notify the web engine that this request should fail with error info. |
 | [void OH_ArkWeb_ReleaseString(char* string)](#oh_arkweb_releasestring) | - | Release the string acquired by native function. |
 | [void OH_ArkWeb_ReleaseByteArray(uint8_t* byteArray)](#oh_arkweb_releasebytearray) | - | Release the byte array acquired by native function. |
 
@@ -1795,6 +1807,263 @@ Notify the ArkWeb that this request should be failed.
 | Type | Description |
 | -- | -- |
 | int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         {@link ARKWEB_INVALID_PARAM} 17100101 - Invalid param, the resourceHandler is nullptr. |
+
+### OH_ArkWeb_CreateErrorInfo()
+
+```c
+void OH_ArkWeb_CreateErrorInfo(ArkWeb_ErrorInfo** errorInfo)
+```
+
+**Description**
+
+Creates an ArkWeb_ErrorInfo object.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkWeb_ErrorInfo](capi-web-arkweb-errorinfo-.md)** errorInfo | The created ArkWeb_ErrorInfo object. If errorInfo is nullptr, this function does nothing.If the creation succeeds, *errorInfo points to the newly created object, which must be destroyedusing [OH_ArkWeb_DestroyErrorInfo](capi-arkweb-scheme-handler-h.md#oh_arkweb_destroyerrorinfo) when no longer needed.If the creation fails, *errorInfo is set to NULL. |
+
+### OH_ArkWeb_DestroyErrorInfo()
+
+```c
+void OH_ArkWeb_DestroyErrorInfo(ArkWeb_ErrorInfo* errorInfo)
+```
+
+**Description**
+
+Destroys the ArkWeb_ErrorInfo.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkWeb_ErrorInfo](capi-web-arkweb-errorinfo-.md)* errorInfo | The ArkWeb_ErrorInfo to be destroyed. |
+
+### OH_ArkWebErrorInfo_SetCompleteIfNoResponse()
+
+```c
+int32_t OH_ArkWebErrorInfo_SetCompleteIfNoResponse(ArkWeb_ErrorInfo* errorInfo, bool completeIfNoResponse)
+```
+
+**Description**
+
+Sets whether to automatically generate a response if no response has been received.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkWeb_ErrorInfo](capi-web-arkweb-errorinfo-.md)* errorInfo | The ArkWeb_ErrorInfo. |
+| bool completeIfNoResponse | If true, a response will be automatically constructed when no response has beenreceived. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         {@link ARKWEB_INVALID_PARAM} 17100101 - Invalid param, errorInfo is nullptr. |
+
+### OH_ArkWebErrorInfo_GetCompleteIfNoResponse()
+
+```c
+bool OH_ArkWebErrorInfo_GetCompleteIfNoResponse(const ArkWeb_ErrorInfo* errorInfo)
+```
+
+**Description**
+
+Gets whether to automatically generate a response if no response has been received.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkWeb_ErrorInfo](capi-web-arkweb-errorinfo-.md)* errorInfo | The ArkWeb_ErrorInfo. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| bool | Returns true if automatically generating a response when no response has been received is enabled,<br>         returns false otherwise. |
+
+### OH_ArkWebErrorInfo_SetCustomErrorCode()
+
+```c
+int32_t OH_ArkWebErrorInfo_SetCustomErrorCode(ArkWeb_ErrorInfo* errorInfo, int32_t errorCode)
+```
+
+**Description**
+
+Sets the custom error code for ArkWeb_ErrorInfo.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkWeb_ErrorInfo](capi-web-arkweb-errorinfo-.md)* errorInfo | The ArkWeb_ErrorInfo. |
+| int32_t errorCode | The custom error code, the web engine will pass the custom error code directly to the applicationthrough onErrorReceive. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         {@link ARKWEB_INVALID_PARAM} 17100101 - Invalid param, errorInfo is nullptr. |
+
+### OH_ArkWebErrorInfo_GetCustomErrorCode()
+
+```c
+int32_t OH_ArkWebErrorInfo_GetCustomErrorCode(const ArkWeb_ErrorInfo* errorInfo)
+```
+
+**Description**
+
+Gets the custom error code from the ArkWeb_ErrorInfo.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkWeb_ErrorInfo](capi-web-arkweb-errorinfo-.md)* errorInfo | The ArkWeb_ErrorInfo. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | The custom error code. |
+
+### OH_ArkWebErrorInfo_SetErrorCode()
+
+```c
+int32_t OH_ArkWebErrorInfo_SetErrorCode(ArkWeb_ErrorInfo* errorInfo, ArkWeb_NetError errorCode)
+```
+
+**Description**
+
+Sets the error code for ArkWeb_ErrorInfo.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkWeb_ErrorInfo](capi-web-arkweb-errorinfo-.md)* errorInfo | The ArkWeb_ErrorInfo. |
+| ArkWeb_NetError errorCode | The error code for this request. Refer to arkweb_net_error_list.h. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         {@link ARKWEB_INVALID_PARAM} 17100101 - Invalid param, errorInfo is nullptr. |
+
+### OH_ArkWebErrorInfo_GetErrorCode()
+
+```c
+ArkWeb_NetError OH_ArkWebErrorInfo_GetErrorCode(const ArkWeb_ErrorInfo* errorInfo)
+```
+
+**Description**
+
+Gets the error code from the ArkWeb_ErrorInfo. Refer to arkweb_net_error_list.h.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkWeb_ErrorInfo](capi-web-arkweb-errorinfo-.md)* errorInfo | The ArkWeb_ErrorInfo. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| ArkWeb_NetError | The error code. |
+
+### OH_ArkWebResponse_SetErrorInfo()
+
+```c
+int32_t OH_ArkWebResponse_SetErrorInfo(ArkWeb_Response* response, ArkWeb_ErrorInfo* errorInfo)
+```
+
+**Description**
+
+Sets the error info for the ArkWeb_Response.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkWeb_Response](capi-web-arkweb-response-.md)* response | The ArkWeb_Response. |
+| [ArkWeb_ErrorInfo](capi-web-arkweb-errorinfo-.md)* errorInfo | The ArkWeb_ErrorInfo to set. Ownership is not transferred; the caller must keep errorInfovalid until [ArkWeb_OnRequestStop](capi-arkweb-scheme-handler-h.md#arkweb_onrequeststop) is triggered. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         {@link ARKWEB_INVALID_PARAM} 17100101 - Invalid param, response or errorInfo is nullptr. |
+
+### OH_ArkWebResponse_GetErrorInfo()
+
+```c
+ArkWeb_ErrorInfo* OH_ArkWebResponse_GetErrorInfo(const ArkWeb_Response* response)
+```
+
+**Description**
+
+Gets the error info from the ArkWeb_Response.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkWeb_Response](capi-web-arkweb-response-.md)* response | The ArkWeb_Response. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkWeb_ErrorInfo*](capi-web-arkweb-errorinfo-.md) | The pointer to the ArkWeb_ErrorInfo if set; NULL otherwise. |
+
+### OH_ArkWebResourceHandler_DidFailWithErrorInfo()
+
+```c
+int32_t OH_ArkWebResourceHandler_DidFailWithErrorInfo(const ArkWeb_ResourceHandler* resourceHandler, const ArkWeb_ErrorInfo* errorInfo)
+```
+
+**Description**
+
+Notify the web engine that this request should fail with error info.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const ArkWeb_ResourceHandler](capi-web-arkweb-resourcehandler-.md)* resourceHandler | The ArkWeb_ResourceHandler for the request. |
+| [const ArkWeb_ErrorInfo](capi-web-arkweb-errorinfo-.md)* errorInfo | The error info for this request. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | {@link ARKWEB_NET_OK} 0 - Success.<br>         {@link ARKWEB_INVALID_PARAM} 17100101 - Invalid param, resourceHandler or errorInfo is nullptr. |
 
 ### OH_ArkWeb_ReleaseString()
 

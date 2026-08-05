@@ -1,0 +1,24 @@
+# EventListener
+
+```TypeScript
+type EventListener = (evt: Object) => void
+```
+
+Event to store.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-process-type EventListener = (evt: Object) => void--><!--Device-process-type EventListener = (evt: Object) => void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| evt | Object | Yes | Event. |
+

@@ -1,0 +1,52 @@
+# DomainAccountInfo
+
+Represents the domain account information.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+<!--Device-osAccount-interface DomainAccountInfo--><!--Device-osAccount-interface DomainAccountInfo-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+## accountId
+
+```TypeScript
+accountId?: string
+```
+
+Domain account ID. This is a system API and is **undefined** by default.
+
+**Type:** string
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-DomainAccountInfo-accountId?: string--><!--Device-DomainAccountInfo-accountId?: string-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+## isAuthenticated
+
+```TypeScript
+isAuthenticated?: boolean
+```
+
+Whether the domain account has been authenticated. The value **true** means that the specified domain account has been authenticated; the value **false** means the opposite. This is a system API. The default value is **false**.
+
+**Type:** boolean
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-DomainAccountInfo-isAuthenticated?: boolean--><!--Device-DomainAccountInfo-isAuthenticated?: boolean-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+

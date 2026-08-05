@@ -1,0 +1,232 @@
+# PrinterInformation
+
+Defines the printer information.
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+<!--Device-print-interface PrinterInformation--><!--Device-print-interface PrinterInformation-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## alias
+
+```TypeScript
+alias?: string
+```
+
+Printer alias.
+
+**Type:** string
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-PrinterInformation-alias?: string--><!--Device-PrinterInformation-alias?: string-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## capability
+
+```TypeScript
+capability?: PrinterCapabilities
+```
+
+Printer capabilities.
+
+**Type:** PrinterCapabilities
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+<!--Device-PrinterInformation-capability?: PrinterCapabilities--><!--Device-PrinterInformation-capability?: PrinterCapabilities-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## description
+
+```TypeScript
+description?: string
+```
+
+Printer description.
+
+**Type:** string
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+<!--Device-PrinterInformation-description?: string--><!--Device-PrinterInformation-description?: string-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## options
+
+```TypeScript
+options?: string
+```
+
+Printer details.
+
+**Type:** string
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+<!--Device-PrinterInformation-options?: string--><!--Device-PrinterInformation-options?: string-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## preferences
+
+```TypeScript
+preferences?: PrinterPreferences
+```
+
+Printer preferences.
+
+**Type:** PrinterPreferences
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-PrinterInformation-preferences?: PrinterPreferences--><!--Device-PrinterInformation-preferences?: PrinterPreferences-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## printerId
+
+```TypeScript
+printerId: string
+```
+
+Printer ID.
+
+**Type:** string
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+<!--Device-PrinterInformation-printerId: string--><!--Device-PrinterInformation-printerId: string-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## printerMake
+
+```TypeScript
+printerMake?: string
+```
+
+Printer model.
+
+**Type:** string
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+<!--Device-PrinterInformation-printerMake?: string--><!--Device-PrinterInformation-printerMake?: string-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## printerName
+
+```TypeScript
+printerName: string
+```
+
+Printer name.
+
+**Type:** string
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+<!--Device-PrinterInformation-printerName: string--><!--Device-PrinterInformation-printerName: string-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## printerStatus
+
+```TypeScript
+printerStatus: PrinterStatus
+```
+
+Printer state.
+
+**Type:** PrinterStatus
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+<!--Device-PrinterInformation-printerStatus: PrinterStatus--><!--Device-PrinterInformation-printerStatus: PrinterStatus-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## selectedDriver
+
+```TypeScript
+selectedDriver?: PpdInfo
+```
+
+Information about the selected driver when adding the printer.
+
+**Type:** PpdInfo
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrinterInformation-selectedDriver?: PpdInfo--><!--Device-PrinterInformation-selectedDriver?: PpdInfo-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## selectedProtocol
+
+```TypeScript
+selectedProtocol?: string
+```
+
+Protocol used when adding the printer.
+
+**Type:** string
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrinterInformation-selectedProtocol?: string--><!--Device-PrinterInformation-selectedProtocol?: string-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## uri
+
+```TypeScript
+uri?: string
+```
+
+Printer URI.
+
+**Type:** string
+
+**Since:** 14
+
+**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+
+<!--Device-PrinterInformation-uri?: string--><!--Device-PrinterInformation-uri?: string-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+

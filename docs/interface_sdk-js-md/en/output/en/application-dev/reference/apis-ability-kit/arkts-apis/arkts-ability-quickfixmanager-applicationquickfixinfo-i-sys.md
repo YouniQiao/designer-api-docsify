@@ -1,0 +1,134 @@
+# ApplicationQuickFixInfo (System API)
+
+Defines the quick fix information at the application level.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-quickFixManager-export interface ApplicationQuickFixInfo--><!--Device-quickFixManager-export interface ApplicationQuickFixInfo-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
+
+**System API:** This is a system API.
+
+## bundleName
+
+```TypeScript
+readonly bundleName: string
+```
+
+Bundle name.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-ApplicationQuickFixInfo-readonly bundleName: string--><!--Device-ApplicationQuickFixInfo-readonly bundleName: string-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
+
+**System API:** This is a system API.
+
+## bundleVersionCode
+
+```TypeScript
+readonly bundleVersionCode: long
+```
+
+Internal version number of the application.
+
+**Type:** long
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-ApplicationQuickFixInfo-readonly bundleVersionCode: long--><!--Device-ApplicationQuickFixInfo-readonly bundleVersionCode: long-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
+
+**System API:** This is a system API.
+
+## bundleVersionName
+
+```TypeScript
+readonly bundleVersionName: string
+```
+
+Version number of the application that is shown to users.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-ApplicationQuickFixInfo-readonly bundleVersionName: string--><!--Device-ApplicationQuickFixInfo-readonly bundleVersionName: string-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
+
+**System API:** This is a system API.
+
+## hapModuleQuickFixInfo
+
+```TypeScript
+readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>
+```
+
+Quick fix information at the HAP file level.
+
+**Type:** Array&lt;HapModuleQuickFixInfo&gt;
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-ApplicationQuickFixInfo-readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>--><!--Device-ApplicationQuickFixInfo-readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
+
+**System API:** This is a system API.
+
+## quickFixVersionCode
+
+```TypeScript
+readonly quickFixVersionCode: long
+```
+
+Version code of the quick fix patch package.
+
+**Type:** long
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-ApplicationQuickFixInfo-readonly quickFixVersionCode: long--><!--Device-ApplicationQuickFixInfo-readonly quickFixVersionCode: long-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
+
+**System API:** This is a system API.
+
+## quickFixVersionName
+
+```TypeScript
+readonly quickFixVersionName: string
+```
+
+Text description of the version number of the quick fix patch package.
+
+**Type:** string
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-ApplicationQuickFixInfo-readonly quickFixVersionName: string--><!--Device-ApplicationQuickFixInfo-readonly quickFixVersionName: string-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.QuickFix
+
+**System API:** This is a system API.
+

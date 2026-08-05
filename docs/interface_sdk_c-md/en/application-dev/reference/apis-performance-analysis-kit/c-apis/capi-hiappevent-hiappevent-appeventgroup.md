@@ -21,7 +21,7 @@ Defines the information of an event group, including its name, the array of even
 | Name | Description |
 | -- | -- |
 | const char* name | The name of the event. |
-| const struct HiAppEvent_AppEventInfo* appEventInfos | The event array which is group by the name. |
+| const struct HiAppEvent_AppEventInfo* appEventInfos | The event array which is grouped by the name. |
 | uint32_t infoLen | The length of appEventInfos array. |
 
 

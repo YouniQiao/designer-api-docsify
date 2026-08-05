@@ -1,0 +1,36 @@
+# PermissionUsingOptions (System API)
+
+Represents the optional parameter set for using a permission.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-privacyManager-interface PermissionUsingOptions--><!--Device-privacyManager-interface PermissionUsingOptions-End-->
+
+**System capability:** SystemCapability.Security.AccessToken
+
+**System API:** This is a system API.
+
+## enhancedIdentity
+
+```TypeScript
+enhancedIdentity?: string
+```
+
+Extension identity, used to identify additional identity information of the caller. This field is passed in when it is necessary to distinguish permission usage records from different call sources within the same application. The length must not exceed 48 characters. Passing an excessively long value when calling [startUsingPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ or [stopUsingPermission]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ will return error code 12100001. Default value: empty string.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PermissionUsingOptions-enhancedIdentity?: string--><!--Device-PermissionUsingOptions-enhancedIdentity?: string-End-->
+
+**System capability:** SystemCapability.Security.AccessToken
+
+**System API:** This is a system API.
+

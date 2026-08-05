@@ -8,9 +8,9 @@ typedef struct ArkUI_Node* ArkUI_NodeHandle
 
 Defines the pointer to the ArkUI native component object.
 
-**Since**: 22
+**Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**Header file**: [drawable_descriptor.h](capi-drawable-descriptor-h.md)
+**Header file**: [common_type.h](capi-common-type-h.md)
 

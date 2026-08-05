@@ -1,0 +1,126 @@
+# Flash
+
+**Flash** inherits from [FlashQuery]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. It provides APIs related to the flash.
+
+**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-camera-interface Flash extends FlashQuery--><!--Device-camera-interface Flash extends FlashQuery-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## getFlashMode
+
+```TypeScript
+getFlashMode(): FlashMode
+```
+
+Obtains the flash mode in use.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Flash-getFlashMode(): FlashMode--><!--Device-Flash-getFlashMode(): FlashMode-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Flash mode obtained. If the operation fails, undefined is returned and an error code |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+## offFlashStateChange
+
+```TypeScript
+offFlashStateChange(callback?: Callback<FlashState>): void
+```
+
+Unsubscribes from flash light status change events.
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-Flash-offFlashStateChange(callback?: Callback<FlashState>): void--><!--Device-Flash-offFlashStateChange(callback?: Callback<FlashState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FlashState&gt; | No | Callback used to return the result. If this parameter is specified,the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+
+## onFlashStateChange
+
+```TypeScript
+onFlashStateChange(callback: Callback<FlashState>): void
+```
+
+Subscribes to flash light status change events.
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-Flash-onFlashStateChange(callback: Callback<FlashState>): void--><!--Device-Flash-onFlashStateChange(callback: Callback<FlashState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FlashState&gt; | Yes | Callback used to return the flash light status. |
+
+## setFlashMode
+
+```TypeScript
+setFlashMode(flashMode: FlashMode): void
+```
+
+Sets a flash mode. Before the setting, do the following checks: 1. Use [hasFlash]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to check whether the camera device has flash. 2. Use [isFlashModeSupported]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ to check whether the camera device supports the flash mode.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Flash-setFlashMode(flashMode: FlashMode): void--><!--Device-Flash-setFlashMode(flashMode: FlashMode): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| flashMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Flash mode. If the input parameter is null or undefined, it is treated as 0 and the flash is turned off. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+

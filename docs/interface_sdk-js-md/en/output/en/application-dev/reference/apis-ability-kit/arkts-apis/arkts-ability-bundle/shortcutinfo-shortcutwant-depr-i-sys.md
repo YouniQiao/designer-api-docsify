@@ -1,0 +1,66 @@
+# ShortcutWant (System API)
+
+> **NOTE** > > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-ShortcutWant]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ instead.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [shortcutInfo:ShortcutWant](../arkts-ability-bundlemanager/shortcutinfo-shortcutwant-i.md)
+
+<!--Device-unnamed-export interface ShortcutWant--><!--Device-unnamed-export interface ShortcutWant-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+## targetBundle
+
+```TypeScript
+readonly targetBundle: string
+```
+
+Target bundle of the shortcut.
+
+**Type:** string
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutWant#targetBundle
+
+<!--Device-ShortcutWant-readonly targetBundle: string--><!--Device-ShortcutWant-readonly targetBundle: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+## targetClass
+
+```TypeScript
+readonly targetClass: string
+```
+
+Target class required by the shortcut.
+
+**Type:** string
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutWant#targetAbility
+
+<!--Device-ShortcutWant-readonly targetClass: string--><!--Device-ShortcutWant-readonly targetClass: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+

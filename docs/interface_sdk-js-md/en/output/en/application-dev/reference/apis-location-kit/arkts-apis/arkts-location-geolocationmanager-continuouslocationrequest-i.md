@@ -1,0 +1,92 @@
+# ContinuousLocationRequest
+
+Configuring parameters in continuous location requests.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-geoLocationManager-export interface ContinuousLocationRequest--><!--Device-geoLocationManager-export interface ContinuousLocationRequest-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## interval
+
+```TypeScript
+interval: int
+```
+
+Location report interval, in seconds.
+
+**Type:** int
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContinuousLocationRequest-interval: int--><!--Device-ContinuousLocationRequest-interval: int-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## locationScenario
+
+```TypeScript
+locationScenario: UserActivityScenario | PowerConsumptionScenario
+```
+
+Location scenario. You can select a user activity scenario or power consumption scenario.
+
+**Type:** UserActivityScenario \| PowerConsumptionScenario
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ContinuousLocationRequest-locationScenario: UserActivityScenario | PowerConsumptionScenario--><!--Device-ContinuousLocationRequest-locationScenario: UserActivityScenario | PowerConsumptionScenario-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## needPoi
+
+```TypeScript
+needPoi?: boolean
+```
+
+Indicates whether to obtain POI information near the current location.
+
+**Type:** boolean
+
+**Since:** 19
+
+**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-ContinuousLocationRequest-needPoi?: boolean--><!--Device-ContinuousLocationRequest-needPoi?: boolean-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## sportsType
+
+```TypeScript
+sportsType?: SportsType
+```
+
+Indicates the type of sports. This parameter is valid only when locationScenario is set to UserActivityScenario.SPORT.
+
+**Type:** SportsType
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ContinuousLocationRequest-sportsType?: SportsType--><!--Device-ContinuousLocationRequest-sportsType?: SportsType-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+

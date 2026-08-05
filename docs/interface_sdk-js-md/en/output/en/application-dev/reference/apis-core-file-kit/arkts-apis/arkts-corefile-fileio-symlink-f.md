@@ -1,0 +1,64 @@
+# symlink
+
+## symlink
+
+```TypeScript
+declare function symlink(target: string, srcPath: string): Promise<void>
+```
+
+Creates a symbolic link based on the file path. This API uses a promise to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:symlink](arkts-corefile-fileio-symlink-f.md#symlink)
+
+<!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>--><!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | string | Yes | Application sandbox path of the target file. |
+| srcPath | string | Yes | Application sandbox path of the symbolic link. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+
+## symlink
+
+```TypeScript
+declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void
+```
+
+Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:symlink](arkts-corefile-fileio-symlink-f.md#symlink)
+
+<!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | string | Yes | Application sandbox path of the target file. |
+| srcPath | string | Yes | Application sandbox path of the symbolic link. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback invoked when the symbolic link is created asynchronously. |
+

@@ -1,0 +1,4 @@
+# component/symbolSpan
+
+## Summary
+

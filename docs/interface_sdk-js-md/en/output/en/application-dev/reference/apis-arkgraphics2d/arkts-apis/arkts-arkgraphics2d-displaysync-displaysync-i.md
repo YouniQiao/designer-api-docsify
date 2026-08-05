@@ -1,0 +1,271 @@
+# DisplaySync
+
+An object that implements the setting of the frame rate and callback. It provides APIs for you to set the frame rate, register a callback, and start/stop the callback. Before calling any of the following APIs, you must use [displaySync.create()]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ to create a **DisplaySync** instance.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-displaySync-interface DisplaySync--><!--Device-displaySync-interface DisplaySync-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## off('frame')
+
+```TypeScript
+off(type: 'frame', callback?: Callback<IntervalInfo>): void
+```
+
+Unsubscribes from change events of each frame.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+<!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IntervalInfo&gt; | No | Callback used for unsubscription.If no value is passed in, all subscriptions to the specified event are canceled. |
+
+**Example**
+
+```TypeScript
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+backDisplaySync?.on("frame", callback)
+
+// Unsubscribe from the event.
+backDisplaySync?.off("frame", callback)
+```
+
+## offFrame
+
+```TypeScript
+offFrame(callback?: Callback<IntervalInfo>): void
+```
+
+Unsubscribes from change events of each frame.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-offFrame(callback?: Callback<IntervalInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IntervalInfo&gt; | No | Callback used for unsubscription.If no value is passed in, all subscriptions to the specified event are canceled. |
+
+## on('frame')
+
+```TypeScript
+on(type: 'frame', callback: Callback<IntervalInfo>): void
+```
+
+Subscribes to change events of each frame.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+<!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'frame' | Yes | Event type. The value is fixed at **'frame'**. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IntervalInfo&gt; | Yes | Callback used for subscription. |
+
+**Example**
+
+```TypeScript
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+// Subscribe to the event.
+backDisplaySync?.on("frame", callback)
+```
+
+## onFrame
+
+```TypeScript
+onFrame(callback: Callback<IntervalInfo>): void
+```
+
+Subscribes to change events of each frame.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-onFrame(callback: Callback<IntervalInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IntervalInfo&gt; | Yes | Callback used for subscription. |
+
+## setExpectedFrameRateRange
+
+```TypeScript
+setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
+```
+
+Sets the expected frame rate range.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void--><!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rateRange | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Expected frame rate range. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 1. Mandatory parameters are left unspecified.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 2. Incorrect parameters types.\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_ 3. Parameter verification failed.or check if ExpectedFrameRateRange is valid. |
+
+**Example**
+
+```TypeScript
+let range : ExpectedFrameRateRange = {
+  expected: 10,
+  min:0,
+  max:120
+};
+
+// Set the expected frame rate range.
+backDisplaySync?.setExpectedFrameRateRange(range)
+```
+
+## start
+
+```TypeScript
+start(): void
+```
+
+Starts callback for each frame.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-DisplaySync-start(): void--><!--Device-DisplaySync-start(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Example**
+
+```TypeScript
+let range : ExpectedFrameRateRange = {
+  expected: 10,
+  min:0,
+  max:120
+};
+
+backDisplaySync?.setExpectedFrameRateRange(range)
+
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+backDisplaySync?.on("frame", callback)
+
+// Start callback for each frame.
+backDisplaySync?.start()
+```
+
+```TypeScript
+import { displaySync } from '@kit.ArkGraphics2D';
+import { UIContext } from '@kit.ArkUI';
+
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  // Create a DisplaySync instance.
+  backDisplaySync: displaySync.DisplaySync = displaySync.create();
+
+  aboutToAppear() {
+    // Obtain a UIContext instance.
+    let uiContext: UIContext = this.getUIContext();
+    // Call start() in the current UI context.
+    uiContext?.runScopedTask(() => {
+      this.backDisplaySync?.start();
+    })
+  }
+
+  build() {
+    // ...
+  }
+}
+```
+
+## stop
+
+```TypeScript
+stop(): void
+```
+
+Stops callback for each frame.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-DisplaySync-stop(): void--><!--Device-DisplaySync-stop(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Example**
+
+```TypeScript
+let range : ExpectedFrameRateRange = {
+  expected: 10,
+  min:0,
+  max:120
+};
+
+backDisplaySync?.setExpectedFrameRateRange(range)
+
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+backDisplaySync?.on("frame", callback)
+
+backDisplaySync?.start()
+
+// ...
+
+// Stop callback for each frame.
+backDisplaySync?.stop()
+```
+

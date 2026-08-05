@@ -1,0 +1,10 @@
+# static/Char
+
+## Summary
+
+### Classes
+
+| Name | Description |
+| --- | --- |
+| [Char](char-char-c.md) | Represents boxed char value and related operations |
+

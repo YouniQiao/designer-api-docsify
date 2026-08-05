@@ -1,0 +1,1958 @@
+# Canvas
+
+A carrier that carries the drawn content and drawing status. > **NOTE** > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions. > > > The canvas comes with a default brush. The brush is black, has anti-aliasing enabled, and has no other style > effects. This default brush is used when no brush or pen is actively set in the canvas.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-drawing-class Canvas--><!--Device-drawing-class Canvas-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## attachBrush
+
+```TypeScript
+attachBrush(brush: Brush): void
+```
+
+Attaches a brush to the canvas. When you draw on the canvas, the brush's style is used to fill the interior of shapes. > **NOTE** > > If the brush effect changes after this API is called, you must call the API again if you want to use the new > effect in the subsequent drawing.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-attachBrush(brush: Brush): void--><!--Device-Canvas-attachBrush(brush: Brush): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| brush | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Brush** object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## attachPen
+
+```TypeScript
+attachPen(pen: Pen): void
+```
+
+Attaches a pen to the canvas. When you draw on the canvas, the pen's style is used to outline shapes. > **NOTE** > > If the pen effect changes after this API is called, you must call the API again if you want to use the new > effect in the subsequent drawing.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-attachPen(pen: Pen): void--><!--Device-Canvas-attachPen(pen: Pen): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pen | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Pen** object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## clear
+
+```TypeScript
+clear(color: common2D.Color): void
+```
+
+Clears the canvas with a given color. This API has the same effect as [drawColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-clear(color: common2D.Color): void--><!--Device-Canvas-clear(color: common2D.Color): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## clear
+
+ArkTS-Dyn:
+```TypeScript
+clear(color: common2D.Color | number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+clear(color: common2D.Color | int): void
+```
+
+Clears the canvas with a given color.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-clear(color: common2D.Color | int): void--><!--Device-Canvas-clear(color: common2D.Color | int): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | ArkTS-Dyn: common2D.Color \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：common2D.Color \| int | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
+
+## clipPath
+
+```TypeScript
+clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void
+```
+
+Clips the drawable area of the canvas using a custom path.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void--><!--Device-Canvas-clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Path** object. |
+| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Clip mode. The default value is **INTERSECT**. |
+| doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **false** means the opposite. Default value: **false**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## clipRect
+
+```TypeScript
+clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void
+```
+
+Clips the drawable area of the canvas using a rectangle.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void--><!--Device-Canvas-clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rect | common2D.Rect | Yes | Rectangle. |
+| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Clip mode. The default value is **INTERSECT**. |
+| doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **false** means the opposite. Default value: **false**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## clipRegion
+
+```TypeScript
+clipRegion(region: Region, clipOp?: ClipOp): void
+```
+
+Clips a region on the canvas.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-clipRegion(region: Region, clipOp?: ClipOp): void--><!--Device-Canvas-clipRegion(region: Region, clipOp?: ClipOp): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Region** object, which indicates the range to clip. |
+| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Clipping mode. The default value is **INTERSECT**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## clipRoundRect
+
+```TypeScript
+clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): void
+```
+
+Clips a rounded rectangle on the canvas.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): void--><!--Device-Canvas-clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| roundRect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **RoundRect** object, which indicates the range to clip. |
+| clipOp | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Clipping mode. The default value is **INTERSECT**. |
+| doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti-aliasing, and **false** means the opposite. Default value: **false**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## concatMatrix
+
+```TypeScript
+concatMatrix(matrix: Matrix): void
+```
+
+Multiplies the current canvas matrix by the incoming matrix on the left. This API does not affect previous drawing operations, but subsequent drawing and clipping operations will be influenced by this matrix in terms of shape and position.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-concatMatrix(matrix: Matrix): void--><!--Device-Canvas-concatMatrix(matrix: Matrix): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Matrix object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## constructor
+
+```TypeScript
+constructor(pixelmap: image.PixelMap)
+```
+
+Creates a **Canvas** object that uses a **PixelMap** as the drawing target.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Canvas-constructor(pixelmap: image.PixelMap)--><!--Device-Canvas-constructor(pixelmap: image.PixelMap)-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelmap | image.PixelMap | Yes | **PixelMap** used to create the object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## detachBrush
+
+```TypeScript
+detachBrush(): void
+```
+
+Detaches the brush from the canvas. When you draw on the canvas, the brush is no longer used to fill the interior of shapes.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-detachBrush(): void--><!--Device-Canvas-detachBrush(): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## detachPen
+
+```TypeScript
+detachPen(): void
+```
+
+Detaches the pen from the canvas. When you draw on the canvas, the pen is no longer used to outline shapes.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-detachPen(): void--><!--Device-Canvas-detachPen(): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## drawArc
+
+ArkTS-Dyn:
+```TypeScript
+drawArc(arc: common2D.Rect, startAngle: number, sweepAngle: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawArc(arc: common2D.Rect, startAngle: double, sweepAngle: double): void
+```
+
+Draws an arc on the canvas. with the start angle and sweep angle specified. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawArc(arc: common2D.Rect, startAngle: double, sweepAngle: double): void--><!--Device-Canvas-drawArc(arc: common2D.Rect, startAngle: double, sweepAngle: double): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arc | common2D.Rect | Yes | Rectangular boundary that encapsulates the oval including the arc. |
+| startAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Start angle, in degrees. The value is a floating point number. When the degree is **0**, the start point is located at the right end of the oval. A positive number indicates that the start point is placed clockwise, and a negative number indicates that the start point is placed counterclockwise. |
+| sweepAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Angle to sweep, in degrees. The value is a floating point number. A positive number indicates a clockwise sweep, and a negative value indicates a counterclockwise swipe. The valid range is from -360 degrees to 360 degrees. If the absolute value of the sweep angle exceeds 360 degrees, an ellipse is drawn. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawArcWithCenter
+
+ArkTS-Dyn:
+```TypeScript
+drawArcWithCenter(arc: common2D.Rect, startAngle: number, sweepAngle: number, useCenter: boolean): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawArcWithCenter(arc: common2D.Rect, startAngle: double, sweepAngle: double, useCenter: boolean): void
+```
+
+Draws an arc on the canvas. It enables you to define the start angle, sweep angle, and whether the arc's endpoints should connect to its center.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawArcWithCenter(arc: common2D.Rect, startAngle: double, sweepAngle: double, useCenter: boolean): void--><!--Device-Canvas-drawArcWithCenter(arc: common2D.Rect, startAngle: double, sweepAngle: double, useCenter: boolean): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| arc | common2D.Rect | Yes | Rectangular boundary that encapsulates the oval including the arc. |
+| startAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Start angle, in degrees. The value is a floating point number. When the degree is **0**, the start point is located at the right end of the oval. A positive number indicates that the start point is placed clockwise, and a negative number indicates that the start point is placed counterclockwise. |
+| sweepAngle | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Angle to sweep, in degrees. The value is a floating point number. A positive number indicates a clockwise sweep, and a negative value indicates a counterclockwise swipe. The swipe angle can exceed 360 degrees, and a complete ellipse is drawn. |
+| useCenter | boolean | Yes | Whether the start point and end point of the arc are connected to its center. The value **true** means that they are connected to the center; the value **false** means the opposite. |
+
+## drawBackground
+
+```TypeScript
+drawBackground(brush: Brush): void
+```
+
+Uses a brush to fill the drawable area of the canvas.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawBackground(brush: Brush): void--><!--Device-Canvas-drawBackground(brush: Brush): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| brush | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Brush** object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawCircle
+
+ArkTS-Dyn:
+```TypeScript
+drawCircle(x: number, y: number, radius: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawCircle(x: double, y: double, radius: double): void
+```
+
+Draws a circle. If the radius is less than or equal to zero, nothing is drawn. By default, black is used for filling.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawCircle(x: double, y: double, radius: double): void--><!--Device-Canvas-drawCircle(x: double, y: double, radius: double): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the center of the circle. The value is a floating point number. |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the center of the circle. The value is a floating point number. |
+| radius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the circle. The value is a floating point number greater than 0. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## drawColor
+
+```TypeScript
+drawColor(color: common2D.Color, blendMode?: BlendMode): void
+```
+
+Fills the drawable area of the canvas with the specified color and [BlendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawColor(color: common2D.Color, blendMode?: BlendMode): void--><!--Device-Canvas-drawColor(color: common2D.Color, blendMode?: BlendMode): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
+| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Blend mode. The default mode is **SRC\_\_\_ESCAPED\_UNDERSCORE\_\_\_OVER**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## drawColor
+
+ArkTS-Dyn:
+```TypeScript
+drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: BlendMode): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void
+```
+
+Fills the drawable area of the canvas with the specified color and [BlendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_. This API provides better performance than [drawColor]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ and is recommended.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void--><!--Device-Canvas-drawColor(alpha: int, red: int, green: int, blue: int, blendMode?: BlendMode): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| alpha | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to255. Any passed-in floating point number is rounded down. |
+| red | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| green | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to255. Any passed-in floating point number is rounded down. |
+| blue | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Blend mode. The default mode is **SRC\_\_\_ESCAPED\_UNDERSCORE\_\_\_OVER**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## drawColor
+
+ArkTS-Dyn:
+```TypeScript
+drawColor(color: number, blendMode?: BlendMode): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawColor(color: int, blendMode?: BlendMode): void
+```
+
+Fills the drawable area of the canvas with the specified color and [BlendMode]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawColor(color: int, blendMode?: BlendMode): void--><!--Device-Canvas-drawColor(color: int, blendMode?: BlendMode): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Color in hexadecimal ARGB format. |
+| blendMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Blend mode. The default mode is **SRC\_\_\_ESCAPED\_UNDERSCORE\_\_\_OVER**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## drawGlyphs
+
+ArkTS-Dyn:
+```TypeScript
+drawGlyphs(glyphIds: Array<number>, glyphIdOffset: number, positions: Array<common2D.Point>,
+      positionOffset: number, glyphCount: number, font: Font): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.Point>,
+      positionOffset: int, glyphCount: int, font: Font): void
+```
+
+Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is smaller than or equals to 0.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Canvas-drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.Point>,      positionOffset: int, glyphCount: int, font: Font): void--><!--Device-Canvas-drawGlyphs(glyphIds: Array<int>, glyphIdOffset: int, positions: Array<common2D.Point>,      positionOffset: int, glyphCount: int, font: Font): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| glyphIds | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; | Yes | Indicates an array of glyph IDs. |
+| glyphIdOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the number of elements to skip before drawing in glyphIds array. |
+| positions | Array&lt;common2D.Point&gt; | Yes | Indicates an array of positions. |
+| positionOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the number of elements to skip before drawing in positions. |
+| glyphCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Indicates the number of glyphs to be drawn. |
+| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Indicates the font used for drawing. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
+## drawImage
+
+ArkTS-Dyn:
+```TypeScript
+drawImage(pixelmap: image.PixelMap, left: number, top: number, samplingOptions?: SamplingOptions): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawImage(pixelmap: image.PixelMap, left: double, top: double, samplingOptions?: SamplingOptions): void
+```
+
+Draws an image. The coordinates of the upper left corner of the image are (left, top).
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawImage(pixelmap: image.PixelMap, left: double, top: double, samplingOptions?: SamplingOptions): void--><!--Device-Canvas-drawImage(pixelmap: image.PixelMap, left: double, top: double, samplingOptions?: SamplingOptions): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelmap | image.PixelMap | Yes | **PixelMap** of an image. |
+| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the upper left corner of the image. The value is a floating point number. |
+| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the upper left corner of the image. The value is a floating point number. |
+| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 12 |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawImageLattice
+
+```TypeScript
+drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,
+      filterMode: FilterMode): void
+```
+
+Splits an image into multiple sections based on the lattice object's configuration and draws each section into the specified target rectangle on the canvas. When this API is used, the anti-aliasing enablement setting does not take effect. The intersections of even-numbered rows and columns (starting from 0) are fixed points. If the fixed lattice area fits within the target rectangle, it will be drawn without scaling. Otherwise, it will be scaled proportionally to fit the target rectangle. Any remaining space will be filled by stretching or compressing the remaining sections to cover the entire target rectangle.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,      filterMode: FilterMode): void--><!--Device-Canvas-drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.Rect,      filterMode: FilterMode): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelmap | image.PixelMap | Yes | **PixelMap** to draw. |
+| lattice | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Lattice object. |
+| dstRect | common2D.Rect | Yes | Target rectangle. |
+| filterMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter mode. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## drawImageNine
+
+```TypeScript
+drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,
+      filterMode: FilterMode): void
+```
+
+Splits an image into nine sections using two horizontal and two vertical lines: four edge sections, four corner sections, and a central section. When this API is used, the anti-aliasing enablement setting does not take effect. If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectangle without scaling. Otherwise, they will be scaled to fit the target rectangle. Any remaining space will be filled by stretching or compressing the other five sections to cover the entire target rectangle.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,      filterMode: FilterMode): void--><!--Device-Canvas-drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D.Rect,      filterMode: FilterMode): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelmap | image.PixelMap | Yes | **PixelMap** to draw. |
+| center | common2D.Rect | Yes | Central rectangle that divides the image into nine sections by extending its four edges. |
+| dstRect | common2D.Rect | Yes | Target rectangle drawn on the canvas. |
+| filterMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Filter mode. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## drawImageRect
+
+```TypeScript
+drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?: SamplingOptions): void
+```
+
+Draws an image onto a specified area of the canvas.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?: SamplingOptions): void--><!--Device-Canvas-drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?: SamplingOptions): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelmap | image.PixelMap | Yes | **PixelMap** of an image. |
+| dstRect | common2D.Rect | Yes | **Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
+| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawImageRectWithSrc
+
+```TypeScript
+drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,
+      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void
+```
+
+Draws a portion of an image onto a specified area of the canvas.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void--><!--Device-Canvas-drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      samplingOptions?: SamplingOptions, constraint?: SrcRectConstraint): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelmap | image.PixelMap | Yes | **PixelMap** of an image. |
+| srcRect | common2D.Rect | Yes | **Rectangle** object, which specifies the portion of the image to draw. |
+| dstRect | common2D.Rect | Yes | **Rectangle** object, which specifies the area of the canvas onto which the image will be drawn. |
+| samplingOptions | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Sampling options. By default, the **SamplingOptions** object created using the no-argument constructor is used. |
+| constraint | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Constraint type of the source rectangle. The default value is **STRICT**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawLine
+
+ArkTS-Dyn:
+```TypeScript
+drawLine(x0: number, y0: number, x1: number, y1: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawLine(x0: double, y0: double, x1: double, y1: double): void
+```
+
+Draws a line segment from the start point to the end point. If the coordinates of the start point are the same as those of the end point, nothing is drawn.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawLine(x0: double, y0: double, x1: double, y1: double): void--><!--Device-Canvas-drawLine(x0: double, y0: double, x1: double, y1: double): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x0 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the start point of the line segment. The value is a floating point number. |
+| y0 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the start point of the line segment. The value is a floating point number. |
+| x1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the end point of the line segment. The value is a floating point number. |
+| y1 | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the end point of the line segment. The value is a floating point number. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawNestedRoundRect
+
+```TypeScript
+drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void
+```
+
+Draws two nested rounded rectangles. The outer rectangle boundary must contain the inner rectangle boundary. Otherwise, there is no drawing effect.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void--><!--Device-Canvas-drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| outer | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Outer rounded rectangle. |
+| inner | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Inner rounded rectangle. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawOval
+
+```TypeScript
+drawOval(oval: common2D.Rect): void
+```
+
+Draws an oval on the canvas, where the shape and position of the oval are defined by its bounding rectangle.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawOval(oval: common2D.Rect): void--><!--Device-Canvas-drawOval(oval: common2D.Rect): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| oval | common2D.Rect | Yes | Rectangle. The oval inscribed within the rectangle is the oval to draw. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawPath
+
+```TypeScript
+drawPath(path: Path): void
+```
+
+Draws a custom path, which contains a set of path outlines. Each path outline can be open or closed.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawPath(path: Path): void--><!--Device-Canvas-drawPath(path: Path): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Path** object to draw. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawPixelMapMesh
+
+ArkTS-Dyn:
+```TypeScript
+drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: number, meshHeight: number,
+      vertices: Array<number>, vertOffset: number, colors: Array<number> | null, colorOffset: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,
+      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void
+```
+
+Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed across the **PixelMap**. (This API works with brushes but not pens.)
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void--><!--Device-Canvas-drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: int, meshHeight: int,      vertices: Array<double>, vertOffset: int, colors: Array<int> | null, colorOffset: int): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pixelmap | image.PixelMap | Yes | **PixelMap** to draw. |
+| meshWidth | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of columns in the mesh. The value is an integer greater than 0. |
+| meshHeight | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of rows in the mesh. The value is an integer greater than 0. |
+| vertices | ArkTS-Dyn: Array&lt;number&gt;  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;double&gt; | Yes | Array of vertices, which specify the position to draw. The value is a floating-point array and the size must be ((meshWidth+1) (meshHeight+1) + vertOffset) 2. |
+| vertOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of vert elements to skip before drawing. The value is an integer greater than or equal to 0. |
+| colors | ArkTS-Dyn: Array&lt;number&gt; \| null  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; \| null | Yes | Array of colors, which specify the color at each vertex. The value is an integer array and can be null. The size must be (meshWidth+1) (meshHeight+1) + colorOffset.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 20 |
+| colorOffset | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of color elements to skip before drawing. The value is an integer greater than or equal to 0. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawPoint
+
+ArkTS-Dyn:
+```TypeScript
+drawPoint(x: number, y: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawPoint(x: double, y: double): void
+```
+
+Draws a point.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawPoint(x: double, y: double): void--><!--Device-Canvas-drawPoint(x: double, y: double): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the point. The value is a floating point number. |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the point. The value is a floating point number. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawPoints
+
+```TypeScript
+drawPoints(points: Array<common2D.Point>, mode?: PointMode): void
+```
+
+Draws a group of points, line segments, or polygons on the canvas, with the specified drawing mode. An array is used to hold these points.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawPoints(points: Array<common2D.Point>, mode?: PointMode): void--><!--Device-Canvas-drawPoints(points: Array<common2D.Point>, mode?: PointMode): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| points | Array&lt;common2D.Point&gt; | Yes | Array that holds the points to draw. The length cannot be **0**. |
+| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Mode in which the points are drawn. The default value is **drawing.PointMode.POINTS**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## drawRect
+
+```TypeScript
+drawRect(rect: common2D.Rect): void
+```
+
+Draws a rectangle. By default, black is used for filling.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawRect(rect: common2D.Rect): void--><!--Device-Canvas-drawRect(rect: common2D.Rect): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rect | common2D.Rect | Yes | Rectangle to draw. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawRect
+
+ArkTS-Dyn:
+```TypeScript
+drawRect(left: number, top: number, right: number, bottom: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawRect(left: double, top: double, right: double, bottom: double): void
+```
+
+Draws a rectangle. By default, black is used for filling. This API provides better performance than [drawRect]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and is recommended.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawRect(left: double, top: double, right: double, bottom: double): void--><!--Device-Canvas-drawRect(left: double, top: double, right: double, bottom: double): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| left | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. |
+| top | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. |
+| right | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. |
+| bottom | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawRegion
+
+```TypeScript
+drawRegion(region: Region): void
+```
+
+Draws a region.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawRegion(region: Region): void--><!--Device-Canvas-drawRegion(region: Region): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| region | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Region to draw. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawRoundRect
+
+```TypeScript
+drawRoundRect(roundRect: RoundRect): void
+```
+
+Draws a rounded rectangle.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawRoundRect(roundRect: RoundRect): void--><!--Device-Canvas-drawRoundRect(roundRect: RoundRect): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| roundRect | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Rounded rectangle. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawShadow
+
+ArkTS-Dyn:
+```TypeScript
+drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: number,
+      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,
+      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void
+```
+
+Draws a spot shadow and uses a given path to outline the ambient shadow.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void--><!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color, spotColor: common2D.Color, flag: ShadowFlag) : void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Path** object, which is used to outline the shadow. |
+| planeParams | common2D.Point3d | Yes | 3D vector, which is used to determine the z-axis offset of an occluder relative to the canvas, based on its x and y coordinates. |
+| devLightPos | common2D.Point3d | Yes | Position of the light relative to the canvas. |
+| lightRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the light. The value is a floating point number. |
+| ambientColor | common2D.Color | Yes | Color of the ambient shadow. |
+| spotColor | common2D.Color | Yes | Color of the spot shadow. |
+| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Defines an enum for the shadow flags. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## drawShadow
+
+ArkTS-Dyn:
+```TypeScript
+drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: number,
+      ambientColor: common2D.Color | number, spotColor: common2D.Color | number, flag: ShadowFlag) : void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,
+      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void
+```
+
+Draws a spot shadow and uses a given path to outline the ambient shadow.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void--><!--Device-Canvas-drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Point3d, lightRadius: double,      ambientColor: common2D.Color | int, spotColor: common2D.Color | int, flag: ShadowFlag) : void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Path** object, which is used to outline the shadow. |
+| planeParams | common2D.Point3d | Yes | 3D vector, which is used to calculate the offset in the Z axis. |
+| devLightPos | common2D.Point3d | Yes | Position of the light relative to the canvas. |
+| lightRadius | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Radius of the light. The value is a floating point number. |
+| ambientColor | ArkTS-Dyn: common2D.Color \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：common2D.Color \| int | Yes | Ambient shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
+| spotColor | ArkTS-Dyn: common2D.Color \| number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：common2D.Color \| int | Yes | Spot shadow color, represented by a 32-bit unsigned integer in hexadecimal ARGB format. |
+| flag | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Defines an enum for the shadow flags. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## drawSingleCharacter
+
+ArkTS-Dyn:
+```TypeScript
+drawSingleCharacter(text: string, font: Font, x: number, y: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawSingleCharacter(text: string, font: Font, x: double, y: double): void
+```
+
+Draws a single character. If the typeface of the current font does not support the character to draw, the system typeface is used to draw the character.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawSingleCharacter(text: string, font: Font, x: double, y: double): void--><!--Device-Canvas-drawSingleCharacter(text: string, font: Font, x: double, y: double): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Single character to draw. The length of the string must be **1**. |
+| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Font** object. |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the left point (red point in the figure below) of the character baseline (blue line in the figure below). The value is a floating point number. |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the left point (red point in the figure below) of the character baseline (blue line in the figure below). The value is a floating point number. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## drawSingleCharacterWithFeatures
+
+ArkTS-Dyn:
+```TypeScript
+drawSingleCharacterWithFeatures(text: string, font: Font, x: number, y: number, features: Array<FontFeature>): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawSingleCharacterWithFeatures(text: string, font: Font, x: double, y: double, features: Array<FontFeature>): void
+```
+
+Draws a single character with font features. If the typeface of the current font does not support the character to draw, the system typeface is used to draw the character.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+
+<!--Device-Canvas-drawSingleCharacterWithFeatures(text: string, font: Font, x: double, y: double, features: Array<FontFeature>): void--><!--Device-Canvas-drawSingleCharacterWithFeatures(text: string, font: Font, x: double, y: double, features: Array<FontFeature>): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| text | string | Yes | Single character to draw. The length of the string must be **1**. |
+| font | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Font** object. |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the left endpoint of the drawn character baseline. The value is a floating point number. |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the left endpoint of the drawn character baseline. The value is a floating point number. |
+| features | Array&lt;FontFeature&gt; | Yes | Array of the font feature object. For an empty array, the preset font features in the TrueType Font (TTF) file are used. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
+## drawTextBlob
+
+ArkTS-Dyn:
+```TypeScript
+drawTextBlob(blob: TextBlob, x: number, y: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawTextBlob(blob: TextBlob, x: double, y: double): void
+```
+
+Draws a text blob. If the typeface used to construct **blob** does not support a character, that character will not be drawn.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-drawTextBlob(blob: TextBlob, x: double, y: double): void--><!--Device-Canvas-drawTextBlob(blob: TextBlob, x: double, y: double): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| blob | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **TextBlob** object. |
+| x | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the left point (red point in the figure below) of the text baseline (blue line in the figure below). The value is a floating point number. |
+| y | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the left point (red point in the figure below) of the text baseline (blue line in the figure below). The value is a floating point number. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## drawVertices
+
+ArkTS-Dyn:
+```TypeScript
+drawVertices(vertexMode: VertexMode, vertexCount: number, positions: Array<common2D.Point>,
+      texs: Array<common2D.Point> | null, colors: Array<number> | null, indexCount: number,
+      indices: Array<number> | null, mode: BlendMode): void
+```
+
+ArkTS-Sta:
+```TypeScript
+drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,
+      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,
+      indices: Array<int> | null, mode: BlendMode): void
+```
+
+Draws a triangle mesh described by the vertex array.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-Canvas-drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,      indices: Array<int> | null, mode: BlendMode): void--><!--Device-Canvas-drawVertices(vertexMode: VertexMode, vertexCount: int, positions: Array<common2D.Point>,      texs: Array<common2D.Point> | null, colors: Array<int> | null, indexCount: int,      indices: Array<int> | null, mode: BlendMode): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| vertexMode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Connection mode of the vertex to be drawn. |
+| vertexCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of elements in the vertex array. The value is an integer greater than or equal to 3. |
+| positions | Array&lt;common2D.Point&gt; | Yes | Array that holds the position of every vertex. The array cannot be null and its length must be equal to the value of **vertexCount**. |
+| texs | Array&lt;common2D.Point&gt; \| null | Yes | Array of texture space coordinates corresponding to the vertices.This array can be null, which indicates that the texture space is invalid. If not null, the length of the array must be equal to the value of **vertexCount**. |
+| colors | ArkTS-Dyn: Array&lt;number&gt; \| null  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; \| null | Yes | Array of colors corresponding to the vertices, which is used for interpolation in triangles. This array can be null, which indicates that the color effect is the default color set by the user. If not null, the length of the array must be equal to the value of **vertexCount**. |
+| indexCount | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Number of indices. The value can be **0** or a value greater than or equal to 3. If the value is not **0**, the value must be an integer greater than or equal to 3. |
+| indices | ArkTS-Dyn: Array&lt;number&gt; \| null  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：Array&lt;int&gt; \| null | Yes | Array of vertex indices. The value can be null. In this case, the value of **indexCount** is ignored (an integer greater than or equal to 3 or equal to 0). If not null, the value length must be the same as that of **indexCount**. |
+| mode | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Color blend mode. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
+## getHeight
+
+ArkTS-Dyn:
+```TypeScript
+getHeight(): number
+```
+
+ArkTS-Sta:
+```TypeScript
+getHeight(): int
+```
+
+Obtains the canvas height.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-getHeight(): int--><!--Device-Canvas-getHeight(): int-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Canvas height. The value is a floating point number. |
+
+## getLocalClipBounds
+
+```TypeScript
+getLocalClipBounds(): common2D.Rect
+```
+
+Obtains the bounds of the cropping region of the canvas.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-Canvas-getLocalClipBounds(): common2D.Rect--><!--Device-Canvas-getLocalClipBounds(): common2D.Rect-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| common2D.Rect | Bounds of the cropping region. |
+
+## getLocalClipBounds
+
+```TypeScript
+getLocalClipBounds(): common2D.Rect | undefined
+```
+
+Obtains the bounds of the cropping region of the canvas.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-Canvas-getLocalClipBounds(): common2D.Rect | undefined--><!--Device-Canvas-getLocalClipBounds(): common2D.Rect | undefined-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| common2D.Rect | Rect object. |
+
+## getSaveCount
+
+ArkTS-Dyn:
+```TypeScript
+getSaveCount(): number
+```
+
+ArkTS-Sta:
+```TypeScript
+getSaveCount(): int
+```
+
+Obtains the number of canvas states (canvas matrix and clipping area) saved in the stack.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-getSaveCount(): int--><!--Device-Canvas-getSaveCount(): int-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Number of canvas statuses that have been saved. The value is a positive integer. |
+
+## getTotalMatrix
+
+```TypeScript
+getTotalMatrix(): Matrix
+```
+
+Obtains the canvas matrix.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-Canvas-getTotalMatrix(): Matrix--><!--Device-Canvas-getTotalMatrix(): Matrix-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Canvas matrix. |
+
+## getTotalMatrix
+
+```TypeScript
+getTotalMatrix(): Matrix | undefined
+```
+
+Obtains the canvas matrix.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-Canvas-getTotalMatrix(): Matrix | undefined--><!--Device-Canvas-getTotalMatrix(): Matrix | undefined-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | Canvas matrix. |
+
+## getWidth
+
+ArkTS-Dyn:
+```TypeScript
+getWidth(): number
+```
+
+ArkTS-Sta:
+```TypeScript
+getWidth(): int
+```
+
+Obtains the canvas width.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-getWidth(): int--><!--Device-Canvas-getWidth(): int-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Canvas width. The value is a floating point number. |
+
+## isClipEmpty
+
+```TypeScript
+isClipEmpty(): boolean
+```
+
+Checks whether the region that can be drawn is empty after clipping.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-isClipEmpty(): boolean--><!--Device-Canvas-isClipEmpty(): boolean-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** means that the region is empty, and **false** means the |
+
+## isOpaque
+
+```TypeScript
+isOpaque(): boolean
+```
+
+Checks whether the current layer that drawn into the device is opaque.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Canvas-isOpaque(): boolean--><!--Device-Canvas-isOpaque(): boolean-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns true if the current layer that drawn into the device is opaque. |
+
+## quickRejectPath
+
+```TypeScript
+quickRejectPath(path: Path): boolean
+```
+
+Checks whether the path is not intersecting with the canvas area. The canvas area includes its boundaries.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-quickRejectPath(path: Path): boolean--><!--Device-Canvas-quickRejectPath(path: Path): boolean-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| path | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | **Path** object. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** means that the path is not intersecting with the canvas |
+
+## quickRejectRect
+
+```TypeScript
+quickRejectRect(rect: common2D.Rect): boolean
+```
+
+Checks whether the rectangle is not intersecting with the canvas area. The canvas area includes its boundaries.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-quickRejectRect(rect: common2D.Rect): boolean--><!--Device-Canvas-quickRejectRect(rect: common2D.Rect): boolean-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rect | common2D.Rect | Yes | Describes a rectangle. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** means that the rectangle is not intersecting with the |
+
+## resetClip
+
+```TypeScript
+resetClip(): void
+```
+
+Resets the clip status.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Canvas-resetClip(): void--><!--Device-Canvas-resetClip(): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## resetMatrix
+
+```TypeScript
+resetMatrix(): void
+```
+
+Resets the matrix of this canvas to an identity matrix.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-resetMatrix(): void--><!--Device-Canvas-resetMatrix(): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## restore
+
+```TypeScript
+restore(): void
+```
+
+Restores the canvas state (canvas matrix and clipping area) saved on the top of the stack.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-restore(): void--><!--Device-Canvas-restore(): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## restoreToCount
+
+ArkTS-Dyn:
+```TypeScript
+restoreToCount(count: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+restoreToCount(count: int): void
+```
+
+Restores the canvas state (canvas matrix and clipping area) to a specified number.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-restoreToCount(count: int): void--><!--Device-Canvas-restoreToCount(count: int): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| count | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Yes | Depth of the canvas statuses to restore. The value is an integer. If the value is less than or equal to 1, the canvas is restored to the initial state. If the value is greater than the number of canvas statuses that have been saved, no operation is performed. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## rotate
+
+ArkTS-Dyn:
+```TypeScript
+rotate(degrees: number, sx: number, sy: number) : void
+```
+
+ArkTS-Sta:
+```TypeScript
+rotate(degrees: double, sx: double, sy: double) : void
+```
+
+Applies a rotation matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a rotation effect applied to their shapes and positions.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-rotate(degrees: double, sx: double, sy: double) : void--><!--Device-Canvas-rotate(degrees: double, sx: double, sy: double) : void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| degrees | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Angle to rotate, in degrees. The value is a floating point number. A positive value indicates a clockwise rotation, and a negative value indicates a counterclockwise rotation. |
+| sx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | X coordinate of the rotation center. The value is a floating point number. |
+| sy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Y coordinate of the rotation center. The value is a floating point number. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## save
+
+ArkTS-Dyn:
+```TypeScript
+save(): number
+```
+
+ArkTS-Sta:
+```TypeScript
+save(): int
+```
+
+Saves the canvas states (canvas matrix and drawable area) to the top of the stack. This API must be used in pair with [restore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-save(): int--><!--Device-Canvas-save(): int-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：int | Number of canvas statuses. The value is a positive integer. |
+
+## saveLayer
+
+ArkTS-Dyn:
+```TypeScript
+saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): number
+```
+
+ArkTS-Sta:
+```TypeScript
+saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long
+```
+
+Saves the matrix and cropping region of the canvas, and allocates a **PixelMap** for subsequent drawing. If you call [restore]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_, changes made to the matrix and clipping region are discarded, and the PixelMap is drawn.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long--><!--Device-Canvas-saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): long-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rect | common2D.Rect \| null | No | **Rect** object, which is used to limit the size of the graphics layer.The default value is the current canvas size. |
+| brush | \_\_\_MD\_LINK\_USD\_0\_\_\_ \| null | No | **Brush** object. The alpha value, filter effect, and blend mode of the brush are applied when the **PixelMap** is drawn. If null is passed in, no effect is applied. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：long | Number of canvas statuses that have been saved. The value is a positive integer. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+
+## scale
+
+ArkTS-Dyn:
+```TypeScript
+scale(sx: number, sy: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+scale(sx: double, sy: double): void
+```
+
+Applies a scaling matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a scaling effect applied to the shapes and positions.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-scale(sx: double, sy: double): void--><!--Device-Canvas-scale(sx: double, sy: double): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale ratio on the X axis. The value is a floating point number. |
+| sy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Scale ratio on the Y axis. The value is a floating point number. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## setMatrix
+
+```TypeScript
+setMatrix(matrix: Matrix): void
+```
+
+Sets a matrix for the canvas. Subsequent drawing and clipping operations will be affected by this matrix in terms of shape and position.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-setMatrix(matrix: Matrix): void--><!--Device-Canvas-setMatrix(matrix: Matrix): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| matrix | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Matrix object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## skew
+
+ArkTS-Dyn:
+```TypeScript
+skew(sx: number, sy: number) : void
+```
+
+ArkTS-Sta:
+```TypeScript
+skew(sx: double, sy: double) : void
+```
+
+Applies a skewing matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a skewing effect applied to the shapes and positions.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-skew(sx: double, sy: double) : void--><!--Device-Canvas-skew(sx: double, sy: double) : void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| sx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
+| sy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+
+## translate
+
+ArkTS-Dyn:
+```TypeScript
+translate(dx: number, dy: number): void
+```
+
+ArkTS-Sta:
+```TypeScript
+translate(dx: double, dy: double): void
+```
+
+Applies a translation matrix on top of the current canvas matrix (identity matrix by default). Subsequent drawing and clipping operations will automatically have a translation effect applied to the shapes and positions.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-Canvas-translate(dx: double, dy: double): void--><!--Device-Canvas-translate(dx: double, dy: double): void-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| dx | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Distance to translate on the X axis. The value is a floating point number. |
+| dy | ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Yes | Distance to translate on the Y axis. The value is a floating point number. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_HTML\_\_\_ESCAPED\_UNDERSCORE\_\_\_TAG\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_2. Incorrect parameter types. |
+

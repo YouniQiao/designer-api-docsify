@@ -1,0 +1,179 @@
+# ComposeTitleBarV2MenuItemParams
+
+Options for creating a menu item instance.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+<!--Device-unnamed-export interface ComposeTitleBarV2MenuItemParams--><!--Device-unnamed-export interface ComposeTitleBarV2MenuItemParams-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## accessibilityDescription
+
+```TypeScript
+accessibilityDescription?: ResourceStr
+```
+
+The accessibilityDescription of this menu item.
+
+**Type:** ResourceStr
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2MenuItemParams-accessibilityDescription?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItemParams-accessibilityDescription?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## accessibilityLevel
+
+```TypeScript
+accessibilityLevel?: string
+```
+
+The accessibilityLevel of this menu item.
+
+**Type:** string
+
+**Default:** auto .The options are as follows:<br/>
+"auto":The value is converted to "yes" or "no" based on the component.
+"yes": the current component is selectable for the accessibility service.
+"no": The current component is not selectable for the accessibility service.
+"no-hide-descendants":The current component and all its child components are not selectable<br/>
+for the accessibility service.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2MenuItemParams-accessibilityLevel?: string--><!--Device-ComposeTitleBarV2MenuItemParams-accessibilityLevel?: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## accessibilityText
+
+```TypeScript
+accessibilityText?: ResourceStr
+```
+
+The accessibilityText of this menu item.
+
+**Type:** ResourceStr
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2MenuItemParams-accessibilityText?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItemParams-accessibilityText?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+action?: OnActionCallback
+```
+
+Callback function when click on this menu item.
+
+**Type:** OnActionCallback
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2MenuItemParams-action?: OnActionCallback--><!--Device-ComposeTitleBarV2MenuItemParams-action?: OnActionCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## isEnabled
+
+```TypeScript
+isEnabled?: boolean
+```
+
+Whether to enable this menu item.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2MenuItemParams-isEnabled?: boolean--><!--Device-ComposeTitleBarV2MenuItemParams-isEnabled?: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## label
+
+```TypeScript
+label?: ResourceStr
+```
+
+Icon label for this menu item.
+
+**Type:** ResourceStr
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2MenuItemParams-label?: ResourceStr--><!--Device-ComposeTitleBarV2MenuItemParams-label?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## symbolStyle
+
+```TypeScript
+symbolStyle?: SymbolGlyphModifier
+```
+
+Symbol icon resource for this menu item, which has higher priority than value.
+
+**Type:** SymbolGlyphModifier
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2MenuItemParams-symbolStyle?: SymbolGlyphModifier--><!--Device-ComposeTitleBarV2MenuItemParams-symbolStyle?: SymbolGlyphModifier-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## value
+
+```TypeScript
+value: ResourceStr
+```
+
+Icon resource for this menu item.
+
+**Type:** ResourceStr
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ComposeTitleBarV2MenuItemParams-value: ResourceStr--><!--Device-ComposeTitleBarV2MenuItemParams-value: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

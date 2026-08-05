@@ -1,0 +1,174 @@
+# Options
+
+Provides KV store configuration.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-distributedKVStore-interface Options--><!--Device-distributedKVStore-interface Options-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+## autoSync
+
+```TypeScript
+autoSync?: boolean
+```
+
+Whether to enable auto sync across devices. The default value is **false**, indicating that only manual sync is supported. If this parameter is set to **true**, \_\_\_MD\_COMMENT\_DESC\_USD\_1\_\_\_it takes effect only in \_\_\_MD\_LINK\_DESC\_USD\_0\_\_\_ .\_\_\_MD\_COMMENT\_DESC\_USD\_2\_\_\_ SystemCapability.DistributedDataManager.KVStore.Core ohos.permission.DISTRIBUTED\_DATASYNC
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Options-autoSync?: boolean--><!--Device-Options-autoSync?: boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+## backup
+
+```TypeScript
+backup?: boolean
+```
+
+Whether to back up the database files. The value **true** means to back up the database files, and the value **false** means the opposite. The default value is **true**. SystemCapability.DistributedDataManager.KVStore.Core
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Options-backup?: boolean--><!--Device-Options-backup?: boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+## createIfMissing
+
+```TypeScript
+createIfMissing?: boolean
+```
+
+Whether to create a database when database files do not exist. The value **true** means to create a database, and the value **false** means the opposite. The default value is **true**. SystemCapability.DistributedDataManager.KVStore.Core
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Options-createIfMissing?: boolean--><!--Device-Options-createIfMissing?: boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+## encrypt
+
+```TypeScript
+encrypt?: boolean
+```
+
+Whether to encrypt the database files. The value **true** means to encrypt the database files, and the value **false** means the opposite. The default value is **false**. SystemCapability.DistributedDataManager.KVStore.Core
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Options-encrypt?: boolean--><!--Device-Options-encrypt?: boolean-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+## kvStoreType
+
+```TypeScript
+kvStoreType?: KVStoreType
+```
+
+Type of the KV store to create. The default value is **DEVICE\_COLLABORATION**, which indicates a device KV store. SystemCapability.DistributedDataManager.KVStore.Core
+
+**Type:** KVStoreType
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Options-kvStoreType?: KVStoreType--><!--Device-Options-kvStoreType?: KVStoreType-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+
+## rootDir
+
+```TypeScript
+rootDir?: string
+```
+
+Specifies the root directory relative to the database
+
+**Type:** string
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Options-rootDir?: string--><!--Device-Options-rootDir?: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+## schema
+
+```TypeScript
+schema?: Schema
+```
+
+Schema that defines the values stored in the KV store. The default value is **undefined**, which means no schema is used. SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+**Type:** Schema
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Options-schema?: Schema--><!--Device-Options-schema?: Schema-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+## securityLevel
+
+```TypeScript
+securityLevel: SecurityLevel
+```
+
+Security level of the KV store. SystemCapability.DistributedDataManager.KVStore.Core
+
+**Type:** SecurityLevel
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Options-securityLevel: SecurityLevel--><!--Device-Options-securityLevel: SecurityLevel-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.Core
+

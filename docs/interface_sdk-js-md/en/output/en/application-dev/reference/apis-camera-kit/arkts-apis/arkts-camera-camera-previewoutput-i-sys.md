@@ -1,0 +1,363 @@
+# PreviewOutput
+
+PreviewOutput implements preview output. It inherits from [CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+<!--Device-camera-interface PreviewOutput extends CameraOutput--><!--Device-camera-interface PreviewOutput extends CameraOutput-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## attachSketchSurface
+
+```TypeScript
+attachSketchSurface(surfaceId: string): void
+```
+
+Attaches a surface for PiP preview.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-PreviewOutput-attachSketchSurface(surfaceId: string): void--><!--Device-PreviewOutput-attachSketchSurface(surfaceId: string): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function attachSketchSurface(previewOutput: camera.PreviewOutput, session: camera.Session, cameraInput: camera.CameraInput, sketchSurfaceId: string): void {
+  try {
+    session.beginConfig();
+    session.addInput(cameraInput);
+    session.addOutput(previewOutput);
+    previewOutput.enableSketch(true);
+    session.commitConfig();
+    previewOutput.attachSketchSurface(sketchSurfaceId);
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The attachSketchSurface call failed. error code: ${err.code}`);
+  }
+}
+```
+
+## enableSketch
+
+```TypeScript
+enableSketch(enabled: boolean): void
+```
+
+Enables or disables PiP preview.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-PreviewOutput-enableSketch(enabled: boolean): void--><!--Device-PreviewOutput-enableSketch(enabled: boolean): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether to enable or disable PiP view. **true** to enable, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Applicable version:** 12 and later |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function enableSketch(previewOutput: camera.PreviewOutput, session: camera.Session, cameraInput: camera.CameraInput): void {
+  try {
+    session.beginConfig();
+    session.addInput(cameraInput);
+    session.addOutput(previewOutput);
+    previewOutput.enableSketch(true);
+    session.commitConfig();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The enableSketch call failed. error code: ${err.code}`);
+  }
+}
+```
+
+## getSketchRatio
+
+ArkTS-Dyn:
+```TypeScript
+getSketchRatio(): number
+```
+
+ArkTS-Sta:
+```TypeScript
+getSketchRatio(): double
+```
+
+Obtains the zoom ratio when PiP preview is enabled.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-PreviewOutput-getSketchRatio(): double--><!--Device-PreviewOutput-getSketchRatio(): double-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| ArkTS-Dyn: number  \_\_\_HTML\_TAG\_USD\_0\_\_\_ArkTS-Sta：double | Zoom ratio. If PiP preview is not supported, the value **-1** is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+
+**Example**
+
+```TypeScript
+function getSketchRatio(previewOutput: camera.PreviewOutput): number {
+  let sketchRatio: number = previewOutput.getSketchRatio();
+  return sketchRatio;
+}
+```
+
+## isSketchSupported
+
+```TypeScript
+isSketchSupported(): boolean
+```
+
+Checks whether Picture-in-Picture (PiP) preview is supported.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-PreviewOutput-isSketchSupported(): boolean--><!--Device-PreviewOutput-isSketchSupported(): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for the support of the PiP preview. **true** if supported, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isSketchSupported(previewOutput: camera.PreviewOutput): boolean {
+  try {
+    let isSupported: boolean = previewOutput.isSketchSupported();
+    return isSupported;
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`The isSketchSupported call failed. error code: ${err.code}`);
+  }
+  return false;
+}
+```
+
+## off('sketchStatusChanged')
+
+```TypeScript
+off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void
+```
+
+Unsubscribes from PiP status change events.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+<!--Device-PreviewOutput-off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-off(type: 'sketchStatusChanged', callback?: AsyncCallback<SketchStatusData>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'sketchStatusChanged' | Yes | Event type. The value is fixed at **'sketchStatusChanged'**. The event can be listened for when a PiP preview stream is created. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SketchStatusData&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('sketchStatusChanged')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+function unregisterSketchStatusChanged(previewOutput: camera.PreviewOutput): void {
+  previewOutput.off('sketchStatusChanged');
+}
+```
+
+## offSketchStatusChanged
+
+```TypeScript
+offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void
+```
+
+Unsubscribes sketch status changed event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-offSketchStatusChanged(callback?: AsyncCallback<SketchStatusData>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SketchStatusData&gt; | No | Callback used to get sketch status data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## on('sketchStatusChanged')
+
+```TypeScript
+on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void
+```
+
+Subscribes to PiP status change events. This API uses an asynchronous callback to return the result.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+<!--Device-PreviewOutput-on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-on(type: 'sketchStatusChanged', callback: AsyncCallback<SketchStatusData>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'sketchStatusChanged' | Yes | Event type. The value is fixed at **'sketchStatusChanged'**. The event can be listened for when a PiP preview stream is created. This event is triggered when PiP preview is enabled or disabled or the zoom ratio changes while PiP preview is enabled. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SketchStatusData&gt; | Yes | Callback used to return the PiP status data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(error: BusinessError, data: camera.SketchStatusData): void {
+  if (error !== undefined && error.code !== 0) {
+    console.error(`Callback Error, errorCode: ${error.code}`);
+    return;
+  }
+  console.info(`sketch errorCode is ${error.code}, data is ${JSON.stringify(data)}`);
+}
+
+function registerSketchStatusChanged(previewOutput: camera.PreviewOutput): void {
+  previewOutput.on('sketchStatusChanged', callback);
+}
+```
+
+## onSketchStatusChanged
+
+```TypeScript
+onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void
+```
+
+Subscribes sketch status changed event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void--><!--Device-PreviewOutput-onSketchStatusChanged(callback: AsyncCallback<SketchStatusData>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SketchStatusData&gt; | Yes | Callback used to sketch status data. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+

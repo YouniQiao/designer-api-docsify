@@ -6,7 +6,7 @@ typedef struct RawDir RawDir
 
 ## Overview
 
-Provides access to the **rawfile** directory.
+`RawDir` represents an opened rawfile directory object, which can be used to traverse the directory and fileswithin it. It is obtained through {@link OH_ResourceManager_OpenRawDir}, and must be closed and released through[OH_ResourceManager_CloseRawDir](capi-raw-dir-h.md#oh_resourcemanager_closerawdir) after use.
 
 **Since**: 8
 

@@ -1,0 +1,54 @@
+# TaskInfo (System API)
+
+Represents the task information.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-update-export interface TaskInfo--><!--Device-update-export interface TaskInfo-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+
+## existTask
+
+```TypeScript
+existTask: boolean
+```
+
+Whether an upgrade task exists, which is used to determine whether an upgrade task is in progress. Use scenarios: Query the task status before the upgrade to avoid repeated operations. Monitor the task status change during the upgrade. The value **true** indicates that an upgrade task (for example, a download or installation task) is in progress. You need to wait until the task is complete or canceled before executing a new task. The value **false** indicates that no task is running and a new upgrade process can be started.
+
+**Type:** boolean
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-TaskInfo-existTask: boolean--><!--Device-TaskInfo-existTask: boolean-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+
+## taskBody
+
+```TypeScript
+taskBody: TaskBody
+```
+
+Task data.
+
+**Type:** TaskBody
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-TaskInfo-taskBody: TaskBody--><!--Device-TaskInfo-taskBody: TaskBody-End-->
+
+**System capability:** SystemCapability.Update.UpdateService
+
+**System API:** This is a system API.
+

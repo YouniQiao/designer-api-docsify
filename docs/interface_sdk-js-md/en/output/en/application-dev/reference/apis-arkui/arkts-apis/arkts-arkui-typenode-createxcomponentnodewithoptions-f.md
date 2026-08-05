@@ -1,0 +1,35 @@
+# createXComponentNodeWithOptions
+
+## createXComponentNodeWithOptions
+
+```TypeScript
+export function createXComponentNodeWithOptions(
+    context: UIContext, value: XComponentOptions, options?: FrameNodeOptions): XComponent
+```
+
+Create a FrameNode of XComponent type with options. On API 26.0.0 and above, It can also create a FrameNode of XComponent type with options and FrameNode options.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-typeNode-export function createXComponentNodeWithOptions(    context: UIContext, value: XComponentOptions, options?: FrameNodeOptions): XComponent--><!--Device-typeNode-export function createXComponentNodeWithOptions(    context: UIContext, value: XComponentOptions, options?: FrameNodeOptions): XComponent-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | uiContext used to create the FrameNode. |
+| value | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | XComponent options. |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Options for configuring FrameNode creation.\_\_\_HTML\_TAG\_USD\_0\_\_\_**Since:** 26.0.0 |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| \_\_\_MD\_LINK\_USD\_0\_\_\_ | - Return XComponent type FrameNode. |
+

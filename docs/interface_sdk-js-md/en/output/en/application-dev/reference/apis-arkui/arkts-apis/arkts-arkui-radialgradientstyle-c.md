@@ -1,0 +1,62 @@
+# RadialGradientStyle
+
+Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_.
+
+**Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-component/textcommon-shaderstyle-c.md)
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-unnamed-declare class RadialGradientStyle extends ShaderStyle--><!--Device-unnamed-declare class RadialGradientStyle extends ShaderStyle-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## constructor
+
+```TypeScript
+constructor(options: RadialGradientOptions)
+```
+
+A constructor used to create a **RadialGradientOptions** object.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-RadialGradientStyle-constructor(options: RadialGradientOptions)--><!--Device-RadialGradientStyle-constructor(options: RadialGradientOptions)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Options for displaying a radial gradient. |
+
+## options
+
+```TypeScript
+options: RadialGradientOptions
+```
+
+Options for displaying a radial gradient.
+
+**Type:** RadialGradientOptions
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-RadialGradientStyle-options: RadialGradientOptions--><!--Device-RadialGradientStyle-options: RadialGradientOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

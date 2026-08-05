@@ -1,0 +1,73 @@
+# cancelAllReminders
+
+## cancelAllReminders
+
+```TypeScript
+function cancelAllReminders(callback: AsyncCallback<void>): void
+```
+
+Cancels all reminders set by the current application. This API uses an asynchronous callback to return the cancellation result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [reminderAgentManager.cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md#cancelallreminders)
+
+<!--Device-reminderAgent-function cancelAllReminders(callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function cancelAllReminders(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Notification.ReminderAgent
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;void&gt; | Yes | Callback used to return the result. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+reminderAgent.cancelAllReminders((err: BusinessError, data: void) =>{
+  console.info("cancelAllReminders callback")
+})
+```
+
+
+## cancelAllReminders
+
+```TypeScript
+function cancelAllReminders(): Promise<void>
+```
+
+Cancels all reminders set by the current application. This API uses a promise to return the cancellation result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [reminderAgentManager.cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md#cancelallreminders)
+
+<!--Device-reminderAgent-function cancelAllReminders(): Promise<void>--><!--Device-reminderAgent-function cancelAllReminders(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Notification.ReminderAgent
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise used to return the result. |
+
+**Example**
+
+```TypeScript
+reminderAgent.cancelAllReminders().then(() => {
+    console.info("cancelAllReminders promise")
+})
+```
+

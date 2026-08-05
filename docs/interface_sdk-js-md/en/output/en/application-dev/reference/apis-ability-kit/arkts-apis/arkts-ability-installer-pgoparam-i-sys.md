@@ -1,0 +1,54 @@
+# PGOParam (System API)
+
+Defines the parameters of the PGO configuration file.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-installer-export interface PGOParam--><!--Device-installer-export interface PGOParam-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
+## moduleName
+
+```TypeScript
+moduleName: string
+```
+
+Module name of the bundle.
+
+**Type:** string
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-PGOParam-moduleName: string--><!--Device-PGOParam-moduleName: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
+## pgoFilePath
+
+```TypeScript
+pgoFilePath: string
+```
+
+Path of the PGO configuration file.
+
+**Type:** string
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+
+<!--Device-PGOParam-pgoFilePath: string--><!--Device-PGOParam-pgoFilePath: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+

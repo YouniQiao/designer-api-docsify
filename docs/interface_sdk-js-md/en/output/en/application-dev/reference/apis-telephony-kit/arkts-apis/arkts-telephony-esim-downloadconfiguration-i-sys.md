@@ -1,0 +1,74 @@
+# DownloadConfiguration (System API)
+
+Specifies the download configuration.
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-eSIM-export interface DownloadConfiguration--><!--Device-eSIM-export interface DownloadConfiguration-End-->
+
+**System capability:** SystemCapability.Telephony.CoreService.Esim
+
+**System API:** This is a system API.
+
+## forceDisableProfile
+
+```TypeScript
+forceDisableProfile: boolean
+```
+
+Specifies whether to forcibly disable the profile. If true, the active profile is disabled in order to perform the operation. Otherwise, \_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ is returned in resultCode to ask for the user's agreement to the operation.
+
+**Type:** boolean
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-DownloadConfiguration-forceDisableProfile: boolean--><!--Device-DownloadConfiguration-forceDisableProfile: boolean-End-->
+
+**System capability:** SystemCapability.Telephony.CoreService.Esim
+
+**System API:** This is a system API.
+
+## isPprAllowed
+
+```TypeScript
+isPprAllowed: boolean
+```
+
+Specifies whether the user allows the service provider to enforce this Profile Policy Rule (PPR) after being informed of its restrictions.
+
+**Type:** boolean
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-DownloadConfiguration-isPprAllowed: boolean--><!--Device-DownloadConfiguration-isPprAllowed: boolean-End-->
+
+**System capability:** SystemCapability.Telephony.CoreService.Esim
+
+**System API:** This is a system API.
+
+## switchAfterDownload
+
+```TypeScript
+switchAfterDownload: boolean
+```
+
+Specifies whether to enable the profile after successful download.
+
+**Type:** boolean
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+
+<!--Device-DownloadConfiguration-switchAfterDownload: boolean--><!--Device-DownloadConfiguration-switchAfterDownload: boolean-End-->
+
+**System capability:** SystemCapability.Telephony.CoreService.Esim
+
+**System API:** This is a system API.
+

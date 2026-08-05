@@ -1,0 +1,58 @@
+# HdrDecomposeOptions (System API)
+
+Describes the options for decomposing an HDR Pixelmap to a Picture containing an SDR PixelMap and a gainmap.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-image-interface HdrDecomposeOptions--><!--Device-image-interface HdrDecomposeOptions-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**System API:** This is a system API.
+
+## desiredPixelFormat
+
+```TypeScript
+desiredPixelFormat?: PixelMapFormat
+```
+
+Indicates the pixel format of the decomposed SDR Pixelmap and the gainmap. The formats of RGBA\_8888\NV12\NV21 are supported. Default value: RGBA\_8888.
+
+**Type:** PixelMapFormat
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HdrDecomposeOptions-desiredPixelFormat?: PixelMapFormat--><!--Device-HdrDecomposeOptions-desiredPixelFormat?: PixelMapFormat-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**System API:** This is a system API.
+
+## isFullSizeGainmap
+
+```TypeScript
+isFullSizeGainmap?: boolean
+```
+
+Indicates generating a full-size gainmap or a 1/2 downscaled gainmap. Default value: false.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HdrDecomposeOptions-isFullSizeGainmap?: boolean--><!--Device-HdrDecomposeOptions-isFullSizeGainmap?: boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**System API:** This is a system API.
+

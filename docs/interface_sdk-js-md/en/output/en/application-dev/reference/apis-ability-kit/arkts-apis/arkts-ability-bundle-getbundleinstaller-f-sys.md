@@ -1,0 +1,63 @@
+# getBundleInstaller (System API)
+
+## getBundleInstaller
+
+```TypeScript
+function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
+```
+
+Obtains the installation package. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [null]
+
+**Required permissions:** ohos.permission.INSTALL_BUNDLE
+
+<!--Device-bundle-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void--><!--Device-bundle-function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;BundleInstaller&gt; | Yes | Callback used to return the installation package. |
+
+
+## getBundleInstaller
+
+```TypeScript
+function getBundleInstaller(): Promise<BundleInstaller>
+```
+
+Obtains the installation package. This API uses a promise to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** 9
+
+**Substitutes:** [null]
+
+**Required permissions:** ohos.permission.INSTALL_BUNDLE
+
+<!--Device-bundle-function getBundleInstaller(): Promise<BundleInstaller>--><!--Device-bundle-function getBundleInstaller(): Promise<BundleInstaller>-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;BundleInstaller&gt; | Promise used to return the installation package. |
+

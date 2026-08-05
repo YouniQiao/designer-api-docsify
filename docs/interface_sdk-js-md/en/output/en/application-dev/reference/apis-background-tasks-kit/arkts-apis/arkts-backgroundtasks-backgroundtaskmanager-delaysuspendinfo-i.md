@@ -1,0 +1,48 @@
+# DelaySuspendInfo
+
+Defines the information about the transient task.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-backgroundTaskManager-interface DelaySuspendInfo--><!--Device-backgroundTaskManager-interface DelaySuspendInfo-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
+
+## actualDelayTime
+
+```TypeScript
+actualDelayTime: int
+```
+
+Actual duration of the transient task requested by the application, in milliseconds. \_\_\_HTML\_TAG\_DESC\_USD\_1\_\_\_Unit:ms Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery ( [BatteryCapacityLevel]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ set to **LEVEL\_LOW**), the maximum duration is decreased to 1 minute.
+
+**Type:** int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-DelaySuspendInfo-actualDelayTime: int--><!--Device-DelaySuspendInfo-actualDelayTime: int-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
+
+## requestId
+
+```TypeScript
+requestId: int
+```
+
+Request ID of the transient task.
+
+**Type:** int
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+<!--Device-DelaySuspendInfo-requestId: int--><!--Device-DelaySuspendInfo-requestId: int-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
+

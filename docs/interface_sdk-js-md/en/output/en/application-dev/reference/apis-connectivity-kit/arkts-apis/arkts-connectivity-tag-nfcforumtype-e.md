@@ -1,0 +1,102 @@
+# NfcForumType
+
+NfcForum Type definition. The NDEF tag may use one of them.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-tag-enum NfcForumType--><!--Device-tag-enum NfcForumType-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+## NFC_FORUM_TYPE_1
+
+```TypeScript
+NFC_FORUM_TYPE_1 = 1
+```
+
+NFC FORUM TYPE 1
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NfcForumType-NFC_FORUM_TYPE_1 = 1--><!--Device-NfcForumType-NFC_FORUM_TYPE_1 = 1-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+## NFC_FORUM_TYPE_2
+
+```TypeScript
+NFC_FORUM_TYPE_2 = 2
+```
+
+NFC FORUM TYPE 2
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NfcForumType-NFC_FORUM_TYPE_2 = 2--><!--Device-NfcForumType-NFC_FORUM_TYPE_2 = 2-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+## NFC_FORUM_TYPE_3
+
+```TypeScript
+NFC_FORUM_TYPE_3 = 3
+```
+
+NFC FORUM TYPE 3
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NfcForumType-NFC_FORUM_TYPE_3 = 3--><!--Device-NfcForumType-NFC_FORUM_TYPE_3 = 3-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+## NFC_FORUM_TYPE_4
+
+```TypeScript
+NFC_FORUM_TYPE_4 = 4
+```
+
+NFC FORUM TYPE 4
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NfcForumType-NFC_FORUM_TYPE_4 = 4--><!--Device-NfcForumType-NFC_FORUM_TYPE_4 = 4-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+## MIFARE_CLASSIC
+
+```TypeScript
+MIFARE_CLASSIC = 101
+```
+
+Mifare Classic
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NfcForumType-MIFARE_CLASSIC = 101--><!--Device-NfcForumType-MIFARE_CLASSIC = 101-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+

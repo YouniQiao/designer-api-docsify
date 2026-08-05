@@ -389,7 +389,7 @@ Creates custom dialog box options.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) content | Content of the custom dialog box. |
+| ArkUI_NodeHandle content | Content of the custom dialog box. |
 
 **Returns**:
 
@@ -909,7 +909,7 @@ Sets the mask for a custom dialog box.
 | -- | -- |
 | [ArkUI_CustomDialogOptions](capi-arkui-nativemodule-arkui-customdialogoptions.md)* options | Dialog box parameters. |
 | uint32_t maskColor | Mask color, in 0xargb format. |
-| [const ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md)* maskRect | Pointer to the mask area. Events outside the mask area are transparently transmitted,and events within the mask area are not. The parameter type is [ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md). |
+| const ArkUI_Rect* maskRect | Pointer to the mask area. Events outside the mask area are transparently transmitted,and events within the mask area are not. The parameter type is [ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md). |
 
 **Returns**:
 

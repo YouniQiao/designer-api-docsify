@@ -1,0 +1,84 @@
+# ConnectionState
+
+The enum of connection state.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+<!--Device-nearlinkConstant-export enum ConnectionState--><!--Device-nearlinkConstant-export enum ConnectionState-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+## STATE_CONNECTING
+
+```TypeScript
+STATE_CONNECTING = 0
+```
+
+The current profile is being connected.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionState-STATE_CONNECTING = 0--><!--Device-ConnectionState-STATE_CONNECTING = 0-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+## STATE_CONNECTED
+
+```TypeScript
+STATE_CONNECTED = 1
+```
+
+The current device is connected.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionState-STATE_CONNECTED = 1--><!--Device-ConnectionState-STATE_CONNECTED = 1-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+## STATE_DISCONNECTING
+
+```TypeScript
+STATE_DISCONNECTING = 2
+```
+
+The current device is being disconnected.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionState-STATE_DISCONNECTING = 2--><!--Device-ConnectionState-STATE_DISCONNECTING = 2-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+## STATE_DISCONNECTED
+
+```TypeScript
+STATE_DISCONNECTED = 3
+```
+
+The current device is disconnected.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionState-STATE_DISCONNECTED = 3--><!--Device-ConnectionState-STATE_DISCONNECTED = 3-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+

@@ -1,0 +1,1048 @@
+# ProfessionalVideoSession (System API)
+
+ProfessionalVideoSession extends Session, AutoExposure, ManualExposure, Focus, ManualFocus, WhiteBalance, ManualIso , Flash, Zoom, ColorEffect, Aperture Implements a professional video session, which sets the parameters of the professional video mode and saves all [CameraInput]\_\_\_JSDOC\_LINK\_DESC\_USD\_0\_\_\_ and [CameraOutput]\_\_\_JSDOC\_LINK\_DESC\_USD\_1\_\_\_ instances required to run the camera. It inherits from [Session]\_\_\_JSDOC\_LINK\_DESC\_USD\_2\_\_\_.
+
+**Inheritance/Implementation:** ProfessionalVideoSession extends [Session](arkts-camera-camera-session-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [ManualExposure](arkts-camera-camera-manualexposure-i.md), [Focus](arkts-camera-camera-focus-i.md), [ManualFocus](arkts-camera-camera-manualfocus-i.md), [WhiteBalance](arkts-camera-camera-whitebalance-i.md), [ManualIso](arkts-camera-camera-manualiso-i.md), [Flash](arkts-camera-camera-flash-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md), [Aperture](arkts-camera-camera-aperture-i.md)
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+
+<!--Device-camera-interface ProfessionalVideoSession extends Session, AutoExposure, ManualExposure, Focus,    ManualFocus, WhiteBalance, ManualIso, Flash, Zoom, ColorEffect, Aperture--><!--Device-camera-interface ProfessionalVideoSession extends Session, AutoExposure, ManualExposure, Focus,    ManualFocus, WhiteBalance, ManualIso, Flash, Zoom, ColorEffect, Aperture-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+## off('error')
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+Unsubscribes from HighResolutionPhotoSession error events.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-ProfessionalVideoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('error')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+function unregisterSessionError(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.off('error');
+}
+```
+
+## off('focusStateChange')
+
+```TypeScript
+off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change events.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-ProfessionalVideoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | No | Callback used to return the result. This parameter is optional.If this parameter is specified, the subscription to the specified event **on('focusStateChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+function unregisterFocusStateChange(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.off('focusStateChange');
+}
+```
+
+## off('smoothZoomInfoAvailable')
+
+```TypeScript
+off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
+```
+
+Unsubscribes from smooth zoom state change events.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-ProfessionalVideoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. The event can be listened for when a session is created. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SmoothZoomInfo&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('smoothZoomInfoAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+function unregisterSmoothZoomInfo(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.off('smoothZoomInfoAvailable');
+}
+```
+
+## off('isoInfoChange')
+
+```TypeScript
+off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void
+```
+
+Unsubscribes from automatic ISO change events.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void--><!--Device-ProfessionalVideoSession-off(type: 'isoInfoChange', callback?: AsyncCallback<IsoInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'isoInfoChange' | Yes | Event type. The value is fixed at **'isoInfoChange'**. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IsoInfo&gt; | No | Callback, which is optional and is used to match **callback** in **on('isoInfoChange')**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+function unregisterIsoInfoEvent(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.off('isoInfoChange');
+}
+```
+
+## off('exposureInfoChange')
+
+```TypeScript
+off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void
+```
+
+Unsubscribes from exposure information change events.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void--><!--Device-ProfessionalVideoSession-off(type: 'exposureInfoChange', callback?: AsyncCallback<ExposureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'exposureInfoChange' | Yes | Event type. The value is fixed at **'exposureInfoChange'**. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ExposureInfo&gt; | No | Callback, which is optional and is used to match **callback** in **on('exposureInfoChange')**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+function unregisterExposureInfoEvent(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.off('exposureInfoChange');
+}
+```
+
+## off('apertureInfoChange')
+
+```TypeScript
+off(type: 'apertureInfoChange', callback?: AsyncCallback<ApertureInfo>): void
+```
+
+Unsubscribes from aperture change events.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-off(type: 'apertureInfoChange', callback?: AsyncCallback<ApertureInfo>): void--><!--Device-ProfessionalVideoSession-off(type: 'apertureInfoChange', callback?: AsyncCallback<ApertureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'apertureInfoChange' | Yes | Event type. The value is fixed at **'apertureInfoChange'**. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ApertureInfo&gt; | No | Callback, which is optional and is used to match **callback** in **on('apertureInfoChange')**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+function unregisterApertureInfoEvent(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.off('apertureInfoChange');
+}
+```
+
+## off('luminationInfoChange')
+
+```TypeScript
+off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void
+```
+
+Unsubscribes from illumination change events.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void--><!--Device-ProfessionalVideoSession-off(type: 'luminationInfoChange', callback?: AsyncCallback<LuminationInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'luminationInfoChange' | Yes | Event type. The value is fixed at **'luminationInfoChange'**. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LuminationInfo&gt; | No | Callback, which is optional and is used to match **callback** in **on('luminationInfoChange')**. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+function unregisterLuminationInfoEvent(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.off('luminationInfoChange');
+}
+```
+
+## offApertureInfoChange
+
+```TypeScript
+offApertureInfoChange(callback?: AsyncCallback<ApertureInfo>): void
+```
+
+Unsubscribes from aperture info event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-offApertureInfoChange(callback?: AsyncCallback<ApertureInfo>): void--><!--Device-ProfessionalVideoSession-offApertureInfoChange(callback?: AsyncCallback<ApertureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ApertureInfo&gt; | No | Callback used to get the aperture info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## offError
+
+```TypeScript
+offError(callback?: ErrorCallback): void
+```
+
+Unsubscribes from error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-offError(callback?: ErrorCallback): void--><!--Device-ProfessionalVideoSession-offError(callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | No | Callback used to get the capture session errors. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## offExposureInfoChange
+
+```TypeScript
+offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void
+```
+
+Unsubscribes from exposure info event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void--><!--Device-ProfessionalVideoSession-offExposureInfoChange(callback?: AsyncCallback<ExposureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ExposureInfo&gt; | No | Callback used to get the exposure info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## offFocusStateChange
+
+```TypeScript
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-ProfessionalVideoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | No | Callback used to get the focus state change. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## offIsoInfoChange
+
+```TypeScript
+offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void
+```
+
+Unsubscribes from ISO info event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void--><!--Device-ProfessionalVideoSession-offIsoInfoChange(callback?: AsyncCallback<IsoInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IsoInfo&gt; | No | Callback used to get the ISO info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## offLuminationInfoChange
+
+```TypeScript
+offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void
+```
+
+Unsubscribes from lumination info event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void--><!--Device-ProfessionalVideoSession-offLuminationInfoChange(callback?: AsyncCallback<LuminationInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LuminationInfo&gt; | No | Callback used to get the lumination info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## offSmoothZoomInfoAvailable
+
+```TypeScript
+offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
+```
+
+Unsubscribes from zoom info event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-ProfessionalVideoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SmoothZoomInfo&gt; | No | Callback used to get the zoom info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## on('error')
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-ProfessionalVideoSession-on(type: 'error', callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_,[commitConfig]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_1\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_, and [addInput]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_2\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to return an error code defined in [CameraErrorCode]\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_JSDOC\_\_\_ESCAPED\_UNDERSCORE\_\_\_LINK\_\_\_ESCAPED\_UNDERSCORE\_\_\_DESC\_\_\_ESCAPED\_UNDERSCORE\_\_\_USD\_\_\_ESCAPED\_UNDERSCORE\_\_\_0\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_\_\_\_ESCAPED\_UNDERSCORE\_\_\_. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError): void {
+  console.error(`Professional video session error code: ${err.code}`);
+}
+
+function registerSessionError(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.on('error', callback);
+}
+```
+
+## on('focusStateChange')
+
+```TypeScript
+on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-ProfessionalVideoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | Yes | Callback used to return the focus state change. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError, focusState: camera.FocusState): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`Focus state: ${focusState}`);
+}
+
+function registerFocusStateChange(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.on('focusStateChange', callback);
+}
+```
+
+## on('smoothZoomInfoAvailable')
+
+```TypeScript
+on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
+```
+
+Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-ProfessionalVideoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'smoothZoomInfoAvailable' | Yes | Event type. The value is fixed at **'smoothZoomInfoAvailable'**. The event can be listened for when a session is created. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SmoothZoomInfo&gt; | Yes | Callback used to return the smooth zoom state change. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError, smoothZoomInfo: camera.SmoothZoomInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`The duration of smooth zoom: ${smoothZoomInfo.duration}`);
+}
+
+function registerSmoothZoomInfo(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.on('smoothZoomInfoAvailable', callback);
+}
+```
+
+## on('isoInfoChange')
+
+```TypeScript
+on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void
+```
+
+Subscribes to automatic ISO change events to obtain real-time ISO information. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void--><!--Device-ProfessionalVideoSession-on(type: 'isoInfoChange', callback: AsyncCallback<IsoInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'isoInfoChange' | Yes | Event type. The value is fixed at **'isoInfoChange'**. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IsoInfo&gt; | Yes | Callback used to return the ISO information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function isoInfoCallback(err: BusinessError, info: camera.IsoInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`ISO value: ${info.iso}`);
+}
+
+function registerIsoInfoEvent(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.on('isoInfoChange', isoInfoCallback);
+}
+```
+
+## on('exposureInfoChange')
+
+```TypeScript
+on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void
+```
+
+Subscribes to exposure information change events to obtain the exposure information. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void--><!--Device-ProfessionalVideoSession-on(type: 'exposureInfoChange', callback: AsyncCallback<ExposureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'exposureInfoChange' | Yes | Event type. The value is fixed at **'exposureInfoChange'**. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ExposureInfo&gt; | Yes | Callback used to return the exposure information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function exposureInfoCallback(err: BusinessError, info: camera.ExposureInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`exposureTimeValue: ${info.exposureTime}`);
+}
+
+function registerExposureInfoEvent(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.on('exposureInfoChange', exposureInfoCallback);
+}
+```
+
+## on('apertureInfoChange')
+
+```TypeScript
+on(type: 'apertureInfoChange', callback: AsyncCallback<ApertureInfo>): void
+```
+
+Subscribes to aperture change events to obtain the real-time aperture information. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-on(type: 'apertureInfoChange', callback: AsyncCallback<ApertureInfo>): void--><!--Device-ProfessionalVideoSession-on(type: 'apertureInfoChange', callback: AsyncCallback<ApertureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'apertureInfoChange' | Yes | Event type. The value is fixed at **'apertureInfoChange'**. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ApertureInfo&gt; | Yes | Callback used to return the aperture information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function apertureInfoCallback(err: BusinessError, info: camera.ApertureInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`Aperture value: ${info.aperture}`);
+}
+
+function registerApertureInfoEvent(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.on('apertureInfoChange', apertureInfoCallback);
+}
+```
+
+## on('luminationInfoChange')
+
+```TypeScript
+on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void
+```
+
+Subscribes to illumination change events to obtain real-time illumination information. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+<!--Device-ProfessionalVideoSession-on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void--><!--Device-ProfessionalVideoSession-on(type: 'luminationInfoChange', callback: AsyncCallback<LuminationInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'luminationInfoChange' | Yes | Event type. The value is fixed at **'luminationInfoChange'**. |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LuminationInfo&gt; | Yes | Callback used to return the illumination information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+**Example**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function luminationInfoCallback(err: BusinessError, info: camera.LuminationInfo): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`Lumination: ${info.lumination}`);
+}
+
+function registerLuminationInfoEvent(professionalVideoSession: camera.ProfessionalVideoSession): void {
+  professionalVideoSession.on('luminationInfoChange', luminationInfoCallback);
+}
+```
+
+## onApertureInfoChange
+
+```TypeScript
+onApertureInfoChange(callback: AsyncCallback<ApertureInfo>): void
+```
+
+Subscribes aperture info event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-onApertureInfoChange(callback: AsyncCallback<ApertureInfo>): void--><!--Device-ProfessionalVideoSession-onApertureInfoChange(callback: AsyncCallback<ApertureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ApertureInfo&gt; | Yes | Callback used to get the aperture info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-onError(callback: ErrorCallback): void--><!--Device-ProfessionalVideoSession-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_ | Yes | Callback used to get the capture session errors. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## onExposureInfoChange
+
+```TypeScript
+onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void
+```
+
+Subscribes exposure info event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void--><!--Device-ProfessionalVideoSession-onExposureInfoChange(callback: AsyncCallback<ExposureInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;ExposureInfo&gt; | Yes | Callback used to get the exposure info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-ProfessionalVideoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;FocusState&gt; | Yes | Callback used to get the focus state change. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## onIsoInfoChange
+
+```TypeScript
+onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void
+```
+
+Subscribes ISO info event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void--><!--Device-ProfessionalVideoSession-onIsoInfoChange(callback: AsyncCallback<IsoInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;IsoInfo&gt; | Yes | Callback used to get the ISO info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## onLuminationInfoChange
+
+```TypeScript
+onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void
+```
+
+Subscribes lumination info event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void--><!--Device-ProfessionalVideoSession-onLuminationInfoChange(callback: AsyncCallback<LuminationInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;LuminationInfo&gt; | Yes | Callback used to get the lumination info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+
+## onSmoothZoomInfoAvailable
+
+```TypeScript
+onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
+```
+
+Subscribes zoom info event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+<!--Device-ProfessionalVideoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-ProfessionalVideoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | \_\_\_MD\_LINK\_USD\_0\_\_\_&lt;SmoothZoomInfo&gt; | Yes | Callback used to get the zoom info. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+

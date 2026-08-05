@@ -1,0 +1,26 @@
+# createAVDownloaderManager
+
+## createAVDownloaderManager
+
+```TypeScript
+function createAVDownloaderManager(): Promise<AVDownloaderManager>
+```
+
+Creating a Streaming Resource Download Task Manager
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-media-function createAVDownloaderManager(): Promise<AVDownloaderManager>--><!--Device-media-function createAVDownloaderManager(): Promise<AVDownloaderManager>-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;AVDownloaderManager&gt; | Promise used to return AVDownloaderManager. |
+

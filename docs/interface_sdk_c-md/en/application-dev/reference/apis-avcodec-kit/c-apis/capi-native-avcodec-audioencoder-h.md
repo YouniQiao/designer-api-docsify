@@ -4,6 +4,8 @@
 
 The file declares the native APIs used for audio encoding.
 
+**Include**: <multimedia/player_framework/native_avcodec_audioencoder.h>
+
 **Library**: libnative_media_aenc.so
 
 **System capability**: SystemCapability.Multimedia.Media.AudioEncoder

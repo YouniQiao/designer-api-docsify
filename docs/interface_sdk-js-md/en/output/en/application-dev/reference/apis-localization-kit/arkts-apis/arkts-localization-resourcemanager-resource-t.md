@@ -1,0 +1,20 @@
+# Resource
+
+```TypeScript
+export type Resource = _Resource
+```
+
+Describes the resource information, including the application package name, application module name, resource ID, resource type, and formatting parameters.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-resourceManager-export type Resource = _Resource--><!--Device-resourceManager-export type Resource = _Resource-End-->
+
+**System capability:** SystemCapability.Global.ResourceManager
+
+**Property type:** _Resource
+

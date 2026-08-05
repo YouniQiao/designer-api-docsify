@@ -14,6 +14,7 @@
     - [ArkWeb_ResourceRequest_](capi-web-arkweb-resourcerequest-.md)
     - [ArkWeb_RequestHeaderList_](capi-web-arkweb-requestheaderlist-.md)
     - [ArkWeb_HttpBodyStream_](capi-web-arkweb-httpbodystream-.md)
+    - [ArkWeb_ErrorInfo_](capi-web-arkweb-errorinfo-.md)
     - [ArkWeb_AnyNativeAPI](capi-web-arkweb-anynativeapi.md)
     - [ArkWeb_BlanklessInfo](capi-web-arkweb-blanklessinfo.md)
     - [ArkWeb_JavaScriptBridgeData](capi-web-arkweb-javascriptbridgedata.md)

@@ -1,0 +1,48 @@
+# MarginTypeV2
+
+Control margin status of ExceptionPromptV2.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+<!--Device-unnamed-export declare enum MarginTypeV2--><!--Device-unnamed-export declare enum MarginTypeV2-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## DEFAULT_MARGIN
+
+```TypeScript
+DEFAULT_MARGIN = 0
+```
+
+Default margin of MarginTypeV2, Margin 1: references ohos\_id\_card\_margin\_start, margin 2: references ohos\_id\_card\_margin\_end.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MarginTypeV2-DEFAULT_MARGIN = 0--><!--Device-MarginTypeV2-DEFAULT_MARGIN = 0-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## FIT_MARGIN
+
+```TypeScript
+FIT_MARGIN = 1
+```
+
+Margins can be adapted of MarginTypeV2, wider than the default margin. Margin 1: references ohos\_id\_max\_padding\_start, margin 2: references ohos\_id\_max\_padding\_end.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MarginTypeV2-FIT_MARGIN = 1--><!--Device-MarginTypeV2-FIT_MARGIN = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

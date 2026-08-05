@@ -1,0 +1,46 @@
+# closeResource
+
+## closeResource
+
+```TypeScript
+function closeResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>
+```
+
+Close the resource with a specific resource ID.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-huksExternalCrypto-function closeResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>--><!--Device-huksExternalCrypto-function closeResource(resourceId: string, params?: HuksExternalCryptoParam[]): Promise<void>-End-->
+
+**System capability:** SystemCapability.Security.Huks.CryptoExtension
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| resourceId | string | Yes | Indicates the resource ID of the provider. |
+| params | \_\_\_MD\_LINK\_USD\_0\_\_\_[] | No | Indicates the input operation parameters. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | The promise returned by the function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | API is not supported. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | Failed to call the UKey driver interface.Please check the UKey connection and driver status. |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameters are abnormal.This error may occur if the process function is not found, or due to other issues. |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | The memory is insufficient. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | Input parameters are invalid. Possible causes:1. The resourceId length is invalid.2. The parameters contain invalid tags or invalid value types. |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | The provider operation failed.This means an error occurred in the crypto extension before calling the UKey driver interface. |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | The provider or UKey is busy. |
+
